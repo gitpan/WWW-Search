@@ -4,7 +4,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.36 1997/01/15 02:15:13 johnh Exp $
+# $Id: Search.pm,v 1.39 1997/08/20 22:37:51 johnh Exp $
 #
 # A complete copyright notice appears at the end of this file.
 # 
@@ -19,7 +19,7 @@ WWW::Search - Virtual base class for WWW searches
 
 =head1 DESCRIPTION
 
-This class is the parent for all access method supported by the
+This class is the parent for all access methods supported by the
 C<WWW::Search> library.  This library implements a Perl API
 to web-based search engines.
 
@@ -36,7 +36,7 @@ for results to avoid overloading either the client or the server.
 
 =head2 Sample program
 
-Using the library should be straightforward:
+Using the library should be straightforward.
 Here's a sample program:
 
     my($search) = new WWW::Search('AltaVista');
@@ -70,8 +70,8 @@ see L<WWW::SearchResult>.
 
 require Exporter;
 @EXPORT = qw();
-@EXPORT_OK = qw(escape_query unescape_query);
-$VERSION = 1.009;
+@EXPORT_OK = qw(escape_query unescape_query generic_option);
+$VERSION = '1.010';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
 use LWP::UserAgent;
@@ -133,6 +133,7 @@ sub new
 	agent_name => $default_agent_name,
 	agent_e_mail => $default_agent_e_mail,
 	http_proxy => undef,
+	timeout => 60,
 	debug => 0,
 	# variable initialization goes here
     }, $subclass;
@@ -153,9 +154,37 @@ Example:
 	$search->native_query('search-engine-specific+query+string',
 		{ option1 => 'able', option2 => 'baker' } );
 
-The hash of options following the query string is optional.  Both the
-query string and the hash of options are interpreted in
-search-engine-specific manner.
+The hash of options following the query string is optional.  
+The query string is back-end specific.
+There are two kinds of options:
+options specific to the back-end
+and generic options applicable to mutliple back-ends.
+
+Generic options all begin with ``search_''.
+Currently two are supported:
+
+=over 4
+
+=item search_url
+Specifies the root of the URL for the 
+
+=item search_debug
+Enables back-end debugging.
+
+=item search_parse_debug
+Enables back-end parser debugging.
+
+=item search_method
+Specifies the HTTP method (C<GET> or C<POST>) for HTTP-based queries.
+=back
+
+Some back-ends may not implement generic options,
+but any which do implement them must provide these semantics.
+
+Back-end-specific options are described
+in the documentation for each back-ends.
+Typically they are packed together to create the query portion of
+the final URL.
 
 Details about how the search string and option hash are interpreted
 in the search-engine-specific manual pages
@@ -300,6 +329,7 @@ sub seek_result
     return $old;
 }
 
+
 =head2 maximum_to_retrieve
 
 The maximum number of hits to return (approximately).
@@ -309,10 +339,37 @@ the first hits, up to this limit.
 Defaults to 500.
 
 Example:
-    $max = $seach->maximum_to_retrieve(100);
+    $max = $search->maximum_to_retrieve(100);
 
 =cut
 sub maximum_to_retrieve { return shift->_elem('maximum_to_retrieve', @_); }
+
+
+=head2 timeout
+
+The maximum length of time any portion of the query should take,
+in seconds.
+
+Defaults to 60.
+
+Example:
+    $search->timeout(120);
+
+=cut
+sub timeout { return shift->_elem('timeout', @_); }
+
+
+
+=head2 opaque
+
+This function provides an application a place to store
+one opaque data element (or many via a Perl reference).
+This facility is useful to (for example),
+maintain client-specific information in each active query
+when you have multiple concurrent queries. 
+
+=cut
+sub opaque { return shift->_elem('opaque', @_); }
 
 
 =head2 escape_query
@@ -386,6 +443,21 @@ sub http_proxy { return shift->_elem('http_proxy', @_); }
 
 
 
+=head2 generic_option (PRIVATE)
+
+This internal routine checks if an option
+is generic or back-end specific.
+Currently all generic options begin with ``search_''.
+This routine is not a method.
+
+=cut
+sub generic_option 
+{
+    my($option) = @_;
+    return ($option =~ /^search_/);
+}
+
+
 
 =head2 setup_search (PRIVATE)
 
@@ -431,6 +503,7 @@ sub user_agent
 	$ua = new LWP::RobotUA($self->{agent_name}, $self->{agent_e_mail});
 	$ua->delay($self->{interrequest_delay}/60.0);
     };
+    $ua->timeout($self->{'timeout'});
     $ua->proxy('http', $self->{'http_proxy'})
 	if (defined($self->{'http_proxy'}));
     $self->{user_agent} = $ua;
@@ -529,9 +602,9 @@ Desired features:
 =item A portable query language.
 A portable language would easily allow you to
 move queries easily between different search engines.
-A good query abstraction is non-trivial
-and won't be done anytime soon at ISI,
-so if you want to take a shot at it, please let me know.
+A  query abstraction is non-trivial
+and won't be done anytime soon at ISI.
+If you want to take a shot at it, please let me know.
 
 =back
 

@@ -4,7 +4,7 @@
 # SearchResult.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: SearchResult.pm,v 1.5 1996/11/21 06:36:59 johnh Exp $
+# $Id: SearchResult.pm,v 1.6 1997/02/12 19:17:08 johnh Exp $
 #
 # Copyright (c) 1996 University of Southern California.
 # All rights reserved.                                            
@@ -162,9 +162,14 @@ Often the first few sentences of the document.
 
 =item score
 A back-end specific, numeric ``score'' of the search result.
-The exact range of scores is search-engine specific,
-but if a score is provided, larger scores are required to 
-signify better quality results.
+The exact range of scores is search-engine specific.
+Usually larger scores are better, but this is no longer required.
+See normalized_score for a back-end independent score.
+
+=item normalized_score
+A back-end independent score of the search result.
+The range of this score is between 0 and 1000.
+Higher values indicate better quality results.
 
 =item change_date
 When the result was last changed.
@@ -185,12 +190,11 @@ The raw HTML for the entire result.
 sub title { return shift->_elem('title', @_); }
 sub description { return shift->_elem('description', @_); }
 sub score { return shift->_elem('score', @_); }
+sub normalized_score { return shift->_elem('normalized_score', @_); }
 sub change_date { return shift->_elem('change_date', @_); }
 sub index_date { return shift->_elem('index_date', @_); }
 sub size { return shift->_elem('size', @_); }
 sub raw { return shift->_elem('raw', @_); }
-
-
 
 
 1;

@@ -3,8 +3,8 @@
 #
 # AltaVista.pm
 # by John Heidemann
-# Copyright (C) 1996 by USC/ISI
-# $Id: AltaVista.pm,v 1.17 1996/11/21 23:02:14 johnh Exp $
+# Copyright (C) 1996-1997 by USC/ISI
+# $Id: AltaVista.pm,v 1.20 1997/08/20 22:37:52 johnh Exp $
 #
 # Complete copyright notice follows below.
 # 
@@ -38,6 +38,18 @@ L<WWW::Search::AltaVista::AdvancedNews>).
 These back-ends set different combinations following options.
 
 =over 8
+
+=item search_url=URL
+
+Specifies who to query with the AltaVista protocol.
+The default is at
+C<http://www.altavista.digital.com/cgi-bin/query>;
+you may wish to retarget it to
+C<http://www.altavista.telia.com/cgi-bin/query>
+or other hosts if you think that they're ``closer''.
+
+=item search_debug, search_parse_debug, search_ref
+Specified at L<WWW::Search>.
 
 =item pg=aq
 
@@ -117,6 +129,7 @@ require Exporter;
 @ISA = qw(WWW::Search Exporter);
 
 use Carp ();
+use WWW::Search(generic_option);
 require WWW::SearchResult;
 
 
@@ -127,30 +140,59 @@ sub native_setup_search
     my($self, $native_query, $native_options_ref) = @_;
     $self->user_agent('user');
     $self->{_next_to_retrieve} = 0;
-    if (!defined($self->{_default_options})) {
-	$self->{_default_options} = {
+    # set the text=yes option to provide next links with <a href>
+    # (suggested by Guy Decoux <decoux@moulon.inra.fr>).
+    if (!defined($self->{_options})) {
+	$self->{_options} = {
 	    pg => 'q',
+	    text => 'yes',
 	    what => 'web',
 	    fmt => 'd',
+	    'search_url' => 'http://www.altavista.digital.com/cgi-bin/query',
         };
     };
-    my($options_ref) = $self->{_default_options};
+    my($options_ref) = $self->{_options};
     if (defined($native_options_ref)) {
-	# copy options
+	# Copy in new options.
 	foreach (keys %$native_options_ref) {
 	    $options_ref->{$_} = $native_options_ref->{$_};
 	};
     };
-    # process the options
+    # Process the options.
     my($options) = '';
     foreach (keys %$options_ref) {
+	# printf STDERR "option: $_ is " . $options_ref->{$_} . "\n";
+	next if (generic_option($_));
 	$options .= $_ . '=' . $options_ref->{$_} . '&';
     };
+    $self->{_debug} = $options_ref->{'search_debug'};
+    $self->{_debug} = 2 if ($options_ref->{'search_parse_debug'});
+    $self->{_debug} = 0 if (!defined($self->{_debug}));
     
+    # Finally figure out the url.
     $self->{_base_url} = 
 	$self->{_next_url} =
-	"http://www.altavista.digital.com/cgi-bin/query?" . $options .
+	$self->{_options}{'search_url'} .
+	"?" . $options .
 	"q=" . $native_query;
+    print $self->{_base_url} . "\n" if ($self->{_debug});
+}
+
+# private
+sub begin_new_hit
+{
+    my($self) = shift;
+    my($old_hit) = shift;
+    my($old_raw) = shift;
+
+    # Save the hit we were working on.
+    if (defined($old_hit)) {
+	$old_hit->raw($old_raw) if (defined($old_raw));
+	push(@{$self->{cache}}, $old_hit);
+    };
+
+    # Make a new hit.
+    return (new WWW::SearchResult, '');
 }
 
 
@@ -162,6 +204,7 @@ sub native_retrieve_some
     # fast exit if already done
     return undef if (!defined($self->{_next_url}));
 
+    print STDERR "WWW::Search::AltaVista::native_retrieve_some: fetching " . $self->{_next_url} . "\n" if ($self->{_debug});
     # get some
     my($request) = new HTTP::Request('GET', $self->{_next_url});
     my($response) = $self->{user_agent}->request($request);
@@ -171,62 +214,82 @@ sub native_retrieve_some
     };
 
     # parse the output
-    my($HEADER, $HITS, $TRAILER) = (1..10);
+    my($HEADER, $HITS, $TRAILER, $POST_NEXT) = (1..10);
     my($hits_found) = 0;
     my($state) = ($HEADER);
-    my($hit) = ();
+    my($hit) = undef;
+    my($raw) = '';
     foreach (split(/\n/, $response->content())) {
          next if m@^$@; # short circuit for blank lines
-	 if ($state == $HEADER && /Documents?.*of\s*(about)?\s*(\d+)\s+matching/) {
+	 if ($state == $HEADER && /Documents?.*of\s*(about)?\s*(\d+)\s+matching/) {   # prior to July 1997
 	    $self->approximate_result_count($2);
 	    $state = $HITS;
-	} elsif ($state == $HITS && m@^(<[Pp]><dt>|<dt>)<a href=\"([^"]+)"><strong>(.*)</strong></a><dd>(.*)(\.)?<br>@) {
-	    if (defined($hit)) {
-	        push(@{$self->{cache}}, $hit);
-	    };
-	    $hit = new WWW::SearchResult;
+	    print STDERR "PARSE(1:HEADER->HITS): $2 documents found.\n" if ($self->{_debug} >= 2);
+	} elsif ($state == $HEADER && /(<b>)?(no|\d+)<\/b>\s+documents? match/i) {  # post July 1997
+	    my($n) = $2;
+	    $n = 0 if ($n =~ /no/i);
+	    $self->approximate_result_count($n);
+	    $state = $HITS;
+	    print STDERR "PARSE(2:HEADER->HITS): $n documents found.\n" if ($self->{_debug} >= 2);
+	} elsif ($state == $HITS && m@^(<p><dt>|<dt>).*<a href=\"([^"]+)"><strong>(.*)</strong></a><dd>(.*)(\.)?<br>@i) {  # post July 1997
+	    ($hit, $raw) = $self->begin_new_hit($hit, $raw);
+	    $raw .= $_;
 	    $hit->add_url($2);
 	    $hits_found++;
 	    $hit->title($3);
 	    $hit->description($4.$5);
+	    print STDERR "PARSE(3:HITS): hit found.\n" if ($self->{_debug} >= 2);
 	} elsif ($state == $HITS && m@^(<[Pp]><dt>|<dt>)<a href=\"([^"]+)"><strong>(.*)</strong></a><dd>(.*)<br><a href=\"([^"]+)">@) {
 	    # news is slightly different
-	    if (defined($hit)) {
-	        push(@{$self->{cache}}, $hit);
-	    };
-	    $hit = new WWW::SearchResult;
+	    ($hit, $raw) = $self->begin_new_hit($hit, $raw);
+	    $raw .= $_;
 	    $hit->add_url($2);   # AltaVista's news gateway URL
 	    $hits_found++;
 	    $hit->title($3);
 	    $hit->description($4);
 	    $hit->add_url($5);   # news: URL
 	    $hits_found++;
+	    print STDERR "PARSE(4:HITS): news hit found.\n" if ($self->{_debug} >= 2);
 	} elsif ($state == $HITS && /^<cite><a href="([^"]+)">/) { #"
 	    if (defined($hit)) {
+		$raw .= $_;
 	        $hit->add_url($1);
 	        $hits_found++;   # altavista counts URL==hit
 	    };
-	} elsif ($state == $HITS && /^<CENTER>.*\s+p\./) {
+	    print STDERR "PARSE(5:HITS): additional hit found.\n" if ($self->{_debug} >= 2);
+	} elsif ($state == $HITS && /^<b>[Tt]ip:/) {
 	    # end, with a list of other pages to go to
-	    if (defined($hit)) {
-	        push(@{$self->{cache}}, $hit);
-	    };
-	    if (/Next\]/) {
+	    ($hit, $raw) = $self->begin_new_hit($hit, $raw);
+	    $state = $TRAILER;
+	    print STDERR "PARSE(6:HITS->TRAILER).\n" if ($self->{_debug} >= 2);
+	} elsif ($state == $HITS && /^<CENTER>.*\s+p\./) {   # pre july 97
+	    # end, with a list of other pages to go to
+	    ($hit, $raw) = $self->begin_new_hit($hit, $raw);
+	    if (/\[[Nn]ext\]/) {
 		# set up next page
 		my($relative_url) = m@<a\s+href="([^"]+)">\s*\[\s*[Nn]ext\s*\]\s*</a>@; #"
 		$self->{_next_url} = new URI::URL($relative_url, $self->{_base_url});
 	    } else {
 		$self->{_next_url} = undef;
 	    };
-	    $state = $TRAILER;
+	    $state = $POST_NEXT;
+	    print STDERR "PARSE(7:HITS->POST_NEXT).\n" if ($self->{_debug} >= 2);
+	} elsif ($state == $TRAILER && /\>\[[Nn]ext\]\</) {
+	    # set up next page
+	    my($relative_url) = m@<a\s+href="([^"]+)">\s*\[\s*[Nn]ext\s*\]\s*</a>@; # "
+	    $self->{_next_url} = new URI::URL($relative_url, $self->{_base_url});
+	    $state = $POST_NEXT;
+	    print STDERR "PARSE(7:TRAILER->POST_NEXT): found next.\n" if ($self->{_debug} >= 2);
+	} else {
+	    # accumulate raw
+	    $raw .= $_;
 	};
     };
-    if ($state != $TRAILER) {
+    if ($state != $POST_NEXT) {
 	# end, no other pages (missed ``next'' tag)
-	if (defined($hit)) {
-	    push(@{$self->{cache}}, $hit);
-	};
+	$self->begin_new_hit($hit, $raw);   # save old one
 	$self->{_next_url} = undef;
+	print STDERR "PARSE: never got to TRAILER.\n" if ($self->{_debug} >= 2);
     };
 
     # sleep so as to not overload altavista

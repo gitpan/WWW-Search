@@ -3,20 +3,18 @@ WWW::Search and AutoSearch
 ==========================
 
 
-WHAT IS NEW WITH WWW::Search 1.009?
+WHAT IS NEW WITH WWW::Search 1.010?
 -----------------------------------
 
-overview:  1.009 is primarily a maintenance release to accommodate
-	changes to LWP and some search engines.
+- new: normalized_score, a back-end independent score (from Paul Lindner)
+- new: generic options are supported by several back-ends
+	(specify search engine URL, debugging, etc.)
+- new: AltaVista back-end now sets SearchResult::raw
+- bug-fix: update for AltaVista (page format changed Jul 97)
+	(some information wrt fix provided by Guy Decoux)
 
-- change:  search application renamed WebSearch (a more specific name)
-- bug-fix:  the WWW::Search error in formatting is fixed
-	(problem found by Larry Virden, fix by him and johnh)
-- bug-fix:  RobotUA handling updated for new LWP in Search.pm
-- bug-fix:  update for Infoseek (page format changed about 1 Jan 97)
-	(problem found by Joseph McDonald, fix by Cesare Feroldi de Rosa)
-- bug-fix:  update for Excite (page format changed about 9 Jan 97)
-	(problem found by Juan Jose Amor, fix by GLen Pringle)
+This release is an interim release, I hope to have a more complete
+release in late August fixing the other (currently broken search engines).
 
 
 WHAT IS WWW::Search?
@@ -196,6 +194,19 @@ RELEASE HISTORY
 - private alpha release, see 1.009 for list of new features
 
 
+1.009:  (14 January 1997)
+overview:  1.009 is primarily a maintenance release to accommodate
+	changes to LWP and some search engines.
+- change:  search application renamed WebSearch (a more specific name)
+- bug-fix:  the WWW::Search error in formatting is fixed
+	(problem found by Larry Virden, fix by him and johnh)
+- bug-fix:  RobotUA handling updated for new LWP in Search.pm
+- bug-fix:  update for Infoseek (page format changed about 1 Jan 97)
+	(problem found by Joseph McDonald, fix by Cesare Feroldi de Rosa)
+- bug-fix:  update for Excite (page format changed about 9 Jan 97)
+	(problem found by Juan Jose Amor, fix by GLen Pringle)
+
+
 SUPPORT AND CREDITS
 -------------------
 
@@ -204,7 +215,7 @@ from the other contributors.  Components of AltaVista have been
 written by several people:
 
 APPLICATIONS:
-	search			John Heidemann <johnh@isi.edu>
+	WebSearch		John Heidemann <johnh@isi.edu>
 	AutoSearch 		William Scheding <wls@isi.edu>
 
 BACK-ENDS:
@@ -215,22 +226,24 @@ BACK-ENDS:
 	Infoseek		Cesare Feroldi de Rosa
 	Lycos			William Scheding
 
-AutoSearch is based on an earlier implementation by Kedar Jog with
-advice from Joe Touch.
+AutoSearch is based on an earlier implementation by Kedar Jog
+<jog@isi.edu> with advice from Joe Touch <touch@isi.edu>.
 
 Bugs and extensions (to the software and documentation) have been
 identified by William Scheding <wls@isi.edu>, T. V. Raman
-<raman@adobe.com> (proxy support, fix included), C. Feroldi
-<C.Feroldi@it.net> (fix included), Larry Virden <lvirden@cas.org> (fix
-included).
+<raman@adobe.com> (proxy support), C. Feroldi <C.Feroldi@it.net>,
+Larry Virden <lvirden@cas.org>, Paul Lindner <PAUL.LINDNER@itu.ch>,
+Guy Decoux <decoux@moulon.inra.fr>.
 
 Bugs have reported by Joseph McDonald <joe@smartlink.net>, Juan Jose
-Amor <jjamor@infor.es>.
+Amor <jjamor@infor.es>, Bowen Dwelle <bowen@hotwired.com>.
 
 Feedback, bug reports and fixes, and new back-ends should be sent to
 John Heidemann <johnh@isi.edu>.  Before submitting a bug report,
 please check <http://www.isi.edu/lsam/tools/WWW_SEARCH/> for any
-announcements about known bugs.
+announcements about known bugs.  When sending e-mail, please please
+put [WWW::Search] at the beginning of the subject line (or risk me
+losing the message in the pile).
 
 
 

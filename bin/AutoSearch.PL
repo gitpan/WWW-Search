@@ -23,7 +23,7 @@ print OUT <<'!NO!SUBS!';
 # AutoSearch.pl
 # Copyright (c) 1996-1997 University of Southern California.
 # All rights reserved.                                            
-# $Id: AutoSearch.PL,v 1.28 1997/01/08 20:03:25 johnh Exp $
+# $Id: AutoSearch.PL,v 1.30 1997/02/12 18:43:02 johnh Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -66,6 +66,10 @@ creates a directory replication_query
 and fills it with the facinating output of the AltaVista query
 on C<"lsam replication">,
 with pages titled ``LSAM Replication''.
+(Note the quoting:  the single quotes in
+C<'"lsam replication"'> are for the shell,
+the double quotes are for AltaVista
+to search for the phrase rather than the separate words.)
 
 A more complicated example:
 
@@ -117,6 +121,12 @@ Specify the search engine.  The query string will be submitted
 to the user specified search engine.  The default is B<AltaVista>.
 Other search engines supported are B<Lycos>, B<HotBot>, and B<Yahoo>.
 
+In many cases there are specialized versions of search engines.
+For example, B<AltaVista::AdvancedWeb> and B<AltaVista::News>
+allow more powerful and Usenet searches.
+See L<AltaVista> or the man page for your search engine
+for details about specialized variations.
+
 =item C<-o>
 
 Specify the query options.  The query options will be submitted 
@@ -126,8 +136,10 @@ engine or option.  More than one query option may be specified.
 
 Example:
 C<-o what=news>
-causes AltaVista to search Usenet
-(but for a simpler way, try C<-e AltaVista::News>).
+causes AltaVista to search Usenet.
+Although this works, the preferred mechanism
+in this case would be C<-e AltaVista::News> or C<-e AltaVista::AdvancedNews>.
+Options are intended for internal or expert use.
 
 
 =item C<-f>

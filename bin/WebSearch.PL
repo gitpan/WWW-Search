@@ -5,6 +5,7 @@ chdir(dirname($0));
 $file =~ s/\.pl$//
       if ($Config{'osname'} eq 'VMS' or
           $Config{'osname'} eq 'OS2');  # "case-forgiving"
+$debug = (`hostname` =~ /^dash.isi.edu/);   # development hack
 open OUT,">$file" or die "Can't create $file: $!";
 chmod(0755, $file);
 print "Extracting $file (with variable substitutions)\n";
@@ -18,11 +19,10 @@ $Config{'startperl'} -w
 
 print OUT <<'!NO!SUBS!';
 
-
 #
 # WebSearch.PL
-# Copyright (C) 1996 by USC/ISI
-# $Id: WebSearch.PL,v 1.23 1996/12/18 02:57:05 johnh Exp $
+# Copyright (C) 1996-1997 by USC/ISI
+# $Id: WebSearch.PL,v 1.25 1997/02/25 19:21:12 johnh Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -30,9 +30,10 @@ print OUT <<'!NO!SUBS!';
 
 sub usage {
     print STDERR <<END;
-usage: $0 [-e SearchEngine] [-o option] [-o option...] [-v] query
+usage: $0 [-e SearchEngine] [-o option] [-o option...] [-vr] query
 
 Make a query to a web search engine, showing the primary URLs which match.
+
 END
     exit 1;
 }
@@ -60,6 +61,9 @@ see L<WWW::Search> for a list.
 A more sophisticated client is L<AutoSearch>
 which maintains a change list of found objects.
 
+For examples and hints about searches,
+see L<AutoSearch>.
+
 
 =head1 OPTIONS
 
@@ -83,6 +87,10 @@ Verbose mode.  Enumerate the returned URLs.
 
 Return all URLs.  Some different URLs may refer to the same object.
 
+=item C<-r>
+
+Return the raw entries (HTML).
+
 =back
 
 
@@ -100,7 +108,7 @@ C<WebSearch> is written by John Heidemann, <johnh@isi.edu>.
 
 =head1 COPYRIGHT
 
-Copyright (c) 1996 University of Southern California.
+Copyright (c) 1996-1997 University of Southern California.
 All rights reserved.                                            
                                                                
 Redistribution and use in source and binary forms are permitted
@@ -127,7 +135,9 @@ use strict;
 
 BEGIN {
     # The next lines are a testing hacks.
-#  unshift (@INC, "./lib/"); # for john
+!NO!SUBS!
+   print OUT 'unshift (@INC, "./lib/"); # for john', "\n" if ($debug);
+print OUT <<'!NO!SUBS!';
 #  unshift (@INC, "/nfs/u1/wls/cvs/lsam/rendezvous/lib/"); # for wls
 }
 
@@ -135,12 +145,13 @@ use WWW::Search;
 use Getopt::Long;
 
 my(%opts);
-&GetOptions(\%opts, qw(v a e=s o=s@)); # i.e -v -e=<string> -o=<options>
+&GetOptions(\%opts, qw(v a e=s o=s@ r)); # i.e -v -e=<string> -o=<options>
 
 &usage if ($#ARGV == -1); # we MUST have one left, the query
 
 my($verbose) = $opts{'v'};
 my($all) = $opts{'a'};
+my($raw) = $opts{'r'};
 
 &main(join(" ", @ARGV));
 
@@ -152,13 +163,17 @@ sub print_result {
     my($prefix) = "";
     $prefix = sprintf("[%3d] ", $count) if defined($verbose);
 
-    if ($all) {
+    if (defined($all)) {
         foreach ($result->urls()) {
             print "$prefix$_\n";
             $prefix = "      ";
         };
     } else {
-        print $prefix, $result->url, "\n";
+	if (defined($raw)) {
+	    print $result->raw(), "\n";
+	} else {
+	    print $prefix, $result->url, "\n";
+	};
     };
 }
 

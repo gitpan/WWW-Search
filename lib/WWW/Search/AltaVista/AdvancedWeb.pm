@@ -4,7 +4,7 @@
 # AdvancedWeb.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: AdvancedWeb.pm,v 1.2 1996/11/11 18:35:29 johnh Exp $
+# $Id: AdvancedWeb.pm,v 1.4 1997/02/25 19:22:16 johnh Exp $
 #
 # Complete copyright notice follows below.
 # 
@@ -71,11 +71,12 @@ use WWW::Search::AltaVista;
 sub native_setup_search
 {
     my($self) = shift;
-    if (!defined($self->{_default_options})) {
-	$self->{_default_options} = {
+    if (!defined($self->{_options})) {
+	$self->{_options} = {
 	    pg => 'aq',
 	    what => 'web',
 	    fmt => 'd',
+	    'search_url' => 'http://www.altavista.digital.com/cgi-bin/query',
         };
     };
     # let AltaVista.pm finish up the hard work.
