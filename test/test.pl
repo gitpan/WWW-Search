@@ -3,7 +3,7 @@
 #
 # test.pl
 # Copyright (C) 1997 by USC/ISI
-# $Id: test.pl,v 1.6 1997/11/04 02:07:07 johnh Exp $
+# $Id: test.pl,v 1.8 1998/03/24 19:43:35 johnh Exp $
 #
 # Copyright (c) 1997 University of Southern California.
 # All rights reserved.                                            
@@ -84,16 +84,21 @@ sub test {
     print "\t$cmd\n" if ($verbose);
     open(TRIALSTREAM, "$cmd|") || die "$0: cannot run test\n";
     open(TRIALFILE, ">$file.trial") || die "$0: cannot open $file.trial\n";
+    open(OUTFILE, ">$file.out") || die "$0: cannot open $file.out\n"
+	if ($mode == $MODE_UPDATE);
     while (<TRIALSTREAM>) {
 	print TRIALFILE $_;
+	print OUTFILE $_ if ($mode == $MODE_UPDATE);
     };
     close TRIALSTREAM;
     close TRIALFILE;
+    close OUTFILE if ($mode == $MODE_UPDATE);
     if (-f "$file.out") {
 	system("diff -c $file.out $file.trial >$file.diff");
 	my($e) = ($? >> 8);
 	if ($e == 0) {
 	    print "\tok.\n";
+	    unlink("$file.trial");   # clean up
 	} elsif ($e == 1) {
 	    print "\tDIFFERENCE DETECTED.\n";
 	} else {
@@ -135,7 +140,7 @@ sub test_cases {
     $maintainer = 'John Heidemann <johnh@isi.edu>';
 
     $file = 'test/AltaVista/zero_result';
-    $query = '+LSAM +NoSuchWord';
+    $query = '+LSAM +Bogus' . 'NoSuchWord';
     $date = 'Fri Oct  3 16:30:25 PDT 1997';
     test;
 
@@ -152,7 +157,7 @@ sub test_cases {
     $maintainer = 'John Heidemann <johnh@isi.edu>';
 
     $file = 'test/AltaVista/Web/zero_result';
-    $query = '+LSAM +NoSuchWord';
+    $query = '+LSAM +Bogus' . 'NoSuchWord';
     $date = 'Thu Oct 23 17:08:48 PDT 1997';
     test;
 
@@ -169,7 +174,7 @@ sub test_cases {
     $maintainer = 'John Heidemann <johnh@isi.edu>';
 
     $file = 'test/AltaVista/AdvancedWeb/zero_result';
-    $query = 'LSAM and NoSuchWord';
+    $query = 'LSAM and Bogus' . 'NoSuchWord';
     $date = 'Thu Oct 23 17:08:48 PDT 1997';
     test;
 
@@ -194,7 +199,7 @@ sub test_cases {
     $test_by_counting = undef;
 
     $file = 'test/AltaVista/News/zero_result';
-    $query = '+perl +NoSuchWord';
+    $query = '+perl +Bogus' . 'NoSuchWord';
     test;
 
     ######################################################################
@@ -210,7 +215,7 @@ sub test_cases {
     $test_by_counting = undef;
 
     $file = 'test/AltaVista/AdvancedNews/zero_result';
-    $query = 'perl and NoSuchWord';
+    $query = 'perl and Bogus' . 'NoSuchWord';
     test;
 
     ######################################################################
@@ -229,8 +234,19 @@ sub test_cases {
 
     ######################################################################
     $search_engine = 'HotBot';
-    $maintainer = 'Wm. L. Scheding <wls@isi.edu>';
-    not_working_and_abandonded;
+    $maintainer = 'Martin Thurn <mthurn@irnet.rest.tasc.com>';
+
+    $file = 'test/HotBot/zero_result';
+    $query = '"mrfglbqnx Bogus' . 'NoSuchWord"';
+    test;
+
+    $file = 'test/HotBot/one_page_result';
+    $query = '"Christie Abbott"';
+    test;
+
+    $file = 'test/HotBot/two_page_result';
+    $query = '+"Martin Thurn" +SWB';
+    test;
 
     ######################################################################
     $search_engine = 'Infoseek';
@@ -242,7 +258,7 @@ sub test_cases {
     $maintainer = 'John Heidemann <johnh@isi.edu>';
 
     $file = 'test/Lycos/zero_result';
-    $query = 'LSAM NoSuchWord';
+    $query = 'LSAM Bogus' . 'NoSuchWord';
     test;
 
     $file = 'test/Lycos/one_page_result';
@@ -274,8 +290,19 @@ sub test_cases {
 
     ######################################################################
     $search_engine = 'Yahoo';
-    $maintainer = 'Wm. L. Scheding <wls@isi.edu>';
-    not_working_and_abandonded;
+    $maintainer = 'Martin Thurn <mthurn@irnet.rest.tasc.com>';
+
+    $file = 'test/Yahoo/zero_result';
+    $query = '"mrfglbqnx Bogus' . 'NoSuchWord"';
+    test;
+
+    $file = 'test/Yahoo/one_page_result';
+    $query = 'LSAM';
+    test;
+
+    $file = 'test/Yahoo/two_page_result';
+    $query = 'Star Wars';
+    test;
 }
 
 sub main {
@@ -290,6 +317,8 @@ sub main {
 	return;
     };
 
+#    print "\n\nWWW::Search version " . $WWW::Search::VERSION . "\n";
+
     print "\n\nTESTING INTERNAL PARSING.\n\t(Errors here should be reported to the WWW::Search maintainer.)\n\n";
     $mode = $MODE_INTERNAL;
     &test_cases;
@@ -303,3 +332,5 @@ main;
 
 exit 0;
 
+# supress warnings
+#my($x) = $WWW::Search::VERSION;

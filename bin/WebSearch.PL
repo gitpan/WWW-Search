@@ -22,7 +22,7 @@ print OUT <<'!NO!SUBS!';
 #
 # WebSearch.PL
 # Copyright (C) 1996-1997 by USC/ISI
-# $Id: WebSearch.PL,v 1.27 1997/10/24 17:13:07 johnh Exp $
+# $Id: WebSearch.PL,v 1.28 1998/03/24 19:43:31 johnh Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -167,12 +167,23 @@ sub print_result {
     my($result, $count) = @_;
 
     my($prefix) = "";
-    $prefix = sprintf("[%3d] ", $count) if defined($verbose);
+    if (defined($verbose)) {
+	my(@attribs) = ();
+        $prefix = "$count. ";
+	push(@attribs, "score: " . $result->score())
+	    if (defined($result->score()));
+	push(@attribs, "normalized_score: " . $result->normalized_score())
+	    if (defined($result->normalized_score()));
+	push(@attribs, "size: " . $result->size())
+	    if (defined($result->size()));
+        $prefix .= "(" . join(", ", @attribs) . ") "
+	    if ($#attribs >= 0);
+    };
 
     if (defined($all)) {
         foreach ($result->urls()) {
             print "$prefix$_\n";
-            $prefix = "      ";
+            $prefix = "\t";
         };
     } else {
 	if (defined($raw)) {

@@ -4,7 +4,7 @@
 # Lycos.pm
 # by Wm. L. Scheding, John Heidemann
 # Copyright (C) 1996-1997 by USC/ISI
-# $Id: Lycos.pm,v 1.6 1997/11/04 01:04:11 johnh Exp $
+# $Id: Lycos.pm,v 1.7 1998/03/24 19:43:34 johnh Exp $
 #
 # Complete copyright notice follows below.
 # 
@@ -178,34 +178,31 @@ sub native_retrieve_some
         next if m@^$@; # short circuit for blank lines
 	if ($state == $HEADER && m@\s+of.*(\d+).*relevant\s+result@i) { # new as of  7-Oct-97
 	    $self->approximate_result_count($1);
-            print STDERR "PARSE(HEADER->HITS): $_\n" if ($self->{_debug} >= 2);
+            print STDERR "PARSE(HEADER->HITS-1): $_\n" if ($self->{_debug} >= 2);
 	    $state = $HITS;
-	} elsif ($state == $HITS && m@(<FONT.*<b>\d+\)|<b><li>)\s+<a\s+href="([^"]+)">(.*)\<\/a\>@i) { #"
+	} if ($state == $HEADER && m@matching web pages@i) {  # new as of 23-Mar-98
+            print STDERR "PARSE(HEADER->HITS-2): $_\n" if ($self->{_debug} >= 2);
+	    $state = $HITS;
+	} elsif ($state == $HITS && m@^<a href="([^"]+)">(.*)\<\/a\>@i) { # post 23-Mar-98 "
 	    $raw = $_;
-	    $url = $2;
-	    $title = $3;
+	    $url = $1;
+	    $title = $2;
 	    print STDERR "PARSE(HITS->DESC): $_\n" if ($self->{_debug} >= 2);
 	    $state = $DESC;
 	} elsif ($state == $DESC) {
 	    $raw .= $_;
 	    m@<br>(.*)@;
 	    $desc = $2;
-	    print STDERR "PARSE(DESC->RATING): $_\n" if ($self->{_debug} >= 2);
-	    $state = $RATING;	    
-	} elsif ($state == $RATING) {
-	    $raw .= $_;
-	    m@<br>.*\[.*(\d+)\%\]@;
-	    $rating = $1;
+	    print STDERR "PARSE(DESC->HITS): $_\n" if ($self->{_debug} >= 2);
+	    #
 	    my($hit) = new WWW::SearchResult;
 	    $hit->add_url($url);
 	    $hit->title($title);
 	    $hit->description($desc);
 	    $hit->score($rating);
-	    $hit->normalized_score($rating * 10);
 	    $hit->raw($raw);
 	    $hits_found++;
 	    push(@{$self->{cache}}, $hit);
-	    print STDERR "PARSE(RATING->HITS): $_\n\n" if ($self->{_debug} >= 2);
 	    $state = $HITS;
 	} elsif ($state == $HITS && m@-- end formatted results --@) {
 	    print STDERR "PARSE(HITS->TRAILER): $_\n\n" if ($self->{_debug} >= 2);

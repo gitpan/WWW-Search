@@ -5,189 +5,293 @@
 <!--begin resultheader.inc-->
 <BODY BGCOLOR="#FFFFFF">
 
-<TABLE BORDER="0" CELLSPACING=0 CELLPADDING=0 WIDTH=602>
-<TR>
-<TD WIDTH=125 BGCOLOR="#000000" VALIGN=TOP ROWSPAN=9>
-<a href="http://www.lycos.com/"><IMG SRC="/assist/graphics/new-logo.gif" width=125 height=48 alt="Lycos" border=0></a>
-<a name="refine"><IMG SRC="/assist/graphics/your-guide.gif" height=76 width=125 alt="Your Personal Guide"></A><BR>
+<TABLE BORDER="0" CELLSPACING=0 CELLPADDING=0 WIDTH=610>
+<TR valign=top>
+<TD WIDTH=135 BGCOLOR="#000000" VALIGN=TOP>
+
+<TABLE WIDTH=135 BGCOLOR="#000000" CELLPADDING=0 CELLSPACING=0 BORDER=0>
+<TR VALIGN=TOP>
+<TD VALIGN=TOP>
+<CENTER><a href="http://www.lycos.com/"><IMG SRC="/assist/graphics/new-logo.gif" width=125 height=48 alt="Lycos" border=0></a>
+<MAP NAME=personalize>
+<AREA SHAPE=rect COORDS="3,15 85,35" HREF="http://personal.lycos.com/">
+</MAP>
+<IMG SRC="/assist/graphics/searchresults/your-guide.gif" height=70 width=99 BORDER=0 alt="Click here to personalize lycos" usemap="#personalize" ISMAP>
+<P>
+<TABLE WIDTH=119 BGCOLOR=#EEEEEE CELLPADDING=2 CELLSPACING=0 BORDER=0>
+<TR><TD VALIGN=TOP BGCOLOR=#CC0000 COLSPAN=2>
+<FONT FACE="helvetica, arial, ms sans serif, sans-serif" COLOR="#FFFFFF"><B>Browse Topics</B></TD></TR>
+<FONT SIZE=-1 FACE="helvetica, arial, ms sans serif, sans-serif"><TR><TD WIDTH=4 BGCOLOR="#EEEEEE"><BR></TD><TD><FONT FACE="HELVETICA, ARIAL" SIZE="-1"><A HREF="http://www.lycos.com/cgi-bin/pursuit?query=custom+ib&cat=lycos&matchmode=and&src=iowa"> custom ib</A></FONT></TD></TR><TR><TD WIDTH=4 BGCOLOR="#EEEEEE"><BR></TD><TD><FONT FACE="HELVETICA, ARIAL" SIZE="-1"><A HREF="http://www.lycos.com/cgi-bin/pursuit?query=isi+category&cat=lycos&matchmode=and&src=iowa"> isi category</A></FONT></TD></TR><TR><TD WIDTH=4 BGCOLOR="#EEEEEE"><BR></TD><TD><FONT FACE="HELVETICA, ARIAL" SIZE="-1"><A HREF="http://www.lycos.com/cgi-bin/pursuit?query=homepage+ib&cat=lycos&matchmode=and&src=iowa"> homepage ib</A></FONT></TD></TR><TR><TD WIDTH=4 BGCOLOR="#EEEEEE"><BR></TD><TD><FONT FACE="HELVETICA, ARIAL" SIZE="-1"><A HREF="http://www.lycos.com/cgi-bin/pursuit?query=isi+buku&cat=lycos&matchmode=and&src=iowa"> isi buku</A></FONT></TD></TR>
+<BR>
+</TD></TR>
+</TABLE>
 
 <!-- GUIDEBAR -->	
 <br>
-<TABLE WIDTH=125 BORDER=0 CELLSPACING=4 CELLPADDING=0 VALIGN=TOP BGCOLOR="#000000">
-<TR VALIGN=TOP>	<TD WIDTH=10 ROWSPAN=6>&#160;</TD>
-		<TD VALIGN=TOP WIDTH=115 BGCOLOR="#FFCC33">&#160;<A HREF="http://www.lycos.com"><FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" COLOR="#000000" SIZE="-1"><B>Lycos Home</B></FONT></A></TD></TR>
-<TR>		<TD VALIGN=TOP WIDTH=115 BGCOLOR="#FFCC33">&#160;<A HREF="http://www.lycos.com/webguides/webguides.html"><FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" COLOR="#000000" SIZE="-1"><B>Web Guides</B></FONT></A></TD></TR>
-<TR>		<TD VALIGN=TOP WIDTH=118 bgcolor="#FFCC33" valign="top">
-<FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" COLOR="#000000" SIZE="-1">
-&nbsp;<B><A HREF="/autos/"><FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" COLOR="#000000" SIZE="-1"><B>Autos</B></FONT></A>
-<BR>&nbsp;<B><A HREF=/business/><FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" COLOR="#000000" SIZE="-1"><B>Business</B></FONT></A>
-<BR>&nbsp;<B><A HREF=/careers/><FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" COLOR="#000000" SIZE="-1"><B>Careers</B></FONT></A>
-<BR>&nbsp;<B><A HREF=/computers/><FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" COLOR="#000000" SIZE="-1"><B>Computers</B></FONT></A>
-<BR>&nbsp;<B><A HREF=/education/><FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" COLOR="#000000" SIZE="-1"><B>Education</B></FONT></A>
-<BR>&nbsp;<B><A HREF=/entertainment/><FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" COLOR="#000000" SIZE="-1"><B>Entertainment</B></FONT></A>
-<BR>&nbsp;<B><A HREF=/fashion/><FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" COLOR="#000000" SIZE="-1"><B>Fashion</B></FONT></A>
-<BR>&nbsp;<B><A HREF=/government/><FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" COLOR="#000000" SIZE="-1"><B>Government</B></FONT></A>
-<BR>&nbsp;<B><A HREF=/health/><FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" COLOR="#000000" SIZE="-1"><B>Health</B></FONT></A>
-<BR>&nbsp;<B><A HREF=/kids/><FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" COLOR="#000000" SIZE="-1"><B>Kids</B></FONT></A>
-<BR>&nbsp;<B><A HREF=/money/><FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" COLOR="#000000" SIZE="-1"><B>Money</B></FONT></A>
-<BR>&nbsp;<B><A HREF=/news/><FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" COLOR="#000000" SIZE="-1"><B>News</B></FONT></A>
-<BR>&nbsp;<B><A HREF=/people/><FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" COLOR="#000000" SIZE="-1"><B>People</B></FONT></A>
-<BR>&nbsp;<B><A HREF=/shopping/><FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" COLOR="#000000" SIZE="-1"><B>Shopping</B></FONT></A>
-<BR>&nbsp;<B><A HREF=/space/><FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" COLOR="#000000" SIZE="-1"><B>Space/Sci-Fi</B></FONT></A>
-<BR>&nbsp;<B><A HREF=/sports/><FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" COLOR="#000000" SIZE="-1"><B>Sports</B></FONT></A>
-<BR>&nbsp;<B><A HREF=/travel/><FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" COLOR="#000000" SIZE="-1"><B>Travel</B></FONT></A>
-</font>
-</td>
-</tr>
-<TR>		<TD VALIGN=TOP WIDTH=115 BGCOLOR="#FFCC33">&#160;<A HREF="http://lycospro.lycos.com"><FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" COLOR="#000000" SIZE="-1"><B>Search</B></FONT></A></TD></TR>
-<TR>		<TD VALIGN=TOP WIDTH=115 BGCOLOR="#FFCC33">&#160;<A HREF="http://www.lycos.com/help/"><FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" COLOR="#000000" SIZE="-1"><B>Help</B></FONT></A></TD></TR>
-<TR>		<TD VALIGN=TOP WIDTH=115 BGCOLOR="#FFCC33" VALIGN=TOP>&#160;<A HREF="http://echomail.lycos.com/echomail"><FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" COLOR="#000000" SIZE="-1"><B>Feedback</B></FONT></A></TD>
+<TABLE WIDTH=125 BORDER=0 CELLSPACING=4 CELLPADDING=2 VALIGN=TOP BGCOLOR="#000000">
+<TR VALIGN=TOP>	
+<TD VALIGN=TOP WIDTH=125 BGCOLOR="#FFCC33">&#160;<A HREF="http://www.lycos.com"><FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" COLOR="#000000" SIZE="-1"><B>Lycos Home</B></FONT></A>
+</TD></TR>
+<TR><TD VALIGN=TOP WIDTH=125 BGCOLOR="#FFCC33" valign="top">
 
-<TD WIDTH=2 BGCOLOR="#000000" VALIGN=TOP ROWSPAN=5>&#160;</TD>
+	&#160;<A HREF="/autos/"><FONT FACE="helvetica, arial, ms sans serif, sans-serif" COLOR="#000000" SIZE="-1"><B>Autos</B></FONT></A>
+		<BR>
+		&#160;<A HREF="/business/"><font face="helvetica, arial, ms sans serif, sans-serif" color="#000000" size="2"><b>Business</b></font></a>
+		<BR>
+			&#160;<A HREF="/careers/"><font face="helvetica, arial, ms sans serif, sans-serif" color="#000000" size="2"><b>Careers</b></font></A>
+			<BR>
+			&#160;<A HREF="/computers/"><FONT FACE="Helvetica, Ariel, MS Sans Serif, Sans Serif" color="#000000" SIZE="-1"><B>Computers</B></FONT></A>
+			<BR>
+			&#160;<A HREF="/education/"><FONT FACE="Helvetica, Ariel, MS Sans Serif, Sans Serif" color="#000000" SIZE="-1"><B>Education</B></FONT></A>
+			<BR>
+			&#160;<A HREF="/electronics/"><FONT FACE="Helvetica, Ariel, MS Sans Serif, Sans Serif" color="#000000" SIZE="-1"><B>Electronics</B></FONT></A>
+	<BR>
+				&#160;<A HREF="/entertainment/"><FONT FACE="Helvetica, Ariel, MS Sans Serif, Sans Serif" color="#000000" SIZE="-1"><B>Entertainment</B></FONT></A>
+			<BR>
+			&#160;<A HREF="/fashion/"><FONT FACE="Helvetica, Ariel, MS Sans Serif, Sans Serif" color="#000000" SIZE="-1"><B>Fashion</B></FONT></A>
+			<BR>
+			&#160;<A HREF="/games/"><FONT FACE="Helvetica, Ariel, MS Sans Serif, Sans Serif" color="#000000" SIZE="-1"><B>Games</B></FONT></A>
+			<BR>
+			&#160;<A HREF="/government/"><FONT FACE="Helvetica, Ariel, MS Sans Serif, Sans Serif" color="#000000" SIZE="-1"><B>Government</B></FONT></A>
+			<BR>
+			&#160;<A HREF="/health/"><FONT FACE="Helvetica, Ariel, MS Sans Serif, Sans Serif" color="#000000" SIZE="-1"><B>Health</B></FONT></A>
+			<BR>
+			&#160;<A HREF="/homegarden"><FONT FACE="Helvetica, Ariel, MS Sans Serif, Sans Serif" color="#000000" SIZE="-1"><B>Home/Garden</B></FONT></A>
+			<BR>
+			&#160;<A HREF="/internet/"><FONT FACE="Helvetica, Ariel, MS Sans Serif, Sans Serif" color="#000000" SIZE="-1"><B>Internet</B></FONT></A>
+			<BR>
+			&#160;<A HREF="/kids/"><FONT FACE="Helvetica, Ariel, MS Sans Serif, Sans Serif" color="#000000" SIZE="-1"><B>Kids</B></FONT></A>
+			<BR>
+	&#160;<A HREF="/money/"><FONT FACE="Helvetica, Ariel, MS Sans Serif, Sans Serif" color="#000000" SIZE="-1"><B>Money</B></FONT></A>
+	<BR>
+&#160;<A HREF="/news/"><FONT FACE="Helvetica, Ariel, MS Sans Serif, Sans Serif" color="#000000" SIZE="-1"><B>News</B></FONT></A>
+	<BR>
+	&#160;<A HREF="/people/"><FONT FACE="Helvetica, Ariel, MS Sans Serif, Sans Serif" color="#000000" SIZE="-1"><B>People</B></FONT></A>
+	<BR>
+	&#160;<A HREF="/realestate/"><FONT FACE="Helvetica, Ariel, MS Sans Serif, Sans Serif" color="#000000" SIZE="-1"><B>Real Estate</B></FONT></A>
+	<BR>
+	&#160;<A HREF="/commerce/shopnet/"><FONT FACE="Helvetica, Ariel, MS Sans Serif, Sans Serif" color="#000000" SIZE="-1"><B>Shopping</B></FONT></A>
+	<BR>
+	&#160;<A HREF="/space/"><FONT FACE="Helvetica, Ariel, MS Sans Serif, Sans Serif" color="#000000" SIZE="-1"><B>Space/Sci-Fi</B></FONT></A>
+	<BR>
+	&#160;<A HREF="/sports/"><FONT FACE="Helvetica, Ariel, MS Sans Serif, Sans Serif" color="#000000" SIZE="-1"><B>Sports</B></FONT></A>
+	<BR>
+		&#160;<A HREF="/travel/"><FONT FACE="Helvetica, Ariel, MS Sans Serif, Sans Serif" color="#000000" SIZE="-1"><B>Travel</B></FONT></A>
+	</TD>
+</tr>
+<TR>		<TD VALIGN=TOP WIDTH=125 BGCOLOR="#FFCC33">&#160;<A HREF="http://www.lycos.com/search.html"><FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" COLOR="#000000" SIZE="-1"><B>Search</B></FONT></A></TD></TR>
+<TR>		<TD VALIGN=TOP WIDTH=125 BGCOLOR="#FFCC33">&#160;<A HREF="http://www.lycos.com/help/"><FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" COLOR="#000000" SIZE="-1"><B>Help</B></FONT></A></TD></TR>
+<TR>		<TD VALIGN=TOP WIDTH=125 BGCOLOR="#FFCC33" VALIGN=TOP>&#160;<A HREF="http://echomail.lycos.com/echomail"><FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" COLOR="#000000" SIZE="-1"><B>Feedback</B></FONT></A></TD>
+
+
 	</TR>
 	</TABLE>
+
+</TD></TR></TABLE>
 	</TD>
 
 <!---- END GUIDEBAR---->
 
 
-<TD WIDTH=476 VALIGN=TOP>
-<!--begin flag.inc-->
+<TD WIDTH=468 VALIGN=TOP>
+
+
 <!-- SERVICEBAR-->
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 width=470>
-<TR valign=bottom HEIGHT=28>
-<td bgcolor="#6699FF" WIDTH=477 valign=bottom  HEIGHT=28>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=2 WIDTH=473>
+<TR valign=bottom>
+<td bgcolor="#6699FF" WIDTH=473 COLSPAN=3 valign=bottom ALIGN=CENTER HEIGHT=28>
 <MAP NAME=service>
-<AREA SHAPE=rect COORDS="6,0, 54,14" HREF="http://point.lycos.com/categories/">
-<AREA SHAPE=rect COORDS="57,0, 115,14" HREF="http://cityguide.lycos.com/">
-<AREA SHAPE=rect COORDS="119,0, 181,14" HREF="http://www.lycos.com/peoplefind/">
-<AREA SHAPE=rect COORDS="184,0, 243,14" HREF="http://www.stockfind.newsalert.com">
-<AREA SHAPE=rect COORDS="249,0, 307,14" HREF="http://www.lycos.com/roadmap.html">
-<AREA SHAPE=rect COORDS="311,0, 386,14" HREF="http://www.lycos.com/cgi-bin/nph-bounce?gtesearch|http://yp.gte.net/lsearch">
-<AREA SHAPE=rect COORDS="391,0, 467,14" HREF="http://www.lycos.com/ups/bridge.html">
-<AREA SHAPE=default  HREF="http://www.lycos.com/">
+<AREA SHAPE=rect COORDS="15,0 63,14" HREF="http://point.lycos.com/categories/">
+<AREA SHAPE=rect COORDS="66,0 124,14" HREF="http://cityguide.lycos.com/">
+<AREA SHAPE=rect COORDS="128,0 191,14" HREF="/peoplefind/">
+<AREA SHAPE=rect COORDS="194,0 253,14" HREF="http://www.stockfind.lycos.com">
+<AREA SHAPE=rect COORDS="257,0 316,14" HREF="/roadmap.html">
+<AREA SHAPE=rect COORDS="319,0 395,14" HREF="http://www.lycos.com/cgi-bin/nph-bounce?gtehome-button|http://yp.gte.net/ypform.phtml_QUES_SRC=lycos">
+<AREA SHAPE=rect COORDS="399,0 458,14"
+HREF="http://www.lycos.com/emarket/shopping">
+<AREA SHAPE=default  HREF="/index.html">
 </MAP>
-<a href="/assist/maps/service.map"><IMG SRC="/assist/graphics/servicebar.gif" HEIGHT=18 WIDTH=473 alt="Lycos Services" BORDER=0 usemap="#service" ISMAP></a>
+<A HREF="/assist/maps/service.map"><IMG SRC="/assist/graphics/servicebar.gif" HEIGHT=18 WIDTH=473 alt="Lycos Services" BORDER=0 usemap="#service" ISMAP></A>
 </TD>
 </TR>
 <TR><TD>&nbsp;</TD></TR>
 <!-- END SERVICEBAR-->
-<TR>
-<!-- AD -->
-<TD ALIGN=LEFT>
-<FONT SIZE=-2 FACE="helvetica, arial, ms sans serif, sans-serif">
-<center><p><a href="/cgi-bin/nph-adclick.exe/CID=000046630000000300000000/ST=lycos/SV=search/A=.lycos.search_lycos."><img  src="http://ads.lycos.com/ads/netscape41.gif" alt="Searching for a better email or groupware solution?"  width=468 height=60></a><br><a href="/cgi-bin/nph-adclick.exe/CID=000046630000000300000000/ST=lycos/SV=search/A=.lycos.search_lycos.">You're looking at it.</a></center></FONT>
-</TD></TR></TABLE>
-<!-- END AD-->
-<!-- START CONTENT-->
-<TABLE BORDER=0>
-<TD ROWSPAN=9>&nbsp;</TD>
-<TR><TD VALIGN=left><FONT SIZE=-1 FACE="helvetica, arial, ms sans serif, sans-serif">
-<b> 1-5</b> of <b>5</b> relevant results</TD>
-<TD ALIGN=right><FONT SIZE=-1 FACE="helvetica, arial, ms sans serif, sans-serif"><A HREF="/cgi-bin/pursuit?cat=lycos&amp;query=LSAM%20IB%20ISI&mtemp=refine">Refine your search</A></TD>
-<TR><TD BGCOLOR="CC0000" COLSPAN=2>
-<FONT FACE="helvetica, arial, ms sans serif, sans-serif" COLOR="#FFFFFF">&nbsp;&nbsp;<B>Get More Results<B></TD></TR>
-<TR><TD></TD></TR>
-<TR><TD COLSPAN=2>
-<FONT SIZE=-1 FACE="helvetica, arial, ms sans serif, sans-serif">
-<b><li></B><a href="/cgi-bin/pursuit?cat=point&amp;query=LSAM%20IB%20ISI">Top 5% reviews about <B>LSAM IB ISI</B></a><br>
-<b><li></B><a href="/cgi-bin/pursuit?cat=graphics&amp;query=LSAM%20IB%20ISI">Pictures about <B>LSAM IB ISI</B></a><br>
-<b><li></B><a href="/cgi-bin/pursuit?cat=geo&amp;query=LSAM%20IB%20ISI">Personal Homepages about <B>LSAM IB ISI</B></a><br>
-<b><li></B><a href="/cgi-bin/pursuit?cat=bn&amp;query=LSAM%20IB%20ISI">Books from BarnesandNoble.com about <B>LSAM IB ISI</B></a><br>
-<B><li></B><A HREF="http://www.lycos.com/cgi-bin/nph-bounce?gtesearch|http://yp.gte.net/lsearch">Browse Yellow Pages for <B>LSAM IB ISI</B></A>
-</TD></TR>
-<TR><TD></TD></TR>
-<TR><TD BGCOLOR="CC0000" COLSPAN=2><FONT FACE="helvetica, arial, ms sans serif, sans-serif" COLOR="#FFFFFF">&nbsp;&nbsp;<B>Matching Web Pages</B></TD></TR>
-<TR><TD></TD></TR>
-<TR><TD COLSPAN=2><FONT SIZE=-1 FACE="helvetica, arial, ms sans serif, sans-serif">
 
+
+<TR>
+
+<TD VALIGN=TOP COLSPAN=3>
+                        <!----AD---->
+                        <FONT SIZE=-2 FACE="helvetica, arial, ms sans serif, sans-serif">
+			<center><p><a href="/cgi-bin/nph-adclick.exe/CID=00030f170000000300000000/ST=lycos/SV=search/A=.lycos.search_lycos."><img  src="http://ad.preferences.com/image.ng;spacedesc=PBNEC_Lycos_468x60-RunOfSite_Any" alt="Click here to enter NEC online computer store"  width=468 height=60></a><br><a href="/cgi-bin/nph-adclick.exe/CID=00030f170000000300000000/ST=lycos/SV=search/A=.lycos.search_lycos.">Click here to enter NEC online computer store</a></center></FONT>
+                        <!-- /AD -->
+                        </TD></TR>
+
+
+
+
+<!-- START CONTENT-->
+
+<TR><TD ROWSPAN=14>&nbsp;</TD></TR>
+<TD><FONT SIZE=-1 FACE="helvetica, arial, ms sans serif, sans-serif">
+You Searched for <B>LSAM IB ISI</B></FONT></TD><TD ALIGN=RIGHT><FONT SIZE=-1 FACE="helvetica, arial, ms sans serif, sans-serif"><A HREF="#search">Refine your search</A>&nbsp;</TD></TR>
+
+<TR><TD COLSPAN=2 BGCOLOR="CC0000">
+<FONT FACE="helvetica, arial, ms sans serif, sans-serif" COLOR="#FFFFFF">&nbsp;&nbsp;<B>Related Topics<B>
+</TD></TR>
+<TR><TD COLSPAN=2> </TD></TR>
+<TR><TD COLSPAN=2> 
+<FONT SIZE=-1 FACE="helvetica, arial, ms sans serif, sans-serif">
+<B></B></TD></TR>
+<TR><TD ALIGN=LEFT>
+<FONT SIZE=-1 FACE="helvetica, arial, ms sans serif, sans-serif">
+<B><li></B><a href="/cgi-bin/pursuit?cat=point&amp;query=LSAM+IB+ISI"><B>Web Site Reviews: LSAM IB ISI</B></a><br>
+<B><li></B><a href="/cgi-bin/pursuit?cat=graphics&amp;query=LSAM+IB+ISI"><B>Pictures: LSAM IB ISI</B></a><br>
+<B><li></B><a href="/cgi-bin/pursuit?cat=homepage&amp;query=LSAM+IB+ISI"><B>Personal Home Pages: LSAM IB ISI</B></a><br>
+<B><li></B><a href="/cgi-bin/pursuit?cat=bn_results&amp;&amp;query=LSAM+IB+ISI"><B>BarnesandNoble.com Book Search: LSAM IB ISI</B></a><br>
+<B><li></B><A HREF="http://www.lycos.com/cgi-bin/nph-bounce?gtesearch|http://yp.gte.net/lsearch"><B>Yellow Pages: LSAM IB ISI</B></A><BR>
+<B><li></B><A HREF="/cgi-bin/pursuit?cat=news&amp;&amp;query=LSAM+IB+ISI"><B>Search News for: LSAM IB ISI</B></A><BR>
+<B><li></B><A HREF="http://www.lycos.com/cgi-bin/nph-bounce?tripod-link|http://homepager.tripod.com"><B>Build a Free Homepage</B></A><BR>
+</FONT>
+</TD>
+<TD ALIGN=RIGHT VALIGN=bottom WIDTH=91>
+<MAP NAME=partner>
+<AREA SHAPE=RECT COORDS=0,0,88,36 HREF=/cgi-bin/nph-bounce?tripod-button|http://homepager.tripod.com>
+<AREA SHAPE=RECT COORDS=0,50,86,79 HREF=http://barnesandnoble.bfast.com/booklink/click?sourceid=15862&categoryid=homepage;>
+</MAP>
+<IMG SRC="/assist/graphics/searchresults/bnresultsbutton.gif" width=89 height=80 border=0 usemap="#partner" ISMAP><BR>
+<a href="http://barnesandnoble.bfast.com/booklink/click?sourceid=15862&categoryid=homepage;"><FONT SIZE=-2 FACE="helvetica, arial, ms sans serif, sans-serif">Shop for Books</FONT></A>
+</TD></TR>
+
+<TR><TD COLSPAN=2> </TD></TR>
+<TR><TD COLSPAN=2>
+
+</FONT>
+</TD></TR>
+<TR><TD COLSPAN=2> </TD></TR>
+
+<TR><TD COLSPAN=2 BGCOLOR="CC0000">
+<FONT FACE="helvetica, arial, ms sans serif, sans-serif" COLOR="#FFFFFF">&nbsp;&nbsp;<B>Matching Web Pages</B>
+<FONT FACE="helvetica, arial, ms sans serif, sans-serif" COLOR="#FFFFFF">
+<b> 1-2</b> </TD></TR>
+
+<TR><TD>
 <P>
-<b><li> <a href="http://www.isi.edu/div7/cities/construction.html">IB Under Constuction</a></b>
-<br>Under Construction ----------- This page is currently under construction. Watch this space for updated information in the near future. Infor.
-<br>[Score: 100%]  http://www.isi.edu/div7/cities/construction.html 
-<p>
-<b><li> <a href="http://www.isi.edu/lsam/construction.html">IB Under Constuction</a></b>
-<br>Under Construction ----------- This page is currently under construction. Watch this space for updated information in the near future. Infor.
-<br>[Score: 100%]  http://www.isi.edu/lsam/construction.html 
-<p>
-<b><li> <a href="http://www.isi.edu/ib/plan.html">IB Research Plan</a></b>
+<FONT SIZE=-1 FACE="helvetica, arial, ms sans serif, sans-serif"><B>Next Page&nbsp;&#124;&nbsp; Previous Page  </FONT></TD><TD ALIGN=RIGHT><FONT SIZE=-1 FACE="helvetica, arial, ms sans serif, sans-serif"><A HREF="/cgi-bin/pursuit?cat=lycos&first=1&bq=1&br=1&query=LSAM+IB+ISI&matchmode=and&adv=0&mtemp=bysite&amp;maxhits=50"><B>List by Website</B></A></FONT>
+</TD>
+</TR>
+<TR><TD COLSPAN=2 WIDTH=468>
+
+<FONT SIZE=-1 FACE="helvetica, arial, ms sans serif, sans-serif">
+<a href="http://www.isi.edu/ib/plan.html">IB Research Plan</a>&nbsp;  
 <br>LOGO IB Research Plan ----------- For the experiments in this research, we will make use of traffic generators that emulate WWW browser requ.
-<br>[Score: 99%]  http://www.isi.edu/ib/plan.html 
-<p>
-<b><li> <a href="http://www.isi.edu/ib/discussion.html">IB Discussion</a></b>
+<br>http://www.isi.edu/ib/plan.html
+<BR><a href="/cgi-bin/pursuit?cat=lycos&first=1&bq=1&br=1&query=LSAM+IB+ISI&matchmode=or&adv=0&mltq=1052481691&mtemp=mlt"><FONT COLOR="#CC0000" size=-2>Find Related Web pages</FONT></a> 
+<P>
+<a href="http://www.isi.edu/ib/discussion.html">IB Discussion</a>&nbsp;  
 <br>LOGO IB Discussion ----------- Response time and bandwidth are key resources in this project. Current Internet user interfaces, such as Web .
-<br>[Score: 99%]  http://www.isi.edu/ib/discussion.html 
-<p>
-<b><li> <a href="http://www.isi.edu/~katia/">Katia Obraczka, USC Information Science Institute </a></b>
-<br>Katia Obraczka Address USC Information Science Institute 4676 Admiralty Way Marina del Rey, CA 90212 voice: (310) 822-1511 fax: (310) 823-67.
-<br>[Score: 73%]  http://www.isi.edu/~katia/ 
-<p>
+<br>http://www.isi.edu/ib/discussion.html
+<BR><a href="/cgi-bin/pursuit?cat=lycos&first=1&bq=1&br=1&query=LSAM+IB+ISI&matchmode=or&adv=0&mltq=3199965363&mtemp=mlt"><FONT COLOR="#CC0000" size=-2>Find Related Web pages</FONT></a> 
+<P>
 
 </font>
+
 <!-- end formatted results -->
+
+<P>
+<NOBR><FONT SIZE=-1 FACE="helvetica, arial, ms sans serif, sans-serif"><B>Next Page&nbsp;&#124;&nbsp; Previous Page &nbsp;&#124;&nbsp;Page:&nbsp;<B><FONT SIZE=+1>1</FONT>
+</B></B></FONT></NOBR>
 </TD></TR>
-<TR><TD COLSPAN=3>
-<!-- Previous/Next page/Refine Search stufff... -->
-<br><B>
-&nbsp;&nbsp;<FONT SIZE=-1 FACE="helvetica, arial, ms sans serif, sans-serif">Previous Page &nbsp;&nbsp; Next Page </font>
-<br>&nbsp;&nbsp;<FONT SIZE="-1" FACE="helvetica, arial, ms sans serif, sans-serif">Go to page:&nbsp;&nbsp;<B><FONT SIZE=+1>1</FONT>
-</B> </FONT>
-</TD>
-</TR></TABLE>
-<!-- HTML Search Form starts here -->
+</TABLE>
+
+<!--SEARCH YOU SEARCH RESULTS FORM STARTS HERE-->
+
+
 <TABLE BGCOLOR="#6699FF" CELLSPACING=0 CELLPADDING=2 BORDER=0>
+<TR><A NAME="search">
+<TD bgcolor="#ffffff" ALIGN=LEFT VALIGN=MIDDLE WIDTH=473>&#160;&#160;<FONT FACE="HELVETICA, ARIAL" SIZE=+1 COLOR="#CC0000">Refine Your Search</FONT></TD><TD bgcolor="#ffffff" ALIGN=RIGHT>&nbsp;&nbsp;<A HREF=/help/refine.html><FONT SIZE=-2 FACE=HELVETICA,ARIAL><B>HELP</B></FONT></A>
+</TD></TR>
 <TR>
-<TD ALIGN=CENTER VALIGN=MIDDLE WIDTH=473 COLSPAN=2>
+<TD VALIGN=MIDDLE WIDTH=473 COLSPAN=2>
 	<FORM ACTION="/cgi-bin/pursuit" METHOD=GET>
 	<INPUT TYPE="hidden" NAME="adv" VALUE="0">
-	<FONT SIZE=-1  FACE="HELVETICA, ARIAL, SANS SERIF, MS SANS SERIF"><B>You Searched</B>&nbsp;<SELECT NAME="cat">
-	<OPTION SELECTED value="lycos">The Web
-	<OPTION value="point">TOP 5% Sites
-	<OPTION value="sounds">Sounds
-	<OPTION value="graphics">Pictures
-	<OPTION value="geo">Personal Homepages
-	<OPTION value="bn">Books
-	<OPTION VALUE="stockfind">Stock Symbol</SELECT>
-	&nbsp;for&nbsp;<SELECT NAME="matchmode">
-	<OPTION SELECTED value="and">All the words
-	<OPTION value="or">Any of the words
+	<INPUT TYPE="hidden" NAME="pq" VALUE="LSAM IB ISI">
+	&#160;&#160;<FONT FACE="HELVETICA, ARIAL,SANS SERIF,MS SANS SERIF" SIZE=-1>Search <B>LSAM IB ISI</B> for:</FONT></TD></TR>
+	<TR><TD VALIGN=TOP ALIGN=LEFT>
+&#160;&#160;<INPUT TYPE="text" NAME="query" VALUE="" SIZE=37></TD><TD ALIGN=LEFT><INPUT TYPE="image" SRC="/assist/graphics/searchresults/searchthese.gif" width=132 height=22 BORDER=0 align=absmiddle VSPACE=4>	
+</td></tr>
+<TR><TD bgcolor="#ffffff" COLSPAN=2>
+<BR>
+&#160;&#160;<FONT FACE="HELVETICA, ARIAL" SIZE=+1 COLOR="#CC0000">More Ways to Search</FONT><BR>
+&#160;&#160;<A HREF="/cgi-bin/pursuit?&amp;query=LSAM+IB+ISI&amp;mtemp=title&amp;fs=title"><FONT SIZE=-1 FACE=HELVETICA,ARIAL><B>Show pages with LSAM IB ISI in the title</FONT></B></A>&#160;<IMG SRC="/assist/graphics/searchresults/new-white.gif" width=32 height=11 border=0 alt="new"><BR>
+&#160;&#160;<A HREF="/search/"><FONT SIZE=-1 FACE=HELVETICA,ARIAL><B>Search for text in URLs (Web Addresses)</FONT></B></A>&#160;<IMG SRC="/assist/graphics/searchresults/new-white.gif" width=32 height=11 border=0 alt="new"><BR>
+&#160;&#160;<A HREF="/search/"><FONT SIZE=-1 FACE=HELVETICA,ARIAL><B>Search within a specific Web site</FONT></B></A>&#160;<IMG SRC="/assist/graphics/searchresults/new-white.gif" width=32 height=11 border=0 alt="new"><BR>
+<p>
+</TD></TR>
+</FORM>
+</TABLE>
+
+
+
+<!-- HTML Search Form starts here -->
+<TABLE BGCOLOR="#6699FF" CELLSPACING=0 CELLPADDING=2 BORDER=0>
+<TR><TD colspan=2 bgcolor="#ffffff" ALIGN=LEFT VALIGN=MIDDLE WIDTH=473>&#160;&#160;<FONT FACE="HELVETICA, ARIAL" SIZE=+1 COLOR="#CC0000">Search Again</FONT></TD><TD bgcolor="#ffffff" ALIGN=RIGHT>&nbsp;&nbsp;<A HREF=/help/search-help.html><FONT SIZE=-2 FACE=HELVETICA,ARIAL><B>HELP</B></FONT></A>
+</TD></TR>
+<TR><TD VALIGN=TOP WIDTH=473 COLSPAN=3>
+<FORM ACTION="/cgi-bin/pursuit" METHOD=GET>
+<INPUT TYPE="hidden" NAME="adv" VALUE="0">
+	&nbsp;Search&nbsp;<SELECT NAME=cat>
+	<OPTION SELECTED VALUE=lycos>The Web 
+	<OPTION VALUE=point>Web Site Reviews
+	<OPTION VALUE=homepage>Personal Homepages 	
+	<OPTION VALUE=dejanews>Discussion Groups
+	<OPTION VALUE=news>Reuters News 
+	<OPTION VALUE=weather>Weather (city)
+	<OPTION VALUE=cities>Cities 	
+	<OPTION VALUE=stockfind>Stock (symbol)
+	<OPTION VALUE=bn>Books
+	<OPTION VALUE=graphics>Pictures
+	<OPTION VALUE=sounds>Sounds
+	<OPTION VALUE=recipedia>Recipes
+	<OPTION VALUE=ups>UPS Tracking #</SELECT>
+	&nbsp;for&nbsp;<SELECT NAME="npl">
+  <OPTION value="matchmode=or&amp;adv=1" >Any of the words
+  <OPTION SELECTED value="matchmode=and&amp;adv=1" >All the words
 	</SELECT>
 	</FONT>
-</TD>
-</TR>
-<TR>
-<TD ALIGN=CENTER VALIGN=MIDDLE WIDTH=472 COLSPAN=0>
-<INPUT TYPE="text" NAME="query" VALUE="LSAM IB ISI" SIZE=50>	
-</TD>
+</TD></TR>
+<TR><TD ALIGN=RIGHT>
+<INPUT TYPE="text" NAME="query" VALUE="LSAM IB ISI" SIZE=35>&nbsp;&nbsp;</TD><TD ALIGN=LEFT><INPUT TYPE="image" SRC="/assist/graphics/gogetit(R).gif" height=22 width=72 BORDER=0 align=ABSmiddle>	
+</TD><TD>&#160;</TD>
 </TR>
 
 <TR>
-<TD ALIGN=CENTER VALIGN=TOP>
-<A HREF=/help/><FONT SIZE=-1 COLOR=#000000 FACE=HELVETICA,ARIAL><B>HELP</B></FONT></A>&nbsp;&nbsp;&nbsp;
-<A HREF=http://lycospro.lycos.com/lycospro-nojava.html><FONT SIZE=-1 COLOR=#000000 FACE=HELVETICA,ARIAL><B>Advanced Search</B></FONT></A>&nbsp;&nbsp;&nbsp;
-<A HREF=http://echomail.lycos.com/echomail><FONT SIZE=-1 COLOR=#000000 FACE=HELVETICA,ARIAL><B>Feedback?</FONT></B></A>&nbsp;&nbsp;&nbsp;
-	<INPUT TYPE="image" SRC="/assist/graphics/gogetit(R).gif" height=22 width=72 BORDER=0 align=ABSmiddle>
+<TD VALIGN=BOTTOM COLSPAN=3>
+&nbsp;&nbsp;&nbsp;<A HREF=http://lycospro.lycos.com/lycospro-nojava.html><FONT SIZE=-1 COLOR=#000000 FACE=HELVETICA,ARIAL><B>Advanced Search</B></FONT></A>&nbsp;&nbsp;&nbsp;
+<A HREF=http://echomail.lycos.com/echomail><FONT SIZE=-1 COLOR=#000000 FACE=HELVETICA,ARIAL><B>Feedback</FONT></B></A></TD>
 </TD>
 </TR>
 </FORM>		
 </TABLE>
 
-<P> <FONT SIZE="-2" FACE="helvetica, arial, ms sans serif, sans-serif">
-<center><a href="/cgi-bin/nph-adclick.exe/CID=000046630000000300000000/ST=lycos/SV=search/A=.lycos.search_lycos."><img  src="http://ads.lycos.com/ads/netscape41.gif" alt="Searching for a better email or groupware solution?"  width=468 height=60></a><br><a href="/cgi-bin/nph-adclick.exe/CID=000046630000000300000000/ST=lycos/SV=search/A=.lycos.search_lycos.">You're looking at it.</a></center>
-<p><A HREF="http://www.lycos.com/lycosinc/legal.html">Copyright</A>&copy; 1997 Lycos,Inc.
-All Rights Reserved.<BR>
-Lycos<font size="-3"><sup>&#174;</sup></font> is a registered trademark of Carnegie Mellon University<BR>
-<A HREF="http://www.lycos.com/contact.html">Questions &amp; Comments</A>  <A HREF="http://www.lycos.com/lycosinc/legal.html">Terms and conditions</A>
+
+
+<P>
+<FONT SIZE="-2" FACE="helvetica, arial, ms sans serif, sans-serif">
+<center><a href="/cgi-bin/nph-adclick.exe/CID=00030f170000000300000000/ST=lycos/SV=search/A=.lycos.search_lycos."><img  src="http://ad.preferences.com/image.ng;spacedesc=PBNEC_Lycos_468x60-RunOfSite_Any" alt="Click here to enter NEC online computer store"  width=468 height=60></a><br><a href="/cgi-bin/nph-adclick.exe/CID=00030f170000000300000000/ST=lycos/SV=search/A=.lycos.search_lycos.">Click here to enter NEC online computer store</a></center>
+<P>
+&#160;&#160;<A HREF="http://www.lycos.com/lycosinc/advertising.html">Advertise with Lycos</A><BR>
+&#160;&#160;<A HREF="http://www.lycos.com/lycosinc/legal.html">Copyright</A>&copy; 1998 Lycos,Inc.  All Rights Reserved.
+Lycos<font size="-3"><sup>&#174;</sup></font> is a registered trademark of Carnegie &#160;&#160;Mellon University 
+&#160;&#160;<A HREF="http://www.lycos.com/contact.html">Questions &amp; Comments</A>  <A HREF="http://www.lycos.com/lycosinc/legal.html">Terms and conditions</A>
 
 </FONT>
 </TD>
 </TR>
-</td>
-</tr>
-</table>
 
 
-</TD></TR></TABLE>
+
+</TABLE>
 
 </BODY>
 </HTML>

@@ -3,20 +3,19 @@ WWW::Search and AutoSearch
 ==========================
 
 
-WHAT IS NEW WITH WWW::Search 1.012?
+WHAT IS NEW WITH WWW::Search 1.014?
 -----------------------------------
 
-Overview:  an alpha release for test-suite testing
-- new: for testing, HTTP results can be saved to disk and played back
-- new: test scripts (try "make test")
-- bug-fix: Lycos works again and is now maintained by John Heidemann
-- bug-fix: AltaVista advanced and news searches have been repaired
-- bug-fix: some uninitialized value warnings suppressed
-	(fix suggested by R. Chandrasekar (Mickey))
-- new: new back-ends PLweb
-- new: documentation for PLweb (contributed by Paul Linder)
-- new: new back-ends: Gopher, Simple (contributed by Paul Linder)
-- new: WWW::Search mailing list:
+overview:  this is an alpha release to include Martin's new back-ends
+
+- bug fix:  AltaVista/Lycos back-ends
+	(problem reported by Bilal Siddiqui <bilal.siddiqui@mankato.msus.edu>)
+- known problem: some back-end test suites give intermittent results
+	(AltaVista::News)
+- problem: several back-ends don't have test suites and
+	so may or may not work (DejaNews, Excite, HotBot, Infoseek, PLweb,
+	SFgate, Verity, Yahoo)
+- reminder: WWW::Search mailing list:
 	to subscribe, send "subscribe info-www-search" as
 	the body of a message to <info-www-search-request@isi.edu>
 
@@ -67,7 +66,8 @@ AVAILABILITY
 ------------
 
 The latest version of WWW::Search should always be available from
-<http://www.isi.edu/lsam/tools/WWW_SEARCH/>.
+<http://www.isi.edu/lsam/tools/WWW_SEARCH/>.  Alpha releases are only
+available here (not at CPAN).
 
 WWW::Search is also available as part of CPAN.  Visit
 <http://www.perl.com/CPAN/> to find a CPAN site near you.
@@ -269,6 +269,33 @@ overview:  an interim release to fix altavista
 1.011:  (8 October 1997)
 - internal alpha release, see 1.012 for list of new features
 
+1.012:   (3 November 1997)
+- Overview:  an alpha release for test-suite testing
+- new: for testing, HTTP results can be saved to disk and played back
+- new: test scripts (try "make test")
+- bug-fix: Lycos works again and is now maintained by John Heidemann
+- bug-fix: AltaVista advanced and news searches have been repaired
+- bug-fix: some uninitialized value warnings suppressed
+	(fix suggested by R. Chandrasekar (Mickey))
+- new: new back-ends PLweb
+- new: documentation for PLweb (contributed by Paul Linder)
+- new: new back-ends: Gopher, Simple (contributed by Paul Linder)
+- new: WWW::Search mailing list:
+	to subscribe, send "subscribe info-www-search" as
+	the body of a message to <info-www-search-request@isi.edu>
+
+1.013, (19 February 1998)
+overview:  this is an alpha release to include Martin's new back-ends
+
+- bug fix:  HotBot back-end updated by Martin Thurn <mthurn@tasc.com>
+- new:  Yahoo back-end now works, by Martin Thurn <mthurn@tasc.com>
+- problem: several back-ends don't work (Lycos)
+- problem: several back-ends don't have test suites and
+	so may or may not work (DejaNews, Excite, HotBot, Infoseek, PLweb,
+	SFgate, Verity, Yahoo)
+- reminder: WWW::Search mailing list:
+	to subscribe, send "subscribe info-www-search" as
+	the body of a message to <info-www-search-request@isi.edu>
 
 SUPPORT AND CREDITS
 -------------------
@@ -285,9 +312,11 @@ BACK-ENDS:
 	AltaVista		John Heidemann
 	Dejanews		Cesare Feroldi de Rosa <C.Feroldi@it.net>
 	Excite			GLen Pringle <pringle@cs.monash.edu.au>
-	HotBot			William Scheding
+	HotBot			William Scheding and Martin Thurn
+						<mthurn@tasc.com>
 	Infoseek		Cesare Feroldi de Rosa
-	Lycos			William Scheding
+	Lycos			William Scheding and John Heidemann
+	Yahoo			William Scheding and Martin Thurn
 
 AutoSearch is based on an earlier implementation by Kedar Jog
 <jog@isi.edu> with advice from Joe Touch <touch@isi.edu>.

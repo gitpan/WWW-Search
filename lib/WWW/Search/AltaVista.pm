@@ -4,7 +4,7 @@
 # AltaVista.pm
 # by John Heidemann
 # Copyright (C) 1996-1997 by USC/ISI
-# $Id: AltaVista.pm,v 1.25 1997/11/04 01:04:11 johnh Exp $
+# $Id: AltaVista.pm,v 1.26 1998/03/24 19:43:33 johnh Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -238,7 +238,7 @@ sub native_retrieve_some
 	    $self->approximate_result_count($n);
 	    $state = $HITS;
 	    print STDERR "PARSE(2:HEADER->HITS): $n documents found.\n" if ($self->{_debug} >= 2);
-	} elsif ($state == $HITS && m@^(<p><dt>|<dt>).*<a href=\"([^"]+)"><strong>(.*)</strong></a><dd>(.*)(\.)?<br>@i) {  # post July 1997
+	} elsif ($state == $HITS && m@(<p><dt>|<dt>)[^"]*<a href=\"([^"]+)"><[a-z]+>(.*)</[a-z]+></a>.*<dd>(.*)(\.)?<br>@i) {  # post March 1998 "
 	    ($hit, $raw) = $self->begin_new_hit($hit, $raw);
 	    $raw .= $_;
 	    $hit->add_url($2);

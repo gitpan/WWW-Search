@@ -1,14 +1,22 @@
 <html><head>
-<title>AltaVista: Simple Query +LSAM +NoSuchWord</title>
+<title>AltaVista: Simple Query +LSAM +BogusNoSuchWord</title>
 </head><body>
-<a href="/cgi-bin/query?pg=q&text=yes"><b>AltaVista Search</b></a><br>
+<a href="/cgi-bin/query?text=yes"><b>AltaVista Search</b></a><br>
+
 <FORM name=mfrm method=GET action="/cgi-bin/query">
 <INPUT TYPE=hidden NAME=pg VALUE=q>
 <INPUT TYPE=hidden NAME=text VALUE=yes>
-<font size=-1 face="arial, helvetica"><B>Search <SELECT NAME=what><OPTION VALUE=web SELECTED>the Web<OPTION VALUE=news >Usenet</SELECT>
+
+<a href="http://babelfish.altavista.digital.com/cgi-bin/translate?">Translations</a> .
+<a href="http://altavista.iname.com/">Free eMail</a> .
+<a href="http://altavista.looksmart.com/altavista.html">Browse by Subject</a> . 
+<a href="http://altavista.switchboard.com/bin/cgiqa.dll?MG=&MEM=212">People Search</a> . 
+<a href="http://altavista.switchboard.com/bin/cgidir.dll?MG=&MEM=212">Business Search</a>
+<br>
+<font size=-1 face=arial><B>Search <SELECT NAME=what><OPTION VALUE=web SELECTED>the Web<OPTION VALUE=news >Usenet</SELECT>
 for documents in <SELECT NAME=kl><OPTION VALUE=XX SELECTED>any language 
 <OPTION VALUE=zh >Chinese
-<OPTION VALUE=cz >Czech
+<OPTION VALUE=cs >Czech
 <OPTION VALUE=da >Danish
 <OPTION VALUE=nl >Dutch
 <OPTION VALUE=en >English
@@ -32,12 +40,29 @@ for documents in <SELECT NAME=kl><OPTION VALUE=XX SELECTED>any language
 <OPTION VALUE=ru >Russian
 <OPTION VALUE=es >Spanish
 <OPTION VALUE=sv >Swedish
-</SELECT></B></font><br><INPUT NAME=q size=65 maxlength=800 wrap=virtual VALUE="+LSAM +NoSuchWord"><br><INPUT TYPE=radio NAME=act VALUE=search CHECKED>search <INPUT TYPE=radio NAME=act VALUE=refine>refine <INPUT TYPE=submit VALUE=Submit>
- <BR><a href="/av/content/help_simple.htm">Help</a> . <a href="/cgi-bin/query?pg=tmpl&v=pref.html&text=yes">Preferences</a> . <a href="/cgi-bin/query?pg=q&text=yes">New Search</a> . <a href="/cgi-bin/query?pg=aq&text=yes">Advanced Search</a><br><BR><font size=-1 face="arial, helvetica"><font color=red>Click to find related books at </font><a href="http://www.amazon.com/exec/obidos/av-search/q=%2bLSAM+%2bNoSuchWord"><b>Amazon.com</b>.</a><br>No documents match the query.</font><BR><dl>
-</dl>
-<b>Tip: </b>
+</SELECT></B></font><br><INPUT NAME=q size=65 maxlength=800 wrap=virtual VALUE="+LSAM +BogusNoSuchWord"><br><INPUT TYPE=radio NAME=act VALUE=search CHECKED>search <INPUT TYPE=radio NAME=act VALUE=refine>refine <INPUT TYPE=submit VALUE=Submit>
+ <BR><a href="/av/content/help_simple.htm">Help</a> . <a href="/cgi-bin/query?pg=tmpl&v=pref.html&text=yes">Preferences</a> . <a href="/cgi-bin/query?pg=q&text=yes">New Search</a> . <a href="/cgi-bin/query?pg=aq&text=yes">Advanced Search</a><br>Click here to find related books at <a href="http://www.amazon.com/exec/obidos/av-search/q=%2bLSAM+%2bBogusNoSuchWord">amazon.com</a>
+<br>
 
-If the first few results don't satisfy you and there are many results, try the <b>refine</b> button.
-<br><BR><font size=-1 face="arial, helvetica"><font size=-1>Word count: LSAM: 401<BR>Ignored:    NoSuchWord:<b>0</b><BR></font>
-</font><P><HR><font face="arial, helvetica" size=-1><a href="/av/content/av_network.htm">Our Network</a> | <a href="/av/content/addurl.htm">Add/Remove URL</a> | <a href="/av/content/questions.htm">Feedback</a> | <a href="/av/content/help.htm">Help</a><br><a href="http://www.doubleclick.net/jumps/jump1217.htm">Advertising Info</a> | <a href="/av/content/about.htm">About AltaVista</a> | <a href="/av/content/jobs.htm">Jobs</a> | <a href="/cgi-bin/query?pg=q">Graphics</a></font><HR><a href="/av/content/disclaimer.htm">Disclaimer</a> | <a href="/av/content/privacy.htm">Privacy Statement</a><br><a href="http://www.digital.com"><b>DIGITAL</b></a> Copyright 1997. All Rights Reserved</FORM>
+
+
+
+No documents match the query.<dl>
+</dl>
+<font size=-1 face=arial><font size=-1>Word count: LSAM: 396<BR>Ignored:    BogusNoSuchWord:<b>0</b><BR></font>
+</font><P><HR><font face="arial, helvetica" size=-1>
+<a href="/av/content/av_network.htm">Our Network</a> | 
+<a href="/av/content/addurl.htm">Add/Remove URL</a> | 
+<a href="/av/content/questions.htm">Feedback</a> | 
+<a href="/av/content/help.htm">Help</a><br>
+
+<a href="http://www.doubleclick.net/jumps/jump1217.htm">Advertising Info</a> | 
+<a href="/av/content/about.htm">About AltaVista</a> | 
+<a href="/av/content/jobs.htm">Jobs</a> | 
+<a href="/cgi-bin/query?pg=q">Graphics</a></font><HR>
+<a href="/av/content/disclaimer.htm">Disclaimer</a> | 
+<a href="/av/content/privacy.htm">Privacy Statement</a><br>
+
+<a href="http://www.digital.com"><b>DIGITAL</b></a> Copyright 1995-98. All Rights Reserved
+</FORM>
 </BODY></HTML>

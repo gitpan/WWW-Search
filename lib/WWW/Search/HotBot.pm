@@ -2,13 +2,9 @@
 
 #
 # HotBot.pm
-# by Wm. L. Scheding
-# Copyright (C) 1996 by USC/ISI
-# $Id: HotBot.pm,v 1.4 1996/11/21 23:02:16 johnh Exp $
+# by Wm. L. Scheding and Martin Thurn
+# $Id: HotBot.pm,v 1.5 1998/02/19 18:28:36 johnh Exp $
 #
-# Complete copyright notice follows below.
-# 
-
 
 package WWW::Search::HotBot;
 
@@ -18,12 +14,12 @@ WWW::Search::HotBot - class for searching HotBot
 
 =head1 DESCRIPTION
 
-This class is an HotBot specialization of WWW::Search.
+This class is a HotBot specialization of WWW::Search.
 It handles making and interpreting HotBot searches
 F<http://www.hotbot.com>.
 
 This class exports no public interface; all interaction should
-be done through WWW::Search objects.
+be done through L<WWW::Search> objects.
 
 
 =head1 SEE ALSO
@@ -33,17 +29,18 @@ To make new back-ends, see L<WWW::Search>.
 
 =head1 HOW DOES IT WORK?
 
-C<native_setup_search> is called before we do anything.
-It initializes our private variables (which all begin with underscores)
-and sets up a URL to the first results page in C<{_next_url}>.
+C<native_setup_search> is called (from C<WWW::Search::setup_search>)
+before we do anything.  It initializes our private variables (which
+all begin with underscore) and sets up a URL to the first results
+page in C<{_next_url}>.
 
 C<native_retrieve_some> is called (from C<WWW::Search::retrieve_some>)
-whenever more hits are needed.  It calls the LWP library
+whenever more hits are needed.  It calls C<WWW::Search::http_request>
 to fetch the page specified by C<{_next_url}>.
-It parses this page, appending any search hits it finds to 
+It then parses this page, appending any search hits it finds to 
 C<{cache}>.  If it finds a ``next'' button in the text,
 it sets C<{_next_url}> to point to the page for the next
-set of results, otherwise it sets it to undef to indicate we're done.
+set of results, otherwise it sets it to undef to indicate we''re done.
 
 
 =head1 BUGS
@@ -51,25 +48,21 @@ set of results, otherwise it sets it to undef to indicate we're done.
 This module should support options.
 
 
+=head1 TESTING
+
+This module adheres to the C<WWW::Search> test suite mechanism. 
+
+
 =head1 AUTHOR
 
-C<WWW::Search::HotBot> is by Wm. L. Scheding,
+As of 1998-02-02, C<WWW::Search::HotBot> is maintained by Martin Thurn
+(mthurn@irnet.rest.tasc.com).
+
+C<WWW::Search::HotBot> was originally written by Wm. L. Scheding,
 based on C<WWW::Search::AltaVista>.
 
 
-=head1 COPYRIGHT
-
-Copyright (c) 1996 University of Southern California.
-All rights reserved.                                            
-                                                               
-Redistribution and use in source and binary forms are permitted
-provided that the above copyright notice and this paragraph are
-duplicated in all such forms and that any documentation, advertising
-materials, and other materials related to such distribution and use
-acknowledge that the software was developed by the University of
-Southern California, Information Sciences Institute.  The name of the
-University may not be used to endorse or promote products derived from
-this software without specific prior written permission.
+=head1 LEGALESE
 
 THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
 WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
@@ -77,216 +70,275 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 
 =cut
-#'
-
-#
-#  Test cases:
-# ./hotbot.pl xxxasdf             --- no hits
-# ./hotbot.pl 'scheding'          --- 373 hits
-# ./hotbot.pl 'lsam replication'  --- 63 hits
-# ./hotbot.pl 'replication'       --- 40,000+ hits
-#
-
-
 
 #####################################################################
 
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
-# $VERSION = 1.000;
 @ISA = qw(WWW::Search Exporter);
 
 use Carp ();
+use WWW::Search(generic_option);
 require WWW::SearchResult;
 
-# from lynx #1
-#       "http://www.hotbot.com/search.html/IU0BfV5r318E4BCC8DBA81A045266430BFB7D0F4?_v=1.0" .
-#	"&MT=" . $native_query .
-#       "&SW=web&SM=MC&search=Submit%20search&MOD=0&OP=0" .
-#       "&date=WH&DR=newer&DM=1&DD=1&DY=96&DV=10&DU=years&smiley=&RD=AN&RG=NA&domain=" .
-#       "&DC=10&FJS=off&FJA=off&FRA=off&FVI=off&FAC=off&FSW=off&FVR=off&FSU=off&FSM=off" .
-#       "&OP=0&MOD=0&FS="; #>HotBot: replication#1 ( 1-10)
-# from lynx #2
-#       "http://www.hotbot.com/search.html/IU0BfV5r318E4BCC8DBA81A045266430BFB7D0F4?_v=1.0" .
-#       "&date=WH&DR=newer&DM=1&DD=1&DY=96&DV=10&DU=years&RD=AN&RG=NA" .
-#       "&DC=10&FJS=off&FJA=off&FRA=off&FVI=off&FAC=off&FSW=off&FVR=off&FSU=off&FSM=off" .
-#       "&OP=0&MOD=0&SW=web&SM=MC" .
-#	"&MT=" . $native_query .
-#       "&base=0&totalhits=78641&next.x=Return%20next"; #>HotBot: replication#2 (11-20)
-# from lynx #3
-#       "http://www.hotbot.com/search.html/IU0BfV5r318E4BCC8DBA81A045266430BFB7D0F4?_v=1.0" .
-#       "&date=WH&DR=newer&DM=1&DD=1&DY=96&DV=10&DU=years&RD=AN&RG=NA" .
-#       "&DC=10&FJS=off&FJA=off&FRA=off&FVI=off&FAC=off&FSW=off&FVR=off&FSU=off&FSM=off" .
-#       "&OP=0&MOD=0&SW=web&SM=MC" .
-#	"&MT=" . $native_query .
-#       "&base=10&totalhits=6429&next.x=Return%20next"; #>HotBot: replication#3 (21-30)
-# from lynx #4
-#       "http://www.hotbot.com/search.html/IU0BfV5r318E4BCC8DBA81A045266430BFB7D0F4?_v=1.0" .
-#       "&date=WH&DR=newer&DM=1&DD=1&DY=96&DV=10&DU=years&RD=AN&RG=NA" .
-#       "&DC=10&FJS=off&FJA=off&FRA=off&FVI=off&FAC=off&FSW=off&FVR=off&FSU=off&FSM=off" .
-#       "&OP=0&MOD=0&SW=web&SM=MC" .
-#	"&MT=" . $native_query .
-#       "&base=20&totalhits=6429&next.x=Return%20next"; #>HotBot: replication#4 (31-40)
 
 # private
 sub native_setup_search
-{
-    my($self, $native_query) = @_;
-    $self->user_agent();
-    $self->{_next_to_retrieve} = 0;
-    $self->{_base_url} = $self->{_next_url} =
-        "http://www.hotbot.com/search.html/IU0BfV5r318E4BCC8DBA81A045266430BFB7D0F4?_v=1.0" .
-	"&MT=" . $native_query .
-        "&SW=web&SM=MC&search=Submit%20search&MOD=0&OP=0" .
-        "&date=WH&DR=newer&DM=1&DD=1&DY=96&DV=10&DU=years&smiley=&RD=AN&RG=NA&domain=" .
-        "&DC=10&FJS=off&FJA=off&FRA=off&FVI=off&FAC=off&FSW=off&FVR=off&FSU=off&FSM=off" .
-        "&OP=0&MOD=0&FS="; # from lynx.
-}
+  {
+  my($self, $native_query, $native_options_ref) = @_;
+  # print STDERR " * this is Martin's new Hotbot.pm!\n" if $self->{'_debug'};
+  # Why waste time sending so many queries?  Do a whole lot all at once!
+  my $DEFAULT_HITS_PER_PAGE = 100;
+  $DEFAULT_HITS_PER_PAGE = 10;   # for debugging
+  $self->{'_hits_per_page'} = $DEFAULT_HITS_PER_PAGE;
+  # Add one to the number of hits needed, because Search.pm does ">"
+  # instead of ">=" on line 672!
+  $self->{'maximum_to_retrieve'}++;
+  # Divide the problem into N pages of K hits per page.
+  my $iNumPages = int(0.999 + 
+                      $self->{'maximum_to_retrieve'} / $self->{'_hits_per_page'});
+  if (1 < $iNumPages)
+    {
+    $self->{'_hits_per_page'} = int($self->{'maximum_to_retrieve'} / $iNumPages);
+    }
+  else
+    {
+    $self->{'_hits_per_page'} = $self->{'maximum_to_retrieve'};
+    }
+  $self->timeout(120);  # HotBot is notoriously slow
+  # $self->{agent_name} = 'Mozilla/4.04 [en] (X11; I; SunOS 5.6 sun4m)';
+  # $self->{agent_name} = 'W3CCommandLine/unspecified';
+  $self->{agent_e_mail} = 'mthurn@irnet.rest.tasc.com';
+  # $self->{agent_e_mail} = '.';
+
+  # As of 1998-02-05, HotBot apparently doesn't like WWW::Search!  Response was
+  # RC: 403 (Forbidden)
+  # Message: Forbidden by robots.txt
+  $self->user_agent(1);
+
+  $self->{_next_to_retrieve} = 0;
+  $self->{'_num_hits'} = 0;
+
+  if (!defined($self->{_options})) 
+    {
+    $self->{_options} = {
+                         'search_url' => 'http://www.search.hotbot.com/hResult.html',
+                         'DE' => 2,
+                         'SM' => 'SC',
+                         'DC' => $self->{_hits_per_page},
+                         'MT' => $native_query,
+                        };
+    } # if
+  my $options_ref = $self->{_options};
+  if (defined($native_options_ref)) 
+    {
+    # Copy in new options.
+    foreach (keys %$native_options_ref) 
+      {
+      $options_ref->{$_} = $native_options_ref->{$_};
+      } # foreach
+    } # if
+  # Process the options.
+  my($options) = '';
+  foreach (keys %$options_ref) 
+    {
+    # printf STDERR "option: $_ is " . $options_ref->{$_} . "\n";
+    next if (generic_option($_));
+    $options .= $_ . '=' . $options_ref->{$_} . '&';
+    }
+  # Finally figure out the url.
+  $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
+
+  $self->{_debug} = $options_ref->{'search_debug'};
+  $self->{_debug} = 2 if ($options_ref->{'search_parse_debug'});
+  $self->{_debug} = 0 if (!defined($self->{_debug}));
+  } # native_setup_search
+
 
 # private
 sub native_retrieve_some
-{
-    my ($self) = @_;
-
-    # fast exit if already done
-    return undef if (!defined($self->{_next_url}));
-
-    # get some
-    my($request) = new HTTP::Request('GET', $self->{_next_url});
-    my($response) = $self->{user_agent}->request($request);
-    $self->{response} = $response;
-    if (!$response->is_success) {
-	return undef;
+  {
+  my ($self) = @_;
+  # print STDERR " *   HotBot::native_retrieve_some()\n" if $self->{'_debug'};
+  
+  # Fast exit if already done:
+  return undef unless defined($self->{_next_url});
+  
+  # print STDERR " * search_from_file is set!\n" if $self->{search_from_file};
+  # print STDERR " * search_to_file is set!\n" if $self->{search_to_file};
+  # Get some results
+  print STDERR " *   sending request (",$self->{_next_url},")\n" if $self->{'_debug'};
+  my($response) = $self->http_request('GET', $self->{_next_url});
+  $self->{response} = $response;
+  if (!$response->is_success) 
+    {
+    return undef;
     };
 
-    # parse the output
-    # HotBot is trying to be too smart. if you come in with netscape,
-    # it gives you a table/form interface; with lynx a simple text intfc.
-    # we are pretending to be like lynx (that's what HotBot thinks).
-    #
-    # i had the code to play on the table interface almost working;
-    # but gave up. $action, $hidden, etc. are leftovers.
-#    my($TITLE, $FORM, $HEADER, $HITS, $BQ, $DESC, $TRAILER) = (1..10);
-    my($TITLE, $HEADER, $HITS, $BQ, $DESC, $TRAILER) = (1..10);
-    my($hits_found) = 0;
-    my($state) = ($TITLE);
-#    my($action,$action_name);
-    my($name,$value);
-    my($native_query);
-    # i did get the code to read the hidden variable going; but went on to non table intfc.
-#    my($hidden) = "";
-    my($base,$total);
-    my($hit) = ();
-    foreach (split(/\n/, $response->content())) {
-        next if m@^$@; # short circuit for blank lines
-	if ($state == $TITLE && m@^<title>HotBot:\s+([^<]+)</title>$@i) {
-            #"<title>HotBot: replication</title>"
-#            print STDOUT "title:\"$_\"\n";
-            $native_query = $1;
-            $native_query =~ s/ /%20/g;
-#	    $state = $FORM;
-	    $state = $HEADER;
-#	} elsif ($state == $FORM && m@^<form\s+action=\"([^"]+)\"\s+name=\"([^"]+)\">$@i) {
-#          #"<form action="/search.html/IU0BeKgOCC935DC9C4ACA6716DD6115B28324907" name="HSQ">"
-##            print STDOUT "form:\"$_\"\n";
-#	    $action = $1;
-#	    $action_name = $2;
-#	    $state = $HEADER;
-	} elsif ($state == $HEADER && m@^Returned\s+<b>(\d+)</b>\s+matches\.</blockquote>$@i) {
-#            print STDOUT "header:\"$_\"\n";
-            $total = $1;
-	    $self->approximate_result_count($total);
-	    $state = $HITS;
-	} elsif ($state == $HITS && m@^<b>(\d+)\.\s+</b><a href=\"([^"]+)\">(.*)</a>@i) {
-	    # "
-#            print STDOUT "hit:\"$_\"\n";
-            $base = $1 - 10;
-	    if (defined($hit)) {
-	        push(@{$self->{cache}}, $hit);
-	    };
-	    $hit = new WWW::SearchResult;
-	    $hit->add_url($2);
-	    $hits_found++;
-	    $hit->title($3);
-	    $state = $BQ;
-	} elsif ($state == $BQ && m@^<blockquote>$@i) {
-#            print STDOUT "blockquote:\"$_\"\n";
-	    $state = $DESC;
-	} elsif ($state == $DESC && m@^(.*)<p>$@i) {
-#            print STDOUT "desc:\"$_\"\n";
-	    $hit->description($1);
-	    $state = $HITS;
-	} elsif ($state == $HITS && m@<input name=\"([^"]+)\"\s+value=\"([^"]+)\"\s+type=\"submit\"\s+>@i) {
-#            print STDOUT "next:\"$_\"\n"; # and or prev too.
-	    $name = $1;
-	    $value = $2;
-            next if ($name =~ m/prev/i); # either wait for next; or quit on 'New Search'
-	    # end, with a list of other pages to go to
-	    if (defined($hit)) {
-	        push(@{$self->{cache}}, $hit);
-	    };
-	    # set up next page (using hidden fileds & compiling the form:)
-#           chop ($hidden) if (substr($hidden,-1,1) eq '&');
-#    	    my($relative_url) = sprintf("http://www.hotbot.com/search.html?%s",$hidden);
-#	    print "URL:\"$relative_url\"\n";
-            # <OR>
-            # we have to build the URL, as we are faking a form
-            # to wit:
-#   URL:"http://www.hotbot.com/search.html/IU0BfV5r318E4BCC8DBA81A045266430BFB7D0F4?_v=1.0" .
-#       "&date=WH&DR=newer&DM=1&DD=1&DY=96&DV=10&DU=years&RD=AN&RG=NA" .
-#       "&DC=10&FJS=off&FJA=off&FRA=off&FVI=off&FAC=off&FSW=off&FVR=off&FSU=off&FSM=off" .
-#       "&OP=0&MOD=0&SW=web&SM=MC" .
-#       "&MT=replication&base=0&totalhits=73983&next.x=Return%20next"
-    	    my($relative_url) = 
-             "http://www.hotbot.com/search.html/IU0BfV5r318E4BCC8DBA81A045266430BFB7D0F4?_v=1.0" .
-             "&date=WH&DR=newer&DM=1&DD=1&DY=96&DV=10&DU=years&RD=AN&RG=NA" .
-             "&DC=10&FJS=off&FJA=off&FRA=off&FVI=off&FAC=off&FSW=off&FVR=off&FSU=off&FSM=off" .
-             "&OP=0&MOD=0&SW=web&SM=MC" .
-             "&MT=" . $native_query .
-             "&base=" . $base .
-             "&totalhits=" . $total .
-             "&next.x=Return%20next";
-#	    print "URL:\"$relative_url\"\n";
-	    $self->{_next_url} = new URI::URL($relative_url, $self->{_base_url});
-	    $state = $TRAILER;
-	} elsif ($state == $HITS && m@^(.+)>New Search</a>\s+-@i) {
-#            print STDOUT "last:\"$_\"\n";
-	    if (defined($hit)) {
-	        push(@{$self->{cache}}, $hit);
-	    };
-	    $self->{_next_url} = undef;
-	    $state = $TRAILER;
-#	} elsif (m@^<input type=hidden\s+name=\"([^"]+)\"\s+value=\"([^"]+)\">$@i) {
-##            print STDOUT "hidden1:\"$_\"\n";
-#	    $name = $1;
-#	    $value = $2;
-#	    $hidden .= sprintf("%s=%s&",$1,$2);
-#	} elsif (m@^<input type=hidden\s+name=\"([^"]+)\"\s+value=\"([^"]+)\"><input type=hidden\s+name=\"([^"]+)\"\s+value=\"([^"]+)\">$@i) {
-##            print STDOUT "hidden2:\"$_\"\n";
-#	    $hidden .= sprintf("%s=%s&",$1,$2);
-#	    $hidden .= sprintf("%s=%s&",$3,$4);
-#	} elsif (m@^(</table)>?<input type=hidden\s+name=\"([^"]+)\"\s+value=\"([^"]+)\"><input type=hidden\s+name=\"([^"]+)\"\s+value=\"([^"]+)\"><input type=hidden\s+name=\"([^"]+)\"\s+value=\"([^"]+)\">$@i) {
-##            print STDOUT "hidden3:\"$_\"\n";
-#	    $hidden .= sprintf("%s=%s&",$2,$3);
-#	    $hidden .= sprintf("%s=%s&",$4,$5);
-#	    $hidden .= sprintf("%s=%s&",$6,$7);
-	} else {
-#            print STDOUT "read:\"$_\"\n";
-	};
-    };
-    if ($state != $TRAILER) {
-	# end, no other pages (missed ``next'' tag)
-	if (defined($hit)) {
-	    push(@{$self->{cache}}, $hit);
-	};
-	$self->{_next_url} = undef;
-    };
-
-    # sleep so as to not overload hotbot
-    $self->user_agent_delay if (defined($self->{_next_url}));
-
-    return $hits_found;
-}
+  print STDERR " *   got response\n" if $self->{'_debug'};
+  $self->{'_next_url'} = undef;
+  # Parse the output
+  my ($TITLE, $HEADER, 
+      $HITS, $HIT1, $HIT2, $HIT3, $HIT4, $HIT5,
+      $NEXT, $TRAILER) = qw(TI HE HH H1 H2 H3 H4 H5 NX TR);
+  my ($hits_found) = 0;
+  my ($state) = ($TITLE);
+  my ($hit) = ();
+  foreach (split(/\n/, $response->content())) 
+    {
+    next if m/^$/; # short circuit for blank lines
+    print STDERR " * $state ===$_===" if 2 <= $self->{'_debug'};
+    if ($state eq $TITLE && 
+        m@<TITLE>HotBot results:\s+(.+)\s\(\d+\+\)</TITLE>@i) 
+      {
+      # Actual line of input is:
+      # <HEAD><TITLE>HotBot results: Christie Abbott (1+)</TITLE>
+      print STDERR "title line\n" if 2 <= $self->{'_debug'};
+      $state = $HEADER;
+      } # We're in TITLE mode, and line has title
+    elsif ($state eq $HEADER && 
+           m@<B>Returned:\s*</B>\s*(\d+)\s+matches\.@i) 
+      {
+      # Actual line of input is:
+      # <B>Returned:</B> 3379 matches.
+      print STDERR "header line\n" if 2 <= $self->{'_debug'};
+      $self->approximate_result_count($1);
+      $state = $NEXT;
+      } # we're in HEADER mode, and line has number of results
+    elsif ($state eq $HITS && 
+           m|^(<TR>)?<TD[^>]*><B>(\d+)\.\s</B>|)
+      {
+      print STDERR "hit number line\n" if 2 <= $self->{'_debug'};
+      # Actual lines of input include:
+      # <TR><TD  width="20" align="left" valign="top"><B>12. </B>
+      # <TD  width="20" align="left" valign="top"><B>13. </B>
+      my $iHit = $2;
+      $state = $HIT1;
+      }
+    elsif ($state eq $HIT1)
+      {
+      print STDERR " skip (HIT1)\n" if 2 <= $self->{'_debug'};
+      # Just skip this line:
+      $state = $HIT2;
+      }
+    elsif ($state eq $HIT2 &&
+           m|<A\s+HREF=\"([^\043]+)\">(.*)</A>|i) 
+      {
+      # \043 is double-quote character "
+      # Actual line of input is:
+      # <TD ><A HREF="http://bcrazy.simplenet.com/STARLETS/ABC/CA_WI/CA_WI.HTM" TARGET="preview"><IMG SRC="/images/btn.openpage.white.gif"  BORDER=0 WIDTH=17 HEIGHT=16 ALT="[VIEW]"></A>&nbsp;&nbsp;<A HREF="http://bcrazy.simplenet.com/STARLETS/ABC/CA_WI/CA_WI.HTM">Christie Abbott Wishbone II</A>
+      print STDERR "hit url line\n" if 2 <= $self->{'_debug'};
+      # At this point, we could do something about "alternate" URLs
+      # (like ignore them), but then our total hit count will get all
+      # out of whack...?
+      if (defined($hit))
+        {
+        push(@{$self->{cache}}, $hit);
+        }
+      $hit = new WWW::SearchResult;
+      $hit->add_url($1);
+      $self->{'_num_hits'}++;
+      $hits_found++;
+      $hit->title($2);
+      if (! m/<FONT\sSIZE=-1>\(alternate\)/)
+        {
+        $state = $HIT3;
+        }
+      else
+        {
+        # Some problem, get ready for next hit
+        $state = $HITS;
+        } # This line is the hit url
+      } # $state eq HIT2
+    elsif ($state eq $HIT3)
+      {
+      print STDERR " skip (HIT3)\n" if 2 <= $self->{'_debug'};
+      # Just skip this line:
+      $state = $HIT4;
+      } # $state eq HIT3
+    elsif ($state eq $HIT4)
+      {
+      print STDERR " skip (HIT4)\n" if 2 <= $self->{'_debug'};
+      # Just skip this line:
+      $state = $HIT5;
+      } # $state eq HIT4
+    elsif ($state eq $HIT5 && m|^<TD\s*>(.*)<BR>$|)
+      {
+      print STDERR " hit description\n" if 2 <= $self->{'_debug'};
+      # Actual input line is:
+      # <TD >Text Files Maintained by Gus Lopez (lopez@cs.washington.edu) Ever wonder which weapon goes with which figure? Well, that's the kind of information you can find right here. Any beginning collector should glance at some of these files since they...<BR>
+      $hit->description($1);
+      $state = $HITS;
+      } # line is description
+    elsif ($state eq $NEXT && m|</FORM>|)
+      {
+      print STDERR " missed next button\n" if 2 <= $self->{'_debug'};
+      # There was no "next" button on this page; no more pages to get!
+      $self->{'_next_url'} = undef;
+      $state = $HITS;
+      }
+    elsif ($state eq $NEXT && m|act.next|)
+      {
+      print STDERR " found next button\n" if 2 <= $self->{'_debug'};
+      # There is a "next" button on this page, therefore there are
+      # indeed more results for us to go after next time.
+      # Process the options.
+      $self->{_options}{'base'} = $self->{'_next_to_retrieve'};
+      $self->{_options}{'act.next.x'} = 1;
+      my($options) = '';
+      foreach (keys %{$self->{_options}}) 
+        {
+        # printf STDERR "option: $_ is " . $self->{_options}{$_} . "\n";
+        next if (generic_option($_));
+        $options .= $_ . '=' . $self->{_options}{$_} . '&';
+        }
+      # Finally figure out the url.
+      $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
+      $self->{'_next_to_retrieve'} += $self->{'_hits_per_page'};
+      $state = $HITS;
+      }
+    else
+      {
+      print STDERR "didn't match\n" if 2 <= $self->{'_debug'};
+      }
+    } # foreach line of query results HTML page
+  if ($state ne $HITS)
+    {
+    # End, no other pages (missed some tag somewhere along the line)
+    $self->{_next_url} = undef;
+    }
+  if (defined($hit)) 
+    {
+    push(@{$self->{cache}}, $hit);
+    }
+  
+  # Sleep so as to not overload Mr. HotBot
+  $self->user_agent_delay if (defined($self->{_next_url}));
+  
+  return $hits_found;
+  } # native_retrieve_some
 
 1;
+
+__END__
+
+Martin''s page download results, 1998-02:
+
+simplest arbitrary page:
+http://www.search.hotbot.com/hResult.html?MT=lsam+replication&DE=0&DC=100
+http://www.search.hotbot.com/hResult.html?MT=Christie+Abbott&base=100&DC=100&DE=0&act.next.x=1
+
+explanation of known fields on GUI search page:
+date = (checkbox) filter by date
+DC = (entry) number of hits per page
+DE = (selection) output format
+DV = (selection) date criteria
+FRA = (checkbox) include audio data type
+FSW = (checkbox) include shockwave data type
+FVI = (checkbox) include image data type
+FVV = (checkbox) include video data type
+MT = query terms
+RD = (checkbox) filter by location
+RG = (selection) location criteria
+SM = (selection) search type 
