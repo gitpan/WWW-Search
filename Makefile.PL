@@ -1,5 +1,5 @@
 # This -*- perl -*- script writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.19 2001/12/20 15:20:03 mthurn Exp $
+# $Id: Makefile.PL,v 1.20 2002/02/05 17:36:43 mthurn Exp mthurn $
 
 require 5.004;
 
@@ -19,7 +19,7 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
               'NAME' => 'WWW::Search',
-              'VERSION' => 2.26,
+              'VERSION' => 2.27,
 
               ($] ge '5.005') ? (
                                  'AUTHOR' => 'Martin Thurn <mthurn@tasc.com>',
@@ -31,9 +31,12 @@ WriteMakefile(
                               'HTML::Parse' => 0,
                               'HTML::Parser' => 2.23,
                               'HTML::TreeBuilder' => 0,  # HTML-Tree-0.51 is good
-                              'LWP' => 5.30,
+                              'LWP' => 5.53,
                               'MIME::Lite' => 0,  # only needed for AutoSearch's --mail option
+                              'Net::Domain' => 0,
+                              'URI' => 0,
                               'URI::Escape' => 0,
+                              'User' => 0,
                              },
               'clean' => { FILES => join(' ', @programs_to_install) },
              );

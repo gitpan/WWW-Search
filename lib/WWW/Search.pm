@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.62 2001/12/20 16:06:20 mthurn Exp mthurn $
+# $Id: Search.pm,v 1.64 2002/03/12 21:19:05 mthurn Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -69,8 +69,8 @@ package WWW::Search;
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query generic_option strip_tags @ENGINES_WORKING);
-$VERSION = '2.28';
-$MAINTAINER = 'Martin Thurn <mthurn@tasc.com>';
+$VERSION = '2.29';
+$MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
 
@@ -83,7 +83,10 @@ use HTTP::Response;
 use HTTP::Status;
 use LWP::RobotUA;
 use LWP::UserAgent;
+use Net::Domain qw( hostfqdn );
+use URI;
 use URI::Escape;
+use User;
 
 # internal
 my ($SEARCH_BEFORE, $SEARCH_UNDERWAY, $SEARCH_DONE) = (1..10);
@@ -111,10 +114,10 @@ The next step is usually:
 # the default (not currently more configurable :-< )
 $default_engine = 'AltaVista';
 $default_agent_name = "WWW::Search/$VERSION";
-$default_agent_e_mail = 'MartinThurn@iname.com';
+$default_agent_e_mail = User->Login .'@'. hostfqdn;
 
 sub new
-  { 
+  {
   my $class = shift;
   my $engine = shift;
   # Remaining arguments will become hash args
@@ -541,6 +544,7 @@ sub results
   Carp::croak "query string is empty" unless ($self->{'native_query'} ne '');
   # Put all the SearchResults into the cache:
   1 while ($self->retrieve_some());
+  $self->{cache} ||= [];
   my $iMax = scalar(@{$self->{cache}});
   # print STDERR " +   mtr is ", $self->{maximum_to_retrieve}, "\n" if $self->{debug};
   # print STDERR " +   cache contains $iMax results\n" if $self->{debug};
@@ -758,15 +762,17 @@ NOTE that this is not a method, it is a plain function.
 
 =cut
 
-sub unescape_query {
-    # code stolen from URI::Escape.pm.
-    my @copy = @_;
-    for (@copy) {
-	s/\+/ /g;
-	s/%([\dA-Fa-f]{2})/chr(hex($1))/eg;
-    }
-    return wantarray ? @copy : $copy[0];
-}
+sub unescape_query
+  {
+  # code stolen from URI::Escape.pm.
+  my @copy = @_;
+  for (@copy)
+    {
+    s/\+/ /g;
+    s/%([\dA-Fa-f]{2})/chr(hex($1))/eg;
+    } # for
+  return wantarray ? @copy : $copy[0];
+  } # unescape_query
 
 =head2 strip_tags
 
@@ -873,10 +879,15 @@ Backends should use robot-style user-agents whenever possible.
 
 sub user_agent
   {
-  my ($self, $non_robot) = @_;
-  $non_robot ||= '';
+  my $self = shift;
+  unless (@_)
+    {
+    # If NO ARGS, return the previously-created agent (if any):
+    return $self->{'user_agent'} if ref($self->{'user_agent'});
+    } # unless
+  my $non_robot = shift || 0;
   my $ua;
-  if ($non_robot ne '')
+  if ($non_robot)
     {
     $ua = new LWP::UserAgent;
     $ua->agent($self->{'agent_name'});
@@ -891,6 +902,7 @@ sub user_agent
   $ua->proxy('http', $self->{'http_proxy'}) if ($self->{'http_proxy'} ne '');
   $ua->env_proxy if $self->{'env_proxy'};
   $self->{'user_agent'} = $ua;
+  return $ua;
   } # user_agent
 
 
@@ -912,7 +924,6 @@ sub http_referer { return shift->_elem('_http_referer', @_); }
 =head2 http_request($method, $url)
 
 Return the response from an http request, handling debugging.
-Requires that user_agent already be set up, if needed.
 Requires that http_referer already be set up, if needed.
 
 =cut
@@ -932,10 +943,10 @@ sub http_request
     my $request;
     if ($method eq 'POST')
       {
-      my $uri_url = $HTTP::URI_CLASS->new($url);
-      my $equery = $uri_url->equery;
-      $uri_url->equery(undef);   # we will handle the query ourselves
-      $request = new HTTP::Request($method, $uri_url->abs());
+      my $uri_url = URI->new($url);
+      my $equery = $uri_url->query;
+      $uri_url->query(undef);   # we will handle the query ourselves
+      $request = new HTTP::Request($method, $uri_url);
       $request->header('Content-Type', 'application/x-www-form-urlencoded');
       $request->header('Content-Length', length $equery);
       $request->content($equery);
@@ -962,7 +973,7 @@ sub http_request
       $request->referer($s);
       } # if referer
 
-    my $ua = $self->{'user_agent'};
+    my $ua = $self->user_agent();
     $response = $ua->request($request);
 
     if (ref($self->{'_cookie_jar'}))
@@ -1177,8 +1188,7 @@ sub user_agent_delay {
 
 An internal routine to convert a relative URL into a absolute URL.  It
 takes two arguments, the 'base' url (usually the search engine CGI
-URL) and the URL to be converted.  Returns a URI or URI::URL object
-(whichever is being used by HTTP on your system).
+URL) and the URL to be converted.  Returns a URI object.
 
 =cut
 
@@ -1189,8 +1199,8 @@ sub absurl
   # print STDERR " +   this is WWW::Search::absurl($base,$url)\n" if 1 < $self->{_debug};
   $base = $self->{_prev_url} if $base eq '';
   #$url =~ s,^http:/([^/]),/$1,; #bogus sfgate URL
-  my $link = $HTTP::URI_CLASS->new_abs($url, $base);
-  return($link);
+  my $link = URI->new_abs($url, $base);
+  return $link;
   } # absurl
 
 
@@ -1248,7 +1258,7 @@ example usage.
 sub native_retrieve_some
   {
   my ($self) = @_;
-  printf STDERR (" +   %s::native_retrieve_some()\n", __PACKAGE__) if $self->{_debug};
+  # printf STDERR (" +   %s::native_retrieve_some()\n", __PACKAGE__) if $self->{_debug};
   # fast exit if already done
   return undef if (!defined($self->{_next_url}));
   # If this is not the first page of results, sleep so as to not overload the server:
@@ -1358,8 +1368,8 @@ maintainers.  If you want to take a shot at it, please let me know.
 
 =head1 AUTHOR
 
-C<WWW::Search> was written by John Heidemann, E<johnh@isi.edu>.
-C<WWW::Search> is currently maintained by Martin Thurn, E<MartinThurn@iname.com>.
+C<WWW::Search> was written by John Heidemann, C<johnh@isi.edu>.
+C<WWW::Search> is currently maintained by Martin Thurn, C<mthurn@cpan.org>.
 
 backends and applications for WWW::Search were originally written by
 John Heidemann,

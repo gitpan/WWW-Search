@@ -1,9 +1,5 @@
 AutoSearch.PL
 ChangeLog
-Generic/Generic.pm
-Generic/WWW__Search__Generic.3
-Generic/amazon.ini
-Generic/wwwsearch.pl
 MANIFEST
 Makefile.PL
 README

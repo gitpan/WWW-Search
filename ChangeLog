@@ -1,3 +1,18 @@
+2002-03-12  Kingpin  <mthurn@copper.dulles.tasc.com>
+
+	* Makefile.PL: require 2 more modules
+
+2002-03-11  Kingpin  <mthurn@copper.dulles.tasc.com>
+
+	* lib/WWW/Search.pm (user_agent): do not require users to call user_agent() explicitly;
+	set default email to local user@host;
+	(results): prevent warning when 0 hits
+
+2002-02-05  Kingpin  <mthurn@copper.dulles.tasc.com>
+
+	* lib/WWW/Search.pm (http_request): use URI instead of $HTTP::URI_CLASS
+	(absurl): same
+
 2002-01-22  Kingpin  <mthurn@copper.dulles.tasc.com>
 
 	* lib/WWW/Search.pm (http_request): do not use URI::URL

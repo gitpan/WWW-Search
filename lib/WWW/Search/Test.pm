@@ -571,6 +571,7 @@ sub run_our_test
     $sExpect = "$iMin..$iMax";
     }
   $iMin ||= 0;
+  $iMax ||= 0;
   if ($iMin == $iMax)
     {
     # The caller expects an exact result set.  Do not limit how many
@@ -579,7 +580,7 @@ sub run_our_test
     }
   else
     {
-    if (defined $iMax)
+    if ($iMax)
       {
       $oSearch->maximum_to_retrieve($iMax + 1);
       }

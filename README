@@ -3,11 +3,12 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.26?  (2002-01-22)
+WHAT IS NEW IN WWW::Search 2.27?  (2002-03-12)
 ----------------------------------------------
 
 overview: 
- * removed explicit reference to URI::URL module
+ * do not require backends or users to call user_agent()
+ * other minor changes
 
 For details, see the ChangeLog file and/or the pod of each affected
 module.
@@ -20,10 +21,10 @@ WWW::Search is a collection of Perl modules which provide an API to
 search engines on the world-wide web (and similar engines).
 Currently, WWW::Search includes backends for WebCrawler, among others.
 Backends for many engines can be obtained separately, such as
-AltaVista, Ebay, Excite, HotBot, and Yahoo.  This distribution
-includes two applications built from this library: AutoSearch (a
-program to automate tracking of search results over time), and
-WebSearch, a small demonstration program to drive the library.
+AltaVista, Ebay, HotBot, and Yahoo.  This distribution includes two
+applications built from this library: AutoSearch (a program to
+automate tracking of search results over time), and WebSearch, a small
+demonstration program to drive the library.
 
 WWW::Search does NOT try to emulate the default search that you would
 get with each search engine's GUI.  I.e. WWW::Search does NOT
@@ -73,7 +74,6 @@ The following backends (and more!) are registered at CPAN
 independently (not included with this WWW::Search distribution):
 
 Euroseek        http://www.perl.com/CPAN-local/authors/by-module/WWW/JSMYSER/
-Excite          http://www.perl.com/CPAN-local/modules/by-module/WWW/
 GoTo            http://www.perl.com/CPAN-local/authors/by-module/WWW/JSMYSER/
 Google          http://www.perl.com/CPAN-local/authors/by-module/WWW/JSMYSER/
 HotBot          http://www.perl.com/CPAN-local/modules/by-module/WWW/
@@ -222,7 +222,7 @@ there as soon as they're fixed.
 Feedback about WWW::Search is encouraged.  If you're using it for a
 neat application, please let us know.  If you'd like to (or have
 already) implement and publish a new backend for WWW::Search, let us
-know so we don't duplicate work.  <mthurn@tasc.com>
+know so we don't duplicate work.  <mthurn@cpan.org>
 
 Backend-related bug reports ("search engine ABC doesn't work") should
 be sent to the author of the backend (backend authors are identified
@@ -230,7 +230,7 @@ in the corresponding man page and in the output of `make
 test_parsing`).  
 
 All other feedback, bug reports, fixes, and new backends should be
-sent to Martin Thurn <mthurn@tasc.com>.  When sending e-mail,
+sent to Martin Thurn <mthurn@cpan.org>.  When sending e-mail,
 please please put [WWW::Search] at the beginning of the subject line
 (or risk me losing the message among the spam).
 
@@ -292,6 +292,12 @@ FUTURE PLANS
 
 Some things we need, and ideas for new features:
 
+ - more robust test mechanism (i.e. more than just counting the number
+of URLs returned) (e.g. look at the various values and make sure
+they're being parsed correctly) (e.g. change_date() is really a date,
+URL is not double-encoded, results are not duplicated, etc.)  Contact
+<mthurn@cpan.org>
+
  - updates to each backend to implement the submit() method.  Contact
 each backend's maintainer.
 
@@ -299,23 +305,19 @@ each backend's maintainer.
 same search as the engine's web GUI (I'm looking for contributions of
 the precise arguments that will produce such a search for each engine;
 i.e. the hash that should be passed as the second argument to
-native_query).  Contact <mthurn@tasc.com>
+native_query).  Contact <mthurn@cpan.org>
 
- - test cases for WebSearch.  Contact <mthurn@tasc.com>
+ - test cases for WebSearch.  Contact <mthurn@cpan.org>
 
- - test cases for AutoSearch.  Contact <mthurn@tasc.com>
+ - test cases for AutoSearch.  Contact <mthurn@cpan.org>
 
  - use LWP::ParallelUA to speed up multiple backend search requests
 (I'm trying to decide what the API interface will look like; please
-send suggestions).  Contact <mthurn@tasc.com>
+send suggestions).  Contact <mthurn@cpan.org>
 
  - add a "language" parameter to the WWW::Search object?  We would
 need a critical mass of backends/engines that can search multiple
 languages before this would be useful.
-
- - proxy support (I'm looking for a contribution here from someone who
-uses/needs proxy support and can test it).  Contact
-<mthurn@tasc.com>
 
  - more widespread use of result tags such as description, date, size,
 etc. across all backends.  Contact backend maintainers.
@@ -326,7 +328,7 @@ etc. across all backends.  Contact backend maintainers.
 
 Contributions are always welcome.  Send me e-mail if you plan a new
 backend, or to discuss architectural changes (to avoid duplicating
-work).  Contact <mthurn@tasc.com>
+work).  Contact <mthurn@cpan.org>
 
 
 SUPPORT AND CREDITS
@@ -352,7 +354,7 @@ APPLICATIONS:
 BACKENDS:
 	AltaVista		John Heidemann
 	Dejanews		Cesare Feroldi de Rosa <C.Feroldi@it.net>
-				and Martin Thurn <mthurn@tasc.com>
+				and Martin Thurn <mthurn@cpan.org>
 	Crawler			Andreas Borchert
 	Excite			GLen Pringle <pringle@cs.monash.edu.au>
 				and Martin Thurn
@@ -390,7 +392,7 @@ identified by William Scheding <wls@isi.edu>, T. V. Raman
 <raman@adobe.com> (proxy support), C. Feroldi <C.Feroldi@it.net>,
 Larry Virden <lvirden@cas.org>, Paul Lindner <paul.lindner@itu.int>,
 Guy Decoux <decoux@moulon.inra.fr>, R Chandrasekar (Mickey)
-<mickeyc@linc.cis.upenn.edu>, Martin Thurn <mthurn@tasc.com>,
+<mickeyc@linc.cis.upenn.edu>, Martin Thurn <mthurn@cpan.org>,
 Chris Nandor <pudge@pobox.com>, Martin Valldeby
 <martin.valldeby@pakom.se>, Jim Smyser <jsmyser@bigfoot.com>, Darren
 Stalder <darren@u.washington.edu>, Neil Bowers
