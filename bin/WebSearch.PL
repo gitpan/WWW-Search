@@ -22,7 +22,7 @@ print OUT <<'!NO!SUBS!';
 #
 # WebSearch.PL
 # Copyright (C) 1996-1997 by USC/ISI
-# $Id: WebSearch.PL,v 1.25 1997/02/25 19:21:12 johnh Exp $
+# $Id: WebSearch.PL,v 1.26 1997/10/03 21:28:19 johnh Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -136,7 +136,7 @@ use strict;
 BEGIN {
     # The next lines are a testing hacks.
 !NO!SUBS!
-   print OUT 'unshift (@INC, "./lib/"); # for john', "\n" if ($debug);
+   print OUT 'unshift (@INC, "/home/johnh/WORKING/LSAM/RENDEZVOUS/lib/"); # for john', "\n" if ($debug);
 print OUT <<'!NO!SUBS!';
 #  unshift (@INC, "/nfs/u1/wls/cvs/lsam/rendezvous/lib/"); # for wls
 }
@@ -145,6 +145,7 @@ use WWW::Search;
 use Getopt::Long;
 
 my(%opts);
+$Getopt::Long::getopt_compat = 1;   # avoid parsing +'s as options (doesn't work!)
 &GetOptions(\%opts, qw(v a e=s o=s@ r)); # i.e -v -e=<string> -o=<options>
 
 &usage if ($#ARGV == -1); # we MUST have one left, the query

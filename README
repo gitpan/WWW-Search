@@ -3,18 +3,15 @@ WWW::Search and AutoSearch
 ==========================
 
 
-WHAT IS NEW WITH WWW::Search 1.010?
+WHAT IS NEW WITH WWW::Search 1.011?
 -----------------------------------
 
-- new: normalized_score, a back-end independent score (from Paul Lindner)
-- new: generic options are supported by several back-ends
-	(specify search engine URL, debugging, etc.)
-- new: AltaVista back-end now sets SearchResult::raw
-- bug-fix: update for AltaVista (page format changed Jul 97)
-	(some information wrt fix provided by Guy Decoux)
-
-This release is an interim release, I hope to have a more complete
-release in late August fixing the other (currently broken search engines).
+Overview:  an alpha release for test-suite testing
+- new: for testing, HTTP results can be saved to disk and played back
+- new: test scripts (try "make test")
+- bug-fix: Lycos works again and is now maintained by John Heidemann
+- bug-fix: some uninitialized value warnings suppressed
+	(fix submitted by a user whose name I misplaced)
 
 
 WHAT IS WWW::Search?
@@ -86,7 +83,10 @@ library, by running these commands:
 
     perl Makefile.PL
     make
+    make test
     make install
+
+See below for a description of what "make test" does.
 
 If you want to install a private copy of WWW::Search in your home
 directory, then you should try to produce the initial Makefile with
@@ -94,6 +94,36 @@ something like this command:
 
     perl Makefile.PL PREFIX=~/perl
 
+
+TESTING
+-------
+
+The "make test" command compares expected output from WWW::Search with
+actual output.  It detects two kinds of errors:
+
+- internal parsing:
+	First it checks to make sure that your system computes
+	the same results from my system based on some saved 
+	Web queries.  This test should always pass; if it doesn't,
+	send me mail.
+
+- external queries:
+	Second, it makes real queries against the search engines
+	and compares them with some saved results.
+
+External queries can fail for several reasons:
+
+- new pages have been added which match my test queries
+	(not bad)
+
+- changes in the web search engine output which break WWW::Search's
+	parsers (very bad)
+
+If the external tests fail, please either investigate the error or
+send a description of the problem and the output of "make test" to the
+maintainer of the back-end for the search engine that fails.  You can
+find out who maintains the back-end by looking at the man page or code
+for the back-end in the lib/WWW/Search directory.
 
 
 
@@ -205,6 +235,15 @@ overview:  1.009 is primarily a maintenance release to accommodate
 	(problem found by Joseph McDonald, fix by Cesare Feroldi de Rosa)
 - bug-fix:  update for Excite (page format changed about 9 Jan 97)
 	(problem found by Juan Jose Amor, fix by GLen Pringle)
+
+1.010: (20 August 1997)
+overview:  an interim release to fix altavista
+- new: normalized_score, a back-end independent score (from Paul Lindner)
+- new: generic options are supported by several back-ends
+	(specify search engine URL, debugging, etc.)
+- new: AltaVista back-end now sets SearchResult::raw
+- bug-fix: update for AltaVista (page format changed Jul 97)
+	(some information wrt fix provided by Guy Decoux)
 
 
 SUPPORT AND CREDITS

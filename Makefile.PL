@@ -1,5 +1,5 @@
 # This -*- perl -*- script writes the Makefile for libwww-perl
-# $Id: Makefile.PL,v 1.6 1996/12/18 02:57:02 johnh Exp $
+# $Id: Makefile.PL,v 1.8 1997/10/08 23:02:19 johnh Exp $
 
 #--- Configuration section ---
 
@@ -78,16 +78,24 @@ WriteMakefile(
 #     join "", @m;
 # }
 
-# # What happens when we say 'make test'
-# sub MY::test {
-#     q(
-# TEST_VERBOSE=0
-# 
-# test:
-# 	$(FULLPERL) t/TEST $(TEST_VERBOSE)
-# 
-# );
-# }
+# What happens when we say 'make test'
+sub MY::test {
+    q(
+TEST_VERBOSE=
+
+FORCE:
+
+# .PHONY: a gnu-ism
+.PHONY: test
+
+test: FORCE
+	$(FULLPERL) test/test.pl $(TEST_VERBOSE)
+
+test-v:
+	$(FULLPERL) test/test.pl -v
+
+);
+}
 
 
 # Determine things that should *not* be installed

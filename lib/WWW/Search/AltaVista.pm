@@ -4,10 +4,10 @@
 # AltaVista.pm
 # by John Heidemann
 # Copyright (C) 1996-1997 by USC/ISI
-# $Id: AltaVista.pm,v 1.20 1997/08/20 22:37:52 johnh Exp $
+# $Id: AltaVista.pm,v 1.23 1997/10/08 23:02:30 johnh Exp $
 #
 # Complete copyright notice follows below.
-# 
+#
 
 
 package WWW::Search::AltaVista;
@@ -87,7 +87,8 @@ set of results, otherwise it sets it to undef to indicate we're done.
 
 =head1 AUTHOR
 
-C<WWW::Search::AltaVista> is written by John Heidemann, <johnh@isi.edu>.
+C<WWW::Search::AltaVista> is written and maintained
+by John Heidemann, <johnh@isi.edu>.
 
 
 =head1 COPYRIGHT
@@ -133,6 +134,10 @@ use WWW::Search(generic_option);
 require WWW::SearchResult;
 
 
+sub undef_to_emptystring {
+    return defined($_[0]) ? $_[0] : "";
+}
+
 
 # private
 sub native_setup_search
@@ -144,10 +149,10 @@ sub native_setup_search
     # (suggested by Guy Decoux <decoux@moulon.inra.fr>).
     if (!defined($self->{_options})) {
 	$self->{_options} = {
-	    pg => 'q',
-	    text => 'yes',
-	    what => 'web',
-	    fmt => 'd',
+	    'pg' => 'q',
+	    'text' => 'yes',
+	    'what' => 'web',
+	    'fmt' => 'd',
 	    'search_url' => 'http://www.altavista.digital.com/cgi-bin/query',
         };
     };
@@ -204,17 +209,16 @@ sub native_retrieve_some
     # fast exit if already done
     return undef if (!defined($self->{_next_url}));
 
-    print STDERR "WWW::Search::AltaVista::native_retrieve_some: fetching " . $self->{_next_url} . "\n" if ($self->{_debug});
     # get some
-    my($request) = new HTTP::Request('GET', $self->{_next_url});
-    my($response) = $self->{user_agent}->request($request);
+    print STDERR "WWW::Search::AltaVista::native_retrieve_some: fetching " . $self->{_next_url} . "\n" if ($self->{_debug});
+    my($response) = $self->http_request('GET', $self->{_next_url});
     $self->{response} = $response;
     if (!$response->is_success) {
 	return undef;
     };
 
     # parse the output
-    my($HEADER, $HITS, $TRAILER, $POST_NEXT) = (1..10);
+    my($HEADER, $HITS, $TRAILER, $POST_NEXT) = (1..10);  # order matters
     my($hits_found) = 0;
     my($state) = ($HEADER);
     my($hit) = undef;
@@ -237,7 +241,7 @@ sub native_retrieve_some
 	    $hit->add_url($2);
 	    $hits_found++;
 	    $hit->title($3);
-	    $hit->description($4.$5);
+	    $hit->description(undef_to_emptystring($4) . undef_to_emptystring($5));
 	    print STDERR "PARSE(3:HITS): hit found.\n" if ($self->{_debug} >= 2);
 	} elsif ($state == $HITS && m@^(<[Pp]><dt>|<dt>)<a href=\"([^"]+)"><strong>(.*)</strong></a><dd>(.*)<br><a href=\"([^"]+)">@) {
 	    # news is slightly different
@@ -246,8 +250,8 @@ sub native_retrieve_some
 	    $hit->add_url($2);   # AltaVista's news gateway URL
 	    $hits_found++;
 	    $hit->title($3);
-	    $hit->description($4);
-	    $hit->add_url($5);   # news: URL
+	    $hit->description(undef_to_emptystring($4));
+	    $hit->add_url(undef_to_emptystring($5));   # news: URL
 	    $hits_found++;
 	    print STDERR "PARSE(4:HITS): news hit found.\n" if ($self->{_debug} >= 2);
 	} elsif ($state == $HITS && /^<cite><a href="([^"]+)">/) { #"
@@ -287,9 +291,11 @@ sub native_retrieve_some
     };
     if ($state != $POST_NEXT) {
 	# end, no other pages (missed ``next'' tag)
-	$self->begin_new_hit($hit, $raw);   # save old one
+	if ($state == $HITS) {
+	    $self->begin_new_hit($hit, $raw);   # save old one
+	    print STDERR "PARSE: never got to TRAILER.\n" if ($self->{_debug} >= 2);
+	};
 	$self->{_next_url} = undef;
-	print STDERR "PARSE: never got to TRAILER.\n" if ($self->{_debug} >= 2);
     };
 
     # sleep so as to not overload altavista

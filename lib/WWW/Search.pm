@@ -4,7 +4,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.39 1997/08/20 22:37:51 johnh Exp $
+# $Id: Search.pm,v 1.42 1997/10/08 23:02:27 johnh Exp $
 #
 # A complete copyright notice appears at the end of this file.
 # 
@@ -71,12 +71,13 @@ see L<WWW::SearchResult>.
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query generic_option);
-$VERSION = '1.010';
+$VERSION = '1.011';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
 use LWP::UserAgent;
 use LWP::RobotUA;
 use HTTP::Status;
+use HTTP::Request;
 use HTTP::Response;
 
 use Carp ();
@@ -119,7 +120,7 @@ sub new
     my($subclass) = "${class}::$engine";
     if (!defined(&$subclass)) {
 	eval "use $subclass";
-	Carp::croak("unknown search engine back-end $engine") if ($@);
+	Carp::croak("unknown search engine back-end $engine ($@)") if ($@);
     };
 
     my $self = bless {
@@ -135,6 +136,9 @@ sub new
 	http_proxy => undef,
 	timeout => 60,
 	debug => 0,
+	search_from_file => undef,
+	search_to_file => undef,
+	search_to_file_index => 0,
 	# variable initialization goes here
     }, $subclass;
     return $self;
@@ -161,7 +165,7 @@ options specific to the back-end
 and generic options applicable to mutliple back-ends.
 
 Generic options all begin with ``search_''.
-Currently two are supported:
+Currently a few are supported:
 
 =over 4
 
@@ -176,6 +180,14 @@ Enables back-end parser debugging.
 
 =item search_method
 Specifies the HTTP method (C<GET> or C<POST>) for HTTP-based queries.
+
+=item search_to_file FILE
+Causes the search results to be saved in a set of files 
+prefixed by FILE.
+
+=item search_from_file FILE
+Reads a search from a set of files prefixed by FILE.
+
 =back
 
 Some back-ends may not implement generic options,
@@ -209,6 +221,12 @@ sub native_query {
 	if ($#_ != 1);
     $self->{'native_query'} = $_[0];
     $self->{'native_options'} = $_[1];
+    # promote generic options
+    my($opts_ref) = $_[1];
+    foreach (keys %$opts_ref) {
+	$self->{$_} = $opts_ref->{$_}
+	    if (generic_option($_));
+    };
 }
 sub approximate_result_count { return shift->_elem('approx_count', @_); }
 
@@ -393,6 +411,7 @@ See also C<unescape_query>.
 sub escape_query {
     # code stolen from URI::Escape.pm.
     my($text) = @_;
+    $text = "" if (!defined($text));
     # Default unsafe characters except for space. (RFC1738 section 2.2)
 #    $text =~ s/([+\x00-\x1f"#%;<>?{}|\\\\^~`\[\]\x7F-\xFF])/$URI::Escape::escapes{$1}/g; #"
     # The modern trend seems to be to quote almost everything.
@@ -442,6 +461,103 @@ Example:
 sub http_proxy { return shift->_elem('http_proxy', @_); }
 
 
+
+=head2 http_request
+
+Return the response from an http request,
+handling debugging.  Requires that user_agent be setup.
+
+=cut
+sub http_request {
+    my($self) = shift;
+    my($method, $url) = @_;
+    my($response);
+    if ($self->{search_from_file}) {
+	$response = $self->http_request_from_file($url);
+    } else {
+	# fetch it
+        my($request) = new HTTP::Request($method, $url);
+	my($ua) = $self->{user_agent};
+	$response = $ua->request($request);
+
+	# save it for debugging?
+	if ($self->{search_to_file} && $response->is_success) {
+	    $self->http_request_to_file($url, $response);
+	};
+    };
+    return $response;
+}
+
+sub http_request_get_filename {
+    my($self) = shift;
+    # filename?
+    if (!defined($self->{search_filename})) {
+	my($fn) = $self->{search_from_file};
+	$fn = $self->{search_to_file} if (!defined($fn));
+	$self->{search_filename} = WWW::Search::unescape_query($fn);
+    };
+    my($fn) = $self->{search_filename};
+    die "$0: bogus filename.\n" if (!defined($fn));
+    return $fn;
+}
+
+sub http_request_from_file {
+    my($self) = shift;
+    my($url) = @_;
+
+    my($fn) = $self->http_request_get_filename();
+
+    # read index?
+    if (!defined($self->{search_from_file_hash})) {
+	open(TABLE, "<$fn") || die "$0: open $fn failed.\n";
+	my($i) = 0;
+	while (<TABLE>) {
+	    chomp;
+	    $self->{search_from_file_hash}{$_} = $i;
+	    # print STDERR "$0: file index: $i <$_>\n";
+	    $i++;
+	};
+	close TABLE;
+    };
+
+    # read file
+    my($i) = $self->{search_from_file_hash}{$url};
+    if (defined($i)) {
+	# print STDERR "$0: saved request <$url> found in $fn.$i\n";
+	# read the data
+	open(FILE, "<$fn.$i") || die "$0: open $fn.$i\n";
+	my($d) = "";
+	while (<FILE>) {
+	    $d .= $_;
+	};
+	close FILE;
+	# make up the response
+	my($r) = new HTTP::Response(RC_OK);
+	$r->content($d);
+	return $r;
+    } else {
+	print STDERR "$0: saved request <$url> not found.\n";
+	my $r = new HTTP::Response(RC_NOT_FOUND);
+	return $r;
+    };
+}
+
+sub http_request_to_file {
+    my($self) = shift;
+    my($url, $response) = @_;
+
+    my($fn) = $self->http_request_get_filename();
+
+    unlink($fn)
+        if ($self->{search_to_file_index} == 0);
+    open(TABLE, ">>$fn") || die "$0: open $fn\n";
+    print TABLE "$url\n";
+    close TABLE;
+    my($i) = ($self->{search_to_file_index})++;
+    open (FILE, ">$fn.$i") || die "$0: open $fn.$i\n";
+    print FILE $response->content();
+    close FILE;
+}
 
 =head2 generic_option (PRIVATE)
 

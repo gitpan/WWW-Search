@@ -1,0 +1,21 @@
+Test scripts should search for pages with all of the words:
+
+Singleton:
+Vons Quarterdeck SantaMonicaHairDesign TijuoNahana TotalTan NevadaBobsDiscountGolf MarinaPlazaChiropractic MailCenter LotusBlossomMandarin DanielFreeman CourtyardMarriot
+
++Vons +Quarterdeck +SantaMonicaHairDesign +TijuoNahana +TotalTan +NevadaBobsDiscountGolf +MarinaPlazaChiropractic +MailCenter +LotusBlossomMandarin +DanielFreeman +CourtyardMarriot
+
+Multiton:
++Vons +Quarterdeck +SantaMonicaHairDesign +TijuoNahana +TotalTan +NevadaBobsDiscountGolf +MarinaPlazaChiropractic +MailCenter +LotusBlossomMandarin +DanielFreeman +CourtyardMarriot +McDonaldsChevron 
+
+
+Sample pages are up at 
+<http://www.isi.edu/lsam/autosearch/TEST/index.html>
+with these keywords.
+
+Unfortunately most sites haven't indexed these pages.
+Submitted to AltaVista  7-Oct-97.
+Submitted to Lycos  7-Oct-97.
+
+To save new results, run WebSearch with -o search_to_file=place/to/save
+(for back-ends that support search_to_file).

@@ -2,9 +2,9 @@
 
 #
 # Lycos.pm
-# by Wm. L. Scheding
-# Copyright (C) 1996 by USC/ISI
-# $Id: Lycos.pm,v 1.3 1996/11/21 23:02:17 johnh Exp $
+# by Wm. L. Scheding, John Heidemann
+# Copyright (C) 1996-1997 by USC/ISI
+# $Id: Lycos.pm,v 1.4 1997/10/08 23:00:52 johnh Exp $
 #
 # Complete copyright notice follows below.
 # 
@@ -55,11 +55,12 @@ This module should support options.
 
 C<WWW::Search::Lycos> is written by Wm. L. Scheding
 based upon C<WWW::Search::AltaVista>.
+It is now maintained by John Heidemann.
 
 
 =head1 COPYRIGHT
 
-Copyright (c) 1996 University of Southern California.
+Copyright (c) 1996-1997 University of Southern California.
 All rights reserved.                                            
                                                                
 Redistribution and use in source and binary forms are permitted
@@ -97,6 +98,7 @@ require Exporter;
 @ISA = qw(WWW::Search Exporter);
 
 use Carp ();
+use WWW::Search(generic_option);
 require WWW::SearchResult;
 
 
@@ -104,12 +106,42 @@ require WWW::SearchResult;
 # private
 sub native_setup_search
 {
-    my($self, $native_query) = @_;
-    $self->user_agent();
+    my($self, $native_query, $native_options_ref) = @_;
+    $self->user_agent('user');
     $self->{_next_to_retrieve} = 0;
-    $self->{_base_url} = $self->{_next_url} =
-	"http://www.lycos.com/cgi-bin/pursuit?cat=lycos&x=13&y=15" .
-	"&query=" . $native_query;
+    if (!defined($self->{_options})) {
+	$self->{_options} = {
+	    'cat' => 'lycos',
+	    'matchmode' => 'and',
+	    'adv' => '0',
+	    'search_url' => 'http://www.lycos.com/cgi-bin/pursuit',
+        };
+    };
+    my($options_ref) = $self->{_options};
+    if (defined($native_options_ref)) {
+	# Copy in new options.
+	foreach (keys %$native_options_ref) {
+	    $options_ref->{$_} = $native_options_ref->{$_};
+	};
+    };
+    # Process the options.
+    my($options) = '';
+    foreach (keys %$options_ref) {
+	# printf STDERR "option: $_ is " . $options_ref->{$_} . "\n";
+	next if (generic_option($_));
+	$options .= $_ . '=' . $options_ref->{$_} . '&';
+    };
+    $self->{_debug} = $options_ref->{'search_debug'};
+    $self->{_debug} = 2 if ($options_ref->{'search_parse_debug'});
+    $self->{_debug} = 0 if (!defined($self->{_debug}));
+    
+    # Finally figure out the url.
+    $self->{_base_url} = 
+	$self->{_next_url} =
+	$self->{_options}{'search_url'} .
+	"?" . $options .
+	"query=" . $native_query;
+    print $self->{_base_url} . "\n" if ($self->{_debug});
 }
 
 
@@ -122,76 +154,65 @@ sub native_retrieve_some
     return undef if (!defined($self->{_next_url}));
 
     # get some
-    my($request) = new HTTP::Request('GET', $self->{_next_url});
-    my($response) = $self->{user_agent}->request($request);
+    print STDERR "WWW::Search::Lycos::native_retrieve_some: fetching " . $self->{_next_url} . "\n" if ($self->{_debug});
+#    my($request) = $self->http_request('GET', $self->{_next_url});
+    my($response) = $self->http_request('GET', $self->{_next_url});
     $self->{response} = $response;
     if (!$response->is_success) {
 	return undef;
     };
 
     # parse the output
-    my($HEADER, $HITS, $DD, $DESC, $CENTER, $PREV, $NBSP, $NEXT, $TRAILER) = (1..10);
+    my($HEADER, $HITS, $DESC, $RATING, $TRAILER, $POST_NEXT) = (1..10);
     my($hits_found) = 0;
     my($state) = ($HEADER);
-    my($hit) = ();
+    my($hit, $raw, $title, $url, $rating, $desc) = ();
     foreach (split(/\n/, $response->content())) {
         next if m@^$@; # short circuit for blank lines
-	if ($state == $HEADER && m@^<P>\s+You\s+found\s+(\d+)\s+relevant\s+documents@i) {
-#            print STDOUT "header:\"$_\"\n";
+	if ($state == $HEADER && m@\s+of\s+(\d+)\s+relevant\s+result@i) { # new as of  7-Oct-97
 	    $self->approximate_result_count($1);
+            print STDERR "PARSE(HEADER->HITS): $_\n" if ($self->{_debug} >= 2);
 	    $state = $HITS;
-	} elsif ($state == $HITS && m@^<DT><b>(\d+)\)\s+<a href=\"([^"]+)\">(.*)</a></b>@i) { #"
-#            print STDOUT "hit:\"$_\"\n";
-	    if (defined($hit)) {
-	        push(@{$self->{cache}}, $hit);
-	    };
-	    $hit = new WWW::SearchResult;
-	    $hit->add_url($2);
-	    $hits_found++;
-	    $hit->title($3);
-	    $state = $DD;
-	} elsif ($state == $DD && m@^<DD>\s+@i) { #"
-#            print STDOUT "DD:\"$_\"\n";
+	} elsif ($state == $HITS && m@<FONT.*<b>\d+\)\s+<a\s+href="([^"]+)">(.*)\<\/a\>@i) { #"
+	    $raw = $_;
+	    $url = $1;
+	    $title = $2;
+	    print STDERR "PARSE(HITS->DESC): $_\n" if ($self->{_debug} >= 2);
 	    $state = $DESC;
-	} elsif ($state == $DESC && m@^(.*)$@i) { #"
-#            print STDOUT "DESC:\"$_\"\n";
-	    $hit->description($1);
+	} elsif ($state == $DESC) {
+	    $raw .= $_;
+	    m@<br><[^>]+>(.*)</font>@;
+	    $desc = $1;
+	    print STDERR "PARSE(DESC->RATING): $_\n" if ($self->{_debug} >= 2);
+	    $state = $RATING;	    
+	} elsif ($state == $RATING) {
+	    $raw .= $_;
+	    m@<br><[^>]+>.*\[(\d+)\%\]</font>@;
+	    $rating = $1;
+	    my($hit) = new WWW::SearchResult;
+	    $hit->add_url($url);
+	    $hit->title($title);
+	    $hit->description($desc);
+	    $hit->score($rating);
+	    $hit->normalized_score($rating * 10);
+	    $hit->raw($raw);
+	    $hits_found++;
+	    push(@{$self->{cache}}, $hit);
+	    print STDERR "PARSE(RATING->HITS): $_\n\n" if ($self->{_debug} >= 2);
 	    $state = $HITS;
-	} elsif ($state == $HITS && m@^<CENTER>$@i) { #"
-#            print STDOUT "center:\"$_\"\n";
-	    $state = $CENTER;
-	} elsif ($state == $CENTER && m@^Previous Page$@i) { #"
-#            print STDOUT "prev:\"$_\"\n";
-	    $state = $PREV;
-	} elsif ($state == $CENTER && m@^<A HREF="([^"]+)">Previous Page</A>$@i) { #"
-#            print STDOUT "prev:\"$_\"\n";
-	    $state = $PREV;
-	} elsif ($state == $PREV && m@^&nbsp;&nbsp;$@i) { #"
-#            print STDOUT "nbsp:\"$_\"\n";
-	    $state = $NBSP;
-	} elsif ($state == $NBSP && m@<A HREF="([^"]+)">Next Page</a><BR>@i) { #"
-#            print STDOUT "next:\"$_\"\n";
-	    # end, with a list of other pages to go to
-	    if (defined($hit)) {
-	        push(@{$self->{cache}}, $hit);
-	    };
-	    # set up next page
-    	    my($relative_url) = $1; #"
+	} elsif ($state == $HITS && m@-- end formatted results --@) {
+	    print STDERR "PARSE(HITS->TRAILER): $_\n\n" if ($self->{_debug} >= 2);
+	    $state = $TRAILER;
+	} elsif ($state == $TRAILER &&  m@<A HREF="([^"]+)">Next Page</A>@i) { #"
+	    my($relative_url) = $1;
 	    $self->{_next_url} = new URI::URL($relative_url, $self->{_base_url});
-	    $state = $TRAILER;
-	} elsif ($state == $NBSP && m@^Next Page<BR>$@i) { #"
-#            print STDOUT "last:\"$_\"\n";
-	    # end, with no other pages to go to
-	    if (defined($hit)) {
-	        push(@{$self->{cache}}, $hit);
-	    };
-	    $self->{_next_url} = undef;
-	    $state = $TRAILER;
+	    print STDERR "PARSE(TRAILER->POST_NEXT): $_\n\n" if ($self->{_debug} >= 2);
+	    $state = $POST_NEXT;
 	} else {
-#            print STDOUT "read:\"$_\"\n";
+            print STDERR "PARSE: read:\"$_\"\n" if ($self->{_debug} >= 2);
 	};
     };
-    if ($state != $TRAILER) {
+    if ($state != $POST_NEXT) {
 	# end, no other pages (missed ``next'' tag)
 	if (defined($hit)) {
 	    push(@{$self->{cache}}, $hit);
