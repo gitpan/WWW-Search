@@ -3,7 +3,7 @@
 #
 # test.pl
 # Copyright (C) 1997 by USC/ISI
-# $Id: test.pl,v 1.19 1998/08/12 20:43:04 johnh Exp $
+# $Id: test.pl,v 1.23 1998/08/27 17:26:41 johnh Exp $
 #
 # Copyright (c) 1997 University of Southern California.
 # All rights reserved.                                            
@@ -61,6 +61,7 @@ my($debug) = $opts{'d'};
 my($desired_search_engine) = $opts{'e'};
 my($update_saved_files) = $opts{'u'};
 my($internal_only) = $opts{'I'};
+my($error_count) = 0;
 
 my($fullperl);
 my($file, $query, $date, $search_engine, $pwd, $maintainer);
@@ -133,6 +134,7 @@ sub test {
 	    print "\tDIFFERENCE DETECTED.\n";
 	} else {
 	    print "\tDIFF ERROR.\n";
+	    $error_count++;
 	};
     } else {
 	print "\tno saved output.\n";
@@ -254,14 +256,23 @@ sub test_cases {
     test($mode, $TEST_EXACTLY);
 
     ######################################################################
-    $search_engine = 'DejaNews';
-    $maintainer = 'Cesare Feroldi de Rosa, <C.Feroldi@IT.net>';
-    not_working;
+    $search_engine = 'Dejanews';
+    # $maintainer = 'Cesare Feroldi de Rosa, <C.Feroldi@IT.net>';
+    $maintainer = 'Martin Thurn <MartinThurn@iname.com>';
+
+    $file = 'test/Dejanews/zero_result';
+    $query = 'mrfglbqnx AND Bogus' . 'NoSuchWord';
+    test($mode, $TEST_EXACTLY);
+
+    $file = 'test/Dejanews/multi_result';
+    $query = 'Perl and CPAN';
+    test($mode, $TEST_GREATER_THAN, 101);
+
 
     ######################################################################
     $search_engine = 'Excite';
     # $maintainer = 'GLen Pringle <pringle@cs.monash.edu.au>';
-    $maintainer = 'Martin Thurn <mthurn@irnet.rest.tasc.com>';
+    $maintainer = 'Martin Thurn <MartinThurn@iname.com>';
 
     $file = 'test/Excite/zero_result';
     $query = '+mrfglbqnx +Bogus' . 'NoSuchWord';
@@ -307,7 +318,7 @@ sub test_cases {
 
     ######################################################################
     $search_engine = 'HotBot';
-    $maintainer = 'Martin Thurn <mthurn@irnet.rest.tasc.com>';
+    $maintainer = 'Martin Thurn <MartinThurn@iname.com>';
 
     $file = 'test/HotBot/zero_result';
     $query = '"mrfglbqnx Bogus' . 'NoSuchWord"';
@@ -324,7 +335,7 @@ sub test_cases {
 
     ######################################################################
     $search_engine = 'Infoseek';
-    $maintainer = 'Martin Thurn <mthurn@irnet.rest.tasc.com>';
+    $maintainer = 'Martin Thurn <MartinThurn@iname.com>';
 
     $file = 'test/Infoseek/zero_result';
     $query = 'disestablishmentarianism' . 'NoSuchWord';
@@ -332,12 +343,12 @@ sub test_cases {
 
     # default infoseek back-end has 50 hits/page
     $file = 'test/Infoseek/one_page_result';
-    $query = 'Martin Thurn';
-    test($mode, $TEST_RANGE, 2, 49);
+    $query = 'Martin Thurn AND Star Wars';
+    test($mode, $TEST_RANGE, 2, 24);
 
-#    $file = 'test/Infoseek/two_page_result';
-#    $query = '+Greedo +collector';
-#    test($mode, $TEST_GREATER_THAN, 50);
+    $file = 'test/Infoseek/two_page_result';
+    $query = 'Greedo AND collectible';
+    test($mode, $TEST_GREATER_THAN, 25);
 
 
     $search_engine = 'Infoseek::Web';
@@ -347,12 +358,12 @@ sub test_cases {
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/Infoseek/Web/one_page_result';
-    $query = 'Martin Thurn';
-    test($mode, $TEST_RANGE, 2, 49);
+    $query = 'Martin Thurn AND Star Wars';
+    test($mode, $TEST_RANGE, 2, 24);
 
-#    $file = 'test/Infoseek/Web/two_page_result';
-#    $query = '+Greedo +collector';
-#    test($mode, $TEST_GREATER_THAN, 50);
+    $file = 'test/Infoseek/Web/two_page_result';
+    $query = 'Greedo AND collectible';
+    test($mode, $TEST_GREATER_THAN, 25);
 
 
     $search_engine = 'Infoseek::Companies';
@@ -362,12 +373,12 @@ sub test_cases {
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/Infoseek/Companies/one_page_result';
-    $query = 'Hawaii';
-    test($mode, $TEST_RANGE, 2, 49);
+    $query = 'Pacific AND travel';
+    test($mode, $TEST_RANGE, 2, 24);
 
     $file = 'test/Infoseek/Companies/two_page_result';
-    $query = 'Delaware';
-    test($mode, $TEST_GREATER_THAN, 50);
+    $query = 'prison';
+    test($mode, $TEST_GREATER_THAN, 25);
 
 
     $search_engine = 'Infoseek::News';
@@ -406,7 +417,7 @@ sub test_cases {
 
     ######################################################################
     $search_engine = 'Magellan';
-    $maintainer = 'Martin Thurn <mthurn@irnet.rest.tasc.com>';
+    $maintainer = 'Martin Thurn <MartinThurn@iname.com>';
 
     $file = 'test/Magellan/zero_result';
     $query = '+mrfglbqnx +Bogus' . 'NoSuchWord';
@@ -414,7 +425,7 @@ sub test_cases {
 
     $file = 'test/Magellan/one_page_result';
     $query = 'disestablishmentarianism';
-    test($mode, $TEST_RANGE, 2, 9);
+    test($mode, $TEST_RANGE, 1, 9);
 
     # 10 hits/page
     $file = 'test/Magellan/two_page_result';
@@ -497,7 +508,7 @@ sub test_cases {
 
     ######################################################################
     $search_engine = 'WebCrawler';
-    $maintainer = 'Martin Thurn <mthurn@irnet.rest.tasc.com>';
+    $maintainer = 'Martin Thurn <MartinThurn@iname.com>';
 
     $file = 'test/WebCrawler/zero_result';
     $query = '+mrfglbqnx +Bogus' . 'NoSuchWord';
@@ -514,7 +525,7 @@ sub test_cases {
 
     ######################################################################
     $search_engine = 'Yahoo';
-    $maintainer = 'Martin Thurn <mthurn@irnet.rest.tasc.com>';
+    $maintainer = 'Martin Thurn <MartinThurn@iname.com>';
 
     $file = 'test/Yahoo/zero_result';
     $query = '"mrfglbqnx Bogus' . 'NoSuchWord"';
@@ -552,6 +563,12 @@ sub main {
     if (!$internal_only) {
         print "\n\nTESTING EXTERNAL QUERIES.\n\t(Errors here suggest search-engine reformatting and should be\n\treported to the maintainer of the back-end for the search engine.)\n\n";
         &test_cases($MODE_EXTERNAL);
+    };
+
+    if ($error_count == 0) {
+	print "All tests have passed.\n\n";
+    } else {
+	print "Some tests failed.  Please check the README file in the distribution\nbefore reporting errors (sometimes back-ends have known failures :-( ).\n\n";
     };
 }
 

@@ -1,13 +1,11 @@
 #!/usr/local/bin/perl -w
 
-#
 # Companies.pm
 # by Martin Thurn
 # Copyright (C) 1996 by USC/ISI
-# $Id: Companies.pm,v 1.2 1998/05/28 04:05:51 johnh Exp $
+# $Id: Companies.pm,v 1.3 1998/08/21 00:03:56 johnh Exp $
 #
 # Complete copyright notice follows below.
-# 
 
 
 package WWW::Search::Infoseek::Companies;
@@ -18,9 +16,13 @@ WWW::Search::Infoseek::Companies - class for Infoseek Companies searching
 
 
 =head1 SYNOPSIS
-
-    require WWW::Search;
-    $search = new WWW::Search('Infoseek::Companies');
+    
+  use WWW::Search;
+  my $oSearch = new WWW::Search('Infoseek::Companies');
+  my $sQuery = WWW::Search::escape_query("+sushi restaurant +Columbus Ohio");
+  $oSearch->native_query($sQuery);
+  while (my $oResult = $oSearch->next_result())
+    { print $oResult->url, "\n"; }
 
 
 =head1 DESCRIPTION
@@ -39,14 +41,14 @@ be done through WWW::Search objects.
 This module adheres to the WWW::Search test harness.  Test cases are:
 
   'mrfglbqnx NoSuchWord' --> no hits
-  'Hawaii'               --> 39 hits on one page
-  'Delaware'             --> 72 hits on two pages
+  'Pacific AND travel'   --> 5 hits on one page
+  'prison'               --> 30 hits on two pages
 
 
 =head1 AUTHOR
 
 C<WWW::Search::Infoseek::Companies> 
-was written by Martin Thurn <mthurn@irnet.rest.tasc.com> 
+was written by Martin Thurn <MartinThurn@iname.com> 
 based on AltaVista::Web by John Heidemann, <johnh@isi.edu>.
 
 
@@ -77,6 +79,8 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search::Infoseek Exporter);
+$VERSION = sprintf("%d.%02d", q$Revision: 1.3 $ =~ /(\d+)\.(\d+)/);
+
 use WWW::Search::Infoseek;
 
 # private

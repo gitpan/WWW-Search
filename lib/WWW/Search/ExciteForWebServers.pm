@@ -142,7 +142,7 @@ sub native_retrieve_some
 
     my($srchitem);
 
-    foreach $_ (split(/\n/, $response->content())) {
+    foreach $_ ($self->split_lines($response->content())) {
       s/ architext\=result//g;
       print "Got $_\n" if ($debug);
 

@@ -7,15 +7,14 @@ WebCrawler Search Results for: +mrfglbqnx +BogusNoSuchWord
 <BODY BGCOLOR="#ffffff">
 <CENTER>
 <MAP NAME="gnav">
-<AREA SHAPE="rect" COORDS="2,1,239,43" HREF="/relocate/co=internal_navlink&|pk=1;http://www.webcrawler.com/">
+<AREA SHAPE="rect" COORDS="2,1,239,43" HREF=/relocate/co=internal_navlink&|pk=1;http://www.webcrawler.com/>
 <AREA SHAPE="rect" COORDS="461,28,490,40" HREF="/relocate/co=internal_navlink&|pk=1;http://www.webcrawler.com/">
 <AREA SHAPE="rect" COORDS="494,29,538,41" HREF="/relocate/co=internal_navlink&|pk=1;http://my.excite.com/webcrawler/">
 <AREA SHAPE="rect" COORDS="542,29,569,40" HREF="/relocate/co=internal_navlink&|pk=1;http://mailexcite.com">
 <AREA SHAPE="rect" COORDS="573,28,596,40" HREF="/relocate/co=internal_navlink&|pk=1;http://www.webcrawler.com/Help/Help.html">
 </MAP>
-<!-- start header -->
-<FORM METHOD="get" ACTION="http://www.webcrawler.com/cgi-bin/redirform">
-<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="600">
+<FORM ACTION=http://www.webcrawler.com/cgi-bin/redirform>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=600>
 <TR><TD colspan=2>
 <IMG SRC=/icons/bumper_results.gif ALT="WebCrawler Search Results" WIDTH=600 HEIGHT=42 BORDER=0 USEMAP="#gnav"></TD></TR>
 <TR>
@@ -47,7 +46,6 @@ WebCrawler Search Results for: +mrfglbqnx +BogusNoSuchWord
 </TD></TR>
 </TABLE>
 </FORM>
-<!-- end header -->
 <CENTER>
 <FORM ACTION="/cgi-bin/WebQuery" METHOD="GET" NAME="wcsearchform"><NOBR>
 <INPUT NAME="search" VALUE='+mrfglbqnx +BogusNoSuchWord' SIZE=35>
@@ -57,104 +55,71 @@ WebCrawler Search Results for: +mrfglbqnx +BogusNoSuchWord
 </FORM>
 </CENTER>
 <CENTER>
-<a href="/relocate/ad=http://ad.preferences.com/image.ng;spacedesc=ExciteNetwork_WebCrawler_468x60-RunOfSite_Any&time=1998.05.30.18.56.54|pk=432721;http://ad.preferences.com/click.ng;spacedesc=ExciteNetwork_WebCrawler_468x60-RunOfSite_Any&time=1998.05.30.18.56.54" onMouseOver="window.status='Click Here!';return true" language="Javascript"><img src="http://ad.preferences.com/image.ng;spacedesc=ExciteNetwork_WebCrawler_468x60-RunOfSite_Any&time=1998.05.30.18.56.54" ALT="Click Here!" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> Click Here! </B></FONT></CENTER></a>
+<a href="/relocate/ad=47291_portfolioworld0727_pwblugrnani.gif|pk=965057;http://www.portfolioworld.com/subscribe.cfm" onMouseOver="window.status='The Ultimate Interactive Investment Site';return true" language="Javascript"><img src="/img/ads/47291_portfolioworld0727_pwblugrnani.gif" ALT="The Ultimate Interactive Investment Site" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> The Ultimate Interactive Investment Site </B></FONT></CENTER></a>
 </CENTER>
-<!-- body content -->
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="100%">
-<TR><TD VALIGN=top WIDTH="70%">
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="100%">
-<TR><TD>&nbsp;<FONT FACE=Arial,helvetica><B>Search Results</B></FONT></TD></TR>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR><TD VALIGN=top WIDTH=75%>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width=98%>
+<TR><TD>&nbsp;<FONT FACE=Arial,helvetica><B>Simple Search Results</B></FONT></TD></TR>
 <TR><TD BGCOLOR=#FFCC66 HEIGHT=3><IMG SRC=/icons/Spacer.gif WIDTH=1 HEIGHT=1></TD></TR>
 </TABLE>
-<TABLE BORDER=0 CELLPADDING=2 CELLSPACING=0 WIDTH="100%">
-<TR><TD><FONT SIZE="-1" FACE="geneva,Helvetica">
+<FONT SIZE=-1 FACE=geneva,helvetica>
 <B>Using "+", "-", "AND", "OR", and/or "NOT" excessively may constrain your search too much. <p>
 Use "+" or "-" only on the words which you think MUST or MUST NOT
 exist in the retrieved documents.</B>
 <BR>Eg. <I>+volvo +penta BB30</I> instead of <I>+volvo +penta +BB30</I>
-<p>
-<FONT SIZE="-2" FACE="geneva,Helvetica">
-Try this search on <A HREF="/relocate/;http://www.excite.com/search.gw?search=%2Bmrfglbqnx+%2BBogusNoSuchWord&trace=WC">Excite</A>.
+<P><FONT SIZE=-2 FACE=geneva,helvetica>
+Try this search on <A HREF=http://www.excite.com/search.gw?search=%2Bmrfglbqnx+%2BBogusNoSuchWord>Excite</A>.
 </FONT>
-</TD></TR>
-<!-- end results -->
-</TABLE>
-</TD><TD VALIGN=top ALIGN=center WIDTH="30%">
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="100%">
-<TR><TD ALIGN=center>&nbsp;<A HREF="/Help/Shortcuts.html"><FONT FACE="Arial,Helvetica"><B>Shortcuts</B></FONT></A></TD></TR>
+</FONT> </TD><TD VALIGN=top ALIGN=left WIDTH=30%>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR><TD ALIGN=left>&nbsp;<FONT FACE="Arial,Helvetica"><B>Shortcuts</B></FONT></TD></TR>
 <TR><TD BGCOLOR=#FFCC66 HEIGHT=3><IMG SRC=/icons/Spacer.gif WIDTH=1 HEIGHT=1></TD></TR></TABLE>
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
-<TR><TD ALIGN=center VALIGN=top><IMG ALT="see below" SRC="/icons/onearrow.gif"></TD></TR>
+<TABLE BORDER=0 CELLPADDING=2 CELLSPACING=1 BGCOLOR=#ffffcc WIDTH=100%>
 <TR><TD ALIGN=center VALIGN=top>
-<!-- shortcuts -->
+<!-- promo shortcuts -->
+<IMG SRC="/icons/barnes2.gif"><BR>
+<FONT FACE="geneva,Helvetica" SIZE="-1">
+<A HREF="/relocate/co=wcs_barnes;http://barnesandnoble.bfast.com/booklink/click?sourceid=17288&is_search=Y&keyword=%2Bmrfglbqnx+%2BBogusNoSuchWord&match=partial&options=and">Find Related Books</A><BR>
+</FONT><BR>
 <!-- end shortcuts -->
 </TD></TR>
 </TABLE>
 </TD></TR>
 </TABLE>
-<P>
-<CENTER>
-</CENTER>
 <BR>
-<TABLE BORDER=0 CELLPADDING=2 CELLSPACING=0 WIDTH="100%">
-<TR><TD VALIGN=top colspan=2>
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 <TR><TD>&nbsp;<FONT FACE=Arial,helvetica><B>Search Again</B></FONT></TD></TR>
 <TR><TD BGCOLOR=#FFCC66 HEIGHT=3><IMG SRC=/icons/Spacer.gif WIDTH=1 HEIGHT=1></TD></TR>
-</TABLE></td></tr>
-<TR><TD VALIGN=top>
-<!-- search box -->
-<FORM ACTION="/cgi-bin/WebQuery" METHOD="GET" NAME="wcsearchform"><NOBR>
-<INPUT NAME="search" VALUE='+mrfglbqnx +BogusNoSuchWord' SIZE=35>
-<INPUT TYPE="submit" VALUE="Search"></NOBR>
-<INPUT NAME="src" VALUE="wc_results" TYPE="hidden">
-<INPUT NAME="showSummary" VALUE="true" TYPE="hidden">
-</FORM>
-<!-- end search box -->
-</TD>
-<TD VALIGN=top ALIGN=center>
-<FONT FACE="geneva,helvetica" SIZE="-1">
-<A HREF=/relocate/co=yp-searchlink;http://yp.gte.net/sform.phtml?SRC=wc&STYPE=S>yellow&nbsp;pages</A>
-&nbsp;&nbsp;<A HREF=/relocate/co=map-searchlink;http://webcrawler.city.net/indexes/top_maps.dcg>maps</A>
-&nbsp;&nbsp;<A HREF=/relocate/co=pfinder-searchlink;http://www.whowhere.com/WebCrawler/wc_search.html>people&nbsp;finder</A>
-&nbsp;&nbsp;<A HREF=/relocate/co=shopping-searchlink;http://jango.excite.com/wc/><B>simple shopping</B></A>
-<BR>
-<A HREF=/relocate/co=horo-searchlink;http://my.excite.com/horoscopes/webcrawler/>horoscopes</A>
-&nbsp;&nbsp;<A HREF=/relocate/co=c2k-searchlink;http://www2.classifieds2000.com/cgi-cls/display.exe?WebCrawler2+class>classifieds</A>
-&nbsp;&nbsp;<A HREF=/relocate/co=quotes-searchlink;http://quicken.webcrawler.com/investments/portfolio/>stock&nbsp;quotes</A>
-&nbsp;&nbsp;<A HREF=/relocate/co=weather-searchlink;http://my.excite.com/webcrawler/weather/>weather</A>
-</FONT>
-</TD></TR>
 </TABLE>
-<!-- end body content-->
+<FORM ACTION="/cgi-bin/WebQuery" NAME=wcsearchform>
+<INPUT TYPE=hidden NAME="showSummary" VALUE="true">
+<INPUT NAME="search" VALUE='+mrfglbqnx +BogusNoSuchWord' SIZE=35>
+<INPUT TYPE="submit" VALUE="Search">
+</FORM>
+<BR>
+<CENTER>
+<a href="/relocate/ad=47291_portfolioworld0727_pwblugrnani.gif|pk=965057;http://www.portfolioworld.com/subscribe.cfm" onMouseOver="window.status='The Ultimate Interactive Investment Site';return true" language="Javascript"><img src="/img/ads/47291_portfolioworld0727_pwblugrnani.gif" ALT="The Ultimate Interactive Investment Site" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> The Ultimate Interactive Investment Site </B></FONT></CENTER></a>
+</CENTER>
 <P>
-<!-- footer -->
 <hr width=600 size=1 noshade>
 <table border=0 cellpadding=0 cellspacing=0 width=600>
 <tr><td valign=top align=center>
 <FONT FACE="geneva,Arial,Helvetica" SIZE="-1">
-<b>More Channels</b> :&nbsp;&nbsp;
-<A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://www.webcrawler.com/Arts/">arts &amp; books</A>&nbsp;|&nbsp;
-<A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://www.webcrawler.com/Auto/">auto</A>&nbsp;|&nbsp;
-<A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://quicken.webcrawler.com">business</A>&nbsp;|&nbsp;
-<A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://www.webcrawler.com/Careers/">careers</A>&nbsp;|&nbsp;
-<A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://www.webcrawler.com/Computers/">computers</A>&nbsp;|&nbsp;
-<A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://www.webcrawler.com/Entertainment/">entertainment</A>&nbsp;|&nbsp;
-<A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://www.webcrawler.com/Games/">games</A>&nbsp;|&nbsp;
-<A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://www.webcrawler.com/Health/">health</A>&nbsp;|&nbsp;
-<A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://www.webcrawler.com/Family/">family</A>&nbsp;|&nbsp;
-<A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://nt.excite.com/webcrawler/">news</A>&nbsp;|&nbsp;
-<A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://www.webcrawler.com/Chat/">chat</A>&nbsp;|&nbsp;
-<A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://www.webcrawler.com/Reference/">reference</A>&nbsp;|&nbsp;
-<A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://www.webcrawler.com/Relationships/">relationships</A>&nbsp;|&nbsp;
-<A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://www.webcrawler.com/Shopping/">shopping</A>&nbsp;|&nbsp;
-<A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://www.webcrawler.com/Sports/">sports</A>&nbsp;|&nbsp;
-<A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://webcrawler.city.net/">travel</A>
+<b>Services</b> :&nbsp;&nbsp;
+<A HREF=/relocate/co=yp-searchlink;http://yp.gte.net/sform.phtml?SRC=wc&STYPE=S>yellow&nbsp;pages</A>
+&nbsp;&nbsp;<A HREF=/relocate/co=map-searchlink;http://webcrawler.city.net/indexes/top_maps.dcg>maps</A>
+&nbsp;&nbsp;<A HREF=/relocate/co=pfinder-searchlink;http://www.whowhere.com/WebCrawler/wc_search.html>people&nbsp;finder</A>
+&nbsp;&nbsp;<A HREF=/relocate/co=shopping-searchlink;http://jango.excite.com/wc/>simple shopping</A>
+&nbsp;&nbsp;<A HREF=/relocate/co=horo-searchlink;http://my.excite.com/horoscopes/webcrawler/>horoscopes</A>
+<BR><A HREF=/relocate/co=c2k-searchlink;http://www.classifieds2000.com/cgi-cls/display.exe?partner=webcrawler&path=class&template=none&>classifieds</A>
+&nbsp;&nbsp;<A HREF=/relocate/co=quotes-searchlink;http://quicken.webcrawler.com/investments/tickersearch/>stock&nbsp;quotes</A>
+&nbsp;&nbsp;<A HREF=/relocate/co=weather-searchlink;http://my.excite.com/webcrawler/weather/>weather</A>
 <P><A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://www.webcrawler.com/">home</A>&nbsp;||&nbsp;
 <A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://my.excite.com/webcrawler/">my page</A>&nbsp;||&nbsp;
 <A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://mailexcite.com/">email</A>&nbsp;||&nbsp;
 <A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://www.webcrawler.com/Help/Help.html">help</A></FONT>
-</td></tr></table>
+</TD></tr></table>
 <P>
 <FONT FACE=GENEVA,ARIAL size=-1>
 <A HREF=/Help/BookmarkWC.html>Bookmark&nbsp;WebCrawler</A></font>
@@ -162,9 +127,9 @@ Try this search on <A HREF="/relocate/;http://www.excite.com/search.gw?search=%2
 &nbsp;&#183;&nbsp;<font face=geneva,arial size=-1><A HREF=/Help/Advertising/Advertising.html>Advertise&nbsp;on&nbsp;WebCrawler</A></font>
 &nbsp;&#183;&nbsp;<font face=geneva,arial size=-1><A HREF=/Help/GetListed/AddURLS.html>Add&nbsp;your&nbsp;URL</A>
 </FONT>
-<BR><FONT FACE="geneva,Arial,Helvetica" COLOR="#000000" SIZE="-2">&nbsp;copyright &copy; 1998 </FONT><A HREF="http://corp.excite.com/"><FONT FACE="Arial,Helvetica" COLOR="#FF0000" SIZE="-2">Excite, Inc.</FONT></A>
-<!-- end footer -->
+<BR>
+<FONT FACE="geneva,Arial,Helvetica" COLOR="#000000" SIZE="-2">&nbsp;copyright &copy; 1998 </FONT><A HREF="http://corp.excite.com/"><FONT FACE="Arial,Helvetica" COLOR="#FF0000" SIZE="-2">Excite, Inc.</FONT></A>
 </CENTER>
 </BODY>
 </HTML>
-<!-- timestamp: 1 0.055234 0.055234 -->
+<!-- timestamp: 1 0.055938 0.055938 -->

@@ -7,15 +7,14 @@ WebCrawler Search Results for: Greedo
 <BODY BGCOLOR="#ffffff">
 <CENTER>
 <MAP NAME="gnav">
-<AREA SHAPE="rect" COORDS="2,1,239,43" HREF="/relocate/co=internal_navlink&|pk=1;http://www.webcrawler.com/">
+<AREA SHAPE="rect" COORDS="2,1,239,43" HREF=/relocate/co=internal_navlink&|pk=1;http://www.webcrawler.com/>
 <AREA SHAPE="rect" COORDS="461,28,490,40" HREF="/relocate/co=internal_navlink&|pk=1;http://www.webcrawler.com/">
 <AREA SHAPE="rect" COORDS="494,29,538,41" HREF="/relocate/co=internal_navlink&|pk=1;http://my.excite.com/webcrawler/">
 <AREA SHAPE="rect" COORDS="542,29,569,40" HREF="/relocate/co=internal_navlink&|pk=1;http://mailexcite.com">
 <AREA SHAPE="rect" COORDS="573,28,596,40" HREF="/relocate/co=internal_navlink&|pk=1;http://www.webcrawler.com/Help/Help.html">
 </MAP>
-<!-- start header -->
-<FORM METHOD="get" ACTION="http://www.webcrawler.com/cgi-bin/redirform">
-<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="600">
+<FORM ACTION=http://www.webcrawler.com/cgi-bin/redirform>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=600>
 <TR><TD colspan=2>
 <IMG SRC=/icons/bumper_results.gif ALT="WebCrawler Search Results" WIDTH=600 HEIGHT=42 BORDER=0 USEMAP="#gnav"></TD></TR>
 <TR>
@@ -47,7 +46,6 @@ WebCrawler Search Results for: Greedo
 </TD></TR>
 </TABLE>
 </FORM>
-<!-- end header -->
 <CENTER>
 <FORM ACTION="/cgi-bin/WebQuery" METHOD="GET" NAME="wcsearchform"><NOBR>
 <INPUT NAME="search" VALUE='Greedo' SIZE=35>
@@ -57,629 +55,587 @@ WebCrawler Search Results for: Greedo
 </FORM>
 </CENTER>
 <CENTER>
-<a href="/relocate/ad=http://ad.preferences.com/image.ng;spacedesc=ExciteNetwork_WebCrawler_468x60-RunOfSite_Any&time=1998.05.30.18.56.59|pk=432721;http://ad.preferences.com/click.ng;spacedesc=ExciteNetwork_WebCrawler_468x60-RunOfSite_Any&time=1998.05.30.18.56.59" onMouseOver="window.status='Click Here!';return true" language="Javascript"><img src="http://ad.preferences.com/image.ng;spacedesc=ExciteNetwork_WebCrawler_468x60-RunOfSite_Any&time=1998.05.30.18.56.59" ALT="Click Here!" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> Click Here! </B></FONT></CENTER></a>
+<a href="/relocate/ad=http://ad.preferences.com/image.ng;spacedesc=ATTOneRate_WebCrawler_468x60_RunOfSite_Any&time=1998.08.20.23.57.11&ex_cookie=&ex_reg=no|pk=944319;http://ad.preferences.com/click.ng;spacedesc=ATTOneRate_WebCrawler_468x60_RunOfSite_Any&time=1998.08.20.23.57.11" onMouseOver="window.status='Click Here';return true" language="Javascript"><img src="http://ad.preferences.com/image.ng;spacedesc=ATTOneRate_WebCrawler_468x60_RunOfSite_Any&time=1998.08.20.23.57.11&ex_cookie=&ex_reg=no" ALT="Click Here" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> Click Here </B></FONT></CENTER></a>
 </CENTER>
-<!-- body content -->
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="100%">
-<TR><TD VALIGN=top WIDTH="70%">
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="100%">
-<TR><TD>&nbsp;<FONT FACE=Arial,helvetica><B>Search Results</B></FONT></TD></TR>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR><TD VALIGN=top WIDTH=75%>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width=98%>
+<TR><TD>&nbsp;<FONT FACE=Arial,helvetica><B>Simple Search Results</B></FONT></TD></TR>
 <TR><TD BGCOLOR=#FFCC66 HEIGHT=3><IMG SRC=/icons/Spacer.gif WIDTH=1 HEIGHT=1></TD></TR>
 </TABLE>
-<TABLE BORDER=0 CELLPADDING=2 CELLSPACING=0 WIDTH="100%">
-<TR><TD><FONT SIZE="-1" FACE="geneva,Helvetica">
-Top 84 of 121
-for
+<FONT SIZE=-1 FACE=geneva,helvetica>
+<P><FONT SIZE=3><B>Web Results for:</B></FONT>&nbsp;&nbsp;
 <B>Greedo</B>
-<br>
-Show
-<A HREF="/cgi-bin/WebQuery?search=Greedo&showSummary=false&start=0&perPage=84"><B>titles</B></a>
-for these results.
-</FONT>
 <BR>
-<A HREF="http://www.webcrawler.com/cgi-bin/prefs.cgi"><FONT FACE="geneva,helvetica" SIZE="-1">Search Options</FONT></A>
-</TD></TR>
-<TR><TD VALIGN=top>
-<FONT SIZE="-1" FACE="Arial,Helvetica">
+(84 of 112)
+- show
+<A HREF="/cgi-bin/WebQuery?search=Greedo&showSummary=false&start=0&perPage=84">titles</a>
+for these results.
 <dl>
-<DT><FONT FACE="Times" COLOR="#006699"><B>68% </B></FONT>
-&nbsp;&nbsp;
-<A HREF="http://greedo.bounty-hunters.com/">A Greedo Page</A>
-<DD> Yes that's right Greedo, you know the green guy Han Solo shot in the Cantina.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1718392&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://greedo.bounty-hunters.com/</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>64% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://users.aol.com/dallathblk/RblTr.html">Rebel Transmissions</A>
-<DD>COMMENT:I think the new seen was somewhat a waist of time and money. But anyways, I think that he should have had a larger part because either Han Solo is above any bounty hunter, or Greedo just sucked as a bounty hunter.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=625772&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<A HREF=http://users.aol.com/dallathblk/RblTr.html>Rebel Transmissions</A>
+<DD>. As we all know, the famous scene in Star Wars where Han shoots Greedo was one of the scenes altered for the new Special Edition. COMMENT:There is no way someone who's species is designed for bounty hunting could have missed the point blank shot that Greedo had.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=171913&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
 <BR><FONT SIZE="-2">http://users.aol.com/dallathblk/RblTr.html</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>62% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://buteo.colorado.edu/~yosh/psi/system2/aliens/greedo/">Greedo</A>
+<A HREF=http://buteo.colorado.edu/~yosh/psi/system2/aliens/greedo/>Greedo</A>
 <DD>Last seen with Captain Han Solo in the Mos Eisley Cantina: PROFILE (taken from Biographies of 10 Cantina Characters): Bounty hunting is a profession veiled in honor on Rodia. Every year, prizes are awarded to those who surpass in various categories such as "greatest accuracy with a distance blaster" and "quickest catch".
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=145081&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=230208&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
 <BR><FONT SIZE="-2">http://buteo.colorado.edu/~yosh/psi/system2/aliens/greedo/</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>60% </B></FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>58% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.parsec-santa.com/index1.html">San Diego, Theatre and Arts, Collectors</A>
-<DD>Other interesting Web Sites: Buddhism, Star Wars Information, Stock Market, Coffee Shops, etc. The actress, Maria deAragon, who played Greedo in Star Wars is writing a story about her experience filming the part of Greedo in Star Wars.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1714593&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.parsec-santa.com/index1.html</FONT>
+<A HREF=http://members.xoom.com/ralph59/index.html>RK´s Mos Eisley Cantina Page ! </A>
+<DD>RKs Mos Eisley Cantina Page !. message =" Welcome to the Mos-Eisley Cantina !^" +" All you want to know about the Mos-Eisley Cantina aliens !^" +" Just click on one of the pictures ...^" +" ...Greedo Muftak Kabe Labria Ponda-Baba Modal-Nodes Sivrak Nadon Garindan. Welcome to the Mos Eisley Cantina !. As you know the Mos Eisley Cantina is one of the most famous scenes in Star Wars . Now.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1017191&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://members.xoom.com/ralph59/index.html</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>57% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.eskimo.com/~miyaguch/starwars.html">Star Wars (A New Hope) MP3 Sounds</A>
-<DD>The instructions here show how to configure .mp3 and .m3u files as MIME types for the Netscape Navigator and Internet Explorer browsers. If you haven't already configured your browser, click on the .mp3 files rather than the .m3u files (which are really just text-file links to the corresponding .mp3 files) to download playable sounds.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=674284&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.eskimo.com/~miyaguch/starwars.html</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>57% </B></FONT>
-&nbsp;&nbsp;
-<A HREF="http://www.netexp.net/~thomseb/mp3/starwars.html">Star Wars (A New Hope) MP3 Sounds</A>
-<DD>m3u 128kB, 16sec [7/7/96] R2D2 being zapped by Jawas batchi. Han: Watch your mouth, kid, or you're gonna find yourself floating home!
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1672859&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.netexp.net/~thomseb/mp3/starwars.html</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>57% </B></FONT>
-&nbsp;&nbsp;
-<A HREF="http://www.iocon.com/mp3/starwars.html">Star Wars (A New Hope) MP3 Sounds</A>
-<DD>The instructions here show how to configure .mp3 and .m3u files as MIME types for the Netscape Navigator and Internet Explorer browsers, if your software was not automatically setup during installation. If you haven't already configured your browser, click on the .mp3 files rather than the .m3u files (which are really just text-file links to the corresponding .mp3 files) to download playable.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1872634&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.iocon.com/mp3/starwars.html</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>57% </B></FONT>
-&nbsp;&nbsp;
-<A HREF="http://www.mit.edu:8001/people/lpchao/harrison.ford.html">Harrison Ford - The Unofficial Homepage</A><a href=http://www.webcrawler.com/WCGuide/entertainment/celebrities/actors_and_actresses/f/site8.html><img src=http://www.webcrawler.com/icons/Review.gif alt=Review border=0 width=53 height=15 align=absmiddle></a>
-<DD>
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1204435&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<A HREF=http://www.mit.edu:8001/people/lpchao/harrison.ford.html>Harrison Ford - The Unofficial Homepage</A>
+<DD>The scar on his chin came when he was 21. He didn't have the money to pay for the plastic surgery to hide the scar.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1690293&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
 <BR><FONT SIZE="-2">http://www.mit.edu:8001/people/lpchao/harrison.ford.html</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>57% </B></FONT>
+&nbsp;&nbsp;
+<A HREF=http://www.eskimo.com/~miyaguch/starwars.html>Star Wars (A New Hope) MP3 Sounds</A>
+<DD>After you configure your browser, clicking on .mp3 files will transfer data, then launch Winplay3 as an external viewer. Clicking on .m3u files will launch Winplay3 before you transfer data, affording you several options, including playing sounds realtime as they stream across the net.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=452272&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://www.eskimo.com/~miyaguch/starwars.html</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>56% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://members.tripod.com/~tdg/index.html">Trevor Grove</A>
+<A HREF=http://members.tripod.com/~tdg/index.html>Trevor Grove</A>
 <DD>Yoda realized that he had made a terrible mistake after, cutting Luke's head off with the lightsaber, the Force did not bring him back as a ghost, like with Obi-Wan . . . Oops! You tell Jabba, that I aint gonna be able to understand you 'til George Lucas digitally enhances the sound, too," replied Han.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1613022&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=989068&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
 <BR><FONT SIZE="-2">http://members.tripod.com/~tdg/index.html</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>56% </B></FONT>
+&nbsp;&nbsp;
+<A HREF=http://members.aol.com/Greedo1/index.html>Greedo's Place</A>
+<DD> Sorry to inform you, but Greedo's Place is no longer here.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=983623&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://members.aol.com/Greedo1/index.html</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>55% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://members.aol.com/Greedo1/index.html">Greedo's Place</A>
-<DD> Sorry to inform you, but Greedo's Place is no longer here.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=204254&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://members.aol.com/Greedo1/index.html</FONT>
+<A HREF=http://home2.swipnet.se/~w-27832/awswb.htm>Characters</A>
+<DD>wav Stormtrooper Scouttrooper Snowtrooper Imperial Pilot ST from Tatoine Imperial Guard OTHER Jabba the Hutt Boba Fett Greedo Rancor hohohoho. wav Jawa Bantha Return to Alexander Wendts Star Wars Page
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1818854&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://home2.swipnet.se/~w-27832/awswb.htm</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>55% </B></FONT>
+&nbsp;&nbsp;
+<A HREF=http://www.blueharvest.net/links.html>StarWars Links</A>
+<DD>A beautifully crafted page from CNN with movie clips, interviews, follow-up's on the actors and much more. StarWars funnies provided by Davin Felth (of WBS, also known as the "Look sir, droids."
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1189203&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://www.blueharvest.net/links.html</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>55% </B></FONT>
+&nbsp;&nbsp;
+<A HREF=http://members.tripod.com/~youngjediknight/index.html>Star Wars: What You Need To Know</A>
+<DD>N64 Codes New Movie Information CCG Jabba's Palace Card List Greedo Played By A Women? UPDATED 8/8/98 Laim Neeson is Oui-Gon Jinn instead of just "Jedi Master" Samuel L. Jackson IS going to be in the 1st movie as Mace Windu.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1014010&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://members.tripod.com/~youngjediknight/index.html</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>54% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.geocities.com/Area51/Vault/1754/">MY FIRST PAGE</A>
+<A HREF=http://people.a2000.nl/tvdbrink/index.html>Bounty Hunters</A>
+<DD>This site features the galaxy's most feared bounty hunters In my latest update I've added a 3d art section and fixed the photo gallery Last updated 28th of June 1998 Over 3500 served! - Bounty Hunter Poll - What's your favorite Bounty Hunter?
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1449401&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://people.a2000.nl/tvdbrink/index.html</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>54% </B></FONT>
+&nbsp;&nbsp;
+<A HREF=http://www.geocities.com/Area51/Vault/1754/>MY FIRST PAGE</A>
 <DD>. What Rebel ship was captured in Star Wars: A New Hope in the begining of the movie? . What kind of soup did Yoda make for Luke when he first got on Degohbah?
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1205713&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1547281&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
 <BR><FONT SIZE="-2">http://www.geocities.com/Area51/Vault/1754/</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>53% </B></FONT>
-&nbsp;&nbsp;
-<A HREF="http://www.personal.kent.edu/~nwillis/ROTJ.html">http://www.personal.kent.edu/~nwillis/ROTJ.html</A>
-<DD>When I got my "Return of the Jedi" card/sticker album back then (I was eight, and have since lost it), this was the first card I got. My first-ever action figure was Greedo, who was a pretty cool-looking alien, and so I became enamoured with Rodians.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1987273&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.personal.kent.edu/~nwillis/ROTJ.html</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>52% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.mds.mdh.se/~kmh94shd/swchat.htm">StarWars Chat</A>
-<DD>It has a large and ever expanding crowd, a pleasant lay-out and many scheduled events. Holds useful information about how to use and log onto various Starwars role playing games like KoBra.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1618188&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.mds.mdh.se/~kmh94shd/swchat.htm</FONT>
+<A HREF=http://www.decipher.com/starwars/productlibrary/cardlists/anewhope/dark/greedo.html>Greedo</A>
+<DD>
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1572670&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://www.decipher.com/starwars/productlibrary/cardlists/anewhope/dark/greedo.html</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>52% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.angelfire.com/va/Yunslair/">Yun's Lair</A>
-<DD>2) ? argv[2] : null; var path = (argc 3) ? argv[3] : null; var domain = (argc 4) ? argv[4] : null; var secure = (argc 5) ? argv[5] : false; document. toGMTString())) + ((path == null) ? "" : ("; path=" + path)) + ((domain == null) ? "" : ("; domain=" + domain)) + ((secure == true) ? "; secure" : ""); } // -- Yun's Lair.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1706195&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<A HREF=http://members.tripod.com/~CodyC/index.html>Cody's Page</A>
+<DD>Georgia Tech fans, check out the best Georgia Tech basketball page on the Net. There is alot of great stuff out there on some of the best(my favorite) bands, like Dave Matthews Band, Nirvana, Collective Soul, Gin Blossoms, Everclear, and Pearl Jam.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1381729&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://members.tripod.com/~CodyC/index.html</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>52% </B></FONT>
+&nbsp;&nbsp;
+<A HREF=http://www.angelfire.com/va/Yunslair/>I AM A PERVET!!!!!</A>
+<DD>This is a Page Dedicated to the youngest Jedi and the all around great guy Yun and it's a not so great page because its my first page. wich made creator George Luca a multimillion dollar man now one of his newest games (and my personnal favorite Jedi Knight Dark Forces II) anbd his expansion Pack Mysteries Of The Sith Jedi Knight Cheat Codes jediwannabe on- God Mode bactame- Full Health.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=258687&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
 <BR><FONT SIZE="-2">http://www.angelfire.com/va/Yunslair/</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>52% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://members.tripod.com/~CodyC/index.html">Cody's Page</A>
-<DD>Georgia Tech fans, check out the best Georgia Tech basketball page on the Net. There is alot of great stuff out there on some of the best(my favorite) bands, like Dave Matthews Band, Nirvana, Collective Soul, Gin Blossoms, Everclear, and Pearl Jam.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=619167&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://members.tripod.com/~CodyC/index.html</FONT>
+<A HREF=http://members.tripod.com/~ElyMN/index-2.html>Clint's Star Wars and Other Multimedia Page</A>
+<DD>Paul's Star Wars Information Page: Ask any question about Star Wars and you WILL be answered. Welcome to My Page!
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=567205&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://members.tripod.com/~ElyMN/index-2.html</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>51% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://books.dreambook.com/gemi/jedi.sign.html">Dreambook - The Jedi Society</A>
-<DD>Dreambook - The Jedi Society Please sign my Dreambook for The Jedi Society.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1673020&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://books.dreambook.com/gemi/jedi.sign.html</FONT>
+<A HREF=http://www.wiseacres.com/gwmovie.htm>Philip's Star Wars Custom Action Figures by Gary Weaver II P...</A>
+<DD>From The Trilogy Miscellaneous Additional Photos by Gary Classic Star Wars Replicards Gary writes: "This new custom series reunites classic figures with cards, bubbles, and coins designed in the style of rare and unproduced production items. Gary Weaver II Main Page Star Wars Toy Photo Archive Page Star Wars Page.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=374676&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://www.wiseacres.com/gwmovie.htm</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>51% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://weber.u.washington.edu/~sbode/starwars/clips.html">Star Wars Video Clips</A>
-<DD>The famous opening scene to Star Wars 1.0 The first hostile meeeting between Darth Vader and Princess Leia (no clip at this time) 0.7 Bye Bye Greedo 1.2 The immortal clash between Obi-Wan and Darth Vader 1.1 Watch a quick trench clip (no clip at this time) 0.3 Han Solo comes to the rescue 1.2 The first Death Star gets the finger 0.8 Episode V: T he E mpire S trikes B ack. Watch Bobba Fett.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=587165&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://weber.u.washington.edu/~sbode/starwars/clips.html</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>51% </B></FONT>
-&nbsp;&nbsp;
-<A HREF="http://www.geocities.com/Hollywood/Set/2618/index.html">chipking 's Home Page</A>
+<A HREF=http://www.geocities.com/Hollywood/Set/2618/index.html>chipking 's Home Page</A>
 <DD>wav The whole conversation between Han and Greedo at Mos Eisley in A New Hope. wav "Watch your mouth kid or your gonna find yourself floating home."
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=619394&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=513900&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
 <BR><FONT SIZE="-2">http://www.geocities.com/Hollywood/Set/2618/index.html</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>51% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.acomicadventure.com/">acomicadventure</A>
-<DD>Tenemos una gran cantidad de mercader&iacute;a que incluye Libros C&oacute;micos, Juguetes, Videos, Posters, Tarjetas Colectibles, Camisetas y Memorabilia de Recuerdos. Star Wars 12" Action Figures Figuras de Acci&oacute;n At-At Driver $75 Darth Vader $28 Grand Moff Tarkin &amp; Imperial Gunner (F.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1272376&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.acomicadventure.com/</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>51% </B></FONT>
-&nbsp;&nbsp;
-<A HREF="http://www.geocities.com/SiliconValley/Pines/6615/starwars.htm">The Unofficial "Star Wars Homepage"</A>
-<DD>Image Library Ships Characters Posters Character Profiles So, are you a Star Wars (c) newbee, or are you just interested in learning more about many of the characters in the Star Wars Trilogy? Luke Skywalker Han Solo Darth Vader (Anakin Skywalker) Chewbacca Princess Leia (Leia Organa) Yoda Obi-wan Kenobi Boba Fett Admiral Ackbar C-3PO R2-D2 Jabba the Hutt Grand Moff Tarkin Grand.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=416103&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.geocities.com/SiliconValley/Pines/6615/starwars.htm</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>51% </B></FONT>
-&nbsp;&nbsp;
-<A HREF="http://members.aol.com/Boush1997/BF-Pics.html">Boba Fett Pics</A>
-<DD>He is also a Mandalorian,many people argue about this and say he's a clone from the Empire,but the clone wars werte fought between the Jedi Knights and the Mandalores,BIG hint. The cloning technology dates WAY back to the Mandalorian history which I'm not going to get into,but I say Fett was secretly a Super Commando in training.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=828892&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://members.aol.com/Boush1997/BF-Pics.html</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>51% </B></FONT>
-&nbsp;&nbsp;
-<A HREF="http://members.tripod.com/~Spawk/st.html">Things you wont see on Star Wars</A>
+<A HREF=http://members.tripod.com/~Spawk/st.html>Things you wont see on Star Wars</A>
 <DD>Star Destroyer destroying the Enterprise:. Leias little ship blows up an emperial star destroyer:.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=806344&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1547027&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
 <BR><FONT SIZE="-2">http://members.tripod.com/~Spawk/st.html</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>51% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.zdnet.com/yil/content/mag/9712/scifisiteweird.html">YIL: Best Sci-Fi Sites: The Best Weird Sci-Fi Sites, Decembe...</A>
-<DD>substring(offset, end)); } } if(cookie != "") return; now = new Date(); randval = now. value != "none") { var msg=storage+"Transferring to - "+storage; for (var spot=0;spot'); document.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=966348&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.zdnet.com/yil/content/mag/9712/scifisiteweird.html</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>50% </B></FONT>
+<A HREF=http://geocities.com/Area51/Hollow/5915/starwars.html>Empirial Shipyard</A>
+<DD>[Skip Prev] [Prev] [Next] [Skip Next] [Random] [Next 5] [List Sites] This Web-Ring site is owned by Zack. [ Back 2 | Previous | Join | List | Random | Next | Next 5 ]. This Star Wars Fans Confederation site is owned by fett.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=75311&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://geocities.com/Area51/Hollow/5915/starwars.html</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>51% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://members.aol.com/SpookieG/c-files.html">Action Figures (The C-Files)</A>
-<DD>. STAR WARS: (POTFII '96) Red cards. Darth Vader (long saber) @ $20.00.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1825858&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<A HREF=http://members.bellatlantic.net/~lemery/starwars1.html>Star Wars</A>
+<DD>STAR WARS MICROMACHINE ACTION FLEET. STAR WARS MICROMACHINE PLAYSETS.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=190005&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://members.bellatlantic.net/~lemery/starwars1.html</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>51% </B></FONT>
+&nbsp;&nbsp;
+<A HREF=http://members.aol.com/SpookieG/c-files.html>Action Figures (The C-Files)</A>
+<DD>. STAR WARS: (POTFII '96) Red cards. DEATH STAR GUNNER (W/ HOLO) @ $9.00.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1215300&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
 <BR><FONT SIZE="-2">http://members.aol.com/SpookieG/c-files.html</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>50% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.toybarn.com/">www.toybarn.com - Toy Barn Home Page</A>
-<DD>Star Wars: 12 inch Sandtrooper, Grand Moff Tarkin, Greedo and Luke Ceremonial at $19.88 each. Baby Dolls including Water Babies $9.28, and Pretty Crazy Curls $19.28.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1460047&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.toybarn.com/</FONT>
+<A HREF=http://www.angelfire.com/hi/berustew/index.html>img src="/hi/berustew/images/</A>
+<DD>
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=995611&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://www.angelfire.com/hi/berustew/index.html</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>50% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.angelfire.com/il/johns0starwars/chicken.html">Why the Chicken Crossed the Road</A>
-<DD>If the chickens have obtained a complete technical readout of this road, it is possible, however unlikely, that they might find a weakness, and cross it. My scope shows the other side but it looks really far, are you sure you can cross it?
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=180712&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.angelfire.com/il/johns0starwars/chicken.html</FONT>
+<A HREF=http://home2.swipnet.se/~w-27832/awswc.htm>Sounds and Music</A>
+<DD>wav ESB C3PO &quot;Artoo says the chanses of survival are 725 to 1.&quot; chewie6. wav ROTJ Ackbar &quot;Move the fleet away from the Death Star!
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1407818&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://home2.swipnet.se/~w-27832/awswc.htm</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>50% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://people.a2000.nl/tvdbrink/index.html">Bounty Hunters</A>
-<DD>So now this is the largest collection of Bounty Hunters on the Net Last updated 13th of May 1998 Over 3000 served! This Star Wars WebRing site is owned by Tim van den Brink Click for the [ Next Page | Skip It | Next 5 | Random ] Want to join the ring?
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=487662&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://people.a2000.nl/tvdbrink/index.html</FONT>
+<A HREF=http://members.aol.com/CMonkyDo/Fett.html>CMonkyDo's Boba Fett Page</A>
+<DD>. Boba Fett Stats Species: Human Sex: Male Hair Color: Unknown Eye Color: Unknown Height: 1.8 meters Homeworld: Unknown Political Affiliation:. Boba Fett, Slave 1 and other things related to Star Wars are registered tradmarks of LucasFilm Ltd.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1374394&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://members.aol.com/CMonkyDo/Fett.html</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>50% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.mds.mdh.se/~kmh94shd/">A Hitch Hiker's Guide to StarWars</A>
-<DD>. Here you'll find pictures, sounds, movie clips, rumors and lots of other stuff you don't see in the movies. ) In order to make a more pure StarWars site, I kicked all my non-StarWars-related pages off this main page to a brand new page.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=867021&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.mds.mdh.se/~kmh94shd/</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>50% </B></FONT>
-&nbsp;&nbsp;
-<A HREF="http://www.erols.com/njesuele/trade.htm">Neil's Star Wars Universe and CCG Homepage SW:CCG Trading Ar...</A>
-<DD>Star Wars: Customizable Card Game Trading Area Last Updated: 8/17/97 Instructions: OFFERING: To place a card up for sale or up for trading, simply write to me at njesuele@erols. com stating your e-mail address the name of the card and the set it belongs to, example: Premiere, A New Hope, Hoth, then state your asking price or cards wanted in return, or if neither is.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1175638&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.erols.com/njesuele/trade.htm</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>50% </B></FONT>
-&nbsp;&nbsp;
-<A HREF="http://members.aol.com/SW4EVER293/starwarsactionfigures.html">STAR WARS COLLECTORS</A>
+<A HREF=http://members.aol.com/SW4EVER293/starwarsactionfigures.html>STAR WARS COLLECTORS</A>
 <DD>For variations on figures try, VARIATIONS . For information on new action figures from KENNER try, HASBRO TOYS . I will sell for a good price, not a RIP OFF. To learn new information on the up comming movies try, STAR WARS HEADQUARTERS , and take the quiz to see if you are a real fan.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1426882&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=974699&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
 <BR><FONT SIZE="-2">http://members.aol.com/SW4EVER293/starwarsactionfigures.html</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>50% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://members.tripod.com/~Sunstar/sound">Sounds of the Crypt</A>
-<DD>. Last Star Fighter "Greetings Star fighter. Click for the [ Next Page | Skip It | Next 5 ]. Want to join the ring?
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=918060&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://members.tripod.com/~Sunstar/sound</FONT>
+<A HREF=http://pages.prodigy.net/crazy4beanies/swtoys.htm>Star Wars Toys</A>
+<DD>Vintage Star Wars Toys Star Wars 12 back Han Solo(big head) c-10 $550 21 back Power Droid c-9.5 $120 Empire Strikes Back Rebel Soldier c-8.5 $40 Zuckuss c-9.8 $85 Return of the Jedi B-Wing Pilot c-9 $25 Yoda(brown snake) c-10 $75 New SW PotF2 Toys Darth Vader (removable helmet) $18 Luke Bespin $12 12 inch Boba Fett $40 12 inch Princess Leia ... <NOBR><A HREF="/cgi-bin/WebQuery?qbe=1157669&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://pages.prodigy.net/crazy4beanies/swtoys.htm</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>50% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.geocities.com/Athens/Olympus/9950/reggae.html">Enrique's Reggae Zone</A>
-<DD>Danger Man (44Kb) La risita de Kafu Banton (90Kb) Las high 5 de Sin Censura del Sabado 18 de Abril (471Kb) Me gusta mi sistema (Johnny Bad Boy) (704Kb) Tienes pelo de zorrillo (Guly Man! !!) (777Kb) Las high 5 de Sin Censura del Sabado 25 de Abril (432Kb) Guerra (El Comandante) (966Kb) Bueno esta me costo bastante ya que es vieja MARIFLOR (Nando Boom) (734Kb).
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1505527&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.geocities.com/Athens/Olympus/9950/reggae.html</FONT>
+<A HREF=http://books.dreambook.com/lairah/delusionspage.sign.html>Dreambook - Delusions of Grandeur</A>
+<DD>Dreambook: Delusions of Grandeur Sign my Dreambook! [ View Guestbook | Delusions of Grandeur ] This Dreambook brought to you by.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1831392&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://books.dreambook.com/lairah/delusionspage.sign.html</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>50% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.geocities.com/Area51/Station/1097/">http://www.geocities.com/Area51/Station/1097/</A>
-<DD>I collect SW toys including the original '70s to '80s toys. Below are links listed alphabetically to provide information on every character in Star Wars.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1903064&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.geocities.com/Area51/Station/1097/</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>50% </B></FONT>
-&nbsp;&nbsp;
-<A HREF="http://cfa160.harvard.edu/~romanow/library/tmec.html">The Galactic Library: Tales from the Mos Eisley Cantina</A>
-<DD>A Hunter's Fate: Greedo's Tale, by Tom Veitch and Martha Veitch. Play it Again, Figrin D'an: The Tale of Muftak and Kabe, by A. C. Crispin.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=195285&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://cfa160.harvard.edu/~romanow/library/tmec.html</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>50% </B></FONT>
-&nbsp;&nbsp;
-<A HREF="http://www.geocities.com/Area51/Chamber/2405/">IG-72's Bounty Hunter Page!</A>
+<A HREF=http://www.geocities.com/Area51/Chamber/2405/>IG-72's Bounty Hunter Page!</A>
 <DD>The Star Wars universe is filled with pirates, smugglers and cut-throats and only fear the best of Bounty Hunters. [ Next Page | Skip It | Next 5 | Prev | Random ]. Want to join the ring?
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=618993&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=22707&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
 <BR><FONT SIZE="-2">http://www.geocities.com/Area51/Chamber/2405/</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>50% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.geocities.com/Area51/Zone/6486/">WELCOME TO DAGGER'S BEST O' THE NET STARWARS PICTURES</A>
+<A HREF=http://www.geocities.com/Area51/Zone/6486/>WELCOME TO DAGGER'S BEST O' THE NET STARWARS PICTURES</A>
 <DD>com function infoscroll(seed,looped) { var text1 = "WELCOME TO DAGGERS BEST OF THE NET STARWARS PICTURES "; var text2 = "I FINALLY UPDATED CAN YOU BELIVE IT? status=""; } else if (seed 100) { seed--; var cmd="infoscroll(" + seed + "," + looped + ")"; timerTwo=window.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=817178&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=740712&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
 <BR><FONT SIZE="-2">http://www.geocities.com/Area51/Zone/6486/</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>50% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.geocities.com/Area51/Cavern/3247/">Bounty Hunters</A>
-<DD>In my last update I've renewed all sections, made all broken links and added some new pictures. This Star Wars WebRing site is owned by Tim van den Brink Click for the [ Next Page | Skip It | Next 5 | Random ] Want to join the ring?
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1224145&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.geocities.com/Area51/Cavern/3247/</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>49% </B></FONT>
-&nbsp;&nbsp;
-<A HREF="http://www.spindia.com/personal/faisalsiddiqisiddiqi.htm">Star Wars</A>
-<DD>Princess Leia Organa as Jabba's Prisoner. Princess Leiain Ewok Celebration Gear.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=198458&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.spindia.com/personal/faisalsiddiqisiddiqi.htm</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>49% </B></FONT>
-&nbsp;&nbsp;
-<A HREF="http://www.geocities.com/Hollywood/Hills/6764/props.html">Custom Made Props</A>
+<A HREF=http://www.geocities.com/Hollywood/Hills/6764/props.html>Custom Made Props</A>
 <DD>Boba Fett Armor Darth Vader Armor Skywalker Saber X-Wing Pilot Gear Luke's Belt Imperial Blaster Stormtrooper Boots Duros Mask Boba Fett's Belt Wookiee Scalps Boba Fett's Gloves Luke's Blaster Boba Fett's ESB Blaster Rebel Trooper Helmet The Arsenal Stormtrooper Armor &amp;. &amp; Hands Star Wars Costumes Home | Sci-Fi
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1820986&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1535334&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
 <BR><FONT SIZE="-2">http://www.geocities.com/Hollywood/Hills/6764/props.html</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>49% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.angelfire.com/me/BobaFetter/adopt.html">The Star Wars adoption center</A>
-<DD>weapon of choice: Blaster DL-44 heavy blaster. Status: Rebel co-pilot, Star ship mechanic.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=425098&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.angelfire.com/me/BobaFetter/adopt.html</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>48% </B></FONT>
+<A HREF=http://members.aol.com/Nogreedo/Mr.Fett>Mr.Fett_Online</A>
+<DD>or try these goldeneye code sites GoldenEye e x t r e m e. Goldeneye 007 - Please Visit Our Sponsors. or this simpsons site The Simpsons Are Super-D'oh-Cious.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1027959&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://members.aol.com/Nogreedo/Mr.Fett</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>49% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.the-cantina.com/port.html">MOS EISLEY SPACE PORT: Star Wars Links</A>
+<A HREF=http://members.tripod.com/~paracho/index.html>Paracho's Incredibly Delightful Porn-Free Star Wars Site.</A>
+<DD>More Incredibly Delightful Porn-Free Web Pages by yours truly. As you may be able to tell, this is a humorous page with episodes of Star Park, which will be added soon.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1222228&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://members.tripod.com/~paracho/index.html</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>49% </B></FONT>
+&nbsp;&nbsp;
+<A HREF=http://www.stwing.upenn.edu/starwars/form.html>Star Wars Home Page Guest Book and Survey</A>
+<DD> None News Section Movie Information Section Multimedia Section Collectibles Section Role Playing Game Section Lucas Arts Section Click Here To Send Form Thanks for taking the time to fill out this form.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=198899&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://www.stwing.upenn.edu/starwars/form.html</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>49% </B></FONT>
+&nbsp;&nbsp;
+<A HREF=http://www.the-cantina.com/port.html>MOS EISLEY SPACE PORT: Star Wars Links</A>
 <DD>A random Star Wars WebRing site &#183 Connect to a randomly select WebRing Site. . Shadows of the Empire &#183 LucasArts Official Shadows of the Empire Page.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1575527&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=392738&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
 <BR><FONT SIZE="-2">http://www.the-cantina.com/port.html</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>48% </B></FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>49% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://members.home.net/rel/tg/join.html">Join The Guild!</A>
-<DD>* Your Email Address: ** Your Preferred Name in The Guild: Comments(including ID line of the person that recruited you): * Users from America Online please put @aol. We are not allowing names such as: Boba Fett, IG-88, Jaster Mereel, Talon Karrde, Dengar, Bossk, Greedo, etc.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1796446&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://members.home.net/rel/tg/join.html</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>48% </B></FONT>
+<A HREF=http://www.griffincomics.com/swtoys.htm>swtoys</A>
+<DD>Orange Carded: Darth Vader ls- $25.00 Darth Vader ss lt- $20.00 Darth Vader ss- $12.00 Chewbacca- $12.00 R2-D2- $12.00 Lando Calrissian- $8.00 Luke Dagobah ls- $25.00 Luke Dagobah ss- $8.00 Stormtrooper- $10.00 Princess Leia- $20.00 Han Solo- $12.00 Obi Wan Kenobi ls- $50.00 Obi Wan Kenobi ss- $12.00.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=475823&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://www.griffincomics.com/swtoys.htm</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>49% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.steven.marlowe.net/">Imperial Network</A>
+<A HREF=http://www.steven.marlowe.net/>Imperial Network</A>
 <DD>You Have Entered The Imperial Network. Join The Imperial Navy.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=859062&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=865654&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
 <BR><FONT SIZE="-2">http://www.steven.marlowe.net/</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>48% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.geocities.com/Area51/Vault/5739/pics.html">Pics Page</A>
-<DD> Boba Fett AND Vader.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=242215&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.geocities.com/Area51/Vault/5739/pics.html</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>48% </B></FONT>
-&nbsp;&nbsp;
-<A HREF="http://members.aol.com/PennyLne1/DonPost.html">Don Post Page</A>
-<DD>Don Post Page. JK2 COSTUMERS THIS PAGE IS UNDER CONSTRUCTION MORE MASKS WILL BE ADDED WEEKLY DON POST MASKS PAGE - - - - - - - - -- - - - - ---------Classic Vader #82107-------------Classic TIE Pilot #82105-------------Classic Stormtrooper #82107 --------List $180 our cost $150--------------List $150 our cost $97-----------------List $150 our cost $97 - - - - - - - - - - -Greedo #82027.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1572299&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://members.aol.com/PennyLne1/DonPost.html</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>48% </B></FONT>
-&nbsp;&nbsp;
-<A HREF="http://www.geocities.com/Area51/Station/6516/">BOUNTY HUNTERS GUILD</A>
-<DD>Should a sentient benig cause that landslide, thre is evil; and requires justice as a consequence, so that civilization can exist. It is said correctly that law exists not for the just but for the unjust, for the just carry the law in their hearts, and do not need to call it from afar.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=903778&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.geocities.com/Area51/Station/6516/</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>48% </B></FONT>
-&nbsp;&nbsp;
-<A HREF="http://members.tripod.com/~GeneralMike/have.html">Mike's Have Want List</A>
-<DD>Red 6. Motti Seeker. Luke's Cape Resposobility of Command.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1545018&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://members.tripod.com/~GeneralMike/have.html</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>48% </B></FONT>
-&nbsp;&nbsp;
-<A HREF="http://www.mds.mdh.se/~kmh94shd/alt.htm">A Hitch Hiker's Guide to StarWars</A>
-<DD>= 0) { imgObject = new Object(); imgObject = imgObjectName; imgObject. jpg"; cacheImg = new Array(); imgPreLoad(0,images); imgPreLoad(1,sounds); imgPreLoad(2,clips); imgPreLoad(3,links); imgPreLoad(4,chat); imgPreLoad(5,cast); // End Script -- .
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1742595&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.mds.mdh.se/~kmh94shd/alt.htm</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>48% </B></FONT>
-&nbsp;&nbsp;
-<A HREF="http://www.angelfire.com/hi/berustew/index.html">Bounty Hunter's Guild</A>
-<DD>Weapons: Mandolorian Battle Armor and EE-3 Blaster Rifle. Weapons: Various Armor and Heavy Blaster Rifle.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1702191&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.angelfire.com/hi/berustew/index.html</FONT>
+<A HREF=http://members.tripod.com/~slave7/>Craig's Guide Bounty Hunters</A>
+<DD>Welcome To Craig's Guide To Bounty Hunters Choose Your Destiny, by Selecting Your Bounty Hunter:. This Site Is Owned By Craig Collie, And Is Not An Authorized Star Wars Website.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=970406&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://members.tripod.com/~slave7/</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>47% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://members.tripod.com/~MaxVeer/">Matt's Star Wars site:The Mos Eisley Spaceport</A>
-<DD>9. What creates the Force?
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=309874&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://members.tripod.com/~MaxVeer/</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>47% </B></FONT>
-&nbsp;&nbsp;
-<A HREF="http://members.tripod.com/~kroegerm/">Jane's Action Figure and Toy Mart</A>
-<DD>The Tick, Series II, Hurling Tick (C7)--SOLD. Tick Series One Complete Set Including Man Eating Cow and Die Fledermaus (C8/C9)---------------------------------- --SOLD.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=606449&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<A HREF=http://members.tripod.com/~kroegerm/>Jane's Action Figure and Toy Mart</A>
+<DD>Star Wars POTF,Orange Card Col.1, Death Star Gunner (C9)--$20.00. Star Wars POTF,Orange Card Col.1, Tatooine Stormtrooper(C9)--$23.00.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=774049&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
 <BR><FONT SIZE="-2">http://members.tripod.com/~kroegerm/</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>47% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.orewells-online.com/bin/webmate/lawrence/page/lawrence/review_list">Reviews Available</A>
-<DD>
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1142420&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.orewells-online.com/bin/webmate/lawrence/page/lawrence/review_list</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>46% </B></FONT>
+<A HREF=http://www.aim4health.com/family/starwars.htm>Welcome to Red30's Star Wars Site</A>
+<DD>2. . New scene in which Jabba the Hutt is hugged by a sobbing Richard Simmons. Rogue Squadron Headquarters - CRS Liberty.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1816858&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://www.aim4health.com/family/starwars.htm</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>47% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.hasbrotoys.com/hasbro/coolstuf.html">Hasbro Cool Stuff</A>
-<DD>2-1B Medic Droid with Medical Diagnostic Computer&#153; - Available starting in February '97. Speeder Bike with Luke Skywalker in Endor Gear&#153; - Available starting in January '97.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=778872&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.hasbrotoys.com/hasbro/coolstuf.html</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>46% </B></FONT>
+<A HREF=http://www.noxtempli.com/StarWars.html>Star Wars Orgasm</A>
+<DD> ! He's definately Luke's dad, blindly loyal to The Emporer, well, until the very end at least when he realized.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1202850&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://www.noxtempli.com/StarWars.html</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>47% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://coyote.accessnv.com/fasalvo/sw/theme.html">Frangisco's Star Wars PC Themes</A>
-<DD>Then You Will See The Power Of The Darkside" to replace the "Please Wait While Your Computer Shuts Down" screen. The Force Is With You Young Jedi," to replace the "It Is Now Safe To Shut Off Your Computer" screen.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=677576&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<A HREF=http://www.nightmarefactory.com/starwars.html>Star Wars Masks (@Nightmare Factory)</A>
+<DD>). Replicated from the original prop helmets used in the filming of the Star Wars trilogy. The TIE fighter helmet is beautifully recreated in a cast from the original props used in the Star Wars trilogy.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=481921&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://www.nightmarefactory.com/starwars.html</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>47% </B></FONT>
+&nbsp;&nbsp;
+<A HREF=http://home.aol.com/greenfour>Home Page for Green Four </A>
+<DD>). I've also included some Star Wars .wav files for download, as well as a subspace link to the largest list of Star Wars Web Sites available. The Complete Listing to Star Wars web pages As a new feature of this page, I'll be listing a "Star Wars Site of the Week."
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=874689&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://home.aol.com/greenfour</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>47% </B></FONT>
+&nbsp;&nbsp;
+<A HREF=http://coyote.accessnv.com/fasalvo/sw/theme.html>Frangisco's Star Wars PC Themes</A>
+<DD>Star Wars Startup And Shutdown Screens For Windows 95 I got sick of my Windows 95 startup and shutdown screens, so I made my own, and now you can have them too. To download a self-extracting zip containing these files, click on the image (make sure to read the file "readme!
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1156455&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
 <BR><FONT SIZE="-2">http://coyote.accessnv.com/fasalvo/sw/theme.html</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>46% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.scifi.com/orbit/scifimovies.html">The Dominion - Orbit - Movies</A>
-<DD>The Highlander Lust List Limited. The Official Highlander WWW, FTP, and HLFIC-L Archive Site.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1244636&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.scifi.com/orbit/scifimovies.html</FONT>
+<A HREF=http://www.angelfire.com/oh/TJsSWCCG/index.html>TJ's StarWars CCG Page</A>
+<DD>......, Charming to the last, vader's lightsaber, disarmed My Hoth Haves (light Side)::::::::::::::::::: Derek"Hobbie"Klivian, General Carlist Rieekan, Zev Senesca, Dack Ralter, Wyron Serper, Jereon Webb, One more Pass, medium Repeating Blaster Cannon. My Hoth haves (dark):::::::::::::::::: Ice Storm, Wampa, Captain Lennox, General Veers, Lieutenant Cabbel, Stalker, Lightsaber Defeciency, if.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=969976&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://www.angelfire.com/oh/TJsSWCCG/index.html</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>46% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.scsn.net/users/pgowder/swpage1.htm">Star Wars Collecting Page</A>
-<DD>C3-P0 with removable limbs in Kenner bag $15. Darth Vader's Tie Fighter missing battery cover, and two wings, does have two connector pieces $10.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1973025&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.scsn.net/users/pgowder/swpage1.htm</FONT>
+<A HREF=http://www.sayville.com/startrek.html>Wormhole</A>
+<DD>16003 Cadet Worf (Star Fleet Academy) $11.00. Probe Droid $9.00 Power FX Figures R2D2 $9.00.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1849249&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://www.sayville.com/startrek.html</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>46% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.angelfire.com/biz/actfig/index.html">JANE'S ACTION FIGURE AND TOY MART</A>
-<DD>Star Wars POTF,Orange Card Col.1, Death Star Gunner (C9)--$20.00. Star Wars POTF,Orange Card Col.1, Tatooine Sandtrooper(C9)--$20.00.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=13218&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.angelfire.com/biz/actfig/index.html</FONT>
+<A HREF=http://www2.gdi.net/~sdp1/swprice.htm>Jawa's STARWARS Action Figure Price Guide</A>
+<DD>SW 21 $ 1500.00 ESB $ 280.00 ROTJ (Fireball) $ 210.00 ROTJ (Desert) $ 200.00 Tri-Logo $ 350.00 In Kenner Bag $ 100.00 Loose $ 40.00. SW 12 $ 200.00 SW 21 $ 135.00 ESB $ 125.00 ROTJ $ 60.00 POTF $ 80.00 Tri-Logo $ 200.00 Loose $ 20.00.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=891924&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://www2.gdi.net/~sdp1/swprice.htm</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>46% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.angelfire.com/biz/actfig/">JANE'S ACTION FIGURE AND TOY MART</A>
-<DD>2) ? argv[2] : null; var path = (argc 3) ? argv[3] : null; var domain = (argc 4) ? argv[4] : null; var secure = (argc 5) ? argv[5] : false; document. toGMTString())) + ((path == null) ? "" : ("; path=" + path)) + ((domain == null) ? "" : ("; domain=" + domain)) + ((secure == true) ? "; secure" : ""); } // -- JANE'S ACTION FIGURE AND TOY MART.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=634981&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.angelfire.com/biz/actfig/</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>45% </B></FONT>
-&nbsp;&nbsp;
-<A HREF="http://www.the-cantina.com/sw-snds/index.html">Mos Eisley Audio Archives</A>
-<DD>WAV 57 Vader: I find your lack of faith disturbing. WAV 36 Emperor: Pay the price for your lack of vision!
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1771131&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<A HREF=http://www.the-cantina.com/sw-snds/index.html>Mos Eisley Audio Archives</A>
+<DD>WAV 30 Leia: I don't know where you get your delusions, laser brain. WAV 29 Stormtrooper: Death Star plans are not in the main computer.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=78502&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
 <BR><FONT SIZE="-2">http://www.the-cantina.com/sw-snds/index.html</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>45% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://members.aol.com/Yankee119/index.html">Yankee119's Home Page</A>
-<DD> Adam Warlock,energy barrage. ..8.00. Adam Warlock,cosmic defenders.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=202318&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<A HREF=http://members.aol.com/Yankee119/index.html>Yankee119's Home Page</A>
+<DD>
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=263095&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
 <BR><FONT SIZE="-2">http://members.aol.com/Yankee119/index.html</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>45% </B></FONT>
+&nbsp;&nbsp;
+<A HREF=http://www.ipa.net/~punkteur/multimedia.html>Star Wars Shadow's Flight Deck - Multimedia</A>
+<DD>wav -- 23Kb - Jawa &quot;Mamet mamet. ...&quot; Han Solo (328Kb) 328Kb crops.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=418903&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://www.ipa.net/~punkteur/multimedia.html</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>45% </B></FONT>
+&nbsp;&nbsp;
+<A HREF=http://up4sale.com/products/cate993-4.htm>UP4SALE - Action Figures - Page 4 of 20</A>
+<DD>All Times Eastern 1503409X MEN X FORCE KILLSPREE $8.00 1 8/15/98 at 2:42pm 1503410FANTASTIC 4 INVISIBLE WOMEN( PAINTED) $12.00 1 8/15/98 at 2:42pm 1503411WILDC. A.T.S SLAG $10.00 1 8/15/98 at 2:42pm 1503412MARVEL CATAPULT INVISIBLE WOMEN $10.00 1 8/15/98 at 2:42pm.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1516911&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://up4sale.com/products/cate993-4.htm</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>45% </B></FONT>
+&nbsp;&nbsp;
+<A HREF=http://www.cf.ac.uk/uwcc/suon/film-soc/events/drinking/stardrin.html>The Darkstar Star Wars drinking game</A>
+<DD>EWOK: An Ewok dies, and the camera lingers longer than it did when the Death Star exploded, killing millions of people. . BANTHA: Every time you find yourself talking to the people on screen.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1928035&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://www.cf.ac.uk/uwcc/suon/film-soc/events/drinking/stardrin.html</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>44% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.angelfire.com/pa/coolbrett/index.html">Welcome to my page!</A>
+<A HREF=http://www.angelfire.com/pa/coolbrett/index.html>Welcome to my page!</A>
 <DD>... var clockID = 0; function UpdateClock() { if(clockID) { clearTimeout(clockID); clockID = 0; } var tDate = new Date(); document. getSeconds(); clockID = setTimeout("UpdateClock()", 1000); } function StartClock() { clockID = setTimeout("UpdateClock()", 500); } function Clock() { if(clockID) { clearTimeout(clockID); clockID = 0; } } //-- .
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1821483&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=61618&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
 <BR><FONT SIZE="-2">http://www.angelfire.com/pa/coolbrett/index.html</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>44% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.smackem.com/feature/genx.html">FEATURE STORY</A>
-<DD>Would I imagine that today people would be taking the Generation X fashion trends much much further than Greedo at the concert? In fact, we at Smack 'em Yack 'em have all jumped on the Generation X bandwagon and feel we have some trendy new products to offer ourselves:Baby PiercingThe piercing craze has been taken to new limits by those who surgically insert metal spikes into their head or.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1382072&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<A HREF=http://www.smackem.com/feature/genx.html>FEATURE STORY</A>
+<DD>Would I imagine that today people would be taking the Generation X fashion trends much much further than Greedo at the concert? ..uh, water-pipe, be a trendy fashion accesory for the true Generation X'er, but you can take a quick hit whenever you like.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=366297&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
 <BR><FONT SIZE="-2">http://www.smackem.com/feature/genx.html</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>43% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.newdream.net/StarWars/secret.htm">The Secret Page</A>
-<DD>Because i myself would like to see not only the good news but also the bad news as well, to be able to read all the information as it comes in. But here goes, it was a nice try, i read the script and -honestly, i hate to say this, but i really don't know how to put it without hurting your feelings, so i won't say a thing about that.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=765808&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.newdream.net/StarWars/secret.htm</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>43% </B></FONT>
-&nbsp;&nbsp;
-<A HREF="http://www.halloweenmart.com/starwars_secure.htm">Halloween Mart - Costumes, Masks, Props, Body Parts </A>
-<DD>Press "Process Order" to proceed to the next page. If you have a request for an item that is not listed please email us at haloshop@accessnv.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1554136&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.halloweenmart.com/starwars_secure.htm</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>43% </B></FONT>
-&nbsp;&nbsp;
-<A HREF="http://www.gamesdomain.co.uk/solution/RebelAssault.txt">http://www.gamesdomain.co.uk/solution/RebelAssault.txt</A>
-<DD>*** Chapter 1: Flight Training Part I : Beggars Canyon View: Third Person Flight Part II: Target Drones Shooting View: Third Person Bombing Spacecraft: Shuttle Hints: - *** Chapter 2: Asteroid Field Training View: First Person Flight Spacecraft: A-Wing Hints: Try to avoid the rocky asteroids. Passcodes: ANOAT / KAIBURR / FORNAX *** Chapter 7: Imperial Probe Droids View: Third Person Flight.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1592879&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<A HREF=http://www.gamesdomain.co.uk/solution/RebelAssault.txt>http://www.gamesdomain.co.uk/solution/RebelAssault.txt</A>
+<DD>========================================= ===================================== R E B E L A S S A U L T H I N T T E X T ========================================= ===================================== Rev.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1723598&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
 <BR><FONT SIZE="-2">http://www.gamesdomain.co.uk/solution/RebelAssault.txt</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>42% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.renegadesoftware.com/">Renegade Software Home Page</A>
-<DD>Best yet, you can construct HTML documents that allow users to enter information, like call logs, again using just a browser. Typical examples include call logging for sales, technical support, and customer service; online job application filing; online computer- based training and testing; and month-end inventory entry.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=68439&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.renegadesoftware.com/</FONT>
+<A HREF=http://members.tripod.com/~SWCORRY/index.html>CORRY'S SWCCG TRADING PAGE</A>
+<DD>Atmospheric Assault x2 Flight Escort Release Your Anger x2 Slip Sliding Away Suprise JABBA'S PALACE LIGHT: Droopy McCool Ghoel Max Rebo Saelt-Marae Yoxgit x2 Strangle x2 Kirdo III JABBA'S PALACE DARK: Jabba The Hutt ***(Want to keep, need really good deal) Klaatu Nysad Pote Snitkin *** PROMOS: Rebel Leader Packs WANT: PREMIERE LIGHT: Revolutions Good Cards(Mains and R1'S), or tell me what.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=458522&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://members.tripod.com/~SWCORRY/index.html</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>42% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.vex.net/~emily/tv.html">Emily's page of TV shows and movies
-</A>
-<DD>
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=697353&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.vex.net/~emily/tv.html</FONT>
+<A HREF=http://users.vnet.net/taylora/moleman.htm>The Many Deaths Of Hans Moleman</A>
+<DD>[What's New] [Description] [Death-o-meter] [Appearances] [Possible Deaths] [Links] [Comments] [Disclaimer]. Key What it Means Add one to the Death-o-meter (N/A) Not Available at this time Episode Appearance Sounds Second Season 7F01 Can be seen in the background as Mr.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1065044&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://users.vnet.net/taylora/moleman.htm</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>42% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.primenet.com/~btn/acellar/exchange.html">Star Wars Exchange Exchange-Where Star Wars Figures are boug...</A>
-<DD>The Exchange uses a Trustee (Safe-T-Net) to insure this will be a safe place to buy and sell figures, eliminating theft and misdealings. . Safe-T-Net (Safe Trading on the Net) is the safest way to purchase Star Wars figures on the net.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=235105&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.primenet.com/~btn/acellar/exchange.html</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>42% </B></FONT>
-&nbsp;&nbsp;
-<A HREF="http://www.decipher.com/starwars/productlibrary/cardlists/anewhope/dark.html">A New Hope Expansion Set Cardlist : Dark</A>
+<A HREF=http://www.decipher.com/starwars/productlibrary/cardlists/anewhope/dark.html>A New Hope Expansion Set Cardlist : Dark</A>
 <DD>gif"; } function imgact(imgName) { if (version == "n3") { imgOn = eval(imgName + "on. src = imgOn; } } function imginact(imgName) { if (version == "n3") { imgOff = eval(imgName + "off.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=198328&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1125436&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
 <BR><FONT SIZE="-2">http://www.decipher.com/starwars/productlibrary/cardlists/anewhope/dark.html</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>41% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.erols.com/njesuele/swanh.htm">Neil's Star Wars Universe and CCG Homepage A New Hope Set
-Pr...</A>
-<DD>Card Name Rarity Dark Price 1 Advance Preparation U1 L $1.50 2 Advosze C2 D $0.25 3 Alternatives to Fighting U1 L $1.50 4 Arcona C2 L $0.25 5 Astromech Shortage U2 D $1.00 6 Attack Run R2 L $6.00 7 Besieged R2 D $3.00 8 Bespin Motors Void Spider THX 1138 C2 D $0.25 9 Black 4 U2 D $1.50 10 Blast the Door, Kid! C2 D $0.25 96 Out of Commission U2 L $1.00 97 Program Trap U1 D $1.50 98 Quite a...
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=967601&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.erols.com/njesuele/swanh.htm</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>40% </B></FONT>
+<A HREF=http://www.primenet.com/~btn/acellar/exchange.html>Star Wars Exchange Exchange-Where Star Wars Figures are boug...</A>
+<DD>The Exchange uses a Trustee (Safe-T-Net) to insure this will be a safe place to buy and sell figures, eliminating theft and misdealings. . Safe-T-Net (Safe Trading on the Net) is the safest way to purchase Star Wars figures on the net.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=13516&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://www.primenet.com/~btn/acellar/exchange.html</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>41% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.primenet.com/~shadocat/agamemcon.html">AgamemCon Babylon 5 & Science Fiction Conventions</A>
-<DD>(Artist, Babylon Project RPG; 3-D Sci-Fi Illustrator, Wireframe Publishing). Neither AgamemCon nor this site are endorsed by or affiliated with Babylonian Productions, PTEN Consortium, or Time Warner Entertainment Co.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=866461&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.primenet.com/~shadocat/agamemcon.html</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>40% </B></FONT>
+<A HREF=http://www.choicelink.com/toys/merch.html>Merchandise</A>
+<DD>Stratos Tank $295.00 This tin exterior space tank has 2 winches and is complete with original box, considered a rare piece by some of the most sophisticated Joe Collectors in the Bay Area. Scorpion Tank $250.00 , no box Action Man Tank , near complete, Joes sold separately.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=546941&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://www.choicelink.com/toys/merch.html</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>41% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.geocities.com/Area51/Vault/6023/index.html">The Mos Eisley Trading Post</A>
-<DD>com J.R. Due to his large number of Haves and Wants, i put the lists on a seperate page. com Marc Dannik Jerriko He's got massive lists as well, so i put them Here.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1012673&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<A HREF=http://www.geocities.com/Area51/Vault/6023/index.html>The Mos Eisley Trading Post</A>
+<DD>com Mark Steele Iceheart Luke Skywalker, Darth Vader mrylande@sendit. com Pepper Darth Vader CA$H & Darth Vader anything not listed bmerchan@uiuc.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1871212&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
 <BR><FONT SIZE="-2">http://www.geocities.com/Area51/Vault/6023/index.html</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>40% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://kissasylum.com/links.html">Deuce's Bitchin' Links</A>
-<DD>Power Computing -Macintosh Clones -- and fast! Pen Computing Magazine -Everything Pen-based.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=364547&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<A HREF=http://kissasylum.com/links.html>Deuce's Bitchin' Links</A>
+<DD>. Jim Rome [Click to listen M-F 11am-3pm Central] -- Great Sports Talk show host! . Jim Rome [Click to listen M-F 11am-3pm Central] -- Great Sports Talk show host!
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=597461&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
 <BR><FONT SIZE="-2">http://kissasylum.com/links.html</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>40% </B></FONT>
+&nbsp;&nbsp;
+<A HREF=http://acomicadventure.com/>acomicadventure</A>
+<DD>C. Penney's) $45 Luke Skywalker (X-wing gear) $35 Sandtrooper (Diamond) $65 Stormtrooper $60 Tie Fighter Pilot $30 Hans Solo-TaunTaun (two pack) $150 C3PO $35 Boba Fett (1978) in box, no cape $150 Star Wars 5" Action Figures and Accessories Darth Vader Carrying Case (loose with card inside) $25 Land Speeder 1978 with box ... <NOBR><A HREF="/cgi-bin/WebQuery?qbe=1097570&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://acomicadventure.com/</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>39% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.halcyon.com/gurahl/xvt/rostere.html">Pilot Listings</A>
-<DD>com 0/0 (none) Greedo greedo@ibm. com 0/0 XO Danz (?????????) 0/0 flight member .\tomic lawfam@california.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1891091&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<A HREF=http://swccg.wis.mb.ca/>Imperial Command</A>
+<DD>I created it on a MacinTRASH IIci with SimpleText as proof of my SW:CCG obsession. Admiral Bryan's SW:CCG Page.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=169620&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://swccg.wis.mb.ca/</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>39% </B></FONT>
+&nbsp;&nbsp;
+<A HREF=http://www.halcyon.com/gurahl/xvt/rostere.html>Pilot Listings</A>
+<DD>Imperial Pilots Black Squadron*B* Name E-Mail Wins/Losses Status Admiral cosley@eskimo. net 0/0 (none) Deathwing(o) Name E-Mail Wins/Losses Status Glay glay@u.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1094934&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
 <BR><FONT SIZE="-2">http://www.halcyon.com/gurahl/xvt/rostere.html</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>39% </B></FONT>
+&nbsp;&nbsp;
+<A HREF=http://www.ece.orst.edu/~volzmi/starwars/>Mike's Star Wars Page</A>
+<DD>mov - Han is put into carbon freeze in The Empire Strikes Back - 5.71 Mb. avi - Boba Fett leaves Cloud City in The Empire Strikes Back - 1.3 Mb.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1641951&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://www.ece.orst.edu/~volzmi/starwars/</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>38% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.starshow.com/">www.starshow.com - Starshow Collectibles Home Page</A>
-<DD>$9.99Jadzia Dax Figure - Trials & Tribble-ations. $9.99 Captain Koloth Figure - Trials & Tribble-ations.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1067751&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<A HREF=http://www.princeton.edu/~nieder/sw/swwww3.txt>http://www.princeton.edu/~nieder/sw/swwww3.txt</A>
+<DD>htm Portraits of the heroes and villains The Star Wars Droid Homepage http://www. com/Area51/Rampart/4798/ The Official Red-6 Memorial Page http://www.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1446292&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://www.princeton.edu/~nieder/sw/swwww3.txt</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>38% </B></FONT>
+&nbsp;&nbsp;
+<A HREF=http://www.starshow.com/>www.starshow.com - Starshow Collectibles Home Page</A>
+<DD>$7.99 1998 Bespin Luke Skywalker. $10.991996 Luke with Desert Skiff.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=872402&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
 <BR><FONT SIZE="-2">http://www.starshow.com/</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>38% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.starwars.priv.pl/1news2.htm">News</A>
-<DD>6.05 Pojawia si wreszczcie polska newsowa grupa dyskusyjna o STAR WARS. com ) TOURNAMENT SEALED DECKS uka si na pocztku maja, natomiast premiera SECOND ANTHOLOGY zostaa przesunita na rodek maja.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1968716&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.starwars.priv.pl/1news2.htm</FONT>
+<A HREF=http://frontpage.lightspeed.net/wolfman/link.htm>Links Page</A>
+<DD> NeoPhYtE_'s Magic Page MTG.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1276046&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://frontpage.lightspeed.net/wolfman/link.htm</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>38% </B></FONT>
+&nbsp;&nbsp;
+<A HREF=http://members.tripod.com/~light_jedi_knight/>Index of /~light_jedi_knight</A>
+<DD>wav 02-Jun-98 06:47 60k boba_vader_cloudcity. wav 02-Jun-98 06:47 314k compactor.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=489798&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://members.tripod.com/~light_jedi_knight/</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>37% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://pw1.netcom.com/~leelman/starwars.html">Star Wars Collectibles at Tosche Station Collectibles</A>
-<DD>GreedoLooseComplete$20 HammerheadLooseComplete$18 Han Solo (Large head)LooseComplete$40 Han Solo (Hoth)LooseMissing gun$15 Han Solo (Bespin)LoosePoor$5 Han Solo (Bespin)LooseMissing gun$15 Imperial CommanderLooseMissing gun$10 Imperial StormtrooperLooseComplete$28 Imperial Stormtrooper (Hoth)LooseMissing skirt$12 Imperial TIE Fighter PilotLooseMissing gun$12 KlaatuLooseComplete$20 Lando.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1616974&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<A HREF=http://www.amused.com/random.html>random silliness</A>
+<DD>Hofstetter's Baseball Jerk of the Week. The New Yorker Inane Ad of the Week.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=790932&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://www.amused.com/random.html</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>37% </B></FONT>
+&nbsp;&nbsp;
+<A HREF=http://pw1.netcom.com/~leelman/starwars.html>Star Wars Collectibles at Tosche Station Collectibles</A>
+<DD>Lando Calrissian (skiff guard)LooseMissing gun/helmet$5 LobotLooseComplete$15 Luke Skywalker (Bespin)LooseMissing gun$20 Luke Skywalker (Hoth)LooseCompleteSOLD! Princess Leia (Bespin)LooseNo Cape$18 Rebel CommandoLooseComplete$20 Ree-YeesLooseComplete$20 SnaggletoothLooseMissing Gun$8 Star Destroyer CommanderLooseComplete$15 Tusken RaiderLooseComplete$20 Walrus ManLooseComplete$20 ...
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1008315&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
 <BR><FONT SIZE="-2">http://pw1.netcom.com/~leelman/starwars.html</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>37% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.angelfire.com/co/wildcatontheweb/index.html">WILDCAT on the web</A>
+<A HREF=http://www.angelfire.com/co/wildcatontheweb/index.html>WILDCAT on the web</A>
 <DD>
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=309380&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=752576&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
 <BR><FONT SIZE="-2">http://www.angelfire.com/co/wildcatontheweb/index.html</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>37% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.geocities.com/Hollywood/Boulevard/4241/ford.html">Harrison Ford - The Unofficial Homepage</A>
-<DD>Blade Runner - Deckard in a spinner (8K). Blade Runner (.AVI) (2.3MB).
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1005473&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.geocities.com/Hollywood/Boulevard/4241/ford.html</FONT>
+<A HREF=http://www.jcpenney.com/wwwfaq.htm>JCPenney's Webmaster FAQ</A>
+<DD>. I sure wish I could apply for a JCPenney charge card or check my account status online; is this planned? . If you're interested in a job with JCPenney, you should call your local JCPenney store or field unit (credit facility, catalog ordering facility, etc.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1256428&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://www.jcpenney.com/wwwfaq.htm</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>36% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.erols.com/njesuele/kenner.htm">Neil's Star Wars Universe and CCG Homepage List of all Kenne...</A>
-<DD>A-Wing Pilot - green flight suit, gun (VIII 93830). A-Wing Pilot - same figure as Star Wars A-Wing Pilot (93830).
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=365448&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.erols.com/njesuele/kenner.htm</FONT>
+<A HREF=http://www.mit.edu/people/lpchao/harrison.ford.html>Harrison Ford - The Unofficial Homepage</A>
+<DD>edu site to this one). edu/~lpchao/ford/.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=806121&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://www.mit.edu/people/lpchao/harrison.ford.html</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>36% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.mufty.com/swccg/interviews/chrisgregg.html">Interview: Chris Gregg </A>
-<DD>. Q. If someone was interested in learning more about Card Table how can they contact you? Now, I might not have as much time, but I can always waste some by catching up on my digests.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1944544&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.mufty.com/swccg/interviews/chrisgregg.html</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>36% </B></FONT>
-&nbsp;&nbsp;
-<A HREF="http://home.ptd.net/~dbohr/wars.html">SPICE WARS</A>
-<DD>* * * The X-Wing force approaches the Death Star at the same time that the Death Star approaches Yavin 4. "Look at the size of it," Wedge gasps over the radio. * * * Meanwhile, aboard the Death Star, an officer approaches Grand Moff Tarkin.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=478180&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://home.ptd.net/~dbohr/wars.html</FONT>
-<DT><FONT FACE="Times" COLOR="#006699"><B>36% </B></FONT>
-&nbsp;&nbsp;
-<A HREF="http://www2.netdoor.com/~lainh/SWtopten.html">Star Wars Top Ten Lists</A>
-<DD>3) Improved medical technology could make new nose and chin more realistic. Star Trek Dream Project | Links To Other Sites.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=40438&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<A HREF=http://www2.netdoor.com/~lainh/SWtopten.html>Star Wars Top Ten Lists</A>
+<DD>
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1740599&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
 <BR><FONT SIZE="-2">http://www2.netdoor.com/~lainh/SWtopten.html</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>36% </B></FONT>
+&nbsp;&nbsp;
+<A HREF=http://www.stanford.edu/~lpchao/ford/>Harrison Ford - The Unofficial Homepage</A>
+<DD>
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1758303&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://www.stanford.edu/~lpchao/ford/</FONT>
 <DT><FONT FACE="Times" COLOR="#006699"><B>35% </B></FONT>
 &nbsp;&nbsp;
-<A HREF="http://www.amused.com/random.html">random silliness</A>
-<DD>. Mad Martian Museum of Modern Madness.
-<NOBR><A HREF="/cgi-bin/WebQuery?qbe=237379&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
-<BR><FONT SIZE="-2">http://www.amused.com/random.html</FONT>
+<A HREF=http://home.onestop.net/lpc/harrison.ford.html>Harrison Ford - The Unofficial Homepage</A>
+<DD>In addition, as recently as 1994 he was in seven of the top twenty movies of all-time. This page has been accessed times since December 16, 1995.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=74538&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://home.onestop.net/lpc/harrison.ford.html</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>35% </B></FONT>
+&nbsp;&nbsp;
+<A HREF=http://www.geocities.com/Hollywood/Boulevard/4241/ford.html>Harrison Ford - The Unofficial Homepage</A>
+<DD>Winner of the People's Choice Award for Favorite Motion Picture Actor in 1998. Interview on USA Weekend (June 14, 1998).
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=765225&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://www.geocities.com/Hollywood/Boulevard/4241/ford.html</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>35% </B></FONT>
+&nbsp;&nbsp;
+<A HREF=http://home.onestop.net/lpc/ford/>Harrison Ford - The Unofficial Homepage</A>
+<DD>Honored at Mann's Chinese Theatre on June 3, 1992. . Named Harvard's Hasty Pudding Theatricals 1995 Man of the Year.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1316248&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://home.onestop.net/lpc/ford/</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>35% </B></FONT>
+&nbsp;&nbsp;
+<A HREF=http://home.ptd.net/~dbohr/wars.html>SPICE WARS</A>
+<DD>The more you tighten your grip," Victoria answers, "the more planets will slip through your fingers." Vader releases Victoria from his magical grasp, only in time for Victoria to see her home planet explode.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=575797&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://home.ptd.net/~dbohr/wars.html</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>35% </B></FONT>
+&nbsp;&nbsp;
+<A HREF=http://www.primenet.com/~btn/areview/review.html>Actions Figures Times. Toy Rewiew</A>
+<DD>He will not stand unless you get the right position for his feet. BLADE BY TOY BIZ Blade has a great sculpt,his glasses are removable.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=878856&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://www.primenet.com/~btn/areview/review.html</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>35% </B></FONT>
+&nbsp;&nbsp;
+<A HREF=http://www.primenet.com/~btn/anew.html>Action Figure Times-What's New</A>
+<DD>The assortment includes Manga Freak, Manga Dead Spawn, Manga Cyber Violator, Manga Samurai Spawn, Manga Beast and Manga Overtkill. Manga Cyber Violator appears to be shortpacked in some cases.
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=1829426&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://www.primenet.com/~btn/anew.html</FONT>
+<DT><FONT FACE="Times" COLOR="#006699"><B>30% </B></FONT>
+&nbsp;&nbsp;
+<A HREF=http://www.cc.gatech.edu/people/home/ccraig/everything.html>Everything I've ever learned, I've learned from Star Wars</A>
+<DD>. Make sure you aren't so fat you can't get away from an exploding Sail Barge. !!!!!. When stealing a skiff, MAKE SURE it's the one with the magnetic thingies on the bottom!
+<NOBR><A HREF="/cgi-bin/WebQuery?qbe=360890&showSummary=true&start=0&perPage=84">Similar Pages</A></NOBR>
+<BR><FONT SIZE="-2">http://www.cc.gatech.edu/people/home/ccraig/everything.html</FONT>
 </dl>
+<BR>
 <FORM ACTION="/cgi-bin/WebQuery" method="GET">
 <INPUT TYPE="hidden" NAME="search" VALUE='Greedo'>
 <INPUT TYPE="hidden" NAME="src" VALUE="wc_more">
 <INPUT TYPE="hidden" NAME="start" VALUE="84">
 <INPUT TYPE="hidden" NAME="showSummary" VALUE="true">
-<INPUT TYPE="hidden" NAME="perPage" VALUE="84">
+<INPUT TYPE="hidden" NAME="perPage" VALUE=84>
 <INPUT TYPE="submit" VALUE="Get the next 84 results">
 </FORM>
-<p>
-<FONT SIZE="-2" FACE="geneva,Helvetica">
-Try this search on <A HREF="/relocate/;http://www.excite.com/search.gw?search=Greedo&trace=WC">Excite</A>.
+<P><FONT SIZE=-2 FACE=geneva,helvetica>
+Try this search on <A HREF=http://www.excite.com/search.gw?search=Greedo>Excite</A>.
 </FONT>
-</TD></TR>
-<!-- end results -->
-</TABLE>
-</TD><TD VALIGN=top ALIGN=center WIDTH="30%">
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="100%">
-<TR><TD ALIGN=center>&nbsp;<A HREF="/Help/Shortcuts.html"><FONT FACE="Arial,Helvetica"><B>Shortcuts</B></FONT></A></TD></TR>
+</FONT> </TD><TD VALIGN=top ALIGN=left WIDTH=30%>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR><TD ALIGN=left>&nbsp;<FONT FACE="Arial,Helvetica"><B>Shortcuts</B></FONT></TD></TR>
 <TR><TD BGCOLOR=#FFCC66 HEIGHT=3><IMG SRC=/icons/Spacer.gif WIDTH=1 HEIGHT=1></TD></TR></TABLE>
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
-<TR><TD ALIGN=center VALIGN=top><IMG ALT="see below" SRC="/icons/onearrow.gif"></TD></TR>
+<TABLE BORDER=0 CELLPADDING=2 CELLSPACING=1 BGCOLOR=#ffffcc WIDTH=100%>
 <TR><TD ALIGN=center VALIGN=top>
-<!-- shortcuts -->
+<!-- promo shortcuts -->
+<IMG SRC="/icons/barnes2.gif"><BR>
+<FONT FACE="geneva,Helvetica" SIZE="-1">
+<A HREF="/relocate/co=wcs_barnes;http://barnesandnoble.bfast.com/booklink/click?sourceid=17288&is_search=Y&keyword=Greedo&match=partial&options=and">Find Related Books</A><BR>
+</FONT><BR>
 <!-- end shortcuts -->
 </TD></TR>
 </TABLE>
 </TD></TR>
 </TABLE>
-<P>
-<CENTER>
-</CENTER>
 <BR>
-<TABLE BORDER=0 CELLPADDING=2 CELLSPACING=0 WIDTH="100%">
-<TR><TD VALIGN=top colspan=2>
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 <TR><TD>&nbsp;<FONT FACE=Arial,helvetica><B>Search Again</B></FONT></TD></TR>
 <TR><TD BGCOLOR=#FFCC66 HEIGHT=3><IMG SRC=/icons/Spacer.gif WIDTH=1 HEIGHT=1></TD></TR>
-</TABLE></td></tr>
-<TR><TD VALIGN=top>
-<!-- search box -->
-<FORM ACTION="/cgi-bin/WebQuery" METHOD="GET" NAME="wcsearchform"><NOBR>
-<INPUT NAME="search" VALUE='Greedo' SIZE=35>
-<INPUT TYPE="submit" VALUE="Search"></NOBR>
-<INPUT NAME="src" VALUE="wc_results" TYPE="hidden">
-<INPUT NAME="showSummary" VALUE="true" TYPE="hidden">
-</FORM>
-<!-- end search box -->
-</TD>
-<TD VALIGN=top ALIGN=center>
-<FONT FACE="geneva,helvetica" SIZE="-1">
-<A HREF=/relocate/co=yp-searchlink;http://yp.gte.net/sform.phtml?SRC=wc&STYPE=S>yellow&nbsp;pages</A>
-&nbsp;&nbsp;<A HREF=/relocate/co=map-searchlink;http://webcrawler.city.net/indexes/top_maps.dcg>maps</A>
-&nbsp;&nbsp;<A HREF=/relocate/co=pfinder-searchlink;http://www.whowhere.com/WebCrawler/wc_search.html>people&nbsp;finder</A>
-&nbsp;&nbsp;<A HREF=/relocate/co=shopping-searchlink;http://jango.excite.com/wc/><B>simple shopping</B></A>
-<BR>
-<A HREF=/relocate/co=horo-searchlink;http://my.excite.com/horoscopes/webcrawler/>horoscopes</A>
-&nbsp;&nbsp;<A HREF=/relocate/co=c2k-searchlink;http://www2.classifieds2000.com/cgi-cls/display.exe?WebCrawler2+class>classifieds</A>
-&nbsp;&nbsp;<A HREF=/relocate/co=quotes-searchlink;http://quicken.webcrawler.com/investments/portfolio/>stock&nbsp;quotes</A>
-&nbsp;&nbsp;<A HREF=/relocate/co=weather-searchlink;http://my.excite.com/webcrawler/weather/>weather</A>
-</FONT>
-</TD></TR>
 </TABLE>
-<!-- end body content-->
+<FORM ACTION="/cgi-bin/WebQuery" NAME=wcsearchform>
+<INPUT TYPE=hidden NAME="showSummary" VALUE="true">
+<INPUT NAME="search" VALUE='Greedo' SIZE=35>
+<INPUT TYPE="submit" VALUE="Search">
+</FORM>
+<BR>
+<CENTER>
+<a href="/relocate/ad=http://ad.preferences.com/image.ng;spacedesc=ATTOneRate_WebCrawler_468x60_RunOfSite_Any&time=1998.08.20.23.57.11&ex_cookie=&ex_reg=no|pk=944319;http://ad.preferences.com/click.ng;spacedesc=ATTOneRate_WebCrawler_468x60_RunOfSite_Any&time=1998.08.20.23.57.11" onMouseOver="window.status='Click Here';return true" language="Javascript"><img src="http://ad.preferences.com/image.ng;spacedesc=ATTOneRate_WebCrawler_468x60_RunOfSite_Any&time=1998.08.20.23.57.11&ex_cookie=&ex_reg=no" ALT="Click Here" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> Click Here </B></FONT></CENTER></a>
+</CENTER>
 <P>
-<!-- footer -->
 <hr width=600 size=1 noshade>
 <table border=0 cellpadding=0 cellspacing=0 width=600>
 <tr><td valign=top align=center>
 <FONT FACE="geneva,Arial,Helvetica" SIZE="-1">
-<b>More Channels</b> :&nbsp;&nbsp;
-<A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://www.webcrawler.com/Arts/">arts &amp; books</A>&nbsp;|&nbsp;
-<A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://www.webcrawler.com/Auto/">auto</A>&nbsp;|&nbsp;
-<A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://quicken.webcrawler.com">business</A>&nbsp;|&nbsp;
-<A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://www.webcrawler.com/Careers/">careers</A>&nbsp;|&nbsp;
-<A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://www.webcrawler.com/Computers/">computers</A>&nbsp;|&nbsp;
-<A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://www.webcrawler.com/Entertainment/">entertainment</A>&nbsp;|&nbsp;
-<A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://www.webcrawler.com/Games/">games</A>&nbsp;|&nbsp;
-<A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://www.webcrawler.com/Health/">health</A>&nbsp;|&nbsp;
-<A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://www.webcrawler.com/Family/">family</A>&nbsp;|&nbsp;
-<A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://nt.excite.com/webcrawler/">news</A>&nbsp;|&nbsp;
-<A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://www.webcrawler.com/Chat/">chat</A>&nbsp;|&nbsp;
-<A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://www.webcrawler.com/Reference/">reference</A>&nbsp;|&nbsp;
-<A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://www.webcrawler.com/Relationships/">relationships</A>&nbsp;|&nbsp;
-<A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://www.webcrawler.com/Shopping/">shopping</A>&nbsp;|&nbsp;
-<A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://www.webcrawler.com/Sports/">sports</A>&nbsp;|&nbsp;
-<A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://webcrawler.city.net/">travel</A>
+<b>Services</b> :&nbsp;&nbsp;
+<A HREF=/relocate/co=yp-searchlink;http://yp.gte.net/sform.phtml?SRC=wc&STYPE=S>yellow&nbsp;pages</A>
+&nbsp;&nbsp;<A HREF=/relocate/co=map-searchlink;http://webcrawler.city.net/indexes/top_maps.dcg>maps</A>
+&nbsp;&nbsp;<A HREF=/relocate/co=pfinder-searchlink;http://www.whowhere.com/WebCrawler/wc_search.html>people&nbsp;finder</A>
+&nbsp;&nbsp;<A HREF=/relocate/co=shopping-searchlink;http://jango.excite.com/wc/>simple shopping</A>
+&nbsp;&nbsp;<A HREF=/relocate/co=horo-searchlink;http://my.excite.com/horoscopes/webcrawler/>horoscopes</A>
+<BR><A HREF=/relocate/co=c2k-searchlink;http://www.classifieds2000.com/cgi-cls/display.exe?partner=webcrawler&path=class&template=none&>classifieds</A>
+&nbsp;&nbsp;<A HREF=/relocate/co=quotes-searchlink;http://quicken.webcrawler.com/investments/tickersearch/>stock&nbsp;quotes</A>
+&nbsp;&nbsp;<A HREF=/relocate/co=weather-searchlink;http://my.excite.com/webcrawler/weather/>weather</A>
 <P><A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://www.webcrawler.com/">home</A>&nbsp;||&nbsp;
 <A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://my.excite.com/webcrawler/">my page</A>&nbsp;||&nbsp;
 <A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://mailexcite.com/">email</A>&nbsp;||&nbsp;
 <A HREF="http://www.webcrawler.com/relocate/co=internal_footernav&|pk=1;http://www.webcrawler.com/Help/Help.html">help</A></FONT>
-</td></tr></table>
+</TD></tr></table>
 <P>
 <FONT FACE=GENEVA,ARIAL size=-1>
 <A HREF=/Help/BookmarkWC.html>Bookmark&nbsp;WebCrawler</A></font>
@@ -687,9 +643,9 @@ Try this search on <A HREF="/relocate/;http://www.excite.com/search.gw?search=Gr
 &nbsp;&#183;&nbsp;<font face=geneva,arial size=-1><A HREF=/Help/Advertising/Advertising.html>Advertise&nbsp;on&nbsp;WebCrawler</A></font>
 &nbsp;&#183;&nbsp;<font face=geneva,arial size=-1><A HREF=/Help/GetListed/AddURLS.html>Add&nbsp;your&nbsp;URL</A>
 </FONT>
-<BR><FONT FACE="geneva,Arial,Helvetica" COLOR="#000000" SIZE="-2">&nbsp;copyright &copy; 1998 </FONT><A HREF="http://corp.excite.com/"><FONT FACE="Arial,Helvetica" COLOR="#FF0000" SIZE="-2">Excite, Inc.</FONT></A>
-<!-- end footer -->
+<BR>
+<FONT FACE="geneva,Arial,Helvetica" COLOR="#000000" SIZE="-2">&nbsp;copyright &copy; 1998 </FONT><A HREF="http://corp.excite.com/"><FONT FACE="Arial,Helvetica" COLOR="#FF0000" SIZE="-2">Excite, Inc.</FONT></A>
 </CENTER>
 </BODY>
 </HTML>
-<!-- timestamp: 1 0.231812 0.231812 -->
+<!-- timestamp: 1 0.218318 0.218318 -->

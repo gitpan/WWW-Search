@@ -1,607 +1,328 @@
-
-
-
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <html>
-<base 
- >
 <head>
-<meta name="IS" content="ok_bull">
-<meta name="Author" content="Vivian, Adina and Mike">
-
-<title>Infoseek: Martin Thurn</Title>
+<base target="_top"><meta name="IS" content="ok_cash">
+<title>Infoseek: Martin Thurn AND Star Wars</Title>
 </head>
-	
 
-<body bgcolor="#FFFFFF" >
+<body  bgcolor="#FFFFFF" 
+
+> 
 <center>
 <table border=0 cellpadding=0 cellspacing=0><tr><td valign=bottom nowrap>
-<a href="/Home?pg=Home.html&nh=50"><img src="/images/tmpl/standard_header.gif" width=331 height=52 alt="Infoseek Results" vspace=0 hspace=0 border=0></a><br>
+
+<a href="/Home?pg=Home.html&nh=25"><img src="/images/tmpl/standard_header.gif" width="331" height="52" alt="Infoseek" vspace=0 hspace=0 border=0></a><br>
+
 </td><td valign=middle nowrap>
+<center>
 
-	
-
+</center>
 </td></tr>
+
 <tr><td colspan=2 valign=top nowrap>
 
-        
-
-
- 
-
-<a href="/Topic?tid=459&nh=50"><b>Stocks</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
-<a href="/Topic?tid=1486&nh=50"><b>News</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
-<a href="/Facts?pg=maps.html&nh=50"><b>Maps</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
-<a href="/Facts?pg=people.html&nh=50"><b>People &amp; Business</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
-<a href="/Home?pg=Home.html&nh=50"><b>Home</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
-<b><a href="/redirect?sv=IS&lk=lcd&ak=BigY&rl=OnBar&rd=http://www.bigyellow.com/part_infoseek.part"><b>Yellow Pages</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
-<a href="/ups?pg=ups_jump.html&nh=50"><b>UPS Services</b></a>
-<br>
-
-
+        <a href="/Topic?tid=459&nh=25"><b>Stocks</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="/Topic?tid=1486&nh=25"><b>News</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="/Facts?pg=maps.html&svx=htb_maps&nh=25"><b>Maps</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="/Facts?pg=email.html&svx=htb_email&nh=25"><b>People &amp; Business</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="/Home?pg=Home.html&nh=25"><b>Home</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
+	<a href="/redirect?sv=IS&lk=noframes&ak=MSSW&rl=OnBar&rd=http://yp.microsoft.com/infoseek/"><b>Yellow Pages</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="/ups?pg=ups_jump.html&lk=lb&nh=25"><b>UPS Services</b></a>
 
 </td></tr></table>
-<p>
- 
+</center>
 
-<FORM name="WW_search" method="get" action="/Titles">
-<table width=100% cellpadding=0 cellspacing=0 border=0><tr><td valign=top width=155>
+
+
+
+<p><center>
+<form action="/Titles" method="get" name="WW_dir_search">
+<table width=468 cellspacing=0 cellpadding=0 border=0>
+<tr><td valign=top width=155>
 <img src="/images/clear.gif" width=155 height=1>
-</td><td valign=top>
-Infoseek found 22     pages  containing
-
-
-at least one of these words:
-
-
-
-<b>Martin Thurn</b> (click for <a href="/Help?pg=HomeHelp.html&nh=50">tips</a> 
-
-)<br>
-<input type=radio name="col" value="New Search" CHECKED>&nbsp;<b>New</b>&nbsp;Search&nbsp;&nbsp;&nbsp;<input type=radio name="col" value="Search These Results">&nbsp;Search&nbsp;only&nbsp;<b>within</b>&nbsp;these&nbsp;22&nbsp;pages<br>
+</td>
+<td valign=top>
+Infoseek found 11
+ pages containing the word <b>Martin Thurn AND Star Wars</b>
+(Click for <a href="/Help?pg=HomeHelp.html&nh=25">tips</a> or <a href="/find?pg=advanced_www.html&nh=25&ud9=advanced_www">Advanced search</a>)
+<br>
+<input type=radio name="col" value="New Search" CHECKED>&nbsp;<b>New</b>&nbsp;Search&nbsp;&nbsp;&nbsp;<input type=radio name="col" value="Search These Results">&nbsp;Search&nbsp;only&nbsp;<b>within</b>&nbsp;these&nbsp;11&nbsp;pages<br>
 <INPUT NAME="qt" size=50 VALUE="" MAXLENGTH=511>&nbsp;<input type=submit value="seek">
-<INPUT TYPE=hidden NAME="oq" VALUE="Martin Thurn">
+<INPUT TYPE=hidden NAME="oq" VALUE="Martin Thurn AND Star Wars">
 <INPUT TYPE=hidden NAME="sv" VALUE="IS">
 <INPUT TYPE=hidden NAME="lk" VALUE="lcd">
-<INPUT TYPE=hidden NAME="nh" VALUE="50">
-
-
-
-
-
-
-
-
-
-
-</td></tr></table>
+<INPUT TYPE=hidden NAME="nh" VALUE="25">
+</td></tr>
+</table>
 </form>
 
+<p>
+    <table border="0" cellpadding="5" bgcolor="#FFFFCC"><tr><td><font size="-1">
+		<a href="/redirect?sv=IS&lk=noframes&ak=BORD&rl=LINK-C0-standard-flash-borders&rd=http://www.borders.com/cgi-bin/partner?PARTNER_ID=101010097&Url=http://www.borders.com/infoseek/section_10000.html">The latest book titles are at Borders.com. In stock. Fast delivery.</a>
 
+</font></td></tr></table><br>
+
+
+</center>
+
+<table width="100%" cellpadding=0 cellspacing=0 border=0><tr><td valign=top width=135>
+<table width="100%" cellpadding=4 cellspacing=0 border=0>
+<tr><td align=center><hr><font face="Arial,Helvetica"><b>Channels</b></font><hr></td></tr><tr><td valign=top>
+
+<dl>
+<dt><a href="/Topic?tid=1803&nh=25">Automotive</a>
+<dt><a href="/Topic?tid=420&nh=25">Business</a>
+<dt><a href="/Topic?tid=421&nh=25">Careers</a>
+<dt><a href="/Topic?tid=15067&nh=25">Communications</a>
+<dt><a href="/Topic?tid=501&nh=25">Computer</a>
+<dt><a href="/Topic/Education?pg=education.html&svx=edu_main&nh=25">Education</a>
+<dt><a href="/Topic?tid=10144&nh=25">Entertainment</a>
+<dt><a href="/Topic?tid=13414&nh=25">Good&nbsp;Life</a>
+<dt><a href="/Topic?tid=1207&nh=25">Health</a>
+<dt><a href="/Topic?tid=502&nh=25">Internet</a>
+<dt><a href="/Topic?tid=12663&nh=25">Kids&nbsp;&&nbsp;Family</a>
+<dt><a href="/Topic?tid=1486&nh=25">News</a>
+<dt><a href="/Topic?tid=459&nh=25">Personal&nbsp;Finance</a>
+<dt><a href="/Topic?tid=433&nh=25">Real&nbsp;Estate</a>
+<dt><a href="/Topic?tid=2245&nh=25">Shopping</a>
+<dt><a href="/Topic?tid=1653&nh=25">Sports</a>
+<dt><a href="/Topic?tid=1753&nh=25">Travel</a>
+<dt><a href="/Topic?tid=14610&nh=25">Women's</a>
+</dl>
+
+    </td></tr><tr><td>&nbsp;</td></tr>
+
+<tr><td align=center><hr><font face="Arial,Helvetica"><b>Classifieds</b></font><hr></td></tr><tr><td valign=top><a href="http://www.classifieds2000.com/cgi-cls/Display.exe?infoseek+class">Find anything</a> from concert tickets to computers, poodles to personals
+</td></tr><tr><td>&nbsp;</td></tr></table>
 
 <p>
-
-
-
-
-<table width=100% cellpadding=0 cellspacing=0 border=0><tr><td valign=top width=135>
-<table width=100% cellpadding=4 cellspacing=0 border=0>
-
- 
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-<tr><td  align=center>
-<hr>
-<font face="Arial,Helvetica" ><b>Classifieds</b></font>
-<hr>
-</td></tr><tr><td valign=top>
-
-
-<a href="http://www.classifieds2000.com/cgi-cls/Display.exe?infoseek+class">Find anything</a> from concert tickets to computers, poodles to personals
-</td></tr>
-<tr><td>&nbsp;</td></tr>
-
-
-
-
-</table>
 <img src="/images/clear.gif" width=135 height=1>
-</td><td width=25 valign=top>
+</td><td width=25 valign=bottom>
 <img src="/images/clear.gif" width=25 height=1>
 </td><td valign=top>
 
+<p>
+
+<p>
+<p><table width="100%" cellpadding=4 cellspacing=0 border=0>
+
+
+<tr><td align=center><hr><font face="Arial,Helvetica"><b>Search results 1 - 11</b></font><hr></td></tr><tr><td valign=top><b><a href="/Titles?nh=20&st=0&qt=Martin+Thurn+AND+Star+Wars&rf=0&col=WW&ud4=1"><font size="-1">Hide summaries</font></a></b>
+&nbsp;|&nbsp; <b><a href="/Titles?nh=25&st=0&qt=Martin+Thurn+AND+Star+Wars&rf=11&col=WW"><font size="-1">Group these results</font></a></b>
+</td></tr>
+</table>
+
+<p><b><a href="http://www.cs.washington.edu/homes/lopez/textf/all-cards.html">STAR WARS CARDED FIGURE VARIATIONS  **************</a></b>
+<br>(revised  6-5-95) NOTES: ------  1)  This is an attempt to assemble the most complete and accurate list of  card variations as they were sold for the U.S. market.  2)  Figures are ...<br>
+<font size="-1">
+<b>71%</b>
+&nbsp;http://www.cs.washington.edu/homes/lopez/textf/all-cards.html&nbsp;
+&nbsp;(Size 26.5K)&nbsp;
+Document Date:&nbsp; 7 Jun 1995
+</font>
+<p><b><a href="http://www.pitt.edu/%7Ethurn/SWB/">The Star Wars Collector's Bible (Introduction)</a></b>
+<br>The Star Wars Collector's Bible .  The Star Wars Collector's Bible (hereafter  The SW Bible  or  SWB  ) is a detailed hypertext list of U.S.-released Star Wars-related  merchandise.  Organization and ...<br>
+<font size="-1">
+<b>70%</b>
+&nbsp;http://www.pitt.edu/%7Ethurn/SWB/&nbsp;
+&nbsp;(Size 8.6K)&nbsp;
+Document Date:&nbsp;25 Jun 1998
+</font>
+<p><b><a href="http://www.toysrgus.com/images-bootleg.html">Bootlegs</a></b>
+<br>toys and other Star Wars collectibles were made primarily in  countries where Star Wars was not commercially released in theaters.  Most  Star Wars bootlegs originate from the eastern bloc countries: Poland,  Hungary, ...<br>
+<font size="-1">
+<b>68%</b>
+&nbsp;http://www.toysrgus.com/images-bootleg.html&nbsp;
+&nbsp;(Size 5.6K)&nbsp;
+Document Date:&nbsp; 6 Jun 1998
+</font>
+<p><b><a href="http://www.pitt.edu/%7Ethurn/SWC/">The Star Wars Collector</a></b>
+<br>is a magazine by collectors, for collectors, about all aspects of collecting all Star Wars-related items of all time periods.  Each issue of  The Star Wars Collector  is filled with useful and informative articles ...<br>
+<font size="-1">
+<b>68%</b>
+&nbsp;http://www.pitt.edu/%7Ethurn/SWC/&nbsp;
+&nbsp;(Size 7.5K)&nbsp;
+Document Date:&nbsp;22 Mar 1998
+</font>
+<p><b><a href="http://www.cs.washington.edu/homes/lopez/info.html">Information on the Star Wars Collectors Archive</a></b>
+<br>The Star Wars Collectors Archive  Created by  Gus Lopez  (lopez@cs.washington.edu).  Much of the information contained here is researched and written by Chris Georgoulias (stun ...<br>
+<font size="-1">
+<b>64%</b>
+&nbsp;http://www.cs.washington.edu/homes/lopez/info.html&nbsp;
+&nbsp;(Size 5.2K)&nbsp;
+Document Date:&nbsp;14 Aug 1996
+</font>
+<p><b><a href="http://www.cs.washington.edu/homes/lopez/textfiles.html">Charts, Tables, and Text Files</a></b>
+<br>Text Files  Maintained by  Gus Lopez  (lopez@cs.washington.edu)  Ever wonder which weapon goes with which figure?  Well, that's the kind of information you can find right here.  Any beginning ...<br>
+<font size="-1">
+<b>60%</b>
+&nbsp;http://www.cs.washington.edu/homes/lopez/textfiles.html&nbsp;
+&nbsp;(Size 2.9K)&nbsp;
+Document Date:&nbsp; 2 Dec 1996
+</font>
+<p><b><a href="http://www.stwing.upenn.edu/starwars/collect/vartions.txt">LOOSE STAR WARS FIGURE VARIATIONS ****  1. I've left prototypes off the ...</a></b>
+<br>LOOSE STAR WARS FIGURE VARIATIONS ****  1. I've left prototypes off the list, except in the case of RocketFett, since it's a well-known prototype.  2. This list ...<br>
+<font size="-1">
+<b>52%</b>
+&nbsp;http://www.stwing.upenn.edu/starwars/collect/vartions.txt&nbsp;
+&nbsp;(Size 15.9K)&nbsp;
+Document Date:&nbsp;13 Jan 1995
+</font>
+<p><b><a href="http://www.stwing.upenn.edu/starwars/collect/swfigrs.txt">ACTION FIGURES  Small Action Figures, Kenner, 1978-1985, came blister ...</a></b>
+<br>ACTION FIGURES  Small Action Figures, Kenner, 1978-1985, came blister packaged on color photo headers.  They were released in eight series (I-VIII), new figures added ...<br>
+<font size="-1">
+<b>52%</b>
+&nbsp;http://www.stwing.upenn.edu/starwars/collect/swfigrs.txt&nbsp;
+&nbsp;(Size 14.4K)&nbsp;
+Document Date:&nbsp;26 Apr 1994
+</font>
+<p><b><a href="http://www.cs.washington.edu/homes/lopez/textf/all-figs.html">STAR WARS LOOSE FIGURE VARIATIONS  ***************</a></b>
+<br>(revised  5-19-95) NOTES: ------  1)  Prototypes are not listed (hence rocket firing Boba Fett does not appear  on the list).  2)  This list is undoubtedly beyond the point that ...<br>
+<font size="-1">
+<b>49%</b>
+&nbsp;http://www.cs.washington.edu/homes/lopez/textf/all-figs.html&nbsp;
+&nbsp;(Size 7.8K)&nbsp;
+Document Date:&nbsp; 7 Apr 1996
+</font>
+<p><b><a href="http://www.cs.washington.edu/homes/lopez/textf/SWfigures.html">ACTION FIGURES  SMALL ACTION FIGURES, Kenner, 1978-1985  Came blister ...</a></b>
+<br>ACTION FIGURES  SMALL ACTION FIGURES, Kenner, 1978-1985  Came blister packaged on color photo headers.  They were released in eight series (I-VIII), new figures ...<br>
+<font size="-1">
+<b>40%</b>
+&nbsp;http://www.cs.washington.edu/homes/lopez/textf/SWfigures.html&nbsp;
+&nbsp;(Size 19.0K)&nbsp;
+Document Date:&nbsp;13 Apr 1996
+</font>
+<p><b><a href="http://www.freelaunch.com/">A Free Launch</a></b>
+<br>This collection is more than a Hotlist and not quite an  Index.  Here you will find sites chosen for their enduring  <br>
+<font size="-1">
+<b>40%</b>
+&nbsp;http://www.freelaunch.com/&nbsp;
+&nbsp;(Size 7.4K)&nbsp;
+Document Date:&nbsp; 4 Apr 1998
+</font>
+<p>
+<font color="FFFFFF" size=0>xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx</font><br>
+
+<b><a href="/Titles?nh=20&st=0&qt=Martin+Thurn+AND+Star+Wars&rf=0&col=WW&ud4=1"><font size="-1">Hide summaries</font></a></b>
+&nbsp;|&nbsp; <b><a href="/Titles?nh=25&st=0&qt=Martin+Thurn+AND+Star+Wars&rf=11&col=WW"><font size="-1">Group these results</font></a></b>
+<p>
+
+
+
+
+
+
+
+
 
 
 <table width=100% cellpadding=4 cellspacing=0 border=0>
+<tr><td align=center colspan=3><hr><font face="Arial,Helvetica"><b>Search more</b></font><hr></td></tr><tr><td valign=top colspan=3>
 
- 
- 
-
-
-
-
-
-
-
-<tr><td  align=center>
-<hr>
-<font face="Arial,Helvetica" ><b>Search results 1 - 22</b></font>
-<hr>
-</td></tr><tr><td valign=top>
-
-
-<p><font size=-1><b><a href="/Titles?qt=Martin+Thurn&col=WW&sv=IS&lk=lcd&rf=0&ud4=1&nh=20">Hide summaries</a>
-
-
-
-&nbsp;&nbsp;|&nbsp;&nbsp;
-<a href="/Titles?qt=Martin+Thurn&col=WW&rf=11&nh=50">Group these results</a>
-
-
-
-
-
-</b>             
-
-</font></p>
-
- 
-
-
-<b><a href="http://www.teleport.com/~dpip/swc/swc.about.html">The Star Wars Collector Online</a></b><br>
-ABOUT THE STAR WARS COLLECTOR.  Welcome to the official website of The Star Wars Collector! This site is designed to compliment the bi-monthly newsletter. This section details all the ...<br>
-
-<font size="-1">
-<b>51%</b> 
-&nbsp;
-http://www.teleport.com/~dpip/swc/swc.about.html &nbsp; &nbsp; 
-(Size 7.5K) &nbsp; 
-Document&nbsp;date: 10 Aug 1997 </font><br>
-<p>
-<b><a href="http://www.pitt.edu/%7Ethurn/SWB/">The Star Wars Collector's Bible (Introduction)</a></b><br>
-The Star Wars Collector's Bible .  The Star Wars Collector's Bible (hereafter  The SW Bible  or  SWB  ) is a detailed hypertext list of U.S.-released Star Wars-related  merchandise.  ...<br>
-
-<font size="-1">
-<b>50%</b> 
-&nbsp;
-http://www.pitt.edu/%7Ethurn/SWB/ &nbsp; &nbsp; 
-(Size 8.6K) &nbsp; 
-Document&nbsp;date:  6 May 1998 </font><br>
-<p>
-<b><a href="http://www.cs.washington.edu/homes/lopez/faq.html">REC.ARTS.SF.STARWARS.COLLECTING FAQ *****  Last updated 4-1-96</a></b><br>
-Coordinators:  Gus Lopez (lopez@cs.washington.edu)  Chris Nichols (anichols@bucknell.edu) Authors:  Dave Halsted (def@leland.stanford.edu)  Gus Lopez (lopez@cs.washington.edu)  Chris ...<br>
-
-<font size="-1">
-<b>49%</b> 
-&nbsp;
-http://www.cs.washington.edu/homes/lopez/faq.html &nbsp; &nbsp; 
-(Size 25.2K) &nbsp; 
-Document&nbsp;date:  8 May 1996 </font><br>
-<p>
-<b><a href="http://www.stwing.upenn.edu/starwars/collectfaq.txt">REC.ARTS.SF.STARWARS.COLLECTING FAQ ----  Coordinators:  Gus Lopez</a></b><br>
-(lopez@cs.washington.edu)  Chris Nichols (anichols@bucknell.edu) Authors:  Dave Halsted (def@leland.stanford.edu)  Gus Lopez (lopez@cs.washington.edu)  Chris Nichols (anicho ...<br>
-
-<font size="-1">
-<b>49%</b> 
-&nbsp;
-http://www.stwing.upenn.edu/starwars/collectfaq.txt &nbsp; &nbsp; 
-(Size 22.5K) &nbsp; 
-Document&nbsp;date: 25 Jun 1995 </font><br>
-<p>
-<b><a href="http://www.cs.washington.edu/homes/lopez/info.html">Information on the Star Wars Collectors Archive</a></b><br>
-The Star Wars Collectors Archive  Created by  Gus Lopez  (lopez@cs.washington.edu).  Much of the information contained here is researched and written by Chris Georgoulias (stun ...<br>
-
-<font size="-1">
-<b>37%</b> 
-&nbsp;
-http://www.cs.washington.edu/homes/lopez/info.html &nbsp; &nbsp; 
-(Size 5.2K) &nbsp; 
-Document&nbsp;date: 14 Aug 1996 </font><br>
-<p>
-<b><a href="http://www.jedinet.com/collecting/variations/">Variations</a></b><br>
-A variation, as you may already know, is a small alteration made during the run of a product that, for some reason, people like to collect and be driven crazy by.  This site is ...<br>
-
-<font size="-1">
-<b>37%</b> 
-&nbsp;
-http://www.jedinet.com/collecting/variations/ &nbsp; &nbsp; 
-(Size 2.3K) &nbsp; 
-Document&nbsp;date: 30 Dec 1997 </font><br>
-<p>
-<b><a href="http://www.hss.cmu.edu/HTML/departments/philosophy/alumni.html">Department of Philosophy Alumni</a></b><br>
-PhD Pure and Applied Logic  August 1996, Christopher Meek, &quot;Selecting Graphical Models: Causal and Statistical Modeling&quot;  August 1996, Thomas Richardson, &quot;Feedback Models: <br>
-
-<font size="-1">
-<b>37%</b> 
-&nbsp;
-http://www.hss.cmu.edu/HTML/departments/philosophy/alumni.html &nbsp; &nbsp; 
-(Size 5.2K) &nbsp; 
-Document&nbsp;date: 10 Sep 1997 </font><br>
-<p>
-<b><a href="http://www.cs.washington.edu/homes/lopez/textfiles.html">Charts, Tables, and Text Files</a></b><br>
-Text Files  Maintained by  Gus Lopez  (lopez@cs.washington.edu)  Ever wonder which weapon goes with which figure?  Well, that's the kind of information you can find right here.  Any ...<br>
-
-<font size="-1">
-<b>37%</b> 
-&nbsp;
-http://www.cs.washington.edu/homes/lopez/textfiles.html &nbsp; &nbsp; 
-(Size 2.9K) &nbsp; 
-Document&nbsp;date:  2 Dec 1996 </font><br>
-<p>
-<b><a href="http://www.cs.washington.edu/homes/lopez/images-bootleg.html">Bootlegs</a></b><br>
-toys and other Star Wars collectibles were made primarily in  countries where Star Wars was not commercially released in theaters.  Most Star Wars bootlegs originate from the eastern ...<br>
-
-<font size="-1">
-<b>37%</b> 
-&nbsp;
-http://www.cs.washington.edu/homes/lopez/images-bootleg.html &nbsp; &nbsp; 
-(Size 4.6K) &nbsp; 
-Document&nbsp;date: 22 Oct 1996 </font><br>
-<p>
-<b><a href="http://www.cs.washington.edu/homes/lopez/textf/all-figs.html">STAR WARS LOOSE FIGURE VARIATIONS  ***************</a></b><br>
-(revised  5-19-95) NOTES: ------  1)  Prototypes are not listed (hence rocket firing Boba Fett does not appear  on the list).  2)  This list is undoubtedly beyond the point that ...<br>
-
-<font size="-1">
-<b>27%</b> 
-&nbsp;
-http://www.cs.washington.edu/homes/lopez/textf/all-figs.html &nbsp; &nbsp; 
-(Size 7.8K) &nbsp; 
-Document&nbsp;date:  7 Apr 1996 </font><br>
-<p>
-<b><a href="http://www.cs.washington.edu/homes/lopez/textf/SWfigures.html">ACTION FIGURES  SMALL ACTION FIGURES, Kenner, 1978-1985  Came blister ...</a></b><br>
-ACTION FIGURES  SMALL ACTION FIGURES, Kenner, 1978-1985  Came blister packaged on color photo headers.  They were released in eight series (I-VIII), new figures ...<br>
-
-<font size="-1">
-<b>27%</b> 
-&nbsp;
-http://www.cs.washington.edu/homes/lopez/textf/SWfigures.html &nbsp; &nbsp; 
-(Size 19.0K) &nbsp; 
-Document&nbsp;date: 13 Apr 1996 </font><br>
-<p>
-<b><a href="http://ftp.cdrom.com/pub/japanese/uesama/KanjiOfTheDay/kotd.44">KANJI OF THE DAY # 44  1*  ******  ****  ****  ***</a></b><br>
-2*****************************  ****  ****  ****  <br>
-
-<font size="-1">
-<b>27%</b> 
-&nbsp;
-http://ftp.cdrom.com/pub/japanese/uesama/KanjiOfTheDay/kotd.44 &nbsp; &nbsp; 
-(Size 10.1K) &nbsp; 
-Document&nbsp;date: 30 Dec 1994 </font><br>
-<p>
-<b><a href="http://www.freelaunch.com/">A Free Launch</a></b><br>
-This collection is more than a Hotlist and not quite an  Index.  Here you will find sites chosen for their enduring  <br>
-
-<font size="-1">
-<b>21%</b> 
-&nbsp;
-http://www.freelaunch.com/ &nbsp; &nbsp; 
-(Size 7.4K) &nbsp; 
-Document&nbsp;date:  4 Apr 1998 </font><br>
-<p>
-<b><a href="http://www.cranium.co.nz/A.htm">Cranium Music Online Catalogue - A</a></b><br>
-Index 0  A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z  Order  Artist  Price  Price  Price  Title  Year  Format  Status  NZ  US  AU  A FOOT IN COLD ...<br>
-
-<font size="-1">
-<b>20%</b> 
-&nbsp;
-http://www.cranium.co.nz/A.htm &nbsp; &nbsp; 
-(Size 15.7K) &nbsp; 
-Document&nbsp;date: 26 Apr 1998 </font><br>
-<p>
-<b><a href="http://www.cybercomm.net/~starbuck/faqs/CD.ALL">Newsgroups: rec.arts.anime Subject: Anime CD Cyclopedia (Very Very Long)</a></b><br>
-Keywords: Monthly informational posting  Howdy!  Here's the latest version of the Anime CD Cyclopedia.  Changes from the last version:  Added CDs:  Ah! My Goddess  Ai no Kusabi  Aile ...<br>
-
-<font size="-1">
-<b>20%</b> 
-&nbsp;
-http://www.cybercomm.net/~starbuck/faqs/CD.ALL &nbsp; &nbsp; 
-(Size 15.8K) &nbsp; 
-Document&nbsp;date:  5 Dec 1997 </font><br>
-<p>
-<b><a href="http://tsunami.anime.net/~lindsley/cdall/cd2.html">Anime CD Cyclopedia  Compiled by Steve Pearl  Previous Revision: 1994.04.14</a></b><br>
-Last Revision: 1996.04.21  Thanks to all those who took the time to mail or post corrections,  additions, and new listings!  This list is dedicated to you!  Specifically:  Marijan ...<br>
-
-<font size="-1">
-<b>20%</b> 
-&nbsp;
-http://tsunami.anime.net/~lindsley/cdall/cd2.html &nbsp; &nbsp; 
-(Size 15.8K) &nbsp; 
-Document&nbsp;date: 26 Apr 1996 </font><br>
-<p>
-<b><a href="http://www.cybercom.com/~starbuck/faqs/CD.ALL">Newsgroups: rec.arts.anime Subject: Anime CD Cyclopedia (Very Very ...</a></b><br>
-Newsgroups: rec.arts.anime Subject: Anime CD Cyclopedia (Very Very Long) Keywords: Monthly informational posting  Howdy!  Here's the latest version of the Anime CD Cyclopedia.  ...<br>
-
-<font size="-1">
-<b>19%</b> 
-&nbsp;
-http://www.cybercom.com/~starbuck/faqs/CD.ALL &nbsp; &nbsp; 
-(Size 15.8K) &nbsp; 
-Document&nbsp;date:  5 Dec 1997 </font><br>
-<p>
-<b><a href="http://unix.hensa.ac.uk/ftp/mirrors/uunet/usenet/news.announce.newgroups/soc/soc.couples.intercultural">From philly@ms8.mis.semi.harris.com Mon Sep 27 10:39:21 1993 Flags: ...</a></b><br>
-From philly@ms8.mis.semi.harris.com Mon Sep 27 10:39:21 1993 Flags: 000000000201 Path: lear Date: Mon, 11 Feb 91 10:54:23 PST From: ...<br>
-
-<font size="-1">
-<b>19%</b> 
-&nbsp;
-http://unix.hensa.ac.uk/ftp/mirrors/uunet/usenet/news.announce.newgroups/soc/soc.couples.intercultural &nbsp; &nbsp; 
-(Size 10.5K) &nbsp; 
-Document&nbsp;date: 11 Oct 1993 </font><br>
-<p>
-<b><a href="http://www.cs.washington.edu/homes/lopez/textf/all-cards.html">STAR WARS CARDED FIGURE VARIATIONS  **************</a></b><br>
-(revised  6-5-95) NOTES: ------  1)  This is an attempt to assemble the most complete and accurate list of  card variations as they were sold for the U.S. market.  2)  Figures are ...<br>
-
-<font size="-1">
-<b>19%</b> 
-&nbsp;
-http://www.cs.washington.edu/homes/lopez/textf/all-cards.html &nbsp; &nbsp; 
-(Size 26.5K) &nbsp; 
-Document&nbsp;date:  7 Jun 1995 </font><br>
-<p>
-<b><a href="http://www.stwing.upenn.edu/starwars/collect/vartions.txt">LOOSE STAR WARS FIGURE VARIATIONS ****  1. I've left prototypes off the</a></b><br>
-list, except in the case of RocketFett, since it's a well-known prototype.  2. This list is undoubtedly beyond the point that even the most anal completist would want to find ...<br>
-
-<font size="-1">
-<b>19%</b> 
-&nbsp;
-http://www.stwing.upenn.edu/starwars/collect/vartions.txt &nbsp; &nbsp; 
-(Size 15.9K) &nbsp; 
-Document&nbsp;date: 13 Jan 1995 </font><br>
-<p>
-<b><a href="http://www.stwing.upenn.edu/starwars/collect/swfigrs.txt">ACTION FIGURES  Small Action Figures, Kenner, 1978-1985, came blister ...</a></b><br>
-ACTION FIGURES  Small Action Figures, Kenner, 1978-1985, came blister packaged on color photo headers.  They were released in eight series (I-VIII), new figures added ...<br>
-
-<font size="-1">
-<b>14%</b> 
-&nbsp;
-http://www.stwing.upenn.edu/starwars/collect/swfigrs.txt &nbsp; &nbsp; 
-(Size 14.4K) &nbsp; 
-Document&nbsp;date: 26 Apr 1994 </font><br>
-<p>
-<b><a href="http://www.landfield.com/faqs/toys/misc-faq/part1/">rec.toys.misc FAQ (1 of 3)</a></b><br>
-From: scottg10@ix.netcom.com (Scott Gordon) Newsgroups: rec.toys.misc,rec.answers,news.answers Subject: rec.toys.misc FAQ (1 of 3) Supersedes:  toys/misc-faq/part1_836440148 ...<br>
-
-<font size="-1">
-<b>14%</b> 
-&nbsp;
-http://www.landfield.com/faqs/toys/misc-faq/part1/ &nbsp; &nbsp; 
-(Size 49.6K) &nbsp; 
-Document&nbsp;date: 19 Jul 1996 </font><br>
-<p>
-
-
-
-
-
-<p><font size=-1><b><a href="/Titles?qt=Martin+Thurn&col=WW&sv=IS&lk=lcd&rf=0&ud4=1&nh=20">Hide summaries</a>
-
-
-
-&nbsp;&nbsp;|&nbsp;&nbsp;
-<a href="/Titles?qt=Martin+Thurn&col=WW&rf=11&nh=50">Group these results</a>
-
-
-
-
-
-</b>
-
-</font></p>
-
-
-<table width=100% border=0 cellpadding=5 cellspacing=0>
-<tr><td  align=center>
-<hr>
-<font face="Arial,Helvetica" ><b>Search more</b></font>
-<hr>
-</td></tr>
-<td valign=top>
-
-
-<FORM name="WW_search" method="get" action="/Titles">
-<input type=radio name="acol" value="New Search" CHECKED>&nbsp;New&nbsp;Search&nbsp;&nbsp;&nbsp;<input type=radio name="acol" value="Search These Results">&nbsp;Search&nbsp;only&nbsp;<b>within</b>&nbsp;these&nbsp;22&nbsp;pages<br>
+<form action="/Titles" method="get" name="WW_dir_search">
+<input type=radio name="col" value="New Search" CHECKED>&nbsp;<b>New</b>&nbsp;Search&nbsp;&nbsp;&nbsp;<input type=radio name="col" value="Search These Results">&nbsp;Search&nbsp;only&nbsp;<b>within</b>&nbsp;these&nbsp;
+11
+&nbsp;pages<br>
 <INPUT NAME="qt" size=50 VALUE="" MAXLENGTH=511>&nbsp;<input type=submit value="seek">
-<INPUT TYPE=hidden NAME="oq" VALUE="Martin Thurn">
+<INPUT TYPE=hidden NAME="oq" VALUE="Martin Thurn AND Star Wars">
 <INPUT TYPE=hidden NAME="sv" VALUE="IS">
 <INPUT TYPE=hidden NAME="lk" VALUE="lcd">
-<INPUT TYPE=hidden NAME="nh" VALUE="50">
-
-
-
-
-
-
-
-
-
-
-
-<INPUT TYPE=hidden NAME="rf" VALUE="0">
+<INPUT TYPE=hidden NAME="nh" VALUE="25">
 <br>
-<font size=-1>Click for <a href="/Help?pg=HomeHelp.html&nh=50">tips</a> or <a href="/find?pg=advanced_www.html&ud9=advanced_www&nh=50">Advanced search</a></font>
-</td></tr><tr><td bgcolor="#FFFFcc">
-<font size=-1><font size=-1><b>Tip:</b> You can search for a specific site by using &quot;site:&quot; before the domain name. Example: site:nols.edu</font> </font>
+<font size="-1">Click for <a href="/Help?pg=HomeHelp.html&nh=25">tips</a> or <a href="/find?pg=advanced_www.html&nh=25&ud9=advanced_www">Advanced search</a></font>
 </td>
 </tr>
 <tr><td>&nbsp;</td></tr>
 
-</table>
-
-
 </form>
 
-
 </td></tr></table>
+</td></tr></table>
+<p> 
+        <center>
+        <table border=0 width=600 cellpadding=1
 
+	> 
+        <tr><td>
+        <table border=0 width=598 cellpadding=5 cellspacing=0>
+        <tr>
+
+        <td
+
+        width=598 align=center colspan=4>
+
+
+<hr noshade size=1>
+<font face="Arial,Helvetica" 	>
+	<b>Infoseek channels</b>
+<hr noshade size=1>
 </td></tr>
-</table>
+	<tr><td 
+>      <li><a href="/Topic?tid=1803&nh=25">Automotive</a></li>
+      <li><a href="/Topic?tid=420&nh=25">Business</a></li>
+      <li><a href="/Topic?tid=421&nh=25">Careers</a></li>
+      <li><a href="/Topic?tid=15067&nh=25">Communications</a></li>
+      <li><a href="/Topic?tid=501&nh=25">Computer</a></li>
+	</td><td 
+	>
+
+      <li><a href="/Topic/Education?tid=670&svx=edu_main&nh=25">Education</a></li>
+      <li><a href="/Topic?tid=10144&nh=25">Entertainment</a></li>
+      <li><a href="/Topic?tid=13414&nh=25">Good&nbsp;Life</a></li>
+      <li><a href="/Topic?tid=1207&nh=25">Health</a></li>
+        </td><td
+        >
+      <li><a href="/Topic?tid=502&nh=25">Internet</a></li>
+      <li><a href="/Topic?tid=12663&nh=25">Kids&nbsp;&&nbsp;Family</a></li>
+      <li><a href="/Topic?tid=1486&nh=25">News</a></li>
+      <li><a href="/Topic?tid=459&nh=25">Personal&nbsp;Finance</a></li>
+        </td><td
+	>
+      <li><a href="/Topic?tid=433&nh=25">Real&nbsp;Estate</a></li>
+      <li><a href="/Topic?tid=2245&nh=25">Shopping</a></li>
+      <li><a href="/Topic?tid=1653&nh=25">Sports</a></li>
+      <li><a href="/Topic?tid=1753&nh=25">Travel</a></li>
+      <li><a href="/Topic?tid=14610&nh=25">Women's</a></li>
+
+    </td>
+  </tr>
+
+<tr><td  width=598 align=center colspan=4><hr noshade size=1><a href="/Home?pg=Home.html&nh=25">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+
+<a href="http://feedback.infoseek.com">Feedback</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="/find?pg=advanced_www.html&ud9=advanced_www.html&nh=25">Advanced&nbsp;search</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+
+<a href="/webkit?pg=webkit.html&nh=25">Put&nbsp;Infoseek&nbsp;on&nbsp;your&nbsp;site</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="/AddUrl?pg=DCaddurl.html&nh=25">Add&nbsp;URL</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="/Help?pg=Contents.html&nh=25">Help</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="/doc?pg=international.html&nh=25">Worldwide&nbsp;Infoseek</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+
+<a href="http://info.infoseek.com/">About&nbsp;Infoseek</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="http://info.infoseek.com/doc/sponsors.html">Advertise&nbsp;on&nbsp;Infoseek</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="http://info.infoseek.com/doc/jobs.html">Jobs&nbsp;&#064;&nbsp;Infoseek</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="http://software.infoseek.com/">Intranet&nbsp;software</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="/redirect?sv=&lk=&ak=PopleL&rl=footer&rd=http://www.peoplelink.com/v1/down_infoseek">Infoseek&nbsp;Instant&nbsp;Messaging</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="/redirect?sv=&lk=&ak=WBS&rl=LINK-SFOOTER-standard_footer-chat&rd=http://pages.infoseek.com/webchat3.so?noreg_entry.x=1">Chat</a>
+
+	</td></tr></table>
+	</td></tr></table>
 
 
+	<hr size=1 noshade width="60%">
 
-<p>
+
+	<font size="-1">Want to be able to <b>search your own site?</b> (<a href="/redirect?sv=IS&lk=&ak=ULTRA&rl=LINK-results_footer-Ultraseek_jump_page&rd=http://software.infoseek.com/ultrajump.htm">click here</a>)<br></font>
+
+<font size="-1">
 <center>
+<a href="/doc?pg=copyright.html&nh=25">Copyright</a> &#169; 1994-98
+<a href="http://info.infoseek.com/">Infoseek Corporation</a>.  All rights reserved.&nbsp;<br>
+<a href="/doc?pg=disclaimer.html&nh=25">Disclaimer</a> &nbsp;&nbsp;
 
-
-<table border=0 width=600 cellpadding=1 ><tr><td>
-<table border=0 width=598 cellpadding=5 cellspacing=0>
-  <tr>
-    <td  width=598 align=center colspan=4>
-	 <hr noshade size=1>
-         <font face="Arial,Helvetica" ><b> Infoseek channels</b></font>
-	 <hr noshade size=1>
-    </td>
-  </tr>
-
-<tr><td >
-      <li><a href="/Topic?tid=1803&nh=50">Automotive</a></li>
-      <li><a href="/Topic?tid=420&nh=50">Business</a></li>
-      <li><a href="/Topic?tid=421&nh=50">Careers</a></li>
-      <li><a href="/Topic?tid=501&nh=50">Computer</a></li>
-    </td>
-    <td >
-      <li><a href="/Topic/Education?pg=education.html&svx=edu_main&nh=50">Education</a></li>
-      <li><a href="/Topic?tid=10144&nh=50">Entertainment</a></li>
-      <li><a href="/Topic?tid=13414&nh=50">Good&nbsp;Life</a></li>
-      <li><a href="/Topic?tid=1207&nh=50">Health</a></li>
-    </td>
-    <td >    
-      <li><a href="/Topic?tid=502&nh=50">Internet</a></li>
-      <li><a href="/Topic?tid=12663&nh=50">Kids&nbsp;&&nbsp;Family</a></li>
-      <li><a href="/Topic?tid=1486&nh=50">News</a></li>
-      <li><a href="/Topic?tid=459&nh=50">Personal&nbsp;Finance</a></li>
-    </td>
-    <td >    
-      <li><a href="/Topic?tid=433&nh=50">Real&nbsp;Estate</a></li>
-      <li><a href="/Topic?tid=2245&nh=50">Shopping</a></li>
-      <li><a href="/Topic?tid=1653&nh=50">Sports</a></li>
-      <li><a href="/Topic?tid=1753&nh=50">Travel</a></li>
-      <li><a href="/Topic?tid=14610&nh=50">Women's</a></li>
-    </td>
-  </tr>
-
-<tr><td colspan=5><hr noshade size=1></td></tr>
-
-
-
-
-
-  <tr>
-    <td  width=598 align=center colspan=5>
-
-      <a href="/Home?pg=Home.html&nh=50">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-      
-   
-      <a href="http://feedback.infoseek.com">Feedback</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-
-
-      <a href="/webkit?pg=webkit.html&nh=50">Put Infoseek&nbsp;on&nbsp;your&nbsp;site</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-      <a href="/AddUrl?pg=DCaddurl.html&nh=50">Add&nbsp;URL</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-      <a href="/Help?pg=Contents.html&nh=50">Help</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-         <a href="/doc?pg=international.html&nh=50">Worldwide&nbsp;Infoseek</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-   
-      <a href="http://info.infoseek.com/">About&nbsp;Infoseek</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-      <a href="http://info.infoseek.com/doc/sponsors.html">Advertise&nbsp;on&nbsp;Infoseek</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-      <a href="http://info.infoseek.com/doc/jobs.html">Jobs&nbsp;&#064;&nbsp;Infoseek</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-      <a href="http://software.infoseek.com/">Intranet&nbsp;software</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-      <a href="/redirect?sv=IS&lk=lcd&ak=PopleL&rl=footer&rd=http://www.peoplelink.com/v1/down_infoseek">Infoseek&nbsp;Instant&nbsp;Messaging</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-	<a href="/redirect?sv=IS&lk=lcd&ak=WBS&rl=LINK-SFOOTER-standard_footer-chat&rd=http://pages.wbs.net/">Chat</a>
-    </td>
-</tr>
-    </td>
-  </tr>
-    </td>
-  </tr>
-</table>
-</td></tr></table>
-
-
-
-<hr size=1 noshade width="60%">
-      <font size="-1">
-      
-      <a href="/doc?pg=copyright.html&nh=50">Copyright</a> &#169; 1994-98
-      <a href="http://info.infoseek.com/">Infoseek Corporation</a>.  All rights reserved.&nbsp; (-1, E)<br>
-      Infoseek incorporates <a href="http://www.inxight.com/products/linguistx/overview.htm">LinguistX</a> technology from InXight.<br>
-      
-      <a href="/doc?pg=disclaimer.html&nh=50">Disclaimer</a>  &nbsp;&nbsp;<a href="http://info.infoseek.com/doc/Reference/Privacy.html">Privacy Policy</a>
+	<a href="http://info.infoseek.com/doc/Reference/Privacy.html">Privacy Policy</a>
 
 </center>
 </font>
-<!-- 
 
-
-
--->
-</body>
-</html>
-
-
-
-
-
+	</center>	
+	</body>
+	</html>

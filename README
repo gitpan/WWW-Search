@@ -3,31 +3,20 @@ WWW::Search and AutoSearch
 ==========================
 
 
-WHAT IS NEW WITH WWW::Search 1.020?  (12-Aug-98)
+WHAT IS NEW WITH WWW::Search 1.021?  (27-Aug-98)
 ------------------------------------------------
-overview:  lots of bug fixes and new back-ends
+overview:  a general release
 
-- bug fix:  maximum_to_retrieve now works for very small values.
-	(Problem identified by Vidyut Luther <vluther@hpctc.org>.)
-- new back-ends: ExciteForWebServers, FolioViews, Livelink, MSIndexServer,
-	Null, Search97
-	all from Paul Lindner (thanks!)
-- bug fix:  Gopher, PLweb, SFgate, Simple, Verity from Paul Lindner
-- bug fix:  Lycos from John Heidemann
-- new test suites:  PLweb, FolioViews, Null, MSIndexServer, Search97,
-	SFgate, ExciteForWebServers rom Paul Lindner
-- bug fix:  HotBot repair from Martin Thurn
-
-- known bug:  When installing on Windows the makefile
-	will break on lines beginning with a colon (:).
-	Delete them and the install should work.
-	Improvements to Windows installation are welcome.
-	(I don't run Windows and so can't write or test this code.)
-- known bug:  WWW::Search doesn't work on MacPerl because of
-	end-of-line differences.  A fix for this problem is in
-	progress.  (Problem identified and fix suggested by 
-	Chris Nandor.)
-	
+- new:  Windows installation is now supported by
+	Jim Smyser <jsmyser@bigfoot.com>; please see his web
+	page <http://pubinfo.phx.primenet.com/www.search/>
+	for details.
+- new:  MacPerl should now be supported.  Thanks to Chris Nandor
+	for the problem and a fix.
+- bug fix:  Infoseek, WebCrawler, Dejanews, HotBot by Martin Thurn
+- bug fix:  AltaVista approx_count bug found by
+	Darren Stalder <darren@u.washington.edu>
+- bug fix: documentation cleanups from Neil Bowers
 
 
 Note:  WWW::Search may have problems with older libwww's (5.08).  If
@@ -56,28 +45,28 @@ test suite for most back-ends which verifies that it's functioning
 correctly.  As of the day of the release the current back-end
 status is:
 
-AltaVista		working		(in test suite)
-Dejanews		not working?	not in test suite
-Excite			working		(in test suite)
-ExciteForWebServers	working		(in test suite)
-FolioViews		working		(in test suite)
-Gopher			not working?	not in test suite
-HotBot			working		(in test suite)
-Infoseek		not working	(in test suite)
-Livelink		not working?	not in test suite
-Lycos			working		(in test suite)
-Magellan		working?	(in test suite)
-MSIndexServer		working		(in test suite)
-Null			working		(in test suite)
-PLweb			working		(in test suite)
-Search97		working		(in test suite)
-SFgate			working		(in test suite)
-Simple			not working?	not in test suite
-Verity			not working	not in test suite
-WebCrawler		not working	(in test suite)
-Yahoo			working?	(in test suite)
+AltaVista		working
+Dejanews		working
+Excite			working
+ExciteForWebServers	working
+FolioViews		working
+Gopher			not working? (not in test suite)
+HotBot			working
+Infoseek		working
+Livelink		not working? (not in test suite)
+Lycos			working
+Magellan		not working (maybe gone?)
+MSIndexServer		working
+Null			working
+PLweb			working
+Search97		working
+SFgate			working
+Simple			not working? (not in test suite)
+Verity			not working (not in test suite)
+WebCrawler		working?
+Yahoo			working
 
-Magellan and Yahoo's test suites are sometimes flakey.
+Yahoo's test suites are sometimes flakey.
 
 (others are currently under development, see contributors below for details)
 
@@ -412,6 +401,19 @@ overview:  back-end updates
 - bug fix: AltaVista wasn't correctly reporting change_time/size 
 	(bug and fix from Martin Valldeby <martin.valldeby@pakom.se>)
 
+1.020, 12-Aug-98
+overview:  lots of bug fixes and new back-ends
+- bug fix:  maximum_to_retrieve now works for very small values.
+	(Problem identified by Vidyut Luther <vluther@hpctc.org>.)
+- new back-ends: ExciteForWebServers, FolioViews, Livelink, MSIndexServer,
+	Null, Search97
+	all from Paul Lindner (thanks!)
+- bug fix:  Gopher, PLweb, SFgate, Simple, Verity from Paul Lindner
+- bug fix:  Lycos from John Heidemann
+- new test suites:  PLweb, FolioViews, Null, MSIndexServer, Search97,
+	SFgate, ExciteForWebServers rom Paul Lindner
+- bug fix:  HotBot repair from Martin Thurn
+
 
 
 SUPPORT AND CREDITS
@@ -421,17 +423,22 @@ The WWW::Search architecture is by John Heidemann with feedback
 from the other contributors.  Components of AltaVista have been
 written by several people:
 
+PLATFORM SUPPORT:
+	Unix			John Heidemann <johnh@isi.edu>
+	Windows			Jim Smyser <jsmyser@bigfoot.com>
+		(see <http://pubinfo.phx.primenet.com/www.search/>)
+
 APPLICATIONS:
-	WebSearch		John Heidemann <johnh@isi.edu>
+	WebSearch		John Heidemann
 	AutoSearch 		William Scheding <wls@isi.edu>
 
 BACK-ENDS:
 	AltaVista		John Heidemann
 	Dejanews		Cesare Feroldi de Rosa <C.Feroldi@it.net>
+				and Martin Thurn <MartinThurn@iname.com>
 	Excite			GLen Pringle <pringle@cs.monash.edu.au>
-				and Martin Thurn <mthurn@tasc.com>
+				and Martin Thurn
 	ExciteForWebServers	Paul Lindner <lindner@reliefweb.int>
-				(under development)
 	FolioViews		Paul Lindner
 	Gopher			Paul Lindner
 	HotBot			William Scheding and Martin Thurn
@@ -457,8 +464,10 @@ identified by William Scheding <wls@isi.edu>, T. V. Raman
 <raman@adobe.com> (proxy support), C. Feroldi <C.Feroldi@it.net>,
 Larry Virden <lvirden@cas.org>, Paul Lindner <paul.lindner@itu.int>,
 Guy Decoux <decoux@moulon.inra.fr>, R Chandrasekar (Mickey)
-<mickeyc@linc.cis.upenn.edu>, Martin Thurn <mthurn@tasc.com>, Chris
-Nandor <pudge@pobox.com>, Martin Valldeby <martin.valldeby@pakom.se>.
+<mickeyc@linc.cis.upenn.edu>, Martin Thurn <MartinThurn@iname.com>,
+Chris Nandor <pudge@pobox.com>, Martin Valldeby
+<martin.valldeby@pakom.se>, Jim Smyser <jsmyser@bigfoot.com>, Darren
+Stalder <darren@u.washington.edu>, Neil Bowers <neilb@cre.canon.co.uk>.
 
 Bugs have reported by Joseph McDonald <joe@smartlink.net>, Juan Jose
 Amor <jjamor@infor.es>, Bowen Dwelle <bowen@hotwired.com>, Vassilis

@@ -6,10 +6,15 @@ package WWW::Search::Livelink;
 
 WWW::Search::Livelink  -  class for searching Open Text Livelink Intranet search engine
 
+=head1 SYNOPSIS
+
+    require WWW::Search;
+    $search = new WWW::Search('Livelink');
+
 =head1 DESCRIPTION
 
 This class is an Open Text Livelink Intranet specialization of
-WWW:Search.  It queries and interprets searches based on Livelink
+WWW::Search.  It queries and interprets searches based on Livelink
 Intranet, which is available at F<http://www.opentext.com>
 
 This class exports no public interface; all interaction should be done
@@ -145,7 +150,7 @@ sub native_retrieve_some
     }
 
     my ($size, $url);
-    my (@lines) = split(/\n/, $results);
+    my (@lines) = $self->split_lines($results);
     my $backup;
 
     my ($lititle, $lidesc, $liurl, $lisize, $lihits, $liscore) = ('', '', '', 0, 0, 0);

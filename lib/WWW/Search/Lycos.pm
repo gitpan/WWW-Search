@@ -4,7 +4,7 @@
 # Lycos.pm
 # by Wm. L. Scheding, John Heidemann
 # Copyright (C) 1996-1997 by USC/ISI
-# $Id: Lycos.pm,v 1.9 1998/08/12 16:40:00 johnh Exp $
+# $Id: Lycos.pm,v 1.10 1998/08/27 17:29:02 johnh Exp $
 #
 # Complete copyright notice follows below.
 # 
@@ -174,7 +174,7 @@ sub native_retrieve_some
     my($hits_found) = 0;
     my($state) = ($HEADER);
     my($hit, $raw, $title, $url, $rating, $desc) = ();
-    foreach (split(/\n/, $response->content())) {
+    foreach ($self->split_lines($response->content())) {
         next if m@^$@; # short circuit for blank lines
 	if ($state == $HEADER && m@\s+of.*(\d+).*relevant\s+result@i) { # new as of  7-Oct-97
 	    $self->approximate_result_count($1);

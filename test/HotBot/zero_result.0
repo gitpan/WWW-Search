@@ -1,94 +1,95 @@
 
 
-
-
 <html>
 <head><title>HotBot results: "mrfglbqnx BogusNoSuc (1+)</title></head>
-<body bgcolor="#FFFFFF" link="#3300CC" text="#000000" vlink="#660066" alink="#FF0000">
-<form action="/">
-<!--ads_and_navbar.asp -->
+
+<body bgcolor="#FFFFFF">
 <img src="http://static.hotbot.com/images/white_ads.gif" width="600" border="0" height="30" ALT="Click here to shop" USEMAP="#white_ads"><br> 
 <img src="http://static.hotbot.com/images/bar.gif" width="600" height="14" border="0" ALT="Navigation Bar" USEMAP="#bar"><br>
-<!-- /ads_and_navbar.asp -->
-<table border="0" cellspacing="0" cellpadding="0" width="600">
-<tr> 
-<td bgcolor="#FFFFFF" colspan="2" width="232" valign="bottom"><a href="http://home.wired.com">
-<img src="http://static.hotbot.com/images/hb_logo.gif" height="70" width="232" ALT="HotBot" border="0"></a></td>
-<td width="368"><img src="http://static.hotbot.com/images/spacer.gif" ALT="" width="1" height="10"><br>
-<font face="Verdana, Arial, Helvetica" size="2"><b><i>the #1 rated search engine</i></b></font><br><img src="http://static.hotbot.com/images/spacer.gif" ALT="" width="236" height="1"></td>
-</tr>
-</table>
-
 <table border="0" width="600" cellspacing="0" cellpadding="0">
 <tr> 
-<td width="150" bgcolor="#FF0000" valign="MIDDLE" align="RIGHT">
-<font face="Verdana, Arial, Helvetica, " size="2" color="#FFFFFF"><b><i>Search the Web</i></b></font><img src="http://static.hotbot.com/images/spacer.gif" ALT="" width="150" height="1"></td>
-<td colspan=2 bgcolor="#FF0000" width="452">
-
-<table border="0" cellspacing="0" cellpadding="8">
-<tr><td valign="MIDDLE"><INPUT type=text name="MT" value="&quot;mrfglbqnx BogusNoSuchWord&quot;" size=35 maxlength=300>
+<td><img src="http://static.hotbot.com/images/hb_logo_results.gif" width="200" height="48"></td>
+<td bgcolor="#FF0000"> 
+	<table border="0" cellspacing="0" cellpadding="4">
+	<tr>
+	<form action="/">
+	<td><INPUT type=text name="MT" value="&quot;mrfglbqnx BogusNoSuchWord&quot;" size=35 maxlength=300>
 </td>
-<td valign="MIDDLE"><input type="submit"  name="submit" value="SEARCH"></td>
-</tr></table></td></tr>
-<tr><td valign="Top" width=148>
-<font face="Verdana, Arial, Helvetica" size="2" color="#ff0000"><i>Find hot deals with our <a href="http://www.hotwired.com/cgi-bin/redirect/1120/http://shop.hotbot.com/">shopping agent.</a></i></font></td>
-<td bgcolor="#99FF33" colspan=2>
-&nbsp;&nbsp;<SELECT name="SM" >
-<OPTION value="MC">all the words
-<OPTION value="SC" selected>any of the words
-<OPTION value="phrase">exact phrase
-<OPTION value="title">the page title
-<OPTION value="name">the person
-<OPTION value="url">links to this URL
-<OPTION value="B">Boolean phrase
-</SELECT>
-&nbsp;</td></tr>
-<tr><td></td><td bgcolor="#99FF33"><img src="http://static.hotbot.com/images/spacer.gif" height=1 width=452><BR>
-&nbsp;&nbsp;<input type="SUBMIT" name="act.new" value=" New ">&nbsp;<input type="SUBMIT" name="act.revise" value=" Revise ">&nbsp;
-
-<input type="SUBMIT" name="act.super" value=" More Options ">
-&nbsp;<BR>
-</td>
-</tr>
-</table>
-
+	<td><input type="SUBMIT" name="submit" value="SEARCH"></td>
 	<INPUT type=hidden name="_v" value="2" >
 <INPUT type=hidden name="OPs" value="MDRTP" >
 
+<INPUT type=hidden name="SM" value="SC" >
 <INPUT type=hidden name="DC" value="100" >
 </form>
 
-<table border="0" width="150" align="LEFT" cellspacing="0" cellpadding="0">
-<tr><td>
-<p>&nbsp;<br>
-	<!-- AdSpace program=hbris position=1 SERVER_NAME=www.hotbot.com KW=mrfglbqnx KW=bogusnosuchword KW=mrfglbqnx%20bogusnosuchword ALL_KW=mrfglbqnx%20bogusnosuchword cobrand=default REMOTE_HOST=dash.isi.edu RH1=edu RH2=isi.edu RH3=dash.isi.edu REMOTE_ADDR=128.9.160.184 HOT_R_UNIQID=1ENXXNrt4Dwn P_UNIQID=1ENXXNrt4DAo hbf=adult hbf=language:any --><font size="-1">
-<a href="http://nsads.hotwired.com/event.ng/Type=click&ProfileID=5003&RunID=8446&AdID=10676&GroupID=1&FamilyID=860&TagValues=1.6.25.145.158.322.348.409.526.2035.3302.4659.4673.4693.4724.4837.4863.6192.6820.6830&params.tag.ALL_KW=mrfglbqnx+bogusnosuchword&Redirect=http://www.spree.com/gifts/default.asp?x=HOTBOTAD"><img src="http://static.wired.com/advertising/blipverts/spree/135x22gifts.gif" border="0" width="135" height="22"></a><br>
-<b><a href="http://nsads.hotwired.com/event.ng/Type=click&ProfileID=5003&RunID=8446&AdID=10676&GroupID=1&FamilyID=860&TagValues=1.6.25.145.158.322.348.409.526.2035.3302.4659.4673.4693.4724.4837.4863.6192.6820.6830&params.tag.ALL_KW=mrfglbqnx+bogusnosuchword&Redirect=http://www.spree.com/gifts/default.asp?x=HOTBOTAD">Click here for Spree.com</a></b></font>
+	</tr>
+	</table></td>
+</tr>
+ 
+<tr> 
+<td></td>
+<td><img src="http://static.hotbot.com/images/spacer.gif" width="400" height="4"></td>
+</tr>
+</table>
+
+<table border="0" width="599" cellspacing="0" cellpadding="2">
+<tr> 
+<td>
+<font face="Verdana, Arial, Helvetica" size="2" color="#FF0000"><b><i>Buy Online</font></i></b><br>
+<font face="Verdana, Arial, Helvetica" size="1">Find hot deals with our <a href="http://www.hotwired.com/cgi-bin/redirect/1120/http://shop.hotbot.com/">shopping agent</a>.</font></td>
+<td align="RIGHT">
+<!-- 468x60 banner ad -->
+<font face="Verdana, Arial, Helvetica" size="2"><!-- AdSpace program=hotbotresults size=large SERVER_NAME=www.hotbot.com KW=mrfglbqnx KW=bogusnosuchword KW=mrfglbqnx%20bogusnosuchword ALL_KW=mrfglbqnx%20bogusnosuchword cobrand=default REMOTE_HOST=dash.isi.edu RH1=edu RH2=isi.edu RH3=dash.isi.edu REMOTE_ADDR=128.9.160.184 HOT_R_UNIQID=1UufYeJo3CQ5 P_UNIQID=1UufYeJo3Cg5 hbf=adult hbf=language:any --><a href="http://nsads.hotwired.com/event.ng/Type=click&ProfileID=4745&RunID=7084&AdID=10989&GroupID=1&FamilyID=745&TagValues=1.6.25.145.156.322.389.409.526.539.2038.4659.4673.4693.4724.4837.4863.6456.6820.6830&params.tag.ALL_KW=mrfglbqnx+bogusnosuchword&Redirect=http:%2F%2Fwww.pacbell.com%2Fjump%2Fisdn%2Fpacbell_jump.html"><img src="http://static.wired.com/advertising/blipverts/pacbell/office_468.gif" border=1 height=60 width=468 alt="Click here for Pacific Bell ISDN"><br>Click here for Pacific Bell ISDN</a><!-- /AdSpace --></font><br></td>
+</tr>
+
+<tr> 
+<td><img src="http://static.hotbot.com/images/spacer.gif" width="124" height="2"></td>
+<td></td>
+</tr>
+
+
+
+</table>
+
+<!-- LEFT HAND COLUMN TABLE -->
+<table border="0" width="129" align="LEFT" cellspacing="0" cellpadding="2">
+<tr>
+<td>
+<!-- the artwork in these ads is breaking the page -->
+
+<!-- AdSpace program=hbris position=1 SERVER_NAME=www.hotbot.com KW=mrfglbqnx KW=bogusnosuchword KW=mrfglbqnx%20bogusnosuchword ALL_KW=mrfglbqnx%20bogusnosuchword cobrand=default REMOTE_HOST=dash.isi.edu RH1=edu RH2=isi.edu RH3=dash.isi.edu REMOTE_ADDR=128.9.160.184 HOT_R_UNIQID=1UufYeJo3CQ5 P_UNIQID=1UufYeJo3Cg5 hbf=adult hbf=language:any --><font size='-1'>
+<a href='http://nsads.hotwired.com/event.ng/Type=click&ProfileID=5003&RunID=7564&AdID=9242&GroupID=1&FamilyID=641&TagValues=1.6.25.145.158.322.348.409.526.2034.3302.4659.4673.4693.4724.4837.4863.6192.6820.6830&params.tag.ALL_KW=mrfglbqnx+bogusnosuchword&Redirect=http://www.getsmartinc.com/home/HomeBanner?BANNERNAME=www.getsmartinc.com/hshopwired001searchresultsbox'><img src='http://static.wired.com/advertising/blipverts/bfc/110x33loan.gif' border='0' width='110' height='33'></a><br>
+<b><a href='http://nsads.hotwired.com/event.ng/Type=click&ProfileID=5003&RunID=7564&AdID=9242&GroupID=1&FamilyID=641&TagValues=1.6.25.145.158.322.348.409.526.2034.3302.4659.4673.4693.4724.4837.4863.6192.6820.6830&params.tag.ALL_KW=mrfglbqnx+bogusnosuchword&Redirect=http://www.getsmartinc.com/home/HomeBanner?BANNERNAME=www.getsmartinc.com/hshopwired001searchresultsbox'>Search</a> thousands of loans</b></font><!-- /AdSpace -->
+<p>
+<!-- AdSpace program=hbris position=2 SERVER_NAME=www.hotbot.com KW=mrfglbqnx KW=bogusnosuchword KW=mrfglbqnx%20bogusnosuchword ALL_KW=mrfglbqnx%20bogusnosuchword cobrand=default REMOTE_HOST=dash.isi.edu RH1=edu RH2=isi.edu RH3=dash.isi.edu REMOTE_ADDR=128.9.160.184 HOT_R_UNIQID=1UufYeJo3CQ5 P_UNIQID=1UufYeJo3Cg5 hbf=adult hbf=language:any --><font size='-1'>
+<a href='http://nsads.hotwired.com/event.ng/Type=click&ProfileID=5019&RunID=7831&AdID=9457&GroupID=1&FamilyID=688&TagValues=1.6.25.145.158.322.348.409.526.3303.4659.4673.4693.4724.4837.4863.6192.6628.6820.6830&params.tag.ALL_KW=mrfglbqnx+bogusnosuchword&Redirect=http://expedia.msn.com/daily/scripts/eap.asp?intro=http:%2F%2Fexpedia.msn.com%2Fpub%2Feta.dll%3F&EAPid=2-1'><img src='http://static.wired.com/advertising/blipverts/msexpedia/exp_120w.gif' border='0' width='120' height='24'></a><br>
+<b>Start Your Travel here - <a href='http://nsads.hotwired.com/event.ng/Type=click&ProfileID=5019&RunID=7831&AdID=9457&GroupID=1&FamilyID=688&TagValues=1.6.25.145.158.322.348.409.526.3303.4659.4673.4693.4724.4837.4863.6192.6628.6820.6830&params.tag.ALL_KW=mrfglbqnx+bogusnosuchword&Redirect=http://expedia.msn.com/daily/scripts/eap.asp?intro=http:%2F%2Fexpedia.msn.com%2Fpub%2Feta.dll%3F&EAPid=2-1'>Microsoft Expedia.com</a></b></font><!-- /AdSpace -->
+<p>
+<!-- AdSpace program=hbris position=3 SERVER_NAME=www.hotbot.com KW=mrfglbqnx KW=bogusnosuchword KW=mrfglbqnx%20bogusnosuchword ALL_KW=mrfglbqnx%20bogusnosuchword cobrand=default REMOTE_HOST=dash.isi.edu RH1=edu RH2=isi.edu RH3=dash.isi.edu REMOTE_ADDR=128.9.160.184 HOT_R_UNIQID=1UufYeJo3CQ5 P_UNIQID=1UufYeJo3Cg5 hbf=adult hbf=language:any --><font size='-1'>
+<a href='http://nsads.hotwired.com/event.ng/Type=click&ProfileID=5417&RunID=7899&AdID=9684&GroupID=1&FamilyID=714&TagValues=1.6.25.145.158.322.348.409.526.2036.3304.4659.4673.4693.4724.4837.4863.6192.6820.6830&params.tag.ALL_KW=mrfglbqnx+bogusnosuchword&Redirect=http://www.webshopper.com/jhtml/index.jhtml?src=wrd_search'><img src='http://static.wired.com/advertising/blipverts/webshopper/special_wired2.gif' border='0' width='110' height='33'></a><br>
+<b>Click here for <a href='http://nsads.hotwired.com/event.ng/Type=click&ProfileID=5417&RunID=7899&AdID=9684&GroupID=1&FamilyID=714&TagValues=1.6.25.145.158.322.348.409.526.2036.3304.4659.4673.4693.4724.4837.4863.6192.6820.6830&params.tag.ALL_KW=mrfglbqnx+bogusnosuchword&Redirect=http://www.webshopper.com/jhtml/index.jhtml?src=wrd_search'>WebShopper.com</a></b></font>
 <!-- /AdSpace -->
-<p>&nbsp;<br>
-	<!-- AdSpace program=hbris position=2 SERVER_NAME=www.hotbot.com KW=mrfglbqnx KW=bogusnosuchword KW=mrfglbqnx%20bogusnosuchword ALL_KW=mrfglbqnx%20bogusnosuchword cobrand=default REMOTE_HOST=dash.isi.edu RH1=edu RH2=isi.edu RH3=dash.isi.edu REMOTE_ADDR=128.9.160.184 HOT_R_UNIQID=1ENXXNrt4Dwn P_UNIQID=1ENXXNrt4DAo hbf=adult hbf=language:any --><font size='-1'>
-<a href='http://nsads.hotwired.com/event.ng/Type=click&ProfileID=5019&RunID=7838&AdID=9520&GroupID=1&FamilyID=695&TagValues=1.6.25.145.158.322.348.409.526.3303.4659.4673.4693.4724.4837.4863.6192.6625.6820.6830&params.tag.ALL_KW=mrfglbqnx+bogusnosuchword&Redirect=http://www.developerdirect.com'><img src='http://static.wired.com/advertising/blipverts/developerdirect/software.gif' border='0' width='110' height='33'></a><br>
-<b>Click here for <a href='http://nsads.hotwired.com/event.ng/Type=click&ProfileID=5019&RunID=7838&AdID=9520&GroupID=1&FamilyID=695&TagValues=1.6.25.145.158.322.348.409.526.3303.4659.4673.4693.4724.4837.4863.6192.6625.6820.6830&params.tag.ALL_KW=mrfglbqnx+bogusnosuchword&Redirect=http://www.developerdirect.com'>developer direct</a>.</b></font>
-<!-- /AdSpace -->
-<p>&nbsp;<br>
-	<!-- AdSpace program=hbris position=3 SERVER_NAME=www.hotbot.com KW=mrfglbqnx KW=bogusnosuchword KW=mrfglbqnx%20bogusnosuchword ALL_KW=mrfglbqnx%20bogusnosuchword cobrand=default REMOTE_HOST=dash.isi.edu RH1=edu RH2=isi.edu RH3=dash.isi.edu REMOTE_ADDR=128.9.160.184 HOT_R_UNIQID=1ENXXNrt4Dwn P_UNIQID=1ENXXNrt4DAo hbf=adult hbf=language:any --><font size='-1'>
-<a href='http://nsads.hotwired.com/event.ng/Type=click&ProfileID=5417&RunID=7899&AdID=9684&GroupID=1&FamilyID=714&TagValues=1.6.25.145.158.322.348.409.526.3304.4659.4673.4693.4724.4837.4863.6192.6626.6820.6830&params.tag.ALL_KW=mrfglbqnx+bogusnosuchword&Redirect=http://www.webshopper.com/jhtml/index.jhtml?src=wrd_search'><img src='http://static.wired.com/advertising/blipverts/webshopper/special_wired2.gif' border='0' width='110' height='33'></a><br>
-<b>Click here for <a href='http://nsads.hotwired.com/event.ng/Type=click&ProfileID=5417&RunID=7899&AdID=9684&GroupID=1&FamilyID=714&TagValues=1.6.25.145.158.322.348.409.526.3304.4659.4673.4693.4724.4837.4863.6192.6626.6820.6830&params.tag.ALL_KW=mrfglbqnx+bogusnosuchword&Redirect=http://www.webshopper.com/jhtml/index.jhtml?src=wrd_search'>WebShopper.com</a></b></font>
-<!-- /AdSpace -->
-<p>&nbsp;<br>
-<!-- Integrated Search, Buy Online -->
+<br>
+<img src="http://static.hotbot.com/images/spacer.gif" width="125" height="1"> 
+
+<font face="Verdana, Arial, Helvetica" size="1">
+<!-- INTEGRATED SEARCH ADS check with bowen are these netgravity units?-->
 <FORM ACTION="http://barnesandnoble.bfast.com/booklink/click">
 <INPUT TYPE="hidden" NAME="sourceid" VALUE="18993" >
 <INPUT TYPE="hidden" NAME="is_search" VALUE="Y">
 <INPUT TYPE="hidden" NAME="match" VALUE="exact">
 <INPUT TYPE="hidden" NAME="options" VALUE="and">
 <INPUT TYPE="hidden" NAME="anotherlevel" VALUE="Y">
-<p><font face="Verdana, Arial, Helvetica" size="2" color="#ff0000"><b><i>Buy&nbsp;Online:&nbsp;&nbsp;&nbsp;&nbsp;</i></b></font>
-<br><img src="http://static.hotbot.com/images/bn.gif" border="0" width="110" height="33" ALT="Search BarnesAndNoble.com">
+<p>
+<img src="http://static.hotbot.com/images/bn.gif" border="0" width="110" height="33" ALT="Search BarnesAndNoble.com">
+<br>
 <input type = "text" name="keyword" value=""mrfglbqnx BogusNoSuchWord"" size="12">
 <input type="submit" name="go" value ="Go">
 </form>
-<p>&nbsp;<p>
+</font>
+<p>
+<font face="Verdana, Arial, Helvetica" size="1">
 <!-- also_search.asp -->
 <font face="Verdana, Arial, Helvetica" size="2" color="#ff0000"><b><i>Other Search Engines:</i></b></font><br>
 <font face="Verdana, Arial, Helvetica" size="2">
@@ -106,26 +107,20 @@
 <a href="http://www.hotwired.com/cgi-bin/redirect/1381/http://www.careerbuilder.com">Jobs&nbsp;&&nbsp;R&eacute;sum&eacute;s</a><br>
 <a href="http://www.hotwired.com/cgi-bin/redirect/1669/http://www.elibrary.com/s/hotbot/">Research Service</a><br>
 </font>
-<!-- /also_search.asp -->
-</td>
-<td></td></tr>
+<!-- /also_search.asp --></font></td>
+</tr>
 </table>
-<!-- END TABLE -->
-<p>
-
-
-	
+<!--END Lefthand Table -->
 
 
 
-<p>
-			</font>
 
-<!-- AdSpace program=hotbotresults size=large SERVER_NAME=www.hotbot.com KW=mrfglbqnx KW=bogusnosuchword KW=mrfglbqnx%20bogusnosuchword ALL_KW=mrfglbqnx%20bogusnosuchword cobrand=default REMOTE_HOST=dash.isi.edu RH1=edu RH2=isi.edu RH3=dash.isi.edu REMOTE_ADDR=128.9.160.184 HOT_R_UNIQID=1ENXXNrt4Dwn P_UNIQID=1ENXXNrt4DAo hbf=adult hbf=language:any --><a href="http://nsads.hotwired.com/event.ng/Type=click&ProfileID=4856&RunID=6183&AdID=7592&GroupID=1&FamilyID=368&TagValues=1.6.25.145.156.322.389.409.526.539.2033.4659.4673.4693.4724.4837.4863.6456.6820.6830&params.tag.ALL_KW=mrfglbqnx+bogusnosuchword&Redirect=http:%2F%2Fad.preferences.com%2Fclick.ng;spacedesc%3DRemedy_Hotbot_468x60_RunOfSite_Any%26time%3D1998.8.12.16.10.18.0" TARGET="_top"><img src="http://ad.preferences.com/image.ng;spacedesc=Remedy_Hotbot_468x60_RunOfSite_Any&time=1998.8.12.16.10.18.0?r=1998.8.12.16.10.18.0" BORDER=1 height=60 width=468 alt="Click HERE for the Worlds Leading Help Desk!"></a><!-- /AdSpace -->
-<p>
+<!-- NO INTERCEPT, NO RESULTS -->
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 <font face ="verdana, arial, helvetica" size="2">
-<B>Sorry, your search yielded no results.</B><Br>
-Please revise your search query and try again.<P></font>
+<B>&nbsp;&nbsp;Sorry, your search yielded no results.</B><Br>
+&nbsp;&nbsp;Please revise your search query and try again.<P></font>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
@@ -141,14 +136,8 @@ Please revise your search query and try again.<P></font>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-
-
-<!-- END no result-->
-
-<!-- test last T -->
-	<!-- foot.asp -->
+<p>
+<!-- foot.asp -->
 <p>
 <table border=0 cellspacing=0 cellpadding=0 width=600>
 <tr>
@@ -164,32 +153,29 @@ About <a href="http://home.wired.com/">Wired Digital</a>&nbsp;|&nbsp;Our <a href
 </tr>
 </table>
 <!-- /foot.asp --><!-- meta/client_side_maps.asp fragment -->
+
 <MAP NAME="bar">
-<AREA SHAPE=RECT COORDS="51,0,132,14" HREF="http://www.wired.com/news/" ALT="Wired News">
-<AREA SHAPE=RECT COORDS="145,0,218,14" HREF="http://www.hotwired.com/" ALT="HotWired">
-<AREA SHAPE=RECT COORDS="231,0,303,14" HREF="http://www.wired.com/wired/" ALT="Wired Mag">
-<AREA SHAPE=RECT COORDS="325,0,394,14" HREF="http://www.suck.com/" ALT="Suck.com">
-<AREA SHAPE=RECT COORDS="417,0,491,14" HREF="http://live.wired.com/" ALT="Live Wired">
-<AREA SHAPE=RECT COORDS="535,0,580,14" HREF="/help/" ALT="Help">
+<AREA SHAPE=RECT COORDS="151,0,236,14" HREF="http://www.wired.com/news/" ALT="Wired News">
+<AREA SHAPE=RECT COORDS="248,0,328,14" HREF="http://www.hotwired.com/" ALT="HotWired">
+<AREA SHAPE=RECT COORDS="332,0,412,14" HREF="http://www.wired.com/wired/" ALT="Wired Mag">
+<AREA SHAPE=RECT COORDS="425,0,494,14" HREF="http://www.suck.com/" ALT="Suck.com">
+<AREA SHAPE=RECT COORDS="539,0,580,14" HREF="/help/" ALT="Help">
 <AREA SHAPE=RECT COORDS="584,0,600,14" HREF="http://home.wired.com/" ALT="About Wired">
 </MAP>
 
 <MAP NAME="white_ads">
-<AREA SHAPE=RECT COORDS="0,0,159,28" HREF="http://www.hotwired.com/cgi-bin/redirect/1375/http://search.outpost.com/search/proddesc.cfm?item=75154">
-<AREA SHAPE=RECT COORDS="159,0,319,28" HREF="http://www.hotwired.com/cgi-bin/redirect/821/http://www.onsale.com">
-<AREA SHAPE=RECT COORDS="319,0,465,28" HREF="http://www.hotwired.com/cgi-bin/redirect/947/http://www.musicblvd.com/cgi-bin/tw/2371_0_main.txt^S&FS=HOTBOT">
-<AREA SHAPE=RECT COORDS="465,0,600,28" HREF="http://www.hotwired.com/cgi-bin/redirect/928/http://members.spree.com/sg/default.asp?x=hotbotfw">
+<AREA SHAPE=RECT COORDS="0,0,159,28" HREF="http://www.hotwired.com/cgi-bin/redirect/1375/http://www.outpost.com/">
+<AREA SHAPE=RECT COORDS="159,0,319,28" HREF="http://www.hotwired.com/cgi-bin/redirect/890/http://www.cdw.com">
+<AREA SHAPE=RECT COORDS="319,0,465,28" HREF="http://www.hotwired.com/cgi-bin/redirect/850/http://www.homeshark.com">
+<AREA SHAPE=RECT COORDS="465,0,600,28" HREF="http://www.hotwired.com/cgi-bin/redirect/821/http://www.onsale.com">
 </MAP>
-
 
 <MAP NAME="new_white_ads">
-<AREA SHAPE=RECT COORDS="0,0,106,39" HREF="http://www.hotwired.com/cgi-bin/redirect/1375/http://search.outpost.com/search/proddesc.cfm?item=75154">
-<AREA SHAPE=RECT COORDS="0,40,106,77" HREF="http://www.hotwired.com/cgi-bin/redirect/821/http://www.onsale.com">
-<AREA SHAPE=RECT COORDS="0,78,106,115" HREF="http://www.hotwired.com/cgi-bin/redirect/947/http://www.musicblvd.com/cgi-bin/tw/2371_0_main.txt^S&FS=HOTBOT">
-<AREA SHAPE=RECT COORDS="0,116,106,153" HREF="http://www.hotwired.com/cgi-bin/redirect/928/http://members.spree.com/sg/default.asp?x=hotbotfw">
+<AREA SHAPE=RECT COORDS="0,0,106,39" HREF="http://www.hotwired.com/cgi-bin/redirect/1375/http://www.outpost.com/">
+<AREA SHAPE=RECT COORDS="0,40,106,77" HREF="http://www.hotwired.com/cgi-bin/redirect/890/http://www.cdw.com">
+<AREA SHAPE=RECT COORDS="0,78,106,115" HREF="http://www.hotwired.com/cgi-bin/redirect/850/http://www.homeshark.com">
+<AREA SHAPE=RECT COORDS="0,116,106,153" HREF="http://www.hotwired.com/cgi-bin/redirect/821/http://www.onsale.com">
 </MAP>
-
-
 
 <MAP NAME="power">
 <AREA SHAPE=RECT COORDS="0,5,146,48" HREF="http://www.inktomi.com/" ALT="Powered by Inktomi">
@@ -201,9 +187,8 @@ About <a href="http://home.wired.com/">Wired Digital</a>&nbsp;|&nbsp;Our <a href
 
 
 
-
 <!-- hotbotMon:success -->
+
 
 </body>
 </html>
-

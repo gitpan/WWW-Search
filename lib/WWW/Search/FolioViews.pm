@@ -6,10 +6,15 @@ package WWW::Search::FolioViews;
 
 WWW::Search:: FolioViews  -  class for searching Folio Views
 
+=head1 SYNOPSIS
+
+    require WWW::Search;
+    $search = new WWW::Search('FolioViews');
+
 =head1 DESCRIPTION
 
 This class is an Folio Views specialization of
-WWW:Search.  It queries and interprets searches based on Folio
+WWW::Search.  It queries and interprets searches based on Folio
 Views, which is available at F<http://www.openmarket.com>
 
 This class exports no public interface; all interaction should be done
@@ -128,7 +133,7 @@ sub native_retrieve_some
     }
 
     my ($size, $url);
-    my (@lines) = split(/\n/, $results);
+    my (@lines) = $self->split_lines($results);
     my $backup;
 
     my ($fvtitle, $fvurl, $fvsize, $fvscore) = ('', '', 0, 0, 0);

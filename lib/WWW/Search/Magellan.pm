@@ -1,8 +1,8 @@
 #!/usr/local/bin/perl -w
 
 # Magellan.pm
-# Copyright (C) 1998 by Martin Thurn
-# $Id: Magellan.pm,v 1.3 1998/05/28 04:05:40 johnh Exp $
+# Copyright (c) 1998 by Martin Thurn
+# $Id: Magellan.pm,v 1.5 1998/08/27 17:29:03 johnh Exp $
 
 package WWW::Search::Magellan;
 
@@ -12,8 +12,12 @@ WWW::Search::Magellan - class for searching Magellan
 
 =head1 SYNOPSIS
 
-    require WWW::Search;
-    $search = new WWW::Search('Magellan');
+  use WWW::Search;
+  my $oSearch = new WWW::Search('Magellan');
+  my $sQuery = WWW::Search::escape_query("+sushi restaurant +Columbus Ohio");
+  $oSearch->native_query($sQuery);
+  while (my $oResult = $oSearch->next_result())
+    print $oResult->url, "\n";
 
 =head1 DESCRIPTION
 
@@ -57,14 +61,14 @@ This module adheres to the C<WWW::Search> test suite mechanism.
 
   Test cases:
  '+mrfglbqnx +NoSuchWord'    ---   no hits
- 'disestablishmentarianism'  ---   5 hits on one page
- '+Martin +Thurn'            ---  15 hits on two pages
+ 'disestablishmentarianism'  ---   1 hits on one page
+ '+Martin +Thurn'            ---  11 hits on two pages
 
 
 =head1 AUTHOR
 
 As of 1998-03-17, C<WWW::Search::Magellan> is maintained by Martin Thurn
-(mthurn@irnet.rest.tasc.com).
+(MartinThurn@iname.com).
 
 C<WWW::Search::Magellan> was originally written by Martin Thurn
 based on C<WWW::Search::WebCrawler>.
@@ -79,6 +83,10 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 =head1 VERSION HISTORY
 
+=head2 1.6
+
+Now parses score (percentage) from Magellan's output.
+
 =head2 1.2
 
 First publicly-released version.
@@ -92,6 +100,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
+$VERSION = sprintf("%d.%02d", q$Revision: 1.5 $ =~ /(\d+)\.(\d+)/);
 
 use Carp ();
 use WWW::Search(generic_option);
@@ -111,7 +120,7 @@ sub native_setup_search
   # instead of ">=" on line 672!
   my $iMaximum = 1 + $self->maximum_to_retrieve;
 
-  $self->{agent_e_mail} = 'mthurn@irnet.rest.tasc.com';
+  $self->{agent_e_mail} = 'MartinThurn@iname.com';
   $self->user_agent(0);
 
   $self->{'_next_to_retrieve'} = 0;
@@ -188,11 +197,11 @@ sub native_retrieve_some
   print STDERR " *   got response\n" if $self->{'_debug'};
   $self->{'_next_url'} = undef;
   # Parse the output
-  my ($HEADER1,$HEADER2, $HITS,$H2,$H3, $DESC, $TRAILER) = qw(E1 E2 HH H2 H3 DE TR);
+  my ($HEADER1,$HEADER2, $HITS,$PERCENT,$H3, $DESC, $TRAILER) = qw(E1 E2 HH PE H3 DE TR);
   my $hits_found = 0;
   my $state = $HEADER1;
   my $hit;
-  foreach (split(/\n/, $response->content())) 
+  foreach ($self->split_lines($response->content())) 
     {
     next if m/^$/; # short circuit for blank lines
     print STDERR " *   $state ===$_===" if 2 <= $self->{'_debug'};
@@ -227,11 +236,15 @@ sub native_retrieve_some
       $hit->title($2);
       $self->{'_num_hits'}++;
       $hits_found++;
-      $state = $H2;
+      $state = $PERCENT;
       }
-    elsif ($state eq $H2)
+    elsif ($state eq $PERCENT &&
+           m{>(\d+)\%<})
       {
-      print STDERR "hit ignore line 2\n" if 2 <= $self->{'_debug'};
+      print STDERR "hit percent line\n" if 2 <= $self->{'_debug'};
+      # Actual line of input is:
+      #   <B>45%</B>&nbsp;&nbsp;&nbsp;
+      $hit->score($1);
       $state = $H3;
       next;
       }

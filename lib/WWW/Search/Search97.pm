@@ -6,10 +6,16 @@ package WWW::Search::Search97;
 
 WWW::Search::Search97  -  class for searching Verity Search97 search engine
 
+=head1 SYNOPSIS
+
+    require WWW::Search;
+    $search = new WWW::Search('Search97');
+
+
 =head1 DESCRIPTION
 
 This class is a Verity Search97 specialization of
-WWW:Search.  It queries and interprets searches based on Verity
+WWW::Search.  It queries and interprets searches based on Verity
 Search97, which is available at F<http://www.verity.com>
 
 This class exports no public interface; all interaction should be done
@@ -128,7 +134,7 @@ sub native_retrieve_some
     }
 
     my ($size, $url);
-    my (@lines) = split(/\n/, $results);
+    my (@lines) = $self->split_lines($results);
     my $backup;
 
     my ($lititle, $lidesc, $liurl, $lisize, $lihits, $liscore) = ('', '', '', 0, 0, 0);

@@ -4,7 +4,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.58 1998/08/11 23:56:23 johnh Exp $
+# $Id: Search.pm,v 1.60 1998/08/27 17:28:57 johnh Exp $
 #
 # A complete copyright notice appears at the end of this file.
 # 
@@ -84,7 +84,7 @@ see L<WWW::SearchResult>.
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query generic_option);
-$VERSION = '1.020';
+$VERSION = '1.021';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
 use LWP::UserAgent;
@@ -600,6 +600,26 @@ sub http_request_to_file {
     open (FILE, ">$fn.$i") || die "$0: open $fn.$i\n";
     print FILE $response->content();
     close FILE;
+}
+
+=head2 split_lines (PRIVATE)
+
+This internal routine splits data (typically the result of the web
+page retrieval) into lines in a way that's OS independent.
+
+=cut
+#'
+sub split_lines {
+    # eventually this should be
+    # use Socket qw(:crlf :DEFAULT);
+    # split(/$CR?$LF/,$_[0])
+    # but I don't have perl5.005 yet.
+    #
+    # This probably fails on an EBCDIC box
+    # where input is in text mode.
+    # Too bad Macs don't just use binmode like Windows boxen.
+    my($self) = shift;
+    return split(/\015?\012/, $_[0]);
 }
 
 =head2 generic_option (PRIVATE)

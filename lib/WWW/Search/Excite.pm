@@ -3,7 +3,7 @@
 # Excite.pm
 # by Martin Thurn
 # Copyright (C) 1998 by USC/ISI
-# $Id: Excite.pm,v 1.11 1998/05/30 18:55:41 johnh Exp $
+# $Id: Excite.pm,v 1.12 1998/08/27 17:28:59 johnh Exp $
 
 package WWW::Search::Excite;
 
@@ -222,7 +222,7 @@ sub native_retrieve_some
   my $hits_found = 0;
   my $state = $HEADER;
   my $hit;
-  foreach (split(/\n/, $response->content())) 
+  foreach ($self->split_lines($response->content())) 
     {
     next if m/^$/; # short circuit for blank lines
     print STDERR " *   $state ===$_===" if 2 <= $self->{'_debug'};

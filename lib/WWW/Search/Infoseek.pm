@@ -2,7 +2,7 @@
 
 # Infoseek.pm
 # Copyright (C) 1998 by Martin Thurn
-# $Id: Infoseek.pm,v 1.7 1998/05/28 04:05:39 johnh Exp $
+# $Id: Infoseek.pm,v 1.9 1998/08/27 17:29:01 johnh Exp $
 
 package WWW::Search::Infoseek;
 
@@ -12,9 +12,12 @@ WWW::Search::Infoseek - class for searching Infoseek
 
 =head1 SYNOPSIS
 
-    WWW::Search;
-    my $oSearch = new WWW::Search('Infoseek');
-    # See Search.pm for further usage
+  use WWW::Search;
+  my $oSearch = new WWW::Search('Infoseek');
+  my $sQuery = WWW::Search::escape_query("+sushi restaurant +Columbus Ohio");
+  $oSearch->native_query($sQuery);
+  while (my $oResult = $oSearch->next_result())
+    { print $oResult->url, "\n"; }
 
 =head1 DESCRIPTION
 
@@ -27,6 +30,10 @@ be done through L<WWW::Search> objects.
 
 
 =head1 SEE ALSO
+
+  L<WWW::Search::Infoseek::Companies>
+  L<WWW::Search::Infoseek::Web>
+  L<WWW::Search::Infoseek::News>
 
 To make new back-ends, see L<WWW::Search>.
 
@@ -62,7 +69,7 @@ See C<WWW::Search::Infoseek::Web> for test cases for the default usage.
 =head1 AUTHOR
 
 C<WWW::Search::Infoseek> is maintained by Martin Thurn
-(mthurn@irnet.rest.tasc.com).
+(MartinThurn@iname.com).
 
 
 =head1 LEGALESE
@@ -73,6 +80,12 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 
 =head1 VERSION HISTORY
+
+If it''s not listed here, then it wasn''t a meaningful nor released revision.
+
+=head2 1.5
+
+Infoseek changed their output format ever-so-slightly.
 
 =head2 1.3
 
@@ -87,6 +100,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
+$VERSION = sprintf("%d.%02d", q$Revision: 1.9 $ =~ /(\d+)\.(\d+)/);
 
 use Carp ();
 use WWW::Search(generic_option);
@@ -98,11 +112,12 @@ sub native_setup_search
   {
   my ($self, $native_query, $rhOptions) = @_;
 
-  my $DEFAULT_HITS_PER_PAGE = 50;
+  my $DEFAULT_HITS_PER_PAGE = 25;
   # $DEFAULT_HITS_PER_PAGE = 10;  # for debugging
+  # Infoseek does not let you choose the number of hits per page!!!
   $self->{'_hits_per_page'} = $DEFAULT_HITS_PER_PAGE;
 
-  $self->{agent_e_mail} = 'mthurn@irnet.rest.tasc.com';
+  $self->{agent_e_mail} = 'MartinThurn@iname.com';
 
   # Infoseek doesn't like robots: response from server was 403 (Forbidden) Forbidden by robots.txt
   $self->user_agent(1);
@@ -197,15 +212,15 @@ sub native_retrieve_some
   my $hits_found = 0;
   my $state = $START;
   my $hit;
-  foreach (split(/\n/, $response->content())) 
+  foreach ($self->split_lines($response->content())) 
     {
     next if m/^$/; # short circuit for blank lines
     print STDERR " *   $state ===$_===" if 2 <= $self->{'_debug'};
     if ($state eq $START && 
-        m=Infoseek\sfound\s+([\d,]+)\s+pages\s+containing=)
+        m=Infoseek\sfound\s+([\d,]+)=)
       {
       # Actual line of input is:
-      # Infoseek found 2,735,159     pages  containing
+      # Infoseek found 25
       print STDERR "header line\n" if 2 <= $self->{'_debug'};
       my $iCount = $1;
       $iCount =~ s/,//g;
@@ -223,7 +238,7 @@ sub native_retrieve_some
       } # we're in START mode, and line has number of results
 
     elsif ($state eq $HEADER && 
-           m@Group\sthese\sresults@)
+           m@roup\sthese\sresults@)
       {
       # Actual line of input is:
       # <a href="/Titles?qt=star+wars+collector&col=WW&nh=25&rf=0">Ungroup these results</a>
@@ -240,7 +255,7 @@ sub native_retrieve_some
       } # we're in HEADER mode, and line talks about (un)grouping results
 
     elsif (($state eq $NEXT || $state eq $COMP_NEXT) &&
-           m@>next&nbsp;\d@)
+           m@>next(&nbsp;|\s+)\d@)
       {
       # Actual line of input is:
       #    &nbsp;&nbsp;|&nbsp;&nbsp;<a href="/Titles?qt=star+wars+collector&rf=11&st=50&nh=25&rf=11">next&nbsp;25</a>
@@ -269,6 +284,12 @@ sub native_retrieve_some
     elsif ($state eq $COMP_NEXT && m=^<p>$=)
       {
       print STDERR " no next button (company mode)\n" if 2 <= $self->{'_debug'};
+      # There is no next button.
+      $state = $HITS;
+      }
+    elsif ($state eq $COMP_NEXT && m=^</table>$=)
+      {
+      print STDERR " no next button (web mode)\n" if 2 <= $self->{'_debug'};
       # There is no next button.
       $state = $HITS;
       }
@@ -326,7 +347,7 @@ sub native_retrieve_some
         } 
       else
         {
-        $state = $PERCENT;
+        $state = $HITS;
         }
       } # line is description
     elsif ($state eq $DESC &&
@@ -345,7 +366,7 @@ sub native_retrieve_some
       $state = $SIZE;
       }
 
-    elsif ($state eq $SIZE && m=^\(Size\s([0-9.KM]+)\)=)
+    elsif ($state eq $SIZE && m=\(Size\s([0-9.KM]+)\)=)
       {
       print STDERR "hit size line\n" if 2 <= $self->{'_debug'};
       my $size = $1;
@@ -355,20 +376,21 @@ sub native_retrieve_some
       $state = $DATE;
       }
 
-    elsif ($state eq $DATE && m=^Document&nbsp;date:\s+(\d+\s+[a-zA-Z]+\s+\d+)=)
+    elsif ($state eq $DATE && m=Document\sDate:(&nbsp;)?\s*(\d+\s+[a-zA-Z]+\s+\d+)=)
       {
       print STDERR "hit change_date line\n" if 2 <= $self->{'_debug'};
       # Actual line of input is:
       # Document&nbsp;date: 22 Oct 1996 </font><br>
-      $hit->change_date($1);
+      $hit->change_date($2);
       $state = $HITS;
       }
-    elsif ($state eq $DATE && m=^<b>([a-zA-Z]+\s+\d+\s+[a-zA-Z]+\s+[\d:]+)</b>=)
+    elsif ($state eq $DATE && m=^(<b>)?([a-zA-Z]+\s+\d+\s+[a-zA-Z]+\s+[\d:]+)(</b>)?=)
       {
       print STDERR "hit news date line\n" if 2 <= $self->{'_debug'};
-      # Actual line of input is:
+      # Actual lines of input include:
       # Document&nbsp;date: 22 Oct 1996 </font><br>
-      $hit->change_date($1);
+      # Wed 19 Aug 13:38
+      $hit->change_date($2);
       $state = $HITS;
       }
 

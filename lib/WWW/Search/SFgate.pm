@@ -15,7 +15,7 @@ WWW::Search::SFgate - class for searching SFgate/Wais search engine
 
 =head1 DESCRIPTION
 
-This class is a SFgate specialization of WWW:Search.  It queries and
+This class is a SFgate specialization of WWW::Search.  It queries and
 interprets searches based on SFgate, which is available at
 F<http://ls6-www.informatik.uni-dortmund.de/SFgate/welcome.html>
 
@@ -176,7 +176,7 @@ sub native_retrieve_some
     }
 	
     my ($size, $url);
-    my (@lines) = split(/\n/, $results);
+    my (@lines) = $self->split_lines($results);
     while ($#lines > -1) {
 	$_ = shift(@lines);
 	if ((m,^<B>\d+:</B>.*<A,) &&

@@ -2,7 +2,7 @@
 
 # WebCrawler.pm
 # Copyright (C) 1998 by Martin Thurn
-# $Id: WebCrawler.pm,v 1.3 1998/06/01 04:43:52 johnh Exp $
+# $Id: WebCrawler.pm,v 1.5 1998/08/27 17:29:05 johnh Exp $
 
 package WWW::Search::WebCrawler;
 
@@ -59,17 +59,17 @@ Please tell the author if you find any!
 
 This module adheres to the C<WWW::Search> test suite mechanism. 
 
-   Test cases (results as of 1998-05-29):
+   Test cases (results as of 1998-08-20):
   '+mrfglbqnx +NoSuchWord'    ---   no hits
-  'LSAM'                      ---    1 hit  on one page
-  'disestablishmentarianism'  ---    5 hits on one page
-  'Greedo'                    ---  121 hits on two pages
+  'disestablishmentarianism'  ---    1 hit  on one page
+  'LSAM'                      ---    4 hits on one page
+  'Jabba'                     ---  334 hits on four pages
 
 
 =head1 AUTHOR
 
 As of 1998-03-16, C<WWW::Search::WebCrawler> is maintained by Martin Thurn
-(mthurn@irnet.rest.tasc.com).
+(MartinThurn@iname.com).
 
 C<WWW::Search::WebCrawler> was originally written by Martin Thurn
 based on C<WWW::Search::HotBot>.
@@ -83,6 +83,14 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 
 =head1 VERSION HISTORY
+
+=head2 1.9
+
+1998-08-20: New format of www.webcrawler.com output.
+
+=head2 1.7
+
+\n changed to \012 for MacPerl compatibility
 
 =head2 1.5
 
@@ -101,6 +109,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
+$VERSION = sprintf("%d.%02d", q$Revision: 1.5 $ =~ /(\d+)\.(\d+)/);
 
 use Carp ();
 use WWW::Search(generic_option);
@@ -134,7 +143,7 @@ sub native_setup_search
     {
     $self->{'_hits_per_page'} = $iMaximum;
     }
-  $self->{agent_e_mail} = 'mthurn@irnet.rest.tasc.com';
+  $self->{agent_e_mail} = 'MartinThurn@iname.com';
 
   # As of 1998-03-16, WebCrawler apparently doesn't like WWW::Search!  Response was
   # 403 (Forbidden) Forbidden by robots.txt
@@ -211,15 +220,15 @@ sub native_retrieve_some
   print STDERR " *   got response\n" if $self->{'_debug'};
   $self->{'_next_url'} = undef;
   # Parse the output
-  my ($HEADER, $HITS, $NBSP, $URL, $DESC, $TRAILER) = qw(HE HH NB UR DE TR);
+  my ($HEADER, $COUNT, $HITS, $NBSP, $URL, $DESC, $TRAILER) = qw(HE CT HH NB UR DE TR);
   my $hits_found = 0;
   my $state = $HEADER;
   my $hit;
-  foreach (split(/\n/, $response->content())) 
+  foreach ($self->split_lines($response->content())) 
     {
     next if m/^$/; # short circuit for blank lines
     print STDERR " * $state ===$_===" if 2 <= $self->{'_debug'};
-    if ($state eq $HEADER && 
+    if ($state eq $COUNT && 
         m=^Result$=i) 
       {
       # Actual line of input is:
@@ -229,23 +238,19 @@ sub native_retrieve_some
       $state = $HITS;
       }
     elsif ($state eq $HEADER && 
-        m=^Results\s+\d+-\d+\s+of\s+(\d+)=i) 
+        m=Web\sResults\sfor:=i) 
       {
       # Actual line of input is:
-      # Results 26-50 of 46642
+      # <P><FONT SIZE=3><B>Web Results for:</B></FONT>&nbsp;&nbsp;
       print STDERR "header line\n" if 2 <= $self->{'_debug'};
-      unless (defined($self->approximate_result_count) and 0 < $self->approximate_result_count)
-        {
-        $self->approximate_result_count($1);
-        } # if
-      $state = $HITS;
-      } # we're in HEADER mode, and line has number of results
-    elsif ($state eq $HEADER && 
-           m=^Top\s+\d+\s+of\s+(\d+)=i) 
+      $state = $COUNT;
+      }
+    elsif ($state eq $COUNT && 
+           m=\([-0-9]+\s+of\s+(\d+)\)=i) 
       {
       # Actual line of input is:
-      # Top 84 of 4399
-      print STDERR "header line\n" if 2 <= $self->{'_debug'};
+      # (10 of 85)
+      print STDERR "count line\n" if 2 <= $self->{'_debug'};
       $self->approximate_result_count($1);
       $state = $HITS;
       } # we're in HEADER mode, and line has number of results
@@ -274,11 +279,12 @@ sub native_retrieve_some
       $state = $URL;
       }
     elsif ($state eq $URL && 
-           m|<A\s+HREF=\"([^\"]+)\">([^<]+)|i)
+           m|<A\s+HREF=\"?([^\">]+)\"?>([^<]+)|i)
       {
       print STDERR "hit url line\n" if 2 <= $self->{'_debug'};
       # Actual line of input:
-      # <A HREF="http://www.geocities.com/Area51/Chamber/4729/">BACK TO THE FUTURE COLLECTABLES</A>
+      # <A HREF="http://www.geocities.com/Area51/Chamber/4729/">BACK TO THE FUTURE COLLECTIBLES</A>
+      # Sometimes there are no quotes around the URL!
       # Sometimes the </A> is on the next line.
       # Sometimes there is a /r right before the </A>
       $hit->add_url($1);

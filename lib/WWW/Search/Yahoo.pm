@@ -3,7 +3,7 @@
 # Yahoo.pm
 # by Wm. L. Scheding and Martin Thurn
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: Yahoo.pm,v 1.7 1998/05/28 04:05:44 johnh Exp $
+# $Id: Yahoo.pm,v 1.8 1998/08/27 17:29:06 johnh Exp $
 
 
 package WWW::Search::Yahoo;
@@ -198,7 +198,7 @@ sub native_retrieve_some
   my($state) = ($HEADER);
   my($cite) = "";
   my($hit) = ();
-  foreach (split(/\n/, $response->content())) 
+  foreach ($self->split_lines($response->content())) 
     {
     next if m@^$@; # short circuit for blank lines
     print STDERR " * $state ===$_=== " if 2 <= $self->{'_debug'};

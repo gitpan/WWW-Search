@@ -1,565 +1,272 @@
-
-
-
-
-
-
 <html>
-<base 
- >
 <head>
-<meta name="IS" content="ok_cash">
-<META name="description" content="Get the latest local, national, and international news and weather. Use Infoseek Personalization to get exactly the news you need.">
-<meta name="Author" content="Vivian, Adina, Chris, Johnny, Ron, Ayse">
-
-
-
-<title>Infoseek: The News Channel</title>
+<base target="_top"><meta name="IS" content="ok_bull">
+<title>Infoseek: Hawaii</Title>
 </head>
-         
 
-<body bgcolor="#FFFFFF" >
+<body  bgcolor="#FFFFFF" 
+
+> 
 <center>
 <table border=0 cellpadding=0 cellspacing=0><tr><td valign=bottom nowrap>
 
-<a href="/Topic?tid=1486&nh=50"><img src="/images/tmpl/1486_header.gif" width=429 height=52 alt="Infoseek The News
-Channel" vspace=0 hspace=0 border=0></a><br>
-
-
-
-
+		<a href="/Topic?tid=1486&nh=25"><img src="/images/tmpl/1486_header.gif" width="429" height="52" alt="Infoseek: The News Channel" vspace=0 hspace=0 border=0 ismap usemap="#header"></a><br>
 
 </td><td valign=middle nowrap>
+<center>
 
-
+</center>
 </td></tr>
+
 <tr><td colspan=2 valign=top nowrap>
 
-	
+            <a href="/Topic?tid=459&nh=25"><b>Stocks</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    	    <a href="/Topic?tid=1486&nh=25"><b>News</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    	    <a href="/Facts?pg=maps.html&svx=htb_maps&nh=25"><b>Maps</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
+	    <a href="/Facts?pg=email.html&svx=htb_email&nh=25"><b>People &amp; Business</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
 
 
+	       <a href="/Home?pg=Home.html&nh=25"><b>Search again</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
 
-
-<a href="/Topic?tid=459&nh=50"><b>Stocks</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
-<a href="/Topic?tid=1486&nh=50"><b>News</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
-<a href="/Facts?pg=maps.html&nh=50"><b>Maps</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
-<a href="/Facts?pg=people.html&nh=50"><b>People &amp; Business</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
-<a href="/Home?pg=Home.html&nh=50"><b>Search again</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
-<a href="/Home?pg=Home.html&nh=50"><b>Home</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
-<a href="/redirect?sv=IS&lk=lcd&ak=UPSS&rl=OnBar&rd=/ups?pg=ups_jump.html&nh=50"><b>UPS Services</b></a><br>
+	    <a href="/Home?pg=Home.html&nh=25"><b>Home</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
+	    <a href="/redirect?sv=IS&lk=noframes&ak=UPSS&rl=OnBar&rd=/ups?pg=ups_jump.html&nh=25"><b>UPS Services</b></a><br>
 
 
 </td></tr></table>
-<p>
-
-<center>
-You searched for &nbsp;<b>Hawaii</b>
-<p>
-
-<b>News Results</b>  1 -  50 of  65<br>
-<font size="-1">sorted by relevance within each date</font>
 </center>
 
 
 
-<p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<p><center>
 <center>
+You searched for <b>Hawaii</b><p>
+<b>
+News Results</b> 1 - 25 of 66
+		<br><font size="-1">sorted by relevance within each date</font>
+</center>
+<p>
+<p>
+    <table border="0" cellpadding="5" bgcolor="#FFFFCC"><tr><td><font size="-1">
+        <a href="/redirect?sv=IS&lk=noframes&ak=BORD&rl=LINK-C1486-news-flash-borders&rd=http://www.borders.com/cgi-bin/partner?PARTNER_ID=101010001&Url=http://www.borders.com/infoseek/section_10000.html">Latest book titles at Borders.com. In stock. Fast delivery.</a>
+
+</font></td></tr></table><br>
 
 
+</center>
 
-<table width=100% border=0 cellpadding=0 cellspacing=0><tr><td valign=top width=
-135>
-<table width=100% border=0 cellpadding=4 cellspacing=0>
+<table width="100%" cellpadding=0 cellspacing=0 border=0><tr><td valign=top width=135>
+<table width="100%" cellpadding=4 cellspacing=0 border=0>
+<tr><td align=center><hr><font face="Arial,Helvetica"><b>In&nbsp;this&nbsp;channel...</b></font><hr></td></tr><tr><td valign=top><dl>
+<dt><a href="/Topic/News?tid=1486&nh=25"><b>NEWS</b></a>
+<dt><a href="/Topic/News/Broadcast_news?tid=13424&nh=25">Broadcast news</a>
+<dt><a href="/Topic/Business_News?tid=456&nh=25">Business news</a>
+<dt><a href="/Topic/Current_stories?tid=13422&nh=25">Current stories</a>
+<dt><a href="/Topic/Entertainment_news?tid=10099&nh=25">Entertainment news</a>
+<dt><a href="/Topic/Newspapers?tid=1492&nh=25">Newspapers</a>
+<dt><a href="/Topic/Politics?tid=777&nh=25">Politics</a>
+<dt><a href="/Topic/Sports_news?tid=1748&nh=25">Sports news</a>
+<dt><a href="/Topic/Technology_news?tid=3080&nh=25">Technology news</a>
+<dt><a href="/Topic/Weather?tid=1491&nh=25">Weather</a>
+<dt><a href="/Topic/World?tid=1490&nh=25">World news</a>
+</dl>
+</td></tr><tr><td>&nbsp;</td></tr>
 
+<tr><td align=center><hr><font face="Arial,Helvetica"><b>Buy the book</b></font><hr></td></tr><tr><td valign=top>
 
+   Learn about 
+	<a href="/redirect?sv=IS&lk=noframes&ak=BORD&rl=LINK-T1486-news-lhs_books&rd=http://www.borders.com/cgi-bin/partner?PARTNER_ID=101010001&Url=http://www.borders.com/infoseek/section_10000.html">the latest book titles</a> at  
+	<a href="/redirect?sv=IS&lk=noframes&ak=BORD&rl=LINK-T1486-news-lhs_borders&rd=http://www.borders.com/cgi-bin/partner?PARTNER_ID=101010001&Url=http://www.borders.com/infoseek/section_10000.html">Borders.com</a>. The best selection in the world. 
+	</td></tr><tr><td>&nbsp;</td></tr>
+<tr><td align=center><hr><font face="Arial,Helvetica"><b>Chat</b></font><hr></td></tr><tr><td valign=top>Welcome to verbal rugby
+<A 
+HREF="/redirect?sv=IS&lk=&ak=LivW&rl=LINK_T1486_POLITICS&rd=http://pages.wbs.net/webchat3.so?&cmd=cmd_doorway:talk.politics.misc">
+<br>
+Talk Politics</a>
+<p>
+Chat Now on 
+<A
+HREF="/redirect?sv=IS&lk=&ak=LivW&rl=LINK_T1486_POLITICS&rd=http://pages.wbs.net/webchat3.so?cmd=cmd_display_page:top.html">
+WBS</a>
+</td></tr><tr><td>&nbsp;</td></tr></table>
 
-
-
-<tr><td  align=center>
-<hr>
-<font face="Arial,Helvetica" >
-<b>Chat</b></font>
-<hr>
-</td></tr><tr><td valign=top>
-
-
-        
-
-  <B><A HREF="/redirect?sv=IS&lk=lcd&ak=LivW&rl=LINK_T1486_POLITICS&rd=http://www.talkcity.com/infoseek/chat.htmpl?room=NewsTalk">News Talk</A></B><BR>
-    Chat with us about news as it's breaking.<P>
-See more <A HREF="/redirect?sv=IS&lk=lcd&ak=LivW&rl=LINK_T1486_POLITICS&rd=http://www.talkcity.com/infoseek/channel.htmpl?channel=news">
-news</A> chats at Talk City.<P>
-
- 
-
-
-
-</td></tr>
-<tr><td>&nbsp;</td></tr>
-
-</table>
+<p>
 <img src="/images/clear.gif" width=135 height=1>
 </td><td width=25 valign=bottom>
 <img src="/images/clear.gif" width=25 height=1>
 </td><td valign=top>
 
-<table width=100% cellpadding=4 cellspacing=0 border=0>
-
-
-
-
-<tr><td  align=center>
-<hr>
-<font face="Arial,Helvetica" ><b>Results</b></font>
-<hr>
-</td></tr><tr><td valign=top>
-
-
-<b>Articles</b>  1  -  50  of  65
-<p> 
-<b><font size="-1">
-<a href="/Titles?qt=Hawaii&col=NX&sv=IS&lk=lcd&rf=0&ud4=1&nh=20">Hide Summaries</a>
-
-
-</font></b>
- 
-&nbsp;&nbsp;
-
-&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/Titles?qt=Hawaii&col=NX&st=50&nh=50">next&nbsp;50</a>
-
 <p>
 
+<table width="100%" cellpadding=4 cellspacing=0 border=0>
 
 
-<b><a href="/Content?arn=BW0284-19980519&qt=Hawaii&col=NX&nh=50">Bank of Hawaii to Grow in New Caledonia and French Polynesia</a></b><br>
-HONOLULU - Bank of Hawaii concluded an agreement to acquire the interest of Paribas in Banque Paribas Pacifique in New Caledonia and Banque Paribas Polynesie in French Polynesia. The ... <br>
-<font size="-1">
-<b>Tue 19 May 15:48</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Business Wire</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=PR8199-19980516&qt=Hawaii&col=NX&nh=50">Hawaii Developers Merge Land in Waikiki to Develop Shopping and Entertainment Complex</a></b><br>
-HONOLULU - The last prime undeveloped land in Waikiki got a fresh new start.  Hawaii developers Honu Group, Inc. and The MacNaughton Group have merged their land assets in Waikiki to ... <br>
-<font size="-1">
-<b>Sat 16 May 22:38</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>PR Newswire</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=BW0235-19980518&qt=Hawaii&col=NX&nh=50">The Big Kahuna Has Arrived! Outrigger's New Vacation Package Promises a Bigger, Better, and</a></b><br>
-HONOLULU - Beginning June 1, 1998, visitors to Hawaii can vacation with &quot;The Big Kahuna&quot; and take advantage of new travel packages from Outrigger Hotels &amp; Resorts that promi <br>
-<font size="-1">
-<b>Mon 18 May 12:02</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Business Wire</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=PR8135-19980516&qt=Hawaii&col=NX&nh=50">Mauna Loa Macadamia Partners, L.P. Reports 1st Quarter 1998 Operating Results</a></b><br>
-HONOLULU - Mauna Loa Macadamia Partners, L.P. today reported net income of $669,000 or $0.09 per Class A Unit for the first quarter 1998 compared to $226,000 or $0.03 per Class A Unit ... <br>
-<font size="-1">
-<b>Sat 16 May  0:29</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>PR Newswire</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=PR1956-19980521&qt=Hawaii&col=NX&nh=50">First Hawaiian Declares Quarterly Dividend</a></b><br>
-HONOLULU - The board of directors of First Hawaiian, Inc. today declared a quarterly dividend of 31 cents per share, payable June 15, 1998 to stockholders of record June 1, 1998.  ... <br>
-<font size="-1">
-<b>Thu 21 May 17:07</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>PR Newswire</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=BW1561-19980518&qt=Hawaii&col=NX&nh=50">Arthur Andersen Signs as Anchor Tenant in New San Francisco Office Tower</a></b><br>
-ATLANTA - Cousins Properties Incorporated one of the largest diversified real estate development companies in the U.S., today announced that Arthur Andersen LLP has signed as the ... <br>
-<font size="-1">
-<b>Mon 18 May 17:26</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Business Wire</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=a1560LBY855reulb-19980514&qt=Hawaii&col=NX&nh=50">The U.S. delegation was to have been headed by Adm. Joseph</a></b><br>
-The U.S. delegation was to have been headed by Adm. Joseph Prueher, commander of the Hawaii-based U.S. forces in the Pacific. He was to have carried a message urging ``restraint'' by ... <br>
-<font size="-1">
-<b>Thu 14 May 11:10</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Reuters News Service</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=BW0304-19980518&qt=Hawaii&col=NX&nh=50">Record Number of Americans Traveling This Memorial Day Holiday; Greatest Number of Auto</a></b><br>
-LOS ANGELES - A record number of Americans will be traveling nationwide this Memorial Day holiday weekend. The greatest projected number of travelers will be in the West -- 6.9 ... <br>
-<font size="-1">
-<b>Mon 18 May 14:00</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Business Wire</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=BW1296-19980518&qt=Hawaii&col=NX&nh=50">Who Should Replace Detective Simone on NYPD Blue? Hill Street's Lt Furillo Beats Out Other</a></b><br>
-VERONA, N.J. - Which TV detective, from all the cop shows that have ever aired on TV, has the perfect chemistry to replace Detective Bobby Simone when Jimmy Smits leaves the ensemble ... <br>
-<font size="-1">
-<b>Mon 18 May 12:39</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Business Wire</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=PR8589-19980518&qt=Hawaii&col=NX&nh=50">AFC Enterprises Signs Letter of Intent to Acquire Assets of Paradise Bakery &amp; Cafe</a></b><br>
-ATLANTA - Atlanta-based AFC Enterprises announced today that it has signed a letter of intent to acquire the assets of Paradise Bakery &amp; Cafe, a 49-unit fresh food bakery concept with <br>
-<font size="-1">
-<b>Mon 18 May  9:39</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>PR Newswire</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=a2249reuff-19980514&qt=Hawaii&col=NX&nh=50">Survey cheapest state to vacation is North Dakota</a></b><br>
-NEW YORK, May 14 - Want to save some money? Vacation in North Dakota. The Midwestern U.S. state will have the lowest average summer vacation costs at $131 a day for meals and lodging ... <br>
-<font size="-1">
-<b>Thu 14 May 14:41</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Reuters News Service</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=a1493LBY409reulb-19980509&qt=Hawaii&col=NX&nh=50">The road to Philippine democracy</a></b><br>
-MANILA, May 10 - The following are the main dates in the Philippines' transition to one of the most vibrant democracies in Asia. The country votes on May 11 to elect a new president, ... <br>
-<font size="-1">
-<b>Sat  9 May 22:47</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Reuters News Service</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=a2286LBY883reulb-19980501&qt=Hawaii&col=NX&nh=50">Hawaiian telescope spots most distant galaxy ever</a></b><br>
-WASHINGTON, May 1 - A telescope on a Hawaiian mountaintop has glimpsed the most distant object ever seen, an infant galaxy 12.3 billion light-years from Earth, scientists reported on ... <br>
-<font size="-1">
-<b>Fri  1 May 18:13</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Reuters News Service</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=BW0204-19980518&qt=Hawaii&col=NX&nh=50">Four Students Win Publishing Contracts With Raintree Steck-Vaughn; Works by writing contest</a></b><br>
-AUSTIN, Texas - Students in four school districts who want to speak to the authors of new books being published next year by Raintree Steck-Vaughn Publishers may be required to do no ... <br>
-<font size="-1">
-<b>Mon 18 May 11:12</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Business Wire</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=BW1137-19980515&qt=Hawaii&col=NX&nh=50">Hawaiian Natural Water Company Reports First Quarter Results</a></b><br>
-HONOLULU -  -- Net Sales Up 84% -- Hawaiian Natural Water Company, Inc. announced today its unaudited results for the three months ended March 31, 1998. Net sales rose 84% to $399,603 ... <br>
-<font size="-1">
-<b>Fri 15 May  9:22</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Business Wire</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=PR1990-19980521&qt=Hawaii&col=NX&nh=50">Gold Points Plus Announces 'Free Travel For Life' Promotion to Boost Loyalty Card Use</a></b><br>
-MINNEAPOLIS - Gold Points Plus, the electronic shopper loyalty program launched by legendary trading stamp king Curt Carlson, today announced one of the most exciting prize programs ... <br>
-<font size="-1">
-<b>Thu 21 May 17:33</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>PR Newswire</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=BW0302-19980521&qt=Hawaii&col=NX&nh=50">Avtel Communications to Acquire Remote Lojix; Converging Local Area Network Support Services</a></b><br>
-SANTA BARBARA, Calif. - AvTel Communications, Inc. today announced that it has signed an Agreement in Principle to acquire Remote Lojix, a privately held provider of Information ... <br>
-<font size="-1">
-<b>Thu 21 May 17:17</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Business Wire</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=a2456LBY526reulb-19980521&qt=Hawaii&col=NX&nh=50">U.S. Marines may move away from Indonesia - Pentagon</a></b><br>
-By Charles Aldinger WASHINGTON, May 21 - The situation in Indonesia appears calm after the resignation of President Suharto and an amphibious task force of U.S. Marines and  ... <br>
-<font size="-1">
-<b>Thu 21 May 17:00</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Reuters News Service</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=BW0260-19980521&qt=Hawaii&col=NX&nh=50">Memorial Day Holiday Starts Summer Travel Season</a></b><br>
-LOS ANGELES - Memorial Day weekend, May 22-25, starts the busy summer travel season at Los Angeles International Airport, with more than 575,000 passengers expected during the ... <br>
-<font size="-1">
-<b>Thu 21 May 16:26</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Business Wire</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=BW0251-19980521&qt=Hawaii&col=NX&nh=50">Record Travel Projected This Memorial Day Weekend, AAA Reports; Gas Cheaper This Year, But</a></b><br>
-SAN FRANCISCO - Northern Californians will pack cars with beach chairs and sunscreen as they head for the sea and sunshine this Memorial Day weekend, AAA reported today. &quot;Record ... <br>
-<font size="-1">
-<b>Thu 21 May 16:14</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Business Wire</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=a1750LBY356reulb-19980521&qt=Hawaii&col=NX&nh=50">Jupier moon might have salt ocean - U.S. study</a></b><br>
-By Michael Kahn WASHINGTON, May 21 - Images beamed from a space probe almost 500 million miles from earth indicate an ocean believed to lie beneath the frozen surface of Jupiter's ... <br>
-<font size="-1">
-<b>Thu 21 May 13:09</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Reuters News Service</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=PR1487-19980521&qt=Hawaii&col=NX&nh=50">Michigan Competitive Telecommunications Providers Association Says Court of Appeals Allows</a></b><br>
-LANSING, Mich. - The Michigan Court of Appeals has issued a ruling that will allow Ameritech to continue to redline large parts of the state, including most of Wayne, Oakland and ... <br>
-<font size="-1">
-<b>Thu 21 May 10:19</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>PR Newswire</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=BW0032-19980521&qt=Hawaii&col=NX&nh=50">Certified organic craft beer taps into Puget Sound; Panorama Brewing Company introduces</a></b><br>
-SANTA CRUZ, Calif. - Panorama Brewing Company brewers of Wolaver's Pale Ale, the country's first certified organic craft beer, announces that Wolaver's Pale Ale is now available in ... <br>
-<font size="-1">
-<b>Thu 21 May  8:05</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Business Wire</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=a0792LBY977reulb-19980521&qt=Hawaii&col=NX&nh=50">Estrada to allow Marcos burial at Heroes Cemetery</a></b><br>
-MANILA, May 21 - Philippine President-elect Joseph Estrada said on Thursday he would allow late dictator Ferdinand Marcos to be buried in Manila's Heroes Cemetery because it was time ... <br>
-<font size="-1">
-<b>Thu 21 May  7:13</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Reuters News Service</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=BW0229-19980519&qt=Hawaii&col=NX&nh=50">AvTel Announces &quot;Agent@ccess&quot; Online Service for Agents and Resellers</a></b><br>
-SANTA BARBARA, Calif. - AvTel Communications, Inc. a single-source provider of integrated data, voice and video services to businesses and individuals, announced today its new ... <br>
-<font size="-1">
-<b>Tue 19 May 13:55</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Business Wire</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=BW0210-19980519&qt=Hawaii&col=NX&nh=50">Oscar-Style Awards Nights Scheduled to Honor Entrepreneurs; Seven Entrepreneur of the Year</a></b><br>
-LOS ANGELES - Ernst &amp; Young, founder of the annual Entrepreneur of the Year competition, the pre-eminent program honoring outstanding owners of fast-growing companies, announced dates <br>
-<font size="-1">
-<b>Tue 19 May 13:02</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Business Wire</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=BW0087-19980519&qt=Hawaii&col=NX&nh=50">XYPOINT to Provide Wireless E9-1-1 to PrimeCo</a></b><br>
-SEATTLE - XYPOINT Corp. has signed a three-year contract with PrimeCo Personal Communications LP to provide wireless enhanced 9-1-1 service that will enable the public safety ... <br>
-<font size="-1">
-<b>Tue 19 May  9:07</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Business Wire</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=BW0085-19980519&qt=Hawaii&col=NX&nh=50">Digital Island Appoints Director of Alliances and Business Development to Spearhead Global IP</a></b><br>
-HONOLULU -  Eilish McCaffrey Brings Extensive Experience in Alliance Development, Electronic Commerce and Enterprise Solutions Digital Island, the first network environment for the ... <br>
-<font size="-1">
-<b>Tue 19 May  9:06</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Business Wire</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=a2761reuff-19980518&qt=Hawaii&col=NX&nh=50">Citizens to spin off telecom unit from utility</a></b><br>
-STAMFORD, Conn. - Citizens Utilities Co. on Monday said its board approved the spin-off of the company's telecommunications businesses, in a move that will create two separately ... <br>
-<font size="-1">
-<b>Mon 18 May 19:28</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Reuters News Service</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=PR8996-19980518&qt=Hawaii&col=NX&nh=50">Norwegian Cruise Line To Build Four New, 2,000-Passenger Ships</a></b><br>
-MIAMI - Norwegian Cruise Line today unveiled plans for an aggressive, billion dollar new build program to add four ships to its current 10-ship fleet. NCL has signed a letter of ... <br>
-<font size="-1">
-<b>Mon 18 May 14:22</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>PR Newswire</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=PR8837-19980518&qt=Hawaii&col=NX&nh=50">Northwest Airlines Expands Web Site to Meet Needs of Leisure Traveler</a></b><br>
-MINNEAPOLIS - Northwest Airlines has redesigned the vacation package section of its web site to make it easier to navigate, and to plan a vacation through the airlines' private label ... <br>
-<font size="-1">
-<b>Mon 18 May 12:38</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>PR Newswire</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=PR8721-19980518&qt=Hawaii&col=NX&nh=50">ThinkQuest Jr. Recognizes 28 Grade-School Teams for Web Excellence</a></b><br>
-ARMONK, N.Y. - In a live CU-SeeMe Web broadcast at noon EST Friday, ThinkQuest Jr. selected 28 winning teams from nearly 300 entries in its first annual site-building contest for 4th ... <br>
-<font size="-1">
-<b>Mon 18 May 11:12</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>PR Newswire</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=BW1304-19980518&qt=Hawaii&col=NX&nh=50">ThinkQuest Jr. Recognizes 28 Grade-school Teams for Web Excellence $500,000 Awarded Live On</a></b><br>
-ARMONK, N.Y. - In a live CU-SeeMe Web broadcast at noon EST Friday, ThinkQuest Jr. selected 28 winning teams from nearly 300 entries in its first annual site-building contest for 4th ... <br>
-<font size="-1">
-<b>Mon 18 May 11:02</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Business Wire</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=PR8472-19980518&qt=Hawaii&col=NX&nh=50">Travel Internet Site for Airline Employees Takes Flight Perx.com Offers 50% Off Over 700</a></b><br>
-AUSTIN, Texas - Grand Adventures Tour and Travel Publishing Corp. today announced the launch of its interactive Web site at http://perx.com, which features all of its resort and ... <br>
-<font size="-1">
-<b>Mon 18 May  8:39</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>PR Newswire</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=BW1125-19980518&qt=Hawaii&col=NX&nh=50">Space Telescope Science Institute Selects Objectivity/DB for COMPASS Celestial Mapping Project</a></b><br>
-MOUNTAIN VIEW, Calif. - Objectivity, Inc., the leading provider of distributed, scalable object databases, today announced that Objectivity/DB has been deployed in the COMPASS project ... <br>
-<font size="-1">
-<b>Mon 18 May  8:16</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Business Wire</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=a0258LBY907reulb-19980517&qt=Hawaii&col=NX&nh=50">Marcos children ``rise from ashes'' to win election</a></b><br>
-By Roli Ng MANILA, May 17 - Former Philippine first lady Imelda Marcos on Sunday said her family had risen from the ashes with the landslide victories by two of her children in the ... <br>
-<font size="-1">
-<b>Sun 17 May  4:49</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Reuters News Service</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=BW1420-19980515&qt=Hawaii&col=NX&nh=50">Turner Classic Movies To Honor Frank Sinatra With Two-Part, 48-Hour Tribute, Sunday, May 17</a></b><br>
-ATLANTA -  FROM HERE TO ETERNITY, ON THE TOWN, OCEAN'S ELEVEN, ANCHOR'S AWEIGH Among the Titles The Turner Classic Movies cable network will pay tribute to the late Frank Sinatra, ... <br>
-<font size="-1">
-<b>Fri 15 May 16:37</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Business Wire</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=BW1263-19980515&qt=Hawaii&col=NX&nh=50">Hudson General Corp. Declares Dividend</a></b><br>
-GREAT NECK, N.Y. - Hudson General Corp. announced today that at a meeting of its Board of Directors held on May 15, 1998, a regular semi-annual dividend of $.50 per share of common ... <br>
-<font size="-1">
-<b>Fri 15 May 12:23</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Business Wire</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=BW1195-19980515&qt=Hawaii&col=NX&nh=50">Medical Supersite Adds Multi-Specialty Content with Three New Journals</a></b><br>
-NEW YORK - Medscape, Inc.  http://www.medscape.com , the leading professional medical supersite, is pleased to welcome three new journals to its growing roster of top-tier online ... <br>
-<font size="-1">
-<b>Fri 15 May 10:45</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Business Wire</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=BW0025-19980515&qt=Hawaii&col=NX&nh=50">Growing Popularity of Point-of-Sale Usage Proved in First Quarter of 1998</a></b><br>
-SAN DIEGO - Star System Inc. point-of-sale transactions continue to rise, while automated teller machine transactions hold strong during the first quarter of 1998. The point-of-sale ... <br>
-<font size="-1">
-<b>Fri 15 May  9:00</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Business Wire</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=a0705LBY650reulb-19980515&qt=Hawaii&col=NX&nh=50">The movies pulled Sinatra back from brink</a></b><br>
-By Bob Tourtellotte LOS ANGELES, May 15 - When all else was failing around him -- his voice, his career, his marriage -- it was a single Hollywood movie that brought Frank Sinatra ... <br>
-<font size="-1">
-<b>Fri 15 May  6:12</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Reuters News Service</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=a3080LBY271reulb-19980514&qt=Hawaii&col=NX&nh=50">U.S. government, firms pull staff from Jakarta</a></b><br>
-By Jonathan Wright WASHINGTON, May 14 - The U.S. government and some companies decided on Thursday to evacuate some staff and dependents from the Indonesian capital of Jakarta, scene ... <br>
-<font size="-1">
-<b>Fri 15 May  1:01</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Reuters News Service</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=a2473LBY130reulb-19980514&qt=Hawaii&col=NX&nh=50">U.S. evacuates staff from Indonesia</a></b><br>
-By Jonathan Wright WASHINGTON - The United States decided Thursday to evacuate non-essential U.S. embassy staff from Indonesia and to put off a visit by a top military team. A ... <br>
-<font size="-1">
-<b>Thu 14 May 18:46</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Reuters News Service</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=a2290LBY074reulb-19980514&qt=Hawaii&col=NX&nh=50">U.S. puts off military visit to Indonesia</a></b><br>
-By Jim Wolf WASHINGTON, May 14 - The Clinton administration on Thursday put off a visit to Indonesia by a top military team, citing the ``dicey'' situation in Jakarta and uncertainty ... <br>
-<font size="-1">
-<b>Thu 14 May 14:47</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Reuters News Service</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=a2069reuff-19980514&qt=Hawaii&col=NX&nh=50">Americans to travel in record numbers this summer</a></b><br>
-By Jonathan Oatis NEW YORK - Americans will travel in record numbers this summer, encouraged by a strong economy, surging financial markets and low gasoline prices, predicts a survey ... <br>
-<font size="-1">
-<b>Thu 14 May 14:36</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Reuters News Service</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=a1538LBY846reulb-19980514&qt=Hawaii&col=NX&nh=50">U.S. postpones military visit to Indonesia</a></b><br>
-By Jim Wolf WASHINGTON - The Clinton administration Thursday put off a visit to Indonesia by a top military team, citing the ''dicey'' situation in Jakarta and uncertainty about which ... <br>
-<font size="-1">
-<b>Thu 14 May 14:16</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Reuters News Service</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=a2137LBY875reulb-19980513&qt=Hawaii&col=NX&nh=50">Trinidad beauty's triumph is victory for all - govt</a></b><br>
-PORT OF SPAIN, Trinidad and Tobago, May 13 - Residents of Trinidad on Wednesday celebrated the crowning of Wendy Fitzwilliam as Miss Universe 1998 and the government declared her ... <br>
-<font size="-1">
-<b>Wed 13 May 13:44</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Reuters News Service</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=a2846reuff-19980512&qt=Hawaii&col=NX&nh=50">Guatemala sues tobacco companies in U.S. court</a></b><br>
-NEW YORK - Guatemala's attorney general sued several U.S. tobacco companies Tuesday seeking to recover costs of treating smoking-related illnesses in that country, attorneys said. The ... <br>
-<font size="-1">
-<b>Tue 12 May 19:40</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Reuters News Service</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=a2446LBY855reulb-19980511&qt=Hawaii&col=NX&nh=50">Two Marcos children in the lead in Philippine poll</a></b><br>
-MANILA, May 11 - The family of late Philippine dictator Ferdinand Marcos, disgraced after he was ousted in a 1986 popular revolt, may be on the road to a political comeback, initial ... <br>
-<font size="-1">
-<b>Mon 11 May 17:12</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Reuters News Service</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-<b><a href="/Content?arn=a2896rontt-19980506&qt=Hawaii&col=NX&nh=50">Gamma-ray burst came from big explosion-NASA</a></b><br>
-By Maggie Fox, Health and Science Correspondent WASHINGTON - A burst of gamma rays from deep in space probably came from the biggest explosion ever seen, astronomers said Wednesday. ... <br>
-<font size="-1">
-<b>Thu  7 May  6:28</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-<b>Reuters News Service</b> &nbsp; &nbsp; &nbsp; &nbsp; 
-</font>
-<p>
-
-
-
-
-<b>Articles</b>  1  -  50  of  65
-<p> 
-<b><font size="-1">
-<a href="/Titles?qt=Hawaii&col=NX&sv=IS&lk=lcd&rf=0&ud4=1&nh=20">Hide Summaries</a>
-
-
-</font></b>
- 
-&nbsp;&nbsp;
-
-&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/Titles?qt=Hawaii&col=NX&st=50&nh=50">next&nbsp;50</a>
-
-<p>
-
-
+<tr><td align=center><hr><font face="Arial,Helvetica"><b>Results</b></font><hr></td></tr><tr><td valign=top><b>Articles</b> 1 - 25 of 66<p>
+<b><a href="/Titles?nh=20&st=0&qt=Hawaii&rf=0&col=NX&ud4=1"><font size="-1">Hide summaries</font></a></b>
+&nbsp;|&nbsp; <b><a href="/Titles?nh=25&st=25&qt=Hawaii&rf=0&col=NX"><font size="-1">next 25</font></a></b>
+<br> 
 </td></tr>
-<tr><td>&nbsp;</td></tr>
+</table>
 
-<tr><td  align=center>
-<hr>
-<font face="Arial,Helvetica" ><b>Search</b></font>
-<hr>
-</td></tr><tr><td valign=top>
-You searched for &nbsp;<b>Hawaii</b>
+<p><b><a href="/Content?arn=BW0006-19980820&qt=Hawaii&sv=IS&lk=&col=NX&kt=A&ak=news1486">Sale of West Oahu Resort Offers Economic Upswing for Hawaii; Revised Master Plan Creates</a></b>
+<br>KAPOLEI, Hawaii - Ko Olina Partners, LLC, the manager of a group of affiliated LLCs, announced today they purchased the remaining 344 acres of Ko Olina Resort properties owned by West Beach Estates,<br>
+<font size="-1"><b>
+Thu 20 Aug  5:02
+&nbsp; &nbsp; &nbsp; &nbsp; Business Wire&nbsp;
+</b></font>
+<p><b><a href="/Content?arn=PR9495-19980820&qt=Hawaii&sv=IS&lk=&col=NX&kt=A&ak=news1486">First Hawaiian Declares Quarterly Dividend</a></b>
+<br>HONOLULU - The board of directors of First Hawaiian, Inc. today declared a quarterly dividend of 31 cents per share, payable September 15, 1998 to stockholders of record September 1, 1998.  This<br>
+<font size="-1"><b>
+Thu 20 Aug 19:07
+&nbsp; &nbsp; &nbsp; &nbsp; PR Newswire&nbsp;
+</b></font>
+<p><b><a href="/Content?arn=BW1242-19980820&qt=Hawaii&sv=IS&lk=&col=NX&kt=A&ak=news1486">Ginsite Materials, Inc. Signs Distributor Agreement Worth Over $1 Million in Next 12 Months</a></b>
+<br>FORT LAUDERDALE, Fla. - Ginsite Materials, Inc. of Ft. Lauderdale, finalized a distribution agreement worth over $1 million in the next 12 months with Advanced Construction Technologies. This marks<br>
+<font size="-1"><b>
+Thu 20 Aug 13:29
+&nbsp; &nbsp; &nbsp; &nbsp; Business Wire&nbsp;
+</b></font>
+<p><b><a href="/Content?arn=BW1257-19980820&qt=Hawaii&sv=IS&lk=&col=NX&kt=A&ak=news1486">Faygo Says "Aloha" to New Ohana Flavors</a></b>
+<br>FORT LAUDERDALE, Fla. - Two new fun and fruity flavors, Kiwi Strawberry and Lemon Iced Tea, are the latest additions to Ohana, Faygo Beverage's unique, non-carbonated beverage line. Consumer demand<br>
+<font size="-1"><b>
+Thu 20 Aug 14:07
+&nbsp; &nbsp; &nbsp; &nbsp; Business Wire&nbsp;
+</b></font>
+<p><b><a href="/Content?arn=a1717reuff-19980820&qt=Hawaii&sv=IS&lk=&col=NX&kt=A&ak=news1486">Eagle Hardware reports record earnings</a></b>
+<br>RENTON, Wash. - Eagle Hardware & Garden Inc. Thursday reported record earnings in the latest quarter, and announced plans to open up to 18 new stores by the end of 1999. The Renton, Wash.-based<br>
+<font size="-1"><b>
+Thu 20 Aug 12:14
+&nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;
+</b></font>
+<p><b><a href="/Content?arn=BW1021-19980820&qt=Hawaii&sv=IS&lk=&col=NX&kt=A&ak=news1486">Eagle Hardware & Garden Reports Record Sales and Earnings for Fiscal 1998 Second Quarter;</a></b>
+<br>RENTON, Wash. - Eagle Hardware & Garden, Inc. today reported record sales and earnings for its second fiscal quarter ended July 31, 1998. For the quarter, sales increased 11% to $308.0 million from<br>
+<font size="-1"><b>
+Thu 20 Aug  7:31
+&nbsp; &nbsp; &nbsp; &nbsp; Business Wire&nbsp;
+</b></font>
+<p><b><a href="/Content?arn=BW0035-19980820&qt=Hawaii&sv=IS&lk=&col=NX&kt=A&ak=news1486">Children's Comprehensive Services Announces Fourth Quarter Pro Forma Diluted Earnings of $0.22</a></b>
+<br>NASHVILLE, Tenn. - William J Ballard, Chairman and Chief Executive Officer of Children's Comprehensive Services, Inc. today announced financial results for the fourth quarter and year ended June 30,<br>
+<font size="-1"><b>
+Thu 20 Aug  8:03
+&nbsp; &nbsp; &nbsp; &nbsp; Business Wire&nbsp;
+</b></font>
+<p><b><a href="/Content?arn=PR8093-19980819&qt=Hawaii&sv=IS&lk=&col=NX&kt=A&ak=news1486">TransData Develops First Commercial-Industrial Electricity Meter With National Two-Way</a></b>
+<br>RICHARDSON, Texas - TransData announces that its MARK-V AMR DATA-PRO platform is the first electricity meter to integrate national, two-way wireless Automatic Meter Reading technology completely<br>
+<font size="-1"><b>
+Wed 19 Aug  1:19
+&nbsp; &nbsp; &nbsp; &nbsp; PR Newswire&nbsp;
+</b></font>
+<p><b><a href="/Content?arn=PR8099-19980819&qt=Hawaii&sv=IS&lk=&col=NX&kt=A&ak=news1486">[stk] [in] Ent Rea Mlm [su] to Business and Entertainment Editors:</a></b>
+<br>LONDON - Tower Records -- the world's largest independent music retailer -- are planning to turn the act of surfing the 'net into a hurricane of excitement, by placing their stores in the homes of<br>
+<font size="-1"><b>
+Wed 19 Aug  3:18
+&nbsp; &nbsp; &nbsp; &nbsp; PR Newswire&nbsp;
+</b></font>
+<p><b><a href="/Content?arn=a0608LBY905reulb-19980819&qt=Hawaii&sv=IS&lk=&col=NX&kt=A&ak=news1486">Manila clears return of Marcos man from exile</a></b>
+<br>MANILA, Aug 19 - Philippine President Joseph Estrada said on Wednesday he had approved the return from exile of a former armed forces chief linked to the 1983 murder of opposition leader Benigno<br>
+<font size="-1"><b>
+Wed 19 Aug  5:49
+&nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;
+</b></font>
+<p><b><a href="/Content?arn=BW1135-19980819&qt=Hawaii&sv=IS&lk=&col=NX&kt=A&ak=news1486">Hawaiian Natural Water Company Appoints Keijiro Sorimachi to the Board of Directors</a></b>
+<br>HONOLULU - Hawaiian Natural Water Company, Inc. announced today that Keijiro Sorimachi has joined the Company's board of directors, bringing 12 years of international marketing expertise in the<br>
+<font size="-1"><b>
+Wed 19 Aug  9:09
+&nbsp; &nbsp; &nbsp; &nbsp; Business Wire&nbsp;
+</b></font>
+<p><b><a href="/Content?arn=PR8074-19980818&qt=Hawaii&sv=IS&lk=&col=NX&kt=A&ak=news1486">Elegant Illusions, Inc. Signs Lease for New Store in Lahaina, Hawaii</a></b>
+<br>PACIFIC GROVE, Calif. - Elegant Illusions, Inc. announced today that the Company has signed a lease for a new Elegant Illusions Created Gem and Copy Jewelry store to be located at Lahaina Harbor on<br>
+<font size="-1"><b>
+Tue 18 Aug 21:25
+&nbsp; &nbsp; &nbsp; &nbsp; PR Newswire&nbsp;
+</b></font>
+<p><b><a href="/Content?arn=BW1005-19980818&qt=Hawaii&sv=IS&lk=&col=NX&kt=A&ak=news1486">IEEE Information Theory Society to Honor ALOHA Networks Founder</a></b>
+<br>SAN FRANCISCO - The IEEE Information Theory Society last night presented Dr. Norman Abramson, founder and Chief Technical Officer of ALOHA Networks, Inc. with a Golden Jubilee Award for<br>
+<font size="-1"><b>
+Tue 18 Aug  5:59
+&nbsp; &nbsp; &nbsp; &nbsp; Business Wire&nbsp;
+</b></font>
+<p><b><a href="/Content?arn=a2998LBY830reulb-19980817&qt=Hawaii&sv=IS&lk=&col=NX&kt=A&ak=news1486">Gore says proud of Clinton for admitting mistake</a></b>
+<br>WASHINGTON - Vice President Al Gore said on Monday he was ``proud'' of President Clinton for having admitted his mistake in carrying on a sexual relationship with former White House intern Monica<br>
+<font size="-1"><b>
+Tue 18 Aug  1:35
+&nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;
+</b></font>
+<p><b><a href="/Content?arn=a0133LBY849reulb-19980818&qt=Hawaii&sv=IS&lk=&col=NX&kt=A&ak=news1486">Congress reacts to Clinton speech on party lines</a></b>
+<br>By Jonathan Wright WASHINGTON - Prominent Republicans reacted skeptically to President Clinton's televised confession Monday that he had had sex with an intern, and some bristled at his attack on<br>
+<font size="-1"><b>
+Tue 18 Aug  1:35
+&nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;
+</b></font>
+<p><b><a href="/Content?arn=BW1158-19980817&qt=Hawaii&sv=IS&lk=&col=NX&kt=A&ak=news1486">Elegant Illusions, Inc. Reports 2Q Earnings, 1998</a></b>
+<br>PACIFIC GROVE, Calif. - Elegant Illusions Inc., reports second quarter earnings, period ending June 30, 1998, of $91,726 on revenues of $2,232,328 compared to income of $114,957 on revenues of<br>
+<font size="-1"><b>
+Tue 18 Aug 21:30
+&nbsp; &nbsp; &nbsp; &nbsp; PR Newswire&nbsp;
+</b></font>
+<p><b><a href="/Content?arn=a1830LBY462reulb-19980818&qt=Hawaii&sv=IS&lk=&col=NX&kt=A&ak=news1486">N. Korea may be restarting nuclear program - U.S.</a></b>
+<br>By Charles Aldinger WASHINGTON, Aug 18 - The United States is concerned about what could be an underground nuclear complex being constructed in North Korea and will raise the issue at a meeting in<br>
+<font size="-1"><b>
+Tue 18 Aug 13:29
+&nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;
+</b></font>
+<p><b><a href="/Content?arn=a0515LBY982reulb-19980818&qt=Hawaii&sv=IS&lk=&col=NX&kt=A&ak=news1486">U.S. tells Seoul of underground plant in N.Korea</a></b>
+<br>By Bill Tarrant SEOUL, Aug 18 - The United States has shown South Korea spy satellite photos of a massive North Korean underground complex that could be used as the heart of a nuclear weapons<br>
+<font size="-1"><b>
+Tue 18 Aug  4:49
+&nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;
+</b></font>
+<p><b><a href="/Content?arn=a0335LBY901reulb-19980818&qt=Hawaii&sv=IS&lk=&col=NX&kt=A&ak=news1486">Republicans skeptical of Clinton speech</a></b>
+<br>By Jonathan Wright WASHINGTON - Former Vice President Dan Quayle called Tuesday for President Clinton to resign as several prominent Republicans reacted negatively to Clinton's televised admission<br>
+<font size="-1"><b>
+Tue 18 Aug  3:29
+&nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;
+</b></font>
+<p><b><a href="/Content?arn=a0405LBY937reulb-19980818&qt=Hawaii&sv=IS&lk=&col=NX&kt=A&ak=news1486">Quayle says Clinton should resign</a></b>
+<br>By Jonathan Wright WASHINGTON - Former Vice President Dan Quayle called Tuesday for President Clinton to resign as prominent Republicans expressed disappointment about Clinton's televised admission<br>
+<font size="-1"><b>
+Tue 18 Aug  7:41
+&nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;
+</b></font>
+<p><b><a href="/Content?arn=a0228LBY865reulb-19980818&qt=Hawaii&sv=IS&lk=&col=NX&kt=A&ak=news1486">Clinton admits Lewinsky liaison, attacks Starr</a></b>
+<br>By Steve Holland WASHINGTON - President Clinton, in an unprecedented televised speech aimed at saving his presidency, admitted Monday that he had a sexual liaison with Monica Lewinsky and misled the<br>
+<font size="-1"><b>
+Tue 18 Aug  2:35
+&nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;
+</b></font>
+<p><b><a href="/Content?arn=a0049LBY834reulb-19980818&qt=Hawaii&sv=IS&lk=&col=NX&kt=A&ak=news1486">Clinton admits liaison, deception, attacks Starr</a></b>
+<br>By Steve Holland WASHINGTON - President Clinton, in an unprecedented televised speech aimed at saving his presidency, admitted  Monday that he had a sexual liaison with Monica Lewinsky and misled<br>
+<font size="-1"><b>
+Tue 18 Aug  1:34
+&nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;
+</b></font>
+<p><b><a href="/Content?arn=PR7915-19980818&qt=Hawaii&sv=IS&lk=&col=NX&kt=A&ak=news1486">Longs Drugs Earnings Up 21%</a></b>
+<br>WALNUT CREEK, Calif. - Longs Drug Stores Corporation today reported that sales for the second quarter ended July 30, 1998 rose 9.5% to $787 million from $718 million the same period last year. <br>
+<font size="-1"><b>
+Tue 18 Aug 16:19
+&nbsp; &nbsp; &nbsp; &nbsp; PR Newswire&nbsp;
+</b></font>
+<p><b><a href="/Content?arn=a0162LBY032reulb-19980817&qt=Hawaii&sv=IS&lk=&col=NX&kt=A&ak=news1486">Japan travel firms hit by weak yen and economy</a></b>
+<br>By Ritsuko Ando TOKYO, Aug 17 - Although Japan is at the height of summer holidays, the nation's travel industry is enjoying little of it as a weaker yen and prolonged economic slump are forcing<br>
+<font size="-1"><b>
+Mon 17 Aug  3:12
+&nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;
+</b></font>
+<p><b><a href="/Content?arn=a2586roptt-19980817&qt=Hawaii&sv=IS&lk=&col=NX&kt=A&ak=news1486">Cabinet members out of sight as Clinton testifies</a></b>
+<br>WASHINGTON - As U.S. President Bill Clinton went through the painful experience of testifying to a grand jury about his relationship with intern Monica Lewinsky Monday, where were the members of his<br>
+<font size="-1"><b>
+Mon 17 Aug 21:56
+&nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;
+</b></font>
+<p>
+<font color="FFFFFF" size=0>xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx</font><br>
+
+<b>Articles</b> 1 - 25 of 66<p>
+<b><a href="/Titles?nh=20&st=0&qt=Hawaii&rf=0&col=NX&ud4=1"><font size="-1">Hide summaries</font></a></b>
+&nbsp;|&nbsp; <b><a href="/Titles?nh=25&st=25&qt=Hawaii&rf=0&col=NX"><font size="-1">next 25</font></a></b>
+<br> 
 <p>
 
-<table width="100%" border=0 cellpadding=3 cellspacing=0><tr><td>
-<FORM name="WW_search" method="get" action="/Titles">
-<INPUT NAME="qt" size=50 VALUE="" MAXLENGTH=511>&nbsp;<input type=submit name=submit value="seek"><br>
-<input type=radio name="col" value="NX,rf_i500sRD,kt_A,ak_news1486" CHECKED>News&nbsp;wires&nbsp; &nbsp;
-<input type=radio name="col" value="D1,rf_i500sRD,kt_A,ak_news1486" >National&nbsp;news&nbsp; &nbsp;
-<br>
-<input type=radio name="col" value="WW" >The&nbsp;Web&nbsp; &nbsp;
-<input type=radio name="col" value="SG,cat_1486" >News&nbsp;Web&nbsp;sites&nbsp; &nbsp;
-
-
-<INPUT TYPE=hidden NAME="sv" VALUE="IS">
-<INPUT TYPE=hidden NAME="lk" VALUE="lcd">
-<INPUT TYPE=hidden NAME="nh" VALUE="50">
 
 
 
@@ -568,118 +275,134 @@ You searched for &nbsp;<b>Hawaii</b>
 
 
 
-</FORM>
-<font size=-1>Click for <a href="/Help?pg=HomeHelp.html&nh=50">tips</a> or <a href="/find?pg=advanced_www.html&ud9=advanced_www&nh=50">Advanced search</a></font>
+
+<table width=100% cellpadding=4 cellspacing=0 border=0>
+<tr><td align=center colspan=3><hr><font face="Arial,Helvetica"><b>Search more</b></font><hr></td></tr><tr><td valign=top colspan=3>
+
+You searched for <b>Hawaii</b><p>
+<form action="/Titles" method="get" name="News_dir_search">
+<table width="100%" cellspacing=0 cellpadding=3 border=0>
+<tr><td colspan=5>
+<input type="text" name="qt" value="" size="45" MAXLENGTH=511>
+</td></tr>
+
+<tr>
+<td><input type=radio name="col" value="NX,rf_i500sRD,kt_A,ak_news1486" 
+
+CHECKED></td><td><font size="-1">News&nbsp;wires</font></td>
+
+<td><input type=radio NAME="col" VALUE="NE,rf_i500sRD,kt=A,ak_news1486"
+
+></td><td><font size="-1">National&nbsp;news</font>&nbsp;</td>
+
+<td rowspan=2><input type=submit VALUE=" seek "></td></tr>
+<tr>
+<td><input type=radio name="col" VALUE="WW"
+
+></td><td><font size="-1">The&nbsp;Web</font></td>
+<td><INPUT TYPE=radio NAME="col" VALUE="SG,cat_1486"
+
+></td><td><font size="-1">News&nbsp;Web&nbsp;sites</font>
 </td>
 </tr>
-<tr><td bgcolor="#FFFFcc">
-<font size=-1><font size=-1>Phrase searching is Infoseek's specialty. </font><br>
-</td></tr></table>
-
-
+<tr><td colspan=5>
+<font size="-1">Click for <a href="/Help?pg=HomeHelp.html&nh=25">tips</a> or <a href="/find?pg=advanced_www.html&nh=25&ud9=advanced_www">Advanced search</a></font><br>
 </td></tr>
-<tr><td>&nbsp;</td></tr>
+</select>
+<INPUT TYPE=hidden NAME="sv" VALUE="IS">
+<INPUT TYPE=hidden NAME="lk" VALUE="lcd">
+<INPUT TYPE=hidden NAME="nh" VALUE="25">
 </table>
-</td></tr></table>
-</center>
+</form>
 
+</td></tr></table>
+</td></tr></table>
+<p> 
+        <center>
+        <table border=0 width=600 cellpadding=1
+
+	> 
+        <tr><td>
+        <table border=0 width=598 cellpadding=5 cellspacing=0>
+        <tr>
+
+        <td
+
+        width=598 align=center colspan=4>
+
+
+<hr noshade size=1>
+<font face="Arial,Helvetica" 	>
+	<b>Infoseek channels</b>
+<hr noshade size=1>
+</td></tr>
+	<tr><td 
+>      <li><a href="/Topic?tid=1803&nh=25">Automotive</a></li>
+      <li><a href="/Topic?tid=420&nh=25">Business</a></li>
+      <li><a href="/Topic?tid=421&nh=25">Careers</a></li>
+      <li><a href="/Topic?tid=15067&nh=25">Communications</a></li>
+      <li><a href="/Topic?tid=501&nh=25">Computer</a></li>
+	</td><td 
+	>
+
+      <li><a href="/Topic/Education?tid=670&svx=edu_main&nh=25">Education</a></li>
+      <li><a href="/Topic?tid=10144&nh=25">Entertainment</a></li>
+      <li><a href="/Topic?tid=13414&nh=25">Good&nbsp;Life</a></li>
+      <li><a href="/Topic?tid=1207&nh=25">Health</a></li>
+        </td><td
+        >
+      <li><a href="/Topic?tid=502&nh=25">Internet</a></li>
+      <li><a href="/Topic?tid=12663&nh=25">Kids&nbsp;&&nbsp;Family</a></li>
+      <li><a href="/Topic?tid=1486&nh=25">News</a></li>
+      <li><a href="/Topic?tid=459&nh=25">Personal&nbsp;Finance</a></li>
+        </td><td
+	>
+      <li><a href="/Topic?tid=433&nh=25">Real&nbsp;Estate</a></li>
+      <li><a href="/Topic?tid=2245&nh=25">Shopping</a></li>
+      <li><a href="/Topic?tid=1653&nh=25">Sports</a></li>
+      <li><a href="/Topic?tid=1753&nh=25">Travel</a></li>
+      <li><a href="/Topic?tid=14610&nh=25">Women's</a></li>
+
+    </td>
+  </tr>
+
+<tr><td  width=598 align=center colspan=4><hr noshade size=1><a href="/Home?pg=Home.html&nh=25">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+
+<a href="http://feedback.infoseek.com">Feedback</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="/find?pg=advanced_www.html&ud9=advanced_www.html&nh=25">Advanced&nbsp;search</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+
+<a href="/webkit?pg=webkit.html&nh=25">Put&nbsp;Infoseek&nbsp;on&nbsp;your&nbsp;site</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="/AddUrl?pg=DCaddurl.html&nh=25">Add&nbsp;URL</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="/Help?pg=Contents.html&nh=25">Help</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="/doc?pg=international.html&nh=25">Worldwide&nbsp;Infoseek</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+
+<a href="http://info.infoseek.com/">About&nbsp;Infoseek</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="http://info.infoseek.com/doc/sponsors.html">Advertise&nbsp;on&nbsp;Infoseek</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="http://info.infoseek.com/doc/jobs.html">Jobs&nbsp;&#064;&nbsp;Infoseek</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="http://software.infoseek.com/">Intranet&nbsp;software</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="/redirect?sv=&lk=&ak=PopleL&rl=footer&rd=http://www.peoplelink.com/v1/down_infoseek">Infoseek&nbsp;Instant&nbsp;Messaging</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="/redirect?sv=&lk=&ak=WBS&rl=LINK-SFOOTER-standard_footer-chat&rd=http://pages.infoseek.com/webchat3.so?noreg_entry.x=1">Chat</a>
+
+	</td></tr></table>
+	</td></tr></table>
+
+
+	<hr size=1 noshade width="60%">
+
+
+	<font size="-1">Want to be able to <b>search your own site?</b> (<a href="/redirect?sv=IS&lk=&ak=ULTRA&rl=LINK-results_footer-Ultraseek_jump_page&rd=http://software.infoseek.com/ultrajump.htm">click here</a>)<br></font>
+
+<font size="-1">
 <center>
+<a href="/doc?pg=copyright.html&nh=25">Copyright</a> &#169; 1994-98
+<a href="http://info.infoseek.com/">Infoseek Corporation</a>.  All rights reserved.&nbsp;<br>
+<a href="/doc?pg=disclaimer.html&nh=25">Disclaimer</a> &nbsp;&nbsp;
 
-
-<table border=0 width=600 cellpadding=1 ><tr><td>
-<table border=0 width=598 cellpadding=5 cellspacing=0>
-  <tr>
-    <td  width=598 align=center colspan=4>
-	 <hr noshade size=1>
-         <font face="Arial,Helvetica" ><b> Infoseek channels</b></font>
-	 <hr noshade size=1>
-    </td>
-  </tr>
-
-<tr><td >
-      <li><a href="/Topic?tid=1803&nh=50">Automotive</a></li>
-      <li><a href="/Topic?tid=420&nh=50">Business</a></li>
-      <li><a href="/Topic?tid=421&nh=50">Careers</a></li>
-      <li><a href="/Topic?tid=501&nh=50">Computer</a></li>
-    </td>
-    <td >
-      <li><a href="/Topic/Education?pg=education.html&svx=edu_main&nh=50">Education</a></li>
-      <li><a href="/Topic?tid=10144&nh=50">Entertainment</a></li>
-      <li><a href="/Topic?tid=13414&nh=50">Good&nbsp;Life</a></li>
-      <li><a href="/Topic?tid=1207&nh=50">Health</a></li>
-    </td>
-    <td >    
-      <li><a href="/Topic?tid=502&nh=50">Internet</a></li>
-      <li><a href="/Topic?tid=12663&nh=50">Kids&nbsp;&&nbsp;Family</a></li>
-      <li><a href="/Topic?tid=1486&nh=50">News</a></li>
-      <li><a href="/Topic?tid=459&nh=50">Personal&nbsp;Finance</a></li>
-    </td>
-    <td >    
-      <li><a href="/Topic?tid=433&nh=50">Real&nbsp;Estate</a></li>
-      <li><a href="/Topic?tid=2245&nh=50">Shopping</a></li>
-      <li><a href="/Topic?tid=1653&nh=50">Sports</a></li>
-      <li><a href="/Topic?tid=1753&nh=50">Travel</a></li>
-      <li><a href="/Topic?tid=14610&nh=50">Women's</a></li>
-    </td>
-  </tr>
-
-<tr><td colspan=5><hr noshade size=1></td></tr>
-
-
-
-
-
-  <tr>
-    <td  width=598 align=center colspan=5>
-
-      <a href="/Home?pg=Home.html&nh=50">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-      
-   
-      <a href="http://feedback.infoseek.com">Feedback</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-
-
-      <a href="/webkit?pg=webkit.html&nh=50">Put Infoseek&nbsp;on&nbsp;your&nbsp;site</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-      <a href="/AddUrl?pg=DCaddurl.html&nh=50">Add&nbsp;URL</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-      <a href="/Help?pg=Contents.html&nh=50">Help</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-         <a href="/doc?pg=international.html&nh=50">Worldwide&nbsp;Infoseek</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-   
-      <a href="http://info.infoseek.com/">About&nbsp;Infoseek</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-      <a href="http://info.infoseek.com/doc/sponsors.html">Advertise&nbsp;on&nbsp;Infoseek</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-      <a href="http://info.infoseek.com/doc/jobs.html">Jobs&nbsp;&#064;&nbsp;Infoseek</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-      <a href="http://software.infoseek.com/">Intranet&nbsp;software</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-      <a href="/redirect?sv=IS&lk=lcd&ak=PopleL&rl=footer&rd=http://www.peoplelink.com/v1/down_infoseek">Infoseek&nbsp;Instant&nbsp;Messaging</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-	<a href="/redirect?sv=IS&lk=lcd&ak=WBS&rl=LINK-SFOOTER-standard_footer-chat&rd=http://pages.wbs.net/">Chat</a>
-    </td>
-</tr>
-    </td>
-  </tr>
-    </td>
-  </tr>
-</table>
-</td></tr></table>
-
-
-
-<hr size=1 noshade width="60%">
-      <font size="-1">
-      
-      <a href="/doc?pg=copyright.html&nh=50">Copyright</a> &#169; 1994-98
-      <a href="http://info.infoseek.com/">Infoseek Corporation</a>.  All rights reserved.&nbsp; (-1, E)<br>
-      Infoseek incorporates <a href="http://www.inxight.com/products/linguistx/overview.htm">LinguistX</a> technology from InXight.<br>
-      
-      <a href="/doc?pg=disclaimer.html&nh=50">Disclaimer</a>  &nbsp;&nbsp;<a href="http://info.infoseek.com/doc/Reference/Privacy.html">Privacy Policy</a>
+	<a href="http://info.infoseek.com/doc/Reference/Privacy.html">Privacy Policy</a>
 
 </center>
 </font>
-<!-- 
-exp: -800000000 
 
-
--->
-</body>
-</html>
-
-
-
-
-
+	</center>	
+	</body>
+	</html>

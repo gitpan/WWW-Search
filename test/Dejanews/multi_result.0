@@ -1,0 +1,1632 @@
+<html>
+<head>
+<title>Search Results</title>
+<meta name=keywords content="dejanews usenet newsgroup articles search query discussion">
+</head>
+
+<body bgcolor=#ffffff text=#000000 link=#0000ff vlink=#52188c alink=#cc0000>
+
+
+
+
+
+
+
+
+
+<a href="/nav_g.map"><img src="http://g.dejanews.com/gifs/nav_g3.gif" alt="Deja News Toolbar" width=640 height=50 usemap="#nav_g.map" ismap border=0></a><br>
+
+<font size=1>&nbsp;</font><br>
+
+<table width=640 cellspacing=0 cellpadding=0 border=0>
+    <tr>
+
+<td width=130 valign=top align=right nowrap>
+<font face="arial,helvetica" size=2><a href="http://www.dejanews.com/home_if.shtml">Interest Finder</a><br>
+<a href="http://www.dejanews.com/home_bg.shtml">Browse Groups</a></font><br>
+</td>
+
+        <td width=20>&nbsp;</td>
+
+        <td width=360 valign=top nowrap>
+
+        <table width=360 cellspacing=0 cellpadding=0 border=0>
+            <tr><font size="0"><form action="/dnquery.xp" method="get"></font>
+	        <td width=65 valign=top nowrap><font face="arial,helvetica" color="#ff6600" size=4><b>Search</b></font><br>&nbsp;</td>
+                <td width=295 align=left valign=top><input type="text" name="QRY" size="30" value="Perl and CPAN"><input type="submit" value="Find"><br>
+
+
+
+<font face="arial,helvetica" size=2>Find messages in the 
+<select name="DBS">
+        <option value=1 >complete
+        <option value=2 selected>standard
+        <option value=3 >adult
+        <option value=4 >jobs
+        <option value=5 >for sale
+        </select> archive</font>
+
+
+
+<input type="hidden" name="maxhits" value="100">
+<input type="hidden" name="format" value="delta">
+<input type="hidden" name="showsort" value="score">
+<input type="hidden" name="ST" value="PS">
+<input type="hidden" name="LNG" value="ALL"></td>
+<font size="0"></form></font></tr></table></td>
+<td width=130 align=right valign=top>
+
+ 
+
+</td>
+</tr></table>
+
+<map name="nav_g.map">
+    <area shape="rect" coords="5,0,110,50" href="http://www.dejanews.com/" alt="Home">
+    <area shape="rect" coords="150,0,435,25" href="http://www.dejanews.com/emarket" alt="About Deja News">
+    <area shape="rect" coords="150,30,250,50" href="http://www.dejanews.com/rg_enter.xp" alt="My Deja News">
+    <area shape="rect" coords="270,30,310,50" href="http://www.dejanews.com/post.xp" alt="Post">
+    <area shape="rect" coords="335,30,432,50" href="http://www.dejanews.com/home_ps.shtml" alt="Power Search">
+    <area shape="rect" coords="460,0,500,40" href="http://www.dejanews.com/" alt="Home">
+    <area shape="rect" coords="525,0,565,40" href="http://www.dejanews.com/" alt="Search">
+    <area shape="rect" coords="590,0,625,40" href="http://www.dejanews.com/help/help_index.shtml" alt="Help">
+    <area shape="default" nohref alt="">
+</map>
+
+
+
+<table border=0 cellpadding=0 cellspacing=0 width=640>
+<tr><td height=1><font size=0>&nbsp;</font></td></tr>
+<tr><td align=center>
+<table cellspacing=0 cellpadding=0 width=470 border=0><tr><td>
+<A HREF="http://gp1.dejanews.com/gtc?id=17555&tm=904238633.782270&site=dn&location=hitlist&keywords=perl%20cpan&cr=%7c%7c%7c%7c%7c%7c%7c%7c">
+<IMG ALIGN=MIDDLE HEIGHT=60 WIDTH=468 SRC="http://web2.dejanews.com/ads/45/2950030645-8318.gif" ALT="Get ServerProven!" border=1></A></td></tr><tr align=center><td><font size=-1><A HREF="http://gp1.dejanews.com/gtc?id=17555&tm=904238633.782270&site=dn&location=hitlist&keywords=perl%20cpan&cr=%7c%7c%7c%7c%7c%7c%7c%7c">
+Get ServerProven!</a></font></td></tr>
+</table>
+
+
+
+</td></tr>
+</table>
+
+
+
+<p>
+<table width=640 border=0 cellpadding=0 cellspacing=0><tr>
+<td bgcolor="#003399" height=5 colspan=2><spacer type=block height=5 width=0></td></tr>
+<tr valign=top><td><font color="#ff6600" face="arial,helvetica" size=4><b>Search Results</b></font></td>
+<td align=right><font face="arial,helvetica" size=-1><a href="http://www.dejanews.com/help/help_qsr.shtml">help</a></font></td></tr>
+</table>
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table cellspacing=0 width=640 cellpadding=0 border=0>
+    <tr valign=top>
+	<td><font face="arial,helvetica" size=2>view results in <a href="http://x4.dejanews.com/dnquery.xp?showsort=score&defaultOp=OR&QRY=Perl+and+CPAN&maxhits=100&ST=PS&&format=terse">tabular format</a></font>&nbsp;<img src="http://g.dejanews.com/gifs/new.gif" border=0 HEIGHT=20 WIDTH=37 align=abscenter></td>
+	<td width=45 rowspan=3>&nbsp;</td>
+	<td><font face="arial,helvetica" size=1>sort by:
+	    &nbsp;<font color="#999999">confidence</font>&nbsp; | &nbsp;<a href="http://x4.dejanews.com/dnquery.xp?showsort=score&format=delta&defaultOp=OR&QRY=Perl+and+CPAN&maxhits=100&ST=PS&&showsort=subject">subject</a>&nbsp; |
+	    &nbsp;<a href="http://x4.dejanews.com/dnquery.xp?showsort=score&format=delta&defaultOp=OR&QRY=Perl+and+CPAN&maxhits=100&ST=PS&&showsort=newsgroup">forum</a>&nbsp; | &nbsp;<a href="http://x4.dejanews.com/dnquery.xp?showsort=score&format=delta&defaultOp=OR&QRY=Perl+and+CPAN&maxhits=100&ST=PS&&showsort=date">date</a>&nbsp; |
+	    &nbsp;<a href="http://x4.dejanews.com/dnquery.xp?showsort=score&format=delta&defaultOp=OR&QRY=Perl+and+CPAN&maxhits=100&ST=PS&&showsort=author">author</a></font></td>
+    </tr>
+    <tr height=5><td>&nbsp;</td></tr>
+    <tr valign=top>
+	<td width=220>
+	
+	
+	
+		
+
+	
+	
+	
+	
+
+	
+	
+	
+	
+
+	<font face="arial,helvetica"><b>Forums related to</b></font>
+	<font face="arial,helvetica" color="#ff6600"><b>Perl and CPAN</b></font><b>:</b>
+	<font face="arial,helvetica" size=2></font>
+        <p>
+	<font face="arial,helvetica" size=2>
+	click on a forum to browse its topics<br>
+	<font face="arial,helvetica">
+	
+	
+	
+	<a href=http://x4.dejanews.com/dnquery.xp?search=word&defaultOp=and&query=%7eg%20(comp.lang.perl.misc)&ST=PS&IS=Perl%20and%20CPAN&svcclass=dncurrent&DBS=1&group=comp.lang.perl.misc&IS=Perl%20and%20CPAN&format=terse&IFP=904238633.1624047620>comp.lang.perl.misc</a><font size=3>&nbsp;</font><br>
+	
+	
+	
+	
+	
+	<a href=http://x4.dejanews.com/dnquery.xp?search=word&defaultOp=and&query=%7eg%20(comp.lang.perl.modules)&ST=PS&IS=Perl%20and%20CPAN&svcclass=dncurrent&DBS=1&group=comp.lang.perl.modules&IS=Perl%20and%20CPAN&format=terse&IFP=904238633.1624047620>comp.lang.perl.modules</a><font size=3>&nbsp;</font><br>
+	
+	
+	
+	
+	
+	<a href=http://x4.dejanews.com/dnquery.xp?search=word&defaultOp=and&query=%7eg%20(perl.porters-gw)&ST=PS&IS=Perl%20and%20CPAN&svcclass=dncurrent&DBS=1&group=perl.porters-gw&IS=Perl%20and%20CPAN&format=terse&IFP=904238633.1624047620>perl.porters-gw</a><font size=3>&nbsp;</font><br>
+	
+	
+	
+	</font>
+	</td>
+
+	<td width=390>
+	
+	<font face=arial,helvetica><b>Messages that contain your search</b></font>
+	<font face=arial,helvetica color=#ff6600><b>Perl and CPAN</b></font><b>:</b>
+        <br>
+	
+        <font face=arial,helvetica size=-1>messages 1-100 of about 19000 matches</font>
+        <p>
+
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=385202988.10&CONTEXT=904238633.1624047620&hitnum=0">LEO-Archiv: neu - pub/comp/programming/languages/script #10/18</font></a><br>
+	<font size=2>
+	<b>Forum</b>: muc.archive.update<br>
+	<b>Date</b>: 1998/08/27 <b>Author</b>: Link Everything Online
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=385271300&CONTEXT=904238633.1624047620&hitnum=1">Re: need and INI File parser in perl</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/27 <b>Author</b>: Mike Stok
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=385118988&CONTEXT=904238633.1624047620&hitnum=2">Re: Perl Cookbook, does anyone have it?</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/26 <b>Author</b>: brian d foy
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384508386&CONTEXT=904238633.1624047620&hitnum=3">[Perl] How to find the Perl FAQ</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.announce<br>
+	<b>Date</b>: 1998/08/25 <b>Author</b>: Tom Phoenix
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384557128&CONTEXT=904238633.1624047620&hitnum=4">Re: Perl documentation</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/25 <b>Author</b>: Tom Christiansen
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384641265&CONTEXT=904238633.1624047620&hitnum=5">help: cpan problems since new perl load</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/25 <b>Author</b>: Darrell Kachilla
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=385111956&CONTEXT=904238633.1624047620&hitnum=6">Re: Pretty HTML-izing of Perl source?</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/27 <b>Author</b>: Emaddin M El-Haraty
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384840832&CONTEXT=904238633.1624047620&hitnum=7">Re: Where to find Net::Domain?</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/26 <b>Author</b>: ∏‹®F¶¿
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384887842&CONTEXT=904238633.1624047620&hitnum=8">Re: Accessing NIS info from perl?</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/26 <b>Author</b>: Tony Curtis
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384952330&CONTEXT=904238633.1624047620&hitnum=9">Adding modules from CPAN</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.modules<br>
+	<b>Date</b>: 1998/08/26 <b>Author</b>: Chris Bower
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=385018003&CONTEXT=904238633.1624047620&hitnum=10">Re: why no true/false keywords?</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/26 <b>Author</b>: brian d foy
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=385018011&CONTEXT=904238633.1624047620&hitnum=11">fileevent in Perl version 5.004_02 win32 bindist</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.tk<br>
+	<b>Date</b>: 1998/08/26 <b>Author</b>: Anthony Jordan
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=385077528&CONTEXT=904238633.1624047620&hitnum=12">Re: WWW Post via Perl</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.modules<br>
+	<b>Date</b>: 1998/08/26 <b>Author</b>: brian d foy
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=385118987&CONTEXT=904238633.1624047620&hitnum=13">Re: I NEED A PASWORD IN CGI!!!! HELP</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/26 <b>Author</b>: brian d foy
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384438853.10&CONTEXT=904238633.1624047620&hitnum=14">LEO-Archiv: neu - pub/comp/programming/languages/script #10/17</font></a><br>
+	<font size=2>
+	<b>Forum</b>: muc.archive.update<br>
+	<b>Date</b>: 1998/08/25 <b>Author</b>: Link Everything Online
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384541569&CONTEXT=904238633.1624047620&hitnum=15">Re: CGI Question,</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/25 <b>Author</b>: brian d foy
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384541570&CONTEXT=904238633.1624047620&hitnum=16">Re: Exporting Methods</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/25 <b>Author</b>: brian d foy
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384583031&CONTEXT=904238633.1624047620&hitnum=17">Re: Active Perl and Net::FTP broken</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/25 <b>Author</b>: mike_lottridge
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384590705&CONTEXT=904238633.1624047620&hitnum=18">Re: "bind" Problems with Internet Server Program</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/25 <b>Author</b>: brian d foy
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384633874&CONTEXT=904238633.1624047620&hitnum=19">Re: Reading binary data...</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/25 <b>Author</b>: brian d foy
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384696018&CONTEXT=904238633.1624047620&hitnum=20">Re: Abzuraten: Advanced Perl Programming</font></a><br>
+	<font size=2>
+	<b>Forum</b>: de.comp.lang.perl<br>
+	<b>Date</b>: 1998/08/25 <b>Author</b>: Samuel Kilchenmann
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384231728&CONTEXT=904238633.1624047620&hitnum=21">Looking for Perl modules for NetWare</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/24 <b>Author</b>: Peter Seitz
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384347748&CONTEXT=904238633.1624047620&hitnum=22">Perl for Win32 Documentation</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/24 <b>Author</b>: Laurie Darcey
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384367492&CONTEXT=904238633.1624047620&hitnum=23">Re: Perl for Win32 Documentation</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/24 <b>Author</b>: Brian Jepson
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=385095341&CONTEXT=904238633.1624047620&hitnum=24">Re: HELP -- using GD.PM</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.infosystems.www.authoring.cgi<br>
+	<b>Date</b>: 1998/08/27 <b>Author</b>: brian d foy
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=385124798&CONTEXT=904238633.1624047620&hitnum=25">*** FAQ: ANSWERS TO YOUR QUESTIONS! READ FIRST! Posted Twice Weekly ***</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/27 <b>Author</b>: gnat
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=385147183&CONTEXT=904238633.1624047620&hitnum=26">Re: Automated Testing w/ Perl (was Re: Web based Automated Testing Info Needed)</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.software.testing<br>
+	<b>Date</b>: 1998/08/27 <b>Author</b>: dzuy
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=385182283&CONTEXT=904238633.1624047620&hitnum=27">ANNOUNCE: Parse::RecDescent 1.51</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.modules<br>
+	<b>Date</b>: 1998/08/27 <b>Author</b>: Damian Conway
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=385190174&CONTEXT=904238633.1624047620&hitnum=28">Perl <-> Database interface module</font></a><br>
+	<font size=2>
+	<b>Forum</b>: alt.perl<br>
+	<b>Date</b>: 1998/08/27 <b>Author</b>: Dante
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=385202988.13&CONTEXT=904238633.1624047620&hitnum=29">LEO-Archiv: neu - pub/comp/programming/languages/script #13/18</font></a><br>
+	<font size=2>
+	<b>Forum</b>: muc.archive.update<br>
+	<b>Date</b>: 1998/08/27 <b>Author</b>: Link Everything Online
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384804214.9&CONTEXT=904238633.1624047620&hitnum=30">LEO-Archiv: neu - pub/comp/programming/languages/script #9/17</font></a><br>
+	<font size=2>
+	<b>Forum</b>: muc.archive.update<br>
+	<b>Date</b>: 1998/08/26 <b>Author</b>: Link Everything Online
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384927294&CONTEXT=904238633.1624047620&hitnum=31">Re: "bind" Problems with Internet Server Program</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/26 <b>Author</b>: robertrose
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384985954&CONTEXT=904238633.1624047620&hitnum=32">Re: Connecting a mSQL database using the Msql module</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/26 <b>Author</b>: brian d foy
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384534238&CONTEXT=904238633.1624047620&hitnum=33">perl frage</font></a><br>
+	<font size=2>
+	<b>Forum</b>: de.comp.sys.novell<br>
+	<b>Date</b>: 1998/08/25 <b>Author</b>: Peter Seitz
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384542000&CONTEXT=904238633.1624047620&hitnum=34">Abzuraten: Advanced Perl Programming</font></a><br>
+	<font size=2>
+	<b>Forum</b>: de.comp.lang.perl<br>
+	<b>Date</b>: 1998/08/25 <b>Author</b>: Carl von Loesch
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384590672&CONTEXT=904238633.1624047620&hitnum=35">Re: inconsistent Window-target behavior</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.infosystems.www.authoring.cgi<br>
+	<b>Date</b>: 1998/08/25 <b>Author</b>: brian d foy
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384590704&CONTEXT=904238633.1624047620&hitnum=36">Re: Regex question - removing HTML tags....</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/25 <b>Author</b>: brian d foy
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384596504&CONTEXT=904238633.1624047620&hitnum=37">MIME:Entity - why so many modules wanted?</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.modules<br>
+	<b>Date</b>: 1998/08/25 <b>Author</b>: Ulf Wendel
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384603472&CONTEXT=904238633.1624047620&hitnum=38">Trouble with MIME:Entity</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/25 <b>Author</b>: Ulf Wendel
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384603840&CONTEXT=904238633.1624047620&hitnum=39">MIME:Entity oder Mail mit Attachement</font></a><br>
+	<font size=2>
+	<b>Forum</b>: de.comp.lang.perl<br>
+	<b>Date</b>: 1998/08/25 <b>Author</b>: Ulf Wendel
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384633875&CONTEXT=904238633.1624047620&hitnum=40">Re: command line switches</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/25 <b>Author</b>: brian d foy
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384250255&CONTEXT=904238633.1624047620&hitnum=41">Re: Looking for Programmer/Job Opp.</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/24 <b>Author</b>: brian d foy
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384304718&CONTEXT=904238633.1624047620&hitnum=42">Re: chop bug</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/24 <b>Author</b>: brian d foy
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384310319&CONTEXT=904238633.1624047620&hitnum=43">Re: Why $1 not set when using next unless in a if statement?</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/24 <b>Author</b>: brian d foy
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384310323&CONTEXT=904238633.1624047620&hitnum=44">Re: Submitting a form from a script</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/24 <b>Author</b>: brian d foy
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384315668&CONTEXT=904238633.1624047620&hitnum=45">Re: ANNOUNCE: Math::Units module used for unit conversion</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.modules<br>
+	<b>Date</b>: 1998/08/24 <b>Author</b>: brian d foy
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384347734&CONTEXT=904238633.1624047620&hitnum=46">Re: Looking for Programmer/Job Opp.</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/24 <b>Author</b>: brian d foy
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384357171&CONTEXT=904238633.1624047620&hitnum=47">CPAN.pm problems</font></a><br>
+	<font size=2>
+	<b>Forum</b>: perl.porters-gw<br>
+	<b>Date</b>: 1998/08/24 <b>Author</b>: Perl mail address
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384403838&CONTEXT=904238633.1624047620&hitnum=48">Re: Y2K Date Support</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/24 <b>Author</b>: brian d foy
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384403839&CONTEXT=904238633.1624047620&hitnum=49">Re: Ignoring lines in a data file</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/24 <b>Author</b>: brian d foy
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=384403840&CONTEXT=904238633.1624047620&hitnum=50">Re: subsorting a report</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/24 <b>Author</b>: brian d foy
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=383809948.10&CONTEXT=904238633.1624047620&hitnum=51">LEO-Archiv: neu - pub/comp/programming/languages/script #10/17</font></a><br>
+	<font size=2>
+	<b>Forum</b>: muc.archive.update<br>
+	<b>Date</b>: 1998/08/23 <b>Author</b>: Link Everything Online
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=383378852&CONTEXT=904238633.1624047620&hitnum=52">Re: Accessing databaes w/ Perl script</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.databases.sybase<br>
+	<b>Date</b>: 1998/08/21 <b>Author</b>: Chris Shelton
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=383408243&CONTEXT=904238633.1624047620&hitnum=53">Perl Module fuer NetWare gesucht</font></a><br>
+	<font size=2>
+	<b>Forum</b>: de.comp.lang.perl<br>
+	<b>Date</b>: 1998/08/21 <b>Author</b>: Peter Seitz
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=382525768&CONTEXT=904238633.1624047620&hitnum=54">Re: perl core dumps</font></a><br>
+	<font size=2>
+	<b>Forum</b>: perl.porters-gw<br>
+	<b>Date</b>: 1998/08/19 <b>Author</b>: Hugo van der Sanden
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=382533617&CONTEXT=904238633.1624047620&hitnum=55">Re: ø°∑Ø∏ﬁΩ√¡ˆ «ÿºÆ¡ª «ÿ¡÷ººø‰...</font></a><br>
+	<font size=2>
+	<b>Forum</b>: han.comp.lang.perl<br>
+	<b>Date</b>: 1998/08/19 <b>Author</b>: starhunt
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=382588150&CONTEXT=904238633.1624047620&hitnum=56">Re: Perl Lex ? Perl Yacc ?</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/19 <b>Author</b>: Uwe Honekamp
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=382606240&CONTEXT=904238633.1624047620&hitnum=57">Re: Perl Lex et Perl yacc</font></a><br>
+	<font size=2>
+	<b>Forum</b>: fr.comp.lang.perl<br>
+	<b>Date</b>: 1998/08/19 <b>Author</b>: ts
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=382642096&CONTEXT=904238633.1624047620&hitnum=58">Re: Perl Lex ? Perl Yacc ?</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/19 <b>Author</b>: Tk Soh
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=382647113&CONTEXT=904238633.1624047620&hitnum=59">Re: Perl Lex ? Perl Yacc ?</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/19 <b>Author</b>: Tk Soh
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=382275909&CONTEXT=904238633.1624047620&hitnum=60">Wo werden PERL Module vom CPAN installiert</font></a><br>
+	<font size=2>
+	<b>Forum</b>: de.comp.lang.perl<br>
+	<b>Date</b>: 1998/08/18 <b>Author</b>: Peter Seitz
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=379926759&CONTEXT=904238633.1624047620&hitnum=61">Re: lex/flex for perl</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.compilers<br>
+	<b>Date</b>: 1998/08/10 <b>Author</b>: valk
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=383513134&CONTEXT=904238633.1624047620&hitnum=62">Re: Perl et LDAP</font></a><br>
+	<font size=2>
+	<b>Forum</b>: fr.comp.lang.perl<br>
+	<b>Date</b>: 1998/08/22 <b>Author</b>: Ollivier Robert
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=383553541.10&CONTEXT=904238633.1624047620&hitnum=63">LEO-Archiv: neu - pub/comp/programming/languages/script #10/18</font></a><br>
+	<font size=2>
+	<b>Forum</b>: muc.archive.update<br>
+	<b>Date</b>: 1998/08/22 <b>Author</b>: Link Everything Online
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=383229277.10&CONTEXT=904238633.1624047620&hitnum=64">LEO-Archiv: neu - pub/comp/programming/languages/script #10/17</font></a><br>
+	<font size=2>
+	<b>Forum</b>: muc.archive.update<br>
+	<b>Date</b>: 1998/08/21 <b>Author</b>: Link Everything Online
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=383559669&CONTEXT=904238633.1624047620&hitnum=65">Re: Perl Lex ? Perl Yacc ?</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/21 <b>Author</b>: Nathan Eaton
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=383084659&CONTEXT=904238633.1624047620&hitnum=66">Re: Script/SNMP query</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.dcom.net-management<br>
+	<b>Date</b>: 1998/08/20 <b>Author</b>: Jochen Wiedmann
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=383204056&CONTEXT=904238633.1624047620&hitnum=67">perl5.004_04-m1</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/20 <b>Author</b>: Dipl.-Ing. Markus Rosenkranz
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=383204603&CONTEXT=904238633.1624047620&hitnum=68">perl5.004_04-m1</font></a><br>
+	<font size=2>
+	<b>Forum</b>: de.comp.lang.perl<br>
+	<b>Date</b>: 1998/08/20 <b>Author</b>: Dipl.-Ing. Markus Rosenkranz
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=383210356.10&CONTEXT=904238633.1624047620&hitnum=69">LEO-Archiv: neu - pub/comp/programming/languages/script #10/18</font></a><br>
+	<font size=2>
+	<b>Forum</b>: muc.archive.update<br>
+	<b>Date</b>: 1998/08/20 <b>Author</b>: Link Everything Online
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=383219312&CONTEXT=904238633.1624047620&hitnum=70">Re: New PERL user looking for sites running PERL5 on an NT server with oracle DB</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/20 <b>Author</b>: John D Groenveld
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=382504195&CONTEXT=904238633.1624047620&hitnum=71">Re: POSTing out</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/19 <b>Author</b>: Martien Verbruggen
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=382537562.10&CONTEXT=904238633.1624047620&hitnum=72">LEO-Archiv: neu - pub/comp/programming/languages/script #10/18</font></a><br>
+	<font size=2>
+	<b>Forum</b>: muc.archive.update<br>
+	<b>Date</b>: 1998/08/19 <b>Author</b>: Link Everything Online
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=382614996&CONTEXT=904238633.1624047620&hitnum=73">Re: perl core dumps</font></a><br>
+	<font size=2>
+	<b>Forum</b>: perl.porters-gw<br>
+	<b>Date</b>: 1998/08/19 <b>Author</b>: M.J.T. Guy
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=382706660&CONTEXT=904238633.1624047620&hitnum=74">Re: Accessing UDB from perl?</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.databases.ibm-db2<br>
+	<b>Date</b>: 1998/08/19 <b>Author</b>: mhm
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=382249464&CONTEXT=904238633.1624047620&hitnum=75">[Perl] How to find the Perl FAQ</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.announce<br>
+	<b>Date</b>: 1998/08/18 <b>Author</b>: Tom Phoenix
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=382048188&CONTEXT=904238633.1624047620&hitnum=76">Re: ANNOUNCEMENT: Perl HTML Docs available</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.modules<br>
+	<b>Date</b>: 1998/08/17 <b>Author</b>: Bob Harold
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=381545759&CONTEXT=904238633.1624047620&hitnum=77">Re: New, Improved Perl Beautifier!</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/16 <b>Author</b>: Tom Christiansen
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=381562890.6&CONTEXT=904238633.1624047620&hitnum=78">Re: Is there a FAQ #6/69</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.tk<br>
+	<b>Date</b>: 1998/08/16 <b>Author</b>: Mark Whitteker
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=381562890.22&CONTEXT=904238633.1624047620&hitnum=79">Re: Is there a FAQ #22/69</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.tk<br>
+	<b>Date</b>: 1998/08/16 <b>Author</b>: Mark Whitteker
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=381213295&CONTEXT=904238633.1624047620&hitnum=80">Using Perl module without access to Perl installation</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/14 <b>Author</b>: roguemouse
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=381247831&CONTEXT=904238633.1624047620&hitnum=81">Re: Perl and NT and SQLServer</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/14 <b>Author</b>: Alastair
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=380322485&CONTEXT=904238633.1624047620&hitnum=82">PERL ⁄¡ ‘“… ƒŒ—</font></a><br>
+	<font size=2>
+	<b>Forum</b>: relcom.commerce.infoserv<br>
+	<b>Date</b>: 1998/08/12 <b>Author</b>: Alex
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=380322491&CONTEXT=904238633.1624047620&hitnum=83">PERL ⁄¡ ‘“… ƒŒ—</font></a><br>
+	<font size=2>
+	<b>Forum</b>: relcom.commerce.software<br>
+	<b>Date</b>: 1998/08/12 <b>Author</b>: Alex
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=380322497&CONTEXT=904238633.1624047620&hitnum=84">PERL ⁄¡ ‘“… ƒŒ—</font></a><br>
+	<font size=2>
+	<b>Forum</b>: relcom.commerce.tradeserv<br>
+	<b>Date</b>: 1998/08/12 <b>Author</b>: Alex
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=380475998&CONTEXT=904238633.1624047620&hitnum=85">Re: PERL and POST method</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/12 <b>Author</b>: brian d foy
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=380506917&CONTEXT=904238633.1624047620&hitnum=86">ANNOUNCEMENT: Perl HTML Docs available</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.moderated<br>
+	<b>Date</b>: 1998/08/12 <b>Author</b>: Tom Christiansen
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=380508830&CONTEXT=904238633.1624047620&hitnum=87">ANNOUNCEMENT: Perl HTML Docs available</font></a><br>
+	<font size=2>
+	<b>Forum</b>: perl.porters-gw<br>
+	<b>Date</b>: 1998/08/12 <b>Author</b>: Tom Christiansen
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=380011159&CONTEXT=904238633.1624047620&hitnum=88">[Perl] How to find the Perl FAQ</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.announce<br>
+	<b>Date</b>: 1998/08/11 <b>Author</b>: Tom Phoenix
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=380026726&CONTEXT=904238633.1624047620&hitnum=89">Re: perl and db</font></a><br>
+	<font size=2>
+	<b>Forum</b>: fido7.ru.cgi.perl<br>
+	<b>Date</b>: 1998/08/11 <b>Author</b>: Serg Shikov
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=380043735&CONTEXT=904238633.1624047620&hitnum=90">perl5.00501 et module CPAN</font></a><br>
+	<font size=2>
+	<b>Forum</b>: fr.comp.lang.perl<br>
+	<b>Date</b>: 1998/08/11 <b>Author</b>: Paul Gaborit
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=380442237&CONTEXT=904238633.1624047620&hitnum=91">Perl & Kerberos</font></a><br>
+	<font size=2>
+	<b>Forum</b>: fr.comp.lang.perl<br>
+	<b>Date</b>: 1998/08/10 <b>Author</b>: Jocelyn Callier
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=379323098&CONTEXT=904238633.1624047620&hitnum=92">Re: mirroring CPAN thru socks proxy?</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/09 <b>Author</b>: Derek
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=378795312&CONTEXT=904238633.1624047620&hitnum=93">mirroring CPAN thru socks proxy?</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/07 <b>Author</b>: Derek
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=378852886&CONTEXT=904238633.1624047620&hitnum=94">looking for Interbase Perl DBD</font></a><br>
+	<font size=2>
+	<b>Forum</b>: interbase.public.linux<br>
+	<b>Date</b>: 1998/08/07 <b>Author</b>: David D Winfield
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=377445472&CONTEXT=904238633.1624047620&hitnum=95">Re: Newbie: Perl and Oracle?!?</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/08/03 <b>Author</b>: F.Quednau
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=375968282&CONTEXT=904238633.1624047620&hitnum=96">Re: striphtml.pl and Win32 Perl 5.004</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/07/29 <b>Author</b>: Martin
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=375614453&CONTEXT=904238633.1624047620&hitnum=97">Re: perl 5.005</font></a><br>
+	<font size=2>
+	<b>Forum</b>: fido7.ru.cgi.perl<br>
+	<b>Date</b>: 1998/07/28 <b>Author</b>: Artur Penttinen
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=375736006&CONTEXT=904238633.1624047620&hitnum=98">Re: [Perl] How to find the Perl FAQ</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.misc<br>
+	<b>Date</b>: 1998/07/28 <b>Author</b>: Ejaz
+	<p>
+	</font>
+	
+	
+	
+        
+        
+        
+	<font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/getdoc.xp?AN=375445135&CONTEXT=904238633.1624047620&hitnum=99">Re: GIF -> BMP in perl?</font></a><br>
+	<font size=2>
+	<b>Forum</b>: comp.lang.perl.modules<br>
+	<b>Date</b>: 1998/07/27 <b>Author</b>: Daniel E. Macks
+	<p>
+	</font>
+	
+	
+
+
+
+<b><font size=4 face="arial,helvetica" color="#999999">&lt;&lt;</font>
+<font face="arial,helvetica" size=2 color="#999999">Previous matches</font></b>
+
+&nbsp; &#183; &nbsp;
+
+
+<b><font face="arial,helvetica" size=2><a href="http://x4.dejanews.com/dnquery.xp?search=next&IS=Perl%20and%20CPAN&ST=PS&offsets=db98p4x%02100&svcclass=dnserver&CONTEXT=904238633.1624047620">Next matches</a></font>
+<font size=4 face="arial,helvetica" color="#ff6600">&gt;&gt;</font></b>
+</td></tr>
+    <tr>
+	<td colspan=2>&nbsp;</td>
+        <td><font face=arial,helvetica size=2>messages 1-100 of about 19000 matches</font></td></tr>
+
+</table>
+
+
+
+
+
+
+
+
+<hr width=640 align=left>
+<B>Individual word match counts (approximate)</B>
+<ul>
+
+<li> cpan: 24000</li>
+<li> perl: 1000000</li>
+</ul>
+
+
+<p>
+<table width=640 border=0 cellpadding=0 cellspacing=0><tr>
+<td bgcolor="#003399" height=5 colspan=2><spacer type=block height=5 width=0></td></tr>
+<tr valign=top><td><font color="#ff6600" face="arial,helvetica" size=4><b>Search Again</b></font></td>
+<td align=right><font face="arial,helvetica" size=-1><a href="http://www.dejanews.com/help/help_ps.shtml">help</a></font></td></tr>
+</table>
+
+
+
+
+
+
+<form action="dnquery.xp" method=get>
+<table cellspacing=0 cellpadding=2 width=640 border=0>
+<tr valign=middle><td width=130 align=right valign=top><font face="arial,helvetica" size=+1 color=#ff6600><b>Power Search</b></font></td>
+<td width=20>&nbsp;</td>
+<td width=490><input type="text" name="QRY" size="30" value="Perl and CPAN"><input type="submit" value="Find"><br>
+<font face="arial,helvetica" size=2>Find messages in the 
+
+<select name="DBS">
+        <option value=1 >complete
+        <option value=2 >standard
+        <option value=3 >adult
+        <option value=4 >jobs
+        <option value=5 >for sale
+        </select> archive</font>
+<input type="hidden" name="ST" value="PS"></td></tr>
+</table>
+
+<p>
+
+<table width=640 border=0 cellpadding=0 cellspacing=0>
+    <tr valign=top>
+        <td width=15%>&nbsp;</td>
+        <td width=40%><font face="arial,helvetica" color="#003399"><b>Limit Search</b></font></td>
+        <td rowspan=8 width=5%>&nbsp;</td>
+        <td width=40%><font face="arial,helvetica" color="#003399"><b>Organize&nbsp;Results</b></font></td>
+    </tr>
+    <tr valign=top>
+        <td height=40>&nbsp;</td>
+        <td><font face=arial,helvetica size=-2>these options help to further narrow your search<p>Match </font><INPUT type="radio" name="defaultOp" value="AND" ><font face=arial,helvetica size=-2> all</font> &nbsp;<INPUT type="radio" name="defaultOp" value="OR" CHECKED><font face=arial,helvetica size=-2> any &nbsp;keywords</font></td>
+        <td><font face=arial,helvetica size=-2>these options help to organize your search results</font></td>
+    </tr>
+    <tr>
+        <td valign=middle align=right height=30><font face=arial,helvetica size=-2>Language &nbsp;</font></td>
+        <td><select name="LNG" size=1>
+		
+                <option value=ALL >any
+                <option value=chinese >Chinese
+                <option value=danish >Danish
+                <option value=dutch >Dutch
+                <option value=english >English
+                <option value=finnish >Finnish
+                <option value=french >French
+                <option value=german >German
+                <option value=hungarian >Hungarian
+                <option value=italian >Italian
+                <option value=japanese >Japanese
+                <option value=korean >Korean
+                <option value=norwegian >Norwegian
+                <option value=portuguese >Portuguese
+                <option value=polish >Polish
+                <option value=russian >Russian
+                <option value=spanish >Spanish
+                <option value=swedish >Swedish
+                <option value=vietnamese >Vietnamese
+            </select></td>
+        <td valign=top rowspan=4><font face=arial,helvetica size=-2>Results format</font><br>
+            <select name="format">
+		
+		<option value="delta" selected>list
+		<option value="terse" >tabular
+		<option value="threaded" >threaded
+            </select>
+            <br>&nbsp;<p>
+	    <font face=arial,helvetica size=-2>Sort by</font><br>
+            <select name="showsort" size=1>
+		
+		<option value="score" selected>confidence
+		<option value="subject" >subject
+		<option value="newsgroup" >forum
+		<option value="author" >author
+		<option value="date" >date
+            </select> 
+            <br>&nbsp;<p>
+	    <font face=arial,helvetica size=-2>Results per page</font><br>
+            <select name="maxhits" size=1>
+		
+		<option value="20" >20
+		<option value="25" >25
+		<option value="50" >50
+		<option value="100" selected>100
+            </select></td>
+    </tr>
+    <tr>
+        <td align=right height=40><font face=arial,helvetica size=-2>Subject &nbsp;</font></td>
+        <td valign=top><font face=arial,helvetica size=-2 color="#ff6600">Example</font><font face=arial,helvetica size=-2>: FAQ or (frequently asked questions)</font><br>
+            <input type=text name=subjects size=30 value=""></td>
+    </tr>
+    <tr>
+        <td align=right height=40><font face="arial,helvetica" size=-2>Forum &nbsp;</font></td>
+        <td valign=top><font face=arial,helvetica size=-2 color="#ff6600">Example</font><font face=arial,helvetica size=-2>: alt.tv.x-files or *x-files*</font><br>
+        <input type=text name=groups size=30 value=""></td>
+    </tr>
+    <tr>
+        <td align=right height=40><font face=arial,helvetica size=-2>Author &nbsp;</font></td>
+        <td valign=top><font face=arial,helvetica size=-2 color="#ff6600">Example</font><font face=arial,helvetica size=-2>: demos@dejanews.com</font><br>
+        <input type=text name=authors size=30 value=""></td>
+    </tr>
+    <tr>
+        <td align=right height=40><font face=arial,helvetica size=-2>Date &nbsp;</font></td>
+        <td valign=top>
+            <table border=0 cellpadding=0 cellspacing=0 width=275>
+                <tr valign=top>
+                    <td><font face=arial,helvetica size=-2 color="#ff6600">Example</font><font face="arial,helvetica" size=-2>: Apr 1 1997</font><br>
+                        <input type=text name=fromdate size=12 value=""></td>
+                    <td><font face=arial,helvetica size=-2 color="#ff6600">Example</font><font face="arial,helvetica" size=-2>: Apr 5 1997</font><br>
+                        <input type=text name=todate size=12 value=""></td>
+                </tr>
+                <tr>
+                    <td><font face="arial,helvetica" size=-2>from</font></td>
+                    <td><font face="arial,helvetica" size=-2>to</font></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</form>
+
+
+
+
+
+<table border=0 cellpadding=0 cellspacing=0 width=640><tr><td align=center><table cellspacing=0 cellpadding=0 width=470 border=0><tr><td>
+<A HREF="http://gp1.dejanews.com/gtc?id=17555&tm=904238633.782270&site=dn&location=hitlist&keywords=perl%20cpan&cr=%7c%7c%7c%7c%7c%7c%7c%7c">
+<IMG ALIGN=MIDDLE HEIGHT=60 WIDTH=468 SRC="http://web2.dejanews.com/ads/45/2950030645-8318.gif" ALT="Get ServerProven!" border=1></A></td></tr><tr align=center><td><font size=-1><A HREF="http://gp1.dejanews.com/gtc?id=17555&tm=904238633.782270&site=dn&location=hitlist&keywords=perl%20cpan&cr=%7c%7c%7c%7c%7c%7c%7c%7c">
+Get ServerProven!</a></font></td></tr>
+</table></td></tr></table>
+
+
+
+<table cellspacing=0 cellpadding=0 border=0 width=640>
+<tr height=10><td>&nbsp;</td></tr>
+<tr><td bgcolor="#003399" height=5 colspan=2><spacer type=block height=5 width=0></td></tr>
+
+<tr align=right><td>
+<font size=4>&nbsp;</font>
+<font size=2 face="arial,helvetica">
+<a href="http://www.dejanews.com/">Home</a> &nbsp;&#183;&nbsp;
+<a href="http://www.dejanews.com/">Search</a> &nbsp;&#183;&nbsp;
+<a href="http://www.dejanews.com/rg_enter.xp">My Deja News</a> &nbsp;&#183;&nbsp;
+<a href="http://www.dejanews.com/post.xp">Post</a> &nbsp;&#183;&nbsp;
+<a href="http://www.dejanews.com/home_ps.shtml">Power Search</a> &nbsp;&#183;&nbsp;
+<a href="http://www.dejanews.com/help/help_index.shtml">Help</a> &nbsp;&#183;&nbsp;
+<a href="http://www.dejanews.com/forms/dnsurvey.shtml">How are we doing?</a>
+</font>
+<br>
+
+<p>
+<font size=2 face="arial,helvetica">
+<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.emaildirect&cid=239122353">Free Coupons!</a> &nbsp;|&nbsp;
+<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.dni&cid=239122353">Register Your Domain Name</a> &nbsp;|&nbsp;
+<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.uswest&cid=239122353">Yellow Pages</a> &nbsp;|&nbsp;
+<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.auctions&cid=239122353">Auctions</a> &nbsp;|&nbsp;
+<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.infospace&cid=239122353">Directories</a>
+<br>
+<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.netscape2&cid=239122353">Visit the new Netscape Netcenter!</a>&nbsp;|&nbsp;
+<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.datek&cid=239122353">Trade Now! with Datek Online</a>&nbsp;|&nbsp;
+<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.ibmsdplead&cid=239122353">Developer Resources</a>
+<br>
+<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.totale&cid=239122353">Movies & Music!</a> &nbsp;|&nbsp;
+<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.ubid&cid=239122353">Great Deals at uBid!</a>
+
+</font>
+</font>
+
+<p>
+<font size=1 face="arial,helvetica">
+<a href="http://www.dejanews.com/help/newusers.shtml">New Users</a> &#183;
+<a href="http://www.dejanews.com/emarket/">About Deja News</a> &#183;
+<a href="http://www.dejanews.com/emarket/programs/">Ad Info</a> &#183;
+<a href="http://www.dejanews.com/emarket/programs/ad_index.shtml">Our Advertisers</a> &#183;
+<a href="http://www.storedejanews.com/">Deja News Store</a>
+<br>
+<a href="http://www.dejanews.com/rg_enter.xp">Free Web Email</a> &#183;
+<a href="http://www.dejanews.com/info/linkback.shtml">Link to Deja News</a> &#183;
+<a href="http://www.dejanews.com/rg_mkgrp.xp">Create Your Own Forum</a>
+</font>
+
+<p>
+<hr width=325>
+<font size=-1>Copyright &copy; 1995-98 <a href="http://www.dejanews.com/emarket/">Deja News, Inc.</A> All rights reserved.
+<a href="http://www.dejanews.com/info/policy.shtml">Conditions of use</a>.</font>
+
+
+</td></tr></table>
+
+</body>
+</html>

@@ -171,7 +171,7 @@ sub native_retrieve_some
 	return(undef);
     }
     
-    my (@lines) = split(/\n/, $results);
+    my (@lines) = $self->split_lines($results);
     my ($docs_found);
     my ($score_ratio) = 0;
 

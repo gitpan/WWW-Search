@@ -13,7 +13,7 @@ WWW::Search::MSIndexServer - class for searching MSIndexServer search engine
 
 =head1 DESCRIPTION
 
-This class is a MSIndexServer specialization of WWW:Search.  It queries and
+This class is a MSIndexServer specialization of WWW::Search.  It queries and
 interprets searches based on MSIndexServer, which is available at
 F<http://www.microsoft.com/>
 
@@ -174,7 +174,7 @@ sub native_retrieve_some
     }
 	
     my ($url);
-    my (@lines) = split(/\n/, $results);
+    my (@lines) = $self->split_lines($results);
 
     my($mstitle, $msurl, $mssize, $mshits, $msdesc);
     ($mstitle, $msurl, $mssize, $mshits, $msdesc) = ('', '', 0, 0, undef);

@@ -1,192 +1,340 @@
-#!/usr/local/bin/perl -w
-
-#
-# Back-end for Dejanews search engine (Usenet news)
-# Cesare Feroldi de Rosa, <C.Feroldi@IT.net> 1996
-# derived from:
-# AltaVista.pm
-# by John Heidemann
-# Copyright (C) 1996 by USC/ISI
-# $Id: Dejanews.pm,v 1.8 1998/05/28 04:05:38 johnh Exp $
-#
-# Complete copyright notice follows below.
-# 
-
-
-package WWW::Search::Dejanews;
+# Dejanews.pm
+# Copyright (C) 1998 by Martin Thurn
+# $Id: Dejanews.pm,v 1.10 1998/08/27 17:28:59 johnh Exp $
 
 =head1 NAME
 
-WWW::Search::Dejanews - Perl class for searching Dejanews
+WWW::Search::Dejanews - class for searching Dejanews 
 
 =head1 SYNOPSIS
 
-    require WWW::Search;
-    $search = new WWW::Search('Dejanews');
+  use WWW::Search;
+  my $oSearch = new WWW::Search('Dejanews');
+  my $sQuery = WWW::Search::escape_query("sushi restaurant Columbus Ohio",);
+  $oSearch->native_query($sQuery,
+                         {'defaultOp' => 'AND'});
+  while (my $oResult = $oSearch->next_result())
+    { print $oResult->url, "\n"; }
 
 =head1 DESCRIPTION
 
-This class is a C<WWW::Search> 
-back-end for the Dejanews search engine for Usenet news.
+This class is a Dejanews specialization of WWW::Search.
+It handles making and interpreting Dejanews searches
+F<http://www.dejanews.com>.
 
 This class exports no public interface; all interaction should
-be done through WWW::Search objects.
+be done through L<WWW::Search> objects.
 
+Dejanews DOES support wildcards (asterisk at end of word).
 
-=head1 OPTIONS
+The default behavior is the OR of the query terms.  If you want AND,
+insert 'AND' between all the query terms in your query string:
 
-=over 8
+  $oSearch->native_query(escape_query('Dorothy AND Toto AND Oz'));
 
-=item defaultOp
-AND or OR (defaults to OR).
+or call
+native_query like this:
 
-=item groups
-Ex. comp.foo.bar.
-Defaults to all groups.
+  $oSearch->native_query(escape_query('Dorothy Toto Oz'), {'defaultOp' => 'AND'} );
 
-=back
+The URLs returned point to "text only" articles from Dejanews' server.
+
+If you want to search particular fields, add the escaped query for
+each field to the second argument to native_query (sorry, this has not
+been tested):
+
+  $oSearch->native_query($sQuery, 
+                         {'groups'   => 'comp.lang.perl.misc',
+                          'subjects' => 'WWW::Search',
+                          'authors'  => 'thurn',
+                          'fromdate' => 'Jan 1 1997',
+                          'todate'   => 'Dec 31 1997', } );
+
 
 =head1 SEE ALSO
 
 To make new back-ends, see L<WWW::Search>.
 
 
+=head1 HOW DOES IT WORK?
+
+C<native_setup_search> is called (from C<WWW::Search::setup_search>)
+before we do anything.  It initializes our private variables (which
+all begin with underscore) and sets up a URL to the first results
+page in C<{_next_url}>.
+
+C<native_retrieve_some> is called (from C<WWW::Search::retrieve_some>)
+whenever more hits are needed.  It calls C<WWW::Search::http_request>
+to fetch the page specified by C<{_next_url}>.
+It then parses this page, appending any search hits it finds to 
+C<{cache}>.  If it finds a ``next'' button in the text,
+it sets C<{_next_url}> to point to the page for the next
+set of results, otherwise it sets it to undef to indicate we''re done.
+
+
+=head1 BUGS
+
+Please tell the author if you find any!
+
+
+=head1 TESTING
+
+This module adheres to the C<WWW::Search> test suite mechanism. 
+
+See C<WWW::Search::Dejanews> for test cases for the default usage.
+
+test cases:
+  'mrfglbqnx AND NoSuchWord'  $TEST_EXACTLY         0
+  'Fett AND stuntboy'         $TEST_RANGE           1, 50
+  'Chewbacca'                 $TEST_GREATER_THAN  101
+
 =head1 AUTHOR
 
-Cesare Feroldi de Rosa, <C.Feroldi@IT.net>, 1996.
-(Derived from AltaVista.pm.)
+C<WWW::Search::Dejanews> is maintained by Martin Thurn
+(MartinThurn@iname.com);
+original version for WWW::Search
+by Cesare Feroldi de Rosa (C.Feroldi@it.net).
 
 
-=head1 COPYRIGHT
-
-This back-end was contributed to USC/ISI by Cesare Feroldi de Rosa.
-
-Copyright (c) 1996 University of Southern California.
-All rights reserved.                                            
-                                                               
-Redistribution and use in source and binary forms are permitted
-provided that the above copyright notice and this paragraph are
-duplicated in all such forms and that any documentation, advertising
-materials, and other materials related to such distribution and use
-acknowledge that the software was developed by the University of
-Southern California, Information Sciences Institute.  The name of the
-University may not be used to endorse or promote products derived from
-this software without specific prior written permission.
+=head1 LEGALESE
 
 THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
 WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
 MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 
+=head1 VERSION HISTORY
+
+=head3 1.4
+
+1998-08-27: New Dejanews output format
+
+=head3 1.3
+
+1998-08-20: New Dejanews output format
+
+=head2 1.2
+
+First publicly-released version.
+
+
 =cut
-#'
-
-#
-#  Test cases:
-# ./search.pl xxxasdf                        --- no hits
-# ./search.pl '"lsam replication"'           --- single page return
-# ./search.pl '+"john heidemann" +work'      --- 9 page return
-#
-
-
 
 #####################################################################
+
+package WWW::Search::Dejanews;
 
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
-# $VERSION = 1.000;
 @ISA = qw(WWW::Search Exporter);
+$VERSION = sprintf("%d.%02d", q$Revision: 1.10 $ =~ /(\d+)\.(\d+)/);
 
 use Carp ();
+use WWW::Search(generic_option);
 require WWW::SearchResult;
-
 
 
 # private
 sub native_setup_search
-{
-    my($self, $native_query, $native_options_ref) = @_;
-    if (!defined($self->{_default_options})) {
-	$self->{_default_options} = {	    
-            defaultOp => OR,
-            groups    => ''
-        };
+  {
+  my ($self, $native_query, $rhOptions) = @_;
+
+  my $DEFAULT_HITS_PER_PAGE = 100;
+  # $DEFAULT_HITS_PER_PAGE = 10;  # for debugging
+  $self->{'_hits_per_page'} = $DEFAULT_HITS_PER_PAGE;
+
+  $self->{agent_e_mail} = 'MartinThurn@iname.com';
+  $self->user_agent(0);
+
+  $self->{'_next_to_retrieve'} = 0;
+  $self->{'_num_hits'} = 0;
+
+  if (!defined($self->{_options})) 
+    {
+    # These are the defaults:
+    $self->{_options} = {
+                         'search_url' => 'http://www.Dejanews.com/dnquery.xp',
+                         'QRY' => $native_query,
+                         'ST' => 'PS',
+                         'defaultOp' => 'OR',
+                         'maxhits' => $self->{'_hits_per_page'},
+                         'format' => 'delta',
+                         'showsort' => 'score',
+                        };
+    } # if
+
+  # Copy in options passed in the argument list:
+  if (defined($rhOptions)) 
+    {
+    foreach (keys %$rhOptions) 
+      {
+      $self->{'_options'}->{$_} = $rhOptions->{$_};
+      } # foreach
+    } # if
+
+  # Build the options part of the URL:
+  my $options = '';
+  foreach (keys %{$self->{'_options'}})
+    {
+    # printf STDERR "option: $_ is " . $self->{'_options'}->{$_} . "\n";
+    next if (generic_option($_));
+    $options .= $_ . '=' . $self->{'_options'}->{$_} . '&';
     }
-    if (defined($native_options_ref)) {
-	foreach (keys %$native_options_ref) {
-	    $self->{_default_options}->{$_} = $native_options_ref->{$_}
-	};
-    }
-    my($options) = '';
-    foreach (keys %{$self->{_default_options}}) {
-        next if $self->{_default_options}->{$_} eq '';
-	$options .= $_ . '=' . $self->{_default_options}->{$_} . '&';
-    };	
-    $self->user_agent();
-    $self->{_next_to_retrieve} = 0;
-    $self->{_base_url} = 
-	$self->{_next_url} =
-	'http://search.dejanews.com/dnquery.xp?' .
-	$options . 'query=' . $native_query;
-}
+
+  # Finally, figure out the url.
+  $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
+
+  # Set some private variables:
+  $self->{_debug} = $self->{'_options'}->{'search_debug'};
+  $self->{_debug} = 2 if ($self->{'_options'}->{'search_parse_debug'});
+  $self->{_debug} = 0 if (!defined($self->{_debug}));
+  } # native_setup_search
 
 
 # private
 sub native_retrieve_some
-{
-    my ($self) = @_;
-
-    # fast exit if already done
-    return undef if (!defined($self->{_next_url}));
-
-    # get some
-    my($request) = new HTTP::Request('GET', $self->{_next_url});
-    my($response) = $self->{user_agent}->request($request);
-    $self->{response} = $response;
-    if (!$response->is_success) {
-	return undef;
+  {
+  my ($self) = @_;
+  
+  # Fast exit if already done:
+  return undef unless defined($self->{_next_url});
+  
+  # If this is not the first page of results, sleep so as to not overload the server:
+  $self->user_agent_delay if 1 < $self->{'_next_to_retrieve'};
+  
+  # Get some results, adhering to the WWW::Search mechanism:
+  print STDERR " *   sending request (",$self->{_next_url},")\n" if $self->{'_debug'};
+  my $response = $self->http_request('GET', $self->{_next_url});
+  $self->{response} = $response;
+  if (!$response->is_success) 
+    {
+    return undef;
     };
 
-    # parse the output
-    #define constants:
-    my($hits_found) = 0;
-    my($hit) = ();
-    my($NextUrl)=0;
-    for (split(/\n/, $response->content())) {
-	if ((m#^Hits <B>[1-9]\d*-[1-9]\d*</B> of ([1-9]\d*) for Query:#)
-	    ||(m#^<B>([1-9]\d*)</B> Hits for Query:#))
-	     {
-	    $self->approximate_result_count($1);
-	} elsif (m#Your query did not match any articles#) {
-	    $self->{_next_url} = undef;
-	    return undef;
-	} elsif (m#^\s+[1-9]\d*\. ([09]\d/\d{2}/\d{2}) \d+ <A HREF="(http://[^.]+\.dejanews\.com/getdoc\.xp\?[^"]+)">([^<]+)</A> <B>([^< ]+)\s*</B> <A HREF="http://[^.]+\.dejanews\.com/profile\.xp\?[^"]+">([^<]+)</A>#i) {
-	    if (defined($hit)) {
-	        push(@{$self->{cache}}, $hit);
-	    };
-	    $hit = new WWW::SearchResult;
-	    $hit->add_url($2);
-	    $hits_found++;
-	    $hit->title($3);
-	    $hit->description(join(' ',($1,$4,$5)));
-	} elsif (m#<A HREF="(http://[^.]+\.dejanews\.com/dnquery\.xp\?search=next&[^"]+)">Get next [1-9]\d* hits</A><HR>#) {
-	    # more pages
-	    $NextUrl=$self->{_next_url} = $1;	    
-	} elsif (m#<P><B>Individual word hit counts</B>#) {
-	    #end of page
-	    if (defined($hit)) {
-	        push(@{$self->{cache}}, $hit);
-	    };
-	     $self->{_next_url} = undef unless $NextUrl;
-	     last;
-	    } 	    
-	};
+  print STDERR " *   got response\n" if $self->{'_debug'};
+  $self->{'_next_url'} = undef;
+  # Parse the output
+  my ($START, $HEADER, $HITS, $URL,$DATE,$FORUM, $TRAILER, $ALLDONE) = qw(ST HE HI UR DA FO TR AD);
+  my $hits_found = 0;
+  my $state = $START;
+  my ($hit, $sDescription);
+  foreach ($self->split_lines($response->content())) 
+    {
+    next if m/^\s*$/; # short circuit for blank lines
+    print STDERR " *   $state ===$_===" if 2 <= $self->{'_debug'};
+    if ($state eq $START && 
+        m=messages\s[-0-9]+\sof\s(about|exactly)\s(\d+)\smatches=)
+      {
+      # Actual line of input is:
+      #         <font face=arial,helvetica size=-1>messages 1-100 of about 2500000 matches</font>
+      print STDERR "count line \n" if 2 <= $self->{'_debug'};
+      $self->approximate_result_count($2);
+      $state = $HITS;
+      } # we're in START mode, and line has number of results
 
-    # sleep so as to not overload altavista
-    $self->user_agent_delay if (defined($self->{_next_url}));
+    elsif ($state eq $HITS &&
+           m@<a\shref=\"([^\"]+)\">Next\smatches@)
+      {
+      # Actual line of input is:
+      # <b><font face="arial,helvetica" size=2><a href="http://x1.dejanews.com/dnquery.xp?search=next&DBS=1&LNG=ALL&IS=Martin%20Thurn&ST=PS&offsets=db98p4x%02100&svcclass=dnserver&CONTEXT=903630253.1503199236">Next matches</a></font>
+      print STDERR " found next button\n" if 2 <= $self->{'_debug'};
+      # There is a "next" button on this page, therefore there are
+      # indeed more results for us to go after next time.
+      $self->{_next_url} = $1;
+      $self->{'_next_to_retrieve'} += $self->{'_hits_per_page'};
+      $state = $ALLDONE;
+      }
 
-    return $hits_found;
-}
+#      elsif ($state eq $HITS &&
+#             m{>(\++)</font>})
+#        {
+#        print STDERR "hit score line\n" if 2 <= $self->{'_debug'};
+#        # Actual line of input:
+#        #         <b><font face="arial,helvetica" color="#ff6600">++++</font><font face="arial,helvetica" size=+1 color="#ffcc99">-</font></b><br>
+#        if (defined($hit))
+#          {
+#          push(@{$self->{cache}}, $hit);
+#          }
+#        $hit = new WWW::SearchResult;
+#        # Count the number of plus-signs and multiply by 20% for each one:
+#        $hit->score(20 * length($1));
+#        $state = $URL;
+#        } #
+
+    elsif ((($state eq $URL) || ($state eq $HITS)) && 
+           m|<a\shref=\"?([^\">]+)\"?>([^<]+)|i)
+      {
+      next if m/Previous\smatches/;
+      print STDERR "hit url line\n" if 2 <= $self->{'_debug'};
+      # Actual line of input:
+      # <td align=left><a href=http://x10.dejanews.com/getdoc.xp?AN=365996516&CONTEXT=899408575.427622419&hitnum=8><b>Stuffed Chewbacca</b></a><br>
+      my $sURL = $1 . '&fmt=raw';
+      my $sTitle = $2;
+      if (defined($hit))
+        {
+        push(@{$self->{cache}}, $hit);
+        }
+      $hit = new WWW::SearchResult;
+      $hit->add_url($sURL);
+      $self->{'_num_hits'}++;
+      $hits_found++;
+      $hit->title($sTitle);
+      $sDescription = '';
+      $state = $FORUM;
+      }
+
+    elsif ($state eq $FORUM &&
+           m|Forum</b>:\s([^<]+)|i)
+      {
+      print STDERR "forum line\n" if 2 <= $self->{'_debug'};
+      # Actual line of input is:
+      # 	<b>Forum</b>: rec.birds<br>
+      $sDescription .= "Newsgroup: $1";
+      $state = $DATE;
+      }
+    elsif ($state eq $DATE &&
+           m|Date</b>:\s([^\s]+).*?Author</b>: (.*)|i)
+      {
+      # Actual line of input is:
+      # 	<b>Date</b>: 1998/08/20 <b>Author</b>: James Hanst
+      $hit->change_date($1);
+      $sDescription .= "; Author: $2";
+      $hit->description($sDescription);
+      $state = $HITS;
+      } # line is end of description
+
+    else
+      {
+      print STDERR "didn't match\n" if 2 <= $self->{'_debug'};
+      }
+    } # foreach line of query results HTML page
+
+  if ($state ne $ALLDONE)
+    {
+    # End, no other pages (missed some tag somewhere along the line?)
+    $self->{_next_url} = undef;
+    }
+  if (defined($hit)) 
+    {
+    push(@{$self->{cache}}, $hit);
+    }
+  
+  return $hits_found;
+  } # native_retrieve_some
 
 1;
+
+__END__
+
+default hairy search URL:
+
+http://www.dejanews.com/dnquery.xp?QRY=Chewbacca&ST=PS&DBS=1&defaultOp=OR&maxhits=10&format=verbose2&showsort=score
+
+new URL 1998-08-20:
+
+http://x1.dejanews.com/dnquery.xp?QRY=Martin+Thurn&ST=PS&defaultOp=OR&DBS=1&showsort=score&maxhits=100&LNG=ALL&format=delta
+
+URL to get "text-only" of an article:
+
+http://x10.dejanews.com/getdoc.xp?AN=365996516&CONTEXT=899408575.427622419&hitnum=8&fmt=raw

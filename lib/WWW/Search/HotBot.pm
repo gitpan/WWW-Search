@@ -3,9 +3,7 @@
 # HotBot.pm
 # by Wm. L. Scheding and Martin Thurn
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: HotBot.pm,v 1.9 1998/07/28 17:27:12 johnh Exp $
-
-package WWW::Search::HotBot;
+# $Id: HotBot.pm,v 1.11 1998/08/27 22:45:20 johnh Exp $
 
 =head1 NAME
 
@@ -57,6 +55,8 @@ set of results, otherwise it sets it to undef to indicate we''re done.
 
 When HotBot reports a "Mirror" URL, WWW::Search::HotBot ignores it.
 
+Use '+' in front of required terms; 'AND' does not work.
+
 =head1 BUGS
 
 Please tell the author if you find any!
@@ -66,10 +66,10 @@ Please tell the author if you find any!
 
 This module adheres to the C<WWW::Search> test suite mechanism. 
 
-  Test cases (results as of 1998-07-27):
+  Test cases (results as of 1998-08-27):
   '+mrfglbqnx +NoSuchWord'       ---   no URLs
-  '"Christie Abbott"'            ---   14 URLs on one page
-  '"Martin Thurn" AND Bible'     ---  131 URLs on two pages
+  '"Christie Abbott"'            ---    9 URLs on one page
+  'LSAM'                         ---  184 URLs on two pages
 
 
 =head1 AUTHOR
@@ -91,6 +91,10 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 =head1 VERSION HISTORY
 
 If it''s not listed here, then it wasn''t a meaningful nor released revision.
+
+=head2 1.22
+
+HotBot changed their output format.
 
 =head2 1.21
 
@@ -127,11 +131,13 @@ release of WWW::Search.
 
 #####################################################################
 
+package WWW::Search::HotBot;
+
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = sprintf("%d.%02d", q$Revision: 1.9 $ =~ /(\d+)\.(\d+)/);
+$VERSION = sprintf("%d.%02d", q$Revision: 1.11 $ =~ /(\d+)\.(\d+)/);
 
 use Carp ();
 use WWW::Search(generic_option);
@@ -151,7 +157,7 @@ sub native_setup_search
   # 500 results take  70 seconds at 100 per page
   # 500 results take 234 seconds at  10 per page
   my $DEFAULT_HITS_PER_PAGE = 100;
-  # $DEFAULT_HITS_PER_PAGE = 10 if $self->{_debug};
+  # $DEFAULT_HITS_PER_PAGE = 10; # for debugging
   $self->{'_hits_per_page'} = $DEFAULT_HITS_PER_PAGE;
   # $self->timeout(120);  # HotBot used to be notoriously slow
 
@@ -255,17 +261,18 @@ sub native_retrieve_some
       } # We're in TITLE mode, and line has title
 
     elsif ($state eq $HEADER && 
-           m@^(\d+)\s+matches\.@i) 
+           m{Web\sResults:[^\d]+(\d+)})
       {
       # Actual line of input is:
-      # 312 matches.</b>&nbsp;&nbsp;
+      # <font face="Verdana, Arial, Helvetica" size="2" color="#FFFFFF">Web Results:&nbsp;&nbsp;1010367</font></td>
       print STDERR "header line\n" if 2 <= $self->{'_debug'};
       $self->approximate_result_count($1);
       $state = $NEXT;
       } # we're in HEADER mode, and line has number of results
 
     elsif ($state eq $HITS && 
-           m/^$sHitPattern/)
+           m|^<[^>]*><B>(\d+)\.| )
+           # m/^$sHitPattern/)
            # m|<B>(\d+)\.\s<A\ .+?</A>\ <A\ HREF=\043([^\043]+)\043>(.+?)</A></B><BR>(.+?)<br>.+?(\d+)\%.+?(\d+)\ bytes.+?(\d\d\d\d/\d\d/\d\d)|i)
       {
       print STDERR "hit line\n" if 2 <= $self->{'_debug'};
@@ -273,9 +280,10 @@ sub native_retrieve_some
       # <font face="verdana&#44;arial&#44;helvetica" size="2"><B>1. <A HREF="http://www.toysrgus.com/images-bootleg.html" TARGET="preview"><IMG SRC="http://static.hotbot.com/images/btn.openpage.white.gif" BORDER="0" WIDTH="17" HEIGHT="16" ALT=""></A> <A HREF="http://www.toysrgus.com/images-bootleg.html">Bootlegs</A></B><BR>Bootlegs Maintained by Gus Lopez (lopez@cs.washington.edu) Bootlegs toys and other Star Wars collectibles were made primarily in countries where Star Wars was not commercially released in theaters. Most Star Wars bootlegs originate from the eastern.<br></font><font size="2">99%&nbsp;&nbsp; 5601 bytes&#44; 1998/03/19 &nbsp;&nbsp;&nbsp;http://www.toysrgus.com/images-bootleg.html</font><p>
       my ($iHit,$iPercent,$iBytes,$sURL,$sTitle,$sDesc,$sDate) = (0,0,0,'','','','');
       # m/<B>(\d+)\.\s/ && $iHit = $1;
-      ($sURL,$sTitle) = ($1,$2) if m|<A\sHREF=\042([^\042]+)\042>(.+?)</A>|;
+      $sURL = $1 if m/target=([^&"]+)/;
+      $sTitle = $1 if m|>([^<]+)</A>|;
       $sDesc = $1 if m/<BR>(.+)<br>/;
-      ($iPercent,$iBytes,$sDate) = ($1,$2,$3) if m|>(\d+)\%&nbsp;&nbsp;\s(\d+)\sbytes&\#44;\s(\d\d\d\d/\d\d/\d\d)|;
+      $iPercent = $1 if m|>(\d+)\%<|;
       # Note that we ignore MIRROR URLs, so our total hit count may
       # get all out of whack.
       if ($sURL eq '')
@@ -299,12 +307,10 @@ sub native_retrieve_some
         $hits_found++;
         } # if $URL else
       $state = $HITS;
-      } # $state eq HIT2
+      } # $state eq HITS
 
-    elsif ($state eq $NEXT && m|<!--\sTABLE\s6\s|i)
+    elsif ($state eq $NEXT && m|</form>|i)
       {
-      # Actual line of input is:
-      # <!-- TABLE 6 (keep bottom half of results from wrapping around left margin) -->
       print STDERR " no next button\n" if 2 <= $self->{'_debug'};
       # There was no "next" button on this page; no more pages to get!
       $self->{'_next_url'} = undef;
@@ -370,4 +376,3 @@ MT = query terms
 RD = (checkbox) filter by location
 RG = (selection) location criteria
 SM = (selection) search type 
-
