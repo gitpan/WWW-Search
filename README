@@ -3,15 +3,16 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.473?  (2004-09-25)
-----------------------------------------------
+WHAT IS NEW IN WWW::Search 2.474?  (2004-10-10)
+-----------------------------------------------
 
 Overview of changes: 
 
- * Workaround for Pod::Parser bug during `make test` on unix
- * SearchResult has new fields bid_count and bid_amount
+ * tweak AutoSearch's email message format
+ * two new functions for using WWW::Search::Test with Test::More
+ * by default, do NOT put login name into the UserAgent's from() method
 
-For details, see the ChangeLog file (updates after 2004-08-21) and/or
+For details, see the ChangeLog file (updates after 2004-09-25) and/or
 the pod of each affected module.
 
 

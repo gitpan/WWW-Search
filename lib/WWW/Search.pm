@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 2.529 2004/08/20 02:07:58 Daddy Exp $
+# $Id: Search.pm,v 2.530 2004/10/10 12:41:44 Daddy Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -82,10 +82,10 @@ use HTTP::Status;
 use LWP::MemberMixin;
 use LWP::RobotUA;
 use LWP::UserAgent;
-use Net::Domain qw( hostfqdn );
+# use Net::Domain qw( hostfqdn );
 use URI;
 use URI::Escape;
-use User;
+# use User;
 
 # Internal states:
 use constant SEARCH_BEFORE => 1;
@@ -100,7 +100,7 @@ use vars qw( @ISA @EXPORT @EXPORT_OK $VERSION $MAINTAINER );
 @EXPORT_OK = qw( escape_query unescape_query generic_option strip_tags );
 @ISA = qw(Exporter LWP::MemberMixin);
 $MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
-$VERSION = do { my @r = (q$Revision: 2.529 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.530 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 =head2 new
 
@@ -129,7 +129,7 @@ sub new
   # the default (not currently more configurable :-< )
   my $default_engine = 'Null::Empty';
   my $default_agent_name = "WWW::Search/$VERSION";
-  my $default_agent_e_mail = User->Login .'@'. hostfqdn;
+  my $default_agent_e_mail = ''; # User->Login .'@'. hostfqdn;
 
   $engine = $default_engine if (!defined($engine));
   # Load the engine, if necessary.

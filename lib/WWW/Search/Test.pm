@@ -1,4 +1,4 @@
-# $rcs = ' $Id: Test.pm,v 2.262 2004/07/01 03:53:41 Daddy Exp $ ' ;
+# $rcs = ' $Id: Test.pm,v 2.266 2004/10/09 23:26:45 Daddy Exp $ ' ;
 
 =head1 NAME
 
@@ -35,21 +35,19 @@ use vars qw( $MODE_DUMMY $MODE_INTERNAL $MODE_EXTERNAL $MODE_UPDATE );
 use vars qw( $TEST_DUMMY $TEST_EXACTLY $TEST_BY_COUNTING $TEST_GREATER_THAN $TEST_RANGE );
 use vars qw( $iTest $oSearch $sEngine );
 
-use vars qw( @EXPORT @EXPORT_OK @ISA );
+use vars qw( @EXPORT @ISA );
 @EXPORT = qw( eval_test test
               no_test not_working not_working_with_tests not_working_and_abandoned
               $MODE_DUMMY $MODE_INTERNAL $MODE_EXTERNAL $MODE_UPDATE
               $TEST_DUMMY $TEST_EXACTLY $TEST_BY_COUNTING $TEST_GREATER_THAN $TEST_RANGE
               new_engine run_test run_gui_test skip_test count_results
+              tm_new_engine tm_run_test
             );
-@EXPORT_OK = qw(
-                 new_engine_test_more run_test_test_more
-               );
 @ISA = qw( Exporter );
 
 use vars qw( $VERSION $bogus_query $websearch );
 
-$VERSION = do { my @r = (q$Revision: 2.262 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.266 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 
 ($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = qw(dummy internal external update);
@@ -542,27 +540,21 @@ sub new_engine
   $oSearch->env_proxy('yes');
   } # new_engine
 
-sub new_engine_test_more
+=head2 tm_new_engine
+
+Same as new_engine(), but uses Test::More instead of just printing 'ok'.
+
+=cut
+
+sub tm_new_engine
   {
   my $sEngine = shift;
   $oSearch = new WWW::Search($sEngine);
-  ok(ref($oSearch), "instantiate WWW::Search::$sEngine object");
+  Test::More::ok(ref($oSearch), "instantiate WWW::Search::$sEngine object");
   $oSearch->env_proxy('yes');
-  } # new_engine_test_more
-
-sub run_test_test_more
-  {
-  # Same arguments as count_results()
-  my ($sType, $sQuery, $iMin, $iMax, $iDebug, $iPrintResults) = @_;
-  my $iCount = &count_results(@_);
-  cmp_ok($iMin, '<=', $iCount, qq{lower-bound num-hits for query=$sQuery}) if defined $iMin;
-  cmp_ok($iCount, '<=', $iMax, qq{upper-bound num-hits for query=$sQuery}) if defined $iMax;
-  } # run_test_test_more
-
+  } # tm_new_engine
 
 =head2 run_test
-
-=head2 run_gui_test
 
 Three arguments: a query string, NOT escaped; a minimum number of expected results; and
 a maximum number of expected results.
@@ -577,13 +569,57 @@ Prints 'ok' or 'not ok' and the test number.
 
 sub run_test
   {
-  return &run_our_test('normal', @_);
+  return &_run_our_test('normal', @_);
   } # run_test
+
+=head2 run_gui_test
+
+Same as run_test(), but calls gui_query() instead of native_query().
+
+=cut
 
 sub run_gui_test
   {
-  return &run_our_test('gui', @_);
+  return &_run_our_test('gui', @_);
   } # run_gui_test
+
+=head2 tm_run_test
+
+Same as run_test(), but uses Test::More rather than just printing 'ok'.
+
+Note: If you use this function inside a TODO block,
+you must set global variable $TODO rather than a local $TODO,
+and you must set the global $TODO back to empty-string (or undef) at the end of your TODO block.
+For example:
+
+  TODO:
+    {
+    $TODO = 'I have not fixed this yet';
+    ok(...);
+    $TODO = '';
+    } # end of TODO block
+
+=cut
+
+sub tm_run_test
+  {
+  # Same arguments as count_results()
+  my ($sType, $sQuery, $iMin, $iMax, $iDebug, $iPrintResults) = @_;
+  my $iCount = &count_results(@_);
+  Test::More::is($oSearch->response->code, 200, 'got valid HTTP response');
+  if (defined $iMin)
+    {
+    Test::More::cmp_ok($iCount, '>=', $iMin, qq{lower-bound num-hits for query=$sQuery});
+    Test::More::cmp_ok($iMin, '<=', $oSearch->approximate_result_count,
+                       qq{lower-bound approximate_result_count});
+    } # if
+  if (defined $iMax)
+    {
+    Test::More::cmp_ok($iCount, '<=', $iMax, qq{upper-bound num-hits for query=$sQuery});
+    Test::More::cmp_ok($oSearch->approximate_result_count, '<=', $iMax,
+                       qq{upper-bound approximate_result_count});
+    } # if
+  } # tm_run_test
 
 =head2 count_results
 
@@ -621,7 +657,7 @@ sub count_results
     }
   $iTest++;
   $sQuery = &WWW::Search::escape_query($sQuery);
-  # print STDERR " + in WWW::Search::Test::run_our_test, iDebug = $iDebug\n";
+  # print STDERR " + in WWW::Search::Test::count_results, iDebug = $iDebug\n";
   if ($sType eq 'gui')
     {
     $oSearch->gui_query($sQuery, $rh);
@@ -647,7 +683,7 @@ sub count_results
   } # count_results
 
 
-sub run_our_test
+sub _run_our_test
   {
   my ($sType, $sQuery, $iMin, $iMax, $iDebug, $iPrintResults) = @_;
   my $iResults = &count_results(@_);
@@ -671,7 +707,7 @@ sub run_our_test
     print STDOUT 'not ';
     } # if
   print STDOUT "ok $iTest\n";
-  } # run_test
+  } # _run_our_test
 
 =head2 skip_test
 

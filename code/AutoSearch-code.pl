@@ -7,7 +7,7 @@ exit 0;
 # AutoSearch-code.pl
 # Copyright (c) 1996-1997 University of Southern California.
 # All rights reserved.
-# $Id: AutoSearch-code.pl,v 2.131 2004/09/21 00:18:26 Daddy Exp $
+# $Id: AutoSearch-code.pl,v 2.132 2004/10/07 10:47:39 Daddy Exp $
 #
 # Complete copyright notice follows below.
 
@@ -37,7 +37,7 @@ use WWW::Search;
 use strict;
 
 use vars qw( $VERSION );
-$VERSION = do { my @r = (q$Revision: 2.131 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.132 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 use constant DEBUG_EMAIL => 0;
 
@@ -909,7 +909,7 @@ sub main
 <HTML>
 <HEAD>$sTitle</HEAD>
 <BODY>
-<h2>The following URLs are new matches for your query '$SummaryQuery':</h2>
+<h2>The following URLs are new matches for your $SummarySearchEngine query '$SummaryQuery':</h2>
 $sEmail
 </BODY></HTML>
 EMAILEND

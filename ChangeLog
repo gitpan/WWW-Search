@@ -1,3 +1,14 @@
+2004-10-10  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search.pm (new): do NOT put login name into agent_e_mail
+
+2004-10-07  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search/Test.pm (tm_new_engine): new function
+	(tm_run_test): new function
+
+	* code/AutoSearch-code.pl (main): add backend name to email body
+
 2004-09-25  Kingpin  <mthurn@verizon.net>
 
 	* lib/WWW/SearchResult.pm (bid_count): new method
