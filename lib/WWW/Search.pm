@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.67 2002/03/22 14:57:31 mthurn Exp $
+# $Id: Search.pm,v 1.68 2002/03/28 19:15:24 mthurn Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -70,7 +70,7 @@ package WWW::Search;
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query generic_option strip_tags @ENGINES_WORKING);
-$VERSION = '2.32';
+$VERSION = '2.33';
 $MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
@@ -1240,9 +1240,42 @@ sub retrieve_some
   } # retrieve_some
 
 
+sub HTML::TreeBuilder::www_search_reset
+  {
+  # If a reset() method becomes available in HTML::TreeBuilder, we
+  # won't need this any more.
+  my $self = shift;
+  $self->delete;
+  # These 4 lines copied from HTML::TreeBuilder::new
+  $self->{'_head'} = $self->insert_element('head',1);
+  $self->{'_pos'} = undef; # pull it back up
+  $self->{'_body'} = $self->insert_element('body',1);
+  $self->{'_pos'} = undef; # pull it back up again
+  } # HTML::TreeBuilder::www_search_reset
+
+
 =head2 native_retrieve_some (PRIVATE)
 
-An internal routine to fetch the next page of results from the engine.
+Fetch the next page of results from the web engine, parse the results,
+and prepare for the next page of results.
+
+If a backend defines this method, it is in total control of the WWW
+fetch, parsing, and preparing for the next page of results.  See the
+WWW::Search::AltaVista module for example usage of the
+native_retrieve_some method.
+
+An easier way to achieve this is to inherit native_retrieve_some from
+WWW::Search, and do only the parsing in the backend code.  Simple
+define a method parse_tree which takes one argument, an
+HTML::TreeBuilder object, and returns an integer, the number of
+results found on this page.  See the WWW::Search::Yahoo module for
+example usage of the parse_tree method.
+
+A backend should, in general, define either parse_tree() or
+native_retrieve_some(), but not both.
+
+Additional features of the default native_retrieve_some method:
+
 Sets $self->{_prev_url} to the URL of the page just retrieved.
 
 Calls $self->preprocess_results_page() on the raw HTML of the page.
@@ -1250,17 +1283,16 @@ Calls $self->preprocess_results_page() on the raw HTML of the page.
 Then, parses the page with an HTML::TreeBuilder object and passes that
 populated object to $self->parse_tree().
 
+Additional notes on using the parse_tree method:
+
 If a backend needs to use a subclassed or modified HTML::TreeBuilder
-object, it should set $self->{'_treebuilder'} to that object before
-any results are retrieved (e.g. at the end of native_setup_search).
+object, the backend should set $self->{'_treebuilder'} to that object
+before any results are retrieved.  The best place to do this is at the
+end of native_setup_search.
 
   my $oTree = new HTML::TreeBuilder;
-  $oTree->store_comments(1);
+  $oTree->store_comments(1);  # for example
   $self->{'_treebuilder'} = $oTree;
-
-If a backend defines the method parse_tree(), it need not also define
-native_retrieve_some().  See the WWW::Search::Yahoo module for example
-usage.
 
 =cut
 
@@ -1276,32 +1308,41 @@ sub native_retrieve_some
   print STDERR " +   sending request (", $self->{'_next_url'}, ")\n" if $self->{_debug};
   my $response = $self->http_request('GET', $self->{'_next_url'});
   $self->{_prev_url} = $self->{_next_url};
-  $self->{'_next_url'} = undef;
+  $self->{_next_url} = undef;
   $self->{response} = $response;
+  # print STDERR " --- WWW response is: ", $response->as_string if 4 < $self->{_debug};
   if (! $response->is_success)
     {
+    if ($self->{_debug})
+      {
+      print STDERR " --- WWW request failed, response is: ", $response->as_string;
+      } # if
     return undef;
     } # if
   # Parse the output:
   my $tree;
   if (ref $self->{'_treebuilder'})
     {
+    # print STDERR " +   using existing _treebuilder\n" if 1 < $self->{_debug};
     # Assume that the backend has installed their own TreeBuilder
     $tree = $self->{'_treebuilder'};
-    # I think we should delete the previous contents of the tree.  BUT
-    # if it is already empty, this gives an error.  I guess for now,
-    # we'll have to live with it.
-    # $tree->delete;
     }
   else
     {
+    # print STDERR " +   creating new _treebuilder\n" if 1 < $self->{_debug};
     $tree = HTML::TreeBuilder->new(
                                    # use all default options
                                   );
     $self->{'_treebuilder'} = $tree;
     }
+  # If a reset() method becomes available in HTML::TreeBuilder, we can
+  # change this:
+  $tree->www_search_reset;
+  # print STDERR " +   parsing content, tree is ", Dumper(\$tree) if 1 < $self->{_debug};
   $tree->parse($self->preprocess_results_page($response->content));
+  # print STDERR " +   done parsing content.\n" if 1 < $self->{_debug};
   $tree->eof();
+  # print STDERR " +   calling parse_tree...\n" if 1 < $self->{_debug};
   return $self->parse_tree($tree);
   } # native_retrieve_some
 

@@ -1,3 +1,9 @@
+2002-03-28  Kingpin  <mthurn@copper.dulles.tasc.com>
+
+	* lib/WWW/Search.pm (native_retrieve_some): add debug msgs
+	(native_retrieve_some): better pod
+	(native_retrieve_some): make it able to re-use the TreeBuilder object!
+
 2002-03-22  Kingpin  <mthurn@copper.dulles.tasc.com>
 
 	* lib/WWW/Search.pm (native_retrieve_some): do not try to delete the TreeBuilder
