@@ -45,7 +45,7 @@ use vars qw( @EXPORT @EXPORT_OK @ISA );
 
 use vars qw( $VERSION $bogus_query );
 
-$VERSION = '2.21';
+$VERSION = '2.22';
 $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 
 ($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = qw(dummy internal external update);
@@ -573,7 +573,6 @@ sub count_results
     else
       {
       $oSearch->maximum_to_retrieve($iMin + 1);
-      $iMax = 999999;
       }
     }
   $iTest++;
@@ -605,21 +604,22 @@ sub run_our_test
   {
   my ($sType, $sQuery, $iMin, $iMax, $iDebug, $iPrintResults) = @_;
   my $iResults = &count_results(@_);
+  my $sExpect;
+  if (! defined($iMax))
+    {
+    $sExpect = "more than $iMin";
+    }
+  elsif (! defined($iMin))
+    {
+    $sExpect = "fewer than $iMax";
+    }
+  else
+    {
+    $sExpect = "$iMin..$iMax";
+    }
+  $iMax = 999999 unless defined ($iMax);
   if (($iResults < $iMin) || ($iMax < $iResults))
     {
-    my $sExpect;
-    if (! defined($iMax))
-      {
-      $sExpect = "more than $iMin";
-      }
-    elsif (! defined($iMin))
-      {
-      $sExpect = "fewer than $iMax";
-      }
-    else
-      {
-      $sExpect = "$iMin..$iMax";
-      }
     print STDERR " --- got $iResults results for $sType $sEngine query '$sQuery', but expected $sExpect\n";
     print STDOUT 'not ';
     } # if

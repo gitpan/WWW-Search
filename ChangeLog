@@ -1,5 +1,17 @@
 2002-07-18  Kingpin  <mthurn@copper.dulles.tasc.com>
 
+	* WWW::Search VERSION 2.36 RELEASED!
+
+2002-07-18  Kingpin  <mthurn@copper.dulles.tasc.com>
+
+	* lib/WWW/Search/Test.pm (run_our_test): FIX miscalculation of max
+
+2002-07-18  Kingpin  <mthurn@copper.dulles.tasc.com>
+
+	* WWW::Search VERSION 2.35 RELEASED!
+
+2002-07-17  Kingpin  <mthurn@copper.dulles.tasc.com>
+
 	* lib/WWW/Search/Test.pm (count_results): new function
 
 2002-06-13  Kingpin  <mthurn@copper.dulles.tasc.com>
