@@ -1,13 +1,11 @@
 # This -*- perl -*- script writes the Makefile for libwww-perl
-# $Id: Makefile.PL,v 1.11 1997/11/04 02:07:06 johnh Exp $
+# $Id: Makefile.PL,v 1.13 1998/08/12 16:50:50 johnh Exp $
+
+require 5.004;
 
 #--- Configuration section ---
-
 @programs_to_install = qw(WebSearch AutoSearch);
-
 #--- End Configuration - You should not have to change anything below this line
-
-require 5.002;  # LWP needs this perl version
 
 # Allow us to suppress all program installation with the -n (library only)
 # option.  This is for those that don't want to mess with the configuration
@@ -20,45 +18,22 @@ unless (getopts("n")) {
 @programs_to_install = () if $opt_n;
 
 
-# Check for non-standard modules that are used by this library.
-$| = 1;
-my $missing_modules = 0;
-
-print "Checking for LWP...";
-eval {
-    require LWP::UserAgent;
-};
-if ($@) {
-    print " failed\n";
-    $missing_modules++;
-    print <<EOT;
-$@
-The WWW::Search library requires the libwww-perl module.
-
-EOT
-    sleep(2);  # Don't hurry too much
-} else {
-    print " ok\n";
-}
-
-print <<EOT if $missing_modules;
-The missing modules can be obtained from CPAN.  Visit
-<URL:http://www.perl.com/CPAN/> to find a CPAN site near you.
-
-EOT
-
-
 # Ok, now it is time to really generate the Makefile
 use ExtUtils::MakeMaker;
 
 WriteMakefile(
-   NAME          => 'WWW::Search',
-   VERSION_FROM  => 'lib/WWW/Search.pm',
-   PL_FILES      => {
+   'NAME'          => 'WWW::Search',
+   'VERSION_FROM'  => 'lib/WWW/Search.pm',
+   'PREREQ_PM'	=> {
+			'HTML::Parser' => 2.16,
+			'HTML::TreeBuilder' => 0,  # release 0.51 is good
+			'LWP' => 5.30,
+		   },
+   'PL_FILES'      => {
                       'bin/WebSearch.PL' => 'bin/WebSearch',
                       'bin/AutoSearch.PL' => 'bin/AutoSearch',
 	            },
-   EXE_FILES     => [ map {"bin/$_"} @programs_to_install ],
+   'EXE_FILES'     => [ map {"bin/$_"} @programs_to_install ],
    'clean'       => { FILES => '$(EXE_FILES)' },
    'dist'	 => { COMPRESS => 'gzip', SUFFIX => 'gz' },
 );

@@ -54,11 +54,11 @@ C<WWW::Search::SFgate> is written by Paul Lindner, <lindner@itu.int>
 
 =head1 BUGS
 
-Things not supported: $result->raw(), options: search_debug.
+Things not supported: $result->raw()
 
 =head1 COPYRIGHT
 
-Copyright (c) 1997 by the United Nations Administrative Committee 
+Copyright (c) 1997,98 by the United Nations Administrative Committee 
 on Coordination (ACC)
 
 All rights reserved.
@@ -66,6 +66,8 @@ All rights reserved.
 =cut
 
 
+use strict;
+use vars qw(@EXPORT @EXPORT_OK @ISA $debug);
 
 require Exporter;
 @EXPORT = qw();
@@ -80,13 +82,11 @@ my($debug) = 0;
 
 #private
 
-
-
 sub native_setup_search {
     my($self, $native_query, $native_opt) = @_;
     my($native_url);
     my($default_native_url) =
-	"http://www.itu.int/cgi-bin/SFgate?application=itu&database=local//usr/local/wais/WWW/www-pages&httppath=/usr/local/www-data/&httpprefix=/&tie=and&verbose=1&text=%s";
+	"http://www.itu.int/SFgate/scripts/SFgate.cgi?application=itu&database=local/WWW/www-pages&tie=and&verbose=1&text=%s";
     
     if (defined($native_opt)) {
 	#print "Got " . join(' ', keys(%$native_opt)) . "\n";
@@ -95,6 +95,8 @@ sub native_setup_search {
 	if ($self->{'search_url'} && $native_opt->{'search_args'}) {
 	    $native_url = $native_opt->{'search_url'} . "?" . $native_opt->{'search_args'};
 	}
+
+	$debug = 1 if ($native_opt->{'search_debug'});
     } 
 
     $native_url = $default_native_url if (!$native_url);
@@ -106,21 +108,25 @@ sub native_setup_search {
     $native_url .= "&verbose=1" if ($native_url !~ /verbose=1/i);
 
     ## Change behaviour depending on 'search_how'
-    if ($self->{search_how} eq 'match_any') {
-	## remove any tieinternal from the query string
-	$native_url =~ s/tieinternal=[^&]+(&?)/$1/ig;
-    } elsif ($self->{search_how} eq 'match_all') {
-	## change tieinternal to and, or add it..
-	$native_url =~ s/tieinternal=[^&]+/tieinternal=and/ig;
-	if ($native_url !~ /tieinternal/) {
-	    $native_url .= "&tieinternal=and";
+    my $how = $self->{'search_how'};
+    if (defined($how)) {
+	if ($how =~ /any/) {
+	    ## remove any tieinternal from the query string
+	    $native_url =~ s/tieinternal=[^&]+(&?)/$1/ig;
+	} elsif ($how =~ /all/) {
+	    ## change tieinternal to and, or add it..
+	    $native_url =~ s/tieinternal=[^&]+/tieinternal=and/ig;
+	    if ($native_url !~ /tieinternal/) {
+		$native_url .= "&tieinternal=and";
+	    }
+	} elsif ($how =~ /phrase/) {
+	    $native_query =~ s/[\'\"]+//g;
+	    $native_query =~ s/\+/ /g;
+	    $native_query = "'$native_query'";
+	} elsif ($how =~ /boolean/) {
+	    ## Leave the same..
 	}
-    } elsif ($self->{search_how} eq 'match_phrase') {
-	$native_query =~ s/[\'\"]+//g;
-	$native_query =~ s/\+/ /g;
-	$native_query = "'$native_query'";
     }
-
     $native_url =~ s/%s/$native_query/g; # Substitute search terms...
     $native_url =~ s/%n/40/g; # Substitute num hits...
 
@@ -144,15 +150,19 @@ sub native_retrieve_some
     return undef if (!defined($self->{_next_url}));
 
     # get some
-    print "GET " . $self->{_next_url} . "\n" if ($debug);
-    my($request) = $self->HTTPrequest($self->{search_method}, $self->{_next_url});
-    my($response) = $self->{user_agent}->request($request);
+    my($method) = $self->{search_method};
+    $method = 'GET' unless $method;
+
+    print $method . $self->{_next_url} . "\n" if ($debug);
+
+    my($response) = $self->http_request($method,
+					$self->{_next_url});
 
     $self->{response} = $response;
 
     if (!$response->is_success) {
 	#print $response->as_string();
-	print "Some problem\n" if ($Debug);
+	print "Some problem\n" if ($debug);
 	return (undef);
     };
 
@@ -178,7 +188,7 @@ sub native_retrieve_some
 
 	    $url =~ s,http:/cgi-bin,/cgi-bin,i;	# weird sfgate thing..
 	    $url =~ s,http:/([^/]),/$1,i;	# weird sfgate thing..
-	    my($linkobj) = $self->absurl($self->{_next_url}, $url);
+	    my($linkobj) = new URI::URL $url, $self->{_next_url};
 
 	    my($hit) = new WWW::SearchResult;
 	    $hit->add_url($linkobj->abs->as_string);
@@ -198,8 +208,6 @@ sub native_retrieve_some
 	    $size = $size * 1024 if ($other =~ /kbytes/);
 
 	    $hit->size($size);
-
-	    $hit->ref($self->{'search_ref'});
 
 	    push(@{$self->{cache}}, $hit);
 	}

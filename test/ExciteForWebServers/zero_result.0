@@ -1,0 +1,22 @@
+<html><head><title>Search Results</title></head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#FF0000" ALINK="#0000FF"><h1><a href="http://www.excite.com/"><img src="/Excite/pictures/AT-search_banner.gif" BORDER=0></a></h1>
+<FORM ACTION="AT-Full_Site_Searchsearch.cgi" METHOD=POST>
+<INPUT TYPE=image BORDER=0 NAME="groupby" SRC="/Excite/pictures/AT-grouped_confidence.gif">
+<INPUT TYPE=hidden NAME="docs" VALUE="">
+<INPUT TYPE=hidden NAME="smode" VALUE="confidence">
+<INPUT TYPE=hidden NAME="mode" VALUE="concept">
+<INPUT TYPE=hidden NAME="searchpage" VALUE="">
+<INPUT TYPE=hidden NAME="search" VALUE="+mrfglbqnx +BogusNoSuchWord">
+
+</FORM>
+
+<br>excite for web servers found documents about: <b>+mrfglbqnx +BogusNoSuchWord</b>
+<p>
+<FONT SIZE=2>
+<img src="/Excite/pictures/AT-red_x.gif" alt="[higher confidence]">
+- higher confidence,
+<img src="/Excite/pictures/AT-black_x.gif" alt="[lower confidence]">
+- lower confidence; click icons to find similar documents
+</FONT>
+
+<p><p><b>No documents found.<b><p></body></html>

@@ -72,8 +72,9 @@ sub native_retrieve_some
 
     # get some
     print "GET " . $self->{_next_url} . "\n" if ($Debug);
-    my($request) = $self->HTTPrequest($self->{search_method}, $self->{_next_url});
-    my($response) = $self->{user_agent}->request($request);
+    my($response) = $self->http_request($self->{search_method}, 
+					$self->{_next_url});
+
     $self->{response} = $response;
     if (!$response->is_success) {
 	print "Some problem\n" if ($Debug);
@@ -93,14 +94,13 @@ sub native_retrieve_some
 	if (($linkelem->parent->starttag() =~ /^<TD/) &&
 	     ($linkelem->parent->endtag()   eq '</TD>')) {
 
-	    my($linkobj)       = $self->absurl($self->{_next_url}, $link);
+	    my($linkobj)       = new URI::URL $link, $self->{_next_url};
 	    $hits_found++;
 
 	    my($hit) = new WWW::SearchResult;
 	    $hit->add_url($linkobj->abs->as_string());
 	    $hit->title(join(' ',@{$linkelem->content}));
 	    $hit->normalized_score($score);
-	    $hit->ref($self->{'search_ref'});
 
 	    $hit->score($score);
 	    # Find the score....  Ack! Uglyness..

@@ -3,7 +3,7 @@
 #
 # test.pl
 # Copyright (C) 1997 by USC/ISI
-# $Id: test.pl,v 1.16 1998/06/25 18:10:27 johnh Exp $
+# $Id: test.pl,v 1.19 1998/08/12 20:43:04 johnh Exp $
 #
 # Copyright (c) 1997 University of Southern California.
 # All rights reserved.                                            
@@ -277,9 +277,33 @@ sub test_cases {
     test($mode, $TEST_GREATER_THAN, 86);
 
     ######################################################################
+    $search_engine = 'ExciteForWebServers';
+    $maintainer = 'Paul Lindner <paul.lindner@itu.int>';
+
+    $file = 'test/ExciteForWebServers/zero_result';
+    $query = '+mrfglbqnx +Bogus' . 'NoSuchWord';
+    test($mode, $TEST_EXACTLY);
+
+    $file = 'test/ExciteForWebServers/one_page_result';
+    $query = 'burundi';
+    test($mode, $TEST_RANGE, 2, 99);
+
+    ######################################################################
+    $search_engine = 'FolioViews';
+    $maintainer = 'Paul Lindner <paul.lindner@itu.int>';
+
+    $file = 'test/FolioViews/zero_result';
+    $query = '+mrfglbqnx +Bogus' . 'NoSuchWord';
+    test($mode, $TEST_EXACTLY);
+
+    $file = 'test/FolioViews/one_page_result';
+    $query = 'burundi';
+    test($mode, $TEST_RANGE, 2, 400);
+
+    ######################################################################
     $search_engine = 'Gopher';
-    $maintainer = 'Paul Lindner <lindner@reliefweb.int>';
-    not_working;
+    $maintainer = 'Paul Lindner <paul.lindner@itu.int>';
+    no_test;
 
     ######################################################################
     $search_engine = 'HotBot';
@@ -295,7 +319,7 @@ sub test_cases {
     test($mode, $TEST_RANGE, 2, 80);
 
     $file = 'test/HotBot/two_page_result';
-    $query = '+"Martin Thurn" +SWB';
+    $query = '+LSAM +ISI';
     test($mode, $TEST_GREATER_THAN, 86);
 
     ######################################################################
@@ -358,6 +382,12 @@ sub test_cases {
 
 
     ######################################################################
+    $search_engine = 'Livelink';
+    $maintainer = 'Paul Lindner <paul.lindner@itu.int>';
+    no_test;
+
+
+    ######################################################################
     $search_engine = 'Lycos';
     $maintainer = 'John Heidemann <johnh@isi.edu>';
 
@@ -366,13 +396,13 @@ sub test_cases {
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/Lycos/one_page_result';
-    $query = 'LSAM IB ISI';
-    test($mode, $TEST_EXACTLY);
+    $query = 'LSAM IB ISI Intelligent';
+    test($mode, $TEST_RANGE, 2, 10);
 
     # 10 hits/page
     $file = 'test/Lycos/two_page_result';
     $query = 'LSAM ISI';
-    test($mode, $TEST_GREATER_THAN, 12);
+    test($mode, $TEST_GREATER_THAN, 10);
 
     ######################################################################
     $search_engine = 'Magellan';
@@ -391,25 +421,79 @@ sub test_cases {
     $query = '+ISI +divisions';
     test($mode, $TEST_GREATER_THAN, 11);
 
+
+    ######################################################################
+    $search_engine = 'MSIndexServer';
+    $maintainer = 'Paul Lindner <paul.lindner@itu.int>';
+
+    $file = 'test/MSIndexServer/zero_result';
+    $query = '+mrfglbqnx +Bogus' . 'NoSuchWord';
+    test($mode, $TEST_EXACTLY);
+
+    $file = 'test/MSIndexServer/one_page_result';
+    $query = 'burundi';
+    test($mode, $TEST_RANGE, 2, 99);
+
+
+    ######################################################################
+    $search_engine = 'Null';
+    $maintainer = 'Paul Lindner <paul.lindner@itu.int>';
+
+    $file = 'test/Null/zero_result';
+    $query = 'anyterm';
+    test($mode, $TEST_EXACTLY);
+
+
     ######################################################################
     $search_engine = 'PLweb';
-    $maintainer = 'Paul Lindner <lindner@reliefweb.int>';
-    not_working;
+    $maintainer = 'Paul Lindner <paul.lindner@itu.int>';
+
+    $file = 'test/PLweb/zero_result';
+    $query = '+mrfglbqnx +Bogus' . 'NoSuchWord';
+    test($mode, $TEST_EXACTLY);
+
+    $file = 'test/PLweb/one_page_result';
+    $query = 'burundi';
+    test($mode, $TEST_RANGE, 2, 99);
+
+
+    ######################################################################
+    $search_engine = 'Search97';
+    $maintainer = 'Paul Lindner <paul.lindner@itu.int>';
+
+    $file = 'test/Search97/zero_result';
+    $query = '+mrfglbqnx +Bogus' . 'NoSuchWord';
+    test($mode, $TEST_EXACTLY);
+
+    $file = 'test/Search97/one_page_result';
+    $query = 'burundi';
+    test($mode, $TEST_RANGE, 2, 99);
+
 
     ######################################################################
     $search_engine = 'SFgate';
-    $maintainer = 'Paul Lindner <lindner@reliefweb.int>';
-    not_working;
+    $maintainer = 'Paul Lindner <paul.lindner@itu.int>';
+
+    $file = 'test/SFgate/zero_result';
+    $query = '+mrfglbqnx +Bogus' . 'NoSuchWord';
+    test($mode, $TEST_EXACTLY);
+
+    $file = 'test/SFgate/one_page_result';
+    $query = 'burundi';
+    test($mode, $TEST_RANGE, 2, 99);
+
 
     ######################################################################
     $search_engine = 'Simple';
-    $maintainer = 'Paul Lindner <lindner@reliefweb.int>';
-    not_working;
+    $maintainer = 'Paul Lindner <paul.lindner@itu.int>';
+    no_test;
+
 
     ######################################################################
     $search_engine = 'Verity';
-    $maintainer = 'Paul Lindner <lindner@reliefweb.int>';
-    not_working;
+    $maintainer = 'Paul Lindner <paul.lindner@itu.int>';
+    no_test;
+
 
     ######################################################################
     $search_engine = 'WebCrawler';
@@ -426,6 +510,7 @@ sub test_cases {
     $file = 'test/WebCrawler/two_page_result';
     $query = 'Greedo';
     test($mode, $TEST_GREATER_THAN, 100);
+
 
     ######################################################################
     $search_engine = 'Yahoo';
@@ -465,7 +550,7 @@ sub main {
     &test_cases($MODE_INTERNAL);
 
     if (!$internal_only) {
-        print "\n\nTESTING EXTERNAL QUERIES.\n\t(Errors here suggest search-engine remormatting and should be\n\treported to the maintainer of the back-end for the search engine.)\n\n";
+        print "\n\nTESTING EXTERNAL QUERIES.\n\t(Errors here suggest search-engine reformatting and should be\n\treported to the maintainer of the back-end for the search engine.)\n\n";
         &test_cases($MODE_EXTERNAL);
     };
 }

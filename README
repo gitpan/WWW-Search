@@ -3,29 +3,30 @@ WWW::Search and AutoSearch
 ==========================
 
 
-WHAT IS NEW WITH WWW::Search 1.019?  (25-Jun-98)
------------------------------------
-overview:  back-end updates
+WHAT IS NEW WITH WWW::Search 1.020?  (12-Aug-98)
+------------------------------------------------
+overview:  lots of bug fixes and new back-ends
 
-- bug fix: test suite bugs were causing false negatives on
-	Yahoo, Excite, Magellan, WebCrawler (reported by Martin Thurn,
-	fixed John Heidemann)
-- new feature:  the test suite is now run daily (automatically).
-	Output can be found at
-	<http://www.isi.edu/~johnh/WORK/LSAM/WWW_SEARCH/>.
-- new feature: verbose mode of WebSearch is more verbose
-- bug fix: AltaVista was recording the RealName URL on some queries
-	(bug reported by Vassilis Papadimos <vpapad@dblab.ece.ntua.gr>)
-- bug fix: AltaVista wasn't correctly reporting change_time/size 
-	(bug and fix from Martin Valldeby <martin.valldeby@pakom.se>)
+- bug fix:  maximum_to_retrieve now works for very small values.
+	(Problem identified by Vidyut Luther <vluther@hpctc.org>.)
+- new back-ends: ExciteForWebServers, FolioViews, Livelink, MSIndexServer,
+	Null, Search97
+	all from Paul Lindner (thanks!)
+- bug fix:  Gopher, PLweb, SFgate, Simple, Verity from Paul Lindner
+- bug fix:  Lycos from John Heidemann
+- new test suites:  PLweb, FolioViews, Null, MSIndexServer, Search97,
+	SFgate, ExciteForWebServers rom Paul Lindner
+- bug fix:  HotBot repair from Martin Thurn
 
+- known bug:  When installing on Windows the makefile
+	will break on lines beginning with a colon (:).
+	Delete them and the install should work.
+	Improvements to Windows installation are welcome.
+	(I don't run Windows and so can't write or test this code.)
 - known bug:  WWW::Search doesn't work on MacPerl because of
 	end-of-line differences.  A fix for this problem is in
 	progress.  (Problem identified and fix suggested by 
 	Chris Nandor.)
-- known bug:  I'm told there are installation problems on Windows.
-	Suggestions about how to improve Windows support are welcome.
-	(I don't run Windows and so can't write or test this code.)
 	
 
 
@@ -58,18 +59,25 @@ status is:
 AltaVista		working		(in test suite)
 Dejanews		not working?	not in test suite
 Excite			working		(in test suite)
+ExciteForWebServers	working		(in test suite)
+FolioViews		working		(in test suite)
 Gopher			not working?	not in test suite
 HotBot			working		(in test suite)
-Infoseek		working		(in test suite)
+Infoseek		not working	(in test suite)
+Livelink		not working?	not in test suite
 Lycos			working		(in test suite)
-Magellan		working		(in test suite)
-PLweb			not working?	not in test suite
-SFgate			not working?	not in test suite
-Verity			not working?	not in test suite
+Magellan		working?	(in test suite)
+MSIndexServer		working		(in test suite)
+Null			working		(in test suite)
+PLweb			working		(in test suite)
+Search97		working		(in test suite)
+SFgate			working		(in test suite)
 Simple			not working?	not in test suite
-WebCrawler		working		(in test suite)
 Verity			not working	not in test suite
-Yahoo			working		(in test suite)
+WebCrawler		not working	(in test suite)
+Yahoo			working?	(in test suite)
+
+Magellan and Yahoo's test suites are sometimes flakey.
 
 (others are currently under development, see contributors below for details)
 
@@ -390,6 +398,20 @@ overview:  back-end updates
 	progress.  (Problem identified and fix suggested by 
 	Chris Nandor.)
 
+1.019, 25-Jun-98
+overview:  back-end updates
+- bug fix: test suite bugs were causing false negatives on
+	Yahoo, Excite, Magellan, WebCrawler (reported by Martin Thurn,
+	fixed John Heidemann)
+- new feature:  the test suite is now run daily (automatically).
+	Output can be found at
+	<http://www.isi.edu/~johnh/WORK/LSAM/WWW_SEARCH/>.
+- new feature: verbose mode of WebSearch is more verbose
+- bug fix: AltaVista was recording the RealName URL on some queries
+	(bug reported by Vassilis Papadimos <vpapad@dblab.ece.ntua.gr>)
+- bug fix: AltaVista wasn't correctly reporting change_time/size 
+	(bug and fix from Martin Valldeby <martin.valldeby@pakom.se>)
+
 
 
 SUPPORT AND CREDITS
@@ -410,13 +432,17 @@ BACK-ENDS:
 				and Martin Thurn <mthurn@tasc.com>
 	ExciteForWebServers	Paul Lindner <lindner@reliefweb.int>
 				(under development)
+	FolioViews		Paul Lindner
 	Gopher			Paul Lindner
 	HotBot			William Scheding and Martin Thurn
 	Infoseek		Cesare Feroldi de Rosa and Martin Thurn
-	MSIndexServer		Paul Lindner (under development)
+	Livelink		Paul Lindner
 	Lycos			William Scheding and John Heidemann
 	Magellan		Martin Thurn
+	MSIndexServer		Paul Lindner
+	Null			Paul Lindner
 	PLWeb			Paul Lindner
+	Search97		Paul Lindner
 	SFgate			Paul Lindner
 	Simple			Paul Lindner
 	Verity			Paul Lindner
@@ -436,7 +462,7 @@ Nandor <pudge@pobox.com>, Martin Valldeby <martin.valldeby@pakom.se>.
 
 Bugs have reported by Joseph McDonald <joe@smartlink.net>, Juan Jose
 Amor <jjamor@infor.es>, Bowen Dwelle <bowen@hotwired.com>, Vassilis
-Papadimos <vpapad@dblab.ece.ntua.gr>.
+Papadimos <vpapad@dblab.ece.ntua.gr>, Vidyut Luther <vluther@hpctc.org>.
 
 Feedback, bug reports and fixes, and new back-ends should be sent to
 John Heidemann <johnh@isi.edu>.  Before submitting a bug report,

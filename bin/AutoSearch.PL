@@ -23,7 +23,7 @@ print OUT <<'!NO!SUBS!';
 # AutoSearch.pl
 # Copyright (c) 1996-1997 University of Southern California.
 # All rights reserved.                                            
-# $Id: AutoSearch.PL,v 1.30 1997/02/12 18:43:02 johnh Exp $
+# $Id: AutoSearch.PL,v 1.31 1998/08/11 23:56:20 johnh Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -431,7 +431,7 @@ There are no bugs, so don't look for them.
 
 
 =cut
-#'     This is needed for emacs' perl mode.
+#'     This is needed for emacs perl mode.
 
 use strict;
 

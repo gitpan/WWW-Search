@@ -4,7 +4,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.52 1998/06/01 17:12:30 johnh Exp $
+# $Id: Search.pm,v 1.58 1998/08/11 23:56:23 johnh Exp $
 #
 # A complete copyright notice appears at the end of this file.
 # 
@@ -84,7 +84,7 @@ see L<WWW::SearchResult>.
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query generic_option);
-$VERSION = '1.019';
+$VERSION = '1.020';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
 use LWP::UserAgent;
@@ -241,6 +241,13 @@ sub native_query {
 	    if (generic_option($_));
     };
 }
+
+=head2 approximate_result_count
+
+Some back-ends indicate how many hits they've found.
+Typically this is an approximate value.
+=cut
+#'
 sub approximate_result_count { return shift->_elem('approx_count', @_); }
 
 
@@ -268,7 +275,11 @@ sub results
     while ($self->retrieve_some()) {
 	# leave them in the cache
     };
-    return @{$self->{cache}};
+    if ($#{$self->{cache}} >= $self->{maximum_to_retrieve}) {
+        return @{$self->{cache}}[0..($self->{maximum_to_retrieve}-1)];
+    } else {
+        return @{$self->{cache}};
+    };
 }
 
 =head2 next_result
@@ -289,6 +300,7 @@ sub next_result
     my($self) = shift;
     Carp::croak "search not yet specified"
 	if (!defined($self->{'native_query'}));
+    return undef if ($self->{next_to_return} >= $self->{maximum_to_retrieve});
     for (;;) {
         # Something in the cache?  Return it.
         if ($self->{next_to_return} <= $#{$self->{cache}}) {
@@ -363,9 +375,11 @@ sub seek_result
 
 =head2 maximum_to_retrieve
 
-The maximum number of hits to return (approximately).
+The maximum number of hits to return.
 Queries resulting in more than this many hits will return
 the first hits, up to this limit.
+Although this specifies a maximum limit,
+search engines may impose a lower limit.
 
 Defaults to 500.
 
@@ -374,6 +388,7 @@ Example:
 
 =cut
 sub maximum_to_retrieve { return shift->_elem('maximum_to_retrieve', @_); }
+# xxx: This should actually be called "maxiumum to return", I suppose.
 
 
 =head2 timeout
@@ -475,10 +490,12 @@ sub http_proxy { return shift->_elem('http_proxy', @_); }
 
 
 
-=head2 http_request
+=head2 http_request($method, $url)
 
 Return the response from an http request,
 handling debugging.  Requires that user_agent be setup.
+For POST methods, query is split off of the URL and passed
+in the request body.
 
 =cut
 sub http_request {
@@ -489,13 +506,25 @@ sub http_request {
 	$response = $self->http_request_from_file($url);
     } else {
 	# fetch it
-        my($request) = new HTTP::Request($method, $url);
+        my($request);
+	if ($method eq 'POST') {
+	    my($uri_url) = new URI::URL($url);
+	    my($equery) = $uri_url->equery;
+	    $uri_url->equery(undef);   # we'll handle the query ourselves
+	    $request = new HTTP::Request($method, $uri_url->abs());
+	    $request->header('Content-Type', 'application/x-www-form-urlencoded');
+	    $request->header('Content-Length', length $equery);
+	    $request->content($equery);
+	} else {
+	    $request = new HTTP::Request($method, $url);
+	};
 	my($ua) = $self->{user_agent};
+
 	$response = $ua->request($request);
 
 	# save it for debugging?
 	if ($self->{search_to_file} && $response->is_success) {
-	    $self->http_request_to_file($url, $response);
+	    $self->http_request_to_file($url, $data, $response);
 	};
     };
     return $response;
@@ -557,7 +586,8 @@ sub http_request_from_file {
 
 sub http_request_to_file {
     my($self) = shift;
-    my($url, $response) = @_;
+    my($response) = pop;
+    my($url) = @_;
 
     my($fn) = $self->http_request_get_filename();
 
@@ -650,6 +680,23 @@ sub user_agent_delay {
     # sleep for a qarter second
     select(undef, undef, undef, $self->{interrequest_delay})
 	 if ($self->{robot_p});
+}
+
+=head2 absurl (PRIVATE)
+
+An internal routine to convert a relative URL into a absolute URL.  It
+takes two arguments, the 'base' url (usually the search engine CGI
+URL) and the URL to be converted.  Returns a URI::URL object.
+
+=cut
+
+sub absurl {
+    my($self, $base, $url) = @_;
+
+    #$url =~ s,^http:/([^/]),/$1,; #bogus sfgate URL
+
+    my $link = new URI::URL $url, $base;
+    return($link);
 }
 
 

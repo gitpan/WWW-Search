@@ -1,5 +1,4 @@
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 
 
 
@@ -7,9 +6,10 @@
 <head><title>HotBot results: "Christie Abbott" (1+)</title></head>
 <body bgcolor="#FFFFFF" link="#3300CC" text="#000000" vlink="#660066" alink="#FF0000">
 <form action="/">
-<!--<img src="http://static.hotbot.com/images/white_ads.gif" width="600" height="30" border=0 ALT="ads" usemap="#white_ads"><br>-->
-<img src="http://static.hotbot.com/images/bar.gif" width="600" height="14" border=0 ALT="Navigation Bar" usemap="#bar"><br>
-
+<!--ads_and_navbar.asp -->
+<img src="http://static.hotbot.com/images/white_ads.gif" width="600" border="0" height="30" ALT="Click here to shop" USEMAP="#white_ads"><br> 
+<img src="http://static.hotbot.com/images/bar.gif" width="600" height="14" border="0" ALT="Navigation Bar" USEMAP="#bar"><br>
+<!-- /ads_and_navbar.asp -->
 <table border="0" cellspacing="0" cellpadding="0" width="600">
 <tr> 
 <td bgcolor="#FFFFFF" colspan="2" width="232" valign="bottom"><a href="http://home.wired.com">
@@ -31,7 +31,7 @@
 <td valign="MIDDLE"><input type="submit"  name="submit" value="SEARCH"></td>
 </tr></table></td></tr>
 <tr><td valign="Top" width=148>
-<!-- shopping bot link --></td>
+<font face="Verdana, Arial, Helvetica" size="2" color="#ff0000"><i>Find hot deals with our <a href="http://www.hotwired.com/cgi-bin/redirect/1120/http://shop.hotbot.com/">shopping agent.</a></i></font></td>
 <td bgcolor="#99FF33" colspan=2>
 &nbsp;&nbsp;<SELECT name="SM" >
 <OPTION value="MC">all the words
@@ -42,154 +42,176 @@
 <OPTION value="url">links to this URL
 <OPTION value="B">Boolean phrase
 </SELECT>
-<input type="SUBMIT" name="act.new" value=" New ">&nbsp;<input type="SUBMIT" name="act.revise" value=" Revise ">&nbsp;
+&nbsp;<INPUT TYPE="Checkbox" NAME="SWR" VALUE=""Christie Abbott"" ><font size=1 face="Verdana, Arial, Helvetica">&nbsp;<b>Search within these 15 results</b></font><BR></td></tr>
+<tr><td></td><td bgcolor="#99FF33"><img src="http://static.hotbot.com/images/spacer.gif" height=1 width=452><BR>
+&nbsp;&nbsp;<input type="SUBMIT" name="act.new" value=" New ">&nbsp;<input type="SUBMIT" name="act.revise" value=" Revise ">&nbsp;
 
 <input type="SUBMIT" name="act.super" value=" More Options ">
-&nbsp;</td>
+&nbsp;<BR>
+</td>
 </tr>
 </table>
 
-
-<table border="0" width="150" align="LEFT" cellspacing="0" cellpadding="0">
-<tr><td>
-<font face="Verdana, Arial, Helvetica" size="2" color="#ff0000"><b><i>Also&nbsp;Search:&nbsp;&nbsp;&nbsp;&nbsp;</i></b></font><br>
-<font face="Verdana, Arial, Helvetica" size="2">
-<a href="/usenet/">Usenet</a><br>
-<a href="/partners/business.html">Yellow Pages</a><br>
-<a href="/partners/people.html">White Pages</a><br>
-<a href="/partners/email.html">Email&nbsp;Addresses</a><br><!-- *paste Shop link* -->
-<a href="/partners/websitez.html">Domain Names</a><br>
-<a href="http://www.classifieds2000.com/cgi-cls/display.exe?hotbot+class">Classifieds</a><br>
-<a href="http://www.newsbot.com/">Top&nbsp;News&nbsp;Sites</a><br>
-<a href="http://www.hotwired.com/cgi-bin/redirect/1121/http://www.homeshark.com">Homes&nbsp;&&nbsp;Loans</a><br>
-<a href="http://stocks.hotbot.com/">Stocks</a><br>
-<a href="/partners/filez.html">Shareware</a><br></font>
-<BR><BR>
-<p>&nbsp;<p>
-
-<!-- 2 ADs were here , extra line of <p>'s -->
-<p>&nbsp;<p><p>&nbsp;<p><p>&nbsp;<p><p>&nbsp;<p><p>&nbsp;<p><p>&nbsp;<p><p>&nbsp;<p>
-<p>&nbsp;<p><p>&nbsp;<p>&nbsp;<p>&nbsp;</p>
-<p>&nbsp;</p>
-</td><td></td></tr>
-</table>
-<!-- END TABLE -->
-
-<!--  HTML ADS  -->
-<font face="Verdana, Arial, Helvetica" size="1" color="#FF0000">
-<i><BR>
-Wired links </i></font><br>
-<font face="Verdana, Arial, Helvetica" size="2" color="#000000">
-<img src="http://static.hotbot.com/images/blackspacer.gif" ALT="" width="434" height="1"><BR>
-<b><i>Webmonkey - </i></b> 
-<a href="http://www.wired.com/cgi-bin/redirect/1144/http://www.hotwired.com/webmonkey/">
-Use our Javascript library to jazz up your site!</a>
-<br>
-<b><i>Wired News - </i></b>
-<a href="http://www.wired.com/cgi-bin/redirect/1143/http://www.wired.com/news/">
-Your essential source for tech news and analysis.</a>
-<br>
-<b><i>HotBot - </i></b>
-<A HREF="http://www.hotwired.com/cgi-bin/redirect/1117/http://www.elibrary.com/s/hotbot/">In research mode?  Try HotBot Research Service</a>.
-</font><br>
-<!--   END HTML ADS   -->
-<INPUT type=hidden name="_v" value="2" >
+	<INPUT type=hidden name="_v" value="2" >
 <INPUT type=hidden name="OPs" value="MDRTP" >
 
 <INPUT type=hidden name="DC" value="100" >
 </form>
-<!-- AdSpace program=hotbotresults size=large params.Styles=html,imgtxt,img,text SERVER_NAME=www.hotbot.com KW=christie KW=abbott KW=christie%20abbott cobrand=default REMOTE_HOST=dash-w.isi.edu RH1=edu RH2=isi.edu RH3=dash-w.isi.edu REMOTE_ADDR=128.9.128.142 HOT_R_UNIQID=1QWO3PLtJGA6 P_UNIQID=1QWO3PLtJGQ6 --><a href="http://nsads.hotwired.com/event.ng/Type=click&ProfileID=4400&RunID=6630&AdID=8039&GroupID=1&FamilyID=368&TagValues=1.6.25.145.156.158.322.389.409.526.539.2036.4659.4673.4693.4724.4837.4863&Redirect=http:%2F%2Fadforce.imgis.com%2F%3Fadlink%7C30%7C7272%7C1%7C1%7CIMGIS"><img src="http://adforce.imgis.com/?adserv%7C30%7C7272%7C1%7C1%7CIMGIS" border=1 height=60 width=468 alt="Click here for AT&T College"><br>Click here for AT&T College</a><!-- /AdSpace -->
+
+<table border="0" width="150" align="LEFT" cellspacing="0" cellpadding="0">
+<tr><td>
+<p>&nbsp;<br>
+	<!-- AdSpace program=hbris position=1 SERVER_NAME=www.hotbot.com KW=christie KW=abbott KW=christie%20abbott ALL_KW=christie%20abbott cobrand=default REMOTE_HOST=dash.isi.edu RH1=edu RH2=isi.edu RH3=dash.isi.edu REMOTE_ADDR=128.9.160.184 HOT_R_UNIQID=1ENXZNrt4DQt P_UNIQID=1ENXZNrt4Dgt hbf=adult hbf=language:any --><font size="-1">
+<a href="http://nsads.hotwired.com/event.ng/Type=click&ProfileID=5003&RunID=8444&AdID=10673&GroupID=1&FamilyID=863&TagValues=1.6.25.145.158.322.348.409.526.3302.4659.4673.4693.4724.4837.4863.6192.6632.6820.6830&params.tag.ALL_KW=christie+abbott&Redirect=http://www.spree.com/gifts/default.asp?x=HOTBOTAD"><img src="http://static.wired.com/advertising/blipverts/spree/135x22gifts.gif" border="0" width="135" height="22"></a><br>
+<b><a href="http://nsads.hotwired.com/event.ng/Type=click&ProfileID=5003&RunID=8444&AdID=10673&GroupID=1&FamilyID=863&TagValues=1.6.25.145.158.322.348.409.526.3302.4659.4673.4693.4724.4837.4863.6192.6632.6820.6830&params.tag.ALL_KW=christie+abbott&Redirect=http://www.spree.com/gifts/default.asp?x=HOTBOTAD">Click here for Spree.com</a></b></font>
+<!-- /AdSpace -->
+<p>&nbsp;<br>
+	<!-- AdSpace program=hbris position=2 SERVER_NAME=www.hotbot.com KW=christie KW=abbott KW=christie%20abbott ALL_KW=christie%20abbott cobrand=default REMOTE_HOST=dash.isi.edu RH1=edu RH2=isi.edu RH3=dash.isi.edu REMOTE_ADDR=128.9.160.184 HOT_R_UNIQID=1ENXZNrt4DQt P_UNIQID=1ENXZNrt4Dgt hbf=adult hbf=language:any --><font size='-1'>
+<a href='http://nsads.hotwired.com/event.ng/Type=click&ProfileID=5019&RunID=8805&AdID=11350&GroupID=1&FamilyID=964&TagValues=1.6.25.145.158.322.348.409.526.2034.3303.4659.4673.4693.4724.4837.4863.6192.6820.6830&params.tag.ALL_KW=christie+abbott&Redirect=http://www.e-centives.com/servlet/home?ema006=3Q9821PP'><img src='http://static.wired.com/advertising/blipverts/emaginet/110x30a.gif' border='0' width='110' height='33'></a><br>
+<b>Digital coupons. e-centives. <a href='http://nsads.hotwired.com/event.ng/Type=click&ProfileID=5019&RunID=8805&AdID=11350&GroupID=1&FamilyID=964&TagValues=1.6.25.145.158.322.348.409.526.2034.3303.4659.4673.4693.4724.4837.4863.6192.6820.6830&params.tag.ALL_KW=christie+abbott&Redirect=http://www.e-centives.com/servlet/home?ema006=3Q9821AU'>Click here.</a></b></font><!-- /AdSpace -->
+<p>&nbsp;<br>
+	<!-- AdSpace program=hbris position=3 SERVER_NAME=www.hotbot.com KW=christie KW=abbott KW=christie%20abbott ALL_KW=christie%20abbott cobrand=default REMOTE_HOST=dash.isi.edu RH1=edu RH2=isi.edu RH3=dash.isi.edu REMOTE_ADDR=128.9.160.184 HOT_R_UNIQID=1ENXZNrt4DQt P_UNIQID=1ENXZNrt4Dgt hbf=adult hbf=language:any --><font size='-1'>
+<a href='http://nsads.hotwired.com/event.ng/Type=click&ProfileID=5417&RunID=7509&AdID=9210&GroupID=1&FamilyID=622&TagValues=1.6.25.145.158.322.348.409.526.2042.3304.4659.4673.4693.4724.4837.4863.6192.6820.6830&params.tag.ALL_KW=christie+abbott&Redirect=http://www.datek.com/advert/tn.html?from=hotbot.9890'><img src='http://static.wired.com/advertising/blipverts/datek/Es-77x40.gif' border='0' width='75' height='40'></a><br>
+<b>Click here for <a href='http://nsads.hotwired.com/event.ng/Type=click&ProfileID=5417&RunID=7509&AdID=9210&GroupID=1&FamilyID=622&TagValues=1.6.25.145.158.322.348.409.526.2042.3304.4659.4673.4693.4724.4837.4863.6192.6820.6830&params.tag.ALL_KW=christie+abbott&Redirect=http://www.datek.com/advert/tn.html?from=hotbot.9890'>Datek Online</a></font><!-- /AdSpace -->
+<p>&nbsp;<br>
+<!-- Integrated Search, Buy Online -->
+<FORM ACTION="http://barnesandnoble.bfast.com/booklink/click">
+<INPUT TYPE="hidden" NAME="sourceid" VALUE="18993" >
+<INPUT TYPE="hidden" NAME="is_search" VALUE="Y">
+<INPUT TYPE="hidden" NAME="match" VALUE="exact">
+<INPUT TYPE="hidden" NAME="options" VALUE="and">
+<INPUT TYPE="hidden" NAME="anotherlevel" VALUE="Y">
+<p><font face="Verdana, Arial, Helvetica" size="2" color="#ff0000"><b><i>Buy&nbsp;Online:&nbsp;&nbsp;&nbsp;&nbsp;</i></b></font>
+<br><img src="http://static.hotbot.com/images/bn.gif" border="0" width="110" height="33" ALT="Search BarnesAndNoble.com">
+<input type = "text" name="keyword" value=""Christie Abbott"" size="12">
+<input type="submit" name="go" value ="Go">
+</form>
+<p>&nbsp;<p>
+<!-- also_search.asp -->
+<font face="Verdana, Arial, Helvetica" size="2" color="#ff0000"><b><i>Other Search Engines:</i></b></font><br>
+<font face="Verdana, Arial, Helvetica" size="2">
+<a href="/usenet/">Usenet</a><br>
+<a href="/partners/business.asp">Yellow Pages</a><br>
+<a href="/partners/people.asp">White Pages</a><br>
+<a href="/partners/email.asp">Email&nbsp;Addresses</a><br>
+<a href="http://www.hotwired.com/cgi-bin/redirect/1119/http://shop.hotbot.com/">Shopping</a><br>
+<a href="/partners/websitez.asp">Domain Names</a><br>
+<a href="/partners/classifieds.asp">Classifieds</a><br>
+<a href="http://www.newsbot.com/">Top&nbsp;News&nbsp;Sites</a><br>
+<a href="http://www.hotwired.com/cgi-bin/redirect/1121/http://rateshop.homeshark.com/scripts/crateshop.dll?center=hotbot">Homes&nbsp;&&nbsp;Loans</a><br>
+<a href="http://stocks.hotbot.com/">Stocks</a><br>
+<a href="http://www.hotwired.com/cgi-bin/redirect/1175/http://www.tucows.com/">Free&nbsp;Downloads</a><br>
+<a href="http://www.hotwired.com/cgi-bin/redirect/1381/http://www.careerbuilder.com">Jobs&nbsp;&&nbsp;R&eacute;sum&eacute;s</a><br>
+<a href="http://www.hotwired.com/cgi-bin/redirect/1669/http://www.elibrary.com/s/hotbot/">Research Service</a><br>
+</font>
+<!-- /also_search.asp -->
+</td>
+<td></td></tr>
+</table>
+<!-- END TABLE -->
 <p>
-<form action="/">
+
+
+	<!-- html_ads.asp -->
+<font face="Verdana, Arial, Helvetica" size="1" color="#FF0000">
+<i>Wired links </i></font><br>
+<font face="Verdana, Arial, Helvetica" size="2" color="#000000">
+<img src="http://static.hotbot.com/images/blackspacer.gif" ALT="" width="434" height="1"><BR>
+<b><i>Wired Collections - </i></b> 
+<a href="http://www.wired.com/cgi-bin/redirect/1384/http://www.wired.com/collections/future_of_money/">
+The future of commerce, markets, and money.</a>
+<br>
+<b><i>Shop HotBot - </i></b>
+<a href="http://www.hotwired.com/cgi-bin/redirect/1116/http://shop.hotbot.com">
+Shop from the comfort of your desktop.</a>
+<br>
+<b><i>HotBot - </i></b>
+<A HREF="http://www.hotwired.com/cgi-bin/redirect/1117/http://www.elibrary.com/s/hotbot/">In research mode?  Try HotBot Research Service</a>.
+</font><p>
+<!-- /html_ads.asp --><!-- AdSpace program=hotbotresults size=large SERVER_NAME=www.hotbot.com KW=christie KW=abbott KW=christie%20abbott ALL_KW=christie%20abbott cobrand=default REMOTE_HOST=dash.isi.edu RH1=edu RH2=isi.edu RH3=dash.isi.edu REMOTE_ADDR=128.9.160.184 HOT_R_UNIQID=1ENXZNrt4DQt P_UNIQID=1ENXZNrt4Dgt hbf=adult hbf=language:any --><a href="http://nsads.hotwired.com/event.ng/Type=click&ProfileID=5594&RunID=8185&AdID=10215&GroupID=1&FamilyID=792&TagValues=1.6.25.145.156.322.389.409.526.539.4659.4673.4693.4724.4837.4863.6456.6632.6820.6830&params.tag.ALL_KW=christie+abbott&Redirect=http:%2F%2Fwww.insweb.com%2Fcgi-bin%2Fbozellauto.exe%3Fbid%3D15317"><img src="http://static.wired.com/advertising/blipverts/insweb/search_468.gif" border=1 height=60 width=468 alt="Click here for insweb.com"><br>Click here for insweb.com</a><!-- /AdSpace -->
+<p>
 
 <font face="verdana, arial, helvetica, " size="2" color="#ff0000"><b><i>Web 
 Results </i></b></font>
 <font face="arial, helvetica" size="2"><b>
-20 matches.</b>&nbsp;&nbsp;
-Breakdown:    abbott 143561, christie 115019
-<br></font>
+15 matches.</b>&nbsp;&nbsp;
+
+<br>
+</font>
 <img src="http://static.hotbot.com/images/blackspacer.gif" ALT="" width="434" height="1"><br>
+<font face="arial, helvetica" size="2"><b>1&nbsp;-&nbsp;15&nbsp;</b></font>
 
 
-<font face="arial, helvetica" size="2"><b>1&nbsp;-&nbsp;20&nbsp;</b></font>
+<img src="http://static.hotbot.com/images/spacer.gif" ALT="" width="320" height="1">
 <p>
 
-<INPUT type=hidden name="_v" value="2" >
-<INPUT type=hidden name="OPs" value="MDRTP" >
 
-<INPUT type=hidden name="MT" value="&quot;Christie Abbott&quot;" >
-<INPUT type=hidden name="SM" value="SC" >
-<INPUT type=hidden name="DC" value="100" >
-</form>
 
-<font face="verdana&#44;arial&#44;helvetica" size="2"><B>1. <A HREF="http://www.pitt.edu/~thurn/christie.html" TARGET="preview"><IMG SRC="http://static.hotbot.com/images/btn.openpage.white.gif" BORDER="0" WIDTH="17" HEIGHT="16" ALT=""></A> <A HREF="http://www.pitt.edu/~thurn/christie.html">Christie Abbott Fan Club</A></B><BR>Christie Abbott Welcome to the unofficial Christie Abbott fan club. Christie is best known for her role as Sam on the acclaimed Wishbone children's series. If we could invest in actors the way we invest in stocks, I would rate Christie a &quot;strong...<br></font><font size="2">99%&nbsp;&nbsp; 4127 bytes&#44; 1998/01/26 &nbsp;&nbsp;&nbsp;http://www.pitt.edu/~thurn/christie.html</font><p>
-<font face="verdana&#44;arial&#44;helvetica" size="2"><B>2. <A HREF="http://www.wwwishbone.com/WWWishbone/MyShow/TheCast/christie.html" TARGET="preview"><IMG SRC="http://static.hotbot.com/images/btn.openpage.white.gif" BORDER="0" WIDTH="17" HEIGHT="16" ALT=""></A> <A HREF="http://www.wwwishbone.com/WWWishbone/MyShow/TheCast/christie.html">WORLDWIDE WISHBONE(TM)</A></B><BR>Christie Abbott as &quot;Samantha&quot; Christie Abbott's television commercial experience helps her in front of the camera as Samantha in the WISHBONE series. Christie has appeared in television commercials for Mattel's Barbie, Venture department stores...<br></font><font size="2">98%&nbsp;&nbsp; 3353 bytes&#44; 1997/04/15 &nbsp;&nbsp;&nbsp;http://www.wwwishbone.com/WWWishbone/MyShow/TheCast/christie.html</font><p>
-<B>3.</b> Mirror: <a href=http://38.182.108.228/WWWishbone/MyShow/TheCast/christie.html>&#40;http://38.182.108.228/WWWishbone/MyShow/TheCast/christie.html&#41;</A><p>
 
-<!-- post #3 -->
 <!-- TABLE 6 (keep bottom half of results from wrapping around left margin) -->
 <table border="0" cellpadding="0" cellspacing="0"><tr><td>
-<!-- END #3 -->       
-
-<font face="verdana&#44;arial&#44;helvetica" size="2"><B>4. <A HREF="http://www.wwwishbone.com/WWWishbone/Misc/siteindex.html" TARGET="preview"><IMG SRC="http://static.hotbot.com/images/btn.openpage.white.gif" BORDER="0" WIDTH="17" HEIGHT="16" ALT=""></A> <A HREF="http://www.wwwishbone.com/WWWishbone/Misc/siteindex.html">Worldwide Wishbone - Site Index</A></B><BR>Worldwide Wishbone Home Page My Show A to D E to I J to R S to Z Wishbone Cast Wishbone Larry Brantley Jordan Wall Adam Springfield Christie Abbott Mary Chris Wall Angee Hughes My Store My Fun Stuff Sketches Sound Bites Glossies Canine Clips News...<br></font><font size="2">97%&nbsp;&nbsp; 5178 bytes&#44; 1997/09/05 &nbsp;&nbsp;&nbsp;http://www.wwwishbone.com/WWWishbone/Misc/siteindex.html</font><p>
-<B>5.</b> Mirror: <a href=http://38.182.108.228/WWWishbone/Misc/>&#40;http://38.182.108.228/WWWishbone/Misc/&#41;</A><p>
-<B>6.</b> Mirror: <a href=http://38.182.108.228/WWWishbone/Misc/siteindex.html>&#40;http://38.182.108.228/WWWishbone/Misc/siteindex.html&#41;</A><p>
-<font face="verdana&#44;arial&#44;helvetica" size="2"><B>7. <A HREF="http://www.execpc.com/~lynch3/history.html" TARGET="preview"><IMG SRC="http://static.hotbot.com/images/btn.openpage.white.gif" BORDER="0" WIDTH="17" HEIGHT="16" ALT=""></A> <A HREF="http://www.execpc.com/~lynch3/history.html">History of the Bedroom Floor/Internet Pulsar</A></B><BR>Approx. Late July 97 The Bedroom Floor is uploaded at original size: 1 page. Following events happened in the month to follow: Quote Page written. Bio Page written. Link Page written. Main Site reworked: carpeting, guestbook, first counter, etc....<br></font><font size="2">95%&nbsp;&nbsp; 2576 bytes&#44; 1998/03/02 &nbsp;&nbsp;&nbsp;http://www.execpc.com/~lynch3/history.html</font><p>
-<font face="verdana&#44;arial&#44;helvetica" size="2"><B>8. <A HREF="http://www.wwwishbone.com/WWWishbone/MyShow/TheCast/cast.html" TARGET="preview"><IMG SRC="http://static.hotbot.com/images/btn.openpage.white.gif" BORDER="0" WIDTH="17" HEIGHT="16" ALT=""></A> <A HREF="http://www.wwwishbone.com/WWWishbone/MyShow/TheCast/cast.html">WORLDWIDE WISHBONE(TM)</A></B><BR>&quot;Meet the members of my pack!&quot; The WISHBONE television series stars Wishbone the dog, &quot;a little dog with a big imagination.&quot;SM The Wishbone character is played by a real Jack Russell terrier (with a voice-over by actor Larry Brantley), who &quot;sniffs..<br></font><font size="2">95%&nbsp;&nbsp; 4392 bytes&#44; 1997/04/15 &nbsp;&nbsp;&nbsp;http://www.wwwishbone.com/WWWishbone/MyShow/TheCast/cast.html</font><p>
-<font face="verdana&#44;arial&#44;helvetica" size="2"><B>9. <A HREF="http://crisny.org/not-for-profit/cllassie/12tteamb.htm" TARGET="preview"><IMG SRC="http://static.hotbot.com/images/btn.openpage.white.gif" BORDER="0" WIDTH="17" HEIGHT="16" ALT=""></A> <A HREF="http://crisny.org/not-for-profit/cllassie/12tteamb.htm">12 &amp; Under B Classie Lassie Tournament Team</A></B><BR>12 &amp; Under 'B' Classie Lassie Tournament Team Team Roster Christie Abbott Trisha Baldwin Ruth Brown Megan Curran Kelly Ferguson Nicole Gorman Corey Lindley Casy Maddalla Jennifer Pfeffer Jessica Sickles Amanda Stan Jenah Vielkind Ashley Zeller...<br></font><font size="2">95%&nbsp;&nbsp; 1557 bytes&#44; 1997/10/21 &nbsp;&nbsp;&nbsp;http://crisny.org/not-for-profit/cllassie/12tteamb.htm</font><p>
-<font face="verdana&#44;arial&#44;helvetica" size="2"><B>10. <A HREF="http://www.pbs.org/wishbone/factsabouttheseries.html" TARGET="preview"><IMG SRC="http://static.hotbot.com/images/btn.openpage.white.gif" BORDER="0" WIDTH="17" HEIGHT="16" ALT=""></A> <A HREF="http://www.pbs.org/wishbone/factsabouttheseries.html">WISHBONE - Facts About the Series</A></B><BR>FACTS ABOUT THE WISHBONE SERIES PREMIERE DATE WISHBONE premiered on PBS on Oct. 9, 1995. Forty half-hour WISHBONE episodes will air daily on some 300 PBS stations over a three-year period. CONCEPT The WISHBONE educational television series airing...<br></font><font size="2">93%&nbsp;&nbsp; 3181 bytes&#44; 1997/06/10 &nbsp;&nbsp;&nbsp;http://www.pbs.org/wishbone/factsabouttheseries.html</font><p>
-<font face="verdana&#44;arial&#44;helvetica" size="2"><B>11. <A HREF="http://www3.pbs.org/whatson/1997/fallpress/wishbone97pr.html" TARGET="preview"><IMG SRC="http://static.hotbot.com/images/btn.openpage.white.gif" BORDER="0" WIDTH="17" HEIGHT="16" ALT=""></A> <A HREF="http://www3.pbs.org/whatson/1997/fallpress/wishbone97pr.html">PBS 1997 Fall Season Highlights - WISHBONE</A></B><BR>WISHBONE&amp;#174 Continuing Series WISHBONE, the literature-loving Jack Russell terrier, bounds into the PBS fall season with a primetime special and new half-hour episodes of the series designed to introduce children to the great classics of world...<br></font><font size="2">92%&nbsp;&nbsp; 5430 bytes&#44; 1997/09/23 &nbsp;&nbsp;&nbsp;http://www3.pbs.org/whatson/1997/fallpress/wishbone97pr.html</font><p>
-<font face="verdana&#44;arial&#44;helvetica" size="2"><B>12. <A HREF="http://www3.pbs.org/whatson/1997/10/press/wish__000201.html" TARGET="preview"><IMG SRC="http://static.hotbot.com/images/btn.openpage.white.gif" BORDER="0" WIDTH="17" HEIGHT="16" ALT=""></A> <A HREF="http://www3.pbs.org/whatson/1997/10/press/wish__000201.html">October 1997 PBS Picks - WISHBONE</A></B><BR>WISHBONE&amp;#174 WISHBONE, the literature-loving Jack Russell terrier, bounds into the PBS fall season with a primetime special and new half-hour episodes of the series designed to introduce children to the great classics of world literature and help..<br></font><font size="2">92%&nbsp;&nbsp; 5288 bytes&#44; 1997/10/28 &nbsp;&nbsp;&nbsp;http://www3.pbs.org/whatson/1997/10/press/wish__000201.html</font><p>
-<font face="verdana&#44;arial&#44;helvetica" size="2"><B>13. <A HREF="http://members.wbs.net/homepages/a/r/o/aromaangelinpurple.html" TARGET="preview"><IMG SRC="http://static.hotbot.com/images/btn.openpage.white.gif" BORDER="0" WIDTH="17" HEIGHT="16" ALT=""></A> <A HREF="http://members.wbs.net/homepages/a/r/o/aromaangelinpurple.html">Aroma(Angel in Purple) / Personal WBS Home Page</A></B><BR>Aroma(Angel in Purple) HEY! IF YOU LIKE WISHBONE CHECK THIS OUT! http://www.wwwishbone.com/WWWishbone/MyShow/TheCast/Images/TheCast.sm.gif -- http://www.wwwishbone.com/WWWishbone/MyShow/TheCast/Images/JoeandWB.sm.gif Joe Tabolt: Jordan Wall earned..<br></font><font size="2">90%&nbsp;&nbsp; 23512 bytes&#44; 1998/02/25 &nbsp;&nbsp;&nbsp;http://members.wbs.net/homepages/a/r/o/aromaangelinpurple.html</font><p>
-<font face="verdana&#44;arial&#44;helvetica" size="2"><B>14. <A HREF="http://www.wwwishbone.com/WWWishbone/NewsAboutMe/primetime.html" TARGET="preview"><IMG SRC="http://static.hotbot.com/images/btn.openpage.white.gif" BORDER="0" WIDTH="17" HEIGHT="16" ALT=""></A> <A HREF="http://www.wwwishbone.com/WWWishbone/NewsAboutMe/primetime.html">WORLDWIDE WISHBONE(TM)</A></B><BR>WISHBONE BOUNDS INTO PBS PRIME TIME THIS FALL WITH AN HOUR-LONG SEASON PREMIERE BASED ON WASHINGTON IRVING'S THE LEGEND OF SLEEPY HOLLOW. Eight New Half-Hour Specials to Follow RICHARDSON, TX, April 8, 1997 - WISHBONE , the highly acclaimed Emmy...<br></font><font size="2">89%&nbsp;&nbsp; 10399 bytes&#44; 1997/11/21 &nbsp;&nbsp;&nbsp;http://www.wwwishbone.com/WWWishbone/NewsAboutMe/primetime.html</font><p>
-<font face="verdana&#44;arial&#44;helvetica" size="2"><B>15. <A HREF="http://www.pbs.org/insidepbs/news/wishbone2.html" TARGET="preview"><IMG SRC="http://static.hotbot.com/images/btn.openpage.white.gif" BORDER="0" WIDTH="17" HEIGHT="16" ALT=""></A> <A HREF="http://www.pbs.org/insidepbs/news/wishbone2.html">&quot;Wishbone&quot; Bounds Into PBS Prime Time This Fall With An Hour-Long Season Premiere Based On Washington Irving's The</A></B><BR>&quot;WISHBONE&quot; BOUNDS INTO PBS PRIME TIME THIS FALL WITH AN HOUR-LONG SEASON PREMIERE BASED ON WASHINGTON IRVING'S THE LEGEND OF SLEEPY HOLLOW - Eight New Half-Hour Episodes to Follow - RICHARDSON, TX, April 8, 1997 -- WISHBONE, the highly acclaimed...<br></font><font size="2">89%&nbsp;&nbsp; 7066 bytes&#44; 1997/06/10 &nbsp;&nbsp;&nbsp;http://www.pbs.org/insidepbs/news/wishbone2.html</font><p>
-<font face="verdana&#44;arial&#44;helvetica" size="2"><B>16. <A HREF="http://www.webring.org/index/a.1.html" TARGET="preview"><IMG SRC="http://static.hotbot.com/images/btn.openpage.white.gif" BORDER="0" WIDTH="17" HEIGHT="16" ALT=""></A> <A HREF="http://www.webring.org/index/a.1.html">Webring Index: a</A></B><BR>Webring Comprehensive Index For a subject-oriented guide to the Webrings, check out RingWorld, our online directory. This index is rebuilt nightly. New additions and changes will not appear here for up to 24 hours. -- a -- 38117 rings total -...<br></font><font size="2">89%&nbsp;&nbsp; 42595 bytes&#44; 1998/03/01 &nbsp;&nbsp;&nbsp;http://www.webring.org/index/a.1.html</font><p>
-<B>17.</b> Mirror: <a href=http://www.webring.com/index/a.1.html>&#40;http://www.webring.com/index/a.1.html&#41;</A><p>
-<font face="verdana&#44;arial&#44;helvetica" size="2"><B>18. <A HREF="http://www.angelfire.com/mo/Jihan/index.html" TARGET="preview"><IMG SRC="http://static.hotbot.com/images/btn.openpage.white.gif" BORDER="0" WIDTH="17" HEIGHT="16" ALT=""></A> <A HREF="http://www.angelfire.com/mo/Jihan/index.html">WISHBONE!</A></B><BR>WISHBONE! http://www.wwwishbone.com/WWWishbone/MyShow/TheCast/Images/TheCast.sm.gif -- http://www.wwwishbone.com/WWWishbone/MyShow/TheCast/Images/JoeandWB.sm.gif Joe Tabolt: Jordan Wall earned the role of Joe in the WISHBONE series after competing..<br></font><font size="2">86%&nbsp;&nbsp; 29295 bytes&#44; 1998/04/21 &nbsp;&nbsp;&nbsp;http://www.angelfire.com/mo/Jihan/index.html</font><p>
-<font face="verdana&#44;arial&#44;helvetica" size="2"><B>19. <A HREF="http://www.lumal.com/usa/cis/female.html" TARGET="preview"><IMG SRC="http://static.hotbot.com/images/btn.openpage.white.gif" BORDER="0" WIDTH="17" HEIGHT="16" ALT=""></A> <A HREF="http://www.lumal.com/usa/cis/female.html">Agency Summary November 15, 1996 00:56:56</A></B><BR>BACK TO THE GATE&gt; RANTINGS of a fierce technopath the STANster AGENCY STABLE OF ACTORS Agency unknown or see manager Aida Turturro Alison LaPlaca Allison Folland Amanda Anka Amy Pietz Angela Ortiz Angie Everhart Angie Harmon Anita Barone Ann Anello.<br></font><font size="2">74%&nbsp;&nbsp; 50758 bytes&#44; 1997/10/13 &nbsp;&nbsp;&nbsp;http://www.lumal.com/usa/cis/female.html</font><p>
-<font face="verdana&#44;arial&#44;helvetica" size="2"><B>20. <A HREF="http://www.xenite.org/kpdoerr/xena_tubewatch90797.html" TARGET="preview"><IMG SRC="http://static.hotbot.com/images/btn.openpage.white.gif" BORDER="0" WIDTH="17" HEIGHT="16" ALT=""></A> <A HREF="http://www.xenite.org/kpdoerr/xena_tubewatch90797.html">AL Wheaties Tube Watch</A></B><BR>UPDATE OF SEPTEMBER 7, 1997 Update of July 18 / TubeWatch Calendar ~Guardian of the Tube~~ Somewhat High Priestess of TV/Movie Trivia A.Y.E. &lt;BG!&gt; angela.wheaton@snet.net I wanted to take this opportunity to say how much I am SADDENED by the recen<br></font><font size="2">61%&nbsp;&nbsp; 108169 bytes&#44; 1997/10/15 &nbsp;&nbsp;&nbsp;http://www.xenite.org/kpdoerr/xena_tubewatch90797.html</font><p>
-
-
-<!--  bottom breakdown -->
-<form action="/">
-<font face="verdana, arial, helvetica " size="2" color="#ff0000"><b><i>Web 
-Results</i></b></font> <font face="Arial, Helvetica" size="2"><b>20 matches.</b>&nbsp;&nbsp;
-Breakdown:    abbott 143561, christie 115019
-<br></font>
-<img src="http://static.hotbot.com/images/blackspacer.gif" ALT="" width="440" height="1"><br>
-
-<font face="arial, helvetica" size="2"><b>1&nbsp;-&nbsp;20&nbsp;</b></font>
-<INPUT type=hidden name="_v" value="2" >
-<INPUT type=hidden name="OPs" value="MDRTP" >
-
-<INPUT type=hidden name="MT" value="&quot;Christie Abbott&quot;" >
-<INPUT type=hidden name="SM" value="SC" >
-<INPUT type=hidden name="DC" value="100" >
-</form>
-
 <p>
+
+<font face="verdana&#44;arial&#44;helvetica" size="2"><B>1.&nbsp;<A HREF="/director.asp?target=http://www.metroplexweb.com/actingclass/&id=1&userid=1ENXZNrt4Dgt&query=MT=%22Christie+Abbott%22&SM=SC&DC=100" TARGET="preview"><IMG SRC="http://static.hotbot.com/images/btn.openpage.white.gif" BORDER="0" WIDTH="17" HEIGHT="16" ALT=""></A> <A HREF="/director.asp?target=http://www.metroplexweb.com/actingclass/&id=1&userid=1ENXZNrt4Dgt&query=MT=%22Christie+Abbott%22&SM=SC&DC=100">Margo Manning Entertainment</A></B><BR>Progressive acting classes for all ages and performance levels.<br></font><font size="2">99%&nbsp;&nbsp; 7370 bytes&#44; 1998/05/16 &nbsp;&nbsp;&nbsp;http://www.metroplexweb.com/actingclass/</font><p>
+<font face="verdana&#44;arial&#44;helvetica" size="2"><B>2.&nbsp;<A HREF="/director.asp?target=http://38.182.108.228/WWWishbone/MyShow/TheCast/&id=2&userid=1ENXZNrt4Dgt&query=MT=%22Christie+Abbott%22&SM=SC&DC=100" TARGET="preview"><IMG SRC="http://static.hotbot.com/images/btn.openpage.white.gif" BORDER="0" WIDTH="17" HEIGHT="16" ALT=""></A> <A HREF="/director.asp?target=http://38.182.108.228/WWWishbone/MyShow/TheCast/&id=2&userid=1ENXZNrt4Dgt&query=MT=%22Christie+Abbott%22&SM=SC&DC=100">WORLDWIDE WISHBONE(TM)</A></B><BR>&quot;Meet the members of my pack!&quot; The WISHBONE television series stars Wishbone the dog, &quot;a little dog with a big imagination.&quot;SM The Wishbone character is played by a real Jack Russell terrier (with a voice-over by actor Larry Brantley), who &quot;sniffs..<br></font><font size="2">96%&nbsp;&nbsp; 4392 bytes&#44; 1998/04/15 &nbsp;&nbsp;&nbsp;http://38.182.108.228/WWWishbone/MyShow/TheCast/</font><p>
+<font face="verdana&#44;arial&#44;helvetica" size="2"><B>3.&nbsp;<A HREF="/director.asp?target=http://www.wwwishbone.com/WWWishbone/Misc/siteindex.html&id=3&userid=1ENXZNrt4Dgt&query=MT=%22Christie+Abbott%22&SM=SC&DC=100" TARGET="preview"><IMG SRC="http://static.hotbot.com/images/btn.openpage.white.gif" BORDER="0" WIDTH="17" HEIGHT="16" ALT=""></A> <A HREF="/director.asp?target=http://www.wwwishbone.com/WWWishbone/Misc/siteindex.html&id=3&userid=1ENXZNrt4Dgt&query=MT=%22Christie+Abbott%22&SM=SC&DC=100">Worldwide Wishbone - Site Index</A></B><BR>Worldwide Wishbone Home Page My Show A to D E to I J to R S to Z Wishbone Cast Wishbone Larry Brantley Jordan Wall Adam Springfield Christie Abbott Mary Chris Wall Angee Hughes My Store My Fun Stuff Sketches Sound Bites Glossies Canine Clips News...<br></font><font size="2">96%&nbsp;&nbsp; 5178 bytes&#44; 1998/04/15 &nbsp;&nbsp;&nbsp;http://www.wwwishbone.com/WWWishbone/Misc/siteindex.html</font><p>
+<font face="verdana&#44;arial&#44;helvetica" size="2"><B>4. </b> Mirror: <a href="http://38.182.108.228/WWWishbone/Misc/siteindex.html">&#40;http://38.182.108.228/WWWishbone/Misc/siteindex.html&#41;</a></font><p>
+<font face="verdana&#44;arial&#44;helvetica" size="2"><B>5. </b> Mirror: <a href="http://38.182.108.228/WWWishbone/Misc/">&#40;http://38.182.108.228/WWWishbone/Misc/&#41;</a></font><p>
+<font face="verdana&#44;arial&#44;helvetica" size="2"><B>6.&nbsp;<A HREF="/director.asp?target=http://crisny.org/not-for-profit/cllassie/12tteamb.htm&id=6&userid=1ENXZNrt4Dgt&query=MT=%22Christie+Abbott%22&SM=SC&DC=100" TARGET="preview"><IMG SRC="http://static.hotbot.com/images/btn.openpage.white.gif" BORDER="0" WIDTH="17" HEIGHT="16" ALT=""></A> <A HREF="/director.asp?target=http://crisny.org/not-for-profit/cllassie/12tteamb.htm&id=6&userid=1ENXZNrt4Dgt&query=MT=%22Christie+Abbott%22&SM=SC&DC=100">12 &amp; Under B Classie Lassie Tournament Team</A></B><BR>12 &amp; Under 'B' Classie Lassie Tournament Team Team Roster Christie Abbott Trisha Baldwin Ruth Brown Megan Curran Kelly Ferguson Nicole Gorman Corey Lindley Casy Maddalla Jennifer Pfeffer Jessica Sickles Amanda Stan Jenah Vielkind Ashley Zeller...<br></font><font size="2">93%&nbsp;&nbsp; 1557 bytes&#44; 1997/10/21 &nbsp;&nbsp;&nbsp;http://crisny.org/not-for-profit/cllassie/12tteamb.htm</font><p>
+<font face="verdana&#44;arial&#44;helvetica" size="2"><B>7.&nbsp;<A HREF="/director.asp?target=http://www.sagami.or.jp/~harasawa/seiyuu/List/NishimuraChinami.html&id=7&userid=1ENXZNrt4Dgt&query=MT=%22Christie+Abbott%22&SM=SC&DC=100" TARGET="preview"><IMG SRC="http://static.hotbot.com/images/btn.openpage.white.gif" BORDER="0" WIDTH="17" HEIGHT="16" ALT=""></A> <A HREF="/director.asp?target=http://www.sagami.or.jp/~harasawa/seiyuu/List/NishimuraChinami.html&id=7&userid=1ENXZNrt4Dgt&query=MT=%22Christie+Abbott%22&SM=SC&DC=100">Katayori seiyuu list : NishimuraChinami</A></B><BR>index sapporo.iij.ad.jp seiyuu database WISHBONE : ``A TALE OF TWO SITTERS&quot; 1998/07/25 # # 54 1998/07/16 52 ! 1998/07/09 53 3 1998/06/29 Gretchen WISHBONE : ``FLEABITTEN BARGAIN&quot; 1998/06/26 2 49 1998/06/18 51 1 1998/06/15 # () # ^^; # () 47 1998...<br></font><font size="2">93%&nbsp;&nbsp; 13270 bytes&#44; 1998/07/25 &nbsp;&nbsp;&nbsp;http://www.sagami.or.jp/~harasawa/seiyuu/List/NishimuraChinami.html</font><p>
+<font face="verdana&#44;arial&#44;helvetica" size="2"><B>8.&nbsp;<A HREF="/director.asp?target=http://www.pbs.org/whatson/1997/fallpress/wishbone97pr.html&id=8&userid=1ENXZNrt4Dgt&query=MT=%22Christie+Abbott%22&SM=SC&DC=100" TARGET="preview"><IMG SRC="http://static.hotbot.com/images/btn.openpage.white.gif" BORDER="0" WIDTH="17" HEIGHT="16" ALT=""></A> <A HREF="/director.asp?target=http://www.pbs.org/whatson/1997/fallpress/wishbone97pr.html&id=8&userid=1ENXZNrt4Dgt&query=MT=%22Christie+Abbott%22&SM=SC&DC=100">PBS 1997 Fall Season Highlights - WISHBONE</A></B><BR>WISHBONE&amp;#174 Continuing Series WISHBONE, the literature-loving Jack Russell terrier, bounds into the PBS fall season with a primetime special and new half-hour episodes of the series designed to introduce children to the great classics of world...<br></font><font size="2">89%&nbsp;&nbsp; 5430 bytes&#44; 1997/09/23 &nbsp;&nbsp;&nbsp;http://www.pbs.org/whatson/1997/fallpress/wishbone97pr.html</font><p>
+<font face="verdana&#44;arial&#44;helvetica" size="2"><B>9. </b> Mirror: <a href="http://www3.pbs.org/whatson/1997/fallpress/wishbone97pr.html">&#40;http://www3.pbs.org/whatson/1997/fallpress/wishbone97pr.html&#41;</a></font><p>
+<font face="verdana&#44;arial&#44;helvetica" size="2"><B>10.&nbsp;<A HREF="/director.asp?target=http://www.hollywood.com/news/topstories/06-09-98/html/2-5.html&id=10&userid=1ENXZNrt4Dgt&query=MT=%22Christie+Abbott%22&SM=SC&DC=100" TARGET="preview"><IMG SRC="http://static.hotbot.com/images/btn.openpage.white.gif" BORDER="0" WIDTH="17" HEIGHT="16" ALT=""></A> <A HREF="/director.asp?target=http://www.hollywood.com/news/topstories/06-09-98/html/2-5.html&id=10&userid=1ENXZNrt4Dgt&query=MT=%22Christie+Abbott%22&SM=SC&DC=100">Hollywood Online - Top Stories</A></B><BR>Tuesday, June 9 1998 Weekly Video Calendar L.A. Times Syndicate The following videocassettes are slated for release the week of June 7, 1998. Unless otherwise noted, all titles are released on Tuesdays: DRAMA -- AFTERGLOW (Columbia TriStar, priced..<br></font><font size="2">89%&nbsp;&nbsp; 9701 bytes&#44; 1998/08/04 &nbsp;&nbsp;&nbsp;http://www.hollywood.com/news/topstories/06-09-98/html/2-5.html</font><p>
+<font face="verdana&#44;arial&#44;helvetica" size="2"><B>11.&nbsp;<A HREF="/director.asp?target=http://www.webring.com/index/a.1.html&id=11&userid=1ENXZNrt4Dgt&query=MT=%22Christie+Abbott%22&SM=SC&DC=100" TARGET="preview"><IMG SRC="http://static.hotbot.com/images/btn.openpage.white.gif" BORDER="0" WIDTH="17" HEIGHT="16" ALT=""></A> <A HREF="/director.asp?target=http://www.webring.com/index/a.1.html&id=11&userid=1ENXZNrt4Dgt&query=MT=%22Christie+Abbott%22&SM=SC&DC=100">Webring Index: a</A></B><BR>Webring Comprehensive Index For a subject-oriented guide to the Webrings, check out RingWorld, our online directory. This index is rebuilt Regularly. New additions and changes will not appear here for 1-2 days. -- a -- 51465 rings total -- 18347...<br></font><font size="2">86%&nbsp;&nbsp; 41909 bytes&#44; 1998/07/26 &nbsp;&nbsp;&nbsp;http://www.webring.com/index/a.1.html</font><p>
+<font face="verdana&#44;arial&#44;helvetica" size="2"><B>12.&nbsp;<A HREF="/director.asp?target=http://www.wwwishbone.com/WWWishbone/NewsAboutMe/primetime.html&id=12&userid=1ENXZNrt4Dgt&query=MT=%22Christie+Abbott%22&SM=SC&DC=100" TARGET="preview"><IMG SRC="http://static.hotbot.com/images/btn.openpage.white.gif" BORDER="0" WIDTH="17" HEIGHT="16" ALT=""></A> <A HREF="/director.asp?target=http://www.wwwishbone.com/WWWishbone/NewsAboutMe/primetime.html&id=12&userid=1ENXZNrt4Dgt&query=MT=%22Christie+Abbott%22&SM=SC&DC=100">WORLDWIDE WISHBONE(TM)</A></B><BR>WISHBONE BOUNDS INTO PBS PRIME TIME THIS FALL WITH AN HOUR-LONG SEASON PREMIERE BASED ON WASHINGTON IRVING'S THE LEGEND OF SLEEPY HOLLOW. Eight New Half-Hour Specials to Follow RICHARDSON, TX, April 8, 1997 - WISHBONE , the highly acclaimed Emmy...<br></font><font size="2">86%&nbsp;&nbsp; 10399 bytes&#44; 1998/04/15 &nbsp;&nbsp;&nbsp;http://www.wwwishbone.com/WWWishbone/NewsAboutMe/primetime.html</font><p>
+<font face="verdana&#44;arial&#44;helvetica" size="2"><B>13.&nbsp;<A HREF="/director.asp?target=http://www.webring.org/index/a.1.html&id=13&userid=1ENXZNrt4Dgt&query=MT=%22Christie+Abbott%22&SM=SC&DC=100" TARGET="preview"><IMG SRC="http://static.hotbot.com/images/btn.openpage.white.gif" BORDER="0" WIDTH="17" HEIGHT="16" ALT=""></A> <A HREF="/director.asp?target=http://www.webring.org/index/a.1.html&id=13&userid=1ENXZNrt4Dgt&query=MT=%22Christie+Abbott%22&SM=SC&DC=100">Webring Index: a</A></B><BR>Webring Comprehensive Index For a subject-oriented guide to the Webrings, check out RingWorld, our online directory. This index is rebuilt Regularly. New additions and changes will not appear here for 1-2 days. -- a -- 51465 rings total -- 18347...<br></font><font size="2">86%&nbsp;&nbsp; 41909 bytes&#44; 1998/07/26 &nbsp;&nbsp;&nbsp;http://www.webring.org/index/a.1.html</font><p>
+<font face="verdana&#44;arial&#44;helvetica" size="2"><B>14.&nbsp;<A HREF="/director.asp?target=http://tr.webring.org/index/a.1.html&id=14&userid=1ENXZNrt4Dgt&query=MT=%22Christie+Abbott%22&SM=SC&DC=100" TARGET="preview"><IMG SRC="http://static.hotbot.com/images/btn.openpage.white.gif" BORDER="0" WIDTH="17" HEIGHT="16" ALT=""></A> <A HREF="/director.asp?target=http://tr.webring.org/index/a.1.html&id=14&userid=1ENXZNrt4Dgt&query=MT=%22Christie+Abbott%22&SM=SC&DC=100">Webring Index: a</A></B><BR>Webring Comprehensive Index For a subject-oriented guide to the Webrings, check out RingWorld, our online directory. This index is rebuilt Regularly. New additions and changes will not appear here for 1-2 days. -- a -- 49059 rings total -- 17678...<br></font><font size="2">86%&nbsp;&nbsp; 42305 bytes&#44; 1998/07/12 &nbsp;&nbsp;&nbsp;http://tr.webring.org/index/a.1.html</font><p>
+<font face="verdana&#44;arial&#44;helvetica" size="2"><B>15.&nbsp;<A HREF="/director.asp?target=http://www.lumal.com/usa/cis/female.html&id=15&userid=1ENXZNrt4Dgt&query=MT=%22Christie+Abbott%22&SM=SC&DC=100" TARGET="preview"><IMG SRC="http://static.hotbot.com/images/btn.openpage.white.gif" BORDER="0" WIDTH="17" HEIGHT="16" ALT=""></A> <A HREF="/director.asp?target=http://www.lumal.com/usa/cis/female.html&id=15&userid=1ENXZNrt4Dgt&query=MT=%22Christie+Abbott%22&SM=SC&DC=100">July 14, 1998 12:24:53</A></B><BR>BACK TO THE GATE&gt; Agent unknown Ai Wan Aida Turturro Alanis Morissette Alex Meneses Alexandra Morgan Alison LaPlaca Alison Leigh MIlls Alison Porter l Allison Dunbar Allison Folland Amanda Anka l Amanda Boyington Amanda McBroom Amy Pietz Andrea...<br></font><font size="2">61%&nbsp;&nbsp; 117793 bytes&#44; 1998/07/15 &nbsp;&nbsp;&nbsp;http://www.lumal.com/usa/cis/female.html</font><p>
+
+<!--  2nd breakdown -->
+
+
+<font face="verdana, arial, helvetica, " size="2" color="#ff0000"><b><i>Web 
+Results </i></b></font>
+<font face="arial, helvetica" size="2"><b>
+15 matches.</b>&nbsp;&nbsp;
+
+<br>
+</font>
+<img src="http://static.hotbot.com/images/blackspacer.gif" ALT="" width="434" height="1"><br>
+<font face="arial, helvetica" size="2"><b>1&nbsp;-&nbsp;15&nbsp;</b></font>
+
+
+<img src="http://static.hotbot.com/images/spacer.gif" ALT="" width="320" height="1">
+<p>
+<p>
+
+
+
+
 <!--  2nd ad, end T6  -->
-<!-- AdSpace page.usehistory=1 cobrand=default REMOTE_HOST=dash-w.isi.edu RH1=edu RH2=isi.edu RH3=dash-w.isi.edu REMOTE_ADDR=128.9.128.142 HOT_R_UNIQID=1QWO3PLtJGA6 P_UNIQID=1QWO3PLtJGQ6 --><a href="http://nsads.hotwired.com/event.ng/Type=click&ProfileID=4400&RunID=6630&AdID=8039&GroupID=1&FamilyID=368&TagValues=1.6.25.145.156.158.322.389.409.526.539.2036.4659.4673.4693.4724.4837.4863&Redirect=http:%2F%2Fadforce.imgis.com%2F%3Fadlink%7C30%7C7272%7C1%7C1%7CIMGIS"><img src="http://adforce.imgis.com/?adserv%7C30%7C7272%7C1%7C1%7CIMGIS" border=1 height=60 width=468 alt="Click here for AT&T College"><br>Click here for AT&T College</a><!-- /AdSpace --></td></tr></table>
+			<!-- AdSpace page.usehistory=4 cobrand=default REMOTE_HOST=dash.isi.edu RH1=edu RH2=isi.edu RH3=dash.isi.edu REMOTE_ADDR=128.9.160.184 HOT_R_UNIQID=1ENXZNrt4DQt P_UNIQID=1ENXZNrt4Dgt hbf=adult hbf=language:any --><a href="http://nsads.hotwired.com/event.ng/Type=click&ProfileID=5594&RunID=8185&AdID=10215&GroupID=1&FamilyID=792&TagValues=1.6.25.145.156.322.389.409.526.539.4659.4673.4693.4724.4837.4863.6456.6632.6820.6830&params.tag.ALL_KW=christie+abbott&Redirect=http:%2F%2Fwww.insweb.com%2Fcgi-bin%2Fbozellauto.exe%3Fbid%3D15317"><img src="http://static.wired.com/advertising/blipverts/insweb/search_468.gif" border=1 height=60 width=468 alt="Click here for insweb.com"><br>Click here for insweb.com</a><!-- /AdSpace -->
+</td></tr></table>
 <!-- END results -->
+
 <!-- BEGIN no result-->
-
-
+	
 
 <!-- END no result-->
 
 <!-- test last T -->
-
+	
 <!-- T7 -->
 <form action="/">
 <table border="0" width="630" cellspacing="0" cellpadding="0">
 <tr> 
 <td width="150"><img src="http://static.hotbot.com/images/spacer.gif" ALT="" width="150" height="1"></td>
-<td  bgcolor="#99FF33">
+<td bgcolor="#99FF33">
 <!-- T8 IN 7 -->
 <table border="0" cellspacing="0" cellpadding="8" width="470">
 <tr>
-<td valign="MIDDLE"><font face="courier" size="2"><INPUT type=text name="MT" value="&quot;Christie Abbott&quot;" size=35 maxlength=300>
-</font></td>
+<td valign="MIDDLE"><INPUT type=text name="MT" value="&quot;Christie Abbott&quot;" size=35 maxlength=300>
+</td>
 <td valign="MIDDLE"><input type="SUBMIT" name="submit" value="SEARCH"></td>
 </tr>
 </table>
@@ -213,42 +235,67 @@ Breakdown:    abbott 143561, christie 115019
 </td></tr>
 </table>
 <!--END T7 -->
-<INPUT type=hidden name="_v" value="2" >
+		<INPUT type=hidden name="_v" value="2" >
 <INPUT type=hidden name="OPs" value="MDRTP" >
 
 <INPUT type=hidden name="DC" value="100" >
 </form>
-
-
-
-<p>&nbsp;<p>
+<!-- foot.asp -->
+<p>
+<table border=0 cellspacing=0 cellpadding=0 width=600>
+<tr>
+<td width=150>
 <img src="http://static.hotbot.com/images/spacer.gif" ALT="" width="150" height="1">
-<font face="verdana, arial, helvetica" size="1">Send us <a href="mailto:newlook@hotbot.com?subject=New look!">feedback</a> on our new interface.</font>
-<br>
-<img src="http://static.hotbot.com/images/spacer.gif" ALT="" width="150" height="1"><img src="http://static.hotbot.com/images/power.gif" ALT="Powered by Inktomi" width="347" height="50" border="0" usemap="#power"><br>
-<font face="verdana, arial, helvetica" size="1">Copyright 1996-98 Wired Digital, Inc. All rights reserved. <br>
-About <a href="http://home.wired.com/">Wired Ventures</a></font>
-
+</td>
+<td width=450>
+<font face="verdana, arial, helvetica" size="1"><a href="http://www.hotwired.com/jobs/">Work</a>&nbsp;at&nbsp;HotBot | <a href="/help/advertise.asp">Advertise</a> on HotBot</font>
+<BR><img src="http://static.hotbot.com/images/power.gif" width="347" height="50" border="0" ALT="Powered by Inktomi" USEMAP="#power"><br>
+<font face="verdana, arial, helvetica" size="1">
+Copyright 1994-98 Wired Digital Inc. All rights reserved.<br>
+About <a href="http://home.wired.com/">Wired Digital</a>&nbsp;|&nbsp;Our <a href="http://www.hotwired.com/info/privacy_pledge.html" target="_top">privacy policy</a>&nbsp;|&nbsp;<a href="/text/">Text-only</a> version&nbsp;|&nbsp;<a href="addurl.asp">Add URL</a></font></td>
+</tr>
+</table>
+<!-- /foot.asp --><!-- meta/client_side_maps.asp fragment -->
 <MAP NAME="bar">
-<AREA SHAPE=RECT COORDS="145,0,242,14" HREF="http://www.wired.com/news/">
-<AREA SHAPE=RECT COORDS="243,0,328,14" HREF="http://www.hotwired.com/">
-<AREA SHAPE=RECT COORDS="329,0,413,14" HREF="http://www.wired.com/wired/">
-<AREA SHAPE=RECT COORDS="414,0,500,14" HREF="http://www.suck.com/">
-<AREA SHAPE=RECT COORDS="535,0,580,14" HREF="/help/">
-<AREA SHAPE=RECT COORDS="584,0,600,14" HREF="http://www.wired.com/home/">
+<AREA SHAPE=RECT COORDS="51,0,132,14" HREF="http://www.wired.com/news/" ALT="Wired News">
+<AREA SHAPE=RECT COORDS="145,0,218,14" HREF="http://www.hotwired.com/" ALT="HotWired">
+<AREA SHAPE=RECT COORDS="231,0,303,14" HREF="http://www.wired.com/wired/" ALT="Wired Mag">
+<AREA SHAPE=RECT COORDS="325,0,394,14" HREF="http://www.suck.com/" ALT="Suck.com">
+<AREA SHAPE=RECT COORDS="417,0,491,14" HREF="http://live.wired.com/" ALT="Live Wired">
+<AREA SHAPE=RECT COORDS="535,0,580,14" HREF="/help/" ALT="Help">
+<AREA SHAPE=RECT COORDS="584,0,600,14" HREF="http://home.wired.com/" ALT="About Wired">
 </MAP>
 
 <MAP NAME="white_ads">
-<AREA SHAPE=RECT COORDS="0,0,159,28"   HREF="http://www.hotwired.com/cgi-bin/redirect/821/http://barnesandnoble.bfast.com/booklink/click?sourceid=10164&categoryid=gifts" ALT="">
-<AREA SHAPE=RECT COORDS="159,0,319,28" HREF="http://www.hotwired.com/cgi-bin/redirect/822/http://www.classifieds2000.com" ALT="">
-<AREA SHAPE=RECT COORDS="319,0,465,28" HREF="http://www.hotwired.com/cgi-bin/redirect/823/http://www.tripod.com" ALT="">
-<AREA SHAPE=RECT COORDS="465,0,600,28" HREF="http://www.hotwired.com/cgi-bin/redirect/824/http://www.cdnow.com" ALT="">
+<AREA SHAPE=RECT COORDS="0,0,159,28" HREF="http://www.hotwired.com/cgi-bin/redirect/1375/http://search.outpost.com/search/proddesc.cfm?item=75154">
+<AREA SHAPE=RECT COORDS="159,0,319,28" HREF="http://www.hotwired.com/cgi-bin/redirect/821/http://www.onsale.com">
+<AREA SHAPE=RECT COORDS="319,0,465,28" HREF="http://www.hotwired.com/cgi-bin/redirect/947/http://www.musicblvd.com/cgi-bin/tw/2371_0_main.txt^S&FS=HOTBOT">
+<AREA SHAPE=RECT COORDS="465,0,600,28" HREF="http://www.hotwired.com/cgi-bin/redirect/928/http://members.spree.com/sg/default.asp?x=hotbotfw">
 </MAP>
 
-<MAP NAME="power">
-<AREA SHAPE=RECT COORDS="0,5,146,48" HREF="http://www.inktomi.com/">
-<AREA SHAPE=RECT COORDS="152,5,250,48" HREF="http://home.netscape.com/">
-<AREA SHAPE=RECT COORDS="256,5,347,48" HREF="http://www.microsoft.com/ie">
+
+<MAP NAME="new_white_ads">
+<AREA SHAPE=RECT COORDS="0,0,106,39" HREF="http://www.hotwired.com/cgi-bin/redirect/1375/http://search.outpost.com/search/proddesc.cfm?item=75154">
+<AREA SHAPE=RECT COORDS="0,40,106,77" HREF="http://www.hotwired.com/cgi-bin/redirect/821/http://www.onsale.com">
+<AREA SHAPE=RECT COORDS="0,78,106,115" HREF="http://www.hotwired.com/cgi-bin/redirect/947/http://www.musicblvd.com/cgi-bin/tw/2371_0_main.txt^S&FS=HOTBOT">
+<AREA SHAPE=RECT COORDS="0,116,106,153" HREF="http://www.hotwired.com/cgi-bin/redirect/928/http://members.spree.com/sg/default.asp?x=hotbotfw">
 </MAP>
-</body></html>
+
+
+
+<MAP NAME="power">
+<AREA SHAPE=RECT COORDS="0,5,146,48" HREF="http://www.inktomi.com/" ALT="Powered by Inktomi">
+<AREA SHAPE=RECT COORDS="152,5,250,48" HREF="http://home.netscape.com/" ALT="Netscape Navigator">
+<AREA SHAPE=RECT COORDS="256,5,347,48" HREF="http://www.microsoft.com/ie/" ALT="Microsoft Internet Explorer">
+</MAP>
+<!-- end fragment -->
+
+
+
+
+
+<!-- hotbotMon:success -->
+
+</body>
+</html>
 

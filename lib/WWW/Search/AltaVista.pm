@@ -4,7 +4,7 @@
 # AltaVista.pm
 # by John Heidemann
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: AltaVista.pm,v 1.32 1998/06/05 18:36:52 johnh Exp $
+# $Id: AltaVista.pm,v 1.33 1998/08/11 23:56:24 johnh Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -220,7 +220,7 @@ sub native_retrieve_some
     print STDERR "WWW::Search::AltaVista::native_retrieve_some: fetching " . $self->{_next_url} . "\n" if ($self->{_debug});
     my($response) = $self->http_request('GET', $self->{_next_url});
     $self->{response} = $response;
-        if (!$response->is_success) {
+    if (!$response->is_success) {
 	return undef;
     };
 

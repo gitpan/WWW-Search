@@ -3,7 +3,7 @@
 # HotBot.pm
 # by Wm. L. Scheding and Martin Thurn
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: HotBot.pm,v 1.8 1998/05/21 21:28:27 johnh Exp $
+# $Id: HotBot.pm,v 1.9 1998/07/28 17:27:12 johnh Exp $
 
 package WWW::Search::HotBot;
 
@@ -53,6 +53,10 @@ it sets C<{_next_url}> to point to the page for the next
 set of results, otherwise it sets it to undef to indicate we''re done.
 
 
+=head1 CAVEATS
+
+When HotBot reports a "Mirror" URL, WWW::Search::HotBot ignores it.
+
 =head1 BUGS
 
 Please tell the author if you find any!
@@ -62,11 +66,16 @@ Please tell the author if you find any!
 
 This module adheres to the C<WWW::Search> test suite mechanism. 
 
+  Test cases (results as of 1998-07-27):
+  '+mrfglbqnx +NoSuchWord'       ---   no URLs
+  '"Christie Abbott"'            ---   14 URLs on one page
+  '"Martin Thurn" AND Bible'     ---  131 URLs on two pages
+
 
 =head1 AUTHOR
 
 As of 1998-02-02, C<WWW::Search::HotBot> is maintained by Martin Thurn
-(mthurn@irnet.rest.tasc.com).
+(MartinThurn@iname.com).
 
 C<WWW::Search::HotBot> was originally written by Wm. L. Scheding,
 based on C<WWW::Search::AltaVista>.
@@ -82,6 +91,14 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 =head1 VERSION HISTORY
 
 If it''s not listed here, then it wasn''t a meaningful nor released revision.
+
+=head2 1.21
+
+HotBot changed their output format.
+
+=head2 1.20
+
+\n changed to \012 for MacPerl compatibility
 
 =head2 1.17
 
@@ -108,18 +125,13 @@ release of WWW::Search.
 
 =cut
 
-#  Test cases:
-# '+mrfglbqnx +NoSuchWord'       ---   no URLs
-# '"Christie Abbott"'            ---   16 URLs on one page
-# '"Martin Thurn" AND Bible'     ---  141 URLs on two pages
-
 #####################################################################
 
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '1.17';
+$VERSION = sprintf("%d.%02d", q$Revision: 1.9 $ =~ /(\d+)\.(\d+)/);
 
 use Carp ();
 use WWW::Search(generic_option);
@@ -130,17 +142,22 @@ require WWW::SearchResult;
 sub native_setup_search
   {
   my ($self, $native_query, $native_options_ref) = @_;
+
+  $self->{_debug} = $native_options_ref->{'search_debug'};
+  $self->{_debug} = 2 if ($native_options_ref->{'search_parse_debug'});
+  $self->{_debug} ||= 0;
+
   # Why waste time sending so many queries?  Do a whole lot all at once!
   # 500 results take  70 seconds at 100 per page
   # 500 results take 234 seconds at  10 per page
   my $DEFAULT_HITS_PER_PAGE = 100;
-  # $DEFAULT_HITS_PER_PAGE = 10;   # for debugging
+  # $DEFAULT_HITS_PER_PAGE = 10 if $self->{_debug};
   $self->{'_hits_per_page'} = $DEFAULT_HITS_PER_PAGE;
   # $self->timeout(120);  # HotBot used to be notoriously slow
 
-  # As of 1998-05, HotBot apparently doesn't like WWW::Search!  Response was
-  # RC: 403 (Forbidden)
-  # Message: Forbidden by robots.txt
+  # As of 1998-05, HotBot apparently doesn't like WWW::Search!  When
+  # using user_agent(0), response was RC: 403 (Forbidden) Message:
+  # Forbidden by robots.txt
   $self->user_agent(1);
 
   $self->{_next_to_retrieve} = 0;
@@ -184,12 +201,8 @@ sub native_setup_search
     }
   # Ugh!  HotBot chokes if our URL has a dangling '&' at the end:
   chop $options;
-  # Finally figure out the url.
+  # Finally, figure out the url.
   $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
-
-  $self->{_debug} = $options_ref->{'search_debug'};
-  $self->{_debug} = 2 if ($options_ref->{'search_parse_debug'});
-  $self->{_debug} = 0 if (!defined($self->{_debug}));
   } # native_setup_search
 
 
@@ -201,6 +214,9 @@ sub native_retrieve_some
   
   # Fast exit if already done:
   return undef unless defined($self->{_next_url});
+  
+  # If this is not the first page of results, sleep so as to not overload the server:
+  $self->user_agent_delay if 1 < $self->{'_next_to_retrieve'};
   
   # print STDERR " * search_from_file is set!\n" if $self->{search_from_file};
   # print STDERR " * search_to_file is set!\n" if $self->{search_to_file};
@@ -223,7 +239,7 @@ sub native_retrieve_some
   my ($state) = ($TITLE);
   my ($hit) = ();
   my $sHitPattern = quotemeta '<font face="verdana&#44;arial&#44;helvetica" size="2">';
-  foreach (split(/\n/, $response->content())) 
+  foreach (split(/\012/, $response->content())) 
     {
     s/\r$//;  # delete DOS carriage-return
     next if m/^\r?$/; # short circuit for blank lines
@@ -260,19 +276,18 @@ sub native_retrieve_some
       ($sURL,$sTitle) = ($1,$2) if m|<A\sHREF=\042([^\042]+)\042>(.+?)</A>|;
       $sDesc = $1 if m/<BR>(.+)<br>/;
       ($iPercent,$iBytes,$sDate) = ($1,$2,$3) if m|>(\d+)\%&nbsp;&nbsp;\s(\d+)\sbytes&\#44;\s(\d\d\d\d/\d\d/\d\d)|;
-      # At this point, we could do something about "mirror" URLs (like
-      # ignore them), but then our total hit count will get all out of
-      # whack...?
-      if (ref($hit))
-        {
-        push(@{$self->{cache}}, $hit);
-        }
+      # Note that we ignore MIRROR URLs, so our total hit count may
+      # get all out of whack.
       if ($sURL eq '')
         {
         print STDERR " *** parse error: found hit line but no URL\n" if 2 <= $self->{'_debug'};
         }
       else
         {
+        if (ref($hit))
+          {
+          push(@{$self->{cache}}, $hit);
+          } # if
         $hit = new WWW::SearchResult;
         $hit->add_url($sURL);
         $hit->title($sTitle) if $sTitle ne '';
@@ -282,18 +297,20 @@ sub native_retrieve_some
         $hit->change_date($sDate) if $sDate ne '';
         $self->{'_num_hits'}++;
         $hits_found++;
-        }
+        } # if $URL else
       $state = $HITS;
       } # $state eq HIT2
 
-    elsif ($state eq $NEXT && m|</form>|i)
+    elsif ($state eq $NEXT && m|<!--\sTABLE\s6\s|i)
       {
-      print STDERR " missed next button\n" if 2 <= $self->{'_debug'};
+      # Actual line of input is:
+      # <!-- TABLE 6 (keep bottom half of results from wrapping around left margin) -->
+      print STDERR " no next button\n" if 2 <= $self->{'_debug'};
       # There was no "next" button on this page; no more pages to get!
       $self->{'_next_url'} = undef;
       $state = $HITS;
       }
-    elsif ($state eq $NEXT && m|act.next|)
+    elsif ($state eq $NEXT && m|act\.next\.x|)
       {
       print STDERR " found next button\n" if 2 <= $self->{'_debug'};
       # There is a "next" button on this page, therefore there are
@@ -321,18 +338,11 @@ sub native_retrieve_some
       print STDERR "didn't match\n" if 2 <= $self->{'_debug'};
       }
     } # foreach line of query results HTML page
-  if ($state ne $HITS)
-    {
-    # End, no other pages (missed some tag somewhere along the line)
-    $self->{_next_url} = undef;
-    }
+
   if (defined($hit)) 
     {
     push(@{$self->{cache}}, $hit);
     }
-  
-  # Sleep so as to not overload Mr. HotBot
-  $self->user_agent_delay if (defined($self->{_next_url}));
   
   return $hits_found;
   } # native_retrieve_some
@@ -340,3 +350,24 @@ sub native_retrieve_some
 1;
 
 __END__
+
+Martin''s page download results, 1998-02:
+
+simplest arbitrary page:
+http://www.search.hotbot.com/hResult.html?MT=lsam+replication&DE=0&DC=100
+http://www.search.hotbot.com/hResult.html?MT=Christie+Abbott&base=100&DC=100&DE=0&act.next.x=1
+
+explanation of known fields on GUI search page:
+date = (checkbox) filter by date
+DC = (entry) number of hits per page
+DE = (selection) output format
+DV = (selection) date criteria
+FRA = (checkbox) include audio data type
+FSW = (checkbox) include shockwave data type
+FVI = (checkbox) include image data type
+FVV = (checkbox) include video data type
+MT = query terms
+RD = (checkbox) filter by location
+RG = (selection) location criteria
+SM = (selection) search type 
+

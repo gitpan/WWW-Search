@@ -4,7 +4,7 @@
 # Lycos.pm
 # by Wm. L. Scheding, John Heidemann
 # Copyright (C) 1996-1997 by USC/ISI
-# $Id: Lycos.pm,v 1.8 1998/05/28 04:05:40 johnh Exp $
+# $Id: Lycos.pm,v 1.9 1998/08/12 16:40:00 johnh Exp $
 #
 # Complete copyright notice follows below.
 # 
@@ -181,6 +181,9 @@ sub native_retrieve_some
             print STDERR "PARSE(HEADER->HITS-1): $_\n" if ($self->{_debug} >= 2);
 	    $state = $HITS;
 	} if ($state == $HEADER && m@matching web pages@i) {  # new as of 23-Mar-98
+            print STDERR "PARSE(HEADER->HITS-2): $_\n" if ($self->{_debug} >= 2);
+	    $state = $HITS;
+	} if ($state == $HEADER && m@a name="pages"@i) {  # new as of 12-Aug-98
             print STDERR "PARSE(HEADER->HITS-2): $_\n" if ($self->{_debug} >= 2);
 	    $state = $HITS;
 	} elsif ($state == $HITS && m@^<a href="([^"]+)">(.*)\<\/a\>@i) { # post 23-Mar-98 "

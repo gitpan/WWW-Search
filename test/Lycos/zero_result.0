@@ -9,37 +9,24 @@ A:link {text-decoration:underline; color:blue;}
 </STYLE>
 </HEAD>
 <!--begin resultheader.inc-->
-
-<!-- remote window Quick Reference -->
-
-<script language="javascript">
-
-<!--
-
-function Remote() {
-  var floater = null
-  floater = window.open('','vRemote','width=500,height=150,resizable=1,status=0,scrollbars=1')
-  if (floater != null) {
-    if (floater.opener == null) {
-      floater.opener = self
-    }
-    floater.location.href = 'http://lycospro.lycos.com/quickref.html'
-  }
-}
-// -->
-
-
-</script>
 <BODY BGCOLOR="#FFFFFF">
 <!--TOP LEFT-->
 <TABLE BORDER="0" CELLSPACING=0 CELLPADDING=0 WIDTH=600>
+
 <TR><TD ALIGN=MIDDLE VALIGN=TOP BGCOLOR="#000000" WIDTH=134>
 <CENTER><a href="http://www.lycos.com/"><IMG SRC="http://www.lycos.com/assist/graphics/new-logo.gif" width=125 height=48 alt="Lycos" border=0></a>
 <IMG SRC="http://www.lycos.com/assist/graphics/your-guide.gif" height=76 width=125 alt="Search Results"></TD>
+
+
+
+
+
 <!--TOP MIDDLE SPACER-->
 <TD width=8><IMG width=8 height=1 SRC="http://www.lycos.com/assist/graphics/dot_clear.gif"></TD>
 <!--TOP RIGHT-->
 <TD VALIGN=TOP>
+
+
 <CENTER><TABLE BGCOLOR="#000000" WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
 <TR><TD>
 <TABLE BORDER=0 CELLSPACING=1 WIDTH=100% CELLPADDING=1>
@@ -67,7 +54,7 @@ Email</A>&nbsp;&nbsp;
 
 <TD ALIGN=CENTER BGCOLOR="#EEEEEE"><FONT SIZE=-1 FACE="HELVETICA, ARIAL, SANS SERIF, MS SANS SERIF"><A HREF="http://weather.lycos.com">Weather</A>&nbsp;&nbsp;</TD>
 
-<TD ALIGN=CENTER BGCOLOR="#EEEEEE"><FONT SIZE=-1 FACE="HELVETICA, ARIAL, SANS SERIF, MS SANS SERIF"><A HREF="http://www.stockfind.newsalert.com/">Stocks</A>
+<TD ALIGN=CENTER BGCOLOR="#EEEEEE"><FONT SIZE=-1 FACE="HELVETICA, ARIAL, SANS SERIF, MS SANS SERIF"><A HREF="http://investing.lycos.com/">Stocks</A>
 </FONT>
 </TD></TR></TABLE>
 </TR></TD></TABLE>
@@ -78,14 +65,18 @@ Email</A>&nbsp;&nbsp;
 </CENTER><BR>
  <!----AD---->
  <FONT FACE="HELEVETICA,ARIAL,MS SANSSERIF, SANS-SERIF" COLOR="#000000" SIZE=-2>
-<CENTER><a href="/cgi-bin/nph-adclick.exe/CID=00033fa10000000300000000/ST=lycos/SV=search/A=.lycos.search_lycos."><img  src="http://ads.lycos.com/ads/gamblingbridge3.gif" alt="Click here for excitement on the web"  width=468 height=60></a><br><a href="/cgi-bin/nph-adclick.exe/CID=00033fa10000000300000000/ST=lycos/SV=search/A=.lycos.search_lycos.">Click here to visit site</a></CENTER></FONT>
+<CENTER><a href="/cgi-bin/nph-adclick.exe/CID=0003eae70001ab6000000000/ST=lycos/SV=search/A=.lycos.search_lycos."><img  src="http://ads.bfast.com/ad/serve?siteid=12840&space=1250&size=468x60" alt="Barnes and Noble"  width=468 height=60></a></CENTER></FONT>
 <!--/AD-->
+
 
 <IMG width=468 border=0 height=1 VALIGN=TOP SRC="http://www.lycos.com/assist/graphics/dot_clear.gif">
 
 </TD></TR>
+
 <TR><TD VALIGN=TOP ALIGN=ABSMIDDLE BGCOLOR="#000000"><CENTER>
+
 <!--BOTTOM LEFT-->
+
 <!-- GUIDEBAR -->	
 <br>
 <TABLE WIDTH=125 BORDER=0 CELLSPACING=4 CELLPADDING=0 VALIGN=TOP>
@@ -132,6 +123,9 @@ Try <A HREF="http://lycospro.lycos.com/lycospro-nojava.html">Lycos Pro Advanced 
 
 <TR><TD VALIGN=BOTTOM ALIGN=LEFT><FONT SIZE=+1 COLOR=#FFCC00 FACE=HELVETICA,ARIAL><B>4.</B></TD><TD VALIGN=BOTTOM ALIGN=LEFT><FONT SIZE=-1  FACE=HELVETICA,ARIAL>
 Consult our <A HREF="http://www.lycos.com/help/search-help.html">Search Help</A> section.</TD></TR>
+
+
+
 
 
 
@@ -200,7 +194,7 @@ ALIGN=LEFT VALIGN=ABSMIDDLE>
 <P>
 <!----AD---->
  <FONT FACE="HELEVETICA,ARIAL,MS SANSSERIF, SANS-SERIF" COLOR="#000000" SIZE=-2>
-<CENTER><a href="/cgi-bin/nph-adclick.exe/CID=00033fa10000000300000000/ST=lycos/SV=search/A=.lycos.search_lycos."><img  src="http://ads.lycos.com/ads/gamblingbridge3.gif" alt="Click here for excitement on the web"  width=468 height=60></a><br><a href="/cgi-bin/nph-adclick.exe/CID=00033fa10000000300000000/ST=lycos/SV=search/A=.lycos.search_lycos.">Click here to visit site</a></CENTER></FONT>
+<CENTER><a href="/cgi-bin/nph-adclick.exe/CID=0003eae70001ab6000000000/ST=lycos/SV=search/A=.lycos.search_lycos."><img  src="http://ads.bfast.com/ad/serve?siteid=12840&space=1250&size=468x60" alt="Barnes and Noble"  width=468 height=60></a></CENTER></FONT>
 <!--/AD-->
 <P>
 <CENTER> 

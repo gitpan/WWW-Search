@@ -4,7 +4,7 @@
 # SearchResult.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: SearchResult.pm,v 1.8 1998/05/30 18:55:39 johnh Exp $
+# $Id: SearchResult.pm,v 1.9 1998/07/14 17:24:09 johnh Exp $
 #
 # Copyright (c) 1996 University of Southern California.
 # All rights reserved.                                            
@@ -192,6 +192,11 @@ The size of the result, in bytes.
 
 =item raw
 The raw HTML for the entire result.
+Raw should be exactly the raw HTML for one entry.
+It shouldn't include list or table setup commands (like the ul tag),
+but it may include list or table item commands (like li).
+Whether raw returns a list entries, table entries, or just br or unformatted
+HTML is search-engine dependent.
 
 =back
 

@@ -22,7 +22,7 @@ print OUT <<'!NO!SUBS!';
 #
 # WebSearch.PL
 # Copyright (C) 1996-1997 by USC/ISI
-# $Id: WebSearch.PL,v 1.30 1998/06/25 17:52:03 johnh Exp $
+# $Id: WebSearch.PL,v 1.31 1998/08/11 23:56:22 johnh Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -46,7 +46,7 @@ WebSearch - a web-searching application demonstrating WWW::Search
 
 =head1 SYNOPSIS
 
-B<WebSearch [-m MaxCount] [-e SearchEngine] [-o option] [-o option...] [-arvV] query>
+B<WebSearch [-m MaxCount] [-e SearchEngine] [-o option] [-o option...] [-ardvV] query>
 
 
 =head1 DESCRIPTION
@@ -98,6 +98,10 @@ Verbose mode.  Enumerate the returned URLs.
 =item C<-V>
 
 Display version string.
+
+=item C<-d>
+
+Display back-end libwww-perl debugging information
 
 =back
 
@@ -155,7 +159,7 @@ use Getopt::Long;
 my(%opts);
 $Getopt::Long::getopt_compat = 1;   # avoid parsing +'s as options (doesn't work!)
 &Getopt::Long::config(qw(no_ignore_case no_getopt_compat));
-&GetOptions(\%opts, qw(a r v V e=s m=s o=s@));
+&GetOptions(\%opts, qw(a r v d V e=s m=s o=s@));
 
 &print_version if ($opts{'V'});
 &usage if ($#ARGV == -1); # we MUST have one left, the query
@@ -164,6 +168,7 @@ my($verbose) = $opts{'v'};
 my($all) = $opts{'a'};
 my($raw) = $opts{'r'};
 my($maximum_to_retrieve) = $opts{'m'};
+my($debuglwp) = $opts{'d'};
 
 &main(join(" ", @ARGV));
 
@@ -227,6 +232,11 @@ sub main {
     my($search) = new WWW::Search($opts{e});
     my($query_options_ref);
 
+    if (defined($debuglwp)) {
+	require LWP::Debug;
+	LWP::Debug::level('+');
+    }
+         
     if (defined($opts{'o'})) {
         $query_options_ref = {};
         foreach (@{$opts{'o'}}) {

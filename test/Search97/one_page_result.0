@@ -1,0 +1,2264 @@
+<!--- Template: imfrslp.hts --->
+<HTML>
+<HEAD><TITLE>IMF Web Site Search Results</TITLE></HEAD>
+
+<BODY bgcolor="#ffffff">
+<CENTER>
+<!---------------------TOP BANNER START--------------------->
+<TABLE CELLSPACING=0 BORDER=0 CELLPADDING=0 WIDTH=590>
+	<TR>
+		<TD valign=top align=right WIDTH=82>
+			<!-------------------------------------IMF LOGO LEFT TOP BANNER----------------------------------------> 
+			<a href="/external/index.htm"><IMG SRC="/external/gifs/toolbar/logo.gif" BORDER=0 WIDTH=82 HEIGHT=53 ALT="IMF"></a>
+		</TD>
+
+		<TD valign=top align=right WIDTH=508>
+			<!------------------------------------TOOLS TOP BANNER-----------------------------------------> 
+			<a href="/external/index.htm"><IMG SRC="/external/gifs/toolbar/home.gif" BORDER=0 ALT="Home" width="40" height="16"></a><IMG SRC="/external/gifs/toolbar/vline.gif" BORDER=0 WIDTH=3 HEIGHT=15 ALT="v-line"><A href="/external/search/search.htm"><IMG SRC="/external/gifs/toolbar/search-y.gif" BORDER=0 ALT="Search" width="46" height="16"></a><IMG SRC="/external/gifs/toolbar/vline.gif" BORDER=0 WIDTH=3 HEIGHT=15 ALT="v-line"><A HREF="/external/map.htm"><IMG SRC="/external/gifs/toolbar/map.gif" BORDER=0 ALT="Map" width="34" height="16"></a><IMG SRC="/external/gifs/toolbar/vline.gif" BORDER=0 WIDTH=3 HEIGHT=15 ALT="v-line"><a href="/external/indexlst.htm"><IMG SRC="/external/gifs/toolbar/index.gif" BORDER=0 ALT="Index" width="37" height="16"></a><a href="/external/what/what.htm"><img src="/external/gifs/toolbar/vline.gif" border=0 width=3 height=15 alt="v-line"><IMG SRC="/external/gifs/toolbar/wnew.gif" BORDER=0 ALT="What's New" width="70" height="16"></a><BR CLEAR=ALL>
+
+			<!------------------------------------IMF TEXT TOP BANNER-----------------------------------------> 
+			<IMG SRC="/external/gifs/toolbar/imftxt.gif" BORDER=0  WIDTH=508 HEIGHT=24 ALT="International Monetary Fund"><BR CLEAR=ALL>
+
+			<!-------------------------------------2ND LEVEL LINKS TOP BANNER----------------------------------------> 
+			<a href="/external/about.htm"><IMG SRC="/external/gifs/toolbar/about.gif" BORDER=0 ALT="About" width="39" height="15"><img src="/external/gifs/toolbar/vline.gif" border=0 width=3 height=15 alt="v-line"></a><a href="/external/news.htm"><IMG SRC="/external/gifs/toolbar/news.gif" BORDER=0 ALT="News" width="36" height="15"></a><img src="/external/gifs/toolbar/vline.gif" border=0 width=3 height=15 alt="v-line"><a href="/external/pubind.htm"><IMG SRC="/external/gifs/toolbar/pub.gif" BORDER=0 ALT="Publications" width="75" height="15"></a><img src="/external/gifs/toolbar/vline.gif" border=0 width=3 height=15 alt="v-line"><a href="/external/np/tre/sdr/sdr.htm"><IMG SRC="/external/gifs/toolbar/rates.gif" BORDER=0 ALT="Fund Rates" width="69" height="15"></a><img src="/external/gifs/toolbar/vline.gif" border=0 width=3 height=15 alt="v-line"><a href="http://dsbb.imf.org"><IMG SRC="/external/gifs/toolbar/data.gif" BORDER=0 ALT="Data Standards" width="90" height="15"></a><BR CLEAR=ALL>
+
+		</TD>
+	</TR>
+</TABLE>
+<BR>
+</CENTER>
+<!-----------------------TOP BANNER ENDS--------------------->
+<TABLE BORDER=0 WIDTH=90%>
+<TR>
+<TD>
+<CENTER>
+  <FONT SIZE=5><B>IMF Web Site Search Results</B></FONT>
+  <HR>
+</CENTER>
+
+  <CENTER>
+  <B>Results List Navigation:</B>
+                1
+                    <A HREF="http://www.imf.org/search97cgi/s97_cgi.exe?QueryZip=burundi&ResultTemplate=imfrslp%2Ehts&QueryText=burundi&Collection=econiss&Collection=insext&Collection=external&SortOrder=Desc&ScoreThreshold=14&ResultStart=41&ResultCount=40&ServerKey=&AdminImagePath=&Theme=&Company=">2</A>
+          
+      <A HREF="http://www.imf.org/search97cgi/s97_cgi.exe?QueryZip=burundi&ResultTemplate=imfrslp%2Ehts&QueryText=burundi&Collection=econiss&Collection=insext&Collection=external&SortOrder=Desc&ScoreThreshold=14&ResultStart=41&ResultCount=40%>&ServerKey=&AdminImagePath=&Theme=&Company=">[Next]</A> 
+   <A HREF="/external/search/search.htm">[Search Again]</A>
+<br>
+For more information <A HREF="/external/pubs/cat/catalog.cfm">search IMF Publications.</A>
+
+    </CENTER>
+  <HR>
+
+<table border=0 width=100%>
+<td width=50%>Your query "<B>burundi</B>"
+matched 71 matches out of 1866 documents. 
+</td>
+<td align=right width=50%>
+Tuesday, August 11, 1998</td><br>
+</table>
+<TABLE border=0 width=100%>
+<TR><TH>Rank</TH><TH></TH><TH ALIGN="Left">Title</TH><TH>Size</TH><TH>Type</TH></TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in   -->
+<!--If it is from another collection it set  to http://www.imf.org/external/pubs/ft/weo/weo0598/pdf/0598sta.pdf -->
+<!--The output section has been change to print  instead of http://www.imf.org/external/pubs/ft/weo/weo0598/pdf/0598sta.pdf -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!-- back to http://www.imf.org/external/pubs/ft/weo/weo0598/pdf/0598sta.pdf -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>1</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/pubs/ft/weo/weo0598/pdf/0598sta.pdf">
+          IMF World Economic Outlook, May 1998--Statistical Appendix </A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/pubs/ft/weo/weo0598/pdf/0598sta.pdf
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+			<br><B>Summary:</b> Assumptions, Data & Conventions, Country Classification, Tables, Output , Inflation,  Financial Policies, Foreign Trade, Current  Account Transactions, Balance of Payments & External Financing, Debt,  Flow of Funds,  Medium-Term Baseline Scenario 
+	</TD>
+
+    <TD  align=center valign=top width=15%>375 Kb</TD>
+      <td  align=center valign=top>PDF</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/pubs/ft/weo/weo0598/pdf/0598sta.pdf  -->
+<!--If it is from another collection it set http://www.imf.org/external/pubs/ft/weo/weo0598/pdf/0598sta.pdf to http://www.imf.org/external/pubs/ft/pam/pam51/pam51.pdf -->
+<!--The output section has been change to print http://www.imf.org/external/pubs/ft/weo/weo0598/pdf/0598sta.pdf instead of http://www.imf.org/external/pubs/ft/pam/pam51/pam51.pdf -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/pubs/ft/weo/weo0598/pdf/0598sta.pdf back to http://www.imf.org/external/pubs/ft/pam/pam51/pam51.pdf -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>2</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/pubs/ft/pam/pam51/pam51.pdf">
+          Debt Relief for Low Income Countries - The HIPC Initiative - Pamphlet 51 </A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/pubs/ft/pam/pam51/pam51.pdf
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+			<br><B>Summary:</b> This pamphlet describes the HIPC initiative and suggests that it should enable HIPCs to exit from the debt-rescheduling process.  
+	</TD>
+
+    <TD  align=center valign=top width=15%>190 Kb</TD>
+      <td  align=center valign=top>PDF</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/pubs/ft/pam/pam51/pam51.pdf  -->
+<!--If it is from another collection it set http://www.imf.org/external/pubs/ft/pam/pam51/pam51.pdf to http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file13.pdf -->
+<!--The output section has been change to print http://www.imf.org/external/pubs/ft/pam/pam51/pam51.pdf instead of http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file13.pdf -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/pubs/ft/pam/pam51/pam51.pdf back to http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file13.pdf -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>3</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file13.pdf">
+          Informe Anual del FMI 1997 -  Apendice II. Operaciones y transacciones financieras del FMI </A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file13.pdf
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+	</TD>
+
+    <TD  align=center valign=top width=15%>119 Kb</TD>
+      <td  align=center valign=top>PDF</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file13.pdf  -->
+<!--If it is from another collection it set http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file13.pdf to http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file13f.pdf -->
+<!--The output section has been change to print http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file13.pdf instead of http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file13f.pdf -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file13.pdf back to http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file13f.pdf -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>4</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file13f.pdf">
+          FMI Rapport annuel 1997 -- OPERATIONS ET TRANSACTION FINANCIERES DU FMI </A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file13f.pdf
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+	</TD>
+
+    <TD  align=center valign=top width=15%>85 Kb</TD>
+      <td  align=center valign=top>PDF</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file13f.pdf  -->
+<!--If it is from another collection it set http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file13f.pdf to http://www.imf.org/external/pubs/ft/ar/97/pdf/file13.pdf -->
+<!--The output section has been change to print http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file13f.pdf instead of http://www.imf.org/external/pubs/ft/ar/97/pdf/file13.pdf -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file13f.pdf back to http://www.imf.org/external/pubs/ft/ar/97/pdf/file13.pdf -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>5</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/pubs/ft/ar/97/pdf/file13.pdf">
+          IMF Annual Report 1997--Financial Operations and Transactions of the Fund </A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/pubs/ft/ar/97/pdf/file13.pdf
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+	</TD>
+
+    <TD  align=center valign=top width=15%>90 Kb</TD>
+      <td  align=center valign=top>PDF</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/pubs/ft/ar/97/pdf/file13.pdf  -->
+<!--If it is from another collection it set http://www.imf.org/external/pubs/ft/ar/97/pdf/file13.pdf to http://www.imf.org/external/np/sec/decdo/wb.htm -->
+<!--The output section has been change to print http://www.imf.org/external/pubs/ft/ar/97/pdf/file13.pdf instead of http://www.imf.org/external/np/sec/decdo/wb.htm -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/pubs/ft/ar/97/pdf/file13.pdf back to http://www.imf.org/external/np/sec/decdo/wb.htm -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>6</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/np/sec/decdo/wb.htm">
+          THE WORLD BANK GROUP</A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/np/sec/decdo/wb.htm
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+    	<br><B>Summary:</b> This is an entry from the IMF's Directory of
+Economic, Commodity and Development Organizations which provides a guide to regional
+economic organizations and to inter-governmental commodity and development
+organizations.
+    </TD>
+
+    <TD  align=center valign=top width=15%>20 Kb</TD>
+      <td  align=center valign=top>HTML</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/np/sec/decdo/wb.htm  -->
+<!--If it is from another collection it set http://www.imf.org/external/np/sec/decdo/wb.htm to http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file16.pdf -->
+<!--The output section has been change to print http://www.imf.org/external/np/sec/decdo/wb.htm instead of http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file16.pdf -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/np/sec/decdo/wb.htm back to http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file16.pdf -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>7</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file16.pdf">
+          Informe Anual del FMI 1997 - Apendices VII-VIII </A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file16.pdf
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+	</TD>
+
+    <TD  align=center valign=top width=15%>68 Kb</TD>
+      <td  align=center valign=top>PDF</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file16.pdf  -->
+<!--If it is from another collection it set http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file16.pdf to http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file16f.pdf -->
+<!--The output section has been change to print http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file16.pdf instead of http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file16f.pdf -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file16.pdf back to http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file16f.pdf -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>8</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file16f.pdf">
+          FMI Rapport annuel 1997 -- ADMINISTRATEURS ET NOMBRE DE VOIX AU 3 0 AVRIL 1997, CHANGEMENTS DANS L A COMPOSITIONDU CONSEIL D~ADMINISTRATION </A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file16f.pdf
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+	</TD>
+
+    <TD  align=center valign=top width=15%>58 Kb</TD>
+      <td  align=center valign=top>PDF</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file16f.pdf  -->
+<!--If it is from another collection it set http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file16f.pdf to http://www.imf.org/external/pubs/ft/survey/pdf/072197.pdf -->
+<!--The output section has been change to print http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file16f.pdf instead of http://www.imf.org/external/pubs/ft/survey/pdf/072197.pdf -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file16f.pdf back to http://www.imf.org/external/pubs/ft/survey/pdf/072197.pdf -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>9</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/pubs/ft/survey/pdf/072197.pdf">
+          IMF Survey: July 21, 1997 </A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/pubs/ft/survey/pdf/072197.pdf
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+	</TD>
+
+    <TD  align=center valign=top width=15%>335 Kb</TD>
+      <td  align=center valign=top>PDF</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/pubs/ft/survey/pdf/072197.pdf  -->
+<!--If it is from another collection it set http://www.imf.org/external/pubs/ft/survey/pdf/072197.pdf to http://www.imf.org/external/pubs/ft/ar/97/pdf/file16.pdf -->
+<!--The output section has been change to print http://www.imf.org/external/pubs/ft/survey/pdf/072197.pdf instead of http://www.imf.org/external/pubs/ft/ar/97/pdf/file16.pdf -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/pubs/ft/survey/pdf/072197.pdf back to http://www.imf.org/external/pubs/ft/ar/97/pdf/file16.pdf -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>10</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/pubs/ft/ar/97/pdf/file16.pdf">
+          IMF Annual Report 1997--Executive Directors and Voting Power on April 30, 1997, Changes in Membership of Executive Board </A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/pubs/ft/ar/97/pdf/file16.pdf
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+	</TD>
+
+    <TD  align=center valign=top width=15%>57 Kb</TD>
+      <td  align=center valign=top>PDF</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/pubs/ft/ar/97/pdf/file16.pdf  -->
+<!--If it is from another collection it set http://www.imf.org/external/pubs/ft/ar/97/pdf/file16.pdf to http://www.imf.org/external/pubs/ft/pam/pam45/pamph452.pdf -->
+<!--The output section has been change to print http://www.imf.org/external/pubs/ft/ar/97/pdf/file16.pdf instead of http://www.imf.org/external/pubs/ft/pam/pam45/pamph452.pdf -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/pubs/ft/ar/97/pdf/file16.pdf back to http://www.imf.org/external/pubs/ft/pam/pam45/pamph452.pdf -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>11</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/pubs/ft/pam/pam45/pamph452.pdf">
+          IMF Pamphlet Series No. 45 The Financial Organization and Operations of the IMF revised 1995 - part 2 </A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/pubs/ft/pam/pam45/pamph452.pdf
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+	</TD>
+
+    <TD  align=center valign=top width=15%>251 Kb</TD>
+      <td  align=center valign=top>PDF</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/pubs/ft/pam/pam45/pamph452.pdf  -->
+<!--If it is from another collection it set http://www.imf.org/external/pubs/ft/pam/pam45/pamph452.pdf to http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file18.pdf -->
+<!--The output section has been change to print http://www.imf.org/external/pubs/ft/pam/pam45/pamph452.pdf instead of http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file18.pdf -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/pubs/ft/pam/pam45/pamph452.pdf back to http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file18.pdf -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>12</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file18.pdf">
+          Informe Anual del FMI 1997 - Apendice X. Estados financieros </A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file18.pdf
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+	</TD>
+
+    <TD  align=center valign=top width=15%>224 Kb</TD>
+      <td  align=center valign=top>PDF</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file18.pdf  -->
+<!--If it is from another collection it set http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file18.pdf to http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file18f.pdf -->
+<!--The output section has been change to print http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file18.pdf instead of http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file18f.pdf -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file18.pdf back to http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file18f.pdf -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>13</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file18f.pdf">
+          FMI Rapport annuel 1997 -- ETATS FINANCIERS </A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file18f.pdf
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+	</TD>
+
+    <TD  align=center valign=top width=15%>176 Kb</TD>
+      <td  align=center valign=top>PDF</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file18f.pdf  -->
+<!--If it is from another collection it set http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file18f.pdf to http://www.imf.org/external/pubs/ft/survey/sup0996/pdf/suppleme.pdf -->
+<!--The output section has been change to print http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file18f.pdf instead of http://www.imf.org/external/pubs/ft/survey/sup0996/pdf/suppleme.pdf -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file18f.pdf back to http://www.imf.org/external/pubs/ft/survey/sup0996/pdf/suppleme.pdf -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>14</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/pubs/ft/survey/sup0996/pdf/suppleme.pdf">
+          IMF Survey Supplement on the Fund 1996 </A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/pubs/ft/survey/sup0996/pdf/suppleme.pdf
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+	</TD>
+
+    <TD  align=center valign=top width=15%>327 Kb</TD>
+      <td  align=center valign=top>PDF</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/pubs/ft/survey/sup0996/pdf/suppleme.pdf  -->
+<!--If it is from another collection it set http://www.imf.org/external/pubs/ft/survey/sup0996/pdf/suppleme.pdf to http://www.imf.org/external/pubs/ft/survey/pdf/090096.pdf -->
+<!--The output section has been change to print http://www.imf.org/external/pubs/ft/survey/sup0996/pdf/suppleme.pdf instead of http://www.imf.org/external/pubs/ft/survey/pdf/090096.pdf -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/pubs/ft/survey/sup0996/pdf/suppleme.pdf back to http://www.imf.org/external/pubs/ft/survey/pdf/090096.pdf -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>15</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/pubs/ft/survey/pdf/090096.pdf">
+          IMF Survey: Supplement on the IMF, September 1996 </A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/pubs/ft/survey/pdf/090096.pdf
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+	</TD>
+
+    <TD  align=center valign=top width=15%>327 Kb</TD>
+      <td  align=center valign=top>PDF</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/pubs/ft/survey/pdf/090096.pdf  -->
+<!--If it is from another collection it set http://www.imf.org/external/pubs/ft/survey/pdf/090096.pdf to http://www.imf.org/external/pubs/ft/survey/sup0997/pdf/suppleme.pdf -->
+<!--The output section has been change to print http://www.imf.org/external/pubs/ft/survey/pdf/090096.pdf instead of http://www.imf.org/external/pubs/ft/survey/sup0997/pdf/suppleme.pdf -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/pubs/ft/survey/pdf/090096.pdf back to http://www.imf.org/external/pubs/ft/survey/sup0997/pdf/suppleme.pdf -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>16</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/pubs/ft/survey/sup0997/pdf/suppleme.pdf">
+          IMF Survey Supplement on the Fund--September 1997 </A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/pubs/ft/survey/sup0997/pdf/suppleme.pdf
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+	</TD>
+
+    <TD  align=center valign=top width=15%>554 Kb</TD>
+      <td  align=center valign=top>PDF</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/pubs/ft/survey/sup0997/pdf/suppleme.pdf  -->
+<!--If it is from another collection it set http://www.imf.org/external/pubs/ft/survey/sup0997/pdf/suppleme.pdf to http://www.imf.org/external/pubs/ft/ar/97/pdf/file18.pdf -->
+<!--The output section has been change to print http://www.imf.org/external/pubs/ft/survey/sup0997/pdf/suppleme.pdf instead of http://www.imf.org/external/pubs/ft/ar/97/pdf/file18.pdf -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/pubs/ft/survey/sup0997/pdf/suppleme.pdf back to http://www.imf.org/external/pubs/ft/ar/97/pdf/file18.pdf -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>17</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/pubs/ft/ar/97/pdf/file18.pdf">
+          IMF Annual Report 1997--Financial Statements </A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/pubs/ft/ar/97/pdf/file18.pdf
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+	</TD>
+
+    <TD  align=center valign=top width=15%>161 Kb</TD>
+      <td  align=center valign=top>PDF</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/pubs/ft/ar/97/pdf/file18.pdf  -->
+<!--If it is from another collection it set http://www.imf.org/external/pubs/ft/ar/97/pdf/file18.pdf to http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=C%3A%5Ctemp%5Ceconiss%5CIssues13%5CIssue13%2Epdf&doctype=raw&Collection=econiss& -->
+<!--The output section has been change to print http://www.imf.org/external/pubs/ft/ar/97/pdf/file18.pdf instead of http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=C%3A%5Ctemp%5Ceconiss%5CIssues13%5CIssue13%2Epdf&doctype=raw&Collection=econiss& -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/pubs/ft/ar/97/pdf/file18.pdf back to http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=C%3A%5Ctemp%5Ceconiss%5CIssues13%5CIssue13%2Epdf&doctype=raw&Collection=econiss& -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+									<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>18</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/pubs/ft/Issues13/Issue13.pdf">
+          Economic Issues No. 13 Fixed or Flexible? getting Exchange Rates Right in the 1990s </A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=C%3A%5Ctemp%5Ceconiss%5CIssues13%5CIssue13%2Epdf&doctype=raw&Collection=econiss&
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+			<br><B>Summary:</b> This paper examines the recent evolution of  exchange rate policies in the developing world and looks at why many countries have made the  transition from fixed or pegged exchange rates to managed floating or independently floating currencies. 
+	</TD>
+
+    <TD  align=center valign=top width=15%>213 Kb</TD>
+      <td  align=center valign=top>PDF</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/pubs/ft/Issues13/Issue13.pdf  -->
+<!--If it is from another collection it set http://www.imf.org/external/pubs/ft/Issues13/Issue13.pdf to http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=C%3A%5Ctemp%5Ceconiss%5CIssues13%5Cindex%2Ehtm&doctype=raw&Collection=econiss& -->
+<!--The output section has been change to print http://www.imf.org/external/pubs/ft/Issues13/Issue13.pdf instead of http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=C%3A%5Ctemp%5Ceconiss%5CIssues13%5Cindex%2Ehtm&doctype=raw&Collection=econiss& -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/pubs/ft/Issues13/Issue13.pdf back to http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=C%3A%5Ctemp%5Ceconiss%5CIssues13%5Cindex%2Ehtm&doctype=raw&Collection=econiss& -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+									<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>19</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/pubs/ft/Issues13/index.htm">
+          Economic Issues No. 13 -- Fixed or Flexible?--Getting the Exchange Rate Right in the 1990s</A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=C%3A%5Ctemp%5Ceconiss%5CIssues13%5Cindex%2Ehtm&doctype=raw&Collection=econiss&
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+    	<br><B>Summary:</b> This paper examines the recent evolution of  exchange rate policies in the developing world. It looks at why so many countries have made the  transition from fixed or pegged exchange rates to managed floating or independently floating  currencies. It disc
+    </TD>
+
+    <TD  align=center valign=top width=15%>44 Kb</TD>
+      <td  align=center valign=top>HTML</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/pubs/ft/Issues13/index.htm  -->
+<!--If it is from another collection it set http://www.imf.org/external/pubs/ft/Issues13/index.htm to http://www.imf.org/external/pubs/ft/fandd/1996/03/pdf/alexande.pdf -->
+<!--The output section has been change to print http://www.imf.org/external/pubs/ft/Issues13/index.htm instead of http://www.imf.org/external/pubs/ft/fandd/1996/03/pdf/alexande.pdf -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/pubs/ft/Issues13/index.htm back to http://www.imf.org/external/pubs/ft/fandd/1996/03/pdf/alexande.pdf -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>20</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/pubs/ft/fandd/1996/03/pdf/alexande.pdf">
+          Finance & Development - March 1996 - Volume 33 - Number 1 </A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/pubs/ft/fandd/1996/03/pdf/alexande.pdf
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  28
+--->
+
+
+  		    	
+			<br><B>Summary:</b> Adopting Indirect Instruments of Monetary Policy by William E. Alexander, Tomas J.T. Balino, and Charles Enoch 
+	</TD>
+
+    <TD  align=center valign=top width=15%>265 Kb</TD>
+      <td  align=center valign=top>PDF</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/pubs/ft/fandd/1996/03/pdf/alexande.pdf  -->
+<!--If it is from another collection it set http://www.imf.org/external/pubs/ft/fandd/1996/03/pdf/alexande.pdf to http://www.imf.org/external/pubs/ft/fandd/1997/09/pdf/imf.pdf -->
+<!--The output section has been change to print http://www.imf.org/external/pubs/ft/fandd/1996/03/pdf/alexande.pdf instead of http://www.imf.org/external/pubs/ft/fandd/1997/09/pdf/imf.pdf -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/pubs/ft/fandd/1996/03/pdf/alexande.pdf back to http://www.imf.org/external/pubs/ft/fandd/1997/09/pdf/imf.pdf -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>21</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/pubs/ft/fandd/1997/09/pdf/imf.pdf">
+          Finance & Development - September 1997 - Volume 34 - Number 3 </A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/pubs/ft/fandd/1997/09/pdf/imf.pdf
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  28
+--->
+
+
+  		    	
+			<br><B>Summary:</b> Experience Under the IMF's Enhanced Structural Adjustment Facility by IMF's Policy Development and Review Department 
+	</TD>
+
+    <TD  align=center valign=top width=15%>292 Kb</TD>
+      <td  align=center valign=top>PDF</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/pubs/ft/fandd/1997/09/pdf/imf.pdf  -->
+<!--If it is from another collection it set http://www.imf.org/external/pubs/ft/fandd/1997/09/pdf/imf.pdf to http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file14.pdf -->
+<!--The output section has been change to print http://www.imf.org/external/pubs/ft/fandd/1997/09/pdf/imf.pdf instead of http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file14.pdf -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/pubs/ft/fandd/1997/09/pdf/imf.pdf back to http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file14.pdf -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>22</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file14.pdf">
+          Informe Anual del FMI 1997 - Apendices III-IV  </A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file14.pdf
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+	</TD>
+
+    <TD  align=center valign=top width=15%>202 Kb</TD>
+      <td  align=center valign=top>PDF</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file14.pdf  -->
+<!--If it is from another collection it set http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file14.pdf to http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file14f.pdf -->
+<!--The output section has been change to print http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file14.pdf instead of http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file14f.pdf -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/pubs/ft/ar/97/S97/pdf/file14.pdf back to http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file14f.pdf -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>23</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file14f.pdf">
+          FMI Rapport annuel 1997 -- RELATIONS AVECLES AUTRES ORGANISATIONS INTERNATIONALES, RELATIONS  EXTERIEURES </A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file14f.pdf
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+	</TD>
+
+    <TD  align=center valign=top width=15%>198 Kb</TD>
+      <td  align=center valign=top>PDF</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file14f.pdf  -->
+<!--If it is from another collection it set http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file14f.pdf to http://www.imf.org/external/pubs/ft/survey/pdf/080597.pdf -->
+<!--The output section has been change to print http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file14f.pdf instead of http://www.imf.org/external/pubs/ft/survey/pdf/080597.pdf -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/pubs/ft/ar/97/F97/pdf/file14f.pdf back to http://www.imf.org/external/pubs/ft/survey/pdf/080597.pdf -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>24</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/pubs/ft/survey/pdf/080597.pdf">
+          IMF Survey: August 5, 1997 </A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/pubs/ft/survey/pdf/080597.pdf
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+	</TD>
+
+    <TD  align=center valign=top width=15%>539 Kb</TD>
+      <td  align=center valign=top>PDF</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/pubs/ft/survey/pdf/080597.pdf  -->
+<!--If it is from another collection it set http://www.imf.org/external/pubs/ft/survey/pdf/080597.pdf to http://www.imf.org/external/pubs/ft/ar/97/pdf/file14.pdf -->
+<!--The output section has been change to print http://www.imf.org/external/pubs/ft/survey/pdf/080597.pdf instead of http://www.imf.org/external/pubs/ft/ar/97/pdf/file14.pdf -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/pubs/ft/survey/pdf/080597.pdf back to http://www.imf.org/external/pubs/ft/ar/97/pdf/file14.pdf -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>25</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/pubs/ft/ar/97/pdf/file14.pdf">
+          IMF Annual Report 1997--Relations with Other International Organizations, External Relations </A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/pubs/ft/ar/97/pdf/file14.pdf
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+	</TD>
+
+    <TD  align=center valign=top width=15%>188 Kb</TD>
+      <td  align=center valign=top>PDF</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/pubs/ft/ar/97/pdf/file14.pdf  -->
+<!--If it is from another collection it set http://www.imf.org/external/pubs/ft/ar/97/pdf/file14.pdf to http://www.imf.org/external/pubs/ft/survey/pdf/011298.pdf -->
+<!--The output section has been change to print http://www.imf.org/external/pubs/ft/ar/97/pdf/file14.pdf instead of http://www.imf.org/external/pubs/ft/survey/pdf/011298.pdf -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/pubs/ft/ar/97/pdf/file14.pdf back to http://www.imf.org/external/pubs/ft/survey/pdf/011298.pdf -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>26</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/pubs/ft/survey/pdf/011298.pdf">
+          IMF Survey: January  12, 1998 </A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/pubs/ft/survey/pdf/011298.pdf
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+			<br><B>Summary:</b>  IMF accelerates disbursement to Korea, interim World Economic Outlook revises projections downward; Supplemental Reserve Facility; lessons from systemic bank restructuring efforts. 
+	</TD>
+
+    <TD  align=center valign=top width=15%>398 Kb</TD>
+      <td  align=center valign=top>PDF</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/pubs/ft/survey/pdf/011298.pdf  -->
+<!--If it is from another collection it set http://www.imf.org/external/pubs/ft/survey/pdf/011298.pdf to http://www.imf.org/external/pubs/ft/survey/pdf/020998.pdf -->
+<!--The output section has been change to print http://www.imf.org/external/pubs/ft/survey/pdf/011298.pdf instead of http://www.imf.org/external/pubs/ft/survey/pdf/020998.pdf -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/pubs/ft/survey/pdf/011298.pdf back to http://www.imf.org/external/pubs/ft/survey/pdf/020998.pdf -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>27</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/pubs/ft/survey/pdf/020998.pdf">
+          IMF Survey: February 9,1998 </A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/pubs/ft/survey/pdf/020998.pdf
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+			<br><B>Summary:</b> Camdessus's commendation of Indonesian reforms; U.S. Congress consideration of funding for NAB and quota increase; lending in 1997; Camdessus on good governance; and IMF Governors' approval of quota increase. 
+	</TD>
+
+    <TD  align=center valign=top width=15%>352 Kb</TD>
+      <td  align=center valign=top>PDF</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/pubs/ft/survey/pdf/020998.pdf  -->
+<!--If it is from another collection it set http://www.imf.org/external/pubs/ft/survey/pdf/020998.pdf to http://www.imf.org/external/pubs/pubs/cat82.pdf -->
+<!--The output section has been change to print http://www.imf.org/external/pubs/ft/survey/pdf/020998.pdf instead of http://www.imf.org/external/pubs/pubs/cat82.pdf -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/pubs/ft/survey/pdf/020998.pdf back to http://www.imf.org/external/pubs/pubs/cat82.pdf -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>28</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/pubs/pubs/cat82.pdf">
+          IMF Publications Catalog, 1997--part 4 </A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/pubs/pubs/cat82.pdf
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+			<br><B>Summary:</b> Economic Issues - Pamphlet Series - Miscellaneous Publications - Local Stockists and Distributors - Title Index - Author Index - Order Form - Blanket Order Book Service 
+	</TD>
+
+    <TD  align=center valign=top width=15%>162 Kb</TD>
+      <td  align=center valign=top>PDF</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/pubs/pubs/cat82.pdf  -->
+<!--If it is from another collection it set http://www.imf.org/external/pubs/pubs/cat82.pdf to http://www.imf.org/external/pubs/pubs/cat22_43.pdf -->
+<!--The output section has been change to print http://www.imf.org/external/pubs/pubs/cat82.pdf instead of http://www.imf.org/external/pubs/pubs/cat22_43.pdf -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/pubs/pubs/cat82.pdf back to http://www.imf.org/external/pubs/pubs/cat22_43.pdf -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>29</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/pubs/pubs/cat22_43.pdf">
+          IMF Publications Catalog, 1997--part 2 </A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/pubs/pubs/cat22_43.pdf
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+			<br><B>Summary:</b> Occasional Papers - Statistical Publications - Magnetic Tape Subscriptions - Periodic Publications - IMF Staff Country Reports  
+	</TD>
+
+    <TD  align=center valign=top width=15%>109 Kb</TD>
+      <td  align=center valign=top>PDF</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/pubs/pubs/cat22_43.pdf  -->
+<!--If it is from another collection it set http://www.imf.org/external/pubs/pubs/cat22_43.pdf to http://www.imf.org/external/np/res/ople/data/extl.pdf -->
+<!--The output section has been change to print http://www.imf.org/external/pubs/pubs/cat22_43.pdf instead of http://www.imf.org/external/np/res/ople/data/extl.pdf -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/pubs/pubs/cat22_43.pdf back to http://www.imf.org/external/np/res/ople/data/extl.pdf -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>30</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/np/res/ople/data/extl.pdf">
+          IMF List of Ongoing Research Projects June 1998, Complete List  </A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/np/res/ople/data/extl.pdf
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+			<br><B>Summary:</b> This list of projects in progress is organized alphabetically by area department and by functional and special service department. It is updated periodically. Copies of work in progress are not available.  
+	</TD>
+
+    <TD  align=center valign=top width=15%>182 Kb</TD>
+      <td  align=center valign=top>PDF</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/np/res/ople/data/extl.pdf  -->
+<!--If it is from another collection it set http://www.imf.org/external/np/res/ople/data/extl.pdf to http://www.imf.org/external/np/res/ople/data/afr.pdf -->
+<!--The output section has been change to print http://www.imf.org/external/np/res/ople/data/extl.pdf instead of http://www.imf.org/external/np/res/ople/data/afr.pdf -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/np/res/ople/data/extl.pdf back to http://www.imf.org/external/np/res/ople/data/afr.pdf -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>31</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/np/res/ople/data/afr.pdf">
+          List of Ongoing Research Projects - June, 1998,   African Department </A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/np/res/ople/data/afr.pdf
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+			<br><B>Summary:</b> This list of projects in progress is organized alphabetically by area department and by functional and special service department. It is updated periodically. Copies of work in progress are not available.  
+	</TD>
+
+    <TD  align=center valign=top width=15%>8 Kb</TD>
+      <td  align=center valign=top>PDF</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/np/res/ople/data/afr.pdf  -->
+<!--If it is from another collection it set http://www.imf.org/external/np/res/ople/data/afr.pdf to http://www.imf.org/external/np/ins/english/training/hemail.htm -->
+<!--The output section has been change to print http://www.imf.org/external/np/res/ople/data/afr.pdf instead of http://www.imf.org/external/np/ins/english/training/hemail.htm -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/np/res/ople/data/afr.pdf back to http://www.imf.org/external/np/ins/english/training/hemail.htm -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>32</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/np/ins/english/training/hemail.htm">
+          IMF - Headquarters Training - Email Form to INS</A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/np/ins/english/training/hemail.htm
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+    </TD>
+
+    <TD  align=center valign=top width=15%>12 Kb</TD>
+      <td  align=center valign=top>HTML</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/np/ins/english/training/hemail.htm  -->
+<!--If it is from another collection it set http://www.imf.org/external/np/ins/english/training/hemail.htm to http://www.imf.org/external/np/sec/decdo/groups.htm -->
+<!--The output section has been change to print http://www.imf.org/external/np/ins/english/training/hemail.htm instead of http://www.imf.org/external/np/sec/decdo/groups.htm -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/np/ins/english/training/hemail.htm back to http://www.imf.org/external/np/sec/decdo/groups.htm -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>33</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/np/sec/decdo/groups.htm">
+          COUNTRY GROUPS</A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/np/sec/decdo/groups.htm
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+    	<br><B>Summary:</b> This is an entry from the IMF's Directory of
+Economic, Commodity and Development Organizations which provides a guide to regional
+economic organizations and to inter-governmental commodity and development
+organizations.
+    </TD>
+
+    <TD  align=center valign=top width=15%>3 Kb</TD>
+      <td  align=center valign=top>HTML</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/np/sec/decdo/groups.htm  -->
+<!--If it is from another collection it set http://www.imf.org/external/np/sec/decdo/groups.htm to http://www.imf.org/external/np/sec/decdo/wto.htm -->
+<!--The output section has been change to print http://www.imf.org/external/np/sec/decdo/groups.htm instead of http://www.imf.org/external/np/sec/decdo/wto.htm -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/np/sec/decdo/groups.htm back to http://www.imf.org/external/np/sec/decdo/wto.htm -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>34</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/np/sec/decdo/wto.htm">
+          WORLD TRADE ORGANIZATION (WTO)</A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/np/sec/decdo/wto.htm
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+    	<br><B>Summary:</b> This is an entry from the IMF's Directory of
+Economic, Commodity and Development Organizations which provides a guide to regional
+economic organizations and to inter-governmental commodity and development
+organizations.
+    </TD>
+
+    <TD  align=center valign=top width=15%>19 Kb</TD>
+      <td  align=center valign=top>HTML</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/np/sec/decdo/wto.htm  -->
+<!--If it is from another collection it set http://www.imf.org/external/np/sec/decdo/wto.htm to http://www.imf.org/external/np/sec/decdo/who.htm -->
+<!--The output section has been change to print http://www.imf.org/external/np/sec/decdo/wto.htm instead of http://www.imf.org/external/np/sec/decdo/who.htm -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/np/sec/decdo/wto.htm back to http://www.imf.org/external/np/sec/decdo/who.htm -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>35</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/np/sec/decdo/who.htm">
+          WORLD HEALTH ORGANIZATION (WHO)</A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/np/sec/decdo/who.htm
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+    	<br><B>Summary:</b> This is an entry from the IMF's Directory of
+Economic, Commodity and Development Organizations which provides a guide to regional
+economic organizations and to inter-governmental commodity and development
+organizations.
+    </TD>
+
+    <TD  align=center valign=top width=15%>9 Kb</TD>
+      <td  align=center valign=top>HTML</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/np/sec/decdo/who.htm  -->
+<!--If it is from another collection it set http://www.imf.org/external/np/sec/decdo/who.htm to http://www.imf.org/external/np/sec/decdo/wfp.htm -->
+<!--The output section has been change to print http://www.imf.org/external/np/sec/decdo/who.htm instead of http://www.imf.org/external/np/sec/decdo/wfp.htm -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/np/sec/decdo/who.htm back to http://www.imf.org/external/np/sec/decdo/wfp.htm -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>36</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/np/sec/decdo/wfp.htm">
+          WORLD FOOD PROGRAMME (WFP)</A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/np/sec/decdo/wfp.htm
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+    	<br><B>Summary:</b> This is an entry from the IMF's Directory of
+Economic, Commodity and Development Organizations which provides a guide to regional
+economic organizations and to inter-governmental commodity and development
+organizations.
+    </TD>
+
+    <TD  align=center valign=top width=15%>11 Kb</TD>
+      <td  align=center valign=top>HTML</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/np/sec/decdo/wfp.htm  -->
+<!--If it is from another collection it set http://www.imf.org/external/np/sec/decdo/wfp.htm to http://www.imf.org/external/np/sec/decdo/upu.htm -->
+<!--The output section has been change to print http://www.imf.org/external/np/sec/decdo/wfp.htm instead of http://www.imf.org/external/np/sec/decdo/upu.htm -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/np/sec/decdo/wfp.htm back to http://www.imf.org/external/np/sec/decdo/upu.htm -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>37</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/np/sec/decdo/upu.htm">
+          UNIVERSAL POSTAL UNION (UPU)</A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/np/sec/decdo/upu.htm
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+    	<br><B>Summary:</b> This is an entry from the IMF's Directory of
+Economic, Commodity and Development Organizations which provides a guide to regional
+economic organizations and to inter-governmental commodity and development
+organizations.
+    </TD>
+
+    <TD  align=center valign=top width=15%>10 Kb</TD>
+      <td  align=center valign=top>HTML</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/np/sec/decdo/upu.htm  -->
+<!--If it is from another collection it set http://www.imf.org/external/np/sec/decdo/upu.htm to http://www.imf.org/external/np/sec/decdo/unido.htm -->
+<!--The output section has been change to print http://www.imf.org/external/np/sec/decdo/upu.htm instead of http://www.imf.org/external/np/sec/decdo/unido.htm -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/np/sec/decdo/upu.htm back to http://www.imf.org/external/np/sec/decdo/unido.htm -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>38</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/np/sec/decdo/unido.htm">
+          UNITED NATIONS INDUSTRIAL DEVELOPMENT ORGANIZATION (UNIDO)</A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/np/sec/decdo/unido.htm
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+    	<br><B>Summary:</b> This is an entry from the IMF's Directory of
+Economic, Commodity and Development Organizations which provides a guide to regional
+economic organizations and to inter-governmental commodity and development
+organizations.
+    </TD>
+
+    <TD  align=center valign=top width=15%>11 Kb</TD>
+      <td  align=center valign=top>HTML</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/np/sec/decdo/unido.htm  -->
+<!--If it is from another collection it set http://www.imf.org/external/np/sec/decdo/unido.htm to http://www.imf.org/external/np/sec/decdo/unesco.htm -->
+<!--The output section has been change to print http://www.imf.org/external/np/sec/decdo/unido.htm instead of http://www.imf.org/external/np/sec/decdo/unesco.htm -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/np/sec/decdo/unido.htm back to http://www.imf.org/external/np/sec/decdo/unesco.htm -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>39</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/np/sec/decdo/unesco.htm">
+          UNITED NATIONS EDUCATIONAL, SCIENTIFIC AND CULTURAL ORGANIZATION (UNESCO)</A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/np/sec/decdo/unesco.htm
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+    	<br><B>Summary:</b> This is an entry from the IMF's Directory of
+Economic, Commodity and Development Organizations which provides a guide to regional
+economic organizations and to inter-governmental commodity and development
+organizations.
+    </TD>
+
+    <TD  align=center valign=top width=15%>7 Kb</TD>
+      <td  align=center valign=top>HTML</td>
+      
+</TR>
+
+
+<!-- GJD 5/98 -->
+<!--This secment has been added as a workaround for the econmic issues -->
+<!--if the result is from the econiss collection it parses the url and changes a -->
+<!--File walked url into a real URL and store it in http://www.imf.org/external/np/sec/decdo/unesco.htm  -->
+<!--If it is from another collection it set http://www.imf.org/external/np/sec/decdo/unesco.htm to http://www.imf.org/external/np/sec/decdo/eca.htm -->
+<!--The output section has been change to print http://www.imf.org/external/np/sec/decdo/unesco.htm instead of http://www.imf.org/external/np/sec/decdo/eca.htm -->
+<!--To get rid of this fix delete this section and change all references to -->
+<!--http://www.imf.org/external/np/sec/decdo/unesco.htm back to http://www.imf.org/external/np/sec/decdo/eca.htm -->
+<!--The search pages should also be modified to remove and references to the econiss collection-->
+<!--The Econiss collection is created by scripts/econiss.cmd which should be removed -->
+<!--from the reindexing procedures -->
+
+	<!--the fix ends here GJD 5/98 -->
+
+
+<TR>
+
+
+
+<TD width=5% align=center valign=top>40</A></TD>
+
+<td>
+</td>
+
+<TD width=75% valign=top><A HREF="http://www.imf.org/external/np/sec/decdo/eca.htm">
+          UNITED NATIONS ECONOMIC COMMISSION FOR AFRICA (ECA)</A>
+    
+
+                                
+
+
+<!---
+<br> url: http://www.imf.org/external/np/sec/decdo/eca.htm
+<br> pr: 0
+<br> pn: 0
+<br> nb: 0
+<br> speech: 0
+<br> tr: 0
+<br> cm: 0
+<br> aa: 0
+<br> fandd:  0
+--->
+
+
+  	
+    	<br><B>Summary:</b> This is an entry from the IMF's Directory of
+Economic, Commodity and Development Organizations which provides a guide to regional
+economic organizations and to inter-governmental commodity and development
+organizations.
+    </TD>
+
+    <TD  align=center valign=top width=15%>7 Kb</TD>
+      <td  align=center valign=top>HTML</td>
+      
+</TR>
+
+
+</TABLE>
+
+  <HR>
+  <center>
+  <B>Results List Navigation:</B>
+
+  
+              1
+                    <A HREF="http://www.imf.org/search97cgi/s97_cgi.exe?QueryZip=burundi&ResultTemplate=imfrslp%2Ehts&QueryText=burundi&Collection=econiss&Collection=insext&Collection=external&SortOrder=Desc&ScoreThreshold=14&ResultStart=41&ResultCount=40&ServerKey=&AdminImagePath=&Theme=&Company=">2</A>
+          
+      <A HREF="http://www.imf.org/search97cgi/s97_cgi.exe?QueryZip=burundi&ResultTemplate=imfrslp%2Ehts&QueryText=burundi&Collection=econiss&Collection=insext&Collection=external&SortOrder=Desc&ScoreThreshold=14&ResultStart=41&ResultCount=40&ServerKey=&AdminImagePath=&Theme=&Company=">[Next]</A>
+    <A HREF="/external/search/search.htm">[Search Again]</A>
+    </center>
+<hr>
+
+</TD></TR></TABLE></CENTER>
+<!------------------------ BEGIN FOOTER ---------------------------->
+<CENTER>
+<!---
+<TABLE><TR><TD ALIGN=RIGHT><A HREF="#TOP"><img src="/external/gifs/up.gif" BORDER=0 width="13" height="14" ALT="up"></A><br clear=all><img src="/external/gifs/up-line.gif" BORDER=0 width="590" height="9"></TD></TR></TABLE>
+---!>
+<!------------------------TOOLS FOOTER -----------------------------> 
+<FONT CLASS=8V FACE="arial, helvetica, sans-serif, verdana" SIZE=-1>
+<NOBR><a href="/external/index.htm">Home</a><img src="/external/gifs/foot-vl.gif" border=0 width=17 height=13 align=ABSBOTTOM><A href="/external/search/search.htm">Search</a> <img src="/external/gifs/foot-vl.gif" border=0 width=17 height=13 align=ABSBOTTOM><a href="/external/map.htm">Map</a><img src="/external/gifs/foot-vl.gif" border=0 width=17 height=13 align=ABSBOTTOM><a href="/external/indexlst.htm">Index</a> <img src="/external/gifs/foot-vl.gif" border=0 width=17 height=13 align=ABSBOTTOM><a href="/external/what/what.htm">What's New</a></NOBR><BR CLEAR=ALL>  
+
+<!---------------------- SECTION FOOTER-----------------------------> 
+<NOBR><a href="/external/about.htm">About</a><img src="/external/gifs/foot-vl.gif" border=0 width=17 height=13 align=ABSBOTTOM><a href="/external/news.htm">News</a><img src="/external/gifs/foot-vl.gif" border=0 width=17 height=13 align=ABSBOTTOM><a href="/external/pubind.htm">Publications</a><img src="/external/gifs/foot-vl.gif" border=0 width=17 height=13 align=ABSBOTTOM><a href="/external/np/tre/sdr/sdr.htm">Fund Rates</a><img src="/external/gifs/foot-vl.gif" border=0 width=17 height=13 align=ABSBOTTOM><a href="http://dsbb.imf.org">Data Standards</a></NOBR>
+<BR CLEAR=ALL>
+</font><BR>
+</CENTER>
+<!------------------------END FOOTER-------------------------------->
+</BODY>
+
+</HTML>

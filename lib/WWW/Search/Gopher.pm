@@ -1,26 +1,37 @@
 #!/usr/local/bin/perl
 
-# contributed from Paul Lindner <lindner@reliefweb.int>
-
-package WWW::Search::Gopher;
-
 =head1 NAME
 
-WWW::Search::Gopher - class for searching Gopher
-
+WWW::Search::Gopher - class for searching Gopher pages
 
 =head1 SYNOPSIS
 
     require WWW::Search;
     $search = new WWW::Search('Gopher');
 
-
 =head1 DESCRIPTION
 
-Not documented.
+This class is a specialization of WWW::Search that searches Gopher
+index items.
+
+This class exports no public interface; all interaction should be done
+through WWW::Search objects.
+
+=head1 AUTHOR
+
+C<WWW::Search::NULL> is written by Paul Lindner, <lindner@itu.int>
+
+=head1 COPYRIGHT
+
+Copyright (c) 1997,98 by the United Nations Administrative Committee 
+on Coordination (ACC)
+
+All rights reserved.
 
 =cut
 
+
+package WWW::Search::Gopher;
 
 require Exporter;
 @EXPORT = qw();
@@ -99,7 +110,6 @@ sub native_retrieve_some
 	$hit->title($title);
 	$hit->score($score);
 	$hit->normalized_score($score);
-	$hit->ref($self->{'search_ref'});
 
 	push(@{$self->{cache}}, $hit);
 		

@@ -2,24 +2,40 @@
 
 # contributed from Paul Lindner <lindner@itu.int>
 
-package WWW::Search::Simple;
 
 =head1 NAME
 
-WWW::Search::Simple - class for searching Simple
-
+WWW::Search::Simple - class for searching any web site
 
 =head1 SYNOPSIS
 
     require WWW::Search;
     $search = new WWW::Search('Simple');
 
-
 =head1 DESCRIPTION
 
-Not documented.
+This class is a specialization of WWW::Search for simple web based
+search indices.  It extracts all links from a given page.
+
+This class exports no public interface; all interaction should be done
+through WWW::Search objects.
+
+Note that this module will probably get a lot of false hits.
+
+=head1 AUTHOR
+
+C<WWW::Search::Simple> is written by Paul Lindner,
+<lindner@itu.int>
+
+=head1 COPYRIGHT
+
+Copyright (c) 1997,98 by the United Nations Administrative Committee 
+on Coordination (ACC)
+
+All rights reserved.
 
 =cut
+
 
 
 package WWW::Search::Simple;
@@ -75,8 +91,9 @@ sub native_retrieve_some
 
     # get some
     print "GET " . $self->{_next_url} . "\n" if ($debug);
-    my($request) = $self->HTTPrequest($self->{search_method}, $self->{_next_url});
-    my($response) = $self->{user_agent}->request($request);
+    my($response) = $self->http_request($self->{search_method}, 
+					$self->{_next_url});
+
     $self->{response} = $response;
     if (!$response->is_success) {
 	print "Some problem\n" if ($Debug);
@@ -96,7 +113,7 @@ sub native_retrieve_some
     for (@{ $h->extract_links(qw(a)) }) {
 	my($link, $linkelem) = @$_;
 	
-	my($linkobj)       = $self->absurl($self->{_next_url}, $link);
+	my($linkobj)       = new URI::URL $link, $self->{_next_url};
 	print "Fixing $link\n" if ($Debug);
 	
 	my($hit) = new WWW::SearchResult;
@@ -104,7 +121,6 @@ sub native_retrieve_some
 	$hit->title(join(' ',@{$linkelem->content}));
 	$hit->score($score);
 	$hit->normalized_score($score);
-	$hit->ref($self->{'search_ref'});
 
 	if (!($srchitem{'title'} =~ /HASH\(0x/)) {
 	    $hits_found++;
