@@ -1,5 +1,5 @@
 # This -*- perl -*- script writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.23 2002/03/22 14:58:26 mthurn Exp mthurn $
+# $Id: Makefile.PL,v 1.24 2002/04/19 13:18:26 mthurn Exp mthurn $
 
 require 5.004;
 
@@ -19,14 +19,15 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
               'NAME' => 'WWW::Search',
-              'VERSION' => 2.31,
+              'VERSION' => 2.32,
 
               ($] ge '5.005') ? (
-                                 'AUTHOR' => 'Martin Thurn <mthurn@tasc.com>',
+                                 'AUTHOR' => 'Martin Thurn <mthurn@cpan.org>',
                                  'ABSTRACT' => 'Query web search engines and get URLs',
                                 ) : (),
               'EXE_FILES' => [ @programs_to_install ],
               'PREREQ_PM' => {
+                              'File::Find' => 0,
                               'File::Spec' => 0,
                               'HTML::Parse' => 0,
                               'HTML::Parser' => 2.23,

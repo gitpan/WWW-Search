@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.68 2002/03/28 19:15:24 mthurn Exp $
+# $Id: Search.pm,v 1.69 2002/04/19 14:04:03 mthurn Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -69,14 +69,15 @@ package WWW::Search;
 
 require Exporter;
 @EXPORT = qw();
-@EXPORT_OK = qw(escape_query unescape_query generic_option strip_tags @ENGINES_WORKING);
-$VERSION = '2.33';
+@EXPORT_OK = qw( escape_query unescape_query generic_option strip_tags );
+$VERSION = '2.34';
 $MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
 
 use Carp ();
 use Data::Dumper;  # for debugging only
+use File::Find;
 use HTML::TreeBuilder;
 use HTTP::Cookies;
 use HTTP::Request;
@@ -154,42 +155,6 @@ sub new
   return $self;
   } # new
 
-=head2 reset_search (PRIVATE)
-
-Resets internal data structures to start over with a new search.
-
-=cut
-
-sub reset_search
-  {
-  my $self = shift;
-  print STDERR " + reset_search(",$self->{'native_query'},")\n" if $self->{debug};
-  $self->{'cache'} = ();
-  # $self->{'debug'} = 0;
-  $self->{'native_query'} = '';
-  $self->{'next_to_retrieve'} = 1;
-  $self->{'next_to_return'} = 0;
-  $self->{'number_retrieved'} = 0;
-  $self->{'requests_made'} = 0;
-  $self->{'state'} = $SEARCH_BEFORE;
-  $self->{'_next_url'} = '';
-  $self->_elem('approx_count', 0);
-  # This method is called by native_query().  native_query() is called
-  # either by gui_query() or by the user.  In the case that
-  # gui_query() was called, we do NOT want to clear out the _options
-  # hash.  For now, I implement a pretty ugly hack to make this work:
-  if (caller(2))
-    {
-    my @as = caller(2);
-    if (1 < scalar(@as))
-      {
-      # print STDERR " in reset_search(), as is (", join(',', @as), ")\n";
-      return if $as[3] =~ m/gui_query/;
-      } # if
-    } # if
-  $self->{_options} = ();
-  } # reset_search
-
 =head2 version
 
 Returns the value of the $VERSION variable of the backend engine, or
@@ -223,29 +188,73 @@ sub maintainer
   return $sMaintainer;
   } # maintainer
 
-=head2 gui_query
 
-Specify a query to the current search object;
-the query will be performed with the engine's default options,
-as if it were typed by a user in a browser window.
+=head2 installed_engines
 
-The query must be escaped; call L<&WWW::Search::escape_query> to escape
-a plain query.  See C<native_query> below for more information.
+Returns a list of the names of all installed backends.
+We can not tell if they are up-to-date or working, though.
 
-Currently, this feature is supported by only a few backends;
-consult the documentation for each backend to see if it is implemented.
+  use WWW::Search;
+  my @asEngines = &WWW::Search::installed_engines();
+  local $" = ', ';
+  print (" + These WWW::Search backends are installed: @asEngines\n");
+  # Choose a backend at random:
+  my $oSearch = WWW::Search->new($asEngines[rand(scalar(@asEngines))]);
 
 =cut
 
-sub gui_query
+use constant DEBUG_FIND => 0;
+
+sub wanted
   {
-  # This function is a stub to prevent runtime errors.  This function
-  # should be defined in each backend as appropriate.  See Yahoo.pm in
-  # the WWW-Search-Yahoo distribution for an example of how to
-  # implement it.
-  my $self = shift;
-  return $self->native_query(@_);
-  } # gui_query
+  # Code adapted from the following netnews post:
+  # From: Tom Christiansen (tchrist@mox.perl.com)
+  # Subject: SRC: pminst - find modules whose names match this pattern
+  # Newsgroups: comp.lang.perl.misc
+  # Date: 1999/02/15
+  my $startdir = shift;
+  my $sFullPath = $File::Find::name;
+  # print STDERR " +   wanted($startdir, $sFullPath)\n" if DEBUG_FIND;
+  if (-d && /^[a-z]/)
+    {
+    # this is so we don't go down site_perl etc too early
+    $File::Find::prune = 1;
+    # print STDERR " +     prune\n" if DEBUG_FIND;
+    return;
+    } # if
+  unless ($sFullPath =~ s!\.pm\Z!!)
+    {
+    # print STDERR " +     not .pm\n" if DEBUG_FIND;
+    return;
+    } # unless
+  # Delete absolute path off front of file path:
+  $sFullPath =~ s{^\Q$startdir/}{};
+  unless ($sFullPath =~ s!\AWWW/Search!!)
+    {
+    # print STDERR " +     not WWW/Search\n" if DEBUG_FIND;
+    return;
+    } # unless
+  print STDERR " +     found $sFullPath\n" if DEBUG_FIND;
+  $sFullPath =~ s{/}{::}g;
+  $sFullPath =~ s!\A::!!;
+  return $sFullPath;
+  } # wanted
+
+sub installed_engines
+  {
+  # Does NOT need a WWW::Search object to operate
+  my %hsi;
+  foreach $sDir (@INC)
+    {
+    File::Find::find(sub {
+                       $hsi{&wanted($sDir) || 'JUNKJUNK'}++;
+                       }, $sDir);
+    } # foreach
+  delete $hsi{'JUNKJUNK'};
+  delete $hsi{'Test'};
+  delete $hsi{'Result'};
+  return keys %hsi;
+  } # installed_engines
 
 
 =head2 native_query
@@ -344,6 +353,31 @@ sub native_query
       } # if
     } # foreach
   } # native_query
+
+
+=head2 gui_query
+
+Specify a query to the current search object;
+the query will be performed with the engine's default options,
+as if it were typed by a user in a browser window.
+
+Same arguments as C<native_query> above.
+
+Currently, this feature is supported by only a few backends;
+consult the documentation for each backend to see if it is implemented.
+
+=cut
+
+sub gui_query
+  {
+  # This function is a stub to prevent runtime errors.  This function
+  # should be defined in each backend as appropriate.  See Yahoo.pm in
+  # the WWW-Search-Yahoo distribution for an example of how to
+  # implement it.
+  my $self = shift;
+  return $self->native_query(@_);
+  } # gui_query
+
 
 =head2 cookie_jar
 
@@ -505,6 +539,42 @@ sub is_http_proxy_auth_data
   } # is_http_proxy_auth_data
 
 
+=head2 maximum_to_retrieve
+
+Set the maximum number of hits to return.
+Queries resulting in more than this many hits will return
+the first hits, up to this limit.
+Although this specifies a maximum limit,
+search engines might return less than this number.
+
+Defaults to 500.
+
+Example:
+    $max = $search->maximum_to_retrieve(100);
+
+You can also spell this method "maximum_to_return".
+
+=cut
+
+sub maximum_to_retrieve { return shift->_elem('maximum_to_retrieve', @_); }
+sub maximum_to_return { return shift->_elem('maximum_to_retrieve', @_); }
+
+
+=head2 timeout
+
+The maximum length of time any portion of the query should take,
+in seconds.
+
+Defaults to 60.
+
+Example:
+    $search->timeout(120);
+
+=cut
+
+sub timeout { return shift->_elem('timeout', @_); }
+
+
 =head2 approximate_result_count
 
 Some backends indicate how many hits they have found.
@@ -652,40 +722,41 @@ sub seek_result
   } # seek_result
 
 
-=head2 maximum_to_retrieve
+=head2 reset_search (PRIVATE)
 
-Set the maximum number of hits to return.
-Queries resulting in more than this many hits will return
-the first hits, up to this limit.
-Although this specifies a maximum limit,
-search engines might return less than this number.
-
-Defaults to 500.
-
-Example:
-    $max = $search->maximum_to_retrieve(100);
-
-You can also spell this method "maximum_to_return".
+Resets internal data structures to start over with a new search.
 
 =cut
 
-sub maximum_to_retrieve { return shift->_elem('maximum_to_retrieve', @_); }
-sub maximum_to_return { return shift->_elem('maximum_to_retrieve', @_); }
-
-
-=head2 timeout
-
-The maximum length of time any portion of the query should take,
-in seconds.
-
-Defaults to 60.
-
-Example:
-    $search->timeout(120);
-
-=cut
-
-sub timeout { return shift->_elem('timeout', @_); }
+sub reset_search
+  {
+  my $self = shift;
+  print STDERR " + reset_search(",$self->{'native_query'},")\n" if $self->{debug};
+  $self->{'cache'} = ();
+  # $self->{'debug'} = 0;
+  $self->{'native_query'} = '';
+  $self->{'next_to_retrieve'} = 1;
+  $self->{'next_to_return'} = 0;
+  $self->{'number_retrieved'} = 0;
+  $self->{'requests_made'} = 0;
+  $self->{'state'} = $SEARCH_BEFORE;
+  $self->{'_next_url'} = '';
+  $self->_elem('approx_count', 0);
+  # This method is called by native_query().  native_query() is called
+  # either by gui_query() or by the user.  In the case that
+  # gui_query() was called, we do NOT want to clear out the _options
+  # hash.  For now, I implement a pretty ugly hack to make this work:
+  if (caller(2))
+    {
+    my @as = caller(2);
+    if (1 < scalar(@as))
+      {
+      # print STDERR " in reset_search(), as is (", join(',', @as), ")\n";
+      return if $as[3] =~ m/gui_query/;
+      } # if
+    } # if
+  $self->{_options} = ();
+  } # reset_search
 
 
 =head2 submit
@@ -1134,6 +1205,7 @@ sub split_lines
   # split(/$CR?$LF/,$_[0])
   } # split_lines
 
+
 =head2 generic_option (PRIVATE)
 
 This internal routine checks if an option
@@ -1143,11 +1215,11 @@ This routine is not a method.
 
 =cut
 
-sub generic_option 
-{
-    my ($option) = @_;
-    return ($option =~ /^search_/);
-}
+sub generic_option
+  {
+  my $option = shift || '';
+  return ($option =~ /^search_/);
+  } # generic_option
 
 
 
@@ -1178,6 +1250,7 @@ Derived classes should call this between requests to remote
 servers to avoid overloading them with many, fast back-to-back requests.
 
 =cut
+
 sub user_agent_delay {
     my ($self) = @_;
     # sleep for a quarter second
@@ -1464,14 +1537,5 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 =cut
 
-
-@ENGINES_WORKING = qw(
-                      Crawler
-                      Fireball
-                      Metapedia
-                      Null
-                      SFgate
-                      VoilaFr
-                     );
 
 1;

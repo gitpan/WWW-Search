@@ -42,6 +42,9 @@ require Exporter;
 use Carp ();
 require WWW::SearchResult;
 
+use vars qw( $VERSION );
+$VERSION = '2.01';
+
 my($debug) = 0;
 
 sub native_setup_search {
@@ -81,7 +84,7 @@ sub native_retrieve_some
 
     # get some
     my($url, $search) = split(/\?/, $self->{_next_url});
-    my $url = new URI::URL($url);
+    $url = new URI::URL($url);
     &GopenServer($url->host, $url->port);
     my $send = $url->path . "\t$search";
     $send =~s/^..//;
@@ -89,7 +92,6 @@ sub native_retrieve_some
     &Gsend($send);
     alarm(0);
 
-    my($self) = @_;
     my(%srchitem);
     my(@entries);
     

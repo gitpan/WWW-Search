@@ -1,36 +1,39 @@
-# -*- perl -*-
+# Emacs, please use -*- perl -*- mode when editing this file
+
+use ExtUtils::testlib;
+use Test::More;
 
 use strict;
-use Test;
-use WWW::Search;
-
 use vars qw( $iNum );
 
 BEGIN
   {
-  my $iExtraTests = 3;
-  $iNum = scalar(@WWW::Search::ENGINES_WORKING);
-  plan tests => $iNum + $iExtraTests;
+  plan tests => 4;
   } # BEGIN
 
 eval 'use WWW::Search';
 # print STDERR ">>>$@<<<\n";
-ok($@ eq '');
+ok($@ eq '', 'use WWW::Search');
 eval 'require WWW::Search::Test';
 # print STDERR ">>>$@<<<\n";
-ok($@ eq '');
+ok($@ eq '', 'use WWW::Search::Test');
 eval 'use WWW::SearchResult';
 # print STDERR ">>>$@<<<\n";
-ok($@ eq '');
+ok($@ eq '', 'use WWW::SearchResult');
 
-foreach my $sEngine (@WWW::Search::ENGINES_WORKING)
+my @as;
+eval { @as = &WWW::Search::installed_engines };
+ok(0 < scalar(@as), 'No installed engines!?!');
+
+exit 0;
+
+foreach my $sEngine (sort @as)
   {
   my $o;
+  print STDERR " trying $sEngine...\n";
   eval { $o = new WWW::Search($sEngine) };
   ok(ref($o));
   } # foreach
-
-exit 0;
 
 # Now make sure we get *some* results from *some* engine:
 my $o = new WWW::Search('WebCrawler');

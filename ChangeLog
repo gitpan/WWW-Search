@@ -1,3 +1,20 @@
+2002-04-19  Kingpin  <mthurn@copper.dulles.tasc.com>
+
+	* lib/WWW/Search.pm (installed_engines): new function
+
+	* t/use.t: upgrade to use Test::More
+
+	* lib/WWW/Search.pm: get rid of @ENGINES_WORKING
+
+	* lib/WWW/Search/Gopher.pm (native_retrieve_some): remove duplicate declaration warnings;
+	added $VERSION
+
+	* lib/WWW/Search.pm (generic_option): gracefully handle missing argument
+
+2002-03-29  Kingpin  <mthurn@copper.dulles.tasc.com>
+
+	* code/WebSearch-code.pl (print_version): show version of --engine, too
+
 2002-03-28  Kingpin  <mthurn@copper.dulles.tasc.com>
 
 	* lib/WWW/Search.pm (native_retrieve_some): add debug msgs

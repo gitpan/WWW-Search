@@ -4,7 +4,7 @@ exit 0;
 # AutoSearch-code.pl
 # Copyright (c) 1996-1997 University of Southern California.
 # All rights reserved.
-# $Id: AutoSearch-code.pl,v 1.3 2001/11/02 15:59:17 mthurn Exp $
+# $Id: AutoSearch-code.pl,v 1.4 2002/03/29 20:08:14 mthurn Exp $
 #
 # Complete copyright notice follows below.
 
@@ -407,7 +407,7 @@ this operation would be transparent to AutoSearch.
 =head1 BUGS
 
 None known at this time; please inform the maintainer
-MartinThurn@iname.com if any crop up.
+mthurn@cpan.org if any crop up.
 
 =cut
 

@@ -3,11 +3,12 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.31?  (2002-03-28)
+WHAT IS NEW IN WWW::Search 2.32?  (2002-04-19)
 ----------------------------------------------
 
 overview: 
- * BUGFIX to be able to re-use the TreeBuilder
+ * new function installed_engines()
+ * WebSearch -V prints backend version too
 
 For details, see the ChangeLog file and/or the pod of each affected
 module.
@@ -92,7 +93,6 @@ NorthernLight   http://www.perl.com/CPAN-local/authors/by-module/WWW/JSMYSER/
 OpenDirectory   http://www.perl.com/CPAN-local/authors/by-module/WWW/JSMYSER/
 PRWire          http://www.perl.com/CPAN-local/authors/by-module/WWW
 Pubmed          http://www.perl.com/CPAN-local/authors/by-module/WWW
-Snap            http://www.perl.com/CPAN-local/authors/by-module/WWW/JSMYSER/
 Yahoo           http://www.perl.com/CPAN-local/modules/by-module/WWW
 ZDNet           http://www.perl.com/CPAN-local/authors/by-module/WWW/JSMYSER/
 WashPost        in the WWW::Search::News distribution
@@ -228,17 +228,17 @@ DISCUSSION, BUG REPORTS, AND IMPROVEMENTS
 When submitting a bug report or request for help, please remember to
 include:
   - the operating system name and version
-  - the version of perl
-  - the version of WWW::Search
-  - the version of the backend
+  - the version of perl (this can be found from `perl -v`)
+  - the version of WWW::Search (this can be found from `WebSearch -V`)
+  - the version of the backend (this can be found from `WebSearch -e Yahoo -V`)
   - the code you ran to produce the error (PLEASE cut-and-paste, do not just summarize!)
   - actual output showing the error (PLEASE cut-and-paste, do not just summarize!)
 
 There is a mailing list for WWW::Search discussion.  To subscribe,
 send "subscribe info-www-search" as the body of a message to
 <info-www-search-request@isi.edu>.  If you use WWW::Search at all, you
-should subscribe to the mailing list.  Bug fixes are usually posted
-there as soon as they're fixed.
+should subscribe to the mailing list.  Bug fixes are usually announced
+there as soon as they're released.
 
 Feedback about WWW::Search is encouraged.  If you're using it for a
 neat application, please let us know.  If you'd like to (or have
@@ -268,22 +268,19 @@ or, if you are on Win32:
 
         WebSearch "\"Your Name Here\""
 
-to see who's talking about you on the web.  Then (in a browsable web
-page directory), try:
+to see where your name is mentioned on the web.  Then try:
 
-        cd /path/to/your/web/pages
 	AutoSearch -n me_on_the_web -s '"Your Name Here"' me
-        netscape /path/to/your/web/pages/me/index.html
+        netscape me/index.html
 
 or, if you are on Win32:
 
-        cd /path/to/your/web/pages
 	AutoSearch -n me_on_the_web -s "\"Your Name Here\"" me
-        netscape /path/to/your/web/pages/me/index.html
+        netscape me\index.html
 
 If you are on UNIX you can add
 
-	0 3 * * 1 AutoSearch /path/to/your/web/pages/me
+	0 3 * * 1 AutoSearch /path/to/me
 
 to your crontab to update this search every week at 3:00 Monday
 morning.  If you install WWW::Search::Ebay, and add the --mail option
@@ -423,8 +420,8 @@ COPYRIGHT
 ---------
 
 Copyright (c) 1996 University of Southern California.
-All rights reserved.                                            
-                                                               
+All rights reserved.
+
 Redistribution and use in source and binary forms are permitted
 provided that the above copyright notice and this paragraph are
 duplicated in all such forms and that any documentation, advertising
@@ -439,5 +436,5 @@ WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
 MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 
-Portions of this README are derived from the README for libwww-perl.
+Portions of this README were derived from the README for libwww-perl.
 
