@@ -1,0 +1,239 @@
+<HTML>
+<HEAD><TITLE>Search Results</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<CENTER>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=2>
+ <TR>
+<TD ALIGN=LEFT VALIGN=top ROWSPAN=4>
+<A HREF="http://www.mckinley.com/">
+<IMG SRC="/img/magellan/mglobe.gif" BORDER=0 WIDTH=49 HEIGHT=41 ALIGN=left></A>
+</TD>
+<TD ALIGN=middle VALIGN=top ROWSPAN=4>
+<A HREF="http://www.mckinley.com/"><IMG SRC="/img/magellan/magellan.gif" BORDER=0 WIDTH=224 HEIGHT=41 ALIGN=middle ALT="Magellan Internet Guide"></A><BR>
+<IMG SRC="/img/magellan/white.gif" HEIGHT=4 WIDTH=1><BR>
+<FONT FACE="arial,helvetica" SIZE="-2">
+<A HREF="http://www.mckinley.com/">HOME</A> | <A HREF="/magellan/Reviews/index.magellan.html">REVIEWS</A></FONT>
+</TD><TD WIDTH=4 ROWSPAN=4></TD>
+<TD HEIGHT="2" COLSPAN=3 NOWRAP></TD></TR>
+
+<TR>
+
+
+<FORM ACTION="/search.gw" METHOD=get>
+<TD ALIGN=left VALIGN=top COLSPAN=3 NOWRAP>
+<INPUT NAME=search VALUE="+Martin +Thurn" SIZE=30>
+<INPUT TYPE=IMAGE SRC="/img/magellan/searchbut.gif" BORDER=0 ALIGN="top" VALUE="Search Magellan" WIDTH=67 HEIGHT=30>
+</TD></TR>
+<TR>
+ <TD ALIGN=left NOWRAP>
+ <INPUT TYPE=radio NAME=c VALUE=web.guide
+    > <FONT SIZE="-1">Reviewed Sites Only</FONT></TD>
+ <TD WIDTH=3 ROWSPAN=2></TD>
+ <TD ALIGN=left>
+  <INPUT TYPE=radio NAME=c VALUE=web.green
+        ><FONT SIZE="-1" COLOR=#008C05>Green Light</FONT><FONT SIZE="-1"> sites only</FONT>
+ </TD>
+</TR>
+<TR>
+ <TD ALIGN=left><INPUT TYPE=radio NAME=c VALUE=web
+   CHECKED  > <FONT SIZE="-1">The Entire Web</FONT>
+<INPUT TYPE=hidden NAME=look VALUE=magellan>
+</TD>
+
+<!-- End of search and collection section -->
+
+
+<TD ALIGN=left><FONT SIZE="-1"><A HREF="/magellan/Info/advancedtips.html">Search Tips and Help</A></FONT></TD></TR></TABLE>
+
+<input type=hidden name=sorig value=rpage>
+</FORM>
+</CENTER>
+<P>
+
+
+ <CENTER><!-- Ad Start -->
+<!-- Ad param svcpage=/search.gw keyword=martin+thurn svcname=msr ip=128.9.160.184 user_agent=WWW::Search/1.015 -->
+<a href="/relocate/ad=http://ads02.focalink.com/SmartBanner/nph-graphic/108.29|pk=360271;http://ads02.focalink.com/SmartBanner/page/108.29" onMouseOver="window.status='Click Here!';return true" language="Javascript"><img src="http://ads02.focalink.com/SmartBanner/nph-graphic/108.29" ALT="Click Here!" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> Click Here! </B></FONT></CENTER></a>
+<!-- Ad Stop -->
+</CENTER>
+
+<BLOCKQUOTE>
+
+<B>13</B> results returned, ranked by relevance.
+
+<!-- IF statement for Green Light text -->
+
+
+
+<FORM ACTION="/search.gw" METHOD=get>
+    <INPUT TYPE=hidden NAME=search VALUE="+Martin +Thurn">
+    <INPUT TYPE=hidden NAME=look VALUE=magellan>
+             <INPUT TYPE=submit NAME=next VALUE="Next Results">
+          <INPUT TYPE=hidden NAME=start VALUE=0>
+    <INPUT TYPE=hidden NAME=collection VALUE=web>
+            
+<!--search results-->
+
+   <HR>
+  <B><A HREF="http://www.pitt.edu/~thurn/SWB/">The Star Wars Collector's Bible (Introduction)</A></B>&nbsp;&nbsp;&nbsp;
+  <B>66%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=339464&ctag=35197E30&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+        The Star Wars Collector's Bible (hereafter The SW Bible or SWB) is a detailed hypertext list of U.S.-released Star Wars-related merchandise.  For example, if you search for "star wars collector's bible" "alarm clock", the first item listed should be "The Star Wars Bible (B companies)".
+    <BR>
+  <I> <A HREF="http://www.pitt.edu/~thurn/SWB/">http://www.pitt.edu/~thurn/SWB/</A></I>
+  <BR>
+   <HR>
+  <B><A HREF="http://www.pitt.edu/~thurn/SWC/">The Star Wars Collector</A></B>&nbsp;&nbsp;&nbsp;
+  <B>65%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=1391966&ctag=35197E30&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+        The Star Wars Collector is a magazine by collectors, for collectors, about all aspects of collecting all Star Wars-related items of all time periods. , that appear in The Star Wars Collector are &copy;The Star Wars Collector (unless otherwise noted at the time of publication), and may not be reprinted without the express written permission of the author and The Star Wars Collector (hey,.
+    <BR>
+  <I> <A HREF="http://www.pitt.edu/~thurn/SWC/">http://www.pitt.edu/~thurn/SWC/</A></I>
+  <BR>
+   <HR>
+  <B><A HREF="http://www.cvm.umn.edu/departments/Diagnostic/C-vdm.htm">CVM Veterinary Diagnostic Medicine</A></B>&nbsp;&nbsp;&nbsp;
+  <B>64%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=582571&ctag=35197E30&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+        612/625-8787.   fax: 612/624-8707.
+    <BR>
+  <I> <A HREF="http://www.cvm.umn.edu/departments/Diagnostic/C-vdm.htm">http://www.cvm.umn.edu/departments/Diagnostic/C-vdm.htm</A></I>
+  <BR>
+   <HR>
+  <B><A HREF="http://www.freelaunch.com/index.html">A Free Launch</A></B>&nbsp;&nbsp;&nbsp;
+  <B>63%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=639427&ctag=35197E30&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+       American Dog Trainers Network - Resource center for dog owners and trainers.  Scone's Scottish Internet Book - An impressive collection of Scottish resources, by Nancy MacCorkill.
+    <BR>
+  <I> <A HREF="http://www.freelaunch.com/index.html">http://www.freelaunch.com/index.html</A></I>
+  <BR>
+   <HR>
+  <B><A HREF="http://www.freelaunch.com/">A Free Launch</A></B>&nbsp;&nbsp;&nbsp;
+  <B>63%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=1673253&ctag=35197E30&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+      None Available
+    <BR>
+  <I> <A HREF="http://www.freelaunch.com/">http://www.freelaunch.com/</A></I>
+  <BR>
+   <HR>
+  <B><A HREF="http://www.netwing.at/italy/altoa/">ATS Tourist Service -  SUEDTIROL  SUEDTIROL  SUEDTIROL  SUEDTIROL  SUE...</A></B>&nbsp;&nbsp;&nbsp;
+  <B>62%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=1449219&ctag=35197E30&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+        Ortsverzeichnis: A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | R | S | T | U | V | W | Z.  &nbsp; Andere Tourismus-Server &uuml;ber SUEDTIROL: D.Net - Der netwing Partner-Provider in S&uuml;dtirol.   Offizielle Site der S&uuml;dtiroler Informatik AG.
+    <BR>
+  <I> <A HREF="http://www.netwing.at/italy/altoa/">http://www.netwing.at/italy/altoa/</A></I>
+  <BR>
+   <HR>
+  <B><A HREF="http://www.feefhs.org/FRGGCRA/gcra3.html">GCRA - Glueckstal Colonies Research Association - Surnames (St. Peters...</A></B>&nbsp;&nbsp;&nbsp;
+  <B>60%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=386978&ctag=35197E30&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+      GCRA - Glueckstal Colonies Research Association - Surnames (St.   Gl&uuml;ckstal Surnames.
+    <BR>
+  <I> <A HREF="http://www.feefhs.org/FRGGCRA/gcra3.html">http://www.feefhs.org/FRGGCRA/gcra3.html</A></I>
+  <BR>
+   <HR>
+  <B><A HREF="http://users.uniserve.com/~canyon/booklist.html">a.t.r. FAQ Bibliography</A></B>&nbsp;&nbsp;&nbsp;
+  <B>36%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=907799&ctag=35197E30&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+       &nbsp; Serg, 1973 &#149; Gauthier, Guy.   &nbsp; Quadrangle, 1973 &#149; Marquis of Ruvigny &amp; Raineval.
+    <BR>
+  <I> <A HREF="http://users.uniserve.com/~canyon/booklist.html">http://users.uniserve.com/~canyon/booklist.html</A></I>
+  <BR>
+   <HR>
+  <B><A HREF="http://www.cranium.co.nz/A.htm">Cranium Music Online Catalogue - A</A></B>&nbsp;&nbsp;&nbsp;
+  <B>31%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=1199781&ctag=35197E30&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+       Michael Gunther recorded local musicians they met and jammed with on the tour.  This is Daevid Allen experimenting with rock band Material whom he met whilst in New York.
+    <BR>
+  <I> <A HREF="http://www.cranium.co.nz/A.htm">http://www.cranium.co.nz/A.htm</A></I>
+  <BR>
+   <HR>
+  <B><A HREF="http://www.cals.cornell.edu/cals/dept/flori/theses.html">Floriculture and Ornamental Horticulture Theses</A></B>&nbsp;&nbsp;&nbsp;
+  <B>14%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=1348575&ctag=35197E30&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+        18 - M.S. - Theresa E. Schindler - The monograph and studies on the genus Antirrhinum.   74 - M.S. - Thomas J. Sheehan - Studies on the breeding of cattleya orchids.
+    <BR>
+  <I> <A HREF="http://www.cals.cornell.edu/cals/dept/flori/theses.html">http://www.cals.cornell.edu/cals/dept/flori/theses.html</A></I>
+  <BR>
+ <HR>
+</FORM>
+<FORM ACTION="/search.gw" METHOD=get>
+             <INPUT TYPE=submit NAME=next VALUE="Next Results">
+       <INPUT TYPE=hidden NAME=search VALUE="+Martin +Thurn">
+    <INPUT TYPE=hidden NAME=look VALUE=magellan>
+       <INPUT TYPE=hidden NAME=start VALUE=0>
+    <INPUT TYPE=hidden NAME=collection VALUE=web>
+          </FORM>
+
+Try your search on:&nbsp;
+  <A HREF="http://www.excite.com/search.gw?s=%2Bmartin+%2Bthurn"><B>Excite</B></A>
+
+</BLOCKQUOTE>
+<CENTER>
+
+<P><CENTER><!-- Ad Start -->
+<a href="/relocate/ad=http://ads02.focalink.com/SmartBanner/nph-graphic/108.29|pk=360271;http://ads02.focalink.com/SmartBanner/page/108.29" onMouseOver="window.status='Click Here!';return true" language="Javascript"><img src="http://ads02.focalink.com/SmartBanner/nph-graphic/108.29" ALT="Click Here!" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> Click Here! </B></FONT></CENTER></a>
+<!-- Ad Stop -->
+</CENTER><P>
+
+<FORM ACTION="/search.gw" METHOD=get>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=2>
+<TR>
+
+
+<TD ALIGN=middle VALIGN=middle WIDTH=120 ROWSPAN=3>
+<TABLE BORDER=1 CELLPADDING=2><TR><TD ALIGN=middle VALIGN=middle HEIGHT=60
+WIDTH=90 BGCOLOR="FFFFCC" NOWRAP><A HREF="/magellan/bookmark.html"><FONT SIZE="-1">Bookmark<BR>
+Magellan<BR></FONT>NOW!<BR>
+<FONT SIZE="-2">click here for details</FONT></A></TD></TR></TABLE></TD>
+
+
+<TD ALIGN=left VALIGN=top COLSPAN=3 NOWRAP>
+<INPUT NAME=search VALUE="+Martin +Thurn" SIZE=30>
+<INPUT TYPE=IMAGE SRC="/img/magellan/searchbut.gif" BORDER=0 ALIGN="top" VALUE="Search Magellan" WIDTH=67 HEIGHT=30>
+</TD></TR>
+<TR>
+ <TD ALIGN=left>
+ <INPUT TYPE=radio NAME=c VALUE=web.guide
+    > <FONT SIZE="-1">Reviewed Sites Only</FONT></TD>
+ <TD WIDTH=3 ROWSPAN=2></TD>
+ <TD ALIGN=left>
+  <INPUT TYPE=radio NAME=c VALUE=web.green
+        ><FONT SIZE="-1" COLOR=#008C05>Green Light</FONT><FONT SIZE="-1"> sites only</FONT>
+ </TD>
+</TR>
+<TR>
+ <TD ALIGN=left><INPUT TYPE=radio NAME=c VALUE=web
+   CHECKED  > <FONT SIZE="-1">The Entire Web</FONT>
+ <INPUT TYPE=hidden NAME=look VALUE=magellan>
+ </TD>
+
+ <TD ALIGN=left><FONT SIZE=-1>
+ <A HREF="/magellan/Info/advancedtips.html">Search Tips and Help</A></FONT></TD></TR>
+ </TABLE>
+<input type=hidden name=sorig value=rpage>
+</FORM>
+
+
+<P><BR>
+<CENTER>
+<FONT FACE="arial,helvetica" SIZE="-1"><A HREF="http://www.mckinley.com/">Home</A> | <A
+HREF="/magellan/Reviews/index.magellan.html">Reviews</A> | <A HREF="/magellan/Info/advancedtips.html">Help</A> | <A HREF="/magellan/Info/addsite.html">Add Site</A><P></FONT>
+</FORM>
+<P>
+<HR>
+<FONT SIZE=-1>
+Explore <A HREF=/magellan/advertising.html>advertising</A> opportunities with Magellan.<BR>
+Copyright &copy;1997 The McKinley Group, Inc., a subsidiary of <A HREF="http://www.excite.com/?Mh-a-t">Excite, Inc.</A>.  All rights reserved.
+</FONT>
+</CENTER>
+<IMG SRC="http://ad.preferences.com/ping.ng;spacedesc=TCExciteData_Excite_1x1_RunOfSite_Any&event=KeywordResults" HEIGHT=1 WIDTH=1 BORDER=0>
+</BODY>
+</HTML>
+
+
+
+
+
+
+

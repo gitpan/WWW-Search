@@ -1,0 +1,123 @@
+<HTML>
+<HEAD><TITLE>Search Results</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<CENTER>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=2>
+ <TR>
+<TD ALIGN=LEFT VALIGN=top ROWSPAN=4>
+<A HREF="http://www.mckinley.com/">
+<IMG SRC="/img/magellan/mglobe.gif" BORDER=0 WIDTH=49 HEIGHT=41 ALIGN=left></A>
+</TD>
+<TD ALIGN=middle VALIGN=top ROWSPAN=4>
+<A HREF="http://www.mckinley.com/"><IMG SRC="/img/magellan/magellan.gif" BORDER=0 WIDTH=224 HEIGHT=41 ALIGN=middle ALT="Magellan Internet Guide"></A><BR>
+<IMG SRC="/img/magellan/white.gif" HEIGHT=4 WIDTH=1><BR>
+<FONT FACE="arial,helvetica" SIZE="-2">
+<A HREF="http://www.mckinley.com/">HOME</A> | <A HREF="/magellan/Reviews/index.magellan.html">REVIEWS</A></FONT>
+</TD><TD WIDTH=4 ROWSPAN=4></TD>
+<TD HEIGHT="2" COLSPAN=3 NOWRAP></TD></TR>
+
+<TR>
+
+
+<FORM ACTION="/search.gw" METHOD=get>
+<TD ALIGN=left VALIGN=top COLSPAN=3 NOWRAP>
+<INPUT NAME=search VALUE="+mrfglbqnx +BogusNoSuchWord" SIZE=30>
+<INPUT TYPE=IMAGE SRC="/img/magellan/searchbut.gif" BORDER=0 ALIGN="top" VALUE="Search Magellan" WIDTH=67 HEIGHT=30>
+</TD></TR>
+<TR>
+ <TD ALIGN=left NOWRAP>
+ <INPUT TYPE=radio NAME=c VALUE=web.guide
+    > <FONT SIZE="-1">Reviewed Sites Only</FONT></TD>
+ <TD WIDTH=3 ROWSPAN=2></TD>
+ <TD ALIGN=left>
+  <INPUT TYPE=radio NAME=c VALUE=web.green
+        ><FONT SIZE="-1" COLOR=#008C05>Green Light</FONT><FONT SIZE="-1"> sites only</FONT>
+ </TD>
+</TR>
+<TR>
+ <TD ALIGN=left><INPUT TYPE=radio NAME=c VALUE=web
+   CHECKED  > <FONT SIZE="-1">The Entire Web</FONT>
+<INPUT TYPE=hidden NAME=look VALUE=magellan>
+</TD>
+
+<!-- End of search and collection section -->
+
+
+<TD ALIGN=left><FONT SIZE="-1"><A HREF="/magellan/Info/advancedtips.html">Search Tips and Help</A></FONT></TD></TR></TABLE>
+
+<input type=hidden name=sorig value=rpage>
+</FORM>
+</CENTER>
+<P>
+
+  <CENTER>
+                                                                                                                                                                                                                                                                                                                    				    				      
+
+<B>Your search produced no results.</B>
+<HR NOSHADE SIZE=1>
+<B>Please refer to the tips below before trying your search again:</B>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=8 WIDTH=100%>
+<TR>
+<TD>
+<B>Using "+", "-", "AND", "&", "&&", "OR", "|", "||", and/or "NOT" excessively may constrain your search too much. Use "+" or "-" only on the words which you think MUST or MUST NOT exist in the retrieved documents.</B><BR>Eg. <I>+volvo +penta BB30</I> instead of <I>+volvo +penta +BB30</I>
+</TD>
+</TR>
+<TR>
+<TD>
+<B> &#183; Did you know? You can search on:</B>
+<TABLE BORDER=0 CELLPADDING=3 CELLSPACING=0 WIDTH=100%>
+<TR>
+<TD>
+  <A HREF="http://webcrawler.com">WebCrawler</A>
+</TD>
+<TD>
+  <A HREF=/xdr>Selected Web Sites</A>
+</TD>
+<TD>
+  <A HREF="/Reference/usenet.html">Newsgroup Postings</A>
+</TD>
+</TR>
+<TR>
+<TD>
+  <A HREF="http://www.mckinley.com">Magellan</A>
+</TD>
+<TD>
+  <A HREF=http://nt.excite.com>Current News Articles</A>
+</TD>
+<TD>
+  <A HREF="http://city.net">City.Net Travel Guide</A>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+
+
+				      				                                                                                                                                                                                                                                                                                                                      <center>
+
+  <br>
+  <!-- Ad Start -->
+<!-- Ad param svcpage=/search.gw keyword=mrfglbqnx+bogusnosuchword svcname=msr ip=128.9.160.184 user_agent=WWW::Search/1.015 -->
+<a href="/relocate/ad=16015_intercasino.062097.gif|pk=320552;http://www.intercasino.com" onMouseOver="window.status='Click Here!';return true" language="Javascript"><img src="/img/ads/16015_intercasino.062097.gif" ALT="Click Here!" HEIGHT=55 WIDTH=460 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> Click Here! </B></FONT></CENTER></a>
+<!-- Ad Stop -->
+
+  </CENTER>
+<P>
+<HR>
+<FONT SIZE=-1>
+Explore <A HREF=/magellan/advertising.html>advertising</A> opportunities with Magellan.<BR>
+Copyright &copy;1997 The McKinley Group, Inc., a subsidiary of <A HREF="http://www.excite.com/?Mh-a-t">Excite, Inc.</A>.  All rights reserved.
+</FONT>
+</CENTER>
+<IMG SRC="http://ad.preferences.com/ping.ng;spacedesc=TCExciteData_Excite_1x1_RunOfSite_Any&event=KeywordResults" HEIGHT=1 WIDTH=1 BORDER=0>
+</BODY>
+</HTML>
+
+
+
+
+
+
+

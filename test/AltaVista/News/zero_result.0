@@ -17,7 +17,7 @@
 <font size=-1 face=arial><B>Search <SELECT NAME=what><OPTION VALUE=web >the Web<OPTION VALUE=news SELECTED>Usenet</SELECT>
 for documents in <SELECT NAME=kl><OPTION VALUE=XX SELECTED>any language 
 <OPTION VALUE=zh >Chinese
-<OPTION VALUE=cz >Czech
+<OPTION VALUE=cs >Czech
 <OPTION VALUE=da >Danish
 <OPTION VALUE=nl >Dutch
 <OPTION VALUE=en >English
@@ -50,7 +50,7 @@ for documents in <SELECT NAME=kl><OPTION VALUE=XX SELECTED>any language
 
 No documents match the query.<dl>
 </dl>
-<font size=-1 face=arial><font size=-1>Word count: perl: 244375<BR>Ignored:    BogusNoSuchWord:<b>0</b><BR></font>
+<font size=-1 face=arial><font size=-1>Word count: perl: 278127<BR>Ignored:    BogusNoSuchWord:<b>0</b><BR></font>
 </font><P><HR><font face="arial, helvetica" size=-1>
 <a href="/av/content/av_network.htm">Our Network</a> | 
 <a href="/av/content/addurl.htm">Add/Remove URL</a> | 

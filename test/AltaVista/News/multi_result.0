@@ -17,7 +17,7 @@
 <font size=-1 face=arial><B>Search <SELECT NAME=what><OPTION VALUE=web >the Web<OPTION VALUE=news SELECTED>Usenet</SELECT>
 for documents in <SELECT NAME=kl><OPTION VALUE=XX SELECTED>any language 
 <OPTION VALUE=zh >Chinese
-<OPTION VALUE=cz >Czech
+<OPTION VALUE=cs >Czech
 <OPTION VALUE=da >Danish
 <OPTION VALUE=nl >Dutch
 <OPTION VALUE=en >English
@@ -48,7 +48,7 @@ for documents in <SELECT NAME=kl><OPTION VALUE=XX SELECTED>any language
 
 
 
-About <b>444750</b> documents match your query.<dl>
+About <b>518500</b> documents match your query.<dl>
 <dt><b>1. </b><a href="http://ww2.altavista.digital.com/cgi-bin/news?msg@91865@comp%2elang%2eperl%2emisc"><strong>perl packages question</strong></a><dd> 5 Dec 97 - <b>comp.lang.perl.misc</b><br><a href="news:669m9q$ooi1@zinc.imation.com">&lt;669m9q$ooi1@zinc.imation.com&gt;</a><br>  <a href="mailto:mwrostron@imation.com">&quot;Mark Rostron&quot; &lt;mwrostron@imation.com&gt;</a><P>
 <dt><b>2. </b><a href="http://ww2.altavista.digital.com/cgi-bin/news?msg@91866@comp%2elang%2eperl%2emisc"><strong>Re: Returning Values from a Perl script</strong></a><dd> 5 Dec 97 - <b>comp.lang.perl.misc</b><br><a href="news:Pine.GSO.3.96.971205114713.29415B-100000@usertest.teleport.com">&lt;Pine.GSO.3.96.971205114713.29415B-100000@usertest.teleport.com&gt;</a><br>  <a href="mailto:rootbeer@teleport.com">Tom Phoenix &lt;rootbeer@teleport.com&gt;</a><P>
 <dt><b>3. </b><a href="http://ww2.altavista.digital.com/cgi-bin/news?msg@91868@comp%2elang%2eperl%2emisc"><strong>Re: Perl for NeXT</strong></a><dd> 5 Dec 97 - <b>comp.lang.perl.misc</b><br><a href="news:Pine.GSO.3.96.971205120700.29415E-100000@usertest.teleport.com">&lt;Pine.GSO.3.96.971205120700.29415E-100000@usertest.teleport.com&gt;</a><br>  <a href="mailto:rootbeer@teleport.com">Tom Phoenix &lt;rootbeer@teleport.com&gt;</a><P>
@@ -80,7 +80,7 @@ About <b>444750</b> documents match your query.<dl>
 <dt><b>29. </b><a href="http://ww2.altavista.digital.com/cgi-bin/news?msg@5803@comp%2elang%2eperl%2etk"><strong>Re: Where to find perl/tk for win32?</strong></a><dd> 3 Dec 97 - <b>comp.lang.perl.tk</b><br><a href="news:664koc$71a@gatekeep.kcc.com">&lt;664koc$71a@gatekeep.kcc.com&gt;</a><br>  <a href="mailto:braynor@jupiter.kcc.com">braynor@jupiter.kcc.com (Bill Raynor (B12349))</a><P>
 <dt><b>30. </b><a href="http://ww2.altavista.digital.com/cgi-bin/news?msg@91947@comp%2elang%2eperl%2emisc"><strong>Re: Q: Learning perl with no progr. experience</strong></a><dd> 4 Dec 97 - <b>comp.lang.perl.misc</b><br><a href="news:3486c3c4.0@news7.centuryinter.net">&lt;3486c3c4.0@news7.centuryinter.net&gt;</a><br>  <a href="mailto:cmuller@avsgroup.com">&quot;Chris Muller&quot; &lt;cmuller@avsgroup.com&gt;</a><P>
 </dl>
-<font size=-1 face=arial><font size=-1>Word count: perl: 244375<BR></font>
+<font size=-1 face=arial><font size=-1>Word count: perl: 278127<BR></font>
 </font><P>1 <a href="/cgi-bin/query?pg=q&what=news&text=yes&q=perl&stq=30">2 </a><a href="/cgi-bin/query?pg=q&what=news&text=yes&q=perl&stq=60">3 </a><a href="/cgi-bin/query?pg=q&what=news&text=yes&q=perl&stq=90">4 </a><a href="/cgi-bin/query?pg=q&what=news&text=yes&q=perl&stq=120">5 </a><a href="/cgi-bin/query?pg=q&what=news&text=yes&q=perl&stq=150">6 </a><a href="/cgi-bin/query?pg=q&what=news&text=yes&q=perl&stq=180">7 </a><a href="/cgi-bin/query?pg=q&what=news&text=yes&q=perl&stq=30">[Next]</a><br>
 <HR><font face="arial, helvetica" size=-1>
 <a href="/av/content/av_network.htm">Our Network</a> | 

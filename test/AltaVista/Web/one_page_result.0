@@ -16,7 +16,7 @@
 <font size=-1 face=arial><B>Search <SELECT NAME=what><OPTION VALUE=web SELECTED>the Web<OPTION VALUE=news >Usenet</SELECT>
 for documents in <SELECT NAME=kl><OPTION VALUE=XX SELECTED>any language 
 <OPTION VALUE=zh >Chinese
-<OPTION VALUE=cz >Czech
+<OPTION VALUE=cs >Czech
 <OPTION VALUE=da >Danish
 <OPTION VALUE=nl >Dutch
 <OPTION VALUE=en >English
@@ -47,12 +47,13 @@ for documents in <SELECT NAME=kl><OPTION VALUE=XX SELECTED>any language
 
 
 
-<b>3</b> documents match your query.<dl>
-<dt><b>1. </b><a href="http://www.isi.edu/div7/cities/tools/autosearch/"><b>index.html directory page</b></a><dd>AutoSearch WEB Searching. What is AutoSearch? AutoSearch performs a web-based search and puts the results set in a web page. It periodically updates this..<br><i>http://www.isi.edu/div7/cities/tools/autosearch/ - size 2K - 3-Feb-97 - English - <a href="http://babelfish.altavista.digital.com/cgi-bin/translate?urltext=http%3a%2f%2fwww%2eisi%2eedu%2fdiv7%2fcities%2ftools%2fautosearch%2f&language=en">Translate</a></i><br>
-<P><dt><b>2. </b><a href="http://www.isi.edu/div7/cities/tools/WWW_SEARCH/"><b>WWW::Search</b></a><dd>WWW::Search. WWW::Search is a collection of Perl modules which provide an API to WWW search engines like AltaVista, Lycos, Hotbot, WebCrawler, and so on...<br><i>http://www.isi.edu/div7/cities/tools/WWW_SEARCH/ - size 3K - 4-Nov-97 - English - <a href="http://babelfish.altavista.digital.com/cgi-bin/translate?urltext=http%3a%2f%2fwww%2eisi%2eedu%2fdiv7%2fcities%2ftools%2fWWW%5fSEARCH%2f&language=en">Translate</a></i><br>
-<P><dt><b>3. </b><a href="http://gost.isi.edu/~johnh/WORK/"><b>John Heidemann's Work</b></a><dd>John Heidemann's Work. I am computer scientist at Information Sciences Institute and a research assistant professor at the University of Southern...<br><i>http://gost.isi.edu/~johnh/WORK/ - size 6K - 14-Nov-97 - English - <a href="http://babelfish.altavista.digital.com/cgi-bin/translate?urltext=http%3a%2f%2fgost%2eisi%2eedu%2f%7ejohnh%2fWORK%2f&language=en">Translate</a></i><br>
+<b>4</b> documents match your query.<dl>
+<dt><b>1. </b><a href="http://theory.uwinnipeg.ca/CPAN/data/WWW-Search/bin/AutoSearch.html"><b>AutoSearch -- a web-searching application</b></a><dd>Contained in WWW-Search-1.012.tar.gz. requires perl 5.002 or later. uses LWP::UserAgent in libwww-perl-5.20.tar.gz. NAME. SYNOPSIS. DESCRIPTION. OPTIONS...<br><i>http://theory.uwinnipeg.ca/CPAN/data/WWW-Search/bin/AutoSearch.html - size 17K - 30-Dec-97 - English - <a href="http://babelfish.altavista.digital.com/cgi-bin/translate?urltext=http%3a%2f%2ftheory%2euwinnipeg%2eca%2fCPAN%2fdata%2fWWW%2dSearch%2fbin%2fAutoSearch%2ehtml&language=en">Translate</a></i><br>
+<P><dt><b>2. </b><a href="http://www.isi.edu/lsam/tools/WWW_SEARCH/"><b>WWW::Search</b></a><dd>WWW::Search. WWW::Search is a collection of Perl modules which provide an API to WWW search engines like AltaVista, Lycos, Hotbot, WebCrawler, and so on...<br><i>http://www.isi.edu/lsam/tools/WWW_SEARCH/ - size 3K - 4-Nov-97 - English - <a href="http://babelfish.altavista.digital.com/cgi-bin/translate?urltext=http%3a%2f%2fwww%2eisi%2eedu%2flsam%2ftools%2fWWW%5fSEARCH%2f&language=en">Translate</a></i><br>
+<P><dt><b>3. </b><a href="http://gost.isi.edu/people/johnh/WORK/"><b>John Heidemann's Work</b></a><dd>John Heidemann's Work. I am computer scientist at Information Sciences Institute of the University of Southern California. I will also be teaching at USC..<br><i>http://gost.isi.edu/people/johnh/WORK/ - size 6K - 25-Jun-97 - English - <a href="http://babelfish.altavista.digital.com/cgi-bin/translate?urltext=http%3a%2f%2fgost%2eisi%2eedu%2fpeople%2fjohnh%2fWORK%2f&language=en">Translate</a></i><br>
+<P><dt><b>4. </b><a href="http://gost.isi.edu/~johnh/WORK/"><b>John Heidemann's Work</b></a><dd>John Heidemann's Work. I am computer scientist at Information Sciences Institute and a research assistant professor at the University of Southern...<br><i>http://gost.isi.edu/~johnh/WORK/ - size 6K - 10-Feb-98 - English - <a href="http://babelfish.altavista.digital.com/cgi-bin/translate?urltext=http%3a%2f%2fgost%2eisi%2eedu%2f%7ejohnh%2fWORK%2f&language=en">Translate</a></i><br>
 <P></dl>
-<font size=-1 face=arial><font size=-1>Word count: LSAM: 395; AutoSearch: 896<BR></font>
+<font size=-1 face=arial><font size=-1>Word count: LSAM: 396; AutoSearch: 968<BR></font>
 </font><P><br>
 <HR><font face="arial, helvetica" size=-1>
 <a href="/av/content/av_network.htm">Our Network</a> | 

@@ -3,8 +3,8 @@
 #
 # AltaVista.pm
 # by John Heidemann
-# Copyright (C) 1996-1997 by USC/ISI
-# $Id: AltaVista.pm,v 1.26 1998/03/24 19:43:33 johnh Exp $
+# Copyright (C) 1996-1998 by USC/ISI
+# $Id: AltaVista.pm,v 1.28 1998/04/02 19:30:38 johnh Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -100,7 +100,7 @@ by John Heidemann, <johnh@isi.edu>.
 
 =head1 COPYRIGHT
 
-Copyright (c) 1996 University of Southern California.
+Copyright (c) 1996-1998 University of Southern California.
 All rights reserved.                                            
                                                                
 Redistribution and use in source and binary forms are permitted
@@ -268,7 +268,12 @@ sub native_retrieve_some
 	    # end, with a list of other pages to go to
 	    ($hit, $raw) = $self->begin_new_hit($hit, $raw);
 	    $state = $TRAILER;
-	    print STDERR "PARSE(6:HITS->TRAILER).\n" if ($self->{_debug} >= 2);
+	    print STDERR "PARSE(6a:HITS->TRAILER).\n" if ($self->{_debug} >= 2);
+	} elsif ($state == $HITS && /<\/dl>/) {
+	    # end, with a list of other pages to go to
+	    ($hit, $raw) = $self->begin_new_hit($hit, $raw);
+	    $state = $TRAILER;
+	    print STDERR "PARSE(6b:HITS->TRAILER).\n" if ($self->{_debug} >= 2);
 	} elsif ($state == $HITS && m@^<\/font><P>.*href="([^"]+)">\s*\[\s*[Nn]ext\s*\]\s*</a>@) { #"
 	    # AdvancedSearch has no Tip
 	    my($relative_url) = $1;

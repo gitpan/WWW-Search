@@ -1,10 +1,9 @@
 #!/usr/local/bin/perl -w
 
-#
 # HotBot.pm
+# Copyright (C) 1996-1998 by USC/ISI
 # by Wm. L. Scheding and Martin Thurn
-# $Id: HotBot.pm,v 1.5 1998/02/19 18:28:36 johnh Exp $
-#
+# $Id: HotBot.pm,v 1.7 1998/03/31 22:29:36 johnh Exp $
 
 package WWW::Search::HotBot;
 
@@ -45,7 +44,7 @@ set of results, otherwise it sets it to undef to indicate we''re done.
 
 =head1 BUGS
 
-This module should support options.
+Please tell the author if you find any!
 
 
 =head1 TESTING
@@ -69,7 +68,32 @@ WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
 MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 
+=head1 VERSION HISTORY
+
+=head2 1.13
+
+Fixed the maximum_to_retrieve off-by-one problem.
+Updated test cases.
+
+=head2 1.12
+
+HotBot does not do truncation. Therefore, if the query contains
+truncation characters (i.e. '*' at end of words), they are simply
+deleted before the query is sent to HotBot.
+
+=head2 1.11
+
+Fixed and revamped by Martin Thurn.  Sent to John Heidemann
+(maintainer of WWW::Search) on 1998-02-05 for inclusion in the next
+release of WWW::Search.
+
+
 =cut
+
+#  Test cases:
+# '+mrfglbqnx +NoSuchWord'       ---  no hits
+# '"Christie Abbott"'            ---  20 hits on one page
+# 'disestablishmentarianism'     --- 152 hits on two pages
 
 #####################################################################
 
@@ -90,21 +114,20 @@ sub native_setup_search
   # print STDERR " * this is Martin's new Hotbot.pm!\n" if $self->{'_debug'};
   # Why waste time sending so many queries?  Do a whole lot all at once!
   my $DEFAULT_HITS_PER_PAGE = 100;
-  $DEFAULT_HITS_PER_PAGE = 10;   # for debugging
+  # $DEFAULT_HITS_PER_PAGE = 10;   # for debugging
   $self->{'_hits_per_page'} = $DEFAULT_HITS_PER_PAGE;
   # Add one to the number of hits needed, because Search.pm does ">"
   # instead of ">=" on line 672!
-  $self->{'maximum_to_retrieve'}++;
+  my $iMaximum = 1 + $self->maximum_to_retrieve;
   # Divide the problem into N pages of K hits per page.
-  my $iNumPages = int(0.999 + 
-                      $self->{'maximum_to_retrieve'} / $self->{'_hits_per_page'});
+  my $iNumPages = 1 + int($iMaximum / $self->{'_hits_per_page'});
   if (1 < $iNumPages)
     {
-    $self->{'_hits_per_page'} = int($self->{'maximum_to_retrieve'} / $iNumPages);
+    $self->{'_hits_per_page'} = 1 + int($iMaximum / $iNumPages);
     }
   else
     {
-    $self->{'_hits_per_page'} = $self->{'maximum_to_retrieve'};
+    $self->{'_hits_per_page'} = $iMaximum;
     }
   $self->timeout(120);  # HotBot is notoriously slow
   # $self->{agent_name} = 'Mozilla/4.04 [en] (X11; I; SunOS 5.6 sun4m)';
@@ -120,6 +143,15 @@ sub native_setup_search
   $self->{_next_to_retrieve} = 0;
   $self->{'_num_hits'} = 0;
 
+  # Remove '*' at end of query terms within the user's query.  If the
+  # query string is not escaped (even though it's supposed to be),
+  # change '* ' to ' ' at end of words and at the end of the string.
+  # If the query string is escaped, change '%2A+' to '+' at end of
+  # words and delete '%2A' at the end of the string.
+  $native_query =~ s/(\w)\052\s/$1\040/g;
+  $native_query =~ s/(\w)\052$/$1\040/g;
+  $native_query =~ s/(\w)\0452A\053/$1\053/g;
+  $native_query =~ s/(\w)\0452A$/$1/g;
   if (!defined($self->{_options})) 
     {
     $self->{_options} = {

@@ -1,11 +1,9 @@
 #!/usr/local/bin/perl -w
 
-#
 # Yahoo.pm
 # by Wm. L. Scheding and Martin Thurn
-# Copyright (C) 1996 by USC/ISI
-# $Id: Yahoo.pm,v 1.5 1998/02/19 18:28:36 johnh Exp $
-#
+# Copyright (C) 1996-1998 by USC/ISI
+# $Id: Yahoo.pm,v 1.6 1998/03/31 06:35:42 johnh Exp $
 
 
 package WWW::Search::Yahoo;
@@ -17,9 +15,10 @@ WWW::Search::Yahoo - class for searching Yahoo
 
 =head1 DESCRIPTION
 
-This class is an Yahoo specialization of L<WWW::Search>.
-It handles making and interpreting Yahoo searches
-F<http://www.yahoo.com>.
+This class is a Yahoo specialization of L<WWW::Search>.  It handles
+making and interpreting Yahoo-site searches F<http://www.yahoo.com>.
+Performs the search on "Yahoo sites", and ignores AltaVista results
+that Yahoo might tell us about.
 
 This class exports no public interface; all interaction should
 be done through L<WWW::Search> objects.
@@ -48,6 +47,17 @@ set of results, otherwise it sets it to undef to indicate we''re done.
 
 =head1 BUGS
 
+Please tell the author if you find any!
+
+
+=head1 TESTING
+
+This module adheres to the C<WWW::Search> test suite mechanism. 
+
+  Test cases:
+ '+mrfglbqnx +NoSuchWord' ---  no hits
+ 'LSAM'                   ---   6 hits on one page
+ 'replication'            --- 119 hits on two pages
 
 
 =head1 AUTHOR
@@ -66,18 +76,16 @@ WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
 MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 
+=head1 VERSION HISTORY
+
+=head2 1.5
+
+Fixed bug where next page tag was always missed.
+Fixed the maximum_to_retrieve off-by-one problem.
+Updated test cases.
+
+
 =cut
-
-#
-#  Test cases:
-# ./yahoo.pl 'xxxxasdf'         --- no hits
-# ./yahoo.pl 'repographics      --- 2 hits 
-# ./yahoo.pl 'reprographics     --- 33 hits 
-# ./yahoo.pl 'replication       --- 73 hits 
-# ./yahoo.pl 'reproduction      --- 255 hits 
-#
-
-
 
 #####################################################################
 
@@ -100,17 +108,16 @@ sub native_setup_search
   $self->{'_hits_per_page'} = $DEFAULT_HITS_PER_PAGE;
   # Add one to the number of hits needed, because Search.pm does ">"
   # instead of ">=" on line 672!
-  $self->{'maximum_to_retrieve'}++;
+  my $iMaximum = 1 + $self->maximum_to_retrieve;
   # Divide the problem into N pages of K hits per page.
-  my $iNumPages = int(0.999 + 
-                      $self->{'maximum_to_retrieve'} / $self->{'_hits_per_page'});
+  my $iNumPages = 1 + int($iMaximum / $self->{'_hits_per_page'});
   if (1 < $iNumPages)
     {
-    $self->{'_hits_per_page'} = int($self->{'maximum_to_retrieve'} / $iNumPages);
+    $self->{'_hits_per_page'} = 1 + int($iMaximum / $iNumPages);
     }
   else
     {
-    $self->{'_hits_per_page'} = $self->{'maximum_to_retrieve'};
+    $self->{'_hits_per_page'} = $iMaximum;
     }
   $self->{agent_e_mail} = 'mthurn@irnet.rest.tasc.com';
 
@@ -143,7 +150,7 @@ sub native_setup_search
     } # if
   # Process the options.
   my($options) = '';
-  foreach (keys %$options_ref) 
+  foreach (sort keys %$options_ref) 
     {
     # printf STDERR "option: $_ is " . $options_ref->{$_} . "\n";
     next if (generic_option($_));
@@ -155,6 +162,7 @@ sub native_setup_search
   $self->{_debug} = $options_ref->{'search_debug'};
   $self->{_debug} = 2 if ($options_ref->{'search_parse_debug'});
   $self->{_debug} = 0 if (!defined($self->{_debug}));
+  print STDERR " * pages to request: $iNumPages pages of ", $self->{'_hits_per_page'}, " hits each.\n" if $self->{_debug};
   } # native_setup_search
 
 
@@ -187,7 +195,17 @@ sub native_retrieve_some
   foreach (split(/\n/, $response->content())) 
     {
     next if m@^$@; # short circuit for blank lines
-    print STDERR " * $state ===$_===" if 2 <= $self->{'_debug'};
+    print STDERR " * $state ===$_=== " if 2 <= $self->{'_debug'};
+    # Note: if Yahoo finds no Yahoo-registered sites that match, it
+    # automatically forward the query to Alta Vista.  If we see that
+    # this has happened, we quit immediately:
+    if (m|<center><p><font size="+1"><b>Alta Vista Web Pages</b></font>|i)
+      {
+      # Actual line of input is:
+      # <center><p><font size="+1"><b>Alta Vista Web Pages</b></font>
+      print STDERR "alta vista page list intro\n";
+      last;
+      } # if
     if ($state eq $HITS && s@^\s-\s(.+)(</UL>|<LI>)@$2@i)
       {
       # Actual line of input is:
@@ -229,7 +247,7 @@ sub native_retrieve_some
       $hits_found++;
       $hit->title($2);
       } 
-    elsif ($state eq $HITS && m|Next\s\d+\smatches|)
+    elsif ($state eq $HITS && m|Next\s\d+\sSite\sMatches|i)
       {
       print STDERR "next line\n" if 2 <= $self->{_debug};
       # There is a "next" button on this page, therefore there are
@@ -238,7 +256,7 @@ sub native_retrieve_some
       $self->{'_next_to_retrieve'} += $self->{'_hits_per_page'};
       $self->{_options}{'b'} = $self->{_next_to_retrieve};
       my($options) = '';
-      foreach (keys %{$self->{_options}}) 
+      foreach (sort keys %{$self->{_options}}) 
         {
         # printf STDERR "option: $_ is " . $self->{_options}{$_} . "\n" if $self->{_debug};
         next if (generic_option($_));
@@ -246,6 +264,7 @@ sub native_retrieve_some
         }
       # Finally figure out the url.
       $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
+      print STDERR " * next URL is ", $self->{_next_url}, "\n" if 2 <= $self->{_debug};
       $state = $TRAILER;
       } 
     else 
@@ -263,7 +282,7 @@ sub native_retrieve_some
     push(@{$self->{cache}}, $hit);
     } # if
   
-  # sleep so as to not overload yahoo
+  # Sleep so as to not overload yahoo
   $self->user_agent_delay if (defined($self->{_next_url}));
   
   return $hits_found;

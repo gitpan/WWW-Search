@@ -3,21 +3,31 @@ WWW::Search and AutoSearch
 ==========================
 
 
-WHAT IS NEW WITH WWW::Search 1.014?
+WHAT IS NEW WITH WWW::Search 1.015?
 -----------------------------------
 
-overview:  this is an alpha release to include Martin's new back-ends
+overview:  this is an alpha release with several new back-ends
 
-- bug fix:  AltaVista/Lycos back-ends
-	(problem reported by Bilal Siddiqui <bilal.siddiqui@mankato.msus.edu>)
-- known problem: some back-end test suites give intermittent results
-	(AltaVista::News)
+- new: back-ends: Magellan, WebCrawler (thanks to Martin Thurn)
+- bug fix:  Yahoo/HotBot/Excite back-ends,
+	with test suites.  Many thanks to Martin Thurn.
+- bug fix:  AltaVista news test suites have been relaxed,
+	even though the code worked before, the test suites
+	used to report false negatives.
+- bug fix: AltaVista is now more careful to detect the end of
+	a hit's raw HTML
+- new: the test suite has been enhanced to be less senstitive
+	to changes in what's indexed
 - problem: several back-ends don't have test suites and
-	so may or may not work (DejaNews, Excite, HotBot, Infoseek, PLweb,
-	SFgate, Verity, Yahoo)
+	so may or may not work (DejaNews, Infoseek, PLweb,
+	SFgate, Verity)
 - reminder: WWW::Search mailing list:
 	to subscribe, send "subscribe info-www-search" as
 	the body of a message to <info-www-search-request@isi.edu>
+
+Note:  WWW::Search may have problems with older libwww's (5.08).  If
+"make test" dies with an error in RobotUA, upgrade libwww.  (Tested
+with libwww-5.30.)
 
 
 WHAT IS WWW::Search?
@@ -297,6 +307,17 @@ overview:  this is an alpha release to include Martin's new back-ends
 	to subscribe, send "subscribe info-www-search" as
 	the body of a message to <info-www-search-request@isi.edu>
 
+
+1.014, (24 March 1998)
+overview:  this is an alpha release to fix the AltaVista/Lycos back-ends
+- bug fix:  AltaVista/Lycos back-ends
+	(problem reported by Bilal Siddiqui <bilal.siddiqui@mankato.msus.edu>)
+- known problem: some back-end test suites give intermittent results
+	(AltaVista::News)
+- problem: several back-ends don't have test suites and
+	so may or may not work (DejaNews, Excite, HotBot, Infoseek, PLweb,
+	SFgate, Verity, Yahoo)
+
 SUPPORT AND CREDITS
 -------------------
 
@@ -312,8 +333,8 @@ BACK-ENDS:
 	AltaVista		John Heidemann
 	Dejanews		Cesare Feroldi de Rosa <C.Feroldi@it.net>
 	Excite			GLen Pringle <pringle@cs.monash.edu.au>
+				and Martin Thurn <mthurn@tasc.com>
 	HotBot			William Scheding and Martin Thurn
-						<mthurn@tasc.com>
 	Infoseek		Cesare Feroldi de Rosa
 	Lycos			William Scheding and John Heidemann
 	Yahoo			William Scheding and Martin Thurn
@@ -326,7 +347,7 @@ identified by William Scheding <wls@isi.edu>, T. V. Raman
 <raman@adobe.com> (proxy support), C. Feroldi <C.Feroldi@it.net>,
 Larry Virden <lvirden@cas.org>, Paul Lindner <paul.lindner@itu.int>,
 Guy Decoux <decoux@moulon.inra.fr>, R Chandrasekar (Mickey)
-<mickeyc@linc.cis.upenn.edu>.
+<mickeyc@linc.cis.upenn.edu>, Martin Thurn <mthurn@tasc.com>.
 
 Bugs have reported by Joseph McDonald <joe@smartlink.net>, Juan Jose
 Amor <jjamor@infor.es>, Bowen Dwelle <bowen@hotwired.com>.

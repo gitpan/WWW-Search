@@ -70,7 +70,7 @@
 	<BR>
 	&#160;<A HREF="/realestate/"><FONT FACE="Helvetica, Ariel, MS Sans Serif, Sans Serif" color="#000000" SIZE="-1"><B>Real Estate</B></FONT></A>
 	<BR>
-	&#160;<A HREF="/commerce/shopnet/"><FONT FACE="Helvetica, Ariel, MS Sans Serif, Sans Serif" color="#000000" SIZE="-1"><B>Shopping</B></FONT></A>
+	&#160;<A HREF="/emarket/shopping/"><FONT FACE="Helvetica, Ariel, MS Sans Serif, Sans Serif" color="#000000" SIZE="-1"><B>Shopping</B></FONT></A>
 	<BR>
 	&#160;<A HREF="/space/"><FONT FACE="Helvetica, Ariel, MS Sans Serif, Sans Serif" color="#000000" SIZE="-1"><B>Space/Sci-Fi</B></FONT></A>
 	<BR>
@@ -123,7 +123,7 @@ HREF="http://www.lycos.com/emarket/shopping">
 <TD VALIGN=TOP COLSPAN=3>
                         <!----AD---->
                         <FONT SIZE=-2 FACE="helvetica, arial, ms sans serif, sans-serif">
-			<center><p><a href="/cgi-bin/nph-adclick.exe/CID=000154fc0000000300000000/ST=lycos/SV=search/A=.lycos.search_lycos."><img  src="http://ads.lycos.com/ads/gist13.gif" alt=""  width=468 height=60></a><br><a href="/cgi-bin/nph-adclick.exe/CID=000154fc0000000300000000/ST=lycos/SV=search/A=.lycos.search_lycos.">Click here to visit site</a></center></FONT>
+			<center><p><a href="/cgi-bin/nph-adclick.exe/CID=00030f170000000300000000/ST=lycos/SV=search/A=.lycos.search_lycos."><img  src="http://ad.preferences.com/image.ng;spacedesc=PBNEC_Lycos_468x60-RunOfSite_Any" alt="Click here to enter NEC online computer store"  width=468 height=60></a><br><a href="/cgi-bin/nph-adclick.exe/CID=00030f170000000300000000/ST=lycos/SV=search/A=.lycos.search_lycos.">Click here to enter NEC online computer store</a></center></FONT>
                         <!-- /AD -->
                         </TD></TR>
 
@@ -177,12 +177,17 @@ You Searched for <B>LSAM ISI</B></FONT></TD><TD ALIGN=RIGHT><FONT SIZE=-1 FACE="
 
 <TR><TD>
 <P>
-<FONT SIZE=-1 FACE="helvetica, arial, ms sans serif, sans-serif"><B><A HREF="/cgi-bin/pursuit?cat=lycos&first=11&bq=4&br=3&query=LSAM+ISI&matchmode=and&adv=0">Next Page</A>&nbsp;&#124;&nbsp; Previous Page  </FONT></TD><TD ALIGN=RIGHT><FONT SIZE=-1 FACE="helvetica, arial, ms sans serif, sans-serif"><A HREF="/cgi-bin/pursuit?cat=lycos&first=1&bq=4&br=3&query=LSAM+ISI&matchmode=and&adv=0&mtemp=bysite&amp;maxhits=50"><B>List by Website</B></A></FONT>
+<FONT SIZE=-1 FACE="helvetica, arial, ms sans serif, sans-serif"><B><A HREF="/cgi-bin/pursuit?cat=lycos&first=11&bq=3&br=3&query=LSAM+ISI&matchmode=and&adv=0">Next Page</A>&nbsp;&#124;&nbsp; Previous Page  </FONT></TD><TD ALIGN=RIGHT><FONT SIZE=-1 FACE="helvetica, arial, ms sans serif, sans-serif"><A HREF="/cgi-bin/pursuit?cat=lycos&first=1&bq=3&br=3&query=LSAM+ISI&matchmode=and&adv=0&mtemp=bysite&amp;maxhits=50"><B>List by Website</B></A></FONT>
 </TD>
 </TR>
 <TR><TD COLSPAN=2 WIDTH=468>
 
 <FONT SIZE=-1 FACE="helvetica, arial, ms sans serif, sans-serif">
+<a href="http://www.isi.edu/div7/cities/people.html">LSAM People</a>&nbsp;  
+<br>[LSAM logo] LSAM People LSAM Researchers: Joe Touch. Project Leader. Coordinating intelligent bandwidth and mobility tasks, performing resea.
+<br>http://www.isi.edu/div7/cities/people.html
+<BR> 
+<P>
 <a href="http://www.isi.edu/lsam/people.html">LSAM People</a>&nbsp;  
 <br>[LSAM logo] LSAM People LSAM Researchers: Joe Touch. Project Leader. Coordinating overall proxy architecture, and performing research on cha.
 <br>http://www.isi.edu/lsam/people.html
@@ -191,11 +196,16 @@ You Searched for <B>LSAM ISI</B></FONT></TD><TD ALIGN=RIGHT><FONT SIZE=-1 FACE="
 <a href="http://www.isi.edu/~johnh/SOFTWARE/APACHE/index.html">LSAM Apache Patches</a>&nbsp;  
 <br>LSAM Apache Patches [Apache logo] As part of my work with ISI's LSAM project we have found some optimizations in http-server performance. We.
 <br>http://www.isi.edu/~johnh/SOFTWARE/APACHE/index.ht
-<BR><a href="/cgi-bin/pursuit?cat=lycos&first=1&bq=4&br=3&query=LSAM+ISI&matchmode=or&adv=0&mltq=2126221767&mtemp=mlt"><FONT COLOR="#CC0000" size=-2>Find Related Web pages</FONT></a> 
+<BR><a href="/cgi-bin/pursuit?cat=lycos&first=1&bq=3&br=3&query=LSAM+ISI&matchmode=or&adv=0&mltq=4273705415&mtemp=mlt"><FONT COLOR="#CC0000" size=-2>Find Related Web pages</FONT></a> 
 <P>
 <a href="http://gin.isi.edu:1080/cgi-bin/gra/application">GRA Application</a>&nbsp;  
 <br>USC/ISI GRA Application ----------- Thanks for your interest in the research projects in division 7. To apply for a position with one of the.
 <br>http://gin.isi.edu:1080/cgi-bin/gra/application
+<BR> 
+<P>
+<a href="http://www.isi.edu/div7/gra/">GRA Opportunities </a>&nbsp;  
+<br>GRA Opportunities in High-Performance Networking and Network-Aware Distributed Systems ----------- GRA Application (uses a Web form) Only st.
+<br>http://www.isi.edu/div7/gra/
 <BR> 
 <P>
 <a href="http://gost.isi.edu/brian/resume/work.html">Brian Tung </a>&nbsp;  
@@ -206,32 +216,22 @@ You Searched for <B>LSAM ISI</B></FONT></TD><TD ALIGN=RIGHT><FONT SIZE=-1 FACE="
 <a href="http://www.isi.edu/~larse/">TCB Sharing</a>&nbsp;  
 <br>TCB SHARING INDEX This page indexes all documents related to the TCB Sharing research going on within the LSAM project. I may also add links.
 <br>http://www.isi.edu/~larse/
-<BR><a href="/cgi-bin/pursuit?cat=lycos&first=1&bq=4&br=3&query=LSAM+ISI&matchmode=or&adv=0&mltq=2126221734&mtemp=mlt"><FONT COLOR="#CC0000" size=-2>Find Related Web pages</FONT></a> 
+<BR><a href="/cgi-bin/pursuit?cat=lycos&first=1&bq=3&br=3&query=LSAM+ISI&matchmode=or&adv=0&mltq=2126221734&mtemp=mlt"><FONT COLOR="#CC0000" size=-2>Find Related Web pages</FONT></a> 
 <P>
 <a href="http://www.isi.edu/~faber/">Ted Faber</a>&nbsp;  
 <br>Ted Faber, Computer Scientist USC/ISI LOGO University of Southern California Information Sciences Institute 4676 Admiralty Way Marina del Re.
 <br>http://www.isi.edu/~faber/
-<BR><a href="/cgi-bin/pursuit?cat=lycos&first=1&bq=4&br=3&query=LSAM+ISI&matchmode=or&adv=0&mltq=3199963669&mtemp=mlt"><FONT COLOR="#CC0000" size=-2>Find Related Web pages</FONT></a> 
+<BR><a href="/cgi-bin/pursuit?cat=lycos&first=1&bq=3&br=3&query=LSAM+ISI&matchmode=or&adv=0&mltq=3199963669&mtemp=mlt"><FONT COLOR="#CC0000" size=-2>Find Related Web pages</FONT></a> 
+<P>
+<a href="http://www.isi.edu/div7/research-top.html">div7 research activities</a>&nbsp;  
+<br>Computer Networks Division Research Activities ISI's participation in the High Performance Computing and Communications Program (HPCC) of th.
+<br>http://www.isi.edu/div7/research-top.html
+<BR> 
 <P>
 <a href="http://www.isi.edu/~touch/projects.html">Joe's Projects </a>&nbsp;  
 <br>Joe Touch - Projects ----------- LOWLAT Web Latency Reduction Removing the 'wait' from the web. Using proactive cache loading (a variant of .
 <br>http://www.isi.edu/~touch/projects.html
 <BR> 
-<P>
-<a href="http://www.isi.edu/~johnh/SOFTWARE/">Software Written by John Heidemann</a>&nbsp;  
-<br>Software Written by John Heidemann Writing software is both my job and one of my hobbies. The following packages are currently available: Op.
-<br>http://www.isi.edu/~johnh/SOFTWARE/
-<BR> 
-<P>
-<a href="http://nii.isi.edu/people/johnh/SOFTWARE/index.html">Software Written by John Heidemann</a>&nbsp;  
-<br>Software Written by John Heidemann Writing software is both my job and one of my hobbies. The following packages are currently available: Op.
-<br>http://nii.isi.edu/people/johnh/SOFTWARE/index.htm
-<BR> 
-<P>
-<a href="http://www.isi.edu/~katia/">Katia Obraczka, USC Information Science Institute </a>&nbsp;  
-<br>Katia Obraczka Address USC Information Science Institute 4676 Admiralty Way Marina del Rey, CA 90212 voice: (310) 822-1511 fax: (310) 823-67.
-<br>http://www.isi.edu/~katia/
-<BR><a href="/cgi-bin/pursuit?cat=lycos&first=1&bq=4&br=3&query=LSAM+ISI&matchmode=or&adv=0&mltq=4273705389&mtemp=mlt"><FONT COLOR="#CC0000" size=-2>Find Related Web pages</FONT></a> 
 <P>
 
 </font>
@@ -239,8 +239,8 @@ You Searched for <B>LSAM ISI</B></FONT></TD><TD ALIGN=RIGHT><FONT SIZE=-1 FACE="
 <!-- end formatted results -->
 
 <P>
-<NOBR><FONT SIZE=-1 FACE="helvetica, arial, ms sans serif, sans-serif"><B><A HREF="/cgi-bin/pursuit?cat=lycos&first=11&bq=4&br=3&query=LSAM+ISI&matchmode=and&adv=0">Next Page</A>&nbsp;&#124;&nbsp; Previous Page &nbsp;&#124;&nbsp;Page:&nbsp;<B><FONT SIZE=+1>1</FONT>
-&nbsp;.&nbsp;<A HREF="/cgi-bin/pursuit?cat=lycos&first=11&bq=4&br=3&query=LSAM+ISI&matchmode=and&adv=0">2</A>
+<NOBR><FONT SIZE=-1 FACE="helvetica, arial, ms sans serif, sans-serif"><B><A HREF="/cgi-bin/pursuit?cat=lycos&first=11&bq=3&br=3&query=LSAM+ISI&matchmode=and&adv=0">Next Page</A>&nbsp;&#124;&nbsp; Previous Page &nbsp;&#124;&nbsp;Page:&nbsp;<B><FONT SIZE=+1>1</FONT>
+&nbsp;.&nbsp;<A HREF="/cgi-bin/pursuit?cat=lycos&first=11&bq=3&br=3&query=LSAM+ISI&matchmode=and&adv=0">2</A>
 </B></B></FONT></NOBR>
 </TD></TR>
 </TABLE>
@@ -319,7 +319,7 @@ You Searched for <B>LSAM ISI</B></FONT></TD><TD ALIGN=RIGHT><FONT SIZE=-1 FACE="
 
 <P>
 <FONT SIZE="-2" FACE="helvetica, arial, ms sans serif, sans-serif">
-<center><a href="/cgi-bin/nph-adclick.exe/CID=000154fc0000000300000000/ST=lycos/SV=search/A=.lycos.search_lycos."><img  src="http://ads.lycos.com/ads/gist13.gif" alt=""  width=468 height=60></a><br><a href="/cgi-bin/nph-adclick.exe/CID=000154fc0000000300000000/ST=lycos/SV=search/A=.lycos.search_lycos.">Click here to visit site</a></center>
+<center><a href="/cgi-bin/nph-adclick.exe/CID=00030f170000000300000000/ST=lycos/SV=search/A=.lycos.search_lycos."><img  src="http://ad.preferences.com/image.ng;spacedesc=PBNEC_Lycos_468x60-RunOfSite_Any" alt="Click here to enter NEC online computer store"  width=468 height=60></a><br><a href="/cgi-bin/nph-adclick.exe/CID=00030f170000000300000000/ST=lycos/SV=search/A=.lycos.search_lycos.">Click here to enter NEC online computer store</a></center>
 <P>
 &#160;&#160;<A HREF="http://www.lycos.com/lycosinc/advertising.html">Advertise with Lycos</A><BR>
 &#160;&#160;<A HREF="http://www.lycos.com/lycosinc/legal.html">Copyright</A>&copy; 1998 Lycos,Inc.  All Rights Reserved.

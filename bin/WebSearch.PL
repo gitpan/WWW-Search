@@ -22,7 +22,7 @@ print OUT <<'!NO!SUBS!';
 #
 # WebSearch.PL
 # Copyright (C) 1996-1997 by USC/ISI
-# $Id: WebSearch.PL,v 1.28 1998/03/24 19:43:31 johnh Exp $
+# $Id: WebSearch.PL,v 1.29 1998/03/31 22:29:31 johnh Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -46,7 +46,7 @@ WebSearch - a web-searching application demonstrating WWW::Search
 
 =head1 SYNOPSIS
 
-B<WebSearch [-e SearchEngine] [-o option] [-o option...] [-va] query>
+B<WebSearch [-m MaxCount] [-e SearchEngine] [-o option] [-o option...] [-arvV] query>
 
 
 =head1 DESCRIPTION
@@ -83,10 +83,6 @@ Specify the maximum number of hits to retrieve.
 
 Specify a search-engine option.
 
-=item C<-v>
-
-Verbose mode.  Enumerate the returned URLs.
-
 =item C<-a>
 
 Return all URLs.  Some different URLs may refer to the same object.
@@ -94,6 +90,14 @@ Return all URLs.  Some different URLs may refer to the same object.
 =item C<-r>
 
 Return the raw entries (HTML).
+
+=item C<-v>
+
+Verbose mode.  Enumerate the returned URLs.
+
+=item C<-V>
+
+Display version string.
 
 =back
 
@@ -150,8 +154,9 @@ use Getopt::Long;
 
 my(%opts);
 $Getopt::Long::getopt_compat = 1;   # avoid parsing +'s as options (doesn't work!)
-&GetOptions(\%opts, qw(v a e=s m=s o=s@ r)); # i.e -v -e=<string> -o=<options>
+&GetOptions(\%opts, qw(a r v V e=s m=s o=s@));
 
+&print_version if ($opts{'V'});
 &usage if ($#ARGV == -1); # we MUST have one left, the query
 
 my($verbose) = $opts{'v'};
@@ -162,6 +167,14 @@ my($maximum_to_retrieve) = $opts{'m'};
 &main(join(" ", @ARGV));
 
 exit 0;
+
+sub print_version {
+    my($version) = $WWW::Search::VERSION;
+    print "$0\n\tWWW::Search::VERSION: $version\n\n";
+    exit 0;
+    # suppress warnings
+    $version = $WWW::Search::VERSION;
+}
 
 sub print_result {
     my($result, $count) = @_;
