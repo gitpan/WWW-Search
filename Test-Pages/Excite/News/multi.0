@@ -1,796 +1,859 @@
-<HTML><HEAD>
-<TITLE>Excite Search Results for "Alaska"</TITLE>
-</HEAD>
-<BODY bgcolor="ffffff" text="000000" link="000099" vlink="990000">
-<CENTER>
+<html>
+<head>
+<title>Excite Search Results for "Alaska"</title>
+<STYLE TYPE="text/css">
+<!--
+a:hover {color: #330000; text-decoration: underline}
+a.uhf:hover {color: #330000; text-decoration: none}
+a:active {font: Verdana,Arial,Sans-Serif; color: #0000CC; text-decoration: underline}
+a:link {font: Verdana,Arial,Sans-Serif; color: #0000CC; text-decoration: underline}
+a:visited {font: Verdana,Arial,Sans-Serif; color: #770066; text-decoration: underline}
+ul {font: 10pt Verdana,Arial,Sans-Serif}
+td {font: 10pt Verdana,Arial,Sans-Serif}
+.size14 {font: 14pt Verdana,Arial,Sans-Serif}
+.size12 {font: 12pt Verdana,Arial,Sans-Serif}
+.size10 {font: 10pt Verdana,Arial,Sans-Serif}
+.size9 {font: 9pt Verdana,Arial,Sans-Serif}
+.size8 {font: 8pt Verdana,Arial,Sans-Serif}
+select {font: 8pt Verdana,Arial,Sans-Serif}
+input {font: 8pt Verdana,Arial,Sans-Serif}
+-->
+</style>
+</head>
+<body
+bgcolor=#ffffff
+link=#0000CC
+text=#000000
+vlink=#770066
+alink=#0000CC
+topmargin=5
+marginheight=5
+>
+<table width=760 border=0 bgcolor=#333333 cellspacing=0 cellpadding=0 height=16><tr><td>
+<table width=100% border=0 bgcolor=#333333 cellspacing=1 cellpadding=0 height=16>
+<tr>
+<td onMouseOut="this.bgColor='FFCC00'"
+onMouseOver="this.bgColor='FFCC00'" width=13
+align=center bgcolor=#FFCC00>
+<a href=http://www.excite.com>
+<img src=http://w.eimg.com/mesp/images/excite/lep.gif border=0
+width=11 height=13></a></td>
+<td onMouseOut="this.bgColor='FFCC00'"
+onMouseOver="this.bgColor='FCAD56'" width=15%
+align=center bgcolor="#FFCC00"><a href=http://www.excite.com/r/co=tsso;http://reg.excite.com/mps/logout?pname=ustrip&targeturl=http%3A%2F%2Fwww.excite.com%2Fsearch&brand=xcit>
+<span class=size8><font face="verdana,geneva,arial" size=-2 color=000000><b>SIGN OUT</b></font></span></a></td>
+<td onMouseOut="this.bgColor='FFCC00'"
+onMouseOver="this.bgColor='FCAD56'" width=13%
+align=center bgcolor="#FFCC00"><a href=http://www.excite.com/r/co=tsem;http://inbox.excite.com/>
+<span class=size8><font face="verdana,geneva,arial" size=-2 color=000000><b>CHECK EMAIL</b></font></span></a></td>
+<td onMouseOut="this.bgColor='FFCC00'"
+onMouseOver="this.bgColor='FCAD56'" width=13%
+align=center bgcolor="#FFCC00"><a href=http://www.excite.com/r/co=tsch;http://www.excite.com/communities/chat/rooms>
+<span class=size8><font face="verdana,geneva,arial" size=-2 color=000000><b>CHAT NOW!</b></font></span></a></td>
+<td onMouseOut="this.bgColor='FFCC00'"
+onMouseOver="this.bgColor='FCAD56'" width=13%
+align=center bgcolor="#FFCC00"><a href=http://www.excite.com/r/co=tsws;http://www.webshots.com/homepage.html>
+<span class=size8><font face="verdana,geneva,arial" size=-2 color=000000><b>PHOTOS</b></font></span></a></td>
+<td onMouseOut="this.bgColor='FFCC00'"
+onMouseOver="this.bgColor='FCAD56'" width=13%
+align=center bgcolor="#FFCC00"><a href=http://www.excite.com/r/co=tsbm;http://www.bluemountain.com>
+<span class=size8><font face="verdana,geneva,arial" size=-2 color=000000><b>SEND E-CARDS</b></font></span></a></td>
+<td onMouseOut="this.bgColor='FFFFCC'"
+onMouseOver="this.bgColor='F9E08C'"
+align=center bgcolor="#FFFFCC"><a href=http://www.excite.com/r/co=tshc;http://www.webshots.com/c/np-utilstrip/>
+<span class=size8><font face="verdana,geneva,arial" size=-2 color=000000><b>Hot Screensavers</b></font></span></a></td>
+<td onMouseOut="this.bgColor='FFFFCC'"
+onMouseOver="this.bgColor='F9E08C'" width=13%
+align=center bgcolor="#FFFFCC"><a href=http://www.excite.com/r/co=tstb;http://toolbar.excite.com/docs/download.html>
+<span class=size8><font face="verdana,geneva,arial" size=-2 color=000000><b>Browser Skins</b></font></span></a></td>
+</td></tr>
+</table>
+</td></tr>
+</table>
+<table border=0 cellpadding=5 cellspacing=0 width=760>
+<tr><td align=center>
+<CENTER><A HREF="http://ad.preferences.com/click;spacedesc=exciteathomenetwork_excite_468x60_sr_banner&af=131042&ml_pkgkw=%252D%253A%2522%2522&ml_kwmth=%252D%253A%252D%253A%252D%253A%252D&ml_pbi=375109&ml_crid=218016&TG_NETLOC=xsr/default&click=http%3A%2F%2Fwww%2Enetledger%2Ecom%2F%3Faffiliateid%3D14321%26sourceid%3D031201" target="_top"><IMG SRC="http://199.172.144.25/2/41571/14414/nl_ban-468x60.gif" BORDER=0 ALT="Click Here!" WIDTH=468 HEIGHT=60><BR>Click Here!</A></CENTER>
+</td></tr>
+</table>
+<SCRIPT LANGUAGE="JavaScript">
+function relatedSearchTopPop(){
+var queryZ = escape(document.topbox.s.value).replace(/\+/g, "%2B");
+var collection;
+for (var i=0; i < 5; i++) {
+if (document.topbox.c[i].checked) {
+collection = document.topbox.c[i].value;
+}
+}
+var url = "http://search.excite.com/search.gw?c=" + collection;
+var query = queryZ.replace(/((%20)+-[\w]+)|((%20)*NOT%20[\w]+)/g, "");
+query = query.replace(/^-[\w]+/, "");
+url = url + "&mode=related_search&s=" + query + "&zoomQ=" + queryZ;
+var w = window.open(url, "relatedSearch_daughter", "resizable,scrollbar=0,height=385,width=343");
+w.focus();
+document.topbox.submit();
+}
+</SCRIPT>
+<table border=0 cellpadding=0 cellspacing=0 width=760>
+<tr valign=top><td width=150 height=83 rowspan=4 bgcolor=#000000><form><a href=/r/co=xsr_excite_mesp;http://www.excite.com onMouseOver="window.status=('http://www.excite.com');return true" onMouseOut="window.status=('');return true"><img src=http://i.eimg.com/img/search/logo_search.gif border=0 hspace=0 vspace=0 alt=eXcite></a><br>
 <center>
-<table cellspacing=0 cellpadding=0 border=0 width=98%>
-<tr>
-<td align=right valign=top width=128>
-<a href="/"><img src="/img/head/logo.gif" alt="Excite" width=128 height=50 border=0></a>
-</td>
-<td>
-<table cellspacing=0 cellpadding=0 border=0 width="100%">
-<tr>
-<td valign=bottom width=552 height=31>
-<font size=4 face=helvetica><b>&nbsp;News Search</b></font>
-</td>
-</tr>
-<tr>
-<td>
-<table border=0 cellpadding=1 cellspacing=0 width="100%">
-<tr bgcolor="FFCC00">
-<td>
-<table border=0 cellpadding=0 cellspacing=0>
-<tr>
-<td>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-</table>
-<table border=0 cellpadding=1 cellspacing=0 width="100%">
-<tr>
-<td align=right>
-<form action="/redir.dcg" method=get onChange="submit()">
-<td align=right>
-<font face="helvetica" size="-1">
-<a href="http://www.excite.com/r/co=hrex;/"><b>My Excite</b></a> | <a href="http://www.excite.com/r/co=hrma;http://mail.excite.com"><b>Check Email</b></a></font>&nbsp;
-<select name="url" size="1" onChange="submit()">
-<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/">Excite Home
-<option value="http://www.excite.com/r/co=hrsr;http://auctions.excite.com/">Auctions
-<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/autos/">Autos
-<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/business/">Business
-<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/careers/">Careers
-<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/local/">City Guides
-<option value="http://www.excite.com/r/co=hrsr;http://classifieds.excite.com/">Classifieds
-<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/computers_and_internet/">Computers & Internet
-<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/education/">Education
-<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/entertainment/">Entertainment
-<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/family/">Family
-<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/games/">Games
-<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/health/">Health
-<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/home_and_real_estate/">Home &amp; Real Estate
-<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/horoscopes/">Horoscopes
-<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/lifestyle/">Lifestyle
-<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/money/">Money &amp; Investing
-<option value="http://www.excite.com/r/co=hrsr;http://news.excite.com/">News
-<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/people_and_chat/">People &amp; Chat
-<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/relationships/">Relationships
-<option value="http://www.excite.com/r/co=hrsr;http://shopping.excite.com/">Shopping
-<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/sports/">Sports
-<option value="http://www.excite.com/r/co=hrsr;http://city.net/">Travel
+<script>
+var relocate = "http://www.excite.com/r/co=";
+function goUHFChannel(url, target) {
+var slices;
+if(target) {
+window.open(url, target);
+return;
+}
+if(url.search(";") > 0) {
+slices = url.split(";");
+url = relocate + slices[1] + ";" + slices[0];
+}
+window.location.href=url;
+}
+</script>
+<select name="uhf_channel"
+onchange="javascript:goUHFChannel(this.options[this.selectedIndex].value);"
+size=1>
+<option value="">Quick Find
+<option value=http://www.excite.com/;uhhm>Excite Home
+<option value=http://www.excite.com/more/;uhsi>Site Index
+<option value=http://www.excite.com/autos/;uhau>Autos
+<option value=http://excite.work.com/;uhbu>Business
+<option value=http://www.excite.com/careers/;uhca>Careers
+<option
+value=http://www.excite.com/computers_and_internet/;uhci>Computers
+<option value=http://www.excite.com/education/;uhed>Education
+<option value=http://www.excite.com/entertainment/;uhen>Entertainment
+<option value=http://www.excite.com/family/;uhfa>Family
+<option value=http://www.excite.com/games/;uhga>Games
+<option value=http://health.excite.com;uhhe>Health
+<option value=http://www.excite.com/money/;uhmi>Investing
+<option value=http://www.excite.com/lifestyle/;uhli>Lifestyle
+<option value=http://music.excite.com/;uhmu>Music
+<option value=http://news.excite.com/;uhnt>News
+<option value=http://www.excite.com/communities/;uhpc>People &amp; Chat
+<option
+value=http://www.excite.com/home_and_real_estate/;uhhr>Real Estate
+<option value=http://www.excite.com/relationships/;uhre>Relationships
+<option value=http://shopping.excite.com/;uhsh>Shopping
+<option value=http://sports.excite.com/;uhsp>Sports
+<option value=http://travel.excite.com/;uhtr>Travel
 </select>
-<input type="submit" value="Go!">
-</form>
+</center></td>
+<td width=610 align=left valign=bottom bgcolor=#004866 colspan=2><span class=size8><a href=http://www.excite.com/search><img src=http://i.eimg.com/img/search/psearch_logo6.gif width=256 height=31 border=0 hspace=0 vspace=0 alt="Precision Search"></a></span></td></tr>
+<tr><td height=3 bgcolor=#6699CC colspan=2>
+<table border=0 cellpadding=0 cellspacing=0 width=100% height=3><tr><td></table>
+</td></tr></form>
+<tr><td bgcolor=DDDDDD height=22 colspan=2><form name=topbox action=/search.gw>
+&nbsp; &nbsp;<B>Search:</B>
+<input type=radio name=c value="web">Web Sites
+<input type=radio name=c value="timely" checked>News
+<input type=radio name=c value="products">Products
+<input type=radio name=c value="spider.mial">Photos
+<input type=radio name=c value="audio.mp3">MP3/Audio
+<input type=radio name=c value="video">Video
+</td></tr>
+<tr><td bgcolor=DDDDDD width=500 height=27><span class=size8>
+&nbsp; &nbsp;<input type=text size=35 name=s value="Alaska">
+<input type=submit value="Search">
+<input type=button value="Zoom In" onClick="relatedSearchTopPop();" onMouseOver="window.status=('Find suggestions to help improve your search');return true" onMouseOut="window.status=('');return true">
+</span></td>
+<td align=right nowrap bgcolor=#DDDDDD width=110><a href=/r/co=xsr_excite_mesp;http://www.excite.com class=uhf>Excite</a> | <a href=/r/co=xsr_excite_help;http://www.excite.com/info/search_help class=uhf>Help</a>&nbsp;&nbsp;<table border=0 cellpadding=0 cellspacing=0><tr><td></form></td></tr></table></td></tr>
+</table>
+<table border=0 cellpadding=0 cellspacing=0 width=760>
+<tr><td align=right><span class=size8>
+<a href=/r/co=xsr_searchhome;http://www.excite.com/search>Search Home</a> |
+<a href=/r/co=xsr_adv_web;http://www.excite.com/search/advanced>Advanced Web Search</a>
+| <a href=/r/co=xsr_rslt_voyeur;http://www.excite.com/search/voyeur>Voyeur!</a>
+| <a href=/r/co=xsr_rslt_submit;http://www.excite.com/info/add_url>Submit A Site</a>
+</span><br>
+<table><tr><td></td></tr></table></td></tr>
+</table>
+<table border=0 cellpadding=0 cellspacing=0 width=760>
+<tr><td colspan=2>
+About 228 found in <font color=#990000><b>Web News</b></font> for: <b>Alaska</b><br>
+<table border=0 cellpadding=3 cellspacing=0 width=100% >
+<tr><td bgcolor=#EEEEEE>Show Results: <font color=#445C77>Web News</font> | <a href=/r/co=xsr_vert_hourly;http://search.excite.com/search.gw?c=hourly&s=Alaska>Newswires</a> | <a href=/r/co=xsr_vert_hrph;http://search.excite.com/search.gw?c=hourly.photo&s=Alaska>News Photos</a></td></tr>
+</table>
 </td>
+<td rowspan=2><table border=0 cellpadding=6 cellspacing=0><tr><td></table></td>
+<td valign=top width=120 rowspan=2>
+<table border=0 cellpadding=0 cellspacing=0><tr><td height=15></td></tr></table>
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+<tr><td bgcolor="#DDDDDD">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr><td align="center" bgcolor="#FFFFCC" height=80>
+<a href=/relocate/co=xsr_amazon1;http://www.amazon.com/exec/obidos/stores/exc-sr-logo target=top><img src=http://i.eimg.com/img/search/lgrd88x311.gif alt="Buy Books" width=88 height=31 border=0></a>
+<br>
+<div align="left"><span class=size8 id=face>
+&nbsp;&#183; <a href=/r/co=xsr_amazon;http://www.amazon.com/exec/obidos/external-search?tag=exc-sr-kw&keyword=Alaska&mode=blended target=_top>ALASKA</a><br>
+&nbsp;&#183; <a href=/r/co=xsr_amazon;http://www.amazon.com/exec/obidos/stores/exc-sr-link1 target=_top>Buy Books Here</a><br>
+&nbsp;&#183; <a href=/r/co=xsr_amazon;http://www.amazon.com/exec/obidos/redirect?tag=exc-sr-link2&path=subst/home/home.html/ref=nw_gateway target=_top>Search Amazon</a><br>
+</span></div>
+</td></tr>
+</table>
+</td></tr>
+</table>
+<br>
+<!--TEXTLINK-->
+<CENTER><A href="http://ad.preferences.com/click;spacedesc=exciteathomenetwork_excite_120x160_sr_esb&af=130704&ml_pkgkw=%252D%253A%2522%2522&ml_kwmth=%252D%253A%252D%253A%252D%253A%252D&ml_pbi=364897&ml_crid=217425&TG_NETLOC=xsr/default&click=http%3A%2F%2Fwww%2Eclassmates%2Ecom%2Findex%2Etf%3Fs%3D2619" target="_top"><IMG src="http://199.172.144.25/2/43982/14389/fab6re-120x160.gif" ALT="Click Here!" height="160" width="120" border="0"><BR>Click Here!</A></CENTER>
+<br>
+<table border=0 cellspacing=0 width=100% >
+<tr><td align=center bgcolor=#E8E6F0 height=18><span class=size10 id=face><b>More Excite</b></span></td></tr>
+<tr><td bgcolor=#E8E6F0>
+<table border=0 cellpadding=8 cellspacing=0 width=100% >
+<tr><td bgcolor=#FFFFFF><span class=size8 id=face>
+<a href=http://www.excite.com/r/co=np_xsr_more_nbhlth;http://health.excite.com/living_better_topic/sxy>Sexual Health</a><br>
+<a href=http://www.excite.com/r/co=np_xsr_more_pers;http://personals.excite.com/cgi-cls/display.exe?partner=excite&path=Personal~SearchMedia&svcpage=searchphoto&>Photo Personals</a><br>
+<a href=http://www.excite.com/r/co=np_xsr_more_nbwbshwall;http://www.webshots.com/c/download01/>Free Wallpaper</a><br>
+<a href=http://www.excite.com/r/co=np_xsr_more_nbmusvid;http://excite.mtv.com/all_video>Music Videos</a><br>
+<a href=http://www.excite.com/r/co=np_xsr_more_nbwbsh;http://www.webshots.com/c/download01/>Free Screensaver</a><br>
+<a href=http://www.excite.com/r/co=np_xsr_more_nbbmakss;http://www.bluemountain.com/eng3/sendkiss/indexval.html>Send a Kiss</a><br>
+<a href=http://www.excite.com/r/co=np_xsr_more_nbsrch;http://www.excite.com/search/photosearch>Try Photo Search</a><br>
+</span></td>
 </tr>
 </table>
-</td></tr></table>
-<TABLE border=0 cellpadding=1 cellspacing=0 width=600>
-<TR><TD bgcolor=#cccccc>
-<FORM NAME=topbox ACTION=/search.gw>
-<TABLE border=0 cellspacing=0 cellpadding=4 width=600 bgcolor=ffffff>
-<TR>
-<TD align=right bgcolor=ffffff>
-<b><font face="helvetica" size=-1>You searched for </font></b>
-<input size=30 name=search value="Alaska">
-</td>
-<td>
-<font face="helvetica" size=-1>
-<input type=submit value="Search Again">
-</font>
-</td>
-<TD nowrap>
-<font face="helvetica" size=-1>
-<b><a href=/relocate/co=help;http://www.excite.com/Info/>
-Help</a>&nbsp;&nbsp;<br>
-<a href=http://www.excite.com/search_forms/advanced/>
-More Search</a>
-</b></font>
-</TD>
-</TR>
-</TABLE>
-<TABLE border=0 cellspacing=0 cellpadding=4 width=600 bgcolor=ffffff>
-<TR>
-<td align=right colspan=1>
-<font face="helvetica" size=-1>
-<b>Search:</b>
-</font>
-</td>
-<td align=left colspan=3>
-<font face="helvetica" size=-1>&nbsp;&nbsp;
-<input type=radio name=c value=hourly ><img src=http://www.excite.com/mesp/images/excite/lep.gif> Newswires&nbsp;&nbsp;
-<input type=radio name=c value=hourly.photo ><img src=http://www.excite.com/mesp/images/excite/lep.gif> News Photos&nbsp;&nbsp;
-<input type=radio name=c value=timely checked>Web News&nbsp;&nbsp;
-<input type=radio name=c value=hourtime >All	</font>
-</td>
-</tr>
+</td></tr>
 </table>
-</td></tr></table>
+</td></tr>
+<tr valign=top><td>
+</td>
+<td><br>
+<span class=size8 id=face>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<b>Top 50 Displayed:</b>
+<a href=/r/co=xsr_newsv_showhead;/search.gw?s=Alaska&c=timely&showSummary=false&start=0&perPage=50>Show Headlines Only</a>
+| <a href=/r/co=xsr_newsv_source;/search.gw?s=Alaska&c=timely&showSummary=true&start=0&perPage=50&sort=pub>View by Source</a>
+| <a href=/r/co=xsr_newsv_date;/search.gw?s=Alaska&c=timely&showSummary=true&start=0&perPage=50&sort=date>View by Date</a>
+</span>
+<ul>
+<li><a href=/r/sr=news|ss=Alaska;http://www.bergen.com:80/morenews/animal2520010325.htm onMouseOver="window.status=('http://www.bergen.com:80/morenews/animal2520010325.htm');return true" onMouseOut="window.status=('');return true">3 wolves die in Alaska after being shot with darts </a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=14992&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 25 Mar 2001 &nbsp;
+<b>Source:</b>
+Bergen Record
+</font>
+<br>
+<span class=size8>Sunday, March 25, 2001 ANCHORAGE, Alaska -- Three wolves in Denali National Park and Preserve died after being darted for collaring, prompting the park to suspend the program until an investigation ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/business/story/0,2641,252613,00.html onMouseOver="window.status=('http://www.adn.com:80/business/story/0,2641,252613,00.html');return true" onMouseOut="window.status=('');return true">Inside Alaska business</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=254&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 28 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>Commission office moves The Regulatory Commission of Alaska moved to 701 W. Eighth Ave. Suite 300, Anchorage, AK, 99501 as of Tuesday. Public meetings will be held on the third floor, ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://archives.seattletimes.nwsource.com:80/cgi-bin/texis/web/vortex/display?slug=ticket22&date=20010322 onMouseOver="window.status=('http://archives.seattletimes.nwsource.com:80/cgi-bin/texis/web/vortex/display?slug=ticket22&date=20010322');return true" onMouseOut="window.status=('');return true">Alaska Airlines refund policy survives suit</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=19738&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 22 Mar 2001 &nbsp;
+<b>Source:</b>
+Seattle Times
+</font>
+<br>
+<span class=size8>A Seattle lawyer's three-year fight over nonrefundable Alaska Airlines tickets has ended with the carrier's fare policies intact. The U.S. Supreme Court last month refused to hear Lem Howell's appeal to ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/metro/story/0,2633,252629,00.html onMouseOver="window.status=('http://www.adn.com:80/metro/story/0,2633,252629,00.html');return true" onMouseOut="window.status=('');return true">Community Profile</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=240&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 28 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>Egegik (EEG-gah-gik) Population: 123 (2000) Location: On the south bank of the Egegik River on the Alaska Peninsula. Description: Egegik has a strong Aleut culture. During the commercial fishing season, the ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/metro/story/0,2633,252625,00.html onMouseOver="window.status=('http://www.adn.com:80/metro/story/0,2633,252625,00.html');return true" onMouseOut="window.status=('');return true">Local folks</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=235&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 28 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>(Published March 28, 2001) The University of Alaska Anchorage lifeguard staff received the "Gold National Aquatic Safety Award" by Jeff Ellis & Associates Inc. Pool manager Luwana Witzleben and her staff ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/weekend/story/0,2645,251193,00.html onMouseOver="window.status=('http://www.adn.com:80/weekend/story/0,2645,251193,00.html');return true" onMouseOut="window.status=('');return true">Alaskan returns north to showcase sounds</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=17400&showSummary=true&rich_media=3>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 23 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/weekend/story/0,2645,251193,00.html onMouseOver="window.status=('http://www.adn.com:80/weekend/story/0,2645,251193,00.html');return true" onMouseOut="window.status=('');return true"><img src=/img/search/audio.gif border=0></a>&nbsp;
+<a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/weekend/story/0,2645,251193,00.html onMouseOver="window.status=('http://www.adn.com:80/weekend/story/0,2645,251193,00.html');return true" onMouseOut="window.status=('');return true"><img src=/img/search/video.gif border=0></a>&nbsp;
+<br>
+<span class=size8>(Published Mar 23 2001) It's not often an Alaskan leaves the state and returns with some sort of fame. Singer-songwriter Jewel, Denver Bronco guard Mark Schlereth and poet John Haines come ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/weekend/story/0,2645,239851,00.html onMouseOver="window.status=('http://www.adn.com:80/weekend/story/0,2645,239851,00.html');return true" onMouseOut="window.status=('');return true">Best of Anchorage: Inside diversions</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=20906&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 16 Feb 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>(Published Feb 15 2001) Until recently, only an orthopedist could love this winter. Ice, ice, baby. Ice so slippery that, even standing still, the momentum from your heartbeat can send you ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/weekend/story/0,2645,251199,00.html onMouseOver="window.status=('http://www.adn.com:80/weekend/story/0,2645,251199,00.html');return true" onMouseOut="window.status=('');return true">Alaska's beauty makes up for film's flaws</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=17394&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 23 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>(Published Mar 23 2001) Director, co-writer and producer Sean Morris spent six years scraping together his all-Alaskan film, "Kusah Hakwaan." His tenacious effort makes its Alaska debut this week at the ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/weekend/story/0,2645,251208,00.html onMouseOver="window.status=('http://www.adn.com:80/weekend/story/0,2645,251208,00.html');return true" onMouseOut="window.status=('');return true">Young readers not bored by Alaska board books</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=17399&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 23 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>(Published Mar 23 2001) Well-read babies will most certainly recognize a chicken as a yellow blob with feathers. But if they live in Anchorage, most don't have a peep of a ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/sports/story/0,2637,252617,00.html onMouseOver="window.status=('http://www.adn.com:80/sports/story/0,2637,252617,00.html');return true" onMouseOut="window.status=('');return true">Alaska Sports Digest</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=251&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 28 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>Snowboarders earn medals A team of Alaska snowboarders returned home this week from the U.S. Amateur Snowboard Championships in Mammoth, Calif., with four medals -- and even more casualties. Led by ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/outdoors/story/0,2922,251760,00.html onMouseOver="window.status=('http://www.adn.com:80/outdoors/story/0,2922,251760,00.html');return true" onMouseOut="window.status=('');return true">Northern lights exposure</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=14360&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 25 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>(Published March 25, 2001) Norio Matsumoto had a vision. He wanted to see the highest peak in North America aglow in the light of a half-moon and shrouded in colorful dancing ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/perfectworld/story/0,3010,251077,00.html onMouseOver="window.status=('http://www.adn.com:80/perfectworld/story/0,3010,251077,00.html');return true" onMouseOut="window.status=('');return true">From wrestling to song</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=17390&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 23 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>(Published March 23, 2001) Regional Basketball is over, but March Madness is still hot, and so is wrestling. March 30 and 31, all your favorite high school wrestling teams congregate for ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/metro/story/0,2633,252631,00.html onMouseOver="window.status=('http://www.adn.com:80/metro/story/0,2633,252631,00.html');return true" onMouseOut="window.status=('');return true">Community datebook</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=237&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 28 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>TODAY COMMUNITY Anchorage Chamber of Commerce E-Commerce Conference, 7:30 a.m.-1:30 p.m., Hilton Anchorage, with keynote speaker D.J. Mueller of Chamber WebLink International. Cost is $70 Chamber members, $90 for non-members. (R.S.V.P., ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/business/story/0,2641,252612,00.html onMouseOver="window.status=('http://www.adn.com:80/business/story/0,2641,252612,00.html');return true" onMouseOut="window.status=('');return true">Rocket launch plans fixed</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=255&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 28 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>(Published March 28, 2001) Kodiak -- Kodiak will see two more rocket launches this year and at least three next year, according to Pat Ladner of the Alaska Aerospace Development Corp. ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/weekend/story/0,2645,251205,00.html onMouseOver="window.status=('http://www.adn.com:80/weekend/story/0,2645,251205,00.html');return true" onMouseOut="window.status=('');return true">Palette</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=17397&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 23 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>(Published Mar 23 2001) DRINDL DRAMA Life isn't easy for Heidi, an orphan sent to live with her cranky grandfather in the Swiss Alps. Her good humor wins him over, but ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/weekend/story/0,2645,239852,00.html onMouseOver="window.status=('http://www.adn.com:80/weekend/story/0,2645,239852,00.html');return true" onMouseOut="window.status=('');return true">2001 Best of Anchorage -- Winter</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=20909&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 16 Feb 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>(Published Feb 15 2001) No irony intended, but it's only fitting that 8 magazine's "Best of Anchorage - Winter" special issue appears right after the supreme storm of this way-mild season. ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/perfectworld/story/0,3010,251075,00.html onMouseOver="window.status=('http://www.adn.com:80/perfectworld/story/0,3010,251075,00.html');return true" onMouseOut="window.status=('');return true">Youth exchange seeks to bridge divide between two Alaskas</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=17392&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 23 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>(Published March 23, 2001) Ira Perman, president of the Humanities Forum, explained that the goal of the Urban-Youth Exchange is to "build a bridge between urban and rural Alaska, one young ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/weekend/story/0,2645,239849,00.html onMouseOver="window.status=('http://www.adn.com:80/weekend/story/0,2645,239849,00.html');return true" onMouseOut="window.status=('');return true">Best of Anchorage: Amusements</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=20908&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 16 Feb 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>(Published Feb 15 2001) Colleen Coadic landed in Anchorage more than a decade ago with a Vancouver, British Columbia, band called Fear of Flying. She fell in love with the state ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.frommers.com:80/newsletters/03-22-01/article2.html onMouseOver="window.status=('http://www.frommers.com:80/newsletters/03-22-01/article2.html');return true" onMouseOut="window.status=('');return true">Your Inside Passage to Savings: Cruise Alaska for Just $47 Per Day: ...</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=19497&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 22 Mar 2001 &nbsp;
+<b>Source:</b>
+Frommer's Vacations for Real People
+</font>
+<br>
+<span class=size8>We ve been telling you, over and over, that it might be best to wait before booking your Alaskan cruise as prices were sure to go lower. Well, here s the ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/metro/story/0,2633,252630,00.html onMouseOver="window.status=('http://www.adn.com:80/metro/story/0,2633,252630,00.html');return true" onMouseOut="window.status=('');return true">Barrow climbers set sights high</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=239&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 28 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>(Published March 28, 2001) Barrow is a flat community, with no mountains or even any substantial hills. But it does have some mountain climbers in residence. In July, Harris Stuermer of ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/metro/story/0,2633,252628,00.html onMouseOver="window.status=('http://www.adn.com:80/metro/story/0,2633,252628,00.html');return true" onMouseOut="window.status=('');return true">People Mover to mark milestone with free bus rides on Thursday</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=238&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 28 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>(Published March 28, 2001) Sometime this week, the 75 millionth passenger will step aboard a People Mover bus, according to Anchorage's Public Transportation Department. The city's bus service, which began in ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/metro/story/0,2633,252627,00.html onMouseOver="window.status=('http://www.adn.com:80/metro/story/0,2633,252627,00.html');return true" onMouseOut="window.status=('');return true">Alaska digest</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=241&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 28 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>Assembly to reconsider development vote digestr:The Anchorage Assembly on Tuesday night decided to revisit its vote of last week that put restrictions on a proposed East Anchorage development project. The Assembly ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/metro/story/0,2633,252635,00.html onMouseOver="window.status=('http://www.adn.com:80/metro/story/0,2633,252635,00.html');return true" onMouseOut="window.status=('');return true">Senators set sights on ANWR</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=245&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 28 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>(Published March 28, 2001) Interior Secretary Gale Norton and a group of U.S. senators are coming to Alaska this week to tour the North Slope oil fields and see the Arctic ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/metro/story/0,2633,252634,00.html onMouseOver="window.status=('http://www.adn.com:80/metro/story/0,2633,252634,00.html');return true" onMouseOut="window.status=('');return true">School funding faulted</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=248&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 28 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>(Published March 28, 2001) A Superior Court judge Tuesday reaffirmed his ruling that Alaska is violating the state constitution and federal civil rights law by discriminating against rural schools when money ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/business/story/0,2641,252614,00.html onMouseOver="window.status=('http://www.adn.com:80/business/story/0,2641,252614,00.html');return true" onMouseOut="window.status=('');return true">Factory may get new life</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=256&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 28 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>(Published March 28, 2001) Alaska Seafood International announced Tuesday a New York investment firm has agreed to buy a 51 percent interest in the struggling South Anchorage fish factory. If the ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/sports/story/0,2637,252620,00.html onMouseOver="window.status=('http://www.adn.com:80/sports/story/0,2637,252620,00.html');return true" onMouseOut="window.status=('');return true">Retaining assistants is unusual</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=249&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 28 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>(Published March 28, 2001) We like to say we do things differently in Alaska, and the University of Alaska Anchorage's decision to make its new head hockey coach retain the two ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/outdoors/story/0,2922,251763,00.html onMouseOver="window.status=('http://www.adn.com:80/outdoors/story/0,2922,251763,00.html');return true" onMouseOut="window.status=('');return true">Place bad judgment at root of accidents</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=14359&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 25 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>(Published March 25, 2001) On Sunday, in the cold north wind, I hiked the sometimes steep southwest couloir of McHugh Peak to the saddle just below the summit in running shoes. ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/weekend/story/0,2645,239850,00.html onMouseOver="window.status=('http://www.adn.com:80/weekend/story/0,2645,239850,00.html');return true" onMouseOut="window.status=('');return true">Best of Anchorage: Tasty victuals</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=20907&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 16 Feb 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>(Published Feb 15 2001) Be warned, McDonald's and Burger King: Anchorage fast-food junkies just don't care about your silly fries war. Readers by an overwhelming margin prefer Taco Bell. The fast-food ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/perfectworld/story/0,3010,251240,00.html onMouseOver="window.status=('http://www.adn.com:80/perfectworld/story/0,3010,251240,00.html');return true" onMouseOut="window.status=('');return true">A very cool trip</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=17393&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 23 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>(Published March 23, 2001) By AMANDA DALE Perfect World staff SCAMMON BAY -- I have to admit that when I first stepped off the plane (a Twin Otter chartered from Bethel), ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/weekend/story/0,2645,251195,00.html onMouseOver="window.status=('http://www.adn.com:80/weekend/story/0,2645,251195,00.html');return true" onMouseOut="window.status=('');return true">Good food, fresh beer and an expert on both</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=17401&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 23 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>(Published Mar 23 2001) People regularly drop 50 bucks or more to participate in wine appreciation and edification events. That's why restaurants like Snow City Cafe schedule classes like "Wine 101" ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/weekend/story/0,2645,239853,00.html onMouseOver="window.status=('http://www.adn.com:80/weekend/story/0,2645,239853,00.html');return true" onMouseOut="window.status=('');return true">Best of Anchorage: Outdoor recreation</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=20450&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 17 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>(Published Feb 15 2001) Gentle readers, you never fail to fascinate us. What's even more interesting than your answers to our Best of Anchorage - Winter query are your handwriting samples. ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/metro/story/0,2633,252626,00.html onMouseOver="window.status=('http://www.adn.com:80/metro/story/0,2633,252626,00.html');return true" onMouseOut="window.status=('');return true">Alaskans hone for Academic Decathlon</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=236&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 28 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>(Published March 28, 2001) Three students at Pacific Northern Academy have been studying Taoism, Confucianism, Hinduism, Plato, the Bible, Buddhism, Islam, Judaism and much more in preparation for the Academic Decathlon ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/outdoors/story/0,2922,251753,00.html onMouseOver="window.status=('http://www.adn.com:80/outdoors/story/0,2922,251753,00.html');return true" onMouseOut="window.status=('');return true">Holy smoke, cars burn more oil than snowmachines</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=14356&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 25 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>(Published March 25, 2001) Lots of folks complain about how snowmachines burn oil. Most of the current machines use two-cycle engines, so burning oil is necessary to keep the engine alive ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/weekend/story/0,2645,251197,00.html onMouseOver="window.status=('http://www.adn.com:80/weekend/story/0,2645,251197,00.html');return true" onMouseOut="window.status=('');return true">Magical Mystikal lure</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=17402&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 23 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>(Published Mar 23 2001) Ginuwine, 112, Nelly, Pieces of a Dream, Destiny's Child, Gladys Knight and, last weekend, B.B. King and Mystikal. That's only a partial list of R&B, hip-hop rap ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www0.mercurycenter.com:80/premium/nation/docs/alaska22nu.htm onMouseOver="window.status=('http://www0.mercurycenter.com:80/premium/nation/docs/alaska22nu.htm');return true" onMouseOut="window.status=('');return true">Republicans signal tactical retreat on Alaska oil drilling (3/22/200...</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=19419&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 22 Mar 2001 &nbsp;
+<b>Source:</b>
+San Jose Mercury News
+</font>
+<br>
+<span class=size8>WASHINGTON -- President Bush's plan to open the Arctic National Wildlife Refuge in Alaska to oil exploration suffered a double blow from House and Senate Republicans on Wednesday. House Republicans did ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/metro/story/0,2633,252633,00.html onMouseOver="window.status=('http://www.adn.com:80/metro/story/0,2633,252633,00.html');return true" onMouseOut="window.status=('');return true">'Forged' endorsement letter rotten to the Corps</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=243&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 28 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>(Published March 28, 2001) A Marine Corps Reserve officer on Tuesday said he did not approve, write or sign a letter with his name on it used by an Anchorage Assembly ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/weekend/story/0,2645,251206,00.html onMouseOver="window.status=('http://www.adn.com:80/weekend/story/0,2645,251206,00.html');return true" onMouseOut="window.status=('');return true">Quartet explores meaning of sax</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=17398&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 23 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>(Published Mar 23 2001) Tenor sax player Matthew Levy recalls an early gig as a founding member of the Prism Saxophone Quartet. Music written just for four saxes was hard to ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/metro/story/0,2633,252632,00.html onMouseOver="window.status=('http://www.adn.com:80/metro/story/0,2633,252632,00.html');return true" onMouseOut="window.status=('');return true">Resolution on assault runs into debate</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=242&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 28 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>(Published March 28, 2001) Juneau -- It was supposed to be a simple resolution -- declaring April as Sexual Assault Awareness Month. But it sparked a debate on the House and ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://seattlep-i.nwsource.com:80/local/cruise24.shtml onMouseOver="window.status=('http://seattlep-i.nwsource.com:80/local/cruise24.shtml');return true" onMouseOut="window.status=('');return true">Initiative seeks head tax, other rules for cruise ships </a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=13261&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 24 Mar 2001 &nbsp;
+<b>Source:</b>
+Seattle Post-Intelligencer
+</font>
+<br>
+<span class=size8>ANCHORAGE -- Organizers are collecting signatures for a ballot initiative that would require cruise ship passengers in Alaska to pay a $75 head tax. Organizers Thursday said they were close to ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/outdoors/story/0,2922,251756,00.html onMouseOver="window.status=('http://www.adn.com:80/outdoors/story/0,2922,251756,00.html');return true" onMouseOut="window.status=('');return true">Outdoor Hotline</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=14357&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 25 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>PARKS AND REFUGES Kenai refuge called a refuge in crisis The national Aububon Society has included the Kenai National Wildlife Refuge among its 10 National Wildlife Refuge Systems in crisis. The ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.outsidemag.com:80/magazine/200103/200103dougswingley2.html onMouseOver="window.status=('http://www.outsidemag.com:80/magazine/200103/200103dougswingley2.html');return true" onMouseOut="window.status=('');return true">Sports</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=20842&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 1 Mar 2001 &nbsp;
+<b>Source:</b>
+Outside Magazine
+</font>
+<br>
+<span class=size8>IDITAROD MUSHERS ARE to Alaska what NASCAR drivers are to the South. Entire towns are known for them. Utter the name Shishmaref and people think of Herbie Nayokpuk, the legendary "Shishmaref ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www10.nytimes.com:80/2001/03/28/living/28KRAB.html onMouseOver="window.status=('http://www10.nytimes.com:80/2001/03/28/living/28KRAB.html');return true" onMouseOut="window.status=('');return true">Now, Live From Alaska, It's King Crab</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=5275&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 28 Mar 2001 &nbsp;
+<b>Source:</b>
+New York Times, <a href=http://www10.nytimes.com/auth/login?Tag=/&URI=http://www10.nytimes.com/yr/mo/day/>free registration</a>
+</font>
+<br>
+<span class=size8>HERE it was, a king crab from Alaska, an enormous, reddish-orange beast with a spiny round body and gangly legs. Not lying there frozen. Alive and fidgeting. It had arrived a ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.usnewswire.com:80/topnews/Current_Releases/0327-117.html onMouseOver="window.status=('http://www.usnewswire.com:80/topnews/Current_Releases/0327-117.html');return true" onMouseOut="window.status=('');return true">Senator Ted Stevens, Senator Daniel Inouye Share CAGW's</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=7931&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 27 Mar 2001 &nbsp;
+<b>Source:</b>
+US Newswire
+</font>
+<br>
+<span class=size8>Porker Of The Month' Award To: National Desk Contact: Sean Rushton or Melissa Naudin of Citizen's Against Government Waste, 202-467-5300 WASHINGTON, March 27 U.S. Newswire -- Citizens Against Government Waste (CAGW), ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/metro/story/0,2633,252637,00.html onMouseOver="window.status=('http://www.adn.com:80/metro/story/0,2633,252637,00.html');return true" onMouseOut="window.status=('');return true">Raven shooter pays fine, gives up rifle</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=244&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 28 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>(Published March 28, 2001) An Anchorage man pleaded guilty Tuesday to shooting three ravens from the window of his East Anchorage apartment three weeks ago. Dennis Harrison, 37, noticed the ravens ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/metro/story/0,2633,252638,00.html onMouseOver="window.status=('http://www.adn.com:80/metro/story/0,2633,252638,00.html');return true" onMouseOut="window.status=('');return true">Sterling Highway fixes imminent</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=247&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 28 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>(Published March 28, 2001) Soldotna -- Road improvements along the twisting Sterling Highway through Cooper Landing have been promised for decades, but the state says it is now serious. It has ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/lifestyles/story/0,2649,252615,00.html onMouseOver="window.status=('http://www.adn.com:80/lifestyles/story/0,2649,252615,00.html');return true" onMouseOut="window.status=('');return true">Onion lovers shed no tears as crop of sweets nears stores</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=252&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 28 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>(Published March 28, 2001) Onion lovers, lift your glasses. April 1 is no fool's day for folks who like a slab of sweet onion on their sandwiches, because those thick-ringed, juicy ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/weekend/story/0,2645,251203,00.html onMouseOver="window.status=('http://www.adn.com:80/weekend/story/0,2645,251203,00.html');return true" onMouseOut="window.status=('');return true">Don't hold your beau hostage to the past</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=17396&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 23 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>(Published Mar 23 2001) The fabulous Drew and I have been palling around for six years, married for four, and you'd think I'd know by now that he likes to talk. ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.iht.com:80/articles/14652.htm onMouseOver="window.status=('http://www.iht.com:80/articles/14652.htm');return true" onMouseOut="window.status=('');return true">Cold Village Gives A Warm Welcome</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=13971&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 26 Mar 2001 &nbsp;
+<b>Source:</b>
+International Herald Tribune
+</font>
+<br>
+<span class=size8>ANCHORAGE, Alaska Residents of a tiny village on the windswept tundra of the Alaska Peninsula provided blankets and food for 220 passengers who were stranded when their plane made an unscheduled ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://inq.philly.com:80/content/inquirer/2001/03/26/national/COLDBAY26.htm onMouseOver="window.status=('http://inq.philly.com:80/content/inquirer/2001/03/26/national/COLDBAY26.htm');return true" onMouseOut="window.status=('');return true">Frozen outpost offers warm refuge</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=13723&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 26 Mar 2001 &nbsp;
+<b>Source:</b>
+Philadelphia Inquirer
+</font>
+<br>
+<span class=size8>ASSOCIATED PRESS ANCHORAGE, Alaska - Residents of a tiny village on the windswept tundra of the Alaska Peninsula pitched in to find blankets and food for 220 passengers stranded when their ...</span><p>
+</li>
+<li><a href=/r/sr=news|ss=Alaska;http://www.adn.com:80/perfectworld/story/0,3010,251076,00.html onMouseOver="window.status=('http://www.adn.com:80/perfectworld/story/0,3010,251076,00.html');return true" onMouseOut="window.status=('');return true">Slam stupid policies: Give 'em a 'Rooney'</a>&nbsp;
+&nbsp;<a href=/search.gw?c=timely&qbe=17391&showSummary=true>(Related Articles)</a>
+<br>
+<font color=#808080>
+<b>Date:</b> 23 Mar 2001 &nbsp;
+<b>Source:</b>
+Anchorage Daily News
+</font>
+<br>
+<span class=size8>(Published March 23, 2001) High school students often encounter administrators, security guards and other adults who flex their enforcement muscles just because they can. Ever have an administrator punish you for ...</span><p>
+</li>
+</ul>
+<table border=0 cellspacing=1 cellpadding=2><tr><td>
+<form action=http://search.excite.com/search.gw method=get>
+<input type=hidden name=s value="Alaska">
+<input type=hidden name=c value="timely">
 <input type=hidden name=showSummary value=true>
-<table border=1 cellspacing=0 cellpadding=1 width=600 bordercolor=#ffcc00>
-<tr><td align=center bgcolor=ffffcc>
-<font face="helvetica" size=-1><b>
-<font color=CC0000>Free</font> Internet Services from Excite: <A href=/relocate/co=xxsr_fwintserv3_isp;http://freeworld.excite.com/>Free ISP</A> | <A href=/relocate/co=xxsr_fwintserv3_email;http://inbox.excite.com/>Free Email</A> | <A href=/relocate/co=xxsr_fwintserv3_vmail;http://inbox.excite.com/>Free Voicemail</A>
-</b></font>
-</td></tr>
-</table>
+<input type=hidden name=start value=50>
+<input type=hidden name=perPage value=50>
+<input type=hidden name=lang value=en>
+<input type=submit name=next value="&nbsp;&nbsp;&nbsp;Next&nbsp;&gt;&gt;&nbsp;">
 </form>
-<!-- The following html is Copyright 1997 by MatchLogic Inc. -->
-<!-- RICH=0 -->
-<IFRAME WIDTH=468 HEIGHT=60 NORESIZE SCROLLING=No FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 SRC="http://ad.preferences.com/iframe;spacedesc=FreeWallpaper3_Excite_468x60_RunOfSite_Any&ML_SSPKG=RunOfSiteSS&ML_CUSTOM=0&time=2000.01.31.21.10.33&ex_cookie=&ML_TARGET=_top&ML_REDIRECT=http%25253A%25252F%25252Fwww.excite.com%25252Frelocate%25252Fad%25253DLUCI%25257Cpk%25253D3809909%25253B">
-<SCRIPT
-SRC="http://ad.preferences.com/jscript;spacedesc=FreeWallpaper3_Excite_468x60_RunOfSite_Any&ML_SSPKG=RunOfSiteSS&ML_CUSTOM=0&ML_NIF=Y&ML_KW=Alaska&time=2000.01.31.21.10.33&ex_cookie=&ML_TARGET=_top&ML_REDIRECT=http%25253A%25252F%25252Fwww.excite.com%25252Frelocate%25252Fad%25253DLUCI%25257Cpk%25253D3809909%25253B">
-</SCRIPT>
-<NOSCRIPT>
-<A HREF="http://www.excite.com/relocate/ad=118339_htmlad.gif|pk=3809909;http://ad.preferences.com/click;spacedesc=FreeWallpaper3_Excite_468x60_RunOfSite_Any&ML_NIF=Y&time=2000.01.31.21.10.33&ex_cookie=" TARGET=_top>
-<IMG SRC="http://ad.preferences.com/image;spacedesc=FreeWallpaper3_Excite_468x60_RunOfSite_Any&ML_NIF=Y&time=2000.01.31.21.10.33&ex_cookie="></A>
-</NOSCRIPT>
-</IFRAME><CENTER><FONT SIZE=-1 COLOR=#0000FF FACE=arial, geneva><B>1,000s of FREE Desktop Images</B></FONT></CENTER>
-<!-- The above html is Copyright 1997 by MatchLogic Inc. -->
-</center>
-<small><br></small>
-</center>
-<a name=news-timely></a>
-<TABLE border=0 CELLSPACING=0 cellpadding=0><TR><TD>
-<img src=/img/logo/lep_w.gif>&nbsp;
-<FONT FACE=helvetica color=000000 SIZE=3><B>Web News</B></FONT></TD>
-</TR></TABLE>
-<table border=0 cellpadding=1 cellspacing=0 width=100%>
-<TR BGCOLOR=003366><TD><TABLE border=0 cellpadding=0 cellspacing=0><TR><TD></TD></TR></TABLE>
-</TD></TR>
-</TABLE>
-<!--promo start-->
-<table border=0 cellpadding=2 cellspacing=5 width=120 align=right>
-<tr><td>
-<table border="2" cellspacing="0" cellpadding="3" bordercolor="#336600" width=120 height=66>
-<tr><td align="center" bgcolor="#ffffcc">
-<b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1">Amazon.com</font></b><br>
-</td></tr>
-<tr><td align="center">
-<font face="Verdana, Arial, Helvetica, sans-serif" size="-2">
-Search for:<br>
-<a href=/relocate/co=xsr_amazon;http://www.amazon.com/exec/obidos/excite-search/search=Alaska>ALASKA</a><br>
-</font>
 </td></tr></table>
 </td></tr>
-<tr><td>
-</td></tr>
-<tr><td>
-<table border="2" cellspacing="0" cellpadding="4" bordercolor="#330099" width=120 height=66>
-<tr><td align="center" bgcolor="#ffffcc">
-<center>
-<font face="Verdana, Arial, Helvetica, sans-serif" size="-2"><b>Worldprints.com</b></font>
-<br>
-<FONT face="Verdana, Arial, Helvetica, sans-serif" size="-2">
-FREE Wallpaper
-</font>
-<br>
-<FONT face="Verdana, Arial, Helvetica, sans-serif" size="-2">
-<a href=/relocate/co=xsr_worldprints;http://wallpaper.worldprints.com/startpage?sid=5009>ALASKA</a><br>
-</font>
-</center></td></tr></table>
-</td></tr>
 </table>
-<!--promo end-->
-<font face="helvetica" size=-1>
-Top <b>50</b>
-matches.
-<br>
-<b>
-Show:&nbsp;
-<a href="/search.gw?s=alaska&c=timely&start=0&showSummary=false
-">Headlines</a>
-&nbsp;
-View by:&nbsp;
-<a href="/search.gw?sort=pub&c=timely&s=alaska">Publication</a>&nbsp;
-or&nbsp;
-<a href="/search.gw?c=timely&sort=date&s=alaska">Date</a>&nbsp;
-</b>
-<br>
-</font>
-<p>
-<font face="helvetica" size=-1>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://deseretnews.com:80/dn/view/0,1249,150008860,00.html?">Bush, Forbes top Alaska poll</A>&nbsp;
-<SMALL>
-(Deseret News)
-</SMALL>
-<BR><SMALL>60% </SMALL> &nbsp; &nbsp; &nbsp; Texas Gov. &nbsp; &nbsp; &nbsp; Sen.
-<BR><i>First found: </i>25 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=25512&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://insidedenver.com:80/college/0131du2.shtml">Alaska-Anchorage powers past DU 2-1 to gain series split </A>&nbsp;
-<SMALL>
-(Denver Rocky Mountain News)
-</SMALL>
-<BR><SMALL>60% </SMALL> Health.
-<BR><i>First found: </i>31 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=5672&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.bestfares.com:80/travel_center/desks/public/200001/10058325L.asp">New Alaska Denali Park Lodging Packages Offered For The 2000 Season</A>&nbsp;
-<SMALL>
-(Best Fares Magazine)
-</SMALL>
-<BR><SMALL>59% </SMALL>New Alaska Denali Park Lodging Packages Offered For The 2000 Season. Story Number: 10058325 Alaska's Denali Park Resorts offer two new packages for 2000, each affording the pleasures of the incomparable national park.
-<BR><i>First found: </i>29 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=14815&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.seattlep-i.com:80/business/alas27.shtml">Alaska Air seen flying high despite income dip </A>&nbsp;
-<SMALL>
-(Seattle Post-Intelligencer)
-</SMALL>
-<BR><SMALL>58% </SMALL>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;HOME &nbsp;NORTHWEST &nbsp;SPORTS &nbsp;BUSINESS &nbsp;&nbsp;&nbsp;Sci-Tech &nbsp;&nbsp;&nbsp;VC Notebook &nbsp;&nbsp;&nbsp;WTO &nbsp;&nbsp;&nbsp;Boeing Watch &nbsp;&nbsp;&nbsp;Microsoft Watch &nbsp;&nbsp;&nbsp;Bruce Ramsey &nbsp;&nbsp;&nbsp;Carol Smith &nbsp;&nbsp;&nbsp;Biz Wire &nbsp;&nbsp;&nbsp;Tech Wire &nbsp;NATION/WORLD &nbsp;ART & LIFE &nbsp;COMICS & GAMES...
-<BR><i>First found: </i>29 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=15039&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www2.nando.net:80/noframes/story/0,2107,500161116-500202483-500909022-0,00.html">Alaska Airlines plans to test live TV on jets</A>&nbsp;
-<SMALL>
-(Nando Times)
-</SMALL>
-<BR><SMALL>58% </SMALL>Alaska Airlines plans to test live TV on jets Copyright &copy 2000 Nando Media. Copyright &copy 2000 Associated Press.
-<BR><i>First found: </i>30 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=11696&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.21stcenturyadventures.com:80/articles/pwalaska.html">Penny-wise: Alaska </A>&nbsp;
-<SMALL>
-(21st Century Adventures 'Ezine)
-</SMALL>
-<BR><SMALL>57% </SMALL> Penny-wise: Alaska. Pick up Fodors Alaska at your neighborhood library.
-<BR><i>First found: </i>22 Jan 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=28433&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://news.excite.com:80/news/ap/000129/22/alaska-airlines-tv">Alaska Airlines To Test TV on Jets</A>&nbsp;
-<SMALL>
-(Associated Press)
-</SMALL>
-<BR><SMALL>56% </SMALL>&nbsp;. &nbsp;&nbsp;&nbsp; &nbsp;.
-<BR><i>First found: </i>31 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=8074&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://insidedenver.com:80/college/0130du2.shtml">Despite 45 shots, DU settles for 2-2 tie in OT </A>&nbsp;
-<SMALL>
-(Denver Rocky Mountain News)
-</SMALL>
-<BR><SMALL>56% </SMALL> &nbsp;&nbsp;Nuggets. &nbsp;&nbsp;Avalanche.
-<BR><i>First found: </i>30 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=12254&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.herald.com:80/content/wed/news/dade/digdocs/039481.htm">Miami Herald: High-bid couple wins Alaska trip</A>&nbsp;
-<SMALL>
-(Miami Herald)
-</SMALL>
-<BR><SMALL>55% </SMALL> BY ROXANA A. SOTO. One was a Miami Dolphins pennant signed by Jimmy Johnson.
-<BR><i>First found: </i>27 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=19333&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://deseretnews.com:80/dn/view/0,1249,150009365,00.html?">Alaskan dies after she's hit on I-215</A>&nbsp;
-<SMALL>
-(Deseret News)
-</SMALL>
-<BR><SMALL>54% </SMALL> Alaskan dies after she's hit on I-215 &nbsp; &nbsp; &nbsp; An Alaska woman was killed Thursday morning when she darted across the interstate and was hit by a passing motorist. &nbsp; &nbsp; &nbsp; Killed was:.
-<BR><i>First found: </i>27 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=19601&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.bestfares.com:80/travel_center/desks/public/200001/10058335L.asp">Bestfares.com Bargains On Nine Seven Seas NavigatorAlaska 2000 Sail...</A>&nbsp;
-<SMALL>
-(Best Fares Magazine)
-</SMALL>
-<BR><SMALL>54% </SMALL> Rates begin at $4,795. Rates begin at $2,995.
-<BR><i>First found: </i>29 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=14825&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.bestfares.com:80/travel_center/desks/public/200001/10058304L.asp">Bestfares.com Bargains On Nine Seven Seas NavigatorAlaska 2000 Saili...</A>&nbsp;
-<SMALL>
-(Best Fares Magazine)
-</SMALL>
-<BR><SMALL>54% </SMALL> Rates begin at $4,795. Rates begin at $2,995.
-<BR><i>First found: </i>28 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=15988&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.foxnews.com:80/science/012800/sealions.sml">Judge Calls Sea Lion Protections Inadequate</A>&nbsp;
-<SMALL>
-(Fox News)
-</SMALL>
-<BR><SMALL>52% </SMALL>="t") {this.sec=1;pbw(vid,neth,netl,realh,reall);}} if (cm=="rh" && realh=="t") {cm="hi.rmm";if(aol||iebug){window.location=vid+cm;}else{showvid('rm',vid+cm);}} else {if (cm=="rh" && realh!="t") {this.sec=2;pbw(vid,neth,netl,realh,reall);}} if (cm=="rl" && reall=="t") {cm="lo.rmm";if(aol||iebug){window.location=vid+cm;}else{showvid('rm',vid+cm);}} else {if (cm=="rl" && reall!
-<BR><i>First found: </i>28 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=16140&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.phillynews.com:80/inquirer/2000/Jan/26/international/CAMPAIGN26.htm">Hatch to drop out of GOP race</A>&nbsp;
-<SMALL>
-(Philadelphia Inquirer)
-</SMALL>
-<BR><SMALL>51% </SMALL> Bush preps for primary.&quot; Bush wins Alaska straw poll.
-<BR><i>First found: </i>26 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=23800&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.phillynews.com:80/inquirer/2000/Jan/26/national/CAMPAIGN26.htm">Hatch to drop out of GOP race</A>&nbsp;
-<SMALL>
-(Philadelphia Inquirer)
-</SMALL>
-<BR><SMALL>51% </SMALL> January 26, 2000 if (document.referrer ) { if (document.referrer.toString().indexOf('usatoday') != -1) { document.writeln('. if (document.referrer ) { if (document.referrer.toString().indexOf('digitalcity') != -1) { document.writeln('.
-<BR><i>First found: </i>26 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=23822&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://abcnews.go.com:80/sections/business/DailyNews/bpamoco_000128.html">ABCNEWS.com : Regulators May Quash BP Amoco-Arco Deal</A>&nbsp;
-<SMALL>
-(ABC News)
-</SMALL>
-<BR><SMALL>51% </SMALL> &nbsp;&nbsp;&nbsp;&nbsp; Your Business &nbsp;&nbsp;&nbsp;&nbsp; Your Money &nbsp;&nbsp;&nbsp;&nbsp; Market Details &nbsp;&nbsp;&nbsp;&nbsp; The Sectors &nbsp;&nbsp;&nbsp;&nbsp; Mutual Funds &nbsp;&nbsp;&nbsp;&nbsp; Raw News. &nbsp;.
-<BR><i>First found: </i>28 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=15784&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www10.nytimes.com:80/library/politics/camp/012600campaign-briefing.html">Campaign Briefing</A>&nbsp;
-<SMALL>
-(New York Times, <A HREF="http://www.nytimes.com/auth/login">free registration</A>)
-</SMALL>
-<BR><SMALL>51% </SMALL> Mr. Mr.
-<BR><i>First found: </i>26 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=24749&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://abcnews.go.com:80/sections/science/DailyNews/sealions000128.html">ABCNEWS.com : Judge Says Sea Lion Rules Inadequate</A>&nbsp;
-<SMALL>
-(ABC News)
-</SMALL>
-<BR><SMALL>50% </SMALL> &nbsp;&nbsp;&nbsp;&nbsp;ABCNEWS.com. &nbsp;.
-<BR><i>First found: </i>28 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=16331&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.nando.net:80/24hour/adn/business/story/0,1968,500161116-500202482-500909022-0,00.html">Alaska Airlines plans to test live TV on jets</A>&nbsp;
-<SMALL>
-(Anchorage Daily News)
-</SMALL>
-<BR><SMALL>50% </SMALL> Problems? Problems?
-<BR><i>First found: </i>30 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=11997&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.onroute.com:80/hotelguide/index.html">Onroute Hotel Guide | Information | Reservations</A>&nbsp;
-<SMALL>
-(Onroute Today)
-</SMALL>
-<BR><SMALL>49% </SMALL> To check out hotels in Canada and other countries, Go Here Directory for Online Reservations. Onroute Destinations pages.
-<BR><i>First found: </i>19 Aug 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=28373&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.pioneerplanet.com:80/seven-days/5/outdoors/docs/003905.htm">Mr. Madden's Wild Ride (1/27/2000)</A>&nbsp;
-<SMALL>
-(St. Paul/Minneapolis Pioneer Planet)
-</SMALL>
-<BR><SMALL>49% </SMALL> ``I think that's what draws people to ride like this. But never to a stop.
-<BR><i>First found: </i>27 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=19735&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.mushing.com:80/72chkpt.htm">Mushing Magazine Issue 72 Checkpoint</A>&nbsp;
-<SMALL>
-(Mushing)
-</SMALL>
-<BR><SMALL>49% </SMALL> &#151;Todd Hoener &nbsp; &nbsp; &nbsp;Subscriptions&nbsp;&nbsp;&nbsp;&nbsp;Archives. Clubs &amp; Races&nbsp;&nbsp;&nbsp;&nbsp;Merchandise&nbsp;&nbsp;&nbsp;&nbsp;Advertising&nbsp;&nbsp;&nbsp;&nbsp;.
-<BR><i>First found: </i>31 Dec 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=28128&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.foxnews.com:80/national/013100/cities_side.sml">List of Best Cities</A>&nbsp;
-<SMALL>
-(Fox News)
-</SMALL>
-<BR><SMALL>49% </SMALL> All rights reserved. All rights reserved.
-<BR><i>First found: </i>31 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=411&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.spokane.net:80/news-story-body.asp?Date=012900&ID=s737592&cat=">Spokane.net - Milestones</A>&nbsp;
-<SMALL>
-(Spokesman Review/Spokane.net)
-</SMALL>
-<BR><SMALL>49% </SMALL> What are your thoughts on. Your comment: Your Email Address:.
-<BR><i>First found: </i>29 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=14022&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.nando.net:80/24hour/adn/nation/story/0,1972,500161227-500202623-500914811-1,00.html">How the largest U.S. cities scored</A>&nbsp;
-<SMALL>
-(Anchorage Daily News)
-</SMALL>
-<BR><SMALL>49% </SMALL> B+. B-.
-<BR><i>First found: </i>31 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=2094&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<center>
-<table border=0 cellpadding=3 cellspacing=0 width=100%><tr>
-<td align=center bgcolor=ffffcc>
-<font face="helvetica" size=-1><b>
-<font color=CC0000>Free</font> Internet Services from Excite: <A href=/relocate/co=xxsr_fwintserv3_isp;http://freeworld.excite.com/>Free ISP</A> | <A href=/relocate/co=xxsr_fwintserv3_email;http://inbox.excite.com/>Free Email</A> | <A href=/relocate/co=xxsr_fwintserv3_vmail;http://inbox.excite.com/>Free Voicemail</A>
-</b></font>
-</td></tr></table></center><p>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://news.excite.com:80/news/r/000127/18/energy-bpamoco">FTC abruptly postpones BP Amoco vote, talks with BP</A>&nbsp;
-<SMALL>
-(Reuters)
-</SMALL>
-<BR><SMALL>48% </SMALL>&nbsp;. &nbsp;&nbsp;&nbsp; &nbsp;.
-<BR><i>First found: </i>31 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=3208&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://news.excite.com:80/news/ap/000126/11/fuel-costs-list">List of States Receiving Energy Aid</A>&nbsp;
-<SMALL>
-(Associated Press)
-</SMALL>
-<BR><SMALL>48% </SMALL>&nbsp;. &nbsp;&nbsp; Books for Health & Happiness in 2000&nbsp;&nbsp; &nbsp;&nbsp;.
-<BR><i>First found: </i>27 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=21836&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.pcworld.com:80/pcwtoday/article/0,1510,15013,00.html">PC World News: Net Voting Leaves Alaskans Cold</A>&nbsp;
-<SMALL>
-(PC World)
-</SMALL>
-<BR><SMALL>48% </SMALL> Letters to PC World Online Corrections. Free Advertising-Join PC World Clicks!
-<BR><i>First found: </i>30 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=10956&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://starbulletin.com:80/2000/01/25/sports/kwon.html">Honolulu Star-Bulletin Sports</A>&nbsp;
-<SMALL>
-(Honolulu Star-Bulletin)
-</SMALL>
-<BR><SMALL>48% </SMALL> Exemption has come. That has compounded the scheduling problems for UH.
-<BR><i>First found: </i>26 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=24591&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://detnews.com:80/2000/sports/0001/30/01300175.htm">Rookie Scott Gomez leading Devils' run - 1/30/00</A>&nbsp;
-<SMALL>
-(Detroit News, The)
-</SMALL>
-<BR><SMALL>48% </SMALL> News Talk. Sports Talk.
-<BR><i>First found: </i>31 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=7538&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www2.nando.net:80/noframes/story/0,2107,500161227-500202623-500914811-1,00.html">How the largest U.S. cities scored</A>&nbsp;
-<SMALL>
-(Nando Times)
-</SMALL>
-<BR><SMALL>48% </SMALL> B+. B-.
-<BR><i>First found: </i>31 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=1107&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.bestfares.com:80/travel_center/desks/public/200001/10058350L.asp">InsideFlyerReaders Choose Best Frequent Flyer/Frequent Guest Progra...</A>&nbsp;
-<SMALL>
-(Best Fares Magazine)
-</SMALL>
-<BR><SMALL>48% </SMALL> Best Award Redemption Airline: Southwest Rapid Rewards Hotel: Starwood Preferred Guest. Best Customer Service Airline: Southwest Rapid Rewards Hotel: Starwood Preferred Guest.
-<BR><i>First found: </i>29 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=14839&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.wcco.com:80/news/stories/news-20000131-140740.html">Channel 4000 - Best-Run Cities</A>&nbsp;
-<SMALL>
-(Channel 4000)
-</SMALL>
-<BR><SMALL>48% </SMALL> Digital Daily. The Digital Daily.
-<BR><i>First found: </i>31 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=166&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.bestfares.com:80/travel_center/desks/public/200001/10058498L.asp">Continental Pulls $20 RT Hidden Fuel Charge On Southwest Airline Rou...</A>&nbsp;
-<SMALL>
-(Best Fares Magazine)
-</SMALL>
-<BR><SMALL>48% </SMALL> Date: 1/30/00. Last Travel Date: 1/30/00.
-<BR><i>First found: </i>30 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=10024&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.bestfares.com:80/travel_center/desks/public/200001/10058496L.asp">All Major Airlines Except TWA Have Rescinded $20 Fuel Surcharge On S...</A>&nbsp;
-<SMALL>
-(Best Fares Magazine)
-</SMALL>
-<BR><SMALL>47% </SMALL> Date: 1/30/00. Last Travel Date: 1/30/00.
-<BR><i>First found: </i>30 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=10022&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.bestfares.com:80/travel_center/desks/public/200001/10058453L.asp">GolfBagShipping.com Offers A Shipping Service For Golf Enthusiasts</A>&nbsp;
-<SMALL>
-(Best Fares Magazine)
-</SMALL>
-<BR><SMALL>47% </SMALL>GolfBagShipping.com Offers A Shipping Service For Golf Enthusiasts. To begin shipping, call GBS to obtain a travel package that contains a special container and all necessary shipping documents.
-<BR><i>First found: </i>30 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=12372&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.usatoday.com:80/usatonline/20000131/1893287s.htm">HOCKEY</A>&nbsp;
-<SMALL>
-(USA Today)
-</SMALL>
-<BR><SMALL>47% </SMALL>&nbsp; &nbsp; &nbsp; &nbsp; Search. &nbsp;
-<BR><i>First found: </i>31 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=2774&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.washingtonpost.com:80/wp-srv/WPlate/2000-01/30/036l-013000-idx.html">Cruise Contacts</A>&nbsp;
-<SMALL>
-(Washington Post)
-</SMALL>
-<BR><SMALL>47% </SMALL> Sunday Travel. Travel.
-<BR><i>First found: </i>30 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=12487&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://news.excite.com:80/news/r/000128/08/energy-bp">BP FTC talks: snowstorm or smokescreen?</A>&nbsp;
-<SMALL>
-(Reuters)
-</SMALL>
-<BR><SMALL>46% </SMALL>&nbsp;. &nbsp;&nbsp;&nbsp; &nbsp;.
-<BR><i>First found: </i>31 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=3083&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://news.excite.com:80/news/ap/000128/16/bp-amoco">BP Amoco Merger Bid Under Review</A>&nbsp;
-<SMALL>
-(Associated Press)
-</SMALL>
-<BR><SMALL>46% </SMALL>&nbsp;. &nbsp;&nbsp;&nbsp; &nbsp;.
-<BR><i>First found: </i>31 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=8104&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www7.mercurycenter.com:80/premium/nation/docs/list31.htm">HOW THEY SCORED (1/31/2000)</A>&nbsp;
-<SMALL>
-(San Jose Mercury News)
-</SMALL>
-<BR><SMALL>46% </SMALL> Mercury News Page 1A. Published Monday, January 31, 2000, in the San Jose Mercury News.
-<BR><i>First found: </i>31 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=3668&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.sltrib.com:80/2000/jan/01302000/sports/22009.htm">The Salt Lake Tribune -- Salt Lake's Cook Earns World Title</A>&nbsp;
-<SMALL>
-(Salt Lake Tribune)
-</SMALL>
-<BR><SMALL>46% </SMALL> &nbsp;&nbsp;&nbsp;. &nbsp;&nbsp;&nbsp; --.
-<BR><i>First found: </i>30 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=11297&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.washingtonpost.com:80/wp-srv/WPlate/2000-01/30/032l-013000-idx.html">Take These Cruises. Please.</A>&nbsp;
-<SMALL>
-(Washington Post)
-</SMALL>
-<BR><SMALL>45% </SMALL> 29-March 25, $1,535). 11 and 25, $2,980).
-<BR><i>First found: </i>30 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=12486&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.thisislondon.co.uk:80/dynamic/lifestyle/review.html?in_review_id=251592&in_review_text_id=199350">Lifestyle</A>&nbsp;
-<SMALL>
-(London Evening Standard/This is London)
-</SMALL>
-<BR><SMALL>45% </SMALL> Buy this book online from Amazon.co.uk. Buy this book online from Amazon.co.uk.
-<BR><i>First found: </i>31 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=3540&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.bestfares.com:80/travel_center/desks/public/200001/10058211L.asp">Fly To London Plus Another City In Europe Cheaper Than London!</A>&nbsp;
-<SMALL>
-(Best Fares Magazine)
-</SMALL>
-<BR><SMALL>45% </SMALL> Fly To London Plus Another City In Europe Cheaper Than London! Now through January 31, 2000, you can fly to select cities in Europe for cheaper than airfare to London.
-<BR><i>First found: </i>28 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=16675&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.latimes.com:80/class/realestate/todayshome/20000129/t000009127.html">LA Times Real Estate: Do It Yourself</A>&nbsp;
-<SMALL>
-(Los Angeles Times)
-</SMALL>
-<BR><SMALL>44% </SMALL> &nbsp; &nbsp;. &nbsp;&nbsp;&nbsp; &nbsp;.
-<BR><i>First found: </i>29 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=13383&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.sltrib.com:80/2000/jan/01302000/travel/21089.htm">The Salt Lake Tribune -- Workers Restoring Versailles After Freakish...</A>&nbsp;
-<SMALL>
-(Salt Lake Tribune)
-</SMALL>
-<BR><SMALL>44% </SMALL> &nbsp;&nbsp;&nbsp; 10. &nbsp;&nbsp;&nbsp; 10.
-<BR><i>First found: </i>31 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=4510&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.seattlep-i.com:80/national/natn278.shtml">News from around the nation </A>&nbsp;
-<SMALL>
-(Seattle Post-Intelligencer)
-</SMALL>
-<BR><SMALL>44% </SMALL>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;HOME &nbsp;NORTHWEST &nbsp;SPORTS &nbsp;BUSINESS &nbsp;NATION/WORLD &nbsp;&nbsp;&nbsp;Sci-Tech &nbsp;&nbsp;&nbsp;WTO &nbsp;&nbsp;&nbsp;U.S. Wire &nbsp;&nbsp;&nbsp;World Wire &nbsp;ART & LIFE &nbsp;COMICS & GAMES &nbsp;OPINION &nbsp;COLUMNISTS &nbsp;GETAWAYS &nbsp;NEIGHBORS &nbsp;CLASSIFIEDS.
-<BR><i>First found: </i>27 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=21323&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.austin360.com:80/news/1metro/2000/01/31austin2.html">Austin gets 'A-' on management report card -- 01/31/00</A>&nbsp;
-<SMALL>
-(Austin American-Statesman/Austin 360)
-</SMALL>
-<BR><SMALL>44% </SMALL>. Search 1,000,000 of the. Web Search.
-<BR><i>First found: </i>31 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=336&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.spokane.net:80/news-story-body.asp?Date=013000&ID=s736706&cat=">Spokane.net - When cruise ships change bases, jump on board</A>&nbsp;
-<SMALL>
-(Spokesman Review/Spokane.net)
-</SMALL>
-<BR><SMALL>44% </SMALL> Other reasons for considering a repositioning cruise are: One-of-a-kind itineraries. What are your thoughts on.
-<BR><i>First found: </i>30 Jan 2000 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=13002&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P>
-</font>
-<FORM ACTION="/search.gw" METHOD=GET>
-<INPUT TYPE=hidden NAME=c VALUE=timely>
-<INPUT TYPE=hidden NAME=s VALUE="Alaska">
-<INPUT TYPE=hidden NAME=showSummary VALUE=true>
-<INPUT TYPE=hidden NAME=start VALUE=0>
-<INPUT TYPE=hidden NAME=perPage VALUE=50>
-<font face="helvetica" size=-1>
-<INPUT TYPE=submit NAME=next VALUE="Next Results">
-</font>
-</FORM>
-<p>
-<center>
-<!-- The following html is Copyright 1997 by MatchLogic Inc. -->
-<!-- RICH=0 -->
-<IFRAME WIDTH=468 HEIGHT=60 NORESIZE SCROLLING=No FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 SRC="http://ad.preferences.com/iframe;spacedesc=FreeWallpaper3_Excite_468x60_RunOfSite_Any&ML_SSPKG=RunOfSiteSS&ML_CUSTOM=0&time=2000.01.31.21.10.33&ex_cookie=&ML_TARGET=_top&ML_REDIRECT=http%25253A%25252F%25252Fwww.excite.com%25252Frelocate%25252Fad%25253DLUCI%25257Cpk%25253D3809909%25253B">
-<SCRIPT
-SRC="http://ad.preferences.com/jscript;spacedesc=FreeWallpaper3_Excite_468x60_RunOfSite_Any&ML_SSPKG=RunOfSiteSS&ML_CUSTOM=0&ML_NIF=Y&ML_KW=Alaska&time=2000.01.31.21.10.33&ex_cookie=&ML_TARGET=_top&ML_REDIRECT=http%25253A%25252F%25252Fwww.excite.com%25252Frelocate%25252Fad%25253DLUCI%25257Cpk%25253D3809909%25253B">
+<SCRIPT LANGUAGE="JavaScript">
+function relatedSearchBotPop() {
+var queryZ = escape(document.botbox.s.value).replace(/\+/g, "%2B");
+var collection;
+for (var i=0; i < 5; i++) {
+if (document.botbox.c[i].checked) {
+collection = document.botbox.c[i].value;
+}
+}
+var url = "http://search.excite.com/search.gw?c=" + collection;
+var query = queryZ.replace(/((%20)+-[\w]+)|((%20)*NOT%20[\w]+)/g, "");
+query = query.replace(/^-[\w]+/, "");
+url = url + "&mode=related_search&s=" + query + "&zoomQ=" + queryZ;
+url = url + "&lk=";
+var w = window.open(url, "relatedSearch_daughter", "resizable,scrollbar=0,height=385,width=343");
+w.focus();
+document.botbox.submit();
+}
 </SCRIPT>
-<NOSCRIPT>
-<A HREF="http://www.excite.com/relocate/ad=118339_htmlad.gif|pk=3809909;http://ad.preferences.com/click;spacedesc=FreeWallpaper3_Excite_468x60_RunOfSite_Any&ML_NIF=Y&time=2000.01.31.21.10.33&ex_cookie=" TARGET=_top>
-<IMG SRC="http://ad.preferences.com/image;spacedesc=FreeWallpaper3_Excite_468x60_RunOfSite_Any&ML_NIF=Y&time=2000.01.31.21.10.33&ex_cookie="></A>
-</NOSCRIPT>
-</IFRAME><CENTER><FONT SIZE=-1 COLOR=#0000FF FACE=arial, geneva><B>1,000s of FREE Desktop Images</B></FONT></CENTER>
-<!-- The above html is Copyright 1997 by MatchLogic Inc. -->
-<small><br></small>
-<TABLE border=0 cellpadding=1 cellspacing=0 width=600>
-<TR><TD bgcolor=#cccccc>
-<FORM NAME=botbox ACTION=/search.gw>
-<TABLE border=0 cellspacing=0 cellpadding=4 width=600 bgcolor=ffffff>
-<TR>
-<TD align=right bgcolor=ffffff>
-<b><font face="helvetica" size=-1>You searched for </font></b>
-<input size=30 name=search value="Alaska">
-</td>
-<td>
-<font face="helvetica" size=-1>
-<input type=submit value="Search Again">
-</font>
-</td>
-<TD nowrap>
-<font face="helvetica" size=-1>
-<b><a href=/relocate/co=help;http://www.excite.com/Info/>
-Help</a>&nbsp;&nbsp;<br>
-<a href=http://www.excite.com/search_forms/advanced/>
-More Search</a>
-</b></font>
-</TD>
-</TR>
-</TABLE>
-<TABLE border=0 cellspacing=0 cellpadding=4 width=600 bgcolor=ffffff>
-<TR>
-<td align=right colspan=1>
-<font face="helvetica" size=-1>
+<table border=0 cellpadding=2 cellspacing=0 width=760>
+<tr><td><form name=botbox>
 <b>Search:</b>
-</font>
-</td>
-<td align=left colspan=3>
-<font face="helvetica" size=-1>&nbsp;&nbsp;
-<input type=radio name=c value=hourly ><img src=http://www.excite.com/mesp/images/excite/lep.gif> Newswires&nbsp;&nbsp;
-<input type=radio name=c value=hourly.photo ><img src=http://www.excite.com/mesp/images/excite/lep.gif> News Photos&nbsp;&nbsp;
-<input type=radio name=c value=timely checked>Web News&nbsp;&nbsp;
-<input type=radio name=c value=hourtime >All	</font>
-</td>
-</tr>
+<input type=radio name=c value="web">Web Sites
+<input type=radio name=c value="timely" checked>News
+<input type=radio name=c value="products">Products
+<input type=radio name=c value="spider.mial">Photos
+<input type=radio name=c value="audio.mp3">MP3/Audio
+<input type=radio name=c value="video">Video
+<br><input type=text size=40 name=s value="Alaska">
+<input type=submit value="Search">
+<input type=button value="Zoom In" onClick="relatedSearchBotPop();" onMouseOver="window.status=('Find suggestions to help improve your search');return true" onMouseOut="window.status=('');return true">
+<br><span class=size8>
+<a href=/r/co=xsr_searchhome;http://www.excite.com/search>Search Home</a> |
+<a href=/r/co=xsr_adv_web;http://www.excite.com/search/advanced>Advanced Web Search</a>
+| <a href=/r/co=xsr_rslt_voyeur;http://www.excite.com/search/voyeur>Voyeur!</a>
+| <a href=/r/co=xsr_rslt_submit;http://www.excite.com/info/add_url>Submit A Site</a>
+</span></form>
+</td></tr>
 </table>
-</td></tr></table>
-<input type=hidden name=showSummary value=true>
-</form>
+<br>
+<table border=0 cellpadding=7 cellspacing=1 width=760>
+<tr><td align=center bgcolor=#F9EFDB>
+<font face=geneva,arial size=-1><b>See Car Photos &amp; Prices: <A HREF=http://www.excite.com/r/co=np_xsr_bot_nbaut_frd;http://autoinfo.excite.com/cgi-cls/searchnew.exe?partner=xc-ac-xau&path=Auto~Research~CarResearch~resultsn&category_id=carresearch&make_str=Ford&min_year=2000&>Ford</A> | <A HREF=http://www.excite.com/r/co=np_xsr_bot_nbaut_chv;http://autoinfo.excite.com/cgi-cls/searchnew.exe?partner=xc-ac-xau&path=Auto~Research~CarResearch~resultsn&category_id=carresearch&make_str=Chevrolet&min_year=2000&>Chevy</A> | <A HREF=http://www.excite.com/r/co=np_xsr_bot_nbaut_hon;http://autoinfo.excite.com/cgi-cls/searchnew.exe?partner=xc-ac-xau&path=Auto~Research~CarResearch~resultsn&category_id=carresearch&make_str=Honda&min_year=2000&>Honda</A> | <A HREF=http://www.excite.com/r/co=np_xsr_bot_nbaut_toy;http://autoinfo.excite.com/cgi-cls/searchnew.exe?partner=xc-ac-xau&path=Auto~Research~CarResearch~resultsn&category_id=carresearch&make_str=Toyota&min_year=2000&>Toyota</A> | <A HREF=http://www.excite.com/r/co=np_xsr_bot_nbaut_vw;http://autoinfo.excite.com/cgi-cls/searchnew.exe?partner=xc-ac-xau&path=Auto~Research~CarResearch~resultsn&category_id=carresearch&make_str=Volkswagen&min_year=2000&>VW</A> | <A HREF=http://www.excite.com/r/co=np_xsr_bot_nbaut_lex;http://autoinfo.excite.com/cgi-cls/searchnew.exe?partner=xc-ac-xau&path=Auto~Research~CarResearch~resultsn&category_id=carresearch&make_str=Lexus&min_year=2000&>Lexus</A> | <A HREF=http://www.excite.com/r/co=np_xsr_bot_nbaut_more;http://www.excite.com/autos/>More</A></b></font>
+</td></tr>
+</table>
 <p>
-<font face="helvetica" size=-1>
-<nobr><b>More Search Services:</b>&nbsp;
-<A HREF=http://www.excite.com/search_forms/advanced?lang=en&c_type=c_country&c_country=web>Advanced Search</A>&nbsp;
-<A HREF=http://www.excite.com/search_forms/news>News Search</A>&nbsp;
-<A HREF=http://www.excite.com/search_forms/audio_video_search/>Audio/Video Search</A>&nbsp;
-<A HREF=http://www.excite.com/voyeur_xt>Search Voyeur</A>&nbsp;
-<A HREF=http://www.excite.com/comments/>Feedback</A></nobr><p>
-<nobr><b>Services:</b>&nbsp;
-<A HREF=http://www.excite.com/info/advertising/>Advertise on Excite</A>&nbsp; <A HREF=/relocate/co=xsr_botnav_deskradio;http://www.excite.com/assist/html/download>Free Desktop Radio</A>&nbsp;
-<A HREF=/relocate/co=xsr_botnav_classifieds;http://classifieds2000.com/cgi-cls/display.exe?partner=excite&path=class&template=none&>Classifieds</A>&nbsp;
-<A HREF=/relocate/co=yp_xsr_results;http://yellowpages.excite.com>Yellow Pages</A>&nbsp;
-<A HREF=http://www.excite.com/reference/>More...</A></nobr><p>
-</font>
-<font size=-2>
-Copyright 1995-2000 Excite Inc. &nbsp; Powered by <A HREF="http://www.sun.com">Sun Microsystems</A> &nbsp;
-<A HREF=http://www.excite.com/info/disclaimer/>Disclaimer</A>
-</font>
-</center>
-<IMG SRC="http://ad.preferences.com/ping.ng;spacedesc=TCExciteData_Excite_1x1_RunOfSite_Any&event=KeywordResults&time=2000.01.31.16.10.33" HEIGHT=1 WIDTH=1 BORDER=0>
+<!-- Footer -->
+<table border=0 cellpadding=0 cellspacing=0 width=760>
+<tr><td bgcolor=#CCCCCC><table border=0 cellpadding=0 cellspacing=0><tr><td></td></tr></table></td></tr>
+<tr><td height=30><span class=size8>&copy;2001 At Home Corporation. All rights reserved. Excite, @Home, Turn You On and the Excite and @Home logos are service marks or registered service marks of At Home in the U.S. and other countries. <a href=http://www.excite.com/info/disclaimer class=uhf>Disclaimer</a> <font color=cccccc>|</font> <a href=http://www.excite.com/privacy_policy class=uhf>Privacy&nbsp;Policy</a></span></td></tr>
+<tr><td bgcolor=#000000 align=center height=17>
+<span class=size8>
+<a href=http://www.excite.com/info/add_url class=uhf><font color=FFFFFF>Submit a Site</font></a> <font color=999999>|</font>
+<a href=http://www.excite.com/info/advertising class=uhf><font color=FFFFFF>Advertise on Excite</font></a> <font color=999999>|</font>
+<a href=http://corp.excite.com/jobs/ class=uhf><font color=FFFFFF>Jobs@Excite</font></a> <font color=999999>|</font>
+<a href=http://corp.excite.com/News/ class=uhf><font color=FFFFFF>Press Releases</font></a> <font color=999999>|</font>
+<a href=http://www.excite.com/u?fx class=uhf><font color=FFFFFF>Investor Relations</font></a> <font color=999999>|</font>
+<a href=http://www.excite.com/info class=uhf><font color=FFFFFF>General Excite Help</font></a>
+</span>
+</td></tr>
+</table>
+<img src=http://ad.preferences.com/ping;spacedesc=TCExciteData_Excite_1x1_RunOfSite_Any&event=KeywordResults&time=2001.03.28.11.58.33 height=1 width=1 border=0>
 </body>
 </html>

@@ -1,5 +1,5 @@
 # This -*- perl -*- script writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.12 2000/05/01 13:58:13 mthurn Exp $
+# $Id: Makefile.PL,v 1.12 2000/05/01 13:58:13 mthurn Exp mthurn $
 
 require 5.004;
 
@@ -9,7 +9,7 @@ require 5.004;
 # option.  This is for those that don't want to mess with the configuration
 # section of this file.
 use Getopt::Std;
-$opt_n = undef;   # avoid -w typo warning?
+my $opt_n;
 unless (getopts("n")) { die "Usage: $0 [-n]\n"; }
 @programs_to_install = () if $opt_n;
 
@@ -34,7 +34,6 @@ WriteMakefile(
                              },
               'EXE_FILES' => [ @programs_to_install ],
               'clean' => { FILES => join(' ', @programs_to_install) },
-              'dist' => { COMPRESS => 'gzip -fv9', SUFFIX => 'gz' },
              );
 
 sub MY::postamble

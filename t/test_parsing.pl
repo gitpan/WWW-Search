@@ -2,11 +2,11 @@
 
 # test.pl
 # Copyright (C) 1997 by USC/ISI
-# $Id: test_parsing.pl,v 1.39 2000/04/12 13:56:53 mthurn Exp $
+# $Id: test_parsing.pl,v 1.39 2000/04/12 13:56:53 mthurn Exp mthurn $
 #
 # Copyright (c) 1997 University of Southern California.
-# All rights reserved.                                            
-#                                                                
+# All rights reserved.
+#
 # Redistribution and use in source and binary forms are permitted
 # provided that the above copyright notice and this paragraph are
 # duplicated in all such forms and that any documentation, advertising
@@ -15,12 +15,12 @@
 # Southern California, Information Sciences Institute.  The name of the
 # University may not be used to endorse or promote products derived from
 # this software without specific prior written permission.
-# 
+#
 # THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
 # WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
 # MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
-sub usage 
+sub usage
   {
   print STDERR <<END;
 usage: $0 [-dIXuv] [-e SearchEngine]
@@ -75,46 +75,46 @@ $oTest->{verbose} = $verbose;
 
 exit 0;
 
-sub test_cases 
+sub test_cases
   {
   my ($o, $query, $sSE, $sM, $file);
   my $bogus_query = $WWW::Search::Test::bogus_query;
 
   $sSE = 'AltaVista';
   $sM = 'John Heidemann <johnh@isi.edu>';
-  
+
   $file = 'zero_result_no_plus';
   $oTest->test($sSE, $sM, $file, $bogus_query, $TEST_EXACTLY);
-  
+
   $file = 'zero_result';
   $query = '+LSAM +' . $bogus_query;
   $oTest->test($sSE, $sM, $file, $query, $TEST_EXACTLY);
-  
+
   $file = 'one_page_result';
   $query = '+LS'.'AM +Aut'.'oSearch';
   $oTest->test($sSE, $sM, $file, $query, $TEST_RANGE, 2, 10);
-  
+
   $file = 'two_page_result';
   $query = '+LS'.'AM +IS'.'I +Heide'.'mann';
   $oTest->test($sSE, $sM, $file, $query, $TEST_GREATER_THAN, 10);
-  
+
   ######################################################################
 
   $sSE = 'AltaVista::Web';
   $sM = 'John Heidemann <johnh@isi.edu>';
-  
+
   $file = 'zero_result';
   $query = '+LSA'.'M +' . $bogus_query;
   $oTest->test($sSE, $sM, $file, $query, $TEST_EXACTLY);
-  
+
   $file = 'one_page_result';
   $query = '+LSA'.'M +AutoSea'.'rch';
   $oTest->test($sSE, $sM, $file, $query, $TEST_RANGE, 2, 10);
-  
+
   $file = 'two_page_result';
   $query = '+LSA'.'M +IS'.'I +I'.'B';
   $oTest->test($sSE, $sM, $file, $query, $TEST_GREATER_THAN, 10);
-  
+
   ######################################################################
 
   $sSE = 'AltaVista::AdvancedWeb';
@@ -126,7 +126,7 @@ sub test_cases
   # $oTest->test($sSE, $sM, 'one', $query, $TEST_RANGE, 2, 11);
   # $query = 'LSA'.'M and IS'.'I and I'.'B';
   # $oTest->test($sSE, $sM, 'two', $query, $TEST_GREATER_THAN, 10);
-  
+
   ######################################################################
 
   $sSE = 'AltaVista::News';
@@ -136,7 +136,7 @@ sub test_cases
   # $oTest->test($sSE, $sM, 'zero', $query, $TEST_EXACTLY);
   # $query = '+Pe'.'rl +CP'.'AN';
   # $oTest->test($sSE, $sM, 'multi', $query, $TEST_GREATER_THAN, 30); # 30 hits/page
-  
+
   ######################################################################
 
   $sSE = 'AltaVista::AdvancedNews';
@@ -146,7 +146,7 @@ sub test_cases
   # $oTest->test($sSE, $sM, 'zero', $query, $TEST_EXACTLY);
   # $query = 'Per'.'l and CP'.'AN';
   # $oTest->test($sSE, $sM, 'multi', $query, $TEST_GREATER_THAN, 70); # 30 hits/page
-  
+
   ######################################################################
 
   $oTest->eval_test('AltaVista::Intranet');
@@ -160,7 +160,7 @@ sub test_cases
   # # 10 hits/page
   # $query = 'Fra'.'nkfurter Al'.'lgemeine Sonnt'.'agszeitung Rech'.'erche';
   # $oTest->test($sSE, $sM, 'two', $query, $TEST_GREATER_THAN, 10);
-  
+
   ######################################################################
 
   $oTest->eval_test('Excite::News');
@@ -173,11 +173,11 @@ sub test_cases
   # &test($sSE, $sM, 'zero', $bogus_query, $TEST_EXACTLY);
   # $query = 'bur'.'undi';
   # &test($sSE, $sM, 'one', $query, $TEST_RANGE, 2, 99);
-  
+
   ######################################################################
 
   $oTest->eval_test('Fireball');
-  
+
   ######################################################################
 
   $sSE = 'FolioViews';
@@ -185,42 +185,27 @@ sub test_cases
   $oTest->test($sSE, $sM, 'zero', $bogus_query, $TEST_EXACTLY);
   $query = 'bur'.'undi';
   $oTest->test($sSE, $sM, 'one', $query, $TEST_RANGE, 2, 400);
-  
+
   ######################################################################
 
-  $oTest->eval_test('Google');
-  
   $oTest->no_test('Gopher', 'Paul Lindner <paul.lindner@itu.int>');
 
-  $oTest->eval_test('GoTo');
-  
+  $oTest->no_test('HeadHunter');
+
   $oTest->eval_test('HotFiles');
-  
-  $oTest->eval_test('Infoseek::Companies');
-  $oTest->eval_test('Infoseek::Email');
-  $oTest->eval_test('Infoseek::News');
-  $oTest->eval_test('Infoseek::Web');
 
   $oTest->no_test('Livelink', 'Paul Lindner <paul.lindner@itu.int>');
 
-  $oTest->eval_test('LookSmart');
-  # use WWW::Search::LookSmart;
-  # $oTest->no_test('LookSmart', $WWW::Search::LookSmart::MAINTAINER);
-
-  $oTest->eval_test('Lycos');
-  
-  $oTest->eval_test('Magellan');
-  
   $oTest->eval_test('MetaCrawler', 'Jim Smyser <jsmyser@bigfoot.com>');
-  
+
   ######################################################################
 
   $sSE = 'Metapedia';
   $sM = 'Jim Smyser <jsmyser@bigfoot.com>';
-  
+
   $file = 'zero';
   $oTest->test($sSE, $sM, $file, $bogus_query, $TEST_EXACTLY);
-  
+
   ######################################################################
 
   $sSE = 'MSIndexServer';
@@ -229,23 +214,17 @@ sub test_cases
   # $oTest->test($sSE, $sM, 'zero', $bogus_query, $TEST_EXACTLY);
   # $query = 'bur'.'undi';
   # $oTest->test($sSE, $sM, 'one', $query, $TEST_RANGE, 2, 99);
-  
+
   ######################################################################
 
   $oTest->eval_test('NetFind');
 
-  $oTest->eval_test('NorthernLight');
-  
   ######################################################################
 
   $sSE = 'Null';
   $sM = 'Paul Lindner <paul.lindner@itu.int>';
   $oTest->test($sSE, $sM, 'zero', $bogus_query, $TEST_EXACTLY);
-  
-  ######################################################################
 
-  $oTest->eval_test('OpenDirectory');
-  
   ######################################################################
 
   $sSE = 'PLweb';
@@ -254,7 +233,7 @@ sub test_cases
   # $oTest->test($sSE, $sM, 'zero', $bogus_query, $TEST_EXACTLY);
   # $query = 'bur'.'undi';
   # $oTest->test($sSE, $sM, 'one', $query, $TEST_RANGE, 2, 99);
-  
+
   ######################################################################
 
   $sSE = 'Search97';
@@ -265,7 +244,7 @@ sub test_cases
   # $file = 'one';
   # $query = 'bur'.'undi';
   # $oTest->test($sSE, $sM, $file, $query, $TEST_RANGE, 2, 99);
-  
+
   ######################################################################
 
   $sSE = 'SFgate';
@@ -273,29 +252,26 @@ sub test_cases
   $oTest->test($sSE, $sM, 'zero', $bogus_query, $TEST_EXACTLY);
   $query = 'bur'.'undi';
   $oTest->test($sSE, $sM, 'one', $query, $TEST_RANGE, 2, 99);
-  
+
   ######################################################################
 
   $oTest->no_test('Simple', 'Paul Lindner <paul.lindner@itu.int>');
 
-  $oTest->eval_test('Snap');
-  
   $oTest->no_test('Verity', 'Paul Lindner <paul.lindner@itu.int>');
 
+  $oTest->no_test('VoilaFr');
+
   $oTest->eval_test('WebCrawler');
-  
-  $oTest->eval_test('ZDNet');
 
   } # test_cases
-  
 
-sub main 
+
+sub main
   {
   # print "\nVERSION INFO:\n  ";
   # my ($cmd) = &web_search_bin . " --VERSION";
   # print `$cmd`;
-  
-  if ($update_saved_files) 
+  if ($update_saved_files)
     {
     print "\nUPDATING.\n\n";
     $oTest->mode($MODE_UPDATE);
@@ -303,41 +279,41 @@ sub main
     # Can not do update AND test:
     return;
     } # if
-  
-  if ($do_internal) 
+
+  if ($do_internal)
     {
     print "\nTESTING INTERNAL PARSING.\n  (Errors here should be reported to the WWW::Search maintainer.)\n\n";
     $oTest->reset_error_count;
     $oTest->mode($MODE_INTERNAL);
     &test_cases();
     print "\n";
-    if ($oTest->{error_count} <= 0) 
+    if ($oTest->{error_count} <= 0)
       {
       print "All ", $oTest->mode, " tests have passed.\n\n";
       }
-    else 
+    else
       {
       print "Some ", $oTest->mode, " tests failed.  Please check the README file before reporting errors (sometimes back-ends have known failures).\n";
       }
     } # if $do_internal
-    
-  if ($do_external) 
+
+  if ($do_external)
     {
     print "\n\nTESTING EXTERNAL QUERIES.\n  (Errors here suggest search-engine reformatting and should be\n  reported to the maintainer of the back-end for the search engine.)\n\n";
     $oTest->reset_error_count;
     $oTest->mode($MODE_EXTERNAL);
     &test_cases();
     print "\n";
-    if ($oTest->{error_count} <= 0) 
+    if ($oTest->{error_count} <= 0)
       {
       print "All ", $oTest->mode, " tests have passed.\n\n";
       }
-    else 
+    else
       {
       print "Some ", $oTest->mode, " tests failed.  Please check the README file before reporting errors (sometimes back-ends have known failures).\n";
       }
     } # if $do_external
-  
+
   } # main
 
 =head2 TO DO

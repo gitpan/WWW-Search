@@ -1,53 +1,54 @@
+<html><head><title>AltaVista: Text Search Results</title><style type="text/css"><!--body,p,div,span,th,td{font-family:arial,sans-serif;font-size:12px}a:active{color:red}a:hover{color:#09c}--></style></head><body>
 
-<html><head>
-<title>AltaVista: Results - Text Search</title>
-</head><body><basefont size=3>
-<h3><a href="/cgi-bin/query?text&pg=q&what=web">AltaVista Search</a></h3>
+<form action="/cgi-bin/query" name=mfrm><input type=hidden name=sc value=on><input type=hidden name=hl value=on>
 
-<form action="/cgi-bin/query" name=mfrm>
+<font size=5><b><a href="/cgi-bin/query?text&pg=q&what=web">AltaVista Search</a></b></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-<b>Ask AltaVista a question.</b>&nbsp;&nbsp;Or enter a few words in
-<SELECT NAME=kl><OPTION VALUE=XX SELECTED>any language <OPTION VALUE=en>English<OPTION VALUE=zh>Chinese<OPTION VALUE=cs>Czech<OPTION VALUE=da>Danish<OPTION VALUE=nl>Dutch<OPTION VALUE=et>Estonian<OPTION VALUE=fi>Finnish<OPTION VALUE=fr>French<OPTION VALUE=de>German<OPTION VALUE=el>Greek<OPTION VALUE=he>Hebrew<OPTION VALUE=hu>Hungarian<OPTION VALUE=is>Icelandic<OPTION VALUE=it>Italian<OPTION VALUE=ja>Japanese<OPTION VALUE=ko>Korean<OPTION VALUE=lv>Latvian<OPTION VALUE=lt>Lithuanian<OPTION VALUE=no>Norwegian<OPTION VALUE=pl>Polish<OPTION VALUE=pt>Portuguese<OPTION VALUE=ro>Romanian<OPTION VALUE=ru>Russian<OPTION VALUE=es>Spanish<OPTION VALUE=sv>Swedish</SELECT>
-<INPUT TYPE=hidden NAME=pg VALUE=q><INPUT TYPE=hidden NAME=text VALUE=yes><p><input type=text name=q size=50 maxlength=800 value="+LSAM +Bogus16882NoSuchWord944167744">&nbsp;<INPUT TYPE=submit name=search VALUE="Search"><br>
-
-</form>
+<A
+HREF="http://ad.doubleclick.net/jump/avfilteredsearchresults.com/results;sz=468x60;kw=%2BLSAM+%2BBogus447NoSuchWord985809469;ord=1443465877?"><IMG
+SRC="http://ad.doubleclick.net/ad/filteredsearchresults.com/results;sz=468x60;kw=%2BLSAM+%2BBogus447NoSuchWord985809469;ord=1443465877?"
+border=0></A>
 
 
-<p>Search - <a href="/cgi-bin/query?pg=aq&what=web&enc=iso88591&text=yes">Advanced Text Search</a>
 
-<p>AltaVista found no document matching your query. 
-<p>
-    
-
-    
-
-    
-
-    <font size=-2>word count: LSAM: 1765<BR>Ignored:    Bogus16882NoSuchWord944167744:<b>0</b><BR></font><P>
-
-
-<p>
 
 <br>
-[<a href="/cgi-bin/query">Graphic Version</a>]
-<p>
-<a href="http://doc.altavista.com/company_info/about_av/background.shtml">About AltaVista</a> | 
-<a href="http://doc.altavista.com/help/search/whats_new.shtml">Help</a> | 
-<a href="http://doc.altavista.com/help/contact/contact_us.shtml">Contact Us</a> | 
-<a href="http://www.doubleclick.net/advertisers/altavista/">Advertise With Us</a><br>
-<a href="http://doc.altavista.com/business_solutions/bus_solutions.shtml">Business Solutions</a> | 
-<a href="http://doc.altavista.com/company_info/jobs/jobs.shtml">Job Openings</a> | 
-<a href="http://doc.altavista.com/company_info/press/press_welcome.shtml">Press Room</a> | 
-<a href="http://doc.altavista.com/legal/privacy.shtml">Privacy</a> | 
-<a href="http://doc.altavista.com/legal/termsofuse.shtml">Legal</a> | 
-<a href="http://www.cmgi.com/">A CMGI Company</a><br>
-<a href="http://www.shopping.com/">Shopping</a> | 
-<a href="http://money.av.com/">Money</a> | 
-<a href="http://news.av.com/">News</a> | 
-<a href="http://sports.av.com/">Sports</a> | 
-<a href="http://search.thetrip.com/">Travel</a> | 
-<a href="http://careers.av.com/">Careers</a> | 
-<a href="http://www.intelihealth.com/IH/ihtAV?r=WSALT002">Health</a> | 
-<a href="http://www.wildweb.com/av/">Entertainment</a>
+<hr align=left size=1 width="85%" noshade>
 
-</BODY></HTML>
+<b>Search for:</b><br>
+<input type=text name=q size=50 maxlength=800 value="+LSAM +Bogus447NoSuchWord985809469">&nbsp;<SELECT NAME=kl><OPTION VALUE=XX SELECTED>any language <OPTION VALUE=en>English<OPTION VALUE=zh>Chinese<OPTION VALUE=cs>Czech<OPTION VALUE=da>Danish<OPTION VALUE=nl>Dutch<OPTION VALUE=et>Estonian<OPTION VALUE=fi>Finnish<OPTION VALUE=fr>French<OPTION VALUE=de>German<OPTION VALUE=el>Greek<OPTION VALUE=he>Hebrew<OPTION VALUE=hu>Hungarian<OPTION VALUE=is>Icelandic<OPTION VALUE=it>Italian<OPTION VALUE=ja>Japanese<OPTION VALUE=ko>Korean<OPTION VALUE=lv>Latvian<OPTION VALUE=lt>Lithuanian<OPTION VALUE=no>Norwegian<OPTION VALUE=pl>Polish<OPTION VALUE=pt>Portuguese<OPTION VALUE=ro>Romanian<OPTION VALUE=ru>Russian<OPTION VALUE=es>Spanish<OPTION VALUE=sv>Swedish</SELECT>
+<INPUT TYPE=hidden NAME=pg VALUE=q><INPUT TYPE=hidden NAME=Translate VALUE=on><INPUT TYPE=hidden NAME=text VALUE=yes>&nbsp;<INPUT TYPE=submit name=search VALUE="Search">
+</form><br>
+
+<font size=3>
+Search - <a href="/cgi-bin/query?pg=aq&text=yes">Advanced Text Search</a>
+</font>
+
+<p>AltaVista found no document matching your query. 
+<br>word count: LSAM: 1802<BR>Ignored:    Bogus447NoSuchWord985809469:<b>0</b><BR>
+<dl><dt><b>Have you tried these resources:</b><br>
+<dd>Comparison shop for <a href="http://jump.altavista.com/rlweb_shp.go??fmt=d&pg=q&text=yes&what=web&q=%2BLSAM+%2BBogus447NoSuchWord985809469&stype=ptext&wt=b"><b>+LSAM +Bogus447NoSuchWord985...</b></a>
+<br>Find <a href="http://jump.altavista.com/rlweb_ylp.go"><b>Yellow Page</b></a> information on +LSAM +Bogus447NoSuchWord985...at WorldPages
+
+<br>Narrow your search on <b><a href="http://jump.altavista.com/rlweb_lks.go?http://www.looksmart.com/r?iaci&comefrom=alta-search&key=LSAM+Bogus447NoSuchWord985809469&search=0">+LSAM +Bogus447NoSuchWord985...</a></b> with LookSmart Categories</dl>
+
+
+<p>
+<br>
+[<a href="http://www.altavista.com/cgi-bin/query?pg=q&sc=on&hl=on&q=+LSAM +Bogus447NoSuchWord985809469">Graphic Version</a>]
+<br>
+<a href="/r?L25">About AltaVista</a> |
+<a href="/r?L30">Terms Of Use</a> |
+<a href="/r?F38"><b>Privacy Policy</b></a> |
+<a href="/r?F37">Help</a> |
+<a href="/r?L26">Contact Us</a> |
+<a href="/r?L33">Text Only</a><br>
+<a href="/r?L32">Submit A Site</a> |
+<a href="/r?L27">Advertise With Us</a> |
+<a href="/r?L34">Jobs</a> |
+<a href="/r?F42">List Your Products</a> |
+<a href="/r?L31">A CMGI Company</a><br><br>
+&copy; 2001 AltaVista Company.
+AltaVista&reg; is a registered trademark, and the AltaVista logo is a trademark of <a
+href="/r?F36"><b>AltaVista Company</b></a>.
+</body></html>

@@ -1,489 +1,384 @@
 <html>
 <head>
-<title>Fireball Express Suche</title>
-<meta NAME="description" CONTENT="Mit Fireball können mehr als 8 Mio. deutschsprachige Dokumente und ein umfangreicher Webkatalog durchsucht werden.">
-<meta NAME="keywords" CONTENT="Suchmaschine, Recherche, Katalog, Webkatalog, suchen, recherchieren, finden">
-<style><!--a:hover {color:#000000; }--></style>
+<title>Fireball Express Suchergebnis</title>
+<meta NAME="description" CONTENT="Mit Fireball k&ouml;nnen mehr als 8 Mio. deutschsprachige Dokumente und ein umfangreicher Webkatalog durchsucht werden.">
+<meta NAME="keywords" CONTENT="suchmaschine, recherche, katalog, webkatalog, suchen, recherchieren, finden">
+<link rel="STYLESHEET" type="text/css" href="http://www.fireball.de/style.css">
+<script language="JavaScript"><!--
+function fbQuery() {
+  return "iRover";
+}
+function fbQuery_s() {
+  return "iRover";
+}
+function fbQuery_ebay() {
+  return "%28iRover%29";
+}
+// -->
+</script>
 </head>
-<body link="#CC0000" vlink="#600000" bgcolor="#FFFFFF">
+<body bgcolor="#FFFFFF" text="#000000" link="#000000" vlink="#666666" alink="#CC0000">
 <center>
-<map name="navmap">
-<area shape="rect" coords="3,0,122,19" href="express.html" alt="Express Suche">
-<area shape="rect" coords="3,19,122,36" href="express_hilfe.html" alt="Hilfe zur Express Suche">
-<area shape="rect" coords="119,0,226,19" href="detail.html" alt="Detail Suche">
-<area shape="rect" coords="227,0,313,19" href="http://rubriken.fireball.de" alt="Rubriken">
-<area shape="rect" coords="314,0,409,19" href="http://www.fireball.de/voyeur-fireball.fcg?action=voyeur-queries" alt="Live Suche">
-<area shape="rect" coords="410,0,462,19" href="info.html" alt="Info und Tools">
+<div id="headernavi" align="center">
+<map name="map"> 
+<area shape="rect" coords="42,0,95,27" href="http://www.fireball.de/" alt="FIREBALL Home" title="FIREBALL Home"> 
+<area shape="rect" coords="98,0,162,26" href="http://www.fireball.de/news.html" alt="FIREBALL News" title="FIREBALL News"> 
+<area shape="rect" coords="163,0,245,26" href="http://wissen.fireball.de/" alt="FIREBALL Wissen" title="FIREBALL Wissen">
+<area shape="rect" coords="247,0,355,26" href="http://shopping.fireball.de/fb/" alt="FIREBALL Shopping" title="FIREBALL Shopping"> 
+<area shape="rect" coords="358,1,430,26" href="http://zlash.fireball.de/" alt="Zlash" title="Zlash"> 
 </map>
-<table cellspacing="0" cellpadding="0" border="0" align="center">
+<!-- header Anfang --> 
+<form method="GET" action="http://suche.fireball.de/fcgi/query.fcg" name="">
+<input type="hidden" name="action" value="query">
+<input type="hidden" name="pg" value="express">
+<table cellspacing="0" width="700" cellpadding="0" border="0">
 <tr> 
-<td bgcolor="#CC0000"> 
-<table width="23" border="0" cellspacing="0" cellpadding="2">
+<td width="8" valign="bottom"><img src="http://bilder.fireball.de/bilder/1_rot.gif" width="8" height="8" alt="" border="0"></td>
+<td colspan="2"><img src="http://bilder.fireball.de/bilder/header_web_k.gif" width=570 height=26 alt="" border="0" usemap="#map"></td>
+<td rowspan="4" width="11" valign="bottom"><img src="http://bilder.fireball.de/bilder/1_rot.gif" width=8 height=50 alt="" border="0"></td>
+<td rowspan="4" width="11"><img src="http://bilder.fireball.de/bilder/1.gif" width="15" height="1"></td>
+<td rowspan="4" width="11" valign="bottom"><a href="http://srv2.bannercommunity.de:80/tagclick.cgi?tag=fb1882"><img border=0 width=100 height=120 alt=Click src="http://srv2.bannercommunity.de:80/tagsearch.cgi?tag=fb1882&engine=fireball&suchworte=iRover"></a><img src="http://count.fireball.de/cgi-bin/vdz/1u1/express_hits_standard?q=iRover" width="1" height="1"></td>
+</tr>
 <tr> 
+<td rowspan="2" width="8" valign="top"><img src="http://bilder.fireball.de/bilder/1_rot.gif" width="8" height="94" alt="" border="0"></td>
+<td bgcolor="#FFCC00" height="19" align="left" colspan="2">
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#CC0000"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<a href="http://www.fireball.de/">EXPRESS SUCHE</a>&nbsp;&gt;&nbsp;SUCHERGEBNISSE</b></font></td>
+<td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#CC0000"><b><a href="http://www.fireball.de/express_hilfe.html">HILFE</a>&nbsp;&nbsp;&nbsp;</b></font></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr> 
+<td bgcolor="#FFFFCC" colspan="2"> 
+<table border="0" cellpadding="3" cellspacing="0" width="100%">
+<tr valign="bottom"> 
+<td width="25" nowrap>&nbsp;</td>
+<td nowrap valign="bottom"> 
+<input type="text" name="q" value="iRover" size=28>
+</td>
+<td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+<input type="submit" value="suchen" name="submit">
+</font></td>
+<td><font face="Arial, Helvetica, sans-serif" size="2"><b> <a href="http://www.fireball.de/express_hilfe.html"><font size="1"> 
+</font></a></b></font></td>
+<td rowspan="2"><a href="http://www.fireball.de"><img src="http://bilder.fireball.de/bilder/logo03.gif" width="186" height="46" alt="FIREBALL Homepage" border="0" vspace="15" hspace="10"></a></td>
+</tr>
+<tr> 
+<td width="25"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+</font></td>
+<td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+<select name="what">
+<option value="german_web" SELECTED>deutsch 
+<option value="web" >allen Sprachen (AltaVista) 
+<option value="da" >d&auml;nisch (AltaVista) 
+<option value="en" >englisch (AltaVista) 
+<option value="et" >estnisch (AltaVista) 
+<option value="fi" >finnisch (AltaVista) 
+<option value="fr" >franz&ouml;sisch (AltaVista) 
+<option value="nl" >holl&auml;ndisch (AltaVista) 
+<option value="is" >isl&auml;ndisch (AltaVista) 
+<option value="it" >italienisch (AltaVista) 
+<option value="lv" >lettisch (AltaVista) 
+<option value="lt" >lithauisch (AltaVista) 
+<option value="no" >norwegisch (AltaVista) 
+<option value="pl" >polnisch (AltaVista) 
+<option value="pt" >portugiesisch (AltaVista) 
+<option value="ro" >rum&auml;nisch (AltaVista) 
+<option value="sv" >schwedisch (AltaVista) 
+<option value="es" >spanisch (AltaVista) 
+<option value="cs" >tschechisch (AltaVista) 
+<option value="hu" >ungarisch (AltaVista) 
+</select>
+</font></td>
+<td align="center"><font face="Arial, Helvetica, sans-serif" size="1"><b><a href="http://www.fireball.de/express_hilfe.html">Suchtipps</a></b></font></td>
 <td>&nbsp;</td>
 </tr>
 </table>
 </td>
-<td bgcolor="#FFFFCC"> 
-<table border="0" cellpadding="0" cellspacing="0">
-<tr> 
-<td colspan="2"><img src="http://bilder.fireball.de/bilder/navbar_e.gif" width="462" height="37" border="0" usemap="#navmap"> 
-</td>
 </tr>
 <tr> 
-<td colspan="2" bgcolor="#FFFFFF"> 
-<table border="0" cellpadding="2" cellspacing="0" width="100%">
-<tr> 
-<td colspan="8" bgcolor="#FFFFCC"> 
-<form method="GET" action="/query-fireball.fcg">
-<input type="HIDDEN" name="action" value="query">
-<input name="pg" type="HIDDEN" value="express">
-<table border="0" cellpadding="3" cellspacing="0" width="100%">
-<tr> 
-<td align="right"><b><font face="arial,helvetica" size="1">Nach: 
-</font></b></td>
-<td align="left" colspan="3"> 
-<input type="text" name="q" value="iRover" size=30>
-&nbsp; 
-<input type="submit" value="suchen" name="submit">
-</td>
-</tr>
-<tr> 
-<td align="right" width="54"><b><font face="arial,helvetica" size="1">Sprache: 
-</font></b></td>
-<td align="left" colspan="2"> 
-<select name="what">
-<option value="german_web" SELECTED>deutsch 
-<option value="web" >allen 
-Sprachen (AltaVista) 
-<option value="da" >d&auml;nisch 
-(AltaVista) 
-<option value="en" >englisch 
-(AltaVista) 
-<option value="et" >estnisch 
-(AltaVista) 
-<option value="fi" >finnisch 
-(AltaVista) 
-<option value="fr" >franz&ouml;sisch 
-(AltaVista) 
-<option value="nl" >holl&auml;ndisch 
-(AltaVista) 
-<option value="is" >isl&auml;ndisch 
-(AltaVista) 
-<option value="it" >italienisch 
-(AltaVista) 
-<option value="lv" >lettisch 
-(AltaVista) 
-<option value="lt" >lithauisch 
-(AltaVista) 
-<option value="no" >norwegisch 
-(AltaVista) 
-<option value="pl" >polnisch 
-(AltaVista) 
-<option value="pt" >portugiesisch 
-(AltaVista) 
-<option value="ro" >rum&auml;nisch 
-(AltaVista) 
-<option value="sv" >schwedisch 
-(AltaVista) 
-<option value="es" >spanisch 
-(AltaVista) 
-<option value="cs" >tschechisch 
-(AltaVista) 
-<option value="hu" >ungarisch 
-(AltaVista) 
-</select>
-</td>
-<td rowspan="2" bgcolor="#FFFFCC"><img src="http://bilder.fireball.de/bilder/logo03.gif" alt="Fireball Logo" width="186" height="46"></td>
-</tr>
-<tr> 
-<td align="right" width="54"><b><font face="arial,helvetica" size="1">Anzeige: 
-</font></b></td>
-<td align="left"> 
-<select name="fmt">
-<option value="d" SELECTED>detail 
-<option value="." >standard 
-<option value="c" >kompakt 
-</select>
-</td>
-<td align="center"><b><font face="arial,helvetica" size="1"><a href="express_hilfe_kurz.html">Tips:</a> 
-</font></b></td>
+<td colspan="3" align="right"><img src="http://bilder.fireball.de/bilder/1_rot.gif" width=140 height=8 alt="" border="0"></td>
 </tr>
 </table>
 </form>
-</td>
+</div>
+<!-- Header Ende --> 
+<!-- Werbung --> 
+<table border="0" cellpadding="1" cellspacing="0" align="center">
+<tr> 
+<td align=center>&nbsp;</td>
+<td align=center width=10><font face="Arial, Helvetica" 
+size=2><b><img src="http://bilder.fireball.de/bilder/anzeige.gif" width="12" height="51"></b></font></td>
+<!-- werbung mittlere zelle --> 
+<td nowrap colspan="3"> <A TARGET="_top" HREF="http://www.fireball.de/fcgi/af.fcg?MIval=zi_redir&mr=&DT=20010328.215839.126&URL=31533&WP=1025&PLZ=23713&BG=26279&NM=fireball%2Dzlash%2Deltern%2D468%2D091100&SNM=468x60&MIqry2pass=on&channel=fireball"><IMG SRC="http://badservant.guj.de/cgi-object/webdriver/LO/00000001a6b7c8d9000000070000000a00002132383085c0000000000001d3ab00000000000000000000000000000000000000000000000000000000000000000000000000000000/MItypeObj/image/gif" WIDTH=468 HEIGHT=60 BORDER=0 ALT="Hier klicken!"></A><IMG SRC="http://werbung.fireball.de/cgi-bin/ziAdCount?WP=1025&KN=0&BG=26279&PLZ=23713&NM=fireball%2Dzlash%2Deltern%2D468%2D091100&SNM=468x60" WIDTH=1 HEIGHT=1>
+<IMG SRC="/cgi-bin/vdz/CP/fcgi/query.fcg" WIDTH=1 HEIGHT=1></td>
+<td align=center><img src="http://bilder.fireball.de/bilder/1.gif" width="10" height="1"></td>
+<!-- <td align=right><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><a href="link.html">Hier 
+steht eine Textanzeige: Strumpfhalter in aktuellen Sommerfarben bei www.strumpfhalter.de</a> </font></td> -->
 </tr>
 </table>
-</td>
-</tr>
-</table></td>
-<td><img src="http://bilder.fireball.de/bilder/verschiedenes/anzeige.gif" width=16 height=52 alt="Anzeige" border="0"></td>
-<td><a href="http://srv1.bannercommunity.de:8484/tagclick.cgi?tag=fb19926"><img border=0 width=100 height=120 alt=Click src="http://srv1.bannercommunity.de:8484/tagsearch.cgi?tag=fb19926&engine=fireball&suchworte=iRover"></a></td>
-</tr>
-</table>
-<!--- werbung --->
 <br>
-<table border="0" cellpadding="0" cellspacing="0" align="center">
-<tr>
-<td><img src="http://bilder.fireball.de/bilder/verschiedenes/anzeige.gif" width=16 height=52 alt="Anzeige" border="0"></td>
-<td><A TARGET="_new" HREF="http://www.fireball.de/af.fcg?MIval=zi_redir&mr=&URL=16965&WP=1025&PLZ=12100&BG=13886&NM=TCH%2Dgewinn%2Dkaribik%2D468%2D031299&SNM=468x60&MIqry2pass=on&channel=fireball"><IMG SRC="http://badservant.guj.de/cgi-object/webdriver/LO/00000001a6b7c8d90000000700000009000000a638306ac3000000000001d3ab00000000000000000000000000000000000000000000000000000000000000000000000000000000/MItypeObj/image/gif" WIDTH=468 HEIGHT=60 BORDER=0 ALT="www.travelchannel.de"></A><IMG SRC="http://werbung.fireball.de/cgi-bin/ziAdCount?WP=1025&KN=0&BG=13886&PLZ=12100&NM=TCH%2Dgewinn%2Dkaribik%2D468%2D031299&SNM=468x60" WIDTH=1 HEIGHT=1>
-<IMG SRC="/cgi-bin/vdz/CP/query-fireball-multi.fcg" WIDTH=1 HEIGHT=1>
-</td>
+<!-- Werbung Ende --> 
+<div id="result" align="center"> 
+<!--  reiter start -->
+<table width="700" cellspacing="0" cellpadding="0" border="0" align="center">
+<tr> 
+<td bgcolor="#CC0000"><img src="http://bilder.fireball.de/bilder/1.gif" width="1" height="1" alt="" border="0"></td>
+<td colspan="12"><img src="http://bilder.fireball.de/bilder/1.gif" width="1" height="1" alt="" border="0"></td>
+</tr>
+<tr> 
+<td align="center" class="express" nowrap><font size="1" face="Verdana,Arial,Helvetica" color="#FFFFFF"><b class="nav">Express Suche</b></font></td>
+<td align="center"><img src="http://bilder.fireball.de/bilder/1.gif" width="2" height="1" alt="" border="0"></td>
+<td class="profi" nowrap align="center"><font size="1" face="Verdana,Arial,Helvetica,sans-serif" color="#FFFFFF"> 
+<a href="http://suche.fireball.de/fcgi/query.fcg?q=&amp;qe=iRover&amp;pg=detail&amp;action=query&amp;r=&amp;what=german_web"><b class="nav">Profi Suche</b></a></font></td>
+<td align="center"><img src="http://bilder.fireball.de/bilder/1.gif" width="2" height="1" alt="" border="0"></td>
+<td class="katalog" nowrap align="center"><font size="1" face="Verdana,Arial,Helvetica,sans-serif" color="#FFFFFF"> 
+<A HREF="http://katalog.fireball.de/fcgi/query-firehoo.fcg?action=query&pg=express&fmt=.&q=iRover&scope=Alle" class="nav"><b class="nav">Katalog Suche</b></a></font></td>
+<td align="center"><img src="http://bilder.fireball.de/bilder/1.gif" width="2" height="1" alt="" border="0"></td>
+<td class="news" align="center"><font size="1" color="#FFFFFF" face="Verdana,Arial,Helvetica,sans-serif"> 
+<A HREF="http://paperball.fireball.de/service/fbpb-all.fcg?action=query&pg=detail&r=&fmt=.&q=iRover" class="nav"><b class="nav">News</b></a></font></td>
+<td><img src="http://bilder.fireball.de/bilder/1.gif" width="2" height="1" alt="" border="0"></td>
+<td class="wissen" align="center"><font size="1" color="#FFFFFF" face="Verdana,Arial,Helvetica,sans-serif"><a href="http://wissen.fireball.de/redirect-search_i.jsp?q=iRover&hq=&sf=1" class="nav"><b class="nav">Wissen</b></a> 
+</font></td> 
+<td><img src="http://bilder.fireball.de/bilder/1.gif" width="2" height="1" alt="" border="0"></td>
+<td class="shopping" align="center"><font size="1" color="#FFFFFF" face="Verdana,Arial,Helvetica,sans-serif"> 
+<a href="http://shopping.fireball.de/fb/search/query?q=iRover&Search=Produktsuche&cat=0&pid=0&rcat=0&pl=&ph=&pc=d"><b class="nav">Shopping</b></a></font></td>
+<td><img src="http://bilder.fireball.de/bilder/1.gif" width="2" height="1" alt="" border="0"></td>
+<td width="190"><img src="http://bilder.fireball.de/bilder/1.gif" width="8" height="2" alt="" border="0"></td>
+</tr>
+<tr> 
+<!-- td colspan="1"><img src="http://bilder.fireball.de/bilder/1.gif" width="1" height="1" alt="" border="0"></td -->
+<td bgcolor="#CC0000"><img src="http://bilder.fireball.de/bilder/1.gif" width="1" height="1" alt="" border="0"></td>
+<td colspan="12"><img src="http://bilder.fireball.de/bilder/1.gif" width="1" height="1" alt="" border="0"></td>
+</tr>
+<tr bgcolor="#CC0000">
+<td colspan="13"><img src="http://bilder.fireball.de/bilder/1.gif" width="6" height="8" alt="" border="0"></td>
 </tr>
 </table>
-<!--- werbung ende---> 
-<br><table width="605" border="0" cellpadding="0" cellspacing="0" align="center">
+<!-- reiter ende -->
+<table cellspacing="0" width="700" cellpadding="0" border="0">
 <tr> 
-<td valign="top">
-<table border="0" cellpadding="2" cellspacing="0" width="100%">
-<tr> 
-<td bgcolor="#FFCC00">&nbsp; </td>
-<td colspan="4" bgcolor="#FFCC00"><font size="2" face="Arial, Helvetica"><b>Rubrikensuche</b></font></td>
-<td bgcolor="#FFCC00">&nbsp; </td>
-</tr>
-<tr> 
-<td bgcolor="#FFCC00"> 
-<table width="21" border="0" cellspacing="0" cellpadding="2">
-<tr> 
-<td>&nbsp;</td>
-</tr>
-</table>
-</td>
-<td colspan="3" bgcolor="#CE0000"> 
-<table cellspacing="0" cellpadding="2">
-<tr> 
-<td> 
-<p><font color="#FFFFFF" size="1" face="Arial, Helvetica"><b>Weitere 
-Treffer in folgenden Rubriken:</b></font></p>
-</td>
-</tr>
-</table>
-</td>
-<td bgcolor="#FFFFCC" colspan="2">&nbsp;</td>
-</tr>
-<tr> 
-<td>&nbsp;</td>
-<td colspan="5" bgcolor="#F7FFD6"> 
-<table width="100%" border="0" cellspacing="0" cellpadding="2">
-<tr bgcolor="#FFFFCC"> 
-<td><tr><td></td></tr></td>
-</tr>
-</table>
-</td>
-</tr>
-</table>
-<!-- empfehlungen -->
-<table border="0" cellpadding="2" cellspacing="0">
-<tr> 
-<td bgcolor="#FFCC00">&nbsp; </td>
-<td colspan="5" bgcolor="#FFCC00"><font size="2" face="Arial, Helvetica"><b>Empfehlung</b></font></td>
-</tr>
-<tr> 
-<td bgcolor="#FFCC00"> 
-<table width="21" border="0" cellspacing="0" cellpadding="2">
-<tr> 
-<td>&nbsp;</td>
-</tr>
-</table>
-</td>
-<td bgcolor="#FFFFCC" valign="top" rowspan="5"> 
-<table width="100%" border="0" cellspacing="0" cellpadding="2">
-<tr> 
-<td><font face="Arial, Helvetica" size="1"><B>surveyor+mars</B> findet alle Dokumenten, in denen die Worte in dieser Reihenfolge vorkommen, <B>+surveyor +mars</B> (Leerzeichen zwischen den Worten) alle, in denen beide Worte vorkommen!</font></td>
-</tr>
-</table>
-</td>
-</tr>
-<tr> 
-<td>&nbsp;</td>
-</tr>
-</table>
-<!-- einkaufen -->
-<table border="0" cellpadding="2" cellspacing="0">
-<tr> 
-<td bgcolor="#FFCC00">&nbsp; </td>
-<td colspan="5" bgcolor="#FFCC00"><font size="2" face="Arial, Helvetica"><b>Einkaufen</b></font></td>
-</tr>
-<tr> 
-<td bgcolor="#FFCC00"> 
-<table width="21" border="0" cellspacing="0" cellpadding="2">
-<tr> 
-<td>&nbsp;</td>
-</tr>
-</table>
-</td>
-<td colspan="5" bgcolor="#FFFFCC" valign="top" rowspan="4"> 
-<table width="100%" border="0" cellspacing="0" cellpadding="2">
-<tr><!--BOL-->
-<td><font size="1" face="Arial, Helvetica"><a href="http://adservant.guj.de/cgi-object/webdriver?MIval=zi_redir&URL=17353&BG=9517&PLZ=7932&WP=1230&NM=bol-textlink-fireball-220499&SNM=468x60&MIqry2pass=on">Hier finden Sie Bücher zu Ihrer Suchanfrage</a><IMG SRC="http://werbung.fireball.de/cgi-bin/ziAdCount?WP=1230&KN=11&BG=9517&PLZ=7932&NM=bol-textlink-fireball-220499&SNM=468x60" WIDTH=1 HEIGHT=1></font></td>
-<td><A TARGET="_top" HREF="http://adservant.guj.de/cgi-object/webdriver?MIval=zi_redir&URL=16803&WP=1231&PLZ=7934&BG=9520&NM=Fireball-horror-68x29-291199&SNM=68x29&MIqry2pass=on"><IMG SRC="http://adservant.guj.de/cgi-object/webdriver/LO/00000001a6b7c8d900000007000000090000003538306a4d000000000001d3ab00000000000000000000000000000000000000000000000000000000000000000000000000000000/MItypeObj/image/gif" WIDTH=68 HEIGHT=29 BORDER=0 ALT=""></A><IMG SRC="http://werbung.fireball.de/cgi-bin/ziAdCount?WP=1231&KN=11&BG=9520&PLZ=7934&NM=Fireball-horror-68x29-291199&SNM=68x29" WIDTH=1 HEIGHT=1></td>
-</tr>
-<tr><!--CD4YOU-->
-<td><font size="1" face="Arial, Helvetica"><a href="http://adservant.guj.de/cgi-object/webdriver?MIval=zi_redir&URL=14119&BG=9518&PLZ=7933&WP=1234&NM=Primus-cd4you-textlink-fb-220499&SNM=468x60&MIqry2pass=on">CDs zu Ihrer Musikanfrage gibt es hier</a>
-<IMG SRC="http://werbung.fireball.de/cgi-bin/ziAdCount?WP=1234&KN=11&BG=9518&PLZ=7933&NM=Primus-cd4you-textlink-fb-220499&SNM=468x60" WIDTH=1 HEIGHT=1></font></td>
-<td><A TARGET="_top" HREF="http://adservant.guj.de/cgi-object/webdriver?MIval=zi_redir&URL=15877&WP=1235&PLZ=7940&BG=9527&NM=Primus-wahnsinn-FB-68x29-131099&SNM=68x29&MIqry2pass=on"><IMG SRC="http://adservant.guj.de/cgi-object/webdriver/LO/00000001a6b7c8d9000000070000000a00001b6b38306645000000000001d3ab00000000000000000000000000000000000000000000000000000000000000000000000000000000/MItypeObj/image/gif" WIDTH=68 HEIGHT=29 BORDER=0 ALT="CDs, Videos, DVDs zu Sonderpreisen!"></A><IMG SRC="http://werbung.fireball.de/cgi-bin/ziAdCount?WP=1235&KN=11&BG=9527&PLZ=7940&NM=Primus-wahnsinn-FB-68x29-131099&SNM=68x29" WIDTH=1 HEIGHT=1></td>
-</tr>
-<tr><!--TC-->
-<td><font size="1" face="Arial, Helvetica"><a href="http://www.travelchannel.de/buchen/index.html">Reisen online buchen</a></font></td>
-<td><a href="http://www.travelchannel.de/buchen/index.html"><img src="http://bilder.fireball.de/bilder/tc_schnaeppchen.gif" width="68" height="29" border="0" alt="klick und weg !"></a></td>
-</tr>
-<!--SHOP--><!--<tr>
-<td><font size="1" face="Arial, Helvetica"><a href="l"> </a><a href="http://shop.guj.de/">Fireball 
-Kollektion </a></font></td>
-<td><a href="http://shop.guj.de/"><img src="http://bilder.fireball.de/bilder/kollektion.gif" width="68" height="29" border="0"></a></td>
-</tr>-->
-<tr><!--ABO-->
-<td><font size="1" face="Arial, Helvetica"><a href="http://abo.fireball.de/cgi-bin/AboShop.storefront?SUCHE=iRover">Zeitschriftenabos 
-zu Ihrer Suche</a></font></td>
-<td><a href="http://abo.fireball.de/cgi-bin/AboShop.storefront?SUCHE=iRover"><img src="http://bilder.fireball.de/bilder/aboshop-button.gif" width="68" height="29" border="0"></a></td>
-</tr>
-</table>
-</td>
-</tr>
-<tr> 
-<td>&nbsp;</td>
-</tr>
-<tr> 
-<td>&nbsp;</td>
-</tr>
-<tr> 
-<td>&nbsp;</td>
-</tr>
-<tr> 
-<td>&nbsp;</td>
-<td colspan="5" bgcolor="#FFFFCC" valign="top">&nbsp;</td>
-</tr>
-</table>
-<table border="0" cellpadding="2" cellspacing="0" width="100%">
-<tr> 
-<td bgcolor="#21639C">&nbsp; </td>
-<td colspan="5" bgcolor="#21639C"><font size="2" face="Arial, Helvetica" color="#FFFFFF"><b>Paperball</b></font></td>
-</tr>
-<tr> 
-<td bgcolor="#21639C">&nbsp; </td>
-<td colspan="5" bgcolor="#FFCC00" valign="top"> 
-<p><font size="2" face="Arial, Helvetica"></font><font face="arial, helvetica" size="1">Stellen 
-Sie Ihre persönliche<br>
-Tageszeitung zusammen. <a href="http://www.paperball.de/">Jetzt!</a></font></p>
-</td>
-</tr>
-<tr> 
-<td> 
-<table width="21" border="0" cellspacing="0" cellpadding="2">
-<tr> 
-<td>&nbsp;</td>
-</tr>
-</table>
-</td>
-<td colspan="5" bgcolor="#FFFFCC" valign="top"> 
-<table border="0" cellpadding="3" cellspacing="0" width="100%">
-<tr> 
-<td colspan="2"><font size="2" face="Arial, Helvetica"><a href="http://www.paperball.de/service/paperball.fcg?action=query&amp;pg=detail&amp;r=&amp;fmt=.&amp;d0=&amp;d1=&amp;q=iRover&amp;papers=all&amp;categories=all"><b>Aktuelle 
-Zeitungsartikel zu Ihrer Suche.</b></a></font></td>
-</tr>
-</table>
-</td>
-</tr>
+<td bgcolor="#CC0000">&nbsp;</td>
+<td align="left" bgcolor="#FFFFCC" rowspan="2"> 
 
-</table>
-
-</td>
-<td><table width="21" border="0" cellspacing="0" cellpadding="2">
-<tr> 
-<td>&nbsp;</td>
-</tr>
-</table></td>
-<td valign="top"> 
-<table border="0" cellpadding="2" cellspacing="0" width="400">
-<tr> 
-<td bgcolor="#CC0000" width="25">&nbsp; </td>
-<td bgcolor="#CC0000"><font face="arial,helvetica" size="2" color="#FFFFFF"><b>Suchergebnis:</b></font></td>
-<td bgcolor="#CC0000">&nbsp; </td>
-<td bgcolor="#CC0000">&nbsp; </td>
-<td width="100">&nbsp; </td>
+<table width="692" border="0" cellspacing="0" cellpadding="3" align="center">
+<tr bgcolor="#FFCC00"> 
+<td width="6">&nbsp;</td>
+<td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><b>Klicken Sie auf die Reiter für Suchergebnisse zu <font color="#CC0000">iRover</font> aus weiteren Bereichen.</b></font></td>
 </tr>
 <tr> 
-<td bgcolor="#CC0000" width="25">&nbsp;</td>
-<td bgcolor="#FFCC00"><font face="Arial,Helvetica" size="1">&nbsp;Zu 
-viele Treffer? Suche <a href="detail.html">verfeinern?</a></font></td>
-<td bgcolor="#FFFFCC">&nbsp; </td>
-<td bgcolor="#FFFFCC">&nbsp; </td>
-<td bgcolor="#FFFFCC" width="100">&nbsp; </td>
+<td width="4"> </td>
+<td width="670"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"> 
+<FONT FACE="Verdana, Arial, Helvetica, sans-serif" SIZE=-1>Worth&auml;ufigkeiten: iRover: 15</FONT> </font></td>
 </tr>
 <tr> 
-<td bgcolor="#CC0000" width="25"> 
-<table width="21" border="0" cellspacing="0" cellpadding="2">
-<tr> 
-<td>&nbsp;</td>
-</tr>
-</table>
-</td>
-<td bgcolor="#FFFFCC" colspan="4" rowspan="2"> <font face="Arial,Helvetica" size="2"> 
-<!--- term statistics ---> <FONT FACE="Arial,Helvetica" SIZE=-1>Worth&auml;ufigkeiten: iRover: 7</FONT> <!--- end term statistics ---> 
-<br>
-<b><!--- hit count information --->&nbsp;Dokument 1-3 von 3 Treffern, beste Treffer zuerst. <!--- end hit count information ---> 
-</b></font> </td>
-</tr>
-<tr> 
-<td width="25">&nbsp; </td>
-</tr>
-<tr>
-<td width="25">&nbsp;</td>
-<td colspan="4">&nbsp;</td>
-</tr>
-</table>
-<!--- Teil 2 -- Ergebnisausgabe ---> 
-<table BORDER="0" CELLPADDING="2" CELLSPACING="0" WIDTH="400">
-<!--- realnames anfang ----> <!--- cover RNS-block 
- 
-<tr> 
-<td WIDTH="25"></td>
-<td></td>
-</tr>
-<tr> 
-<td valign="top" WIDTH="25" bgcolor="#FFCC00">&nbsp;</td>
-<td bgcolor="#FFFFCC">&nbsp;<font face="Arial,Helvetica" size=2">Weitere Treffer in der RealNames-Datenbank zu&nbsp;<b></b>.</font></td>
-</tr>
-<tr> 
-<td valign="top" WIDTH="25">&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
- end cover RNS-block ---> 
- <!--- realnames ende ---> <!--- hits ---> <TR><td valign="top" WIDTH="25" bgcolor="#CC0000"><img SRC="bilder/verschiedenes/1.gif" BORDER="0" width="25" height="1">&nbsp;</td><td bgcolor="#FFFFCC"><b><a HREF="http://www.zdplanet.de/download/library/deBCK-wf.htm"><font FACE="Arial,Helvetica" SIZE="2">iRover
-</font></a></b></td></tr><tr><td valign="top" WIDTH="25"><img src="bilder/verschiedenes/1.gif" width="21" height="1"></td><td><font FACE="Arial,Helvetica" SIZE="2">Tip des Tages Top-Hits Jason's weekly Roulette Neue Downloads Software z.  Heft Index A-Z Themen  Click Here!   iRover  Mehrere Suchmaschinen gleichzeitig abfragen  Version: 1.7.5 (englisch)  Betriebssystem: Win95/98/NT  Systemvoraussetzungen: Brows<br></font><font FACE="Arial,Helvetica" SIZE="1"><a HREF="http://www.zdplanet.de/download/library/deBCK-wf.htm">http://www.zdplanet.de/download/library/deBCK-wf.htm</a><BR><i>Gr&ouml;&szlig;e unbekannt - 20.11.1999  - <I>Autor:</I> unknown</i><br><a href="/query-fireball.fcg?action=query&pg=express&fmt=d&r=&q=%2BiRover+%2Bsite%3Awww%2Ezdplanet%2Ede&stq=1&d0=&d1=&what=german_web&dmn=alle">Nur Seiten von dieser Site zeigen</a>&nbsp;|&nbsp;<a href="/query-fireball.fcg?action=query&pg=express&fmt=d&r=&q=%2BiRover+%2Dsite%3Awww%2Ezdplanet%2Ede&stq=1&d0=&d1=&what=german_web&dmn=alle">Keine Seiten von dieser Site zeigen</a><br><br></font></td></tr>
-
-<TR><td valign="top" WIDTH="25" bgcolor="#CC0000"><img SRC="bilder/verschiedenes/1.gif" BORDER="0" width="25" height="1">&nbsp;</td><td bgcolor="#FFFFCC"><b><a HREF="http://www.zdplanet.de/download/subjects/intit-wf.htm"><font FACE="Arial,Helvetica" SIZE="2">Anwendungen
-</font></a></b></td></tr><tr><td valign="top" WIDTH="25"><img src="bilder/verschiedenes/1.gif" width="21" height="1"></td><td><font FACE="Arial,Helvetica" SIZE="2">Tip des Tages Top-Hits Jason's weekly Roulette Neue Downloads Software z.  Heft Index A-Z Themen  Click Here!   Anwendungen AcqURL Version 2.4 für Win95/98/NT (Englisch): Transportable, universell  kompatible Bookmarklisten erstellen   Active Worlds<br></font><font FACE="Arial,Helvetica" SIZE="1"><a HREF="http://www.zdplanet.de/download/subjects/intit-wf.htm">http://www.zdplanet.de/download/subjects/intit-wf.htm</a><BR><i>Gr&ouml;&szlig;e unbekannt - 2.12.1999  - <I>Autor:</I> unknown</i><br><a href="/query-fireball.fcg?action=query&pg=express&fmt=d&r=&q=%2BiRover+%2Bsite%3Awww%2Ezdplanet%2Ede&stq=1&d0=&d1=&what=german_web&dmn=alle">Nur Seiten von dieser Site zeigen</a>&nbsp;|&nbsp;<a href="/query-fireball.fcg?action=query&pg=express&fmt=d&r=&q=%2BiRover+%2Dsite%3Awww%2Ezdplanet%2Ede&stq=1&d0=&d1=&what=german_web&dmn=alle">Keine Seiten von dieser Site zeigen</a><br><br></font></td></tr>
-
-<TR><td valign="top" WIDTH="25" bgcolor="#CC0000"><img SRC="bilder/verschiedenes/1.gif" BORDER="0" width="25" height="1">&nbsp;</td><td bgcolor="#FFFFCC"><b><a HREF="http://www.zdplanet.de/download/abisz/I-wc.html"><font FACE="Arial,Helvetica" SIZE="2">ZDNet Downloads: Index I
-</font></a></b></td></tr><tr><td valign="top" WIDTH="25"><img src="bilder/verschiedenes/1.gif" width="21" height="1"></td><td><font FACE="Arial,Helvetica" SIZE="2">ZDNet Downloads - Index der Bibliothek: I<br></font><font FACE="Arial,Helvetica" SIZE="1"><a HREF="http://www.zdplanet.de/download/abisz/I-wc.html">http://www.zdplanet.de/download/abisz/I-wc.html</a><BR><i>Gr&ouml;&szlig;e 8 K - 27.11.1999  - <I>Herausgeber:</I> ZDNet Deutschland - <I>Urheberrecht:</I> Ziff-Davis Verlag GmbH - <I>Thema:</I> Forschung Technik - <I>Zielgruppe:</I> Alle</i><br><a href="/query-fireball.fcg?action=query&pg=express&fmt=d&r=&q=%2BiRover+%2Bsite%3Awww%2Ezdplanet%2Ede&stq=1&d0=&d1=&what=german_web&dmn=alle">Nur Seiten von dieser Site zeigen</a>&nbsp;|&nbsp;<a href="/query-fireball.fcg?action=query&pg=express&fmt=d&r=&q=%2BiRover+%2Dsite%3Awww%2Ezdplanet%2Ede&stq=1&d0=&d1=&what=german_web&dmn=alle">Keine Seiten von dieser Site zeigen</a><br><br></font></td></tr>
-
- 
-<!--- end hits ---> 
-</table>
-<table border="0" cellpadding="0" cellspacing="0" width="400">
-<tr> 
-<td width="25"></td>
-<td colspan="4">&nbsp; </td>
-<td>&nbsp; </td>
-</tr>
-<tr> 
-<td width="25">&nbsp; </td>
-<td bgcolor="#FFFFCC" colspan="5" rowspan="2"> 
-<table border="0" width="471">
- 
-</table>
-</td>
-</tr>
-<tr> 
-<td width="25" bgcolor="#CC0000">
-<table width="21" border="0" cellspacing="0" cellpadding="2">
-<tr> 
-<td>&nbsp;</td>
-</tr>
-</table>
-&nbsp; </td>
-</tr>
-<tr> 
-<td width="25" bgcolor="#CC0000">&nbsp; </td>
-<td bgcolor="#FFCC00"><font face="arial,helvetica" size="2"><b>&nbsp;&nbsp;<a href="#top">Seitenanfang</a></b></font></td>
-<td bgcolor="#FFCC00"><font face="arial,helvetica" size="2"><b>&nbsp;</b></font></td>
-<td bgcolor="#FFCC00"><font face="arial,helvetica" size="2"><b> 
+<td width="4">&nbsp;</td>
+<td width="670"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><b>Dokument 1-4 von 4 Treffern, beste Treffer zuerst. 
 </b></font></td>
-<td bgcolor="#FFFFCC">&nbsp; </td>
-<td bgcolor="#FFFFCC">&nbsp; </td>
-</tr>
-<tr> 
-<td width="25" bgcolor="#CC0000">
-<table width="21" border="0" cellspacing="0" cellpadding="2">
-<tr> 
-<td>&nbsp;</td>
 </tr>
 </table>
 </td>
-<td bgcolor="#CC0000" colspan="3">&nbsp; </td>
-<td bgcolor="#CC0000">&nbsp; </td>
-<td>&nbsp; </td>
+</tr>
+<tr> 
+<td bgcolor="#CC0000" width="8">&nbsp;</td>
+</tr>
+<tr> 
+<td colspan="2"><img src="http://bilder.fireball.de/bilder/1.gif" width="8" height="8" alt="" border="0"></td>
 </tr>
 </table>
-<table border="0" cellpadding="2" cellspacing="0" align="right">
+
+<!-- buecher Anfang --------> 
+<table width="700" border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td>
-<table width="21" border="0" cellspacing="0" cellpadding="2">
+<td bgcolor="#FFCC00" width="4"><img src="http://bilder.fireball.de/bilder/1.gif" width="8" height="30" border="0"></td>
+<td width="8" bgcolor="#FFFFCC">&nbsp;</td>
+<td width="619" align="left" bgcolor="#FFFFCC"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;
+<script language="JavaScript" src="http://www.fireball.de/js/bol20010207.js"></script>
+<noscript>
+<a href="http://www.fireball.de/fcgi/af.fcg?MIval=zi_redir&mr=&DT=20010328.215839.187&URL=34714&BG=9517&PLZ=7932&WP=1230&NM=bol%2Drelated%5Fbooks%5Fmit%5Fdeeplink%2D20010207&SNM=468x60&MIqry2pass=on&channel=fireball">CDs,B&uuml;cher,Games,Video/DVD zu diesem Suchbegriff bei BOL!</a>
+</noscript>
+</font><IMG SRC="http://werbung.fireball.de/cgi-bin/ziAdCount?WP=1230&KN=0&BG=9517&PLZ=7932&NM=bol%2Drelated%5Fbooks%5Fmit%5Fdeeplink%2D20010207&SNM=468x60" WIDTH=1 HEIGHT=1>
+</td>
+<td width="69" bgcolor="#FFFFCC" nowrap valign="middle"><A TARGET="_top" HREF="http://www.fireball.de/fcgi/af.fcg?MIval=zi_redir&mr=&DT=20010328.215839.194&URL=34772&WP=1231&PLZ=21372&BG=23793&NM=feb2001%2Dbol%2Dschuhbeck%2D68%2D080201&SNM=68x29&MIqry2pass=on&channel=fireball"><IMG SRC="http://badservant.guj.de/cgi-object/webdriver/LO/00000001a6b7c8d90000000700000009000029773830a6f5000000000001d3ab00000000000000000000000000000000000000000000000000000000000000000000000000000000/MItypeObj/image/gif" WIDTH=68 HEIGHT=29 BORDER=0 ALT="BOL-My Entertainer!Klick!"></A><IMG SRC="http://werbung.fireball.de/cgi-bin/ziAdCount?WP=1231&KN=0&BG=23793&PLZ=21372&NM=feb2001%2Dbol%2Dschuhbeck%2D68%2D080201&SNM=68x29" WIDTH=1 HEIGHT=1>
+</td></tr>
+<tr>
+<td colspan="4"><img src="http://bilder.fireball.de/bilder/1.gif" width="8" height="5" alt="" border="0"></td>
+</tr>
+</table>
+<!-- buecher Ende ---------------------->
+<A TARGET="_top" HREF="http://www.fireball.de/fcgi/af.fcg?MIval=zi_redir&mr=&DT=20010328.215839.200&URL=0&WP=1835&PLZ=19154&BG=21387&NM=default%2D1x1&SNM=1x1&MIqry2pass=on&channel=fireball"><IMG SRC="http://badservant.guj.de/cgi-object/webdriver/LO/00000001a6b7c8d9000000070000000a00001e2c383080e0000000000001d3ab00000000000000000000000000000000000000000000000000000000000000000000000000000000/MItypeObj/image/gif" WIDTH=1 HEIGHT=1 BORDER=0 ALT=""></A><IMG SRC="http://werbung.fireball.de/cgi-bin/ziAdCount?WP=1835&KN=0&BG=21387&PLZ=19154&NM=default%2D1x1&SNM=1x1" WIDTH=1 HEIGHT=1>
+<table cellspacing="0" cellpadding="0" border="0" width="700" align="center">
+<tr> 
+<td bgcolor="#FFCC00"><img src="http://bilder.fireball.de/bilder/1.gif" width="8" height="8" alt="" border="0"></td>
+<td align="left" bgcolor="#FEFECE" width="2"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;</font></td>
+<td align="left" bgcolor="#FEFECE"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;
+<script language="JavaScript" src="http://www.fireball.de/js/ebay20010216.js"></script>
+<noscript>
+<a href="http://www.fireball.de/fcgi/af.fcg?MIval=zi_redir&mr=&DT=20010328.215839.203&URL=35035&BG=24100&PLZ=21640&WP=2061&NM=eBay%5Fdeeplink%5F20010216&SNM=468x60&MIqry2pass=on&channel=fireball">eBay Angebote zu diesem Thema</a>
+</noscript>
+</font></td>
+</tr>
+<tr> 
+<td></td>
+<td colspan="2"><img src="http://bilder.fireball.de/bilder/1.gif" width="617" height="1" alt="" border="0"></td>
+<td><a href="http://www.fireball.de/fcgi/af.fcg?MIval=zi_redir&mr=&DT=20010328.215839.203&URL=35036&BG=24100&PLZ=21640&WP=2061&NM=eBay%5Fdeeplink%5F20010216&SNM=468x60&MIqry2pass=on&channel=fireball"><img src="http://bilder.fireball.de/bilder/1.gif" width="1" height="1" alt="" border="0"></a><!-- &loc=http://search.ebay.de/search/search.dll%3f%26ebaycurr=4%26st=2%26srchdesc=y%26query= --></td>
+</tr>
+</table><IMG SRC="http://werbung.fireball.de/cgi-bin/ziAdCount?WP=2061&KN=0&BG=24100&PLZ=21640&NM=eBay%5Fdeeplink%5F20010216&SNM=468x60" WIDTH=1 HEIGHT=1>
+<A TARGET="_top" HREF="http://www.fireball.de/fcgi/af.fcg?MIval=zi_redir&mr=&DT=20010328.215839.208&URL=0&WP=2064&PLZ=21873&BG=24343&NM=default%2D1x1&SNM=1x1&MIqry2pass=on&channel=fireball"><IMG SRC="http://badservant.guj.de/cgi-object/webdriver/LO/00000001a6b7c8d9000000070000000a00001e2c383080e0000000000001d3ab00000000000000000000000000000000000000000000000000000000000000000000000000000000/MItypeObj/image/gif" WIDTH=1 HEIGHT=1 BORDER=0 ALT=""></A><IMG SRC="http://werbung.fireball.de/cgi-bin/ziAdCount?WP=2064&KN=0&BG=24343&PLZ=21873&NM=default%2D1x1&SNM=1x1" WIDTH=1 HEIGHT=1>
+
+<!--
+<table cellspacing="0" cellpadding="0" border="0" width="700" align="center">
+<tr>
+<td bgcolor="#FFCC00"><img src="http://bilder.fireball.de/bilder/1.gif" width="8" height="8" alt="" border="0"></td>
+<td align="left" bgcolor="#FFFFCC" width="2"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;</font></td>
+<td align="left" bgcolor="#FFFFCC"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;<A HREF="http://cgi.ebay.de/aw-cgi/eBayISAPI.dll?RedirectEnter&partner=20271&loc=http://search.ebay.de/search/search.dll%3Fshortcut=1%26query=iRover">Auktionen zum Thema <b>iRover</b> finden Sie bei <b>eBay.de</b></A><IMG SRC="http://werbung.fireball.de/cgi-bin/ziAdCount?WP=1822&KN=0&BG=20765&PLZ=18545&NM=Textlink%2Ddefault%2D110800&SNM=468x60" WIDTH=1 HEIGHT=1></font></td>
+</tr>
+<tr>
+<td></td>
+<td colspan="2"><img src="http://bilder.fireball.de/bilder/1.gif" width="617" height="5" alt="" border="0"></td>
+<td><img src="http://bilder.fireball.de/bilder/1.gif" width="1" height="5" alt="" border="0"></td>
+</tr>
+</table>
+-->
+
+<!--- cover RNS-block 
+
+<table cellspacing="0" cellpadding="0" border="0" width="700" align="center">
+<tr> 
+<td bgcolor="#FFCC00"><img src="http://bilder.fireball.de/bilder/1.gif" width="8" height="8" alt="" border="0"></td>
+<td align="left" bgcolor="#FFFFCC" width="4">&nbsp; </td>
+<td align="left" bgcolor="#FFFFCC"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">&nbsp;&nbsp;<font size="2">Klicken Sie hier f&uuml;r eine Liste von Internet Keywords zu&nbsp;<b></b>. 
+</font></font></td>
+</tr>
 <tr> 
 <td>&nbsp;</td>
+<td align="left" colspan="2"><img src="http://bilder.fireball.de/bilder/1.gif" width="692" height="5" alt="" border="0"></td>
+</tr>
+</table>
+ end cover RNS-block ---> 
+ 
+<!-- Suchergebnisse --> 
+
+
+<table width="700" border="0" align="center" cellspacing="0" cellpadding="2"><TR><td valign="top" WIDTH="4" bgcolor="#CC0000"><img SRC="http://bilder.fireball.de/bilder/verschiedenes/1.gif" BORDER="0" width="4" height="1"></td><td bgcolor="#FFFFCC"><b><font FACE="Verdana, Arial, Helvetica, sans-serif" SIZE="2">&nbsp;&nbsp;<a HREF="http://softer.de/Detail/1818.shtml">Freeware Download von iRover 2.0
+</a></font></b></td></tr><tr><td valign="top" WIDTH="4"><img src="http://bilder.fireball.de/bilder/verschiedenes/1.gif" width="4" height="1"></td><td><font FACE="Verdana, Arial, Helvetica, sans-serif" SIZE="2">iRover 2.0 Download iRover 2.0<br></font><font FACE="verdana,Arial,Helvetica,sans-serif" SIZE="1"><a HREF="http://softer.de/Detail/1818.shtml" target="firetop" title="In neuem Fenster anzeigen."><img src="http://bilder.fireball.de/bilder/topwindow.gif" width="13" height="10" border="0" alt="In neuem Fenster anzeigen."> http://softer.de/Detail/1818.shtml</a><BR><i>Gr&ouml;&szlig;e 15 K - 19.3.2001  - <I>Seitentyp:</I> Software Download - <I>Thema:</I> Kleines Tool mit dem Sie direkt vom Desktop aus eine Suchanfrag</i><br><a href="/fcgi/query.fcg?action=query&pg=express&fmt=d&r=&q=%2BiRover+%2Bsite%3Asofter%2Ede&stq=1&d0=&d1=&what=german_web&qe=&qb=&hq=&dmn=de">Nur Seiten von dieser Site zeigen</a>&nbsp;|&nbsp;<a href="/fcgi/query.fcg?action=query&pg=express&fmt=d&r=&q=%2BiRover+%2Dsite%3Asofter%2Ede&stq=1&d0=&d1=&what=german_web&qe=&qb=&hq=&dmn=de">Keine Seiten von dieser Site zeigen</a><br><br></font></td></tr><tr><td><img src="http://bilder.fireball.de/bilder/verschiedenes/1.gif" border="0" width="4" height="1"></td><td><img src="http://bilder.fireball.de/bilder/verschiedenes/1.gif" border="0" width="688" height="1"></td></tr></table>
+
+<table width="700" border="0" align="center" cellspacing="0" cellpadding="2"><TR><td valign="top" WIDTH="4" bgcolor="#CC0000"><img SRC="http://bilder.fireball.de/bilder/verschiedenes/1.gif" BORDER="0" width="4" height="1"></td><td bgcolor="#FFFFCC"><b><font FACE="Verdana, Arial, Helvetica, sans-serif" SIZE="2">&nbsp;&nbsp;<a HREF="http://www.zdnet.de/download/subjects/intit-wf.htm">Anwendungen
+</a></font></b></td></tr><tr><td valign="top" WIDTH="4"><img src="http://bilder.fireball.de/bilder/verschiedenes/1.gif" width="4" height="1"></td><td><font FACE="Verdana, Arial, Helvetica, sans-serif" SIZE="2">Tip des Tages Top-Hits Jason's weekly Roulette Neue Downloads Software z.  Heft Index A-Z Themen Click Here!  Anwendungen AcqURL Version 2.4 für Win95/98/NT (Englisch): Transportable, universell  kompatible Bookmarklisten erstellen  Active Worlds Br<br></font><font FACE="verdana,Arial,Helvetica,sans-serif" SIZE="1"><a HREF="http://www.zdnet.de/download/subjects/intit-wf.htm" target="firetop" title="In neuem Fenster anzeigen."><img src="http://bilder.fireball.de/bilder/topwindow.gif" width="13" height="10" border="0" alt="In neuem Fenster anzeigen."> http://www.zdnet.de/download/subjects/intit-wf.htm</a><BR><i>Gr&ouml;&szlig;e 1 K - 21.3.2001  - <I>Autor:</I> unknown</i><br><a href="/fcgi/query.fcg?action=query&pg=express&fmt=d&r=&q=%2BiRover+%2Bsite%3Awww%2Ezdnet%2Ede&stq=1&d0=&d1=&what=german_web&qe=&qb=&hq=&dmn=de">Nur Seiten von dieser Site zeigen</a>&nbsp;|&nbsp;<a href="/fcgi/query.fcg?action=query&pg=express&fmt=d&r=&q=%2BiRover+%2Dsite%3Awww%2Ezdnet%2Ede&stq=1&d0=&d1=&what=german_web&qe=&qb=&hq=&dmn=de">Keine Seiten von dieser Site zeigen</a><br><br></font></td></tr><tr><td><img src="http://bilder.fireball.de/bilder/verschiedenes/1.gif" border="0" width="4" height="1"></td><td><img src="http://bilder.fireball.de/bilder/verschiedenes/1.gif" border="0" width="688" height="1"></td></tr></table>
+
+<table width="700" border="0" align="center" cellspacing="0" cellpadding="2"><TR><td valign="top" WIDTH="4" bgcolor="#CC0000"><img SRC="http://bilder.fireball.de/bilder/verschiedenes/1.gif" BORDER="0" width="4" height="1"></td><td bgcolor="#FFFFCC"><b><font FACE="Verdana, Arial, Helvetica, sans-serif" SIZE="2">&nbsp;&nbsp;<a HREF="http://softer.de/Internet_und_Dfue/Internetsuchprogramme/">Internet und Dfue : Internetsuchprogramme im Download-Tipp.de 
+</a></font></b></td></tr><tr><td valign="top" WIDTH="4"><img src="http://bilder.fireball.de/bilder/verschiedenes/1.gif" width="4" height="1"></td><td><font FACE="Verdana, Arial, Helvetica, sans-serif" SIZE="2">Inzwischen gibt es viele Internetsuchprogramme die es Ihnen ermöglichen das Internet direkt von Ihrem Desktop aus zu durchsuchen, hier finden Sie die richtige Software.<br></font><font FACE="verdana,Arial,Helvetica,sans-serif" SIZE="1"><a HREF="http://softer.de/Internet_und_Dfue/Internetsuchprogramme/" target="firetop" title="In neuem Fenster anzeigen."><img src="http://bilder.fireball.de/bilder/topwindow.gif" width="13" height="10" border="0" alt="In neuem Fenster anzeigen."> http://softer.de/Internet_und_Dfue/Internetsuchprogramme/</a><BR><i>Gr&ouml;&szlig;e 25 K - 19.3.2001  - <I>Autor:</I> Lothar Jung</i><br><a href="/fcgi/query.fcg?action=query&pg=express&fmt=d&r=&q=%2BiRover+%2Bsite%3Asofter%2Ede&stq=1&d0=&d1=&what=german_web&qe=&qb=&hq=&dmn=de">Nur Seiten von dieser Site zeigen</a>&nbsp;|&nbsp;<a href="/fcgi/query.fcg?action=query&pg=express&fmt=d&r=&q=%2BiRover+%2Dsite%3Asofter%2Ede&stq=1&d0=&d1=&what=german_web&qe=&qb=&hq=&dmn=de">Keine Seiten von dieser Site zeigen</a><br><br></font></td></tr><tr><td><img src="http://bilder.fireball.de/bilder/verschiedenes/1.gif" border="0" width="4" height="1"></td><td><img src="http://bilder.fireball.de/bilder/verschiedenes/1.gif" border="0" width="688" height="1"></td></tr></table>
+
+<table width="700" border="0" align="center" cellspacing="0" cellpadding="2"><TR><td valign="top" WIDTH="4" bgcolor="#CC0000"><img SRC="http://bilder.fireball.de/bilder/verschiedenes/1.gif" BORDER="0" width="4" height="1"></td><td bgcolor="#FFFFCC"><b><font FACE="Verdana, Arial, Helvetica, sans-serif" SIZE="2">&nbsp;&nbsp;<a HREF="http://softer.de/Neu/18-September-2000.shtml">Neue oder aktualisierte Einträge im Softer.de Shareware und Fr
+</a></font></b></td></tr><tr><td valign="top" WIDTH="4"><img src="http://bilder.fireball.de/bilder/verschiedenes/1.gif" width="4" height="1"></td><td><font FACE="Verdana, Arial, Helvetica, sans-serif" SIZE="2">Neueintr&auml;ge und aktualisierte Software<br></font><font FACE="verdana,Arial,Helvetica,sans-serif" SIZE="1"><a HREF="http://softer.de/Neu/18-September-2000.shtml" target="firetop" title="In neuem Fenster anzeigen."><img src="http://bilder.fireball.de/bilder/topwindow.gif" width="13" height="10" border="0" alt="In neuem Fenster anzeigen."> http://softer.de/Neu/18-September-2000.shtml</a><BR><i>Gr&ouml;&szlig;e 26 K - 12.10.2000  - <I>Autor:</I> Lothar Jung</i><br><a href="/fcgi/query.fcg?action=query&pg=express&fmt=d&r=&q=%2BiRover+%2Bsite%3Asofter%2Ede&stq=1&d0=&d1=&what=german_web&qe=&qb=&hq=&dmn=de">Nur Seiten von dieser Site zeigen</a>&nbsp;|&nbsp;<a href="/fcgi/query.fcg?action=query&pg=express&fmt=d&r=&q=%2BiRover+%2Dsite%3Asofter%2Ede&stq=1&d0=&d1=&what=german_web&qe=&qb=&hq=&dmn=de">Keine Seiten von dieser Site zeigen</a><br><br></font></td></tr><tr><td><img src="http://bilder.fireball.de/bilder/verschiedenes/1.gif" border="0" width="4" height="1"></td><td><img src="http://bilder.fireball.de/bilder/verschiedenes/1.gif" border="0" width="688" height="1"></td></tr></table>
+
+  
+
+
+<table cellspacing="0" width="700" cellpadding="0" border="0" align="center">
+<tr> 
+<td width="9" bgcolor="#CC0000"><img src="http://bilder.fireball.de/bilder/1.gif" width="8" height="8" alt="" border="0"></td>
+<td width="691"> 
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr bgcolor="#FFFFCC"> 
+<td colspan="4"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"></font></td>
+</tr>
+<tr> 
+<td bgcolor="#FFCC00" width="46%"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><b><a href="#top">Seitenanfang</a></b></font></td>
+<td bgcolor="#FFCC00" width="33%"> <b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;</font></b></td>
+<td bgcolor="#FFCC00" width="33%"><b><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+</font></b></td>
+<td width="21%" bgcolor="#FFFFCC">&nbsp;</td>
 </tr>
 </table>
 </td>
-<td colspan="3">&nbsp; </td>
-<td>&nbsp; </td>
 </tr>
 <tr> 
-<td width="25">&nbsp; </td>
-<td rowspan="2" bgcolor="#FFFFCC" colspan="3" align="right"> 
-<table border="0" cellspacing="0" cellpadding="4">
-<tr valign="top" align="right"> 
-<td nowrap> 
-<div align="right"> 
-<p><font size="2" face="Arial, Helvetica"><a href="http://altavista.software.digital.com/search/">Powered 
-by</a></font><a href="http://www.compaq.de/produkte/alphaserver/"><img src="http://bilder.fireball.de/bilder/alta.gif" width="45" height="17" hspace="2" border="0"><font size="2" face="Arial, Helvetica"><br>
-Search Software <br>
-und <br>
-Compaq AlphaServer</font></a></p>
-</div>
-</td>
-<td nowrap><font size="2" face="Arial, Helvetica"><b><a href="url_melden.html">URL 
-melden</a></b></font><font face="Arial,Helvetica" size="1"> 
+<td width="700" colspan="2" bgcolor="#CC0000"><img src="http://bilder.fireball.de/bilder/1.gif" width=1 height=8 alt="" border="0"></td>
+</tr>
+<tr> 
+<td width="700" colspan="2">&nbsp;</td>
+</tr>
+</table>
 <br>
-</font><font size="2" face="Arial, Helvetica"><a href="impressum.html">Impressum</a><br>
-<a href="kontakt.html">Kontakt<br>
-</a></font><font size="2" face="Arial, Helvetica"><a href="werben.html"> 
-Werben</a><br>
-<a href="nutzungsordnung.html">Nutzungs-<br>
-ordnung</a></font></td>
-<td nowrap> 
-<div align="right"> 
-<p><font size="2" face="Arial, Helvetica"><b><a href="express_hilfe.html">Fireball 
-Hilfe</a><br>
-</b><a href="express.html">Express Suche</a><br>
-<a href="detail.html">Detail Suche</a><b><br>
-</b></font><font size="2" face="Arial, Helvetica"><a href="katalog.html">Rubriken 
-Suche</a><br>
-<a href="intern.html">Info &amp; Tools</a><br>
-<a href="guestbook-fireball.fcg">G&auml;stebuch</a></font></p>
-</div>
-</td>
+<!-- Rubriken --> 
+<!-- box-begin
+<table cellspacing="0" width="700" cellpadding="0" border="0">
+<tr> 
+<td colspan="2" bgcolor="#CC0000"><img src="http://bilder.fireball.de/bilder/1_rot.gif" width=40 height=8 alt="" border="0"></td>
 </tr>
-</table>
-<!-- disclaimer innen --> </td>
+<tr> 
+<td width="8" bgcolor="#CC0000"><img src="http://bilder.fireball.de/bilder/1_rot.gif" width=8 height=16 alt="" border="0"></td>
+<td width="675" bgcolor="#FFCC00"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;<b>Rubriken zu Suchanfrage <font color="#CC0000">iRover</b></font></font></td>
+</tr>
+<tr> 
 <td>&nbsp; </td>
+<td> 
+<table cellspacing="0" width="100%" cellpadding="3" border="0" bgcolor="#FFFFCC">
+ 
+</table>
+</td>
 </tr>
 <tr> 
-<td width="25">&nbsp; </td>
-<td bgcolor="#CC0000">
-<table width="21" border="0" cellspacing="0" cellpadding="2">
+<td width="8" bgcolor="#CE0000"><img src="http://bilder.fireball.de/bilder/1_rot.gif" width=8 height=18 alt="" border="0"></td>
+<td width="675" bgcolor="#FFCC00"><font size="2"> &nbsp;&nbsp;</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;</font></td>
+</tr>
 <tr> 
-<td>&nbsp;</td>
+<td colspan="2" align="left" bgcolor="#CE0000"><img src="http://bilder.fireball.de/bilder/1_rot.gif" width=40 height=8 alt="" border="0"></td>
+</tr>
+</table>
+ box-end --> 
+<!-- Rubriken  Ende -->
+</div>
+<br>
+<br>
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="700"> 
+   <tr> 
+      <td align="center" width="116"><a href="http://solutions.altavista.com/"><img alt="Alta Vista" border="0" height="36" src="http://bilder.fireball.de/powersmall.gif" width="113"></a></td>
+      <td align="right" width="474">
+	  <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+	  Möchten Sie noch eine andere Meinung einholen<br> - klicken Sie bitte hier:</font></td> 
+	  <td align="right" width="100">
+	  <a href="http://www.lycos.de/cgi-bin/pursuit?matchmode=and&mtemp=main.sites&etemp=error&query=iRover&cat=de_spkr">
+	  <img border="0" height="24" src="http://bilder.fireball.de/bilder/lycos.gif" width="68" hspace="10" alt="Lycos - Ihr pers&ouml;nlicher Internet Guide"></a></td> 
+   </tr>
+</table>
+<br>
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+<tr> 
+<td> 
+<table width="100%" border="0" cellspacing="0" cellpadding="2">
+<tr align="center"> 
+<td><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><b><a href="http://www.fireball.de/express_hilfe.html">FIREBALL 
+Hilfe</a> | <a href="http://www.fireball.de/profi.html"> Profi Suche</a> 
+| <a href="http://www.fireball.de/fcgi/voyeur.fcg?action=voyeur-queries">Live 
+Suche</a>
+| <a href="http://www.fireball.de/express_t.html">Textversion</a> 
+| <a href="http://shop.guj.de/">FIREBALL Shop</a>
+| <a href="http://www.fireball.de/intern.html">Info &amp; Tools</a> 
+| <a href="http://www.fireball.de/url_melden.html">URL melden</a></b></font></td>
 </tr>
 </table>
 </td>
 </tr>
 <tr> 
-<td width="25">&nbsp; </td>
-<td bgcolor="#FFFFCC">&nbsp; </td>
-<td bgcolor="#FFFFCC">&nbsp; </td>
-<td bgcolor="#FFCC00" align="right"><font face="arial,helvetica" size="1">© 
-<a
-href="http://www.ems.guj.de">G+J Electronic Media Service<br>
-</a> Hamburg 1997/99</font></td>
-<td bgcolor="#CC0000">&nbsp; </td>
+<td> 
+
+</td>
 </tr>
 <tr> 
-<td width="25">&nbsp; </td>
-<td align="right">&nbsp; </td>
-<td bgcolor="#CC0000">&nbsp; </td>
-<td bgcolor="#CC0000" align="right"><font face="arial,helvetica" size="2" color="#FFFFFF"><b>Fireball</b></font></td>
-<td bgcolor="#CC0000">&nbsp; </td>
+<td> 
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
+<tr align="center"> 
+<td><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><a href="http://www.fireball.de/nutzungsordnung.html">Nutzungsordnung</a> 
+| <a href="http://www.fireball.de/impressum.html">Impressum</a> 
+| <a href="http://www.fireball.de/werben.html">Werben auf Fireball</a> 
+| <a href="http://www.fireball.de/datenschutz.html">Datenschutz</a> 
+| <a href="http://www.fireball-netsearch.de/">© FIREBALL Netsearch 
+GmbH</a> Hamburg 2001</font></td>
 </tr>
 </table>
 </td>

@@ -1,3 +1,35 @@
+2001-03-28  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search.pm (submit): new method
+
+2001-03-20  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search.pm (reset_search): BUGFIX: reset approx_count (thanks to Alexander Mikhailian)
+
+2001-03-15  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search/AltaVista/NL.pm: new backend
+
+2000-10-25  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search.pm: many minor pod updates
+
+2000-10-13  Kingpin  <mthurn@tasc.com>
+
+	* Infoseek.pm et al. removed (use Go.pm instead)
+
+2000-10-06  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search.pm (http_referer): new method
+
+2000-10-04  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search.pm (cookie_jar): do not save cookies if user gave us HTTP::Cookie object
+
+2000-10-03  Kingpin  <mthurn@tasc.com>
+
+	* WWW::Search VERSION 2.15 RELEASED!
+
 2000-10-02  Kingpin  <mthurn@tasc.com>
 
 	* lib/WWW/Search.pm (split_lines): new optional first arg: list of patterns

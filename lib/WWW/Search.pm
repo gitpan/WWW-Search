@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.44 2000/09/27 14:04:16 mthurn Exp mthurn $
+# $Id: Search.pm,v 1.53 2001/03/28 19:39:14 mthurn Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -23,19 +23,19 @@ This class is the parent for all access methods supported by the
 C<WWW::Search> library.  This library implements a Perl API
 to web-based search engines.
 
-See README for a list of search engines currently supported.
+See README for a list of search engines currently supported, and for a
+lot of interesting high-level information about this distribution.
 
 Search results can be limited, and there is a pause between each
 request to avoid overloading either the client or the server.
 
 =head2 Sample program
 
-Using the library should be straightforward.
 Here is a sample program:
 
     my $search = new WWW::Search('AltaVista');
     $search->native_query(WWW::Search::escape_query($query));
-    while (my $result = $search->next_result()) 
+    while (my $result = $search->next_result())
       {
       print $result->url, "\n";
       }
@@ -57,6 +57,9 @@ see L<WWW::SearchResult>.
 
 =head1 METHODS AND FUNCTIONS
 
+Methods and functions marked as PRIVATE are in general only useful to
+backend programmers.
+
 =cut
 
 #####################################################################
@@ -66,7 +69,7 @@ package WWW::Search;
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query generic_option strip_tags @ENGINES_WORKING);
-$VERSION = '2.15';
+$VERSION = '2.16';
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
@@ -114,7 +117,7 @@ sub new
   my $class = shift;
   my $engine = shift;
   # Remaining arguments will become hash args
-  
+
   $engine = $default_engine if (!defined($engine));
   # Load the engine, if necessary.
   my $subclass = "${class}::$engine";
@@ -123,7 +126,7 @@ sub new
     eval "use $subclass";
     Carp::croak("unknown search engine backend $engine ($@)") if ($@);
     } # if
-  
+
   my $self = bless {
                     engine => $engine,
                     maximum_to_retrieve => 500,  # both pages and hits
@@ -161,6 +164,7 @@ sub reset_search
   $self->{'requests_made'} = 0;
   $self->{'state'} = $SEARCH_BEFORE;
   $self->{'_next_url'} = '';
+  $self->_elem('approx_count', 0);
   # This method is called by native_query().  native_query() is called
   # either by gui_query() or by the user.  In the case that
   # gui_query() was called, we do NOT want to clear out the _options
@@ -321,7 +325,7 @@ sub native_query
   $self->{'native_options'} = $_[1];
   # promote generic options
   my $opts_ref = $_[1];
-  foreach my $sKey (keys %$opts_ref) 
+  foreach my $sKey (keys %$opts_ref)
     {
     $self->{$sKey} = $opts_ref->{$sKey} if (generic_option($sKey));
     } # foreach
@@ -338,7 +342,7 @@ passing the filename to HTTP::Cookies::new).
   $oSearch->cookie_jar('/tmp/my_cookies');
 
 If you give an HTTP::Cookies object, it is up to you to save the
-cookies if you wish.
+cookies if/when you wish.
 
   use HTTP::Cookies;
   my $oJar = HTTP::Cookies->new(...);
@@ -352,17 +356,19 @@ sub cookie_jar
   my $arg = shift;
   if (ref($arg) eq 'HTTP::Cookies')
     {
-    $self->{'cookie_jar'} = $arg;
+    $self->{'_cookie_jar'} = $arg;
+    $self->{'_cookie_jar_we_save'} = 0;
     }
   elsif (! ref($arg))
     {
     # Assume that $arg is a file name:
-    $self->{'cookie_jar'} = HTTP::Cookies->new(
+    $self->{'_cookie_jar'} = HTTP::Cookies->new(
                                                'file' => $arg,
                                                'autosave' => 1,
                                                'ignore_discard' => 1,
                                                );
-    $self->{'cookie_jar'}->load;
+    $self->{'_cookie_jar'}->load;
+    $self->{'_cookie_jar_we_save'} = 1;
     # print STDERR " + WWW::Search just loaded cookies from $arg\n";
     }
   else
@@ -372,6 +378,23 @@ sub cookie_jar
   } # cookie_jar
 
 
+=head2 http_proxy
+
+Set-up an HTTP proxy
+(for connections from behind a firewall).
+
+This routine should be called before calling any of the result
+functions (next_result or results).
+
+Example:
+
+    $search->http_proxy("http://gateway:8080");
+
+=cut
+
+sub http_proxy { return shift->_elem('http_proxy', @_); }
+
+
 =head2 approximate_result_count
 
 Some backends indicate how many hits they have found.
@@ -379,7 +402,7 @@ Typically this is an approximate value.
 
 =cut
 
-sub approximate_result_count 
+sub approximate_result_count
   {
   my $self = shift;
   # prime the pump:
@@ -390,8 +413,8 @@ sub approximate_result_count
 
 =head2 results
 
-Return all the results of a query as a reference to array 
-of SearchResult objects.
+Return all the results of a query as an array of SearchResult objects.
+
 Example:
 
     @results = $search->results();
@@ -408,14 +431,15 @@ sub results
   {
   my $self = shift;
   print STDERR " + results(",$self->{'native_query'},")\n" if $self->{debug};
-  Carp::croak "search not yet specified" if (!defined($self->{'native_query'}));
+  Carp::croak "query string is not defined" if (!defined($self->{'native_query'}));
+  Carp::croak "query string is empty" unless ($self->{'native_query'} ne '');
   # Put all the SearchResults into the cache:
   1 while ($self->retrieve_some());
   if ($#{$self->{cache}} >= $self->{maximum_to_retrieve})
     {
     return @{$self->{cache}}[0..($self->{maximum_to_retrieve}-1)];
     }
-  else 
+  else
     {
     return @{$self->{cache}};
     }
@@ -426,7 +450,7 @@ sub results
 Call this method repeatedly to return each result of a query as a
 SearchResult object.  Example:
 
-    while ($result = $search->next_result()) 
+    while ($result = $search->next_result())
       {
       print $result->url(), "\n";
       }
@@ -465,10 +489,10 @@ sub next_result
 
 =head2 response
 
-Return the HTTP Response code for the last query
-(see L<HTTP::Response>).
-If the query returns C<undef>,
-errors could be reported like this:
+Returns the an HTTP::Response object which resulted from the
+most-recently-sent query (see L<HTTP::Response>).  If the query
+returns no results (i.e. $search->results is C<undef>), errors can
+be reported like this:
 
     my $response = $search->response();
     if ($response->is_success) {
@@ -477,8 +501,8 @@ errors could be reported like this:
 	print "error:  " . $response->as_string() . "\n";
     }
 
-Note: even if the backend does not involve the web,
-it should return HTTP::Response-style codes.
+Note to backend authors: even if the backend does not involve the web,
+it should return an HTTP::Response object.
 
 =cut
 
@@ -492,9 +516,8 @@ sub response
 
 =head2 seek_result($offset)
 
-Set which result C<next_result> should return
-(like C<lseek> in Unix).
-Results are zero-indexed.
+Set which result C<next_result> should be returned next time
+next_result() is called.  Results are zero-indexed.
 
 The only guaranteed valid offset is 0,
 which will replay the results from the beginning.
@@ -522,7 +545,7 @@ sub seek_result
 
 =head2 maximum_to_retrieve
 
-The maximum number of hits to return.
+Set the maximum number of hits to return.
 Queries resulting in more than this many hits will return
 the first hits, up to this limit.
 Although this specifies a maximum limit,
@@ -533,10 +556,12 @@ Defaults to 500.
 Example:
     $max = $search->maximum_to_retrieve(100);
 
+You can also spell this method "maximum_to_return".
+
 =cut
 
 sub maximum_to_retrieve { return shift->_elem('maximum_to_retrieve', @_); }
-# xxx: This should actually be called "maxiumum to return", I suppose.
+sub maximum_to_return { return shift->_elem('maximum_to_retrieve', @_); }
 
 
 =head2 timeout
@@ -554,13 +579,30 @@ Example:
 sub timeout { return shift->_elem('timeout', @_); }
 
 
+=head2 submit
+
+This method can be used to submit URLs to the search engines for indexing.
+Consult the documentation for each backend to find out if it is implemented there,
+and if so what the arguments are.
+
+Returns an HTTP::Response object describing the result of the submission request.
+Consult the documentation for each backend to find out the meaning of the response.
+
+=cut
+
+sub submit
+  {
+  return new HTTP::Response(788, 'Sorry, this backend does not support the submit() method.');
+  } # submit
+
+
 =head2 opaque
 
 This function provides an application a place to store
-one opaque data element (or many via a Perl reference).
+one opaque data element (or many, via a Perl reference).
 This facility is useful to (for example),
 maintain client-specific information in each active query
-when you have multiple concurrent queries. 
+when you have multiple concurrent queries.
 
 =cut
 
@@ -570,7 +612,7 @@ sub opaque { return shift->_elem('opaque', @_); }
 =head2 escape_query
 
 Escape a query.
-Before queries are made special characters must be escaped
+Before queries are sent to the internet, special characters must be escaped
 so that a proper URL can be formed.
 This is like escaping a URL,
 but all non-alphanumeric characters are escaped and
@@ -586,7 +628,7 @@ NOTE that this is not a method, it is a plain function.
 
 =cut
 
-sub escape_query 
+sub escape_query
   {
   my $text = join(' ', @_);
   $text ||= '';
@@ -628,6 +670,8 @@ Given a string, returns a copy of that string with HTML tags removed.
 This should be used by each backend as they insert the title and
 description values into the SearchResults.
 
+NOTE that this is not a method, it is a plain function.
+
 =cut
 
 sub strip_tags
@@ -644,7 +688,7 @@ sub strip_tags
     s/&gt;/\076/g;
     s/&quot;/\042/g;
     } # foreach
-  return wantarray ? @as : $as[0];
+  return wantarray ? @as : shift @as;
   } # strip_tags
 
 =head2 hash_to_cgi_string (PRIVATE) (DEPRECATED)
@@ -701,26 +745,10 @@ sub hash_to_cgi_string
   } # hash_to_cgi_string
 
 
-=head2 http_proxy
-
-Set-up an HTTP proxy
-(for connections from behind a firewall).
-
-This routine should be called before the first retrieval is attempted.
-
-Example:
-
-    $search->http_proxy("http://gateway:8080");
-
-=cut
-
-sub http_proxy { return shift->_elem('http_proxy', @_); }
-
-
 =head2 user_agent($NON_ROBOT) (PRIVATE)
 
 This internal routine creates a user-agent for derived classes that
-query the web.  If non-empty argument $non_robot is given, a normal
+query the web.  If non-false argument $non_robot is given, a normal
 user-agent (rather than a robot-style user-agent) is used.
 
 If a backend needs the low-level LWP::UserAgent or LWP::RobotUA to
@@ -734,8 +762,6 @@ calling $oSearch->user_agent():
   $oSearch->user_agent('non-robot');
 
 Backends should use robot-style user-agents whenever possible.
-Also, backends should call C<user_agent_delay> between every page retrieval
-to avoid swamping search-engines.
 
 =cut
 
@@ -749,8 +775,8 @@ sub user_agent
     $ua = new LWP::UserAgent;
     $ua->agent($self->{'agent_name'});
     $ua->from($self->{'agent_e_mail'});
-    } 
-  else 
+    }
+  else
     {
     $ua = new LWP::RobotUA($self->{'agent_name'}, $self->{'agent_e_mail'});
     $ua->delay($self->{'interrequest_delay'}/60.0);
@@ -761,11 +787,26 @@ sub user_agent
   } # user_agent
 
 
+=head2 http_referer (PRIVATE)
+
+Get / set the value of the HTTP_REFERER variable for this search object.
+Some search engines might only accept requests that originated at some specific previous page.
+This method lets backend authors "fake" the previous page.
+Call this method before calling http_request.
+
+  $oSearch->http_referer('http://prev.engine.com/wherever/setup.html');
+  $oResponse = $oSearch->http_request('GET', $url);
+
+=cut
+
+sub http_referer { return shift->_elem('_http_referer', @_); }
+
+
 =head2 http_request($method, $url)
 
 Return the response from an http request, handling debugging.
-Requires that user_agent already be set up.  For POST methods, query
-is split off of the URL and passed in the request body.
+Requires that user_agent already be set up, if needed.
+Requires that http_referer already be set up, if needed.
 
 =cut
 
@@ -797,18 +838,27 @@ sub http_request
       $request = new HTTP::Request($method, $url);
       }
 
-    $self->{'cookie_jar'}->add_cookie_header($request) if ref($self->{'cookie_jar'});
+    $self->{'_cookie_jar'}->add_cookie_header($request) if ref($self->{'_cookie_jar'});
+    # print STDERR " + the request with cookies is >>>", $request->as_string, "<<<\n";
+
+    if ($self->{'_http_referer'} && ($self->{'_http_referer'} ne ''))
+      {
+      my $s = uri_escape($self->{'_http_referer'});
+      # print STDERR " +    referer($s), ref(s) = ", ref($s), "\n";
+      $s = $s->as_string if ref($s) =~ m!URI!;
+      $request->referer($s);
+      } # if referer
 
     my $ua = $self->{'user_agent'};
     $response = $ua->request($request);
 
-    if (ref($self->{'cookie_jar'}))
+    if (ref($self->{'_cookie_jar'}))
       {
-      $self->{'cookie_jar'}->extract_cookies($response);
-      $self->{'cookie_jar'}->save;
-      # print STDERR " + WWW::Search just saved cookies\n";
-      # print STDERR $self->{'cookie_jar'}->as_string;
-      # print STDERR Dumper($self->{'cookie_jar'});
+      $self->{'_cookie_jar'}->extract_cookies($response);
+      $self->{'_cookie_jar'}->save if $self->{'_cookie_jar_we_save'};
+      # print STDERR " + WWW::Search just extracted cookies\n";
+      # print STDERR $self->{'_cookie_jar'}->as_string;
+      # print STDERR Dumper($self->{'_cookie_jar'});
       }
 
     if ($self->{'search_to_file'} && $response->is_success)
@@ -891,6 +941,37 @@ sub http_request_to_file {
     print FILE $response->content();
     close FILE;
 }
+
+=head2 next_url (PRIVATE)
+
+Get or set the URL for the next backend request.  This can be used to
+save the WWW::Search state between sessions (e.g. if you are showing
+pages of results to the user in a web browser).  Before closing down a
+session, save the value of next_url:
+
+  ...
+  $oSearch->maximum_to_return(10);
+  while ($oSearch->next_result) { ... }
+  my $urlSave = $oSearch->next_url;
+
+Then, when you start up the next session (e.g. after the user clicks
+your "next" button), restore this value before calling for the results:
+
+  $oSearch->native_query(...);
+  $oSearch->next_url($urlSave);
+  $oSearch->maximum_to_return(20);
+  while ($oSearch->next_result) { ... }
+
+WARNING: It is entirely up to you to keep your interface in sync with
+the number of hits per page being returned from the backend.  And, we
+make no guarantees whether this method will work for any given
+backend.  (Their caching scheme might not enable you to jump into the
+middle of a list of search results, for example.)
+
+=cut
+
+sub next_url { return shift->_elem('_next_url', @_); }
+
 
 =head2 split_lines (PRIVATE)
 
@@ -981,18 +1062,18 @@ sub user_agent_delay {
 
 An internal routine to convert a relative URL into a absolute URL.  It
 takes two arguments, the 'base' url (usually the search engine CGI
-URL) and the URL to be converted.  Returns a URI::URL object.
+URL) and the URL to be converted.  Returns a URI or URI::URL object
+(whichever is being used by HTTP on your system).
 
 =cut
 
-sub absurl {
-    my ($self, $base, $url) = @_;
-
-    #$url =~ s,^http:/([^/]),/$1,; #bogus sfgate URL
-
-    my $link = new URI::URL $url, $base;
-    return($link);
-}
+sub absurl
+  {
+  my ($self, $base, $url) = @_;
+  #$url =~ s,^http:/([^/]),/$1,; #bogus sfgate URL
+  my $link = $HTTP::URI_CLASS->new_abs($url, $base);
+  return($link);
+  } # absurl
 
 
 =head2 retrieve_some (PRIVATE)
@@ -1031,17 +1112,16 @@ sub retrieve_some
 }
 
 
-=head2 test_cases
+=head2 test_cases (deprecated)
+
+Deprecated.
 
 Returns the value of the $TEST_CASES variable of the backend engine.
-All backends should set $TEST_CASES to a string containing perl code
-which will be eval-ed during 'make test'.
-See Excite.pm for an example.
 
 =cut
 
-sub test_cases 
-  { 
+sub test_cases
+  {
   my $self = shift;
   return eval '$'.ref($self).'::TEST_CASES';
   } # test_cases
@@ -1099,8 +1179,8 @@ maintainers.  If you want to take a shot at it, please let me know.
 
 =head1 AUTHOR
 
-C<WWW::Search> was written by John Heidemann, E<lt>johnh@isi.eduE<gt>.
-C<WWW::Search> is currently maintained by Martin Thurn, E<lt>MartinThurn@iname.comE<gt>.
+C<WWW::Search> was written by John Heidemann, E<johnh@isi.edu>.
+C<WWW::Search> is currently maintained by Martin Thurn, E<MartinThurn@iname.com>.
 
 backends and applications for WWW::Search were originally written by
 John Heidemann,
@@ -1113,8 +1193,8 @@ GLen Pringle.
 =head1 COPYRIGHT
 
 Copyright (c) 1996 University of Southern California.
-All rights reserved.                                            
-                                                               
+All rights reserved.
+
 Redistribution and use in source and binary forms are permitted
 provided that the above copyright notice and this paragraph are
 duplicated in all such forms and that any documentation, advertising
@@ -1132,31 +1212,27 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 
 @ENGINES_WORKING = qw(
-AltaVista	
-AltaVista::Careers
-AltaVista::Intranet
-AltaVista::Web		
-AOL::Classifieds::Employment
-Crawler			
-Dice                    
-Excite::News
-Fireball
-FolioViews
-HeadHunter      
-HotFiles	
-Infoseek	
-Infoseek::Companies
-Infoseek::News		
-Infoseek::Web		
-MetaCrawler             
-Metapedia		
-Monster                 
-NetFind                 
-Null			
-SFgate			
-VoilaFr
-WebCrawler		
-Yahoo::Classifieds::Employment
-           );
+                      AltaVista
+                      AltaVista::Careers
+                      AltaVista::Intranet
+                      AltaVista::Web
+                      AOL::Classifieds::Employment
+                      Crawler
+                      Dice
+                      Excite::News
+                      Fireball
+                      FolioViews
+                      HeadHunter
+                      HotFiles
+                      MetaCrawler
+                      Metapedia
+                      Monster
+                      NetFind
+                      Null
+                      SFgate
+                      VoilaFr
+                      WebCrawler
+                      Yahoo::Classifieds::Employment
+                     );
 
 1;

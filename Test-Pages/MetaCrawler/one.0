@@ -1,29 +1,64 @@
-<html><head><title>[ MetaCrawler Results: ohmeohmy ]</title>
-<meta name="Description" content="MetaCrawler Results: ohmeohmy">
-<style type="text/css" title="ps">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- $Id: results_regular.html,v 1.65 2001/03/23 01:19:16 taniae Exp $ -->
+<html><head><title>MetaCrawler Results | Search Query = ohmeohmy </title>
+
+<style> 
+input.radio { background-color: #FFCC33; color: #FFFFFF; }
+.midbg { background-color: #FFCC33; }
+.divider { background-color: #CC9900; }
+.lightbg { background-color: #FAFAD2; }
+.navbg { background-color: #ff6600; }
+.dkfooterbg { background-color: #666666; }
+
+</style>
+
+
+<script language="javascript" type="text/javascript">
 <!--
-a:hover { color: red }
--->
-</style></head>
+function doBlink() {
+    blink = window.open("http://www.blink.com/add?partnerID=6021739" +
+	"&entry.EntryTrack.vendor=metacrawler&entry.EntryTrack.advert=bookmarkthis&url="
+	+ escape(location.href) + "&title="
+	+ escape(document.title),"Blink",
+	"height=230,width=425,screenX=100,screenY=100,resizable");
+    blink.focus();
+}
+//-->
+</script>
+
+<meta name="Description" content="MetaCrawler search results for the query ohmeohmy"></head>
 <body link="#0033CC" alink="#CCCC99" vlink="#666666" text="#000000" bgcolor="#FFFFFF">
-
-<table cellpadding=0 cellspacing=0 border=0 width="100%">
-<!-- NETWORK NAV SECTION -->
-<tr><td colspan=2 height=27><img src="http://images.go2net.com/search/images/network.gif" width=600 height=27 border=0 alt="[ The Go2Net Network ]" usemap="#mainnet"><map name="mainnet"><area shape=rect coords="0,0,63,27" href="http://www.go2net.com/" alt="[ Go2Net Network ]"><area shape=rect coords="90,8,154,20" href="http://www.go2net.com/customize/" alt="[ personalize ]"><area shape=rect coords="186,8,224,19" href="http://www.siliconinvestor.com/" alt="[ Silicon Investor ]"><area shape=rect coords="254,8,303,20" href="http://www.metaspy.com/" alt="[ MetaSpy ]"><area shape=rect coords="335,8,374,20" href="http://www.playsite.com/" alt="[ PlaySite ]"><area shape=rect coords="405,6,458,19" href="http://www.webmarket.com/" alt="[ WebMarket ]"><area shape=rect coords="490,7,539,20" href="http://www.haggle.com/" alt="[ Haggle Auctions ]"><area shape=rect coords="567,6,600,18" href="http://www.go2net.com/customize/mcemail_login.gsp" alt="[ MetaCrawler Email ]"></map></td>
-</tr>
-
-<!-- MC LOGO/SEARCHBOX SECTION -->
-<tr><td width="40%" valign=top align=right><img src="http://images.go2net.com/search/images/mc_result.gif" width=179 height=35 border=0 alt="[ MetaCrawler ]"></td>
-<td width="60%" valign=bottom>
-<form name="querybox" action="/crawler" method="get">
-&nbsp;<input type="text" name="general" value="ohmeohmy" size="31"><br>
-<font face="Geneva, Arial, Helvetica" size="-1">
+<!-- BEGIN search area -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr class="midbg"><td align=left><img src="http://images.go2net.com/metacrawler/images/themed/classic/corner1.gif" width="13" height="11" border="0"></td><td colspan="3" align=right><img src="http://images.go2net.com/metacrawler/images/themed/classic/corner2.gif" width="13" height="11" border="0"></td></tr>
+<tr class="midbg">
+<td width="222" rowspan="2" align="center" valign="top"><form name="querybox" action="/crawler" method=get>
+<a href="http://www.metacrawler.com/"><img src="http://images.go2net.com/metacrawler/images/themed/classic/mc.gif" border="0" alt="[ MetaCrawler&reg; ]"></a><br>
+<img src="http://images.go2net.com/search/images/transparent.gif" width="222" height="1" alt="." border="0"><font size="2" face="geneva, arial, helvetica"></td>
+<td colspan="2">
+&nbsp;
+</td><td width="100%" rowspan="2" class="midbg"><br></td></tr>
+<tr class="midbg">
+<td width="232" valign="top"><font size="2" face="geneva, arial, helvetica"><input type="text" name="general" value="ohmeohmy" size=27><br>
 <input type="radio" name="method" value="1" > any
 &nbsp;<input type="radio" name="method" value="0" checked> all
 &nbsp;<input type="radio" name="method" value="2" > phrase 
-&nbsp;<input value="Search" type="submit">
-</font>
 
+
+</font><br>
+<img src="http://images.go2net.com/search/images/transparent.gif" width="233" height="1" alt="." border="0"><font size="2" face="geneva, arial, helvetica">
+
+</font></td>
+<td width="140" valign="top"><input value="Search" type="submit"><br><img src="http://images.go2net.com/search/images/transparent.gif" width="1" height="2" border="0" alt="-"><br>
+<select name="redirect">
+<option value="">The Web
+<option value="opendir">Directory
+<option value="audio">Audio/MP3
+<option value="images">Images
+<option value="dejanews">Newsgroups
+<option value="auctions">Auctions
+<option value="streaming">Streaming Media
+</select>
 <input type="hidden" name="region" value=0>
 <input type="hidden" name="rpp" value=30>
 <input type="hidden" name="timeout" value=10>
@@ -32,169 +67,109 @@ a:hover { color: red }
 <input type="hidden" name="power" value=0>
 <INPUT type="hidden" name="eng" value="AltaVista">
 <INPUT type="hidden" name="eng" value="Excite">
-<INPUT type="hidden" name="eng" value="Infoseek">
 <INPUT type="hidden" name="eng" value="Lycos">
 <INPUT type="hidden" name="eng" value="WebCrawler">
-<INPUT type="hidden" name="eng" value="Yahoo">
-<INPUT type="hidden" name="eng" value="Thunderstone">
 <INPUT type="hidden" name="eng" value="LookSmart">
-<INPUT type="hidden" name="eng" value="About">
 <INPUT type="hidden" name="eng" value="GoTo">
 <INPUT type="hidden" name="eng" value="DirectHit">
 
-<INPUT type="hidden" name="format" value="regular">
-</form>
-</td>
-</tr>
-</table>
 
+<INPUT type="hidden" name="refer" value="mc-results1">
+</form></td></tr>
+<tr><td colspan="4" class="divider"><img src="http://images.go2net.com/search/images/transparent.gif" width="1" height="1" border="0" alt="-"></td></tr>
+</table><!-- END SEARCHBOX -->
 <!-- Direct Hit Related -->
 
 
+<!-- END search area -->
+<!-- BEGIN banner ad area 1 -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr><td height="5" colspan="2"><img src="http://images.go2net.com/search/images/transparent.gif" height=5></td></tr>
+<tr><td valign="top" width="468" height="65"><a href="http://click.go2net.com/adclick?cid=0002d0631635862c00000000&area=results&site=MC&shape=banner&other=sHOWcOUNT/1&keyword=ohmeohmy&pass_random=46700" target="_top" onMouseOver="window.status='[Advertisement]'; return true"><img src="http://view.avenuea.com/avenuea/view/infospace_msfthmv00501aa_ron_va_468x60/direct/01 /46700" alt="Click here!" border="1"  width=468 height=60></a></td>
+<td valign="top" align="center" width="132"><a href="http://click.go2net.com/adclick?cid=0002d12beb356f6f00000000&area=sponsor&site=MC&shape=button&keyword=ohmeohmy" target="_top" onMouseOver="window.status='[Advertisement]'; return true"><img src="http://images.go2net.com/go2net/ads/200103/0174.gif" alt="Click here!" border="1"  width=120 height=60></a></td></tr>
+<tr><td colspan="2"><!-- Default Ad --><a href="http://www.go2net.com" target="_top"><img src="http://images.go2net.com/go2net/ads/default/plug.gif" border="" align=></a></td></tr>
+<!--  BEGIN ASKME.COM link -->
 
+<!-- END ASKME.COM link -->
+</table>
+<!-- END banner ad area 1 -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr><td colspan="2"><img src="http://images.go2net.com/metacrawler/images/themed/classic/r_web.gif" width=594 height=29 alt="[ Click on a tab to View Related: ]" border="0" usemap="#get_relatednavmap"><MAP NAME="get_relatednavmap"><AREA SHAPE=RECT COORDS="87,0,168,29" HREF="/crawler?general=ohmeohmy&redirect=opendir" ALT="[ View Related Directory Listings ]"><AREA SHAPE=RECT COORDS="173,0,253,29" HREF="/crawler?general=ohmeohmy&redirect=audio" ALT="[ View Related Audio/MP3 files ]"><AREA SHAPE=RECT COORDS="257,0,336,29" HREF="/crawler?general=ohmeohmy&redirect=images" ALT="[ View Related Images ]"><AREA SHAPE=RECT COORDS="341,0,422,29" HREF="/crawler?general=ohmeohmy&redirect=dejanews" ALT="[ View Related NewsGroups ]"><AREA SHAPE=RECT COORDS="427,0,505,29" HREF="/crawler?general=ohmeohmy&redirect=auctions" ALT="[ View Related Products for Auction ]"><AREA SHAPE=RECT COORDS="511,0,591,29" HREF="/crawler?general=ohmeohmy&redirect=streaming" ALT="Streaming Media"></MAP></td></tr>
+<tr class="midbg"><td height="23"><font size="2" face="geneva, arial, helvetica">&nbsp;<b>Results for &quot;ohmeohmy&quot;</b>&nbsp;1 to 15 of 15 results</font></td><td align="right"><font size="2" face="Geneva, Arial, Helvetica">&nbsp;</font></td></tr>
+<tr><td height="23"><font size="2" face="geneva, arial, helvetica">View by:
+Relevance | <a href="http://mc3.metacrawler.com/crawler?general=ohmeohmy&method=0&sid=87597769mc3_8_4&sno=3772&domainLimit=0&rpp=30&mrr=0&timeout=10&hpe=30&format=regular&power=0&target=&eng=AltaVista&eng=Excite&eng=Lycos&eng=WebCrawler&eng=LookSmart&eng=GoTo&eng=DirectHit&refer=sort&start=0&sort=1">Site</a> | <a href="http://mc3.metacrawler.com/crawler?general=ohmeohmy&method=0&sid=87597769mc3_8_4&sno=3772&domainLimit=0&rpp=30&mrr=0&timeout=10&hpe=30&format=regular&power=0&target=&eng=AltaVista&eng=Excite&eng=Lycos&eng=WebCrawler&eng=LookSmart&eng=GoTo&eng=DirectHit&refer=sort&start=0&sort=2">Source</a>
 
+<!-- MC AUDIO/MP3 SEARCH -->
 
-
-
-
-<table cellpadding=0 cellspacing=0 border=0 width="100%">
-<tr><td colspan=4 height=23 bgcolor="#FFCC66"><font size="-1" face="Geneva, Arial, Helvetica">
-&nbsp;<a href="http://www.go2net.com/">Go2Net</a> &gt; <a href="http://www.go2net.com/search.html">MetaCrawler</a> &gt; Search Query = ohmeohmy
-</font></td>
-    </tr>
-<tr><td colspan=4 height=2 bgcolor="#EEEEEE"><img src="http://images.go2net.com/search/images/transparent.gif" width=1 height=2 border=0 alt="."></td></tr>
-<tr><td rowspan=3 width=2 bgcolor="#EEEEEE"><img src="http://images.go2net.com/search/images/transparent.gif" width=2 height=1 border=0 alt="."></td>
-<td rowspan=3 width=123 bgcolor="#EEEEEE" valign=top><font size="-1" face="Geneva, Arial, Helvetica"><br>
-
-<!-- Default Ad --><a href="http://www.go2net.com" target="_top"><img src="http://a1656.g.akamaitech.net/7/1656/831/0001/images.go2net.com/go2net/ads/default/textlink.gif" border="0" align=></a>
-<p>
-<font size="-1" face="Geneva, Arial, Helvetica">
-900MHz Cordless Phone only $29.93 <A href="http://click.go2net.com/adclick?cid=00012275919028a500000000&area=results.sidebar2&site=MC&shape=textlink&keyword=ohmeohmy">while supplies last</a>.</font>
-<p>
-<font size="-1" face="Geneva, Arial, Helvetica">Deep discounts on<br>over 50k business<br>computing products!<br><a href="http://click.go2net.com/adclick?cid=00012373851e276b00000000&area=results.sidebar3&site=MC&shape=textlink&keyword=ohmeohmy">Solutions4SURE.com</a></font>
-
-
-
-
-<br><br>
-<a href="http://click.go2net.com/adclick?cid=00011859eb356f6f00000000&area=sponsor&site=MC&shape=button&keyword=ohmeohmy" target="_top" onMouseOver="window.status='[Advertisement]'; return true"><img src="http://a1656.g.akamaitech.net/7/1656/831/0001/images.go2net.com/go2net/ads/199910/0639.gif" alt="Click Here for Free PC Phone Calls!" border="0"  width=120 height=60></a>
-<br>
-<a href="http://click.go2net.com/adclick?cid=000104431635862c00000000&area=results&site=MC&shape=button&keyword=ohmeohmy" target="_top" onMouseOver="window.status='[Advertisement]'; return true"><img src="http://a1656.g.akamaitech.net/7/1656/831/0001/images.go2net.com/go2net/ads/199910/0215.gif" alt="Click here!" border="0"  width=120 height=60></a>
-<br>
-<!-- ?shape=button&site=MC&keyword=ohmeohmy&area=results2"-->
-<p>
-
-    
-Research "<a href="http://click.go2net.com/adclick?cid=000038b7da55c0ef00000000&area=results.sponsor&site=MC&shape=textlink&keyword=ohmeohmy">ohmeohmy</a>" at
-<B>Electric Library</B>.
-
-    
-<p>
-<font size="-2"><a href="http://www.go2net.com/customize/searchbox.php">Add or Remove Engines</a></font>
-
-<br><br><br>
-<B>Search</B><BR>
-
-<A HREF="http://www.go2net.com/channels/entertainment/">Arts/Entertainment</A><BR>
-<A HREF="http://www.go2net.com/directory/Automobiles/">Automobiles</A><BR>
-<A HREF="http://www.go2net.com/directory/Business/">Business</A><BR>
-<A HREF="http://www.go2net.com/channels/computing/">Computers</A><BR>
-<A HREF="http://www.go2net.com/channels/education/">Education</A><BR>
-<A HREF="http://www.go2net.com/channels/finance/">Finance</A><BR>
-<A HREF="http://www.go2net.com/channels/games/">Games</A><BR>
-<A HREF="http://www.go2net.com/channels/health/">Health</A><BR>
-<A HREF="http://www.go2net.com/directory/Home/">Home</A><BR>
-<A HREF="http://www.go2net.com/channels/news/">News</A><BR>
-<A HREF="http://www.go2net.com/channels/realestate/">Real Estate</A><BR>
-<A HREF="http://www.go2net.com/directory/Recreation/">Recreation</A><BR>
-<A HREF="http://www.go2net.com/directory/Reference/">Reference</A><BR>
-<A HREF="http://www.go2net.com/directory/Regional/">Regional</A><BR>
-<A HREF="http://www.go2net.com/directory/Science/">Science</A><BR>
-<A HREF="http://www.go2net.com/directory/Shopping/">Shopping</A><BR>
-<A HREF="http://www.go2net.com/directory/Society/">Society</A><BR>
-<A HREF="http://www.go2net.com/channels/sports/">Sports</A><BR>
-<A HREF="http://www.go2net.com/channels/travel/">Travel</A><BR>
-<A HREF="http://www.go2net.com/directory/World/">World</A><BR>
-<br><br>
-<b>Resources</b><br>
-<a href="http://click.go2net.com/adclick?cid=0000ffc2fb907c4f00000000&area=resources&site=mc&shape=textlink">Yellow Pages</a><br>
-<a href="http://click.go2net.com/adclick?cid=0000fd09fb907c4f00000000&area=resources&site=MC&shape=textlink">Personals</a><br>
-<a href="http://www.infospace.com/info.go2net/newclass/ad_index.html">Classifieds</a><br>
-<a href="http://in-115.infospace.com/info.go2net/localevents/index.htm">Concerts</a><br>
-<a href="http://in-115.infospace.com/info.go2net/horo.html">Horoscopes</a><br>
-<a href="http://in-115.infospace.com/info.go2net/lotto/index.htm">Lottery</a><br>
-<a href="http://www.infospace.com/info.go2net/fillc?nf=mapdir.html">Maps</a><br>
-<a href="http://in-115.infospace.com/info.go2net/movies/index.htm">Movies</a><br>
-<a href="http://www.infospace.com/info.go2net/index_ppl.html">PeopleFind</a><br>
-<a href="http://www.infospace.com/info.go2net/">UltimateDirectory</a><br>
-<a href="http://www.infospace.com/info.go2net/weather/infowea.html">Weather</a><br>
-<a href="http://bn.bfast.com/booklink/click?sourceid=833078&categoryid=homepage">Books</a><br>
-<br><a href="http://store.go2net.com/cgi-bin/Go2Net.storefront/EN/product/102">Get the new MetaCrawler t-shirt here!</a>
-
-</font><br><img src="http://images.go2net.com/search/images/transparent.gif" width=123 height=1 border=0 alt="."></td>
-<td colspan=2 height=70 bgcolor="#EEEEEE">
-<a href="http://click.go2net.com/adclick?cid=00011bcc1635862c00000000&area=results&site=MC&shape=banner&other=sHOWcOUNT/1&keyword=ohmeohmy&pass_random=9215" target="_top" onMouseOver="window.status='[Advertisement]'; return true"><img src="http://view.avenuea.com/view/go2net_gateway_nov_102699aa_01/direct/01&random=9215" alt="Click here for a Gateway computer deal!" border="1"  width=468 height=60></a>
-<br><img src="http://images.go2net.com/search/images/transparent.gif" width=475 height=1 border=0 alt="."></td>
+<!-- END MC AUDIO/MP3 SEARCH -->
+</font></td><td align="right"><font size="2" face="geneva, arial, helvetica">
+<img src="http://images.go2net.com/search/images/envelope.gif" width=18 height=12 border=0 alt="">&nbsp;&nbsp;<a href="http://mc3.metacrawler.com/cgi-bin/mail-results.cgi?http://mc3.metacrawler.com/crawler?general=ohmeohmy&method=0&sid=87597769mc3_8_4&sno=3772&domainLimit=0&rpp=30&mrr=0&timeout=10&hpe=30&format=email&power=0&target=&eng=AltaVista&eng=Excite&eng=Lycos&eng=WebCrawler&eng=LookSmart&eng=GoTo&eng=DirectHit&refer=email&start=0&sort=0&saved_rpp=30&saved_format=regular">E-mail results to a friend</a></font></td></tr>
+<tr>
+<td><font size="2" face="geneva, arial, helvetica"><!-- BLINK section THERE is associated javascript for popup--><a href="http://click.go2net.com/adclick?cid=0002b8890000000000000000&area=results.blink&site=MC&shape=textlink" onclick="doBlink(); return false;"><img src="http://images.go2net.com/search/images/logo_blink.gif" width="20" height="17" alt="" border="0"></A> <a href="http://click.go2net.com/adclick?cid=0002b8890000000000000000&area=results.blink&site=MC&shape=textlink" onclick="doBlink(); return false;">Bookmark this page with Blink</A></font></td>
 </tr>
-
-<tr> <!-- begin results -->
-  <td width=5>
-      <img src="http://images.go2net.com/search/images/transparent.gif" width=5 height=625 border=0 alt=" ">
-  </td>
-  <td valign=top width="100%">
-    <font size="-1" face="Geneva, Arial, Helvetica">
-<!-- TEXT AD BOX WITH BOX OUTLINE -->
-
-      <ul>
-<!-- Default Ad --><a href="http://www.go2net.com" target="_top"><img src="http://a1656.g.akamaitech.net/7/1656/831/0001/images.go2net.com/go2net/ads/default/textlink.gif" border="0" align=></a>
-
-			<li><b>Find books on <a href="http://click.go2net.com/adclick?cid=0000e6880623ede300000000&area=results.bn&site=MC&shape=textlink&keyword=ohmeohmy&ext_keyword=ohmeohmy">ohmeohmy</a> at bn.com</b> <br>
-
+<tr><td colspan="2" height="23"><font size="2" face="geneva, arial, helvetica">
 <!-- MC SUGGESTS SECTION -->
+<img src="http://images.go2net.com/search/images/mcsuggests.gif" width=145 height=16 border=0 alt="MC Suggests">
+<font size="2" face="geneva, arial, helvetica">
+<a href="http://click.go2net.com/adclick?cid=0002cd481635862c00000000&area=results&site=MC&shape=textlink&keyword=ohmeohmy">Aria Visa! Apply!</a></font>
+<br></font></td></tr>
+<tr><td colspan="2" height="2" class="midbg"><img src="http://images.go2net.com/search/images/transparent.gif" width=1 height=2 border=0 alt=""></td></tr>
+<tr><td colspan="2" height=24><font size="2" face="geneva, arial, helvetica"><b>You just searched these search engines:</b> AltaVista, Excite, WebCrawler</font></td></tr>
+<tr><td colspan="2" height="5"><img src="http://images.go2net.com/search/images/transparent.gif" width=1 height=2 border=0 alt=""></td></tr>
+<tr><td colspan="2"><font size="2" face="geneva, arial, helvetica">
 
-<!-- Default Ad --><a href="http://www.go2net.com" target="_top"><img src="http://a1656.g.akamaitech.net/7/1656/831/0001/images.go2net.com/go2net/ads/default/textlink.gif" border="0" align=></a>
-      </ul>
+<a href="http://click.go2net.com/adclick?cid=0002bb1f0000000000000000&area=results.robocast&site=MC&shape=textlink&clickurl=http%3A%2F%2Fmc3%2Emetacrawler%2Ecom%2Fcrawler%3Fgeneral%3Dohmeohmy%26method%3D0%26sid%3D87597769mc3%5F8%5F4%26sno%3D3772%26domainLimit%3D0%26rpp%3D30%26mrr%3D0%26timeout%3D10%26hpe%3D30%26format%3Drobocast%26power%3D0%26target%3D%26eng%3DAltaVista%26eng%3DExcite%26eng%3DLycos%26eng%3DWebCrawler%26eng%3DLookSmart%26eng%3DGoTo%26eng%3DDirectHit%26refer%3Dautobrowse%26start%3D0%26sort%3D0%26saved%5Frpp%3D30%26saved%5Fformat%3Dregular"><img src="http://images.go2net.com/search/images/robocast_results2.gif" width="369" height="13" alt="auto-browse your results" border="0"></a>
+</font></td></tr>
+</table>
+<br>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr><td valign="top"><!-- START: result information displayed by ranking -->
 
-      <table cellpadding=0 cellspacing=0 border=0 width="100%">
-	<tr>
-	  <td colspan=2 height=20 bgcolor="#FFCC66">
-	      <font size="-1" face="Geneva, Arial, Helvetica">
-&nbsp;<b>Results for "ohmeohmy"</b>  &nbsp;&nbsp;1 to 15 of 15 results</font>
-	  </td>
-	</tr>
-	<tr>
-	  <td height=20 valign=top bgcolor="#EEEEEE">
-	      <font size="-1" face="Geneva, Arial, Helvetica">
 
-	      </font>
-	  </td>
-	  <td align=right valign=top bgcolor="#EEEEEE">
-	      <font size="-1" face="Geneva, Arial, Helvetica">
-View by:
-
-Relevance | 
-<a href="http://mc3.go2net.com/crawler?general=ohmeohmy&method=0&sid=43624060mc3_40_17&sno=174848&domainLimit=0&rpp=30&timeout=10&hpe=30&format=regular&power=0&eng=AltaVista&eng=Excite&eng=Infoseek&eng=Lycos&eng=WebCrawler&eng=Yahoo&eng=Thunderstone&eng=LookSmart&eng=About&eng=GoTo&eng=DirectHit&refer=sort&start=0&sort=1">Site</a> |
-<a href="http://mc3.go2net.com/crawler?general=ohmeohmy&method=0&sid=43624060mc3_40_17&sno=174848&domainLimit=0&rpp=30&timeout=10&hpe=30&format=regular&power=0&eng=AltaVista&eng=Excite&eng=Infoseek&eng=Lycos&eng=WebCrawler&eng=Yahoo&eng=Thunderstone&eng=LookSmart&eng=About&eng=GoTo&eng=DirectHit&refer=sort&start=0&sort=2">Source</a>
-
+<!-- START: Direct Hit Sidebar Ads -->
+<table cellspacing="0" cellpadding="3" border="0" width="160" align="right">
+<tr><td>
+<br>
+<table cellspacing="0" cellpadding="1" border="0" width="160">
+<tr><td class="midbg">
 
 
 
+<table cellspacing="0" cellpadding="3" border="0" width="160">
+<tr><td width="1" bgcolor="#FFFFFF"><img src="http://images.go2net.com/search/images/transparent.gif" width=1 height=1 border=0 alt=" "></td><td width="159" height="60" bgcolor="#FFFFFF">
+<a href="http://go2net.directhit.com/fcgi-bin/RedirURL.fcg?url=http://www.metacrawler.com/help/faq/affiliate.html&qry=%2Bohmeohmy&bID=000310079&src=mtc"><font size="-1" face="Geneva, Arial, Helvetica">Add the Web's best search to your site</font></a><br><font size="-1" face="Geneva, Arial, Helvetica">You already use MetaCrawler because the results are the best on the Web. Now you can add this top-notch search to your site, here's how.<br></font>
+</td></tr></table>
 
-	      </font>
-	  </td>
-	</tr>
-	<tr>
-	  <td colspan=2 height=20 align=right>
-	      <font size="-1" face="Geneva, Arial, Helvetica">
-      
-<img src="http://images.go2net.com/search/images/envelope.gif" width=17 height=11 border=0 alt="">&nbsp;&nbsp;<a href="http://mc3.go2net.com/cgi-bin/mail-results.cgi?http://mc3.go2net.com/crawler?general=ohmeohmy&method=0&sid=43624060mc3_40_17&sno=174848&domainLimit=0&rpp=30&timeout=10&hpe=30&format=email&power=0&eng=AltaVista&eng=Excite&eng=Infoseek&eng=Lycos&eng=WebCrawler&eng=Yahoo&eng=Thunderstone&eng=LookSmart&eng=About&eng=GoTo&eng=DirectHit&refer=email&start=0&sort=0&saved_rpp=30&saved_format=regular">Email results to a friend</a>
+<table cellspacing="0" cellpadding="3" border="0" width="160">
+<tr><td width="1" bgcolor="#FFFFFF"><img src="http://images.go2net.com/search/images/transparent.gif" width=1 height=1 border=0 alt=" "></td><td width="159" height="60" bgcolor="#FFFFFF">
+<a href="http://go2net.directhit.com/fcgi-bin/RedirURL.fcg?url=http://www.metacrawler.com/help/faq/img_search.html&qry=%2Bohmeohmy&bID=000310081&src=mtc"><font size="-1" face="Geneva, Arial, Helvetica">Improve your images</font></a><br><font size="-1" face="Geneva, Arial, Helvetica">Stop endless searches for images on the Web, use MetaCrawler image search instead. Just type what you're looking for, hit enter and see for yourself.<br></font>
+</td></tr></table>
 
-	      </font>
-	  </td>
-	</tr>
-    </table>
-<!-- /font -->
-<!-- B&N RECOMMENDS -->
+<table cellspacing="0" cellpadding="3" border="0" width="160">
+<tr><td width="1" bgcolor="#FFFFFF"><img src="http://images.go2net.com/search/images/transparent.gif" width=1 height=1 border=0 alt=" "></td><td width="159" height="60" bgcolor="#FFFFFF">
+<a href="http://go2net.directhit.com/fcgi-bin/RedirURL.fcg?url=http://www.metacrawler.com/help/faq/audio.html&qry=%2Bohmeohmy&bID=000310083&src=mtc"><font size="-1" face="Geneva, Arial, Helvetica">Find the best sounds around</font></a><br><font size="-1" face="Geneva, Arial, Helvetica">Looking for a random song, movie clip or other audio file? Use MetaCrawler audio search and find it faster.<br></font>
+</td></tr></table>
+
+
+
+
+<table cellspacing="0" cellpadding="3" border="0" width="160">
+<tr><td width="1" bgcolor="#FFFFFF"><img src="http://images.go2net.com/search/images/transparent.gif" width=1 height=1 border=0 alt=" "></td>
+<td width="159" height="60" bgcolor="#FFFFFF">
+
+<a href="http://click.go2net.com/adclick?cid=0002043291eb65f800000000&area=results.sidebar&site=MC&shape=textlink&keyword=ohmeohmy">Come see<br>what everyone’s<br>talking about.<br>100hot!</a>
+
+</td></tr>
+<tr><td width="1" bgcolor="#FFFFFF"><img src="http://images.go2net.com/search/images/transparent.gif" width=1 height=1 border=0 alt=" "></td>
+<td width="159" bgcolor="#FFFFFF"><font size="-1" face="Geneva, Arial, Helvetica">
+<a href="http://secure.directhit.com/servlet/AdServlet?cmd=refer&type=set&redirurl=http://sponsor.directhit.com&refurl=http://www.metacrawler.com&refvenueid=15">Promote Your Site</a>
+</font></td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<!-- END: Direct Hit Sidebar Ads -->
+
+
+<!-- SI quote -->
 
 
 
@@ -209,68 +184,94 @@ Relevance |
 
 
 
+
 <dl>
-  <dt>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.thebabynet.com/babyboard/messages2/52802.html"><b>Ohmeohmy</b>.....</a><br>
-  <dd><b>Ohmeohmy</b>..... [ Follow Ups ] [ Post Followup ] [ The Babynet Discussion Forum ] [ Help ] Posted by Tammy on May 15, 1998 at 16:31:42: In Reply to:...<br><font size="-3">1000,&nbsp;http://www.thebabynet.com/babyboard/messages2/52802.html (<a target="_blank" href="http://www.altavista.digital.com/cgi-bin/query?pg=q&kl=XX&q=ohmeohmy">AltaVista</a>)
-</font>
+  <dt>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://home.talkcity.com/BackbeatBlvd/ohmeohmy/"><b>ohmeohmy</b>'s Home Page</a>
+<br>
+  <dd><i>AltaVista, Excite, WebCrawler</i>: <b>ohmeohmy</b><br> 
+  <font size="-3">1000,&nbsp;http://home.talkcity.com/BackbeatBlvd/ohmeohmy/ (<a target="_blank" href="http://partners.altavista.com/cgi-bin/query?pg=q&kl=XX&q=%2Bohmeohmy">AltaVista</a>, <a target="_blank" href="http://search.excite.com/search.gw?s=%2Bohmeohmy&lk=go2net_full&perPage=30">Excite</a>, <a target="_blank" href="http://www.webcrawler.com/cgi-bin/WebQuery?searchText=%2Bohmeohmy&lk=wc_go2net_full">WebCrawler</a>)
+ | <a href="/crawler?refer=mc-morelike&general=ohmeohmys%20Home%20Page">More Like This</a></font>
 <p>
 </dl>
 
 <dl>
-  <dt>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://maxpages.com/clansite">Miscellaneous -- Clan Bonnie and Clyde -- http://maxpages.com/clansite/Home</a><br>
-  <dd>Miscellaneous, Clan Bonnie and Clyde<br><font size="-3">1000,&nbsp;http://maxpages.com/clansite (<a target="_blank" href="http://www.infoseek.com/Titles?qt=ohmeohmy&col=WW&sv=IS&lk=noframes&nh=30">Infoseek</a>)
-</font>
+  <dt>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://members.tripod.com/no1crackho/no1ckho.html">Well guys it's time to say goodbye.</a>
+<br>
+  <dd><i>AltaVista</i>: Well guys it's time to say goodbye. We no longer are checking email. There. are. a. lot. of. other. good. sites. out. there. so. check. them. out....<br><i>Excite, WebCrawler</i>: Well guys it's time to say goodbye. We no longer are checking email. The No1CrackHo<br> 
+  <font size="-3">543,&nbsp;http://members.tripod.com/no1crackho/no1ckho.html (<a target="_blank" href="http://partners.altavista.com/cgi-bin/query?pg=q&kl=XX&q=%2Bohmeohmy">AltaVista</a>, <a target="_blank" href="http://search.excite.com/search.gw?s=%2Bohmeohmy&lk=go2net_full&perPage=30">Excite</a>, <a target="_blank" href="http://www.webcrawler.com/cgi-bin/WebQuery?searchText=%2Bohmeohmy&lk=wc_go2net_full">WebCrawler</a>)
+ | <a href="/crawler?refer=mc-morelike&general=Well%20guys%20its%20time%20to%20say%20goodbye%2E">More Like This</a></font>
 <p>
 </dl>
 
 <dl>
-  <dt>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.experts-exchange.com/comp/lang/perl/">Perl Programming Help, Info, Assistance</a><br>
-  <dd>Free technical answers within minutes, Experts Exchange, a knowledge sharing community where you can quickly find Perl Programming help, info, and assistance from other expert members<br><font size="-3">999,&nbsp;http://www.experts-exchange.com/comp/lang/perl/ (<a target="_blank" href="http://search.excite.com/search.gw?search=ohmeohmy&perPage=30">Excite</a>)
-</font>
+  <dt>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.rense.com/politics6/ohmeohmy.htm">Scallion's Dire Predictions For Earth To Air On Art Bell Friday</a>
+<br>
+  <dd>SIGHTINGS. Scallion's Dire Predictions For Earth To Air On Art Bell Friday By Ralph Jimenez - Boston Globe Staff. http://www.boston.com:80/dailyglobe...<br> 
+  <font size="-3">528,&nbsp;http://www.rense.com/politics6/ohmeohmy.htm (<a target="_blank" href="http://partners.altavista.com/cgi-bin/query?pg=q&kl=XX&q=%2Bohmeohmy">AltaVista</a>)
+ | <a href="/crawler?refer=mc-morelike&general=Scallions%20Dire%20Predictions%20For%20Earth%20To%20Air%20On%20Art%20Bell%20Friday">More Like This</a></font>
 <p>
 </dl>
 
 <dl>
-  <dt>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://home.talkcity.com/lists/O10.html">Talk Citizens</a><br>
-  <dd>The Internet's leading community site. home.talkcity.com Home Page Directory (O) &lt;A &gt;Z ohmamma OhMan Ohmandingo ohmandude OHMandy OHManny ohmanx4 ohmara ohmarc ohmarylou<br><font size="-3">700,&nbsp;http://home.talkcity.com/lists/O10.html (<a target="_blank" href="http://search.excite.com/search.gw?search=ohmeohmy&perPage=30">Excite</a>)
-<br><b>Pages at this site with the same name:</b>
-<br><b>1.</b> <a href="http://home.talkcity.com/lists/O9.html">http://home.talkcity.com/lists/O9.html</a>
-</font>
+  <dt>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://rainforest.parentsplace.com/dialog/get/newaffiliate8n2/17.html">Me? Dating?? Yup!!!</a>
+<br>
+  <dd>Click Here! Membership | How-to Post | Rules of Play | Become a Board Leader | Suggest a Board. Hi. All boards on rainforest.parentsplace.com are now...<br> 
+  <font size="-3">323,&nbsp;http://rainforest.parentsplace...og/get/newaffiliate8n2/17.html (<a target="_blank" href="http://partners.altavista.com/cgi-bin/query?pg=q&kl=XX&q=%2Bohmeohmy">AltaVista</a>)
+ | <a href="/crawler?refer=mc-morelike&general=Me%20Dating%20Yup">More Like This</a></font>
 <p>
 </dl>
 
 <dl>
-  <dt>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.thebabynet.com/babyboard/messages2/52799.html">I've noticed...</a><br>
-  <dd>I've noticed... [ Follow Ups ] [ Post Followup ] [ The Babynet Discussion Forum ] [ Help ] Posted by Jessica on May 15, 1998 at 16:24:21: That there...<br><font size="-3">428,&nbsp;http://www.thebabynet.com/babyboard/messages2/52799.html (<a target="_blank" href="http://www.altavista.digital.com/cgi-bin/query?pg=q&kl=XX&q=ohmeohmy">AltaVista</a>)
-</font>
+  <dt>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://dem0nmac.mgh.harvard.edu/forum_2/AddictionF/OhMEOhmy.html">Oh ME! Oh my!</a>
+<br>
+  <dd>Click Here to Read our Forum Disclaimer and Statement of Purpose. This Web Forum is not moderated in any sense. Anyone on the Internet can post...<br> 
+  <font size="-3">246,&nbsp;http://dem0nmac.mgh.harvard.ed...rum_2/AddictionF/OhMEOhmy.html (<a target="_blank" href="http://partners.altavista.com/cgi-bin/query?pg=q&kl=XX&q=%2Bohmeohmy">AltaVista</a>)
+ | <a href="/crawler?refer=mc-morelike&general=Oh%20ME%20Oh%20my">More Like This</a></font>
 <p>
 </dl>
 
 <dl>
-  <dt>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://matilda.aaa.com.au/matilda/feedback/clinton_affairs/12-25.shtml">AAA Matilda Guestbook</a><br>
-  <dd>AAA Matilda USA Political Message Board You Can Make Any Comment You Like About World and USA News. [Add YOUR Letter to AAA Matilda's American Political Message Board. ]<br><font size="-3">393,&nbsp;http://matilda.aaa.com.au/mati...ck/clinton_affairs/12-25.shtml (<a target="_blank" href="http://search.excite.com/search.gw?search=ohmeohmy&perPage=30">Excite</a>)
-</font>
+  <dt>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://matilda.aaa.com.au/matilda/feedback/clinton_affairs/12-25.shtml">AAA Matilda Guestbook</a>
+<br>
+  <dd><i>Excite, WebCrawler</i>: AAA Matilda USA Political Message Board You Can Make Any Comment You Like About World and USA News. [Add YOUR Letter to AAA Matilda's American Political Message Board. ]<br> 
+  <font size="-3">176,&nbsp;http://matilda.aaa.com.au/mati...ck/clinton_affairs/12-25.shtml (<a target="_blank" href="http://search.excite.com/search.gw?s=%2Bohmeohmy&lk=go2net_full&perPage=30">Excite</a>, <a target="_blank" href="http://www.webcrawler.com/cgi-bin/WebQuery?searchText=%2Bohmeohmy&lk=wc_go2net_full">WebCrawler</a>)
+ | <a href="/crawler?refer=mc-morelike&general=AAA%20Matilda%20Guestbook">More Like This</a></font>
 <p>
 </dl>
 
 <dl>
-  <dt>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.vsws.com/wwwboard/mdata/333.html">PC2000 &amp; Net object fusion v3 crack</a><br>
-  <dd>PC2000 &amp; Net object fusion v3 crack. ...... .... ........: 1998 ...... 14.., 21..40..41... hi PC20000. go here and you will find the thing  ...<br><font size="-3">318,&nbsp;http://www.vsws.com/wwwboard/mdata/333.html (<a target="_blank" href="http://www.altavista.digital.com/cgi-bin/query?pg=q&kl=XX&q=ohmeohmy">AltaVista</a>)
-</font>
+  <dt>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://pirfuct.diaryland.com/january22.html">pirfuct / online diary / gerl</a>
+<br>
+  <dd>virgin onehotgal andrew karla andy baby slacker leah.  . 1/22/00. i woke up with a sore neck this morning. no big deal. i know how i got it. i was...<br> 
+  <font size="-3">131,&nbsp;http://pirfuct.diaryland.com/january22.html (<a target="_blank" href="http://partners.altavista.com/cgi-bin/query?pg=q&kl=XX&q=%2Bohmeohmy">AltaVista</a>)
+ | <a href="/crawler?refer=mc-morelike&general=pirfuct%20%2F%20online%20diary%20%2F%20gerl">More Like This</a></font>
 <p>
 </dl>
 
 <dl>
-  <dt>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.ncsweetpotatoes.com/media/ohmeohmy.htm">Sweet Potato</a><br>
-  <dd>My Oh My, It’s SweetPotato Pie. If the film &quot;Soul Food&quot; didn't make you hungry for a slice of SweetPotato Pie, then reading about it will.This...<br><font size="-3">259,&nbsp;http://www.ncsweetpotatoes.com/media/ohmeohmy.htm (<a target="_blank" href="http://www.altavista.digital.com/cgi-bin/query?pg=q&kl=XX&q=ohmeohmy">AltaVista</a>)
-</font>
+  <dt>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.angelfire.com/wa/monicasdude/GuideO.htm">Bob Dylan Field Recordings -- CD/CDR Guide O</a>
+<br>
+  <dd>OBERHAUSEN 2000. no label 2CDR Arena (Oberhausen, Germany); May 9, 2000 Tracklist: Roving Gambler, Times They Are A-Changin', Masters Of War, It's...<br> 
+  <font size="-3">109,&nbsp;http://www.angelfire.com/wa/monicasdude/GuideO.htm (<a target="_blank" href="http://partners.altavista.com/cgi-bin/query?pg=q&kl=XX&q=%2Bohmeohmy">AltaVista</a>)
+ | <a href="/crawler?refer=mc-morelike&general=Bob%20Dylan%20Field%20Recordings%20%20CD%2FCDR%20Guide%20O">More Like This</a></font>
 <p>
 </dl>
 
 <dl>
-  <dt>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.oberlin.edu/~gjohnson/lulu/ohmeohmy.html">Oh Me Oh My (I'm a Fool For You Baby)</a><br>
-  <dd>oh me oh my (i'm a fool for you baby) written by jim doris. To make you laugh I'd play the fool for you Although the people turn and stare I'd give...<br><font size="-3">204,&nbsp;http://www.oberlin.edu/~gjohnson/lulu/ohmeohmy.html (<a target="_blank" href="http://www.altavista.digital.com/cgi-bin/query?pg=q&kl=XX&q=ohmeohmy">AltaVista</a>)
-</font>
+  <dt>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://members.theglobe.com/OhmeOhmy/no1ckho.html">No1CrackHo Web Site</a>
+<br>
+  <dd><br> 
+  <font size="-3">91,&nbsp;http://members.theglobe.com/OhmeOhmy/no1ckho.html (<a target="_blank" href="http://partners.altavista.com/cgi-bin/query?pg=q&kl=XX&q=%2Bohmeohmy">AltaVista</a>)
+ | <a href="/crawler?refer=mc-morelike&general=No1CrackHo%20Web%20Site">More Like This</a></font>
+<p>
+</dl>
+
+<dl>
+  <dt>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.multimania.com/darkp/Lien.htm">Liens</a>
+<br>
+  <dd>Liens. Vous voulez des liens pour le crack, pour la programmation ou pour downloader (les programmes dont les cracks sont fournis sur cette page ;-)...<br> 
+  <font size="-3">75,&nbsp;http://www.multimania.com/darkp/Lien.htm (<a target="_blank" href="http://partners.altavista.com/cgi-bin/query?pg=q&kl=XX&q=%2Bohmeohmy">AltaVista</a>)
+ | <a href="/crawler?refer=mc-morelike&general=Liens">More Like This</a></font>
 <p>
 </dl>
 
@@ -279,38 +280,51 @@ Relevance |
 
 
 
+
+
+
 <dl>
-  <dt>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.cyberdanmark.dk/danmark/byggedele/midi/Midikunstner/Deb_Ackley/">Index of /danmark/byggedele/midi/Midikunstner/Deb_Ackley</a><br>
-  <dd>Index of /danmark/byggedele/midi/Midikunstner/Deb_Ackley. Name Last modified Size Description. Parent Directory 19-Jul-1999 11:55 -...<br><font size="-3">168,&nbsp;http://www.cyberdanmark.dk/dan.../midi/Midikunstner/Deb_Ackley/ (<a target="_blank" href="http://www.altavista.digital.com/cgi-bin/query?pg=q&kl=XX&q=ohmeohmy">AltaVista</a>)
-</font>
+  <dt>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://galaxy.channeli.net/kaimst/data/na/linksite.html">Untitled</a>
+<br>
+  <dd>.... .... ...... ........... ........ .... .......... .... .......... http://dir.to .. .. ......... .... .... .. ...<br> 
+  <font size="-3">55,&nbsp;http://galaxy.channeli.net/kaimst/data/na/linksite.html (<a target="_blank" href="http://partners.altavista.com/cgi-bin/query?pg=q&kl=XX&q=%2Bohmeohmy">AltaVista</a>)
+ | <a href="/crawler?refer=mc-morelike&general=Untitled">More Like This</a></font>
 <p>
 </dl>
 
 <dl>
-  <dt>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.connectexpress.com/~izzer/rules.html">Room Rules For Chatting in &quot;A Swingers Hideaway&quot;</a><br>
-  <dd>Room Rules For Chatting in &quot;A Swingers Hideaway&quot; This chatroom has worked out the following rules/conduct for this community. These rules apply to...<br><font size="-3">76,&nbsp;http://www.connectexpress.com/~izzer/rules.html (<a target="_blank" href="http://www.altavista.digital.com/cgi-bin/query?pg=q&kl=XX&q=ohmeohmy">AltaVista</a>)
-</font>
+  <dt>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.cyberdanmark.dk/danmark/byggedele/midi/Midikunstner/Deb_Ackley/">Index of /danmark/byggedele/midi/Midikunstner/Deb_Ackley</a>
+<br>
+  <dd>Index of /danmark/byggedele/midi/Midikunstner/Deb_Ackley. Name Last modified Size Description. Parent Directory 04-Oct-1999 18:15 -...<br> 
+  <font size="-3">39,&nbsp;http://www.cyberdanmark.dk/dan.../midi/Midikunstner/Deb_Ackley/ (<a target="_blank" href="http://partners.altavista.com/cgi-bin/query?pg=q&kl=XX&q=%2Bohmeohmy">AltaVista</a>)
+ | <a href="/crawler?refer=mc-morelike&general=Index%20of%20%2Fdanmark%2Fbyggedele%2Fmidi%2FMidikunstner%2FDeb%5FAckley">More Like This</a></font>
 <p>
 </dl>
 
 <dl>
-  <dt>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://rainforest.parentsplace.com/dialog/get/newaffiliate8n2.html">Single Parents Support</a><br>
-  <dd>Click Here! Membership | How-to Post | Rules of Play | Become a Board Leader | Suggest a Board. Hi. All boards on rainforest.parentsplace.com are now...<br><font size="-3">53,&nbsp;http://rainforest.parentsplace...ialog/get/newaffiliate8n2.html (<a target="_blank" href="http://www.altavista.digital.com/cgi-bin/query?pg=q&kl=XX&q=ohmeohmy">AltaVista</a>)
-</font>
+  <dt>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.ohmeohmy.com/">No Title</a>
+<br>
+  <dd>UPDATE 12/28/00.<br> 
+  <font size="-3">25,&nbsp;http://www.ohmeohmy.com/ (<a target="_blank" href="http://partners.altavista.com/cgi-bin/query?pg=q&kl=XX&q=%2Bohmeohmy">AltaVista</a>)
+ | <a href="/crawler?refer=mc-morelike&general=No%20Title">More Like This</a></font>
 <p>
 </dl>
 
 <dl>
-  <dt>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.geocities.com/SunsetStrip/Vine/5722/ohmeohmy.html">Lance in the Olympics??...</a><br>
-  <dd>GOLD MEDAL WINNER! We thought this was too fuckin' funny to be put on the pictures page. I mean, come on! JUST LOOK AT IT! *ahem* Sorry. We found...<br><font size="-3">35,&nbsp;http://www.geocities.com/SunsetStrip/Vine/5722/ohmeohmy.html (<a target="_blank" href="http://www.altavista.digital.com/cgi-bin/query?pg=q&kl=XX&q=ohmeohmy">AltaVista</a>)
-</font>
+  <dt>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.beyond-the-illusion.com/pipermail/illusions/1999-December/004303.html">[illusions] Scallion Will Be On Art Bell Friday Night.</a>
+<br>
+  <dd>illusions] Scallion Will Be On Art Bell Friday Night. John F. Winston johnfwin@mlode.com Wed, 29 Dec 1999 22:30:01 -0800 (PST) Previous message:...<br> 
+  <font size="-3">11,&nbsp;http://www.beyond-the-illusion...ions/1999-December/004303.html (<a target="_blank" href="http://partners.altavista.com/cgi-bin/query?pg=q&kl=XX&q=%2Bohmeohmy">AltaVista</a>)
+ | <a href="/crawler?refer=mc-morelike&general=%5Billusions%5D%20Scallion%20Will%20Be%20On%20Art%20Bell%20Friday%20Night%2E">More Like This</a></font>
 <p>
 </dl>
 
 <dl>
-  <dt>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://poe.org/info/read.html">No Title</a><br>
-  <dd>READ A MESSAGE. © 1999 Cyberfan Corporation Thank You for your Messages - Enjoy the Reading - Finally a NeW POE.ORG and I couldn't be happier....<br><font size="-3">14,&nbsp;http://poe.org/info/read.html (<a target="_blank" href="http://www.altavista.digital.com/cgi-bin/query?pg=q&kl=XX&q=ohmeohmy">AltaVista</a>)
-</font>
+  <dt>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.connectexpress.com/~izzer/rules.html">Room Rules For Chatting in &quot;A Swingers Hideaway&quot;</a>
+<br>
+  <dd>Room Rules For Chatting in &quot;A Swingers Hideaway&quot; This chatroom has worked out the following rules/conduct for this community. These rules apply to...<br> 
+  <font size="-3">4,&nbsp;http://www.connectexpress.com/~izzer/rules.html (<a target="_blank" href="http://partners.altavista.com/cgi-bin/query?pg=q&kl=XX&q=%2Bohmeohmy">AltaVista</a>)
+ | <a href="/crawler?refer=mc-morelike&general=Room%20Rules%20For%20Chatting%20in%20quotA%20Swingers%20Hideawayquot">More Like This</a></font>
 <p>
 </dl>
 
@@ -331,116 +345,136 @@ Relevance |
 </font>
 
 
-    <br>
+<br></td></tr>
+
+<tr><td width="100%" bgcolor="#FFFFFF">
+<!-- BEGIN Cached Partners -->
+
+
+<!-- END Cached Partners -->
+<!-- BEGIN GoTo Best Picks -->
+
+
+<!-- END GoTo Best Picks -->
+<font size="2" face="geneva, arial, helvetica">
+<img src="http://images.go2net.com/search/images/icon_target.gif" width="12" height="12" alt="" border="0"> Can't find what you are looking for? Try your search on <a href="http://click.go2net.com/adclick?cid=0002b99c0000000000000000&area=results.dpmetasearch&site=MC&shape=textlink&clickurl=http://search.dogpile.com/texis/search%3Fbrand%3Dmc&ext_q=ohmeohmy">Dogpile Metasearch</a>!
+<p>
+<a href="http://click.go2net.com/adclick?cid=000296e60000000000000000&area=results.goshop&site=MC&shape=textlink">Go Shopping</a> with MetaCrawler</font><br>
+<br><font size="2" face="geneva, arial, helvetica">
+Research <b><a href="http://click.go2net.com/adclick?cid=00017ef0a453010d00000000&area=results.el&site=MC&shape=textlink&keyword=ohmeohmy&ext_query=ohmeohmy">ohmeohmy</a></b> at <b>Electric Library</b></font>
 
 
 
-<!--<font size="-1"><b>Engines that are not currently responding:</b> Yahoo!</font><br>-->
-    <br>
+
+</td></tr>
+</table><br>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr class="midbg"><td height="23"><font size="2" face="geneva, arial, helvetica">&nbsp;<b>Results for &quot;ohmeohmy&quot;</b>&nbsp;1 to 15 of 15 results</font></td><td align="right"><font size="2" face="Geneva, Arial, Helvetica"><a href="http://click.go2net.com/adclick?cid=0002b99b0000000000000000&area=results.mcdirectory&site=MC&shape=textlink&clickurl=http://kevdb.infospace.com/info.metac/kevdb%3Fkcfg%3Dlooksmart%26otmpl%3Dlooksmart/searchlayout.htm%26qk%3D5%26qi%3D0%26qfirstmatch%3D1%26ran%3D06079%26qcat%3D&ext_qn=ohmeohmy">MetaCrawler Directory </a> &nbsp;</font></td></tr>
+</table>
+<!-- bottom -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="600">
 
 
+<!-- BEGIN banner ad area 1 -->
+<tr><td height=5><img src="http://images.go2net.com/search/images/transparent.gif" height=5></td></tr>
+<tr><td valign="top" width="468" height="75">
+<a href="http://click.go2net.com/adclick?cid=0002d1913272d82500000000&area=results.banner2&site=mc&shape=banner&keyword=ohmeohmy" target="_top" onMouseOver="window.status='[Advertisement]'; return true"><img src="http://images.go2net.com/go2net/ads/200103/0194.gif" alt="Click here!" border="0"  width=468 height=60></a>
+</td>
+<td valign="top" align="center" width="132">
+<a href="http://click.go2net.com/adclick?cid=0002bbab1635862c00000000&area=results&site=MC&shape=button&keyword=ohmeohmy" target="_top" onMouseOver="window.status='[Advertisement]'; return true"><img src="http://images.go2net.com/go2net/ads/200008/0523.gif" alt="Click here!" border="0"  width=120 height=60></a></td></tr><!-- END banner ad area 1 -->
+</table>
 
-
-
-    <table cellspacing=0 cellpadding=0 border=0 width="100%">
-
-      <tr>
-	<td colspan=2 height=1 bgcolor="#0066CC">
-	    <img src="http://images.go2net.com/search/images/transparent.gif" width=468 height=1 border=0 alt=" ">
-	</td>
-      </tr>
-      <tr>
-	<td colspan=2 height=5>
-	    <img src="http://images.go2net.com/search/images/transparent.gif" width=1 height=5 border=0 alt=" ">
-	</td>
-      </tr>
-
-      <tr>
-	<td width=300 valign=top>
-	    <font size="-1" face="Geneva, Arial, Helvetica">
-	    
-	    </font>
-	    <br><br>
-	</td>
-
-      </tr>
-
-      <tr>
-	<td align=center>
-	    
-	    <form name="querybox" action="/crawler" method="get">
-&nbsp;<input type="text" name="general" value="ohmeohmy" size="31"><br>
-<font face="Geneva, Arial, Helvetica" size="-1">
+<!-- BEGIN search area 2-->
+<!-- BEGIN SEARCHBOX -->
+<br>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr class="midbg"><td colspan="4">&nbsp;</td></tr>
+<tr class="midbg">
+<td width="222" rowspan="2" align="center" valign="top"><form action="/crawler" method=get>
+<a href="http://www.metacrawler.com/"><img src="http://images.go2net.com/metacrawler/images/themed/classic/mc.gif" border="0" alt="[ MetaCrawler&reg; ]"></a><br>
+<img src="http://images.go2net.com/search/images/transparent.gif" width="222" height="1" alt="." border="0"></td>
+<td colspan="2">
+&nbsp;
+</td><td width="100%" rowspan="2" class="midbg"><br></td></tr>
+<tr class="midbg">
+<td width="232" valign="top"><font size="2" face="geneva, arial, helvetica"><input type="text" name="general" value="ohmeohmy" size=27><br>
 <input type="radio" name="method" value="1" > any
 &nbsp;<input type="radio" name="method" value="0" checked> all
 &nbsp;<input type="radio" name="method" value="2" > phrase 
-&nbsp;<input value="Search" type="submit">
-</font>
 
+
+<br><a href="http://www.metacrawler.com/index_power.html">Power Search</a> | <a href="http://www.metacrawler.com/index_country.html">Search By Country</a>
+</font><br>
+<img src="http://images.go2net.com/search/images/transparent.gif" width="233" height="1" alt="." border="0"></td>
+<td width="140" valign="top"><input value="Search" type="submit"><br><img src="http://images.go2net.com/search/images/transparent.gif" width="1" height="2" border="0" alt="-"><br>
+<select name="redirect">
+<option value="">The Web
+<option value="opendir">Directory
+<option value="audio">Audio/MP3
+<option value="images">Images
+<option value="dejanews">Newsgroups
+<option value="auctions">Auctions
+<option value="streaming">Streaming Media
+</select>
 <input type="hidden" name="region" value=0>
 <input type="hidden" name="rpp" value=30>
 <input type="hidden" name="timeout" value=10>
 <input type="hidden" name="hpe" value=30>
+<input type="hidden" name="sort" value=0>
+<input type="hidden" name="power" value=0>
 <INPUT type="hidden" name="eng" value="AltaVista">
 <INPUT type="hidden" name="eng" value="Excite">
-<INPUT type="hidden" name="eng" value="Infoseek">
 <INPUT type="hidden" name="eng" value="Lycos">
 <INPUT type="hidden" name="eng" value="WebCrawler">
-<INPUT type="hidden" name="eng" value="Yahoo">
-<INPUT type="hidden" name="eng" value="Thunderstone">
 <INPUT type="hidden" name="eng" value="LookSmart">
-<INPUT type="hidden" name="eng" value="About">
 <INPUT type="hidden" name="eng" value="GoTo">
 <INPUT type="hidden" name="eng" value="DirectHit">
 
-<input type="hidden" name="format" value="regular">
-<input type="hidden" name="sort" value=0>
-</form>
+
+<INPUT type="hidden" name="refer" value="mc-results1">
+</form></td></tr>
+<tr><td colspan="4" class="divider"><img src="http://images.go2net.com/search/images/transparent.gif" width="1" height="1" border="0" alt="-"></td></tr>
+</table>
+<!-- END search area 2-->
+<!-- Direct Hit Related -->
 
 
 
-	    
-	    
-	</td>
-      </tr>
-  </table>
-
-  </font>
-</td>
-</tr>
-
-<tr>
-  <td colspan=2 height=70 bgcolor="#EEEEEE">
-<a href="http://click.go2net.com/adclick?cid=00011bcc1635862c00000000&area=results&site=MC&shape=banner&other=sHOWcOUNT/2&keyword=ohmeohmy&pass_random=9215" target="_top" onMouseOver="window.status='[Advertisement]'; return true"><img src="http://view.avenuea.com/view/go2net_gateway_nov_102699aa_01/direct/01&random=9215" alt="Click here for a Gateway computer deal!" border="1"  width=468 height=60></a>
-  </td>
-</tr>
-
-<tr>
-  <td colspan=3 width=130>
-      &nbsp;
-  </td>
-<td>
-    <font size="-1" face="Geneva, Arial, Helvetica">
-<br><font size="-1" face="geneva, arial, helvetica">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr><td colspan="3">
+<br>
+<table>
+<tr><td>
+<font size="-1" face="geneva, arial, helvetica">
 MetaCrawler utilizes the following search engines:<br>
-<a href="http://www.about.com">About.com</a> |
-<a href="http://www.altavista.digital.com">AltaVista</a> |
-<a href="http://www.directhit.com">DirectHit</a> |
-<a href="http://www.excite.com">Excite</a> |
-<a href="http://www.goto.com">GoTo.com</a> |
-<a href="http://www.infoseek.com">Infoseek</a> |
-<a href="http://www.looksmart.com">LookSmart</a><br>
-<a href="http://www.lycos.com">Lycos</a> |
-<a href="http://thunderstone.go2net.com">Thunderstone</a> |
-<a href="http://www.webcrawler.com">Webcrawler</a> |
-<a href="http://www.yahoo.com">Yahoo!</a>
+<a href="http://www.altavista.digital.com/">AltaVista</a> |
+<a href="http://www.directhit.com/">DirectHit</a> |
+<a href="http://www.excite.com/">Excite</a> |
+<a href="http://findwhat.com/">FindWhat.com</a> |
+<a href="http://click.go2net.com/adclick?cid=00014d33e6d5c52c00000000&area=mainpage&site=MC&shape=textlink&clickurl=http://www.google.com">Google</a> | 
+<a href="http://www.goto.com/">GoTo.com</a> |
+<a href="http://www.realnames.com/">Internet Keywords</a> <br>
+<a href="http://www.kanoodle.com/">Kanoodle</a> |
+<a href="http://www.looksmart.com/">LookSmart</a> |
+<a href="http://www.lycos.com/">Lycos</a> |
+<a href="http://dpcatalog.dogpile.com/">MetaCatalog</a> |
+<a href="http://www.sprinks.com/">Sprinks by About</a> | 
+<a href="http://www.webcrawler.com/">Webcrawler</a> 
 </font>
-<br><br>
-<br><font size="-1" face="geneva, arial, helvetica">Copyright &copy; 1996-99 Go2Net, Inc.  - <a href="http://www.go2net.com/corporate/terms.html">Terms of use</a></font>
-
-    </font>
 </td>
+
+<td>
+<a href="http://click.go2net.com/adclick?cid=0002bbab908427ce00000000&area=results.button3&site=mc&shape=button&keyword=ohmeohmy" target="_top" onMouseOver="window.status='[Advertisement]'; return true"><img src="http://images.go2net.com/go2net/ads/200008/0523.gif" alt="Click here!" border="1"  width=120 height=60></a>
+</td> 
 </tr>
 </table>
+<br><br>
+<font size="1" face="geneva, arial, helvetica">Traded on NASDAQ: <a href="http://www.siliconinvestor.com/research/quote.gsp?s=INSP" title="click here to get latest INSP quote">INSP</a> &copy; 2000 InfoSpace, Inc. All Rights Reserved. &nbsp;&nbsp;
+<a href="http://www.go2net.com/corporate/legal/terms.html">Terms of Use</a> | <a href="http://www.infospace.com/info/about/truste.htm" title="Privacy Policy">Privacy Policy</a> | <a href="http://www.infospace.com/info/redirs_all.htm?pgtarg=abtct" title="Customer Feedback">Customer Feedback</a> | <a href="http://www.infospace.com/redirs_all.htm?pgtarg=abtus" title="About InfoSpace">About InfoSpace</a> | <a href="http://www.metacrawler.com/press/bg.html">MC History</a></font>
+<br>
+</td></tr>
+</table>
+</form>
+</body></html>
 
-<br><br></body></html>

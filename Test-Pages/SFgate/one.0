@@ -6,37 +6,11 @@
   </HEAD>
 
   <BODY>
-<body bgcolor="#FFFFFF">
+        
+<A HREF="/search/wais/SFgate/author.html">
+<IMG SRC="/search/wais/SFgate/SFgate-small.gif" ALT="SFgate"></A>
 
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
- <tr>
- <td valign="bottom" nowrap><address>
-<MAP NAME="FrontPageMap"><AREA SHAPE="CIRCLE" COORDS="306, 17, 17" HREF="home-en.html"><AREA SHAPE="CIRCLE" COORDS="307, 88, 17" HREF="home-es.html"><AREA SHAPE="CIRCLE" COORDS="306, 51, 17" HREF="home-fr.html"><AREA COORDS="0,0,10000,10000" HREF="/home/"></MAP> <img align="top"
- src="/templates/graphics/logo-en.gif" width="331"
- alt="ITU Home Page " ismap usemap="#FrontPageMap"
- height="148" border="0"> 
- </address>
- </td>
- <td align="right" valign="top" width="100%" nowrap><h2
- align="right"><a href="/Highlights/index.html"><font
- size="4" face="Ariel, Helvetica, SansSerif"><img
- src="/templates/graphics/banner-en.jpg"
- alt="ITU Highlights" align="top" border="0" width="440"
- height="125"></font></a></h2>
- </td>
- </tr>
-</table>
-
-<table border="0" cellpadding="0" cellspacing="0">
- <tr>
- <td valign="top" width="131"><p><MAP NAME="FrontPageMap1"><AREA SHAPE="RECT" COORDS="0, 138, 130, 163" HREF="/TELECOM/"><AREA SHAPE="RECT" COORDS="0, 108, 130, 134" HREF="/ITU-D/index.html"><AREA SHAPE="RECT" COORDS="0, 78, 130, 101" HREF="/ITU-T/index.html"><AREA SHAPE="RECT" COORDS="1, 49, 130, 73" HREF="/ITU-R/index.html"><AREA SHAPE="RECT" COORDS="0, 14, 130, 41" HREF="/Highlights/index.html"><AREA SHAPE="RECT" COORDS="0, 230, 130, 254" HREF="/home/Search/index.html"><AREA SHAPE="RECT" COORDS="0, 198, 130, 223" HREF="/ITU-Databases/index.html"><AREA SHAPE="RECT" COORDS="0, 168, 130, 193" HREF="/publications/index.html"></MAP><img
- src="/templates/graphics/items-en.gif" width="131"
- alt=" ITU Menu Bar " ismap usemap="#FrontPageMap1"
- height="300" border="0"></p>
- </td>
- <td width="15">&nbsp;&nbsp;</td>
- <td valign="top" width="100%">
-
+ <P>
 
 
 <DL>
@@ -44,102 +18,27 @@
 <DD> <B>burundi</B>
 </DL>
 
-The selected databases contain <B>35</B> documents matching your query:
+ <HR>
+<H2>Diagnostics</H2>
+Server <B>local</B> returns the following diagnostics:
+
+<PRE>
+<B>WWW/www-pages</B>: The following database is not available: /usr/local/wais/WWW/www-pages
+<B>WWW/www-pages</B>: Search produced no result
+</PRE>
 
  <HR>
 
-<pre>
-<B>1:</B> <B><A HREF="/usr/local/www-data/plenipot98/Documents/drsadmbdi.html">I.   Administrations - Administrations - Administr &lt;meta name="DC.title" content=" I.   Administrations - Administrations - Administr "&gt;  &lt;META http-equiv="PICS-Label" content='(PICS-1.0 "http://www.classify.org/safesurf/" l gen true for "http://www.itu.int/" by "lindner@itu.int" r (SS~~000 1))'&gt; &lt;META http-equiv="PICS-Label" content='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l gen true comment "RSACi North America Server" by "lindner@itu.int" for "http://www.itu.int" on "1997.02.16T19:30-</A></B>
-    Database: <B>www-pages</B>, Size: <B>   2.2 kbytes</B>, Type: <B>URL</B>, Score: <B>1000</B>
-<B>2:</B> <B><A HREF="/usr/local/www-data/itudoc/gs/plenipot/pp98/conf/docs2/184.html">[184] Proposals... Draft Resolution - Assistance and Support to Burundi, Liberia, Rwanda and Somalia for Rebuilding their Telecommunication Networks</A></B>
-    Database: <B>www-pages</B>, Size: <B>   7.5 kbytes</B>, Type: <B>URL</B>, Score: <B>787</B>
-<B>3:</B> <B><A HREF="/usr/local/www-data/newsarchive/press/releases/1997/footnotenp07-1.html">Africa One Signatories</A></B>
-    Database: <B>www-pages</B>, Size: <B>578 bytes</B>, Type: <B>URL</B>, Score: <B>752</B>
-<B>4:</B> <B><A HREF="/usr/local/www-data/wtpf/particip/Particip/Ann_1Page16.html">Ann</A></B>
-    Database: <B>www-pages</B>, Size: <B>   7.7 kbytes</B>, Type: <B>URL</B>, Score: <B>692</B>
-<B>5:</B> <B><A HREF="/usr/local/www-data/wtpf/particip/Particip/final/ParF_1Page17.html">ParF</A></B>
-    Database: <B>www-pages</B>, Size: <B>   9.6 kbytes</B>, Type: <B>URL</B>, Score: <B>591</B>
-<B>6:</B> <B><A HREF="/usr/local/www-data/itudoc/itu-d/gentrend/49399.html">General Trends in Telecommunication Reform 1998: Africa Volume II</A></B>
-    Database: <B>www-pages</B>, Size: <B>  16.2 kbytes</B>, Type: <B>URL</B>, Score: <B>402</B>
-<B>7:</B> <B><A HREF="/usr/local/www-data/pforum/gmpcs-mou/no-57.htm">Groupe Informel</A></B>
-    Database: <B>www-pages</B>, Size: <B>   2.0 kbytes</B>, Type: <B>URL</B>, Score: <B>394</B>
-<B>8:</B> <B><A HREF="/usr/local/www-data/GMPCS/gmpcs-mou/no-57.htm">Groupe Informel</A></B>
-    Database: <B>www-pages</B>, Size: <B>   2.3 kbytes</B>, Type: <B>URL</B>, Score: <B>394</B>
-<B>9:</B> <B><A HREF="/usr/local/www-data/ti/WTIM99/List">List of LDCs</A></B>
-    Database: <B>www-pages</B>, Size: <B>  20.7 kbytes</B>, Type: <B>URL</B>, Score: <B>391</B>
-<B>10:</B> <B><A HREF="/usr/local/www-data/VTC/partners/ggl/c_m_entr.htm">Series: "The Communications Manager"</A></B>
-    Database: <B>www-pages</B>, Size: <B>   9.9 kbytes</B>, Type: <B>URL</B>, Score: <B>360</B>
-<B>11:</B> <B><A HREF="/usr/local/www-data/newsarchive/wtd/1997/documents/arrl.html">ARRL Letter online</A></B>
-    Database: <B>www-pages</B>, Size: <B>   3.5 kbytes</B>, Type: <B>URL</B>, Score: <B>350</B>
-<B>12:</B> <B><A HREF="/usr/local/www-data/itudoc/itu-d/indicato/46325.html">African Telecommunication Indicators 1998</A></B>
-    Database: <B>www-pages</B>, Size: <B>   8.8 kbytes</B>, Type: <B>URL</B>, Score: <B>335</B>
-<B>13:</B> <B><A HREF="/usr/local/www-data/itudoc/itu-d/indicato/africa96.html">Africa Telecom Indicators - 1996</A></B>
-    Database: <B>www-pages</B>, Size: <B>   7.7 kbytes</B>, Type: <B>URL</B>, Score: <B>309</B>
-<B>14:</B> <B><A HREF="/usr/local/www-data/radioclub/rr/itureg.htm">ITU regions list</A></B>
-    Database: <B>www-pages</B>, Size: <B>  20.5 kbytes</B>, Type: <B>URL</B>, Score: <B>288</B>
-<B>15:</B> <B><A HREF="/usr/local/www-data/ti/publications/ldc95/ldc95.htm">Telecommunication Indicators for the Least Developed Countries 95</A></B>
-    Database: <B>www-pages</B>, Size: <B>   5.6 kbytes</B>, Type: <B>URL</B>, Score: <B>287</B>
-<B>16:</B> <B><A HREF="/usr/local/www-data/itudoc/itu-d/indicato/53118.html">ITU Yearbook of Statistics 1999</A></B>
-    Database: <B>www-pages</B>, Size: <B>   9.8 kbytes</B>, Type: <B>URL</B>, Score: <B>281</B>
-<B>17:</B> <B><A HREF="/usr/local/www-data/ars/rr/itureg.htm">ITU regions list</A></B>
-    Database: <B>www-pages</B>, Size: <B>  16.0 kbytes</B>, Type: <B>URL</B>, Score: <B>279</B>
-<B>18:</B> <B><A HREF="/usr/local/www-data/GMPCS/gmpcs-mou/final/comment/index.html">GMPCS-MoU - List of Comments</A></B>
-    Database: <B>www-pages</B>, Size: <B>  12.8 kbytes</B>, Type: <B>URL</B>, Score: <B>279</B>
-<B>19:</B> <B><A HREF="/usr/local/www-data/y2k/countryallocation.htm">ICTWG - Proposed Regional Country Allocation</A></B>
-    Database: <B>www-pages</B>, Size: <B>   5.1 kbytes</B>, Type: <B>URL</B>, Score: <B>279</B>
-<B>20:</B> <B><A HREF="/usr/local/www-data/ITU-SG/pp94/table2.html">TABLE OF CONTENTS</A></B>
-    Database: <B>www-pages</B>, Size: <B>   7.1 kbytes</B>, Type: <B>URL</B>, Score: <B>255</B>
-<B>21:</B> <B><A HREF="/usr/local/www-data/iahc/docs/countries.html">WTO Regions</A></B>
-    Database: <B>www-pages</B>, Size: <B>   4.6 kbytes</B>, Type: <B>URL</B>, Score: <B>252</B>
-<B>22:</B> <B><A HREF="/usr/local/www-data/pforum/gmpcs-mou/index.htm">Informal Group GMPCS-MOU</A></B>
-    Database: <B>www-pages</B>, Size: <B>  17.9 kbytes</B>, Type: <B>URL</B>, Score: <B>246</B>
-<B>23:</B> <B><A HREF="/usr/local/www-data/GMPCS/gmpcs-mou/final/sign/indexold.htm">Signatories of the GMPCS - MoU</A></B>
-    Database: <B>www-pages</B>, Size: <B>  36.0 kbytes</B>, Type: <B>URL</B>, Score: <B>239</B>
-<B>24:</B> <B><A HREF="/usr/local/www-data/ti/industryoverview/at_glance/delaf.htm">Main telephone lines, Africa 1996</A></B>
-    Database: <B>www-pages</B>, Size: <B>  52.0 kbytes</B>, Type: <B>URL</B>, Score: <B>235</B>
-<B>25:</B> <B><A HREF="/usr/local/www-data/iahc/dns-refs/registry.html">Registries and TLD Resources</A></B>
-    Database: <B>www-pages</B>, Size: <B>  11.7 kbytes</B>, Type: <B>URL</B>, Score: <B>234</B>
-<B>26:</B> <B><A HREF="/usr/local/www-data/newsroom/press/PP98/Documents/Statements.html">Policy Statements</A></B>
-    Database: <B>www-pages</B>, Size: <B>  22.4 kbytes</B>, Type: <B>URL</B>, Score: <B>223</B>
-<B>27:</B> <B><A HREF="/usr/local/www-data/telecom-wt99/press_service/about_telecom99_and_interactive99/press_factsheet/press_factsheet_admin.htm">Administration and Protocol</A></B>
-    Database: <B>www-pages</B>, Size: <B>   9.7 kbytes</B>, Type: <B>URL</B>, Score: <B>221</B>
-<B>28:</B> <B><A HREF="/usr/local/www-data/ITU-D/bdtint/Brochure98/itudexp.htm">ITUD Expert Groups</A></B>
-    Database: <B>www-pages</B>, Size: <B>  10.2 kbytes</B>, Type: <B>URL</B>, Score: <B>213</B>
-<B>29:</B> <B><A HREF="/usr/local/www-data/ITU-D-Finance/brochure/itudexp.htm">ITUD Expert Groups</A></B>
-    Database: <B>www-pages</B>, Size: <B>  10.1 kbytes</B>, Type: <B>URL</B>, Score: <B>213</B>
-<B>30:</B> <B><A HREF="/usr/local/www-data/ti/publications/YB99/yb99.htm">Yearbook of Statistics 1999</A></B>
-    Database: <B>www-pages</B>, Size: <B>  13.8 kbytes</B>, Type: <B>URL</B>, Score: <B>212</B>
-<B>31:</B> <B><A HREF="/usr/local/www-data/radioclub/rr/arsfoot1.htm">Amateur Footnotes1</A></B>
-    Database: <B>www-pages</B>, Size: <B>  11.9 kbytes</B>, Type: <B>URL</B>, Score: <B>208</B>
-<B>32:</B> <B><A HREF="/usr/local/www-data/ars/rr/arsfoot1.htm">Amateur Footnotes1</A></B>
-    Database: <B>www-pages</B>, Size: <B>  11.4 kbytes</B>, Type: <B>URL</B>, Score: <B>208</B>
-<B>33:</B> <B><A HREF="/usr/local/www-data/itudoc/gs/plenipot/pp98/conf/docs2/index.html">Documents 100 to 199</A></B>
-    Database: <B>www-pages</B>, Size: <B>  24.3 kbytes</B>, Type: <B>URL</B>, Score: <B>207</B>
-<B>34:</B> <B><A HREF="/usr/local/www-data/plenipot98/Documents/drsdiplomat.html">&lt;meta name="DC.title" content=" "&gt;  &lt;META http-equiv="PICS-Label" content='(PICS-1.0 "http://www.classify.org/safesurf/" l gen true for "http://www.itu.int/" by "lindner@itu.int" r (SS~~000 1))'&gt; &lt;META http-equiv="PICS-Label" content='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l gen true comment "RSACi North America Server" by "lindner@itu.int" for "http://www.itu.int" on "1997.02.16T19:30-0500" r (n 0 s 0 v 0 l 0))'&gt; &lt;/HEAD&gt; &lt;CENTER&gt; &lt;p align="center"&gt;&lt;a href="participant-int.html"&gt;&lt;img SR</A></B>
-    Database: <B>www-pages</B>, Size: <B>  14.2 kbytes</B>, Type: <B>URL</B>, Score: <B>205</B>
-<B>35:</B> <B><A HREF="/usr/local/www-data/GMPCS/gmpcs-mou/final/sign/index.htm">List of signatories of the GMPCS</A></B>
-    Database: <B>www-pages</B>, Size: <B>  42.4 kbytes</B>, Type: <B>URL</B>, Score: <B>196</B>
-</pre>
+The selected databases contain <B>no</B> item matching your query.
+<!-- EMPTY RESULT -->
 
  <HR>
- <hr size="1" width="75%">
- <p align="center"><a href="/index.html"><font size="1">Home</font></a><font
- size="1"> | </font><a
- href="/home/Search/"><font size="1">Search</font></a><font
- size="1"> | </font><a
- href="/home/Help/"><font size="1">Help</font></a><font
- size="1"> | </font><a
- href="/home/Contact/"><font
- size="1">Contact</font></a><font size="1"> | </font><a
- href="mailto:webmaster@itu.int"><font size="1">Comments</font></a><font
- size="1"> | </font><a
- href="/home/Copyright/"><font
- size="1">© Copyright</font></a><font size="1"> </font></p>
- </td>
- </tr>
-</table>
-</body>
-</html>
+
+    <ADDRESS>
+      This page was generated by
+      <A HREF="/search/wais/SFgate/author.html">SFgate 5.111</A>.
+    </ADDRESS>
+
   </BODY>
 
 </HTML>

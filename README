@@ -3,14 +3,13 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.15?  (2000-10-02)
+WHAT IS NEW IN WWW::Search 2.16?  (2001-03-28)
 ----------------------------------------------
 
 overview:
- * now supports Cookies!
- * minor bug fixes
- * minor updates for some search engines, as usual
- * several backends removed to separate modules
+ * new backend for altavista.nl
+ * new method submit()
+ * minor pod updates
 
 For details, see the file ChangeLog and/or the pod of each affected module.
 
@@ -19,29 +18,30 @@ WHAT IS WWW::Search?
 --------------------
 
 WWW::Search is a collection of Perl modules which provide an API to
-WWW (and similar) search engines.  Currently WWW::Search includes
-backends for variations of AltaVista, Infoseek, and WebCrawler, among
-others.  Backends for some engines can be obtained separately, such as
-Deja, Excite, HotBot, and Yahoo.  This distribution includes two
-applications built from this library: AutoSearch (a program to
-automate tracking of search results over time), and WebSearch, a small
-demonstration program to drive the library.
+search engines on the world-wide web (and similar engines).
+Currently, WWW::Search includes backends for variations of AltaVista
+and WebCrawler, among others.  Backends for some engines can be
+obtained separately, such as Excite, Go, HotBot, and Yahoo.  This
+distribution includes two applications built from this library:
+AutoSearch (a program to automate tracking of search results over
+time), and WebSearch, a small demonstration program to drive the
+library.
 
 WWW::Search does NOT try to emulate the default search that you would
 get with each search engine's GUI.  I.e. WWW::Search does NOT
 necessarily return the same results you would get by visiting the
 search engine's web page.  A few backends implement the method
-gui_query which does get the same results as the engine's web page;
-see `perldoc WWW::Search` for details.  See also below under FUTURE
-PLANS.  WWW::Search performs the search in a way that is efficient and
-convenient for text processing.  This might include getting
-"text-only" pages, making "OR" the default query term operator instead
-of "AND", ungrouping same-site results, making sure descriptions are
-turned on, and increasing the number of hits per page, among other
-tricks.
+gui_query which does get the same results as searches from the
+engine's default web page; see `perldoc WWW::Search` for details.  See
+also below under FUTURE PLANS.  WWW::Search performs the search in a
+way that is efficient and convenient for text processing.  This might
+include using the "advanced search" interface; getting "text-only"
+pages; making "OR" the default query term operator instead of "AND";
+ungrouping same-site results; making sure descriptions are turned on;
+and increasing the number of hits per page, among other tricks.
 
 Because WWW::Search depends on parsing the HTML output of web search
-engines it will fail if the search engine operators change their
+engines, it will fail if the search engine operators change their
 format (an unfortunately frequent occurrence).  WWW::Search includes a
 test suite for many backends which verifies that they are functioning
 correctly.  The test suite can be run by typing 'make test_parsing';
@@ -54,6 +54,7 @@ AltaVista::AdvancedWeb	not working
 AltaVista::Careers	working? (not in test suite)
 AltaVista::Intranet	working
 AltaVista::News		not working
+AltaVista::NL		working? (not in test suite)
 AltaVista::Web		working
 AOL                     (same as NetFind)
 AOL::Classifieds::Employment    working (not in test suite)
@@ -65,12 +66,7 @@ Fireball		working? (not in test suite)
 FolioViews		working
 Gopher			not working? (not in test suite)
 HeadHunter              working? (not in test suite)
-HotFiles		working
-Infoseek		working
-Infoseek::Companies	working
-Infoseek::Email		not working
-Infoseek::News		working
-Infoseek::Web		working
+HotFiles		not working
 Livelink		not working? (not in test suite)
 MetaCrawler             working
 Metapedia		working? (not in test suite)
@@ -93,7 +89,6 @@ Yahoo::Classifieds::Employment  working? (not in test suite)
 The following backends are now registered at CPAN independently (not
 included with the WWW::Search release):
 
-Deja/Dejanews   http://www.perl.com/CPAN-local/modules/by-module/WWW/
 Euroseek        http://www.perl.com/CPAN-local/authors/by-module/WWW/JSMYSER/
 Excite          http://www.perl.com/CPAN-local/modules/by-module/WWW/
 GoTo            http://www.perl.com/CPAN-local/authors/by-module/WWW/JSMYSER/
@@ -109,7 +104,7 @@ Yahoo           http://www.perl.com/CPAN-local/modules/by-module/WWW/MTHURN/
 ZDNet           http://www.perl.com/CPAN-local/authors/by-module/WWW/JSMYSER/
 
 There are even more backends available for manual download and
-installation at http://members.xoom.com/_XMCM/backends/index.htm
+installation at http://members.nbci.com/backends/
 
 
 REQUIREMENTS
@@ -148,9 +143,9 @@ INSTALLATION
 In order to use this package you will need Perl version 5.002 or
 better.  
 
-It is hightly recommended that you use CPAN.pm to install WWW::Search.
+It is highly recommended that you use CPAN.pm to install WWW::Search.
 It will automatically install all the prerequisite modules and all the
-backends and put everything in the right places.  On a unix or linux
+backends and put everything in the right places.  On a Unix or linux
 system, while connected to the internet, just type
 
    perl -MCPAN -e 'install WWW::Search'
@@ -165,7 +160,8 @@ modules):
     make install
 
 On Win32, maintenance and testing is done with Microsoft's nmake.exe;
-use 'nmake' instead of 'make' in the above sequence of commands.  
+if that's true for you, use 'nmake' instead of 'make' in the above
+sequence of commands.
 
 When you do `perl makefile.pl` on Win32, you might get warnings that a
 whole bunch of 'zero*.out' files are missing.  This seems to be a bug
@@ -193,9 +189,10 @@ and maintainers.]
 
 The "make test_parsing" command compares expected output
 (precalculated and shipped with the archive) with actual output (from
-the internet).  You can give arguments to the test_parsing program by
-using the TEST_ARGS macro.  For example, the following command only
-runs the external queries for AltaVista:
+the internet).  Sorry, the "make test_parsing" command does not run on
+Win32, only in UNIX-type shells.  You can give arguments to the
+test_parsing program by using the TEST_ARGS macro.  For example, the
+following command only runs the external queries for AltaVista:
 
 make test_parsing TEST_ARGS='-e AltaVista -x'
 
@@ -241,7 +238,7 @@ over time.  Sample output from AutoSearch can be found at
 <http://www.isi.edu/lsam/tools/autosearch/>.  Output format is
 configurable.
 
-See the man page for AutoSearch details, or the DEMONSTRATION section
+See `perldoc AutoSearch` for details, or the DEMONSTRATION section
 below for quick-start instructions.
 
 
@@ -262,8 +259,7 @@ know so we don't duplicate work.  <MartinThurn@iname.com>
 Backend-related bug reports ("search engine ABC doesn't work") should
 be sent to the author of the backend (backend authors are identified
 in the corresponding man page and in the output of `make
-test_parsing`).  General bugs should be reported to
-<MartinThurn@iname.com>.
+test_parsing`).  
 
 All other feedback, bug reports, fixes, and new backends should be
 sent to Martin Thurn <MartinThurn@iname.com>.  When sending e-mail,
@@ -273,11 +269,11 @@ please please put [WWW::Search] at the beginning of the subject line
 When submitting a bug report or request for help, please remember to
 include:
   - your operating system name and version
-  - your version of perl
-  - your version of WWW::Search
-  - your version of the backend
+  - the version of perl
+  - the version of WWW::Search
+  - the version of the backend
   - the code you ran to produce the error (PLEASE cut-and-paste, do not just summarize!)
-  - sample output showing the error (PLEASE cut-and-paste, do not just summarize!)
+  - actual output showing the error (PLEASE cut-and-paste, do not just summarize!)
 
 
 DEMONSTRATION
@@ -291,8 +287,8 @@ or, if you are on Win32:
 
         WebSearch "\"Your Name Here\""
 
-to see who's talking about you on the web.  Then (in your web page
-directory), try:
+to see who's talking about you on the web.  Then (in a browsable web
+page directory), try:
 
         cd /path/to/your/web/pages
 	AutoSearch -n me_on_the_web -s '"Your Name Here"' me
@@ -326,6 +322,9 @@ FUTURE PLANS
 
 Some things we need, and ideas for new features:
 
+ - updates to each backend to implement the submit() method.  Contact
+each backend's maintainer.
+
  - updates to each backend that will force WWW::Search to perform the
 same search as the engine's web GUI (I'm looking for contributions of
 the precise arguments that will produce such a search for each engine;
@@ -344,15 +343,15 @@ send suggestions).  Contact <MartinThurn@iname.com>
 here from someone who uses/needs proxy support and can test it).
 Contact <MartinThurn@iname.com>
 
- - more widespread use of result tags description, date, size,
-etc. across all backends.  Contact backend authors.
+ - more widespread use of result tags such as description, date, size,
+etc. across all backends.  Contact backend maintainers.
 
  - a freeze/restore interface to suspend and resume in-progress queries.
 
  - more backends.
 
 Contributions are always welcome.  Send me e-mail if you plan a new
-backend and to discuss architectural changes (to avoid duplicating
+backend, or to discuss architectural changes (to avoid duplicating
 work).  Contact <MartinThurn@iname.com>
 
 
@@ -362,13 +361,15 @@ SUPPORT AND CREDITS
 The WWW::Search architecture was originally written by John Heidemann,
 with feedback from other contributors listed below.  NOTE: This list
 is no longer updated; consult the on-line documentation and/or the
-output of `make test` to find out who is currently maintaining each
-component.
+output of `make test_parsing` to find out who is currently maintaining
+each component.
 
 PLATFORM SUPPORT:
 	Unix			John Heidemann <johnh@isi.edu>
 	Windows			Jim Smyser <jsmyser@bigfoot.com>
                 		(see <http://members.xoom.com/WWW_Search>)
+
+COOKIE & HTTP_REFERER TESTING:  Jerry Hermel <jerryxh@earthlink.net>
 
 APPLICATIONS:
 	WebSearch		John Heidemann
