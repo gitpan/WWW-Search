@@ -3,7 +3,7 @@
 # NorthernLight.pm
 # by Jim Smyser
 # Copyright (C) 1996-1999 by Jim Smyser & USC/ISI
-# $Id: NorthernLight.pm,v 1.7 1999/07/14 13:20:28 mthurn Exp $
+# $Id: NorthernLight.pm,v 1.8 1999/07/23 13:47:45 mthurn Exp $
 
 package WWW::Search::NorthernLight;
 
@@ -82,6 +82,9 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 =head1 VERSION HISTORY
 
+2.02
+Minor parsing change to get the new description line that had changed.
+
 2.01
 typo and new test mechanism
 
@@ -109,7 +112,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.01';
+$VERSION = '2.02';
 
 $MAINTAINER = 'Jim Smyser <jsmyser@bigfoot.com>';
 $TEST_CASES = <<"ENDTESTCASES";
@@ -131,6 +134,7 @@ sub native_setup_search {
    $self->user_agent('user');
    $self->{_next_to_retrieve} = 1;
    $self->{'_num_hits'} = 0;
+   $native_query =~ s/(\w)\053/$1\053\AND+/g;
  
    if (!defined($self->{_options})) {
      $self->{'search_base_url'} = 'http://www.northernlight.com';
@@ -149,7 +153,7 @@ sub native_setup_search {
        {
        $options_ref->{$_} = $native_options_ref->{$_};
        } # foreach
-     } # if
+       } # if
    # Process the options.
    my($options) = '';
    foreach (sort keys %$options_ref) 
@@ -161,7 +165,7 @@ sub native_setup_search {
    chop $options;
    # Finally figure out the url.
    $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
-   } # native_setup_search
+    } # native_setup_search
  
 # private
 sub native_retrieve_some
@@ -192,10 +196,10 @@ sub native_retrieve_some
     my $state = $HEADER;
     my $hit = ();
     foreach ($self->split_lines($response->content()))
-      {
-     next if m@^$@; # short circuit for blank lines
-     print STDERR " $state ===$_=== " if 2 <= $self->{'_debug'};
-     if (m|(\d+)\sitems|i) {
+       {
+       next if m@^$@; # short circuit for blank lines
+       print STDERR " $state ===$_=== " if 2 <= $self->{'_debug'};
+    if (m|(\d+)\sitems|i) {
        print STDERR "**Found Header Count**\n" if ($self->{_debug});
        $self->approximate_result_count($1);
        $state = $START;
@@ -207,7 +211,7 @@ sub native_retrieve_some
        my ($URL, $Title) = ($1,$2);
        # ignore NorthernLights own URL's.
        if ($URL ne 'http://special.northernlight.com')
-          {
+         {
      if (defined($hit)) 
          {
          push(@{$self->{cache}}, $hit);
@@ -218,8 +222,9 @@ sub native_retrieve_some
        $hit->title($Title);
        $state = $DESC;
        } #URL does eq
-      # score and date is returned with the description. 
-  } elsif ($state eq $DESC && m|^(<b>(.*))<br>|i) {
+       # score and date is returned with the description. 
+
+  } elsif ($state eq $DESC && m|<!.*?>(.*)<br>|i) {
        print STDERR "**Found Description**\n" if 2 <= $self->{_debug};
        my ($description) = ($1);
        # Don't desire this, remove it if found.
@@ -232,16 +237,16 @@ sub native_retrieve_some
   } elsif ($state eq $HITS && m@.*?<a href="(.*)"><img src="(.*)alt="Next Page"></a>@i) {
        print STDERR "**Going to Next Page**\n" if 2 <= $self->{_debug};
        my $URL = $1;
-       # $self->{'_next_to_retrieve'} = $1;   # Martin Thurn commented this out.  _next_to_retrieve is supposed to be an integer.
        $self->{'_next_url'} = $self->{'search_base_url'} . $URL;
        print STDERR "Next URL is ", $self->{'_next_url'}, "\n" if 2 <= $self->{_debug};
        $state = $HITS;
-       } else {
+        } else {
        print STDERR "**Nothing matched.**\n" if 2 <= $self->{_debug};
-       }
+        }
   } if (defined($hit)) {
-     push(@{$self->{cache}}, $hit);
-     } 
-   return $hits_found;
-   } # native_retrieve_some
+       push(@{$self->{cache}}, $hit);
+        } 
+       return $hits_found;
+        } # native_retrieve_some
  1;
+

@@ -2,7 +2,7 @@
 
 # test.pl
 # Copyright (C) 1997 by USC/ISI
-# $Id: test.pl,v 1.20 1999/07/16 15:12:11 mthurn Exp $
+# $Id: test.pl,v 1.23 1999/08/18 15:18:18 mthurn Exp $
 #
 # Copyright (c) 1997 University of Southern California.
 # All rights reserved.                                            
@@ -68,7 +68,7 @@ my $fullperl;
 my ($date, $pwd);
 my ($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = qw(dummy internal external update);
 my ($TEST_DUMMY, $TEST_EXACTLY, $TEST_BY_COUNTING, $TEST_GREATER_THAN, $TEST_RANGE) = (1..10);
-my $bogus_query = "Bogus" . "NoSuchWord" . "SpammersAreIdiots";
+my $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 
 &main();
 
@@ -120,6 +120,13 @@ sub test
   
   return if (!relevant_test($sSE));
   
+  print "trial $file ($mode)\n";
+  if (($mode eq $MODE_INTERNAL) && ($query =~ m/$bogus_query/))
+    {
+    print "\tskipping test on this platform.\n";
+    return;
+    } # if
+
   my $path = "$pwd/test/Pages/$sSE";
   $path =~ s!::!\/!g;
   mkpath $path;
@@ -129,13 +136,13 @@ sub test
     } # if
   my $o = new WWW::Search($sSE);
   my $version = $o->version;
-  print "trial $file ($mode)\n\t($sSE $version, $sM)\n";
+  print "\t($sSE $version, $sM)\n";
   my %src = (
-             $MODE_INTERNAL => "-o search_from_file=$file",
+             $MODE_INTERNAL => "--option search_from_file=$file",
              $MODE_EXTERNAL => '',
-             $MODE_UPDATE => "-o search_to_file=$file",
+             $MODE_UPDATE => "--option search_to_file=$file",
             );
-  my $cmd = &web_search_bin . "-e $sSE $src{$mode} -- $query";
+  my $cmd = &web_search_bin . "--engine $sSE $src{$mode} -- $query";
   print "\t$cmd\n" if ($verbose);
   open(TRIALSTREAM, "$cmd|") || die "$0: cannot run test\n";
   open(TRIALFILE, ">$file.trial") || die "$0: cannot open $file.trial\n";
@@ -516,9 +523,8 @@ sub main
   $pwd = cwd;
   $fullperl = $Config{'perlpath'};
   
-  #    print "\n\nWWW::Search version " . $WWW::Search::VERSION . "\n";
-  print "\nVERSION INFO:\n";
-  my ($cmd) = &web_search_bin . " -V";
+  print "\nVERSION INFO:\n\t";
+  my ($cmd) = &web_search_bin . " --VERSION";
   print `$cmd`;
   
   if ($update_saved_files) 
@@ -526,8 +532,9 @@ sub main
     print "\nUPDATING.\n\n";
     $mode = $MODE_UPDATE;
     &test_cases();
+    # Can not do update AND test:
     return;
-    }
+    } # if
   
   if ($do_internal) 
     {

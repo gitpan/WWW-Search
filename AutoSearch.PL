@@ -23,7 +23,7 @@ print OUT <<'!NO!SUBS!';
 # AutoSearch.pl
 # Copyright (c) 1996-1997 University of Southern California.
 # All rights reserved.                                            
-# $Id: AutoSearch.PL,v 1.2 1999/07/09 14:04:21 mthurn Exp $
+# $Id: AutoSearch.PL,v 1.3 1999/08/18 15:18:45 mthurn Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -449,8 +449,12 @@ use Getopt::Long;
 use POSIX qw(strftime);
 
 use vars qw( $VERSION );
+$VERSION = '2.01';
 
-$VERSION = '1.26';
+sub print_version
+  {
+  print "$0 version $VERSION;  WWW::Search version $WWW::Search::VERSION\n";
+  } # print_version
 
 #=head1 NAME
 #
@@ -464,14 +468,16 @@ $VERSION = '1.26';
 
 sub usage {
   print STDERR <<END;
-usage: $0 -stats -v -n "Query Name" -s "query string" -e "engine" -o "query options" -f "filter" query_id
+usage: $0 [-stats] [-verbose] -n "Query Name" -s "query string" -engine engine [-options "query options"]... -filter "filter" [-host host] [-port port] query_id
 Update or create a web search-engine query.
+Unambiguous argument names can be abbreviated to one letter (e.g. -e engine -f "filter")
 END
   exit 1;
 }
 
 my(%opts,@query_list,$query_name,$query_string,$search_engine,$query_options,$url_filter);
-&GetOptions(\%opts, qw(n|qn|queryname=s s|qs|querystring=s e|engine=s o|options=s@ f|uf|urlfilter=s stats v|verbose));
+&GetOptions(\%opts, qw(n|qn|queryname=s s|qs|querystring=s e|engine=s h|host=s p|port=s o|options=s@ f|uf|urlfilter=s stats v|verbose V|VERSION));
+&print_version if $opts{'V'};
 
 &usage if ($#ARGV == -1); # we MUST have one left, the qid
 
@@ -494,15 +500,15 @@ if (defined($opts{'stats'})) {
 $query_name =    $opts{'n'} if defined($opts{'n'});
 $query_string =  $opts{'s'} if defined($opts{'s'});
 $search_engine = $opts{'e'} if defined($opts{'e'});
-if (defined($opts{'o'})) {
+if (defined($opts{'o'})) 
+  {
   $query_options = {};
-  foreach (@{$opts{'o'}}) {
-    next if m/^$/;
-    my($key, $value) = m/^([^=]+)=(.*)$/;
-#    print "option:$key=$value\n";
-    $query_options->{$key} = WWW::Search::escape_query($value);
+  foreach my $sPair (@{$opts{'o'}}) 
+    {
+    my ($key, $value) = $sPair =~ m/^([^=]+)=(.*)$/;
+    &add_to_hash($key, &WWW::Search::escape_query($value), $query_options);
+    }
   }
-}
 $url_filter =    $opts{'f'} if defined($opts{'f'});
 my($local_filter) = 0; # shall we exclude our own old pages? (1=y,0=n)
 
@@ -730,7 +736,7 @@ sub main {
         next if m/^$/;
         my($key, $value) = m/^([^=]+)=(.*)$/;
 #        print "option:$_ is $key=$value\n";
-        $query_options->{$key} = WWW::Search::escape_query($value);
+        &add_to_hash($key, &WWW::Search::escape_query($value), $query_options);
       }
     }
   } else { # or use what came from index.html file
@@ -738,13 +744,13 @@ sub main {
     foreach (@SummaryQueryOptions) {
       next if m/^$/;
       my($key, $value) = m/^([^=]+)=(.*)$/;
-      print "option:$_ is $key=$value\n";
-      $query_options->{$key} = WWW::Search::escape_query($value);
+      # print "option:$_ is $key=$value\n";
+      &add_to_hash($key, &WWW::Search::escape_query($value), $query_options);
     }
   }
 
 # this is not a required field.
-# this MUST BE ask user to get AutoSeatch to ask.
+# this MUST BE ask user to get AutoSearch to ask.
   if ($SummaryURLFilter =~ m/ask user/i) { # no, shall we ask the user
     if (defined($url_filter)) { # from command line ?
       $URLFilter = $url_filter;
@@ -792,6 +798,8 @@ sub main {
   } else {
     $search = new WWW::Search(undef()); # must be undef to get default.
   }
+  $search->{_host} = $opts{'h'} if defined($opts{'h'});
+  $search->{_port} = $opts{'p'} if defined($opts{'p'});
   $search->http_proxy($ENV{'HTTP_PROXY'}) if ($ENV{'HTTP_PROXY'});
   $search->http_proxy($ENV{'http_proxy'}) if ($ENV{'http_proxy'});
   # submit search w/options.
@@ -1672,5 +1680,27 @@ sub http_error_as_nice_string {
     return "$message (code $code)";
 }
 
+sub add_to_hash
+  {
+  # This is a bit of a hack.  A set of CGI options is not strictly a
+  # hash, because multiple values for the same key can be specified.
+  # To get around this, we rely on the fact that this hash of options
+  # is only used to construct a CGI parameter list.  If we see
+  # multiple values for the same key, we append the multiple values
+  # onto the value of the key in CGI '?key=value' format.
+  my ($key, $value, $hashref) = @_;
+  if (exists($hashref->{$key}) && $hashref->{$key} ne '')
+    {
+    # There was already an option of this key given; append
+    # multiple values as CGI arguments:
+    $hashref->{$key} .= "&$key=$value";
+    } # if exists
+  else
+    {
+    # This is the only instance of this key; just insert the
+    # hash value:
+    $hashref->{$key} = $value;
+    }
+  } # add_to_hash
 
 !NO!SUBS!

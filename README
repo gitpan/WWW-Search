@@ -3,13 +3,14 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.01?  (1999-07-14)
+WHAT IS NEW IN WWW::Search 2.03?  (1999-qqq)
 ----------------------------------------------
 overview:
- * Makefile now works in Win32!
  * Bug fixes for some backends (as usual)
- * New backends for Google, LookSmart, and OpenDirectory
- * All backends with their own version numbers have been bumped up to 2.01
+ * WebSearch and AutoSearch have new options --host and --port for
+   AltaVista::Intranet (and any future modules that might need them)
+ * WebSearch and AutoSearch correctly handle multiple options with the
+   same key (e.g. -options key=val1 -options key=val2)
 
 See the file ChangeLog for details.
 
@@ -44,7 +45,7 @@ AltaVista::AdvancedWeb	working
 AltaVista::News		working
 AltaVista::Web		working
 AltaVista::Intranet	working
-Crawler			partially working
+Crawler			partially working?
 Dejanews		working
 Excite			working
 Excite::News		working
@@ -54,7 +55,7 @@ FolioViews		working
 Google  		working
 Gopher			not working? (not in test suite)
 HotBot			working
-HotFiles		not working? (not in test suite)
+HotFiles		working
 Infoseek		working
 Infoseek::Companies	working
 Infoseek::Email		not working
@@ -65,8 +66,8 @@ LookSmart		working
 Lycos			working
 Magellan		working
 Metacrawler             not working
-Metapedia		not working? (not in test suite)
-MSIndexServer		not working
+Metapedia		not working
+MSIndexServer		not working?
 NorthernLight		working
 Null			working
 OpenDirectory           working
@@ -94,58 +95,73 @@ over time.  Sample output from AutoSearch can be found at
 <http://www.isi.edu/lsam/tools/autosearch/>.  Output format is
 configurable.
 
-See the man page for AutoSearch details, or Demonstration section
-below for the quick-start instructions.
+See the man page for AutoSearch details, or the DEMONSTRATION section
+below for quick-start instructions.
 
 
 REQUIREMENTS
 ------------
 
-WWW::Search requires Perl5 and libwww-perl.  For information on Perl5,
-see <http://www.perl.com>.  For libwww-perl, see
-<http://www.sn.no/libwww-perl/>.  Both are also available from the
-Comprehensive Perl Archive Network (CPAN). Visit
+WWW::Search requires Perl5, the libwww-perl module suite, the URI
+module, and the HTML::Parser module.  Some of the "not working"
+modules require the HTML::TreeBuilder module (so you can ignore
+warnings about TreeBuilder during the build).  For information on
+Perl5, see <http://www.perl.com>.  For all the modules, see
 <http://www.perl.com/CPAN/> to find a CPAN site near you.
 
 At the time of this release, the primary WWW::Search development and
 testing is under perl version 5.005_03 on Sun Sparc Solaris 7 and
-ActiveState perl build 517 on Windows NT 4.0 with service pack 5.
+under ActiveState perl build 519 on Windows NT 4.0 with service pack
+5.
 
-*** NOTE: The maintainer has NOT been able to install WWW::Search with
-ActivePerl 518 on Windows NT *** Please email MartinThurn@iname.com if
-you get WWW::Search to install with ActivePerl 518 ***
+WWW::Search has also been built and tested successfully on Win98J with
+ActiveState perl build 517.
+
+If you have successfully built and tested WWW::Search on any other
+(obscure) platform / version combination, please let me know!
+MartinThurn@iname.com
 
 
 AVAILABILITY
 ------------
 
 The latest version of WWW::Search should always be available on CPAN.
-
-Feedback about WWW::Search is encouraged.  If you're using it for a
-neat application, please let us know.  If you'd like to (or have)
-implemented a new back-end for WWW::Search, let us know so we don't
-duplicate work.
+Here is the best URL for finding it:
+http://www.perl.com/CPAN-local/modules/by-module/WWW
 
 
 INSTALLATION
 ------------
 
 In order to use this package you will need Perl version 5.002 or
-better.  You install WWW::Search as you would install any perl module
-library, by running these commands:
+better.  
+
+It is hightly recommended that you use CPAN.pm to install WWW::Search.
+On a unix system, just type 
+
+   perl -MCPAN -e 'install WWW::Search'.
+
+Otherwise, You can install WWW::Search as you would any perl module
+library, by running these commands in the WWW-Search-2.03 directory
+after unpacking the archive:
 
     perl Makefile.PL
     make
     make test
     make install
 
+On Win32, maintenance and testing is done with Microsoft's nmake.exe;
+use 'nmake' instead of 'make' in the above sequence of commands.
+
 See below for a description of what "make test" does.
 
 If you want to install a private copy of WWW::Search in your home
-directory, then you should try to produce the initial Makefile with
-something like this command:
+directory, then you should produce the initial Makefile with something
+like this command:
 
     perl Makefile.PL PREFIX=/my/perl/lib
+
+Don't forget to add /my/perl/lib to your PERL5LIB environment variable!
 
 
 TESTING
@@ -180,6 +196,11 @@ maintainer of the back-end for the search engine that fails.
 DISCUSSION, BUG REPORTS, AND IMPROVEMENTS
 -----------------------------------------
 
+Feedback about WWW::Search is encouraged.  If you're using it for a
+neat application, please let us know.  If you'd like to (or have)
+implemented a new back-end for WWW::Search, let us know so we don't
+duplicate work.
+
 A mailing list for WWW::Search discussion exists.  To subscribe, send
 "subscribe info-www-search" as the body of a message to
 <info-www-search-request@isi.edu>.
@@ -194,14 +215,14 @@ When submitting a bug report, please remember to include
 	- your version of perl
 	- your version of WWW::Search
 	- your version of the backend
-        - the code you ran to produce the error
-	- sample output showing the error
+        - the code you ran to produce the error (PLEASE cut-and-paste!)
+	- sample output showing the error (PLEASE cut-and-paste!)
 
 
 DEMONSTRATION
 -------------
 
-After installing the client programs, try:
+After installing the distribution, try:
 
 	WebSearch '"Your Name Here"'
 
@@ -212,14 +233,16 @@ or, if you are on Win32:
 to see who's talking about you on the web.  Then (in your web page
 directory), try:
 
+        cd /path/to/your/web/pages
 	AutoSearch -n me_on_the_web -s '"Your Name Here"' me
 
 or, if you are on Win32:
 
+        cd /path/to/your/web/pages
 	AutoSearch -n me_on_the_web -s "\"Your Name Here\"" me
 
-and the web page me/index.html will be created summarizing this
-information.  Then add
+and the web page /path/to/your/web/pages/me/index.html will be created
+summarizing this information.  Then if you are on UNIX you can add
 
 	0 3 * * 1 AutoSearch /path/to/your/web/pages/me
 
@@ -246,7 +269,9 @@ i.e. the hash that should be passed as the second argument to
 native_query)
 
   - application-level proxy support (I'm looking for a contribution
-here from someone who uses/needs proxy support)
+here from someone who uses/needs proxy support and can test it)
+
+  - use LWP::ParallelUA to speed up multiple backend search requests
 
   - more widespread use of new results tags across all back-ends
 

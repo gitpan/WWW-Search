@@ -11,12 +11,12 @@ location.href = list.options[list.selectedIndex].value
 }
 // --></SCRIPT><table border=0 width=100% height=50 cellpadding=0 cellspacing=0>
 <tr>
-<td valign="top" height=50 width=160 bgcolor="#000000"><a href="http://www.go.com/?svx=header_logo"><img src="/images/hp/160_50_c.gif" width=160 height=50 alt="Go Network" border=0></a></td>
+<td valign="top" height=50 width=160 bgcolor="#000000"><a href="/Center/?svx=header_logo"><img src="/images/hp/160_50_c.gif" width=160 height=50 alt="Go Network" border=0></a></td>
 <td valign="bottom" width=100% height=50>
 <table width=100% cellpadding=0 cellspacing=0 border=0>
 <tr>
 <td valign="bottom" width=100% height=32>
-<font face="verdana,geneva,arial" size=1><b><a href="/redirect?sv=IS&lk=&ak=QLNK&rl=LINK_HEAD_Book&rd=http://entertainment.go.com/Books/">Books</a> &nbsp; <a href="/Facts?pg=maps.html&svx=QLNK_Maps">Maps</a> &nbsp; <a href="/Center/News/Weather?svx=QLNK_weather">Weather</a> &nbsp; <a href="/Facts?pg=email.html&svx=QLNK_white_pages">White pages</a> &nbsp; <a href="/redirect?sv=IS&lk=&ak=BGYL&rl=LINK-HEAD-QLNK_yellow_pages&rd=http://www.bigyellow.com/cobr/go/go_search.html">Yellow pages</a></b></font> </td>
+<font face="verdana,geneva,arial" size=1><b><a href="/redirect?sv=IS&lk=&ak=QLNK&rl=LINK_HEAD_Book&rd=http://entertainment.go.com/Books/">Books</a> &nbsp; <a href="/Facts?pg=maps.html&svx=QLNK_Maps">Maps</a> &nbsp; <a href="/Center/News/Weather?svx=QLNK_weather">Weather</a> &nbsp; <a href="/White_Pages?svx=QLNK_white_pages">White pages</a> &nbsp; <a href="/redirect?sv=IS&lk=&ak=BGYL&rl=LINK-HEAD-QLNK_yellow_pages&rd=http://www.bigyellow.com/cobr/go/go_search.html">Yellow pages</a></b></font> </td>
 <td align="right" valign="bottom" height=28>
 <img src="/images/clear.gif" border=0 height=25 width=65> </td>
 </tr>
@@ -30,8 +30,8 @@ location.href = list.options[list.selectedIndex].value
 <option value="">----------------</option>
 <option value="/Center/Automotive">Autos</option>
 <option value="http://broadcast.go.com/">Broadcast</option>
-<option value="/Center/Business">Business</option>
 <option value="/Center/Careers">Careers</option>
+<option value="/Community/Chat">Chat</option>
 <option value="/Center/Computing">Computing</option>
 <option value="http://entertainment.go.com/">Entertainment</option>
 <option value="/Center/Family">Family</option>
@@ -39,10 +39,12 @@ location.href = list.options[list.selectedIndex].value
 <option value="/Center/Games">Games</option>
 <option value="/Center/Health">Health</option>
 <option value="/Center/Kids">Kids</option>
+<option value="/Community/Message">Message Boards</option>
 <option value="http://money.go.com/">Money</option>
 <option value="http://gonews.abcnews.go.com/">News</option>
 <option value="/Center/Real_Estate">Real Estate</option>
 <option value="http://shop.go.com">Shopping</option>
+<option value="/Center/Business">Small Business</option>
 <option value="/Center/Sports">Sports</option>
 <option value="/Center/Travel">Travel</option>
 <option value="/Center/Women">Women</option>
@@ -64,7 +66,7 @@ location.href = list.options[list.selectedIndex].value
 </tr>
 </table>
 <p><center>
-<a href="http://www.infoseek.com/redirect?sv=IS&lk=&tid=&ak=GETS-15930-1176-GEN&rd=http://www.getsmartinc.com/mortgage/HomeBanner?BANNERNAME=www.getsmartinc.com/minfoseek017m17468x60" target="_top"><img border=1 width=468 height=60 src="/ads/GETS1176.gif" alt="[GetSmart (BFC)]"><br><FONT FACE="verdana,arial,helvetica" SIZE="1"><b>Click for GetSmart&#39;s MortgageFinder</b></FONT></a></p> </center>
+<a href="http://www.infoseek.com/redirect?sv=IS&lk=&tid=&ak=ALST-15955-1084-GEN&rd=http://www.allstate.com/parts-labor/index.html" target="_top"><img border=1 width=468 height=60 src="/ads/ALST1084.gif" alt="[Allstate]"><br><FONT FACE="verdana,arial,helvetica" SIZE="1"><b>Click here</b></FONT></a></p> </center>
 <table  width="100%"  border=0 cellpadding=3 cellspacing=0>
 <tr><td valign=top align=left bgcolor="003366">
 &nbsp;<font face="Arial, Helvetica" size="4" color="#FFFFFF"><b><i>No Results Found</i></b></font>
@@ -79,7 +81,7 @@ location.href = list.options[list.selectedIndex].value
 Infoseek found no results for:<br>
 <ul>
 &nbsp;&gt;&nbsp;
-<b>BogusNoSuchWordSpammersAreIdiots</b>
+<b>Bogus26745NoSuchWord934834683</b>
 </ul>
 <p>
 <!-- Begin searchbox placement -->
@@ -94,14 +96,14 @@ Infoseek found no results for:<br>
 <INPUT TYPE=hidden NAME="lk" VALUE="noframes">
 <INPUT TYPE=hidden NAME="nh" VALUE="25">
  <input type=hidden name="cc" value="WW">
-	<input type=hidden name="oq" value="BogusNoSuchWordSpammersAreIdiots">
+	<input type=hidden name="oq" value="Bogus26745NoSuchWord934834683">
 </font></b>
 </td>
 <td rowspan=4 width=10 >&nbsp;</td>
 </tr>
 <tr>
 <td nowrap colspan=2 align=right>
-<input type="text" name="qt" size="42" maxlength="511" value="BogusNoSuchWordSpammersAreIdiots">
+<input type="text" name="qt" size="42" maxlength="511" value="Bogus26745NoSuchWord934834683">
 &nbsp;<input type="submit" value="Find">
 </td>
 </tr>
@@ -141,7 +143,7 @@ For example: <strong><tt>Bill Clinton, Boris Yeltsin</tt></strong>
 For example: <strong><tt>CDROM, CD-ROM</tt></strong>
 </ul>
 For more assistance with Infoseek
-, please see these <a href="/Help?pg=SearchTips.html&nh=25">tips</a> or <a href="http://feedback.infoseek.com/feedbacksubmit.html?nh=25">contact us</a>.
+, please see these <a href="/Help?pg=SearchTips.html&nh=25">tips</a> or <a href="http://comments.go.com/comments.html?nh=25">contact us</a>.
 <p>
 <font face="Helvetica, Arial">
 </td></tr></table>

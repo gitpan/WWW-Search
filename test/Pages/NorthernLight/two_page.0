@@ -1,24 +1,47 @@
+<!-- ad bucket == 4, file was /servers/ads/adbuckets.dat -->
 <html>
-<!--Northern Light Simple Search Results (Build 5036)--><!--    -->
+<!--Northern Light Simple Search Results (Build 7023)--><!--    -->
 
 <head>
- <title>Northern Light Search: +LSAM +ISI</title>
+ <title>Northern Light Search: +LSAM AND +ISI</title>
 </head>
 
 <!--T_JAVA_SCRIPT-->
 
 <body bgcolor=white alink=blue link=blue text=black>
 
-<table border=0 cellspacing=0 cellpadding=0 width=730><tr>
- <td width=25 rowspan=3><img src="docs/gif/transparent.gif" width=25 height=1 alt=""></td>
- <td width=112><img src="docs/gif/transparent.gif" width=112 height=1 alt=""></td>
- <td width=116><img src="docs/gif/transparent.gif" width=116 height=1 alt=""></td>
- <td width=477><img src="docs/gif/transparent.gif" width=477 height=1 alt=""></td>
-</tr><tr>
- <td valign=top><a href="search.html"><img src="docs/gif/nlt_logo.gif" width=112 height=100 border=0 alt="Northern Light Technology"></a></td>
+<table border=0 cellspacing=0 cellpadding=0 width=730>
+<!--T_AD_ENABLED_LOGO-->
+<!-- and now... -->
+<!-- ...a word from 3, but we're waiting for 4 -->
+
+
+<!-- ...a word from 4 --><tr>
+<td width=215><img src="docs/gif/transparent.gif" width=215 height=1 alt=""></td>
+<td width=36><img src="docs/gif/transparent.gif" width=36 height=1 alt=""></td>
+<td width=472><img src="docs/gif/transparent.gif" width=472 height=1 alt=""></td>
+</tr>
+
+<tr>
+<td valign=top width=215><font size=1>&nbsp;<br>&nbsp;</font><br>
+<table border=0 cellspacing=0 width="215"><tr>
+<td valign=top><a href="search.html"><img src="docs/gif/logo-cobrand.gif" width=80 height=93 hspace=8 border=0 alt="Northern Light Technology LLC"></a></td>
+<td valign=middle><img src="docs/gif/logo_newsedge2.gif" width=97 height=36 hspace=5 border=0 alt="Newsedge"></td>
+</tr></table>
+</td><!-- end -->
+
+
+
+<!-- ...a word from 2, but we're waiting for 4 -->
+
+
+<!-- 0 -->
+
+
+
  <td>&nbsp;</td>
  <td colspan=2 valign=top>
-<table border=0 cellspacing=0 cellpadding=5 width=468><tr><td bgcolor="#FFFFCC" align=left><font size=1>
+<table border=0 cellspacing=0 cellpadding=5 width=468><tr><td bgcolor=#ffffcc align=left><font size=1>
 <a href="search.html">Simple Search</a>&nbsp;|&nbsp;
 <a href="power.html">Power</a>&nbsp;|&nbsp;
 <a href="industry.html">Industry</a>&nbsp;|&nbsp;
@@ -27,12 +50,32 @@
 <a href="investext.html">Investext</a>&nbsp;|&nbsp;
 <a href="pubsearch.html">Publication</a>
 </font></td>
-<td bgcolor="#FFFFCC" align=right><font size=1>
+<td bgcolor=#ffffcc align=right><font size=1>
 <a href="http://special.northernlight.com">Special Edition</a>
 </font></td>
 </tr></table>
 <font size=1>&nbsp;<br></font>
-<!-- and now a word from our sponsor --><IFRAME WIDTH=468 HEIGHT=60 NORESIZE SCROLLING=No FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 SRC="http://adforce.imgis.com/?adiframe|2.0|34|47263|1|1|Key=LSAM_ISI;loc=300"><script language=javascript src="http://adforce.imgis.com/?addyn|2.0|34|47263|1|1|Key=LSAM_ISI;loc=300"></script><noscript><a href="http://adforce.imgis.com/?adlink|2.0|34|47263|1|1|Key=LSAM_ISI;loc=300" target=_top><img src="http://adforce.imgis.com/?adserv|2.0|34|47263|1|1|Key=LSAM_ISI;loc=300" border=0 width=468 height=60></a></noscript></IFRAME><!-- end -->
+
+<!--T_TOP_AD-->
+<!-- and now... -->
+
+<!-- ...a word from 3, but we're waiting for 4 -->
+
+<!-- ...a word from 4 --><!--NLBannerStart--><!-- Begin DoubleClick ad head -->
+<NOLAYER>
+<IFRAME SRC="http://ad.doubleclick.net/adi/nl.newspage.com/computing;!category=nl_comp;sz=468x60;ord=934835493" frameborder=0 marginheight=0 marginwidth=0 width=468 height=80 scrolling=no>
+<A HREF="http://ad.doubleclick.net/jump/nl.newspage.com/computing;!category=nl_comp;sz=468x60;ord=934835493" target="_top"><IMG BORDER="0" SRC="http://ad.doubleclick.net/ad/nl.newspage.com/computing;!category=nl_comp;sz=468x60;ord=934835493"><BR>Click Here!</A>
+</IFRAME>
+</NOLAYER>
+<ILAYER ID=snap VISIBILITY=HIDE HEIGHT=80 WIDTH=468></ILAYER>
+<!-- End DoubleClick ad head --><!--NLBannerEnd--><!-- end -->
+
+<!-- ...a word from 2, but we're waiting for 4 -->
+
+<!-- 0 -->
+
+
+
 <br><img src="docs/gif/transparent.gif" width=1 height=3 alt=""><br>
  </td>
 </tr><tr>
@@ -54,9 +97,9 @@
 <input type=hidden name=cc value=" ">
 <input type=hidden name=us value="025">
 <input type=hidden name=xd value="">
-<tr><td colspan=3><img src="docs/gif/transparent.gif" width=1 height=5 border=0 alt=""><br><font size=2><b>390 items</b><!-- result --> found <!-- end --><!-- audit cluster --><!-- result -->for:<!-- end --></font></td></tr>
+<tr><td colspan=3><img src="docs/gif/transparent.gif" width=1 height=5 border=0 alt=""><br><font size=2><b>395 items</b><!-- result --> found <!-- end --><!-- audit cluster --> in <b>78 sources</b> <!-- result -->for:<!-- end --></td></tr>
 <tr>
- <td><input type=text size=35 name=qr value="+LSAM +ISI"></td>
+ <td><input type=text size=35 name=qr value="+LSAM AND +ISI"></td>
  <td>&nbsp;</td>
  <td nowrap><input name=search type=image src="docs/gif/btn_search.gif" border=0 alt="Search"><a href="docs/search_help_results.html"><img src="docs/gif/btn_search_help.gif" border=0 width=51 height=28 alt="Help"></a></td>
 </tr>
@@ -68,589 +111,472 @@
 
 <table border=0 cellspacing=0 cellpadding=0 width=730><tr>
  <td width=220><img src="docs/gif/transparent.gif" width=220 height=1 alt=""></td>
- <td width=33><img src="docs/gif/transparent.gif" width=33 height=1 alt=""></td>
- <td width=360><img src="docs/gif/transparent.gif" width=360 height=1 alt=""></td>
- <td width=15><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
- <td width=107><img src="docs/gif/transparent.gif" width=107 height=1 alt=""></td>
+ <td width=515><img src="docs/gif/transparent.gif" width=515 height=1 alt=""></td>
 </tr><tr>
- <td colspan=5><font size=1>&nbsp;</font></td>
+ <td colspan=2><font size=1>&nbsp;</font></td>
 </tr><tr>
- <td rowspan=999 valign=top><font size=2>
-<!--Custom Search Folders(TM) span all rows-25:1----->
+ <td rowspan=999 valign=top><font size=2><!--1:1----->
 <!-- any clusters -->
 <img src="docs/gif/dynamicfolders.gif" width=204 height=47 hspace=3 border=0 alt="Narrow Your Search with Custom Search Folders"><br>
-Your search returned  390 items which we have organized into the following <!--  the following categories: --> <a href="docs/search_help_folders.html">Custom Search Folders</a>:<br>
-<img src="docs/gif/transparent.gif" border=0 width=1 height=8 alt=""><br></font>
-<!-- end --><TABLE border=0 cellspacing=0 cellpadding=0><TR><TD>
-<TABLE border=0 cellspacing=0 cellpadding=2>
-<!-- any clusters --><tr><td colspan=2 bgcolor="#FFFFCC"><img src="docs/gif/transparent.gif" border=0 width=1 height=3 alt=""></td></tr><!-- end -->
-<!-- audit cluster -->
-<!-- news cluster --><tr><TD align=right valign=top bgcolor="#FFFFCC"><a href="/nlquery.fcg?qr=%2bLSAM+%2bISI&dr=14&dx=1006&rv=1"><img src="docs/gif/folder-blue.gif" width=22 height=15 border=0 alt=""></a></TD><td bgcolor="#FFFFCC"><font size=2><a href="/nlquery.fcg?qr=%2bLSAM+%2bISI&dr=14&dx=1006&rv=2">Search Current News</a></font></td></tr><!-- end -->
-<!-- cluster --><tr><TD align=right valign=top bgcolor="#FFFFCC"><img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&cc=for+-Special+Collection+documents&cl=1&clscc_1_36=%28SOURCE+%5E%3D+1%29&cn_1=Special+Collection+documents&db=443443904&us=025"><img src="docs/gif/folder-yellow.gif" width=22 height=14 border=0 alt=""></a></TD><td bgcolor="#FFFFCC"><font size=2><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&cc=for+-Special+Collection+documents&cl=1&clscc_1_36=%28SOURCE+%5E%3D+1%29&cn_1=Special+Collection+documents&db=443443904&us=025">Special Collection documents</a></font></td></tr><!-- end --><tr><TD align=right valign=top bgcolor="#FFFFCC"><img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&cc=for+-www%2eisi%2eedu&cl=1&clweb_1_37=27533&cn_1=www%2eisi%2eedu&db=443443904&us=025"><img src="docs/gif/folder-yellow.gif" width=22 height=14 border=0 alt=""></a></TD><td bgcolor="#FFFFCC"><font size=2><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&cc=for+-www%2eisi%2eedu&cl=1&clweb_1_37=27533&cn_1=www%2eisi%2eedu&db=443443904&us=025">www.isi.edu</a></font></td></tr><!-- end --><tr><TD align=right valign=top bgcolor="#FFFFCC"><img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&cc=for+-Personal+pages&cl=1&clsrc_1_38=2&cn_1=Personal+pages&db=443443904&us=025"><img src="docs/gif/folder-yellow.gif" width=22 height=14 border=0 alt=""></a></TD><td bgcolor="#FFFFCC"><font size=2><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&cc=for+-Personal+pages&cl=1&clsrc_1_38=2&cn_1=Personal+pages&db=443443904&us=025">Personal pages</a></font></td></tr><!-- end --><tr><TD align=right valign=top bgcolor="#FFFFCC"><img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&cc=for+-Educational+sites&cl=1&clsrc_1_39=7&cn_1=Educational+sites&db=443443904&us=025"><img src="docs/gif/folder-yellow.gif" width=22 height=14 border=0 alt=""></a></TD><td bgcolor="#FFFFCC"><font size=2><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&cc=for+-Educational+sites&cl=1&clsrc_1_39=7&cn_1=Educational+sites&db=443443904&us=025">Educational sites</a></font></td></tr><!-- end --><tr><TD align=right valign=top bgcolor="#FFFFCC"><img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&cc=for+-Computer+caches&cl=1&clsub_1_40=20226&cn_1=Computer+caches&db=443443904&us=025"><img src="docs/gif/folder-yellow.gif" width=22 height=14 border=0 alt=""></a></TD><td bgcolor="#FFFFCC"><font size=2><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&cc=for+-Computer+caches&cl=1&clsub_1_40=20226&cn_1=Computer+caches&db=443443904&us=025">Computer caches</a></font></td></tr><!-- end --><tr><TD align=right valign=top bgcolor="#FFFFCC"><img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&cc=for+-Local+area+networks&cl=1&clsub_1_41=18600&cn_1=Local+area+networks&db=443443904&us=025"><img src="docs/gif/folder-yellow.gif" width=22 height=14 border=0 alt=""></a></TD><td bgcolor="#FFFFCC"><font size=2><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&cc=for+-Local+area+networks&cl=1&clsub_1_41=18600&cn_1=Local+area+networks&db=443443904&us=025">Local area networks</a></font></td></tr><!-- end --><tr><TD align=right valign=top bgcolor="#FFFFCC"><img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&cc=for+-gin%2eisi%2eedu&cl=1&clweb_1_42=2116398&cn_1=gin%2eisi%2eedu&db=443443904&us=025"><img src="docs/gif/folder-yellow.gif" width=22 height=14 border=0 alt=""></a></TD><td bgcolor="#FFFFCC"><font size=2><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&cc=for+-gin%2eisi%2eedu&cl=1&clweb_1_42=2116398&cn_1=gin%2eisi%2eedu&db=443443904&us=025">gin.isi.edu</a></font></td></tr><!-- end --><tr><TD align=right valign=top bgcolor="#FFFFCC"><img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&cc=for+-FTP+%28File+Transfer+Protocol%29&cl=1&clsub_1_43=20094&cn_1=FTP+%28File+Transfer+Protocol%29&db=443443904&us=025"><img src="docs/gif/folder-yellow.gif" width=22 height=14 border=0 alt=""></a></TD><td bgcolor="#FFFFCC"><font size=2><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&cc=for+-FTP+%28File+Transfer+Protocol%29&cl=1&clsub_1_43=20094&cn_1=FTP+%28File+Transfer+Protocol%29&db=443443904&us=025">FTP (File Transfer Protocol)</a></font></td></tr><!-- end --><tr><TD align=right valign=top bgcolor="#FFFFCC"><img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&cc=for+-Commercial+sites&cl=1&clsrc_1_44=6&cn_1=Commercial+sites&db=443443904&us=025"><img src="docs/gif/folder-yellow.gif" width=22 height=14 border=0 alt=""></a></TD><td bgcolor="#FFFFCC"><font size=2><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&cc=for+-Commercial+sites&cl=1&clsrc_1_44=6&cn_1=Commercial+sites&db=443443904&us=025">Commercial sites</a></font></td></tr><!-- end --><tr><TD align=right valign=top bgcolor="#FFFFCC"><img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&cc=for+-Modems&cl=1&clsub_1_45=20899&cn_1=Modems&db=443443904&us=025"><img src="docs/gif/folder-yellow.gif" width=22 height=14 border=0 alt=""></a></TD><td bgcolor="#FFFFCC"><font size=2><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&cc=for+-Modems&cl=1&clsub_1_45=20899&cn_1=Modems&db=443443904&us=025">Modems</a></font></td></tr><!-- end --><tr><TD align=right valign=top bgcolor="#FFFFCC"><img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&cc=for+-Programming+algorithms&cl=1&clsub_1_46=20716&cn_1=Programming+algorithms&db=443443904&us=025"><img src="docs/gif/folder-yellow.gif" width=22 height=14 border=0 alt=""></a></TD><td bgcolor="#FFFFCC"><font size=2><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&cc=for+-Programming+algorithms&cl=1&clsub_1_46=20716&cn_1=Programming+algorithms&db=443443904&us=025">Programming algorithms</a></font></td></tr><!-- end --><tr><TD align=right valign=top bgcolor="#FFFFCC"><img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&cc=for+-www%2ehpl%2ehp%2eco%2euk&cl=1&clweb_1_47=1405394&cn_1=www%2ehpl%2ehp%2eco%2euk&db=443443904&us=025"><img src="docs/gif/folder-yellow.gif" width=22 height=14 border=0 alt=""></a></TD><td bgcolor="#FFFFCC"><font size=2><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&cc=for+-www%2ehpl%2ehp%2eco%2euk&cl=1&clweb_1_47=1405394&cn_1=www%2ehpl%2ehp%2eco%2euk&db=443443904&us=025">www.hpl.hp.co.uk</a></font></td></tr><!-- end --><tr><TD align=right valign=top bgcolor="#FFFFCC"><img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&cl=1&cloth_1_48=NOT+%28+WEBSITE+%3D+27533+OR++SOURCE+%3D+2+OR++SOURCE+%3D+7+OR++SUBJECT+%3D+20226+OR++SUBJECT+%3D+18600+OR++WEBSITE+%3D+2116398+OR++SUBJECT+%3D+20094+OR++SOURCE+%3D+6+OR++SUBJECT+%3D+20899+OR++SUBJECT+%3D+20716+OR++WEBSITE+%3D+1405394%29&cn_1=all+others%2E%2E%2E&db=443443904&us=025"><img src="docs/gif/folder-yellow.gif" width=22 height=14 border=0 alt=""></a></TD><td bgcolor="#FFFFCC"><font size=2><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&cl=1&cloth_1_48=NOT+%28+WEBSITE+%3D+27533+OR++SOURCE+%3D+2+OR++SOURCE+%3D+7+OR++SUBJECT+%3D+20226+OR++SUBJECT+%3D+18600+OR++WEBSITE+%3D+2116398+OR++SUBJECT+%3D+20094+OR++SOURCE+%3D+6+OR++SUBJECT+%3D+20899+OR++SUBJECT+%3D+20716+OR++WEBSITE+%3D+1405394%29&cn_1=all+others%2E%2E%2E&db=443443904&us=025">all others...</a></font></td></tr><!-- end -->
-<!-- any clusters -->
-<tr><TD colspan=2 bgcolor="#FFFFCC"><font size=2><div align="center">&nbsp;<br><b>Patent Pending</b>&nbsp;&nbsp;</div></font></td></tr>
-<TR><TD colspan=2 bgcolor="#FFFFCD"><IMG SRC="docs/gif/transparent.gif" WIDTH=200 HEIGHT=4></TD></TR>        
-<TR><TD colspan=2 bgcolor="#FFFFD7"><IMG SRC="docs/gif/transparent.gif" WIDTH=1 HEIGHT=4></TD></TR>
-<TR><TD colspan=2 bgcolor="#FFFFE3"><IMG SRC="docs/gif/transparent.gif" WIDTH=1 HEIGHT=4></TD></TR>
-<TR><TD colspan=2 bgcolor="#FFFFEB"><IMG SRC="docs/gif/transparent.gif" WIDTH=1 HEIGHT=4></TD></TR>
-<TR><TD colspan=2 bgcolor="#FFFFF6"><IMG SRC="docs/gif/transparent.gif" WIDTH=1 HEIGHT=4></TD></TR>
+Your search returned  395 items which we have organized into the following <!--  the following categories: --> <a href="docs/search_help_folders.html">Custom Search Folders</a>:<br>
 <!-- end -->
+<img src="docs/gif/transparent.gif" border=0 width=1 height=8 alt=""><br></font>
+<TABLE border=0 cellspacing=0 cellpadding=2 width=210>
+<!-- any clusters --><tr><td colspan=2 bgcolor=#ffffcc><img src=docs/gif/transparent.gif border=0 width=1 height=3></td></tr><!-- end -->
+<!-- audit cluster -->
+<!-- news cluster --><tr><TD align=right valign=top bgcolor=#ffffcc><a href="/nlquery.fcg?qr=%2bLSAM+AND+%2bISI&dr=14&dx=1006&rv=1"><img src="docs/gif/folder-blue.gif" width=22 height=14 border=0 alt="Search Current News"></a></TD><td bgcolor=#ffffcc><font size=2><a href="/nlquery.fcg?qr=%2bLSAM+AND+%2bISI&dr=14&dx=1006&rv=2">Search Current News</a></font></td></tr><!-- end -->
+<!-- cluster --><tr><TD align=right valign=top bgcolor=#ffffcc><img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&cb=0&cc=for+-Special+Collection+documents&cl=1&clscc_1_0=%28SOURCE+%5E%3D+1%29&cn_1=Special+Collection+documents&db=80473024&us=025"><img src="docs/gif/folder-yellow.gif" width=22 height=14 border=0 alt="More results"></a></TD><td bgcolor=#ffffcc><font size=2><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&cb=0&cc=for+-Special+Collection+documents&cl=1&clscc_1_0=%28SOURCE+%5E%3D+1%29&cn_1=Special+Collection+documents&db=80473024&us=025">Special Collection documents</a></font></td></tr><!-- end --><tr><TD align=right valign=top bgcolor=#ffffcc><img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&cb=0&cc=for+-www%2eisi%2eedu&cl=1&clweb_1_0=27533&cn_1=www%2eisi%2eedu&db=80473024&us=025"><img src="docs/gif/folder-yellow.gif" width=22 height=14 border=0 alt="More results"></a></TD><td bgcolor=#ffffcc><font size=2><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&cb=0&cc=for+-www%2eisi%2eedu&cl=1&clweb_1_0=27533&cn_1=www%2eisi%2eedu&db=80473024&us=025">www.isi.edu</a></font></td></tr><!-- end --><tr><TD align=right valign=top bgcolor=#ffffcc><img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&cb=0&cc=for+-Personal+pages&cl=1&clsrc_1_0=2&cn_1=Personal+pages&db=80473024&us=025"><img src="docs/gif/folder-yellow.gif" width=22 height=14 border=0 alt="More results"></a></TD><td bgcolor=#ffffcc><font size=2><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&cb=0&cc=for+-Personal+pages&cl=1&clsrc_1_0=2&cn_1=Personal+pages&db=80473024&us=025">Personal pages</a></font></td></tr><!-- end --><tr><TD align=right valign=top bgcolor=#ffffcc><img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&cb=0&cc=for+-Computer+caches&cl=1&clsub_1_0=20226&cn_1=Computer+caches&db=80473024&us=025"><img src="docs/gif/folder-yellow.gif" width=22 height=14 border=0 alt="More results"></a></TD><td bgcolor=#ffffcc><font size=2><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&cb=0&cc=for+-Computer+caches&cl=1&clsub_1_0=20226&cn_1=Computer+caches&db=80473024&us=025">Computer caches</a></font></td></tr><!-- end --><tr><TD align=right valign=top bgcolor=#ffffcc><img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&cb=0&cc=for+-Local+area+networks&cl=1&clsub_1_0=18600&cn_1=Local+area+networks&db=80473024&us=025"><img src="docs/gif/folder-yellow.gif" width=22 height=14 border=0 alt="More results"></a></TD><td bgcolor=#ffffcc><font size=2><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&cb=0&cc=for+-Local+area+networks&cl=1&clsub_1_0=18600&cn_1=Local+area+networks&db=80473024&us=025">Local area networks</a></font></td></tr><!-- end --><tr><TD align=right valign=top bgcolor=#ffffcc><img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&cb=0&cc=for+-gin%2eisi%2eedu&cl=1&clweb_1_0=2116398&cn_1=gin%2eisi%2eedu&db=80473024&us=025"><img src="docs/gif/folder-yellow.gif" width=22 height=14 border=0 alt="More results"></a></TD><td bgcolor=#ffffcc><font size=2><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&cb=0&cc=for+-gin%2eisi%2eedu&cl=1&clweb_1_0=2116398&cn_1=gin%2eisi%2eedu&db=80473024&us=025">gin.isi.edu</a></font></td></tr><!-- end --><tr><TD align=right valign=top bgcolor=#ffffcc><img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&cb=0&cc=for+-FTP+%28File+Transfer+Protocol%29&cl=1&clsub_1_0=20094&cn_1=FTP+%28File+Transfer+Protocol%29&db=80473024&us=025"><img src="docs/gif/folder-yellow.gif" width=22 height=14 border=0 alt="More results"></a></TD><td bgcolor=#ffffcc><font size=2><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&cb=0&cc=for+-FTP+%28File+Transfer+Protocol%29&cl=1&clsub_1_0=20094&cn_1=FTP+%28File+Transfer+Protocol%29&db=80473024&us=025">FTP (File Transfer Protocol)</a></font></td></tr><!-- end --><tr><TD align=right valign=top bgcolor=#ffffcc><img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&cb=0&cc=for+-Commercial+sites&cl=1&clsrc_1_0=6&cn_1=Commercial+sites&db=80473024&us=025"><img src="docs/gif/folder-yellow.gif" width=22 height=14 border=0 alt="More results"></a></TD><td bgcolor=#ffffcc><font size=2><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&cb=0&cc=for+-Commercial+sites&cl=1&clsrc_1_0=6&cn_1=Commercial+sites&db=80473024&us=025">Commercial sites</a></font></td></tr><!-- end --><tr><TD align=right valign=top bgcolor=#ffffcc><img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&cb=0&cc=for+-Modems&cl=1&clsub_1_0=20899&cn_1=Modems&db=80473024&us=025"><img src="docs/gif/folder-yellow.gif" width=22 height=14 border=0 alt="More results"></a></TD><td bgcolor=#ffffcc><font size=2><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&cb=0&cc=for+-Modems&cl=1&clsub_1_0=20899&cn_1=Modems&db=80473024&us=025">Modems</a></font></td></tr><!-- end --><tr><TD align=right valign=top bgcolor=#ffffcc><img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&cb=0&cc=for+-Programming+algorithms&cl=1&clsub_1_0=20716&cn_1=Programming+algorithms&db=80473024&us=025"><img src="docs/gif/folder-yellow.gif" width=22 height=14 border=0 alt="More results"></a></TD><td bgcolor=#ffffcc><font size=2><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&cb=0&cc=for+-Programming+algorithms&cl=1&clsub_1_0=20716&cn_1=Programming+algorithms&db=80473024&us=025">Programming algorithms</a></font></td></tr><!-- end --><tr><TD align=right valign=top bgcolor=#ffffcc><img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&cb=0&cc=for+-www%2ehpl%2ehp%2eco%2euk&cl=1&clweb_1_0=1405394&cn_1=www%2ehpl%2ehp%2eco%2euk&db=80473024&us=025"><img src="docs/gif/folder-yellow.gif" width=22 height=14 border=0 alt="More results"></a></TD><td bgcolor=#ffffcc><font size=2><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&cb=0&cc=for+-www%2ehpl%2ehp%2eco%2euk&cl=1&clweb_1_0=1405394&cn_1=www%2ehpl%2ehp%2eco%2euk&db=80473024&us=025">www.hpl.hp.co.uk</a></font></td></tr><!-- end --><tr><TD align=right valign=top bgcolor=#ffffcc><img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&cb=0&cc=for+-www%2duk%2ehpl%2ehp%2ecom&cl=1&clweb_1_0=1317967&cn_1=www%2duk%2ehpl%2ehp%2ecom&db=80473024&us=025"><img src="docs/gif/folder-yellow.gif" width=22 height=14 border=0 alt="More results"></a></TD><td bgcolor=#ffffcc><font size=2><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&cb=0&cc=for+-www%2duk%2ehpl%2ehp%2ecom&cl=1&clweb_1_0=1317967&cn_1=www%2duk%2ehpl%2ehp%2ecom&db=80473024&us=025">www-uk.hpl.hp.com</a></font></td></tr><!-- end --><tr><TD align=right valign=top bgcolor=#ffffcc><img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&cb=0&cl=1&cloth_1_0=NOT+%28+WEBSITE+%3D+27533+OR++SOURCE+%3D+2+OR++SUBJECT+%3D+20226+OR++SUBJECT+%3D+18600+OR++WEBSITE+%3D+2116398+OR++SUBJECT+%3D+20094+OR++SOURCE+%3D+6+OR++SUBJECT+%3D+20899+OR++SUBJECT+%3D+20716+OR++WEBSITE+%3D+1405394+OR++WEBSITE+%3D+1317967%29&cn_1=all+others%2E%2E%2E&db=80473024&us=025"><img src="docs/gif/folder-yellow.gif" width=22 height=14 border=0 alt="More results"></a></TD><td bgcolor=#ffffcc><font size=2><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&cb=0&cl=1&cloth_1_0=NOT+%28+WEBSITE+%3D+27533+OR++SOURCE+%3D+2+OR++SUBJECT+%3D+20226+OR++SUBJECT+%3D+18600+OR++WEBSITE+%3D+2116398+OR++SUBJECT+%3D+20094+OR++SOURCE+%3D+6+OR++SUBJECT+%3D+20899+OR++SUBJECT+%3D+20716+OR++WEBSITE+%3D+1405394+OR++WEBSITE+%3D+1317967%29&cn_1=all+others%2E%2E%2E&db=80473024&us=025">all others...</a></font></td></tr><!-- end -->
+<!-- any clusters -->
+<tr><TD colspan=2 bgcolor=#FFFFCC><font size=2><div align="center">&nbsp;<br><b>Patent Pending</b>&nbsp;&nbsp;</div></font></td></tr>
+<TR><TD colspan=2 bgcolor=#FFFFCD><IMG SRC="docs/gif/transparent.gif" WIDTH=200 HEIGHT=4></TD></TR>        
+<!-- end -->
+<!-- news cluster --><TR><TD colspan=2 bgcolor=#FFFFD7><IMG SRC="docs/gif/transparent.gif" WIDTH=1 HEIGHT=4></TD></TR><!-- end -->
+<!-- any clusters --><TR><TD colspan=2 bgcolor=#FFFFE3><IMG SRC="docs/gif/transparent.gif" WIDTH=1 HEIGHT=4></TD></TR><!-- end -->
+<!-- news cluster --><TR><TD colspan=2 bgcolor=#FFFFEB><IMG SRC="docs/gif/transparent.gif" WIDTH=1 HEIGHT=4></TD></TR><!-- end -->
+<!-- any clusters --><TR><TD colspan=2 bgcolor=#FFFFF6><IMG SRC="docs/gif/transparent.gif" WIDTH=1 HEIGHT=4></TD></TR><!-- end -->
 <tr><td colspan=2 bgcolor=white align=center><font size=2>
-<a href="search.html"><img src="docs/gif/startover.gif" width=104 height=29 border=0 alt="Start Over"></a><br>
-<img src="docs/gif/transparent.gif" width=162 height=1 alt=""><br>
+<img src="docs/gif/transparent.gif" border=0 width=162 height=5 alt=""><br>
+<a href="search.html">Start Over</a>&nbsp;<br>
 <!-- Clipping Service -->
 <!-- Clipping Service -->
+&nbsp;<br>
+<a href="search.html"><img src="docs/gif/chanl_home_off.gif" width=71 height=40 border=0 alt="Home"></a><br>
+<a href="docs/gen_help_where.html"><img border=0 src="docs/gif/chanl_help_off.gif" width=76 height=30 alt="Help"></a><br>
+<a href="docs/member_accounts.html"><img src="docs/gif/chanl_accts_off.gif" width=76 height=30 border=0 alt="Accounts"></a><br>
+<a href="docs/about_company_mission.html"><img src="docs/gif/chanl_company_off.gif" width=76 height=30 border=0 alt="Company"></a><br>
  </font></td>
 </tr>
 </table>
-</td></tr>
-</TABLE>
  </td>
- <td>&nbsp;</td>
-<td colspan=3 valign=top>
+<td valign=top>
 <img src="docs/gif/transparent.gif" width=1 height=6 alt=""><br>
-<img src="docs/gif/searchresults.gif" width=372 height=28 border=0 alt="Documents that best match your search"><br>
+<img src="docs/gif/transparent.gif" width=33 height=1 alt=""><img src="docs/gif/searchresults.gif" width=372 height=28 border=0 alt="Documents that best match your search"><br>
 <img src="docs/gif/transparent.gif" width=1 height=14 alt=""><br>
- </td>
-</tr>
-<!-- RESULTS LIST START -->
-<!-- result -->
-<tr><!--  --><!--  -->
-<td align=right valign=top><font size=2>1.&nbsp;&nbsp;</font></td>
-<td valign=top><font size=2><a href="http://www13.w3.org/Protocols/HTTP/Issues/touch.html">View: Browse HTML Browse Raw Text From: touch@ISI.EDU Date: Thu, 13 Mar 1997 ......</a><br>
-<b>93% - Directories & Lists:&nbsp;</b>View: Browse HTML Browse Raw Text From: touch@ISI.EDU Date: Thu, 13 Mar 1997 13:11:48 -0800 To: jg@pa.dec.com, fielding... 04/04/97<br>
-<b>Non-profit site:</b>&nbsp;&nbsp;http:/ / www13.w3.org/ Protocols/ HTTP/ Issues/ touch.html<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
-<!-- Inline Clustering -->
 
-<!-- 0 -->
-<!-- Inline Clustering -->
-<!-- Inline Clustering -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
-</tr>
-<!-- end -->
+<!--NLResultListStart-->
+<table border=0 cellspacing=0 cellpadding=0>
+<!-- result --><!--NLResultStart-->
 <tr><!--  --><!--  -->
-<td align=right valign=top><font size=2>2.&nbsp;&nbsp;</font></td>
-<td valign=top><font size=2><a href="http://www.telematik.informatik.uni-karlsruhe.de/~dresler/Multicast/multicast.html">Stefan Dresler's Multicast Page</a><br>
-<b>86% - Directories & Lists:&nbsp;</b>Stefan Dresler's Multicast Page Multicast and other stuff Reliable Broadcast/Multic... Links @nasa.gov, local copy of 03/17/96 Transis (HUJI, Jerusalem, Israel... Date Not Available<br>
-<b>Personal page:</b>&nbsp;&nbsp;http:/ / www.telematik.informatik.u ni-karlsruhe.de/ ~dresler/ Multicast/ multicast.html<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
-<!-- Inline Clustering -->
-
-<!-- 0 -->
-<!-- Inline Clustering -->
-<!-- Inline Clustering -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
-</tr>
-<!-- end -->
-<tr><!--  --><!--  -->
-<td align=right valign=top><font size=2>3.&nbsp;&nbsp;</font></td>
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>1.&nbsp;&nbsp;</font></td>
 <td valign=top><font size=2><a href="http://www.isi.edu/div7/cities/channels/">LSAM channels</a><br>
-<b>61% - Articles & General info:&nbsp;</b>LSAM channels LSAM Proxy Multicast Channels The LSAM Proxy relies on multicast channels to perform its group-following behavior Page maintainer Last modified: Thu Feb... 02/18/99<br>
+<b><!--NLResultRelevanceStart-->91% -<!--NLResultRelevanceEnd--> Articles & General info:&nbsp;</b>LSAM Proxy Multicast Channels The LSAM Proxy relies on multicast channels to perform its group-following behavior Page maintainer Last modified: Thu Feb 18 12... 02/18/99<br>
 <b>Educational site:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ div7/ cities/ channels/ <br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
 <!-- Inline Clustering -->
-<!-- Inline Clustering -->
-<!-- Inline Clustering --><!-- for websites -->
-<!-- Inline Clustering Loop --><table border=0 cellspacing=0 cellpadding=0 width=355><tr><td width=1%><img src="docs/gif/transparent.gif" width=1 height=2 border=0 alt=""></td><td width=99%><img src="docs/gif/transparent.gif" width=300 height=1 border=0 alt=""></td></tr><tr><td nowrap valign=top><font size=2><b>60%:&nbsp;</b></font></td><td><font size=2><a href="http://www.isi.edu/div7/cities/mobility/">About LSAM Relocation</a></font></font></td></tr></table>
+<!-- Inline Clustering --><!-- web -->
+<!-- Inline Clustering Loop --><table border=0 cellspacing=0 cellpadding=0 width=355><tr><td width=1%><img src="docs/gif/transparent.gif" width=1 height=3 border=0></td><td width=99%><img src="docs/gif/transparent.gif" width=300 height=3 border=0></td></tr><tr><td nowrap valign=top><font size=2><b>89%:&nbsp;</b></font></td><td><font size=2><a href="http://www.isi.edu/div7/cities/mobility/">About LSAM Relocation</a></font></font></td></tr></table>
 <!-- 0 -->
 <table border=0 cellspacing=0 cellpadding=0 width=355><tr>
-<td width=18><img src="docs/gif/transparent.gif" width=18 height=5 border=0 alt=""></td>
-<td width=319><img src="docs/gif/transparent.gif" width=319 height=1 border=0 alt=""></td>
-</tr><tr>
-<td valign=top><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&db=443443904&iq=7%3A27533&us=025"><img src="docs/gif/folderz.gif" width=15 height=14 border=0 alt=""></a></td>
-<td valign=middle><font size=2 color="#666666"><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&db=443443904&iq=7%3A27533&us=025">More results</a> from this site<!--&nbsp;&nbsp;&nbsp;&nbsp; Go&nbsp;to&nbsp;<a href="http://www.isi.edu">www.isi.edu</a>--><br><img src="docs/gif/transparent.gif" width=1 height=5 border=0 alt=""><br></font></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=18 height=3 border=0 alt=""><br><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&&cb=0&cc=+for+www%2eisi%2eedu&cl=1&clweb_1_1=27533&cn_1=www%2eisi%2eedu&db=80473024&us=025"><img src="docs/gif/folderz.gif" width=15 height=14 border=0 alt="More results from this site"></a></td>
+<td colspan=2 valign=top><img src="docs/gif/transparent.gif" width=337 height=3 border=0 alt=""><br><font size=2 color=#666666><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&&cb=0&cc=+for+www%2eisi%2eedu&cl=1&clweb_1_1=27533&cn_1=www%2eisi%2eedu&db=80473024&us=025">More results</a> from this site</font></td>
 </tr></table>
 <!-- 0 -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
 </tr>
-<!-- end -->
+<!--NLResultEnd--><!-- end --><!--NLResultStart-->
 <tr><!--  --><!--  -->
-<td align=right valign=top><font size=2>4.&nbsp;&nbsp;</font></td>
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>2.&nbsp;&nbsp;</font></td>
 <td valign=top><font size=2><a href="http://gin.isi.edu/lsam/people.html">LSAM People</a><br>
-<b>61% - Articles & General info:&nbsp;</b>LSAM People LSAM Researchers: Project Leader. Coordinating overall proxy architecture, and performing research on channel management and environment analysis. Earlier work focused on Intelligent Bandwidth... 02/18/99<br>
+<b><!--NLResultRelevanceStart-->90% -<!--NLResultRelevanceEnd--> Articles & General info:&nbsp;</b>LSAM Researchers: Project Leader. Coordinating overall proxy architecture, and performing research on channel management and environment analysis. Earlier work focused on Intelligent Bandwidth research. hr. 02/18/99<br>
 <b>Educational site:</b>&nbsp;&nbsp;http:/ / gin.isi.edu/ lsam/ people.html<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
 <!-- Inline Clustering -->
-<!-- Inline Clustering -->
-<!-- Inline Clustering --><!-- for websites -->
-<!-- Inline Clustering Loop --><table border=0 cellspacing=0 cellpadding=0 width=355><tr><td width=1%><img src="docs/gif/transparent.gif" width=1 height=2 border=0 alt=""></td><td width=99%><img src="docs/gif/transparent.gif" width=300 height=1 border=0 alt=""></td></tr><tr><td nowrap valign=top><font size=2><b>61%:&nbsp;</b></font></td><td><font size=2><a href="http://gin.isi.edu/lsam/publications/index.html">LSAM Publications</a></font></font></td></tr></table>
-<!-- 0 -->
+<!-- Inline Clustering --><!-- web -->
+<!-- Inline Clustering Loop -->
 <table border=0 cellspacing=0 cellpadding=0 width=355><tr>
-<td width=18><img src="docs/gif/transparent.gif" width=18 height=5 border=0 alt=""></td>
-<td width=319><img src="docs/gif/transparent.gif" width=319 height=1 border=0 alt=""></td>
-</tr><tr>
-<td valign=top><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&db=443443904&iq=7%3A2116398&us=025"><img src="docs/gif/folderz.gif" width=15 height=14 border=0 alt=""></a></td>
-<td valign=middle><font size=2 color="#666666"><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&db=443443904&iq=7%3A2116398&us=025">More results</a> from this site<!--&nbsp;&nbsp;&nbsp;&nbsp; Go&nbsp;to&nbsp;<a href="http://gin.isi.edu">gin.isi.edu</a>--><br><img src="docs/gif/transparent.gif" width=1 height=5 border=0 alt=""><br></font></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=18 height=3 border=0 alt=""><br><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&&cb=0&cc=+for+gin%2eisi%2eedu&cl=1&clweb_1_1=2116398&cn_1=gin%2eisi%2eedu&db=80473024&us=025"><img src="docs/gif/folderz.gif" width=15 height=14 border=0 alt="More results from this site"></a></td>
+<td colspan=2 valign=top><img src="docs/gif/transparent.gif" width=337 height=3 border=0 alt=""><br><font size=2 color=#666666><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&&cb=0&cc=+for+gin%2eisi%2eedu&cl=1&clweb_1_1=2116398&cn_1=gin%2eisi%2eedu&db=80473024&us=025">More results</a> from this site</font></td>
 </tr></table>
 <!-- 0 -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
 </tr>
-<!-- end -->
+<!--NLResultEnd--><!-- end --><!--NLResultStart-->
 <tr><!--  --><!--  -->
-<td align=right valign=top><font size=2>5.&nbsp;&nbsp;</font></td>
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>3.&nbsp;&nbsp;</font></td>
 <td valign=top><font size=2><a href="http://gost.isi.edu/~johnh/SOFTWARE/APACHE/index.html">LSAM Apache Patches</a><br>
-<b>55% - Articles & General info:&nbsp;</b>LSAM Apache Patches As part of my work with ISI's hre project we have found some optimizations in http-server performance. We describe these... 03/27/98<br>
+<b><!--NLResultRelevanceStart-->82% -<!--NLResultRelevanceEnd--> Articles & General info:&nbsp;</b>As part of my work with ISI's hre project we have found some optimizations in http-server performance. We describe these problems in a... 03/27/98<br>
 <b>Personal page:</b>&nbsp;&nbsp;http:/ / gost.isi.edu/ ~johnh/ SOFTWARE/ APACHE/ index.html<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
 <!-- Inline Clustering -->
-<!-- Inline Clustering -->
-<!-- Inline Clustering --><!-- for websites -->
+<!-- Inline Clustering --><!-- web -->
 <!-- Inline Clustering Loop -->
 <table border=0 cellspacing=0 cellpadding=0 width=355><tr>
-<td width=18><img src="docs/gif/transparent.gif" width=18 height=5 border=0 alt=""></td>
-<td width=319><img src="docs/gif/transparent.gif" width=319 height=1 border=0 alt=""></td>
-</tr><tr>
-<td valign=top><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&db=443443904&iq=7%3A1181206&us=025"><img src="docs/gif/folderz.gif" width=15 height=14 border=0 alt=""></a></td>
-<td valign=middle><font size=2 color="#666666"><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&db=443443904&iq=7%3A1181206&us=025">More results</a> from this site<!--&nbsp;&nbsp;&nbsp;&nbsp; Go&nbsp;to&nbsp;<a href="http://gost.isi.edu">gost.isi.edu</a>--><br><img src="docs/gif/transparent.gif" width=1 height=5 border=0 alt=""><br></font></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=18 height=3 border=0 alt=""><br><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&&cb=0&cc=+for+gost%2eisi%2eedu&cl=1&clweb_1_1=1181206&cn_1=gost%2eisi%2eedu&db=80473024&us=025"><img src="docs/gif/folderz.gif" width=15 height=14 border=0 alt="More results from this site"></a></td>
+<td colspan=2 valign=top><img src="docs/gif/transparent.gif" width=337 height=3 border=0 alt=""><br><font size=2 color=#666666><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&&cb=0&cc=+for+gost%2eisi%2eedu&cl=1&clweb_1_1=1181206&cn_1=gost%2eisi%2eedu&db=80473024&us=025">More results</a> from this site</font></td>
 </tr></table>
 <!-- 0 -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
 </tr>
-<!-- end -->
+<!--NLResultEnd--><!-- end --><!--NLResultStart-->
 <tr><!--  --><!--  -->
-<td align=right valign=top><font size=2>6.&nbsp;&nbsp;</font></td>
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>4.&nbsp;&nbsp;</font></td>
 <td valign=top><font size=2><a href="http://www.darpa.mil/ITO/psum1998/C370-0.html">LSAM: Large-Scale Active Middleware (formerly Cities Online</a><br>
-<b>55% - Articles & General info:&nbsp;</b>DARPA ITO Sponsored Research 1998 Project Summary LSAM: Large-Scale Active Middleware (formerly Cities Online) USC Information Sciences Institute Project Website -- Additional project information provided... 06/30/99<br>
+<b><!--NLResultRelevanceStart-->79% -<!--NLResultRelevanceEnd--> Articles & General info:&nbsp;</b>DARPA ITO Sponsored Research 1998 Project Summary LSAM: Large-Scale Active Middleware(forme... Cities Online) USC Information Sciences Institute Project Website &nbsp; Additional project information... 07/07/99<br>
 <b>Department of Defense:</b>&nbsp;&nbsp;http:/ / www.darpa.mil/ ITO/ psum1998/ C370-0.html<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
 <!-- Inline Clustering -->
-<!-- Inline Clustering -->
-<!-- Inline Clustering --><!-- for websites -->
+<!-- Inline Clustering --><!-- web -->
 <!-- Inline Clustering Loop -->
 <table border=0 cellspacing=0 cellpadding=0 width=355><tr>
-<td width=18><img src="docs/gif/transparent.gif" width=18 height=5 border=0 alt=""></td>
-<td width=319><img src="docs/gif/transparent.gif" width=319 height=1 border=0 alt=""></td>
-</tr><tr>
-<td valign=top><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&db=443443904&iq=7%3A11256&us=025"><img src="docs/gif/folderz.gif" width=15 height=14 border=0 alt=""></a></td>
-<td valign=middle><font size=2 color="#666666"><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&db=443443904&iq=7%3A11256&us=025">More results</a> from this site<!--&nbsp;&nbsp;&nbsp;&nbsp; Go&nbsp;to&nbsp;<a href="http://www.darpa.mil">www.darpa.mil</a>--><br><img src="docs/gif/transparent.gif" width=1 height=5 border=0 alt=""><br></font></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=18 height=3 border=0 alt=""><br><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&&cb=0&cc=+for+www%2edarpa%2emil&cl=1&clweb_1_1=11256&cn_1=www%2edarpa%2emil&db=80473024&us=025"><img src="docs/gif/folderz.gif" width=15 height=14 border=0 alt="More results from this site"></a></td>
+<td colspan=2 valign=top><img src="docs/gif/transparent.gif" width=337 height=3 border=0 alt=""><br><font size=2 color=#666666><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&&cb=0&cc=+for+www%2edarpa%2emil&cl=1&clweb_1_1=11256&cn_1=www%2edarpa%2emil&db=80473024&us=025">More results</a> from this site</font></td>
 </tr></table>
 <!-- 0 -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
 </tr>
-<!-- end -->
+<!--NLResultEnd--><!-- end --><!--NLResultStart-->
 <tr><!--  --><!--  -->
-<td align=right valign=top><font size=2>7.&nbsp;&nbsp;</font></td>
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>5.&nbsp;&nbsp;</font></td>
+<td valign=top><font size=2><a href="http://www13.w3.org/Protocols/HTTP/Issues/touch.html">View: Browse HTML Browse Raw Text From: touch@ISI.EDU Date: Thu, 13 Mar 1997 ......</a><br>
+<b><!--NLResultRelevanceStart-->77% -<!--NLResultRelevanceEnd--> Directories & Lists:&nbsp;</b>13:11:48-0800 To: jg@pa.dec.com, fielding@ics.uci... Cc: touch@ISI.EDU, lsam@ISI.EDU Subject: Re: Updated issues list... 04/04/97<br>
+<b>Non-profit site:</b>&nbsp;&nbsp;http:/ / www13.w3.org/ Protocols/ HTTP/ Issues/ touch.html<br>
+<!-- Inline Clustering -->
+<!-- Inline Clustering -->
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+</tr>
+<!--NLResultEnd--><!-- end --><!--NLResultStart-->
+<tr><!--  --><!--  -->
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>6.&nbsp;&nbsp;</font></td>
 <td valign=top><font size=2><a href="http://www-uk.hpl.hp.com/people/ange/archives/archives-96/http-wg-archive/1593.html">HTTP-wg Archive: Re: [touch@isi.edu: draft may be of interest]</a><br>
-<b>51% - Articles & General info:&nbsp;</b>HTTP-wg : Re: [touch@isi.edu: draft may be of interest] Re: [touch@isi.edu: draft may be of interest] touch@ISI.EDU Fri, 14... Date Not Available<br>
+<b><!--NLResultRelevanceStart-->75% -<!--NLResultRelevanceEnd--> Articles & General info:&nbsp;</b>HTTP-wg: Re:[touch@isi.ed... draft may be of interest] Re:[touch@isi.ed... draft may be of interest] touch@ISI.EDU Fri, 14... Date Not Available<br>
 <b>Commercial site:</b>&nbsp;&nbsp;http:/ / www-uk.hpl.hp.com/ people/ ange/ archives/ archives-96/ http-wg-archive/ 1593.html<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
 <!-- Inline Clustering -->
-<!-- Inline Clustering -->
-<!-- Inline Clustering --><!-- for websites -->
+<!-- Inline Clustering --><!-- web -->
 <!-- Inline Clustering Loop -->
 <table border=0 cellspacing=0 cellpadding=0 width=355><tr>
-<td width=18><img src="docs/gif/transparent.gif" width=18 height=5 border=0 alt=""></td>
-<td width=319><img src="docs/gif/transparent.gif" width=319 height=1 border=0 alt=""></td>
-</tr><tr>
-<td valign=top><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&db=443443904&iq=7%3A1317967&us=025"><img src="docs/gif/folderz.gif" width=15 height=14 border=0 alt=""></a></td>
-<td valign=middle><font size=2 color="#666666"><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&db=443443904&iq=7%3A1317967&us=025">More results</a> from this site<!--&nbsp;&nbsp;&nbsp;&nbsp; Go&nbsp;to&nbsp;<a href="http://www-uk.hpl.hp.com">www-uk.hpl.hp.com</a>--><br><img src="docs/gif/transparent.gif" width=1 height=5 border=0 alt=""><br></font></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=18 height=3 border=0 alt=""><br><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&&cb=0&cc=+for+www%2duk%2ehpl%2ehp%2ecom&cl=1&clweb_1_1=1317967&cn_1=www%2duk%2ehpl%2ehp%2ecom&db=80473024&us=025"><img src="docs/gif/folderz.gif" width=15 height=14 border=0 alt="More results from this site"></a></td>
+<td colspan=2 valign=top><img src="docs/gif/transparent.gif" width=337 height=3 border=0 alt=""><br><font size=2 color=#666666><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&&cb=0&cc=+for+www%2duk%2ehpl%2ehp%2ecom&cl=1&clweb_1_1=1317967&cn_1=www%2duk%2ehpl%2ehp%2ecom&db=80473024&us=025">More results</a> from this site</font></td>
 </tr></table>
 <!-- 0 -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
 </tr>
-<!-- end -->
+<!--NLResultEnd--><!-- end --><!--NLResultStart-->
 <tr><!--  --><!--  -->
-<td align=right valign=top><font size=2>8.&nbsp;&nbsp;</font></td>
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>7.&nbsp;&nbsp;</font></td>
 <td valign=top><font size=2><a href="http://poppy.hensa.ac.uk/events/workshop/14/lsam.html">Abstract</a><br>
-<b>50% - Articles & General info:&nbsp;</b>Abstract The LSAM Proxy Cache - a Multicast Distributed Virtual Cache Joe Touch USC / Information Sciences Institute Abstract ` The LSAM Proxy is a multicast distributed web... 04/14/98<br>
+<b><!--NLResultRelevanceStart-->74% -<!--NLResultRelevanceEnd--> Articles & General info:&nbsp;</b>The LSAM Proxy Cache- a Multicast Distributed Virtual Cache Joe Touch USC/ Information Sciences Institute Abstract` The LSAM Proxy is a multicast distributed web cache... 04/14/98<br>
 <b>Educational site:</b>&nbsp;&nbsp;http:/ / poppy.hensa.ac.uk/ events/ workshop/ 14/ lsam.html<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
-<!-- Inline Clustering -->
-
-<!-- 0 -->
 <!-- Inline Clustering -->
 <!-- Inline Clustering -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
 </tr>
-<!-- end -->
+<!--NLResultEnd--><!-- end --><!--NLResultStart-->
 <tr><!--  --><!--  -->
-<td align=right valign=top><font size=2>9.&nbsp;&nbsp;</font></td>
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>8.&nbsp;&nbsp;</font></td>
 <td valign=top><font size=2><a href="http://cgi.w3.org/Archives/Public/uri/1997Feb/0086.html">uri@bunyip.com from February 1997: Re: Location independence</a><br>
-<b>49% - Directories & Lists:&nbsp;</b>uri@bunyip.com from February 1997: Re: Location independence? Re: Location independence Wed, 26 Feb 1997 09:16:13 -0800 Messages sorted by Next message... 01/09/98<br>
+<b><!--NLResultRelevanceStart-->73% -<!--NLResultRelevanceEnd--> Directories & Lists:&nbsp;</b>Re: Location independence Wed, 26 Feb 1997 09:16:13-0800 Messages sorted by Next message Previous message From: touch@isi.edu Date: Wed, 26... 01/09/98<br>
 <b>Non-profit site:</b>&nbsp;&nbsp;http:/ / cgi.w3.org/ Archives/ Public/ uri/ 1997Feb/ 0086.html<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
 <!-- Inline Clustering -->
-<!-- Inline Clustering -->
-<!-- Inline Clustering --><!-- for websites -->
+<!-- Inline Clustering --><!-- web -->
 <!-- Inline Clustering Loop -->
 <table border=0 cellspacing=0 cellpadding=0 width=355><tr>
-<td width=18><img src="docs/gif/transparent.gif" width=18 height=5 border=0 alt=""></td>
-<td width=319><img src="docs/gif/transparent.gif" width=319 height=1 border=0 alt=""></td>
-</tr><tr>
-<td valign=top><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&db=443443904&iq=7%3A8847&us=025"><img src="docs/gif/folderz.gif" width=15 height=14 border=0 alt=""></a></td>
-<td valign=middle><font size=2 color="#666666"><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&db=443443904&iq=7%3A8847&us=025">More results</a> from this site<!--&nbsp;&nbsp;&nbsp;&nbsp; Go&nbsp;to&nbsp;<a href="http://cgi.w3.org">cgi.w3.org</a>--><br><img src="docs/gif/transparent.gif" width=1 height=5 border=0 alt=""><br></font></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=18 height=3 border=0 alt=""><br><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&&cb=0&cc=+for+cgi%2ew3%2eorg&cl=1&clweb_1_1=8847&cn_1=cgi%2ew3%2eorg&db=80473024&us=025"><img src="docs/gif/folderz.gif" width=15 height=14 border=0 alt="More results from this site"></a></td>
+<td colspan=2 valign=top><img src="docs/gif/transparent.gif" width=337 height=3 border=0 alt=""><br><font size=2 color=#666666><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&&cb=0&cc=+for+cgi%2ew3%2eorg&cl=1&clweb_1_1=8847&cn_1=cgi%2ew3%2eorg&db=80473024&us=025">More results</a> from this site</font></td>
 </tr></table>
 <!-- 0 -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
 </tr>
-<!-- end -->
-<tr><!--  --><!-- <td>&nbsp;</td> -->
-<td align=right valign=top><font size=2>10.&nbsp;&nbsp;</font></td>
-<td valign=top><font size=2><a href="http://www.centergate.com/shotz-pubs.html">CenterGate Research Group - Steve Hotz</a><br>
-<b>49% - Articles & General info:&nbsp;</b>CenterGate Research Group - Steve Hotz Hotz, Chief Scientist has over eleven publications and ten presentations to his credit, as well as several software distributions. 04/26/99<br>
-<b>Commercial site:</b>&nbsp;&nbsp;http:/ / www.centergate.com/ shotz-pubs.html<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
-<!-- Inline Clustering -->
-<!-- Inline Clustering -->
-<!-- Inline Clustering --><!-- for websites -->
-<!-- Inline Clustering Loop -->
-<table border=0 cellspacing=0 cellpadding=0 width=355><tr>
-<td width=18><img src="docs/gif/transparent.gif" width=18 height=5 border=0 alt=""></td>
-<td width=319><img src="docs/gif/transparent.gif" width=319 height=1 border=0 alt=""></td>
-</tr><tr>
-<td valign=top><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&db=443443904&iq=7%3A2329996&us=025"><img src="docs/gif/folderz.gif" width=15 height=14 border=0 alt=""></a></td>
-<td valign=middle><font size=2 color="#666666"><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&db=443443904&iq=7%3A2329996&us=025">More results</a> from this site<!--&nbsp;&nbsp;&nbsp;&nbsp; Go&nbsp;to&nbsp;<a href="http://www.centergate.com">www.centergate.com</a>--><br><img src="docs/gif/transparent.gif" width=1 height=5 border=0 alt=""><br></font></td>
-</tr></table>
-<!-- 0 -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
-</tr>
-<!-- end -->
-<tr><!--  --><!-- <td>&nbsp;</td> -->
-<td align=right valign=top><font size=2>11.&nbsp;&nbsp;</font></td>
+<!--NLResultEnd--><!-- end --><!--NLResultStart-->
+<tr><!--  --><!--  -->
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>9.&nbsp;&nbsp;</font></td>
 <td valign=top><font size=2><a href="http://www.acm.rpi.edu/~albert/pilot/Jan97/0086.html">Pilot UNIX Development Mailing List: [Pilot-Unix] address entries</a><br>
-<b>49% - Directories & Lists:&nbsp;</b>Pilot UNIX Development Mailing List: [Pilot-Unix] address entries [Pilot-Unix] address entries touch@ISI.EDU Tue, 14 Jan 1997 13:28:47 -0800 Messages... 05/15/97<br>
+<b><!--NLResultRelevanceStart-->72% -<!--NLResultRelevanceEnd--> Directories & Lists:&nbsp;</b>Pilot-Unix] address entries touch@ISI.EDU Tue, 14 Jan 1997 13:28:47-0800 Messages sorted by:[ date][ thread][ subject][ author] Next message: Scott... 05/15/97<br>
 <b>Personal page:</b>&nbsp;&nbsp;http:/ / www.acm.rpi.edu/ ~albert/ pilot/ Jan97/ 0086.html<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
 <!-- Inline Clustering -->
-<!-- Inline Clustering -->
-<!-- Inline Clustering --><!-- for websites -->
+<!-- Inline Clustering --><!-- web -->
 <!-- Inline Clustering Loop -->
 <table border=0 cellspacing=0 cellpadding=0 width=355><tr>
-<td width=18><img src="docs/gif/transparent.gif" width=18 height=5 border=0 alt=""></td>
-<td width=319><img src="docs/gif/transparent.gif" width=319 height=1 border=0 alt=""></td>
-</tr><tr>
-<td valign=top><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&db=443443904&iq=7%3A557102&us=025"><img src="docs/gif/folderz.gif" width=15 height=14 border=0 alt=""></a></td>
-<td valign=middle><font size=2 color="#666666"><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&db=443443904&iq=7%3A557102&us=025">More results</a> from this site<!--&nbsp;&nbsp;&nbsp;&nbsp; Go&nbsp;to&nbsp;<a href="http://www.acm.rpi.edu">www.acm.rpi.edu</a>--><br><img src="docs/gif/transparent.gif" width=1 height=5 border=0 alt=""><br></font></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=18 height=3 border=0 alt=""><br><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&&cb=0&cc=+for+www%2eacm%2erpi%2eedu&cl=1&clweb_1_1=557102&cn_1=www%2eacm%2erpi%2eedu&db=80473024&us=025"><img src="docs/gif/folderz.gif" width=15 height=14 border=0 alt="More results from this site"></a></td>
+<td colspan=2 valign=top><img src="docs/gif/transparent.gif" width=337 height=3 border=0 alt=""><br><font size=2 color=#666666><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&&cb=0&cc=+for+www%2eacm%2erpi%2eedu&cl=1&clweb_1_1=557102&cn_1=www%2eacm%2erpi%2eedu&db=80473024&us=025">More results</a> from this site</font></td>
 </tr></table>
 <!-- 0 -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
 </tr>
-<!-- end -->
+<!--NLResultEnd--><!-- end --><!--NLResultStart-->
 <tr><!--  --><!-- <td>&nbsp;</td> -->
-<td align=right valign=top><font size=2>12.&nbsp;&nbsp;</font></td>
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>10.&nbsp;&nbsp;</font></td>
+<td valign=top><font size=2><a href="http://www.ietf.org/internet-drafts/draft-ietf-wrec-res-00.txt">INTERNET-DRAFT Joe Touch WREC Working Group ISI</a><br>
+<b><!--NLResultRelevanceStart-->72% -<!--NLResultRelevanceEnd--> Articles & General info:&nbsp;</b>INTERNET-DRAFT Joe Touch WREC Working Group ISI draft-ietf-wrec-... March 22, 1999 Expires: Sept. 22, 1999 Web Caching and Replication... 04/06/99<br>
+<b>Non-profit site:</b>&nbsp;&nbsp;http:/ / www.ietf.org/ internet-drafts/ draft-ietf-wrec-res-00.txt <br>
+<!-- Inline Clustering -->
+<!-- Inline Clustering --><!-- web -->
+<!-- Inline Clustering Loop -->
+<table border=0 cellspacing=0 cellpadding=0 width=355><tr>
+<td valign=top><img src="docs/gif/transparent.gif" width=18 height=3 border=0 alt=""><br><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&&cb=0&cc=+for+www%2eietf%2eorg&cl=1&clweb_1_1=6939&cn_1=www%2eietf%2eorg&db=80473024&us=025"><img src="docs/gif/folderz.gif" width=15 height=14 border=0 alt="More results from this site"></a></td>
+<td colspan=2 valign=top><img src="docs/gif/transparent.gif" width=337 height=3 border=0 alt=""><br><font size=2 color=#666666><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&&cb=0&cc=+for+www%2eietf%2eorg&cl=1&clweb_1_1=6939&cn_1=www%2eietf%2eorg&db=80473024&us=025">More results</a> from this site</font></td>
+</tr></table>
+<!-- 0 -->
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+</tr>
+<!--NLResultEnd--><!-- end --><!--NLResultStart-->
+<tr><!--  --><!-- <td>&nbsp;</td> -->
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>11.&nbsp;&nbsp;</font></td>
+<td valign=top><font size=2><a href="http://www.centergate.com/shotz-pubs.html">CenterGate Research Group - Steve Hotz</a><br>
+<b><!--NLResultRelevanceStart-->72% -<!--NLResultRelevanceEnd--> Articles & General info:&nbsp;</b>Hotz, Chief Scientist has over eleven publications and ten presentations to his credit, as well as several software distributions. 04/26/99<br>
+<b>Commercial site:</b>&nbsp;&nbsp;http:/ / www.centergate.com/ shotz-pubs.html<br>
+<!-- Inline Clustering -->
+<!-- Inline Clustering --><!-- web -->
+<!-- Inline Clustering Loop -->
+<table border=0 cellspacing=0 cellpadding=0 width=355><tr>
+<td valign=top><img src="docs/gif/transparent.gif" width=18 height=3 border=0 alt=""><br><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&&cb=0&cc=+for+www%2ecentergate%2ecom&cl=1&clweb_1_1=2329996&cn_1=www%2ecentergate%2ecom&db=80473024&us=025"><img src="docs/gif/folderz.gif" width=15 height=14 border=0 alt="More results from this site"></a></td>
+<td colspan=2 valign=top><img src="docs/gif/transparent.gif" width=337 height=3 border=0 alt=""><br><font size=2 color=#666666><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&&cb=0&cc=+for+www%2ecentergate%2ecom&cl=1&clweb_1_1=2329996&cn_1=www%2ecentergate%2ecom&db=80473024&us=025">More results</a> from this site</font></td>
+</tr></table>
+<!-- 0 -->
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+</tr>
+<!--NLResultEnd--><!-- end --><!--NLResultStart-->
+<tr><!--  --><!-- <td>&nbsp;</td> -->
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>12.&nbsp;&nbsp;</font></td>
 <td valign=top><font size=2><a href="http://lists.w3.org/Archives/Public/www-talk/1995NovDec/0255.html">www-talk@w3.org from November to December 1995: Re: two ideas...</a><br>
-<b>48% - Articles & General info:&nbsp;</b>www-talk@w3.org from November to December 1995: Re: two ideas... Re: two ideas... touch@ISI.EDU Mon, 11 Dec 1995 14:13:58... 11/21/97<br>
+<b><!--NLResultRelevanceStart-->71% -<!--NLResultRelevanceEnd--> Articles & General info:&nbsp;</b>Re: two ideas. touch@ISI.EDU Mon, 11 Dec 1995 14:13:58-0800 Messages sorted by:[ date][ thread][ subject][ author] Next message: Frank Atkinson... 11/21/97<br>
 <b>Non-profit site:</b>&nbsp;&nbsp;http:/ / lists.w3.org/ Archives/ Public/ www-talk/ 1995NovDec/ 0255.html<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
-<!-- Inline Clustering -->
-
-<!-- 0 -->
 <!-- Inline Clustering -->
 <!-- Inline Clustering -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
 </tr>
-<!-- end -->
+<!--NLResultEnd--><!-- end --><!--NLResultStart-->
 <tr><!--  --><!-- <td>&nbsp;</td> -->
-<td align=right valign=top><font size=2>13.&nbsp;&nbsp;</font></td>
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>13.&nbsp;&nbsp;</font></td>
 <td valign=top><font size=2><a href="http://mash.cs.berkeley.edu/ns/ns-contributors.html">UCB/LBNL Network Simulator: Contributors</a><br>
-<b>48% - Directories & Lists:&nbsp;</b>UCB/LBNL Network Simulator: Contributors UCB/LBNL Network Simulator: Documentation Funding Ns is currently funded by DARPA through the VINT project at LBL under DARPA... 05/19/98<br>
+<b><!--NLResultRelevanceStart-->70% -<!--NLResultRelevanceEnd--> Directories & Lists:&nbsp;</b>UCB/LBNL Network Simulator: Documentation Funding Ns is currently funded by DARPA through the VINT project at LBL under DARPA grant DABT63-96-C-0105...  05/19/98<br>
 <b>Educational site:</b>&nbsp;&nbsp;http:/ / mash.cs.berkeley.edu/ ns/ ns-contributors.html<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
-<!-- Inline Clustering -->
-
-<!-- 0 -->
 <!-- Inline Clustering -->
 <!-- Inline Clustering -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
 </tr>
-<!-- end -->
+<!--NLResultEnd--><!-- end --><!--NLResultStart-->
 <tr><!--  --><!-- <td>&nbsp;</td> -->
-<td align=right valign=top><font size=2>14.&nbsp;&nbsp;</font></td>
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>14.&nbsp;&nbsp;</font></td>
 <td valign=top><font size=2><a href="http://nii.isi.edu/people/johnh/SOFTWARE/APACHE/index.html">LSAM Apache Patches</a><br>
-<b>48% - Articles & General info:&nbsp;</b>LSAM Apache Patches LSAM Apache Patches As part of my work with ISI's LSAM project we have found some optimizations in http-server performance. 07/01/97<br>
+<b><!--NLResultRelevanceStart-->70% -<!--NLResultRelevanceEnd--> Articles & General info:&nbsp;</b>As part of my work with ISI's LSAM project we have found some optimizations in http-server performance. 07/01/97<br>
 <b>Educational site:</b>&nbsp;&nbsp;http:/ / nii.isi.edu/ people/ johnh/ SOFTWARE/ APACHE/ index.html<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
 <!-- Inline Clustering -->
-<!-- Inline Clustering -->
-<!-- Inline Clustering --><!-- for websites -->
+<!-- Inline Clustering --><!-- web -->
 <!-- Inline Clustering Loop -->
 <table border=0 cellspacing=0 cellpadding=0 width=355><tr>
-<td width=18><img src="docs/gif/transparent.gif" width=18 height=5 border=0 alt=""></td>
-<td width=319><img src="docs/gif/transparent.gif" width=319 height=1 border=0 alt=""></td>
-</tr><tr>
-<td valign=top><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&db=443443904&iq=7%3A475387&us=025"><img src="docs/gif/folderz.gif" width=15 height=14 border=0 alt=""></a></td>
-<td valign=middle><font size=2 color="#666666"><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&db=443443904&iq=7%3A475387&us=025">More results</a> from this site<!--&nbsp;&nbsp;&nbsp;&nbsp; Go&nbsp;to&nbsp;<a href="http://nii.isi.edu">nii.isi.edu</a>--><br><img src="docs/gif/transparent.gif" width=1 height=5 border=0 alt=""><br></font></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=18 height=3 border=0 alt=""><br><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&&cb=0&cc=+for+nii%2eisi%2eedu&cl=1&clweb_1_1=475387&cn_1=nii%2eisi%2eedu&db=80473024&us=025"><img src="docs/gif/folderz.gif" width=15 height=14 border=0 alt="More results from this site"></a></td>
+<td colspan=2 valign=top><img src="docs/gif/transparent.gif" width=337 height=3 border=0 alt=""><br><font size=2 color=#666666><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&&cb=0&cc=+for+nii%2eisi%2eedu&cl=1&clweb_1_1=475387&cn_1=nii%2eisi%2eedu&db=80473024&us=025">More results</a> from this site</font></td>
 </tr></table>
 <!-- 0 -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
 </tr>
-<!-- end -->
+<!--NLResultEnd--><!-- end --><!--NLResultStart-->
 <tr><!--  --><!-- <td>&nbsp;</td> -->
-<td align=right valign=top><font size=2>15.&nbsp;&nbsp;</font></td>
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>15.&nbsp;&nbsp;</font></td>
 <td valign=top><font size=2><a href="http://www.dyncorp-is.com/darpa/meetings/gradmeet98/Whitepapers/isi.html">----------------... </a><br>
-<b>48% - Articles & General info:&nbsp;</b>----------------... Intelligent Caching Hierarchical Distributed Information Access Amy S. Hughes The Large-Scale Active Middleware (LSAM) project is developing the middleware infrastructure to support scalable distributed... 09/17/98<br>
+<b><!--NLResultRelevanceStart-->70% -<!--NLResultRelevanceEnd--> Articles & General info:&nbsp;</b>Intelligent Caching Hierarchical Distributed Information Access Amy S. Hughes The Large-Scale Active Middleware(LSAM)... project is developing the middleware infrastructure to support scalable distributed... 09/17/98<br>
 <b>Commercial site:</b>&nbsp;&nbsp;http:/ / www.dyncorp-is.com/ darpa/ meetings/ gradmeet98/ Whitepapers/ isi.html<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
 <!-- Inline Clustering -->
-<!-- Inline Clustering -->
-<!-- Inline Clustering --><!-- for websites -->
+<!-- Inline Clustering --><!-- web -->
 <!-- Inline Clustering Loop -->
 <table border=0 cellspacing=0 cellpadding=0 width=355><tr>
-<td width=18><img src="docs/gif/transparent.gif" width=18 height=5 border=0 alt=""></td>
-<td width=319><img src="docs/gif/transparent.gif" width=319 height=1 border=0 alt=""></td>
-</tr><tr>
-<td valign=top><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&db=443443904&iq=7%3A186303&us=025"><img src="docs/gif/folderz.gif" width=15 height=14 border=0 alt=""></a></td>
-<td valign=middle><font size=2 color="#666666"><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&db=443443904&iq=7%3A186303&us=025">More results</a> from this site<!--&nbsp;&nbsp;&nbsp;&nbsp; Go&nbsp;to&nbsp;<a href="http://www.dyncorp-is.com">www.dyncorp-is.com</a>--><br><img src="docs/gif/transparent.gif" width=1 height=5 border=0 alt=""><br></font></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=18 height=3 border=0 alt=""><br><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&&cb=0&cc=+for+www%2edyncorp%2dis%2ecom&cl=1&clweb_1_1=186303&cn_1=www%2edyncorp%2dis%2ecom&db=80473024&us=025"><img src="docs/gif/folderz.gif" width=15 height=14 border=0 alt="More results from this site"></a></td>
+<td colspan=2 valign=top><img src="docs/gif/transparent.gif" width=337 height=3 border=0 alt=""><br><font size=2 color=#666666><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&&cb=0&cc=+for+www%2edyncorp%2dis%2ecom&cl=1&clweb_1_1=186303&cn_1=www%2edyncorp%2dis%2ecom&db=80473024&us=025">More results</a> from this site</font></td>
 </tr></table>
 <!-- 0 -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
 </tr>
-<!-- end -->
+<!--NLResultEnd--><!-- end --><!--NLResultStart-->
 <tr><!--  --><!-- <td>&nbsp;</td> -->
-<td align=right valign=top><font size=2>16.&nbsp;&nbsp;</font></td>
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>16.&nbsp;&nbsp;</font></td>
 <td valign=top><font size=2><a href="http://www.hpl.hp.co.uk/people/ange/archives/archives-97/http-wg-archive/0151.html">HTTP-wg Archive: Re: How to add new &quot;protocols</a><br>
-<b>47% - Directories & Lists:&nbsp;</b>HTTP-wg : Re: How to add new &quot;protocols&quot; ? Re: How to add new &quot;protocols Fri, 14 Feb 1997 13:26:10 -0800 Messages sorted by... Date Not Available<br>
+<b><!--NLResultRelevanceStart-->70% -<!--NLResultRelevanceEnd--> Directories & Lists:&nbsp;</b>HTTP-wg: Re: How to add new&quot;protocols&quot; Re: How to add new&quot;protocols Fri, 14 Feb 1997 13:26:10-0800 Messages sorted by... Date Not Available<br>
 <b>Commercial site:</b>&nbsp;&nbsp;http:/ / www.hpl.hp.co.uk/ people/ ange/ archives/ archives-97/ http-wg-archive/ 0151.html<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
 <!-- Inline Clustering -->
-<!-- Inline Clustering -->
-<!-- Inline Clustering --><!-- for websites -->
+<!-- Inline Clustering --><!-- web -->
 <!-- Inline Clustering Loop -->
 <table border=0 cellspacing=0 cellpadding=0 width=355><tr>
-<td width=18><img src="docs/gif/transparent.gif" width=18 height=5 border=0 alt=""></td>
-<td width=319><img src="docs/gif/transparent.gif" width=319 height=1 border=0 alt=""></td>
-</tr><tr>
-<td valign=top><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&db=443443904&iq=7%3A1405394&us=025"><img src="docs/gif/folderz.gif" width=15 height=14 border=0 alt=""></a></td>
-<td valign=middle><font size=2 color="#666666"><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&db=443443904&iq=7%3A1405394&us=025">More results</a> from this site<!--&nbsp;&nbsp;&nbsp;&nbsp; Go&nbsp;to&nbsp;<a href="http://www.hpl.hp.co.uk">www.hpl.hp.co.uk</a>--><br><img src="docs/gif/transparent.gif" width=1 height=5 border=0 alt=""><br></font></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=18 height=3 border=0 alt=""><br><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&&cb=0&cc=+for+www%2ehpl%2ehp%2eco%2euk&cl=1&clweb_1_1=1405394&cn_1=www%2ehpl%2ehp%2eco%2euk&db=80473024&us=025"><img src="docs/gif/folderz.gif" width=15 height=14 border=0 alt="More results from this site"></a></td>
+<td colspan=2 valign=top><img src="docs/gif/transparent.gif" width=337 height=3 border=0 alt=""><br><font size=2 color=#666666><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&&cb=0&cc=+for+www%2ehpl%2ehp%2eco%2euk&cl=1&clweb_1_1=1405394&cn_1=www%2ehpl%2ehp%2eco%2euk&db=80473024&us=025">More results</a> from this site</font></td>
 </tr></table>
 <!-- 0 -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
 </tr>
-<!-- end -->
+<!--NLResultEnd--><!-- end --><!--NLResultStart-->
 <tr><!--  --><!-- <td>&nbsp;</td> -->
-<td align=right valign=top><font size=2>17.&nbsp;&nbsp;</font></td>
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>17.&nbsp;&nbsp;</font></td>
 <td valign=top><font size=2><a href="http://www.engelschall.com/ar/perldoc/pages/util/AutoSearch.html">AutoSearch -- a web-searching application</a><br>
-<b>47% - Directories & Lists:&nbsp;</b>-- a web-searching application AutoSearch AutoSearch -- a web-searching application AutoSearch [-n QueryName] [-s query] [-e=SearchEngine... [-o=QueryOptions... [-o=QueryOptions... [-o=QueryOptions... [-f FilterRegExp... Date Not Available<br>
+<b><!--NLResultRelevanceStart-->70% -<!--NLResultRelevanceEnd--> Directories & Lists:&nbsp;</b>a web-searching application AutoSearch AutoSearch- a web-searching application AutoSearch[n QueryName][s query][e=SearchE... FilterRegExp... Date Not Available<br>
 <b>Commercial site:</b>&nbsp;&nbsp;http:/ / www.engelschall.com/ ar/ perldoc/ pages/ util/ AutoSearch.html<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
-<!-- Inline Clustering -->
-
-<!-- 0 -->
 <!-- Inline Clustering -->
 <!-- Inline Clustering -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
 </tr>
-<!-- end -->
+<!--NLResultEnd--><!-- end --><!--NLResultStart-->
 <tr><!--  --><!-- <td>&nbsp;</td> -->
-<td align=right valign=top><font size=2>18.&nbsp;&nbsp;</font></td>
-<td valign=top><font size=2><a href="http://www.sarigraphics.com/~buc/Info/IndexSearch/webftpIi.htm">26thCentury Engineering Resources: web, ftp, telnet sites by domain name: I</a><br>
-<b>47% - Directories & Lists:&nbsp;</b>Domain-name Sort: web, ftp, telnet directory links sorted by domain 26thCentury Engineering Resources: web, ftp, telnet sites by domain : I(updated 06/06/1999... 06/07/99<br>
-<b>Personal page:</b>&nbsp;&nbsp;http:/ / www.sarigraphics.com/ ~buc/ Info/ IndexSearch/ webftpIi.htm<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>18.&nbsp;&nbsp;</font></td>
+<td valign=top><font size=2><a href="http://www.sarigraphics.com/~buc/Info/IndexSearch/Netmgmti.htm">26thCentury Engineering Resources: Netmgmt</a><br>
+<b><!--NLResultRelevanceStart-->70% -<!--NLResultRelevanceEnd--> Directories & Lists:&nbsp;</b>Domain-name Sort: web, ftp, telnet directory links sorted by domain name 26thCentury Engineering Resources: Netmgmt/(updated... 06/30/1999 23:07:38 See also... 07/01/99<br>
+<b>Personal page:</b>&nbsp;&nbsp;http:/ / www.sarigraphics.com/ ~buc/ Info/ IndexSearch/ Netmgmti.htm<br>
 <!-- Inline Clustering -->
-<!-- Inline Clustering -->
-<!-- Inline Clustering --><!-- for websites -->
-<!-- Inline Clustering Loop --><table border=0 cellspacing=0 cellpadding=0 width=355><tr><td width=1%><img src="docs/gif/transparent.gif" width=1 height=2 border=0 alt=""></td><td width=99%><img src="docs/gif/transparent.gif" width=300 height=1 border=0 alt=""></td></tr><tr><td nowrap valign=top><font size=2><b>47%:&nbsp;</b></font></td><td><font size=2><a href="http://www.sarigraphics.com/~buc/Info/IndexSearch/Netmgmti.htm">26thCentury Engineering Resources: Netmgmt</a></font></font></td></tr></table>
+<!-- Inline Clustering --><!-- web -->
+<!-- Inline Clustering Loop --><table border=0 cellspacing=0 cellpadding=0 width=355><tr><td width=1%><img src="docs/gif/transparent.gif" width=1 height=3 border=0></td><td width=99%><img src="docs/gif/transparent.gif" width=300 height=3 border=0></td></tr><tr><td nowrap valign=top><font size=2><b>70%:&nbsp;</b></font></td><td><font size=2><a href="http://www.sarigraphics.com/~buc/Info/IndexSearch/webftpIi.htm">26thCentury Engineering Resources: web, ftp, telnet sites by domain name: I</a></font></font></td></tr></table>
 <!-- 0 -->
 <table border=0 cellspacing=0 cellpadding=0 width=355><tr>
-<td width=18><img src="docs/gif/transparent.gif" width=18 height=5 border=0 alt=""></td>
-<td width=319><img src="docs/gif/transparent.gif" width=319 height=1 border=0 alt=""></td>
-</tr><tr>
-<td valign=top><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&db=443443904&iq=7%3A410010&us=025"><img src="docs/gif/folderz.gif" width=15 height=14 border=0 alt=""></a></td>
-<td valign=middle><font size=2 color="#666666"><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&db=443443904&iq=7%3A410010&us=025">More results</a> from this site<!--&nbsp;&nbsp;&nbsp;&nbsp; Go&nbsp;to&nbsp;<a href="http://www.sarigraphics.com">www.sarigraphics.com</a>--><br><img src="docs/gif/transparent.gif" width=1 height=5 border=0 alt=""><br></font></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=18 height=3 border=0 alt=""><br><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&&cb=0&cc=+for+www%2esarigraphics%2ecom&cl=1&clweb_1_1=410010&cn_1=www%2esarigraphics%2ecom&db=80473024&us=025"><img src="docs/gif/folderz.gif" width=15 height=14 border=0 alt="More results from this site"></a></td>
+<td colspan=2 valign=top><img src="docs/gif/transparent.gif" width=337 height=3 border=0 alt=""><br><font size=2 color=#666666><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&&cb=0&cc=+for+www%2esarigraphics%2ecom&cl=1&clweb_1_1=410010&cn_1=www%2esarigraphics%2ecom&db=80473024&us=025">More results</a> from this site</font></td>
 </tr></table>
 <!-- 0 -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
 </tr>
-<!-- end -->
+<!--NLResultEnd--><!-- end --><!--NLResultStart-->
 <tr><!--  --><!-- <td>&nbsp;</td> -->
-<td align=right valign=top><font size=2>19.&nbsp;&nbsp;</font></td>
-<td valign=top><font size=2><a href="http://www.ietf.org/ids.by.wg/tcpimpl.html">TCP Implementation Problems That Need To Be Documented&quot;, Vern Paxson, Mark ...</a><br>
-<b>47% - Articles & General info:&nbsp;</b>The TCP-IMPL working group has documented a number of TCP implementation problems [PADHV98]. However, a significant number still have not been fully described and... 05/25/99<br>
-<b>Non-profit site:</b>&nbsp;&nbsp;http:/ / www.ietf.org/ ids.by.wg/ tcpimpl.html<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>19.&nbsp;&nbsp;</font></td>
+<td valign=top><font size=2><a href="http://ns3.readadp.com/wnlist/msg01141.html">WN 1.15.6 released</a><br>
+<b><!--NLResultRelevanceStart-->70% -<!--NLResultRelevanceEnd--> Articles & General info:&nbsp;</b>To Subject: WN 1.15.6 released From: John Franks &lt &gt; Date: Mon, 26 Aug 1996 14:19:27-0500(CD... Sender WN version... 06/25/99<br>
+<b>Commercial site:</b>&nbsp;&nbsp;http:/ / ns3.readadp.com/ wnlist/ msg01141.html<br>
 <!-- Inline Clustering -->
 <!-- Inline Clustering -->
-<!-- Inline Clustering --><!-- for websites -->
-<!-- Inline Clustering Loop --><table border=0 cellspacing=0 cellpadding=0 width=355><tr><td width=1%><img src="docs/gif/transparent.gif" width=1 height=2 border=0 alt=""></td><td width=99%><img src="docs/gif/transparent.gif" width=300 height=1 border=0 alt=""></td></tr><tr><td nowrap valign=top><font size=2><b>47%:&nbsp;</b></font></td><td><font size=2><a href="http://www.ietf.org/internet-drafts/draft-ietf-tcpsat-res-issues-07.txt">Internet Engineering Task Force Mark Allman, Editor INTERNET DRAFT Spencer ...</a></font></font></td></tr></table>
-<!-- 0 -->
-<table border=0 cellspacing=0 cellpadding=0 width=355><tr>
-<td width=18><img src="docs/gif/transparent.gif" width=18 height=5 border=0 alt=""></td>
-<td width=319><img src="docs/gif/transparent.gif" width=319 height=1 border=0 alt=""></td>
-</tr><tr>
-<td valign=top><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&db=443443904&iq=7%3A6939&us=025"><img src="docs/gif/folderz.gif" width=15 height=14 border=0 alt=""></a></td>
-<td valign=middle><font size=2 color="#666666"><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&db=443443904&iq=7%3A6939&us=025">More results</a> from this site<!--&nbsp;&nbsp;&nbsp;&nbsp; Go&nbsp;to&nbsp;<a href="http://www.ietf.org">www.ietf.org</a>--><br><img src="docs/gif/transparent.gif" width=1 height=5 border=0 alt=""><br></font></td>
-</tr></table>
-<!-- 0 -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
 </tr>
-<!-- end -->
+<!--NLResultEnd--><!-- end --><!--NLResultStart-->
 <tr><!--  --><!-- <td>&nbsp;</td> -->
-<td align=right valign=top><font size=2>20.&nbsp;&nbsp;</font></td>
-<td valign=top><font size=2><a href="http://info6.cs-ipv6.lancs.ac.uk/ipv6/documents/ietf-drafts/99.html">UK IPv6 Resource Centre</a><br>
-<b>47% - Articles & General info:&nbsp;</b>UK IPv6 Resource Centre Lancaster University Computing Department TCP Implementation TCP Implementation Problems That Need To Be Documented, 12 March, 1998 Issues in TCP Slow... 05/16/99<br>
-<b>Educational site:</b>&nbsp;&nbsp;http:/ / info6.cs-ipv6.lancs.ac.uk/ ipv6/ documents/ ietf-drafts/ 99.html<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
-<!-- Inline Clustering -->
-
-<!-- 0 -->
-<!-- Inline Clustering -->
-<!-- Inline Clustering -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
-</tr>
-<!-- end -->
-<tr><!--  --><!-- <td>&nbsp;</td> -->
-<td align=right valign=top><font size=2>21.&nbsp;&nbsp;</font></td>
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>20.&nbsp;&nbsp;</font></td>
 <td valign=top><font size=2><a href="http://tcpsat.grc.nasa.gov/list/old-archive.txt">tcp-over-satelli... Saturday, January 25 1997 Volume 01 : Number 001</a><br>
-<b>47% - Articles & General info:&nbsp;</b>tcp-over-satelli... Saturday, January 25 1997 Volume 01 : Number 001 In this issues: FWDRFC 2001 on TCP See the end of the digest... 08/20/98<br>
+<b><!--NLResultRelevanceStart-->69% -<!--NLResultRelevanceEnd--> Articles & General info:&nbsp;</b>In this issues: FWDRFC 2001 on TCP See the end of the digest information about tcp-over-satelli... Date: 23 Jan 1997 16:55... 08/20/98<br>
 <b>Government site:</b>&nbsp;&nbsp;http:/ / tcpsat.grc.nasa.gov/ list/ old-archive.txt<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
-<!-- Inline Clustering -->
-
-<!-- 0 -->
 <!-- Inline Clustering -->
 <!-- Inline Clustering -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
 </tr>
-<!-- end -->
+<!--NLResultEnd--><!-- end --><!--NLResultStart-->
 <tr><!--  --><!-- <td>&nbsp;</td> -->
-<td align=right valign=top><font size=2>22.&nbsp;&nbsp;</font></td>
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>21.&nbsp;&nbsp;</font></td>
+<td valign=top><font size=2><a href="http://info6.cs-ipv6.lancs.ac.uk/ipv6/documents/ietf-drafts/99.html">UK IPv6 Resource Centre</a><br>
+<b><!--NLResultRelevanceStart-->69% -<!--NLResultRelevanceEnd--> Articles & General info:&nbsp;</b>Lancaster University Computing Department TCP Implementation TCP Implementation Problems That Need To Be Documented, 12 March, 1998 Issues in TCP Slow-Start Restart After Idle... 05/16/99<br>
+<b>Educational site:</b>&nbsp;&nbsp;http:/ / info6.cs-ipv6.lancs.ac.uk/ ipv6/ documents/ ietf-drafts/ 99.html<br>
+<!-- Inline Clustering -->
+<!-- Inline Clustering -->
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+</tr>
+<!--NLResultEnd--><!-- end --><!--NLResultStart-->
+<tr><!--  --><!-- <td>&nbsp;</td> -->
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>22.&nbsp;&nbsp;</font></td>
 <td valign=top><font size=2><a href="http://www.alternic.com/drafts/drafts-m-n/draft-melve-intercache-comproto-00.html">draft-melve-inte... - ALterNIC - Network Information Center - ......</a><br>
-<b>47% - Directories & Lists:&nbsp;</b>draft-melve-inte... - ALterNIC - Network Information Center - Sandy Ratz and Diane Boling AlterNICNetwork Information Center. Send Comments to Match: All Any Format: Long... 05/06/99<br>
+<b><!--NLResultRelevanceStart-->68% -<!--NLResultRelevanceEnd--> Directories & Lists:&nbsp;</b>Sandy Ratz and Diane Boling AlterNICNetwork Information Center. Send Comments to Match: All Any Format: Long Short Internet DRAFT Search Engine: Search: Internet Draftmelve-inter...  05/06/99<br>
 <b>Commercial site:</b>&nbsp;&nbsp;http:/ / www.alternic.com/ drafts/ drafts-m-n/ draft-melve-intercache-com proto-00.html<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
 <!-- Inline Clustering -->
 <!-- Inline Clustering -->
-<!-- Inline Clustering --><!-- for websites -->
-<!-- Inline Clustering Loop -->
-<table border=0 cellspacing=0 cellpadding=0 width=355><tr>
-<td width=18><img src="docs/gif/transparent.gif" width=18 height=5 border=0 alt=""></td>
-<td width=319><img src="docs/gif/transparent.gif" width=319 height=1 border=0 alt=""></td>
-</tr><tr>
-<td valign=top><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&db=443443904&iq=7%3A2079890&us=025"><img src="docs/gif/folderz.gif" width=15 height=14 border=0 alt=""></a></td>
-<td valign=middle><font size=2 color="#666666"><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&db=443443904&iq=7%3A2079890&us=025">More results</a> from this site<!--&nbsp;&nbsp;&nbsp;&nbsp; Go&nbsp;to&nbsp;<a href="http://www.alternic.com">www.alternic.com</a>--><br><img src="docs/gif/transparent.gif" width=1 height=5 border=0 alt=""><br></font></td>
-</tr></table>
-<!-- 0 -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
 </tr>
-<!-- end -->
+<!--NLResultEnd--><!-- end --><!--NLResultStart-->
 <tr><!--  --><!-- <td>&nbsp;</td> -->
-<td align=right valign=top><font size=2>23.&nbsp;&nbsp;</font></td>
-<td valign=top><font size=2><a href="http://x500.icm.edu.pl/sunworldonline/swol-09-1997/swol-09-webserver.html">Measuring Web server performance - SunWorld - September 1997</a><br>
-<b>46% - Articles & General info:&nbsp;</b>Measuring Web server performance - SunWorld - September 1997 Measuring Web server performance Tips making your Web server as fast and efficient as possible By Ed Tittel... 03/26/99<br>
-<b>Polish site:</b>&nbsp;&nbsp;http:/ / x500.icm.edu.pl/ sunworldonline/ swol-09-1997/ swol-09-webserver.html<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
-<!-- Inline Clustering -->
-
-<!-- 0 -->
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>23.&nbsp;&nbsp;</font></td>
+<td valign=top><font size=2><a href="http://fbp.icm.edu.pl/sunworldonline/swol-09-1997/swol-09-webserver.html">Measuring Web server performance - SunWorld - September 1997</a><br>
+<b><!--NLResultRelevanceStart-->68% -<!--NLResultRelevanceEnd--> Articles & General info:&nbsp;</b>Measuring Web server performance Tips for making your Web server as fast and efficient as possible By Ed Tittel September&nbsp;&nbsp;1997 Abstract In... 03/26/99<br>
+<b>Polish site:</b>&nbsp;&nbsp;http:/ / fbp.icm.edu.pl/ sunworldonline/ swol-09-1997/ swol-09-webserver.html<br>
 <!-- Inline Clustering -->
 <!-- Inline Clustering -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
 </tr>
-<!-- end -->
+<!--NLResultEnd--><!-- end --><!--NLResultStart-->
 <tr><!--  --><!-- <td>&nbsp;</td> -->
-<td align=right valign=top><font size=2>24.&nbsp;&nbsp;</font></td>
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>24.&nbsp;&nbsp;</font></td>
 <td valign=top><font size=2><a href="http://ircache.nlanr.net/Cache/Workshop99/Papers/rejaie-html/index.html">Proxy Caching Mechanism for Multimedia Playback Streams in the Internet1</a><br>
-<b>46% - Articles & General info:&nbsp;</b>Proxy Caching Mechanism Multimedia Playback Streams in the Internet1 Proxy Caching Mechanism Multimedia Playback Streams in the Internet Reza Rejaie, Mark Handley, Haobo Yu, Deborah... 03/24/99<br>
+<b><!--NLResultRelevanceStart-->68% -<!--NLResultRelevanceEnd--> Articles & General info:&nbsp;</b>Proxy Caching Mechanism Multimedia Playback Streams in the Internet1 Proxy Caching Mechanism Multimedia Playback Streams in the Internet Reza Rejaie, Mark Handley, Haobo Yu, Deborah... 03/24/99<br>
 <b>Commercial site:</b>&nbsp;&nbsp;http:/ / ircache.nlanr.net/ Cache/ Workshop99/ Papers/ rejaie-html/ index.html<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
 <!-- Inline Clustering -->
-<!-- Inline Clustering -->
-<!-- Inline Clustering --><!-- for websites -->
+<!-- Inline Clustering --><!-- web -->
 <!-- Inline Clustering Loop -->
 <table border=0 cellspacing=0 cellpadding=0 width=355><tr>
-<td width=18><img src="docs/gif/transparent.gif" width=18 height=5 border=0 alt=""></td>
-<td width=319><img src="docs/gif/transparent.gif" width=319 height=1 border=0 alt=""></td>
-</tr><tr>
-<td valign=top><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&db=443443904&iq=7%3A517577&us=025"><img src="docs/gif/folderz.gif" width=15 height=14 border=0 alt=""></a></td>
-<td valign=middle><font size=2 color="#666666"><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&db=443443904&iq=7%3A517577&us=025">More results</a> from this site<!--&nbsp;&nbsp;&nbsp;&nbsp; Go&nbsp;to&nbsp;<a href="http://ircache.nlanr.net">ircache.nlanr.net</a>--><br><img src="docs/gif/transparent.gif" width=1 height=5 border=0 alt=""><br></font></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=18 height=3 border=0 alt=""><br><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&&cb=0&cc=+for+ircache%2enlanr%2enet&cl=1&clweb_1_1=517577&cn_1=ircache%2enlanr%2enet&db=80473024&us=025"><img src="docs/gif/folderz.gif" width=15 height=14 border=0 alt="More results from this site"></a></td>
+<td colspan=2 valign=top><img src="docs/gif/transparent.gif" width=337 height=3 border=0 alt=""><br><font size=2 color=#666666><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&&cb=0&cc=+for+ircache%2enlanr%2enet&cl=1&clweb_1_1=517577&cn_1=ircache%2enlanr%2enet&db=80473024&us=025">More results</a> from this site</font></td>
 </tr></table>
 <!-- 0 -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
 </tr>
-<!-- end -->
+<!--NLResultEnd--><!-- end --><!--NLResultStart-->
 <tr><!--  --><!-- <td>&nbsp;</td> -->
-<td align=right valign=top><font size=2>25.&nbsp;&nbsp;</font></td>
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>25.&nbsp;&nbsp;</font></td>
 <td valign=top><font size=2><a href="http://memory.palace.org/public/rfcs/html/rfc2140.html">TCP Control Block Interdependence</a><br>
-<b>46% - Articles & General info:&nbsp;</b>TCP Control Block Interdependence .title { : #990; font-size: 22px; line-height: 22px; font-weight: bold; text-align: right; font-family: helvetica, arial, sans-serif } .filename... 03/23/99<br>
+<b><!--NLResultRelevanceStart-->68% -<!--NLResultRelevanceEnd--> Articles & General info:&nbsp;</b>title{ #990; font-size: 22px; line-height: 22px; font-weight: bold; text-align: right; font-family: helvetica, arial, sans-serif} filename{ #6; font-size: 18px... 03/23/99<br>
 <b>Non-profit site:</b>&nbsp;&nbsp;http:/ / memory.palace.org/ public/ rfcs/ html/ rfc2140.html<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
-<!-- Inline Clustering -->
-
-<!-- 0 -->
 <!-- Inline Clustering -->
 <!-- Inline Clustering -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
 </tr>
-<!-- end -->
-<!--END RESULTS LIST -->
+<!--NLResultEnd--><!-- end -->
+</table>
+<!--NLResultListEnd-->
+</td></tr>
 </table>
 
-<!-- Search box, next/previous buttons -->
 <table border=0 cellspacing=0 cellpadding=0 width=730>
-<tr><td width=220><img src="docs/gif/transparent.gif" width=220 height=1 alt=""></td><td width=20><img src="docs/gif/transparent.gif" width=20 height=1 alt=""></td><td width=15><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td><td width=475><img src="docs/gif/transparent.gif" width=475 height=1 alt=""></td></tr>
+<tr>
+<td><img src="docs/gif/transparent.gif" width=220 height=1></td>
+<td><img src="docs/gif/transparent.gif" width=20 height=1></td>
+<td><img src="docs/gif/transparent.gif" width=10 height=7></td>
+<td><img src="docs/gif/transparent.gif" width=480 height=1></td>
+</tr>
 <tr><td colspan=2>&nbsp;</td><td colspan=2 valign=top><table border=0>
 <!-- No previous results -->
-<!-- No next results --><tr><td valign=middle><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+%2BISI&cb=0&db=443443904&nth=214&us=025"><img src="docs/gif/nextten.gif" width=124 height=28 border=0 alt="Next Page"></a></td><td valign=middle><font size=2><b>Get the next page of documents</b></font></td></tr><!-- end -->
+<!-- No next results --><tr><td valign=middle><a href="/nlquery.fcg?ho=tornado&po=5040&qr=%2BLSAM+AND+%2BISI&cb=0&db=80473024&nth=214&us=025"><img src="docs/gif/nextten.gif" width=124 height=28 border=0 alt="Next Page"></a></td><td valign=middle><font size=2><b>Get the next page of documents</b></font></td></tr><!-- end -->
 </table>
-</td></tr><tr><td>&nbsp;</td></tr><tr><td colspan=3>&nbsp;</td><td>
+</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td colspan=3>&nbsp;</td><td>
 <table border=0 cellspacing=0 cellpadding=0>
 <form action="/nlquery.fcg" method=get>
 <input type=hidden name=ho value="">
 <input type=hidden name=po value="">
 <input type=hidden name=si value="">
-<input type=hidden name=cc value=" ">
+<input type=hidden name=cc value="">
 <input type=hidden name=us value="025">
 <input type=hidden name=xd value="">
-<tr><td><input type=text size=35 name=qr value="+LSAM +ISI"></td><td>&nbsp;</td><td nowrap><input name=search type=image src="docs/gif/btn_search.gif" border=0 alt="Search"><a href="docs/search_help_results.html"><img src="docs/gif/btn_search_help.gif" border=0 width=51 height=28 alt="Help"></a></td></tr>
+<tr><td><input type=text size=35 name=qr value="+LSAM AND +ISI"></td><td>&nbsp;</td><td nowrap><input name=search type=image src="docs/gif/btn_search.gif" border=0 alt="Search"><a href="docs/search_help_results.html"><img src="docs/gif/btn_search_help.gif" border=0 width=51 height=28 alt="Help"></a></td></tr>
 </form>
 </table>
  </td>
 </tr><tr>
  <td colspan=3></td>
  <td>&nbsp;<br>&nbsp;<br>
-<table border=0 cellspacing=0 cellpadding=5 width=468><tr><td bgcolor="#FFFFCC" align=left><font size=1>
+<table border=0 cellspacing=0 cellpadding=5 width=468><tr><td bgcolor=#ffffcc align=left><font size=1>
 <a href="search.html">Simple Search</a>&nbsp;|&nbsp;
 <a href="power.html">Power</a>&nbsp;|&nbsp;
 <a href="industry.html">Industry</a>&nbsp;|&nbsp;
@@ -659,7 +585,7 @@ Your search returned  390 items which we have organized into the following <!-- 
 <a href="investext.html">Investext</a>&nbsp;|&nbsp;
 <a href="pubsearch.html">Publication</a>
 </font></td>
-<td bgcolor="#FFFFCC" align=right><font size=1>
+<td bgcolor=#ffffcc align=right><font size=1>
 <a href="http://special.northernlight.com">Special Edition</a>
 </font></td>
 </tr></table>
@@ -667,10 +593,45 @@ Your search returned  390 items which we have organized into the following <!-- 
 </td>
 </tr><tr>
  <td colspan=3>&nbsp;</td><td>
-<!-- and now a word from our sponsor --><IFRAME WIDTH=468 HEIGHT=60 NORESIZE SCROLLING=No FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 SRC="http://adforce.imgis.com/?adiframe|2.0|34|47263|1|1|Key=LSAM_ISI;loc=300"><script language=javascript src="http://adforce.imgis.com/?addyn|2.0|34|47263|1|1|Key=LSAM_ISI;loc=300"></script><noscript><a href="http://adforce.imgis.com/?adlink|2.0|34|47263|1|1|Key=LSAM_ISI;loc=300" target=_top><img src="http://adforce.imgis.com/?adserv|2.0|34|47263|1|1|Key=LSAM_ISI;loc=300" border=0 width=468 height=60></a></noscript></IFRAME><!-- end -->
+
+<!--T_BOTTOM_AD-->
+<!-- and now... -->
+
+<!-- ...a word from 3, but we're waiting for 4 -->
+
+<!-- ...a word from 4 --><!--NLBannerStart--><!-- Begin DoubleClick ad head -->
+<NOLAYER>
+<IFRAME SRC="http://ad.doubleclick.net/adi/nl.newspage.com/computing;!category=nl_comp;sz=468x60;ord=934835493" frameborder=0 marginheight=0 marginwidth=0 width=468 height=80 scrolling=no>
+<A HREF="http://ad.doubleclick.net/jump/nl.newspage.com/computing;!category=nl_comp;sz=468x60;ord=934835493" target="_top"><IMG BORDER="0" SRC="http://ad.doubleclick.net/ad/nl.newspage.com/computing;!category=nl_comp;sz=468x60;ord=934835493"><BR>Click Here!</A>
+</IFRAME>
+</NOLAYER>
+<ILAYER ID=snap2 VISIBILITY=HIDE HEIGHT=80 WIDTH=468></ILAYER>
+<!-- End DoubleClick ad head -->
+<!--NLBannerEnd--><!-- end -->
+
+<!-- ...a word from 2, but we're waiting for 4 -->
+
+<!-- 0 -->
+
 <font size=2><br>&nbsp;<br>Copyright &copy; 1997-1999, Northern Light Technology LLC. All rights reserved.</font>
  </td>
+</form>
 </tr></table>
+
+<!-T_AD_CONTROL-->
+<!-- and now... -->
+
+<!-- block for control stuff -->
+
+<!-- ...a word from 3, but we're waiting for 4 -->
+
+
+<!-- ...a word from 4 --><!-- Begin DoubleClick ad foot -->
+<LAYER SRC="http://ad.doubleclick.net/adl/nl.newspage.com/computing;!category=nl_comp;sz=468x60;ord=934835493?" visibility=hide onload="moveToAbsolute(snap.pageX, snap.pageY); clip.height=80; clip.width=468; visibility='show';"></LAYER>
+<LAYER SRC="http://ad.doubleclick.net/adl/nl.newspage.com/computing;!category=nl_comp;sz=468x60;ord=934835493?" visibility=hide onload="moveToAbsolute(snap2.pageX, snap2.pageY); clip.height=80; clip.width=468; visibility='show';"></LAYER>
+<!-- End DoubleClick ad foot --><!-- end -->
+
+<!-- 0 -->
+
 </body>
 </html>
-

@@ -1,24 +1,40 @@
+<!-- ad bucket == 2, file was /servers/ads/adbuckets.dat -->
 <html>
-<!--Northern Light Simple Search Results (Build 5036)--><!--    -->
+<!--Northern Light Simple Search Results (Build 7023)--><!--    -->
 
 <head>
- <title>Northern Light Search: +Biathlon +weltcups +Athleten +deutschland</title>
+ <title>Northern Light Search: +Biathlon AND +weltcups AND +Athleten AND +deutschland</title>
 </head>
 
 <!--T_JAVA_SCRIPT-->
 
 <body bgcolor=white alink=blue link=blue text=black>
 
-<table border=0 cellspacing=0 cellpadding=0 width=730><tr>
- <td width=25 rowspan=3><img src="docs/gif/transparent.gif" width=25 height=1 alt=""></td>
+<table border=0 cellspacing=0 cellpadding=0 width=730>
+<!--T_AD_ENABLED_LOGO-->
+<!-- and now... -->
+<!-- ...a word from 3, but we're waiting for 2 -->
+
+
+<!-- ...a word from 4, but we're waiting for 2 -->
+
+
+
+<!-- ...a word from 2 --><tr><td width=25 rowspan=3><img src="docs/gif/transparent.gif" width=25 height=1 alt=""></td>
  <td width=112><img src="docs/gif/transparent.gif" width=112 height=1 alt=""></td>
  <td width=116><img src="docs/gif/transparent.gif" width=116 height=1 alt=""></td>
  <td width=477><img src="docs/gif/transparent.gif" width=477 height=1 alt=""></td>
 </tr><tr>
- <td valign=top><a href="search.html"><img src="docs/gif/nlt_logo.gif" width=112 height=100 border=0 alt="Northern Light Technology"></a></td>
+<td valign=top><a href="search.html"><img src="docs/gif/nlt_logo.gif" width=112 height=100 border=0 alt="Northern Light Technology"></a></td><!-- end -->
+
+
+<!-- 0 -->
+
+
+
  <td>&nbsp;</td>
  <td colspan=2 valign=top>
-<table border=0 cellspacing=0 cellpadding=5 width=468><tr><td bgcolor="#FFFFCC" align=left><font size=1>
+<table border=0 cellspacing=0 cellpadding=5 width=468><tr><td bgcolor=#ffffcc align=left><font size=1>
 <a href="search.html">Simple Search</a>&nbsp;|&nbsp;
 <a href="power.html">Power</a>&nbsp;|&nbsp;
 <a href="industry.html">Industry</a>&nbsp;|&nbsp;
@@ -27,12 +43,25 @@
 <a href="investext.html">Investext</a>&nbsp;|&nbsp;
 <a href="pubsearch.html">Publication</a>
 </font></td>
-<td bgcolor="#FFFFCC" align=right><font size=1>
+<td bgcolor=#ffffcc align=right><font size=1>
 <a href="http://special.northernlight.com">Special Edition</a>
 </font></td>
 </tr></table>
 <font size=1>&nbsp;<br></font>
-<!-- and now a word from our sponsor --><IFRAME WIDTH=468 HEIGHT=60 NORESIZE SCROLLING=No FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 SRC="http://adforce.imgis.com/?adiframe|2.0|34|47263|1|1|Key=Biathlon_weltcups_Athleten_deutschland;loc=300"><script language=javascript src="http://adforce.imgis.com/?addyn|2.0|34|47263|1|1|Key=Biathlon_weltcups_Athleten_deutschland;loc=300"></script><noscript><a href="http://adforce.imgis.com/?adlink|2.0|34|47263|1|1|Key=Biathlon_weltcups_Athleten_deutschland;loc=300" target=_top><img src="http://adforce.imgis.com/?adserv|2.0|34|47263|1|1|Key=Biathlon_weltcups_Athleten_deutschland;loc=300" border=0 width=468 height=60></a></noscript></IFRAME><!-- end -->
+
+<!--T_TOP_AD-->
+<!-- and now... -->
+
+<!-- ...a word from 3, but we're waiting for 2 -->
+
+<!-- ...a word from 4, but we're waiting for 2 -->
+
+<!-- ...a word from 2 --><!--NLBannerStart--><IFRAME WIDTH=468 HEIGHT=60 NORESIZE SCROLLING=No FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 SRC="http://adforce.imgis.com/?adiframe|2.0|34|47263|1|1|Key=Biathlon_AND_weltcups_AND_Athleten_AND_deutschland;loc=300"><script language=javascript src="http://adforce.imgis.com/?addyn|2.0|34|47263|1|1|Key=Biathlon_AND_weltcups_AND_Athleten_AND_deutschland;loc=300"></script><noscript><a href="http://adforce.imgis.com/?adlink|2.0|34|47263|1|1|Key=Biathlon_AND_weltcups_AND_Athleten_AND_deutschland;loc=300" target=_top><img src="http://adforce.imgis.com/?adserv|2.0|34|47263|1|1|Key=Biathlon_AND_weltcups_AND_Athleten_AND_deutschland;loc=300" border=0 width=468 height=60></a></noscript></IFRAME><!--NLBannerEnd--><!-- end -->
+
+<!-- 0 -->
+
+
+
 <br><img src="docs/gif/transparent.gif" width=1 height=3 alt=""><br>
  </td>
 </tr><tr>
@@ -54,9 +83,9 @@
 <input type=hidden name=cc value=" ">
 <input type=hidden name=us value="025">
 <input type=hidden name=xd value="">
-<tr><td colspan=3><img src="docs/gif/transparent.gif" width=1 height=5 border=0 alt=""><br><font size=2><b>11 items</b><!-- result --> found <!-- end --><!-- audit cluster --><!-- result -->for:<!-- end --></font></td></tr>
+<tr><td colspan=3><img src="docs/gif/transparent.gif" width=1 height=5 border=0 alt=""><br><font size=2><b>10 items</b><!-- result --> found <!-- end --><!-- audit cluster -->  <!-- result -->for:<!-- end --></td></tr>
 <tr>
- <td><input type=text size=35 name=qr value="+Biathlon +weltcups +Athleten +deutschland"></td>
+ <td><input type=text size=35 name=qr value="+Biathlon AND +weltcups AND +Athleten AND +deutschland"></td>
  <td>&nbsp;</td>
  <td nowrap><input name=search type=image src="docs/gif/btn_search.gif" border=0 alt="Search"><a href="docs/search_help_results.html"><img src="docs/gif/btn_search_help.gif" border=0 width=51 height=28 alt="Help"></a></td>
 </tr>
@@ -68,245 +97,200 @@
 
 <table border=0 cellspacing=0 cellpadding=0 width=730><tr>
  <td width=220><img src="docs/gif/transparent.gif" width=220 height=1 alt=""></td>
- <td width=33><img src="docs/gif/transparent.gif" width=33 height=1 alt=""></td>
- <td width=360><img src="docs/gif/transparent.gif" width=360 height=1 alt=""></td>
- <td width=15><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
- <td width=107><img src="docs/gif/transparent.gif" width=107 height=1 alt=""></td>
+ <td width=515><img src="docs/gif/transparent.gif" width=515 height=1 alt=""></td>
 </tr><tr>
- <td colspan=5><font size=1>&nbsp;</font></td>
+ <td colspan=2><font size=1>&nbsp;</font></td>
 </tr><tr>
- <td rowspan=999 valign=top><font size=2>
-<!--Custom Search Folders(TM) span all rows-300:1----->
-<!-- any clusters --><TABLE border=0 cellspacing=0 cellpadding=0><TR><TD>
-<TABLE border=0 cellspacing=0 cellpadding=2>
+ <td rowspan=999 valign=top><font size=2><!--1:1----->
+<!-- any clusters -->
+<img src="docs/gif/transparent.gif" border=0 width=1 height=8 alt=""><br></font>
+<TABLE border=0 cellspacing=0 cellpadding=2 width=210>
 <!-- any clusters -->
 <!-- audit cluster -->
-<!-- news cluster --><tr><TD align=right valign=top bgcolor="#FFFFCC"><a href="/nlquery.fcg?qr=%2bBiathlon+%2bweltcups+%2bAthleten+%2bdeutschland&dr=14&dx=1006&rv=1"><img src="docs/gif/folder-blue.gif" width=22 height=15 border=0 alt=""></a></TD><td bgcolor="#FFFFCC"><font size=2><a href="/nlquery.fcg?qr=%2bBiathlon+%2bweltcups+%2bAthleten+%2bdeutschland&dr=14&dx=1006&rv=2">Search Current News</a></font></td></tr><!-- end -->
+<!-- news cluster --><tr><TD align=right valign=top bgcolor=#ffffcc><a href="/nlquery.fcg?qr=%2bBiathlon+AND+%2bweltcups+AND+%2bAthleten+AND+%2bdeutschland&dr=14&dx=1006&rv=1"><img src="docs/gif/folder-blue.gif" width=22 height=14 border=0 alt="Search Current News"></a></TD><td bgcolor=#ffffcc><font size=2><a href="/nlquery.fcg?qr=%2bBiathlon+AND+%2bweltcups+AND+%2bAthleten+AND+%2bdeutschland&dr=14&dx=1006&rv=2">Search Current News</a></font></td></tr><!-- end -->
 <!-- cluster -->
 <!-- any clusters -->
+<!-- news cluster --><TR><TD colspan=2 bgcolor=#FFFFD7><IMG SRC="docs/gif/transparent.gif" WIDTH=1 HEIGHT=4></TD></TR><!-- end -->
+<!-- any clusters -->
+<!-- news cluster --><TR><TD colspan=2 bgcolor=#FFFFEB><IMG SRC="docs/gif/transparent.gif" WIDTH=1 HEIGHT=4></TD></TR><!-- end -->
+<!-- any clusters -->
 <tr><td colspan=2 bgcolor=white align=center><font size=2>
-<a href="search.html"><img src="docs/gif/startover.gif" width=104 height=29 border=0 alt="Start Over"></a><br>
-<img src="docs/gif/transparent.gif" width=162 height=1 alt=""><br>
+<img src="docs/gif/transparent.gif" border=0 width=162 height=5 alt=""><br>
+<a href="search.html">Start Over</a>&nbsp;<br>
 <!-- Clipping Service -->
 <!-- Clipping Service -->
+&nbsp;<br>
+<a href="search.html"><img src="docs/gif/chanl_home_off.gif" width=71 height=40 border=0 alt="Home"></a><br>
+<a href="docs/gen_help_where.html"><img border=0 src="docs/gif/chanl_help_off.gif" width=76 height=30 alt="Help"></a><br>
+<a href="docs/member_accounts.html"><img src="docs/gif/chanl_accts_off.gif" width=76 height=30 border=0 alt="Accounts"></a><br>
+<a href="docs/about_company_mission.html"><img src="docs/gif/chanl_company_off.gif" width=76 height=30 border=0 alt="Company"></a><br>
  </font></td>
 </tr>
 </table>
-</td></tr>
-</TABLE>
  </td>
- <td>&nbsp;</td>
-<td colspan=3 valign=top>
+<td valign=top>
 <img src="docs/gif/transparent.gif" width=1 height=6 alt=""><br>
-<img src="docs/gif/searchresults.gif" width=372 height=28 border=0 alt="Documents that best match your search"><br>
+<img src="docs/gif/transparent.gif" width=33 height=1 alt=""><img src="docs/gif/searchresults.gif" width=372 height=28 border=0 alt="Documents that best match your search"><br>
 <img src="docs/gif/transparent.gif" width=1 height=14 alt=""><br>
- </td>
-</tr>
-<!-- RESULTS LIST START -->
-<!-- result -->
-<tr><!--  --><!--  -->
-<td align=right valign=top><font size=2>1.&nbsp;&nbsp;</font></td>
-<td valign=top><font size=2><a href="http://www.biathlon.de/HTML/wc6.htm">Biathlon Weltcup6 Ergebnisse: Saison 98/99</a><br>
-<b>99% - Articles & General info:&nbsp;</b>Biathlon Weltcup6 Ergebnisse: Saison 98/99 Auswahl Antholz Hochfilzen Konthiolathi Pokljuka Orsblie Oberhof Ruhpolding Ergebnisse der letzten Saison Der Vergleich im komfortablen &Uuml;berblick Weltcuppunkte......  12/09/98<br>
-<b>German site:</b>&nbsp;&nbsp;http:/ / www.biathlon.de/ HTML/ wc6.htm<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
-<!-- Inline Clustering -->
 
-<!-- 0 -->
-<!-- Inline Clustering -->
-<!-- Inline Clustering -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
-</tr>
-<!-- end -->
+<!--NLResultListStart-->
+<table border=0 cellspacing=0 cellpadding=0>
+<!-- result --><!--NLResultStart-->
 <tr><!--  --><!--  -->
-<td align=right valign=top><font size=2>2.&nbsp;&nbsp;</font></td>
-<td valign=top><font size=2><a href="http://www.biathlon.de/HTML/wc1.htm">Biathlon Weltcup1 Ergebnisse: Saison 98/99</a><br>
-<b>99% - Articles & General info:&nbsp;</b>Biathlon Weltcup1 Ergebnisse: Saison 98/99 Auswahl Antholz Hochfilzen Konthiolathi Pokljuka Orsblie Oberhof Ruhpolding Ergebnisse der letzten Saison Der Vergleich im komfortablen &Uuml;berblick Weltcuppunkte......  12/17/98<br>
-<b>German site:</b>&nbsp;&nbsp;http:/ / www.biathlon.de/ HTML/ wc1.htm<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
-<!-- Inline Clustering -->
-
-<!-- 0 -->
-<!-- Inline Clustering -->
-<!-- Inline Clustering -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
-</tr>
-<!-- end -->
-<tr><!--  --><!--  -->
-<td align=right valign=top><font size=2>3.&nbsp;&nbsp;</font></td>
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>1.&nbsp;&nbsp;</font></td>
 <td valign=top><font size=2><a href="http://www.ski-online.de/sp10.html">Skiplan 2000</a><br>
-<b>91% - Articles & General info:&nbsp;</b>Skiplan 2000 Meilensteine - 100 Jahre Skisport in Deutschland Skiplan 2000 1895 Gr&uuml;ndung des ersten deutschen Ski-Landes-(Gebi... des Skiclubs Schwarzwald auf... 02/17/99<br>
+<b><!--NLResultRelevanceStart-->99% -<!--NLResultRelevanceEnd--> Articles & General info:&nbsp;</b>Meilensteine- 100 Jahre Skisport in Deutschland Skiplan 2000 1895 Gr&uuml;ndung des ersten deutschen Ski-Landes-(Gebi... des Skiclubs Schwarzwald auf dem Feldberg... 02/17/99<br>
 <b>German site:</b>&nbsp;&nbsp;http:/ / www.ski-online.de/ sp10.html<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
-<!-- Inline Clustering -->
-
-<!-- 0 -->
 <!-- Inline Clustering -->
 <!-- Inline Clustering -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
 </tr>
-<!-- end -->
+<!--NLResultEnd--><!-- end --><!--NLResultStart-->
 <tr><!--  --><!--  -->
-<td align=right valign=top><font size=2>4.&nbsp;&nbsp;</font></td>
-<td valign=top><font size=2><a href="http://germany-live.de/gl/Artikel/Sport/1997-01/Index.html">Ressort Sport - Artikelübersicht... </a><br>
-<b>91% - Directories & Lists:&nbsp;</b>Ressort Sport - Artikel&uuml;bersicht... Artikel&uuml;bersicht... Januar 1997 Freitag, 31. Date Not Available<br>
-<b>German site:</b>&nbsp;&nbsp;http:/ / germany-live.de/ gl/ Artikel/ Sport/ 1997-01/ Index.html<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
-<!-- Inline Clustering -->
-
-<!-- 0 -->
-<!-- Inline Clustering -->
-<!-- Inline Clustering -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
-</tr>
-<!-- end -->
-<tr><!--  --><!--  -->
-<td align=right valign=top><font size=2>5.&nbsp;&nbsp;</font></td>
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>2.&nbsp;&nbsp;</font></td>
 <td valign=top><font size=2><a href="http://www.biathlon.de/HTML/wc5.htm">Biathlon Weltcup5 Ergebnisse: Saison 98/99</a><br>
-<b>90% - Articles & General info:&nbsp;</b>Biathlon Weltcup5 Ergebnisse: Saison 98/99 Auswahl Antholz Hochfilzen Konthiolathi Pokljuka Orsblie Oberhof Ruhpolding Ergebnisse der letzten Saison Der Vergleich im komfortablen &Uuml;berblick Weltcuppunkte......  12/09/98<br>
+<b><!--NLResultRelevanceStart-->98% -<!--NLResultRelevanceEnd--> Articles & General info:&nbsp;</b>Auswahl Antholz Hochfilzen Konthiolathi Pokljuka Orsblie Oberhof Ruhpolding Ergebnisse der letzten Saison Der Vergleich im komfortablen &Uuml;berblick Weltcuppunkte Disziplinen Was macht den Wettkampf spannend... 12/09/98<br>
 <b>German site:</b>&nbsp;&nbsp;http:/ / www.biathlon.de/ HTML/ wc5.htm<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
-<!-- Inline Clustering -->
-
-<!-- 0 -->
 <!-- Inline Clustering -->
 <!-- Inline Clustering -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
 </tr>
-<!-- end -->
+<!--NLResultEnd--><!-- end --><!--NLResultStart-->
 <tr><!--  --><!--  -->
-<td align=right valign=top><font size=2>6.&nbsp;&nbsp;</font></td>
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>3.&nbsp;&nbsp;</font></td>
+<td valign=top><font size=2><a href="http://www.biathlon.de/HTML/wc6.htm">Biathlon Weltcup6 Ergebnisse: Saison 98/99</a><br>
+<b><!--NLResultRelevanceStart-->97% -<!--NLResultRelevanceEnd--> Articles & General info:&nbsp;</b>Auswahl Antholz Hochfilzen Konthiolathi Pokljuka Orsblie Oberhof Ruhpolding Ergebnisse der letzten Saison Der Vergleich im komfortablen &Uuml;berblick Weltcuppunkte Disziplinen Was macht den Wettkampf spannend... 12/09/98<br>
+<b>German site:</b>&nbsp;&nbsp;http:/ / www.biathlon.de/ HTML/ wc6.htm<br>
+<!-- Inline Clustering -->
+<!-- Inline Clustering -->
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+</tr>
+<!--NLResultEnd--><!-- end --><!--NLResultStart-->
+<tr><!--  --><!--  -->
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>4.&nbsp;&nbsp;</font></td>
+<td valign=top><font size=2><a href="http://www.biathlon.de/HTML/wc1.htm">Biathlon Weltcup1 Ergebnisse: Saison 98/99</a><br>
+<b><!--NLResultRelevanceStart-->96% -<!--NLResultRelevanceEnd--> Articles & General info:&nbsp;</b>Auswahl Antholz Hochfilzen Konthiolathi Pokljuka Orsblie Oberhof Ruhpolding Ergebnisse der letzten Saison Der Vergleich im komfortablen &Uuml;berblick Weltcuppunkte Disziplinen Was macht den Wettkampf spannend... 12/17/98<br>
+<b>German site:</b>&nbsp;&nbsp;http:/ / www.biathlon.de/ HTML/ wc1.htm<br>
+<!-- Inline Clustering -->
+<!-- Inline Clustering -->
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+</tr>
+<!--NLResultEnd--><!-- end --><!--NLResultStart-->
+<tr><!--  --><!--  -->
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>5.&nbsp;&nbsp;</font></td>
 <td valign=top><font size=2><a href="http://www.sport.de/spart/ski/ski008.html">Sport im Deutschen Internet - Skisport (Nachrichten</a><br>
-<b>87% - Articles & General info:&nbsp;</b>Performanceim Web Die ganze Range an Rechnerpower Skisport Nachrichten Maier sagt Kitzb&uuml;hel wegen Verletzung ab - Neuschnee gef&auml;hrdet Renn-Programm Mittwoch, 21... 02/04/99<br>
+<b><!--NLResultRelevanceStart-->94% -<!--NLResultRelevanceEnd--> Articles & General info:&nbsp;</b>Performanceim Web Die ganze Range an Rechnerpower Skisport Nachrichten Maier sagt Kitzb&uuml;hel wegen Verletzung ab- Neuschnee gef&auml;hrdet Renn-Programm Mittwoch, 21... 02/04/99<br>
 <b>German site:</b>&nbsp;&nbsp;http:/ / www.sport.de/ spart/ ski/ ski008.html<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
-<!-- Inline Clustering -->
-
-<!-- 0 -->
 <!-- Inline Clustering -->
 <!-- Inline Clustering -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
 </tr>
-<!-- end -->
+<!--NLResultEnd--><!-- end --><!--NLResultStart-->
 <tr><!--  --><!--  -->
-<td align=right valign=top><font size=2>7.&nbsp;&nbsp;</font></td>
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>6.&nbsp;&nbsp;</font></td>
 <td valign=top><font size=2><a href="http://www.olympia.de/pages/news/news0602.html">News vom 6.2.</a><br>
-<b>85% - Articles & General info:&nbsp;</b>News vom 6.2. Zur&uuml;ck zum News Archiv NEWS VOM 6. 03/04/98<br>
+<b><!--NLResultRelevanceStart-->92% -<!--NLResultRelevanceEnd--> Articles & General info:&nbsp;</b>Zur&uuml;ck zum News Archiv NEWS VOM 6. 03/04/98<br>
 <b>German site:</b>&nbsp;&nbsp;http:/ / www.olympia.de/ pages/ news/ news0602.html<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
-<!-- Inline Clustering -->
-
-<!-- 0 -->
 <!-- Inline Clustering -->
 <!-- Inline Clustering -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
 </tr>
-<!-- end -->
+<!--NLResultEnd--><!-- end --><!--NLResultStart-->
 <tr><!--  --><!--  -->
-<td align=right valign=top><font size=2>8.&nbsp;&nbsp;</font></td>
-<td valign=top><font size=2><a href="http://www.visa.de/ap/olympia/news3.htm">Visa - Olympia '98 - News</a><br>
-<b>85% - Directories & Lists:&nbsp;</b>Visa - Olympia '98 - News browserName = navigator.appNam... browserVer = parseInt(navigat... if (browserName == &quot;Netscape&quot; && browserVer = 3) else if ( &quot;n4&quot;) { rn_01on = new Image(29, 54... 02/27/98<br>
-<b>German site:</b>&nbsp;&nbsp;http:/ / www.visa.de/ ap/ olympia/ news3.htm<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
-<!-- Inline Clustering -->
-
-<!-- 0 -->
-<!-- Inline Clustering -->
-<!-- Inline Clustering -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
-</tr>
-<!-- end -->
-<tr><!--  --><!--  -->
-<td align=right valign=top><font size=2>9.&nbsp;&nbsp;</font></td>
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>7.&nbsp;&nbsp;</font></td>
 <td valign=top><font size=2><a href="http://www.azag.ch/nagano98/story1702.htm">Nagano Story 0702</a><br>
-<b>85% - Articles & General info:&nbsp;</b>Nagano Story 0702 STEHRAMPE Checklose Puckj gerinnen HANSRUEDI CAMENISCH Im Big-Hat-Stadion zu Nagano zelebrieren diese Woche die weltbesten Eishockeystars aus der National Hockey... 02/18/98<br>
+<b><!--NLResultRelevanceStart-->92% -<!--NLResultRelevanceEnd--> Articles & General info:&nbsp;</b>STEHRAMPE Checklose Puckj gerinnen HANSRUEDI CAMENISCH Im Big-Hat-Stadion zu Nagano zelebrieren diese Woche die weltbesten Eishockeystars aus der National Hockey League(NHL) ihre... 02/18/98<br>
 <b>Swiss site:</b>&nbsp;&nbsp;http:/ / www.azag.ch/ nagano98/ story1702.htm<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
-<!-- Inline Clustering -->
-
-<!-- 0 -->
 <!-- Inline Clustering -->
 <!-- Inline Clustering -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
 </tr>
-<!-- end -->
-<tr><!--  --><!-- <td>&nbsp;</td> -->
-<td align=right valign=top><font size=2>10.&nbsp;&nbsp;</font></td>
+<!--NLResultEnd--><!-- end --><!--NLResultStart-->
+<tr><!--  --><!--  -->
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>8.&nbsp;&nbsp;</font></td>
 <td valign=top><font size=2><a href="http://www.iat.uni-leipzig.de/iat/news/biblio/lit97.htm">Bibliographie wissenschaftlich... Arbeiten 1997</a><br>
-<b>85% - Articles & General info:&nbsp;</b>Bibliographie wissenschaftlich... Arbeiten 1997 Bibliographie wissenschaftlich... Arbeiten 1997 ADAMCZEWSKI, H. &amp; PERLT, B. (1997). Anlaufzeitmessun... Stabhochsprung wie Aspekte der Technik im Stabhochsprung der Frauen. Leichtathletik.....  02/09/98<br>
+<b><!--NLResultRelevanceStart-->92% -<!--NLResultRelevanceEnd--> Articles & General info:&nbsp;</b>ADAMCZEWSKI, H. &amp; PERLT, B.(1997) Anlaufzeitmessun... Stabhochsprung wie Aspekte der Technik im Stabhochsprung der Frauen. Leichtathletik, 36(37/38/39/40) Beilage&quot;Die Lehre... 02/09/98<br>
 <b>German site:</b>&nbsp;&nbsp;http:/ / www.iat.uni-leipzig.de/ iat/ news/ biblio/ lit97.htm<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
-<!-- Inline Clustering -->
-
-<!-- 0 -->
 <!-- Inline Clustering -->
 <!-- Inline Clustering -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
 </tr>
-<!-- end -->
-<tr><!--  --><!-- <td>&nbsp;</td> -->
-<td align=right valign=top><font size=2>11.&nbsp;&nbsp;</font></td>
+<!--NLResultEnd--><!-- end --><!--NLResultStart-->
+<tr><!--  --><!--  -->
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>9.&nbsp;&nbsp;</font></td>
 <td valign=top><font size=2><a href="http://sport.de/spart/oly/1998/oly008.html">Sport im Deutschen Internet - Olympia 1998 (Nachrichten)</a><br>
-<b>85% - Articles & General info:&nbsp;</b>Sport im Deutschen Internet - Olympia 1998 (Nachrichten) Nachrichten Sporthilfe Eine Million Mark f&uuml;r Goldrausch von Nagano Dienstag, 24. Februar 1998 Frankfurt/Main - Der... Date Not Available<br>
+<b><!--NLResultRelevanceStart-->92% -<!--NLResultRelevanceEnd--> Articles & General info:&nbsp;</b>Nachrichten Sporthilfe Eine Million Mark f&uuml;r Goldrausch von Nagano Dienstag, 24. Februar 1998 Frankfurt/Main- Der Goldrausch von Nagano kostet die Deutsche Sporthilfe... Date Not Available<br>
 <b>German site:</b>&nbsp;&nbsp;http:/ / sport.de/ spart/ oly/ 1998/ oly008.html<br>
-<img src="docs/gif/transparent.gif" width=1 height=3 border=0 alt=""><br>
-<!-- Inline Clustering -->
-
-<!-- 0 -->
 <!-- Inline Clustering -->
 <!-- Inline Clustering -->
-&nbsp;</td>
-<td></td>
-<td valign=top>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
 </tr>
-<!-- end -->
-<!--END RESULTS LIST -->
+<!--NLResultEnd--><!-- end --><!--NLResultStart-->
+<tr><!--  --><!-- <td>&nbsp;</td> -->
+<td align=right valign=top><font size=2><img src="docs/gif/transparent.gif" width=33 height=1 alt=""><br>10.&nbsp;&nbsp;</font></td>
+<td valign=top><font size=2><a href="http://germany-live.de/gl/Artikel/Sport/1997-01/Index.html">Ressort Sport - Artikelübersicht... </a><br>
+<b><!--NLResultRelevanceStart-->82% -<!--NLResultRelevanceEnd--> Directories & Lists:&nbsp;</b>Ressort Sport- Artikel&uuml;bersicht... Artikel&uuml;bersicht... Januar 1997 Freitag, 31. Date Not Available<br>
+<b>German site:</b>&nbsp;&nbsp;http:/ / germany-live.de/ gl/ Artikel/ Sport/ 1997-01/ Index.html<br>
+<!-- Inline Clustering -->
+<!-- Inline Clustering -->
+&nbsp;</font></td>
+<td><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+<td valign=top><img src="docs/gif/transparent.gif" width=107 height=1><br>&nbsp;<br><img src=docs/gif/www.gif border=0 width=42 height=11><br></td>
+</tr>
+<!--NLResultEnd--><!-- end -->
+</table>
+<!--NLResultListEnd-->
+</td></tr>
 </table>
 
-<!-- Search box, next/previous buttons -->
 <table border=0 cellspacing=0 cellpadding=0 width=730>
-<tr><td width=220><img src="docs/gif/transparent.gif" width=220 height=1 alt=""></td><td width=20><img src="docs/gif/transparent.gif" width=20 height=1 alt=""></td><td width=15><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td><td width=475><img src="docs/gif/transparent.gif" width=475 height=1 alt=""></td></tr>
+<tr>
+<td><img src="docs/gif/transparent.gif" width=220 height=1></td>
+<td><img src="docs/gif/transparent.gif" width=20 height=1></td>
+<td><img src="docs/gif/transparent.gif" width=10 height=7></td>
+<td><img src="docs/gif/transparent.gif" width=480 height=1></td>
+</tr>
 <tr><td colspan=2>&nbsp;</td><td colspan=2 valign=top><table border=0>
 <!-- No previous results -->
 <!-- No next results -->
 </table>
-</td></tr><tr><td>&nbsp;</td></tr><tr><td colspan=3>&nbsp;</td><td>
+</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td colspan=3>&nbsp;</td><td>
 <table border=0 cellspacing=0 cellpadding=0>
 <form action="/nlquery.fcg" method=get>
 <input type=hidden name=ho value="">
 <input type=hidden name=po value="">
 <input type=hidden name=si value="">
-<input type=hidden name=cc value=" ">
+<input type=hidden name=cc value="">
 <input type=hidden name=us value="025">
 <input type=hidden name=xd value="">
-<tr><td><input type=text size=35 name=qr value="+Biathlon +weltcups +Athleten +deutschland"></td><td>&nbsp;</td><td nowrap><input name=search type=image src="docs/gif/btn_search.gif" border=0 alt="Search"><a href="docs/search_help_results.html"><img src="docs/gif/btn_search_help.gif" border=0 width=51 height=28 alt="Help"></a></td></tr>
+<tr><td><input type=text size=35 name=qr value="+Biathlon AND +weltcups AND +Athleten AND +deutschland"></td><td>&nbsp;</td><td nowrap><input name=search type=image src="docs/gif/btn_search.gif" border=0 alt="Search"><a href="docs/search_help_results.html"><img src="docs/gif/btn_search_help.gif" border=0 width=51 height=28 alt="Help"></a></td></tr>
 </form>
 </table>
  </td>
 </tr><tr>
  <td colspan=3></td>
  <td>&nbsp;<br>&nbsp;<br>
-<table border=0 cellspacing=0 cellpadding=5 width=468><tr><td bgcolor="#FFFFCC" align=left><font size=1>
+<table border=0 cellspacing=0 cellpadding=5 width=468><tr><td bgcolor=#ffffcc align=left><font size=1>
 <a href="search.html">Simple Search</a>&nbsp;|&nbsp;
 <a href="power.html">Power</a>&nbsp;|&nbsp;
 <a href="industry.html">Industry</a>&nbsp;|&nbsp;
@@ -315,7 +299,7 @@
 <a href="investext.html">Investext</a>&nbsp;|&nbsp;
 <a href="pubsearch.html">Publication</a>
 </font></td>
-<td bgcolor="#FFFFCC" align=right><font size=1>
+<td bgcolor=#ffffcc align=right><font size=1>
 <a href="http://special.northernlight.com">Special Edition</a>
 </font></td>
 </tr></table>
@@ -323,10 +307,34 @@
 </td>
 </tr><tr>
  <td colspan=3>&nbsp;</td><td>
-<!-- and now a word from our sponsor --><IFRAME WIDTH=468 HEIGHT=60 NORESIZE SCROLLING=No FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 SRC="http://adforce.imgis.com/?adiframe|2.0|34|47263|1|1|Key=Biathlon_weltcups_Athleten_deutschland;loc=300"><script language=javascript src="http://adforce.imgis.com/?addyn|2.0|34|47263|1|1|Key=Biathlon_weltcups_Athleten_deutschland;loc=300"></script><noscript><a href="http://adforce.imgis.com/?adlink|2.0|34|47263|1|1|Key=Biathlon_weltcups_Athleten_deutschland;loc=300" target=_top><img src="http://adforce.imgis.com/?adserv|2.0|34|47263|1|1|Key=Biathlon_weltcups_Athleten_deutschland;loc=300" border=0 width=468 height=60></a></noscript></IFRAME><!-- end -->
+
+<!--T_BOTTOM_AD-->
+<!-- and now... -->
+
+<!-- ...a word from 3, but we're waiting for 2 -->
+
+<!-- ...a word from 4, but we're waiting for 2 -->
+
+<!-- ...a word from 2 --><IFRAME WIDTH=468 HEIGHT=60 NORESIZE SCROLLING=No FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 SRC="http://adforce.imgis.com/?adiframe|2.0|34|47264|1|1|Key=Biathlon_AND_weltcups_AND_Athleten_AND_deutschland;loc=300"><script language=javascript src="http://adforce.imgis.com/?addyn|2.0|34|47264|1|1|Key=Biathlon_AND_weltcups_AND_Athleten_AND_deutschland;loc=300"></script><noscript><a href="http://adforce.imgis.com/?adlink|2.0|34|47264|1|1|Key=Biathlon_AND_weltcups_AND_Athleten_AND_deutschland;loc=300" target=_top><img src="http://adforce.imgis.com/?adserv|2.0|34|47264|1|1|Key=Biathlon_AND_weltcups_AND_Athleten_AND_deutschland;loc=300" border=0 width=468 height=60></a></noscript></IFRAME><!-- end -->
+
+<!-- 0 -->
+
 <font size=2><br>&nbsp;<br>Copyright &copy; 1997-1999, Northern Light Technology LLC. All rights reserved.</font>
  </td>
+</form>
 </tr></table>
+
+<!-T_AD_CONTROL-->
+<!-- and now... -->
+
+<!-- block for control stuff -->
+
+<!-- ...a word from 3, but we're waiting for 2 -->
+
+
+<!-- ...a word from 4, but we're waiting for 2 -->
+
+<!-- 0 -->
+
 </body>
 </html>
-

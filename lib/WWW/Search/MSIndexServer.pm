@@ -152,15 +152,15 @@ sub native_retrieve_some
     if (! defined($method)) {
 	$method = 'GET';
     }
-    print "GET " . $self->{_next_url} . "\n" if ($debug);
+    warn "$method ", $self->{_next_url}, "\n" if ($debug);
 
-    my($response) = $self->http_request($method, $self->{_next_url}); 
+    my $response = $self->http_request($method, $self->{_next_url}); 
 
     $self->{response} = $response;
 
     if (!$response->is_success) {
-	#print $response->as_string();
-	print "Some problem\n" if ($debug);
+	#warn $response->as_string();
+	warn " --- HTTP request failed: ", $response->as_string, "\n" if ($debug);
 	return (undef);
     };
 

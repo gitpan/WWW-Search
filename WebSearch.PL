@@ -22,21 +22,24 @@ print OUT <<'!NO!SUBS!';
 #
 # WebSearch.PL
 # Copyright (C) 1996-1997 by USC/ISI
-# $Id: WebSearch.PL,v 1.32 1998/11/18 21:54:56 johnh Exp $
+# $Id: WebSearch.PL,v 1.4 1999/08/16 19:09:10 mthurn Exp $
 #
 # Complete copyright notice follows below.
 #
 
 
-sub usage {
-    print STDERR <<END;
-usage: $0  [-m MaxCount] [-e SearchEngine] [-o option] [-o option...] [-arvV] query
+sub usage 
+  {
+  my $msg = shift;
+  defined($msg) && ($msg ne '') && print STDERR "$0: $msg\n";
+  print STDERR <<"END";
+usage: WebSearch [-m MaxCount] [-e SearchEngine] [-o option] [-o option...] [-arvV] query
 
 Make a query to a web search engine, showing the primary URLs which match.
 
 END
-    exit 1;
-}
+  exit 1;
+  } # usage
 
 
 =head1 NAME
@@ -148,8 +151,8 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 use strict;
 
-&usage if ($#ARGV == -1);
-&usage if ($#ARGV >= 0 && $ARGV[0] eq '-?');
+&usage('no arguments given') if ($#ARGV == -1);
+# &usage if ($#ARGV >= 0 && $ARGV[0] eq '-?');
 
 BEGIN {
     # The next lines are a testing hacks.
@@ -162,31 +165,38 @@ print OUT <<'!NO!SUBS!';
 use WWW::Search;
 use Getopt::Long;
 
-my(%opts);
-$Getopt::Long::getopt_compat = 1;   # avoid parsing +'s as options (doesn't work!)
+use vars qw( $VERSION );
+$VERSION = '2.04';
+
+use vars qw( $sEngine $all $verbose $raw $maximum_to_retrieve $print_version $debuglwp );
+use vars qw( @options $_host $_port $help );
 &Getopt::Long::config(qw(no_ignore_case no_getopt_compat));
-&GetOptions(\%opts, qw(a r v d V e=s m=s o=s@));
+&usage('getopt failed') unless &GetOptions('all', \$all, 'raw', \$raw,
+            'verbose', \$verbose,  'VERSION', \$print_version,
+            'max=i', \$maximum_to_retrieve,
+            'engine=s', \$sEngine,
+            'debug', \$debuglwp,
+            'options=s@', \@options,
+            'host=s', \$_host,  'port=s', \$_port,
+            'help', \$help,
+           );
+&usage('user requested help') if $help;
+$_host ||= '';
+$_port ||= '';
 
-&print_version if ($opts{'V'});
-&usage if ($#ARGV == -1); # we MUST have one left, the query
-
-my($verbose) = $opts{'v'};
-my($all) = $opts{'a'};
-my($raw) = $opts{'r'};
-my($maximum_to_retrieve) = $opts{'m'};
-my($debuglwp) = $opts{'d'};
+&print_version if defined($print_version);
+# there MUST be some argument(s) left, the query:
+&usage('no query found on command line') if (scalar(@ARGV) <= 0); 
 
 &main(join(" ", @ARGV));
 
 exit 0;
 
-sub print_version {
-    my($version) = $WWW::Search::VERSION;
-    print "$0\n\tWWW::Search::VERSION: $version\n\n";
-    exit 0;
-    # suppress warnings
-    $version = $WWW::Search::VERSION;
-}
+sub print_version 
+  {
+  print "$0 version $VERSION;  WWW::Search version $WWW::Search::VERSION\n";
+  exit 0;
+  } # print_version
 
 my($verbose_code);
 
@@ -235,8 +245,10 @@ sub print_error {
 sub main {
     my($query) = @_;
     my($count) = 0;
-    my($search) = new WWW::Search($opts{e});
-    my($query_options_ref);
+    my($search) = new WWW::Search($sEngine);
+    $search->{_host} = $_host if $_host ne '';
+    $search->{_port} = $_port if $_port ne '';
+    my %hsOptions = ();
 
     if (defined($debuglwp)) {
 	require LWP::Debug;
@@ -246,13 +258,32 @@ sub main {
     $search->http_proxy($ENV{'HTTP_PROXY'}) if ($ENV{'HTTP_PROXY'});
     $search->http_proxy($ENV{'http_proxy'}) if ($ENV{'http_proxy'});
          
-    if (defined($opts{'o'})) {
-        $query_options_ref = {};
-        foreach (@{$opts{'o'}}) {
-            my($key, $value) = m/^([^=]+)=(.*)$/;
-            $query_options_ref->{$key} = WWW::Search::escape_query($value);
-        };
-    };
+    if (0 < scalar(@options)) 
+      {
+      foreach my $sPair (@options) 
+        {
+        my ($key, $value) = $sPair =~ m/^([^=]+)=(.*)$/;
+        # This is a bit of a hack.  A set of CGI options is not
+        # strictly a hash, because multiple values for the same key
+        # can be specified.  To get around this, we rely on the fact
+        # that this hash of options is only used to construct a CGI
+        # parameter list.  If we see multiple values for the same key,
+        # we append the multiple values onto the value of the key in
+        # CGI '?key=value' format.
+        if (exists($hsOptions{$key}) && $hsOptions{$key} ne '')
+          {
+          # There was already an option of this key given; append
+          # multiple values as CGI arguments:
+          $hsOptions{$key} .= '&'.$key.'='.WWW::Search::escape_query($value);
+          } # if exists
+        else
+          {
+          # This is the only instance of this key; just insert the
+          # hash value:
+          $hsOptions{$key} = WWW::Search::escape_query($value);
+          }
+        } # foreach $sPair
+      } # if @options
 
     if (defined($maximum_to_retrieve)) {
 	$search->maximum_to_retrieve($maximum_to_retrieve);
@@ -260,7 +291,7 @@ sub main {
 	$maximum_to_retrieve = 10000;
     };
 
-    $search->native_query(WWW::Search::escape_query($query), $query_options_ref);
+    $search->native_query(WWW::Search::escape_query($query), \%hsOptions);
 
     my($way) = 0; # 0=piecemeal, 1=all at once
     my($result);

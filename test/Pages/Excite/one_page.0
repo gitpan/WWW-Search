@@ -7,7 +7,7 @@
 <table cellspacing=0 cellpadding=0 border=0 width=600>
 <tr>
 <td align=right VALIGN=BOTTOM width=120>
-<a href=http://www.excite.com/><img src=/img/head/logo3.gif width=128 height=50 border=0></a>
+<a href=http://www.excite.com/><img src=/img/head/logo2.gif width=120 height=50 border=0></a>
 </td>
 <td width=480>
 <table cellspacing=0 cellpadding=0 border=0 width=100%>
@@ -78,17 +78,30 @@
 <TABLE border=0 cellpadding=1 cellspacing=0 >
 <TR><TD bgcolor=cccccc>
 <FORM NAME=topbox ACTION=/search.gw>
-<TABLE border=0 cellspacing=0 cellpadding=4 width='598' bgcolor=ffffff>
+<TABLE border=0 cellspacing=0 cellpadding=4 width=100% bgcolor=ffffff>
 <TR>
 <TD align=right bgcolor=ffffff nowrap>
-<b><font face="helvetica" size=-1>You searched for</font></b>
-<input size=30 name=search value="+LSAM +replication">
+<b><font face="helvetica" size=-1>Search for&nbsp;</font></b>
+<input size=25 name=search value="+LSAM +replication">
 <input type=hidden name=tsug value=-1>
 <input type=hidden name=csug value=0>
-</TD>
-<TD>
+<font face="helvetica" size=-1><b>&nbsp;in&nbsp;</b></font>
+<select name="lang">
+<option value="en" >English
+<option value="cn" >Chinese
+<option value="nl" >Dutch
+<option value="fr" >French
+<option value="de" >German
+<option value="it" >Italian
+<option value="jp" >Japanese
+<option value="no" >Norwegian
+<option value="pt" >Portuguese
+<option value="es" >Spanish
+<option value="se" >Swedish
+</select>
+&nbsp;
 <font face="helvetica" size=-1>
-<input type=submit value="Search Again">
+<input type=submit value="Search">
 </font>
 </TD>
 <TD nowrap>
@@ -104,7 +117,7 @@
 <table border=0 cellspacing=0 cellpadding=1 width=100%>
 <tr><td align=center bgcolor=ffcc00>
 <font face="helvetica" size=-1><b>
-Pick your <A HREF=http://www.excite.com/relocate/co=xxsr_mchat2;/communities/chat/rooms>Chat</A>: <A HREF=http://www.excite.com/relocate/co=xxsr_mchat2;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/teenchat.html>Teen</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_mchat2;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/20ish.html>20ish</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_mchat2;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/30ish.html>30ish</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_mchat2;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/40ish.html>40ish</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_mchat2;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/peers/50plus.html>50+</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_mchat2;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/peers/christians.html>Christian</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_mchat2;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/grrls_domain.html>Grrls</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_mchat2;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/pink_triangle.html>Gay</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_mchat2;/communities/chat/rooms>more</A>
+Want a <font color=red>FREE</font> <A HREF=http://www.excite.com/r/co=xxsr_vmail2;/Info/mail/vmail_welcome.html>voicemail account</A>? Reserve a <A HREF=http://www.excite.com/r/co=xxsr_vmail2;/Info/mail/vmail_welcome.html>toll-free extension</A> now!
 </b></font>
 </td></tr>
 </table>
@@ -114,25 +127,7 @@ Pick your <A HREF=http://www.excite.com/relocate/co=xxsr_mchat2;/communities/cha
 </TD>
 </TR>
 </table>
-<form action="http://lifeminders.com/lifeminder30/banner/SignUpDAT.asp"
-method="get"> <input type="hidden"
-name="MktgSourceCD" value="LLQA64"> <TABLE BORDER=1 CELLPADDING=0
-CELLSPACING=0 WIDTH=468 HEIGHT=60><TR><TD> <table
-cellpadding="0" cellspacing="0" width="468" height="60" bgcolor="0000FF"
-border="0"><tr><td height="30" valign="top"
-bgcolor="0000FF"><center><img src="http://image.eimg.com/ads/99301_rapidfire.gif" width=468 height=30
-border="0"></td></tr><tr><td valign="top"
-height="30" bgcolor="0000FF" align="center">&nbsp;&nbsp;<font
-color="#FFFFFF"><font face="arial, helvetica,
-sans-serif" size="-1"><B>Your E-mail:</B></font><input type="text"
-name="Email" size="12" align="top"><font
-face="arial, helvetica, sans-serif" size="-1">&nbsp;&nbsp;<B>Zip
-Code:</B></font><input type="text"
-name="PostalCode" size="7">&nbsp;&nbsp;&nbsp; <input type="submit"
-value="Submit"></td></tr></table></TD></TR></TABLE><CENTER><FONT SIZE=-1
-COLOR=#0000FF FACE=arial, geneva><B><A
-HREF="http://www.excite.com/relocate/ad=99301_htmlad.gif|pk=2961325;http://lifeminders.com/l/index.asp?Mktg=LLQE245">Free email
-upgrade!</A></B></FONT></CENTER></form>
+<a href="http://www.excite.com/relocate/ad=103538_webfill081399_exciteani.gif|pk=3132119;http://www.shopthecountry.com" onMouseOver="window.status='Click Here!';return true" language="Javascript"><img src="http://image.eimg.com/ads/103538_webfill081399_exciteani.gif" ALT="Click Here!" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> Click Here! </B></FONT></CENTER></a>
 </center>
 <small><br></small>
 </center>
@@ -151,15 +146,16 @@ upgrade!</A></B></FONT></CENTER></form>
 <tr><td VALIGN=TOP width=40% nowrap>
 <font face="helvetica">
 Documents
-&nbsp;1-5
-</font></td>
+&nbsp;1-19
+</font>
+</td>
 <td align=right width=60% nowrap><font face="helvetica"><b>
 Show:&nbsp;
-<a href="/search.gw?s=%2Blsam+%2Breplication&c=web&start=0&showSummary=false
+<a href="/search.gw?s=%2BLSAM+%2Breplication&c=qb&start=0&showSummary=false
 ">Titles only</a>
 &nbsp;
 View by:&nbsp;
-<a href="/search.gw?sort=site&c=web&s=%2Blsam+%2Breplication">Web site</a>
+<a href="/search.gw?sort=site&c=qb&s=%2BLSAM+%2Breplication">Web site</a>
 </b></font>
 </td>
 </tr></table>
@@ -169,6 +165,23 @@ View by:&nbsp;
 <table border=0 cellpadding=2 cellspacing=1 width=120 align=right>
 <tr>
 <td>
+<table border="2" cellspacing="0" cellpadding="3" bordercolor="#330099" bgcolor="#ffffcc" width=120 height=66>
+<tr>
+<td align="center" width=100%>
+<CENTER>
+<B>
+<FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+<FONT SIZE=-1>Beyond.com</FONT>
+</FONT>
+</B><BR>
+<FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+<FONT SIZE=-2><a href=http://www.excite.com/relocate/co=83355;http://www.beyond.com/AF99301-exosxxse0001/search.htm?name_desc=replication&fail_redirect=home_page>replication</a></FONT>
+</FONT><BR>
+<FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+<FONT SIZE=-2>Buy Software!</FONT>
+</FONT>
+</CENTER>
+</td></tr></table>
 </td>
 </tr>
 <tr>
@@ -180,54 +193,94 @@ View by:&nbsp;
 <tr><td align="center">
 <font face="Verdana, Arial, Helvetica, sans-serif" size="-2">
 Search for:<br>
-<a href=/relocate/co=xsr_amazon;http://www.amazon.com/exec/obidos/excite-search/search=%2BLSAM+%2Breplication>+LSAM +replica...</a><br>
+<a href=/relocate/co=xsr_amazon;http://www.amazon.com/exec/obidos/excite-search/search=%2BLSAM+%2Breplication>+LSAM +REPLICA...</a><br>
 </font>
 </td></tr></table>
 </td>
 </tr>
 </table>
 <font face="helvetica" size=-1>
+<SMALL>69% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BLSAM+%2Breplication|id=11192549;http://www.isi.edu/lsam/about/replication.html">About LSAM Replication</A>&nbsp;
+- Although the Web is widely used today, for it to be truly effective part of daily work, it must provide both dependable availability and performance. <BR><SMALL>http://www.isi.edu/lsam/about/replication.html
+<P></SMALL>
+<SMALL>68% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BLSAM+%2Breplication|id=2823380;http://www.isi.edu/div7/cities/index.html">Large-Scale Active Middleware</A>&nbsp;
+- The LSAM Proxy Cache uses multicast push of related web pages, based on automatically-selected interest groups, to load caches at natural network aggregation points. <BR><SMALL>http://www.isi.edu/div7/cities/index.html
+<P></SMALL>
 <SMALL>66% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BLSAM+%2Breplication|id=12870394;http://www.isi.edu/div7/cities/">Large-Scale Active Middleware</A>&nbsp;
-- The LSAM Proxy Cache uses multicast push of related web pages, based on automatically-selected interest groups, to load caches at natural network aggregation points. <BR><SMALL>http://www.isi.edu/div7/cities/
-<BR><A HREF="/search.gw?c=web&qbe=12870394&ctag=377BA326&showSummary=true">
-Search for more documents like this one</A>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BLSAM+%2Breplication|id=28066972;http://www.isi.edu/div7/cities/about/security.html">LSAM Security</A>&nbsp;
+- THE TECHNOLOGIES provided in LSAM represent one strategy toward presenting improved performance and service to the site administrator and the end user. <BR><SMALL>http://www.isi.edu/div7/cities/about/security.html
 <P></SMALL>
-<SMALL>62% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BLSAM+%2Breplication|id=5759075;http://nii.isi.edu/people/johnh/WORK/index.html">John Heidemann's Work</A>&nbsp;
-- I am computer scientist at Information Sciences Institute of the University of Southern California. I will also be teaching at USC in Spring semester 1997. <BR><SMALL>http://nii.isi.edu/people/johnh/WORK/index.html
-<BR><A HREF="/search.gw?c=web&qbe=5759075&ctag=377BA326&showSummary=true">
-Search for more documents like this one</A>
+<SMALL>64% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BLSAM+%2Breplication|id=4750689;http://nii.isi.edu/~johnh/WORK/index.html">John Heidemann's Work</A>&nbsp;
+- See LA through ISI's eyes (or at least windows). At ISI I'm currently active on the VINT project. VINT's aim is to build a network simulator (ns) and a network animator (nam) that will allow the study of scale and protocol interaction in the context of current and future network protocols. <BR><SMALL>http://nii.isi.edu/~johnh/WORK/index.html
 <P></SMALL>
-<CENTER> <TABLE BORDER=0 CELLPADDING=3 CELLSPACING=0 WIDTH=100%><TR>
-<TD ALIGN=center BGCOLOR=FFFFCC>
-<FONT FACE="helvetica" SIZE=-1><B>
-Pick your <A HREF=http://www.excite.com/relocate/co=xxsr_mchat2;/communities/chat/rooms>Chat</A>: <A HREF=http://www.excite.com/relocate/co=xxsr_mchat2;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/teenchat.html>Teen</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_mchat2;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/20ish.html>20ish</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_mchat2;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/30ish.html>30ish</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_mchat2;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/40ish.html>40ish</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_mchat2;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/peers/50plus.html>50+</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_mchat2;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/peers/christians.html>Christian</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_mchat2;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/grrls_domain.html>Grrls</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_mchat2;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/pink_triangle.html>Gay</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_mchat2;/communities/chat/rooms>more</A>
-</B></FONT>
-</TD></TR></TABLE></CENTER><P>
-<SMALL>37% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BLSAM+%2Breplication|id=38010458;http://netresearch.ics.uci.edu/researchclass/web.html">Web caching bibliography</A>&nbsp;
-- This bibliography is also available in BibTeX and gzipped postscript formats.You can also search the bibliography thanks to the Collection of Computer Science Bibliographies. <BR><SMALL>http://netresearch.ics.uci.edu/researchclass/web.html
-<BR><A HREF="/search.gw?c=web&qbe=38010458&ctag=377BA326&showSummary=true">
-Search for more documents like this one</A>
+<SMALL>59% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BLSAM+%2Breplication|id=6438893;http://www.isi.edu/~wls/">William L. Scheding @ ISI</A>&nbsp;
+- William L. (Bill) Scheding (Resume) Systems Programmer USC/Information Sciences Institute 4676 Admiralty Way, Suite 1001 Weather conditions at 6:00 PST on 5 JUN 99 for Los Angeles, CA. <BR><SMALL>http://www.isi.edu/~wls/
 <P></SMALL>
-<SMALL>34% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BLSAM+%2Breplication|id=27867628;http://www-sor.inria.fr/projects/relais/biblio/webcaches.bib">Untitled</A>&nbsp;
-- Abdelzaher and Nina Bhatti}, title = {Web Content Adaptation to Improve Server Overload Behavior}, booktitle = {Proceedings of the 8th International {WWW} Conference}, year = {1999}, address = {Toronto, Canada}, month = may, note = {\url{http://www8.org/w8-papers/4c-server/web/web.pdf}} } @InProceedings{abrams95a, author = {Marc Abrams and Charles R. <BR><SMALL>http://www-sor.inria.fr/projects/relais/biblio/webcaches.bib
-<BR><A HREF="/search.gw?c=web&qbe=27867628&ctag=377BA326&showSummary=true">
-Search for more documents like this one</A>
+<SMALL>56% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BLSAM+%2Breplication|id=27142889;http://www.isi.edu/div7/cities/publications/wc98/lsam-arch.html">Abstract</A>&nbsp;
+- Joe Touch USC / Information Sciences Institute touch@isi.edu Abstract 1` The LSAM Proxy is a multicast distributed web cache that provides automated multicast push of web pages, based on self-configuring interest groups. <BR><SMALL>http://www.isi.edu/div7/cities/publications/wc98/lsam-arch.html
 <P></SMALL>
-<SMALL>34% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BLSAM+%2Breplication|id=30272838;http://www.cs.rutgers.edu/~davison/web-caching/bibliography.html">Brian Davison's Web-Caching Bibliography</A>&nbsp;
+<SMALL>55% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BLSAM+%2Breplication|id=39852359;http://www.ch.engelschall.com/ar/perldoc/pages/util/AutoSearch.html">AutoSearch -- a web-searching application</A>&nbsp;
+- AutoSearch -- a web-searching application AutoSearch qid AutoSearch performs a web-based search and puts the results set in qid/index.html. Subsequent searches (i.e., the second form above) AutoSearch determine what changes (if any) occured to the results sent since the last run. <BR><SMALL>http://www.ch.engelschall.com/ar/perldoc/pages/util/AutoSear...
+<P></SMALL>
+<SMALL>55% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BLSAM+%2Breplication|id=35629417;http://theory.uwinnipeg.ca/CPAN/data/WWW-Search/bin/AutoSearch.html">AutoSearch -- a web-searching application</A>&nbsp;
+- requires perl 5.004 or later AutoSearch -- a web-searching application AutoSearch qid AutoSearch performs a web-based search and puts the results set in qid/index.html. <BR><SMALL>http://theory.uwinnipeg.ca/CPAN/data/WWW-Search/bin/AutoSear...
+<P></SMALL>
+<SMALL>52% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BLSAM+%2Breplication|id=23651326;http://theory.uwinnipeg.ca/CPAN/data/WWW-Search/WWW/Search/AltaVista/AdvancedWeb.html">WWW::Search::AltaVista::AdvancedWeb - class for advanced Alta Vista web searching</A>&nbsp;
+- requires perl 5.004 or later WWW::Search::AltaVista::AdvancedWeb - class for advanced Alta Vista web searching require WWW::Search; $search = new WWW::Search('AltaVista::AdvancedWeb'); <BR><SMALL>http://theory.uwinnipeg.ca/CPAN/data/WWW-Search/WWW/Search/A...
+<P></SMALL>
+<SMALL>52% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BLSAM+%2Breplication|id=2873062;http://www.isi.edu/~touch/pubs/">Joe Touch - Publications (chronological)</A>&nbsp;
+- Finn, J. Touch, Proc. Usenix Workshop on Embedded Systems, Mar. 1999. Available in its original form as ISI Research Report, ISI/RR-98-461, July, 1998. <BR><SMALL>http://www.isi.edu/~touch/pubs/
+<P></SMALL>
+<SMALL>50% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BLSAM+%2Breplication|id=40972986;http://www.cra.org/Policy/NGI/papers/touchWP">Untitled</A>&nbsp;
+- Joe Touch Project Leader and Research Assistant Professor USC/Information Sciences Institute 4676 Admiralty Way Marina del Rey, CA 90292-6695 touch@isi.edu +1 (310) 822-1511 +1 (310) 823-6714 (fax) ------------------------------------------------------------ The X-Bone Joe Touch / touch@isi.edu USC / Information Sciences Institute NGI Workshop White Paper - March 1997 Introduction... <BR><SMALL>http://www.cra.org/Policy/NGI/papers/touchWP
+<P></SMALL>
+<SMALL>47% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BLSAM+%2Breplication|id=27997649;http://ietf.org/internet-drafts/draft-ietf-wrec-res-00.txt">Untitled</A>&nbsp;
+- INTERNET-DRAFT Joe Touch WREC Working Group ISI draft-ietf-wrec-res-00.txt March 22, 1999 Expires: Sept. 22, 1999 Web Caching and Replication -- Research Issues Status of this Memo This document is an Internet-Draft and is in full conformance with all provisions of Section 10 of RFC2026 except that the right to produce derivative works is not granted. <BR><SMALL>http://ietf.org/internet-drafts/draft-ietf-wrec-res-00.txt
+<P></SMALL>
+<SMALL>46% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BLSAM+%2Breplication|id=40566523;http://sofa.dartnet.co.uk/manual/perl5/site_perl/WWW/search.pm.html">search.pm</A>&nbsp;
+- WWW::Search - Virtual base class for WWW searches This class is the parent for all access methods supported by the library. This library implements a Perl API to web-based search engines. <BR><SMALL>http://sofa.dartnet.co.uk/manual/perl5/site_perl/WWW/search....
+<P></SMALL>
+<SMALL>45% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BLSAM+%2Breplication|id=23507409;http://www.ch.engelschall.com/ar/perldoc/pages/module/WWW::Search.html">WWW::Search - Virtual base class for WWW searches</A>&nbsp;
+- WWW::Search WWW::Search - Virtual base class for WWW searches This class is the parent for all access methods supported by the library. This library implements a Perl API to web-based search engines. <BR><SMALL>http://www.ch.engelschall.com/ar/perldoc/pages/module/WWW::S...
+<P></SMALL>
+<SMALL>44% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BLSAM+%2Breplication|id=31432266;http://www.dmi.usherb.ca/laboratoires/documentations-logiciels/Perl/lib/WWW/Search.html">WWW::Search - Virtual base class for WWW searches</A>&nbsp;
+- WWW::Search - Virtual base class for WWW searches require WWW::Search; $search_engine = &quot;AltaVista&quot;; $search = new WWW::Search($search_engine); <BR><SMALL>http://www.dmi.usherb.ca/laboratoires/documentations-logicie...
+<P></SMALL>
+<SMALL>42% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BLSAM+%2Breplication|id=19382554;http://www.isi.edu/~johnh/WORK/CS555/SP1997/cs555.bib">Untitled</A>&nbsp;
+- % % % Bibilography for USC CSci555, Spring 1997 % (web page ). % Prepared by John Heidemann and Ted Faber. % Please report any errors to % @string{comments-to = "johnh@isi.edu"} % % This database is a subset ficus.bib. % % % publisher strings @string{unpub = "Unpublished manuscript"}; @string{pub-acm = "{ACM}"}; @string{pub-acm-address = "New York"}; @string{pub-aw = "Addison-Wesley"};... <BR><SMALL>http://www.isi.edu/~johnh/WORK/CS555/SP1997/cs555.bib
+<P></SMALL>
+<SMALL>38% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BLSAM+%2Breplication|id=10609598;http://www.cs.rutgers.edu/~davison/web-caching/bibliography.html">Brian Davison's Web-Caching Bibliography</A>&nbsp;
 - Brian Davison's Web-Caching Bibliography <BR><SMALL>http://www.cs.rutgers.edu/~davison/web-caching/bibliography....
-<BR><A HREF="/search.gw?c=web&qbe=30272838&ctag=377BA326&showSummary=true">
-Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>37% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BLSAM+%2Breplication|id=12112877;http://www-sor.inria.fr/projects/relais/biblio/webcaches-bib.html">webcaches.bib</A>&nbsp;
+- @INPROCEEDINGS{abdelzaher99, author = {Tarek F. Abdelzaher and Nina Bhatti}, title = {Web Content Adaptation to Improve Server Overload Behavior}, booktitle = {Proceedings of the 8th International {WWW} Conference}, year = {1999}, address = {Toronto, Canada}, month = {May}, note = {\url{http://www8.org/w8-papers/4c-server/web/web.pdf}} } @INPROCEEDINGS{abrams95a, author = {Marc Abrams and... <BR><SMALL>http://www-sor.inria.fr/projects/relais/biblio/webcaches-bib...
+<P></SMALL>
+<SMALL>36% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BLSAM+%2Breplication|id=38290102;http://www-sor.inria.fr/projects/relais/biblio/webcaches.bib">Untitled</A>&nbsp;
+- Abdelzaher and Nina Bhatti}, title = {Web Content Adaptation to Improve Server Overload Behavior}, booktitle = {Proceedings of the 8th International {WWW} Conference}, year = {1999}, address = {Toronto, Canada}, month = may, note = {\url{http://www8.org/w8-papers/4c-server/web/web.pdf}} } @InProceedings{abrams95a, author = {Marc Abrams and Charles R. <BR><SMALL>http://www-sor.inria.fr/projects/relais/biblio/webcaches.bib
 <P></SMALL>
 </font>
 <FORM ACTION="/search.gw" METHOD=GET>
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 <TR><TD>
-<INPUT TYPE=hidden NAME=c VALUE=web>
+<INPUT TYPE=hidden NAME=c VALUE=qb>
 <INPUT TYPE=hidden NAME=s VALUE="+LSAM +replication">
 <INPUT TYPE=hidden NAME=showSummary VALUE=true>
 <INPUT TYPE=hidden NAME=start VALUE=0>
@@ -243,41 +296,36 @@ For simplified results, try <a href="/relocate/co=webcraw;http://webcrawler.com/
 <small><br></small>
 <p>
 <center>
-<form action="http://lifeminders.com/lifeminder30/banner/SignUpDAT.asp"
-method="get"> <input type="hidden"
-name="MktgSourceCD" value="LLQA64"> <TABLE BORDER=1 CELLPADDING=0
-CELLSPACING=0 WIDTH=468 HEIGHT=60><TR><TD> <table
-cellpadding="0" cellspacing="0" width="468" height="60" bgcolor="0000FF"
-border="0"><tr><td height="30" valign="top"
-bgcolor="0000FF"><center><img src="http://image.eimg.com/ads/99301_rapidfire.gif" width=468 height=30
-border="0"></td></tr><tr><td valign="top"
-height="30" bgcolor="0000FF" align="center">&nbsp;&nbsp;<font
-color="#FFFFFF"><font face="arial, helvetica,
-sans-serif" size="-1"><B>Your E-mail:</B></font><input type="text"
-name="Email" size="12" align="top"><font
-face="arial, helvetica, sans-serif" size="-1">&nbsp;&nbsp;<B>Zip
-Code:</B></font><input type="text"
-name="PostalCode" size="7">&nbsp;&nbsp;&nbsp; <input type="submit"
-value="Submit"></td></tr></table></TD></TR></TABLE><CENTER><FONT SIZE=-1
-COLOR=#0000FF FACE=arial, geneva><B><A
-HREF="http://www.excite.com/relocate/ad=99301_htmlad.gif|pk=2961325;http://lifeminders.com/l/index.asp?Mktg=LLQE245">Free email
-upgrade!</A></B></FONT></CENTER></form>
+<a href="http://www.excite.com/relocate/ad=103538_webfill081399_exciteani.gif|pk=3132119;http://www.shopthecountry.com" onMouseOver="window.status='Click Here!';return true" language="Javascript"><img src="http://image.eimg.com/ads/103538_webfill081399_exciteani.gif" ALT="Click Here!" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> Click Here! </B></FONT></CENTER></a>
 <small><br></small>
 <FORM NAME=botbox ACTION=/search.gw>
 <TABLE border=0 cellpadding=1 cellspacing=0 width=600>
 <TR><TD bgcolor=cccccc>
 <a name="botbox"> </a>
-<TABLE border=0 cellspacing=0 cellpadding=4 width='598' bgcolor=ffffff>
+<TABLE border=0 cellspacing=0 cellpadding=4 width=100% bgcolor=ffffff>
 <TR>
 <TD align=right bgcolor=ffffff nowrap>
-<b><font face="helvetica" size=-1>You searched for</font></b>
-<input size=30 name=search value="+LSAM +replication">
+<b><font face="helvetica" size=-1>Search for&nbsp;</font></b>
+<input size=25 name=search value="+LSAM +replication">
 <input type=hidden name=tsug value=-1>
 <input type=hidden name=csug value=0>
-</TD>
-<TD>
+<font face="helvetica" size=-1><b>&nbsp;in&nbsp;</b></font>
+<select name="lang">
+<option value="en" >English
+<option value="cn" >Chinese
+<option value="nl" >Dutch
+<option value="fr" >French
+<option value="de" >German
+<option value="it" >Italian
+<option value="jp" >Japanese
+<option value="no" >Norwegian
+<option value="pt" >Portuguese
+<option value="es" >Spanish
+<option value="se" >Swedish
+</select>
+&nbsp;
 <font face="helvetica" size=-1>
-<input type=submit value="Search Again">
+<input type=submit value="Search">
 </font>
 </TD>
 <TD nowrap>
@@ -302,9 +350,9 @@ upgrade!</A></B></FONT></CENTER></form>
 <A HREF=http://www.excite.com/voyeur_xt>Search Voyeur</A>&nbsp;
 <A HREF=http://www.excite.com/comments/>Feedback</A></nobr><p>
 <nobr><b>Services:</b>&nbsp;
-<A HREF=http://www.excite.com/info/advertising/>Advertise on Excite</A>&nbsp; <A HREF=/relocate/co=xsr_botnav_bookflights;http://city.net/forms/reservations/>Book Flights</A>&nbsp;
+<A HREF=http://www.excite.com/info/advertising/>Advertise on Excite</A>&nbsp; <A HREF=/relocate/co=xsr_botnav_deskradio;http://www.excite.com/assist/html/download>Free Desktop Radio</A>&nbsp;
 <A HREF=/relocate/co=xsr_botnav_classifieds;http://classifieds2000.com/cgi-cls/display.exe?partner=excite&path=class&template=none&>Classifieds</A>&nbsp;
-<A HREF=/relocate/co=7705;http://yellowpages.excite.com>Yellow Pages</A>&nbsp;
+<A HREF=/relocate/co=yp_xsr_results;http://yellowpages.excite.com>Yellow Pages</A>&nbsp;
 <A HREF=http://www.excite.com/reference/>More...</A></nobr><p>
 </font>
 <font size=-2>
@@ -312,6 +360,6 @@ Copyright 1995-1999 Excite Inc. &nbsp; Powered by <A HREF="http://www.sun.com">S
 <A HREF=http://www.excite.com/info/disclaimer/>Disclaimer</A>
 </font>
 </center>
-<IMG SRC="http://ad.preferences.com/ping.ng;spacedesc=TCExciteData_Excite_1x1_RunOfSite_Any&event=KeywordResults&time=1999.07.13.11.07.00" HEIGHT=1 WIDTH=1 BORDER=0>
+<IMG SRC="http://ad.preferences.com/ping.ng;spacedesc=TCExciteData_Excite_1x1_RunOfSite_Any&event=KeywordResults&time=1999.08.16.16.20.25" HEIGHT=1 WIDTH=1 BORDER=0>
 </body>
 </html>

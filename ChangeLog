@@ -1,3 +1,38 @@
+1999-08-18  Kingpin  <mthurn@tasc.com>
+
+	* AutoSearch updated to version 2.01, with new command-line arguments -host and -port
+
+	* AutoSearch now allows multiple -options arguments with the same key
+
+1999-08-16  Kingpin  <mthurn@tasc.com>
+
+	* complete package tested with ActivePerl 519 in WinNT
+
+	* It finally happened!  Our "Bogus" query string is starting to
+	appear in web archives and is being indexed by search engines.
+	Therefore, the "Bogus" query string now contains some "random"
+	numbers so that it can never be indexed.
+
+1999-08-09  Kingpin  <mthurn@tasc.com>
+
+	* WebSearch now allows long command-line argument names with double-minus
+
+	* WebSearch updated to version 2.04, with new command-line arguments --host and --port
+
+	* WebSearch now allows multiple --options arguments with the same key
+
+1999-08-01  Kingpin  <mthurn@tasc.com>
+
+	* WebSearch now has its own VERSION number
+
+1999-07-23  Jim Smyser
+
+	* NorthernLight.pm updated to 2.02 (fix description parsing)
+
+1999-07-16  Kingpin  <mthurn@tasc.com>
+
+	* complete package tested with ActivePerl 517 in Win98
+
 1999-07-14  Kingpin  <mthurn@tasc.com>
 
 	* WWW::Search VERSION 2.01 RELEASED!

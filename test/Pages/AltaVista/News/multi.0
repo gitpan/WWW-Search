@@ -4,7 +4,7 @@
 <font face="Arial,Helvetica" size="+1"><a href="/cgi-bin/query?text&pg=q&what=news">AltaVista Search Service</a></font><p><FORM name=mfrmaction="/cgi-bin/query">
 <INPUT TYPE=hidden NAME=pg VALUE=q><INPUT TYPE=hidden NAME=what VALUE="news"><INPUT TYPE=hidden NAME=text VALUE=yes><font size=-1><b>Search Usenet for postings on:</b>
 </font><p><input type=text name=q size=50 maxlength=800 value="+Perl +CPAN">&nbsp; <input type=submit name=search value="Search"><p><P><font size=-1>Search - <a href="/cgi-bin/query?pg=aq&what=news&text=yes">Advanced Text Search</a> - <a href="/cgi-bin/query?pg=q&text=yes">The Web</a></font></FORM>
-AltaVista found about 2036 postings. <P><font size=-1><b>Result Pages: </b><b>1</b> &nbsp;<a href="/cgi-bin/query?pg=q&what=news&text=yes&q=%2bPerl+%2bCPAN&stq=30&c9k">2</a>
+AltaVista found about 2750 postings. <P><font size=-1><b>Result Pages: </b><b>1</b> &nbsp;<a href="/cgi-bin/query?pg=q&what=news&text=yes&q=%2bPerl+%2bCPAN&stq=30&c9k">2</a>
  &nbsp;<a href="/cgi-bin/query?pg=q&what=news&text=yes&q=%2bPerl+%2bCPAN&stq=60&c9k">3</a>
  &nbsp;<a href="/cgi-bin/query?pg=q&what=news&text=yes&q=%2bPerl+%2bCPAN&stq=90&c9k">4</a>
  &nbsp;<a href="/cgi-bin/query?pg=q&what=news&text=yes&q=%2bPerl+%2bCPAN&stq=120&c9k">5</a>
@@ -42,7 +42,7 @@ AltaVista found about 2036 postings. <P><font size=-1><b>Result Pages: </b><b>1<
  &nbsp;<a href="/cgi-bin/query?pg=q&what=news&text=yes&q=%2bPerl+%2bCPAN&stq=150&c9k">6</a>
  &nbsp;<a href="/cgi-bin/query?pg=q&what=news&text=yes&q=%2bPerl+%2bCPAN&stq=180&c9k">7</a>
 &nbsp; <a href="/cgi-bin/query?pg=q&what=news&text=yes&q=%2bPerl+%2bCPAN&stq=30&c9k">[<b>Next &gt;&gt;</b>]</a> <br>
-</font><font size=-2>word count: CPAN: 100296; Perl: 147159<BR></font><P>
+</font><font size=-2>word count: CPAN: 131646; Perl: 161202<BR></font><P>
 <p><font face="Arial,Helvetica" size="-2">
 <a href="/">AltaVista.com</a> |
 <a href="/av/content/about.htm">About AltaVista</a> |

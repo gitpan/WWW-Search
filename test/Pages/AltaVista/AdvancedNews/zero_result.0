@@ -1,11 +1,11 @@
 <html><head>
-<title>AltaVista: Advanced Query perl and BogusNoSuchWordSpammersAreIdiots</title>
+<title>AltaVista: Advanced Query perl and Bogus26745NoSuchWord934834683</title>
 </head><body>
 <font face="Arial,Helvetica" size="+1"><a href="/cgi-bin/query?text&pg=q&what=news">AltaVista Search Service</a></font><p><FORM name=mfrmaction="/cgi-bin/query">
 <INPUT TYPE=hidden NAME=pg VALUE=aq><INPUT TYPE=hidden NAME=what VALUE="news"><INPUT TYPE=hidden NAME=text VALUE=yes><font size=-1><b>Search Usenet for postings on:</b>
 </font><font size=-1><p><input type=text name=r size=50 value="">
  <input type=submit name=search value="Search"><p>Enter boolean expression:<br>
-<textarea name=q cols=50 rows=3 maxlength=800 wrap=virtual>perl and BogusNoSuchWordSpammersAreIdiots</textarea><p>Range of Dates (e.g. 21/Mar/96): <b> From </b><INPUT TYPE=text NAME=d0 SIZE=9 MAXLENGTH=32 VALUE="">
+<textarea name=q cols=50 rows=3 maxlength=800 wrap=virtual>perl and Bogus26745NoSuchWord934834683</textarea><p>Range of Dates (e.g. 21/Mar/96): <b> From </b><INPUT TYPE=text NAME=d0 SIZE=9 MAXLENGTH=32 VALUE="">
 <b> To </b><INPUT TYPE=text NAME=d1 SIZE=9 MAXLENGTH=32 VALUE=""><p><INPUT TYPE=checkbox name=fmt value=n> <b>Count documents matching the boolean expression.</b> 
 <P><font size=-1><a href="/cgi-bin/query?pg=q&what=news&text=yes">Search</a> - Advanced Text Search - <a href="/cgi-bin/query?pg=aq&text=yes">The Web</a></font></font></FORM>
 AltaVista found no document matching your query. <P><dl>

@@ -1,8 +1,9 @@
+<!-- ad bucket == 2, file was /servers/ads/adbuckets.dat -->
 <html>
-<!--Northern Light Simple Search No Results (Build 5036)--><!--    -->
+<!--Northern Light Simple Search No Results (Build 6020)--><!--    -->
 
 <head>
- <title>Northern Light Search: BogusNoSuchWordSpammersAreIdiots</title>
+ <title>Northern Light Search: Bogus26745NoSuchWord934834683</title>
 </head>
 
 <!-- Shopping Cart HTML -->
@@ -44,7 +45,7 @@ You may want to <b>check the spelling of all the words in your query.</b>
 <input type=hidden name=us value="025">
 <input type=hidden name=xd value="">
 <tr>
- <td><input type=text size=38 name=qr value="BogusNoSuchWordSpammersAreIdiots"></td>
+ <td><input type=text size=38 name=qr value="Bogus26745NoSuchWord934834683"></td>
  <td>&nbsp;&nbsp;</td>
  <td><input name=search type=image src="docs/gif/btn_search.gif" border=0 alt="Search"><a href="docs/search_help_results.html"><img src="docs/gif/btn_search_help.gif" border=0 width=51 height=28 alt="Help"></a></td>
 </tr>

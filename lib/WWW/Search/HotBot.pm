@@ -1,7 +1,7 @@
 # HotBot.pm
 # by Wm. L. Scheding and Martin Thurn
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: HotBot.pm,v 1.36 1999/07/13 18:45:14 mthurn Exp $
+# $Id: HotBot.pm,v 1.37 1999/08/17 13:45:00 mthurn Exp $
 
 =head1 NAME
 
@@ -296,7 +296,10 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 If it''s not listed here, then it wasn''t a meaningful nor released revision.
 
-=head2 2.01, 1999-07-13
+=head2 2.02, 1999-08-17
+
+Now is able to parse "URL-only" format (i.e. {'DE' => 0}) and "brief
+description" format (i.e. {'DE' => 1}) if the user so desires.
 
 =head2 1.34, 1999-07-01
 
@@ -374,7 +377,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.01';
+$VERSION = '2.02';
 
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 $TEST_CASES = <<"ENDTESTCASES";
@@ -492,6 +495,7 @@ sub native_retrieve_some
   my ($state) = ($TITLE);
   my ($hit) = ();
   my $sHitPattern = quotemeta '<font face="verdana&#44;arial&#44;helvetica" size="2">';
+  my $WHITESPACE = '(\s|&nbsp;)';
   foreach ($self->split_lines($response->content()))
     {
     s/\r$//;  # delete DOS carriage-return
@@ -545,17 +549,21 @@ sub native_retrieve_some
       # Actual line of input:
       # <B>2. </B><A HREF="http://www.toysrgus.com/textfiles.html">Charts, Tables, and Text Files</A><BR>Text Files Maintained by Gus Lopez (lopez@halcyon.com) Ever wonder which weapon goes with which figure? Well, that's the kind of information you can find right here. Any beginning collector should glance at some of these files since they answer...<br>92%&nbsp;&nbsp;&nbsp; 3616 bytes&#44; 1998/04/07&nbsp;&nbsp;&nbsp;http://www.toysrgus.com/textfiles.html<p>
       # <br> <b>1.&nbsp;&nbsp;<a href=/director.asp?target=http%3A%2F%2Fwww%2Ecoolshop%2Ecom%2Fliquidblue%2Ehtml&id=1&userid=2EtRtdJnbHAA&query=MT=Star+Wars+Golden+Turtle&SM=SC&rsource=INK>The Coolest T-Shirts Ever!</A></b><br>Liquid BlueM-. T-shirts, CoolshopM-. offers an incredible line of popular T-shirt styles. In addition to the designs featuring images from the legendary Grateful Dead, COOLSHOPM-. offers a diverse line of T-shirts with original art depicting the...<br><font size=-1><b>99%&nbsp&nbsp</b><i>11/4/98</i>  http://www.coolshop.com/liquidblue.html<BR>See results from <a href="/?MT=Star+Wars+Golden+Turtle&SM=SC&uHost=http://www.coolshop.com/liquidblue.html">this site only</a>.</font><p> <b>2.&nbsp;&nbsp;<a href=/director.asp?target=http%3A%2F%2Fcust%2Eidl%2Enet%2Eau%2Ffionat%2F&id=2&userid=2EtRtdJnbHAA&query=MT=Star+Wars+Golden+Turtle&SM=SC&rsource=INK>Fiona's Tazo Swap Page</A></b><br>UPDATED 30th Nonember 98 I Swap 1 for 1 in mint condition, unless other-wise specified. I will swap 2 of yours for 1 of mine if you don't have any-thing I need. ? means in the process of swapping. SERIES 1: ORIGINAL SWAPS 6 7 22 27 30 32 35 47 BLUE.<br><font size=-1><b>98%&nbsp&nbsp</b><i>11/30/98</i>  http://cust.idl.net.au/fionat/<BR>See results from <a href="/?MT=Star+Wars+Golden+Turtle&SM=SC&uHost=http://cust.idl.net.au/fionat/">this site only</a>.</font>
+      # Here is what it looks like if DE=1 (brief description):
+      # <p> <b>1. <a href=/director.asp?target=http%3A%2F%2Fwww%2Epitt%2Eedu%2F%7Ethurn&id=1&userid=3gr+hc5jrHwm&query=MT=Martin+Thurn&SM=SC&DE=1&DC=100&rsource=INK>Martin Thurn's Index Page</A></b><br>Martin Thurn Why am I so busy? I am gainfully employed at TASC. I have a family including 3 beautiful children. I am a co-habitant with two immaculate cats. I am the editor of The Star Wars Collector, a bimonthly newsletter by Star Wars  collectors.<font size=1><br><b>99%&nbsp&nbsp</b></font><p> <b>2. <a href=/director.asp?target=http%3A%2F%2Fwww%2Eposta%2Esuedtirol%2Ecom%2F&id=2&userid=3gr+hc5jrHwm&query=MT=Martin+Thurn&SM=SC&DE=1&DC=100&rsource=INK>**Gasthof Post St. Martin in Thurn Val Badia Sudtirol Alto Adige Southtyrol Suedtirol</A></b><br>Urlaub im Gasthof Post in Pikolein in St. Martin in Thurn in Val Badia in  Sudtiro<font size=1><br><b>98%&nbsp&nbsp</b></font><p> <b>3. ...
       my @asHits = split /<p>/;
       foreach my $sHit (@asHits)
         {
         my ($iHit,$iPercent,$iBytes,$sURL,$sTitle,$sDesc,$sDate) = (0,0,0,'','','','');
-        # m/<B>(\d+)\.\s/ && $iHit = $1;
+        # m/<b>(\d+)\.$WHITESPACE/ && $iHit = $1;
         $sURL = $1 if $sHit =~ m/uHost=(.+)\"/;
         # Following line added 1999-04-12 to recognize domain-limited results:
         $sURL ||= $1 if $sHit =~ m!</i>\s*(.+)!;
+        # Following line added 1999-08-17 to recognize brief-description results (DE=1):
+        $sURL ||= $1 if $sHit =~ m!director.asp\?target=(.+?)\&!;
         $sTitle = $1 if $sHit =~ m/\>([^<]+)<\/A>/;
         $sDate = $1 if $sHit =~ m!<i>(\d\d?\/\d\d?\/\d\d)</i>!;
-        $sDesc = $1 if $sHit =~ m/<br>([^<]+)<br>/;
+        $sDesc = $1 if $sHit =~ m/<br>([^<]+)<(br|font)/;
         $iPercent = $1 if $sHit =~ m/>(\d+)\%(&nbsp|\<)/;
         $iBytes = $1 if $sHit =~ m/&nbsp;\s(\d+)\sbytes/;
         # Note that we ignore MIRROR URLs, so our total hit count may
@@ -619,7 +627,9 @@ DM = month (January = 1)
 DD = day of month
 DC = (entry) number of hits per page
 DE = (selection) output format
-     2 = the only value WWW::Search::HotBot can recognize!
+     0 = "URL only" (also gives title and score)
+     1 = brief descriptions (adds description)
+     2 = full descriptions (adds date and size)
 FAX = (checkbox) only return pages that contain ActiveX data type
 FJA = (checkbox) only return pages that contain Java data type
 FJS = (checkbox) only return pages that contain JavaScript data type
@@ -667,3 +677,5 @@ SM = (selection) search type
      name = the person
      url = links to this URL
      B = Boolean phrase     
+
+Here is 
