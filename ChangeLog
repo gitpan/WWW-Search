@@ -1,3 +1,13 @@
+2002-01-22  Kingpin  <mthurn@copper.dulles.tasc.com>
+
+	* lib/WWW/Search.pm (http_request): do not use URI::URL
+
+2001-12-20  Kingpin  <mthurn@copper.dulles.tasc.com>
+
+	* lib/WWW/Search/Test.pm: remove warning about ./WebSearch
+
+	* lib/WWW/Search.pm (preprocess_results_page): new method
+
 2001-11-23  Kingpin  <mthurn@copper.dulles.tasc.com>
 
 	* lib/WWW/Search.pm (http_request): delete bogus argument to http_request_to_file() call

@@ -45,7 +45,7 @@ use File::Path;
 
 use vars qw( $VERSION $bogus_query );
 
-$VERSION = '2.16';
+$VERSION = '2.17';
 $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 
 ($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = qw(dummy internal external update);
@@ -55,7 +55,7 @@ $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 my @as = split(/\s/, eval{`WebSearch --VERSION`});
 my $websearch = shift @as;
 # Try local directory, in case . is not in the path:
-@as = split(/\s/, eval{`./WebSearch --VERSION`});
+(-f './WebSearch') && (@as = split(/\s/, eval{`./WebSearch --VERSION`}));
 $websearch ||= shift @as;
 $websearch ||= 'not in the path';
 undef $websearch unless $websearch =~ m/WebSearch/;

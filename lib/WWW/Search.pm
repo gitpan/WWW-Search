@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.61 2001/11/23 20:20:03 mthurn Exp $
+# $Id: Search.pm,v 1.62 2001/12/20 16:06:20 mthurn Exp mthurn $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -57,8 +57,8 @@ see L<WWW::SearchResult>.
 
 =head1 METHODS AND FUNCTIONS
 
-Methods and functions marked as PRIVATE are in general only useful to
-backend programmers.
+Methods and functions marked as PRIVATE are, in general, only useful
+to backend programmers.
 
 =cut
 
@@ -69,7 +69,7 @@ package WWW::Search;
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query generic_option strip_tags @ENGINES_WORKING);
-$VERSION = '2.26';
+$VERSION = '2.28';
 $MAINTAINER = 'Martin Thurn <mthurn@tasc.com>';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
@@ -932,7 +932,7 @@ sub http_request
     my $request;
     if ($method eq 'POST')
       {
-      my $uri_url = new URI::URL($url);
+      my $uri_url = $HTTP::URI_CLASS->new($url);
       my $equery = $uri_url->equery;
       $uri_url->equery(undef);   # we will handle the query ourselves
       $request = new HTTP::Request($method, $uri_url->abs());
@@ -1185,6 +1185,9 @@ URL) and the URL to be converted.  Returns a URI or URI::URL object
 sub absurl
   {
   my ($self, $base, $url) = @_;
+  $base ||= '';
+  # print STDERR " +   this is WWW::Search::absurl($base,$url)\n" if 1 < $self->{_debug};
+  $base = $self->{_prev_url} if $base eq '';
   #$url =~ s,^http:/([^/]),/$1,; #bogus sfgate URL
   my $link = $HTTP::URI_CLASS->new_abs($url, $base);
   return($link);
@@ -1230,9 +1233,13 @@ sub retrieve_some
 
 An internal routine to fetch the next page of results from the engine.
 Sets $self->{_prev_url} to the URL of the page just retrieved.
-Creates an HTML::TreeBuilder object and passes it to $self->parse_tree().
 
-If a backend defines parse_tree(), it need not also define
+Calls $self->preprocess_results_page() on the raw HTML of the page.
+
+Then, parses the page with an HTML::TreeBuilder object and
+passes that object to $self->parse_tree().
+
+If a backend defines the method parse_tree(), it need not also define
 native_retrieve_some().  See the WWW::Search::Yahoo distribution for
 example usage.
 
@@ -1257,9 +1264,31 @@ sub native_retrieve_some
     return undef;
     } # if
   # Parse the output:
-  my $tree = HTML::TreeBuilder->new_from_content($response->content);
+  my $tree = HTML::TreeBuilder->new_from_content($self->preprocess_results_page($response->content));
   return $self->parse_tree($tree);
   } # native_retrieve_some
+
+
+=head2 preprocess_results_page (PRIVATE)
+
+A filter on the raw HTML of the results page.
+This allows the backend to alter the HTML before it is parsed,
+such as to correct for known problems, HTML that can not be parsed correctly, etc.
+
+This method is called from within native_retrieve_some (above)
+before the HTML of the page is parsed.
+
+See the WWW::Search::Ebay distribution 2.07 or higher for example
+usage.
+
+=cut
+
+sub preprocess_results_page
+  {
+  # Here is just a stub.
+  my $self = shift;
+  @_;
+  } # preprocess_results_page
 
 
 =head2 test_cases (deprecated)
