@@ -3,11 +3,14 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.33?  (2002-04-21)
+WHAT IS NEW IN WWW::Search 2.34?  (2002-06-03)
 ----------------------------------------------
 
 overview: 
- * fixed MANIFEST & missing files
+ * new methods http_method() and logout()
+ * fixed case-sensitivity for AutoSearch args
+ * make sure required modules are in Makefile.PL
+ * some pod updates
 
 For details, see the ChangeLog file and/or the pod of each affected
 module.

@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.69 2002/04/19 14:04:03 mthurn Exp $
+# $Id: Search.pm,v 1.69 2002/04/19 14:04:03 mthurn Exp mthurn $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -36,10 +36,12 @@ Here is a sample program:
     my $query = 'Columbus Ohio sushi restaurant';
     my $search = new WWW::Search('AltaVista');
     $search->native_query(WWW::Search::escape_query($query));
+    $search->login($sUser, $sPassword);
     while (my $result = $search->next_result())
       {
       print $result->url, "\n";
       } # while
+    $search->logout;
 
 Results are objects of type C<WWW::SearchResult>
 (see L<WWW::SearchResult> for details).
@@ -70,7 +72,7 @@ package WWW::Search;
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw( escape_query unescape_query generic_option strip_tags );
-$VERSION = '2.34';
+$VERSION = '2.35';
 $MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
@@ -140,11 +142,13 @@ sub new
                     agent_name => $default_agent_name,
                     agent_e_mail => $default_agent_e_mail,
                     env_proxy => 0,
+                    http_method => 'GET',
                     http_proxy => '',
                     http_proxy_user => undef,
                     http_proxy_pwd => undef,
                     timeout => 60,
-                    debug => 0,
+                    _debug => 0,
+                    _parse_debug => 0,
                     search_from_file => undef,
                     search_to_file => undef,
                     search_to_file_index => 0,
@@ -207,7 +211,7 @@ use constant DEBUG_FIND => 0;
 
 sub wanted
   {
-  # Code adapted from the following netnews post:
+  # Code adapted from the following netnews post (Thank you, Tom!):
   # From: Tom Christiansen (tchrist@mox.perl.com)
   # Subject: SRC: pminst - find modules whose names match this pattern
   # Newsgroups: comp.lang.perl.misc
@@ -271,7 +275,7 @@ Example:
   $search->native_query('search-engine-specific+escaped+query+string',
                         { option1 => 'able', option2 => 'baker' } );
 
-The hash of options following the query string is optional.  
+The hash of options following the query string is optional.
 The query string is backend-specific.
 There are two kinds of options:
 options specific to the backend,
@@ -293,11 +297,6 @@ Enables backend debugging.  The default is 0 (no debugging).
 =item search_parse_debug
 
 Enables backend parser debugging.  The default is 0 (no debugging).
-
-=item search_method
-
-Specifies the HTTP method (C<GET> or C<POST>) for HTTP-based queries.
-The default is GET
 
 =item search_to_file FILE
 
@@ -336,7 +335,7 @@ After C<native_query>, the next step is usually:
 sub native_query
   {
   my $self = shift;
-  print STDERR " + native_query($_[0])\n" if $self->{debug};
+  print STDERR " + native_query($_[0])\n" if $self->{_debug};
   # return $self->_elem('native_query', @_) if ($#_ != 1);
   $self->reset_search();
   $self->{'native_query'} = $_[0];
@@ -396,17 +395,26 @@ cookies if/when you wish.
   my $oJar = HTTP::Cookies->new(...);
   $oSearch->cookie_jar($oJar);
 
+If you pass in no arguments, the cookie jar (if any) is returned.
+
+  my $oJar = $oSearch->cookie_jar;
+  unless (ref $oJar) { print "No jar" };
+
 =cut
 
 sub cookie_jar
   {
   my $self = shift;
+  if (! @_)
+    {
+    return $self->{'_cookie_jar'};
+    } # if no arguments
   my $arg = shift;
   if (ref($arg) eq 'HTTP::Cookies')
     {
     $self->{'_cookie_jar'} = $arg;
     $self->{'_cookie_jar_we_save'} = 0;
-    }
+    } # if
   elsif (! ref($arg))
     {
     # Assume that $arg is a file name:
@@ -610,17 +618,17 @@ to the HTTP response code.
 sub results
   {
   my $self = shift;
-  print STDERR " + results(",$self->{'native_query'},")\n" if $self->{debug};
+  print STDERR " + results(",$self->{'native_query'},")\n" if $self->{_debug};
   Carp::croak "query string is not defined" if (!defined($self->{'native_query'}));
   Carp::croak "query string is empty" unless ($self->{'native_query'} ne '');
   # Put all the SearchResults into the cache:
   1 while ($self->retrieve_some());
   $self->{cache} ||= [];
   my $iMax = scalar(@{$self->{cache}});
-  # print STDERR " +   mtr is ", $self->{maximum_to_retrieve}, "\n" if $self->{debug};
-  # print STDERR " +   cache contains $iMax results\n" if $self->{debug};
+  # print STDERR " +   mtr is ", $self->{maximum_to_retrieve}, "\n" if $self->{_debug};
+  # print STDERR " +   cache contains $iMax results\n" if $self->{_debug};
   $iMax = $self->{maximum_to_retrieve} if ($self->{maximum_to_retrieve} < $iMax);
-  # print STDERR " +   returning $iMax results\n" if $self->{debug};
+  # print STDERR " +   returning $iMax results\n" if $self->{_debug};
   return @{$self->{cache}}[0..$iMax-1];
   } # results
 
@@ -664,6 +672,32 @@ sub next_result
     # Go back and try again:
     } # while infinite
   } # next_result
+
+
+=head2 login
+
+Backends which need to login to the search engine should implement
+this function.  Takes two arguments, user and password.
+
+=head2 logout
+
+Backends which need to logout from the search engine should implement
+this function.
+
+=cut
+
+sub login
+  {
+  my $self = shift;
+  my ($sUser, $sPassword) = @_;
+  # Here is just a stub.
+  } # login
+
+sub logout
+  {
+  my $self = shift; # no other args
+  # Here is just a stub.
+  } # logout
 
 
 =head2 response
@@ -724,16 +758,16 @@ sub seek_result
 
 =head2 reset_search (PRIVATE)
 
-Resets internal data structures to start over with a new search.
+Resets internal data structures to start over with a new search (on
+the same engine).
 
 =cut
 
 sub reset_search
   {
   my $self = shift;
-  print STDERR " + reset_search(",$self->{'native_query'},")\n" if $self->{debug};
+  print STDERR " + reset_search(",$self->{'native_query'},")\n" if $self->{_debug};
   $self->{'cache'} = ();
-  # $self->{'debug'} = 0;
   $self->{'native_query'} = '';
   $self->{'next_to_retrieve'} = 1;
   $self->{'next_to_return'} = 0;
@@ -882,6 +916,8 @@ Deprecated.
 Given a reference to a hash of string => string, constructs a CGI
 parameter string that looks like 'key1=value1&key2=value2'.
 
+If the value is undef, the key will not be added to the string.
+
 At one time, for testing purposes, we asked backends to use this
 function rather than piecing the URL together by hand, to ensure that
 URLs are identical across platforms and software versions.  But this
@@ -915,6 +951,8 @@ sub hash_to_cgi_string
     {
     # printf STDERR "option: $key is " . $rh->{$key} . "\n";
     next if generic_option($key);
+    # Throw out keys with undef values.
+    next unless defined($rh->{$key});
     # If we want to let the user delete options, uncomment the next
     # line. (They can still blank them out, which may or may not have
     # the same effect):
@@ -922,7 +960,7 @@ sub hash_to_cgi_string
     # next unless $rh->{$key} ne '';
 
     $ret .= $key .'='. $rh->{$key} .'&';
-    }
+    } # foreach $key
   # Remove the trailing '&':
   chop $ret;
   return $ret;
@@ -993,9 +1031,26 @@ Call this method before calling http_request.
 sub http_referer { return shift->_elem('_http_referer', @_); }
 
 
+=head2 http_method (PRIVATE)
+
+Get / set the method to be used for the HTTP request.
+Must be either 'GET' or 'POST'.
+Call this method before calling http_request.
+(Normally you would set this during native_setup_search.)
+The default is 'GET'.
+
+  $oSearch->http_method('POST');
+
+=cut
+
+sub http_method { shift->_elem('http_method', @_); }
+
+
 =head2 http_request($method, $url)
 
-Return the response from an http request, handling debugging.
+Return the response from an http request.
+Similar to LWP::UserAgent::request.
+Handles cookies, follows redirects, etc.
 Requires that http_referer already be set up, if needed.
 
 =cut
@@ -1032,10 +1087,9 @@ sub http_request
       {
       $request->proxy_authorization_basic($self->http_proxy_user,
                                           $self->http_proxy_pwd);
-      }
+      } # if
 
     $self->{'_cookie_jar'}->add_cookie_header($request) if ref($self->{'_cookie_jar'});
-    # print STDERR " + the request with cookies is >>>", $request->as_string, "<<<\n";
 
     if ($self->{'_http_referer'} && ($self->{'_http_referer'} ne ''))
       {
@@ -1044,23 +1098,40 @@ sub http_request
       $s = $s->as_string if ref($s) =~ m!URI!;
       $request->referer($s);
       } # if referer
+    print STDERR " +   original HTTP::Request is:\n", $request->as_string if 3 <= $self->{_debug};
 
     my $ua = $self->user_agent();
-    $response = $ua->request($request);
-
-    if (ref($self->{'_cookie_jar'}))
+    while (1)
       {
-      $self->{'_cookie_jar'}->extract_cookies($response);
-      $self->{'_cookie_jar'}->save if $self->{'_cookie_jar_we_save'};
-      # print STDERR " + WWW::Search just extracted cookies\n";
-      # print STDERR $self->{'_cookie_jar'}->as_string;
-      # print STDERR Dumper($self->{'_cookie_jar'});
-      }
+      $response = $ua->request($request);
 
-    if ($self->{'search_to_file'} && $response->is_success)
-      {
-      $self->http_request_to_file($url, $response);
-      } # if
+      if (ref($self->{'_cookie_jar'}))
+        {
+        $self->{'_cookie_jar'}->extract_cookies($response);
+        $self->{'_cookie_jar'}->save if $self->{'_cookie_jar_we_save'};
+        # print STDERR " + WWW::Search just extracted cookies\n";
+        # print STDERR $self->{'_cookie_jar'}->as_string;
+        # print STDERR Dumper($self->{'_cookie_jar'});
+        } # if
+
+      if ($self->{'search_to_file'} && $response->is_success)
+        {
+        $self->http_request_to_file($url, $response);
+        } # if
+      last if $response->is_success;
+      if ($response->message =~ m!Object moved!i)
+        {
+        # Some engines spoof us with a false 302 code.
+        $request = new HTTP::Request('GET',
+                                     URI->new_abs($response->headers->header('Location'),
+                                                  $response->request->uri),
+                                    );
+        $request->referer($response->request->uri->as_string);
+        $self->{'_cookie_jar'}->add_cookie_header($request) if ref($self->{'_cookie_jar'});
+        print STDERR " +   Object moved, new HTTP::Request is:\n", $request->as_string if 3 <= $self->{_debug};
+        # Go back and try again
+        } # if
+      } # while infinite
     } # if not from_file
   return $response;
   } # http_request
@@ -1234,7 +1305,7 @@ It calls C<native_setup_search> to do backend specific setup.
 sub setup_search
   {
   my ($self) = @_;
-  print STDERR " + setup_search(",$self->{'native_query'},")\n" if $self->{debug};
+  print STDERR " + setup_search(",$self->{'native_query'},")\n" if $self->{_debug};
   $self->{cache} = ();
   $self->{next_to_retrieve} = 1;
   $self->{number_retrieved} = 0;
@@ -1288,7 +1359,7 @@ Checks for overflow.
 sub retrieve_some
   {
   my $self = shift;
-  print STDERR " + retrieve_some(", $self->{'native_query'}, ")\n" if $self->{debug};
+  print STDERR " + retrieve_some(", $self->{'native_query'}, ")\n" if $self->{_debug};
   return undef if ($self->{state} == $SEARCH_DONE);
   # assume that caller has verified defined($self->{'native_query'}).
   $self->setup_search() if ($self->{state} == $SEARCH_BEFORE);
@@ -1305,7 +1376,7 @@ sub retrieve_some
     } # if
   # need more results
   my $res = $self->native_retrieve_some() || 0;
-  print STDERR " +   native_retrieve_some() returned $res\n" if $self->{debug};
+  print STDERR " +   native_retrieve_some() returned $res\n" if $self->{_debug};
   $self->{requests_made}++;
   $self->{number_retrieved} += $res;
   $self->{state} = $SEARCH_DONE if ($res == 0);
@@ -1367,6 +1438,11 @@ end of native_setup_search.
   $oTree->store_comments(1);  # for example
   $self->{'_treebuilder'} = $oTree;
 
+When parse_tree() is called, the $self->next_url is cleared.
+During parsing, the backend should set $self->next_url to the appropriate URL for the next page of results.
+(If parse_tree does not set the value, the search will end after parsing this page of results.)
+When parse_tree() is called, the URL for this page of results can be found in $self->{_prev_url}.
+
 =cut
 
 sub native_retrieve_some
@@ -1378,17 +1454,20 @@ sub native_retrieve_some
   # If this is not the first page of results, sleep so as to not overload the server:
   $self->user_agent_delay if 1 < $self->{'_next_to_retrieve'};
   # Get one page of results:
-  print STDERR " +   sending request (", $self->{'_next_url'}, ")\n" if $self->{_debug};
-  my $response = $self->http_request('GET', $self->{'_next_url'});
+  print STDERR " +   submitting URL (", $self->{'_next_url'}, ")\n" if $self->{_debug};
+  my $response = $self->http_request($self->http_method, $self->{'_next_url'});
+  print STDERR " +     got response\n", $response->headers->as_string, "\n" if 2 <= $self->{_debug};
   $self->{_prev_url} = $self->{_next_url};
+  # Assume there are no more results, unless we find out otherwise
+  # when we parse the html:
   $self->{_next_url} = undef;
   $self->{response} = $response;
-  # print STDERR " --- WWW response is: ", $response->as_string if 4 < $self->{_debug};
+  # print STDERR " --- HTTP response is:\n", $response->as_string if 4 < $self->{_debug};
   if (! $response->is_success)
     {
     if ($self->{_debug})
       {
-      print STDERR " --- WWW request failed, response is: ", $response->as_string;
+      print STDERR " --- HTTP request failed, response is:\n", $response->as_string;
       } # if
     return undef;
     } # if
@@ -1426,6 +1505,9 @@ A filter on the raw HTML of the results page.
 This allows the backend to alter the HTML before it is parsed,
 such as to correct for known problems, HTML that can not be parsed correctly, etc.
 
+Takes one argument, a string (the HTML webpage);
+returns one string (the same HTML, modified).
+
 This method is called from within native_retrieve_some (above)
 before the HTML of the page is parsed.
 
@@ -1436,7 +1518,7 @@ usage.
 
 sub preprocess_results_page
   {
-  # Here is just a stub.
+  # Here is just a stub.  Return our argument(s) without modification.
   my $self = shift;
   @_;
   } # preprocess_results_page

@@ -146,8 +146,8 @@ C<WebSearch> is written by John Heidemann, <johnh@isi.edu>.
 =head1 COPYRIGHT
 
 Copyright (c) 1996-1997 University of Southern California.
-All rights reserved.                                            
-                                                               
+All rights reserved.
+
 Redistribution and use in source and binary forms are permitted
 provided that the above copyright notice and this paragraph are
 duplicated in all such forms and that any documentation, advertising
@@ -170,8 +170,8 @@ use strict;
 &usage('no arguments given') if ($#ARGV == -1);
 # &usage if ($#ARGV >= 0 && $ARGV[0] eq '-?');
 
-use WWW::Search;
 use Getopt::Long;
+use WWW::Search;
 
 use vars qw( $VERSION );
 $VERSION = '2.13';

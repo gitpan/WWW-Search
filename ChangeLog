@@ -1,3 +1,25 @@
+2002-06-04  Kingpin  <mthurn@copper.dulles.tasc.com>
+
+	* lib/WWW/Search.pm (login, logout): new methods
+	(new): initialize _debug parameter to 0
+
+2002-06-03  Kingpin  <mthurn@copper.dulles.tasc.com>
+
+	* lib/WWW/Search.pm (cookie_jar): return jar if no args
+
+2002-05-31  Kingpin  <mthurn@copper.dulles.tasc.com>
+
+	* lib/WWW/Search.pm (hash_to_cgi_string): delete keys whose value is undef
+	(http_method): new get/set method
+
+2002-04-29  Kingpin  <mthurn@copper.dulles.tasc.com>
+
+	* lib/WWW/Search/Test.pm: `use WWW::Search` so client doesn't have to
+
+2002-04-22  Kingpin  <mthurn@copper.dulles.tasc.com>
+
+	* code/AutoSearch-code.pl: fix for case-sensitive cmd-line args
+
 2002-04-19  Kingpin  <mthurn@copper.dulles.tasc.com>
 
 	* lib/WWW/Search.pm (installed_engines): new function

@@ -1,9 +1,8 @@
 AutoSearch.PL
 ChangeLog
-MANIFEST
+MANIFEST			This list of files
 Makefile.PL
 README
-TAGS
 TODO
 Test-Pages/Fireball/multi
 Test-Pages/Fireball/multi.0
@@ -103,6 +102,7 @@ lib/WWW/Search/Metapedia.pm
 lib/WWW/Search/NetFind.pm
 lib/WWW/Search/Null.pm
 lib/WWW/Search/PLweb.pm
+lib/WWW/Search/Result.pm
 lib/WWW/Search/SFgate.pm
 lib/WWW/Search/Search97.pm
 lib/WWW/Search/Simple.pm

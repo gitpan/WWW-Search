@@ -4,7 +4,7 @@ exit 0;
 # AutoSearch-code.pl
 # Copyright (c) 1996-1997 University of Southern California.
 # All rights reserved.
-# $Id: AutoSearch-code.pl,v 1.4 2002/03/29 20:08:14 mthurn Exp $
+# $Id: AutoSearch-code.pl,v 1.4 2002/03/29 20:08:14 mthurn Exp mthurn $
 #
 # Complete copyright notice follows below.
 
@@ -411,11 +411,6 @@ mthurn@cpan.org if any crop up.
 
 =cut
 
-use strict;
-
-&usage if ($#ARGV == -1);
-&usage if ($#ARGV >= 0 && $ARGV[0] eq '-?');
-
 BEGIN
   {
   # next line is a release hack
@@ -423,12 +418,14 @@ BEGIN
   # unshift (@INC, "/nfs/u1/wls/cvs/lsam/rendezvous/lib");
   }
 
-use Getopt::Long;
+use Getopt::Long qw( :config no_ignore_case );
 use POSIX qw(strftime);
 use WWW::Search;
 
+use strict;
+
 use vars qw( $VERSION );
-$VERSION = '2.04';
+$VERSION = '2.05';
 
 sub print_version
   {
@@ -461,7 +458,11 @@ $opts{'v'} = 0;
 $opts{'stats'} = 0;
 $opts{'debug'} = 0;
 &GetOptions(\%opts, qw(n|qn|queryname=s s|qs|querystring=s e|engine=s m|mail=s h|host=s p|port=s o|options=s@ f|uf|urlfilter=s stats v|verbose V|VERSION debug));
-&print_version if $opts{'V'};
+if ($opts{'V'})
+  {
+  &print_version();
+  exit 0;
+  } # if
 
 &usage if ($#ARGV == -1); # we MUST have one left, the qid
 

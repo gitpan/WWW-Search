@@ -1,5 +1,5 @@
 # This -*- perl -*- script writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.24 2002/04/19 13:18:26 mthurn Exp mthurn $
+# $Id: Makefile.PL,v 1.25 2002/05/02 16:49:16 mthurn Exp $
 
 require 5.004;
 
@@ -19,7 +19,7 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
               'NAME' => 'WWW::Search',
-              'VERSION' => 2.33,
+              'VERSION' => 2.34,
 
               ($] ge '5.005') ? (
                                  'AUTHOR' => 'Martin Thurn <mthurn@cpan.org>',
@@ -29,18 +29,33 @@ WriteMakefile(
               'PREREQ_PM' => {
                               'File::Find' => 0,
                               'File::Spec' => 0,
-                              'HTML::Parse' => 0,
+                              'Getopt::Long' => 2.24,  # for AutoSearch
                               'HTML::Parser' => 2.23,
                               'HTML::TreeBuilder' => 0,  # HTML-Tree-0.51 is good
                               'LWP' => 5.53,
                               'MIME::Lite' => 0,  # only needed for AutoSearch's --mail option
                               'Net::Domain' => 0,
+                              'POSIX' => 0,  # for AutoSearch
+                              'Test::More' => 0,
                               'URI' => 0,
                               'URI::Escape' => 0,
                               'User' => 0,
                              },
               'clean' => { FILES => join(' ', @programs_to_install) },
              );
+
+sub MY::preamble
+  {
+  # This does not work because MakeMaker apparently does not have a
+  # preamble method.
+  return '
+
+AutoSearch :: FORCE
+	/bin/rm -f AutoSearch
+
+';
+  } # MY::postamble
+
 
 sub MY::postamble
   {
@@ -50,5 +65,8 @@ test_parsing: pure_all
 
 tags:
 	cat MANIFEST | etags -
+
 ';
   } # MY::postamble
+
+

@@ -20,7 +20,12 @@ See file test.pl in the WWW-Search-HotBot distribution for a detailed
 package WWW::Search::Test;
 
 use Carp;
+use Config;
+use Cwd;
+use Exporter;
+use File::Path;
 use File::Spec::Functions qw( :ALL );
+use WWW::Search;
 
 use strict;
 
@@ -28,7 +33,6 @@ use vars qw( $MODE_DUMMY $MODE_INTERNAL $MODE_EXTERNAL $MODE_UPDATE );
 use vars qw( $TEST_DUMMY $TEST_EXACTLY $TEST_BY_COUNTING $TEST_GREATER_THAN $TEST_RANGE );
 use vars qw( $iTest $oSearch $sEngine );
 
-require Exporter;
 use vars qw( @EXPORT @EXPORT_OK @ISA );
 @EXPORT = qw( eval_test test
               no_test not_working not_working_with_tests not_working_and_abandoned
@@ -39,13 +43,9 @@ use vars qw( @EXPORT @EXPORT_OK @ISA );
 @EXPORT_OK = qw( );
 @ISA = qw( Exporter );
 
-use Config;
-use Cwd;
-use File::Path;
-
 use vars qw( $VERSION $bogus_query );
 
-$VERSION = '2.18';
+$VERSION = '2.19';
 $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 
 ($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = qw(dummy internal external update);
