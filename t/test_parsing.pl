@@ -2,7 +2,7 @@
 
 # test.pl
 # Copyright (C) 1997 by USC/ISI
-# $Id: test_parsing.pl,v 1.37 1999/12/22 20:18:21 mthurn Exp mthurn $
+# $Id: test_parsing.pl,v 1.38 2000/02/25 18:15:49 mthurn Exp $
 #
 # Copyright (c) 1997 University of Southern California.
 # All rights reserved.                                            
@@ -163,9 +163,6 @@ sub test_cases
   
   ######################################################################
 
-  $oTest->eval_test('Dejanews');
-  
-  # $oTest->eval_test('Excite');
   $oTest->eval_test('Excite::News');
 
   ######################################################################
@@ -196,8 +193,6 @@ sub test_cases
   $oTest->no_test('Gopher', 'Paul Lindner <paul.lindner@itu.int>');
 
   $oTest->eval_test('GoTo');
-  
-  # $oTest->eval_test('HotBot');
   
   $oTest->eval_test('HotFiles');
   
@@ -289,8 +284,6 @@ sub test_cases
 
   $oTest->eval_test('WebCrawler');
   
-  $oTest->eval_test('Yahoo');
-
   $oTest->eval_test('ZDNet');
 
   } # test_cases

@@ -1,3 +1,26 @@
+2000-02-26  Kingpin  <mthurn@tasc.com>
+
+	* WWW::Search VERSION 2.10 RELEASED!
+
+2000-02-25  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search.pm (reset_search): new function.  New feature: if
+	you call native_query() a second time on the same WWW::Search
+	object, a new search will be started.  (Before this change, you
+	would get the results of the first query all over again)
+
+2000-02-24  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search/Dejanews.pm et al.: removed to their own separate registered module
+	
+2000-02-15  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search/AltaVista/Intranet.pm (native_retrieve_some): parse Rank integer
+
+2000-02-08  Kingpin  <mthurn@tasc.com>
+
+	* WWW::Search VERSION 2.09 RELEASED!
+
 2000-02-07  Kingpin  <mthurn@tasc.com>
 
 	* WebSearch: new option --gui to mimic query in browser

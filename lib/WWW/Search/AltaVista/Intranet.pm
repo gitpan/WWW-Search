@@ -1,6 +1,6 @@
 # AltaVista/Intranet.pm
 # by Martin Thurn
-# $Id: Intranet.pm,v 1.5 1999/11/29 17:48:28 mthurn Exp $
+# $Id: Intranet.pm,v 1.6 2000/02/15 14:02:48 mthurn Exp $
 #
 # Complete copyright notice follows below.
 
@@ -58,6 +58,10 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 If it''s not listed here, then it wasn''t a meaningful nor released revision.
 
+=head2 2.03, 2000-02-14
+
+Added support for score/rank (thanks to Peter bon Burg <pvonburg@aspes.ch>)
+
 =head2 2.02, 1999-11-29
 
 Fixed to work with latest version of AltaVista.pm
@@ -76,7 +80,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search::AltaVista Exporter);
-$VERSION = '2.02';
+$VERSION = '2.03';
 
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 $TEST_CASES = <<"ENDTESTCASES";
@@ -203,10 +207,12 @@ sub native_retrieve_some
       } # DESCRIPTION line
     elsif ($state eq $DATE && m:Last modified (.+)$:i)
       {
-      # Actual line of input is:
+      # Actual lines of input are:
       # Last modified 15-Jan-1999
+      # <br>Rank: 170 - Last modified 11-Feb-2000
       print STDERR "date line\n" if 2 <= $self->{_debug};
       $hit->change_date($1);
+      $hit->score($1) if m!Rank:\s+(\d+)!;
       $state = $SIZE;
       } # DATE line
     elsif ($state eq $SIZE && m:page size (\S+):i)

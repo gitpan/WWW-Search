@@ -321,7 +321,8 @@ sub test
     } 
   else 
     {
-    print "NO SAVED OUTPUT.\n";
+    print "NO SAVED OUTPUT, can not evaluate test results.\n";
+    $self->{error_count}++;
     }
   } # test
 

@@ -3,16 +3,14 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.09?  (2000-02-08)
+WHAT IS NEW IN WWW::Search 2.10?  (2000-02-26)
 ----------------------------------------------
 
 overview:
- * new module WWW::Search::Test
- * new methods maintainer(), gui_query()
- * bug fixes for several backends (as usual)
- * some backends removed to their own modules
+ * You can now use the same WWW::Search object to perform more than one query (one after the other)
+ * Dejanews.pm & Deja.pm moved to their own registered module
 
-For details, see the file ChangeLog and/or the pod of each module.
+For details, see the file ChangeLog and/or the pod of each affected module.
 
 
 WHAT IS WWW::Search?
@@ -22,7 +20,7 @@ WWW::Search is a collection of Perl modules which provide an API to
 WWW (and similar) search engines.  Currently WWW::Search includes
 backends for variations of AltaVista, Dejanews, Infoseek, Lycos,
 Magellan, and WebCrawler, among others.  Backends for some engines can
-be obtained separately, such as Excite, HotBot, and Yahoo.  This
+be obtained separately, such as Deja, Excite, HotBot, and Yahoo.  This
 distribution includes two applications built from this library:
 AutoSearch (a program to automate tracking of search results over
 time), and WebSearch, a small demonstration program to drive the
@@ -54,7 +52,6 @@ AltaVista::News		not working
 AltaVista::Web		working
 AOL::Classifieds::Employment    working (not in test suite)
 Crawler			partially working?
-Deja/Dejanews		working
 Dice                    working? (not in test suite)
 Euroseek                working? (not in test suite)
 Excite::News		working
@@ -101,6 +98,7 @@ ZDNet			working
 The following backends are now registered at CPAN independently (not
 included with the WWW::Search release):
 
+Deja/Dejanews
 Excite
 HotBot
 Yahoo
@@ -197,9 +195,9 @@ TESTING
 The "make test_parsing" command compares expected output from
 WWW::Search with actual output.  You can give arguments to the
 test_parsing program by using the TEST_ARGS macro.  For example, the
-following command only runs the external queries for Dejanews:
+following command only runs the external queries for AltaVista:
 
-make test_parsing TEST_ARGS='-e Dejanews -x'
+make test_parsing TEST_ARGS='-e AltaVista -x'
 
 To see all the available options, do this:
 
@@ -332,7 +330,7 @@ etc. across all backends
 
   - a freeze/restore interface to suspend and resume in-progress queries
 
-  - more backends
+  - more backends.  In particular: www.alltheweb.com, ...
 
 Contributions are always welcome.  Send me e-mail if you plan a new
 backend and to discuss architectural changes (to avoid duplicating

@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.21 2000/02/08 16:09:47 mthurn Exp $
+# $Id: Search.pm,v 1.23 2000/02/25 18:13:08 mthurn Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -66,7 +66,7 @@ package WWW::Search;
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query generic_option strip_tags @ENGINES_WORKING);
-$VERSION = '2.09';
+$VERSION = '2.10';
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
@@ -91,7 +91,7 @@ To create a new WWW::Search, call
 where SearchEngineName is replaced with a particular search engine.
 For example:
 
-    $search = new WWW::Search('Dejanews');
+    $search = new WWW::Search('Google');
 
 If no search engine is specified a default (currently 'AltaVista')
 will be chosen for you.
@@ -124,11 +124,7 @@ sub new
   
   my $self = bless {
                     engine => $engine,
-                    state => $SEARCH_BEFORE,
-                    next_to_return => 0,
                     maximum_to_retrieve => 500,  # both pages and hits
-                    number_retrieved => 0,
-                    requests_made => 0,
                     interrequest_delay => 0.25,  # in seconds
                     agent_name => $default_agent_name,
                     agent_e_mail => $default_agent_e_mail,
@@ -141,8 +137,28 @@ sub new
                     @_,
                     # variable initialization goes here
                    }, $subclass;
+  $self->reset_search();
   return $self;
   } # new
+
+=head2 reset_search (PRIVATE)
+
+Resets internal data structures to start over with a new search.
+
+=cut
+
+sub reset_search
+  {
+  my $self = shift;
+  print STDERR " + reset_search(",$self->{'native_query'},")\n" if $self->{debug};
+  $self->{'cache'} = ();
+  $self->{'native_query'} = '';
+  $self->{'next_to_retrieve'} = 1;
+  $self->{'next_to_return'} = 0;
+  $self->{'number_retrieved'} = 0;
+  $self->{'requests_made'} = 0;
+  $self->{'state'} = $SEARCH_BEFORE;
+  } # reset_search
 
 =head2 version
 
@@ -179,15 +195,15 @@ sub maintainer
 
 =head2 gui_query
 
-Specify a query to the current search object.  
-The query will be performed 
-with the default options as if it were typed by a user in a browser window.
+Specify a query to the current search object;  
+the query will be performed with the engine's default options,
+as if it were typed by a user in a browser window.
 
 The query must be escaped; call L<WWW::Search/escape_query> to escape
 a plain query.  See C<native_query> below for more information.
 
-This feature is NOT supported by all backends; 
-conslut the documentation for each backend to see if it is implemented.
+Currently, this feature is supported by only a few backends; 
+consult the documentation for each backend to see if it is implemented.
 
 =cut
 
@@ -205,21 +221,22 @@ sub gui_query
 =head2 native_query
 
 Specify a query (and optional options) to the current search object.
-The query and options must be escaped; call L<WWW::Search/escape_query>
-to escape a plain query.
-The actual search is not actually begun until C<results> or
-C<next_result> is called.
+Previous query (if any) and its cached results (if any) will be thrown away.
+The option values and the query must be escaped; call L<WWW::Search::escape_query()>
+to escape a string.
+The search process is not actually begun until C<results> or
+C<next_result> is called (lazy!), so native_query does not return anything.
 
 Example:
 
-	$search->native_query('search-engine-specific+query+string',
-		{ option1 => 'able', option2 => 'baker' } );
+  $search->native_query('search-engine-specific+escaped+query+string',
+                        { option1 => 'able', option2 => 'baker' } );
 
 The hash of options following the query string is optional.  
-The query string is backend specific.
+The query string is backend-specific.
 There are two kinds of options:
-options specific to the backend
-and generic options applicable to mutliple backends.
+options specific to the backend,
+and generic options applicable to multiple backends.
 
 Generic options all begin with 'search_'.
 Currently a few are supported:
@@ -256,12 +273,12 @@ Reads a search from a set of files prefixed by FILE.
 
 =back
 
-Some backends may not implement generic options,
+Some backends may not implement these generic options,
 but any which do implement them must provide these semantics.
 
-backend-specific options are described
+Backend-specific options are described
 in the documentation for each backend.
-Typically they are packed together to create the query portion of
+In most cases the options and their values are packed together to create the query portion of
 the final URL.
 
 Details about how the search string and option hash are interpreted
@@ -276,22 +293,24 @@ or
 
     while ($result = $search->next_result()) {
 	# do_something;
-    };
+    }
 
 =cut
 
 sub native_query 
   {
-  my($self) = shift;
-  return $self->_elem('native_query', @_) if ($#_ != 1);
+  my $self = shift;
+  print STDERR " + native_query($_[0])\n" if $self->{debug};
+  # return $self->_elem('native_query', @_) if ($#_ != 1);
+  $self->reset_search();
   $self->{'native_query'} = $_[0];
   $self->{'native_options'} = $_[1];
   # promote generic options
   my $opts_ref = $_[1];
-  foreach (keys %$opts_ref) 
+  foreach my $sKey (keys %$opts_ref) 
     {
-    $self->{$_} = $opts_ref->{$_} if (generic_option($_));
-    }
+    $self->{$sKey} = $opts_ref->{$sKey} if (generic_option($sKey));
+    } # foreach
   } # native_query
 
 =head2 approximate_result_count
@@ -327,19 +346,21 @@ to the HTTP response code.
 =cut
 
 sub results
-{
-    my($self) = shift;
-    Carp::croak "search not yet specified"
-	if (!defined($self->{'native_query'}));
-    while ($self->retrieve_some()) {
-	# leave them in the cache
-    };
-    if ($#{$self->{cache}} >= $self->{maximum_to_retrieve}) {
-        return @{$self->{cache}}[0..($self->{maximum_to_retrieve}-1)];
-    } else {
-        return @{$self->{cache}};
-    };
-}
+  {
+  my $self = shift;
+  print STDERR " + results(",$self->{'native_query'},")\n" if $self->{debug};
+  Carp::croak "search not yet specified" if (!defined($self->{'native_query'}));
+  # Put all the SearchResults into the cache:
+  1 while ($self->retrieve_some());
+  if ($#{$self->{cache}} >= $self->{maximum_to_retrieve}) 
+    {
+    return @{$self->{cache}}[0..($self->{maximum_to_retrieve}-1)];
+    }
+  else 
+    {
+    return @{$self->{cache}};
+    }
+  } # results
 
 =head2 next_result
 
@@ -488,17 +509,17 @@ sub opaque { return shift->_elem('opaque', @_); }
 Escape a query.
 Before queries are made special characters must be escaped
 so that a proper URL can be formed.
-
 This is like escaping a URL,
 but all non-alphanumeric characters are escaped and
 and spaces are converted to "+"s.
 
 Example:
-    $escaped = WWW::Search::escape_query('+lsam +replication');
+    $escaped = WWW::Search::escape_query('+hi +mom');
 
-    (Returns "%2Blsam+%2Breplication").
+    (Returns "%2Bhi+%2Bmom").
 
 See also C<unescape_query>.
+NOTE that this is not a method, it is a plain function.
 
 =cut
 
@@ -521,11 +542,11 @@ Unescape a query.
 See C<escape_query> for details.
 
 Example:
-    $unescaped = WWW::Search::unescape_query('%22lsam+replication%22');
+    $unescaped = WWW::Search::unescape_query('%22hi+mom%22');
 
-    (Returns '"lsam replication"').
+    (Returns '"hi mom"').
 
-See also C<unescape_query>.
+NOTE that this is not a method, it is a plain function.
 
 =cut
 
@@ -573,11 +594,14 @@ Backends should use this function rather than piecing the URL together
 by hand, to ensure that URLs are identical across platforms and
 software versions.  
 
-Example (from Dejanews.pm):
+Example:
 
     $self->{_options} = {
+                         'opt3' => 'val3',
                          'search_url' => 'http://www.deja.com/dnquery.xp',
+                         'opt1' => 'val1',
                          'QRY' => $native_query,
+                         'opt2' => 'val2',
                         };
     $self->{_next_url} = $self->{_options}{'search_url'} .'?'. 
                          $self->hash_to_cgi_string($self->{_options});
@@ -587,10 +611,11 @@ Example (from Dejanews.pm):
 sub hash_to_cgi_string
   {
   my $self = shift;
-  # We need our URLs to be identical on all systems, all versions of
-  # perl.  Ergo we must explicitly control the order in which our CGI
-  # parameter strings are cobbled together.  For now, I assume sorting
-  # the hash keys will suffice.
+  # Because of the design of our test suite, we need our generated
+  # URLs to be identical on all systems, all versions of perl.  Ergo
+  # we must explicitly control the order in which our CGI parameter
+  # strings are cobbled together.  For now, I assume sorting the hash
+  # keys will suffice.
   my $rh = shift;
   my $ret = '';
   foreach my $key (sort keys %$rh) 
@@ -599,7 +624,7 @@ sub hash_to_cgi_string
     next if generic_option($key);
     # If we want to let the user delete options, uncomment the next
     # line. (They can still blank them out, which may or may not have
-    # the same effect, anyway): 
+    # the same effect): 
 
     # next unless $rh->{$key} ne '';
 
@@ -820,10 +845,12 @@ It calls C<native_setup_search> to do backend specific setup.
 sub setup_search
   {
   my ($self) = @_;
-  $self->{next_to_retrieve} = 1;
+  print STDERR " + setup_search(",$self->{'native_query'},")\n" if $self->{debug};
   $self->{cache} = ();
+  $self->{next_to_retrieve} = 1;
   $self->{number_retrieved} = 0;
   $self->{state} = $SEARCH_UNDERWAY;
+  $self->{_options} = ();
   $self->native_setup_search($self->{'native_query'}, $self->{'native_options'});
   } # setup_search
 
@@ -869,9 +896,10 @@ Checks for overflow.
 sub retrieve_some
 {
     my($self) = shift;
+    print STDERR " + retrieve_some(",$self->{'native_query'},")\n" if $self->{debug};
     return undef
 	if ($self->{state} == $SEARCH_DONE);
-    # assume that caller as verified defined($self->{'native_query'}).
+    # assume that caller has verified defined($self->{'native_query'}).
     $self->setup_search()
 	if ($self->{state} == $SEARCH_BEFORE);
 
@@ -1001,10 +1029,7 @@ AltaVista::Intranet
 AltaVista::Web		
 AOL::Classifieds::Employment
 Crawler			
-Deja
-Dejanews
 Dice                    
-Euroseek
 Excite::News
 Fireball
 FolioViews
