@@ -4,7 +4,7 @@
 # Lycos.pm
 # by Wm. L. Scheding
 # Copyright (C) 1996 by USC/ISI
-# $Id: Lycos.pm,v 1.1 1996/11/01 23:44:20 wls Exp $
+# $Id: Lycos.pm,v 1.3 1996/11/21 23:02:17 johnh Exp $
 #
 # Complete copyright notice follows below.
 # 
@@ -46,9 +46,15 @@ it sets C<{_next_url}> to point to the page for the next
 set of results, otherwise it sets it to undef to indicate we're done.
 
 
+=head1 BUGS
+
+This module should support options.
+
+
 =head1 AUTHOR
 
-C<WWW::Search> is written by John Heidemann, <johnh@isi.edu>.
+C<WWW::Search::Lycos> is written by Wm. L. Scheding
+based upon C<WWW::Search::AltaVista>.
 
 
 =head1 COPYRIGHT
@@ -99,7 +105,7 @@ require WWW::SearchResult;
 sub native_setup_search
 {
     my($self, $native_query) = @_;
-    $self->{_user_agent} = WWW::Search::setup_user_agent;
+    $self->user_agent();
     $self->{_next_to_retrieve} = 0;
     $self->{_base_url} = $self->{_next_url} =
 	"http://www.lycos.com/cgi-bin/pursuit?cat=lycos&x=13&y=15" .
@@ -117,7 +123,7 @@ sub native_retrieve_some
 
     # get some
     my($request) = new HTTP::Request('GET', $self->{_next_url});
-    my($response) = $self->{_user_agent}->request($request);
+    my($response) = $self->{user_agent}->request($request);
     $self->{response} = $response;
     if (!$response->is_success) {
 	return undef;

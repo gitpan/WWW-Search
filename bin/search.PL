@@ -19,11 +19,10 @@ $Config{'startperl'} -w
 print OUT <<'!NO!SUBS!';
 
 
-
 #
 # search.pl
 # Copyright (C) 1996 by USC/ISI
-# $Id: search.PL,v 1.15 1996/11/11 18:35:28 johnh Exp $
+# $Id: search.PL,v 1.22 1996/11/13 00:49:44 wls Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -99,7 +98,7 @@ Return all URLs.  Some different URLs may refer to the same object.
 
 For the library, see L<WWW::Search>.
 
-For a more sophisticated, see L<AutoSearch>.
+For a more sophisticated client, see L<AutoSearch>.
 
 
 =head1 AUTHOR
@@ -157,49 +156,70 @@ my($all) = $opts{'a'};
 exit 0;
 
 sub print_result {
-  my($result, $count) = @_;
+    my($result, $count) = @_;
 
-  my($prefix) = "";
-  $prefix = "[$count] " if defined($verbose);
+    my($prefix) = "";
+    $prefix = sprintf("[%3d] ", $count) if defined($verbose);
 
-  if ($all) {
-    foreach ($result->urls()) {
-      print "$prefix$_\n";
-      $prefix = "      ";
+    if ($all) {
+        foreach ($result->urls()) {
+            print "$prefix$_\n";
+            $prefix = "      ";
+        };
+    } else {
+        print $prefix, $result->url, "\n";
     };
-  } else {
-    print $prefix, $result->url, "\n";
-  };
+}
+
+sub print_error {
+    my($error, $count) = @_;
+
+    my($prefix) = "";
+    $prefix = sprintf("[%3d] ", $count) if defined($verbose);
+
+    print $prefix, $error, "\n";
 }
 
 sub main {
-  my($query) = @_;
-  my($count) = "001" if defined($verbose);
-  my($search) = new WWW::Search($opts{e});
-  my($query_options_ref);
+    my($query) = @_;
+    my($count) = 0;
+    my($search) = new WWW::Search($opts{e});
+    my($query_options_ref);
 
-  if (defined($opts{'o'})) {
-    $query_options_ref = {};
-    foreach (@{$opts{'o'}}) {
-      my($key, $value) = m/^([^=]+)=(.*)$/;
-      $query_options_ref->{$key} = WWW::Search::escape_query($value);
+    if (defined($opts{'o'})) {
+        $query_options_ref = {};
+        foreach (@{$opts{'o'}}) {
+            my($key, $value) = m/^([^=]+)=(.*)$/;
+            $query_options_ref->{$key} = WWW::Search::escape_query($value);
+        };
     };
-  };
 
-  $search->native_query(WWW::Search::escape_query($query), $query_options_ref);
+    $search->native_query(WWW::Search::escape_query($query), $query_options_ref);
 
-  my($way) = 0; # 0=piecemeal, 1=all at once
-  my($result);
-  if ($way) { # return all at once.
-    foreach $result ($search->results()) {
-      print_result($result, $count++);
+    my($way) = 0; # 0=piecemeal, 1=all at once
+    my($result);
+    if ($way) { # return all at once.
+        foreach $result ($search->results()) {
+            print_result($result, ++$count);
+        };
+    } else { # return page by page
+        while ($result = $search->next_result()) {
+            print_result($result, ++$count);
+        };
     };
-  } else { # return page by page
-    while ($result = $search->next_result()) {
-      print_result($result, $count++);
+    # handle errors
+    if ($count == 0) {
+        my($response) = $search->response();
+	my($nothing) = "Nothing found.";
+        if ($response->is_success) {
+            print_error($nothing, $count);
+        } else {
+            print_error("Error:  " . $response->as_string(), $count);
+        };
     };
-  };
+
 };
+
 
 
 

@@ -4,7 +4,7 @@
 # HotBot.pm
 # by Wm. L. Scheding
 # Copyright (C) 1996 by USC/ISI
-# $Id: HotBot.pm,v 1.2 1996/11/06 23:56:54 johnh Exp $
+# $Id: HotBot.pm,v 1.4 1996/11/21 23:02:16 johnh Exp $
 #
 # Complete copyright notice follows below.
 # 
@@ -46,10 +46,15 @@ it sets C<{_next_url}> to point to the page for the next
 set of results, otherwise it sets it to undef to indicate we're done.
 
 
+=head1 BUGS
+
+This module should support options.
+
+
 =head1 AUTHOR
 
-C<WWW::Search> is written by John Heidemann, <johnh@isi.edu>.
-C<WWW::Search/HotBot> is written by Wm. L. Scheding, <wls@isi.edu>.
+C<WWW::Search::HotBot> is by Wm. L. Scheding,
+based on C<WWW::Search::AltaVista>.
 
 
 =head1 COPYRIGHT
@@ -128,7 +133,7 @@ require WWW::SearchResult;
 sub native_setup_search
 {
     my($self, $native_query) = @_;
-    $self->{_user_agent} = WWW::Search::setup_user_agent;
+    $self->user_agent();
     $self->{_next_to_retrieve} = 0;
     $self->{_base_url} = $self->{_next_url} =
         "http://www.hotbot.com/search.html/IU0BfV5r318E4BCC8DBA81A045266430BFB7D0F4?_v=1.0" .
@@ -149,7 +154,7 @@ sub native_retrieve_some
 
     # get some
     my($request) = new HTTP::Request('GET', $self->{_next_url});
-    my($response) = $self->{_user_agent}->request($request);
+    my($response) = $self->{user_agent}->request($request);
     $self->{response} = $response;
     if (!$response->is_success) {
 	return undef;

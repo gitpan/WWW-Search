@@ -4,7 +4,7 @@
 # SearchResult.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: SearchResult.pm,v 1.3 1996/10/03 22:06:10 johnh Exp $
+# $Id: SearchResult.pm,v 1.5 1996/11/21 06:36:59 johnh Exp $
 #
 # Copyright (c) 1996 University of Southern California.
 # All rights reserved.                                            
@@ -78,10 +78,17 @@ sub new
 
 =head2 url
 
-Return url.  Note that there may be a list of urls, see also methods
+Return the primary URL.
+Note that there may be a list of urls, see also methods
 C<urls> and C<add_url>.
+Nothing special is guaranteed about the primary URL
+other than that 
+it's the first one returned by the back end.
+
+Every result is required to have at least one URL.
 
 =cut
+#'
 sub url {
     my($self) = shift @_;
     return ${$self->{urls}}[0] if ($#_ == -1);
@@ -89,46 +96,99 @@ sub url {
     return ${$self->{urls}}[0];
 };
 
+sub _elem_array {
+    my($self) = shift @_;
+    my($elem) = shift @_;
+    return wantarray ? @{$self->{$elem}} : $self->{$elem}
+        if ($#_ == -1);
+    if (ref($_[0])) {
+        $self->{$elem} = $_[0];
+    } else {
+	$self->{$elem} = ();
+	push @{$self->{$elem}}, @_;
+    };
+    # always return array refrence
+    return $self->{$elem};
+}
+sub _add_elem_array {
+    my($self) = shift @_;
+    my($elem) = shift @_;
+    push(@{$self->{$elem}}, @_);
+};
+
+
 =head2 urls
 
 Return a reference to an array of urls.
-There is also a distinguished URL (C<url>).
+There is also a primary URL (C<url>).
 See also C<add_url>.
-
-=cut
-sub urls {
-    my($self) = shift @_;
-    return wantarray ? @{$self->{urls}} : $self->{urls}
-        if ($#_ == -1);
-    if (ref($_[0])) {
-        $self->{urls} = $_[0];
-    } else {
-	$self->{urls} = ();
-	push @{$self->{urls}}, @_;
-    };
-    # always return array refrence
-    return $self->{urls};
-}
 
 =head2 add_url
 
 Add a URL to the list.
 
-=cut
-sub add_url {
-    my($self) = shift @_;
-    push(@{$self->{'urls'}}, @_);
-};
 
-=head2 title, description
+=head2 related_urls, add_related_url, related_titles, add_related_title
+
+Analgous to urls, these functions provide lists of related URLs
+and their titles.  These point to things the search engine thinks
+you might want (for example, see Infoseek).
+
+=cut
+sub urls { return shift->_elem_array('urls', @_); }
+sub add_url { return shift->_add_elem_array('urls', @_); }
+sub related_urls { return shift->_elem_array('related_urls', @_); }
+sub add_related_url { return shift->_add_elem_array('related_urls', @_); }
+sub related_titles { return shift->_elem_array('related_titles', @_); }
+sub add_related_title { return shift->_add_elem_array('related_titles', @_); }
+
+=head2 title, description, score, change_date, index_date, size, raw
 
 Set or get attributes of the result.
-In the future, these attributes might expand to include
-size and change-date.
+
+None of these attributes is guaranteed to be provided by 
+a given back-end.  If an attribute is not provided
+its method will return C<undef>.
+
+Typical contents of these attributes:
+
+=over 8
+=item title
+The result's title (typically that provided by the ``TITLE'' HTML command) .
+
+=item description
+A brief description of result.
+Often the first few sentences of the document.
+
+=item score
+A back-end specific, numeric ``score'' of the search result.
+The exact range of scores is search-engine specific,
+but if a score is provided, larger scores are required to 
+signify better quality results.
+
+=item change_date
+When the result was last changed.
+
+=item index_date
+When the search engine indexed the result.
+
+=item size
+The size of the result, in bytes.
+
+=item raw
+The raw HTML for the entire result.
+
+=back
 
 =cut
+#'
 sub title { return shift->_elem('title', @_); }
 sub description { return shift->_elem('description', @_); }
+sub score { return shift->_elem('score', @_); }
+sub change_date { return shift->_elem('change_date', @_); }
+sub index_date { return shift->_elem('index_date', @_); }
+sub size { return shift->_elem('size', @_); }
+sub raw { return shift->_elem('raw', @_); }
 
 
 

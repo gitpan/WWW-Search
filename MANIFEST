@@ -9,7 +9,13 @@ lib/WWW/Search/AltaVista/AdvancedNews.pm
 lib/WWW/Search/AltaVista/AdvancedWeb.pm
 lib/WWW/Search/AltaVista/News.pm
 lib/WWW/Search/AltaVista/Web.pm
+lib/WWW/Search/Dejanews.pm
+lib/WWW/Search/Excite.pm
 lib/WWW/Search/HotBot.pm
+lib/WWW/Search/Infoseek.pm
+lib/WWW/Search/Infoseek/Email.pm
+lib/WWW/Search/Infoseek/News.pm
+lib/WWW/Search/Infoseek/Web.pm
 lib/WWW/Search/Lycos.pm
 lib/WWW/Search/Yahoo.pm
 lib/WWW/SearchResult.pm

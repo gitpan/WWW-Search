@@ -22,7 +22,7 @@ print OUT <<'!NO!SUBS!';
 #
 # AutoSearch.pl
 # Copyright (C) 1996 by USC/ISI
-# $Id: AutoSearch.PL,v 1.17 1996/11/11 18:46:14 johnh Exp $
+# $Id: AutoSearch.PL,v 1.27 1996/12/17 21:21:27 johnh Exp $
 #
 # Copyright (c) 1996 University of Southern California.
 # All rights reserved.                                            
@@ -58,14 +58,26 @@ B<AutoSearch qid>
 =head1 DESCRIPTION
 
 B<AutoSearch> performs a web-based search and puts the results
-set in F<qid/index.html>.  Subsequent searches (i.e., the second form above)
-B<AutoSearch> determine the changes (if any) there were to the
-results set.  These incremental changes are recorded in F<qid/YYYYMMDD.html>.
+set in F<qid/index.html>.
+Subsequent searches (i.e., the second form above)
+B<AutoSearch> determine what changes (if any) occured to the 
+results sent since the last run.
+These incremental changes are recorded in F<qid/YYYYMMDD.html>.
 B<AutoSearch> is amenable to be run as a B<cron> job because all
 the input parameters are saved in the web pages.  B<AutoSearch> 
 can act as a automated query agent for a particular search.  The output
 files are designed to be a set of web pages to easily display the
 results set with a web browser.
+
+Example:
+
+    AutoSearch -n "LSAM Replication" -s '"lsam replication"' -e AltaVista replication_query
+
+This query creates a directory replication_query
+and fills it with the facinating output of the AltaVista query
+on C<"lsam replication">,
+with pages titled ``LSAM Replication''.
+
 
 =head1 OPTIONS
 
@@ -73,7 +85,7 @@ results set with a web browser.
 
 =item qid
 
-The I<query identifer> specifies the directory directory in which all the
+The I<query identifer> specifies the directory in which all the
 files that relate to this query and search results will live.
 
 =item C<-stats>
@@ -112,13 +124,25 @@ to the user search engine with the query string.  This feature
 permits modification of the query string for a specific search
 engine or option.  More than one query option may be specified.
 
+Example:
+C<-o what=news>
+causes AltaVista to search Usenet
+(but for a simpler way, try C<-e AltaVista::News>).
+
+
 =item C<-f>
 
 Specify the URL filter regular expression.
-This option specifies a regular expression of URLs to remove from
-the results.
-If the results pages are publically available (and indexed),
-they should be filtered out of the results with this option.
+This option specifies a regular expression which will
+be compared against the URLs of any results;
+if they match the case-insensitive regular expression, they will be removed
+from the hit set.
+If the web pages created by AutoSearch are
+publically available (and indexed),
+they should be filtered out with this option.
+
+Example: 
+C<-f '.*\.isi\.edu'> avoids all of ISI's web pages.
 
 =back
 
@@ -143,7 +167,7 @@ The primary file is F<index.html>, which reflects the latest
 search results.  Every not-filtered hit for every search is stored
 in F<index.html>.
 When a hit is no longer found by the search engine
-they a removed from F<index.html>.
+it a removed from F<index.html>.
 As new results for a search are returned from the search engine they are placed
 in F<index.html>.
 
@@ -185,7 +209,7 @@ might be used to run the search each Monday at 3:00 AM.  The
 query name and query string may be repeated; but they will not be
 used.  This means that with a cron line like:
 
-    0 3 * * 1 /nfs/u1/wls/AutoSearch.pl /www/div7/lsam/autosearch/caching -n caching -q caching
+    0 3 * * 1 /nfs/u1/wls/AutoSearch.pl /www/div7/lsam/autosearch/caching -n caching -s caching
 
 a whole new search series can be originated by
 
@@ -208,10 +232,6 @@ comments are used to identify sections of the document.  Almost
 everything can be changed except for the strings which identify the
 section starts and ends.
 
-A second requirement is that once the first search is made no changes
-can be made to the fields.  If changes are made, the contents of results
-sets are unpredictible.  It would be better to start over.
-
 Noteworthy tags and their meaning:
 
 =over 16
@@ -229,13 +249,14 @@ a query name.
 The text contained between the braces is the query string.  This is how
 B<AutoSearch> maintains the query string.  You may edit this
 string to change the query string; but only in F<qid/index.html>.
-The text I<ask user> is special and will force B<AutoSearch> to
+The text I<ask user> is special and will force B<AutoSearch>
 to request the search string from the user.
 
 =item <!--SearchEngine{.*}/SearchEngine-->
 
 The text contained between the braces is the search engine.  The
-default engine is AltaVista.  Other engines supported are HotBot
+default engine is AltaVista.
+Other engines supported are HotBot
 and Lycos.  You may edit this
 string to change the query string; but only in F<qid/index.html>.
 The text I<ask user> is special and will force B<AutoSearch> to
@@ -243,11 +264,9 @@ to request the search string from the user.
 
 =item <!--QueryOptions{.*}/QueryOptions-->
 
-The text contained between the braces is the query string.  This is how
-B<AutoSearch> maintains the query string.  You may edit this
-string to change the query string; but only in F<qid/index.html>.
-The text I<ask user> is special and will force B<AutoSearch> to
-to request the search string from the user.
+The text contained between the braces specifies a query options.
+Multiple occurrencs of this command are allowed to specify multiple
+options.
 
 =item <!--URLFilter{.*}/URLFilter-->
 
@@ -263,13 +282,13 @@ do not match will be kept.
 =item <!--Bottom-->.*<!--/Bottom-->
 
 The text contained within this tag is placed at the bottom of the output
-page.  There is no magic string in the bottom text.  It's just a place
-to locate navigation, page owner information, etc.
+page.  This is a good place 
+to put navigation, page owner information, etc.
 
 =back
 
 The remainder of the tags fall into a triplet of I<~Heading>,
-I<~Template>, and I<~>.  Where ~ is Summary, Weekly, Appended,
+I<~Template>, and I<~>, where ~ is Summary, Weekly, Appended,
 and Suspended. The sub-sections appear in the order given. 
 To produce a section B<AutoSearch> outputs the heading, the template,
 the section, n copies of the formatted data, and an /section.
@@ -299,6 +318,10 @@ section represents the actual n-items of data.
 You can edit these values in the F<qid/index.html> page of an existing
 search.  The file F<first_index.html> (in the directory above F<qid>)
 will be used as a default template for new queries.
+
+Examples of these files can be seen in the pages under
+C<http://www.isi.edu/lsam/autosearch/>,
+or in the output generated by a new AutoSearch.
 
 
 =head1 FILES
@@ -352,6 +375,25 @@ Wm. L. Scheding
 B<AutoSearch> is  a re-implementation of an earlier version written by Kedar Jog.
 
 
+=head1 DESIRED FEATURES
+
+These are good ideas that people have suggested.
+
+=over 4
+
+=item URL validation.
+Validate the status of each URL (with HTTP HEAD requests)
+and indicate this status in the output.
+
+=item Multi-search.
+It should be possible to merge the results of searches from two
+search-engines.
+If this merger were done as a new search engine,
+this operation would be transparent to AutoSearch.
+
+=back
+
+
 =head1 BUGS
 
 There are no bugs, so don't look for them.
@@ -359,7 +401,6 @@ There are no bugs, so don't look for them.
 
 =cut
 #'     This is needed for emacs' perl mode.
-#'
 
 use strict;
 
@@ -369,7 +410,7 @@ use strict;
 BEGIN {
   # next line is a release hack
 #  push (@INC, "..");
-#  unshift (@INC, "/nfs/u1/wls/cvs/lsam/rendezvous/lib/");
+#  unshift (@INC, "/nfs/u1/wls/cvs/lsam/rendezvous/lib");
 }
 
 use WWW::Search;
@@ -395,17 +436,17 @@ END
 }
 
 my(%opts,@query_list,$query_name,$query_string,$search_engine,$query_options,$url_filter);
-&GetOptions(\%opts, qw(n|qn|queryname=s s|qs|querystring=s e|engine=s o|options=s@ f|uf|urlfilter=s stats v));
+&GetOptions(\%opts, qw(n|qn|queryname=s s|qs|querystring=s e|engine=s o|options=s@ f|uf|urlfilter=s stats v|verbose));
 
 &usage if ($#ARGV == -1); # we MUST have one left, the qid
 
-my($v_dbg) = $opts{'v'} if (defined($opts{'v'}));
+my($v_dbg) = $opts{'v'} if defined($opts{'v'});
 if (defined($opts{'v'})) {
   print "v options: defined\n" if defined($v_dbg);
 } else {
   print "v options: undefined\n" if defined($v_dbg);
 }
-my($s_dbg) = $opts{'stats'} if (defined($opts{'stats'}));
+my($s_dbg) = $opts{'stats'} if defined($opts{'stats'});
 if (defined($opts{'stats'})) {
   print "stats options: defined\n" if defined($v_dbg);
 } else {
@@ -413,11 +454,11 @@ if (defined($opts{'stats'})) {
 }
 
 # if we want a list of args:
-#@query_list = split(/[,\s]+/, $opts{'n'},2) if (defined($opts{'n'}));
+#@query_list = split(/[,\s]+/, $opts{'n'},2) if defined($opts{'n'});
 
-$query_name =    $opts{'n'} if (defined($opts{'n'}));
-$query_string =  $opts{'s'} if (defined($opts{'s'}));
-$search_engine = $opts{'e'} if (defined($opts{'e'}));
+$query_name =    $opts{'n'} if defined($opts{'n'});
+$query_string =  $opts{'s'} if defined($opts{'s'});
+$search_engine = $opts{'e'} if defined($opts{'e'});
 if (defined($opts{'o'})) {
   $query_options = {};
   foreach (@{$opts{'o'}}) {
@@ -427,7 +468,8 @@ if (defined($opts{'o'})) {
     $query_options->{$key} = WWW::Search::escape_query($value);
   }
 }
-$url_filter =    $opts{'f'} if (defined($opts{'f'}));
+$url_filter =    $opts{'f'} if defined($opts{'f'});
+my($local_filter) = 0; # shall we exclude our own old pages? (1=y,0=n)
 
 #print "n = \"$opts{'n'}\"\n" if defined($opts{'n'});
 #print "s = \"$opts{'s'}\"\n" if defined($opts{'s'});
@@ -457,7 +499,7 @@ exit 0;
 #
 #=cut
 #
-# files expected first_date.html and first_index.html in the
+# Files expected first_date.html and first_index.html in the
 # 'home' directory.  These are used to build the initial
 # search files.
 #
@@ -561,7 +603,7 @@ sub main {
   $n = $#old_summary + 1;
   for ($i=0; $i < $n; $i++) {
     # $old_summary -> $url & $title
-    $line = @old_summary[$i];
+    $line = $old_summary[$i];
     if ($line =~ m#<a href="(.*)">(.*)</a><br>#i) {
       $url = $1;
       $title = $2;
@@ -639,9 +681,9 @@ sub main {
 # this is not a required field.
 # this MUST BE ask user to get AutoSeatch to ask.
 # 
-#  print @SummaryQueryOptions[0], " v. ask user\n";
-  if (@SummaryQueryOptions[0] =~ m/ask user/i) { # either ask or use command line
-#    print @SummaryQueryOptions[0], " is ask user\n";
+#  print $SummaryQueryOptions[0], " v. ask user\n";
+  if ($SummaryQueryOptions[0] =~ m/ask user/i) { # either ask or use command line
+#    print $SummaryQueryOptions[0], " is ask user\n";
     if (defined($opts{'o'})) { # from command line ?
 #      print "defined.\n";
       # use $query_options
@@ -705,7 +747,8 @@ sub main {
     $WeeklyTop =~ s/AutoSearch WEB Searching/$QueryName/i # use the summary.
   } # else, yes.
 
-  my($count) = 0; # actual no. of hits.
+  my($hits) = 0; # actual no. of hits.
+  my($saved) = 0; # actual no. saved.
   # duh! This must be outside the if () {} else {}; because of scope!
   my($search);
   # search AltaVista, or whatever the user has specified.
@@ -732,19 +775,22 @@ sub main {
   # convert latest search results to a list of urls (descriptions & titles)
   # filtered by $SummaryURLFilter called new_weekly_*
   NEXT_URL:
-  while ($next_result = $search->next_result()) {
+  while ($next_result = $search->next_result()) { # page-by-page
     $url = $next_result->url;
-    $count++;
-    # let's not display references to our own pages.
-    next if $url =~ m,www\.isi\.edu/div7/ib/(.+)/(\d+)\.html$,o;
-    # let's not display references to our old pages.
-    next if $url =~ m,www\.isi\.edu/div7/ib/jog,o;
+    $hits++; # how many were returned?
+    if ($local_filter) { # exclude old pages from prev. version?
+      # let's not display references to our own pages.
+      next if $url =~ m,www\.isi\.edu/div7/ib/(.+)/(\d+)\.html$,o;
+      # let's not display references to our old pages.
+      next if $url =~ m,www\.isi\.edu/div7/ib/jog,o;
+    }
     # let the user filter out URLs.
-    if ( ($SummaryURLFilter) && ($url =~ m,$SummaryURLFilter,o) ) {
+    if ( ($SummaryURLFilter) && ($url =~ m,$SummaryURLFilter,oi) ) {
 #      print "filter out $url \n with filter: $SummaryURLFilter\n";
       $url_filter_count++;
       next;
     }
+    $saved++; # how many were saved?
     push(@weekly_url,$url); # the complete set of hits
     $title = $next_result->title;
     push(@weekly_title,$title);
@@ -763,6 +809,15 @@ sub main {
     push(@new_weekly_description,$description);
     push(@new_weekly_title,$title);
   }
+  # report errors
+  if ($hits == 0) {
+    my($response) = $search->response();
+    if ($response->is_success) {
+      print "Warning:  Empty results set.\n" if defined($v_dbg);
+    } else {
+      print "Error: " . http_error_as_nice_string($response) . "\n";
+    }
+  }
 
   # only save the ones that don't show up in the current query list.
   # those we shall call suspended_*
@@ -772,37 +827,39 @@ sub main {
   $m = $#weekly_url + 1;
   OLD_URL:
   for ($i=0; $i < $n; $i++) {
-    $url = @old_summary_url[$i];
+    $url = $old_summary_url[$i];
     for ($j=0; $j < $m; $j++) {
-      $line = @weekly_url[$j];
+      $line = $weekly_url[$j];
       # if we match the weekly (active search) hits, skip it.
       next OLD_URL if $url eq $line;
     }
     printf "suspend:\n [%02d]%s\n",$i,$url if $dbg_search;
     # not found? save it, it's been suspended
     push(@suspended_url,$url);
-    $title = @old_summary_title[$i];
+    $title = $old_summary_title[$i];
     push(@suspended_title,$title);
   }
   # stats?? (to see 'em use -stats)
   print "Query is : \"$SummaryQuery\" on \"$SummarySearchEngine\"" if defined($s_dbg);
   print " with \"@SummaryQueryOptions\"" if (defined($s_dbg) && $#SummaryQueryOptions);
   print "\n" if defined($s_dbg);
-  print "new count        : ",$count,"\n" if defined($s_dbg);
-  print "url's filtered   : ",$url_filter_count,", filter \"",$URLFilter,"\"\n" if defined($s_dbg);
-  print "new results count: ",$#new_weekly_url + 1,"\n" if defined($s_dbg);
+  print "old summary count: ",$#old_summary_url + 1,"\n" if defined($s_dbg);
+  print "raw hits         : ",$hits,"\n" if defined($s_dbg);
+  print "urls filtered    : ",$url_filter_count,", filter \"",$URLFilter,"\"\n" if defined($s_dbg);
+  print "not filtered     : ",$saved,"\n" if defined($s_dbg);
+  print "results set count: ",$#new_weekly_url + 1,"\n" if defined($s_dbg);
   print "suspended count  : ",$#suspended_url + 1,"\n" if defined($s_dbg);
-  print "summary count    : ",$#old_summary_url + 1,"\n" if defined($s_dbg);
   print "final count      : ",$#weekly_url + 1,"\n" if defined($s_dbg);
   my($changes) = (($#new_weekly_url != -1) || ($#suspended_url != -1));
-#  printf "changes is %d\n",$changes if (defined($v_dbg));
+#  printf "changes is %d\n",$changes if defined($v_dbg);
 
-# for every search, we will make a 'weekly' file.
-# usually this is a 'cron' job; but can be run manually.
+# For every search, AutoSearch (aka AS) will make a 'weekly' file.
+# Usually AutoSearch is run as a 'cron' job; but can be run manually.
+# AS will attempt to handle multiple (non-concurrent) runs per day.
   my($file) = (&time_file_of_the_day_numeric).'.html';
   my($section);
 
-# to test this code 1) rm qid/* 2) run AS -stats qid -qn -qs
+# to test this 'diff' code 1) rm -r qid/* 2) run AS -stats qid -qn -qs
 # 3) edit qid/index.html remove some, add some (new urls)
 # 4) run AS -stats qid; look at <today>.html
 # you will see 'deleted' (from above) as 'recently added' &
@@ -834,9 +891,9 @@ sub main {
       }
       # format each unique result.
       for ($i=0; $i < $n; $i++) {
-        $url = @new_weekly_url[$i];
-        $title = @new_weekly_title[$i];
-        $description = @new_weekly_description[$i];
+        $url = $new_weekly_url[$i];
+        $title = $new_weekly_title[$i];
+        $description = $new_weekly_description[$i];
         print HTML &make_link($AppendedTemplate,$url,$title,$description),"\n";
       }
       print HTML "<!--/Appended-->"; # replace due to split
@@ -848,8 +905,8 @@ sub main {
       }
       # format each suspended result.
       for ($i=0; $i < $n; $i++) {
-        $url = @suspended_url[$i];
-        $title = @suspended_title[$i];
+        $url = $suspended_url[$i];
+        $title = $suspended_title[$i];
         print HTML &make_link($SuspendedTemplate,$url,$title,""),"\n";
       }
       print HTML "<!--/Suspended-->"; # replace due to split
@@ -873,9 +930,9 @@ sub main {
       print HTML "<!--$section-->\n";
       # format each unique result.
       for ($i=0; $i < $n; $i++) {
-        $url = @new_weekly_url[$i];
-        $title = @new_weekly_title[$i];
-        $description = @new_weekly_description[$i];
+        $url = $new_weekly_url[$i];
+        $title = $new_weekly_title[$i];
+        $description = $new_weekly_description[$i];
         print HTML &make_link($AppendedTemplate,$url,$title,$description),"\n";
       }
       print HTML $Appended;
@@ -890,8 +947,8 @@ sub main {
       $section = "Suspended"; # the section of the file/output.
       print HTML "<!--$section-->\n";
       for ($i=0; $i < $n; $i++) {
-        $url = @suspended_url[$i];
-        $title = @suspended_title[$i];
+        $url = $suspended_url[$i];
+        $title = $suspended_title[$i];
         print HTML &make_link($SuspendedTemplate,$url,$title,""),"\n";
       }
       print HTML $Suspended;
@@ -932,8 +989,8 @@ sub main {
 #    $description = "";
     $n = $#weekly_url + 1;
     for ($i=0; $i < $n; $i++) {
-      $url = @weekly_url[$i];
-      $title = @weekly_title[$i];
+      $url = $weekly_url[$i];
+      $title = $weekly_title[$i];
       print HTML &make_link($SummaryTemplate,$url,$title,""),"\n";
     }
   }
@@ -944,11 +1001,20 @@ sub main {
   print HTML "<!--WeeklyTemplate\n$WeeklyTemplate/WeeklyTemplate-->\n";
   $section = "Weekly"; # the section of the file/output.
   print HTML "<!--$section-->\n";
+  # report errors FIRST.
+  if ($hits == 0) {
+    my($response) = $search->response();
+    if ($response->is_success) { # dbg message, normally we're quiet
+#      print HTML "AutoSearch Warning: Empty Results Set. <br>\n";
+    } else { # SearchEngine error message:
+      print HTML "AutoSearch Error: " . http_error_as_nice_string($response) . "<br>\n";
+    }
+  }
   # let's use reverse chronological order.
   # update the 'weekly' status:
   if ($changes) { # there were changes.
     # second run today?
-    if ($Weekly =~ m/^No Unique Results found for(.*)$today/) { # yes
+    if ($Weekly =~ m/^No unique results found for(.*)$today/i) { # yes
 #      print "change 'No' to 'Yes'\n";
       # change No to Yes.
       # the first line SHOULD be today's, assume so.
@@ -964,13 +1030,13 @@ sub main {
     }
   } else { # no changes.
     # second run today?
-    if ($Weekly =~ m/^No Unique Results found for(.*)$today/) { # yes
+    if ($Weekly =~ m/^No unique results found for(.*)$today/i) { # yes
 #      print "leave 'No'\n";
     } elsif ($Weekly =~ m/^Web search results for(.*)$today/) { # yes we already have a link, leave it.
 #      print "leave 'Yes'\n";      # do nothing, still no results.
     } else { # no results, add a line.
 #      print "insert 'No'\n";
-      print HTML "No Unique Results found for search on ",$today,"<br>\n";
+      print HTML "No unique results found for search on ",$today,"<br>\n";
     }
   }
   print HTML $Weekly;
@@ -1285,7 +1351,7 @@ sub get_pair_part {
 #    print "$mark: \"$1\"\n";
     return ($1);
   }
-  print "Warning: can't find <!--$mark--> ... <--/$mark-->\n" if defined($v_dbg);
+  # print "Warning: can't find <!--$mark--> ... <--/$mark-->\n" if defined($v_dbg);
   return ("");
 }
 
@@ -1310,7 +1376,7 @@ sub get_part {
 #    print "$mark: \"$1\"\n";
     return ($1);
   }
-  print "Warning: can't find <!--$mark\\n ... /$mark-->\n" if defined($v_dbg);
+  # print "Warning: can't find <!--$mark\\n ... /$mark-->\n" if defined($v_dbg);
   return ("");
 }
 
@@ -1335,7 +1401,7 @@ sub get_inline_part {
 #    print "inline $mark: \{$1\}\n";
     return ($1);
   }
-  print "Warning: can't find <!--$mark\{ ... \}/$mark-->\n" if defined($v_dbg);
+  # print "Warning: can't find <!--$mark\{ ... \}/$mark-->\n" if defined($v_dbg);
   return ("");
 }
 
@@ -1368,7 +1434,7 @@ sub get_inline_list {
     }
     return (@LIST);
   }
-  print "Warning: can't find <!--$mark\{ ... \}/$mark-->\n" if defined($v_dbg);
+  # print "Warning: can't find <!--$mark\{ ... \}/$mark-->\n" if defined($v_dbg);
   return ("");
 }
 
@@ -1401,7 +1467,11 @@ sub make_index {
   } 
   # or OUR provided file
   my($it) = <<EOF;
+<HEAD>
 <Title> index.html empty page to establish summary file format </Title>
+</HEAD>
+
+<BODY>
 <!--Top-->
 <!--Place the html to make your page start to look nice here-->
 <!--In the next line place the pretty name of the query.-->
@@ -1449,6 +1519,7 @@ sub make_index {
 <p>
 Last modified October 17, 1996.
 <!--/Bottom-->
+</BODY>
 EOF
 
   print INDEX $it;
@@ -1486,7 +1557,11 @@ sub make_date {
   } 
   # or OUR provided file
   my($it) = <<EOF;
+<HEAD>
 <Title> first_date.html empty page to establish weekly file format </Title>
+</HEAD>
+
+<BODY>
 <!--Top-->
 <!--Place the html to make your page start to look nice here-->
 <!--In the next line place the pretty name of the query.-->
@@ -1527,8 +1602,9 @@ TITLE<br>
 <!--Bottom-->
 <!--Place the html to make your page finish up sharply here-->
 <p>
-Last modified October 17, 1996.
+Web searches maintained by <a href="http://www.isi.edu/lsam/autosearch/index.html">AutoSearch</a>.
 <!--/Bottom-->
+</BODY>
 EOF
 
   $it =~ s/{ask user}/\{$qs\}/ if ($it =~ m,Query\{ask user\}/Query,);
@@ -1548,6 +1624,15 @@ sub time_today {
 
 sub time_file_of_the_day_numeric {
     return strftime("%Y%m%d", localtime(time));
+}
+
+
+sub http_error_as_nice_string {
+    my($response) = @_;
+    my($message) = $response->message();
+    my($code) = $response->code();
+    chomp($message);
+    return "$message (code $code)";
 }
 
 

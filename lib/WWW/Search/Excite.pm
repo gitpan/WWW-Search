@@ -1,61 +1,37 @@
 #!/usr/local/bin/perl -w
 
 #
-# AltaVista.pm
-# by John Heidemann
+# Excite.pm
+# by GLen Pringle
+#
+# based upon Lycos.pm
+# by Wm. L. Scheding
 # Copyright (C) 1996 by USC/ISI
-# $Id: AltaVista.pm,v 1.17 1996/11/21 23:02:14 johnh Exp $
+# $Id: Excite.pm,v 1.5 1996/11/25 19:43:10 johnh Exp $
 #
 # Complete copyright notice follows below.
 # 
 
 
-package WWW::Search::AltaVista;
+package WWW::Search::Excite;
 
 =head1 NAME
 
-WWW::Search::AltaVista - class for searching Alta Vista 
+WWW::Search::Excite - class for searching Excite 
 
 =head1 DESCRIPTION
 
-This class is an AltaVista specialization of WWW::Search.
-It handles making and interpreting AltaVista searches
-F<http://www.altavista.digital.com>.
+This class is an Excite specialization of WWW::Search.
+It handles making and interpreting Excite searches
+F<http://www.excite.com>.
 
 This class exports no public interface; all interaction should
 be done through WWW::Search objects.
 
 
-=head1 OPTIONS
-
-The default is for simple web queries.
-Specialized back-ends for simple and advanced web and news searches
-are available (see
-L<WWW::Search::AltaVista::Web>,
-L<WWW::Search::AltaVista::AdvancedWeb>,
-L<WWW::Search::AltaVista::News>,
-L<WWW::Search::AltaVista::AdvancedNews>).
-These back-ends set different combinations following options.
-
-=over 8
-
-=item pg=aq
-
-Do advanced queries.
-(It defaults to simple queries.)
-
-=item what=news
-
-Search Usenet instead of the web.
-(It defaults to search the web.)
-
-=back
-
-
 =head1 SEE ALSO
 
-To make new back-ends, see L<WWW::Search>,
-or the specialized AltaVista searches described in options.
+To make new back-ends, see L<WWW::Search>.
 
 
 =head1 HOW DOES IT WORK?
@@ -73,12 +49,20 @@ it sets C<{_next_url}> to point to the page for the next
 set of results, otherwise it sets it to undef to indicate we're done.
 
 
+=head1 BUGS
+
+This module should support options and a back-end specific for news.
+
+
 =head1 AUTHOR
 
-C<WWW::Search::AltaVista> is written by John Heidemann, <johnh@isi.edu>.
+C<WWW::Search::Excite> is written by GLen Pringle (C<pringle@cs.monash.edu.au>)
+based upon C<WWW::Search::Lycos>.
 
 
 =head1 COPYRIGHT
+
+This back-end was contributed to USC/ISI by GLen Pringle.
 
 Copyright (c) 1996 University of Southern California.
 All rights reserved.                                            
@@ -102,9 +86,9 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 #
 #  Test cases:
-# ./altavista.pl xxxasdf                        --- no hits
-# ./altavista.pl '"lsam replication"'           --- single page return
-# ./altavista.pl '+"john heidemann" +work'      --- 9 page return
+# search xxxasdf                    --- no matches
+# search 'lsam AND replication'     --- four matches
+# search 'glen AND pringle'         --- tons of matches
 #
 
 
@@ -114,6 +98,7 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
+# $VERSION = 1.000;
 @ISA = qw(WWW::Search Exporter);
 
 use Carp ();
@@ -124,33 +109,12 @@ require WWW::SearchResult;
 # private
 sub native_setup_search
 {
-    my($self, $native_query, $native_options_ref) = @_;
-    $self->user_agent('user');
+    my($self, $native_query) = @_;
+    $self->user_agent();
     $self->{_next_to_retrieve} = 0;
-    if (!defined($self->{_default_options})) {
-	$self->{_default_options} = {
-	    pg => 'q',
-	    what => 'web',
-	    fmt => 'd',
-        };
-    };
-    my($options_ref) = $self->{_default_options};
-    if (defined($native_options_ref)) {
-	# copy options
-	foreach (keys %$native_options_ref) {
-	    $options_ref->{$_} = $native_options_ref->{$_};
-	};
-    };
-    # process the options
-    my($options) = '';
-    foreach (keys %$options_ref) {
-	$options .= $_ . '=' . $options_ref->{$_} . '&';
-    };
-    
-    $self->{_base_url} = 
-	$self->{_next_url} =
-	"http://www.altavista.digital.com/cgi-bin/query?" . $options .
-	"q=" . $native_query;
+    $self->{_base_url} = $self->{_next_url} =
+	"http://www.excite.com/search.gw?trace=a&collection=web" .
+	"&search=" . $native_query;
 }
 
 
@@ -171,16 +135,19 @@ sub native_retrieve_some
     };
 
     # parse the output
-    my($HEADER, $HITS, $TRAILER) = (1..10);
+    my($HEADER, $HITS, $DESC, $FORM, $INPUT, $TRAILER) = (1..6);
     my($hits_found) = 0;
     my($state) = ($HEADER);
     my($hit) = ();
+    my($next) = "";
     foreach (split(/\n/, $response->content())) {
-         next if m@^$@; # short circuit for blank lines
-	 if ($state == $HEADER && /Documents?.*of\s*(about)?\s*(\d+)\s+matching/) {
-	    $self->approximate_result_count($2);
+        next if m@^$@; # short circuit for blank lines
+	if ($state == $HEADER && m@^<B>Excite\s+Search\s*</B>\s*found\s+<B>\s*(\d+)\s*</B>\s*documents\s+about@i) {
+#            print STDOUT "header:\"$+\" matches\n";
+	    $self->approximate_result_count($1);
 	    $state = $HITS;
-	} elsif ($state == $HITS && m@^(<[Pp]><dt>|<dt>)<a href=\"([^"]+)"><strong>(.*)</strong></a><dd>(.*)(\.)?<br>@) {
+	} elsif ($state == $HITS && m@^<DT><font\s+color=\#ff0000><B>(\d+)\%\s+</B></font><B><a href=\"([^"]+)\">(.*)</a></b>@i) { #"
+#            print STDOUT "hit: \"$_\"\n";
 	    if (defined($hit)) {
 	        push(@{$self->{cache}}, $hit);
 	    };
@@ -188,37 +155,41 @@ sub native_retrieve_some
 	    $hit->add_url($2);
 	    $hits_found++;
 	    $hit->title($3);
-	    $hit->description($4.$5);
-	} elsif ($state == $HITS && m@^(<[Pp]><dt>|<dt>)<a href=\"([^"]+)"><strong>(.*)</strong></a><dd>(.*)<br><a href=\"([^"]+)">@) {
-	    # news is slightly different
-	    if (defined($hit)) {
-	        push(@{$self->{cache}}, $hit);
-	    };
-	    $hit = new WWW::SearchResult;
-	    $hit->add_url($2);   # AltaVista's news gateway URL
-	    $hits_found++;
-	    $hit->title($3);
-	    $hit->description($4);
-	    $hit->add_url($5);   # news: URL
-	    $hits_found++;
-	} elsif ($state == $HITS && /^<cite><a href="([^"]+)">/) { #"
-	    if (defined($hit)) {
-	        $hit->add_url($1);
-	        $hits_found++;   # altavista counts URL==hit
-	    };
-	} elsif ($state == $HITS && /^<CENTER>.*\s+p\./) {
+	    $state = $DESC;
+	} elsif ($state == $DESC && m@^<BR><B><I>Summary:</I></B>\s+(.*)<p>$@i) { #"
+#            print STDOUT "desc:\"$+\"\n";
+	    $hit->description($1);
+	    $state = $HITS;
+	} elsif ($state == $HITS && m@^</DL>$@i) { #"
+#            print STDOUT "hits:\"$_\"\n";
+	    $state = $FORM;
+	} elsif ($state == $FORM && m@^<FORM\sACTION="([^"]+)"@i) { #"
+#            print STDOUT "form:\"$_\"\n";
+	    $state = $INPUT;
+		$next = "http://www.excite.com".$1."?";
+	} elsif ($state == $INPUT && m@^<INPUT\s+TYPE=(\w*)\s+NAME="*([^"]+)"*\s+VALUE=\"([^"]+)\">$@i) { #"
+#            print STDOUT "input:\"$_\"\n";
+		my($type) = $1;
+		my($name) = $2;
+		my($value) = $3;
+		my($test) = $1.$3;
+		if ($test !~ /^submit.*previous/i) {
+			$next = "$next$name=$value&";
+		}
+	} elsif ($state == $INPUT && m@^</FORM>$@i) { #"
+		$next =~ s/ /+/g;
+		my($c) = chop($next);
+		if ($c ne "&") { $next = $next.$c; }
+#            print STDOUT "input:\"$_\"\n";
 	    # end, with a list of other pages to go to
 	    if (defined($hit)) {
 	        push(@{$self->{cache}}, $hit);
 	    };
-	    if (/Next\]/) {
-		# set up next page
-		my($relative_url) = m@<a\s+href="([^"]+)">\s*\[\s*[Nn]ext\s*\]\s*</a>@; #"
-		$self->{_next_url} = new URI::URL($relative_url, $self->{_base_url});
-	    } else {
-		$self->{_next_url} = undef;
-	    };
+	    # set up next page
+	    $self->{_next_url} = $next;
 	    $state = $TRAILER;
+	} else {
+#            print STDOUT "read:\"$_\"\n";
 	};
     };
     if ($state != $TRAILER) {
@@ -229,7 +200,7 @@ sub native_retrieve_some
 	$self->{_next_url} = undef;
     };
 
-    # sleep so as to not overload altavista
+    # sleep so as to not overload excite
     $self->user_agent_delay if (defined($self->{_next_url}));
 
     return $hits_found;

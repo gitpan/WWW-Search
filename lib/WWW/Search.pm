@@ -4,7 +4,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.23 1996/11/07 00:18:42 johnh Exp $
+# $Id: Search.pm,v 1.33 1996/11/25 22:21:37 johnh Exp $
 #
 # A complete copyright notice appears at the end of this file.
 # 
@@ -24,9 +24,12 @@ C<WWW::Search> library.  This library implements a Perl API
 to web-based search engines.
 
 Current search engines supported include
-AltaVista (both web and Usenet searches),
-Lycos,
-and HotBot.
+AltaVista (both web and news),
+Dejanews,
+Excite (web only),
+HotBot (web only),
+Infoseek (e-mail, web, and news)
+and Lycos.
 
 Search results are limited and there is a pause between each request 
 for results to avoid overloading either the client or the server.
@@ -36,7 +39,7 @@ for results to avoid overloading either the client or the server.
 Using the library should be straightforward:
 Here's a sample program:
 
-    my($search) = new WWW::Search::AltaVista;
+    my($search) = new WWW::Search('AltaVista');
     $search->native_query(WWW::Search::escape_query($query));
     my($result);
     while ($result = $search->next_result()) {
@@ -54,6 +57,9 @@ For more details see L<LWP>.
 For specific search engines, see L<WWW::Search::TheEngineName>
 (replacing TheEngineName with a particular search engine).
 
+For details about the results of a search,
+see L<WWW::SearchResult>.
+
 
 =head1 METHODS AND FUNCTIONS
 
@@ -65,11 +71,13 @@ For specific search engines, see L<WWW::Search::TheEngineName>
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query);
-$VERSION = 1.005;
+$VERSION = 1.007;
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
-require LWP::UserAgent;
-#require LWP::RobotUA;
+use LWP::UserAgent;
+use LWP::RobotUA;
+use HTTP::Status;
+use HTTP::Response;
 
 use Carp ();
 use URI::Escape;
@@ -99,6 +107,7 @@ The next step is usually:
 
 # the default (not currently more configurable :-< )
 $default_engine = 'AltaVista';
+$default_agent_name = 'WWW::Search/johnh@isi.edu';
 
 sub new
 { 
@@ -119,7 +128,9 @@ sub new
 	maximum_to_retrieve => 500,  # both pages and hits
 	number_retrieved => 0,
 	requests_made => 0,
-	interrequest_delay => 0.25,
+	interrequest_delay => 0.25,  # in seconds
+	agent_name => $default_agent_name,
+	http_proxy => undef,
 	# variable initialization goes here
     }, $subclass;
     return $self;
@@ -135,8 +146,8 @@ The actual search is not actually begun until C<results> or
 C<next_result> is called.
 
 Example:
-    $search->native_query('search-engine-specific+query+string',
-	{ option1 => 'able', option2 => 'baker' } );
+	$search->native_query('search-engine-specific+query+string',
+		{ option1 => 'able', option2 => 'baker' } );
 
 The hash of options following the query string is optional.  Both the
 query string and the hash of options are interpreted in
@@ -180,6 +191,9 @@ Example:
         print $result->url(), "\n";
     };
 
+On error, results() will return undef and set C<response()>
+to the HTTP response code.
+
 =cut
 
 sub results
@@ -202,6 +216,9 @@ Example:
 	print $result->url(), "\n";
     };
 
+On error, results() will return undef and set C<response()>
+to the HTTP response code.
+
 =cut
 sub next_result
 {
@@ -222,6 +239,34 @@ sub next_result
 	$self->retrieve_some();
     };
 }
+
+
+=head2 response
+
+Return the HTTP Response code for the last query
+(see L<HTTP::Response>).
+If the query returns C<undef>,
+errors could be reported like this:
+
+    my($response) = $search->response();
+    if ($response->is_success) {
+	print "no search results\n";
+    } else {
+	print "error:  " . $response->as_string() . "\n";
+    };
+
+Note:  even if the back-end does not involve the web
+it should return HTTP::Response-style codes.
+
+=cut
+sub response
+{
+    my($self) = shift;
+    $self->{response} = new HTTP::Response(RC_OK)
+	if (!defined($self->{response}));
+    return $self->{response};
+}
+
 
 =head2 C<seek_result($offset)>
 
@@ -263,7 +308,7 @@ Example:
     $max = $seach->maximum_to_retrieve(100);
 
 =cut
-sub title { return shift->_elem('maximum_to_retrieve', @_); }
+sub maximum_to_retrieve { return shift->_elem('maximum_to_retrieve', @_); }
 
 
 =head2 escape_query
@@ -273,7 +318,7 @@ Before queries are made special characters must be escaped
 so that a proper URL can be formed.
 
 This is like escaping a URL
-but "+" is a protected character
+but all non-alphanumeric characters are escaped and
 and spaces are converted to "+"'s.
 
 Example:
@@ -288,7 +333,9 @@ sub escape_query {
     # code stolen from URI::Escape.pm.
     my($text) = @_;
     # Default unsafe characters except for space. (RFC1738 section 2.2)
-    $text =~ s/([+\x00-\x1f"#%;<>?{}|\\\\^~`\[\]\x7F-\xFF])/$URI::Escape::escapes{$1}/g; #"
+#    $text =~ s/([+\x00-\x1f"#%;<>?{}|\\\\^~`\[\]\x7F-\xFF])/$URI::Escape::escapes{$1}/g; #"
+    # The modern trend seems to be to quote almost everything.
+    $text =~ s/([^ A-Za-z0-9])/$URI::Escape::escapes{$1}/g; #"
     # space
     $text =~ s/ /+/g;
     return $text;
@@ -319,6 +366,23 @@ sub unescape_query {
 
 
 
+=head2 http_proxy
+
+Set-up an HTTP proxy
+(Perhaps for connections from behind a firewall.)
+
+This routine should be called before the first retrival is attempted.
+
+Example:
+
+    $search->http_proxy("http://gateway:8080");
+
+=cut
+sub http_proxy { return shift->_elem('http_proxy', @_); }
+
+
+
+
 =head2 setup_search (PRIVATE)
 
 This internal routine does generic Search setup.
@@ -338,25 +402,36 @@ sub setup_search
 }
 
 
-=head2 setup_user_agent (PRIVATE, NOT A METHOD)
+=head2 user_agent($NON_ROBOT) (PRIVATE)
 
-This internal routine does setup for a user-agent
-for dervived classes that use the web.
+This internal routine creates a user-agent
+for dervived classes that query the web.
+If C<$NON_ROBOT>, a normal user-agent (rather than a robot-style user-agent)
+is used.
+
+Back-ends should use robot-style user-agents whereever possible.
+Also, back-ends should call C<user_agent_delay> every page retrival
+to avoid swamping search-engines.
 
 =cut
 
-sub setup_user_agent
+sub user_agent
 {
-    #
-    # Sigh.  We should use RobotUA,
-    # but all search engines prohibit all robots from making
-    # queries (presumably to avoid search-engine overload).
-    #
-    my($ua) = new LWP::UserAgent;
-    $ua->agent('WWW::Search/johnh@isi.edu');
-#    $ua->delay(1/60.0);   # inter-page delay in minutes
-    return $ua;
+    my($self) = shift;
+    my($non_robot) = @_;
+
+    my($ua);
+    if ($non_robot) {
+	$ua = new LWP::UserAgent;
+    } else {
+	$ua = new LWP::RobotUA($self->{agent_name});
+	$ua->delay($self->{interrequest_delay}/60.0);
+    };
+    $ua->proxy('http', $self->{'http_proxy'})
+	if (defined($self->{'http_proxy'}));
+    $self->{user_agent} = $ua;
 }
+
 
 =head2 user_agent_delay (PRIVATE)
 
@@ -367,7 +442,8 @@ servers to avoid overloading them with many, fast back-to-back requests.
 sub user_agent_delay {
     my($self) = @_;
     # sleep for a qarter second
-    select(undef, undef, undef, $self->{interrequest_delay});
+    select(undef, undef, undef, $self->{interrequest_delay})
+	 if ($self->{robot_p});
 }
 
 
@@ -388,11 +464,11 @@ sub retrieve_some
 	if ($self->{state} == $SEARCH_BEFORE);
 
     # too many?
-    if ($self->{number_retrieved} > $self->{maximum_to_retrieve}) {
+    if ($self->{number_retrieved} > $self->{'maximum_to_retrieve'}) {
         $self->{state} = $SEARCH_DONE;
 	return;
     };
-    if ($self->{requests_made} > $self->{maximum_to_retrieve}) {
+    if ($self->{requests_made} > $self->{'maximum_to_retrieve'}) {
         $self->{state} = $SEARCH_DONE;
 	return;
     };
@@ -438,6 +514,24 @@ and C<{response}> (an C<HTTP::Response> code) and C<{cache}>
 If you implement a new back-end, please let the authors know.
 
 
+=head1 BUGS AND DESIRED FEATURES
+
+The bugs are there for you to find (some people call them Easter Eggs).
+
+Desired features:
+
+=over 4
+
+=item A portable query language.
+A portable language would easily allow you to
+move queries easily between different search engines.
+A good query abstraction is non-trivial
+and won't be done anytime soon at ISI,
+so if you want to take a shot at it, please let me know.
+
+=back
+
+
 =head1 AUTHOR
 
 C<WWW::Search> is written by John Heidemann, <johnh@isi.edu>.
@@ -445,7 +539,9 @@ C<WWW::Search> is written by John Heidemann, <johnh@isi.edu>.
 Back-ends and applications for WWW::Search have been done by 
 John Heidemann,
 Wm. L. Scheding,
-and others.
+Cesare Feroldi de Rosa,
+and
+GLen Pringle.
 
 
 =head1 COPYRIGHT
@@ -467,6 +563,7 @@ WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
 MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 =cut
+#'
 
 
 # make warnings go away

@@ -4,7 +4,7 @@
 # Yahoo.pm
 # by Wm. L. Scheding
 # Copyright (C) 1996 by USC/ISI
-# $Id: Yahoo.pm,v 1.2 1996/11/11 18:14:51 johnh Exp $
+# $Id: Yahoo.pm,v 1.4 1996/11/21 23:02:17 johnh Exp $
 #
 # Complete copyright notice follows below.
 # 
@@ -49,10 +49,17 @@ it sets C<{_next_url}> to point to the page for the next
 set of results, otherwise it sets it to undef to indicate we're done.
 
 
+=head1 BUGS
+
+C<WWW::Search::Yahoo> does not currently work reliably
+and is not being actively maintained.
+If you wish to hack on it, please go ahead.
+
+
 =head1 AUTHOR
 
-C<WWW::Search> is written by John Heidemann, <johnh@isi.edu>.
-C<WWW::Yahoo> is written by Wm. L. Scheding, <wls@isi.edu>.
+C<WWW::Search::Yahoo> is written by Wm. L. Scheding
+based upon C<WWW::Search::AltaVista>.
 
 
 =head1 COPYRIGHT
@@ -107,7 +114,7 @@ require WWW::SearchResult;
 sub native_setup_search
 {
     my($self, $native_query) = @_;
-    $self->{_user_agent} = WWW::Search::setup_user_agent;
+    $self->user_agent();
     $self->{_next_to_retrieve} = 0;
     $self->{_base_url} = $self->{_next_url} =
 	"http://search.yahoo.com/bin/search?d=y&g=0&s=a&w=s&n=100" .
@@ -125,7 +132,7 @@ sub native_retrieve_some
 
     # get some
     my($request) = new HTTP::Request('GET', $self->{_next_url});
-    my($response) = $self->{_user_agent}->request($request);
+    my($response) = $self->{user_agent}->request($request);
     $self->{response} = $response;
     if (!$response->is_success) {
 	return undef;
