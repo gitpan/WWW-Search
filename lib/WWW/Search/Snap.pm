@@ -1,10 +1,7 @@
-#!/usr/local/bin/perl -w
-
-#
 # Snap.pm
 # by Jim Smyser
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: Snap.pm,v 1.07 1999/6/8 20:19:25 jims Exp $
+# $Id: Snap.pm,v 1.2 1999/06/22 13:40:47 mthurn Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -118,7 +115,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '1.07';
+$VERSION = '1.08';
 
 use Carp ();
 use WWW::Search(generic_option);
@@ -180,7 +177,7 @@ sub native_setup_search {
    # Finally figure out the url.
    $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
    } # native_setup_search
- 
+
 # private
 sub native_retrieve_some
     {
@@ -219,7 +216,7 @@ sub native_retrieve_some
        $state = $HITS;
        # Make sure we catch redirects Snap likes to randomly insert 
        # and filter them.....
-  } if ($state eq $HITS && m@<b><a href="http://redirect.*?u=([^"]+)\q=.*?>(.*)</a></b><br>@i) {
+  } if ($state eq $HITS && m@<b><a href="http://redirect.*?u=([^"]+)\&q=.*?>(.*)</a></b><br>@i) {
        print STDERR "**Found a URL\n" if 2 <= $self->{_debug};
        if (defined($hit)) 
          {
@@ -242,7 +239,7 @@ sub native_retrieve_some
        $hits_found++;
        $hit->title($2);
        $state = $DESC;
-   } elsif ($state eq $DESC && m{\w(.*)<br>}i) {
+   } elsif ($state eq $DESC && m{(\w(.*)<br>)}i) {
        print STDERR "**Found description\n" if 2 <= $self->{_debug};
        $hit->description($1);
        $state = $HITS;
@@ -263,6 +260,5 @@ sub native_retrieve_some
      } 
    return $hits_found;
    } # native_retrieve_some
- 1;
-
+1;
 

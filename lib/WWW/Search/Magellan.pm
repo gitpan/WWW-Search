@@ -1,10 +1,6 @@
-#!/usr/local/bin/perl -w
-
 # Magellan.pm
 # Copyright (c) 1998 by Martin Thurn
-# $Id: Magellan.pm,v 1.5 1998/08/27 17:29:03 johnh Exp $
-
-package WWW::Search::Magellan;
+# $Id: Magellan.pm,v 1.9 1998/10/22 17:46:24 mthurn Exp $
 
 =head1 NAME
 
@@ -28,11 +24,9 @@ F<http://www.mckinley.com>.
 This class exports no public interface; all interaction should
 be done through L<WWW::Search> objects.
 
-
 =head1 SEE ALSO
 
 To make new back-ends, see L<WWW::Search>.
-
 
 =head1 HOW DOES IT WORK?
 
@@ -49,21 +43,27 @@ C<{cache}>.  If it finds a ``next'' button in the text,
 it sets C<{_next_url}> to point to the page for the next
 set of results, otherwise it sets it to undef to indicate we''re done.
 
-
 =head1 BUGS
 
 Please tell the author if you find any!
-
 
 =head1 TESTING
 
 This module adheres to the C<WWW::Search> test suite mechanism. 
 
-  Test cases:
- '+mrfglbqnx +NoSuchWord'    ---   no hits
- 'disestablishmentarianism'  ---   1 hits on one page
- '+Martin +Thurn'            ---  11 hits on two pages
+  Test cases (accurate as of 1998-10-22):
 
+    $file = 'test/Magellan/zero_result';
+    $query = 'Bogus' . 'NoSuchWord';
+    test($mode, $TEST_EXACTLY);
+
+    $file = 'test/Magellan/one_page_result';
+    $query = 'disestab'.'lishmentarianism';
+    test($mode, $TEST_RANGE, 2, 9);
+
+    $file = 'test/Magellan/multi_page_result';
+    $query = 'om'.'arr';
+    test($mode, $TEST_GREATER_THAN, 11);
 
 =head1 AUTHOR
 
@@ -73,15 +73,17 @@ As of 1998-03-17, C<WWW::Search::Magellan> is maintained by Martin Thurn
 C<WWW::Search::Magellan> was originally written by Martin Thurn
 based on C<WWW::Search::WebCrawler>.
 
-
 =head1 LEGALESE
 
 THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
 WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
 MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
-
 =head1 VERSION HISTORY
+
+=head2 1.7, 1998-10-09
+
+Now uses split_lines function
 
 =head2 1.6
 
@@ -91,16 +93,17 @@ Now parses score (percentage) from Magellan's output.
 
 First publicly-released version.
 
-
 =cut
 
 #####################################################################
+
+package WWW::Search::Magellan;
 
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = sprintf("%d.%02d", q$Revision: 1.5 $ =~ /(\d+)\.(\d+)/);
+$VERSION = sprintf("%d.%02d", q$Revision: 1.9 $ =~ /(\d+)\.(\d+)/);
 
 use Carp ();
 use WWW::Search(generic_option);
@@ -305,13 +308,3 @@ sub native_retrieve_some
 1;
 
 __END__
-
-Martin''s page download results, 1998-03:
-
-simplest arbitrary page:
-
-http://www.mckinley.com/search.gw?search=%2Bstar+%2Bwars+%2Bbible&c=web&look=magellan&x=23&y=17
-http://www.mckinley.com/search.gw?search=%2Bstar+%2Bwars+%2Bbible&look=magellan&start=8&c=web
-
-Here''s what I''m generating:
-

@@ -1,0 +1,412 @@
+head	1.2;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	99.06.30.20.12.06;	author mthurn;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.06.29.19.15.55;	author mthurn;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@remove MIME crap at bottom of file!
+@
+text
+@###############################################################
+# ExciteNews.pm                                               
+# by Jim Smyser                                               
+# Copyright (c) 1999 by Jim Smyser & USC/ISI                  
+# $Id: News.pm,v 1.1 1999/06/29 19:15:55 mthurn Exp mthurn $
+# Complete copyright notice follows below.                    
+###############################################################
+
+=head1 NAME
+
+WWW::Search::Excite::News - class for searching ExciteNews
+
+=head1 SYNOPSIS
+
+require WWW::Search;
+$search = new WWW::Search('Excite::News');
+
+=head1 DESCRIPTION
+
+Class for searching Excite News F<http://www.excite.com>.
+Excite has one of the best news bot on the web.
+
+If you use the raw method for this backend you will need to include
+a "<p>" at end of your print statement, example:
+     print $result->raw(), "<p>\n";
+
+This class exports no public interface; all interaction should
+be done through WWW::Search objects.
+
+=head1 SEE ALSO
+
+To make new back-ends, see L<WWW::Search>.
+
+=head1 HOW DOES IT WORK?
+
+C<native_setup_search> is called before we do anything.
+It initializes our private variables (which all begin with underscores)
+and sets up a URL to the first results page in C<{_next_url}>.
+         
+C<native_retrieve_some> is called (from C<WWW::Search::retrieve_some>)
+whenever more hits are needed.  It calls the LWP library
+to fetch the page specified by C<{_next_url}>.
+It parses this page, appending any search hits it finds to
+C<{cache}>.  If it finds a ``next'' button in the text,
+it sets C<{_next_url}> to point to the page for the next
+set of results, otherwise it sets it to undef to indicate we are done.
+
+=head1 AUTHOR
+
+Maintained by Jim Smyser <jsmyser@@bigfoot.com>
+
+=head1 TESTING
+
+NONE AVAILABLE FOR THIS BACKEND!
+
+=head1 COPYRIGHT
+
+The original parts from John Heidemann are subject to
+following copyright notice:
+         
+Copyright (c) 1996-1998 University of Southern California.
+All rights reserved.
+                                                                        
+THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+=cut
+
+#####################################################################
+
+package WWW::Search::Excite::News;
+
+require Exporter;
+@@EXPORT = qw();
+@@EXPORT_OK = qw();
+@@ISA = qw(WWW::Search Exporter);
+$VERSION = '1.01';
+
+use Carp ();
+use WWW::Search(generic_option);
+require WWW::SearchResult;
+
+# private
+sub native_setup_search
+  {
+  my ($self, $native_query, $native_options_ref) = @@_;
+  
+  # Set some private variables:
+  $self->{_debug} = $native_options_ref->{'search_debug'};
+  $self->{_debug} = 2 if ($native_options_ref->{'search_parse_debug'});
+  $self->{_debug} ||= 0;
+  $self->{'_hits_per_page'} = '50';
+  $self->{agent_e_mail} = 'jsmyser@@bigfoot.com.com';
+  $self->user_agent(0);
+  $self->{'_next_to_retrieve'} = 0;
+  $self->{'_num_hits'} = 0;
+  if (!defined($self->{_options})) {
+    $self->{_options} = {
+                         'search_url' => 'http://search.excite.com/search.gw',
+                         'c' => 'timely&showSummary=true',
+                         'search' => $native_query,
+                         'perPage' => $self->{'_hits_per_page'},
+                         'start' => $self->{'_next_to_retrieve'},
+                        };
+    }
+  my $options_ref = $self->{_options};
+  if (defined($native_options_ref))
+    {
+    # Copy in new options.
+    foreach (keys %$native_options_ref)
+      {
+      $options_ref->{$_} = $native_options_ref->{$_};
+      } 
+    } 
+  # Process the options.
+  my $options = '';
+  foreach (keys %$options_ref)
+    {
+    # printf STDERR "option: $_ is " . $options_ref->{$_} . "\n";
+    next if (generic_option($_));
+    $options .= $_ . '=' . $options_ref->{$_} . '&';
+    }
+  # Yikes, gotta chop the trailing & 
+  chop $options;
+  # Finally, figure out the url.
+  $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
+  } 
+  
+sub begin_new_hit
+  {
+  my($self) = shift;
+  my($old_hit) = shift;
+  my($old_raw) = shift;
+  # Save it
+  if (defined($old_hit)) {
+    $old_hit->raw($old_raw) if (defined($old_raw));
+    push(@@{$self->{cache}}, $old_hit);
+    }
+  # Make a new hit.
+  return (new WWW::SearchResult, '');
+  }
+
+# private
+sub native_retrieve_some
+  {
+  my ($self) = @@_;
+  # Fast exit if already done:
+  return undef unless defined($self->{_next_url});
+  # Sleep so as to not overload the server for next page(s)
+  print STDERR "***Sending request (",$self->{_next_url},")\n" if $self->{'_debug'};
+  my $response = $self->http_request('GET', $self->{_next_url});
+  $self->{response} = $response;
+  unless ($response->is_success)
+    {
+    return undef;
+    }
+  print STDERR "***Picked up a response..\n" if $self->{'_debug'};
+  $self->{'_next_url'} = undef;
+  # Parse the output
+  my ($HEADER, $HITS, $SOURCE, $DESC, $DATE, $TRAILER) = qw(HE HH SO DE DA TR);
+  my ($raw) = '';
+  my $hits_found = 0;
+  my $state = $HEADER;
+  my $hit;
+  foreach ($self->split_lines($response->content()))
+    {
+    next if m/^$/;              # short circuit for blank lines
+    print STDERR " *** $state ===$_===" if 2 <= $self->{'_debug'};
+    
+    if ($state eq $HEADER && m=^\[(\d+)\s+hits.=i) {
+      print STDERR "**Result Count**\n" if 2 <= $self->{'_debug'};
+      $self->approximate_result_count($1);
+      $state = $HITS;
+      } elsif ($state eq $HEADER && m@@&nbsp;(\d+)-(\d+)@@i) {
+        print STDERR "**Next Page Header**\n" if 2 <= $self->{'_debug'};
+        $state = $HITS;
+        
+        } elsif ($state eq $HITS && m@@.*?<A HREF=.*?;([^"]+)\">(.*)</A></b>&nbsp;@@i) {
+          print STDERR "hit url line\n" if 2 <= $self->{'_debug'};
+          ($hit, $raw) = $self->begin_new_hit($hit, $raw);
+          $raw .= $_;
+          $self->{'_num_hits'}++;
+          $hits_found++;
+          $hit->add_url($1);
+          $hit->title($2);
+          $state = $SOURCE;
+          } elsif ($state eq $SOURCE && m@@(\((.*))@@i) {
+            print STDERR "**News Source**\n" if 2 <= $self->{'_debug'};
+            $raw .= $_;
+            $hit->score($1);
+            $state = $DESC;
+            } elsif ($state eq $DESC && m@@<BR>(.*)$@@i) {
+              print STDERR "**Found Description**\n" if 2 <= $self->{'_debug'};
+              $raw .= $_;
+              $hit->description($1);
+              $state = $DATE;
+              
+              } elsif ($state eq $DATE && m@@<BR>(<i>(.*))&nbsp;@@) {
+                print STDERR "**Got the Date**\n" if 2 <= $self->{'_debug'};
+                $raw .= $_;
+                $hit->index_date($1);
+                $state = $HITS;
+                
+                } elsif ($state eq $HITS && m/<INPUT\s[^>]*VALUE=\"Next\sResults\"/i) {
+                  print STDERR "**Going to Next Page**\n" if 2 <= $self->{'_debug'};
+                  $self->{'_next_to_retrieve'} += $self->{'_hits_per_page'};
+                  $self->{'_options'}{'start'} = $self->{'_next_to_retrieve'};
+                  my($options) = '';
+                  foreach (keys %{$self->{_options}})
+                    {
+                    next if (generic_option($_));
+                    $options .= $_ . '=' . $self->{_options}{$_} . '&';
+                    }
+                  chop $options;
+                  # Finally, figure out the url.
+                  $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
+                  $state = $TRAILER;
+                  } else {
+                    print STDERR "**Nothing Matched**\n" if 2 <= $self->{'_debug'};
+                    }
+    } 
+  if ($state ne $TRAILER)
+    {
+    # no other pages missed
+    $self->{_next_url} = undef;
+    }
+  return $hits_found;
+  } # native_retrieve_some
+      
+1;
+      
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d5 1
+a5 1
+# $Id: ExciteNews.pm,v 1.00 1999/06/29 11:06:31 jims Exp $
+a232 140
+ -=- MIME -=- 
+DQpIZXJlIGlzIEV4Y2l0ZU5ld3MucG0NCg0KDQoNCg0KIyEvdXNyL2xvY2FsL2Jpbi9wZXJsIC13
+DQogICAgICAgICANCiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMj
+IyMjIyMjIyMjIyMjIyMjIyMjIw0KIyBFeGNpdGVOZXdzLnBtICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICANCiMgYnkgSmltIFNteXNlciAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgDQojIENvcHlyaWdodCAoYykgMTk5OSBi
+eSBKaW0gU215c2VyICYgVVNDL0lTSSAgICAgICAgICAgICAgICAgIA0KIyAkSWQ6IEV4Y2l0ZU5l
+d3MucG0sdiAxLjAwIDE5OTkvMDYvMjkgMTE6MDY6MzEgamltcyBFeHAgJA0KIyBDb21wbGV0ZSBj
+b3B5cmlnaHQgbm90aWNlIGZvbGxvd3MgYmVsb3cuICAgICAgICAgICAgICAgICAgICANCiMjIyMj
+IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMj
+Iw0KICAgICAgICAgDQogICAgICAgICANCnBhY2thZ2UgV1dXOjpTZWFyY2g6OkV4Y2l0ZU5ld3M7
+DQogICAgICAgICANCj1oZWFkMSBOQU1FDQogICAgICAgICANCldXVzo6U2VhcmNoOjpFeGNpdGVO
+ZXdzIC0gY2xhc3MgZm9yIHNlYXJjaGluZyBFeGNpdGVOZXdzDQoNCiAgICAgICAgDQo9aGVhZDEg
+U1lOT1BTSVMNCiAgICAgICAgIA0KcmVxdWlyZSBXV1c6OlNlYXJjaDsNCiRzZWFyY2ggPSBuZXcg
+V1dXOjpTZWFyY2goJ0V4Y2l0ZU5ld3MnKTsNCiAgICAgICAgIA0KICAgICAgICAgDQo9aGVhZDEg
+REVTQ1JJUFRJT04NCg0KQ2xhc3MgZm9yIHNlYXJjaGluZyBFeGNpdGUgTmV3cyBGPGh0dHA6Ly93
+d3cuZXhjaXRlLmNvbT4uDQpFeGNpdGUgaGFzIG9uZSBvZiB0aGUgYmVzdCBuZXdzIGJvdCBvbiB0
+aGUgd2ViLg0KDQpJZiB5b3UgdXNlIHRoZSByYXcgbWV0aG9kIGZvciB0aGlzIGJhY2tlbmQgeW91
+IHdpbGwgbmVlZCB0byBpbmNsdWRlDQphICI8cD4iIGF0IGVuZCBvZiB5b3VyIHByaW50IHN0YXRl
+bWVudCwgZXhhbXBsZToNCiAgICAgcHJpbnQgJHJlc3VsdC0+cmF3KCksICI8cD5cbiI7DQoNCg0K
+VGhpcyBjbGFzcyBleHBvcnRzIG5vIHB1YmxpYyBpbnRlcmZhY2U7IGFsbCBpbnRlcmFjdGlvbiBz
+aG91bGQNCmJlIGRvbmUgdGhyb3VnaCBXV1c6OlNlYXJjaCBvYmplY3RzLg0KICAgICAgICAgDQo9
+aGVhZDEgU0VFIEFMU08NCiAgICAgICAgIA0KVG8gbWFrZSBuZXcgYmFjay1lbmRzLCBzZWUgTDxX
+V1c6OlNlYXJjaD4uDQogICAgICAgICANCiAgICAgICAgIA0KPWhlYWQxIEhPVyBET0VTIElUIFdP
+Uks/DQogICAgICAgICANCkM8bmF0aXZlX3NldHVwX3NlYXJjaD4gaXMgY2FsbGVkIGJlZm9yZSB3
+ZSBkbyBhbnl0aGluZy4NCkl0IGluaXRpYWxpemVzIG91ciBwcml2YXRlIHZhcmlhYmxlcyAod2hp
+Y2ggYWxsIGJlZ2luIHdpdGggdW5kZXJzY29yZXMpDQphbmQgc2V0cyB1cCBhIFVSTCB0byB0aGUg
+Zmlyc3QgcmVzdWx0cyBwYWdlIGluIEM8e19uZXh0X3VybH0+Lg0KICAgICAgICAgDQpDPG5hdGl2
+ZV9yZXRyaWV2ZV9zb21lPiBpcyBjYWxsZWQgKGZyb20gQzxXV1c6OlNlYXJjaDo6cmV0cmlldmVf
+c29tZT4pDQp3aGVuZXZlciBtb3JlIGhpdHMgYXJlIG5lZWRlZC4gIEl0IGNhbGxzIHRoZSBMV1Ag
+bGlicmFyeQ0KdG8gZmV0Y2ggdGhlIHBhZ2Ugc3BlY2lmaWVkIGJ5IEM8e19uZXh0X3VybH0+Lg0K
+SXQgcGFyc2VzIHRoaXMgcGFnZSwgYXBwZW5kaW5nIGFueSBzZWFyY2ggaGl0cyBpdCBmaW5kcyB0
+bw0KQzx7Y2FjaGV9Pi4gIElmIGl0IGZpbmRzIGEgYGBuZXh0JycgYnV0dG9uIGluIHRoZSB0ZXh0
+LA0KaXQgc2V0cyBDPHtfbmV4dF91cmx9PiB0byBwb2ludCB0byB0aGUgcGFnZSBmb3IgdGhlIG5l
+eHQNCnNldCBvZiByZXN1bHRzLCBvdGhlcndpc2UgaXQgc2V0cyBpdCB0byB1bmRlZiB0byBpbmRp
+Y2F0ZSB3ZSdyZSBkb25lLg0KICAgICAgICAgDQogICAgICAgICANCj1oZWFkMSBBVVRIT1INCiAg
+ICAgICAgIA0KTWFpbnRhaW5lZCBieSBKaW0gU215c2VyIDxqc215c2VyQGJpZ2Zvb3QuY29tPg0K
+ICAgICAgICAgDQo9aGVhZDEgVEVTVElORw0KDQpOT05FIEFWQUlMQUJMRSBGT1IgVEhJUyBCQUNL
+RU5EIQ0KDQo9aGVhZDEgQ09QWVJJR0hUDQogICAgICAgICANClRoZSBvcmlnaW5hbCBwYXJ0cyBm
+cm9tIEpvaG4gSGVpZGVtYW5uIGFyZSBzdWJqZWN0IHRvDQpmb2xsb3dpbmcgY29weXJpZ2h0IG5v
+dGljZToNCiAgICAgICAgIA0KQ29weXJpZ2h0IChjKSAxOTk2LTE5OTggVW5pdmVyc2l0eSBvZiBT
+b3V0aGVybiBDYWxpZm9ybmlhLg0KQWxsIHJpZ2h0cyByZXNlcnZlZC4NCiAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+IA0KVEhJUyBTT0ZUV0FSRSBJUyBQUk9WSURFRCAiQVMgSVMiIEFORCBXSVRIT1VUIEFOWSBFWFBS
+RVNTIE9SIElNUExJRUQNCldBUlJBTlRJRVMsIElOQ0xVRElORywgV0lUSE9VVCBMSU1JVEFUSU9O
+LCBUSEUgSU1QTElFRCBXQVJSQU5USUVTIE9GDQpNRVJDSEFOVEFCSUxJVFkgQU5EIEZJVE5FU1Mg
+Rk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFLg0KICAgICAgICAgDQogICAgICAgICANCj1jdXQNCiMn
+DQoNCiAgICAgICAgIA0KIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMj
+IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjDQogICAgDQpyZXF1aXJlIEV4cG9ydGVyOw0KQEVY
+UE9SVCA9IHF3KCk7DQpARVhQT1JUX09LID0gcXcoKTsNCkBJU0EgPSBxdyhXV1c6OlNlYXJjaCBF
+eHBvcnRlcik7DQogICAgDQp1c2UgQ2FycCAoKTsNCnVzZSBXV1c6OlNlYXJjaChnZW5lcmljX29w
+dGlvbik7DQpyZXF1aXJlIFdXVzo6U2VhcmNoUmVzdWx0Ow0KICAgIA0KIyBwdWJsaWMNCnN1YiB2
+ZXJzaW9uIHsgJFZFUlNJT04gfQ0KICAgIA0KIyBwcml2YXRlDQpzdWIgbmF0aXZlX3NldHVwX3Nl
+YXJjaA0KICB7DQogIG15ICgkc2VsZiwgJG5hdGl2ZV9xdWVyeSwgJG5hdGl2ZV9vcHRpb25zX3Jl
+ZikgPSBAXzsNCg0KICAjIFNldCBzb21lIHByaXZhdGUgdmFyaWFibGVzOg0KICAkc2VsZi0+e19k
+ZWJ1Z30gPSAkbmF0aXZlX29wdGlvbnNfcmVmLT57J3NlYXJjaF9kZWJ1Zyd9Ow0KICAkc2VsZi0+
+e19kZWJ1Z30gPSAyIGlmICgkbmF0aXZlX29wdGlvbnNfcmVmLT57J3NlYXJjaF9wYXJzZV9kZWJ1
+Zyd9KTsNCiAgJHNlbGYtPntfZGVidWd9IHx8PSAwOw0KICAkc2VsZi0+eydfaGl0c19wZXJfcGFn
+ZSd9ID0gJzUwJzsNCiAgJHNlbGYtPnthZ2VudF9lX21haWx9ID0gJ2pzbXlzZXJAYmlnZm9vdC5j
+b20uY29tJzsNCiAgJHNlbGYtPnVzZXJfYWdlbnQoMCk7DQogICRzZWxmLT57J19uZXh0X3RvX3Jl
+dHJpZXZlJ30gPSAwOw0KICAkc2VsZi0+eydfbnVtX2hpdHMnfSA9IDA7DQogICBpZiAoIWRlZmlu
+ZWQoJHNlbGYtPntfb3B0aW9uc30pKSB7DQogICAgICAgICAgICAkc2VsZi0+e19vcHRpb25zfSA9
+IHsNCiAgICAgICAgICAgICdzZWFyY2hfdXJsJyA9PiAnaHR0cDovL3NlYXJjaC5leGNpdGUuY29t
+L3NlYXJjaC5ndycsDQogICAgICAgICAgICAnYycgPT4gJ3RpbWVseSZzaG93U3VtbWFyeT10cnVl
+JywNCiAgICAgICAgICAgICdzZWFyY2gnID0+ICRuYXRpdmVfcXVlcnksDQogICAgICAgICAgICAn
+cGVyUGFnZScgPT4gJHNlbGYtPnsnX2hpdHNfcGVyX3BhZ2UnfSwNCiAgICAgICAgICAgICdzdGFy
+dCcgPT4gJHNlbGYtPnsnX25leHRfdG9fcmV0cmlldmUnfSwNCiAgIA0KICAgICAgICAgICAgfTsN
+CiAgICAgICAgIH0NCiAgIG15ICRvcHRpb25zX3JlZiA9ICRzZWxmLT57X29wdGlvbnN9Ow0KICAg
+aWYgKGRlZmluZWQoJG5hdGl2ZV9vcHRpb25zX3JlZikpDQogICB7DQogICAjIENvcHkgaW4gbmV3
+IG9wdGlvbnMuDQogICBmb3JlYWNoIChrZXlzICUkbmF0aXZlX29wdGlvbnNfcmVmKQ0KICAgIHsN
+CiAgICRvcHRpb25zX3JlZi0+eyRffSA9ICRuYXRpdmVfb3B0aW9uc19yZWYtPnskX307DQogICAg
+fSANCiAgICAgIH0gDQojIFByb2Nlc3MgdGhlIG9wdGlvbnMuDQogICBteSAkb3B0aW9ucyA9ICcn
+Ow0KICAgZm9yZWFjaCAoa2V5cyAlJG9wdGlvbnNfcmVmKQ0KICAgew0KICAgIyBwcmludGYgU1RE
+RVJSICJvcHRpb246ICRfIGlzICIgLiAkb3B0aW9uc19yZWYtPnskX30gLiAiXG4iOw0KICAgbmV4
+dCBpZiAoZ2VuZXJpY19vcHRpb24oJF8pKTsNCiAgICRvcHRpb25zIC49ICRfIC4gJz0nIC4gJG9w
+dGlvbnNfcmVmLT57JF99IC4gJyYnOw0KICAgIH0NCiAgICMgWWlrZXMsIGdvdHRhIGNob3AgdGhl
+IHRyYWlsaW5nICYgDQogIGNob3AgJG9wdGlvbnM7DQojIEZpbmFsbHksIGZpZ3VyZSBvdXQgdGhl
+IHVybC4NCiAgICRzZWxmLT57X25leHRfdXJsfSA9ICRzZWxmLT57X29wdGlvbnN9eydzZWFyY2hf
+dXJsJ30gLic/Jy4gJG9wdGlvbnM7DQogICAgfSANCiAgICANCnN1YiBiZWdpbl9uZXdfaGl0DQog
+ICAgew0KICAgbXkoJHNlbGYpID0gc2hpZnQ7DQogICBteSgkb2xkX2hpdCkgPSBzaGlmdDsNCiAg
+IG15KCRvbGRfcmF3KSA9IHNoaWZ0Ow0KICAgIyBTYXZlIGl0DQogICBpZiAoZGVmaW5lZCgkb2xk
+X2hpdCkpIHsNCiAgICRvbGRfaGl0LT5yYXcoJG9sZF9yYXcpIGlmIChkZWZpbmVkKCRvbGRfcmF3
+KSk7DQogICBwdXNoKEB7JHNlbGYtPntjYWNoZX19LCAkb2xkX2hpdCk7DQogICAgfTsNCiMgTWFr
+ZSBhIG5ldyBoaXQuDQogICByZXR1cm4gKG5ldyBXV1c6OlNlYXJjaFJlc3VsdCwgJycpOw0KICAg
+IH0NCiAgIA0KIyBwcml2YXRlDQpzdWIgbmF0aXZlX3JldHJpZXZlX3NvbWUNCiAgICB7DQogICBt
+eSAoJHNlbGYpID0gQF87DQogICAjIEZhc3QgZXhpdCBpZiBhbHJlYWR5IGRvbmU6DQogICByZXR1
+cm4gdW5kZWYgdW5sZXNzIGRlZmluZWQoJHNlbGYtPntfbmV4dF91cmx9KTsNCiAgICMgU2xlZXAg
+c28gYXMgdG8gbm90IG92ZXJsb2FkIHRoZSBzZXJ2ZXIgZm9yIG5leHQgcGFnZShzKQ0KICAgcHJp
+bnQgU1RERVJSICIqKipTZW5kaW5nIHJlcXVlc3QgKCIsJHNlbGYtPntfbmV4dF91cmx9LCIpXG4i
+IGlmICRzZWxmLT57J19kZWJ1Zyd9Ow0KICAgbXkgJHJlc3BvbnNlID0gJHNlbGYtPmh0dHBfcmVx
+dWVzdCgnR0VUJywgJHNlbGYtPntfbmV4dF91cmx9KTsNCiAgICRzZWxmLT57cmVzcG9uc2V9ID0g
+JHJlc3BvbnNlOw0KICAgdW5sZXNzICgkcmVzcG9uc2UtPmlzX3N1Y2Nlc3MpDQogICAgew0KICAg
+cmV0dXJuIHVuZGVmOw0KICAgIH0NCiAgIHByaW50IFNUREVSUiAiKioqUGlja2VkIHVwIGEgcmVz
+cG9uc2UuLlxuIiBpZiAkc2VsZi0+eydfZGVidWcnfTsNCiAgICRzZWxmLT57J19uZXh0X3VybCd9
+ID0gdW5kZWY7DQojIFBhcnNlIHRoZSBvdXRwdXQNCiAgIG15ICgkSEVBREVSLCAkSElUUywgJFNP
+VVJDRSwgJERFU0MsICREQVRFLCAkVFJBSUxFUikgPSBxdyhIRSBISCBTTyBERSBEQSBUUik7DQog
+ICBteSAoJHJhdykgPSAnJzsNCiAgIG15ICRoaXRzX2ZvdW5kID0gMDsNCiAgIG15ICRzdGF0ZSA9
+ICRIRUFERVI7DQogICBteSAkaGl0Ow0KICAgZm9yZWFjaCAoJHNlbGYtPnNwbGl0X2xpbmVzKCRy
+ZXNwb25zZS0+Y29udGVudCgpKSkNCiAgICB7DQogICBuZXh0IGlmIG0vXiQvOyAjIHNob3J0IGNp
+cmN1aXQgZm9yIGJsYW5rIGxpbmVzDQogICBwcmludCBTVERFUlIgIiAqKiogJHN0YXRlID09PSRf
+PT09IiBpZiAyIDw9ICRzZWxmLT57J19kZWJ1Zyd9Ow0KICAgDQppZiAoJHN0YXRlIGVxICRIRUFE
+RVIgJiYgbT1eXFsoXGQrKVxzK2hpdHMuPWkpIHsNCiAgICBwcmludCBTVERFUlIgIioqUmVzdWx0
+IENvdW50KipcbiIgaWYgMiA8PSAkc2VsZi0+eydfZGVidWcnfTsNCiAgICAgICRzZWxmLT5hcHBy
+b3hpbWF0ZV9yZXN1bHRfY291bnQoJDEpOw0KICAgICRzdGF0ZSA9ICRISVRTOw0KfSBlbHNpZiAo
+JHN0YXRlIGVxICRIRUFERVIgJiYgbUAmbmJzcDsoXGQrKS0oXGQrKUBpKSB7DQogICAgcHJpbnQg
+U1RERVJSICIqKk5leHQgUGFnZSBIZWFkZXIqKlxuIiBpZiAyIDw9ICRzZWxmLT57J19kZWJ1Zyd9
+Ow0KICAgICRzdGF0ZSA9ICRISVRTOw0KDQp9IGVsc2lmICgkc3RhdGUgZXEgJEhJVFMgJiYgbUAu
+Kj88QSBIUkVGPS4qPzsoW14iXSspXCI+KC4qKTwvQT48L2I+Jm5ic3A7QGkpIHsNCiAgICBwcmlu
+dCBTVERFUlIgImhpdCB1cmwgbGluZVxuIiBpZiAyIDw9ICRzZWxmLT57J19kZWJ1Zyd9Ow0KICAg
+ICgkaGl0LCAkcmF3KSA9ICRzZWxmLT5iZWdpbl9uZXdfaGl0KCRoaXQsICRyYXcpOw0KICAgICRy
+YXcgLj0gJF87DQogICAgJHNlbGYtPnsnX251bV9oaXRzJ30rKzsNCiAgICAkaGl0c19mb3VuZCsr
+Ow0KICAgICRoaXQtPmFkZF91cmwoJDEpOw0KICAgICRoaXQtPnRpdGxlKCQyKTsNCiAgICAkc3Rh
+dGUgPSAkU09VUkNFOw0KfSBlbHNpZiAoJHN0YXRlIGVxICRTT1VSQ0UgJiYgbUAoXCgoLiopKUBp
+KSB7DQogICAgcHJpbnQgU1RERVJSICIqKk5ld3MgU291cmNlKipcbiIgaWYgMiA8PSAkc2VsZi0+
+eydfZGVidWcnfTsNCiAgICAkcmF3IC49ICRfOw0KICAgICRoaXQtPnNjb3JlKCQxKTsNCiAgICAk
+c3RhdGUgPSAkREVTQzsNCn0gZWxzaWYgKCRzdGF0ZSBlcSAkREVTQyAmJiBtQDxCUj4oLiopJEBp
+KSB7DQogICAgcHJpbnQgU1RERVJSICIqKkZvdW5kIERlc2NyaXB0aW9uKipcbiIgaWYgMiA8PSAk
+c2VsZi0+eydfZGVidWcnfTsNCiAgICAkcmF3IC49ICRfOw0KICAgICRoaXQtPmRlc2NyaXB0aW9u
+KCQxKTsNCiAgICAkc3RhdGUgPSAkREFURTsNCg0KfSBlbHNpZiAoJHN0YXRlIGVxICREQVRFICYm
+IG1APEJSPig8aT4oLiopKSZuYnNwO0ApIHsNCiAgICBwcmludCBTVERFUlIgIioqR290IHRoZSBE
+YXRlKipcbiIgaWYgMiA8PSAkc2VsZi0+eydfZGVidWcnfTsNCiAgICAkcmF3IC49ICRfOw0KICAg
+ICRoaXQtPmluZGV4X2RhdGUoJDEpOw0KICAgICRzdGF0ZSA9ICRISVRTOw0KDQp9IGVsc2lmICgk
+c3RhdGUgZXEgJEhJVFMgJiYgbS88SU5QVVRcc1tePl0qVkFMVUU9XCJOZXh0XHNSZXN1bHRzXCIv
+aSkgew0KICAgIHByaW50IFNUREVSUiAiKipHb2luZyB0byBOZXh0IFBhZ2UqKlxuIiBpZiAyIDw9
+ICRzZWxmLT57J19kZWJ1Zyd9Ow0KICAgICRzZWxmLT57J19uZXh0X3RvX3JldHJpZXZlJ30gKz0g
+JHNlbGYtPnsnX2hpdHNfcGVyX3BhZ2UnfTsNCiAgICAkc2VsZi0+eydfb3B0aW9ucyd9eydzdGFy
+dCd9ID0gJHNlbGYtPnsnX25leHRfdG9fcmV0cmlldmUnfTsNCiAgICBteSgkb3B0aW9ucykgPSAn
+JzsNCiAgICBmb3JlYWNoIChrZXlzICV7JHNlbGYtPntfb3B0aW9uc319KQ0KICAgICB7DQogICAg
+bmV4dCBpZiAoZ2VuZXJpY19vcHRpb24oJF8pKTsNCiAgICAkb3B0aW9ucyAuPSAkXyAuICc9JyAu
+ICRzZWxmLT57X29wdGlvbnN9eyRffSAuICcmJzsNCiAgICAgfQ0KICAgIGNob3AgJG9wdGlvbnM7
+DQogICAgIyBGaW5hbGx5LCBmaWd1cmUgb3V0IHRoZSB1cmwuDQogICAgJHNlbGYtPntfbmV4dF91
+cmx9ID0gJHNlbGYtPntfb3B0aW9uc317J3NlYXJjaF91cmwnfSAuJz8nLiAkb3B0aW9uczsNCiAg
+ICAkc3RhdGUgPSAkVFJBSUxFUjsNCiAgICAgfSBlbHNlIHsNCiAgICBwcmludCBTVERFUlIgIioq
+Tm90aGluZyBNYXRjaGVkKipcbiIgaWYgMiA8PSAkc2VsZi0+eydfZGVidWcnfTsNCiAgICAgfQ0K
+ICAgICAgIH0gDQogICAgaWYgKCRzdGF0ZSBuZSAkVFJBSUxFUikNCiAgICAgew0KICAgICMgbm8g
+b3RoZXIgcGFnZXMgbWlzc2VkDQogICAgJHNlbGYtPntfbmV4dF91cmx9ID0gdW5kZWY7DQogICAg
+IH0NCiAgICByZXR1cm4gJGhpdHNfZm91bmQ7DQp9ICMgbmF0aXZlX3JldHJpZXZlX3NvbWUNCiAg
+IA0KMTsNCg0K
+
+
+@

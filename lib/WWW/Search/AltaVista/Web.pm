@@ -4,7 +4,7 @@
 # Web.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Web.pm,v 1.8 1998/10/09 01:11:40 johnh Exp $
+# $Id: Web.pm,v 1.1 1999/06/18 19:16:18 mthurn Exp $
 #
 # Complete copyright notice follows below.
 # 

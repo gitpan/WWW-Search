@@ -1,0 +1,77 @@
+<html><head>
+<title>AltaVista: Advanced Query Perl and CPAN</title>
+</head><body>
+<font size=+1 face=arial, helvetica>
+<a href="/cgi-bin/query?text">AltaVista Search Service</a>
+</font>
+<br>
+<FORM name=mfrm method=GET action="/cgi-bin/query">
+<INPUT TYPE=hidden NAME=pg VALUE=aq>
+<INPUT TYPE=hidden NAME=what VALUE="news">
+<INPUT TYPE=hidden NAME=text VALUE=yes>
+<font size=-1><b>Search Usenet for postings on:</b>
+</font><font size=-1><br><input type=text name=r size=50 value="">
+ <input type=submit name=search value="Search"><br>Enter boolean expression:<br>
+<textarea name=q cols=50 rows=3 maxlength=800 wrap=virtual>Perl and CPAN</textarea><br>Range of Dates (e.g. 21/Mar/96): <b> From </b><INPUT TYPE=text NAME=d0 SIZE=9 MAXLENGTH=32 VALUE="">
+<b> To </b><INPUT TYPE=text NAME=d1 SIZE=9 MAXLENGTH=32 VALUE=""><br><INPUT TYPE=checkbox name=fmt value=n> <b>Count documents matching the boolean expression.</b> 
+<P><font size=-1><a href="/cgi-bin/query?pg=q&what=news&text=yes">Search</a> - Advanced - <a href="/cgi-bin/query?pg=aq&text=yes">The Web</a></font><BR></font></FORM>
+<font size=-1><b>AltaVista found about 2152 postings for you. </font></b><P><font size=-1><b>Result Pages: </b><a href="/cgi-bin/query?pg=aq&what=news&text=yes&q=Perl+and+CPAN&stq=450&c9k">[<b>&lt;&lt; Prev</b>]</a>  &nbsp;<a href="/cgi-bin/query?pg=aq&what=news&text=yes&q=Perl+and+CPAN&stq=0&c9k">1</a>
+ &nbsp;<a href="/cgi-bin/query?pg=aq&what=news&text=yes&q=Perl+and+CPAN&stq=30&c9k">2</a>
+ &nbsp;<a href="/cgi-bin/query?pg=aq&what=news&text=yes&q=Perl+and+CPAN&stq=60&c9k">3</a>
+ &nbsp;<a href="/cgi-bin/query?pg=aq&what=news&text=yes&q=Perl+and+CPAN&stq=90&c9k">4</a>
+ &nbsp;<a href="/cgi-bin/query?pg=aq&what=news&text=yes&q=Perl+and+CPAN&stq=120&c9k">5</a>
+ &nbsp;<a href="/cgi-bin/query?pg=aq&what=news&text=yes&q=Perl+and+CPAN&stq=150&c9k">6</a>
+ &nbsp;<a href="/cgi-bin/query?pg=aq&what=news&text=yes&q=Perl+and+CPAN&stq=180&c9k">7</a>
+&nbsp; <a href="/cgi-bin/query?pg=aq&what=news&text=yes&q=Perl+and+CPAN&stq=510&c9k">[<b>Next &gt;&gt;</b>]</a> <br>
+</font><dl>
+<dt><b>481. </b><a href="http://ww2.altavista.com/cgi-bin/news?msg@18261@comp%2elang%2eperl%2emodules"><strong>CPAN.pm problem. ?</strong></a><dd>10 Feb 99 - <b>comp.lang.perl.modules</b><br><a href="news:36C0FC23.930A9C06@ecr.mu.oz.au">&lt;36C0FC23.930A9C06@ecr.mu.oz.au&gt;</a><br>  <a href="mailto:pylim@ecr.mu.oz.au">Paul Lim &lt;pylim@ecr.mu.oz.au&gt;</a><P>
+<dt><b>482. </b><a href="http://ww2.altavista.com/cgi-bin/news?msg@18264@comp%2elang%2eperl%2emodules"><strong>Almost able to compile Crypt::Blowfish on Win32 - need DLL help</strong></a><dd>10 Feb 99 - <b>comp.lang.perl.modules</b><br><a href="news:79s6s4$j28$1@nnrp1.dejanews.com">&lt;79s6s4$j28$1@nnrp1.dejanews.com&gt;</a><br>  <a href="mailto:jase@purdue.edu">jase@purdue.edu</a><P>
+<dt><b>483. </b><a href="http://ww2.altavista.com/cgi-bin/news?msg@18265@comp%2elang%2eperl%2emodules"><strong>Re: Net::FTP and put</strong></a><dd>10 Feb 99 - <b>comp.lang.perl.modules</b><br><a href="news:01be550a$13cae310$d53ec69b@leicester">&lt;01be550a$13cae310$d53ec69b@leicester&gt;</a><br>  <a href="mailto:jwilson@ic.ac.uk">&quot;Jeff Wilson&quot; &lt;jwilson@ic.ac.uk&gt;</a><P>
+<dt><b>484. </b><a href="http://ww2.altavista.com/cgi-bin/news?msg@18271@comp%2elang%2eperl%2emodules"><strong>Re: Adding New Module Perl NT binary CPAN?</strong></a><dd>10 Feb 99 - <b>comp.lang.perl.modules</b><br><a href="news:79rmne$o11$1@fnord.nationwide.net">&lt;79rmne$o11$1@fnord.nationwide.net&gt;</a><br>  <a href="mailto:clerke@emirates.net.ae">&quot;wayne clerke&quot; &lt;clerke@emirates.net.ae&gt;</a><P>
+<dt><b>485. </b><a href="http://ww2.altavista.com/cgi-bin/news?msg@18276@comp%2elang%2eperl%2emodules"><strong>Re: Net::FTP and put</strong></a><dd>10 Feb 99 - <b>comp.lang.perl.modules</b><br><a href="news:SIfw2.1$qA5.38@news.aa.ans.net">&lt;SIfw2.1$qA5.38@news.aa.ans.net&gt;</a><br>  <a href="mailto:emerald@reston.ans.net">&lt;emerald@reston.ans.net&gt;</a><P>
+<dt><b>486. </b><a href="http://ww2.altavista.com/cgi-bin/news?msg@18282@comp%2elang%2eperl%2emodules"><strong>Re: File::Find &amp;&amp; File::stat</strong></a><dd>10 Feb 99 - <b>comp.lang.perl.modules</b><br><a href="news:m1btj2mfdk.fsf@halfdome.holdit.com">&lt;m1btj2mfdk.fsf@halfdome.holdit.com&gt;</a><br>  <a href="mailto:merlyn@stonehenge.com">merlyn@stonehenge.com (Randal L. Schwartz)</a><P>
+<dt><b>487. </b><a href="http://ww2.altavista.com/cgi-bin/news?msg@18283@comp%2elang%2eperl%2emodules"><strong>File::Find &amp;&amp; File::stat</strong></a><dd>10 Feb 99 - <b>comp.lang.perl.modules</b><br><a href="news:79s7f3$jjk$1@nnrp1.dejanews.com">&lt;79s7f3$jjk$1@nnrp1.dejanews.com&gt;</a><br>  <a href="mailto:scott@sboss.net">scott@sboss.net</a><P>
+<dt><b>488. </b><a href="http://ww2.altavista.com/cgi-bin/news?msg@18284@comp%2elang%2eperl%2emodules"><strong>Re: Net::FTP and put</strong></a><dd>10 Feb 99 - <b>comp.lang.perl.modules</b><br><a href="news:36C1A436.7E97A6FD@home.com">&lt;36C1A436.7E97A6FD@home.com&gt;</a><br>  <a href="mailto:brucemohler@home.com">&quot;Bruce W. Mohler&quot; &lt;brucemohler@home.com&gt;</a><P>
+<dt><b>489. </b><a href="http://ww2.altavista.com/cgi-bin/news?msg@62633@comp%2elang%2etcl"><strong>Re: Perl + TK</strong></a><dd>11 Feb 99 - <b>comp.lang.tcl</b><br><a href="news:79st9v$jag$1@wagner.wagner.home">&lt;79st9v$jag$1@wagner.wagner.home&gt;</a><br>  <a href="mailto:vitus@wagner.rinet.ru">vitus@wagner.rinet.ru (Victor Wagner)</a><P>
+<dt><b>490. </b><a href="http://ww2.altavista.com/cgi-bin/news?msg@170923@comp%2elang%2eperl%2emisc"><strong>Re: Perl and Microsoft Mail</strong></a><dd>11 Feb 99 - <b>comp.lang.perl.misc</b><br><a href="news:slrn7c4f0a.65.alastair@calliope.demon.co.uk">&lt;slrn7c4f0a.65.alastair@calliope.demon.co.uk&gt;</a><br>  <a href="mailto:alastair@calliope.demon.co.uk">alastair@calliope.demon.co.uk (Alastair)</a><P>
+<dt><b>491. </b><a href="http://ww2.altavista.com/cgi-bin/news?msg@170959@comp%2elang%2eperl%2emisc"><strong>Re: Interactive Programs and Perl</strong></a><dd>11 Feb 99 - <b>comp.lang.perl.misc</b><br><a href="news:ebohlmanF6z3uv.2o9@netcom.com">&lt;ebohlmanF6z3uv.2o9@netcom.com&gt;</a><br>  <a href="mailto:ebohlman@netcom.com">Eric Bohlman &lt;ebohlman@netcom.com&gt;</a><P>
+<dt><b>492. </b><a href="http://ww2.altavista.com/cgi-bin/news?msg@170974@comp%2elang%2eperl%2emisc"><strong>Re: Need Perl Tcl/Tk for Linux</strong></a><dd>10 Feb 99 - <b>comp.lang.perl.misc</b><br><a href="news:79sl8o$4hu$2@news0-alterdial.uu.net">&lt;79sl8o$4hu$2@news0-alterdial.uu.net&gt;</a><br>  <a href="mailto:gward@cnri.reston.va.us">gward@cnri.reston.va.us (Greg Ward)</a><P>
+<dt><b>493. </b><a href="http://ww2.altavista.com/cgi-bin/news?msg@171010@comp%2elang%2eperl%2emisc"><strong>Re: File max. size</strong></a><dd>10 Feb 99 - <b>comp.lang.perl.misc</b><br><a href="news:39ogn1lsax.fsf@ibnets.com">&lt;39ogn1lsax.fsf@ibnets.com&gt;</a><br>  <a href="mailto:uri@ibnets.com">Uri Guttman &lt;uri@ibnets.com&gt;</a><P>
+<dt><b>494. </b><a href="http://ww2.altavista.com/cgi-bin/news?msg@171042@comp%2elang%2eperl%2emisc"><strong>Net-SSLeay on Windows NT?</strong></a><dd>10 Feb 99 - <b>comp.lang.perl.misc</b><br><a href="news:36C23A0D.D5265377@slac.stanford.edu">&lt;36C23A0D.D5265377@slac.stanford.edu&gt;</a><br>  <a href="mailto:stupakov@slac.stanford.edu">Gennady Stupakov &lt;stupakov@slac.stanford.edu&gt;</a><P>
+<dt><b>495. </b><a href="http://ww2.altavista.com/cgi-bin/news?msg@220177@comp%2eos%2elinux%2eadvocacy"><strong>Re: Why I use NT4 (posted to both linux and NT groups)</strong></a><dd>10 Feb 99 - <b>comp.os.linux.advocacy</b><br><a href="news:m1k8xqgm10.fsf@inconnu.isu.edu">&lt;m1k8xqgm10.fsf@inconnu.isu.edu&gt;</a><br>  <a href="mailto:ink@inconnu.isu.edu">Craig Kelley &lt;ink@inconnu.isu.edu&gt;</a><P>
+<dt><b>496. </b><a href="http://ww2.altavista.com/cgi-bin/news?msg@46895@comp%2email%2esendmail"><strong>Re: Sendmail &amp; Perl scripts in aliases - how?</strong></a><dd>10 Feb 99 - <b>comp.mail.sendmail</b><br><a href="news:36C20D16.2781E494@crush.net">&lt;36C20D16.2781E494@crush.net&gt;</a><br>  <a href="mailto:pict2@crush.net">pict2 &lt;pict2@crush.net&gt;</a><P>
+<dt><b>497. </b><a href="http://ww2.altavista.com/cgi-bin/news?msg@171082@comp%2elang%2eperl%2emisc"><strong>Re: Interactive Programs and Perl</strong></a><dd>11 Feb 99 - <b>comp.lang.perl.misc</b><br><a href="news:slrn7c4ups.55v.fl_aggie@enso.coaps.fsu.edu">&lt;slrn7c4ups.55v.fl_aggie@enso.coaps.fsu.edu&gt;</a><br>  <a href="mailto:fl_aggie@thepentagon.com">fl_aggie@thepentagon.com (I R A Aggie)</a><P>
+<dt><b>498. </b><a href="http://ww2.altavista.com/cgi-bin/news?msg@171087@comp%2elang%2eperl%2emisc"><strong>Re: Calculate yesterdays date</strong></a><dd>10 Feb 99 - <b>comp.lang.perl.misc</b><br><a href="news:MPG.112b9cc8f7fdfab989a1b@nntp.hpl.hp.com">&lt;MPG.112b9cc8f7fdfab989a1b@nntp.hpl.hp.com&gt;</a><br>  <a href="mailto:lr@hpl.hp.com">lr@hpl.hp.com (Larry Rosler)</a><P>
+<dt><b>499. </b><a href="http://ww2.altavista.com/cgi-bin/news?msg@171094@comp%2elang%2eperl%2emisc"><strong>Re: OS-supported open-time mandatory file locks from Perl?</strong></a><dd>11 Feb 99 - <b>comp.lang.perl.misc</b><br><a href="news:19990211093430.19609.00000017@ng123.aol.com">&lt;19990211093430.19609.00000017@ng123.aol.com&gt;</a><br>  <a href="mailto:bbirthisel@aol.com">bbirthisel@aol.com (Bbirthisel)</a><P>
+<dt><b>500. </b><a href="http://ww2.altavista.com/cgi-bin/news?msg@171099@comp%2elang%2eperl%2emisc"><strong>Re: Calculate yesterdays date</strong></a><dd>11 Feb 99 - <b>comp.lang.perl.misc</b><br><a href="news:m3yam58e05.fsf@moiraine.dimensional.com">&lt;m3yam58e05.fsf@moiraine.dimensional.com&gt;</a><br>  <a href="mailto:dgris@moiraine.dimensional.com">Daniel Grisinger &lt;dgris@moiraine.dimensional.com&gt;</a><P>
+<dt><b>501. </b><a href="http://ww2.altavista.com/cgi-bin/news?msg@171103@comp%2elang%2eperl%2emisc"><strong>Re: Calculate yesterdays date</strong></a><dd>11 Feb 99 - <b>comp.lang.perl.misc</b><br><a href="news:yln22l8cu5.fsf@windlord.stanford.edu">&lt;yln22l8cu5.fsf@windlord.stanford.edu&gt;</a><br>  <a href="mailto:rra@stanford.edu">Russ Allbery &lt;rra@stanford.edu&gt;</a><P>
+<dt><b>502. </b><a href="http://ww2.altavista.com/cgi-bin/news?msg@57342@comp%2einfosystems%2ewww%2eauthoring%2ecgi"><strong>CGI Programming OpenFAQ (Free Help!)</strong></a><dd>11 Feb 99 - <b>comp.infosystems.www.authoring.cgi</b><br><a href="news:79uaf8$ucu$1@slave1.aa.net">&lt;79uaf8$ucu$1@slave1.aa.net&gt;</a><br>  <a href="mailto:boutell@boutell.com">boutell@boutell.com (Thomas Boutell)</a><P>
+<dt><b>503. </b><a href="http://ww2.altavista.com/cgi-bin/news?msg@9505@comp%2elang%2eperl%2etk"><strong>Re: Compile error on Linux RedHat 5.2 - na undeclared</strong></a><dd>11 Feb 99 - <b>comp.lang.perl.tk</b><br><a href="news:36C2CE7F.C555360F@ti.com">&lt;36C2CE7F.C555360F@ti.com&gt;</a><br>  <a href="mailto:reatmon@ti.com">Ryan Eatmon &lt;reatmon@ti.com&gt;</a><P>
+<dt><b>504. </b><a href="http://ww2.altavista.com/cgi-bin/news?msg@57513@comp%2edatabases%2einformix"><strong>Re: IDS on Linux: PERL/SQL</strong></a><dd>11 Feb 99 - <b>comp.databases.informix</b><br><a href="news:79voap$hf7$1@news.xmission.com">&lt;79voap$hf7$1@news.xmission.com&gt;</a><br>  <a href="mailto:jleffler@informix.com">Jonathan Leffler &lt;jleffler@informix.com&gt;</a><P>
+<dt><b>505. </b><a href="http://ww2.altavista.com/cgi-bin/news?msg@4709@comp%2eunix%2ebsd%2emisc"><strong>Re: HTTP file fetcher</strong></a><dd>11 Feb 99 - <b>comp.unix.bsd.misc</b><br><a href="news:79v916$c2v$1@news1.bu.edu">&lt;79v916$c2v$1@news1.bu.edu&gt;</a><br>  <a href="mailto:slanning@buphy.bu.edu">slanning@buphy.bu.edu (Scott Lanning)</a><P>
+</dl>
+<font size=-1><b>Result Pages: </b><a href="/cgi-bin/query?pg=aq&what=news&text=yes&q=Perl+and+CPAN&stq=450&c9k">[<b>&lt;&lt; Prev</b>]</a>  &nbsp;<a href="/cgi-bin/query?pg=aq&what=news&text=yes&q=Perl+and+CPAN&stq=0&c9k">1</a>
+ &nbsp;<a href="/cgi-bin/query?pg=aq&what=news&text=yes&q=Perl+and+CPAN&stq=30&c9k">2</a>
+ &nbsp;<a href="/cgi-bin/query?pg=aq&what=news&text=yes&q=Perl+and+CPAN&stq=60&c9k">3</a>
+ &nbsp;<a href="/cgi-bin/query?pg=aq&what=news&text=yes&q=Perl+and+CPAN&stq=90&c9k">4</a>
+ &nbsp;<a href="/cgi-bin/query?pg=aq&what=news&text=yes&q=Perl+and+CPAN&stq=120&c9k">5</a>
+ &nbsp;<a href="/cgi-bin/query?pg=aq&what=news&text=yes&q=Perl+and+CPAN&stq=150&c9k">6</a>
+ &nbsp;<a href="/cgi-bin/query?pg=aq&what=news&text=yes&q=Perl+and+CPAN&stq=180&c9k">7</a>
+&nbsp; <a href="/cgi-bin/query?pg=aq&what=news&text=yes&q=Perl+and+CPAN&stq=510&c9k">[<b>Next &gt;&gt;</b>]</a> <br>
+</font><font size=-2></font><P>
+<br>
+<font size=-2 face=arial, helvetica>
+<a href="/cgi-bin/query?text">AltaVista Home</a> | 
+<a href="/av/content/help.htm">Help</a> | 
+<a href="/av/content/questions.htm">Feedback</a>
+<br> 
+Copyright | 
+<a href="/av/content/disclaimer.htm">Disclaimer</a> | 
+<a href="/av/content/privacy.htm">Privacy</a>
+<br>
+<a href="/av/content/about.htm">About AltaVista</a> | 
+<a href="/cgi-bin/query?pg=tmpl&v=pref.html">Set your Preferences</a> | 
+<a href="/av/content/addurl.htm">Add a Page</a> | 
+<a href="/cgi-bin/query">Graphic Version</a>
+</font>
+</BODY></HTML>

@@ -1,7 +1,7 @@
 # Yahoo.pm
 # by Wm. L. Scheding and Martin Thurn
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: Yahoo.pm,v 1.10 1998/11/07 01:26:10 johnh Exp $
+# $Id: Yahoo.pm,v 1.13 1999/04/29 16:44:34 mthurn Exp $
 
 =head1 NAME
 
@@ -110,11 +110,13 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = sprintf("%d.%02d", q$Revision: 1.10 $ =~ /(\d+)\.(\d+)/);
+$VERSION = '1.13';
 
 use Carp ();
 use WWW::Search(generic_option);
 require WWW::SearchResult;
+
+sub version { $VERSION }
 
 sub native_setup_search
   {

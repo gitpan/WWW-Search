@@ -1,10 +1,7 @@
-#!/usr/local/bin/perl -w
-
-#
 # SearchResult.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: SearchResult.pm,v 1.10 1999/04/26 21:20:48 johnh Exp $
+# $Id: SearchResult.pm,v 1.2 1999/06/30 15:03:27 mthurn Exp $
 #
 # Copyright (c) 1996 University of Southern California.
 # All rights reserved.                                            
@@ -21,10 +18,7 @@
 # THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
 # WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
 # MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-# 
 
-
-package WWW::SearchResult;
 
 =head1 NAME
 
@@ -63,16 +57,13 @@ to return a url and title.
 
 #####################################################################
 
+package WWW::SearchResult;
+
 require LWP::MemberMixin;
 @ISA = qw(LWP::MemberMixin);
-
 use Carp ();
-# use HTTP::Status 'RC_INTERNAL_SERVER_ERROR';
 
-# my %ImplementedBy = (); # scheme => classname
-
-
-my($SEARCH_UNSPECIFIED, $SEARCH_SPECIFIED, $SEARCH_UNDERWAY, $SEARCH_DONE) = (1..10);
+my ($SEARCH_UNSPECIFIED, $SEARCH_SPECIFIED, $SEARCH_UNDERWAY, $SEARCH_DONE) = (1..10);
 
 
 =head2 new
@@ -95,23 +86,21 @@ sub new
 
 =head2 url
 
-Return the primary URL.
-Note that there may be a list of urls, see also methods
-C<urls> and C<add_url>.
-Nothing special is guaranteed about the primary URL
-other than that 
-it's the first one returned by the back end.
+Return the primary URL.  Note that there may be a list of urls, see
+also methods C<urls> and C<add_url>.  Nothing special is guaranteed
+about the primary URL other than that it is the first one returned by
+the back end.
 
 Every result is required to have at least one URL.
 
 =cut
-#'
+
 sub url {
     my($self) = shift @_;
     return ${$self->{urls}}[0] if ($#_ == -1);
     unshift @{$self->{urls}}, $_[0];
     return ${$self->{urls}}[0];
-};
+}
 
 sub _elem_array {
     my($self) = shift @_;
@@ -127,6 +116,7 @@ sub _elem_array {
     # always return array refrence
     return $self->{$elem};
 }
+
 sub _add_elem_array {
     my($self) = shift @_;
     my($elem) = shift @_;
@@ -152,6 +142,7 @@ and their titles.  These point to things the search engine thinks
 you might want (for example, see Infoseek).
 
 =cut
+
 sub urls { return shift->_elem_array('urls', @_); }
 sub add_url { return shift->_add_elem_array('urls', @_); }
 sub related_urls { return shift->_elem_array('related_urls', @_); }
@@ -171,44 +162,56 @@ Typical contents of these attributes:
 
 =over 8
 =item title
-The result's title (typically that provided by the ``TITLE'' HTML command) .
+
+The title of the hit result (typically that provided by the 'TITLE'
+HTML tag).
 
 =item description
-A brief description of result.
+
+A brief description of the result, as provided (or not) by the search engine.
 Often the first few sentences of the document.
 
 =item score
-A back-end specific, numeric ``score'' of the search result.
+
+A back-end specific, numeric score of the search result.
 The exact range of scores is search-engine specific.
 Usually larger scores are better, but this is no longer required.
 See normalized_score for a back-end independent score.
 
 =item normalized_score
+
 A back-end independent score of the search result.
 The range of this score is between 0 and 1000.
 Higher values indicate better quality results.
 
 =item change_date
+
 When the result was last changed.
 
 =item index_date
+
 When the search engine indexed the result.
 
 =item size
-The size of the result, in bytes.
+
+The approximate size of the result, in bytes.  This is only an
+approximation because search backends often report the size as
+"18.4K"; the best we can do with that number is return it as the value
+of 18.4 * 1024.
 
 =item raw
-The raw HTML for the entire result.
-Raw should be exactly the raw HTML for one entry.
-It shouldn't include list or table setup commands (like the ul tag),
-but it may include list or table item commands (like li).
-Whether raw returns a list entries, table entries, or just br or unformatted
-HTML is search-engine dependent.
+
+The raw HTML for the entire result.  Raw should be exactly the raw
+HTML for one entry.  It should not include list or table setup commands
+(like the ul tag), but it may include list or table item commands
+(like li).  Whether raw returns a list entries, table entries, or just
+br or unformatted HTML is search-engine dependent.  In fact, many
+backends do not even return it at all.
 
 =back
 
 =cut
-#'
+
 sub title { return shift->_elem('title', @_); }
 sub description { return shift->_elem('description', @_); }
 sub score { return shift->_elem('score', @_); }

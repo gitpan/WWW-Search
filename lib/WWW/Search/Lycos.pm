@@ -1,7 +1,7 @@
 # Lycos.pm
 # by Wm. L. Scheding and Martin Thurn
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: Lycos.pm,v 1.14 1999/05/27 23:15:54 johnh Exp $
+# $Id: Lycos.pm,v 1.4 1999/04/30 18:50:22 mthurn Exp $
 
 =head1 NAME
 

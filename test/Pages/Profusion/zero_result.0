@@ -1,0 +1,306 @@
+<html><head><title>ProFusion&reg; Warnings</title>
+<meta name="description" content="ProFusion Meta Search Engine">
+<meta name="keywords" content="ProFusion,Meta Search,Search,Search Engine,Find,Web,World Wide,Quality Not Quantity,Look up,GET, resource,research">
+<link rev=made href="mailto:webmaster@profusion.com">
+<style type="text/css">
+<!--
+A:link {text-decoration: none;} A:visited {text-decoration: none}
+A:active {text-decoration: none;} A:hover {color:#990000}
+-->
+</style>
+<script language="JavaScript">
+<!-- Start hiding
+//BEGIN MOUSEOVER ARROWS
+whichbrowser = navigator.appName;
+Ver = parseInt(navigator.appVersion);
+version = parseFloat(navigator.appVersion)
+function ArrowOn(imageName) {
+  if ((whichbrowser = "Netscape" && version >= "3") || (version >= "4"))
+  {
+    if (document.images)
+    {
+      //document[imageName].src = eval(imageName + "On.src");
+      document.images[imageName].src = eval("On.src");
+    }
+  }
+}
+function ArrowOff(imageName)
+{
+  if ((whichbrowser = "Netscape" && version >= "3") || (version >= "4"))
+  {
+    if (document.images) 
+    {
+      //document[imageName].src = eval(imageName + "Off.src");
+      document.images[imageName].src = eval("Off.src");
+    }
+   }
+}
+//END MOUSEOVER ARROWS
+//BEGIN MOUSEOVER HELP
+function mr(tag)
+{
+  if ((whichbrowser = "Netscape" && version >= "3") || (version >= "4"))
+  {
+    ActiveImage = eval(tag + "_a.src");
+    //document["tips"].src = ActiveImage;
+    document.images["tips"].src = ActiveImage;
+  }
+}
+function mt(tag)
+{
+  if ((whichbrowser = "Netscape" && version >= "3") || (version >= "4"))
+  {
+    //document["tips"].src ="/images/tips.gif"
+    document.images["tips"].src = "/images/tips.gif";
+  }
+}
+if ((whichbrowser = "Netscape" && version >= "3") || (version >= "4") && (document.images))
+{
+  tips1_a = new Image(400, 20);
+  tips1_a.src = "/images/tips1.gif";
+  tips2_a = new Image(400, 20);
+  tips2_a.src = "/images/tips2.gif";
+  tips3_a = new Image(400, 20);
+  tips3_a.src = "/images/tips3.gif";
+  tips4_a = new Image(400, 20);
+  tips4_a.src = "/images/tips4.gif";
+  On = new Image();
+  On.src = "/images/proabul.gif";
+  Off = new Image();
+  Off.src = "/images/probul.gif";
+}
+
+//END MOUSEOVER HELP
+
+// end hiding-->
+</SCRIPT>
+<SCRIPT language="JavaScript">
+<!-- Start hiding
+//JAVASCRIPT FUNCTIONS:-
+// Copyright ProFusion Corp, LLC.
+
+  // For banner ads
+  var randomNumber = new String (Math.random());
+  var imageurl="http://keywords.profusion.com/RealMedia/ads/adstream.cgi/www.profusion.com/1" + randomNumber.substring (2, 11);
+  var clickurl = "http://keywords.profusion.com/RealMedia/ads/click.cgi/www.profusion.com/1" + randomNumber.substring (2, 11);
+
+//activated when the submit button is clicked
+<!-- ChannelScriptBegin -->
+var COOKIE_NAME = "kansas.profusion.com";
+var ENGINE_NUM = 9;
+<!-- ChannelScriptEnd --> 
+function check_correctness()
+{
+  var cookiename = COOKIE_NAME;
+  if (document.form.elements[0].value == "")
+  {
+     alert("\n\nPROFUSION:\n\nempty queryterm");
+  }
+  else if (document.form.elements[9].checked == true 
+          &&
+      any_engine_selected() == false)
+  {
+     alert("\n\nPROFUSION:\n\nPlease select a search engine..");
+  }
+  else
+  {
+     var cookiestr = "";
+     var cookiepath = "; path=/";  
+     cookiestr += document.form.elements[0].value + ":";
+     cookiestr += document.form.option.options.selectedIndex + ":";
+     cookiestr += document.form.summary.options.selectedIndex + ":";
+     cookiestr += document.form.display.options.selectedIndex + ":";
+     cookiestr += document.form.totalverify.options.selectedIndex + ":";
+     for (var i = 5; i < 10+ENGINE_NUM; i++)
+     if (document.form.elements[i].checked == true)
+     {
+       cookiestr += i + ":";
+     }
+     WriteCookie (cookiename, cookiestr, cookiepath, 31536000);
+     document.form.submit();
+  }
+}
+// Writing the cookie string to save option state.
+function WriteCookie (cookieName, cookieValue, cookiepath, expiry)
+{
+  var expDate = new Date();
+  if (expiry)
+  {
+    expDate.setTime (expDate.getTime() + expiry);
+    document.cookie = cookieName + "=" + escape (cookieValue) + "; expires=" 
+          + expDate.toGMTString() + cookiepath;
+  }
+  else
+  {
+    //document.cookie = cookieName + "=" + escape (cookieValue);
+   document.cookie = cookieName + "=" + escape (cookieValue) + "; expires=" 
+           + expDate.toGMTString() + cookiepath;
+  }
+}
+// Reading the options from cookies.
+function ReadCookie () {
+  var agt = navigator.userAgent.toLowerCase();
+  if (agt)
+    this.major = parseInt(navigator.appVersion);
+  else
+    return false;
+  if (this.major < 3)
+    return false;
+  var CookieName = COOKIE_NAME;
+  var CookieString = document.cookie;
+  var CookieSet = CookieString.split (';');
+  var SetSize = CookieSet.length;
+  var CookiePieces;
+  var ReturnValue = "";
+  var x = 0;
+  for (x = 0; ((x < SetSize) && (ReturnValue == "")); x++) {
+    CookiePieces = CookieSet[x].split ('=');
+    if (CookiePieces[0].substring (0,1) == ' ') {
+      CookiePieces[0] = CookiePieces[0].substring (1, CookiePieces[0].length);
+    }
+    if (CookiePieces[0] == CookieName) {
+      ReturnValue = CookiePieces[1];
+    }
+  }
+  if (ReturnValue)
+  {
+    var savedOptions = ReturnValue.split('%3A');
+    var savedSize = savedOptions.length;
+    var i;
+    document.form.option.options.selectedIndex = savedOptions[1];
+    document.form.summary.options.selectedIndex = savedOptions[2];
+    document.form.display.options.selectedIndex = savedOptions[3];
+    //document.form.totalverify.options.selectedIndex = savedOptions[4];
+    for (x = 5; x < savedSize; x++)
+    {
+      i = savedOptions[x];
+      if (i.length > 0) {
+        document.form.elements[i].checked = true;
+      }
+    }
+  }
+//alert('cookie read = '+ReturnValue);
+return true;
+}
+//activated when any search engine is selected. 
+function search_engine_button(button)
+{
+      document.form.elements[9].checked = true; // select manual
+}
+//activated when any search engine selection criterion 
+//radio button is selected
+function selection_button(button)
+{
+   if (button.value == "all")
+   {
+      select_all();
+      return;
+   }
+   var any_selected = any_engine_selected();
+   if (any_selected  == true)
+   {
+      deselect_all();
+   }
+}
+//returns true if any engine is selected
+//returns false if no engine is selected
+function any_engine_selected()
+{
+   for (var i = 10; i < 10+ENGINE_NUM; ++i)
+   {
+      if (document.form.elements[i].checked == true)
+      {
+         return true;
+      }
+   }
+   return false;
+}
+//selects all the search engines
+function select_all()
+{
+   for (var i = 10; i < 10+ENGINE_NUM; ++i)
+   {
+      document.form.elements[i].checked = true;
+   }
+}
+//deselects all the search engines
+function deselect_all()
+{
+   for (var i = 10; i < 10+ENGINE_NUM; ++i)
+   {
+      document.form.elements[i].checked = false;
+   }
+}
+//END OF JAVASCRIPT FUNCTIONS
+// end hiding-->
+</script>
+</head>
+
+<body bgcolor="#ffffff" text="#000000" link="#000066" vlink="#333300">
+<table cellspacing="0" cellpadding="0" border="0"><tr><td colspan="3" nowrap><a href="http://www.profusion.com/index.html"><img src="/images/prologo.gif" width="600" height="53" border="0" alt="ProFusion"></a></td></tr><tr><td colspan="3" nowrap><a href="/index.html"><img src="/images/prohome.gif" width="96" height="60" border="0"></a><SCRIPT LANGUAGE="JavaScript"><!--
+document.write ('<A HREF=\"' + clickurl + '@Top\">');document.write ('<IMG SRC=\"' + imageurl + '@Top\" height=60 width=468 vspace=0 hspace=0 border=0></A>');
+//--></SCRIPT><NOSCRIPT><A HREF="http://keywords.profusion.com/RealMedia/ads/click.cgi/www.profusion.com/index.html@Top"><IMG SRC="http://keywords.profusion.com/RealMedia/ads/adstream.cgi/www.profusion.com/index.html@Top" height=60 width=468 vspace=0 hspace=0 border=0></A></NOSCRIPT></td></tr>
+<tr><td bgcolor="#fff3d3" valign="top" align="center" width="150">
+<br>
+<!--START L COLUMN-->
+<table width="95%" bgcolor="#fff3d3" border="0" cellpadding="2" cellspacing="0">
+<tr><td bgcolor="#d9c698" align="center" valign="middle" nowrap><a href="/about/targets.html"><font color="#000066" face="arial"><b>Target Search</b></font></a>
+</td></tr>
+<tr><td nowrap>
+<font face="arial" size="-1" >
+<img name=T1 src="/images/probul.gif" width="7" height="11"><a href="http://entertainment.profusion.com/" onmouseout="ArrowOff('T1')" onmouseover="ArrowOn('T1')">Entertainment</a><br>
+<img name=T2 src="/images/probul.gif" width="7" height="11"><a href="http://health.profusion.com/" onmouseout="ArrowOff('T2')" onmouseover="ArrowOn('T2')">Health</a><br>
+<img name=T3 src="/images/probul.gif" width="7" height="11"><a href="http://kidsafe.profusion.com/" onmouseout="ArrowOff('T3')" onmouseover="ArrowOn('T3')">KidSafe</a><br>
+<img name=T4 src="/images/probul.gif" width="7" height="11"><a href="http://mp3.profusion.com/" onmouseout="ArrowOff('T4')" onmouseover="ArrowOn('T4')">MP3</a><br>
+<img name=T5 src="/images/probul.gif" width="7" height="11"><a href="http://sports.profusion.com/" onmouseout="ArrowOff('T5')" onmouseover="ArrowOn('T5')">Sports</a><br>
+<img name=T6 src="/images/probul.gif" width="7" height="11"><a href="http://usenet.profusion.com/" onmouseout="ArrowOff('T6')" onmouseover="ArrowOn('T6')">UseNet</a>
+<br><br></td></tr>
+</font>
+<tr><td bgcolor="#d9c698" align="center" valign="middle" nowrap><a href="/about/guides.html"><font color="#000066" face="arial"><b>Guides</b></font></a>
+</td></tr>
+<tr><td nowrap>
+<font face="arial" size="-1">
+<img name=G1 src="/images/probul.gif" width="7" height="11"><a href="/users/bakeacookie.html" onmouseout="ArrowOff('G1')" onmouseover="ArrowOn('G1')">Bake-A-Cookie</a><br>
+<img name=G2 src="/images/probul.gif" width="7" height="11"><a href="/users/faq.html" onmouseout="ArrowOff('G2')" onmouseover="ArrowOn('G2')">FAQs</a><br>
+<img name=G3 src="/images/probul.gif" width="7" height="11"><a href="/users/bookmark.html" onmouseout="ArrowOff('G3')" onmouseover="ArrowOn('G3')">Favorite Finder</a><br>
+<img name=G4 src="/images/probul.gif" width="7" height="11"><a href="/users/searchtips.html" onmouseout="ArrowOff('G4')" onmouseover="ArrowOn('G4')">Search Tips</a><br>
+<img name=G5 src="/images/probul.gif" width="7" height="11"><a href="/users/startpage.html" onmouseout="ArrowOff('G5')" onmouseover="ArrowOn('G5')">Start Finding It</a>
+</font><br><br></td></tr>
+<tr><td bgcolor="#d9c698" align="center" valign="middle" nowrap><a href="/about/services.html"><font color="#000066" face="arial"><b>Services</b></font></a>
+</td></tr>
+<tr><td nowrap>
+<font face="arial" size="-1">
+<img name=S1 src="/images/probul.gif" width="7" height="11"><a href="mailto:webmaster@profusion.com" onmouseout="ArrowOff('S1')" onmouseover="ArrowOn('S1')">Email Webmaster</a><br>
+<img name=S2 src="/images/probul.gif" width="7" height="11"><a href="/webmasters/index.html" onmouseout="ArrowOff('S2')" onmouseover="ArrowOn('S2')">For Webmasters</a><br>
+<img name=S3 src="/images/probul.gif" width="7" height="11"><a href="/users/newsfuse.html" onmouseout="ArrowOff('S3')" onmouseover="ArrowOn('S3')">Subscribe</a><br>
+<img name=S4 src="/images/probul.gif" width="7" height="11"><a href="/users/feedback.html" onmouseout="ArrowOff('S4')" onmouseover="ArrowOn('S4')">User Feedback</a><br>
+<img name=S5 src="/images/probul.gif" width="7" height="11"><a href="/users/usersurvey.html" onmouseout="ArrowOff('S5')" onmouseover="ArrowOn('S5')">User Survey</a><br>
+<img name=S6 src="/images/probul.gif" width="7" height="11"><a href="/webmasters/add.html" onmouseout="ArrowOff('S6')" onmouseover="ArrowOn('S6')">Link To Us</a>
+</font><br>
+</td></tr></table>
+<img src="/images/pix.gif" width="150" height="1"></td>
+<!--END L COLUMN-->
+<td><img src="/images/pix.gif" width="8" height="1"></td>
+<td width="442" valign="top">
+<br>
+<!-- START TEXT-->
+<center><br><br><br><br><br><br>No result was retrieved for your query.<br>Please check your spelling or choose a more general search.<br><br><br><br></center>
+<!-- END TEXT-->
+
+</td></tr><tr><td bgcolor="#fff3d3"><img src="/images/pix.gif" height="1"></td><td><img src="/images/pix.gif" height="1"></td>
+<td bgcolor="#d9c698"><img src="/images/pix.gif" height="1"></td></tr>
+<tr><td bgcolor="#fff3d3">&nbsp;</td><td>&nbsp;</td><td align="center" bgcolor="#fff3d3"><font face="arial" color="#000066">
+<a href="/advertise/index.html"> <font size="-1" face="arial">Advertise</font></a> |
+<a href="/invest/index.html"><font size="-1" face="arial">Invest</font></a> |
+<a href="/about/index.html"><font size="-1" face="arial">About</font></a> |
+<a href="/press/awards.html"><font size="-1" face="arial">Awards</font></a> |
+<a href="/press/index.html"><font size="-1" face="arial">In The News</font></a> |
+<a href="/about/legalinfo.html"><font size="-1" face="arial">Legal</font></a> | 
+<a href="/about/privacy.html"><font size="-1" face="arial">Privacy</font></a> | 
+<a href="/index.html"><font size="-1" face="arial">Home</font></a>
+</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td><td align="center">
+<font size="-2" face="arial"><br>Copyright &copy 1996-99 ProFusion.com.</font>
+<input type="hidden" name="search" value="web">
+</td></tr></table>
+</center></body></html>

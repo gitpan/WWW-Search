@@ -1,0 +1,253 @@
+1999-06-30  Kingpin  <mthurn@tasc.com>
+
+	* WebCrawler.pm updated to version 1.14; adheres to new test mechanism
+
+	* Infoseek.pm now strips HTML from titles and descriptions
+
+	* Infoseek/Companies.pm updated to version 1.10; adheres to new test mechanism
+
+	* Infoseek/News.pm updated to version 1.09; adheres to new test mechanism
+
+	* Infoseek/Web.pm updated to version 1.10; adheres to new test mechanism
+
+	* new exported function strip_tags()
+
+1999-06-29  Kingpin  <mthurn@tasc.com>
+
+	* Excite.pm updated to version 1.11; adheres to new test mechanism
+
+	* new test mechanism puts list of test cases into each module's
+	code (no more duplicate test code!)
+
+	* Infoseek.pm updated to version 1.14; Companies and News searches fixed
+
+1999-06-28  Kingpin  <mthurn@tasc.com>
+
+	* test/test.pl is more informative about errors
+
+	* Infoseek.pm updated to version 1.13
+
+1999-06-24  Kingpin  <mthurn@tasc.com>
+
+	* Profusion.pm updated to version 1.05
+
+	* OpenDirectory.pm updated
+
+1999-06-22  Kingpin  <mthurn@tasc.com>
+
+	* The version method is now implemented within the WWW::Search
+	module, so backends no longer need to declare it locally
+
+	* Snap.pm updated
+
+1999-06-21  Kingpin  <mthurn@tasc.com>
+
+	* NorthernLight.pm updated; now returns score and date for each hit
+
+	* new backend AltaVista::Intranet
+
+	* HotBot.pm updated; now unescapes URLs before returning them
+
+=====================================
+
+RELEASE HISTORY (moved here from the README file):
+	
+1.002:  (11 October 1996)
+- First public release.
+
+1.004:  (31 October 1996)
+- new:  AutoSearch, a client application (see below for details)
+- new:  WWW::Search is now in CPAN (see GETTING WWW::Search for details)
+- bug fix:  installation problem (no rule to make CLIENTS/search) fixed
+
+1.005:  (12 November 1996)
+- new: back-ends for HotBot, Lycos, and several AltaVista variants
+- new: application support for search-engine selection
+- new: application and library support for search-engine options
+
+1.006:  (25 November 1996)
+- private beta release, see 1.007 for list of new features
+
+1.007: (17 December 1996)
+- new: back-ends for Dejanews (from Cesare Feroldi de Rosa),
+	Infoseek (also from Cesare Feroldi de Rosa),
+	and Excite (from GLen Pringle)
+- new: more fields in SearchResult (score, dates, etc., see the man page)
+	(problem found by Cesare Feroldi de Rosa)
+- new: better error handling on network failures
+	(AutoSearch should report errors on its pages,
+	$search->response() provides an API for error reporting)
+- new (internal):  user_agent handling has changed
+- new:  proxy support added to WWW::Search (still needed in applications)
+	(problem and fix suggested by T. V. Raman)
+- bug-fix: numerous documentation updates
+	(problems found by Larry Virden)
+- bug-fix: AltaVista web search was occasionally dropping hits
+	(problem found by Larry Virden, fixed by Bill Scheding)
+- bug-fix: all non-alphanumeric characters are now escaped
+	(problem found by Larry Virden)
+
+1.008:  (8 January 1997)
+- private alpha release, see 1.009 for list of new features
+
+
+1.009:  (14 January 1997)
+overview:  1.009 is primarily a maintenance release to accommodate
+	changes to LWP and some search engines.
+- change:  search application renamed WebSearch (a more specific name)
+- bug-fix:  the WWW::Search error in formatting is fixed
+	(problem found by Larry Virden, fix by him and johnh)
+- bug-fix:  RobotUA handling updated for new LWP in Search.pm
+- bug-fix:  update for Infoseek (page format changed about 1 Jan 97)
+	(problem found by Joseph McDonald, fix by Cesare Feroldi de Rosa)
+- bug-fix:  update for Excite (page format changed about 9 Jan 97)
+	(problem found by Juan Jose Amor, fix by GLen Pringle)
+
+1.010: (20 August 1997)
+overview:  an interim release to fix AltaVista
+- new: normalized_score, a back-end independent score (from Paul Lindner)
+- new: generic options are supported by several back-ends
+	(specify search engine URL, debugging, etc.)
+- new: AltaVista back-end now sets SearchResult::raw
+- bug-fix: update for AltaVista (page format changed Jul 97)
+	(some information wrt fix provided by Guy Decoux)
+
+1.011:  (8 October 1997)
+- internal alpha release, see 1.012 for list of new features
+
+1.012:   (3 November 1997)
+- Overview:  an alpha release for test-suite testing
+- new: for testing, HTTP results can be saved to disk and played back
+- new: test scripts (try "make test")
+- bug-fix: Lycos works again and is now maintained by John Heidemann
+- bug-fix: AltaVista advanced and news searches have been repaired
+- bug-fix: some uninitialized value warnings suppressed
+	(fix suggested by R. Chandrasekar (Mickey))
+- new: new back-ends PLweb
+- new: documentation for PLweb (contributed by Paul Linder)
+- new: new back-ends: Gopher, Simple (contributed by Paul Linder)
+- new: WWW::Search mailing list:
+	to subscribe, send "subscribe info-www-search" as
+	the body of a message to <info-www-search-request@isi.edu>
+
+1.013, (19 February 1998)
+overview:  this is an alpha release to include Martin's new back-ends
+
+- bug fix:  HotBot back-end updated by Martin Thurn <mthurn@tasc.com>
+- new:  Yahoo back-end now works, by Martin Thurn <mthurn@tasc.com>
+- problem: several back-ends don't work (Lycos)
+- problem: several back-ends don't have test suites and
+	so may or may not work (DejaNews, Excite, HotBot, Infoseek, PLweb,
+	SFgate, Verity, Yahoo)
+- reminder: WWW::Search mailing list:
+	to subscribe, send "subscribe info-www-search" as
+	the body of a message to <info-www-search-request@isi.edu>
+
+
+1.014, (24 March 1998)
+overview:  this is an alpha release to fix the AltaVista/Lycos back-ends
+- bug fix:  AltaVista/Lycos back-ends
+	(problem reported by Bilal Siddiqui <bilal.siddiqui@mankato.msus.edu>)
+- known problem: some back-end test suites give intermittent results
+	(AltaVista::News)
+- problem: several back-ends don't have test suites and
+	so may or may not work (DejaNews, Excite, HotBot, Infoseek, PLweb,
+	SFgate, Verity, Yahoo)
+
+1.015, (2-Apr-98)
+overview:  this is an alpha release with several new back-ends
+- new: back-ends: Magellan, WebCrawler (thanks to Martin Thurn)
+- bug fix:  Yahoo/HotBot/Excite back-ends,
+	with test suites.  Many thanks to Martin Thurn.
+- bug fix:  AltaVista news test suites have been relaxed,
+	even though the code worked before, the test suites
+	used to report false negatives.
+- bug fix: AltaVista is now more careful to detect the end of
+	a hit's raw HTML
+- new: the test suite has been enhanced to be less sensitive
+	to changes in what's indexed
+- problem: several back-ends don't have test suites and
+	so may or may not work (DejaNews, Infoseek, PLweb,
+	SFgate, Verity)
+- reminder: WWW::Search mailing list:
+	to subscribe, send "subscribe info-www-search" as
+	the body of a message to <info-www-search-request@isi.edu>
+
+1.016, 21-May-98
+overview: this is an alpha to fix HotBot/Infoseek
+- bug fix: Infoseek/HotBot back ends now work again.
+	(HotBot problem reported by Alan McCoy <a.r.mccoy@larc.nasa.gov>,
+	both back-ends fixed by Martin Thurn)
+- addition: Infoseek test suite
+- addition: test output now includes the version number
+
+1.017, 27-May-98
+overview:  this is the public release since 1.012
+- bug fix: Lycos bug fix
+
+1.018, 31-May-98
+overview:  back-end updates
+- bug fix: Excite and WebCrawler (by Martin Thurn),
+	AltaVista (by John Heidemann)
+	updated 30-May-98
+- known bugs:  WWW::Search doesn't work on MacPerl because of
+	end-of-line differences.  A fix for this problem is in
+	progress.  (Problem identified and fix suggested by 
+	Chris Nandor.)
+
+1.019, 25-Jun-98
+overview:  back-end updates
+- bug fix: test suite bugs were causing false negatives on
+	Yahoo, Excite, Magellan, WebCrawler (reported by Martin Thurn,
+	fixed John Heidemann)
+- new feature:  the test suite is now run daily (automatically).
+	Output can be found at
+	<http://www.isi.edu/~johnh/WORK/LSAM/WWW_SEARCH/>.
+- new feature: verbose mode of WebSearch is more verbose
+- bug fix: AltaVista was recording the RealName URL on some queries
+	(bug reported by Vassilis Papadimos <vpapad@dblab.ece.ntua.gr>)
+- bug fix: AltaVista wasn't correctly reporting change_time/size 
+	(bug and fix from Martin Valldeby <martin.valldeby@pakom.se>)
+
+1.020, 12-Aug-98
+overview:  lots of bug fixes and new back-ends
+- bug fix:  maximum_to_retrieve now works for very small values.
+	(Problem identified by Vidyut Luther <vluther@hpctc.org>.)
+- new back-ends: ExciteForWebServers, FolioViews, Livelink, MSIndexServer,
+	Null, Search97
+	all from Paul Lindner (thanks!)
+- bug fix:  Gopher, PLweb, SFgate, Simple, Verity from Paul Lindner
+- bug fix:  Lycos from John Heidemann
+- new test suites:  PLweb, FolioViews, Null, MSIndexServer, Search97,
+	SFgate, ExciteForWebServers rom Paul Lindner
+- bug fix:  HotBot repair from Martin Thurn
+
+1.021, 27-Aug-98
+overview:  a general release
+- new:  Windows installation is now supported by
+	Jim Smyser <jsmyser@bigfoot.com>; please see his web
+	page <http://pubinfo.phx.primenet.com/www.search/>
+	for details.
+- new:  MacPerl should now be supported.  Thanks to Chris Nandor
+	for the problem and a fix.
+- bug fix:  Infoseek, WebCrawler, Dejanews, HotBot by Martin Thurn
+- bug fix:  AltaVista approx_count bug found by
+	Darren Stalder <darren@u.washington.edu>
+- bug fix: documentation cleanups from Neil Bowers
+
+1.022, 16-Oct-98
+overview:  An interim release to fix several broken back-ends.
+- bug fix: documentation cleanups from Ave Wrigley
+- bug fix: Infoseek updates (from Martin Thurn)
+- bug fix: AltaVista update (minor format changes Oct. 1998,
+	partial fix from Andreas Borchert)
+- new: back ends for Crawler, Fireball, NorthernLight from Andreas Borchert
+
+1.024, 11-Dec-98
+overview:  primarily bug fixes for back ends
+- new: proxy support added to WebSearch and AutoSearch
+	(based on code from Paul Linder)
+- new: new back end for Snap.com (from Jim Smyser)
+- bug fix:  Yahoo, HotBot, Excite, Lycos (from Martin Thurn),
+	NorthernLight (from Jim Smyser)
+

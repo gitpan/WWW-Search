@@ -1,7 +1,7 @@
 # HotBot.pm
 # by Wm. L. Scheding and Martin Thurn
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: HotBot.pm,v 1.31 1999/06/11 19:07:00 mthurn Exp $
+# $Id: HotBot.pm,v 1.33 1999/06/22 13:58:48 mthurn Exp $
 
 =head1 NAME
 
@@ -309,6 +309,10 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 If it''s not listed here, then it wasn''t a meaningful nor released revision.
 
+=head2 1.32, 1999-06-20
+
+Now unescapes the URLs before returning them.
+
 =head2 1.31, 1999-06-11
 
 www.hotbot.com changed their output format ever so slightly.  (Thanks
@@ -377,15 +381,12 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '1.31';
+$VERSION = '1.32';
 
 use Carp ();
 use WWW::Search(generic_option);
 require WWW::SearchResult;
-
-
-# public
-sub version { $VERSION }
+use URI::Escape;
 
 # private
 sub native_setup_search
@@ -566,7 +567,8 @@ sub native_retrieve_some
             push(@{$self->{cache}}, $hit);
             } # if
           $hit = new WWW::SearchResult;
-          $hit->add_url($sURL);
+          # As of 1999-06-20: www.hotbot.pm escapes the URL on this line of output:
+          $hit->add_url(uri_unescape($sURL));
           $hit->title($sTitle) if $sTitle ne '';
           $hit->description($sDesc) if $sDesc ne '';
           $hit->score($iPercent) if 0 < $iPercent;
@@ -665,5 +667,3 @@ SM = (selection) search type
      name = the person
      url = links to this URL
      B = Boolean phrase     
-
-

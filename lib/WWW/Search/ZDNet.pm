@@ -4,7 +4,7 @@
 # ZDnet.pm
 # by Jim Smyser
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: ZDNet.pm,v 1.1 1999/05/27 23:15:58 johnh Exp $
+# $Id: ZDNet.pm,v 1.1 1999/06/18 19:15:36 mthurn Exp $
 # Complete copyright notice follows below.
 #
          

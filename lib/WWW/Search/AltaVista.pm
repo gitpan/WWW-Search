@@ -4,7 +4,7 @@
 # AltaVista.pm
 # by John Heidemann
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: AltaVista.pm,v 1.38 1998/10/09 01:11:38 johnh Exp $
+# $Id: AltaVista.pm,v 1.2 1999/06/30 20:13:00 mthurn Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -246,6 +246,7 @@ sub native_retrieve_some
 	    $self->approximate_result_count($n);
 	    $state = $HITS;
 	    print STDERR "PARSE(2:HEADER->HITS): $n documents found.\n" if ($self->{_debug} >= 2);
+            print STDERR ' 'x 12, "$_\n" if ($self->{_debug} >= 2);
 	} elsif ($state == $HITS && m@(<p><dt>|<dt>|<dt><b>)[^"]*\d+\.[^"]*<a[^>]*href=\"([^"]+)"[^>]*>(.*)</a>.*<dd>\s+(\d+\s+\w+\s+\d+)([^"]+)<a@i) {  # post 30-May-98 "
 	    # news is, of course, slightly different
 	    # <dt><b>1. </b><a href="http://ww2.altavista.digital.com/cgi-bin/news?msg@96138@comp%2elang%2eperl%2emisc"><strong>How to Tar &amp; unzip Perl mods on CPAN site on Win32?</strong></a><dd> 8 Jan 98 - <b>comp.lang.perl.misc</b><br><a href="news:34B53D7D.2CED@fast.net">&lt;34B53D7D.2CED@fast.net&gt;</a><br>  <a href="mailto:emorr@fast.net">&quot;Edward Morris, Jr.&quot; &lt;emorr@fast.net&gt;</a><P>
@@ -259,6 +260,7 @@ sub native_retrieve_some
 	    $hit->change_date($4);
 	    $hit->description($5);
 	    print STDERR "PARSE(3:HITS): news hit found.\n" if ($self->{_debug} >= 2);
+            print STDERR ' 'x 12, "$_\n" if ($self->{_debug} >= 2);
 	} elsif ($state == $HITS && m@(<p><dt>|<dt>|<dt><b>)[^"]*\d+\.[^"]*<a[^>]*href=\"([^"]+)"[^>]*>(.*)</a>@i) {
 	    # post 30-May-98:
 	    # <dt><b>1. </b><a href="http://www.isi.edu/lsam/tools/autosearch/"><b>index.html directory page</b></a><dd>
@@ -273,6 +275,7 @@ sub native_retrieve_some
 	    $hit->title($title);
 	    $hit->description("");
 	    print STDERR "PARSE(3:HITS): hit found.\n" if ($self->{_debug} >= 2);
+            print STDERR ' 'x 12, "$_\n" if ($self->{_debug} >= 2);
 	} elsif ($state == $HITS && m@^([^<]+).*last modified\s+(\S+)\s.*page size\s+(\S+)\s@i) { # "
 	    # pre-8-oct-98
 	    # AutoSearch WEB Searching. What is AutoSearch? AutoSearch performs a web-based search and puts the results set in a web page. It periodically updates this..<br><font size=-2>Last modified 3-Feb-97 - page size 2K - in English [ <a href="http://babelfish.altavista.digital.com/cgi-bin/translate?urltext=http%3a%2f%2fwww%2eisi%2eedu%2flsam%2ftools%2fautosearch%2f&language=en">Translate</a> ]</font><P>
@@ -283,6 +286,8 @@ sub native_retrieve_some
 	    $size *= 1024 if ($size =~ s@k$@@i);
 	    $size *= 1024*1024 if ($size =~ s@m$@@i);
 	    $hit->size($size);
+	    print STDERR "PARSE(3old:HITS): hit found.\n" if ($self->{_debug} >= 2);
+            print STDERR ' 'x 12, "$_\n" if ($self->{_debug} >= 2);
 	} elsif ($state == $HITS && m@last modified (\d+-\w+-\d+).*page size (\S+)@i) {
 	    # post  8-Oct-98
 	    # Last modified 3-Jun-98 - page size 2K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go??urltext=http%3a%2f%2fwww%2eisi%2eedu%2f%7elsam%2ftools%2fautosearch%2findex%2ehtml&language=en">Translate</a>&nbsp;]</dl>
@@ -292,26 +297,31 @@ sub native_retrieve_some
 	    $size *= 1024 if ($size =~ s@k$@@i);
 	    $size *= 1024*1024 if ($size =~ s@m$@@i);
 	    $hit->size($size);
+	    print STDERR "PARSE(4old:HIT DATE): hit found.\n" if ($self->{_debug} >= 2);
+            print STDERR ' 'x 12, "$_\n" if ($self->{_debug} >= 2);
 	} elsif ($state == $HITS && m@^([^<]+).*URL:@) {
 	    # post  8-Oct-98
 	    # AutoSearch WEB Searching. What is AutoSearch? AutoSearch performs a web-based search and puts the results set in a web page. It periodically updates this..<br><b>URL:</b> <font color=gray>www.isi.edu/~lsam/tools/autosearch/index.html<br>
 	    $raw .= $_;
 	    $hit->description($1);
+	    print STDERR "PARSE(5:DESCRIPTION): hit found.\n" if ($self->{_debug} >= 2);
+            print STDERR ' 'x 12, "$_\n" if ($self->{_debug} >= 2);
 	} elsif ($state == $HITS && (m@^</font>.*<br>@i || m@AltaVista Home.*\|@i || m@result pages:.*href="/cgi-bin/query@i)) { #"
 	    # end of hits
 	    # afb 10/98 adds the cgi-bin termination check
 	    ($hit, $raw) = $self->begin_new_hit($hit, $raw);
 	    $state = $TRAILER;
 	    print STDERR "PARSE(6b:HITS->TRAILER).\n" if ($self->{_debug} >= 2);
+            print STDERR ' 'x 12, "$_\n" if ($self->{_debug} >= 2);
 	} elsif ($state == $HITS) {
 	    # other random stuff in a hit---accumulate it
 	    # <font size=-2>[<b>URL:</b> www.isi.edu/lsam/tools/autosearch/]</font><br>
-
 	    $raw .= $_;
+	    print STDERR "PARSE(7:HITS NO MATCH)\n" if ($self->{_debug} >= 2);
+            print STDERR ' 'x 12, "$_\n" if ($self->{_debug} >= 2);
 	} elsif ($state == $TRAILER && /<a[^>]+href="([^"]+)".*\&gt;\&gt;/) { # "
 	    # set up next page
 	    # <a href="/cgi-bin/query?pg=q&text=yes&q=%2bLSAM+%2bISI+%2bwork&stq=10&c9k">[<b>&gt;&gt;</b>]</a> <P>
-
 	    my($relative_url) = $1;
 	    # hack:  make sure fmt=d stays on news URLs
 	    $relative_url =~ s/what=news/what=news\&fmt=d/ if ($relative_url !~ /fmt=d/);

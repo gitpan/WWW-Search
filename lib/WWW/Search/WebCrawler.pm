@@ -1,6 +1,6 @@
 # WebCrawler.pm
 # Copyright (C) 1998 by Martin Thurn
-# $Id: WebCrawler.pm,v 1.6 1999/05/27 23:15:58 johnh Exp $
+# $Id: WebCrawler.pm,v 1.14 1999/06/30 15:41:29 mthurn Exp $
 
 =head1 NAME
 
@@ -50,20 +50,7 @@ Please tell the author if you find any!
 =head1 TESTING
 
 This module adheres to the C<WWW::Search> test suite mechanism. 
-
-  Test cases (accurate as of 1999-03-29):
-
-    $file = 'test/WebCrawler/zero_result';
-    $query = 'Bogus' . 'NoSuchWord';
-    test($mode, $TEST_EXACTLY);
-
-    $file = 'test/WebCrawler/one_page_result';
-    $query = 'antidisestab'.'lishmentarianism';
-    test($mode, $TEST_RANGE, 2, 50);
-
-    $file = 'test/WebCrawler/multi_page_result';
-    $query = 'Ke'.'nobi';
-    test($mode, $TEST_GREATER_THAN, 100);
+See $TEST_CASES below.
 
 =head1 AUTHOR
 
@@ -117,7 +104,14 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '1.13';
+$VERSION = '1.14';
+
+$MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
+$TEST_CASES = <<"ENDTESTCASES";
+&test('WebCrawler', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_BY_COUNTING, 0);
+&test('WebCrawler', '$MAINTAINER', 'one_page', 'dise'.'stablishmentarianism', \$TEST_RANGE, 2,99);
+&test('WebCrawler', '$MAINTAINER', 'two_page', 'Lan'.'do', \$TEST_GREATER_THAN, 50);
+ENDTESTCASES
 
 use Carp ();
 use WWW::Search(generic_option);
@@ -348,3 +342,15 @@ sub native_retrieve_some
 
 1;
 
+__END__
+
+Martin''s page download results, 1998-02:
+
+simplest arbitrary page:
+
+http://www.webcrawler.com/cgi-bin/WebQuery?search=star+wars+collecting;showSummary=true;perPage=25;start=0
+
+Here''s what I''m generating:
+
+http://www.webcrawler.com/cgi-bin/WebQuery?search=LSAM;perPage=24;start=0;showSummary=true;
+http://www.webcrawler.com/cgi-bin/WebQuery?search=LSAM;perPage=30;start=0;showSummary=true;

@@ -1,6 +1,6 @@
 # Infoseek.pm
 # Copyright (C) 1998 by Martin Thurn
-# $Id: Infoseek.pm,v 1.13 1999/05/27 23:15:53 johnh Exp $
+# $Id: Infoseek.pm,v 1.16 1999/06/30 15:07:12 mthurn Exp $
 
 =head1 NAME
 
@@ -57,10 +57,22 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 If it is not listed here, then it was not a meaningful nor released revision.
 
+=head2 1.16, 1999-06-30
+
+Now strips HTML tags from titles and descriptions.
+
+=head2 1.14, 1999-06-29
+
+Companies and News searches now work!
+
+=head2 1.13, 1999-06-28
+
+www.infoseek.com changed their output format ever so slightly.
+Companies and News searches return URLs, but titles and descriptions are unreliable.
+
 =head2 1.12, 1999-05-21
 
 www.infoseek.com changed their output format.
-Unfortunately, Companies and News search don't work.
 
 =head2 1.11, 1999-04-27
 
@@ -99,14 +111,12 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '1.12';
+$VERSION = '1.16';
 
 use Carp ();
-use WWW::Search(generic_option);
+use WWW::Search(qw( generic_option strip_tags ));
 require WWW::SearchResult;
-
-# public
-sub version { $VERSION }
+use URI;
 
 # private
 sub native_setup_search
@@ -219,7 +229,9 @@ sub native_retrieve_some
   my $hits_found = 0;
   my $state = $START;
   my $hit;
-  foreach ($self->split_lines($response->content())) 
+  my $sContent = $response->content();
+  $sContent =~ s/<p>/\n/g;
+  foreach ($self->split_lines($sContent))
     {
     next if m/^$/; # short circuit for blank lines
     print STDERR " *   $state ===$_===" if 2 <= $self->{'_debug'};
@@ -238,10 +250,11 @@ sub native_retrieve_some
       } # we're in START mode, and line has number of WEB results
 
     if ($state eq $START && 
-           m=<b>ARTICLES\s+\d+\s+-\s+\d+</b>\s+of\s+([0-9,]+)=)
+           m=\>\d+\s+-\s+\d+\s+of\s+<b>([0-9,]+)=)
       {
       # Actual line of input is:
       # <b>ARTICLES 1 - 25</b>  of 1,239 total articles <p>
+      # <tr><td valign="middle" align="left" nowrap colspan="3"><font face="Helvetica,Arial" size="3" color="#FFFFFF"><a name="search">&nbsp;<b>Web search results</b>&nbsp;&nbsp;&nbsp;&nbsp;<font face="Helvetica,Arial" size="2">1 - 25 of <b>97</b> results most relevant to <b>Martin Thurn</b> </font>&nbsp;</a></font></td>
       print STDERR "header line\n" if 2 <= $self->{'_debug'};
       my $iCount = $1;
       $iCount =~ tr/[^0-9]//;
@@ -278,23 +291,13 @@ sub native_retrieve_some
       print STDERR " found 'next' link\n" if 2 <= $self->{'_debug'};
       # There is a "next" link on this page, therefore there are
       # indeed more results for us to go after next time.
-      # # Process the options.
-      # $self->{'_next_to_retrieve'} += $self->{'_hits_per_page'};
-      # $self->{'_options'}{'st'} = $self->{'_next_to_retrieve'};
-      # my($options) = '';
-      # foreach (keys %{$self->{_options}}) 
-      #   {
-      #   next if (generic_option($_));
-      #   $options .= $_ . '=' . $self->{_options}{$_} . '&';
-      #   }
-      # # Finally, figure out the url.
-      # $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
       $self->{_next_url} = $1;
       $state = $WEB_HITS;
       # Stay on this line of input!
       }
     elsif ($state eq $NEXT &&
-           s@^.*?<a href=\"(.*?)\">Group\sresults@WWWSEARCHDELETED@i)
+           (s@^.*?<a href=\"(.*?)\">Group\sresults@WWWSEARCHDELETED@i ||
+            m!\">Hide\ssummaries!i))
       {
       print STDERR " no 'next' link\n" if 2 <= $self->{'_debug'};
       $self->{_next_url} = undef;
@@ -302,46 +305,47 @@ sub native_retrieve_some
       # Stay on this line of input!
       }
 
-    if ($state eq $WEB_HITS)
+    if ($state eq $WEB_HITS && s!<b><a href=\"(.*?)\">(.*?)</a>!!i)
       {
-      # All the hits are on one line of input.
-      my @asHits = split /<p>/i;
-      foreach my $sHit (@asHits)
+      print STDERR " hit URL line\n" if 2 <= $self->{'_debug'};
+      my ($sURL,$sTitle) = ($1,$2);
+      if (defined($hit))
         {
-        print STDERR "\n *   hit substring ===$sHit===" if 3 <= $self->{'_debug'};
-        if ($sHit =~ m@<b><a href=\"(.*?)\">(.*?)</a>@i)
-          {
-          my ($sURL,$sTitle) = ($1,$2);
-          if (defined($hit))
-            {
-            push(@{$self->{cache}}, $hit);
-            $self->{'_num_hits'}++;
-            } # if
-          $hits_found++;
-          $hit = new WWW::SearchResult;
-          $hit->add_url($sURL);
-          $hit->title($sTitle);
-          $hit->description($1) if ($sHit =~ m/<br>(.*?)<br>/i);
-          $hit->score($1) if ($sHit =~ m/(\d+)\%$SPACE/i);
-          $hit->change_date($1) if ($sHit =~ m/Date:\s(.*?)</i);
-          if ($sHit =~ m/Size\s(\S+?),/i)
-            {
-            my $size = $1;
-            $size =~ s/K/*1024/;
-            $size =~ s/M/*1024*1024/;
-            $hit->size(int eval $size);
-            } # if
-          } # if
-        } # foreach
-      next;
-      } # WEB_HITS
-
-    if (($state eq $NEXT || $state eq $COMP_NEXT) && m=^\s*</FONT>\s*$=i)
-      {
-      print STDERR " no next button\n" if 2 <= $self->{'_debug'};
-      # There is no next button.
-      $state = $HITS;
+        push(@{$self->{cache}}, $hit);
+        $self->{'_num_hits'}++;
+        } # if
+      $hits_found++;
+      $hit = new WWW::SearchResult;
+      my $sURLabs = URI->new_abs($sURL, $self->{_options}{search_url});
+      $hit->add_url($sURLabs);
+      $hit->title(strip_tags($sTitle));
+      $state = $DESC;
+      $hit->score($1) if (m/(\d+)\%$SPACE/i);
+      $hit->change_date($1) if (m/Date:\s(.*?)</i);
+      $hit->description(strip_tags($1)) if (s!<br>(.*?)<br>!!);
+      if (m/Size\s(\S+?),/i)
+        {
+        my $size = $1;
+        $size =~ s/K/*1024/;
+        $size =~ s/M/*1024*1024/;
+        $hit->size(int eval $size);
+        $state = $WEB_HITS;
+        } # if
       }
+    elsif ($state eq $DESC && s!^<br>(.*?)<br>!!)
+      {
+      print STDERR " description line\n" if 2 <= $self->{'_debug'};
+      $hit->description(strip_tags($1));
+      $hit->change_date($1) if (m/^<b>(.*?)\s&nbsp;/i);
+      $state = $WEB_HITS;
+      } # if
+
+    # if (($state eq $NEXT || $state eq $COMP_NEXT) && m=^\s*</FONT>\s*$=i)
+    #   {
+    #   print STDERR " no next button\n" if 2 <= $self->{'_debug'};
+    #   # There is no next button.
+    #   $state = $HITS;
+    #   }
     elsif ($state eq $COMP_NEXT && m=^<p>$=)
       {
       print STDERR " no next button (company mode)\n" if 2 <= $self->{'_debug'};
@@ -373,6 +377,7 @@ sub native_retrieve_some
       print STDERR "show/hide line\n" if 2 <= $self->{'_debug'};
       $state = $TRAILER;
       }
+
     elsif ($state eq $HITS && 
            m|<b><a\shref=\"([^\"]+)\">([^<]+)|i)
       {
@@ -395,17 +400,17 @@ sub native_retrieve_some
         $hit->add_url($sURL);
         $self->{'_num_hits'}++;
         $hits_found++;
-        $hit->title($sTitle);
+        $hit->title(strip_tags($sTitle));
         $state = $DESC;
         } # unless
-      }
+      } # old URL line
 
     elsif ($state eq $DESC &&
-           m|<br>(.*)<br>$|)
+           m|<br>(.*?)<br>$|)
       {
       print STDERR "hit description line\n" if 2 <= $self->{'_debug'};
       # Sometimes description is empty
-      $hit->description($1) if ref($hit);
+      $hit->description(strip_tags($1)) if ref($hit);
       if ($hit->url =~ m/col=NX/)
         {
         # This a NEWS results page
@@ -421,7 +426,7 @@ sub native_retrieve_some
       {
       print STDERR "hit company description line\n" if 2 <= $self->{'_debug'};
       # Sometimes description is empty
-      $hit->description($1) if ref($hit);
+      $hit->description(strip_tags($1)) if ref($hit);
       $state = $HITS;
       } # line is description
 
@@ -495,3 +500,4 @@ http://www.infoseek.com/Titles?qt=cable+tv&col=HV%2Ckt_N%2Cak_corpdir&sv=IS&lk=n
 simple Companies search:
 
 http://www.infoseek.com/Titles?qt=cable+tv&col=HV&nh=10
+

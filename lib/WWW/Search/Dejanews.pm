@@ -1,6 +1,6 @@
 # Dejanews.pm
 # Copyright (C) 1998 by Martin Thurn
-# $Id: Dejanews.pm,v 1.10 1998/08/27 17:28:59 johnh Exp $
+# $Id: Dejanews.pm,v 1.6 1998/12/03 14:41:05 mthurn Exp $
 
 =head1 NAME
 
@@ -50,51 +50,37 @@ been tested):
                           'fromdate' => 'Jan 1 1997',
                           'todate'   => 'Dec 31 1997', } );
 
-
 =head1 SEE ALSO
 
 To make new back-ends, see L<WWW::Search>.
-
-
-=head1 HOW DOES IT WORK?
-
-C<native_setup_search> is called (from C<WWW::Search::setup_search>)
-before we do anything.  It initializes our private variables (which
-all begin with underscore) and sets up a URL to the first results
-page in C<{_next_url}>.
-
-C<native_retrieve_some> is called (from C<WWW::Search::retrieve_some>)
-whenever more hits are needed.  It calls C<WWW::Search::http_request>
-to fetch the page specified by C<{_next_url}>.
-It then parses this page, appending any search hits it finds to 
-C<{cache}>.  If it finds a ``next'' button in the text,
-it sets C<{_next_url}> to point to the page for the next
-set of results, otherwise it sets it to undef to indicate we''re done.
-
 
 =head1 BUGS
 
 Please tell the author if you find any!
 
-
 =head1 TESTING
 
 This module adheres to the C<WWW::Search> test suite mechanism. 
 
-See C<WWW::Search::Dejanews> for test cases for the default usage.
+Test cases:
 
-test cases:
-  'mrfglbqnx AND NoSuchWord'  $TEST_EXACTLY         0
-  'Fett AND stuntboy'         $TEST_RANGE           1, 50
-  'Chewbacca'                 $TEST_GREATER_THAN  101
+    $file = 'test/Dejanews/zero_result';
+    $query = 'Bogus' . 'NoSuchWord';
+    test($mode, $TEST_EXACTLY);
+
+    $file = 'test/Dejanews/one_page_result';
+    $query = 'Fe'.'tt AND st'.'untboy;
+    test($mode, $TEST_RANGE, 2, 50);
+
+    $file = 'test/Dejanews/multi_page_result';
+    $query = 'Chewb'.'acca';
+    test($mode, $TEST_GREATER_THAN, 101);
 
 =head1 AUTHOR
 
 C<WWW::Search::Dejanews> is maintained by Martin Thurn
-(MartinThurn@iname.com);
-original version for WWW::Search
-by Cesare Feroldi de Rosa (C.Feroldi@it.net).
-
+(MartinThurn@iname.com); 
+original version for WWW::Search by Cesare Feroldi de Rosa (C.Feroldi@it.net).
 
 =head1 LEGALESE
 
@@ -102,21 +88,24 @@ THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
 WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
 MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
-
 =head1 VERSION HISTORY
 
-=head3 1.4
+=head2 1.11, 1998-12-03
 
-1998-08-27: New Dejanews output format
+Now uses the split_lines() function;
+sync with WWW::Search distribution's version number
 
-=head3 1.3
+=head2 1.4, 1998-08-27
 
-1998-08-20: New Dejanews output format
+New Dejanews output format
+
+=head2 1.3, 1998-08-20
+
+New Dejanews output format
 
 =head2 1.2
 
 First publicly-released version.
-
 
 =cut
 
@@ -128,7 +117,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = sprintf("%d.%02d", q$Revision: 1.10 $ =~ /(\d+)\.(\d+)/);
+$VERSION = '1.11';
 
 use Carp ();
 use WWW::Search(generic_option);

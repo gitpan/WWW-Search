@@ -8,7 +8,7 @@
 # AltaVista.pm
 # by John Heidemann
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: Crawler.pm,v 1.1 1998/10/16 21:19:47 johnh Exp $
+# $Id: Crawler.pm,v 1.1 1999/06/18 19:15:36 mthurn Exp $
 #
 # Complete copyright notice follows below.
 #

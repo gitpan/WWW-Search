@@ -1,10 +1,7 @@
-#!/usr/local/bin/perl -w
-
-#
 # OpenDirectory.pm
 # by Jim Smyser
 # Copyright (c) 1999 by Jim Smyser & USC/ISI
-# $Id: OpenDirectory.pm,v 1.1 1999/05/27 23:15:56 johnh Exp $
+# $Id: OpenDirectory.pm,v 1.2 1999/06/24 14:45:17 mthurn Exp $
 
 
 package WWW::Search::OpenDirectory;
@@ -84,8 +81,7 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 =head1 VERSION HISTORY
 
-=head2 1.02, 5/10/99
-
+1.02
 Format changes.
 
 =cut
@@ -181,9 +177,9 @@ sub native_retrieve_some {
   } elsif ($state == $HITS && m@<CENTER>@i) {
        print STDERR "PARSE(HITS->TRAILER): $_\n\n" if ($self->{_debug} >= 2);
        $state = $TRAILER;
-  } elsif ($state == $TRAILER && m@<a href="([^"]+)">\sNext</a>@i) { #"
-       my($relative_url) = $1;
-       $self->{_next_url} = new URI::URL($relative_url, $self->{_base_url});
+  } elsif ($state == $TRAILER && m@<a href="([^"]+)">\sNext</a>@i) { 
+       my($sURL) = $1;
+       $self->{_next_url} = new URI::URL($sURL, $self->{_base_url});
        print STDERR "PARSE(TRAILER->POST_NEXT): $_\n\n" if ($self->{_debug} >= 2);
        $state = $POST_NEXT;
        } else {
@@ -204,5 +200,3 @@ sub native_retrieve_some {
 }
 
 1;
-
-

@@ -1,29 +1,22 @@
-#!/usr/local/bin/perl -w
-
 # Companies.pm
 # by Martin Thurn
 # Copyright (C) 1996 by USC/ISI
-# $Id: Companies.pm,v 1.3 1998/08/21 00:03:56 johnh Exp $
+# $Id: Companies.pm,v 1.10 1999/06/30 15:30:11 mthurn Exp $
 #
 # Complete copyright notice follows below.
-
-
-package WWW::Search::Infoseek::Companies;
 
 =head1 NAME
 
 WWW::Search::Infoseek::Companies - class for Infoseek Companies searching
 
-
 =head1 SYNOPSIS
-    
+
   use WWW::Search;
   my $oSearch = new WWW::Search('Infoseek::Companies');
   my $sQuery = WWW::Search::escape_query("+sushi restaurant +Columbus Ohio");
   $oSearch->native_query($sQuery);
   while (my $oResult = $oSearch->next_result())
     { print $oResult->url, "\n"; }
-
 
 =head1 DESCRIPTION
 
@@ -35,22 +28,16 @@ F<http://www.infoseek.com>.
 This class exports no public interface; all interaction should
 be done through WWW::Search objects.
 
-
 =head1 TESTING
 
-This module adheres to the WWW::Search test harness.  Test cases are:
-
-  'mrfglbqnx NoSuchWord' --> no hits
-  'Pacific AND travel'   --> 5 hits on one page
-  'prison'               --> 30 hits on two pages
-
+This module adheres to the WWW::Search test mechanism.
+See $TEST_CASES below.
 
 =head1 AUTHOR
 
 C<WWW::Search::Infoseek::Companies> 
 was written by Martin Thurn <MartinThurn@iname.com> 
 based on AltaVista::Web by John Heidemann, <johnh@isi.edu>.
-
 
 =head1 COPYRIGHT
 
@@ -70,16 +57,24 @@ THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
 WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
 MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
-
 =cut
 
 #####################################################################
+
+package WWW::Search::Infoseek::Companies;
 
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search::Infoseek Exporter);
-$VERSION = sprintf("%d.%02d", q$Revision: 1.3 $ =~ /(\d+)\.(\d+)/);
+$VERSION = '1.10';
+
+$MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
+$TEST_CASES = <<"ENDTESTCASES";
+&test('Infoseek::Companies', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_BY_COUNTING, 0);
+&test('Infoseek::Companies', '$MAINTAINER', 'one_page', 'Pac'.'ific AND trav'.'el', \$TEST_RANGE, 2,24);
+&test('Infoseek::Companies', '$MAINTAINER', 'two_page', 'pr'.'ison', \$TEST_GREATER_THAN, 25);
+ENDTESTCASES
 
 use WWW::Search::Infoseek;
 

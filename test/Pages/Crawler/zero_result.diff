@@ -1,0 +1,9 @@
+*** test/Pages/Crawler/zero_result.out	Tue Jun 29 15:22:27 1999
+--- test/Pages/Crawler/zero_result.trial	Tue Jun 29 16:33:29 1999
+***************
+*** 0 ****
+--- 1,4 ----
++ Error:  404 (Not Found) 
++ 
++ 
++ 

@@ -1,7 +1,7 @@
 # Excite.pm
 # by Martin Thurn
 # Copyright (C) 1998 by USC/ISI
-# $Id: Excite.pm,v 1.10 1999/06/11 15:33:57 mthurn Exp $
+# $Id: Excite.pm,v 1.12 1999/06/29 20:20:11 mthurn Exp $
 
 =head1 NAME
 
@@ -41,20 +41,7 @@ Please tell the author if you find any!
 =head1 TESTING
 
 This module adheres to the C<WWW::Search> test suite mechanism. 
-
-  Test cases (accurate as of 1999-06-11):
-
-    $file = 'test/Excite/zero_result';
-    $query = 'Bogus' . 'NoSuchWord';
-    test($mode, $TEST_EXACTLY);
-
-    $file = 'test/Excite/one_page_result';
-    $query = '+L'.'S'.'A'.'M +replic'.'ation';
-    test($mode, $TEST_RANGE, 2, 75);
-
-    $file = 'test/Excite/multi_page_result';
-    $query = 'L'.'S'.'A'.'M';
-    test($mode, $TEST_GREATER_THAN, 100);
+See the value of $TEST_CASES below.
 
 =head1 AUTHOR
 
@@ -71,6 +58,10 @@ WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
 MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 =head1 VERSION HISTORY
+
+=head2 1.12, 1999-06-29
+
+updated test cases
 
 =head2 1.10, 1999-06-11
 
@@ -108,15 +99,18 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '1.10';
+$VERSION = '1.11';
 
 use Carp ();
 use WWW::Search(generic_option);
 require WWW::SearchResult;
 
-# public
-sub version { $VERSION }
-
+$MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
+$TEST_CASES = <<"ENDTESTCASES";
+&test('Excite', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_BY_COUNTING, 0);
+&test('Excite', '$MAINTAINER', 'one_page', '+L'.'S'.'A'.'M +replic'.'ation', \$TEST_RANGE, 2,75);
+&test('Excite', '$MAINTAINER', 'two_page', 'chir'.'pa pa'.'ploo te'.'ebo', \$TEST_GREATER_THAN, 87);
+ENDTESTCASES
 
 # private
 sub native_setup_search

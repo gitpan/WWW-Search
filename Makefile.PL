@@ -1,5 +1,5 @@
 # This -*- perl -*- script writes the Makefile for libwww-perl
-# $Id: Makefile.PL,v 1.13 1998/08/12 16:50:50 johnh Exp $
+# $Id: Makefile.PL,v 1.3 1999/06/21 15:54:28 mthurn Exp mthurn $
 
 require 5.004;
 
@@ -25,6 +25,7 @@ WriteMakefile(
    'NAME'          => 'WWW::Search',
    'VERSION_FROM'  => 'lib/WWW/Search.pm',
    'PREREQ_PM'	=> {
+			'URI::Escape' => 0,
 			'HTML::Parser' => 2.16,
 			'HTML::TreeBuilder' => 0,  # release 0.51 is good
 			'LWP' => 5.30,
@@ -79,11 +80,11 @@ TEST_VERBOSE=
 
 TEST_ENGINE=
 
-test: FORCE
-	$(FULLPERL) test/test.pl $(TEST_VERBOSE) $(TEST_ENGINE)
+test: all
+	$(FULLPERL) -Iblib/lib test/test.pl $(TEST_VERBOSE) $(TEST_ENGINE)
 
-test-v:
-	$(FULLPERL) test/test.pl -v $(TEST_ENGINE)
+test-v: all
+	$(FULLPERL) -Iblib/lib test/test.pl -v $(TEST_ENGINE)
 
 );
 }
@@ -91,9 +92,8 @@ test-v:
 
 # Determine things that should *not* be installed
 sub MY::libscan {
-    my($self, $path) = @_;
-    return '' if $path =~ m/.(pl|dtd|sgml)$/;
+    my ($self, $path) = @_;
     return '' if $path =~ m:\bCVS/:;
     return '' if $path !~ m/\.pm$/;
-    $path;
+    return $path;
 }

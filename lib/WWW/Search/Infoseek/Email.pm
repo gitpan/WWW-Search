@@ -6,7 +6,7 @@
 # AltaVista.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Email.pm,v 1.4 1998/05/28 04:05:52 johnh Exp $
+# $Id: Email.pm,v 1.1 1999/06/18 19:17:17 mthurn Exp $
 #
 # Complete copyright notice follows below.
 # 

@@ -3,62 +3,46 @@ WWW::Search and AutoSearch
 ==========================
 
 
-WHAT IS NEW WITH WWW::Search 1.024?  (15-Jun-99)
+WHAT IS NEW WITH WWW::Search 1.025?  (1999-06-30)
 ------------------------------------------------
-overview:  primarily bug fixes for back ends
+overview:
+ * Bug fixes for some backends (as usual)
+ * New backend for AltaVista Intranet!
+ * New backend for Excite News!
+ * New test mechanism
 
-- BUG FIX:  HotBot (from Martin Thurn)
-- NEW: Profusion (from Jim Smyser)
-- BUG FIX:  documentation clarification on required SearchResult fields
-	(based on comment from Chris P. Acantilado
-
-- BUG FIX:  Excite, WebCrawler, Infoseek (from Martin Thurn).
-	Infoseek::News and ::Companies are broken.
-- NEW: Metapedia, ZDNet, Open Directory, HotFiles (from Jim Smyser)
-- NEW: Lycos now supports advanced queries (from Jim Smyser)
-- BUG FIX: Profusion, NorthernLight, Snap (from Jim Smyser)
-
-- NEW MAINTAINER:  Future WWW::Search releases will come from
-	Martin Thurn <mthurn@tasc.com>.
-	The paucity of releases in the last six months has been
-	because I've been way to busy to maintain it.
-	Unfortunately, WWW::Search requires a fair amount of
-	maintenence.  I trust that Martin will be able to
-	give it the attention it needs.  THANKS!   -John
-
+See the file ChangeLog for details.
 
 
 WHAT IS WWW::Search?
 --------------------
 
 WWW::Search is a collection of Perl modules which provide an API to
-WWW search engines.  Currently WWW::Search includes back-ends for
-variations of AltaVista, Dejanews, Excite, HotBot, Infoseek, Lycos,
-Magellan, PLweb, SFgate, Verity, WebCrawler, and Yahoo.  We include
-two applications built from this library: AutoSearch (an program to
-automate tracking of search results over time), and WebSearch, a small
-demonstration program to drive the library.  Back-ends for other
-search engines and more sophisticated clients are currently under
-development.
+WWW (and similar) search engines.  Currently WWW::Search includes
+back-ends for variations of AltaVista, Dejanews, Excite, HotBot,
+Infoseek, Lycos, Magellan, WebCrawler, and Yahoo, among others.  We
+include two applications built from this library: AutoSearch (a
+program to automate tracking of search results over time), and
+WebSearch, a small demonstration program to drive the library.
 
 Because WWW::Search depends on parsing the HTML output of web search
 engines it will fail of the search engine operators change their
 format (an unfortunately frequent occurrence).  WWW::Search includes a
-test suite for most back-ends which verifies that it's functioning
-correctly.  As of the day of the release the current back-end
-status is:
+test suite for most back-ends which verifies that it is functioning
+correctly.  As of the day of the release the current back-end status
+is:
 
 AltaVista		working
 Crawler			partially working
 Dejanews		working
-Excite			partially working
+Excite			working
 ExciteForWebServers	not working
 Fireball		not working
 FolioViews		working
 Gopher			not working? (not in test suite)
 HotBot			working
 HotFiles		not working? (not in test suite)
-Infoseek		working (Companies partially working)
+Infoseek		working
 Livelink		not working? (not in test suite)
 Lycos			working
 Magellan		working
@@ -67,20 +51,17 @@ MSIndexServer		not working
 NorthernLight		partially working (doesn't handle multi-page returns)
 Null			working
 PLweb			working
-Profusion		not working
+Profusion		working
 Search97		working
 SFgate			working
 Simple			not working? (not in test suite)
-Snap			partially working
+Snap			working
 Verity			not working (not in test suite)
-WebCrawler		partially working
+WebCrawler		working
 Yahoo			working
 ZDNet			not working? (not in test suite)
 
 ``Paritially working'' indicates that some tests passed and some failed.
-
-(others are currently under development, see contributors below for details)
-
 
 
 WHAT IS AutoSearch?
@@ -89,44 +70,36 @@ WHAT IS AutoSearch?
 WWW::Search's primary client is AutoSearch.  AutoSearch performs a
 web-based search and puts the results set in a web page.  It
 periodically updates this web page, indicating how the search changes
-over time.  Sample output from WWW::Search can be found at
-<http://www.isi.edu/lsam/tools/autosearch/>.  Output format is configurable.
+over time.  Sample output from AutoSearch can be found at
+<http://www.isi.edu/lsam/tools/autosearch/>.  Output format is
+configurable.
 
 See the man page for AutoSearch details, or Demonstration section
 below for the quick-start instructions.
 
 
-
 REQUIREMENTS
 ------------
 
-WWW::Search requires Perl5 and libwww-perl.
-For information on Perl5, see <http://www.perl.com>.
-For libwww-perl, see <http://www.sn.no/libwww-perl/>.
-Both are also available from the Comprehensive Perl Archive
-Network (CPAN). Visit <http://www.perl.com/CPAN/> to find a CPAN
-site near you.
+WWW::Search requires Perl5 and libwww-perl.  For information on Perl5,
+see <http://www.perl.com>.  For libwww-perl, see
+<http://www.sn.no/libwww-perl/>.  Both are also available from the
+Comprehensive Perl Archive Network (CPAN). Visit
+<http://www.perl.com/CPAN/> to find a CPAN site near you.
 
-At this time WWW::Search is tested under Perl version 5.004_04.
-
+At this time the primary WWW::Search development and testing is under
+perl version 5.005_05 on Sun Sparc Solaris 2.5.1 and 7.
 
 
 AVAILABILITY
 ------------
 
-The latest version of WWW::Search should always be available from
-<http://www.isi.edu/lsam/tools/WWW_SEARCH/>.  Alpha releases are only
-available here (not at CPAN).
-
-WWW::Search is also available as part of CPAN.  Visit
-<http://www.perl.com/CPAN/> to find a CPAN site near you.
+The latest version of WWW::Search should always be available on CPAN.
 
 Feedback about WWW::Search is encouraged.  If you're using it for a
 neat application, please let us know.  If you'd like to (or have)
 implemented a new back-end for WWW::Search, let us know so we don't
 duplicate work.
-
-
 
 
 INSTALLATION
@@ -147,7 +120,7 @@ If you want to install a private copy of WWW::Search in your home
 directory, then you should try to produce the initial Makefile with
 something like this command:
 
-    perl Makefile.PL PREFIX=~/perl
+    perl Makefile.PL PREFIX=/my/perl/lib
 
 
 TESTING
@@ -158,9 +131,9 @@ actual output.  It detects two kinds of errors:
 
 - internal parsing:
 	First it checks to make sure that your system computes
-	the same results from my system based on some saved 
-	Web queries.  This test should always pass; if it doesn't,
-	send me mail.
+	the same results as my system based on some saved
+	Web queries.  This test should always pass for working
+        backends; if it doesn't, send me mail.
 
 - external queries:
 	Second, it makes real queries against the search engines
@@ -168,17 +141,17 @@ actual output.  It detects two kinds of errors:
 
 External queries can fail for several reasons:
 
-- new pages have been added which match my test queries
-	(not bad)
+- new pages have been added which match the test queries
+	(not a bad thing)
 
 - changes in the web search engine output which break WWW::Search's
-	parsers (very bad)
+	parsers (a bad thing)
 
 If the external tests fail, please either investigate the error or
 send a description of the problem and the output of "make test" to the
 maintainer of the back-end for the search engine that fails.  You can
-find out who maintains the back-end by looking at the man page or code
-for the back-end in the lib/WWW/Search directory.
+find out who maintains the back-end by looking at the documentation
+(e.g. perldoc WWW::Search::Infoseek).
 
 
 DISCUSSION, BUG REPORTS, AND IMPROVEMENTS
@@ -188,10 +161,10 @@ A mailing list for WWW::Search discussion exists.  To subscribe, send
 "subscribe info-www-search" as the body of a message to
 <info-www-search-request@isi.edu>.
 
-Back-end-related bug reports (search engine whatever doesn't work) should
+Back-end-related bug reports ("search engine ABC doesn't work") should
 be sent to the author of the back-end (back-end authors are identified
 in the corresponding man page and the output of ``make test'').
-General bugs should be reported to <johnh@isi.edu>.
+General bugs should be reported to <MartinThurn@iname.com>.
 
 When submitting a bug report, please remember to include
 	- your version of perl
@@ -200,12 +173,10 @@ When submitting a bug report, please remember to include
 	- the output of "make test"
 
 
-
 DEMONSTRATION
 -------------
 
-After installing the client programs,
-try
+After installing the client programs, try
 	WebSearch '"Your Name Here"'
 to see who's talking about you on the web.
 
@@ -218,17 +189,12 @@ Then add
 to your crontab(1) to update this search once a week.
 
 
-
 DOCUMENTATION
 -------------
 
-See WWW/Search.pm for an overview of the library.
-POD-style documentation is included in all modules
-and scripts.  These are normally converted to manual pages and
-installed as part of the "make install" process.  You should also be
-able to use the 'perldoc' utility to extract documentation from the
-module files directly.
-
+See `perldoc WWW::Search` for an overview of the library.
+POD-style documentation is also included in all modules
+and scripts.  
 
 
 FUTURE PLANS
@@ -245,224 +211,18 @@ Some ideas:
 
   - more back-ends
 
-Now that the test suite is done I don't plans to add major new
-features, but contributions from others are always welcome.  Send me
-e-mail if you plan a new back-end and to discuss architectural changes
-(to avoid duplicating work).
-
-
-
-RELEASE HISTORY
----------------
-
-1.002:  (11 October 1996)
-- First public release.
-
-1.004:  (31 October 1996)
-- new:  AutoSearch, a client application (see below for details)
-- new:  WWW::Search is now in CPAN (see GETTING WWW::Search for details)
-- bug fix:  installation problem (no rule to make CLIENTS/search) fixed
-
-1.005:  (12 November 1996)
-- new: back-ends for HotBot, Lycos, and several AltaVista variants
-- new: application support for search-engine selection
-- new: application and library support for search-engine options
-
-1.006:  (25 November 1996)
-- private beta release, see 1.007 for list of new features
-
-1.007: (17 December 1996)
-- new: back-ends for Dejanews (from Cesare Feroldi de Rosa),
-	Infoseek (also from Cesare Feroldi de Rosa),
-	and Excite (from GLen Pringle)
-- new: more fields in SearchResult (score, dates, etc., see the man page)
-	(problem found by Cesare Feroldi de Rosa)
-- new: better error handling on network failures
-	(AutoSearch should report errors on its pages,
-	$search->response() provides an API for error reporting)
-- new (internal):  user_agent handling has changed
-- new:  proxy support added to WWW::Search (still needed in applications)
-	(problem and fix suggested by T. V. Raman)
-- bug-fix: numerous documentation updates
-	(problems found by Larry Virden)
-- bug-fix: AltaVista web search was occasionally dropping hits
-	(problem found by Larry Virden, fixed by Bill Scheding)
-- bug-fix: all non-alphanumeric characters are now escaped
-	(problem found by Larry Virden)
-
-1.008:  (8 January 1997)
-- private alpha release, see 1.009 for list of new features
-
-
-1.009:  (14 January 1997)
-overview:  1.009 is primarily a maintenance release to accommodate
-	changes to LWP and some search engines.
-- change:  search application renamed WebSearch (a more specific name)
-- bug-fix:  the WWW::Search error in formatting is fixed
-	(problem found by Larry Virden, fix by him and johnh)
-- bug-fix:  RobotUA handling updated for new LWP in Search.pm
-- bug-fix:  update for Infoseek (page format changed about 1 Jan 97)
-	(problem found by Joseph McDonald, fix by Cesare Feroldi de Rosa)
-- bug-fix:  update for Excite (page format changed about 9 Jan 97)
-	(problem found by Juan Jose Amor, fix by GLen Pringle)
-
-1.010: (20 August 1997)
-overview:  an interim release to fix AltaVista
-- new: normalized_score, a back-end independent score (from Paul Lindner)
-- new: generic options are supported by several back-ends
-	(specify search engine URL, debugging, etc.)
-- new: AltaVista back-end now sets SearchResult::raw
-- bug-fix: update for AltaVista (page format changed Jul 97)
-	(some information wrt fix provided by Guy Decoux)
-
-1.011:  (8 October 1997)
-- internal alpha release, see 1.012 for list of new features
-
-1.012:   (3 November 1997)
-- Overview:  an alpha release for test-suite testing
-- new: for testing, HTTP results can be saved to disk and played back
-- new: test scripts (try "make test")
-- bug-fix: Lycos works again and is now maintained by John Heidemann
-- bug-fix: AltaVista advanced and news searches have been repaired
-- bug-fix: some uninitialized value warnings suppressed
-	(fix suggested by R. Chandrasekar (Mickey))
-- new: new back-ends PLweb
-- new: documentation for PLweb (contributed by Paul Linder)
-- new: new back-ends: Gopher, Simple (contributed by Paul Linder)
-- new: WWW::Search mailing list:
-	to subscribe, send "subscribe info-www-search" as
-	the body of a message to <info-www-search-request@isi.edu>
-
-1.013, (19 February 1998)
-overview:  this is an alpha release to include Martin's new back-ends
-
-- bug fix:  HotBot back-end updated by Martin Thurn <mthurn@tasc.com>
-- new:  Yahoo back-end now works, by Martin Thurn <mthurn@tasc.com>
-- problem: several back-ends don't work (Lycos)
-- problem: several back-ends don't have test suites and
-	so may or may not work (DejaNews, Excite, HotBot, Infoseek, PLweb,
-	SFgate, Verity, Yahoo)
-- reminder: WWW::Search mailing list:
-	to subscribe, send "subscribe info-www-search" as
-	the body of a message to <info-www-search-request@isi.edu>
-
-
-1.014, (24 March 1998)
-overview:  this is an alpha release to fix the AltaVista/Lycos back-ends
-- bug fix:  AltaVista/Lycos back-ends
-	(problem reported by Bilal Siddiqui <bilal.siddiqui@mankato.msus.edu>)
-- known problem: some back-end test suites give intermittent results
-	(AltaVista::News)
-- problem: several back-ends don't have test suites and
-	so may or may not work (DejaNews, Excite, HotBot, Infoseek, PLweb,
-	SFgate, Verity, Yahoo)
-
-1.015, (2-Apr-98)
-overview:  this is an alpha release with several new back-ends
-- new: back-ends: Magellan, WebCrawler (thanks to Martin Thurn)
-- bug fix:  Yahoo/HotBot/Excite back-ends,
-	with test suites.  Many thanks to Martin Thurn.
-- bug fix:  AltaVista news test suites have been relaxed,
-	even though the code worked before, the test suites
-	used to report false negatives.
-- bug fix: AltaVista is now more careful to detect the end of
-	a hit's raw HTML
-- new: the test suite has been enhanced to be less sensitive
-	to changes in what's indexed
-- problem: several back-ends don't have test suites and
-	so may or may not work (DejaNews, Infoseek, PLweb,
-	SFgate, Verity)
-- reminder: WWW::Search mailing list:
-	to subscribe, send "subscribe info-www-search" as
-	the body of a message to <info-www-search-request@isi.edu>
-
-1.016, 21-May-98
-overview: this is an alpha to fix HotBot/Infoseek
-- bug fix: Infoseek/HotBot back ends now work again.
-	(HotBot problem reported by Alan McCoy <a.r.mccoy@larc.nasa.gov>,
-	both back-ends fixed by Martin Thurn)
-- addition: Infoseek test suite
-- addition: test output now includes the version number
-
-1.017, 27-May-98
-overview:  this is the public release since 1.012
-- bug fix: Lycos bug fix
-
-1.018, 31-May-98
-overview:  back-end updates
-- bug fix: Excite and WebCrawler (by Martin Thurn),
-	AltaVista (by John Heidemann)
-	updated 30-May-98
-- known bugs:  WWW::Search doesn't work on MacPerl because of
-	end-of-line differences.  A fix for this problem is in
-	progress.  (Problem identified and fix suggested by 
-	Chris Nandor.)
-
-1.019, 25-Jun-98
-overview:  back-end updates
-- bug fix: test suite bugs were causing false negatives on
-	Yahoo, Excite, Magellan, WebCrawler (reported by Martin Thurn,
-	fixed John Heidemann)
-- new feature:  the test suite is now run daily (automatically).
-	Output can be found at
-	<http://www.isi.edu/~johnh/WORK/LSAM/WWW_SEARCH/>.
-- new feature: verbose mode of WebSearch is more verbose
-- bug fix: AltaVista was recording the RealName URL on some queries
-	(bug reported by Vassilis Papadimos <vpapad@dblab.ece.ntua.gr>)
-- bug fix: AltaVista wasn't correctly reporting change_time/size 
-	(bug and fix from Martin Valldeby <martin.valldeby@pakom.se>)
-
-1.020, 12-Aug-98
-overview:  lots of bug fixes and new back-ends
-- bug fix:  maximum_to_retrieve now works for very small values.
-	(Problem identified by Vidyut Luther <vluther@hpctc.org>.)
-- new back-ends: ExciteForWebServers, FolioViews, Livelink, MSIndexServer,
-	Null, Search97
-	all from Paul Lindner (thanks!)
-- bug fix:  Gopher, PLweb, SFgate, Simple, Verity from Paul Lindner
-- bug fix:  Lycos from John Heidemann
-- new test suites:  PLweb, FolioViews, Null, MSIndexServer, Search97,
-	SFgate, ExciteForWebServers rom Paul Lindner
-- bug fix:  HotBot repair from Martin Thurn
-
-1.021, 27-Aug-98
-overview:  a general release
-- new:  Windows installation is now supported by
-	Jim Smyser <jsmyser@bigfoot.com>; please see his web
-	page <http://pubinfo.phx.primenet.com/www.search/>
-	for details.
-- new:  MacPerl should now be supported.  Thanks to Chris Nandor
-	for the problem and a fix.
-- bug fix:  Infoseek, WebCrawler, Dejanews, HotBot by Martin Thurn
-- bug fix:  AltaVista approx_count bug found by
-	Darren Stalder <darren@u.washington.edu>
-- bug fix: documentation cleanups from Neil Bowers
-
-1.022, 16-Oct-98
-overview:  An interim release to fix several broken back-ends.
-- bug fix: documentation cleanups from Ave Wrigley
-- bug fix: Infoseek updates (from Martin Thurn)
-- bug fix: AltaVista update (minor format changes Oct. 1998,
-	partial fix from Andreas Borchert)
-- new: back ends for Crawler, Fireball, NorthernLight from Andreas Borchert
-
-1.024, 11-Dec-98
-overview:  primarily bug fixes for back ends
-- new: proxy support added to WebSearch and AutoSearch
-	(based on code from Paul Linder)
-- new: new back end for Snap.com (from Jim Smyser)
-- bug fix:  Yahoo, HotBot, Excite, Lycos (from Martin Thurn),
-	NorthernLight (from Jim Smyser)
-
-
+Contributions from others are always welcome.  Send me e-mail if you
+plan a new back-end and to discuss architectural changes (to avoid
+duplicating work).
 
 
 SUPPORT AND CREDITS
 -------------------
 
-The WWW::Search architecture is by John Heidemann with feedback
-from the other contributors.  Components of AltaVista have been
-written by several people:
+The WWW::Search architecture is by John Heidemann with feedback from
+the other contributors.  NOTE: This list is not updated; consult the
+on-line documentation to find out who is currently maintaining each
+component.
 
 PLATFORM SUPPORT:
 	Unix			John Heidemann <johnh@isi.edu>
@@ -528,12 +288,9 @@ Papadimos <vpapad@dblab.ece.ntua.gr>, Vidyut Luther <vluther@hpctc.org>,
 Chris P. Acantilado <cacantil@spawar.navy.mil>.
 
 Feedback, bug reports and fixes, and new back-ends should be sent to
-John Heidemann <johnh@isi.edu>.  Before submitting a bug report,
-please check <http://www.isi.edu/lsam/tools/WWW_SEARCH/> for any
-announcements about known bugs.  When sending e-mail, please please
-put [WWW::Search] at the beginning of the subject line (or risk me
-losing the message in the pile).
-
+Martin Thurn <MartinThurn@iname.com>.  When sending e-mail, please
+please put [WWW::Search] at the beginning of the subject line (or risk
+me losing the message in the pile).
 
 
 COPYRIGHT
@@ -557,7 +314,6 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 
 Portions of this README are derived from the README for libwww-perl.
-
 
 
 ISPELL
