@@ -38,14 +38,14 @@ use vars qw( @EXPORT @EXPORT_OK @ISA );
               no_test not_working not_working_with_tests not_working_and_abandoned
               $MODE_DUMMY $MODE_INTERNAL $MODE_EXTERNAL $MODE_UPDATE
               $TEST_DUMMY $TEST_EXACTLY $TEST_BY_COUNTING $TEST_GREATER_THAN $TEST_RANGE
-              new_engine run_test run_gui_test skip_test
+              new_engine run_test run_gui_test skip_test count_results
             );
 @EXPORT_OK = qw( );
 @ISA = qw( Exporter );
 
 use vars qw( $VERSION $bogus_query );
 
-$VERSION = '2.19';
+$VERSION = '2.21';
 $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 
 ($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = qw(dummy internal external update);
@@ -204,9 +204,7 @@ sub test
     {
     $sExpected = "$low_end..$high_end";
     }
-  
   return if (!$self->relevant_test($sSE));
-  
   print "  trial $file (", $self->{'mode'}, ")\n";
   if (($self->{'mode'} eq $MODE_INTERNAL) && ($query =~ m/$bogus_query/))
     {
@@ -257,7 +255,7 @@ sub test
   open(TRIALFILE, ">$file.trial") || die "$0: cannot open $file.trial for writing ($!)\n";
   open(OUTFILE, ">$file.out") || die "$0: cannot open $file.out for writing ($!)\n" if ($self->{'mode'} eq $MODE_UPDATE);
   my $iActual = 0;
-  while (<TRIALSTREAM>) 
+  while (<TRIALSTREAM>)
     {
     print TRIALFILE $_;
     $iActual++;
@@ -279,10 +277,10 @@ sub test
     return;
     } # if
 
-  if (-f "$file.out") 
+  if (-f "$file.out")
     {
     my ($e, $sMsg) = (0, '');
-    if ($test_method == $TEST_GREATER_THAN) 
+    if ($test_method == $TEST_GREATER_THAN)
       {
       if ($iActual <= $low_end)
         {
@@ -290,7 +288,7 @@ sub test
         $e = 1;
         }
       } # TEST_GREATER_THAN
-    elsif ($test_method == $TEST_RANGE) 
+    elsif ($test_method == $TEST_RANGE)
       {
       $sMsg .= "INTERNAL ERROR, low_end has no value; " unless defined($low_end);
       $sMsg .= "INTERNAL ERROR, high_end has no value; " unless defined($high_end);
@@ -306,11 +304,11 @@ sub test
         $e = 1;
         }
       } # TEST_RANGE
-    elsif ($test_method == $TEST_EXACTLY) 
+    elsif ($test_method == $TEST_EXACTLY)
       {
       $e = &diff("$file.out", "$file.trial") ? 1 : 0;
       } # TEST_EXACTLY
-    elsif ($test_method == $TEST_BY_COUNTING) 
+    elsif ($test_method == $TEST_BY_COUNTING)
       {
       my $iExpected = shift;
       my $iActual = &wc_l("$file.trial");
@@ -326,23 +324,23 @@ sub test
       $sMsg = "INTERNAL ERROR, unknown test method $test_method; ";
       }
 
-    if ($e == 0) 
+    if ($e == 0)
       {
       print "  ok.\n";
       unlink("$file.trial");   # clean up
       } 
-    elsif ($e == 1) 
+    elsif ($e == 1)
       {
       print "DIFFERENCE DETECTED: $query --> $sMsg\n";
       $self->{error_count}++;
       }
-    else 
+    else
       {
       print "INTERNAL ERROR $query --> e is $e.\n";
       $self->{error_count}++;
       }
-    } 
-  else 
+    }
+  else
     {
     print "NO SAVED OUTPUT, can not evaluate test results.\n";
     $self->{error_count}++;
@@ -551,25 +549,13 @@ sub run_gui_test
   return &run_our_test('gui', @_);
   } # run_gui_test
 
-sub run_our_test
+sub count_results
   {
   my ($sType, $sQuery, $iMin, $iMax, $iDebug, $iPrintResults) = @_;
   $iDebug ||= 0;
   $iPrintResults ||= 0;
   carp ' --- min/max values out of order?' if defined($iMin) && defined($iMax) && ($iMax < $iMin);
-  my $sExpect;
-  if (! defined($iMax))
-    {
-    $sExpect = "more than $iMin";
-    }
-  elsif (! defined($iMin))
-    {
-    $sExpect = "fewer than $iMax";
-    }
-  else
-    {
-    $sExpect = "$iMin..$iMax";
-    }
+  $oSearch->reset_search;
   $iMin ||= 0;
   $iMax ||= 0;
   if ($iMin == $iMax)
@@ -612,9 +598,28 @@ sub run_our_test
     print map { $_->url .' == '. $_->description } @aoResults;
     print "\n";
     } # if
-  my $iResults = scalar(@aoResults);
+  return scalar(@aoResults);
+  } # count_results
+
+sub run_our_test
+  {
+  my ($sType, $sQuery, $iMin, $iMax, $iDebug, $iPrintResults) = @_;
+  my $iResults = &count_results(@_);
   if (($iResults < $iMin) || ($iMax < $iResults))
     {
+    my $sExpect;
+    if (! defined($iMax))
+      {
+      $sExpect = "more than $iMin";
+      }
+    elsif (! defined($iMin))
+      {
+      $sExpect = "fewer than $iMax";
+      }
+    else
+      {
+      $sExpect = "$iMin..$iMax";
+      }
     print STDERR " --- got $iResults results for $sType $sEngine query '$sQuery', but expected $sExpect\n";
     print STDOUT 'not ';
     } # if

@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.69 2002/04/19 14:04:03 mthurn Exp mthurn $
+# $Id: Search.pm,v 1.70 2002/06/04 15:26:03 mthurn Exp mthurn $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -92,8 +92,10 @@ use URI;
 use URI::Escape;
 use User;
 
-# internal
-my ($SEARCH_BEFORE, $SEARCH_UNDERWAY, $SEARCH_DONE) = (1..10);
+# Internal states:
+use constant SEARCH_BEFORE => 1;
+use constant SEARCH_UNDERWAY => 2;
+use constant SEARCH_DONE => 3;
 
 =head2 new
 
@@ -199,7 +201,7 @@ Returns a list of the names of all installed backends.
 We can not tell if they are up-to-date or working, though.
 
   use WWW::Search;
-  my @asEngines = &WWW::Search::installed_engines();
+  my @asEngines = sort &WWW::Search::installed_engines();
   local $" = ', ';
   print (" + These WWW::Search backends are installed: @asEngines\n");
   # Choose a backend at random:
@@ -594,7 +596,7 @@ sub approximate_result_count
   {
   my $self = shift;
   # prime the pump:
-  $self->retrieve_some() if ($self->{'state'} == $SEARCH_BEFORE);
+  $self->retrieve_some() if ($self->{'state'} == SEARCH_BEFORE);
   return $self->_elem('approx_count', @_);
   } # approximate_result_count
 
@@ -662,7 +664,7 @@ sub next_result
       }
     # If we get here, then the desired element is beyond the end of
     # the cache.
-    if ($self->{state} == $SEARCH_DONE)
+    if ($self->{state} == SEARCH_DONE)
       {
       # There are no more results to be gotten; fail & bail:
       return undef;
@@ -773,7 +775,7 @@ sub reset_search
   $self->{'next_to_return'} = 0;
   $self->{'number_retrieved'} = 0;
   $self->{'requests_made'} = 0;
-  $self->{'state'} = $SEARCH_BEFORE;
+  $self->{'state'} = SEARCH_BEFORE;
   $self->{'_next_url'} = '';
   $self->_elem('approx_count', 0);
   # This method is called by native_query().  native_query() is called
@@ -1060,6 +1062,10 @@ sub http_request
   my $self = shift;
   my ($method, $url) = @_;
   my $response;
+  if (50 <= $self->{_debug})
+    {
+    eval q{ use LWP::Debug qw(+) };
+    } # if
   if ($self->{search_from_file})
     {
     $response = $self->http_request_from_file($url);
@@ -1104,6 +1110,7 @@ sub http_request
     while (1)
       {
       $response = $ua->request($request);
+      print STDERR " +   got HTTP::Response:\n", $response->headers->as_string if 3 <= $self->{_debug};
 
       if (ref($self->{'_cookie_jar'}))
         {
@@ -1118,8 +1125,9 @@ sub http_request
         {
         $self->http_request_to_file($url, $response);
         } # if
-      last if $response->is_success;
-      if ($response->message =~ m!Object moved!i)
+      last if ($response->is_success);
+      last if ($response->is_error);
+      if ($response->is_redirect || ($response->message =~ m!Object moved!i))
         {
         # Some engines spoof us with a false 302 code.
         $request = new HTTP::Request('GET',
@@ -1309,7 +1317,7 @@ sub setup_search
   $self->{cache} = ();
   $self->{next_to_retrieve} = 1;
   $self->{number_retrieved} = 0;
-  $self->{state} = $SEARCH_UNDERWAY;
+  $self->{state} = SEARCH_UNDERWAY;
   # $self->{_options} = ();
   $self->native_setup_search($self->{'native_query'}, $self->{'native_options'});
   } # setup_search
@@ -1360,18 +1368,19 @@ sub retrieve_some
   {
   my $self = shift;
   print STDERR " + retrieve_some(", $self->{'native_query'}, ")\n" if $self->{_debug};
-  return undef if ($self->{state} == $SEARCH_DONE);
-  # assume that caller has verified defined($self->{'native_query'}).
-  $self->setup_search() if ($self->{state} == $SEARCH_BEFORE);
+  return undef if ($self->{state} == SEARCH_DONE);
+  # assume that caller has verified defined($self->{'native_query'}),
+  # hopefully by calling $self->native_query().
+  $self->setup_search() if ($self->{state} == SEARCH_BEFORE);
   # got enough already?
   if ($self->{number_retrieved} >= $self->{'maximum_to_retrieve'})
     {
-    $self->{state} = $SEARCH_DONE;
+    $self->{state} = SEARCH_DONE;
     return;
     } # if
   # spinning our wheels?
   if ($self->{requests_made} > $self->{'maximum_to_retrieve'}) {
-    $self->{state} = $SEARCH_DONE;
+    $self->{state} = SEARCH_DONE;
     return;
     } # if
   # need more results
@@ -1379,7 +1388,7 @@ sub retrieve_some
   print STDERR " +   native_retrieve_some() returned $res\n" if $self->{_debug};
   $self->{requests_made}++;
   $self->{number_retrieved} += $res;
-  $self->{state} = $SEARCH_DONE if ($res == 0);
+  $self->{state} = SEARCH_DONE if ($res == 0);
   return $res;
   } # retrieve_some
 
