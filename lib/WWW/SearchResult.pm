@@ -1,7 +1,7 @@
 # SearchResult.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: SearchResult.pm,v 1.8 1999/12/10 15:35:10 mthurn Exp $
+# $Id: SearchResult.pm,v 1.9 2001/05/11 13:23:08 mthurn Exp $
 #
 # Copyright (c) 1996 University of Southern California.
 # All rights reserved.                                            
@@ -185,11 +185,12 @@ See normalized_score for a backend independent score.
 
 =item normalized_score
 
-SORRY, THIS IS NOT IMPLEMENTED.
-
 This is intended to be a backend-independent score of the search
 result.  The range of this score is between 0 and 1000.  Higher values
 indicate better quality results.
+
+This is not really implemented since no one has created an
+backend-independent ranking algorithm.
 
 =item change_date
 

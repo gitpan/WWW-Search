@@ -149,13 +149,11 @@ lib/WWW/Search/NetFind.pm
 lib/WWW/Search/Null.pm
 lib/WWW/Search/PLweb.pm
 lib/WWW/Search/SFgate.pm
-lib/WWW/Search/Scraper.pm
 lib/WWW/Search/Search97.pm
 lib/WWW/Search/Simple.pm
 lib/WWW/Search/Test.pm
 lib/WWW/Search/Verity.pm
 lib/WWW/Search/VoilaFr.pm
-lib/WWW/Search/WebCrawler.pm
 lib/WWW/SearchResult.pm
 t/test_parsing.pl
 t/use.t

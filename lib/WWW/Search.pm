@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.55 2001/05/07 13:44:23 mthurn Exp $
+# $Id: Search.pm,v 1.55 2001/05/07 13:44:23 mthurn Exp mthurn $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -1226,7 +1226,6 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
                       Null
                       SFgate
                       VoilaFr
-                      WebCrawler
                      );
 
 1;

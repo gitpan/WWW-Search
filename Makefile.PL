@@ -19,7 +19,7 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
               'NAME' => 'WWW::Search',
-              'VERSION' => 2.19,
+              'VERSION' => 2.21,
 
               ($] ge '5.005') ? (
                                  'AUTHOR' => 'Martin Thurn <MartinThurn@iname.com>',

@@ -3,13 +3,16 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.19?  (2001-05-07)
+WHAT IS NEW IN WWW::Search 2.21?  (2001-06-13)
 ----------------------------------------------
 
-overview:
- * BUGFIX for: results() always returned 500!
+Administrative release only.  No change in functionality.
 
-For details, see the file ChangeLog and/or the pod of each affected module.
+overview:
+ * remove Sherlock and Scraper
+
+For details, see the ChangeLog file and/or the pod of each affected
+module.
 
 
 WHAT IS WWW::Search?
@@ -19,7 +22,7 @@ WWW::Search is a collection of Perl modules which provide an API to
 search engines on the world-wide web (and similar engines).
 Currently, WWW::Search includes backends for variations of AltaVista
 and WebCrawler, among others.  Backends for some engines can be
-obtained separately, such as Excite, HotBot, and Yahoo.  This
+obtained separately, such as Ebay, Excite, HotBot, and Yahoo.  This
 distribution includes two applications built from this library:
 AutoSearch (a program to automate tracking of search results over
 time), and WebSearch, a small demonstration program to drive the
@@ -75,12 +78,11 @@ SFgate			working
 Simple			not working? (not in test suite)
 Verity			not working (not in test suite)
 VoilaFr                 working (not in test suite)
-WebCrawler		working
 
 ''Partially working'' indicates that some tests passed and some failed.
 
-The following backends are now registered at CPAN independently (not
-included with the WWW::Search release):
+The following backends (and more!) are registered at CPAN
+independently (not included with this WWW::Search distribution):
 
 Euroseek        http://www.perl.com/CPAN-local/authors/by-module/WWW/JSMYSER/
 Excite          http://www.perl.com/CPAN-local/modules/by-module/WWW/
@@ -104,22 +106,10 @@ REQUIREMENTS
 ------------
 
 WWW::Search requires Perl5, the libwww-perl module suite, the URI
-module, and the HTML::Parser module.  Some of the "not working"
-modules require the HTML::TreeBuilder module (you can ignore warnings
-about TreeBuilder during the build).  For information on Perl5, see
-<http://www.perl.com>.  For all the modules, see
-<http://www.perl.com/CPAN/> to find a CPAN site near you.
-
-At the time of this release, the primary WWW::Search development and
-testing is under perl version 5.005_03 on Sun UltraSparc Solaris 7 and
-under ActiveState perl build 522 on Windows NT 4.0 service pack 6.
-
-WWW::Search has also been built and tested successfully on Win98J
-(that's Japanese) with ActiveState perl build 517.
-
-If you have successfully built and tested WWW::Search on any other
-(obscure) platform / version combination, please let me know!
-MartinThurn@iname.com
+module, the HTML::Parser module, and a few other modules (see
+Makefile.PL for a complete list).  For information on Perl5, see
+<http://www.perl.com>.  For modules, see
+<http://www.perl.com/CPAN-local/modules>.
 
 
 AVAILABILITY
@@ -132,9 +122,6 @@ http://www.perl.com/CPAN-local/modules/by-module/WWW
 
 INSTALLATION
 ------------
-
-In order to use this package you will need Perl version 5.002 or
-better.  
 
 It is highly recommended that you use CPAN.pm to install WWW::Search.
 It will automatically install all the prerequisite modules and all the
@@ -261,7 +248,7 @@ please please put [WWW::Search] at the beginning of the subject line
 
 When submitting a bug report or request for help, please remember to
 include:
-  - your operating system name and version
+  - the operating system name and version
   - the version of perl
   - the version of WWW::Search
   - the version of the backend
@@ -298,9 +285,9 @@ If you are on UNIX you can add
 	0 3 * * 1 AutoSearch /path/to/your/web/pages/me
 
 to your crontab to update this search every week at 3:00 Monday
-morning, for example.  If you install WWW::Search::Ebay, and add the
---mail option to AutoSearch, you'll have your own private replacement
-for ebay's personal search service... WITHOUT the three-query limit!
+morning.  If you install WWW::Search::Ebay, and add the --mail option
+to AutoSearch, you'll have your own private replacement for ebay's
+personal search service... WITHOUT the three-query limit!
 
 
 DOCUMENTATION
@@ -334,9 +321,9 @@ native_query).  Contact <MartinThurn@iname.com>
 (I'm trying to decide what the API interface will look like; please
 send suggestions).  Contact <MartinThurn@iname.com>
 
- - application-level proxy support (I'm looking for a contribution
-here from someone who uses/needs proxy support and can test it).
-Contact <MartinThurn@iname.com>
+ - proxy support (I'm looking for a contribution here from someone who
+uses/needs proxy support and can test it).  Contact
+<MartinThurn@iname.com>
 
  - more widespread use of result tags such as description, date, size,
 etc. across all backends.  Contact backend maintainers.
