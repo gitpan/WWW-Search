@@ -3,31 +3,22 @@ WWW::Search and AutoSearch
 ==========================
 
 
-WHAT IS NEW WITH WWW::Search 1.015?
+WHAT IS NEW WITH WWW::Search 1.017?  (27-May-98)
 -----------------------------------
+overview:  this is the public release since 1.012
 
-overview:  this is an alpha release with several new back-ends
+- bug fix: Lycos bug fix
 
-- new: back-ends: Magellan, WebCrawler (thanks to Martin Thurn)
-- bug fix:  Yahoo/HotBot/Excite back-ends,
-	with test suites.  Many thanks to Martin Thurn.
-- bug fix:  AltaVista news test suites have been relaxed,
-	even though the code worked before, the test suites
-	used to report false negatives.
-- bug fix: AltaVista is now more careful to detect the end of
-	a hit's raw HTML
-- new: the test suite has been enhanced to be less senstitive
-	to changes in what's indexed
-- problem: several back-ends don't have test suites and
-	so may or may not work (DejaNews, Infoseek, PLweb,
-	SFgate, Verity)
-- reminder: WWW::Search mailing list:
-	to subscribe, send "subscribe info-www-search" as
-	the body of a message to <info-www-search-request@isi.edu>
+(Major additions since 1.012, the last public release:
+- new back-ends: Yahoo, Magellan, WebCrawler (Martin Thurn)
+- fixed back-ends: HotBot, InfoSeek (Martin Thurn), Lycos, AltaVista
+- test suites are more lenient to hopefully reduce false negatives
+)
 
 Note:  WWW::Search may have problems with older libwww's (5.08).  If
 "make test" dies with an error in RobotUA, upgrade libwww.  (Tested
 with libwww-5.30.)
+
 
 
 WHAT IS WWW::Search?
@@ -35,12 +26,34 @@ WHAT IS WWW::Search?
 
 WWW::Search is a collection of Perl modules which provide an API to
 WWW search engines.  Currently WWW::Search includes back-ends for
-variations of AltaVista, Dejanews, Excite, HotBot, Infoseek, and
-Lycos.  We include two applications built from this library:
-AutoSearch (an program to automate tracking of search results over
-time), and WebSearch, a small demonstration program to drive the library.
-Back-ends for other search engines and more sophisticated clients are
-currently under development.
+variations of AltaVista, Dejanews, Excite, HotBot, Infoseek, Lycos,
+Magellan, PLweb, SFgate, Verity, WebCrawler, and Yahoo.  We include
+two applications built from this library: AutoSearch (an program to
+automate tracking of search results over time), and WebSearch, a small
+demonstration program to drive the library.  Back-ends for other
+search engines and more sophisticated clients are currently under
+development.
+
+Because WWW::Search depends on parsing the HTML output of web search
+engines it will fail of the search engine operators change their
+format (an unfortunately frequent occurrence).  WWW::Search includes a
+test suite for most back-ends which verifies that it's functioning
+correctly.  As of the day of the release the current back-end
+status is:
+
+AltaVista		working		(in test suite)
+Dejanews		?		not in test suite
+Excite			not working	(but in test suite)
+HotBot			working		(in test suite)
+Infoseek		working		(in test suite)
+Lycos			working		(in test suite)
+Magellan		working		(in test suite)
+PLweb			?		not in test suite
+SFgate			?		not in test suite
+Verity			not working	not in test suite
+WebCrawler		working		(in test suite)
+Yahoo			working		(in test suite)
+
 
 
 
@@ -68,7 +81,7 @@ Both are also available from the Comprehensive Perl Archive
 Network (CPAN). Visit <http://www.perl.com/CPAN/> to find a CPAN
 site near you.
 
-At this time WWW::Search has been tested with Perl version 5.003.
+At this time WWW::Search is tested under Perl version 5.004_04.
 
 
 
@@ -149,7 +162,7 @@ A mailing list for WWW::Search discussion exists.  To subscribe, send
 "subscribe info-www-search" as the body of a message to
 <info-www-search-request@isi.edu>.
 
-Back-end-related bug reports (search engine xxx doesn't work) should
+Back-end-related bug reports (search engine whatever doesn't work) should
 be sent to the author of the back-end (back-end authors are identified
 in the corresponding man page and the output of ``make test'').
 General bugs should be reported to <johnh@isi.edu>.
@@ -268,7 +281,7 @@ overview:  1.009 is primarily a maintenance release to accommodate
 	(problem found by Juan Jose Amor, fix by GLen Pringle)
 
 1.010: (20 August 1997)
-overview:  an interim release to fix altavista
+overview:  an interim release to fix AltaVista
 - new: normalized_score, a back-end independent score (from Paul Lindner)
 - new: generic options are supported by several back-ends
 	(specify search engine URL, debugging, etc.)
@@ -317,6 +330,35 @@ overview:  this is an alpha release to fix the AltaVista/Lycos back-ends
 - problem: several back-ends don't have test suites and
 	so may or may not work (DejaNews, Excite, HotBot, Infoseek, PLweb,
 	SFgate, Verity, Yahoo)
+
+1.015, (2-Apr-98)
+overview:  this is an alpha release with several new back-ends
+- new: back-ends: Magellan, WebCrawler (thanks to Martin Thurn)
+- bug fix:  Yahoo/HotBot/Excite back-ends,
+	with test suites.  Many thanks to Martin Thurn.
+- bug fix:  AltaVista news test suites have been relaxed,
+	even though the code worked before, the test suites
+	used to report false negatives.
+- bug fix: AltaVista is now more careful to detect the end of
+	a hit's raw HTML
+- new: the test suite has been enhanced to be less sensitive
+	to changes in what's indexed
+- problem: several back-ends don't have test suites and
+	so may or may not work (DejaNews, Infoseek, PLweb,
+	SFgate, Verity)
+- reminder: WWW::Search mailing list:
+	to subscribe, send "subscribe info-www-search" as
+	the body of a message to <info-www-search-request@isi.edu>
+
+1.016, 21-May-98
+overview: this is an alpha to fix HotBot/Infoseek
+- bug fix: Infoseek/HotBot back ends now work again.
+	(HotBot problem reported by Alan McCoy <a.r.mccoy@larc.nasa.gov>,
+	both back-ends fixed by Martin Thurn)
+- addition: Infoseek test suite
+- addition: test output now includes the version number
+
+
 
 SUPPORT AND CREDITS
 -------------------
@@ -393,4 +435,8 @@ ISPELL
  LocalWords:  crontab HotBot autosearch Scheding Kedar Dejanews Infoseek lib de
  LocalWords:  SearchResult LCI wls Cesare Feroldi GLen Pringle pringle monash
  LocalWords:  au Raman raman Virden lvirden cas org LWP WebSearch RobotUA Amor
- LocalWords:  joe smartlink jjamor infor es
+ LocalWords:  joe smartlink jjamor infor es Yahoo Thurn InfoSeek libwww's PLweb
+ LocalWords:  SFgate Lindner Jul wrt Decoux Chandrasekar Linder Martin's mthurn
+ LocalWords:  tasc DejaNews Bilal Siddiqui bilal siddiqui mankato msus Apr larc
+ LocalWords:  mccoy nasa gov paul lindner itu int decoux moulon inra
+ LocalWords:  fr mickeyc linc cis upenn Dwelle hotwired

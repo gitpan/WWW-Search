@@ -8,6 +8,11 @@ package WWW::Search::SFgate;
 
 WWW::Search::SFgate - class for searching SFgate/Wais search engine
 
+=head1 SYNOPSIS
+
+    require WWW::Search;
+    $search = new WWW::Search('SFgate');
+
 =head1 DESCRIPTION
 
 This class is a SFgate specialization of WWW:Search.  It queries and

@@ -2,13 +2,18 @@
 
 # Magellan.pm
 # Copyright (C) 1998 by Martin Thurn
-# $Id: Magellan.pm,v 1.2 1998/04/02 19:12:22 johnh Exp $
+# $Id: Magellan.pm,v 1.3 1998/05/28 04:05:40 johnh Exp $
 
 package WWW::Search::Magellan;
 
 =head1 NAME
 
 WWW::Search::Magellan - class for searching Magellan 
+
+=head1 SYNOPSIS
+
+    require WWW::Search;
+    $search = new WWW::Search('Magellan');
 
 =head1 DESCRIPTION
 

@@ -4,6 +4,24 @@
 
 package WWW::Search::Gopher;
 
+=head1 NAME
+
+WWW::Search::Gopher - class for searching Gopher
+
+
+=head1 SYNOPSIS
+
+    require WWW::Search;
+    $search = new WWW::Search('Gopher');
+
+
+=head1 DESCRIPTION
+
+Not documented.
+
+=cut
+
+
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();

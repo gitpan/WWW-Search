@@ -1,214 +1,217 @@
-
 <HTML>
-
 <HEAD>
-
-<TITLE>Lycos Search</TITLE>
-<meta http-equiv="pragma" content="no-cache">
+<TITLE>Lycos Search:Error</TITLE>
+<STYLE>
+<!--
+A:hover {text-decoration:bold; color:red;}
+A:link {text-decoration:underline; color:blue;}
+-->
+</STYLE>
 </HEAD>
-<!----BEGIN SPORTS HEADER INCLUDE---->
+<!--begin resultheader.inc-->
 
+<!-- remote window Quick Reference -->
+
+<script language="javascript">
+
+<!--
+
+function Remote() {
+  var floater = null
+  floater = window.open('','vRemote','width=500,height=150,resizable=1,status=0,scrollbars=1')
+  if (floater != null) {
+    if (floater.opener == null) {
+      floater.opener = self
+    }
+    floater.location.href = 'http://lycospro.lycos.com/quickref.html'
+  }
+}
+// -->
+
+
+</script>
 <BODY BGCOLOR="#FFFFFF">
+<!--TOP LEFT-->
+<TABLE BORDER="0" CELLSPACING=0 CELLPADDING=0 WIDTH=600>
+<TR><TD ALIGN=MIDDLE VALIGN=TOP BGCOLOR="#000000" WIDTH=134>
+<CENTER><a href="http://www.lycos.com/"><IMG SRC="http://www.lycos.com/assist/graphics/new-logo.gif" width=125 height=48 alt="Lycos" border=0></a>
+<IMG SRC="http://www.lycos.com/assist/graphics/your-guide.gif" height=76 width=125 alt="Search Results"></TD>
+<!--TOP MIDDLE SPACER-->
+<TD width=8><IMG width=8 height=1 SRC="http://www.lycos.com/assist/graphics/dot_clear.gif"></TD>
+<!--TOP RIGHT-->
+<TD VALIGN=TOP>
+<CENTER><TABLE BGCOLOR="#000000" WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR><TD>
+<TABLE BORDER=0 CELLSPACING=1 WIDTH=100% CELLPADDING=1>
+<TD ALIGN=CENTER BGCOLOR="#EEEEEE"><FONT SIZE=-1 FACE="HELVETICA,
+ARIAL, SANS SERIF, MS SANS SERIF"><A
+HREF="http://personal.lycos.com"><FONT COLOR="#CC0000"><B>Personalize</B></FONT></A>&nbsp;&nbsp;</TD>
 
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=4 VALIGN=TOP>
-<TR VALIGN=TOP>
-	<TD WIDTH=125 BGCOLOR="#000000" VALIGN=TOP ROWSPAN=2>
+<TD ALIGN=CENTER BGCOLOR="#EEEEEE">
 
-<!---- LOGO & ICON ---->
-	
-	<A HREF="http://www.lycos.com/"><IMG SRC="/assist/graphics/new-logo.gif" width=125 height=48 border=0 alt="Lycos"></A>
-	<A HREF="http://www.lycos.com/sports/"><IMG SRC="/assist/graphics/your-guide.gif" WIDTH=125 HEIGHT=76 border=0></A>
-
-<!---- END LOGO & ICON ---->
-
-	</TD>
-	<TD BGCOLOR="#6699FF" VALIGN=BOTTOM>
-
-<!----END SPORTS HEADER INCLUDE---->
-
-
-<!---- SERVICEBAR/GUIDEFLAG INCLUDE ---->
-
-	<MAP NAME=service>
-<AREA SHAPE=rect COORDS="6,0, 54,14" HREF="http://point.lycos.com/categories/">
-<AREA SHAPE=rect COORDS="57,0, 115,14" HREF="http://cityguide.lycos.com/">
-<AREA SHAPE=rect COORDS="119,0, 181,14" HREF="http://www.lycos.com/peoplefind/">
-<AREA SHAPE=rect COORDS="184,0, 243,14" HREF="http://www.stockfind.newsalert.com">
-<AREA SHAPE=rect COORDS="249,0, 307,14" HREF="http://www.lycos.com/roadmap.html">
-<AREA SHAPE=rect COORDS="311,0, 386,14" HREF="http://www.lycos.com/cgi-bin/nph-bounce?gtehome-button|http://yp.gte.net/ypform.phtml_QUES_SRC=lycos">
-<AREA SHAPE=rect COORDS="391,0, 467,14" HREF="http://www.lycos.com/ups/bridge.html">
-<AREA SHAPE=default  HREF="http://www.lycos.com/">
-</MAP>
-<a href="/assist/maps/service.map"><IMG SRC="/assist/graphics/servicebar.gif" HEIGHT=18 WIDTH=473 alt="Lycos Services" BORDER=0 usemap="#service" ISMAP></A></TD>
-
-</TR>
-
-<TR>
-<TD>
-
-<!----AD---->
-
-<CENTER><font size="-2"><a href="/cgi-bin/nph-adclick.exe/CID=0000f9f10000000300000000/ST=lycos/SV=search/A=.lycos.search_lycos."><img  src="http://ads.lycos.com/ads/mastermerchant1.gif" alt="Master Adult Merchant"  width=468 height=60></a><br><a href="/cgi-bin/nph-adclick.exe/CID=0000f9f10000000300000000/ST=lycos/SV=search/A=.lycos.search_lycos.">Click here to visit site</a></font></CENTER>
-
-<!-- /AD -->
+<FONT SIZE=-1 FACE="HELVETICA, ARIAL, SANS SERIF, MS SANS SERIF">
+<A HREF="http://www.lycosemail.com/member/login.page">Free
+Email</A>&nbsp;&nbsp;
 
 </TD>
-</TR>
-</TABLE>
-<!---- END SERVICEBAR/GUIDEFLAG INCLUDE---->
-<!--BEGIN WEBGUIDE IMAP -->
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=4 WIDTH=600 VALIGN=TOP>
-<TR VALIGN=TOP>
-	<TD BGCOLOR="#000000" VALIGN=TOP ROWSPAN=10>
-	
-	<!-- GUIDEBAR -->	
 
-<TABLE WIDTH=125 BORDER=0 CELLSPACING=5 CELLPADDING=0 VALIGN=TOP BGCOLOR="#000000">
-<TR VALIGN=TOP>	<TD WIDTH=10 ROWSPAN=5>&#160;</TD>
-		<TD VALIGN=TOP WIDTH=113 BGCOLOR="#FFCC33">&#160;<A HREF="http://www.lycos.com"><FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" COLOR="#000000" SIZE="-1"><B>Lycos Home</B></FONT></A></TD></TR>
-<TR>		<TD VALIGN=TOP WIDTH=113 BGCOLOR="#FFCC33">&#160;<A HREF="http://www.lycos.com/webguides/webguides.html"><FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" COLOR="#000000" SIZE="-1"><B>Web Guides</B></FONT></A></TD></TR>
-<TR>		<TD VALIGN=TOP WIDTH=113 BGCOLOR="#FFCC33">&#160;<A HREF="http://www.lycos.com/search.html"><FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" COLOR="#000000" SIZE="-1"><B>Search</B></FONT></A></TD></TR>
-<TR>		<TD VALIGN=TOP WIDTH=113 BGCOLOR="#FFCC33">&#160;<A HREF="http://www.lycos.com/help/"><FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" COLOR="#000000" SIZE="-1"><B>Help</B></FONT></A></TD></TR>
-<TR>		<TD VALIGN=TOP WIDTH=113 BGCOLOR="#FFCC33" VALIGN=TOP>&#160;<A HREF="http://echomail.lycos.com/echomail"><FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" COLOR="#000000" SIZE="-1"><B>Feedback</B></FONT></A></TD>
+<TD ALIGN=CENTER BGCOLOR="#EEEEEE">
 
-<TD WIDTH=2 BGCOLOR="#000000" VALIGN=TOP ROWSPAN=5>&#160;</TD>
-	</TR>
+<FONT SIZE=-1 FACE="HELVETICA, ARIAL, SANS SERIF, MS SANS SERIF">
+<A HREF="http://chat.lycos.com">Chat</A>&nbsp;&nbsp;
+
+</TD>
+
+
+<TD ALIGN=CENTER BGCOLOR="#EEEEEE"><FONT SIZE=-1 FACE="HELVETICA, ARIAL, SANS SERIF, MS SANS SERIF"><A HREF="http://news.lycos.com/headlines/TopNews/default.asp">News</A>&nbsp;&nbsp;</TD>
+
+<TD ALIGN=CENTER BGCOLOR="#EEEEEE"><FONT SIZE=-1 FACE="HELVETICA, ARIAL, SANS SERIF, MS SANS SERIF"><A HREF="http://weather.lycos.com">Weather</A>&nbsp;&nbsp;</TD>
+
+<TD ALIGN=CENTER BGCOLOR="#EEEEEE"><FONT SIZE=-1 FACE="HELVETICA, ARIAL, SANS SERIF, MS SANS SERIF"><A HREF="http://www.stockfind.newsalert.com/">Stocks</A>
+</FONT>
+</TD></TR></TABLE>
+</TR></TD></TABLE>
+
+
+
+
+</CENTER><BR>
+ <!----AD---->
+ <FONT FACE="HELEVETICA,ARIAL,MS SANSSERIF, SANS-SERIF" COLOR="#000000" SIZE=-2>
+<CENTER><a href="/cgi-bin/nph-adclick.exe/CID=00033fa10000000300000000/ST=lycos/SV=search/A=.lycos.search_lycos."><img  src="http://ads.lycos.com/ads/gamblingbridge3.gif" alt="Click here for excitement on the web"  width=468 height=60></a><br><a href="/cgi-bin/nph-adclick.exe/CID=00033fa10000000300000000/ST=lycos/SV=search/A=.lycos.search_lycos.">Click here to visit site</a></CENTER></FONT>
+<!--/AD-->
+
+<IMG width=468 border=0 height=1 VALIGN=TOP SRC="http://www.lycos.com/assist/graphics/dot_clear.gif">
+
+</TD></TR>
+<TR><TD VALIGN=TOP ALIGN=ABSMIDDLE BGCOLOR="#000000"><CENTER>
+<!--BOTTOM LEFT-->
+<!-- GUIDEBAR -->	
+<br>
+<TABLE WIDTH=125 BORDER=0 CELLSPACING=4 CELLPADDING=0 VALIGN=TOP>
+<TR VALIGN=TOP><TD VALIGN=TOP BGCOLOR="#0066CC">&#160;&#160;<A HREF="http://www.lycos.com/"><FONT FACE="HELVETICA,ARIAL" COLOR="#FFFFFF" SIZE=2><B>Lycos Home</B></FONT></A></TR>
+<TR VALIGN=TOP><TD VALIGN=TOP BGCOLOR="#0066CC">&#160;&#160;<A HREF="http://www.lycos.com/help/"><FONT FACE="HELVETICA,ARIAL" COLOR="#FFFFFF" SIZE=2><B>Help</B></FONT></A></TR>
+<TR VALIGN=TOP><TD VALIGN=TOP BGCOLOR="#0066CC">&#160;&#160;<A HREF="http://echomail.lycos.com/em_dir/lycos/lycosmail.nsf/email+form?OpenForm"><FONT FACE="HELVETICA,ARIAL" COLOR="#FFFFFF" SIZE=2><B>Feedback</B></FONT></A></TR>
 	</TABLE>
 	</TD>
 
+<!---- END GUIDEBAR---->
 
-<!--END WEBGUIDE IMAP-->
 
-
-<!-- COLUMN 1 -->
-
+</TD>
+<!--BOTTOM MIDDLE SPACER-->
+<TD width=8><IMG width=8 height=1 SRC="http://www.lycos.com/assist/graphics/dot_clear.gif"></TD>
+<!--BOTTOM RIGHT-->
 <TD VALIGN=TOP>
-<TABLE>
-<TR><TD bgcolor="#ffffff" ALIGN=LEFT VALIGN=MIDDLE WIDTH=473>&#160;&#160;<BR><FONT FACE="HELVETICA, ARIAL" SIZE=+1 COLOR="#CC0000">Try Again</FONT></TD><TD bgcolor="#ffffff" ALIGN=RIGHT>&nbsp;&nbsp;<A HREF=/help/refine.html><FONT SIZE=-2 FACE=HELVETICA,ARIAL><B>HELP</B></FONT></A>
-</TD></TR>
-<TD><FONT SIZE=-1 FACE="helvetica, arial, ms sans serif, sans-serif">
-<B>Search words were not found. Please check your spelling or search again using different words (nouns and verbs). Or <a href="http://www.lycos.com/help/">click here</a> for search help..</B></FONT></TD><TD>&nbsp;</TD></TR>
+<TABLE ALIGN=RIGHT WIDTH=113 BORDER=0><TR><TD>
+<!---STARTRIGHT COLUMN ADS-->
+
+<!--ENDRIGHT COLUMN ADS-->
+
+
+</TD></TR></TABLE>
+
+
+
+<FONT SIZE=-1 FACE="helvetica, arial, ms sans serif, sans-serif">Your Search for <B>LSAM BogusNoSuchWord</B> returned no results</FONT><BR>
+<FONT COLOR="CC000000" SIZE=+1 FACE="helvetica, arial, ms sans serif, sans-serif"><B>Search Tips</B></FONT><BR>
+<TABLE WIDTH=100% CELLPADDING=0 CELLSPACING=0>
+<TR><TD WIDTH=469 BGCOLOR=#6699FF VALIGN=TOP ALIGN=LEFT><IMG width=475 height=1 SRC="http://www.lycos.com/assist/graphics/dot_clear.gif"></TD></TR></TABLE>
+<TABLE CELLSPACING=0 CELLPADDING=3 BORDER=0>
+<TR><TD VALIGN=BOTTOM ALIGN=LEFT><FONT SIZE=+1 COLOR=#FFCC00 FACE=HELVETICA,ARIAL><B>1.</B></TD><TD VALIGN=BOTTOM ALIGN=LEFT><FONT SIZE=-1  FACE=HELVETICA,ARIAL>
+Check your spelling.</TD></TR>
+
+
+<TR><TD VALIGN=BOTTOM ALIGN=LEFT><FONT SIZE=+1 COLOR=#FFCC00 FACE=HELVETICA,ARIAL><B>2.</B></TD><TD VALIGN=BOTTOM ALIGN=LEFT><FONT SIZE=-1  FACE=HELVETICA,ARIAL>
+Rephrase your search using synonyms of your search terms.</TD></TR>
+
+
+<TR><TD VALIGN=BOTTOM ALIGN=LEFT><FONT SIZE=+1 COLOR=#FFCC00 FACE=HELVETICA,ARIAL><B>3.</B></TD><TD VALIGN=BOTTOM ALIGN=LEFT><FONT SIZE=-1  FACE=HELVETICA,ARIAL>
+Try <A HREF="http://lycospro.lycos.com/lycospro-nojava.html">Lycos Pro Advanced Search</A> for more search options.</TD></TR>
+
+
+<TR><TD VALIGN=BOTTOM ALIGN=LEFT><FONT SIZE=+1 COLOR=#FFCC00 FACE=HELVETICA,ARIAL><B>4.</B></TD><TD VALIGN=BOTTOM ALIGN=LEFT><FONT SIZE=-1  FACE=HELVETICA,ARIAL>
+Consult our <A HREF="http://www.lycos.com/help/search-help.html">Search Help</A> section.</TD></TR>
+
+
+
+
 </TABLE>
-<TABLE BGCOLOR="#6699FF" CELLSPACING=0 CELLPADDING=2 BORDER=0>
+<BR><FONT SIZE=-1 FACE="helvetica, arial, ms sans serif, sans-serif">
+<!--SEARCH BOX BEGIN-->
+<CENTER>
+<FORM ACTION="/cgi-bin/pursuit" METHOD=GET>
+<TABLE BGCOLOR="#6699FF" CELLSPACING=0 CELLPADDING=3 BORDER=0>
 <TR>
-<TD ALIGN=CENTER VALIGN=MIDDLE WIDTH=473 COLSPAN=2>
-	<FORM ACTION="/cgi-bin/pursuit" METHOD=GET>
-	<INPUT TYPE="hidden" NAME="adv" VALUE="0">
-	<FONT SIZE=-1  FACE="HELVETICA, ARIAL, SANS SERIF, MS SANS SERIF"><B>You Searched</B>&nbsp;
-	<SELECT NAME=cat>
-	<OPTION SELECTED VALUE=lycos>The Web 
-	<OPTION VALUE=point>Web Site Reviews
-	<OPTION VALUE=homepage>Personal Homepages 	
-	<OPTION VALUE=dejanews>Discussion Groups
-	<OPTION VALUE=news>Reuters News 
-	<OPTION VALUE=weather>Weather (city)
-	<OPTION VALUE=cities>Cities 	
-	<OPTION VALUE=stockfind>Stock (symbol)
-	<OPTION VALUE=bn>Books
-	<OPTION VALUE=graphics>Pictures
-	<OPTION VALUE=sounds>Sounds
-	<OPTION VALUE=recipedia>Recipes
-	<OPTION VALUE=ups>UPS Tracking #</SELECT>
-	&nbsp;for&nbsp;<SELECT NAME="matchmode">
-	<OPTION SELECTED value="and">All the words
-	<OPTION value="or">Any of the words
-	</SELECT>
-	</FONT>
+<TD VALIGN=TOP WIDTH=440 COLSPAN=3>
+<INPUT TYPE="hidden" NAME="adv" VALUE="0">	&nbsp;
+<FONT SIZE=-1 COLOR=#000000 FACE=HELVETICA,ARIAL>Search&nbsp;
+<SELECT NAME=cat>	
+<OPTION SELECTED VALUE=lycos>The Web 	
+<OPTION VALUE=point>Web Site Reviews	
+<OPTION VALUE=homepage>Personal Homepages 		
+<OPTION VALUE=dejanews>Discussion Groups	
+<OPTION VALUE=news>Reuters News 	
+<OPTION VALUE=weather>Weather (city)	
+<OPTION VALUE=cities>Cities 		
+<OPTION VALUE=stockfind>Stock (symbol)	
+<OPTION VALUE=bn>Books	
+<OPTION VALUE=graphics>Pictures	
+<OPTION VALUE=sounds>Sounds	
+<OPTION VALUE=recipedia>Recipes	
+<OPTION VALUE=ups>UPS Tracking #</SELECT>	&nbsp;for&nbsp;
+<SELECT NAME="npl"> 
+<OPTION value="matchmode=or&amp;adv=1" >Any of the words 
+<OPTION SELECTED value="matchmode=and&amp;adv=1" >All the words	</SELECT>	</FONT>
 </TD>
 </TR>
 <TR>
-<TD ALIGN=CENTER VALIGN=MIDDLE WIDTH=472 COLSPAN=0>
-<INPUT TYPE="text" NAME="query" VALUE="LSAM BogusNoSuchWord" SIZE=50>	
+<TD ROWSPAN=2>
+<FONT SIZE=-1 COLOR=#6699FF FACE=HELVETICA,ARIAL>Search
 </TD>
+<TD ALIGN=LEFT VALIGN=ABSMIDDLE>
+<INPUT TYPE="text" NAME="query" VALUE="LSAM BogusNoSuchWord" SIZE=35></TD><TD
+ALIGN=LEFT VALIGN=ABSMIDDLE>
+<INPUT TYPE="image" SRC="/assist/graphics/gogetit(R).gif" height=22 width=72 BORDER=0 align=LEFT>
+<NOBR>&nbsp;&nbsp;&nbsp;&nbsp;  </TD></TR>
+<TR><TD COLSPAN=2>
+<FONT SIZE=-2 COLOR=#00000 FACE=HELVETICA,ARIAL>
+<B>Tip :</B> The minus sign (-) excludes words from your search.
+<BR>(Ex. Bill Clinton -Roger)
+</TD>
+
 </TR>
-
-
-
 <TR>
-<TD ALIGN=CENTER VALIGN=TOP>
-<A HREF=/help/><FONT SIZE=-1 COLOR=#000000 FACE=HELVETICA,ARIAL><B>HELP</B></FONT></A>&nbsp;&nbsp;&nbsp;
-<A HREF=http://lycospro.lycos.com/lycospro-nojava.html><FONT SIZE=-1 COLOR=#000000 FACE=HELVETICA,ARIAL><B>Advanced Search</B></FONT></A>&nbsp;&nbsp;&nbsp;
-<A HREF=http://echomail.lycos.com/echomail><FONT SIZE=-1 COLOR=#000000 FACE=HELVETICA,ARIAL><B>Feedback?</FONT></B></A>&nbsp;&nbsp;&nbsp;
-	<INPUT TYPE="image" SRC="/assist/graphics/gogetit(R).gif" height=22 width=72 BORDER=0 align=ABSmiddle>
+<TD VALIGN=BOTTOM COLSPAN=3>
+<TABLE BORDER=0 WIDTH=440 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD ALIGN=LEFT COLSPAN=2>
+<A HREF=http://lycospro.lycos.com/lycospro-nojava.html>
+<FONT SIZE=-1 COLOR=#000000 FACE=HELVETICA,ARIAL>
+<B>Lycos Pro Advanced Search</B></FONT></A>
 </TD>
+<TD ALIGN=RIGHT><A HREF="http://www.lycos.com/help/search-help.html"><FONT SIZE=-1 COLOR=#000000 FACE=HELVETICA,ARIAL><B>Help</B></FONT></A>&nbsp;&nbsp;<A HREF="http://echomail.lycos.com/echomail"><FONT SIZE=-1 COLOR=#000000 FACE=HELVETICA,ARIAL><B>Feedback</FONT></A></B></TD>
 </TR>
-</FORM>		
 </TABLE>
-</TD></TR>
-<TR><TD bgcolor="#ffffff" ALIGN=LEFT VALIGN=MIDDLE WIDTH=473>&#160;&#160;<BR><FONT FACE="HELVETICA, ARIAL" SIZE=+1 COLOR="#CC0000">Other Choices</FONT></TD></TR>
-
-<tr>
-<td>
-<FONT SIZE=-1 FACE="helvetica, arial, ms sans serif, sans-serif">
-<LI><a href=http://www.lycos.com><B>Return to the Home Page</B></A>
-<LI><a href=http://lycospro.lycos.com/><B>Try Lycos Pro Search</B></A>
-<LI><a href=http://point.lycos.com/categories><B>Browse Top 5% Categories</B></A>
-<LI><a href=http://cityguide.lycos.com><B>Browse City Guides</B></A>
-<LI><a href=http://www.stockfind.newsalert.com/><B>Get free stock quotes</B></A>
-<LI><a href=http://www.lycos.com/roadmap.html><B>Get a free map of your neighborhood</B></A>
-<LI><a href=http://www.lycos.com/cgi-bin/nph-bounce?gtesearch|http://yp.gte.net/ypform.phtml?SRC=lycos><B>Search Yellow Pages</B></A>
-<LI><a href=http://www.lycos.com/peoplefind/><B>Search for a friend's telephone number</B></A>
-</font>
-
-
-<!-- cqs a query word is unknown to the dbase (17) -->
-<!-- crs  ()  -->
 </TD>
-</TR>
-
-
-
-<!---- FOOTER ---->
-
-
-<TD WIDTH=470 COLSPAN=2>
-<p>
-<FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" SIZE="-2">
-<nobr><a href="http://www.lycos.com/">New Search</a> <strong><FONT SIZE="+1">&#46;</font></strong> 
-<a href="http://www.topnews.com/index.html">TopNews</a> <strong><FONT SIZE="+1">&#46;</font></strong> 
-<a href="http://point.lycos.com/categories/index.html">TOP 5%</a> <strong><font size="+1">&#46;</font></strong>
-<a href="http://cityguide.lycos.com/index.html">City Guide</a> <strong><font size="+1">&#46;</font></strong>
-<a href="http://www.lycos.com/cgi-bin/nph-bounce?stockfind-button|http://www.stockfind.lycos.com/">StockFind</a><strong><font size="+1">&#46;</font></strong>
-<A HREF=http://classifieds2000.lycos.com/cgi-cls/display.exe?lycos+class>Classifieds</A></nobr><BR>
-<nobr><a href="http://www.lycos.com/peoplefind/">PeopleFind</a> <strong><font size="+1">&#46;</font></strong>
-<a href="http://www.companiesonline.com">Companies Online</a> <strong><font size="+1">&#46;</font></strong>
-<a href="http://www.lycos.com/roadmap.html">Road Maps</a> <strong><font size="+1">&#46;</font></strong>
-<a href="http://www.lycos.com/software/">Software</a> <strong><font size="+1">&#46;</font></strong>
-<a href="http://www.lycos.com/info/index.html">About Lycos</a> <strong><font size="+1">&#46;</font></strong>
-<a href="http://www.lycos.com/help/">Help</a></nobr><BR>
-<nobr><a href="http://www.lycos.com/addasite.html">Add Your Site to Lycos</a> <strong><font size="+1">&#46;</font></strong> 
-<a href="http://www.lycos.com/lycosinc/advertising.html">Advertise with Lycos</a> <strong><font size="+1">&#46;</font></strong>
-<a href="http://www.lycos.com/lycosinc/lycosjobs.html">Jobs4You</a> <strong><font size="+1">&#46;</font></strong>
-<a href="http://www.lycos.com/cgi-bin/nph-bounce?gtefooter|http://yp.gte.net/lhome">GTE Yellow Pages</a></nobr> 
-</FONT>
-
-
-
-<FONT FACE="ARIAL,HELVETICA,MS SANS SERIF,SANS-SERIF" SIZE="-2">
+</TR></FORM>		
+</TABLE></CENTER>
+<!--END SEARCH BOX-->
 <P>
-<nobr><a href="http://www.lycos.de">Lycos Germany</a> <strong><font size=+2>&#46;</font></strong> 
-<a href="http://www.lycos.se">Lycos Sweden</a> <strong><font size=+2>&#46;</font></strong> <a href="http://www.lycosuk.co.uk"> Lycos UK</a></nobr>
-<P><font size="-2"><a href=http://www.lycos.com/software/safesearch.html>Download Safe Search Software</a><p>
-<A HREF="http://www.lycos.com/lycosinc/legal.html">Copyright</A>&copy; 1998 Lycos,Inc.<BR>
-All Rights Reserved.<BR>
-Lycos<font size="-3"><sup>&#174;</sup></font> is a registered trademark of<BR>
-Carnegie Mellon University<BR>
-<A HREF="http://www.lycos.com/contact.html">Questions &amp; Comments</A><BR>
-<A HREF="http://www.lycos.com/lycosinc/legal.html">Terms and conditions</A>
- </font>
-</TD>
-</TR></TABLE>
-<!---- END FOOTER ---->
-
+<!----AD---->
+ <FONT FACE="HELEVETICA,ARIAL,MS SANSSERIF, SANS-SERIF" COLOR="#000000" SIZE=-2>
+<CENTER><a href="/cgi-bin/nph-adclick.exe/CID=00033fa10000000300000000/ST=lycos/SV=search/A=.lycos.search_lycos."><img  src="http://ads.lycos.com/ads/gamblingbridge3.gif" alt="Click here for excitement on the web"  width=468 height=60></a><br><a href="/cgi-bin/nph-adclick.exe/CID=00033fa10000000300000000/ST=lycos/SV=search/A=.lycos.search_lycos.">Click here to visit site</a></CENTER></FONT>
+<!--/AD-->
+<P>
+<CENTER> 
+<FONT FACE="HELEVETICA,ARIAL,MS SANSSERIF, SANS-SERIF" COLOR="#000000" SIZE=-3>
+<A HREF=/lycosinc/advertising.html>Advertise with Lycos</A>&nbsp;|&nbsp;<A HREF="/info/">About
+Lycos</A>&nbsp;|&nbsp;<A HREF="/software/safesearch.html">Download Safe Search Software</A><BR>
+<A HREF=/lycosinc/legal.html>Copyright</A>&copy; 1998 Lycos,Inc.All Rights Reserved. <BR>Lycos<font size=-3><sup>&#174;</sup></font> is a registered trademark of Carnegie Mellon University
+<BR>
+<A HREF=/lycosinc/legal.html>Terms and conditions</A> </CENTER>
 
 </TD></TR>
 </TABLE>
-
-
-</TD>
-</TR>
-</TABLE>
-
-
+</BODY>
 </HTML>
-

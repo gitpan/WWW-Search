@@ -3,7 +3,7 @@
 #
 # test.pl
 # Copyright (C) 1997 by USC/ISI
-# $Id: test.pl,v 1.10 1998/03/31 22:29:39 johnh Exp $
+# $Id: test.pl,v 1.12 1998/05/28 04:05:54 johnh Exp $
 #
 # Copyright (c) 1997 University of Southern California.
 # All rights reserved.                                            
@@ -67,7 +67,7 @@ my($file, $query, $date, $search_engine, $pwd, $maintainer);
 
 my($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = (0..10);
 
-my($TEST_DUMMY, $TEST_EXACTLY, $TEST_BY_COUNTING, $TEST_GREATER_THAN, $TEST_RANGE) = (0..10);
+my($TEST_DUMMY, $TEST_EXACTLY, $TEST_BY_COUNTING, $TEST_GREATER_THAN, $TEST_RANGE) = (1..10);
 
 sub relevant_test {
     return 1 if (!defined($desired_search_engine));
@@ -153,6 +153,15 @@ sub not_working {
     print "trial none ($search_engine)\n";
     print "\tThis search engine is known to be non-functional.  You are encouraged\n";
     print "\tto investigate the problem or send mail to its maintainer\n\t$maintainer.\n";
+    print "\n";
+}
+
+sub not_working_with_tests {
+    return if (!relevant_test);
+    print "trial none ($search_engine)\n";
+    print "\tThis search engine is known to be non-functional.  You are encouraged\n";
+    print "\tto investigate the problem or send mail to its maintainer\n\t$maintainer.\n";
+    print "\t(The test sets below are known to fail.)\n";
     print "\n";
 }
 
@@ -255,6 +264,8 @@ sub test_cases {
     # $maintainer = 'GLen Pringle <pringle@cs.monash.edu.au>';
     $maintainer = 'Martin Thurn <mthurn@irnet.rest.tasc.com>';
 
+    not_working_with_tests;
+
     $file = 'test/Excite/zero_result';
     $query = '+mrfglbqnx +Bogus' . 'NoSuchWord';
     test($mode, $TEST_EXACTLY);
@@ -292,8 +303,62 @@ sub test_cases {
 
     ######################################################################
     $search_engine = 'Infoseek';
-    $maintainer = 'Cesare Feroldi de Rosa, <C.Feroldi@IT.net>';
-    not_working;
+    $maintainer = 'Martin Thurn <mthurn@irnet.rest.tasc.com>';
+
+    $file = 'test/Infoseek/zero_result';
+    $query = 'disestablishmentarianism' . 'NoSuchWord';
+    test($mode, $TEST_EXACTLY);
+
+    # default infoseek back-end has 50 hits/page
+    $file = 'test/Infoseek/one_page_result';
+    $query = 'Martin Thurn';
+    test($mode, $TEST_RANGE, 2, 49);
+
+#    $file = 'test/Infoseek/two_page_result';
+#    $query = '+Greedo +collector';
+#    test($mode, $TEST_GREATER_THAN, 50);
+
+
+    $search_engine = 'Infoseek::Web';
+
+    $file = 'test/Infoseek/Web/zero_result';
+    $query = 'disestablishmentarianism' . 'NoSuchWord';
+    test($mode, $TEST_EXACTLY);
+
+    $file = 'test/Infoseek/Web/one_page_result';
+    $query = 'Martin Thurn';
+    test($mode, $TEST_RANGE, 2, 49);
+
+#    $file = 'test/Infoseek/Web/two_page_result';
+#    $query = '+Greedo +collector';
+#    test($mode, $TEST_GREATER_THAN, 50);
+
+
+    $search_engine = 'Infoseek::Companies';
+
+    $file = 'test/Infoseek/Companies/zero_result';
+    $query = 'mrfglbqnx' . 'NoSuchWord';
+    test($mode, $TEST_EXACTLY);
+
+    $file = 'test/Infoseek/Companies/one_page_result';
+    $query = 'Hawaii';
+    test($mode, $TEST_RANGE, 2, 49);
+
+    $file = 'test/Infoseek/Companies/two_page_result';
+    $query = 'Delaware';
+    test($mode, $TEST_GREATER_THAN, 50);
+
+
+    $search_engine = 'Infoseek::News';
+
+    $file = 'test/Infoseek/News/zero_result';
+    $query = 'mrfglbqnx' . 'NoSuchWord';
+    test($mode, $TEST_EXACTLY);
+
+    $file = 'test/Infoseek/News/nonzero_result';
+    $query = 'Hawaii';
+    test($mode, $TEST_GREATER_THAN, 2);
+
 
     ######################################################################
     $search_engine = 'Lycos';
@@ -394,6 +459,7 @@ sub main {
     print `$cmd`;
 
     if ($update_saved_files) {
+        print "\nUPDATING.\n\n";
 	&test_cases($MODE_UPDATE);
 	return;
     };

@@ -7,7 +7,7 @@
 # AltaVista.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Dejanews.pm,v 1.7 1996/11/25 19:55:14 johnh Exp $
+# $Id: Dejanews.pm,v 1.8 1998/05/28 04:05:38 johnh Exp $
 #
 # Complete copyright notice follows below.
 # 
@@ -18,6 +18,11 @@ package WWW::Search::Dejanews;
 =head1 NAME
 
 WWW::Search::Dejanews - Perl class for searching Dejanews
+
+=head1 SYNOPSIS
+
+    require WWW::Search;
+    $search = new WWW::Search('Dejanews');
 
 =head1 DESCRIPTION
 

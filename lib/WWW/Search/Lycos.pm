@@ -4,7 +4,7 @@
 # Lycos.pm
 # by Wm. L. Scheding, John Heidemann
 # Copyright (C) 1996-1997 by USC/ISI
-# $Id: Lycos.pm,v 1.7 1998/03/24 19:43:34 johnh Exp $
+# $Id: Lycos.pm,v 1.8 1998/05/28 04:05:40 johnh Exp $
 #
 # Complete copyright notice follows below.
 # 
@@ -18,7 +18,7 @@ WWW::Search::Lycos - class for searching Lycos
 
 
 =head1 SYNOPSIS
-    
+
     require WWW::Search;
     $search = new WWW::Search('Lycos');
 
@@ -204,7 +204,7 @@ sub native_retrieve_some
 	    $hits_found++;
 	    push(@{$self->{cache}}, $hit);
 	    $state = $HITS;
-	} elsif ($state == $HITS && m@-- end formatted results --@) {
+	} elsif ($state == $HITS && (m@-- end formatted results --@ || m@</DL>@i)) {
 	    print STDERR "PARSE(HITS->TRAILER): $_\n\n" if ($self->{_debug} >= 2);
 	    $state = $TRAILER;
 	} elsif ($state == $TRAILER &&  m@<A HREF="([^"]+)">Next Page</A>@i) { #"

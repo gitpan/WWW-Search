@@ -4,7 +4,7 @@
 # AdvancedNews.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: AdvancedNews.pm,v 1.6 1997/11/04 01:04:13 johnh Exp $
+# $Id: AdvancedNews.pm,v 1.7 1998/05/28 04:05:48 johnh Exp $
 #
 # Complete copyright notice follows below.
 # 
@@ -18,7 +18,7 @@ WWW::Search::AltaVista::AdvancedNews - class for advanced Alta Vista news search
 
 
 =head1 SYNOPSIS
-    
+
     require WWW::Search;
     $search = new WWW::Search('AltaVista::AdvancedNews');
 

@@ -4,7 +4,7 @@
 # AltaVista.pm
 # by John Heidemann
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: AltaVista.pm,v 1.28 1998/04/02 19:30:38 johnh Exp $
+# $Id: AltaVista.pm,v 1.29 1998/05/28 04:05:37 johnh Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -18,7 +18,7 @@ WWW::Search::AltaVista - class for searching Alta Vista
 
 
 =head1 SYNOPSIS
-    
+
     require WWW::Search;
     $search = new WWW::Search('AltaVista');
 

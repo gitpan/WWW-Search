@@ -6,7 +6,7 @@
 # AltaVista.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Email.pm,v 1.3 1996/11/25 22:21:39 johnh Exp $
+# $Id: Email.pm,v 1.4 1998/05/28 04:05:52 johnh Exp $
 #
 # Complete copyright notice follows below.
 # 
@@ -17,6 +17,11 @@ package WWW::Search::Infoseek::Email;
 =head1 NAME
 
 WWW::Search::Infoseek::Email - class for searching for e-mail at Infoseek
+
+=head1 SYNOPSIS
+
+    require WWW::Search;
+    $search = new WWW::Search('Infoseek::Email');
 
 =head1 DESCRIPTION
 

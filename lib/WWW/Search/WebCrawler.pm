@@ -2,13 +2,19 @@
 
 # WebCrawler.pm
 # Copyright (C) 1998 by Martin Thurn
-# $Id: WebCrawler.pm,v 1.1 1998/03/31 22:29:38 johnh Exp $
+# $Id: WebCrawler.pm,v 1.2 1998/05/28 04:05:43 johnh Exp $
 
 package WWW::Search::WebCrawler;
 
 =head1 NAME
 
 WWW::Search::WebCrawler - class for searching WebCrawler 
+
+=head1 SYNOPSIS
+
+    require WWW::Search;
+    $search = new WWW::Search('WebCrawler');
+
 
 =head1 DESCRIPTION
 

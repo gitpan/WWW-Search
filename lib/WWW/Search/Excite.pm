@@ -3,13 +3,18 @@
 # Excite.pm
 # Copyright (C) 1998 by USC/ISI
 # by Martin Thurn
-# $Id: Excite.pm,v 1.9 1998/03/31 22:29:36 johnh Exp $
+# $Id: Excite.pm,v 1.10 1998/05/28 04:05:38 johnh Exp $
 
 package WWW::Search::Excite;
 
 =head1 NAME
 
 WWW::Search::Excite - class for searching Excite 
+
+=head1 SYNOPSIS
+
+    require WWW::Search;
+    $search = new WWW::Search('Excite');
 
 =head1 DESCRIPTION
 

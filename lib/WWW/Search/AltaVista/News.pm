@@ -4,7 +4,7 @@
 # News.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: News.pm,v 1.6 1997/11/04 01:04:14 johnh Exp $
+# $Id: News.pm,v 1.7 1998/05/28 04:05:50 johnh Exp $
 #
 # Complete copyright notice follows below.
 # 
@@ -18,7 +18,7 @@ WWW::Search::AltaVista::News - class for Alta Vista news searching
 
 
 =head1 SYNOPSIS
-    
+
     require WWW::Search;
     $search = new WWW::Search('AltaVista::News');
 

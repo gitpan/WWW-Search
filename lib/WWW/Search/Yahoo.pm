@@ -3,7 +3,7 @@
 # Yahoo.pm
 # by Wm. L. Scheding and Martin Thurn
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: Yahoo.pm,v 1.6 1998/03/31 06:35:42 johnh Exp $
+# $Id: Yahoo.pm,v 1.7 1998/05/28 04:05:44 johnh Exp $
 
 
 package WWW::Search::Yahoo;
@@ -11,6 +11,12 @@ package WWW::Search::Yahoo;
 =head1 NAME
 
 WWW::Search::Yahoo - class for searching Yahoo 
+
+
+=head1 SYNOPSIS
+
+    require WWW::Search;
+    $search = new WWW::Search('Yahoo');
 
 
 =head1 DESCRIPTION

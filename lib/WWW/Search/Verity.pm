@@ -4,6 +4,23 @@
 
 package WWW::Search::Verity;
 
+=head1 NAME
+
+WWW::Search::Verity
+
+
+=head1 SYNOPSIS
+
+    require WWW::Search;
+    $search = new WWW::Search('Verity');
+
+
+=head1 DESCRIPTION
+
+Not documented.
+
+=cut
+
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();

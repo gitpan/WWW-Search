@@ -1,15 +1,26 @@
 #!/usr/local/bin/perl -w
 
 # HotBot.pm
-# Copyright (C) 1996-1998 by USC/ISI
 # by Wm. L. Scheding and Martin Thurn
-# $Id: HotBot.pm,v 1.7 1998/03/31 22:29:36 johnh Exp $
+# Copyright (C) 1996-1998 by USC/ISI
+# $Id: HotBot.pm,v 1.8 1998/05/21 21:28:27 johnh Exp $
 
 package WWW::Search::HotBot;
 
 =head1 NAME
 
 WWW::Search::HotBot - class for searching HotBot 
+
+
+=head1 SYNOPSIS
+
+  use WWW::Search;
+  my $oSearch = new WWW::Search('HotBot');
+  my $sQuery = WWW::Search::escape_query("+sushi restaurant +Columbus Ohio");
+  $oSearch->native_query($sQuery);
+  while (my $oResult = $oSearch->next_result())
+    { print $oResult->url, "\n"; }
+
 
 =head1 DESCRIPTION
 
@@ -70,6 +81,13 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 =head1 VERSION HISTORY
 
+If it''s not listed here, then it wasn''t a meaningful nor released revision.
+
+=head2 1.17
+
+HotBot changed their search script location and output format on 1998-05-21.
+Also, as many as 6 fields of each SearchResult are now filled in.
+
 =head2 1.13
 
 Fixed the maximum_to_retrieve off-by-one problem.
@@ -91,9 +109,9 @@ release of WWW::Search.
 =cut
 
 #  Test cases:
-# '+mrfglbqnx +NoSuchWord'       ---  no hits
-# '"Christie Abbott"'            ---  20 hits on one page
-# 'disestablishmentarianism'     --- 152 hits on two pages
+# '+mrfglbqnx +NoSuchWord'       ---   no URLs
+# '"Christie Abbott"'            ---   16 URLs on one page
+# '"Martin Thurn" AND Bible'     ---  141 URLs on two pages
 
 #####################################################################
 
@@ -101,6 +119,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
+$VERSION = '1.17';
 
 use Carp ();
 use WWW::Search(generic_option);
@@ -110,32 +129,16 @@ require WWW::SearchResult;
 # private
 sub native_setup_search
   {
-  my($self, $native_query, $native_options_ref) = @_;
-  # print STDERR " * this is Martin's new Hotbot.pm!\n" if $self->{'_debug'};
+  my ($self, $native_query, $native_options_ref) = @_;
   # Why waste time sending so many queries?  Do a whole lot all at once!
+  # 500 results take  70 seconds at 100 per page
+  # 500 results take 234 seconds at  10 per page
   my $DEFAULT_HITS_PER_PAGE = 100;
   # $DEFAULT_HITS_PER_PAGE = 10;   # for debugging
   $self->{'_hits_per_page'} = $DEFAULT_HITS_PER_PAGE;
-  # Add one to the number of hits needed, because Search.pm does ">"
-  # instead of ">=" on line 672!
-  my $iMaximum = 1 + $self->maximum_to_retrieve;
-  # Divide the problem into N pages of K hits per page.
-  my $iNumPages = 1 + int($iMaximum / $self->{'_hits_per_page'});
-  if (1 < $iNumPages)
-    {
-    $self->{'_hits_per_page'} = 1 + int($iMaximum / $iNumPages);
-    }
-  else
-    {
-    $self->{'_hits_per_page'} = $iMaximum;
-    }
-  $self->timeout(120);  # HotBot is notoriously slow
-  # $self->{agent_name} = 'Mozilla/4.04 [en] (X11; I; SunOS 5.6 sun4m)';
-  # $self->{agent_name} = 'W3CCommandLine/unspecified';
-  $self->{agent_e_mail} = 'mthurn@irnet.rest.tasc.com';
-  # $self->{agent_e_mail} = '.';
+  # $self->timeout(120);  # HotBot used to be notoriously slow
 
-  # As of 1998-02-05, HotBot apparently doesn't like WWW::Search!  Response was
+  # As of 1998-05, HotBot apparently doesn't like WWW::Search!  Response was
   # RC: 403 (Forbidden)
   # Message: Forbidden by robots.txt
   $self->user_agent(1);
@@ -155,7 +158,7 @@ sub native_setup_search
   if (!defined($self->{_options})) 
     {
     $self->{_options} = {
-                         'search_url' => 'http://www.search.hotbot.com/hResult.html',
+                         'search_url' => 'http://www.hotbot.com/default.asp',
                          'DE' => 2,
                          'SM' => 'SC',
                          'DC' => $self->{_hits_per_page},
@@ -179,6 +182,8 @@ sub native_setup_search
     next if (generic_option($_));
     $options .= $_ . '=' . $options_ref->{$_} . '&';
     }
+  # Ugh!  HotBot chokes if our URL has a dangling '&' at the end:
+  chop $options;
   # Finally figure out the url.
   $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
 
@@ -217,10 +222,13 @@ sub native_retrieve_some
   my ($hits_found) = 0;
   my ($state) = ($TITLE);
   my ($hit) = ();
+  my $sHitPattern = quotemeta '<font face="verdana&#44;arial&#44;helvetica" size="2">';
   foreach (split(/\n/, $response->content())) 
     {
-    next if m/^$/; # short circuit for blank lines
+    s/\r$//;  # delete DOS carriage-return
+    next if m/^\r?$/; # short circuit for blank lines
     print STDERR " * $state ===$_===" if 2 <= $self->{'_debug'};
+
     if ($state eq $TITLE && 
         m@<TITLE>HotBot results:\s+(.+)\s\(\d+\+\)</TITLE>@i) 
       {
@@ -229,81 +237,56 @@ sub native_retrieve_some
       print STDERR "title line\n" if 2 <= $self->{'_debug'};
       $state = $HEADER;
       } # We're in TITLE mode, and line has title
+
     elsif ($state eq $HEADER && 
-           m@<B>Returned:\s*</B>\s*(\d+)\s+matches\.@i) 
+           m@^(\d+)\s+matches\.@i) 
       {
       # Actual line of input is:
-      # <B>Returned:</B> 3379 matches.
+      # 312 matches.</b>&nbsp;&nbsp;
       print STDERR "header line\n" if 2 <= $self->{'_debug'};
       $self->approximate_result_count($1);
       $state = $NEXT;
       } # we're in HEADER mode, and line has number of results
+
     elsif ($state eq $HITS && 
-           m|^(<TR>)?<TD[^>]*><B>(\d+)\.\s</B>|)
+           m/^$sHitPattern/)
+           # m|<B>(\d+)\.\s<A\ .+?</A>\ <A\ HREF=\043([^\043]+)\043>(.+?)</A></B><BR>(.+?)<br>.+?(\d+)\%.+?(\d+)\ bytes.+?(\d\d\d\d/\d\d/\d\d)|i)
       {
-      print STDERR "hit number line\n" if 2 <= $self->{'_debug'};
-      # Actual lines of input include:
-      # <TR><TD  width="20" align="left" valign="top"><B>12. </B>
-      # <TD  width="20" align="left" valign="top"><B>13. </B>
-      my $iHit = $2;
-      $state = $HIT1;
-      }
-    elsif ($state eq $HIT1)
-      {
-      print STDERR " skip (HIT1)\n" if 2 <= $self->{'_debug'};
-      # Just skip this line:
-      $state = $HIT2;
-      }
-    elsif ($state eq $HIT2 &&
-           m|<A\s+HREF=\"([^\043]+)\">(.*)</A>|i) 
-      {
-      # \043 is double-quote character "
-      # Actual line of input is:
-      # <TD ><A HREF="http://bcrazy.simplenet.com/STARLETS/ABC/CA_WI/CA_WI.HTM" TARGET="preview"><IMG SRC="/images/btn.openpage.white.gif"  BORDER=0 WIDTH=17 HEIGHT=16 ALT="[VIEW]"></A>&nbsp;&nbsp;<A HREF="http://bcrazy.simplenet.com/STARLETS/ABC/CA_WI/CA_WI.HTM">Christie Abbott Wishbone II</A>
-      print STDERR "hit url line\n" if 2 <= $self->{'_debug'};
-      # At this point, we could do something about "alternate" URLs
-      # (like ignore them), but then our total hit count will get all
-      # out of whack...?
-      if (defined($hit))
+      print STDERR "hit line\n" if 2 <= $self->{'_debug'};
+      # Actual line of input:
+      # <font face="verdana&#44;arial&#44;helvetica" size="2"><B>1. <A HREF="http://www.toysrgus.com/images-bootleg.html" TARGET="preview"><IMG SRC="http://static.hotbot.com/images/btn.openpage.white.gif" BORDER="0" WIDTH="17" HEIGHT="16" ALT=""></A> <A HREF="http://www.toysrgus.com/images-bootleg.html">Bootlegs</A></B><BR>Bootlegs Maintained by Gus Lopez (lopez@cs.washington.edu) Bootlegs toys and other Star Wars collectibles were made primarily in countries where Star Wars was not commercially released in theaters. Most Star Wars bootlegs originate from the eastern.<br></font><font size="2">99%&nbsp;&nbsp; 5601 bytes&#44; 1998/03/19 &nbsp;&nbsp;&nbsp;http://www.toysrgus.com/images-bootleg.html</font><p>
+      my ($iHit,$iPercent,$iBytes,$sURL,$sTitle,$sDesc,$sDate) = (0,0,0,'','','','');
+      # m/<B>(\d+)\.\s/ && $iHit = $1;
+      ($sURL,$sTitle) = ($1,$2) if m|<A\sHREF=\042([^\042]+)\042>(.+?)</A>|;
+      $sDesc = $1 if m/<BR>(.+)<br>/;
+      ($iPercent,$iBytes,$sDate) = ($1,$2,$3) if m|>(\d+)\%&nbsp;&nbsp;\s(\d+)\sbytes&\#44;\s(\d\d\d\d/\d\d/\d\d)|;
+      # At this point, we could do something about "mirror" URLs (like
+      # ignore them), but then our total hit count will get all out of
+      # whack...?
+      if (ref($hit))
         {
         push(@{$self->{cache}}, $hit);
         }
-      $hit = new WWW::SearchResult;
-      $hit->add_url($1);
-      $self->{'_num_hits'}++;
-      $hits_found++;
-      $hit->title($2);
-      if (! m/<FONT\sSIZE=-1>\(alternate\)/)
+      if ($sURL eq '')
         {
-        $state = $HIT3;
+        print STDERR " *** parse error: found hit line but no URL\n" if 2 <= $self->{'_debug'};
         }
       else
         {
-        # Some problem, get ready for next hit
-        $state = $HITS;
-        } # This line is the hit url
-      } # $state eq HIT2
-    elsif ($state eq $HIT3)
-      {
-      print STDERR " skip (HIT3)\n" if 2 <= $self->{'_debug'};
-      # Just skip this line:
-      $state = $HIT4;
-      } # $state eq HIT3
-    elsif ($state eq $HIT4)
-      {
-      print STDERR " skip (HIT4)\n" if 2 <= $self->{'_debug'};
-      # Just skip this line:
-      $state = $HIT5;
-      } # $state eq HIT4
-    elsif ($state eq $HIT5 && m|^<TD\s*>(.*)<BR>$|)
-      {
-      print STDERR " hit description\n" if 2 <= $self->{'_debug'};
-      # Actual input line is:
-      # <TD >Text Files Maintained by Gus Lopez (lopez@cs.washington.edu) Ever wonder which weapon goes with which figure? Well, that's the kind of information you can find right here. Any beginning collector should glance at some of these files since they...<BR>
-      $hit->description($1);
+        $hit = new WWW::SearchResult;
+        $hit->add_url($sURL);
+        $hit->title($sTitle) if $sTitle ne '';
+        $hit->description($sDesc) if $sDesc ne '';
+        $hit->score($iPercent) if 0 < $iPercent;
+        $hit->size($iBytes) if 0 < $iBytes;
+        $hit->change_date($sDate) if $sDate ne '';
+        $self->{'_num_hits'}++;
+        $hits_found++;
+        }
       $state = $HITS;
-      } # line is description
-    elsif ($state eq $NEXT && m|</FORM>|)
+      } # $state eq HIT2
+
+    elsif ($state eq $NEXT && m|</form>|i)
       {
       print STDERR " missed next button\n" if 2 <= $self->{'_debug'};
       # There was no "next" button on this page; no more pages to get!
@@ -325,11 +308,14 @@ sub native_retrieve_some
         next if (generic_option($_));
         $options .= $_ . '=' . $self->{_options}{$_} . '&';
         }
+      # Ugh!  HotBot chokes if our URL has a dangling '&' at the end:
+      chop $options;
       # Finally figure out the url.
       $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
       $self->{'_next_to_retrieve'} += $self->{'_hits_per_page'};
       $state = $HITS;
       }
+
     else
       {
       print STDERR "didn't match\n" if 2 <= $self->{'_debug'};
@@ -354,23 +340,3 @@ sub native_retrieve_some
 1;
 
 __END__
-
-Martin''s page download results, 1998-02:
-
-simplest arbitrary page:
-http://www.search.hotbot.com/hResult.html?MT=lsam+replication&DE=0&DC=100
-http://www.search.hotbot.com/hResult.html?MT=Christie+Abbott&base=100&DC=100&DE=0&act.next.x=1
-
-explanation of known fields on GUI search page:
-date = (checkbox) filter by date
-DC = (entry) number of hits per page
-DE = (selection) output format
-DV = (selection) date criteria
-FRA = (checkbox) include audio data type
-FSW = (checkbox) include shockwave data type
-FVI = (checkbox) include image data type
-FVV = (checkbox) include video data type
-MT = query terms
-RD = (checkbox) filter by location
-RG = (selection) location criteria
-SM = (selection) search type 

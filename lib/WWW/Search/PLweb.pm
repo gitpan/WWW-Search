@@ -12,6 +12,11 @@ package WWW::Search::PLweb;
 
 WWW::Search::PLweb - class for searching PLS PLweb search engine
 
+=head1 SYNOPSIS
+
+    require WWW::Search;
+    $search = new WWW::Search('PLweb');
+
 =head1 DESCRIPTION
 
 This class is a PLweb specialization of WWW::Search.

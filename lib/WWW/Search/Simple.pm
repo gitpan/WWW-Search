@@ -4,6 +4,26 @@
 
 package WWW::Search::Simple;
 
+=head1 NAME
+
+WWW::Search::Simple
+
+
+=head1 SYNOPSIS
+
+    require WWW::Search;
+    $search = new WWW::Search('Simple');
+
+
+=head1 DESCRIPTION
+
+Not documented.
+
+=cut
+
+
+package WWW::Search::Simple;
+
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
