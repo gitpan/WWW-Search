@@ -34,7 +34,7 @@ use vars qw( @EXPORT @EXPORT_OK @ISA );
               no_test not_working not_working_with_tests not_working_and_abandoned
               $MODE_DUMMY $MODE_INTERNAL $MODE_EXTERNAL $MODE_UPDATE
               $TEST_DUMMY $TEST_EXACTLY $TEST_BY_COUNTING $TEST_GREATER_THAN $TEST_RANGE
-              new_engine run_test
+              new_engine run_test run_gui_test
             );
 @EXPORT_OK = qw( );
 @ISA = qw( Exporter );
@@ -45,7 +45,7 @@ use File::Path;
 
 use vars qw( $VERSION $bogus_query );
 
-$VERSION = '2.11';
+$VERSION = '2.12';
 $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 
 ($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = qw(dummy internal external update);
@@ -508,7 +508,7 @@ use the $WWW::Search::Test::iTest counter.
 One argument: the name of a backend suitable to be passed to WWW::Search::new().
 Prints 'ok' or 'not ok' and the test number.
 Creates a WWW::Search object internally,
-to be used for all subsequent calls to run_test (see below).
+to be used for all subsequent calls to run_test and run_gui_test (see below).
 
 =cut
 
@@ -521,6 +521,8 @@ sub new_engine
   } # new_engine
 
 =head2 run_test
+
+=head2 run_gui_test
 
 Three arguments: a query string, NOT escaped; a minimum number of expected results; and
 a maximum number of expected results.
@@ -535,7 +537,17 @@ Prints 'ok' or 'not ok' and the test number.
 
 sub run_test
   {
-  my ($sQuery, $iMin, $iMax, $iDebug) = @_;
+  return &run_our_test('normal', @_);
+  } # run_test
+
+sub run_gui_test
+  {
+  return &run_our_test('gui', @_);
+  } # run_gui_test
+
+sub run_our_test
+  {
+  my ($sType, $sQuery, $iMin, $iMax, $iDebug) = @_;
   carp ' --- min/max values out of order?' if defined($iMin) && defined($iMax) && ($iMax < $iMin);
   my $sExpect;
   if (! defined($iMax))
@@ -561,14 +573,24 @@ sub run_test
     $iMax = 999999;
     }
   $iTest++;
-  $oSearch->native_query(WWW::Search::escape_query($sQuery),
-                           { 'search_debug' => $iDebug, },
-                        );
+  $sQuery = WWW::Search::escape_query($sQuery);
+  if ($sType eq 'gui')
+    {
+    $oSearch->gui_query($sQuery,
+                          { 'search_debug' => $iDebug, },
+                       );
+    }
+  else
+    {
+    $oSearch->native_query($sQuery,
+                             { 'search_debug' => $iDebug, },
+                          );
+    }
   my @aoResults = $oSearch->results();
   my $iResults = scalar(@aoResults);
   if (($iResults < $iMin) || ($iMax < $iResults))
     {
-    print STDERR " --- got $iResults results for $sQuery, but expected $sExpect\n";
+    print STDERR " --- got $iResults results for $sType query '$sQuery', but expected $sExpect\n";
     print STDOUT 'not ';
     } # if
   print STDOUT "ok $iTest\n";

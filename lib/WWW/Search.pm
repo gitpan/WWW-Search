@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.57 2001/07/05 13:34:55 mthurn Exp $
+# $Id: Search.pm,v 1.57 2001/07/05 13:34:55 mthurn Exp mthurn $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -69,7 +69,7 @@ package WWW::Search;
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query generic_option strip_tags @ENGINES_WORKING);
-$VERSION = '2.22';
+$VERSION = '2.23';
 $MAINTAINER = 'Martin Thurn <mthurn@tasc.com>';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
@@ -384,6 +384,31 @@ sub cookie_jar
     Carp::carp "argument to WWW::Search::cookie_jar() must be HTTP::Cookies or scalar";
     }
   } # cookie_jar
+
+
+=head2 date_from
+
+Set/get the start date for limiting the query by a date range.  See
+the documentation for each backend to find out if date ranges are
+supported for each search engine.
+
+=head2 date_to
+
+Set/get the end date for limiting the query by a date range.  See the
+documentation for each backend to find out if date ranges are
+supported for each search engine.
+
+=cut
+
+sub date_from
+  {
+  return shift->_elem('date_from', @_);
+  } # date_from
+
+sub date_to
+  {
+  return shift->_elem('date_to', @_);
+  } # date_from
 
 
 =head2 http_proxy

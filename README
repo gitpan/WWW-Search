@@ -3,12 +3,12 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.22?  (2001-07-05)
+WHAT IS NEW IN WWW::Search 2.23?  (2001-07-16)
 ----------------------------------------------
 
 overview:
- * proxy support (thanks to Gaetano Vocca)
- * AltaVista backends moved to their own distribution
+ * new mechanism for restricting search to a date-range
+ * new infrastructure for testing GUI queries
 
 For details, see the ChangeLog file and/or the pod of each affected
 module.

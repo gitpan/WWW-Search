@@ -1,3 +1,10 @@
+2001-07-16  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search/Test.pm (run_gui_test): new method
+
+	* lib/WWW/Search.pm (date_from): new method
+	(date_to): new method
+
 2001-07-05  Kingpin  <mthurn@tasc.com>
 
 	* lib/WWW/Search/Test.pm (run_test): new functionality for simple test-running
