@@ -1,10 +1,10 @@
 # This -*- cperl -*- program writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.39 2004/08/21 19:43:49 Daddy Exp $
+# $Id: Makefile.PL,v 1.40 2004/09/25 21:43:16 Daddy Exp Daddy $
 
 use inc::Module::Install;
 
 name('WWW-Search');
-version(2.472);
+version(2.473);
 author('Martin Thurn <mthurn@cpan.org>');
 abstract('Query web search engines and get URLs');
 requires(perl => 5.004);
@@ -40,6 +40,7 @@ requires('File::Find');
 requires('File::Spec');
 requires('HTML::Parser' => 2.23);
 requires('HTML::TreeBuilder');  # HTML-Tree-0.51 is good
+build_requires('IO::Capture::ErrorMessages' => 0);
 requires('LWP::UserAgent' => 2.0);
 requires('Net::Domain');
 requires('Pod::Usage');
@@ -49,8 +50,10 @@ requires('User');
 # These are needed during `make all`:
 build_requires('File::Spec');
 # These are needed during `make test`:
+build_requires('File::Temp');
 build_requires('Pod::Tests' => 0.12);
 build_requires('Test::Inline' => 0.16);
+build_requires('Test::File');
 build_requires('Test::More');
 build_requires('Test::Pod');
 # I think there's a bug in Module::CoreList or something, because this
@@ -127,6 +130,7 @@ PART3
 
   sub top_targets
     {
+    use File::Temp;
     my $self = shift;
     # Use the default setting for (not) echoing commands during make:
     my $NOECHO = $self->{NOECHO};
@@ -135,19 +139,25 @@ PART3
     # And, ignore error signals.  This is necessary because pod2test
     # carps if the file contains no test code!
     $NOECHO .= '-';
-    # Assume that pod2test was installed into the same place as perl
-    # itself:
-    my $POD2TEST = '$(INSTALLBIN)/pod2test';
-    # But on Windows, it MUST be in the path:
-    $POD2TEST = 'pod2test' if $^O =~ m!win32!i;
-    my $out = "POD2TEST_EXE = $POD2TEST\n";
+    # Figure out how to squeeze tests out of .pm files.  Assume that
+    # pod2test (or pod2test.exe or pod2test.bat) is in the path.
+    my $sPod2testCmd = 'pod2test %s %s';
+    # There is a bug in Pod::Tests (or is it Pod::Parser).  We can not
+    # read Win32 pod Unix:
+    if ($^O =~ m!(solaris|linux)!)
+      {
+      my $sTempFname = tmpnam();
+      $sPod2testCmd = 'cat %s | dos2unix > $sTempFname ; pod2test $sTempFname %s';
+      # $sPod2testCmd = 'cat %s | dos2unix | pod2test > %s';
+      } # if unix
     $out .= $self->SUPER::top_targets(@_);
     $out .= "\n\ntestifypods : \n";
     $out .= "\t\$(FULLPERL) -MExtUtils::Command -e rm_f t/embedded-*.t\n";
     use Data::Dumper;
     # print STDERR " + self is ", Dumper($self);
     my %hsPOD;
-    foreach my $pod (keys %{$self->{MAN1PODS}},
+    foreach my $pod (
+                     keys %{$self->{MAN1PODS}},
                      keys %{$self->{MAN3PODS}},
                      # Win32 has no MANPODS, so we add these:
                      keys %{$self->{PM}},
@@ -166,7 +176,7 @@ PART3
       $test =~ s/^lib\W//;
       $test =~ s/\W/-/;
       $test = "embedded-$test.t";
-      my $sCode = "\$(POD2TEST_EXE) $pod t/$test";
+      my $sCode = sprintf($sPod2testCmd, $pod, "t/$test");
       # print STDERR " +     code to testifypod $pod is $sCode\n";
       $out .= "\t$NOECHO $sCode\n";
       } # foreach

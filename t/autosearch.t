@@ -1,7 +1,8 @@
 # Emacs, please use -*- cperl -*- mode when editing this file
 
-use File::Spec::Functions;
 use ExtUtils::testlib;
+use File::Spec::Functions;
+use Test::File;
 use Test::More qw(no_plan);
 
 use strict;
@@ -10,15 +11,15 @@ my $sProg = catfile('blib', 'script', 'AutoSearch');
 my $iWIN32 = ($^O =~ m!win32!i);
 
 diag('');
-ok(-s $sProg, "$sProg does not exist");
-ok(-f $sProg, "$sProg is not a plain file");
+file_exists_ok($sProg, "$sProg exists");
 SKIP:
   {
   skip 'Can not check "executable" file flag on Win32', 1 if $iWIN32;
-  ok(-x $sProg, "$sProg is not executable");
+  file_executable_ok($sProg, "$sProg is executable");
   } # end of SKIP block
 print STDERR "\r# ";
 diag(`$sProg -V`);
+ok(1);
 exit 0;
 # Special testing, not for public release:
 &martin_test();

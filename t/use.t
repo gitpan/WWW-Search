@@ -3,6 +3,9 @@
 use ExtUtils::testlib;
 use Test::More no_plan;
 
+use IO::Capture::ErrorMessages;
+my $oICE =  IO::Capture::ErrorMessages->new;
+
 use strict;
 
 BEGIN { use_ok('WWW::Search') };
@@ -54,9 +57,9 @@ is($o5->maintainer, $WWW::Search::MAINTAINER);
 $o4->cookie_jar('t/cookies.txt');
 my $oCookies = new HTTP::Cookies;
 $o5->cookie_jar($oCookies);
-diag(q{'argument...must be a scalar...' message here is normal:});
+$oICE->start;
 eval { $o2->cookie_jar($o4) };
-# like($@, qr{(?i:must be a scalar or a flavor of)});
+$oICE->stop;
 $oCookies = $o4->cookie_jar;
 
 exit 0;
@@ -76,3 +79,5 @@ my $o = new WWW::Search('WebCrawler');
 $o->maximum_to_retrieve(10);
 $o->native_query('Ohio');
 ok(5 < scalar($o->results()));
+
+__END__

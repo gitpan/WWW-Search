@@ -3,15 +3,15 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.472?  (2004-08-20)
+WHAT IS NEW IN WWW::Search 2.473?  (2004-09-25)
 ----------------------------------------------
 
 Overview of changes: 
 
- * AutoSearch now uses Email::Send
- * AutoSearch now sends well-formed HTML email
+ * Workaround for Pod::Parser bug during `make test` on unix
+ * SearchResult has new fields bid_count and bid_amount
 
-For details, see the ChangeLog file (updates after 2004-07-02) and/or
+For details, see the ChangeLog file (updates after 2004-08-21) and/or
 the pod of each affected module.
 
 

@@ -7,7 +7,7 @@ exit 0;
 # AutoSearch-code.pl
 # Copyright (c) 1996-1997 University of Southern California.
 # All rights reserved.
-# $Id: AutoSearch-code.pl,v 2.130 2004/08/21 19:50:32 Daddy Exp $
+# $Id: AutoSearch-code.pl,v 2.131 2004/09/21 00:18:26 Daddy Exp $
 #
 # Complete copyright notice follows below.
 
@@ -37,7 +37,7 @@ use WWW::Search;
 use strict;
 
 use vars qw( $VERSION );
-$VERSION = do { my @r = (q$Revision: 2.130 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.131 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 use constant DEBUG_EMAIL => 0;
 
@@ -941,7 +941,7 @@ EMAILEND
       }
     else
       {
-      print STDERR " --- could not create Email::Simple object\n";
+      print STDERR " --- could not create Email::MIME object\n";
       }
     } # if
   } # main

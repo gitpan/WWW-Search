@@ -1,7 +1,7 @@
 # SearchResult.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: SearchResult.pm,v 2.62 2004/07/24 18:48:27 Daddy Exp $
+# $Id: SearchResult.pm,v 2.63 2004/09/25 21:23:21 Daddy Exp $
 #
 # Copyright (c) 1996 University of Southern California.
 # All rights reserved.
@@ -30,14 +30,12 @@ WWW::SearchResult - class for results returned from WWW::Search
     require WWW::SearchResult;
     $search = new WWW::Search;
     $search->native_query(WWW::Search::escape_query($query));
-    # get first result
+    # Get first result:
     $result = $search->next_result();
-
 
 =head1 DESCRIPTION
 
 A framework for returning the results of C<WWW::Search>.
-
 
 =head1 SEE ALSO
 
@@ -48,7 +46,6 @@ L<WWW::Search>
 The particular fields returned in a result are backend- (search
 engine-) dependent.  However, all search engines are required to
 return a url and title.  (This list may grow in the future.)
-
 
 =head1 METHODS AND FUNCTIONS
 
@@ -61,7 +58,7 @@ package WWW::SearchResult;
 require LWP::MemberMixin;
 @ISA = qw(LWP::MemberMixin);
 use Carp ();
-$VERSION = do { my @r = (q$Revision: 2.62 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.63 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 =head2 new
 
@@ -306,6 +303,8 @@ More attributes of the result.  Backend-specific.
 
 sub company { return shift->_elem('company', @_); }
 sub location { return shift->_elem('location', @_); }
+sub bid_count { return shift->_elem('bids', @_); }
+sub bid_amount { return shift->_elem('bid', @_); }
 
 =head1 AUTHOR
 

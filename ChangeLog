@@ -1,3 +1,8 @@
+2004-09-25  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/SearchResult.pm (bid_count): new method
+	(bid_amount): new method
+
 2004-08-21  Kingpin  <mthurn@verizon.net>
 
 	* code/AutoSearch-code.pl: added pod
