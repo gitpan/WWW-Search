@@ -3,20 +3,15 @@ WWW::Search and AutoSearch
 ==========================
 
 
-WHAT IS NEW WITH WWW::Search 1.022?  (16-Oct-98)
+WHAT IS NEW WITH WWW::Search 1.023?  (11-Dec-98)
 ------------------------------------------------
-overview:  An interim release to fix several broken back-ends.
+overview:  primarily bug fixes for back ends
 
-- bug fix: documentation cleanups from Ave Wrigley
-- bug fix: Infoseek updates (from Martin Thurn)
-- bug fix: AltaVista update (minor format changes Oct. 1998,
-	partial fix from Andreas Borchert)
-- new: back ends for Crawler, Fireball, NorthernLight from Andreas Borchert
-
-Note:  WWW::Search may have problems with older libwww's (5.08).  If
-"make test" dies with an error in RobotUA, upgrade libwww.  (Tested
-with libwww-5.30.)
-
+- NEW: proxy support added to WebSearch and AutoSearch
+	(based on code from Paul Linder)
+- NEW: new back end for Snap.com (from Jim Smyser)
+- BUG FIX:  Yahoo, HotBot, Excite, Lycos (from Martin Thurn),
+	NorthernLight (from Jim Smyser)
 
 
 WHAT IS WWW::Search?
@@ -40,18 +35,18 @@ correctly.  As of the day of the release the current back-end
 status is:
 
 AltaVista		working
-Crawler			working
+Crawler			partially working
 Dejanews		working
 Excite			working
 ExciteForWebServers	working
-Fireball		not working
+Fireball		working
 FolioViews		working
 Gopher			not working? (not in test suite)
-HotBot			not working?
+HotBot			partially working
 Infoseek		working
 Livelink		not working? (not in test suite)
-Lycos			not working
-Magellan		not working (maybe gone?)
+Lycos			working
+Magellan		working
 MSIndexServer		partially working?
 NorthernLight		working
 Null			working
@@ -59,10 +54,12 @@ PLweb			working
 Search97		working
 SFgate			working
 Simple			not working? (not in test suite)
+Snap			working
 Verity			not working (not in test suite)
 WebCrawler		partially working?
-Yahoo			paritally working?
+Yahoo			working
 
+``Paritially working'' indicates that some tests passed and some failed.
 Yahoo's test suites are sometimes flakey.
 
 (others are currently under development, see contributors below for details)
@@ -424,6 +421,14 @@ overview:  a general release
 	Darren Stalder <darren@u.washington.edu>
 - bug fix: documentation cleanups from Neil Bowers
 
+1.022, 16-Oct-98
+overview:  An interim release to fix several broken back-ends.
+- bug fix: documentation cleanups from Ave Wrigley
+- bug fix: Infoseek updates (from Martin Thurn)
+- bug fix: AltaVista update (minor format changes Oct. 1998,
+	partial fix from Andreas Borchert)
+- new: back ends for Crawler, Fireball, NorthernLight from Andreas Borchert
+
 
 
 SUPPORT AND CREDITS
@@ -454,17 +459,19 @@ BACK-ENDS:
 	FolioViews		Paul Lindner
 	Gopher			Paul Lindner
 	HotBot			William Scheding and Martin Thurn
-	Infoseek		Cesare Feroldi de Rosa and Martin Thurn
+	 Infoseek		Cesare Feroldi de Rosa and Martin Thurn
 	Livelink		Paul Lindner
-	Lycos			William Scheding and John Heidemann
+	Lycos			William Scheding and John Heidemann,
+				Martin Thurn
 	Magellan		Martin Thurn
 	MSIndexServer		Paul Lindner
-	NorthernLight		Andreas Borchert
+	NorthernLight		Jim Smyser
 	Null			Paul Lindner
 	PLWeb			Paul Lindner
 	Search97		Paul Lindner
 	SFgate			Paul Lindner
 	Simple			Paul Lindner
+	Snap			Jim Smyser
 	Verity			Paul Lindner
 	WebCrawler		Martin Thurn
 	Yahoo			William Scheding and Martin Thurn
@@ -482,7 +489,8 @@ Chris Nandor <pudge@pobox.com>, Martin Valldeby
 <martin.valldeby@pakom.se>, Jim Smyser <jsmyser@bigfoot.com>, Darren
 Stalder <darren@u.washington.edu>, Neil Bowers
 <neilb@cre.canon.co.uk>, Ave Wrigley <wrigley@cre.canon.co.uk>,
-Andreas Borchert <borchert@mathematik.uni-ulm.de>.
+Andreas Borchert <borchert@mathematik.uni-ulm.de>, Jim Smyser
+<jsmyser@bigfoot.com>.
 
 Bugs have reported by Joseph McDonald <joe@smartlink.net>, Juan Jose
 Amor <jjamor@infor.es>, Bowen Dwelle <bowen@hotwired.com>, Vassilis

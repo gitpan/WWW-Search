@@ -1,254 +1,272 @@
-#!/usr/local/bin/perl -w
-
-#
 # Lycos.pm
-# by Wm. L. Scheding, John Heidemann
-# Copyright (C) 1996-1997 by USC/ISI
-# $Id: Lycos.pm,v 1.11 1998/10/16 21:15:41 johnh Exp $
-#
-# Complete copyright notice follows below.
-# 
-
-
-package WWW::Search::Lycos;
+# by Wm. L. Scheding and Martin Thurn
+# Copyright (C) 1996-1998 by USC/ISI
+# $Id: Lycos.pm,v 1.13 1998/12/10 18:20:53 johnh Exp $
 
 =head1 NAME
 
 WWW::Search::Lycos - class for searching Lycos 
 
-
 =head1 SYNOPSIS
 
-    require WWW::Search;
-    $search = new WWW::Search('Lycos');
-
+  use WWW::Search;
+  my $oSearch = new WWW::Search('Lycos');
+  my $sQuery = WWW::Search::escape_query("+sushi restaurant +Columbus Ohio");
+  $oSearch->native_query($sQuery);
+  while (my $oResult = $oSearch->next_result())
+    print $oResult->url, "\n";
 
 =head1 DESCRIPTION
 
-This class is an Lycos specialization of WWW::Search.
-It handles making and interpreting Lycos searches
-F<www-english.lycos.com>.
+This class is a Lycos specialization of L<WWW::Search>.  It handles
+making and interpreting Lycos-site searches F<http://www.Lycos.com>.
 
 This class exports no public interface; all interaction should
-be done through WWW::Search objects.
+be done through L<WWW::Search> objects.
 
+=head1 NOTES
+
+The default search mode is "any" of the query terms.  If you want to
+search for "ALL" of the query terms, add {'matchmode' => 'and'} as the
+second argument to native_query().  More advanced query modes can be
+added upon request; please contact the author.
+
+www.lycos.com is pretty slow to respond; but I've not had a problem
+with the default timeout.
+
+www.lycos.com does not give the total number of results available;
+therefore approximate_result_count() will never have a value.
+
+www.lycos.com does not give the score, date, nor size of the pages at
+the resulting URLs; therefore change_date(), score(), and size() will
+never have a value.
 
 =head1 SEE ALSO
 
 To make new back-ends, see L<WWW::Search>.
 
-
-=head1 HOW DOES IT WORK?
-
-C<native_setup_search> is called before we do anything.
-It initializes our private variables (which all begin with underscores)
-and sets up a URL to the first results page in C<{_next_url}>.
-
-C<native_retrieve_some> is called (from C<WWW::Search::retrieve_some>)
-whenever more hits are needed.  It calls the LWP library
-to fetch the page specified by C<{_next_url}>.
-It parses this page, appending any search hits it finds to 
-C<{cache}>.  If it finds a ``next'' button in the text,
-it sets C<{_next_url}> to point to the page for the next
-set of results, otherwise it sets it to undef to indicate we're done.
-
-
 =head1 BUGS
 
-This module should support options.
+Please tell the author if you find any!
 
+=head1 TESTING
+
+This module adheres to the C<WWW::Search> test suite mechanism. 
+
+  Test cases (accurate as of 1998-12-10):
+
+    $file = 'test/Lycos/zero_result';
+    $query = 'Bogus' . 'NoSuchWord';
+    test($mode, $TEST_EXACTLY);
+
+    $file = 'test/Lycos/one_page_result';
+    $query = '"Chri'.'stie Ab'.'bott"';
+    test($mode, $TEST_RANGE, 2, 50);
+
+    $file = 'test/Lycos/multi_page_result';
+    $query = 'repli'.'cation';
+    test($mode, $TEST_GREATER_THAN, 100);
 
 =head1 AUTHOR
 
-C<WWW::Search::Lycos> is written by Wm. L. Scheding
-based upon C<WWW::Search::AltaVista>.
-It is now maintained by John Heidemann.
+As of 1998-12-07, C<WWW::Search::Lycos> is maintained by Martin Thurn
+(MartinThurn@iname.com).
 
+C<WWW::Search::Lycos> was originally written by Martin Thurn,
+based on C<WWW::Search::Yahoo> version 1.12 of 1998-10-22.
 
-=head1 COPYRIGHT
-
-Copyright (c) 1996-1997 University of Southern California.
-All rights reserved.                                            
-                                                               
-Redistribution and use in source and binary forms are permitted
-provided that the above copyright notice and this paragraph are
-duplicated in all such forms and that any documentation, advertising
-materials, and other materials related to such distribution and use
-acknowledge that the software was developed by the University of
-Southern California, Information Sciences Institute.  The name of the
-University may not be used to endorse or promote products derived from
-this software without specific prior written permission.
+=head1 LEGALESE
 
 THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
 WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
 MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
+=head1 VERSION HISTORY
+
+If it''s not listed here, then it wasn''t a meaningful nor released revision.
+
+=head2 1.02, 1998-12-10
+
+First public release after being adopted by Martin Thurn.
 
 =cut
 #'
 
-#
-#  Test cases:
-# ./search.pl xxxasdf         --- no hits
-# ./search.pl 'lsam replication&matchmode=and'  --- single page return
-# ./search.pl 'scheding'      --- 3 page return
-#
-
-
-
 #####################################################################
+
+package WWW::Search::Lycos;
 
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
-# $VERSION = 1.000;
 @ISA = qw(WWW::Search Exporter);
+$VERSION = '1.02';
 
 use Carp ();
 use WWW::Search(generic_option);
 require WWW::SearchResult;
 
-
-
-# private
 sub native_setup_search
-{
-    my($self, $native_query, $native_options_ref) = @_;
-    $self->user_agent('user');
-    $self->{_next_to_retrieve} = 0;
-    if (!defined($self->{_options})) {
-	$self->{_options} = {
-	    'cat' => 'lycos',
-	    'matchmode' => 'and',
-	    'adv' => '0',
-	    # Lycos switches from www.lycos.com to www.lycos.de if
-	    # contacted from German sites (afb 10/98)
-	    'search_url' => 'http://www-english.lycos.com/cgi-bin/pursuit',
-        };
-    };
-    my($options_ref) = $self->{_options};
-    if (defined($native_options_ref)) {
-	# Copy in new options.
-	foreach (keys %$native_options_ref) {
-	    $options_ref->{$_} = $native_options_ref->{$_};
-	};
-    };
-    # Process the options.
-    my($options) = '';
-    foreach (keys %$options_ref) {
-	# printf STDERR "option: $_ is " . $options_ref->{$_} . "\n";
-	next if (generic_option($_));
-	$options .= $_ . '=' . $options_ref->{$_} . '&';
-    };
-    $self->{_debug} = $options_ref->{'search_debug'};
-    $self->{_debug} = 2 if ($options_ref->{'search_parse_debug'});
-    $self->{_debug} = 0 if (!defined($self->{_debug}));
-    
-    # Finally figure out the url.
-    $self->{_base_url} = 
-	$self->{_next_url} =
-	$self->{_options}{'search_url'} .
-	"?" . $options .
-	"query=" . $native_query;
-    print $self->{_base_url} . "\n" if ($self->{_debug});
-}
+  {
+  my($self, $native_query, $native_options_ref) = @_;
+  # print STDERR " * this is Martin's new Lycos.pm!\n" if $self->{_debug};
+  $self->{_debug} = $native_options_ref->{'search_debug'};
+  $self->{_debug} = 2 if ($native_options_ref->{'search_parse_debug'});
+  $self->{_debug} = 0 if (!defined($self->{_debug}));
+
+  # Why waste time sending so many queries?  Do a whole lot all at once!
+  my $DEFAULT_HITS_PER_PAGE = 100;
+  $DEFAULT_HITS_PER_PAGE = 10 if $self->{_debug};
+  $self->{'_hits_per_page'} = $DEFAULT_HITS_PER_PAGE;
+
+  $self->{agent_e_mail} = 'MartinThurn@iname.com';
+
+  $self->user_agent('non-robot');
+
+  $self->{_next_to_retrieve} = 1;
+  $self->{'_num_hits'} = 0;
+
+  if (!defined($self->{_options})) 
+    {
+    $self->{'search_base_url'} = 'http://www.lycos.com';
+    $self->{_options} = {
+                         'search_url' => $self->{'search_base_url'} .'/cgi-bin/pursuit',
+                         # 'first' => $self->{_next_to_retrieve},
+                         'maxhits' => $self->{_hits_per_page},
+                         'query' => $native_query,
+                         'matchmode' => 'or',
+                         'adv' => 1,
+                        };
+    } # if
+  my $options_ref = $self->{_options};
+  if (defined($native_options_ref)) 
+    {
+    # Copy in new options.
+    foreach (keys %$native_options_ref) 
+      {
+      $options_ref->{$_} = $native_options_ref->{$_};
+      } # foreach
+    } # if
+  # Process the options.
+  my($options) = '';
+  foreach (sort keys %$options_ref) 
+    {
+    # printf STDERR "option: $_ is " . $options_ref->{$_} . "\n";
+    next if (generic_option($_));
+    $options .= $_ . '=' . $options_ref->{$_} . '&';
+    }
+  chop $options;
+  # Finally figure out the url.
+  $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
+
+  } # native_setup_search
 
 
 # private
 sub native_retrieve_some
-{
-    my ($self) = @_;
+  {
+  my ($self) = @_;
+  print STDERR " *   Lycos::native_retrieve_some()\n" if $self->{_debug};
+  
+  # Fast exit if already done:
+  return undef if (!defined($self->{_next_url}));
+  
+  # If this is not the first page of results, sleep so as to not
+  # overload the server:
+  $self->user_agent_delay if 1 < $self->{'_next_to_retrieve'};
+  
+  # Get some:
+  print STDERR " *   sending request (",$self->{_next_url},")\n" if $self->{_debug};
+  my($response) = $self->http_request('GET', $self->{_next_url});
+  $self->{response} = $response;
+  if (!$response->is_success) 
+    {
+    return undef;
+    }
+  
+  $self->{'_next_url'} = undef;
+  print STDERR " *   got response\n" if $self->{_debug};
+  # parse the output
+  my ($HEADER, $HITS, $DESC) = qw(HE HI DE);
+  my $hits_found = 0;
+  my $state = $HEADER;
+  my $cite = "";
+  my $hit = ();
+  foreach ($self->split_lines($response->content()))
+    {
+    next if m@^$@; # short circuit for blank lines
 
-    # fast exit if already done
-    return undef if (!defined($self->{_next_url}));
+    print STDERR " * $state ===$_=== " if 2 <= $self->{'_debug'};
+    # Note: if Lycos finds no Lycos-registered sites that match, it
+    # automatically forward the query to Alta Vista.  If we see that
+    # this has happened, we quit immediately:
+    if (m|Matching Web Pages|i)
+      {
+      # Actual line of input is:
+      # <FONT SIZE="+1">Matching Web Pages</FONT>
+      print STDERR " page list intro\n" if ($self->{_debug});
+      $state = $HITS;
+      } # if
 
-    # get some
-    print STDERR "WWW::Search::Lycos::native_retrieve_some: fetching " . $self->{_next_url} . "\n" if ($self->{_debug});
-#    my($request) = $self->http_request('GET', $self->{_next_url});
-    my($response) = $self->http_request('GET', $self->{_next_url});
-    $self->{response} = $response;
-    if (!$response->is_success) {
-	return undef;
-    };
+    if ($state eq $HITS && m@<p><b><a href=\"([^"]+)\">(.*)</A>@i)
+      {
+      # Actual line of input is:
+      # <p><b><a href="http://scifireplicas.com/movies/masks.htm">Merchandise Collector Masks - Star Wars</A></b>
+      print STDERR "hit url line\n" if 2 <= $self->{_debug};
+      if (defined($hit)) 
+        {
+        push(@{$self->{cache}}, $hit);
+        };
+      $hit = new WWW::SearchResult;
+      $hit->add_url($1);
+      $hits_found++;
+      $hit->title($2);
+      $state = $DESC;
+      }
 
-    # parse the output
-    my($HEADER, $HITS, $DESC, $RATING, $TRAILER, $POST_NEXT) = (1..10);
-    my(@ST) = ("", "HD", "HI", "DE", "RT", "TR", "PN"); # afb 10/98
-    my($hits_found) = 0;
-    my($state) = ($HEADER);
-    my($hit, $raw, $title, $url, $rating, $desc) = ();
-    foreach ($self->split_lines($response->content())) {
-        next if m@^$@; # short circuit for blank lines
-	print STDERR $ST[$state], ": " if ($self->{_debug} >= 2);
-	if ($state == $HEADER && m@\s+of.*(\d+).*relevant\s+result@i) { # new as of  7-Oct-97
-	    $self->approximate_result_count($1);
-            print STDERR "PARSE(HEADER->HITS-1): $_\n" if ($self->{_debug} >= 2);
-	    $state = $HITS;
-	} if ($state == $HEADER && m@matching web pages@i) {  # new as of 23-Mar-98
-            print STDERR "PARSE(HEADER->HITS-2): $_\n" if ($self->{_debug} >= 2);
-	    $state = $HITS;
-	} if ($state == $HEADER && m@a name="pages"@i) {  # new as of 12-Aug-98
-            print STDERR "PARSE(HEADER->HITS-2): $_\n" if ($self->{_debug} >= 2);
-	    $state = $HITS;
-	# &nbsp;&nbsp;897&nbsp;matches
-	} if ($state == $HEADER && m@\&nbsp;\&nbsp;(\d+)\&nbsp;matches@i) { # afb 10/98
-	    $self->approximate_result_count($1);
-            print STDERR "PARSE(HEADER->HITS-1): $_\n" if ($self->{_debug} >= 2);
-	    $state = $HITS;
-	} elsif ($state == $HITS && m@<a href="([^"]+)">(.*)\<\/a\><br>(.*)<br>@i) { # afb 10/98
-	    print STDERR "PARSE(HITS->HITS): $_\n" if ($self->{_debug} >= 2);
-	    my($hit) = new WWW::SearchResult;
-	    $hit->add_url($1);
-	    $hit->title($2);
-	    $hit->description($3);
-	    $hit->raw($_);
-	    $hits_found++;
-	    push(@{$self->{cache}}, $hit);
-	} elsif ($state == $HITS && m@^<a href="([^"]+)">(.*)\<\/a\>@i) { # post 23-Mar-98 "
-	    $raw = $_;
-	    $url = $1;
-	    $title = $2;
-	    print STDERR "PARSE(HITS->DESC): $_\n" if ($self->{_debug} >= 2);
-	    $state = $DESC;
-	} elsif ($state == $DESC) {
-	    $raw .= $_;
-	    m@<br>(.*)@;
-	    $desc = $2;
-	    print STDERR "PARSE(DESC->HITS): $_\n" if ($self->{_debug} >= 2);
-	    #
-	    my($hit) = new WWW::SearchResult;
-	    $hit->add_url($url);
-	    $hit->title($title);
-	    $hit->description($desc);
-	    $hit->score($rating);
-	    $hit->raw($raw);
-	    $hits_found++;
-	    push(@{$self->{cache}}, $hit);
-	    $state = $HITS;
-	} elsif ($state == $HITS && (m@-- end formatted results --@ || m@</DL>@i)) {
-	    print STDERR "PARSE(HITS->TRAILER): $_\n\n" if ($self->{_debug} >= 2);
-	    $state = $TRAILER;
-	} elsif ($state == $TRAILER &&  m@<A HREF="([^"]+)">Next Page</A>@i) { #"
-	    my($relative_url) = $1;
-	    $self->{_next_url} = new URI::URL($relative_url, $self->{_base_url});
-	    print STDERR "PARSE(TRAILER->POST_NEXT): $_\n\n" if ($self->{_debug} >= 2);
-	    $state = $POST_NEXT;
-	} else {
-            print STDERR "PARSE: read:\"$_\"\n" if ($self->{_debug} >= 2);
-	};
-    };
-    if ($state != $POST_NEXT) {
-	# end, no other pages (missed ``next'' tag)
-	if (defined($hit)) {
-	    push(@{$self->{cache}}, $hit);
-	};
-	$self->{_next_url} = undef;
-    };
+    elsif ($state eq $DESC && m=^<BR>$=)
+      {
+      # Actual line of input is:
+      # <BR>
+      print STDERR "lone BR line\n" if 2 <= $self->{_debug};
+      # Don't change state; try to get the description from the next line
+      }
+    elsif ($state eq $DESC && m=^(.+)<BR>=)
+      {
+      # Actual line of input is:
+      # Star Wars logo &nbsp; Merchandise Collector Masks - Star Wars &nbsp; Emperor Palpatine Greedo Yoda Emperor Palpatine Gre<BR>http://scifireplicas.com/movies/masks.htm
+      print STDERR "description line\n" if 2 <= $self->{_debug};
+      my $sDescription = $1;
+      $hit->description($sDescription) if defined($hit);
+      $state = $HITS;
+      }
 
-    # sleep so as to not overload lycos
-    $self->user_agent_delay if (defined($self->{_next_url}));
+    elsif ($state eq $HITS && m|<A\sHREF=\"([^"]+)\">next\s+&gt;&gt;<|i)
+      {
+      print STDERR "next line\n" if 2 <= $self->{_debug};
+      # There is a "next" button on this page, therefore there are
+      # indeed more results for us to go after next time.
+      my $sURL = $1;
+      $self->{'_next_to_retrieve'} += $self->{'_hits_per_page'};
+      $self->{'_next_to_retrieve'} = $1 if $sURL =~ m/first=(\d+)/;
+      $self->{'_next_url'} = $self->{'search_base_url'} . $sURL;
+      print STDERR " * next URL is ", $self->{'_next_url'}, "\n" if 2 <= $self->{_debug};
+      $state = $HITS;
+      } 
+    else 
+      {
+      print STDERR "didn't match\n" if 2 <= $self->{_debug};
+      }
+    } # foreach
 
-    return $hits_found;
-}
+  if (defined($hit)) 
+    {
+    push(@{$self->{cache}}, $hit);
+    } # if
+  
+  return $hits_found;
+  } # native_retrieve_some
 
 1;
+
+__END__

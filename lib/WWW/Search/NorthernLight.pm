@@ -1,7 +1,12 @@
 #!/usr/local/bin/perl -w
 
 # NorthernLight.pm
-# by Andreas Borchert (based on other implementations of Martin Thurn)
+# by Jim Smyser
+# Copyright (C) 1996-1998 by USC/ISI
+# $Id: NorthernLight.pm,v 1.3 1998/12/10 18:24:04 johnh Exp $
+#
+# Complete copyright notice follows below.
+#
 
 package WWW::Search::NorthernLight;
 
@@ -20,9 +25,13 @@ WWW::Search::NorthernLight - class for searching NorthernLight
     while (my $oResult = $oSearch->next_result()) {
         print $oResult->url, "\n";
     }
-
-
 =head1 DESCRIPTION
+
+This is a overhaul on the work by Andreas Borchert. I have
+not been able to get in touch with him so I went ahead and rebuilt
+the script to work with NorthernLight. 
+
+I can be flamed @ <jsmyser@bigfoot.com>
 
 This class is a NorthernLight specialization of WWW::Search.
 It handles making and interpreting NorthernLight searches
@@ -55,8 +64,8 @@ set of results, otherwise it sets it to undef to indicate we''re done.
 
 =head1 BUGS
 
-Please tell the author if you find any!
-
+You bet! Although I think I have pointed them all out to NL
+so there shouldn't now be any.
 
 =head1 TESTING
 
@@ -70,8 +79,8 @@ This module adheres to the C<WWW::Search> test suite mechanism.
 
 =head1 AUTHOR
 
-As of 1998-10-06, C<WWW::Search::NorthernLight> is maintained by
-Andreas Borchert (borchert@mathematik.uni-ulm.de).
+Oh what the heck, till the author comes forward I will maintain
+this backend. Flames to: <jsmyser@bigfoot.com>
 
 C<WWW::Search::NorthernLight> was originally written by Andreas Borchert
 based on C<WWW::Search::Excite>.
@@ -85,10 +94,12 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 
 =head1 VERSION HISTORY
-
-Not released yet.
+1.2
+This is my second re-write to account for lots of 
+little annoying formatting changes.
 
 =cut
+#'
 
 #####################################################################
 
@@ -96,7 +107,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '1.4';
+$VERSION = '1.03';
 
 use Carp ();
 use WWW::Search(generic_option);
@@ -112,21 +123,8 @@ sub native_setup_search
   # $DEFAULT_HITS_PER_PAGE = 30;  # for debugging
   $self->{'_hits_per_page'} = $DEFAULT_HITS_PER_PAGE;
 
-  # Add one to the number of hits needed, because Search.pm does ">"
-  # instead of ">=" on line 672!
-  my $iMaximum = 1 + $self->maximum_to_retrieve;
-  # Divide the problem into N pages of K hits per page.
-  my $iNumPages = 1 + int($iMaximum / $self->{'_hits_per_page'});
-  if (1 < $iNumPages)
-    {
-    $self->{'_hits_per_page'} = 1 + int($iMaximum / $iNumPages);
-    }
-  else
-    {
-    $self->{'_hits_per_page'} = $iMaximum;
-    }
 
-  $self->{agent_e_mail} = 'borchert@mathematik.uni-ulm.de';
+  $self->{agent_e_mail} = 'jsmyser@bigfoot.com';
   $self->user_agent(1);
 
   $self->{'_next_to_retrieve'} = 0;
@@ -141,14 +139,16 @@ sub native_setup_search
   $native_query =~ s/(\w)\052$/$1\040/g;
   $native_query =~ s/(\w)\0452A\053/$1\053/g;
   $native_query =~ s/(\w)\0452A$/$1/g;
-  if (!defined($self->{_options})) 
-    {
+  if (!defined($self->{_options})) {
     $self->{_options} = {
                          'search_url' => 'http://www.northernlight.com/nlquery.fcg',
                          'qr' => $native_query,
-			 'si' => '', 'cb' => '', 'cc' => '', 'ns' => '025',
-                        };
-    } # if
+                         'si' => '', 
+                         'cb' => '0', 
+                         'cc' => '', 
+                         'us' => '025',
+     };
+        } 
   my $options_ref = $self->{_options};
   if (defined($native_options_ref)) 
     {
@@ -177,18 +177,14 @@ sub native_setup_search
   $self->{_debug} = 0 if (!defined($self->{_debug}));
   } # native_setup_search
 
-
 # private
 sub native_retrieve_some
   {
   my ($self) = @_;
-  
   # Fast exit if already done:
   return undef unless defined($self->{_next_url});
-  
   # If this is not the first page of results, sleep so as to not overload the server:
   $self->user_agent_delay if 1 < $self->{'_next_to_retrieve'};
-  
   # Get some results, adhering to the WWW::Search mechanism:
   print STDERR " *   sending request (",$self->{_next_url},")\n" if $self->{'_debug'};
   my($response) = $self->http_request('GET', $self->{_next_url});
@@ -197,11 +193,10 @@ sub native_retrieve_some
     {
     return undef;
     };
-
   print STDERR " *   got response\n" if $self->{'_debug'};
   $self->{'_next_url'} = undef;
   # Parse the output
-  my ($HEADER, $CUSTOM, $HITS, $DESC, $TRAILER) = qw(HE CU HI DE TR);
+  my ($HEADER, $CUSTOM, $HITS, $SCORE, $DESC, $TRAILER) = qw(HE CU HI SC DE TR);
   my $hits_found = 0;
   my $state = $HEADER;
   my $hit;
@@ -209,23 +204,15 @@ sub native_retrieve_some
     {
     next if m/^$/; # short circuit for blank lines
     print STDERR " *   $state ===$_===" if 2 <= $self->{'_debug'};
-    if ($state eq $HEADER && 
-	m{<b>([0-9,]+) items</b><!-- result --> found}i)
-      {
-      # Actual line of input is:
-      # 
-      # <td valign=top><font size=2><b>653 items</b><!-- result --> found <!-- end --><!-- audit cluster -->  <!-- result -->for:<!-- end --></font></td>
+    if ($state eq $HEADER && m{(\d+) items}i) {
       print STDERR "header line\n" if 2 <= $self->{'_debug'};
       $self->approximate_result_count($1);
-      $state = $CUSTOM;
-      } # we're in HEADER mode, and line has number of results
-    elsif ($state eq $CUSTOM && m{End of the Dynamic Categories Column}) {
+     $state = $CUSTOM;
+    } # we're in HEADER mode, and line has number of results
+    elsif ($state eq $CUSTOM && m{<!-- result -->}i) {
       $state = $HITS;
       print STDERR "end of custom search folders\n" if 2 <= $self->{'_debug'};
-    } elsif ($state eq $HITS &&
-             m{<a href="(.*?)">(.*?)</a><br>}) {
-      # Actual line of input:
-      # <a href="http://www.bochum.de/bochum/bosehe10.htm">Zisterzienser Kloster Bochum</a><br>
+    } elsif ($state eq $HITS &&	m{<a href="(.*?)">(.*?)</a><br>}) {
       print STDERR "hit found\n" if 2 <= $self->{'_debug'};
       push(@{$self->{cache}}, $hit) if defined($hit);
       $hit = new WWW::SearchResult;
@@ -233,31 +220,21 @@ sub native_retrieve_some
       $hit->title($2);
       $self->{'_num_hits'}++;
       $hits_found++;
-      $state = $DESC;
-    } elsif ($state eq $DESC && 
-	   m{<b>(\d+)\% -.*?:</b>\&nbsp;\s+(.*)<br>}i)
-      {
-      print STDERR "hit percentage line\n" if 2 <= $self->{'_debug'};
+	  $state = $SCORE
+    } elsif ($state eq $SCORE && m{<b>(\d+)+%}i) {
       $hit->score($1);
+      $state = $DESC;
+    } elsif ($state eq $DESC && m{-(.*)<br>}i) {
+      print STDERR "hit percentage line\n" if 2 <= $self->{'_debug'};
       $hit->description($1);
       $state = $HITS;
-    } elsif ($state eq $HITS &&
-	   m{\?(.*?)"><img src=docs/gif/nextten.gif}i)
-      {
-      # Actual line of input:
-      # <td valign=middle><a href="/nlquery.fcg?ho=typhoon&po=5004&qr=zisterzienser&si=&cb=0&cc=&nth=021&us=0100"><img src=docs/gif/nextten.gif width=124 height=28 border=0 alt="Next Page"></a></td>
-      # <input value="Next Results" type="submit" name="next">
-      # There is a "next" button on this page, therefore there are
-      # indeed more results for us to go after next time.
-      # Process the options.
-      my($options) = $1;
-      foreach (keys %{$self->{_options}}) 
-        {
-        next if (generic_option($_));
-        $options .= $_ . '=' . $self->{_options}{$_} . '&';
-        }
+    } elsif ($state eq $HITS && m{<table border=0>}i) {
+      # End of hits  
+      print STDERR "PARSE(HITS->TRAILER): $_\n\n" if ($self->{_debug} >= 2);
+      $state = $TRAILER;
+      #This line now has to be more defined or NL will return same page
+    } elsif ($state eq $TRAILER && m{<td valign=middle><a href="(.*)"><img src="(.*)alt="Next Page"></a></td>}i) {
       # Finally, figure out the url.
-      $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
       print STDERR " found next button, next url is $self->{_next_url}\n" if 2 <= $self->{'_debug'};
       $state = $TRAILER;
       }
@@ -276,11 +253,9 @@ sub native_retrieve_some
     {
     push(@{$self->{cache}}, $hit);
     }
-  
   return $hits_found;
   } # native_retrieve_some
 
 1;
 
-__END__
 

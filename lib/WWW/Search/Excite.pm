@@ -3,26 +3,20 @@
 # Excite.pm
 # by Martin Thurn
 # Copyright (C) 1998 by USC/ISI
-# $Id: Excite.pm,v 1.12 1998/08/27 17:28:59 johnh Exp $
-
-package WWW::Search::Excite;
-
+# $Id: Excite.pm,v 1.13 1998/11/07 01:26:08 johnh Exp $
 
 =head1 NAME
 
-WWW::Search::Excite - class for searching Excite 
-
+WWW::Search::Excite - backend for searching www.excite.com 
 
 =head1 SYNOPSIS
 
-    use WWW::Search;
-    my $oSearch = new WWW::Search('Excite');
-    my $sQuery = WWW::Search::escape_query("+sushi restaurant +Columbus Ohio");
-    $oSearch->native_query($sQuery);
-    while (my $oResult = $oSearch->next_result()) {
-        print $oResult->url, "\n";
-    }
-
+  use WWW::Search;
+  my $oSearch = new WWW::Search('Excite');
+  my $sQuery = WWW::Search::escape_query("+sushi restaurant +Columbus Ohio");
+  $oSearch->native_query($sQuery);
+  while (my $oResult = $oSearch->next_result())
+    { print $oResult->url, "\n"; }
 
 =head1 DESCRIPTION
 
@@ -33,57 +27,44 @@ F<http://www.excite.com>.
 This class exports no public interface; all interaction should
 be done through L<WWW::Search> objects.
 
-
 =head1 SEE ALSO
 
 To make new back-ends, see L<WWW::Search>.
-
-
-=head1 HOW DOES IT WORK?
-
-C<native_setup_search> is called (from C<WWW::Search::setup_search>)
-before we do anything.  It initializes our private variables (which
-all begin with underscore) and sets up a URL to the first results
-page in C<{_next_url}>.
-
-C<native_retrieve_some> is called (from C<WWW::Search::retrieve_some>)
-whenever more hits are needed.  It calls C<WWW::Search::http_request>
-to fetch the page specified by C<{_next_url}>.
-It then parses this page, appending any search hits it finds to 
-C<{cache}>.  If it finds a ``next'' button in the text,
-it sets C<{_next_url}> to point to the page for the next
-set of results, otherwise it sets it to undef to indicate we''re done.
-
 
 =head1 CAVEATS
 
 Only returns results from Excite's "Web Results".
 Ignores all other sections of Excite's query results.
 
-
 =head1 BUGS
 
 Please tell the author if you find any!
-
 
 =head1 TESTING
 
 This module adheres to the C<WWW::Search> test suite mechanism. 
 
-  Test cases:
- '+mrfglbqnx +NoSuchWord'          ---   no hits
- '+LSAM +replication'              ---   13 hits on one page
- '+Jabba +bounty +hunter +Greedo'  ---  138 hits on two pages
+  Test cases (accurate as of 1998-11-06):
 
+    $file = 'test/Excite/zero_result';
+    $query = 'Bogus' . 'NoSuchWord';
+    test($mode, $TEST_EXACTLY);
+
+    $file = 'test/Excite/one_page_result';
+    $query = '+LS'.'AM +replic'.'ation';
+    test($mode, $TEST_RANGE, 2, 75);
+
+    $file = 'test/Excite/multi_page_result';
+    $query = '+Jabb'.'a +bou'.'nty +hu'.'nter +Gr'.'eedo'
+    test($mode, $TEST_GREATER_THAN, 100);
 
 =head1 AUTHOR
 
 As of 1998-03-23, C<WWW::Search::Excite> is maintained by Martin Thurn
-(mthurn@irnet.rest.tasc.com).
+(MartinThurn@iname.com).
 
 C<WWW::Search::Excite> was originally written by Martin Thurn
 based on C<WWW::Search::HotBot>.
-
 
 =head1 LEGALESE
 
@@ -91,8 +72,20 @@ THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
 WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
 MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
-
 =head1 VERSION HISTORY
+
+=head2 1.08, 1998-11-06
+
+www.excite.com changed their output format slightly (thank you Jim
+(jsmyser@bigfoot.com) for pointing it out!)
+
+=head2 1.7, 1998-10-09
+
+use new split_lines function
+
+=head2 1.5
+
+\n changed to \012 for MacPerl compatibility
 
 =head2 1.4
 
@@ -102,16 +95,17 @@ Modified for new Excite output format.
 
 First publicly-released version.
 
-
 =cut
 
 #####################################################################
+
+package WWW::Search::Excite;
 
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '1.4';
+$VERSION = '1.08';
 
 use Carp ();
 use WWW::Search(generic_option);
@@ -121,10 +115,15 @@ require WWW::SearchResult;
 # private
 sub native_setup_search
   {
-  my($self, $native_query, $native_options_ref) = @_;
+  my ($self, $native_query, $native_options_ref) = @_;
+
+  # Set some private variables:
+  $self->{_debug} = $native_options_ref->{'search_debug'};
+  $self->{_debug} = 2 if ($native_options_ref->{'search_parse_debug'});
+  $self->{_debug} ||= 0;
 
   my $DEFAULT_HITS_PER_PAGE = 100;
-  # $DEFAULT_HITS_PER_PAGE = 30;  # for debugging
+  $DEFAULT_HITS_PER_PAGE = 30 if $self->{_debug};
   $self->{'_hits_per_page'} = $DEFAULT_HITS_PER_PAGE;
 
   # Add one to the number of hits needed, because Search.pm does ">"
@@ -141,7 +140,7 @@ sub native_setup_search
     $self->{'_hits_per_page'} = $iMaximum;
     }
 
-  $self->{agent_e_mail} = 'mthurn@irnet.rest.tasc.com';
+  $self->{agent_e_mail} = 'MartinThurn@iname.com';
   $self->user_agent(0);
 
   $self->{'_next_to_retrieve'} = 0;
@@ -187,11 +186,6 @@ sub native_setup_search
 
   # Finally, figure out the url.
   $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
-
-  # Set some private variables:
-  $self->{_debug} = $options_ref->{'search_debug'};
-  $self->{_debug} = 2 if ($options_ref->{'search_parse_debug'});
-  $self->{_debug} = 0 if (!defined($self->{_debug}));
   } # native_setup_search
 
 
@@ -208,12 +202,12 @@ sub native_retrieve_some
   
   # Get some results, adhering to the WWW::Search mechanism:
   print STDERR " *   sending request (",$self->{_next_url},")\n" if $self->{'_debug'};
-  my($response) = $self->http_request('GET', $self->{_next_url});
+  my $response = $self->http_request('GET', $self->{_next_url});
   $self->{response} = $response;
-  if (!$response->is_success) 
+  unless ($response->is_success) 
     {
     return undef;
-    };
+    }
 
   print STDERR " *   got response\n" if $self->{'_debug'};
   $self->{'_next_url'} = undef;
@@ -226,34 +220,36 @@ sub native_retrieve_some
     {
     next if m/^$/; # short circuit for blank lines
     print STDERR " *   $state ===$_===" if 2 <= $self->{'_debug'};
+
     if ($state eq $HEADER && 
-        m=^<small>.+?\[(\d+)$=)
+        m=^\[(\d+)\s+hits.=)
       {
       # Actual line of input is:
-      # <small><a href=/search.gw?layout=about&num=138&s=%2BJabba><i>[138
-      print STDERR "header line\n" if 2 <= $self->{'_debug'};
+      # [9000 hits. About Your Results]</i></a></small>
+      print STDERR "header line (first page)\n" if 2 <= $self->{'_debug'};
       $self->approximate_result_count($1);
       $state = $HITS;
       } # we're in HEADER mode, and line has number of results
     elsif ($state eq $HEADER && 
-           m=^&nbsp;\d+-(\d+)=)
+           m=^\s*(\240|&nbsp;)?\d+-(\d+)\s*$=)
       {
       # Actual line of input is:
-      # &nbsp;85-138
-      print STDERR "header line\n" if 2 <= $self->{'_debug'};
+      #  11-20
+      print STDERR "header line (second/only page)\n" if 2 <= $self->{'_debug'};
       unless (defined($self->approximate_result_count) and 0 < $self->approximate_result_count)
         {
-        $self->approximate_result_count($1);
-        } # if
+        $self->approximate_result_count($2);
+        } # unless
       $state = $HITS;
       } # we're in HEADER mode, and line has number of results
+
     elsif ($state eq $HITS && 
            m=^<SMALL>(\d+)\%\s*</SMALL>$=i)
       {
       print STDERR "hit percentage line\n" if 2 <= $self->{'_debug'};
       # Actual line of input:
       # <SMALL>92% </SMALL>
-      if (defined($hit))
+      if (ref($hit) && $hit->url)
         {
         push(@{$self->{cache}}, $hit);
         }
@@ -263,6 +259,7 @@ sub native_retrieve_some
       $hits_found++;
       $state = $URL;
       } # in HITS mode, saw percentage line
+
     elsif ($state eq $URL && 
            m|^<A\s+HREF=\"([^\"]+)\">([^<]+)|i)
       {
@@ -275,16 +272,20 @@ sub native_retrieve_some
       $hit->title($2);
       $state = $DESC;
       }
+
     elsif ($state eq $DESC &&
-           m/^\-\s(.+)$/)
+           m/^\-\s(.+)(<BR>)?/)
       {
       print STDERR "hit description line\n" if 2 <= $self->{'_debug'};
+      # Actual line of input:
+      # - Bootlegs Maintained by Gus Lopez (lopez@halcyon.com) Bootlegs toys and other Star Wars collectibles were made primarily in countries where Star Wars was not commercially released in theaters. Most Star Wars bootlegs originate from the eastern bloc countries: Poland, Hungary, and Russia. <BR><SMALL>http://www.toysrgus.com/images-bootleg.html
+      # (The description ends when we see <BR>, or goes to end-of-line if there is no <BR>
       $hit->description($1);
       $state = $HITS;
       } # line is description
 
     elsif ($state eq $HITS &&
-           m/<input\s[^>]*VALUE=\"Next\sResults\"/i)
+           m/<INPUT\s[^>]*VALUE=\"Next\sResults\"/i)
       {
       # Actual lines of input include:
       # <INPUT TYPE=submit NAME=next VALUE="Next Results">
@@ -305,6 +306,7 @@ sub native_retrieve_some
       $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
       $state = $TRAILER;
       }
+
     else
       {
       print STDERR "didn't match\n" if 2 <= $self->{'_debug'};
@@ -316,7 +318,7 @@ sub native_retrieve_some
     # End, no other pages (missed some tag somewhere along the line?)
     $self->{_next_url} = undef;
     }
-  if (defined($hit)) 
+  if (ref($hit)) 
     {
     push(@{$self->{cache}}, $hit);
     }

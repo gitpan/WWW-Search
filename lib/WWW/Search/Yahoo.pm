@@ -1,9 +1,7 @@
-#!/usr/local/bin/perl -w
-
 # Yahoo.pm
 # by Wm. L. Scheding and Martin Thurn
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: Yahoo.pm,v 1.9 1998/10/09 00:37:20 johnh Exp $
+# $Id: Yahoo.pm,v 1.10 1998/11/07 01:26:10 johnh Exp $
 
 =head1 NAME
 
@@ -55,10 +53,19 @@ Please tell the author if you find any!
 
 This module adheres to the C<WWW::Search> test suite mechanism. 
 
-  Test cases:
- '+mrfglbqnx +NoSuchWord' ---  no hits
- 'LSAM'                   ---   6 hits on one page
- 'replication'            --- 145 hits on two pages
+  Test cases (accurate as of 1998-10-22):
+
+    $file = 'test/Yahoo/zero_result';
+    $query = 'Bogus' . 'NoSuchWord';
+    test($mode, $TEST_EXACTLY);
+
+    $file = 'test/Yahoo/one_page_result';
+    $query = 'LS'.'AM';
+    test($mode, $TEST_RANGE, 2, 50);
+
+    $file = 'test/Yahoo/multi_page_result';
+    $query = 'repli'.'cation';
+    test($mode, $TEST_GREATER_THAN, 100);
 
 =head1 AUTHOR
 
@@ -78,9 +85,14 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 If it''s not listed here, then it wasn''t a meaningful nor released revision.
 
-=head2 1.9 1998-10-08
+=head2 1.12, 1998-10-22
 
-Cosmetic code updates.
+BUG FIX: now captures citation descriptions;
+BUG FIX: next page of results was often wrong or missing!
+
+=head2 1.11, 1998-10-09
+
+Now uses split_lines function
 
 =head2 1.5
 
@@ -98,7 +110,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = sprintf("%d.%02d", q$Revision: 1.9 $ =~ /(\d+)\.(\d+)/);
+$VERSION = sprintf("%d.%02d", q$Revision: 1.10 $ =~ /(\d+)\.(\d+)/);
 
 use Carp ();
 use WWW::Search(generic_option);
@@ -137,8 +149,9 @@ sub native_setup_search
 
   if (!defined($self->{_options})) 
     {
+    $self->{'search_base_url'} = 'http://search.yahoo.com';
     $self->{_options} = {
-                         'search_url' => 'http://search.yahoo.com/search',
+                         'search_url' => $self->{'search_base_url'} .'/search',
                          'b' => $self->{_next_to_retrieve},
                          'h' => 's',
                          'n' => $self->{_hits_per_page},
@@ -226,6 +239,23 @@ sub native_retrieve_some
       # Don't change state, and don't go to the next line! The <LI> on
       # this line is the next hit!
       }
+    elsif ($state eq $HITS && m=^(.*?)<BR><cite>=)
+      {
+      # Actual line of input is:
+      # 
+      print STDERR "citation line\n" if 2 <= $self->{_debug};
+      if (ref($hit))
+        {
+        my $sDescrip = '';
+        if (defined($hit->description) and $hit->description ne '')
+          {
+          $sDescrip = $hit->description . ' ';
+          }
+        $sDescrip .= $1;
+        $hit->description($sDescrip);
+        $state = $HITS;
+        } # if hit
+      } # CITATION line
     if ($state eq $HEADER && m|^and\s<b>(\d+)</b>\s*$|)
       {
       print STDERR "header line\n" if 2 <= $self->{_debug};
@@ -256,24 +286,16 @@ sub native_retrieve_some
       $hits_found++;
       $hit->title($2);
       } 
-    elsif ($state eq $HITS && m|Next\s\d+\sSite\sMatches|i)
+    elsif ($state eq $HITS && m|<a\shref=\"([^"]+)\">Next\s\d+\s(Site\s)?Matches|i)
       {
       print STDERR "next line\n" if 2 <= $self->{_debug};
       # There is a "next" button on this page, therefore there are
       # indeed more results for us to go after next time.
-      # Process the options.
+      my $sURL = $1;
       $self->{'_next_to_retrieve'} += $self->{'_hits_per_page'};
-      $self->{_options}{'b'} = $self->{_next_to_retrieve};
-      my($options) = '';
-      foreach (sort keys %{$self->{_options}}) 
-        {
-        # printf STDERR "option: $_ is " . $self->{_options}{$_} . "\n" if $self->{_debug};
-        next if (generic_option($_));
-        $options .= $_ . '=' . $self->{_options}{$_} . '&';
-        }
-      # Finally figure out the url.
-      $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
-      print STDERR " * next URL is ", $self->{_next_url}, "\n" if 2 <= $self->{_debug};
+      $self->{'_next_to_retrieve'} = $1 if $sURL =~ m/b=(\d+)/;
+      $self->{'_next_url'} = $self->{'search_base_url'} . $sURL;
+      print STDERR " * next URL is ", $self->{'_next_url'}, "\n" if 2 <= $self->{_debug};
       $state = $TRAILER;
       } 
     else 
@@ -291,9 +313,6 @@ sub native_retrieve_some
     push(@{$self->{cache}}, $hit);
     } # if
   
-  # Sleep so as to not overload yahoo
-  $self->user_agent_delay if (defined($self->{_next_url}));
-
   return $hits_found;
   } # native_retrieve_some
 

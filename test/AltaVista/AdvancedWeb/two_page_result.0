@@ -8,7 +8,8 @@
 <FORM name=mfrm method=GET action="/cgi-bin/query">
 <INPUT TYPE=hidden NAME=pg VALUE=aq>
 <INPUT TYPE=hidden NAME=text VALUE=yes>
-<font size=-1><SELECT NAME=kl><OPTION VALUE=XX SELECTED>any language 
+<font size=-1><B>Enter ranking keywords in</B>
+<SELECT NAME=kl><OPTION VALUE=XX SELECTED>any language 
 <OPTION VALUE=zh>Chinese
 <OPTION VALUE=cs>Czech
 <OPTION VALUE=da>Danish
@@ -40,8 +41,8 @@
 <textarea name=q cols=50 rows=3 maxlength=800 wrap=virtual>LSAM and ISI and IB</textarea><br>Range of Dates (e.g. 21/Mar/96): <b> From </b><INPUT TYPE=text NAME=d0 SIZE=9 MAXLENGTH=32 VALUE="">
 <b> To </b><INPUT TYPE=text NAME=d1 SIZE=9 MAXLENGTH=32 VALUE=""><br><INPUT TYPE=checkbox name=fmt value=n> <b>Count documents matching the boolean expression.</b> 
 <P><font size=-1><a href="/cgi-bin/query?pg=q&what=web&text=yes">Search</a> - Advanced - <a href="/cgi-bin/query?pg=aq&what=news&text=yes">Usenet</a></font><BR></font></FORM>
-<font size=-1><b>AltaVista found about 13 Web pages for you. </font></b><P><font size=-1><b>Result Pages: </b><b>1</b> <a href="/cgi-bin/query?pg=aq&text=yes&q=LSAM+and+ISI+and+IB&stq=10&c9k">2</a>
-<a href="/cgi-bin/query?pg=aq&text=yes&q=LSAM+and+ISI+and+IB&stq=10&c9k">[<b>next &gt;&gt;</b>]</a> <br>
+<font size=-1><b>AltaVista found about 13 Web pages for you. </font></b><P><font size=-1><b>Result Pages: </b><b>1</b> &nbsp;<a href="/cgi-bin/query?pg=aq&text=yes&q=LSAM+and+ISI+and+IB&stq=10&c9k">2</a>
+&nbsp; <a href="/cgi-bin/query?pg=aq&text=yes&q=LSAM+and+ISI+and+IB&stq=10&c9k">[<b>Next &gt;&gt;</b>]</a> <br>
 </font><font size=-1><dl><dt><b>1. </b><a href="http://www.isi.edu/div7/cities/ib/people.html"><b>IB Research Plan</b></a><dd>
 IB People.   Joe Touch (project leader)  Amy S. Hughes.  Anand Oswal.  Page maintainer: Joe Touch Last modified: Thu Jan 15 13:31:54 1998 Copyright © 1996.<br><b>URL:</b> <font color=gray>www.isi.edu/div7/cities/ib/people.html<br>
 Last modified 15-Jan-98 - page size 2K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fwww%2eisi%2eedu%2fdiv7%2fcities%2fib%2fpeople%2ehtml&language=en">Translate</a>&nbsp;]</dl>
@@ -72,8 +73,8 @@ Last modified 12-Feb-98 - page size 3K - in English</font> [&nbsp;<a href="http:
 <dl><dt><b>10. </b><a href="http://www.isi.edu/~lsam/ib/projects.html"><b>IB Research Plan</b></a><dd>
 IB Research Projects.   Lowlat.  Anticipatory document caching reduces request latency.  Multicast Web Tuner. Multicasting popular documents on channels...<br><b>URL:</b> <font color=gray>www.isi.edu/~lsam/ib/projects.html<br>
 Last modified 12-Feb-98 - page size 2K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fwww%2eisi%2eedu%2f%7elsam%2fib%2fprojects%2ehtml&language=en">Translate</a>&nbsp;]</dl>
-</font><font size=-1><b>Result Pages: </b><b>1</b> <a href="/cgi-bin/query?pg=aq&text=yes&q=LSAM+and+ISI+and+IB&stq=10&c9k">2</a>
-<a href="/cgi-bin/query?pg=aq&text=yes&q=LSAM+and+ISI+and+IB&stq=10&c9k">[<b>next &gt;&gt;</b>]</a> <br>
+</font><font size=-1><b>Result Pages: </b><b>1</b> &nbsp;<a href="/cgi-bin/query?pg=aq&text=yes&q=LSAM+and+ISI+and+IB&stq=10&c9k">2</a>
+&nbsp; <a href="/cgi-bin/query?pg=aq&text=yes&q=LSAM+and+ISI+and+IB&stq=10&c9k">[<b>Next &gt;&gt;</b>]</a> <br>
 </font><font size=-2></font><P>
 <br>
 <font size=-2 face=arial, helvetica>

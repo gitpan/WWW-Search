@@ -3,7 +3,7 @@
 # HotBot.pm
 # by Wm. L. Scheding and Martin Thurn
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: HotBot.pm,v 1.13 1998/09/11 20:20:45 johnh Exp $
+# $Id: HotBot.pm,v 1.14 1998/11/07 01:26:09 johnh Exp $
 
 =head1 NAME
 
@@ -28,13 +28,17 @@ This class exports no public interface; all interaction should
 be done through L<WWW::Search> objects.
 
 The default behavior is for HotBot to look for "any of" the query
-terms.  If you want "all of", call native_query like this:
+terms: 
 
-  $oSearch->native_query(escape_query('Dorothy Toto Oz'), {'SM' => 'MC'});
+  $oSearch->native_query(escape_query('Dorothy Oz'));
+
+If you want "all of", call native_query like this:
+
+  $oSearch->native_query(escape_query('Dorothy Oz'), {'SM' => 'MC'});
 
 If you want to send HotBot a boolean phrase, call native_query like this:
 
-  $oSearch->native_query(escape_query('Oz AND Dorothy AND toto NOT Australia'), {'SM' => 'B'});
+  $oSearch->native_query(escape_query('Oz AND Dorothy NOT Australia'), {'SM' => 'B'});
 
 See below for other query-handling options.
 
@@ -260,24 +264,12 @@ Only return pages that are the "top" page of their website.
 
 To make new back-ends, see L<WWW::Search>.
 
-=head1 HOW DOES IT WORK?
-
-C<native_setup_search> is called (from C<WWW::Search::setup_search>)
-before we do anything.  It initializes our private variables (which
-all begin with underscore) and sets up a URL to the first results
-page in C<{_next_url}>.
-
-C<native_retrieve_some> is called (from C<WWW::Search::retrieve_some>)
-whenever more hits are needed.  It calls C<WWW::Search::http_request>
-to fetch the page specified by C<{_next_url}>.
-It then parses this page, appending any search hits it finds to 
-C<{cache}>.  If it finds a ''next'' button in the text,
-it sets C<{_next_url}> to point to the page for the next
-set of results, otherwise it sets it to undef to indicate we''re done.
-
 =head1 CAVEATS
 
-When HotBot reports a "Mirror" URL, WWW::Search::HotBot ignores it.
+When www.hotbot.com reports a "Mirror" URL, WWW::Search::HotBot
+ignores it.  Therefore, the number of URLs returned by
+WWW::Search::HotBot might not agree with the value returned in
+approximate_result_count.
 
 =head1 BUGS
 
@@ -287,10 +279,19 @@ Please tell the author if you find any!
 
 This module adheres to the C<WWW::Search> test suite mechanism. 
 
-  Test cases (results as of 1998-08-27):
-  '+mrfglbqnx +NoSuchWord'       ---   no URLs
-  '"Christie Abbott"'            ---    9 URLs on one page
-  'LSAM'                         ---  184 URLs on two pages
+  Test cases (accurate as of 1998-11-06):
+
+    $file = 'test/HotBot/zero_result';
+    $query = 'Bogus' . 'NoSuchWord';
+    test($mode, $TEST_EXACTLY);
+
+    $file = 'test/HotBot/one_page_result';
+    $query = '"Chris'.'tie Abb'.'ott"';
+    test($mode, $TEST_RANGE, 2, 99);
+
+    $file = 'test/HotBot/multi_page_result';
+    $query = 'Moth'.'ma';
+    test($mode, $TEST_GREATER_THAN, 100);
 
 =head1 AUTHOR
 
@@ -310,7 +311,13 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 If it''s not listed here, then it wasn''t a meaningful nor released revision.
 
-=head2 1.25 1998-09-11
+=head2 1.27, 1998-11-06
+
+HotBot changed their output format(?).
+HotBot.pm now uses hotbot.com's text-only search results format.
+Minor documentation changes.
+
+=head2 1.25, 1998-09-11
 
 HotBot changed their output format ever so slightly.
 Documentation added for all possible HotBot query options!
@@ -321,11 +328,11 @@ Better documentation for boolean queries.  (Thanks to Jason Titus jason_titus@od
 
 =head2 1.22
 
-HotBot changed their output format.
+www.hotbot.com changed their output format.
 
 =head2 1.21
 
-HotBot changed their output format.
+www.hotbot.com changed their output format.
 
 =head2 1.20
 
@@ -333,7 +340,7 @@ HotBot changed their output format.
 
 =head2 1.17
 
-HotBot changed their search script location and output format on 1998-05-21.
+www.hotbot.com changed their search script location and output format on 1998-05-21.
 Also, as many as 6 fields of each SearchResult are now filled in.
 
 =head2 1.13
@@ -343,9 +350,9 @@ Updated test cases.
 
 =head2 1.12
 
-HotBot does not do truncation. Therefore, if the query contains
-truncation characters (i.e. '*' at end of words), they are simply
-deleted before the query is sent to HotBot.
+www.hotbot.com does not do truncation. Therefore, if the query
+contains truncation characters (i.e. '*' at end of words), they are
+simply deleted before the query is sent to www.hotbot.com.
 
 =head2 1.11 1998-02-05
 
@@ -361,7 +368,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = sprintf("%d.%02d", q$Revision: 1.13 $ =~ /(\d+)\.(\d+)/);
+$VERSION = '1.27';
 
 use Carp ();
 use WWW::Search(generic_option);
@@ -381,13 +388,13 @@ sub native_setup_search
   # 500 results take  70 seconds at 100 per page
   # 500 results take 234 seconds at  10 per page
   my $DEFAULT_HITS_PER_PAGE = 100;
-  # $DEFAULT_HITS_PER_PAGE = 10; # for debugging
+  $DEFAULT_HITS_PER_PAGE = 10 if $self->{_debug};
   $self->{'_hits_per_page'} = $DEFAULT_HITS_PER_PAGE;
   # $self->timeout(120);  # HotBot used to be notoriously slow
 
   # As of 1998-05, HotBot apparently doesn't like WWW::Search!  When
-  # using user_agent(0), response was RC: 403 (Forbidden) Message:
-  # Forbidden by robots.txt
+  # using user_agent(0), response was "RC: 403 (Forbidden) Message:
+  # Forbidden by robots.txt"
   $self->user_agent(1);
 
   $self->{_next_to_retrieve} = 0;
@@ -405,7 +412,7 @@ sub native_setup_search
   if (!defined($self->{_options})) 
     {
     $self->{_options} = {
-                         'search_url' => 'http://www.hotbot.com/default.asp',
+                         'search_url' => 'http://www.hotbot.com/text/default.asp',
                          'DE' => 2,
                          'SM' => 'SC',
                          'DC' => $self->{_hits_per_page},
@@ -444,7 +451,6 @@ sub native_setup_search
 sub native_retrieve_some
   {
   my ($self) = @_;
-  # print STDERR " *   HotBot::native_retrieve_some()\n" if $self->{'_debug'};
   
   # Fast exit if already done:
   return undef unless defined($self->{_next_url});
@@ -455,7 +461,7 @@ sub native_retrieve_some
   # print STDERR " * search_from_file is set!\n" if $self->{search_from_file};
   # print STDERR " * search_to_file is set!\n" if $self->{search_to_file};
   # Get some results
-  print STDERR " *   sending request (",$self->{_next_url},")\n" if $self->{'_debug'};
+  print STDERR "\n *   sending request (",$self->{_next_url},")" if $self->{'_debug'};
   my($response) = $self->http_request('GET', $self->{_next_url});
   $self->{response} = $response;
   if (!$response->is_success) 
@@ -463,7 +469,7 @@ sub native_retrieve_some
     return undef;
     };
 
-  print STDERR " *   got response\n" if $self->{'_debug'};
+  print STDERR "\n *   got response" if $self->{'_debug'};
   $self->{'_next_url'} = undef;
   # Parse the output
   my ($TITLE, $HEADER, 
@@ -473,87 +479,69 @@ sub native_retrieve_some
   my ($state) = ($TITLE);
   my ($hit) = ();
   my $sHitPattern = quotemeta '<font face="verdana&#44;arial&#44;helvetica" size="2">';
-  foreach (split(/\012/, $response->content())) 
+  foreach ($self->split_lines($response->content()))
     {
     s/\r$//;  # delete DOS carriage-return
     next if m/^\r?$/; # short circuit for blank lines
-    print STDERR " * $state ===$_===" if 2 <= $self->{'_debug'};
+    print STDERR "\n * $state ===$_===" if 2 <= $self->{'_debug'};
 
     if ($state eq $TITLE && 
         m@<TITLE>HotBot results:\s+(.+)\s\(\d+\+\)</TITLE>@i) 
       {
       # Actual line of input is:
       # <HEAD><TITLE>HotBot results: Christie Abbott (1+)</TITLE>
-      print STDERR "title line\n" if 2 <= $self->{'_debug'};
+      print STDERR "title line" if 2 <= $self->{'_debug'};
       $state = $HEADER;
       } # We're in TITLE mode, and line has title
 
-    elsif ($state eq $HEADER &&
-          m{Web\sResults})
+    elsif ($state eq $HEADER && 
+           m{^(\d+)\s+matches.<})
       {
-      print STDERR "header line\n" if 2 <= $self->{'_debug'};
+      # Actual line of input is:
+      # 248 matches.</b><br>
+      print STDERR "count line" if 2 <= $self->{'_debug'};
+      $self->approximate_result_count($1);
       $state = $NEXT;
-      }
+      } # we're in HEADER mode, and line has number of results
 
-    elsif ($state eq $NEXT && m|</form>|i)
+    elsif ($state eq $NEXT && m|href="[^"?]+\?([^"]+act\.next=next[^"]+)|)
       {
-      print STDERR " no next button\n" if 2 <= $self->{'_debug'};
+      print STDERR " found next button" if 2 <= $self->{'_debug'};
+      # There is a "next" button on this page, therefore there are
+      # indeed more results for us to go after next time.
+      $self->{_next_url} = $self->{'_options'}{'search_url'} .'?'. $1;
+      print STDERR "\n + next_url is >>>", $self->{_next_url}, "<<<" if $self->{_debug};
+      $self->{'_next_to_retrieve'} += $self->{'_hits_per_page'};
+      $state = $HITS;
+      } # found "next" link in NEXT mode
+    elsif ($state eq $NEXT && m|^<B>(\d+)\.| )
+      {
+      print STDERR " no next button; " if 2 <= $self->{'_debug'};
       # There was no "next" button on this page; no more pages to get!
       $self->{'_next_url'} = undef;
       $state = $HITS;
-      }
-    elsif ($state eq $NEXT && m|act\.next\.x|)
-      {
-      print STDERR " found next button\n" if 2 <= $self->{'_debug'};
-      # There is a "next" button on this page, therefore there are
-      # indeed more results for us to go after next time.
-      # Process the options.
-      $self->{_options}{'base'} = $self->{'_next_to_retrieve'};
-      $self->{_options}{'act.next.x'} = 1;
-      my($options) = '';
-      foreach (keys %{$self->{_options}}) 
-        {
-        # printf STDERR "option: $_ is " . $self->{_options}{$_} . "\n";
-        next if (generic_option($_));
-        $options .= $_ . '=' . $self->{_options}{$_} . '&';
-        }
-      # Ugh!  HotBot chokes if our URL has a dangling '&' at the end:
-      chop $options;
-      # Finally figure out the url.
-      $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
-      $self->{'_next_to_retrieve'} += $self->{'_hits_per_page'};
-      $state = $HITS;
+      # Fall through (i.e. don't say "elsif") so that the $HITS
+      # pattern matches this line (again)!
       }
 
-    elsif ($state eq $HITS && 
-           m{&nbsp;(\d+)&nbsp;matches</font>})
+    if ($state eq $HITS && m|^<B>(\d+)\.| )
       {
-      # Actual line of input is:
-      # <font face="Verdana, Arial, Helvetica" size="2" color="#000000"><b>Martin THurn:</b>&nbsp;&nbsp;1009435&nbsp;matches</font><br>
-      print STDERR "count line\n" if 2 <= $self->{'_debug'};
-      $self->approximate_result_count($1);
-      $state = $HITS;
-      } # we're in HITS mode, and line has number of results
-
-    elsif ($state eq $HITS && 
-           m|^<[^>]*><B>(\d+)\.| )
-           # m/^$sHitPattern/)
-           # m|<B>(\d+)\.\s<A\ .+?</A>\ <A\ HREF=\043([^\043]+)\043>(.+?)</A></B><BR>(.+?)<br>.+?(\d+)\%.+?(\d+)\ bytes.+?(\d\d\d\d/\d\d/\d\d)|i)
-      {
-      print STDERR "hit line\n" if 2 <= $self->{'_debug'};
+      print STDERR "hit line" if 2 <= $self->{'_debug'};
       # Actual line of input:
-      # <font face="verdana&#44;arial&#44;helvetica" size="2"><B>1. <A HREF="http://www.toysrgus.com/images-bootleg.html" TARGET="preview"><IMG SRC="http://static.hotbot.com/images/btn.openpage.white.gif" BORDER="0" WIDTH="17" HEIGHT="16" ALT=""></A> <A HREF="http://www.toysrgus.com/images-bootleg.html">Bootlegs</A></B><BR>Bootlegs Maintained by Gus Lopez (lopez@cs.washington.edu) Bootlegs toys and other Star Wars collectibles were made primarily in countries where Star Wars was not commercially released in theaters. Most Star Wars bootlegs originate from the eastern.<br></font><font size="2">99%&nbsp;&nbsp; 5601 bytes&#44; 1998/03/19 &nbsp;&nbsp;&nbsp;http://www.toysrgus.com/images-bootleg.html</font><p>
+      # <B>2. </B><A HREF="http://www.toysrgus.com/textfiles.html">Charts, Tables, and Text Files</A><BR>Text Files Maintained by Gus Lopez (lopez@halcyon.com) Ever wonder which weapon goes with which figure? Well, that's the kind of information you can find right here. Any beginning collector should glance at some of these files since they answer...<br>92%&nbsp;&nbsp;&nbsp; 3616 bytes&#44; 1998/04/07&nbsp;&nbsp;&nbsp;http://www.toysrgus.com/textfiles.html<p>
       my ($iHit,$iPercent,$iBytes,$sURL,$sTitle,$sDesc,$sDate) = (0,0,0,'','','','');
       # m/<B>(\d+)\.\s/ && $iHit = $1;
-      $sURL = $1 if m/target=([^&"]+)/;
+      $sURL = $1 if m/HREF="([^"]+)/;
       $sTitle = $1 if m|>([^<]+)</A>|;
+      $sDate = $1 if m/(\d\d\d\d\/\d\d\/\d\d)&nbsp;/;
       $sDesc = $1 if m/<BR>(.+)<br>/;
-      $iPercent = $1 if m|>(\d+)\%<|;
+      $iPercent = $1 if m/>(\d+)\%(&nbsp;|<)/;
+      $iBytes = $1 if m/&nbsp;\s(\d+)\sbytes/;
       # Note that we ignore MIRROR URLs, so our total hit count may
       # get all out of whack.
       if ($sURL eq '')
         {
-        print STDERR " *** parse error: found hit line but no URL\n" if 2 <= $self->{'_debug'};
+        print STDERR "\n *** parse error: found hit line but no URL\n" if 2 <= $self->{'_debug'};
         }
       else
         {
@@ -574,10 +562,6 @@ sub native_retrieve_some
       $state = $HITS;
       } # $state eq HITS
 
-    else
-      {
-      print STDERR "didn't match\n" if 2 <= $self->{'_debug'};
-      }
     } # foreach line of query results HTML page
 
   if (defined($hit)) 
@@ -597,6 +581,9 @@ Martin''s page download results, 1998-02:
 simplest arbitrary page:
 http://www.search.hotbot.com/hResult.html?MT=lsam+replication&DE=0&DC=100
 http://www.search.hotbot.com/hResult.html?MT=Christie+Abbott&base=100&DC=100&DE=0&act.next.x=1
+
+text-only pages:
+http://www.hotbot.com/text/default.asp?SM=MC&MT=Martin+Thurn&DC=100&DE=2&DV=0&RG=all&LG=any&_v=2&OPs=MDRTP&NUMMOD=2
 
 explanation of known fields on GUI search page:
 date = (checkbox) filter by date

@@ -1,1 +1,19 @@
-Nothing found.
+Error:  HTTP/1.1 403 Forbidden
+Connection: close
+Date: Sat, 12 Dec 1998 01:08:47 GMT
+Server: Apache/1.3.1 (Unix) PHP/3.0.3
+Content-Type: text/html
+Client-Date: Fri, 11 Dec 1998 23:17:16 GMT
+Client-Peer: 195.4.183.8:80
+Title: 403 Forbidden
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<HTML><HEAD>
+<TITLE>403 Forbidden</TITLE>
+</HEAD><BODY>
+<H1>Forbidden</H1>
+You don't have permission to access /suche.php3
+on this server.<P>
+</BODY></HTML>
+
+

@@ -23,7 +23,7 @@ print OUT <<'!NO!SUBS!';
 # AutoSearch.pl
 # Copyright (c) 1996-1997 University of Southern California.
 # All rights reserved.                                            
-# $Id: AutoSearch.PL,v 1.31 1998/08/11 23:56:20 johnh Exp $
+# $Id: AutoSearch.PL,v 1.32 1998/11/18 21:54:55 johnh Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -788,6 +788,8 @@ sub main {
   } else {
     $search = new WWW::Search(undef()); # must be undef to get default.
   }
+  $search->http_proxy($ENV{'HTTP_PROXY'}) if ($ENV{'HTTP_PROXY'});
+  $search->http_proxy($ENV{'http_proxy'}) if ($ENV{'http_proxy'});
   # submit search w/options.
   $search->native_query(WWW::Search::escape_query($SummaryQuery), $query_options);
   # examine search results

@@ -38,7 +38,7 @@
 </SELECT></font><br><INPUT NAME=q size=50 maxlength=800 VALUE="+LSAM +AutoSearch">
 <br><INPUT TYPE=radio NAME=act VALUE=search CHECKED>search <INPUT TYPE=radio NAME=act VALUE=refine>refine <INPUT TYPE=submit VALUE=Submit><br>
  <P><font size=-1>Search - <a href="/cgi-bin/query?pg=aq&what=web&text=yes">Advanced</a> - <a href="/cgi-bin/query?pg=q&what=news&text=yes">Usenet</a></font><BR></FORM>
-<font size=-1><b>AltaVista found 9 Web pages for you. </font></b><P><font size=-1><br>
+<font size=-1><b>AltaVista found 8 Web pages for you. </font></b><P><font size=-1><br>
 </font><font size=-1><dl><dt><b>1. </b><a href="http://www.isi.edu/~lsam/tools/autosearch/index.html"><b>index.html directory page</b></a><dd>
 AutoSearch WEB Searching. What is AutoSearch? AutoSearch performs a web-based search and puts the results set in a web page. It periodically updates this..<br><b>URL:</b> <font color=gray>www.isi.edu/~lsam/tools/autosearch/index.html<br>
 Last modified 3-Jun-98 - page size 2K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fwww%2eisi%2eedu%2f%7elsam%2ftools%2fautosearch%2findex%2ehtml&language=en">Translate</a>&nbsp;]</dl>
@@ -54,20 +54,17 @@ Last modified 26-Oct-97 - page size 18K - in English</font> [&nbsp;<a href="http
 <dl><dt><b>5. </b><a href="http://www.isi.edu/~lsam/tools/WWW_SEARCH/index.html"><b>WWW::Search</b></a><dd>
 WWW::Search. WWW::Search is a collection of Perl modules which provide an API to WWW search engines like AltaVista, Lycos, Hotbot, WebCrawler, and so on...<br><b>URL:</b> <font color=gray>www.isi.edu/~lsam/tools/WWW_SEARCH/index.html<br>
 Last modified 27-Aug-98 - page size 12K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fwww%2eisi%2eedu%2f%7elsam%2ftools%2fWWW%5fSEARCH%2findex%2ehtml&language=en">Translate</a>&nbsp;]</dl>
-<dl><dt><b>6. </b><a href="http://0zombie.test.at/code/perl/WWW-Search-1.009/bin/AutoSearch"><b>first_date.html empty page to establish weekly file format</b></a><dd>
-usr/bin/perl -w eval 'exec perl -S $0 "$@"' if 0; # # AutoSearch.pl # Copyright (c) 1996-1997 University of Southern California. # All rights reserved. #..<br><b>URL:</b> <font color=gray>0zombie.test.at/code/perl/WWW-Search-1.009/bin/AutoSearch<br>
-Last modified 28-Oct-97 - page size 52K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2f0zombie%2etest%2eat%2fcode%2fperl%2fWWW%2dSearch%2d1%2e009%2fbin%2fAutoSearch&language=en">Translate</a>&nbsp;]</dl>
-<dl><dt><b>7. </b><a href="http://gost.isi.edu/people/johnh/WORK/index.html"><b>John Heidemann's Work</b></a><dd>
+<dl><dt><b>6. </b><a href="http://gost.isi.edu/people/johnh/WORK/index.html"><b>John Heidemann's Work</b></a><dd>
 John Heidemann's Work. I am computer scientist at Information Sciences Institute of the University of Southern California. I will also be teaching at USC..<br><b>URL:</b> <font color=gray>gost.isi.edu/people/johnh/WORK/index.html<br>
 Last modified 25-Jun-97 - page size 6K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fgost%2eisi%2eedu%2fpeople%2fjohnh%2fWORK%2findex%2ehtml&language=en">Translate</a>&nbsp;]</dl>
-<dl><dt><b>8. </b><a href="http://theory.uwinnipeg.ca/CPAN/data/WWW-Search/README.html"><b>/usr/local/lib/perl5/site_perl/WAIT/DB/cpan/data/WWW-Search/README</b></a><dd>
+<dl><dt><b>7. </b><a href="http://theory.uwinnipeg.ca/CPAN/data/WWW-Search/README.html"><b>/usr/local/lib/perl5/site_perl/WAIT/DB/cpan/data/WWW-Search/README</b></a><dd>
 Contained in WWW-Search-1.019.tar.gz. requires perl 5.002 or later. uses LWP::UserAgent in libwww-perl-5.36.tar.gz. NAME. DESCRIPTION. NAME. WWW-Search...<br><b>URL:</b> <font color=gray>theory.uwinnipeg.ca/CPAN/data/WWW-Search/README.html<br>
 Last modified 29-Jun-98 - page size 21K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2ftheory%2euwinnipeg%2eca%2fCPAN%2fdata%2fWWW%2dSearch%2fREADME%2ehtml&language=en">Translate</a>&nbsp;]</dl>
-<dl><dt><b>9. </b><a href="http://gost.isi.edu/~johnh/WORK/index.html"><b>John Heidemann's Work</b></a><dd>
+<dl><dt><b>8. </b><a href="http://gost.isi.edu/~johnh/WORK/index.html"><b>John Heidemann's Work</b></a><dd>
 John Heidemann's Work. I am computer scientist at Information Sciences Institute and a research assistant professor at the University of Southern...<br><b>URL:</b> <font color=gray>gost.isi.edu/~johnh/WORK/index.html<br>
 Last modified 7-Aug-98 - page size 6K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fgost%2eisi%2eedu%2f%7ejohnh%2fWORK%2findex%2ehtml&language=en">Translate</a>&nbsp;]</dl>
 </font><font size=-1><br>
-</font><font size=-2>word count: LSAM: 703; AutoSearch: 1142<BR></font><P>
+</font><font size=-2>word count: LSAM: 690; AutoSearch: 1061<BR></font><P>
 <br>
 <font size=-2 face=arial, helvetica>
 <a href="/cgi-bin/query?text">AltaVista Home</a> | 

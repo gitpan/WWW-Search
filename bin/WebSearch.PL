@@ -22,7 +22,7 @@ print OUT <<'!NO!SUBS!';
 #
 # WebSearch.PL
 # Copyright (C) 1996-1997 by USC/ISI
-# $Id: WebSearch.PL,v 1.31 1998/08/11 23:56:22 johnh Exp $
+# $Id: WebSearch.PL,v 1.32 1998/11/18 21:54:56 johnh Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -104,6 +104,12 @@ Display version string.
 Display back-end libwww-perl debugging information
 
 =back
+
+
+=head1 ENVIRONMENT VARIABLES
+
+The environment variable F<http_proxy> (or F<HTTP_PROXY>)
+specifies a proxy, if any.
 
 
 =head1 SEE ALSO
@@ -236,6 +242,9 @@ sub main {
 	require LWP::Debug;
 	LWP::Debug::level('+');
     }
+
+    $search->http_proxy($ENV{'HTTP_PROXY'}) if ($ENV{'HTTP_PROXY'});
+    $search->http_proxy($ENV{'http_proxy'}) if ($ENV{'http_proxy'});
          
     if (defined($opts{'o'})) {
         $query_options_ref = {};

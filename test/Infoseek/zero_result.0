@@ -16,7 +16,9 @@
 	<table width=100% cellpadding=0 cellspacing=0 border=0>
 	<tr>
 	<td align=left colspan=3 valign=bottom nowrap bgcolor=#003366>
-	<img src="/images/tmpl/header.gif" align=left width="600" height="47" ismap usemap="#menu" border="0" hspace="0" vspace="0">
+
+<img src="/cimages?HOME_T00000_HEADER_url_key0_19981129_145045_0.gif&col=IV" align="left" width=600 height=47 ismap usemap="#menu" border=0 hspace=0 vspace=0 alt="">
+	   
 	</td></tr>
 	<tr>
 	<td colspan=3 bgcolor=#000000 valign=top nowrap><img src="/images/clear.gif" align=right height="3" hspace="0" vspace="0" border="0" width=1></td>
@@ -25,12 +27,12 @@
 		<area shape=rect coords="184,4,237,25" href="/Home/Home.html?svx=tb_home&nh=25" alt=" Homepage ">
 		<area shape=rect coords="237,4,301,25" href="/Topic?tid=459&svx=tb_stocks&nh=25" alt=" Stocks ">
 		<area shape=rect coords="301,4,352,25" href="/Topic?tid=1486&svx=tb_news&nh=25" alt=" News ">
-		<area shape=rect coords="352,4,448,25" href="/redirect?sv=IS&lk=noframes&ak=MSSW&rl=OnBar&rd=http://yp.microsoft.com/infoseek/" alt=" Yellow Pages ">
+		<area shape=rect coords="352,4,448,25" href="/redirect?sv=IS&lk=noframes&ak=MSSW&rl=OnBar&rd=http://national.sidewalk.msn.com/infoseek/search" alt=" Yellow Pages ">
 	<area shape=rect coords="184,26,246,43" href="/Facts/maps.html?svx=tb_maps&nh=25" alt=" Maps ">
 		<area shape=rect coords="246,26,299,44" href="/redirect?sv=IS&lk=noframes&ak=WBS&rl=LINK-HEADER-CHAT&rd=http://pages.infoseek.com/webchat3.so?noreg_entry.x=1" alt=" Chat ">
 		<area shape=rect coords="299,25,405,44" href="/redirect?sv=IS&lk=noframes&ak=WBS&rl=LINK-HEADER-FREEPAGES&rd=http://pages.infoseek.com/webchat3.so?chatmode=noframes&&&back_default&homepage_center.x=1" alt=" Free Web Page ">
 		<area shape=rect coords="405,26,449,44" href="/Help/Contents.html?svx=tb_help&nh=25" alt=" Help ">
-		<area shape=rect coords="533,0,596,47" href="/ups/ups_jump.html?svx=tb_ups&nh=25" alt=" UPS PACKAGE TRACKING ">
+		<area shape=rect coords="533,0,596,47" href="/ups/ups_jump.html?svx=tb_ups&nh=25" alt=" UPS Service Center ">
 	</map>
 
 
@@ -83,7 +85,19 @@ vspace="0" border="0"></td>
 </table>
 </center>
 <p><center>
-<a href="http://www.infoseek.com/redirect?sv=IS&lk=&tid=&ak=LNCH-2018-1099-GEN&rd=http://www.launchcdrom.com/orderform.asp?partner=Infoseek" target="_top"><img border=1 width=468 height=60 src="/ads/LNCH1099.gif" alt="[[Click here for a FREE Launch CD-ROM]]"></a><br><a href="http://www.infoseek.com/redirect?sv=IS&lk=&tid=&ak=LNCH-2018-1099-GEN&rd=http://www.launchcdrom.com/orderform.asp?partner=Infoseek" target="_top"><strong>Click here for a FREE Launch CD-ROM</strong></a><p>
+<IFRAME WIDTH=468 HEIGHT=60 MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0
+FRAMEBORDER=0 SCROLLING=no BORDERCOLOR="#000000"
+SRC="http://LSCO.ngadcenter.net/html.ng/site=is&size=468x60&sec=ie&sec=ie&seccat=gi">
+<SCRIPT LANGUAGE="JavaScript1.1"
+SRC="http://LSCO.ngadcenter.net/js.ng/Params.richmedia=yes&site=is&size=468x60&sec=ie&sec=ie&seccat=gi">
+</SCRIPT>
+<NOSCRIPT>
+<A
+HREF="http://www.infoseek.com/redirect?sv=IS&lk=&ak=LVIS-2004-1024-GEN&tid=&rd=http://LSCO.ngadcenter.net/click.ng/Params.richmedia=yes&site=is&size=468x60&sec=ie&sec=ie&seccat=gi">
+<IMG
+SRC="http://LSCO.ngadcenter.net/image.ng/Params.richmedia=yes&site=is&size=468x60&sec=ie&sec=ie&seccat=gi"></A>
+</NOSCRIPT>
+</IFRAME><p>
 <center>
 <table width="100%" cellpadding=0 cellspacing=0 border=0><tr><td valign=top width=135>
 <tr><td valign=top>
@@ -95,11 +109,11 @@ vspace="0" border="0"></td>
 Infoseek found no results for:<br>
 &nbsp;&gt;&nbsp;
 <b>
-disestablishmentarianismNoSuchWord
+BogusNoSuchWordSpammersAreIdiots
 </b>
 
 <p>
-<b><a href="/Titles?nh=25&qt=disestablishmentarianismNoSuchWord">Click here</a> to expand this search or try a new search:</b>
+<b><a href="/Titles?nh=25&qt=BogusNoSuchWordSpammersAreIdiots">Click here</a> to expand this search or try a new search:</b>
 <p>
 <form action="/Titles" method="get" name="WW_dir_search">
 <table cellspacing=0 cellpadding=3 border=0><tr><td colspan=5 bgcolor="000000">
@@ -211,11 +225,11 @@ For more assistance with Infoseek
 	<tr><td colspan="3" align="center">
 
 <font face="Arial,Helvetica"size="-2"><a href="http://feedback.infoseek.com">Feedback</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-<a href="/webkit?pg=webkit.html&nh=25">Put&nbsp;Infoseek&nbsp;on&nbsp;your&nbsp;site</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="/Tools?pg=StartPage.html&nh=25">Make&nbsp;Infoseek&nbsp;your&nbsp;start&nbsp;page</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 <a href="/AddUrl?pg=DCaddurl.html&nh=25">Add&nbsp;URL</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 <a href="/Help?pg=Contents.html&nh=25">Help</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 <a href="http://info.infoseek.com/">About&nbsp;Infoseek</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-<a href="http://info.infoseek.com/doc/sponsors.html">Advertise&nbsp;on&nbsp;Infoseek</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="http://info.infoseek.com/doc/sponsors.html" target="_blank">Advertise&nbsp;on&nbsp;Infoseek</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 <a href="http://info.infoseek.com/doc/jobs.html">Jobs&nbsp;&#064;&nbsp;Infoseek</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 <a href="http://software.infoseek.com/">Intranet software</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 <a href="/redirect?sv=&lk=&ak=PopleL&rl=footer&rd=http://www.peoplelink.com/v1/down_infoseek">Infoseek&nbsp;Instant&nbsp;Messaging</a>&nbsp;&nbsp;|&nbsp;&nbsp;

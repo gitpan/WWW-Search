@@ -1,6 +1,6 @@
 <html>
 <head>
-<base target="_top"><base font="Arial,Helvetica"><meta name="IS" content="ok_blaze">
+<base target="_top"><base font="Arial,Helvetica"><meta name="IS" content="ok_flash">
 <title>Infoseek: Pacific AND travel</Title>
 </head>
 
@@ -12,7 +12,9 @@
 	<table width=100% cellpadding=0 cellspacing=0 border=0>
 	<tr>
 	<td align=left colspan=3 valign=bottom nowrap bgcolor=#003366>
-	<img src="/images/tmpl/header.gif" align=left width="600" height="47" ismap usemap="#menu" border="0" hspace="0" vspace="0">
+
+<img src="/cimages?HOME_T00000_HEADER_url_key0_19981129_145045_0.gif&col=IV" align="left" width=600 height=47 ismap usemap="#menu" border=0 hspace=0 vspace=0 alt="">
+	   
 	</td></tr>
 	<tr>
 	<td colspan=3 bgcolor=#000000 valign=top nowrap><img src="/images/clear.gif" align=right height="3" hspace="0" vspace="0" border="0" width=1></td>
@@ -21,12 +23,12 @@
 		<area shape=rect coords="184,4,237,25" href="/Home/Home.html?svx=tb_home&nh=25" alt=" Homepage ">
 		<area shape=rect coords="237,4,301,25" href="/Topic?tid=459&svx=tb_stocks&nh=25" alt=" Stocks ">
 		<area shape=rect coords="301,4,352,25" href="/Topic?tid=1486&svx=tb_news&nh=25" alt=" News ">
-		<area shape=rect coords="352,4,448,25" href="/redirect?sv=IS&lk=noframes&ak=MSSW&rl=OnBar&rd=http://yp.microsoft.com/infoseek/" alt=" Yellow Pages ">
+		<area shape=rect coords="352,4,448,25" href="/redirect?sv=IS&lk=noframes&ak=MSSW&rl=OnBar&rd=http://national.sidewalk.msn.com/infoseek/search" alt=" Yellow Pages ">
 	<area shape=rect coords="184,26,246,43" href="/Facts/maps.html?svx=tb_maps&nh=25" alt=" Maps ">
 		<area shape=rect coords="246,26,299,44" href="/redirect?sv=IS&lk=noframes&ak=WBS&rl=LINK-HEADER-CHAT&rd=http://pages.infoseek.com/webchat3.so?noreg_entry.x=1" alt=" Chat ">
 		<area shape=rect coords="299,25,405,44" href="/redirect?sv=IS&lk=noframes&ak=WBS&rl=LINK-HEADER-FREEPAGES&rd=http://pages.infoseek.com/webchat3.so?chatmode=noframes&&&back_default&homepage_center.x=1" alt=" Free Web Page ">
 		<area shape=rect coords="405,26,449,44" href="/Help/Contents.html?svx=tb_help&nh=25" alt=" Help ">
-		<area shape=rect coords="533,0,596,47" href="/ups/ups_jump.html?svx=tb_ups&nh=25" alt=" UPS PACKAGE TRACKING ">
+		<area shape=rect coords="533,0,596,47" href="/ups/ups_jump.html?svx=tb_ups&nh=25" alt=" UPS Service Center ">
 	</map>
 
 
@@ -83,20 +85,21 @@ vspace="0" border="0"></td>
 </table>
 </center>
 <center>
-<table width=100% cellpadding=0 cellspacing=0 border=0>
+<!-- advertising table -->
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
 
 <tr>
-<td align=center valign=top width=121>
+<td align=center valign=top width="20%">
 
-	<center>
-        	<table width=121 cellpadding=1 cellspacing=0 BORDER=0>
+        	<table align="left" width=121 height="60" cellpadding=1 cellspacing=0 BORDER=0>
         	<tr>
         	<td BGCOLOR="#000000">
-                	<table width=100% cellpadding=3 cellspacing=0 border=0>
-                	<tr><td bgcolor=#CCCCCC align=center>
+                	<table width=100% height="58" cellpadding=3 cellspacing=0 border=0>
+                	<tr><td bgcolor="#FFFFFF" align=center nowrap>
                 	<font face="Arial,Helvetica" SIZE=-1>
 
-        <a href="/redirect?sv=IS&lk=noframes&ak=BORD&rl=LINK-C420-business-flash-borders&rd=http://www.borders.com/cgi-bin/partner?PARTNER_ID=101010069&Url=http://www.borders.com/infoseek/section_10400.html">Business books at Borders.com. In stock. Fast delivery.</a>
+	<b>Business books at<br>Borders.com.</b><br>
+        <a href="/redirect?sv=IS&lk=noframes&ak=BORD&rl=LINK-C420-business-flash-borders&rd=http://www.borders.com/cgi-bin/partner?PARTNER_ID=101010069&Url=http://www.borders.com/infoseek/section_10400.html"><!--Business books at Borders.com. -->In stock. Fast delivery.</a>
 
                 	</FONT>
 
@@ -105,13 +108,15 @@ vspace="0" border="0"></td>
                 	</table>
 
         	</td></tr></table>
-	</center>
 
 </td>
 
-<td valign=top align=center colspan=3>
-<a href="http://www.infoseek.com/redirect?sv=IS&lk=&tid=&ak=BTCM-2005-1118-K1557&rd=http://ads01.focalink.com/SmartBanner/page/157.771-000021495" target="_top"><img border=1 width=468 height=60 src="http://ads01.focalink.com/SmartBanner/nph-graphic/157.771-000021495" alt="[More Miles. Lower Fares. Better Scheduling. Click Here.]"></a><br><a href="http://www.infoseek.com/redirect?sv=IS&lk=&tid=&ak=BTCM-2005-1118-K1557&rd=http://ads01.focalink.com/SmartBanner/page/157.771-000021495" target="_top"><strong>More Miles. Lower Fares. Better Scheduling. Click Here.</strong></a>
+<td width="2%">
+&nbsp;
 </td>
+
+<td valign=top align=center width="78%">
+<a href="http://www.infoseek.com/redirect?sv=IS&lk=&tid=&ak=MIMG-2001-1003-K1557&rd=http://expedia.msn.com/daily/scripts/eap.asp?intro=http:%2F%2Fexpedia.msn.com%2FPromos%2Flh%2Fdefault.asp&EAPid=408-1" target="_top"><img border=1 width=468 height=60 src="/ads/MIMG1003.gif" alt="[Microsoft IMG Expedia]"><br><b>Click here</b></a></td>
 </tr>
 </table>
 </center>
@@ -119,10 +124,11 @@ vspace="0" border="0"></td>
 <p><br clear=all><a name="tab3">
 <table border=0 cellpadding=0 cellspacing=0 width=100%>
 <tr><td valign=bottom width=30% align=left nowrap>
-	<b><font size="+1" face="Arial,Helvetica">
+	<b><font size="+0" face="Arial,Helvetica">
 
-Company Profiles Search Results&nbsp;</font></b></td><td valign=middle align=right width=70% nowrap>
-	<font size=-1 face="Arial,Helvetica"><B>Jump to:&nbsp;&nbsp;
+Company Capsules Search Results&nbsp;</font></b></td><td valign=middle align=right width=70% nowrap>
+	<font size=-1 face="Arial,Helvetica"><B>
+	<font color="CC0033">Jump to >&nbsp;&nbsp;</font>
 
 		<a href="#tab4">Search Box</a></b>
 
@@ -140,24 +146,26 @@ Company Profiles Search Results&nbsp;</font></b></td><td valign=middle align=rig
 </a>
 <table width="100%" border=0 cellpadding=2 cellspacing=0>
 <tr><td align=left valign=top bgcolor="#CCCCCC"><font face="Arial,Helvetica" size="-1">
-<b>ARTICLES 1 - 5</b>  of 5 total articles <p>
-</font></td><td align=right valign=top bgcolor="#CCCCCC"><font face="Arial,Helvetica" size="-1">
+<b>ARTICLES 1 - 8</b>  of 8 total articles
+</font></td></tr><tr><td align=right valign=top bgcolor="#FFFFFF"><font face="Arial,Helvetica" size="-1">
 
-<b><a href="/Titles?nh=20&qt=Pacific+AND+travel&rf=0&col=HV&ud4=1"><font size="-1">HIDE SUMMARIES</font></a></b>
-	</td></tr><tr><td colspan=2 bgcolor="#FFFFFF" align=right>
-<font face="Arial,Helvetica" size="-2" color="#CC0000">***</font><font face="Arial,Helvetica" size="-2">Pages from the same site are grouped together.</font>
+<b><a href="/Titles?nh=20&qt=Pacific+AND+travel&col=HV&sf=1&ud4=1"><font size="-1">Hide Summaries</font></a></b>
+	</td></tr>
 
-</font></td></tr></table>
+
+
+
+</table>
 </td></tr></table><table align=right width=121 cellpadding=0 cellspacing=0><tr><td><p>	<p>
 	<table width="121" cellpadding=1 cellspacing=0 border=0>
-	<tr><td bgcolor="#000000" valign=top>
+	<tr><td bgcolor="#FFFFFF" valign=top>
 
 		<table width="100%" cellpadding=3 cellspacing=0 border=0>
 		<tr><td bgcolor="#FFFFFF"><center>
 <center>
 <font face="Arial,Helvetica" size="1"><b>&nbsp;</b></font><br>
-<a href="/redirect?sv=IS&lk=&ak=SEEK&rl=LINK_T420_Channel_buttons_THOM_business_topright&rd=http://www.thomasregister.com/"><img src="/cimages?SEEK_T420_Channel_buttons_urlkey0_19981012_134534_0.gif&col=SL " alt="Thomas Register" border=0></a><br><br>
-<a href="/redirect?sv=IS&lk=&ak=SEEK&rl=LINK_T420_Channel_buttons_ATW__business_topright&rd=http://www.home.net/work/infoseek"><img src="/cimages?SEEK_T420_Channel_buttons_urlkey0_19981012_134534_1.gif&col=SL " alt="At Work" border=0></a>
+<a href="/redirect?sv=IS&lk=&ak=SEEK&rl=LINK_T420_Channel_buttons_THOM_business_topright&rd=http://www.thomasregister.com/"><img src="/cimages?SEEK_T420_Channel_buttons_urlkey0_19981203_090042_0.gif&col=SL " alt="Thomas Register" border=0></a><br><br>
+<a href="/redirect?sv=IS&lk=&ak=SEEK&rl=LINK_T420_Channel_buttons_ATW__business_topright&rd=http://www.home.net/work/infoseek"><img src="/cimages?SEEK_T420_Channel_buttons_urlkey0_19981203_090042_1.gif&col=SL " alt="At Work" border=0></a>
 </center>
 
 		</center>
@@ -172,14 +180,26 @@ Company Profiles Search Results&nbsp;</font></b></td><td valign=middle align=rig
         <table width="100%" cellpadding=1 cellspacing=0 border=0>
         <tr><td valign=top bgcolor="#000000">
 		<table width="100%" cellpadding=3 cellspacing=0 border=0>
-		<tr><td valign=top bgcolor="#CCCCCC">
+		<tr><td valign=top bgcolor="#FFFFFF">
 			<font face="Arial,Helvetica" size="-1">
 
-        <b>Buy the book</b><br>
+<center><b>Buy the book</b></center><br>
 
-   Interested in 
-	<a href="/redirect?sv=IS&lk=noframes&ak=BORD&rl=LINK-T420-business-lhs_books&rd=http://www.borders.com/cgi-bin/partner?PARTNER_ID=101010083&Url=http://www.borders.com/infoseek/section_10400.html">business books</a>? Visit 
-	<a href="/redirect?sv=IS&lk=noframes&ak=BORD&rl=LINK-T420-business-lhs_borders&rd=http://www.borders.com/cgi-bin/partner?PARTNER_ID=101010083&Url=http://www.borders.com/infoseek/section_10400.html">Borders.com</a>. The best selection in the world. 
+<!-- Infoseek cut-->
+
+<A HREF="/redirect?sv=IS&lk=&ak=BORD&rl=LINK_C420_RESULTS&rd=http://www.borders.com/cgi-bin/part?PID=101010810&PKIND=tb&PAGE=sections%2Fsection%5F10400%2Ehtml">Books</A> at <A HREF="/redirect?sv=IS&lk=&ak=BORD&rl=LINK_C420_RESULTS&rd=http://www.borders.com/cgi-bin/part?PID=101010814&PKIND=tb&PAGE=http%3A%2F%2Fwww%2Eborders%2Ecom%2F">Borders.com</A>
+
+
+<BR>
+
+
+- <A HREF="/redirect?sv=IS&lk=&ak=BORD&rl=LINK_C420_RESULTS&rd=http://www.borders.com/cgi-bin/part?PID=101010811&PKIND=tb&PAGE=http%3A%2F%2Fwww%2Eborders%2Ecom%3A8080%2Ffcgi%2Dbin%2Fdb2www%2Fsearch%2Fsearch%2Ed2w%2FDetails%3FmediaType%3DBook%26prodID%3D2758899">One Min. Manager</A><BR>
+
+- <A HREF="/redirect?sv=IS&lk=&ak=BORD&rl=LINK_C420_RESULTS&rd=http://www.borders.com/cgi-bin/part?PID=101010812&PKIND=tb&PAGE=http%3A%2F%2Fwww%2Eborders%2Ecom%3A8080%2Ffcgi%2Dbin%2Fdb2www%2Fsearch%2Fsearch%2Ed2w%2FDetails%3FmediaType%3DBook%26prodID%3D25518878">Winning Everyday</A><BR>
+
+- <A HREF="/redirect?sv=IS&lk=&ak=BORD&rl=LINK_C420_RESULTS&rd=http://www.borders.com/cgi-bin/part?PID=101010813&PKIND=tb&PAGE=http%3A%2F%2Fwww%2Eborders%2Ecom%3A8080%2Ffcgi%2Dbin%2Fdb2www%2Fsearch%2Fsearch%2Ed2w%2FDetails%3FmediaType%3DBook%26prodID%3D40615572">The Millionaire...</A><BR>
+
+<!-- Infoseek cut-->
 			</font>
 		</td></tr>
 		</table>		
@@ -191,7 +211,7 @@ Company Profiles Search Results&nbsp;</font></b></td><td valign=middle align=rig
 <table width="100%" border=0 cellpadding=1 cellspacing=0>
 <tr><td bgcolor="#000000">
 	<table width="100%" border=0 cellpadding=3 cellspacing=0>
-	<tr><td bgcolor="#CCCCCC"><font face="Arial,Helvetica" size="-1">
+	<tr><td bgcolor="#FFFFFF"><font face="Arial,Helvetica" size="-1">
 		<b>Industry News</b><br>
 		Get your industry news updates from <a href="http://www.industrywatch.com">Industry Watch</a>.
 		</font>
@@ -203,7 +223,7 @@ Company Profiles Search Results&nbsp;</font></b></td><td valign=middle align=rig
 <table width="100%" border=0 cellpadding=1 cellspacing=0>
 <tr><td bgcolor="#000000">
         <table width="100%" border=0 cellpadding=3 cellspacing=0>
-        <tr><td bgcolor="#CCCCCC"><font face="Arial,Helvetica" size="-1">
+        <tr><td bgcolor="#FFFFFF"><font face="Arial,Helvetica" size="-1">
                 <b>UPS service center</b><br>
 		<li><a href="/redirect?sv=IS&lk=&ak=UPSS&rl=LINK-C420-service_center-services&rd=/ups?pg=ups_jump.html&sv=">UPS services</a><br>
 		<li><a href="/redirect?sv=IS&lk=&ak=UPSS&rl=LINK-C420-service_center-tracking&rd=/ups?pg=ups_jump.html&sv=">Package tracking</a><br>
@@ -221,29 +241,37 @@ Company Profiles Search Results&nbsp;</font></b></td><td valign=middle align=rig
 	<table width="121" cellpadding=1 cellspacing=0 border=0>
 	<tr><td bgcolor="#000000" valign=top>
 		<table width="100%" cellpadding=3 cellspacing=0 border=0>
-		<tr><td bgcolor="#CCCCCC"><font size="-1" face="Arial,Helvetica">
+		<tr><td bgcolor="#FFFFFF"><font size="-1" face="Arial,Helvetica">
 
 
-	<p><b>Classifieds:</b><br><font size="-1"> 
+	<p><center><b>Classifieds</b></center><br><font size="-1"> 
 
-Buy and sell <A HREF="/redirect?sv=IS&lk=&ak=CLAS&rl=LINK_T420_BUSINESS&rd=http://www.classifieds2000.com/cgi-cls/display.exe?infoseek+Vertical_Business">office furniture and equipment</a>.
-Explore job opportunities.</font></p></td></tr></table>
+Buy and sell <A HREF="/redirect?sv=IS&lk=&ak=CLAS&rl=LINK_T420_BUSINESS&rd=http://www.classifieds2000.com/cgi-cls/display.exe?infoseek+Vertical_Business">office furniture and equipment</a>.</font></p></td></tr></table>
 </td></tr></table>
 
-</td></tr></table><font face="Arial,Helvetica">			<p><b><a href="/Content?arn=47633&qt=Pacific+AND+travelsv=IS&lk=&col=HV&kt=A&ak=corpdir">Pleasant Travel Service, Inc.</a></b>
-<br>What's more pleasant than a trip to Hawaii or Mexico? Pleasant Travel Service doesn't think any other destinations compare, since it offers wholesale tours to both locales. The firm serves over 33,000 travel agencies and about 350,000 customers worldwide and features such services as scheduled West Coast to Hawaii flights. In addition, it owns ...<br>
+</td></tr></table><font face="Arial,Helvetica" size=-1>			<p><b><a href="/Content?arn=47633&qt=Pacific+AND+travelsv=IS&lk=&col=HV&kt=A&ak=corpdir">Pleasant Travel Service, Inc.</a></b>
+<br>What's more pleasant than a trip to Hawaii or Mexico? Pleasant Travel Service doesn't think any other destinations compare, since it offers wholesale tours to both locales. The firm serves over 33,000 travel agencies and about ...<br>
 
-<font face="Arial,Helvetica">			<p><b><a href="/Content?arn=44509&qt=Pacific+AND+travelsv=IS&lk=&col=HV&kt=A&ak=corpdir">Transmedia Asia Pacific, Inc.</a></b>
-<br>Transmedia Asia Pacific sells restaurant and retail discount card services. The company advances cash to affiliated restaurants that then give discounts to holders of company restaurant charge cards. Other cards provide discounts on retail goods. Transmedia Asia Pacific has rights to offer its services in nearly 50 countries, but it primarily ...<br>
+<font face="Arial,Helvetica" size=-1>			<p><b><a href="/Content?arn=44509&qt=Pacific+AND+travelsv=IS&lk=&col=HV&kt=A&ak=corpdir">Transmedia Asia Pacific, Inc.</a></b>
+<br>Transmedia Asia Pacific believes it holds the card to great savings. The firm and its subsidiaries sell restaurant and retail discount card services under license from US-based Transmedia Network. It also operates telephone advice lines, ...<br>
 
-<font face="Arial,Helvetica">			<p><b><a href="/Content?arn=53561&qt=Pacific+AND+travelsv=IS&lk=&col=HV&kt=A&ak=corpdir">iMALL, Inc.</a></b>
-<br>iMALL operates an Internet shopping mall Web site that offers the products and services of more than 1,000 merchant clients. iMALL also provides those merchants and others with Web site creation and Internet consulting services. Its mall site, which registers about 18 million hits from shoppers and browsers each month, includes banner advertising, classified ads, ...<br>
+<font face="Arial,Helvetica" size=-1>			<p><b><a href="/Content?arn=52078&qt=Pacific+AND+travelsv=IS&lk=&col=HV&kt=A&ak=corpdir">The SABRE Group Holdings, Inc.</a></b>
+<br>The SABRE Group Holdings' computer reservation system dominates the travel reservation industry. Almost 150,000 travel agency terminals around the world use SABRE -- one of the world's largest privately owned real-time ...<br>
 
-<font face="Arial,Helvetica">			<p><b><a href="/Content?arn=46638&qt=Pacific+AND+travelsv=IS&lk=&col=HV&kt=A&ak=corpdir">Transmedia Europe, Inc.</a></b>
-<br>Transmedia Europe believes that you should not only have your cake and eat it but that you deserve a discount on it too. Although licensed to use the Transmedia Network brand in Europe, the company so far operates only in the UK and France. Transmedia Europe provides its cardholders with 20%-25% discounts on meals at participating restaurants (its ...<br>
+<font face="Arial,Helvetica" size=-1>			<p><b><a href="/Content?arn=41393&qt=Pacific+AND+travelsv=IS&lk=&col=HV&kt=A&ak=corpdir">Qantas Airways Limited</a></b>
+<br>Some Australians go on walkabout; others fly about on Qantas Airways, Australia's #1 airline for domestic travel and a leader in international flights. The airline has nearly 100 jets in service; its Australian regional subsidiaries ...<br>
 
-<font face="Arial,Helvetica">			<p><b><a href="/Content?arn=42764&qt=Pacific+AND+travelsv=IS&lk=&col=HV&kt=A&ak=corpdir">DFS Group Limited</a></b>
-<br>DFS Group, the world's largest travel retailer, operates duty-free shops on the West Coast and throughout the Asia/Pacific region. It has more than 150 stores in 16 countries; most of the stores are in international airports. DFS Group also operates DFS Galleria anchor stores, hotel and resort boutiques, and specialty stores. Asian economic woes and a ...<br>
+<font face="Arial,Helvetica" size=-1>			<p><b><a href="/Content?arn=53561&qt=Pacific+AND+travelsv=IS&lk=&col=HV&kt=A&ak=corpdir">iMALL, Inc.</a></b>
+<br>iMALL operates an Internet shopping mall Web site that offers the products and services of more than 1,000 merchant clients. iMALL also provides those merchants and others with Web site creation and Internet consulting services. Its mall site, ...<br>
+
+<font face="Arial,Helvetica" size=-1>			<p><b><a href="/Content?arn=46638&qt=Pacific+AND+travelsv=IS&lk=&col=HV&kt=A&ak=corpdir">Transmedia Europe, Inc.</a></b>
+<br>Transmedia Europe believes that you should not only have your cake and eat it but that you deserve a discount on it too. Although licensed to use the Transmedia Network brand in Europe, the company so far operates only in the UK and France. ...<br>
+
+<font face="Arial,Helvetica" size=-1>			<p><b><a href="/Content?arn=42764&qt=Pacific+AND+travelsv=IS&lk=&col=HV&kt=A&ak=corpdir">DFS Group Limited</a></b>
+<br>DFS Group has made it inexcusable to return from a trip abroad without gifts for the family. The world's largest travel retailer, DFS (Duty Free Shoppers) operates 150 stores in 16 countries, primarily throughout the Asia/Pacific region and on ...<br>
+
+<font face="Arial,Helvetica" size=-1>			<p><b><a href="/Content?arn=42539&qt=Pacific+AND+travelsv=IS&lk=&col=HV&kt=A&ak=corpdir">Kitty Hawk, Inc.</a></b>
+<br>Equipped with plenty of the right stuff, airfreight carrier and logistics provider Kitty Hawk has more than 120 owned and leased aircraft that fly throughout the US as well as in the Pacific Rim and South America. Kitty Hawk arranges ...<br>
 
 </font>
 <br clear=all>
@@ -251,25 +279,28 @@ Explore job opportunities.</font></p></td></tr></table>
 
 <table width="100%" border=0 cellpadding=2 cellspacing=0>
 <tr><td align=left valign=top bgcolor="#CCCCCC"><font face="Arial,Helvetica" size="-1">
-<b>ARTICLES 1 - 5</b>  of 5 total articles <p>
-</font></td><td align=right valign=top bgcolor="#CCCCCC"><font face="Arial,Helvetica" size="-1">
+<b>ARTICLES 1 - 8</b>  of 8 total articles
+</font></td></tr><tr><td align=right valign=top bgcolor="#FFFFFF"><font face="Arial,Helvetica" size="-1">
 
-<b><a href="/Titles?nh=20&qt=Pacific+AND+travel&rf=0&col=HV&ud4=1"><font size="-1">HIDE SUMMARIES</font></a></b>
-	</td></tr><tr><td colspan=2 bgcolor="#FFFFFF" align=right>
-<font face="Arial,Helvetica" size="-2" color="#CC0000">***</font><font face="Arial,Helvetica" size="-2">Pages from the same site are grouped together.</font>
+<b><a href="/Titles?nh=20&qt=Pacific+AND+travel&col=HV&sf=1&ud4=1"><font size="-1">Hide Summaries</font></a></b>
+	</td></tr>
 
-</font></td></tr></table>
+
+
+
+</table>
 </p>
 
 <br clear=all><a name="tab4">
 <table border=0 cellpadding=0 cellspacing=0 width=100%>
 <tr><td valign=bottom width=30% align=left nowrap>
-	<b><font size="+1" face="Arial,Helvetica">
+	<b><font size="+0" face="Arial,Helvetica">
 
 Search Box&nbsp;</font></b></td><td valign=middle align=right width=70% nowrap>
-	<font size=-1 face="Arial,Helvetica"><B>Jump to:&nbsp;&nbsp;
+	<font size=-1 face="Arial,Helvetica"><B>
+	<font color="CC0033">Jump to >&nbsp;&nbsp;</font>
 
-		<a href="#tab3">Company Profiles Search Results</a>
+		<a href="#tab3">Company Capsules Search Results</a>
 
 </font>
 
@@ -280,16 +311,15 @@ Search Box&nbsp;</font></b></td><td valign=middle align=right width=70% nowrap>
         </tr>
 
 	<tr>
-	<td bgcolor="CCCCCC" colspan=2>
-	<font size=-1 face="Arial,Helvetica">&nbsp;</font></td>
+	<td bgcolor="CCCCCC" colspan=2 align=left>
+	&nbsp;<font size=-1 face="Arial,Helvetica"><b>Search again or search within these results to refine your query.</b></font></td>
 	</tr>
 	</table>
 
 </a>
 <table width=100% cellpadding=0 cellspacing=0 border=0 bgcolor="#CCCCCC">
-	<tr><td colspan="5" align=center valign=middle bgcolor=#CCCCCC>
-		<img src="/images/clear.gif" width="1" height="4" border="0" hspace="0" vspace="0"><br>
-	</td></tr>
+	<tr><td colspan="5" align=left valign=middle bgcolor=#CCCCCC>
+        <img src="/images/clear.gif" width="1" height="4" border="0" hspace="0" vspace="0"></td></tr>
 	<tr><td bgcolor="#CCCCCC">
 		&nbsp; 
 	</td><td colspan=3 align=left valign=middle bgcolor="#CCCCCC">
@@ -310,7 +340,7 @@ Search Box&nbsp;</font></b></td><td valign=middle align=right width=70% nowrap>
 	</td><td rowspan=2 valign=middle align=center bgcolor="#CCCCCC">
 
 <!  DAILY CONTENT>
-<a href="/redirect?sv=IS&lk=&ak=SEEK&rl=LINK_T100_Searchbox_Promo_express&rd=http://express.infoseek.com/button_jump.html"><img src="/cimages?SEEK_T100_Searchbox_Promo_urlkey0_19981014_000931_0.gif&col=SL " alt="Express by Infoseek" border=0></a>
+<a href="/redirect?sv=IS&lk=&ak=ACC2&rl=LINK_T106_Searchbox_Promo_netsonic&rd=http://www.infoseek.com/Web3000?pg=netsonic.html"><img src="/cimages?SEEK_T106_Searchbox_Promo_urlkey0_19981130_113743_0.gif&col=SL " alt="Netsonic " border="0 " Foo ></a>
 <!  END CONTENT>	</td></tr>
 	<tr><td bgcolor="#CCCCCC">
 		&nbsp; 
@@ -329,7 +359,7 @@ Search Box&nbsp;</font></b></td><td valign=middle align=right width=70% nowrap>
 
                                 <table border="0" cellpadding="0" cellspacing="0">
                                         <tr><td align=right>
-                                                <input type="submit" value="Company Capsules" name="col">
+						<input type="submit" value="Company capsules" name="col">
                                         </td><td>
                                                 &nbsp;or&nbsp;
                                         </td><td>
@@ -381,7 +411,7 @@ Search Box&nbsp;</font></b></td><td valign=middle align=right width=70% nowrap>
 
 	</td></tr>
 </table>
-<p> 
+<center><a href="http://www.infoseek.com/redirect?sv=IS&lk=&tid=&ak=MIMG-2001-1003-K1557&rd=http://expedia.msn.com/daily/scripts/eap.asp?intro=http:%2F%2Fexpedia.msn.com%2FPromos%2Flh%2Fdefault.asp&EAPid=408-1" target="_top"><img border=1 width=468 height=60 src="/ads/MIMG1003.gif" alt="[Microsoft IMG Expedia]"><br><b>Click here</b></a></center><p> 
 <center>
 <font face="Arial, Helvetica" size=-2><a href="/doc?pg=copyright.html&nh=25">Copyright</a> &#169; 1994-98 <a href="http://info.infoseek.com/">Infoseek&nbsp;Corporation</a>. 
 <br>All rights reserved.&nbsp;

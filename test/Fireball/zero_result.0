@@ -49,7 +49,7 @@
 <tr>
 <td align="right"><b><font face="arial,helvetica" size="1">Nach: </font></b></td>
 <td align="left" colspan="3" width="387">
-<INPUT TYPE="text" name="q" VALUE="+LSAM +BogusNoSuchWordSpammersAreIdiots" SIZE=30>&nbsp;
+<INPUT TYPE="text" name="q" VALUE="BogusNoSuchWordSpammersAreIdiots" SIZE=30>&nbsp;
 <input TYPE="submit" VALUE="suchen"></td>
 </tr>
 <tr>
@@ -101,9 +101,21 @@
   <tr>
     <td valign="top" WIDTH="25" bgcolor="#CC0000"><img SRC="bilder/verschiedenes/1.gif" alt="" BORDER="0" width="1"
     height="1"></td>
-    <td bgcolor="#FFFFCC">&nbsp;<A HREF="/forward-fireball.fcg?action=sforward&furl=http%3A%2F%2Fwww.boulevard.de%2Findex.phtml%3Fsc%3D10015001%26aktion%3Dprofisuche%26schlagwort%3DLSAM%2BBogusNoSuchWordSpammersAreIdiots&rurl=%2Fquery%2Dfireball%2Dplus%2Dstart%2D1%2Efcg%3Fwhat%3Dgerman%5Fweb%26action%3Dquery%26fmt%3Dd%26pg%3Dexpress%26q%3D%252BLSAM%2B%252BBogusNoSuchWordSpammersAreIdiots" target="_blank"><font face="arial,helvetica">Hier finden Sie Bücher zu Ihrer Suchanfrage.</font></a></td>
-	<td bgcolor="#FFFFCC" align="right"><A HREF="/forward-fireball.fcg?action=sforward&furl=http%3A%2F%2Fwww.boulevard.de%2Findex.phtml%3Fsc%3D10015001%26aktion%3Dprofisuche%26schlagwort%3DLSAM%2BBogusNoSuchWordSpammersAreIdiots&rurl=%2Fquery%2Dfireball%2Dplus%2Dstart%2D1%2Efcg%3Fwhat%3Dgerman%5Fweb%26action%3Dquery%26fmt%3Dd%26pg%3Dexpress%26q%3D%252BLSAM%2B%252BBogusNoSuchWordSpammersAreIdiots" target="_blank"><img src="bilder/werbung/bol_68_29.gif" border="0" alt="Boulevard Online" width="68" height="29"></a></td>
+    <td bgcolor="#FFFFCC">&nbsp;<A HREF="/forward-fireball.fcg?action=sforward&furl=http%3A%2F%2Fwww.boulevard.de%2Findex.phtml%3Fsc%3D10015001%26aktion%3Dprofisuche%26schlagwort%3DBogusNoSuchWordSpammersAreIdiots&rurl=%2Fquery%2Dfireball%2Db%2Dc%2Efcg%3Fwhat%3Dgerman%5Fweb%26action%3Dquery%26fmt%3Dd%26pg%3Dexpress%26q%3DBogusNoSuchWordSpammersAreIdiots" target="_blank"><font face="arial,helvetica">Hier finden Sie Bücher zu Ihrer Suchanfrage.</font></a></td>
+	<td bgcolor="#FFFFCC" align="right"><A HREF="/forward-fireball.fcg?action=sforward&furl=http%3A%2F%2Fwww.boulevard.de%2Findex.phtml%3Fsc%3D10015001%26aktion%3Dprofisuche%26schlagwort%3DBogusNoSuchWordSpammersAreIdiots&rurl=%2Fquery%2Dfireball%2Db%2Dc%2Efcg%3Fwhat%3Dgerman%5Fweb%26action%3Dquery%26fmt%3Dd%26pg%3Dexpress%26q%3DBogusNoSuchWordSpammersAreIdiots" target="_blank"><img src="bilder/werbung/bol_68_29.gif" border="0" alt="Boulevard Online" width="68" height="29"></a></td>
   </tr>
+  
+  <tr>
+    <td valign="top" WIDTH="25"><img src="bilder/verschiedenes/1.gif" alt="" width="21" height="1"></td>
+    <td></td>
+	<td></td>
+  </tr>
+<tr>
+<td valign="top" WIDTH="25" bgcolor="#CC0000"><img SRC="bilder/verschiedenes/1.gif" alt="" BORDER="0" width="1" height="1"></td>
+<td bgcolor="#FFFFCC">&nbsp;<A HREF="/forward-fireball.fcg?action=sforward&furl=http%3A%2F%2Fwww.cd4you.de&rurl=%2Fquery%2Dfireball%2Db%2Dc%2Efcg%3Fwhat%3Dgerman%5Fweb%26action%3Dquery%26fmt%3Dd%26pg%3Dexpress%26q%3DBogusNoSuchWordSpammersAreIdiots" target="_blank"><font face="arial,helvetica">CDs zu Ihrer Musikanfrage gibt es hier:</font></a></td>
+<td bgcolor="#FFFFCC" align="right"><A HREF="/forward-fireball.fcg?action=sforward&furl=http%3A%2F%2Fwww.cd4you.de&rurl=%2Fquery%2Dfireball%2Db%2Dc%2Efcg%3Fwhat%3Dgerman%5Fweb%26action%3Dquery%26fmt%3Dd%26pg%3Dexpress%26q%3DBogusNoSuchWordSpammersAreIdiots" target="_blank"><img src="bilder/werbung/Primus-Promo-cd-68x29-261198.gif" border="0" alt="Boulevard Online" width="68" height="29"></a></td>
+</tr>
+
   <tr>
     <td valign="top" WIDTH="25"><img src="bilder/verschiedenes/1.gif" alt="" width="21" height="1"></td>
     <td></td>
@@ -123,9 +135,9 @@
 <td>
 
 <!--- advertisement stuff (forward-daemon, banner, zmod-daemon, zmod-module) - context-sensitive ad-engine developed by FLP/KIT --->
-<A HREF="/forward-fireball.fcg?action=forward&furl=http%3A%2F%2Fwww%2Eonline%2Dtoday%2Ede%2Fshareware%2Ffb%2Ehbs&rurl=CP%2Fquery%2Dfireball%2Dplus%2Dstart%2D1%2Efcg&adID=1881&imageName=%2Fwerbung%2FTVT%5Fonline%5FSoftware%2Egif&matchReason=express&customerName=12"><IMG SRC="/werbung/TVT_online_Software.gif" ALT="TV Today Network" BORDER=0></A>
-<IMG SRC="/zmod-fireball.fcg?page=CP%2Fquery%2Dfireball%2Dplus%2Dstart%2D1%2Efcg&ad=1881&imageName=%2Fwerbung%2FTVT%5Fonline%5FSoftware%2Egif&matchReason=express&customerName=12&info=localQuery#" WIDTH=1 HEIGHT=1>
-<IMG SRC="/cgi-bin/vdz/CP/query-fireball-plus-start-1.fcg/1881%3A/werbung/TVT_online_Software.gif%3Aexpress%3A12" WIDTH=1 HEIGHT=1>
+<A HREF="/forward-fireball.fcg?action=forward&furl=http%3A%2F%2Fshop%2Eguj%2Ede%2F&rurl=CP%2Fquery%2Dfireball%2Db%2Dc%2Efcg&adID=2268&imageName=%2Fwerbung%2Ffireball%2Dkollektion%2D468%2D091298%2Egif&matchReason=express&customerName=5"><IMG SRC="/werbung/fireball-kollektion-468-091298.gif" ALT="Fireball Kollektion" BORDER=0></A>
+<IMG SRC="/zmod-fireball.fcg?page=CP%2Fquery%2Dfireball%2Db%2Dc%2Efcg&ad=2268&imageName=%2Fwerbung%2Ffireball%2Dkollektion%2D468%2D091298%2Egif&matchReason=express&customerName=5&info=localQuery#" WIDTH=1 HEIGHT=1>
+<IMG SRC="/cgi-bin/vdz/CP/query-fireball-b-c.fcg/2268%3A/werbung/fireball-kollektion-468-091298.gif%3Aexpress%3A5" WIDTH=1 HEIGHT=1>
 <!--- end of advertisement stuff --->
 
 </td>
@@ -158,7 +170,7 @@
 	<!--- term statistics --->
         &nbsp;
 <!--- term statistics --->
-<FONT FACE="Arial,Helvetica" SIZE=-1>Worth&auml;ufigkeiten: LSAM: 0; BogusNoSuchWordSpammersAreIdiots: 0</FONT>
+<FONT FACE="Arial,Helvetica" SIZE=-1>Worth&auml;ufigkeiten: BogusNoSuchWordSpammersAreIdiots: 0</FONT>
 <!--- end term statistics --->
 
 
@@ -214,7 +226,7 @@ Keine passenden Dokumente gefunden.
     <td width="25" bgcolor="#CC0000">&nbsp; </td>
     <td bgcolor="#FFCC00"><font face="arial,helvetica" size="2"><b>&nbsp;&nbsp;<a href="#top">Seitenanfang</a></b></font></td>
     <td bgcolor="#FFCC00"><font face="arial,helvetica" size="2"><b></b></font></td>
-    <td bgcolor="#FFCC00"><font face="arial,helvetica" size="2"><b><A HREF="/query-fireball.fcg?action=query&pg=express&fmt=d&r=&q=%2BLSAM+%2BBogusNoSuchWordSpammersAreIdiots&stq=11&d0=&d1=&what=german_web" TARGET=_top>n&auml;chste Seite</A> </b></font></td>
+    <td bgcolor="#FFCC00"><font face="arial,helvetica" size="2"><b><A HREF="/query-fireball.fcg?action=query&pg=express&fmt=d&r=&q=BogusNoSuchWordSpammersAreIdiots&stq=11&d0=&d1=&what=german_web" TARGET=_top>n&auml;chste Seite</A> </b></font></td>
     <td bgcolor="#FFFFCC">&nbsp; </td>
     <td bgcolor="#FFFFCC">&nbsp; </td>
   </tr>
@@ -236,7 +248,7 @@ Keine passenden Dokumente gefunden.
     <td WIDTH="518">
 
 <!--- (last) advertisement stuff (forward-daemon, banner) --->
-<A HREF="/forward-fireball.fcg?action=forward&furl=http%3A%2F%2Fwww%2Eonline%2Dtoday%2Ede%2Fshareware%2Ffb%2Ehbs&rurl=CP%2Fquery%2Dfireball%2Dplus%2Dstart%2D1%2Efcg&adID=1881&imageName=%2Fwerbung%2FTVT%5Fonline%5FSoftware%2Egif&matchReason=express&customerName=12"><IMG SRC="/werbung/TVT_online_Software.gif" BORDER=0></A>
+<A HREF="/forward-fireball.fcg?action=forward&furl=http%3A%2F%2Fshop%2Eguj%2Ede%2F&rurl=CP%2Fquery%2Dfireball%2Db%2Dc%2Efcg&adID=2268&imageName=%2Fwerbung%2Ffireball%2Dkollektion%2D468%2D091298%2Egif&matchReason=express&customerName=5"><IMG SRC="/werbung/fireball-kollektion-468-091298.gif" BORDER=0></A>
 <!--- end of (last) advertisement stuff --->
 
 </td>
@@ -280,8 +292,8 @@ Keine passenden Dokumente gefunden.
             <a href="http://www.fireball.de/surftips/art/mu.idx.html">Musik</a><br>
             <a href="http://www.fireball.de/surftips/art/re.idx.html">Reisen</a><br>
             <a href="http://www.fireball.de/surftips/art/spi.idx.html">Spiel &amp; Spaß</a><br>
-            <a href="http://www.fireball.de/surftips/art/spo.idx.html">Sport &amp; Karriere</a><br>
-            <a href="http://www.fireball.de/surftips/art/wi.idx.html">Wirtschaft</a></font></td>
+            <a href="http://www.fireball.de/surftips/art/spo.idx.html">Sport</a><br>
+            <a href="http://www.fireball.de/surftips/art/wr.idx.html">Wirtschaft</a></font></td>
           </tr>
         </table>
         </td>

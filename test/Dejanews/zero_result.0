@@ -2,9 +2,14 @@
 <head>
 <title>Search Results</title>
 <meta name=keywords content="dejanews usenet newsgroup articles search query discussion">
+
+
+
 </head>
 
 <body bgcolor=#ffffff text=#000000 link=#0000ff vlink=#52188c alink=#cc0000>
+
+
 
 
 
@@ -25,54 +30,36 @@
 
 
 <map name="nav_g.map">
-    <area shape="rect" coords="5,0,110,50" href="http://www.dejanews.com/" alt="Home">
-    <area shape="rect" coords="150,0,435,25" href="http://www.dejanews.com/emarket/" alt="About Deja News">
-    <area shape="rect" coords="150,30,250,50" href="http://www.dejanews.com/rg_enter.xp" alt="My Deja News">
-    <area shape="rect" coords="270,30,310,50" href="http://www.dejanews.com/post.xp" alt="Post">
-    <area shape="rect" coords="335,30,432,50" href="http://www.dejanews.com/home_ps.shtml" alt="Power Search">
-    <area shape="rect" coords="460,0,500,40" href="http://www.dejanews.com/" alt="Home">
-    <area shape="rect" coords="525,0,565,40" href="http://www.dejanews.com/" alt="Search">
-    <area shape="rect" coords="590,0,625,40" href="http://www.dejanews.com/help/help_index.shtml" alt="Help">
-    <area shape="default" nohref alt="">
+<area shape="rect" coords="5,0,110,50" href="http://www.dejanews.com/" alt="Home">
+<area shape="rect" coords="150,0,435,25" href="http://www.dejanews.com/emarket/" alt="About Deja News">
+<area shape="rect" coords="150,30,250,50" href="http://www.dejanews.com/rg_enter.xp" alt="My Deja News">
+<area shape="rect" coords="270,30,310,50" href="http://www.dejanews.com/post.xp" alt="Post">
+<area shape="rect" coords="335,30,432,50" href="http://www.dejanews.com/home_ps.shtml" alt="Power Search">
+<area shape="rect" coords="460,0,500,40" href="http://www.dejanews.com/" alt="Home">
+<area shape="rect" coords="525,0,565,40" href="http://www.dejanews.com/" alt="Search">
+<area shape="rect" coords="590,0,625,40" href="http://www.dejanews.com/help/help_index.shtml" alt="Help">
+<area shape="default" nohref alt="">
 </map>
+
 
 
 
 <table border=0 cellpadding=0 cellspacing=0 width=640>
 <tr><td height=1><font size=0>&nbsp;</font></td></tr>
 <tr><td align=center>
+<table border=0 cellpadding=0 cellspacing=0 width=470>
+<tr><td align=center>
 <table cellspacing=0 cellpadding=0 width=470 border=0><tr><td>
-<A HREF="http://gp1.dejanews.com/gtc?id=18012&tm=908570191.642996&site=dn&location=hitlist&keywords=mrfglbqnx%20bogusnosuchwordspammersareidiots&cr=%7c%7c%7c%7c%7c%7c%7c%7c">
-<IMG ALIGN=MIDDLE HEIGHT=60 WIDTH=468 SRC="http://web2.dejanews.com/ads/77/2614348077-11771.gif" ALT="uBid Online Auction" border=1></A></td></tr><tr align=center><td><font size=-1><A HREF="http://gp1.dejanews.com/gtc?id=18012&tm=908570191.642996&site=dn&location=hitlist&keywords=mrfglbqnx%20bogusnosuchwordspammersareidiots&cr=%7c%7c%7c%7c%7c%7c%7c%7c">
-uBid Online Auction</a></font></td></tr>
+<A HREF="http://gp1.dejanews.com/gtc?id=19704&tm=913314345.246325&site=dn&location=hitlist&keywords=bogusnosuchwordspammersareidiots&cr=%7c%7c%7c%7c%7c%7c%7c%7c">
+<IMG ALIGN=MIDDLE HEIGHT=60 WIDTH=468 SRC="http://web2.dejanews.com/ads/76/1233048076-8753.gif" ALT="Stay on the leading edge with the IBM Developer Connection" border=1></A></td></tr><tr align=center><td><font size=-1><A HREF="http://gp1.dejanews.com/gtc?id=19704&tm=913314345.246325&site=dn&location=hitlist&keywords=bogusnosuchwordspammersareidiots&cr=%7c%7c%7c%7c%7c%7c%7c%7c">
+Stay on the leading edge with the IBM Developer Connection</a></font></td></tr>
 </table>
-
-
+</td></tr></table>
 
 </td></tr>
 </table>
 
-<p>
-<table width=640 border=0 cellpadding=0 cellspacing=0><tr>
-<td bgcolor="#003399" height=5 colspan=2><spacer type=block height=5 width=0></td></tr>
-<tr valign=top><td><font color="#ff6600" face="arial,helvetica" size=4><b>If you can't find it, make it!</b></font></td>
-<td align=right></td></tr>
-</table>
-
-
-
-
-
-
-<p>
-<table border=0 width=640 cellspacing=0 cellpadding=0>
-<tr align=left valign=middle><td>
-Couldn't find people talking about: mrfglbqnx AND BogusNoSuchWordSpammersAreIdiots?  Why don't you create a place for them to talk!  Make your own <A HREF=http://www.dejanews.com/rg_mkgrp.xp>Free Member Forum Here.</a>
-</td></tr></table>
-<p>
-
-
-
+<font size=0><p></font>
 
 <p>
 <table width=640 border=0 cellpadding=0 cellspacing=0><tr>
@@ -141,7 +128,7 @@ Typically you will find many more matches in our "Old" database.  If you used ou
 <table cellspacing=0 cellpadding=2 width=640 border=0>
 <tr valign=middle><td width=130 align=right valign=top><font face="arial,helvetica" size=+1 color=#ff6600><b>Power Search</b></font></td>
 <td width=20>&nbsp;</td>
-<td width=490><input type="text" name="QRY" size="30" value="mrfglbqnx AND BogusNoSuchWordSpammersAreIdiots"><input type="submit" value="Find"><br>
+<td width=490><input type="text" name="QRY" size="30" value="BogusNoSuchWordSpammersAreIdiots"><input type="submit" value="Find"><br>
 <font face="arial,helvetica" size=2>Find messages in the 
 
 <select name="DBS">
@@ -257,6 +244,20 @@ Typically you will find many more matches in our "Old" database.  If you used ou
 
 
 
+<table border=0 cellpadding=0 cellspacing=0 width=640>
+<tr><td height=1><font size=0>&nbsp;</font></td></tr>
+<tr><td align=center>
+<table border=0 cellpadding=0 cellspacing=0 width=470>
+<tr><td align=center>
+<table cellspacing=0 cellpadding=0 width=470 border=0><tr><td>
+<A HREF="http://gp1.dejanews.com/gtc?id=19704&tm=913314345.246325&site=dn&location=hitlist&keywords=bogusnosuchwordspammersareidiots&cr=%7c%7c%7c%7c%7c%7c%7c%7c">
+<IMG ALIGN=MIDDLE HEIGHT=60 WIDTH=468 SRC="http://web2.dejanews.com/ads/76/1233048076-8753.gif" ALT="Stay on the leading edge with the IBM Developer Connection" border=1></A></td></tr><tr align=center><td><font size=-1><A HREF="http://gp1.dejanews.com/gtc?id=19704&tm=913314345.246325&site=dn&location=hitlist&keywords=bogusnosuchwordspammersareidiots&cr=%7c%7c%7c%7c%7c%7c%7c%7c">
+Stay on the leading edge with the IBM Developer Connection</a></font></td></tr>
+</table>
+</td></tr></table></td></tr></table>
+
+
+
 
 <table cellspacing=0 cellpadding=0 border=0 width=640>
 <tr height=10><td>&nbsp;</td></tr>
@@ -275,43 +276,40 @@ Typically you will find many more matches in our "Old" database.  If you used ou
 </font>
 <br>
 
-<p>
-<font size=2 face="arial,helvetica">
-<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.auctions&cid=289153631">Auctions</a> &nbsp;|&nbsp;
-<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.voicenet2&cid=289153631">Best Calling Card in America!</a>&nbsp;|&nbsp;
-<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.ibmsdplead&cid=289153631">Developer Resources</a>&nbsp;|&nbsp;
-<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.infospace&cid=289153631">Directories</a>&nbsp;|&nbsp;
-<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.infoseek&cid=289153631">Express by Infoseek</a>
+<p><font size=2 face="arial,helvetica">
+<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.freeshop&cid=344122545">FREE STUFF @FreeShop!</a>&nbsp;|&nbsp;
+<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.ibmsdplead&cid=344122545">Developer Resources</a>&nbsp;|&nbsp;
+<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.infoseek&cid=344122545">Express by Infoseek</a>
+
+<br>
+<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.nextcard&cid=344122545">NextCard VISA 2.9% intro APR</a>&nbsp;|&nbsp;
+<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.infospace&cid=344122545">Directories</a>&nbsp;|&nbsp;
+<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.bfl&cid=344122545">Shopping</a>&nbsp;|&nbsp;
+<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.auctions&cid=344122545">Auctions</a>
 
 <br>
 <a href="http://uswestdex.com/dejanews.html">Yellow Pages</a>&nbsp;|&nbsp;
-<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.emaildirect&cid=289153631">Free Coupons!</a>&nbsp;|&nbsp;
-<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.abc&cid=289153631">4 audiobooks for 1c. Click now</a>&nbsp;|&nbsp;
-<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.ubid&cid=289153631">Great Deals at uBid!</a>
-
+<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.abc&cid=344122545">Four audio books for a penny!</a>&nbsp;|&nbsp;
+<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.ubid&cid=344122545">Get Great Deals at uBid!</a>
 
 <br>
-<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.datek&cid=289153631">Trade Now! with Datek Online</a>&nbsp;|&nbsp;
-<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.networksolutions&cid=289153631">DOT COM IT with Network Solutions</a>
+<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.datek&cid=344122545">Trade Now! with Datek Online</a>&nbsp;|&nbsp;
+<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.uproar&cid=344122545">Win CASH on Uproar game shows!</a>
 <br>
-
-
-
 </font>
 </font>
 
 <p>
 <font size=1 face="arial,helvetica">
 <a href="http://www.dejanews.com/help/newusers.shtml">New Users</a> &#183;
-<a href="http://www.dejanews.com/emarket/">About Deja News</a> &#183;
-<a href="http://www.dejanews.com/emarket/programs/">Ad Info</a> &#183;
-<a href="http://www.dejanews.com/emarket/programs/ad_index.shtml">Our Advertisers</a> &#183;
+<a href="http://www.dejanews.com/corp/">About Deja News</a> &#183;
+<a href="http://www.dejanews.com/corp/adv/">Ad Info</a> &#183;
+<a href="http://www.dejanews.com/corp/adv/ad_index.shtml">Our Advertisers</a> &#183;
 <a href="http://www.storedejanews.com/">Deja News Store</a>
 <br>
 <a href="http://www.dejanews.com/rg_enter.xp">Free Web Email</a> &#183;
 <a href="http://www.dejanews.com/info/linkback.shtml">Link to Deja News</a> &#183;
-<a href="http://www.dejanews.com/rg_mkgrp.xp">Create Your Own Forum</a>
-</font>
+<a href="http://www.dejanews.com/rg_mkgrp.xp">Create Your Own Community</a></font>
 
 <p>
 <hr width=325>
@@ -324,5 +322,10 @@ Typically you will find many more matches in our "Old" database.  If you used ou
 
 </td></tr></table>
 
+
+
+
+
+ 
 </body>
 </html>

@@ -1,288 +1,324 @@
 <html>
-<!--  (Build 2055) -->
+
+<!--Northern Light Simple Search Results (Build 2164)-->
 <!--    -->
 
-<head> 
-<title>Northern Light Search: +Biathlon +weltcups +Athleten +deutschland</title>
+<head>
+ <title>Northern Light Search: +Biathlon +weltcups +Athleten +deutschland</title>
 </head>
 
-<body bgcolor=white text="#000000" link="#0000ff">
+<body bgcolor=white alink=blue link=blue text=black>
 
-<!-- First table comprises logo, hit count, input form and submit/search help buttons -->
-
-<table border="0" cellspacing="0" cellpadding="0">
-
-<tr>
-<td width="220"><img src="docs/gif/transparent.gif" width=220 height=1></td>
-<td width="38"><img src="docs/gif/transparent.gif" width=38 height=1></td>
-<td width="472"><img src="docs/gif/transparent.gif" width=472 height=1></td>
-</tr>
-
-<tr>
-<td rowspan=3 valign=top width="220"><font size=1>&nbsp;<br>&nbsp;</font><br>
-<a href=search.html><img src=docs/gif/nlt_logo.gif width=112 height=100 hspace=25 border=0 alt="Northern Light Technology LLC"></a><br>
-</td>
-<td>&nbsp;</td>
-<td colspan=2><font size="1">
-<a href="search.html">Simple Search</a>&nbsp;&nbsp;&nbsp;
-<a href="power.html">Power Search</a>&nbsp;&nbsp;&nbsp;
-<a href="pubsearch.html">Publication Search</a>&nbsp;&nbsp;&nbsp;
-<a href="industry.html">Industry Search</a>&nbsp;&nbsp;&nbsp;
-<a href="news.html">Current News</a>
-<br>&nbsp;<br></font>
-
-<!-- and now a word from our sponsor -->
-<nolayer>
-<IFRAME SRC="http://ad.doubleclick.net/adi/northernlight.com/results;kw=Biathlon+weltcups+Athleten+deutschland;ord=908572254" MARGINWIDTH=0 MARGINHEIGH=0 WIDTH=468 HEIGHT=60 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING="no">
-<A HREF="http://ad.doubleclick.net/jump/northernlight.com/results;kw=Biathlon+weltcups+Athleten+deutschland;ord=908572254">
-<IMG SRC="http://ad.doubleclick.net/ad/northernlight.com/results;kw=Biathlon+weltcups+Athleten+deutschland;ord=908572254" WIDTH=468 HEIGHT=60 ALT="please visit our sponsor" border=0></A></font>
-</iframe>
-</nolayer>
-<ilayer id=snap visibility=hide width=468 height=63></ilayer>
-<!-- end -->
-
-<br><img src="docs/gif/transparent.gif" width=1 height=6><br>
-</td>
-</tr>
-
-<tr>
-<td>&nbsp;</td>
-<td valign=top><font size=2><b>5 items</b><!-- result --> found <!-- end --><!-- audit cluster -->  <!-- result -->for:<!-- end --></font></td>
-</tr>
-
-<form action="/nlquery.fcg" method=get>
-<input type=hidden name=ho value="">
-<input type=hidden name=po value="">
-<tr>
-<td>&nbsp;</td>
-<td colspan=3 valign=top>
-<table border="0" cellspacing=0 cellpadding=0><tr>
-<td><input type=text size=27 name=qr maxsize=100 value="+Biathlon +weltcups +Athleten +deutschland"></td>
-<td>&nbsp;</td>
-<td nowrap><input type=image name=sb src=docs/gif/srchbtn1.gif border=0 align=top width=74 height=28 alt=Search><nobr><a href=docs/prod_help.htm#simplesearch><img src=docs/gif/searchhelp.gif border=0 align=top width=85 height=28 alt="Help/Hints"></a></td>
-</tr></table>
-</td>
-</tr>
-<input type=hidden name=si value="">
-<input type=hidden name=cc value=" ">
-<input type=hidden name=us value="">
-<input type=hidden name=xd value="">
-</table>
-</form>
-
-<!--
-The next table contains headers for the remaining columns,
-including the dynamic category that spans all rows.
--->
-
-<table border="0" cellspacing="0" cellpadding="0" width="730">
-
-<tr>
-  <td width="220"><img src="docs/gif/transparent.gif" width=220 height=1></td>
-  <td width="38"><img src="docs/gif/transparent.gif" width=38 height=1></td>
-  <td width="365"><img src="docs/gif/transparent.gif" width=365 height=1></td>
-  <td><img src="docs/gif/transparent.gif" width=1 height=1></td>
-  <td><img src="docs/gif/transparent.gif" width=1 height=1></td>
-</tr>
-
-<tr>
-
-<!-- The dynamic category column... -->
-<!-- Reset tableIndent, which was 1, is now reset to: 1 -->
-
-<td rowspan="8" valign="top" width="220"><font size=2>
-
-<!-- any clusters -->
-
-<table border="0" cellspacing="0">
-<tr><td colspan=4>
-<!-- audit cluster -->
-</td></tr>
-
-<!-- news cluster -->
-<tr>
-<td><font size=1>&nbsp;&nbsp;</font></td>
-<td valign=middle align=right><a href=/nlquery.fcg?qr=%2bBiathlon+%2bweltcups+%2bAthleten+%2bdeutschland&dr=14&dx=1006&us=025&rv=1><img src=docs/gif/folderx.gif width=22 height=15 border=0></a><br><img src=docs/gif/transparent.gif border=0 width=1 height=3><br></td>
-<td><font size=1>&nbsp;&nbsp;</font></td>
-<td valign=middle><font size=2><a href=/nlquery.fcg?qr=%2bBiathlon+%2bweltcups+%2bAthleten+%2bdeutschland&dr=14&dx=1006&us=025&rv=1>Search Current News</a></font><br><img src=docs/gif/transparent.gif border=0 width=1 height=1><br></td>
-</tr>
-<!-- end -->
-
-<!-- cluster -->
-
-<tr><td></td><td colspan=3 align=center valign=top>
-<font size=2>
-
-<!-- any clusters -->
-
-  &nbsp;<br>
-  <a href=search.html><img src=docs/gif/startover.gif width=104 height=29 border=0 alt="Start Over"></a>
-  
-  </font></td>
-</tr></table>
-</td>
-
-<!-- End of the Dynamic Categories Column -->
-
-<td width="38">&nbsp;</td><td colspan=3 valign=bottom><img src="docs/gif/searchresults.gif" width="372" height=28 border=0 alt="Documents that best match your search"><br>&nbsp;</td><td>&nbsp;</td>
-</tr>
-
-<!-- result -->
-  <tr>
-    
-  <td align=right valign=top><font size=2>1.&nbsp;&nbsp;</font></td>
+<!--Search box, logos and banner------------------------------>
+	
+<table border=0 cellspacing=0 cellpadding=0>
+ <tr>
+  <td width=25 rowspan=3><img src="docs/gif/transparent.gif" width=25 height=1 alt=""></td>
+  <td width=195><img src="docs/gif/transparent.gif" width=195 height=1 alt=""></td>
+  <td width=38><img src="docs/gif/transparent.gif" width=38 height=1 alt=""></td>
+  <td width=472><img src="docs/gif/transparent.gif" width=472 height=1 alt=""></td>
+ </tr>
+ <tr>
   <td valign=top>
-    <font size=2>
-    <a href="http://germany-live.de/gl/Artikel/Sport/1997-01/Index.html">Ressort Sport - Artikelübersicht... </a><br>
-    <b>99% - Directories & Lists:</b>&nbsp;   Ressort Sport - Artikel&uuml;bersicht...        Artikel&uuml;bersicht... Januar 1997                Freitag, 31.... Date Not Available<br>
-    <b>German sites:</b>&nbsp;&nbsp;http://germany-live.de /gl/Artikel /Sport/1997-01 /Index.html<br>
-    </font>
-    &nbsp;
+   <a href="search.html"><img src="docs/gif/nlt_logo.gif" width=112 height=100 border=0 alt="Northern Light Technology"></a><br>
+   <img src="docs/gif/transparent.gif" width=1 height=5 border=0 alt=""><br>
   </td>
-  <td><img src=docs/gif/transparent.gif border=0 width=25 height=1></td>
-  <td valign=center><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
-  </tr>
-<!-- end -->
-  <tr>
-    
-  <td align=right valign=top><font size=2>2.&nbsp;&nbsp;</font></td>
-  <td valign=top>
-    <font size=2>
-    <a href="http://www.olympia.de/pages/news/news0602.html">News vom 6.2.</a><br>
-    <b>93% - Articles & General info:</b>&nbsp;     News vom 6.2.                  Zur&uuml;ck zum News Archiv                                               NEWS VOM     6.... 03/04/98<br>
-    <b>German sites:</b>&nbsp;&nbsp;http://www.olympia.de /pages/news /news0602.html<br>
-    </font>
-    &nbsp;
-  </td>
-  <td><img src=docs/gif/transparent.gif border=0 width=25 height=1></td>
-  <td valign=center><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
-  </tr>
-<!-- end -->
-  <tr>
-    
-  <td align=right valign=top><font size=2>3.&nbsp;&nbsp;</font></td>
-  <td valign=top>
-    <font size=2>
-    <a href="http://www.visa.de/ap/olympia/news3.htm">Visa - Olympia '98 - News</a><br>
-    <b>92% - Directories & Lists:</b>&nbsp;  Visa - Olympia '98 - News     browserName = navigator.appNam...  browserVer = parseInt(navigat...  if (browserName == &quot;Netscape&quot; && browserVer >= 3) version = &quot;n4&quot;;  else version... 02/27/98<br>
-    <b>German sites:</b>&nbsp;&nbsp;http://www.visa.de /ap/olympia /news3.htm<br>
-    </font>
-    &nbsp;
-  </td>
-  <td><img src=docs/gif/transparent.gif border=0 width=25 height=1></td>
-  <td valign=center><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
-  </tr>
-<!-- end -->
-  <tr>
-    
-  <td align=right valign=top><font size=2>4.&nbsp;&nbsp;</font></td>
-  <td valign=top>
-    <font size=2>
-    <a href="http://www.azag.ch/nagano98/story1702.htm">Nagano Story 0702</a><br>
-    <b>92% - Articles & General info:</b>&nbsp;    Nagano Story 0702       STEHRAMPE  Checklose Puckjägerinnen  HANSRUEDI CAMENISCH  Im Big-Hat-Stadion zu Nagano zelebrieren diese Woche die weltbesten Eishockeystars aus der National Hockey League (NHL) ihre... 02/18/98<br>
-    <b>Swiss sites:</b>&nbsp;&nbsp;http://www.azag.ch /nagano98/story1702.htm<br>
-    </font>
-    &nbsp;
-  </td>
-  <td><img src=docs/gif/transparent.gif border=0 width=25 height=1></td>
-  <td valign=center><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
-  </tr>
-<!-- end -->
-  <tr>
-    
-  <td align=right valign=top><font size=2>5.&nbsp;&nbsp;</font></td>
-  <td valign=top>
-    <font size=2>
-    <a href="http://sport.de/spart/oly/1998/oly008.html">Sport im Deutschen Internet - Olympia 1998 (Nachrichten)</a><br>
-    <b>92% - Articles & General info:</b>&nbsp;  Sport im Deutschen Internet - Olympia 1998 (Nachrichten)          Nachrichten    Sporthilfe Eine Million Mark f&uuml;r «Goldrausch von Nagano» Dienstag, 24. Februar 1998 Frankfurt/Main - Der «Goldrausch... Date Not Available<br>
-    <b>German sites:</b>&nbsp;&nbsp;http://sport.de /spart/oly/1998 /oly008.html<br>
-    </font>
-    &nbsp;
-  </td>
-  <td><img src=docs/gif/transparent.gif border=0 width=25 height=1></td>
-  <td valign=center><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
-  </tr>
-<!-- end -->
-
-</table>
-
-<table border="0" cellspacing="0" cellpadding="0" width="730">
-
-<tr>
-<td width="225"><img src="docs/gif/transparent.gif" width=225 height=1></td>
-<td width="10"><img src="docs/gif/transparent.gif" width=10 height=1></td>
-<td width="495"><img src="docs/gif/transparent.gif" width=495 height=1></td>
-</tr>
-
-<tr>
   <td>&nbsp;</td>
-  <td colspan=2 valign=top><table border=0>
+  <td colspan=2 valign=top><font size=1>
+   <a href="search.html">Simple Search</a>&nbsp;&nbsp;&nbsp;
+   <a href="power.html">Power Search</a>&nbsp;&nbsp;&nbsp;
+   <a href="pubsearch.html">Publication Search</a>&nbsp;&nbsp;&nbsp;
+   <a href="industry.html">Industry Search</a>&nbsp;&nbsp;&nbsp;
+   <a href="news.html">Current News</a>
+   <br>&nbsp;<br>
+   </font>
+   <!-- and now a word from our sponsor -->
+   <nolayer>
+   <!--iframe src="http://ad.doubleclick.net/adi/northernlight.com/results;kw=Biathlon+weltcups+Athleten+deutschland;ord=913314522" marginwidth=1 marginheight=0 width=468 height=60 hspace=0 vspace=0 frameborder=0 scrolling="no"-->
+   <iframe src="http://ad.doubleclick.net/adi/northernlight.com/results;kw=Biathlon+weltcups+Athleten+deutschland;ord=913314522" marginwidth=1 marginheight=1 width=468 height=60 frameborder=0 scrolling="no">
+   <!--NLBannerStart-->
+   <a href="http://ad.doubleclick.net/jump/northernlight.com/results;kw=Biathlon+weltcups+Athleten+deutschland;ord=913314522"><img src="http://ad.doubleclick.net/ad/northernlight.com/results;kw=Biathlon+weltcups+Athleten+deutschland;ord=913314522" width=468 height=60 alt="please visit our sponsor" border=0></a>
+   <!--NLBannerEnd-->
+   </iframe>
+   </nolayer>
+   <!--ilayer id=snap visibility=hidden width=468 height=63></ilayer-->
+   <ilayer id=snap visibility=hidden width=468 height=63></ilayer>
+   <!-- end -->
+   <br><img src="docs/gif/transparent.gif" width=1 height=6 alt=""><br>
+  </td>
+ </tr>
+ <tr>
+ <!-- keywords cluster -->
+  <td valign=middle>
+<table border=0 cellspacing=0 cellpadding=0 width=110>
+ <tr>
+<td align=center><font size=2>
+ <img src="docs/gif/transparent.gif" width=1 height=5 border=0 alt=""><br>
+ <a href="http://barnesandnoble.bfast.com/booklink/click?sourceid=222869&categoryid=homepage">Buy books at</a>&nbsp;<br>
+ <img src="docs/gif/transparent.gif" width=110 height=3 border=0 alt=""><br>
+ <a href="http://barnesandnoble.bfast.com/booklink/click?sourceid=222869&categoryid=homepage"><img src="docs/gif/bn_logo_results.gif" width=80 height=20 border=0 alt="barnesandnoble.com"></a><br>
+</font></td>
+ </tr>
+</table>
+  </td>
+  <!-- end -->
+  <td>&nbsp;</td>
+  <td colspan=3 valign=middle>
+   <table border=0 cellspacing=1 cellpadding=0>
+   <form action="/nlquery.fcg" method=get>
+    <input type=hidden name=ho value="">
+    <input type=hidden name=po value="">
+    <input type=hidden name=si value="">
+    <input type=hidden name=cc value=" ">
+    <input type=hidden name=us value="025">
+    <input type=hidden name=xd value="">
+    <tr>
+     <td colspan=3><img src="docs/gif/transparent.gif" width=1 height=5 border=0 alt=""><br>
+      <font size=2><b>5 items</b><!-- result --> found <!-- end --><!-- audit cluster -->  <!-- result -->for:<!-- end --></font></td>
+    </tr>
+    <tr>
+     <td><input type=text size=27 name=qr value="+Biathlon +weltcups +Athleten +deutschland"></td>
+     <td>&nbsp;</td>
+     <td nowrap><input type=image name=sb src="docs/gif/srchbtn1.gif" maxlength=100 border=0 align=top alt="Search"><nobr><a href="docs/search_help_results.html"><img src="docs/gif/searchhelp.gif" border=0 align=top width=85 height=28 alt="Help/Hints"></a></nobr></td>
+    </tr>
+   </form>
+   </table>
+  </td>
+ </tr>
+</table>
 
-<!-- No previous results -->
+<!--Results--------------------------------------------------->
+	
+<table border=0 cellspacing=0 cellpadding=0 width=730>
+ <tr>
+  <td colspan=5><font size=1>&nbsp;</font></td>
+ </tr>
+ <tr>
+  <td width=220><img src="docs/gif/transparent.gif" width=220 height=1 alt=""></td>
+  <td width=38><img src="docs/gif/transparent.gif" width=38 height=1 alt=""></td>
+  <td width=365><img src="docs/gif/transparent.gif" width=365 height=1 alt=""></td>
+  <td><img src="docs/gif/transparent.gif" width=1 height=1 alt=""></td>
+  <td><img src="docs/gif/transparent.gif" width=1 height=1 alt=""></td>
+ </tr>
+ <tr>
+  <td rowspan=8 valign=top width=220><font size=2>
+  <!--Custom Search Folders(TM) span all rows-300:1----->
+  <!-- any clusters -->
+    <table border=0 cellspacing=0>
+     <tr>
+      <td colspan=4>
+      <!-- audit cluster -->
+     </td>
+    </tr>
+    <!-- news cluster -->
+    <tr>
+     <td><font size=1>&nbsp;&nbsp;</font></td>
+     <td valign=middle align=right><a href="/nlquery.fcg?qr=%2bBiathlon+%2bweltcups+%2bAthleten+%2bdeutschland&dr=14&dx=1006&us=025&rv=1"><img src="docs/gif/folderx.gif" width=22 height=15 border=0 alt=""></a><br>
+      <img src="docs/gif/transparent.gif" border=0 width=1 height=3 alt=""><br>
+     </td>
+     <td><font size=1>&nbsp;&nbsp;</font></td>
+     <td valign=middle><font size=2><a href="/nlquery.fcg?qr=%2bBiathlon+%2bweltcups+%2bAthleten+%2bdeutschland&dr=14&dx=1006&us=025&rv=2">Search Current News</a></font><br>
+      <img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""><br>
+     </td>
+    </tr>
+    <!-- end -->
+    <!-- cluster -->
+    <tr>
+     <td></td>
+     <td colspan=3 align=center valign=top><font size=2>
+     <!-- any clusters -->
+      &nbsp;<br>
+      <a href="search.html"><img src="docs/gif/startover.gif" width=104 height=29 border=0 alt="Start Over"></a>
+     </font></td>
+    </tr>
+   </table>
+  </td>
 
-<!-- No next results -->
+<!--Custom Search Folders(TM) end----------------------------->
+		  
+  <td width=38>&nbsp;</td>
+  <td colspan=3 valign=top>
+   <img src="docs/gif/transparent.gif" width=1 height=6 alt=""><br>
+   <img src="docs/gif/searchresults.gif" width=372 height=28 border=0 alt="Documents that best match your search"><br>
+   <img src="docs/gif/transparent.gif" width=1 height=14 alt=""><br>
+  </td>
+  <td>&nbsp;</td>
+ </tr>
+ <!--NLResultListStart-->
+ <!-- result -->
+ <tr>
+ <!--NLResultStart-->
+  
+  <td align=right valign=top><font size=2>1.&nbsp;&nbsp;</font></td>
+  <td valign=top><font size=2>
+   <a href="http://germany-live.de/gl/Artikel/Sport/1997-01/Index.html">Ressort Sport - Artikelübersicht... </a><br>
+   <!--NLResultRelevanceStart-->
+   <b>99%
+   <!--NLResultRelevanceEnd-->
+   - Directories & Lists:</b>&nbsp;   Ressort Sport - Artikel&uuml;bersicht...        Artikel&uuml;bersicht... Januar 1997                Freitag, 31.... Date Not Available<br>
+   <b>German site:</b>&nbsp;&nbsp;http:/ / germany-live.de/ gl/ Artikel/ Sport/ 1997-01/ Index.html<br>
+   </font>
+   &nbsp;
+  </td>
+  <td><img src="docs/gif/transparent.gif" border=0 width=25 height=1 alt=""></td>
+  <td valign=middle><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
+  <!--NLResultEnd-->
+ </tr>
+ <!-- end -->
+ <tr>
+ <!--NLResultStart-->
+  
+  <td align=right valign=top><font size=2>2.&nbsp;&nbsp;</font></td>
+  <td valign=top><font size=2>
+   <a href="http://www.olympia.de/pages/news/news0602.html">News vom 6.2.</a><br>
+   <!--NLResultRelevanceStart-->
+   <b>93%
+   <!--NLResultRelevanceEnd-->
+   - Articles & General info:</b>&nbsp;     News vom 6.2.                  Zur&uuml;ck zum News Archiv                                               NEWS VOM     6.... 03/04/98<br>
+   <b>German site:</b>&nbsp;&nbsp;http:/ / www.olympia.de/ pages/ news/ news0602.html<br>
+   </font>
+   &nbsp;
+  </td>
+  <td><img src="docs/gif/transparent.gif" border=0 width=25 height=1 alt=""></td>
+  <td valign=middle><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
+  <!--NLResultEnd-->
+ </tr>
+ <!-- end -->
+ <tr>
+ <!--NLResultStart-->
+  
+  <td align=right valign=top><font size=2>3.&nbsp;&nbsp;</font></td>
+  <td valign=top><font size=2>
+   <a href="http://www.visa.de/ap/olympia/news3.htm">Visa - Olympia '98 - News</a><br>
+   <!--NLResultRelevanceStart-->
+   <b>92%
+   <!--NLResultRelevanceEnd-->
+   - Directories & Lists:</b>&nbsp;  Visa - Olympia '98 - News     browserName = navigator.appNam...  browserVer = parseInt(navigat...  if (browserName == &quot;Netscape&quot; && browserVer >= 3) version = &quot;n4&quot;;  else version... 02/27/98<br>
+   <b>German site:</b>&nbsp;&nbsp;http:/ / www.visa.de/ ap/ olympia/ news3.htm<br>
+   </font>
+   &nbsp;
+  </td>
+  <td><img src="docs/gif/transparent.gif" border=0 width=25 height=1 alt=""></td>
+  <td valign=middle><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
+  <!--NLResultEnd-->
+ </tr>
+ <!-- end -->
+ <tr>
+ <!--NLResultStart-->
+  
+  <td align=right valign=top><font size=2>4.&nbsp;&nbsp;</font></td>
+  <td valign=top><font size=2>
+   <a href="http://www.azag.ch/nagano98/story1702.htm">Nagano Story 0702</a><br>
+   <!--NLResultRelevanceStart-->
+   <b>92%
+   <!--NLResultRelevanceEnd-->
+   - Articles & General info:</b>&nbsp;    Nagano Story 0702       STEHRAMPE  Checklose Puckjägerinnen  HANSRUEDI CAMENISCH  Im Big-Hat-Stadion zu Nagano zelebrieren diese Woche die weltbesten Eishockeystars aus der National Hockey League (NHL) ihre... 02/18/98<br>
+   <b>Swiss site:</b>&nbsp;&nbsp;http:/ / www.azag.ch/ nagano98/ story1702.htm<br>
+   </font>
+   &nbsp;
+  </td>
+  <td><img src="docs/gif/transparent.gif" border=0 width=25 height=1 alt=""></td>
+  <td valign=middle><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
+  <!--NLResultEnd-->
+ </tr>
+ <!-- end -->
+ <tr>
+ <!--NLResultStart-->
+  
+  <td align=right valign=top><font size=2>5.&nbsp;&nbsp;</font></td>
+  <td valign=top><font size=2>
+   <a href="http://sport.de/spart/oly/1998/oly008.html">Sport im Deutschen Internet - Olympia 1998 (Nachrichten)</a><br>
+   <!--NLResultRelevanceStart-->
+   <b>92%
+   <!--NLResultRelevanceEnd-->
+   - Articles & General info:</b>&nbsp;  Sport im Deutschen Internet - Olympia 1998 (Nachrichten)          Nachrichten    Sporthilfe Eine Million Mark f&uuml;r «Goldrausch von Nagano» Dienstag, 24. Februar 1998 Frankfurt/Main - Der «Goldrausch... Date Not Available<br>
+   <b>German site:</b>&nbsp;&nbsp;http:/ / sport.de/ spart/ oly/ 1998/ oly008.html<br>
+   </font>
+   &nbsp;
+  </td>
+  <td><img src="docs/gif/transparent.gif" border=0 width=25 height=1 alt=""></td>
+  <td valign=middle><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
+  <!--NLResultEnd-->
+ </tr>
+ <!-- end -->
+ <!--NLResultListEnd-->
+</table>
 
-  </table></td>
-</tr>
+<!--Search box, next/previous buttons------------------------->
 
-<tr><td>&nbsp;</td></tr>
-
-<form action="/nlquery.fcg" method=get>
-<input type=hidden name=ho    value="">
-<input type=hidden name=po    value="">
-<tr>
-<td colspan=2>&nbsp;</td>
-<td>
-<table border="0" cellspacing=0 cellpadding=0><tr>
-<td><input type=text size=27 name=qr maxsize=100 value="+Biathlon +weltcups +Athleten +deutschland"></td>
-<td>&nbsp;</td>
-<td nowrap><input type=image name=sb src=docs/gif/srchbtn1.gif border=0 align=top width=74 height=28 alt=Search><nobr><a href=docs/prod_help.htm#simplesearch><img src=docs/gif/searchhelp.gif border=0 align=top width=85 height=28 alt="Help/Hints"></a></td>
-</tr></table>
-</td>
-</tr>
-<input type=hidden name=si value="">
-<input type=hidden name=cc value=" ">
-<input type=hidden name=us value="">
-<input type=hidden name=xd value="">
-</form>
-
-<tr><td colspan=2></td><td>&nbsp;<br><font size="1">
-<a href="search.html">Simple Search</a>&nbsp;&nbsp;&nbsp;
-<a href="power.html">Power Search</a>&nbsp;&nbsp;&nbsp;
-<a href="pubsearch.html">Publication Search</a>&nbsp;&nbsp;&nbsp;
-<a href="industry.html">Industry Search</a>&nbsp;&nbsp;&nbsp;
-<a href="news.html">Current News</a>
-</font><br>&nbsp;</td></tr>
-
-<tr>
-<td colspan=2>&nbsp;</td>
-<td>
-
-<!-- and now a word from our sponsor -->
-<nolayer>
-<IFRAME SRC="http://ad.doubleclick.net/adi/northernlight.com/results;kw=Biathlon+weltcups+Athleten+deutschland;ord=908572254" MARGINWIDTH=0 MARGINHEIGH=0 WIDTH=468 HEIGHT=60 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING="no">
-<A HREF="http://ad.doubleclick.net/jump/northernlight.com/results;kw=Biathlon+weltcups+Athleten+deutschland;ord=908572254">
-<IMG SRC="http://ad.doubleclick.net/ad/northernlight.com/results;kw=Biathlon+weltcups+Athleten+deutschland;ord=908572254" WIDTH=468 HEIGHT=60 ALT="please visit our sponsor" border=0></A>
-</iframe>
-</nolayer>
-<ilayer id=snap2 visibility=hide width=468 height=63></ilayer>
-<!-- end -->
-<font size=2><br>&nbsp;<br>Copyright &copy; 1997-1998, Northern Light Technology LLC. All rights reserved.</font>
-</td>
-</tr>
+<table border=0 cellspacing=0 cellpadding=0 width=730>
+ <tr>
+  <td width=25 rowspan=3><img src="docs/gif/transparent.gif" width=25 height=1 alt=""></td>
+  <td width=225><img src="docs/gif/transparent.gif" width=225 height=1 alt=""></td>
+  <td width=10><img src="docs/gif/transparent.gif" width=10 height=1 alt=""></td>
+  <td width=495><img src="docs/gif/transparent.gif" width=495 height=1 alt=""></td>
+ </tr>
+ <tr>
+  <td>&nbsp;</td>
+  <td colspan=2 valign=top>
+   <table border=0>
+   <!-- No previous results -->
+    <!-- No next results -->
+   </table>
+  </td>
+ </tr>
+ <tr>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td colspan=2>&nbsp;</td>
+  <td>
+   <table border=0 cellspacing=0 cellpadding=0>
+   <form action="/nlquery.fcg" method=get>
+    <input type=hidden name=ho value="">
+    <input type=hidden name=po value="">
+    <input type=hidden name=si value="">
+    <input type=hidden name=cc value=" ">
+    <input type=hidden name=us value="025">
+    <input type=hidden name=xd value="">
+    <tr>
+     <td><input type=text size=27 name=qr value="+Biathlon +weltcups +Athleten +deutschland"></td>
+     <td>&nbsp;</td>
+     <td nowrap><input type=image name=sb src="docs/gif/srchbtn1.gif" border=0 align=top alt="Search"><nobr><a href="docs/search_help_results.html"><img src="docs/gif/searchhelp.gif" border=0 align=top width=85 height=28 alt="Help/Hints"></a></nobr></td>
+    </tr>
+   </form>
+   </table>
+  </td>
+ </tr>
+ <tr>
+  <td colspan=2></td>
+  <td>&nbsp;<br>
+   <font size=1>
+   <a href="search.html">Simple Search</a>&nbsp;&nbsp;&nbsp;
+   <a href="power.html">Power Search</a>&nbsp;&nbsp;&nbsp;
+   <a href="pubsearch.html">Publication Search</a>&nbsp;&nbsp;&nbsp;
+   <a href="industry.html">Industry Search</a>&nbsp;&nbsp;&nbsp;
+   <a href="news.html">Current News</a>
+   </font><br>&nbsp;
+  </td>
+ </tr>
+ <tr>
+  <td colspan=2>&nbsp;</td>
+  <td>
+  <!-- and now a word from our sponsor -->
+   <nolayer>
+   <iframe src="http://ad.doubleclick.net/adi/northernlight.com/results;kw=Biathlon+weltcups+Athleten+deutschland;ord=913314522" marginwidth=1 marginheight=1 width=468 height=60 frameborder=0 scrolling="no">
+   <a href="http://ad.doubleclick.net/jump/northernlight.com/results;kw=Biathlon+weltcups+Athleten+deutschland;ord=913314522"><img src="http://ad.doubleclick.net/ad/northernlight.com/results;kw=Biathlon+weltcups+Athleten+deutschland;ord=913314522" width=468 height=60 alt="please visit our sponsor" border=0></a>
+   </iframe>
+   </nolayer>
+  <!--ilayer id=snap2 visibility=hidden width=468 height=63></ilayer-->
+   <ilayer id=snap2 visibility=hidden width=468 height=63></ilayer>
+  <!-- end -->
+   <font size=2><br>&nbsp;<br>Copyright &copy; 1997-1998, Northern Light Technology LLC. All rights reserved.</font>
+  </td>
+ </tr>
 </table>
 
 <!-- and now a word from our sponsor -->
-<layer clip="468,60" src="http://ad.doubleclick.net/adl/northernlight.com/results;kw=Biathlon+weltcups+Athleten+deutschland;ord=908572254" 
-       visibility=hide 
-       onload="moveToAbsolute(snap.pageX, snap.pageY); visibility='show';">
+<layer clip="468,60" src="http://ad.doubleclick.net/adl/northernlight.com/results;kw=Biathlon+weltcups+Athleten+deutschland;ord=913314522" visibility=hidden onload="moveToAbsolute(snap.pageX, snap.pageY); visibility='show';">
 </layer>
-
-<layer clip="468,60" src="http://ad.doubleclick.net/adl/northernlight.com/results;kw=Biathlon+weltcups+Athleten+deutschland;ord=908572254" 
-       visibility=hide 
-       onload="moveToAbsolute(snap2.pageX, snap2.pageY); visibility='show';">
+<layer clip="468,60" src="http://ad.doubleclick.net/adl/northernlight.com/results;kw=Biathlon+weltcups+Athleten+deutschland;ord=913314522" visibility=hidden onload="moveToAbsolute(snap2.pageX, snap2.pageY); visibility='show';">
 </layer>
 <!-- end -->
 
 </body>
-</html>

@@ -8,7 +8,8 @@
 <FORM name=mfrm method=GET action="/cgi-bin/query">
 <INPUT TYPE=hidden NAME=pg VALUE=aq>
 <INPUT TYPE=hidden NAME=text VALUE=yes>
-<font size=-1><SELECT NAME=kl><OPTION VALUE=XX SELECTED>any language 
+<font size=-1><B>Enter ranking keywords in</B>
+<SELECT NAME=kl><OPTION VALUE=XX SELECTED>any language 
 <OPTION VALUE=zh>Chinese
 <OPTION VALUE=cs>Czech
 <OPTION VALUE=da>Danish

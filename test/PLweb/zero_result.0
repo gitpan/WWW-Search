@@ -1,6 +1,6 @@
 <title>PLWeb Query Results</title>
 <H3>Search Results:</H3><B>Search produced zero hits</B>
-<B> Query : "+mrfglbqnx +BogusNoSuchWord" </B>
+<B> Query : "BogusNoSuchWordSpammersAreIdiots" </B>
 <BR><B> Documents 1 thru 0</B><h4> <PRE> VAL DOCUMENT                                                                    DB        SIZE<HR> </pre> </h4><input type=hidden name=platmode value=unix> 
 <input type=hidden name=operation value=query> 
 <input type=hidden name=dbgroup value=un> 
@@ -9,7 +9,7 @@
 <input type=hidden name=dbname value=gopher> 
 <input type=hidden name=dbname value=webdepts> 
 <input type=hidden name=dbname value=webnews> 
-<input type=hidden name=query value="%2bmrfglbqnx%20%2bBogusNoSuchWord" >
+<input type=hidden name=query value="BogusNoSuchWordSpammersAreIdiots" >
 </form>
 <HR>
 <h2></H4><B><P><A HREF="/">Return to UN Home Page</B></A>

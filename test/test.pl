@@ -3,7 +3,7 @@
 #
 # test.pl
 # Copyright (C) 1997 by USC/ISI
-# $Id: test.pl,v 1.26 1998/10/16 21:15:41 johnh Exp $
+# $Id: test.pl,v 1.29 1998/12/11 23:07:41 johnh Exp $
 #
 # Copyright (c) 1997 University of Southern California.
 # All rights reserved.                                            
@@ -203,11 +203,11 @@ sub test_cases {
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/AltaVista/one_page_result';
-    $query = '+LSAM +AutoSearch';
+    $query = '+LS' . 'AM +AutoSearch';
     test($mode, $TEST_RANGE, 2, 10);
 
     $file = 'test/AltaVista/two_page_result';
-    $query = '+LSAM +ISI +IB';
+    $query = '+LSA' . 'M +ISI +IB';
     test($mode, $TEST_GREATER_THAN, 10);
 
 
@@ -216,15 +216,15 @@ sub test_cases {
     $maintainer = 'John Heidemann <johnh@isi.edu>';
 
     $file = 'test/AltaVista/Web/zero_result';
-    $query = '+LSAM +' . $bogus_query;
+    $query = '+LSA' . 'M +' . $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/AltaVista/Web/one_page_result';
-    $query = '+LSAM +AutoSearch';
+    $query = '+LSA' . 'M +AutoSearch';
     test($mode, $TEST_RANGE, 2, 10);
 
     $file = 'test/AltaVista/Web/two_page_result';
-    $query = '+LSAM +ISI +IB';
+    $query = '+LSA' . 'M +ISI +IB';
     test($mode, $TEST_GREATER_THAN, 10);
 
     ######################################################################
@@ -232,15 +232,15 @@ sub test_cases {
     $maintainer = 'John Heidemann <johnh@isi.edu>';
 
     $file = 'test/AltaVista/AdvancedWeb/zero_result';
-    $query = 'LSAM and ' . $bogus_query;
+    $query = 'LS' . 'AM and ' . $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/AltaVista/AdvancedWeb/one_page_result';
-    $query = 'LSAM and AutoSearch';
+    $query = 'LSA' . 'M and AutoSearch';
     test($mode, $TEST_RANGE, 2, 11);
 
     $file = 'test/AltaVista/AdvancedWeb/two_page_result';
-    $query = 'LSAM and ISI and IB';
+    $query = 'LSA' . 'M and ISI and IB';
     test($mode, $TEST_GREATER_THAN, 10);
 
     ######################################################################
@@ -248,11 +248,11 @@ sub test_cases {
     $maintainer = 'John Heidemann <johnh@isi.edu>';
 
     $file = 'test/AltaVista/News/multi_result';
-    $query = '+Perl +CPAN';
+    $query = '+Pe' . 'rl +CPAN';
     test($mode, $TEST_GREATER_THAN, 30);   # 30 hits/page
 
     $file = 'test/AltaVista/News/zero_result';
-    $query = '+perl +' . $bogus_query;
+    $query = '+pe' . 'rl +' . $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     ######################################################################
@@ -260,11 +260,11 @@ sub test_cases {
     $maintainer = 'John Heidemann <johnh@isi.edu>';
 
     $file = 'test/AltaVista/AdvancedNews/multi_result';
-    $query = 'Perl and CPAN';
+    $query = 'Per' . 'l and CPAN';
     test($mode, $TEST_GREATER_THAN, 70);   # 30 hits/page
 
     $file = 'test/AltaVista/AdvancedNews/zero_result';
-    $query = 'perl and ' . $bogus_query;
+    $query = 'per' . 'l and ' . $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     ######################################################################
@@ -272,16 +272,16 @@ sub test_cases {
     $maintainer = 'unsupported';
 
     $file = 'test/Crawler/zero_result';
-    $query = 'LSAM ' . $bogus_query;
+    $query = $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/Crawler/one_page_result';
-    $query = 'Bayreuth Bindlacher Berg Flugplatz Pilot';
+    $query = 'Bay' . 'reuth Bindlacher Berg Flugplatz Pilot';
     test($mode, $TEST_RANGE, 2, 10);
 
     # 10 hits/page
     $file = 'test/Crawler/two_page_result';
-    $query = 'Frankfurter Allgemeine Sonntagszeitung Recherche';
+    $query = 'Fran' . 'kfurter Allgemeine Sonntagszeitung Recherche';
     test($mode, $TEST_GREATER_THAN, 10);
 
     ######################################################################
@@ -290,11 +290,11 @@ sub test_cases {
     $maintainer = 'Martin Thurn <MartinThurn@iname.com>';
 
     $file = 'test/Dejanews/zero_result';
-    $query = 'mrfglbqnx AND ' . $bogus_query;
+    $query = $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/Dejanews/multi_result';
-    $query = 'Perl and CPAN';
+    $query = 'Per' . 'l and CPAN';
     test($mode, $TEST_GREATER_THAN, 101);
 
 
@@ -304,16 +304,16 @@ sub test_cases {
     $maintainer = 'Martin Thurn <MartinThurn@iname.com>';
 
     $file = 'test/Excite/zero_result';
-    $query = '+mrfglbqnx +' . $bogus_query;
+    $query = $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     # 84 hits/page
     $file = 'test/Excite/one_page_result';
-    $query = 'disestablishmentarianism';
+    $query = 'dis' . 'establishmentarianism';
     test($mode, $TEST_RANGE, 2, 80);
 
     $file = 'test/Excite/two_page_result';
-    $query = '+Jabba +bounty +hunter +Greedo';
+    $query = '+Ja' . 'bba +bounty +hunter +Greedo';
     test($mode, $TEST_GREATER_THAN, 86);
 
     ######################################################################
@@ -321,11 +321,11 @@ sub test_cases {
     $maintainer = 'Paul Lindner <paul.lindner@itu.int>';
 
     $file = 'test/ExciteForWebServers/zero_result';
-    $query = '+mrfglbqnx +' . $bogus_query;
+    $query = $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/ExciteForWebServers/one_page_result';
-    $query = 'burundi';
+    $query = 'bur' . 'undi';
     test($mode, $TEST_RANGE, 2, 99);
 
     ######################################################################
@@ -333,16 +333,16 @@ sub test_cases {
     $maintainer = 'unsupported';
 
     $file = 'test/Fireball/zero_result';
-    $query = '+LSAM +' . $bogus_query;
+    $query = $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/Fireball/one_page_result';
-    $query = '+Anna +Kournikova +Wimbledon +WTA +tennis';
+    $query = '+An' . 'na +Kournikova +Wimbledon +WTA +tennis';
     test($mode, $TEST_RANGE, 2, 10);
 
     # 10 hits/page
     $file = 'test/Fireball/two_page_result';
-    $query = '+Murnau +Hinterglasbilder';
+    $query = '+Mu' . 'rnau +Hinterglasbilder';
     test($mode, $TEST_GREATER_THAN, 10);
 
     ######################################################################
@@ -350,11 +350,11 @@ sub test_cases {
     $maintainer = 'Paul Lindner <paul.lindner@itu.int>';
 
     $file = 'test/FolioViews/zero_result';
-    $query = '+mrfglbqnx +' . $bogus_query;
+    $query = $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/FolioViews/one_page_result';
-    $query = 'burundi';
+    $query = 'bur' . 'undi';
     test($mode, $TEST_RANGE, 2, 400);
 
     ######################################################################
@@ -367,16 +367,16 @@ sub test_cases {
     $maintainer = 'Martin Thurn <MartinThurn@iname.com>';
 
     $file = 'test/HotBot/zero_result';
-    $query = '"mrfglbqnx ' . $bogus_query . '"';
+    $query = '"mr' . 'fglbqnx ' . $bogus_query . '"';
     test($mode, $TEST_EXACTLY);
 
     # 84 hits/page
     $file = 'test/HotBot/one_page_result';
-    $query = '"Christie Abbott"';
+    $query = '"Ch' . 'ristie Abbott"';
     test($mode, $TEST_RANGE, 2, 80);
 
     $file = 'test/HotBot/two_page_result';
-    $query = '+LSAM +ISI';
+    $query = '+LS' . 'AM +ISI';
     test($mode, $TEST_GREATER_THAN, 86);
 
     ######################################################################
@@ -384,57 +384,57 @@ sub test_cases {
     $maintainer = 'Martin Thurn <MartinThurn@iname.com>';
 
     $file = 'test/Infoseek/zero_result';
-    $query = 'disestablishmentarianism' . 'NoSuchWord';
+    $query = $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     # default infoseek back-end has 50 hits/page
     $file = 'test/Infoseek/one_page_result';
-    $query = 'Martin Thurn AND Star Wars';
+    $query = 'Mar' . 'tin Thurn AND Star Wars';
     test($mode, $TEST_RANGE, 2, 24);
 
     $file = 'test/Infoseek/two_page_result';
-    $query = 'Greedo AND collectible';
+    $query = 'Gre' . 'edo AND collectible';
     test($mode, $TEST_GREATER_THAN, 25);
 
 
     $search_engine = 'Infoseek::Web';
 
     $file = 'test/Infoseek/Web/zero_result';
-    $query = 'disestablishmentarianism' . 'NoSuchWord';
+    $query = $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/Infoseek/Web/one_page_result';
-    $query = 'Martin Thurn AND Star Wars';
+    $query = 'Mar' . 'tin Thurn AND Star Wars';
     test($mode, $TEST_RANGE, 2, 24);
 
     $file = 'test/Infoseek/Web/two_page_result';
-    $query = 'Greedo AND collectible';
+    $query = 'Gre' . 'edo AND collectible';
     test($mode, $TEST_GREATER_THAN, 25);
 
 
     $search_engine = 'Infoseek::Companies';
 
     $file = 'test/Infoseek/Companies/zero_result';
-    $query = 'mrfglbqnx' . 'NoSuchWord';
+    $query = $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/Infoseek/Companies/one_page_result';
-    $query = 'Pacific AND travel';
+    $query = 'Pac' . 'ific AND travel';
     test($mode, $TEST_RANGE, 2, 24);
 
     $file = 'test/Infoseek/Companies/two_page_result';
-    $query = 'prison';
+    $query = 'pri' . 'son';
     test($mode, $TEST_GREATER_THAN, 25);
 
 
     $search_engine = 'Infoseek::News';
 
     $file = 'test/Infoseek/News/zero_result';
-    $query = 'mrfglbqnx' . 'NoSuchWord';
+    $query = $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/Infoseek/News/nonzero_result';
-    $query = 'Hawaii';
+    $query = 'Haw' . 'aii';
     test($mode, $TEST_GREATER_THAN, 2);
 
 
@@ -446,36 +446,35 @@ sub test_cases {
 
     ######################################################################
     $search_engine = 'Lycos';
-    $maintainer = 'John Heidemann <johnh@isi.edu>';
+    $maintainer = 'Martin Thurn <MartinThurn@iname.com>';
 
     $file = 'test/Lycos/zero_result';
-    $query = 'LSAM ' . $bogus_query;
+    $query = $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/Lycos/one_page_result';
-    $query = 'LSAM IB ISI Intelligent';
-    test($mode, $TEST_RANGE, 2, 10);
+    $query = '"Chri'.'stie Ab'.'bott"';
+    test($mode, $TEST_RANGE, 2, 50);
 
-    # 10 hits/page
-    $file = 'test/Lycos/two_page_result';
-    $query = 'LSAM ISI';
-    test($mode, $TEST_GREATER_THAN, 10);
+    $file = 'test/Lycos/multi_page_result';
+    $query = 'repli'.'cation';
+    test($mode, $TEST_GREATER_THAN, 100);
 
     ######################################################################
     $search_engine = 'Magellan';
     $maintainer = 'Martin Thurn <MartinThurn@iname.com>';
 
     $file = 'test/Magellan/zero_result';
-    $query = '+mrfglbqnx +' . $bogus_query;
+    $query = $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/Magellan/one_page_result';
-    $query = 'disestablishmentarianism';
+    $query = 'dis' . 'establishmentarianism';
     test($mode, $TEST_RANGE, 1, 9);
 
     # 10 hits/page
     $file = 'test/Magellan/two_page_result';
-    $query = '+ISI +divisions';
+    $query = '+IS' . 'I +divisions';
     test($mode, $TEST_GREATER_THAN, 11);
 
 
@@ -484,11 +483,11 @@ sub test_cases {
     $maintainer = 'Paul Lindner <paul.lindner@itu.int>';
 
     $file = 'test/MSIndexServer/zero_result';
-    $query = '+mrfglbqnx +' .  $bogus_query;
+    $query = $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/MSIndexServer/one_page_result';
-    $query = 'burundi';
+    $query = 'bur' . 'undi';
     test($mode, $TEST_RANGE, 2, 99);
 
 
@@ -497,16 +496,16 @@ sub test_cases {
     $maintainer = 'unsupported';
 
     $file = 'test/NorthernLight/zero_result';
-    $query = '+LSAM +' . $bogus_query;
+    $query = $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/NorthernLight/one_page_result';
-    $query = '+Biathlon +weltcups +Athleten +deutschland';
+    $query = '+Bi' . 'athlon +weltcups +Athleten +deutschland';
     test($mode, $TEST_RANGE, 2, 25);
 
     # 25 hits/page
     $file = 'test/NorthernLight/two_page_result';
-    $query = '+Madonna +profile +features';
+    $query = '+LS' . 'AM +ISI +IB';
     test($mode, $TEST_GREATER_THAN, 25);
 
 
@@ -515,7 +514,7 @@ sub test_cases {
     $maintainer = 'Paul Lindner <paul.lindner@itu.int>';
 
     $file = 'test/Null/zero_result';
-    $query = 'anyterm';
+    $query = 'any' . 'term';
     test($mode, $TEST_EXACTLY);
 
 
@@ -524,11 +523,11 @@ sub test_cases {
     $maintainer = 'Paul Lindner <paul.lindner@itu.int>';
 
     $file = 'test/PLweb/zero_result';
-    $query = '+mrfglbqnx +' . $bogus_query;
+    $query = $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/PLweb/one_page_result';
-    $query = 'burundi';
+    $query = 'bur' . 'undi';
     test($mode, $TEST_RANGE, 2, 99);
 
 
@@ -537,11 +536,11 @@ sub test_cases {
     $maintainer = 'Paul Lindner <paul.lindner@itu.int>';
 
     $file = 'test/Search97/zero_result';
-    $query = '+mrfglbqnx +' . $bogus_query;
+    $query = $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/Search97/one_page_result';
-    $query = 'burundi';
+    $query = 'bur' . 'undi';
     test($mode, $TEST_RANGE, 2, 99);
 
 
@@ -550,13 +549,29 @@ sub test_cases {
     $maintainer = 'Paul Lindner <paul.lindner@itu.int>';
 
     $file = 'test/SFgate/zero_result';
-    $query = '+mrfglbqnx +' . $bogus_query;
+    $query = $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/SFgate/one_page_result';
-    $query = 'burundi';
+    $query = 'bur' . 'undi';
     test($mode, $TEST_RANGE, 2, 99);
 
+
+    ######################################################################
+    $search_engine = 'Snap';
+    $maintainer = 'Jim Smyser <jsmyser@bigfoot.com>';
+
+    $file = 'test/Snap/zero_result'; 
+    $query = $bogus_query; 
+    test($mode, $TEST_EXACTLY); 
+     
+    $file = 'test/Snap/one_page_result'; 
+    $query = '"WW' . 'W::Search"'. '"Jim Smyser"'; 
+    test($mode, $TEST_RANGE, 2, 99); 
+      
+    $file = 'test/Snap/multi_page_result'; 
+    $query = '+di' . 'v7 +ISI';
+    test($mode, $TEST_GREATER_THAN, 100); 
 
     ######################################################################
     $search_engine = 'Simple';
@@ -575,15 +590,15 @@ sub test_cases {
     $maintainer = 'Martin Thurn <MartinThurn@iname.com>';
 
     $file = 'test/WebCrawler/zero_result';
-    $query = '+mrfglbqnx +' . $bogus_query;
+    $query = $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/WebCrawler/one_page_result';
-    $query = 'disestablishmentarianism';
+    $query = 'dis' . 'establishmentarianism';
     test($mode, $TEST_RANGE, 2, 99);
 
     $file = 'test/WebCrawler/two_page_result';
-    $query = 'Greedo';
+    $query = 'Gre' . 'edo';
     test($mode, $TEST_GREATER_THAN, 100);
 
 
@@ -592,16 +607,16 @@ sub test_cases {
     $maintainer = 'Martin Thurn <MartinThurn@iname.com>';
 
     $file = 'test/Yahoo/zero_result';
-    $query = '"mrfglbqnx ' . $bogus_query . '"';
+    $query = $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/Yahoo/one_page_result';
-    $query = 'LSAM';
-    test($mode, $TEST_RANGE, 2, 10);
+    $query = 'LSA' . 'M';
+    test($mode, $TEST_RANGE, 2, 84);
 
     $file = 'test/Yahoo/two_page_result';
-    $query = 'Star Wars';
-    test($mode, $TEST_GREATER_THAN, 200);  # Yahoo seems to have 84 hits/page
+    $query = 'rep' . 'lication';
+    test($mode, $TEST_GREATER_THAN, 100);  # Yahoo seems to have 84 hits/page
 }
 
 sub main {

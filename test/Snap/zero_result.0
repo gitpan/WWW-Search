@@ -1,0 +1,160 @@
+<!-- c|net Fri Dec 11 15:19:31 1998  $Revision: 1.3 $  -->
+
+ 
+
+
+
+
+
+
+
+
+<html>
+
+<head>
+<title>Snap:Advanced Search:Results</title>
+</head>
+
+<body bgcolor="#FFFFFF" link="#0000FF" vlink="#666666" text="#333333">
+
+
+
+<!-- c|net Fri Dec 11 12:18:21 1998  $Revision: 1.3 $  -->
+
+
+<map name="tabs"><area shape="rect" coords="0,0,80,32" href="/main/door/0,1,home-home,00.html"><area shape="rect" coords="200,15,273,32" href="/main/door/0,1,home-home,00.html?st.sn.0.t.fd"><area shape="rect" coords="276,15,348,32" href="/main/local/1,37,home-8,00.html?tag=st.sn.0.t.lc"><area shape="rect" coords="349,15,423,32" href="/LMOID/mysnap/mysnap/0,160,home-0,00.html?st.sn.0.t.ms"></map>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr valign="bottom"><td width="434"><img src="http://images.snap.com/main/images/general/tab_all5.gif" width="434" height="32" usemap="#tabs" border="0"></td><td width="100%" align="right"><font face="Arial,Helvetica" size="-1">
+<span style="color:#0000FF">
+<b>
+<a href="/main/redirect/emailcom/1,294,home-0,00.html?sr=ex.email.bh"><font color="#0000FF">Get Mail!</font></a></b>
+</span>
+</font></td></tr>
+<tr><td bgcolor="#003399" height="8" colspan="2"><spacer type="block" width="1" height="8"></td></tr></table>
+
+<table bgcolor="#EEEEEE" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr valign="middle">
+<td height="100" align="center"><A HREF="http://images.snap.com/cgi-acc/acc_clickthru.acc?clickid=000016355811944e00000000&edition=home&cat=s-web&site=SN" TARGET="_top"><IMG SRC="http://images.snap.com/Ads/Media/Images/nbc.shopping2.banner.gif?u_vid_0_0&ffffffff" ALT="NBC Merchandise Available Online!" BORDER="2" HEIGHT="60" WIDTH="468" ><BR><FONT FACE="Verdana, Arial, Helvetica" SIZE="-2">NBC Merchandise Available Online!</FONT></A>
+</td>
+</tr>
+</table>
+
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#003399" height="8" colspan="2"><spacer type="block" width="1" height="8"></td></tr></table>
+<table width="100%" cellpadding="4" cellspacing="0" border="0"><tr><td><b><font face="Arial,Helvetica">
+<a href="/main/door/0,1,home-home,00.html"><span style="color:#0000FF">Home</span></a>:&nbsp;<a href="/search/power/form/0,179,home-0,00.html"><span style="color:#0000FF">Advanced Search</span></a>:&nbsp;Results
+</font></b></td></tr></table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#003399" height="4" colspan="2"><spacer type="block" width="1" height="4"></td></tr></table>
+
+
+    
+<!-- error message #1 -->
+<table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td height=8><spacer type=block width=1 height=1></td></tr>
+<tr><td><font face="arial, helvetica">No results returned for "<b>BogusNoSuchWordSpammersAreIdiots</b>." <a href="/main/help/item/0,11,home-6736,00.html">Need help</a>?</font></td></tr>
+   <tr><td height=8><spacer type=block width=1 height=1></td></tr></table>
+
+<!-- end error message 1 -->
+     
+
+
+<!-- search box -->
+<table  bgcolor="#CCCCCC" width="100%" cellpadding="4" cellspacing="0" border="0">
+<tr bgcolor="#CCCCCC">
+<td><form action="/search/power/results/1,180,home-0,00.html" method="get">
+<font face="Arial,Helvetica" size="-2"><b>Enter search word(s):</b></font><br><input type="text" name="KW" value="BogusNoSuchWordSpammersAreIdiots" size="40">
+<input type="hidden" name="KM" value="a">
+<input type="hidden" name="AM0" value="m">
+<input type="hidden" name="AT0" value="w">
+<input type="hidden" name="AK0" value="">
+<input type="hidden" name="AM1" value="">
+<input type="hidden" name="AT1" value="">
+<input type="hidden" name="AK1" value="">
+<input type="hidden" name="AM2" value="">
+<input type="hidden" name="AT2" value="">
+<input type="hidden" name="AK2" value="">
+<input type="hidden" name="AM3" value="">
+<input type="hidden" name="AT3" value="">
+<input type="hidden" name="AK3" value="">
+<input type="hidden" name="AM4" value="">
+<input type="hidden" name="AT4" value="">
+<input type="hidden" name="AK4" value="">
+<input type="hidden" name="AN" value="1">
+<input type="hidden" name="NR" value="100">
+<input type="hidden" name="FR" value="f">
+<input type="hidden" name="PL" value="a">
+<input type="hidden" name="DR" value="0">
+<input type="hidden" name="FM" value="1">
+<input type="hidden" name="FD" value="1">
+<input type="hidden" name="FY" value="">
+<input type="hidden" name="TM" value="">
+<input type="hidden" name="TD" value="">
+<input type="hidden" name="TY" value="">
+<input type="hidden" name="LN" value="">
+<input type="hidden" name="MT" value="">
+<input type="hidden" name="XT" value="">
+<input type="hidden" name="DM" value="">
+<input type="hidden" name="SDI" value="">
+&nbsp;&nbsp;<input type="submit" value="Search">&nbsp;&nbsp;<font face="Arial,Helvetica" size="-2"><a href="/main/help/item/0,11,home-6736,00.html">Search Tips</a></font>
+<br>
+
+<a href="/search/power/form/0,179,home-0,00.html"><font face="Arial,Helvetica" size="-1"><b>New Search</b></font></a>&nbsp;|&nbsp;<a href="/search/power/form/1,179,home-0,00.html?KM=a&KW=BogusNoSuchWordSpammersAreIdiots&AM0=m&AT0=w&AK0=&AM1=&AT1=&AK1=&AM2=&AT2=&AK2=&AM3=&AT3=&AK3=&AM4=&AT4=&AK4=&AN=0&NR=100&FR=f&PL=a&DR=0&FM=1&FD=1&FY=&TM=&TD=&TY=&LN=&MT=&XT=&DM=&SDI="><font face="Arial,Helvetica" size="-1"><b>Revise Search</b></font></a><br><br>
+
+
+</td><td width="1"><spacer type="block" height="1" width="1"></form></td>
+</tr>
+</table>
+<!-- end search box -->
+
+
+<!-- begin external search links -->
+<table bgcolor="#CCCCCC" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td><font face="Arial,Helvetica" size="-2"><b>&nbsp;Or try one of these search engines:</b></font></td>
+</tr>
+<tr>
+<td align="center">
+<font face="Arial,Helvetica" size="-1">
+<a href="/exredirect/template/1,304,-0,00.html?tag=ex.sn.sr.6.av&destUrl=http%3A%2F%2Fwww%2Esearch%2Ecom%2FAltaVista%2F1%2C57%2C0%2C0200%2Ehtml%3Fmode%3Dsimple%26what%3Dweb%26suffix%3D%26query%3DBogusNoSuchWordSpammersAreIdiots%26format%3D2">AltaVista</a> | 
+<a href="/main/finance/news/search/1,216,home-0,00.html?tag=st.sn.sr.6.bbn&keyword=BogusNoSuchWordSpammersAreIdiots">Bloomberg News</a> |
+<a href="/exredirect/template/1,304,-0,00.html?tag=ex.sn.sr.6.dn&destUrl=http%3A%2F%2Fx8%2Edejanews%2Ecom%2Fdnquery%2Exp%3FQRY%3DBogusNoSuchWordSpammersAreIdiots%26defaultOp%3DAND%26svcclass%3Ddncurrent%26maxhits%3D20%26ST%3DQS%26format%3Dterse%26DBS%3D2">DejaNews</a> | 
+<a href="/exredirect/template/1,304,-0,00.html?tag=ex.sn.sr.6.xcit&destUrl=http%3A%2F%2Fwww%2Eexcite%2Ecom%2Fsearch%2Egw%3Fsearch%3DBogusNoSuchWordSpammersAreIdiots%26searchType%3DKeyword%26category%3Ddefault%26mode%3Drelevance%26showqbe%3D1%26display%3Dhtml3%2Chb">Excite</a> | 
+<a href="/exredirect/template/1,304,-0,00.html?tag=ex.sn.sr.6.ipix&destUrl=http%3A%2F%2Fisurf%2Einterpix%2Ecom%2Fcgi%2Dbin%2Fisurf%2Dnoframes%2Fkeyword%5Fsearch%2Ecgi%3Fdb%3D%26q%3DBogusNoSuchWordSpammersAreIdiots">Image Surfer</a> | 
+<a href="/exredirect/template/1,304,-0,00.html?tag=ex.sn.sr.6.seek&destUrl=http%3A%2F%2Fwww%2Esearch%2Ecom%2FInfoseek%2F1%2C135%2C0%2C0200%2Ehtml%3FQUERY%3DBogusNoSuchWordSpammersAreIdiots%26COLL%3DWW">Infoseek</a> | 
+<a href="/exredirect/template/1,304,-0,00.html?tag=ex.sn.sr.6.lcos&destUrl=http%3A%2F%2Fwww%2Elycos%2Ecom%2Fcgi%2Dbin%2Fpursuit%3Fquery%3DBogusNoSuchWordSpammersAreIdiots">Lycos</a> | 
+<a href="/exredirect/template/1,304,-0,00.html?tag=ex.sn.sr.6.yhoo&destUrl=http%3A%2F%2Fsearch%2Eyahoo%2Ecom%2Fbin%2Fsearch%3Fp%3DBogusNoSuchWordSpammersAreIdiots">Yahoo</a> |
+<a href="/directory/category/0,16,home-1269,00.html?st.sn.sr.6.more">More...</a></font>
+</td></tr>
+<tr>
+<td height="5"><spacer type="block" height="1" width="1"></td>
+</tr>
+<tr bgcolor="#999999">
+<td height="1"><spacer type="block" height="1" width="1"></td>
+</tr>
+</table>
+<!-- end external search links -->
+
+
+<table bgcolor="#EEEEEE" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td height="100" align="center"><A HREF="http://images.snap.com/cgi-acc/acc_clickthru.acc?clickid=000016355811944e00000000&edition=home&cat=s-web&site=SN" TARGET="_top"><IMG SRC="http://images.snap.com/Ads/Media/Images/nbc.shopping2.banner.gif?u_vid_0_0&ffffffff" ALT="NBC Merchandise Available Online!" BORDER="2" HEIGHT="60" WIDTH="468" ><BR><FONT FACE="Verdana, Arial, Helvetica" SIZE="-2">NBC Merchandise Available Online!</FONT></A>
+</td>
+</tr>
+</table>
+
+<!-- c|net Mon Nov 16 11:23:26 1998  $Revision: 1.3 $  -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td bgcolor="#003399" height="3"><spacer type="block" width="1" height="3"></td></tr></table>
+<table width="100%" cellpadding="4" cellspacing="0" border="0"><tr><td><b><font face="Arial, Helvetica" size="-1">
+<a href="/main/door/0,1,home-home,00.html">Home</a>&nbsp;|&nbsp;
+<a href="/search/directory/results/1,61,home-0,00.html">Search</a>&nbsp;|&nbsp;
+<a href="/main/help/index/0,79,home-0,00.html">Help</a>&nbsp;|&nbsp; <a href="/main/help/item/0,11,home-7679,00.html">About Snap</a> &nbsp;|&nbsp; <a href="/main/help/advertising/0,309,home-0,00.html">Ad Info</a> &nbsp;|&nbsp; <a href="/main/help/item/0,11,home-8073,00.html">Snap Jobs</a></font></b></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td bgcolor="#003399" height="6"><spacer type="block" width="1" height="6"></td></tr></table>
+
+<p>
+<!-- c|net Sat Nov  7 03:04:02 1998  $Revision: 1.3 $  -->
+
+
+<font face="Arial,Helvetica" size="-2"><a href="/main/copyright/0,72,home-0,00.html">Copyright</a> &copy; 1997-1998 Snap and its content providers. All rights reserved.</font>
+</body
+</html>
+
+
