@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.66 2002/03/15 18:20:20 mthurn Exp $
+# $Id: Search.pm,v 1.67 2002/03/22 14:57:31 mthurn Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -70,7 +70,7 @@ package WWW::Search;
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query generic_option strip_tags @ENGINES_WORKING);
-$VERSION = '2.31';
+$VERSION = '2.32';
 $MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
@@ -1288,8 +1288,10 @@ sub native_retrieve_some
     {
     # Assume that the backend has installed their own TreeBuilder
     $tree = $self->{'_treebuilder'};
-    # Get ready to start over:
-    $tree->delete;
+    # I think we should delete the previous contents of the tree.  BUT
+    # if it is already empty, this gives an error.  I guess for now,
+    # we'll have to live with it.
+    # $tree->delete;
     }
   else
     {

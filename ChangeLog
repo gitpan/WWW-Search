@@ -1,3 +1,7 @@
+2002-03-22  Kingpin  <mthurn@copper.dulles.tasc.com>
+
+	* lib/WWW/Search.pm (native_retrieve_some): do not try to delete the TreeBuilder
+
 2002-03-15  Kingpin  <mthurn@copper.dulles.tasc.com>
 
 	* lib/WWW/Search.pm (native_retrieve_some): allow backends to specify the HTML::TreeBuilder object to be used

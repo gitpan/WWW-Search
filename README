@@ -3,12 +3,11 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.28?  (2002-03-18)
+WHAT IS NEW IN WWW::Search 2.29?  (2002-03-22)
 ----------------------------------------------
 
 overview: 
- * allow backend to provide their own HTML::TreeBuilder
- * updated various lists, for currently broken backends
+ * BUGFIX do not try to delete the TreeBuilder
 
 For details, see the ChangeLog file and/or the pod of each affected
 module.
