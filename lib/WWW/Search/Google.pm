@@ -2,7 +2,7 @@
 # Google.pm
 # by Jim Smyser
 # Copyright (C) 1996-1999 by Jim Smyser & USC/ISI
-# $Id: Google.pm,v 1.14 1999/12/23 14:57:25 mthurn Exp $
+# $Id: Google.pm,v 1.15 2000/01/13 15:08:24 mthurn Exp $
 ##########################################################
 
 
@@ -133,7 +133,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.15';
+$VERSION = '2.16';
 
 $MAINTAINER = 'Jim Smyser <jsmyser@bigfoot.com>';
 $TEST_CASES = <<"ENDTESTCASES";
@@ -144,7 +144,7 @@ $TEST_CASES = <<"ENDTESTCASES";
 ENDTESTCASES
           
 use Carp ();
-use WWW::Search(generic_option);
+use WWW::Search(qw(generic_option strip_tags));
 require WWW::SearchResult;
           
           
@@ -235,7 +235,7 @@ sub native_retrieve_some {
      $raw .= $_;
      $hit->add_url($1);
      $hits_found++;
-     $hit->title($2);
+     $hit->title(strip_tags($title));
      $state = $HITS;
      } 
   elsif ($state == $HITS &&
@@ -251,7 +251,7 @@ sub native_retrieve_some {
      $raw .= $_;
      $hit->add_url($url);
      $hits_found++;
-     $hit->title($title);
+     $hit->title(strip_tags($title));
      $mDesc =~ s/<.*?>//g;
      $mDesc =  $mDesc . '<br>' if not $mDesc =~ m@<br>@;
      $hit->description($mDesc) if (defined($hit));

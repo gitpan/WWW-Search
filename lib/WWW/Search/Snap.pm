@@ -1,7 +1,7 @@
 # Snap.pm
 # by Jim Smyser
-# Copyright (C) 1996-1998 by USC/ISI
-# $Id: Snap.pm,v 1.5 1999/11/08 14:12:35 mthurn Exp $
+# Copyright (C) 1996-2000 by Jim Smyser & USC/ISI
+# $Id: Snap.pm,v 1.6 2000/01/13 15:08:15 mthurn Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -22,8 +22,7 @@ WWW::Search::Snap - class for searching Snap.com!
 =head1 DESCRIPTION
 
 Class specialization of WWW::Search for searching F<http://snap.com>.
-Snap.com can return up to 1000 hits. NEW: $result->source() returns
-URL resource.
+Snap.com can return up to 1000 hits.
 
 This class exports no public interface; all interaction should
 be done through WWW::Search objects.
@@ -108,7 +107,8 @@ $TEST_CASES = <<"ENDTESTCASES";
 ENDTESTCASES
 
 use Carp ();
-use WWW::Search(generic_option);
+use WWW::Search(qw(generic_option strip_tags));
+
 require WWW::SearchResult;
 
 sub native_setup_search {
@@ -116,17 +116,19 @@ sub native_setup_search {
    $self->{_debug} = $native_options_ref->{'search_debug'};
    $self->{_debug} = 2 if ($native_options_ref->{'search_parse_debug'});
    $self->{_debug} = 0 if (!defined($self->{_debug}));
+
    #Define default number of hit per page
    $self->{'_hits_per_page'} = 100;
    $self->{agent_e_mail} = 'jsmyser@bigfoot.com';
    $self->user_agent('user');
-   $self->{_next_to_retrieve} = 1;
+   $self->{_next_to_retrieve} = 0;
+
    if (!defined($self->{_options})) {
      $self->{'search_base_url'} = 'http://home.snap.com';
      $self->{_options} = {
          'search_url' => 'http://home.snap.com/search/power/results/1,180,home-0,00.html',
            'KM' => 'a', 
-           'KW' => $native_query,
+           'KW' =>  $native_query,
            'AM0' => 'm',
            'AT0' => 'w',
            'AN' => '1',
@@ -137,69 +139,70 @@ sub native_setup_search {
            'FM' => '1',
            'FD' => '1',
            };
-           }
-      my $options_ref = $self->{_options};
-      if (defined($native_options_ref)) 
-      {
-      # Copy in new options.
-      foreach (keys %$native_options_ref) 
-      {
-      $options_ref->{$_} = $native_options_ref->{$_};
-      } 
-      } 
-      # Process the options.
-      my($options) = '';
-      foreach (sort keys %$options_ref) {
-      # printf STDERR "option: $_ is " . $options_ref->{$_} . "\n";
-      next if (generic_option($_));
-      $options .= $_ . '=' . $options_ref->{$_} . '&';
-      }
-      chop $options;
-      # Finally figure out the url.
-      $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $self->hash_to_cgi_string($self->{_options});
-      } 
-# private
-sub native_retrieve_some {
+        }
+   my $options_ref = $self->{_options};
+   if (defined($native_options_ref)) 
+     {
+     # Copy in new options.
+     foreach (keys %$native_options_ref) 
+       {
+       $options_ref->{$_} = $native_options_ref->{$_};
+       } # foreach
+     } # if
+   # Process the options.
+   my($options) = '';
+   foreach (sort keys %$options_ref) 
+     {
+     # printf STDERR "option: $_ is " . $options_ref->{$_} . "\n";
+     next if (generic_option($_));
+     $options .= $_ . '=' . $options_ref->{$_} . '&';
+     }
+   chop $options;
+   # Finally figure out the url.
+  $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $self->hash_to_cgi_string($self->{_options});
+   } # native_setup_search
 
-      my ($self) = @_;
-      print STDERR "**Snap::native_retrieve_some()\n" if $self->{_debug};
-      
-      # Fast exit if already done:
-      return undef if (!defined($self->{_next_url}));
+# private
+sub native_retrieve_some
+    {
+    my ($self) = @_;
+    print STDERR "**Snap::native_retrieve_some()\n" if $self->{_debug};
     
-      # If this is not the first page of results, sleep so as to not
-      # overload the server:
-      $self->user_agent_delay if 1 < $self->{'_next_to_retrieve'};
+    # Fast exit if already done:
+    return undef if (!defined($self->{_next_url}));
     
-      # Get some:
-      print STDERR "**Requesting (",$self->{_next_url},")\n" if $self->{_debug};
-      my($response) = $self->http_request('GET', $self->{_next_url});
-      $self->{response} = $response;
-      if (!$response->is_success) 
-          {
-          return undef;
-          }
-       $self->{'_next_url'} = undef;
-       print STDERR "**Found Some\n" if $self->{_debug};
-       # parse the output
-       my ($HEADER, $HITS, $DESC, $SOURCE) = qw(HE HI DE SO);
-       my $state = $HEADER;
-       my $hit = ();
-       my $hits_found = 0;
-       foreach ($self->split_lines($response->content()))
-        {
-       next if m@^$@; # short circuit for blank lines
-       print STDERR " * $state ===$_=== " if 2 <= $self->{'_debug'};
-    if (m|<ul><font face="Arial,Helvetica" size=-1>|i) {
-       # $self->approximate_result_count($1);
+    # If this is not the first page of results, sleep so as to not
+    # overload the server:
+    $self->user_agent_delay if 1 < $self->{'_next_to_retrieve'};
+    
+    # Get some:
+    print STDERR "**Requesting (",$self->{_next_url},")\n" if $self->{_debug};
+    my($response) = $self->http_request('GET', $self->{_next_url});
+    $self->{response} = $response;
+    if (!$response->is_success) 
+      {
+      return undef;
+      }
+    $self->{'_next_url'} = undef;
+    print STDERR "**Found Some\n" if $self->{_debug};
+    # parse the output
+    my ($HEADER, $HITS, $DESC) = qw(HE HI DE);
+    my $state = $HEADER;
+    my $hit = ();
+    my $hits_found = 0;
+    foreach ($self->split_lines($response->content()))
+      {
+     next if m@^$@; # short circuit for blank lines
+     print STDERR " * $state ===$_=== " if 2 <= $self->{'_debug'};
+     if (m|<ul>|i) {
+      # $self->approximate_result_count($1);
        print STDERR "**Approx. Count\n" if ($self->{_debug});
        $state = $HITS;
        # Make sure we catch redirects Snap likes to randomly insert 
        # and filter them.....
-  } if ($state eq $HITS && 
-       m@<b><a href="http://redirect.*?u=([^"]+)\&q=.*?>(.*)</a></b><br>@i) {
+   } if ($state eq $HITS && m|.*?<a href="http://redirect.*?u=([^"]+)\&q=.*?>(.*)</a></b><br>(.*)<br>|i) {
        print STDERR "**Found a URL\n" if 2 <= $self->{_debug};
-       my ($url,$title) = ($1,$2);
+	   my ($url,$title, $desc) = ($1,$2,$3);
        if (defined($hit)) 
          {
         push(@{$self->{cache}}, $hit);
@@ -207,43 +210,23 @@ sub native_retrieve_some {
        $hit = new WWW::SearchResult;
        $hit->add_url($url);
        $hits_found++;
-       $title =~ s/amp;//g;
-       $hit->title($title);
-       $state = $DESC;
-  } elsif ($state eq $HITS && m@<b><a href="([^"]+)">(.*)</a></b><br>@i) {
-       print STDERR "**Found a URL\n" if 2 <= $self->{_debug};
-       if (defined($hit)) 
-         {
-        push(@{$self->{cache}}, $hit);
-         };
-       $hit = new WWW::SearchResult;
-       $hit->add_url($1);
-       $hits_found++;
-       $hit->title($2);
-       $state = $DESC;
-   } elsif ($state eq $DESC && m@^(.*)<br>@i) {
-       print STDERR "**Found description\n" if 2 <= $self->{_debug};
-       $hit->description($1);
-       $state = $SOURCE;
-   } elsif ($state eq $SOURCE && m@<.*?>Found at:\s(.*)</font><p>@i) {
-       print STDERR "**Found Source URL\n" if 2 <= $self->{_debug};
-       $hit->source($1);
+       $hit->title(strip_tags($title));
+       $hit->description(strip_tags($desc));
        $state = $HITS;
    } elsif ($state eq $HITS && m|<A HREF="([^"]+)">Next</A>|i) {
        print STDERR "**Found 'next' Tag\n" if 2 <= $self->{_debug};
-       my $nURL = $1;
-       $self->{'_next_url'} = $self->{'search_base_url'} . $nURL;
-       print STDERR " **Next URL is: ", $self->{'_next_url'}, "\n" if 2 <= $self->{_debug};
+       my $sURL = $1;
+       $self->{'_next_url'} = $self->{'search_base_url'} . $sURL;
+       print STDERR " **Next Tag is: ", $self->{'_next_url'}, "\n" if 2 <= $self->{_debug};
        $state = $HITS;
        } 
      else 
        {
        print STDERR "**Nothing Matched\n" if 2 <= $self->{_debug};
        }
-  } if (defined($hit)) {
-       push(@{$self->{cache}}, $hit);
-       } 
-       return $hits_found;
-       } # native_retrieve_some
+   } if (defined($hit)) {
+     push(@{$self->{cache}}, $hit);
+     } 
+   return $hits_found;
+   } # native_retrieve_some
 1;
-

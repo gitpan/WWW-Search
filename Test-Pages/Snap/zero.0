@@ -1,203 +1,80 @@
-<!-- c|net Mon Nov  8 05:43:57 1999  $Revision: 2.29 $  -->
-
- 
-
+<html><head><title>Snap: Search Results</title></head>
+<body bgcolor="#FFFFFF" link="#0000FF" vlink="#666666" text="#333333"><!-- c|net Mon Jan 10 14:22:57 2000  $Revision: 2.29 $  -->
 
 
-
-
-
-
-
-<html>
-<head>
-<title>Snap:Power Search:Results</title>
-</head>
-
-<body bgcolor="#FFFFFF" link="#0000FF" vlink="#666666" text="#333333">
-
-
-
-<!-- c|net Wed Nov  3 10:12:28 1999  $Revision: 2.29 $  -->
-
-
-<map name=gs-tabs><area shape=rect coords="2,22,81,44" href="/main/door/0,1,home-home,00.html?st.sn.0.t.fd"><area shape=rect coords="82,27,155,44" href="/main/local/1,37,home-8,00.html?tag=st.sn.0.t.lc"><area shape=rect coords="156,27,230,44" href="/LMOID/mysnap/mysnap/0,160,home-0,00.html?st.sn.0.t.ms"></map>
-<table width="100%" cellspacing=0 cellpadding=0 border=0><tr bgcolor="#cc0000">
-<td width="33%"><a href="/main/door/0,1,home-home,00.html"><img src="/main/images/logos/logo_header_fl.gif" alt=Snap.com width=185 height=45 border=0></a></td>
-<td width="34%" align=center valign=bottom><img src="/main/images/tabs/none_fl_tgl.gif" alt="Navigation Tabs" width=234 height=45 border=0 usemap="#gs-tabs"></td>
-<td width="33%"><spacer type=block width=1 height=1></td>
-</tr><tr><td bgcolor="#666666" height=2 colspan=3><spacer type=block width=1 height=1></td></tr></table>
-<table bgcolor="#FFFFFF" width="100%" cellpadding=0 cellspacing=0 border=0>
-<tr valign=middle><td height=100 align=center><FORM method="GET" action="http://home.snap.com/cgi-acc/acc_clickthru.acc" target="_top">
-<!--http%3A%2F%2Fadcenter%2Ein2%2Ecom%2Fcgi%2Dbin%2Fclick%2Ecgi-->
-<input type="hidden" name="clickid" value="0000505f5811944e00000000">
-<input type="hidden" name="adt" value="banner">
-<input type="hidden" name="edt" value="home">
-<input type="hidden" name="site" value="SN">
-<input type="hidden" name="cat" value="s-web">
-<input type=hidden name=url value=http://adcenter.in2.com/cgi-bin/click.cgi>
-<table border="0" cellpadding="0" cellspacing="0" width="468" bgcolor="#639CFF">
-<tr><input type="hidden" name="fwd_cid" value="ivillage-personality_s-468x60">
-<input type="hidden" name="fwd_hid" value="snap">
-<input type="hidden" NAME="fwd_tid" VALUE="15453">
-<td rowspan="2"><input type=image name="fwd_personality_a" SRC="http://www.snap.com/Ads/Media/Images/ivillage.a.banner.gif" border=0 WIDTH="217" HEIGHT="60" alt="iVillage - Does your name match your personality?"></td>
-<td colspan="2"><input type=image name="fwd_personality_b" SRC="http://www.snap.com/Ads/Media/Images/ivillage.b.banner.gif" border=0 WIDTH="251" HEIGHT="30" alt="iVillage - Does your name match your personality?"></td>
-</tr><tr><td height="30" bgcolor="#639CFF" align="center"><INPUT TYPE=text NAME="fwd_answer" SIZE=16 value="type in name"></td>
-<td align="right"><input type=image name="fwd_personality_d" SRC="http://www.snap.com/Ads/Media/Images/ivillage.d.banner.gif" border=0 WIDTH="127" HEIGHT="30" alt="iVillage - Find out if your name matches your personality - Click Here!"></td>
-</tr></table><A HREF="http://home.snap.com/cgi-acc/acc_clickthru.acc?clickid=0000505f5811944e00000000&edition=home&category=s-web&site=SN&url=http%3A%2F%2Fwww%2Eivillage%2Ecom%2F" TARGET="_top"><FONT FACE="Verdana, Arial, Helvetica" SIZE="-2">Click Here</FONT></A>
-</FORM>
-<IMG SRC="http://home.snap.com/Ads/Media/Images/1x1.gif?u_vid_0_0&ffffffff"></td></tr></table>
-<table width="100%" cellpadding=0 cellspacing=0 border=0>
-<tr><td bgcolor="#0000FF" height=1><spacer type=block width=1 height=1></td></tr></table>
-<table cellspacing=0 cellpadding=4 border=0 width="100%"><tr valign=top><td nowrap width="75%"><font size=-1 face="Arial,Helvetica">
-Find books
-about '<a
-href="http://home.snap.com/cgi-acc/acc_clickthru.acc?clickid=0000479c3eb331ba00000000&adt=commercelink1&edt=home&cat=s-web&site=SN&url=http%3A%2F%2Fbn%2Ebfast%2Ecom%2Fbooklink%2Fclick%3Fsourceid%3D1380915%26categoryid%3Dmerchsearch%26match%3Dexact%26options%3Dand%26keyword%3DBogus23688NoSuchWord942068632">Bogus23688NoSuchWord942068632</a>'
-at barnesandnoble.com.
-</font></td><td width="25%" align=right nowrap><font size=-2 face="Arial,Helvetica">A D V E R T I S E M E N T</td></tr></table>
-
-<table width="100%" cellpadding=0 cellspacing=0 border=0>
-<tr><td bgcolor="#666666" height=2><spacer type=block width=1 height=1></td></tr>
-</table>
+<map name=gs-tabs><area shape=rect coords="6,16,76,36" href="/main/door/0,1,home-home,00.html?st.sn.ip.t.fd" alt="Home"><area shape=rect coords="78,16,148,36" href="/main/local/1,37,home-8,00.html?tag=st.sn.ip.t.lc" alt="Local"><area shape=rect coords="151,16,220,36" href="/LMOID/mysnap/mysnap/0,160,home-0,00.html?st.sn.ip.t.ms" alt="My Snap"><area shape=rect coords="223,16,293,36" href="/dir/0,668,home-0,00.html?st.sn.ip.t.dir" alt="Directory"><area shape=rect coords="296,16,366,36" href="/main/channel/0,2,home-sh,00.html?st.sn.ip.t.ic-sh" alt="Shopping"></map><table bgcolor="#CC0000" width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr valign=bottom><td width="25%"><img src="http://a1356.g.ak.snap.com/f/1356/814/24h/www.snap.com/main/images/logos/logo_header_fl.gif" width=185 height=45 border=0 alt="Snap.com"></td><td width="50%" align=center><img src="http://a1356.g.ak.snap.com/f/1356/814/24h/www.snap.com/main/images/tabs/d/00no.gif" alt="Navigation Tabs" width=379 height=37 border=0 usemap="#gs-tabs"></td><td width="25%"><spacer type=block width=1 height=1></td></tr></table><table width="100%" cellpadding=0 cellspacing=0 border=0><tr><td height=90 align=center><a href="http://home.snap.com/cgi-acc/acc_clickthru.acc?clickid=00006caf5811944e00000000&adt=banner&edt=home&cat=s-web&site=SN" target="_top"><img src="http://home.snap.com/Ads/Media/Images/010600.passionsstore.banner.gif?u_vid_0_0&ffffffff" alt="Buy the jewelry you see on Passions - Click Here" border="2" height="60" width="468" ><br><center><font face="Verdana, Arial, Helvetica" size="-2">Buy the jewelry you see on Passions - Click Here</font></center></A></td></tr></table><table width="100%" cellpadding=0 cellspacing=0 border=0><tr><td>
 <table width="100%" cellpadding=4 cellspacing=0 border=0>
 <tr bgcolor="#CCCCCC" valign=bottom><td nowrap>
-<form method=get action="/search/directory/results/1,61,home-0,00.html">
-<input type=text name=keyword value="Bogus23688NoSuchWord942068632" size=40><input type=hidden name="SM" value="1">
+<form method=get action="/search/results/1,61,home-0,00.html">
+<input type=text name=keyword value="Bogus17170NoSuchWord947776213" size=40><input type=hidden name=NR value="100">&nbsp;&nbsp;<input type=hidden name=stype value="6"><input type=hidden name=KM value="a"><input type=hidden name=AN value="1"><input type=hidden name=FR value="f"><input type=hidden name=PL value="a"><input type=hidden name="SM" value="1">
 <input type=hidden name="tag" value="st.sn.srsb.top">
 &nbsp;&nbsp;<input type=submit value="Search">
-&nbsp;&nbsp;<span style="color:#0000FF"><a href="/main/help/item/0,11,home-6736,00.html"><font color="#0000FF" face="Arial,Helvetica" size=-2>Search Tips</a></font></span></font></td><td><spacer type=block width=1 height=1></form></td></tr></table>
-
-
-
-
-    
-<!-- error message #1 -->
-<table border=0 cellspacing=0 cellpadding=0 width="100%"><tr><td height=8><spacer type=block width=1 height=1></td></tr>
-<tr><td><font face="Arial,Helvetica">No results returned for "<b>Bogus23688NoSuchWord942068632</b>." <a href="/main/help/item/0,11,home-6736,00.html">Need help</a>?</font></td></tr>
-   <tr><td height=8><spacer type=block width=1 height=1></td></tr></table>
-
-<!-- end error message 1 -->
-     
-
-<table width="100%" cellpadding=0 cellspacing=0 border=0>
-<tr><td bgcolor="#666666" height=2><spacer type=block width=1 height=1></td></tr></table>
-
-
-<!-- c|net Tue Oct  5 18:32:19 1999  $Revision: 2.29 $  -->
+&nbsp;&nbsp;<span style="color:#0000FF"><a href="/main/help/item/0,11,home-6736,00.html"><font color="#0000FF" face="Arial,Helvetica" size=-2>Search Tips</a></font></span></font></td></tr>
+</form>
+</table><p></td></tr>
+<tr><td bgcolor="#666666" height=2><spacer type=block width=1 height=1></td></tr>
+</table><table cellspacing=0 cellpadding=4 border=0 width="100%"><tr valign=top><td nowrap width="75%"><font size=-1 face="Arial,Helvetica">Find books
+about '<a
+href="http://home.snap.com/cgi-acc/acc_clickthru.acc?clickid=0000479c3eb331ba00000000&adt=commercelink1&edt=home&cat=s-web&site=SN&url=http%3A%2F%2Fbn%2Ebfast%2Ecom%2Fbooklink%2Fclick%3Fsourceid%3D1380915%26categoryid%3Dmerchsearch%26match%3Dexact%26options%3Dand%26keyword%3DBogus17170NoSuchWord947776213">Bogus17170NoSuchWord947776213</a>'
+at barnesandnoble.com.
+</td><td width="25%" nowrap align=right><font size=-2 face="Arial,Helvetica">A D V E R T I S E M E N T</td></tr></table><table width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td bgcolor="#0000FF" height=1><spacer type=block width=1 height=1></td></tr><tr><td height=10><spacer type=block width=1 height=1></td></tr>
+</table><table align=right cellpadding=4 cellspacing=0 border=0>
+<tr><td><font face="Arial,Helvetica" size=-2>A D V E R T I S E M E N T</font></td></tr><tr><td align=center><spacer type=block width=1 height=1></td></tr>
+<tr><td align=center><spacer type=block width=1 height=1></td></tr>
+<tr><td align=center><a href="http://home.snap.com/cgi-acc/acc_clickthru.acc?clickid=00006a54ee99194b00000000&adt=midas1&edt=home&cat=s-web&site=SN" target="_top"><img src="http://home.snap.com/Ads/Media/Images/snap.homeloanb.button.gif" alt="Click Here!" border="1" height="31" width="88" ><br><center><font face="Verdana, Arial, Helvetica" size="-2">Click Here!</font></center></A><hr size=1 noshade></td></tr>
+<tr><td align=center><a href="http://home.snap.com/cgi-acc/acc_clickthru.acc?clickid=00005172cc22741200000000&adt=midas2&edt=home&cat=s-web&site=SN" target="_top"><img src="http://home.snap.com/Ads/Media/Images/freeshop.midas.text.freeshop.gif" alt="" border="1" height="31" width="88" ><br><center><font face="Verdana, Arial, Helvetica" size="-2"></font></center></A></td></tr>
+</table>
+</table>
+<p><font face="Arial,Helvetica" size=-1><b>Sorry, no results found for 'Bogus17170NoSuchWord947776213'.</b><p>Looking for a specific website? Try submitting it to the <a href="http://livedirectory.snap.com?tag=st.sn.ld.nores">Snap LiveDirectory</a>.</font><br clear=all><p><table width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td bgcolor="#666666" height=2><spacer type=block width=1 height=1></td></tr></table><!-- c|net Tue Nov 30 16:27:46 1999  $Revision: 2.29 $  -->
 
 
 <table width="100%" cellpadding=4 cellspacing=0 border=0>
 <tr><td><font face="Arial,Helvetica" size="-1" color="#0000FF">
-<a href="/LMOID/resource/0,566,-409,00.html?ad.snbottom.0.cruise" style="color:#0000FF">
-<font color="#0000FF">Win a Cruise -- Enter Today!</font></a></td>
+<a href="/main/channel/0,2,-sh,00.html?ad.sn.0.searchbtm" style="color:#0000FF">
+<font color="#0000FF"> Shop at Snap and Get $20 Off Your First Purchase (No Minimum)!</font></a></td>
 <td align=right><font face="Arial,Helvetica" size="-2">A D V E R T I S E M E N T</font></td></tr></table>
 
-
-
 <table width="100%" cellpadding=0 cellspacing=0 border=0>
-<tr><td bgcolor="#0000FF" height=1><spacer type=block width=1 height=1></td></tr></table>
+<tr><td bgcolor="#0000FF" height=1><spacer type=block width=1 height=1></td></tr></table><table width="100%" cellpadding=0 cellspacing=0 border=0><tr><td height="100" align=center><a href="http://home.snap.com/cgi-acc/acc_clickthru.acc?clickid=00006caf5811944e00000000&adt=banner&edt=home&cat=s-web&site=SN" target="_top"><img src="http://home.snap.com/Ads/Media/Images/010600.passionsstore.banner.gif?u_vid_0_0&ffffffff" alt="Buy the jewelry you see on Passions - Click Here" border="2" height="60" width="468" ><br><center><font face="Verdana, Arial, Helvetica" size="-2">Buy the jewelry you see on Passions - Click Here</font></center></A></td></tr></table>
 
-<table bgcolor="#FFFFFF" width="100%" cellpadding=0 cellspacing=0 border=0>
-<tr><td height=100 align=center><FORM method="GET" action="http://home.snap.com/cgi-acc/acc_clickthru.acc" target="_top">
-<!--http%3A%2F%2Fadcenter%2Ein2%2Ecom%2Fcgi%2Dbin%2Fclick%2Ecgi-->
-<input type="hidden" name="clickid" value="0000505f5811944e00000000">
-<input type="hidden" name="adt" value="banner">
-<input type="hidden" name="edt" value="home">
-<input type="hidden" name="site" value="SN">
-<input type="hidden" name="cat" value="s-web">
-<input type=hidden name=url value=http://adcenter.in2.com/cgi-bin/click.cgi>
-<table border="0" cellpadding="0" cellspacing="0" width="468" bgcolor="#639CFF">
-<tr><input type="hidden" name="fwd_cid" value="ivillage-personality_s-468x60">
-<input type="hidden" name="fwd_hid" value="snap">
-<input type="hidden" NAME="fwd_tid" VALUE="15453">
-<td rowspan="2"><input type=image name="fwd_personality_a" SRC="http://www.snap.com/Ads/Media/Images/ivillage.a.banner.gif" border=0 WIDTH="217" HEIGHT="60" alt="iVillage - Does your name match your personality?"></td>
-<td colspan="2"><input type=image name="fwd_personality_b" SRC="http://www.snap.com/Ads/Media/Images/ivillage.b.banner.gif" border=0 WIDTH="251" HEIGHT="30" alt="iVillage - Does your name match your personality?"></td>
-</tr><tr><td height="30" bgcolor="#639CFF" align="center"><INPUT TYPE=text NAME="fwd_answer" SIZE=16 value="type in name"></td>
-<td align="right"><input type=image name="fwd_personality_d" SRC="http://www.snap.com/Ads/Media/Images/ivillage.d.banner.gif" border=0 WIDTH="127" HEIGHT="30" alt="iVillage - Find out if your name matches your personality - Click Here!"></td>
-</tr></table><A HREF="http://home.snap.com/cgi-acc/acc_clickthru.acc?clickid=0000505f5811944e00000000&edition=home&category=s-web&site=SN&url=http%3A%2F%2Fwww%2Eivillage%2Ecom%2F" TARGET="_top"><FONT FACE="Verdana, Arial, Helvetica" SIZE="-2">Click Here</FONT></A>
-</FORM>
+<table width="100%" cellpadding=4 cellspacing=0 border=0>
+<tr bgcolor="#CCCCCC"><td colspan=2>
 </td></tr>
-</table>
+<tr bgcolor="#CCCCCC" valign=bottom><td width="55%" nowrap>
+<form method=get action="/search/results/1,61,home-0,00.html">
+<font face="Arial,Helvetica" size=-2>Enter search word(s):</font><br><input type=text name=keyword value="Bogus17170NoSuchWord947776213" size=40>
+<input type=hidden name=NR value="100">&nbsp;&nbsp;<input type=hidden name=stype value="6"><input type=hidden name=KM value="a"><input type=hidden name=AN value="1"><input type=hidden name=FR value="f"><input type=hidden name=PL value="a">
+<input type=hidden name="SM" value="1">
+<input type=hidden name="tag" value="st.sn.srsb.bot">
+&nbsp;&nbsp;<input type=submit value="Search"></td>
+<td width="45%" valign=bottom><font face="Arial,Helvetica" size=-2><span style="color:#0000FF"><a href="/search/power/form/0,179,home-0,00.html"><font color="#0000FF">Power Search</font></a><br><a href="/main/help/item/0,11,home-6736,00.html"><font color="#0000F">Search Tips</a></font></span></font></td></tr>
+<tr bgcolor="#cccccc"><td colspan=2><font face="Arial,Helvetica" size=-1><p><b><a href="/search/power/form/0,179,home-0,00.html">New Search</a> | <a href="/search/power/form/1,179,home-0,00.html?&NR=100&stype=6&keyword=Bogus17170NoSuchWord947776213&KM=a&AN=1&FR=f&PL=a">Revise Search</a></td></tr></form></table><table bgcolor="#CCCCCC" width="100%" cellpadding=0 cellspacing=0 border=0><tr><td><font face="Arial,Helvetica" size=-2>&nbsp;Or try one of these search engines:</font></td></tr><tr><td align=center><font face="Arial,Helvetica" size=-1><a href="/go/to?tag=ex.sn.sr.1.av&destUrl=http%3A%2F%2Fwww%2Esearch%2Ecom%2FAltaVista%2F1%2C57%2C0%2C0200%2Ehtml%3Fmode%3Dsimple%26what%3Dweb%26suffix%3D%26format%3D2%26query%3DBogus17170NoSuchWord947776213">AltaVista</a> | <a href="/main/finance/news/search/1,216,home-0,00.html?tag=st.sn.sr.1.bbn&keyword=Bogus17170NoSuchWord947776213">Bloomberg News</a> | <a href="/go/to?tag=ex.sn.sr.1.directhit&destUrl=http%3A%2F%2Fwww%2Edirecthit%2Ecom%2Ffcgi%2Dbin%2FDirectHitWeb%2Efcg%3Fservice%3Dweb%26type%3Dsrc%26fmt%3Dhtml%26template%3Dsearch%26qry%3DBogus17170NoSuchWord947776213%26submit%2Ex%3D25%26submit%2Ey%3D10"><b>Direct Hit</b></a> | <a href="/go/to?tag=ex.sn.sr.1.xcit&destUrl=http%3A%2F%2Fwww%2Eexcite%2Ecom%2Fsearch%2Egw%3FsearchType%3DKeyword%26category%3Ddefault%26mode%3Drelevance%26showqbe%3D1%26display%3Dhtml3%2Chb%26search%3DBogus17170NoSuchWord947776213">Excite</a> | <b><a href="/go/to?tag=ex.sn.sr.1.goto&destUrl=http%3A%2F%2Fwww%2Egoto%2Ecom%2Fd%2Fsearch%2Fp%2Fsnap%2F%3FKeywords%3DBogus17170NoSuchWord947776213">GoTo</a></b> | <b><a href="/go/to?tag=ex.sn.sr.1.kanoodle&destUrl=http%3A%2F%2Fwww%2Ekanoodle%2Ecom%2Freturn%2Ecool%3Fquery%3DBogus17170NoSuchWord947776213">Kanoodle</a></b> | <a href="/go/to?tag=ex.sn.sr.1.seek&destUrl=http%3A%2F%2Fwww%2Esearch%2Ecom%2FInfoseek%2F1%2C135%2C0%2C0200%2Ehtml%3FCOLL%3DWW%26QUERY%3DBogus17170NoSuchWord947776213">Search.com</a> | <a href="/go/to?tag=ex.sn.sr.1.yhoo&destUrl=http%3A%2F%2Fsearch%2Eyahoo%2Ecom%2Fbin%2Fsearch%3Fp%3DBogus17170NoSuchWord947776213">Yahoo</a> | <a href="/directory/category/0,16,home-1269,00.html?st.sn.sr.1.more">More...</a></font></td></tr>
+</font></td></tr>
 
-<!-- search box -->
-<table bgcolor="#CCCCCC" width="100%" cellpadding=4 cellspacing=0 border=0>
-<tr bgcolor="#CCCCCC"><td><form action="/search/power/results/1,180,home-0,00.html" method="get">
-<font face="Arial,Helvetica" size="-2">Enter search word(s):</font><br><input type="text" name="KW" value="Bogus23688NoSuchWord942068632" size="40">
-<input type="hidden" name="KM" value="a">
-<input type="hidden" name="AM0" value="m">
-<input type="hidden" name="AT0" value="w">
-<input type="hidden" name="AK0" value="">
-<input type="hidden" name="AM1" value="">
-<input type="hidden" name="AT1" value="">
-<input type="hidden" name="AK1" value="">
-<input type="hidden" name="AM2" value="">
-<input type="hidden" name="AT2" value="">
-<input type="hidden" name="AK2" value="">
-<input type="hidden" name="AM3" value="">
-<input type="hidden" name="AT3" value="">
-<input type="hidden" name="AK3" value="">
-<input type="hidden" name="AM4" value="">
-<input type="hidden" name="AT4" value="">
-<input type="hidden" name="AK4" value="">
-<input type="hidden" name="AN" value="1">
-<input type="hidden" name="NR" value="100">
-<input type="hidden" name="FR" value="f">
-<input type="hidden" name="PL" value="a">
-<input type="hidden" name="DR" value="0">
-<input type="hidden" name="FM" value="1">
-<input type="hidden" name="FD" value="1">
-<input type="hidden" name="FY" value="">
-<input type="hidden" name="TM" value="">
-<input type="hidden" name="TD" value="">
-<input type="hidden" name="TY" value="">
-<input type="hidden" name="LN" value="">
-<input type="hidden" name="MT" value="">
-<input type="hidden" name="XT" value="">
-<input type="hidden" name="DM" value="">
-<input type="hidden" name="SDI" value="">
-&nbsp;&nbsp;<input type="submit" value="Search">&nbsp;&nbsp;<font face="Arial,Helvetica" size="-2"><a href="/main/help/item/0,11,home-6736,00.html">Search Tips</a></font>
-<br>
-
-<a href="/search/power/form/0,179,home-0,00.html"><font face="Arial,Helvetica" size=-1><b>New Search</b></font></a>&nbsp;|&nbsp;<a href="/search/power/form/1,179,home-0,00.html?KM=a&KW=Bogus23688NoSuchWord942068632&AM0=m&AT0=w&AK0=&AM1=&AT1=&AK1=&AM2=&AT2=&AK2=&AM3=&AT3=&AK3=&AM4=&AT4=&AK4=&AN=0&NR=100&FR=f&PL=a&DR=0&FM=1&FD=1&FY=&TM=&TD=&TY=&LN=&MT=&XT=&DM=&SDI="><font face="Arial,Helvetica" size=-1><b>Revise Search</b></font></a><br><br>
+<tr><td height=5><spacer type=block height=1 width=1></td></tr><tr bgcolor="#999999"><td height=1><spacer type=block height=1 width=1></td></tr></table><!-- c|net Fri Sep 17 21:22:53 1999  $Revision: 2.29 $  -->
 
 
-</td><td width=1><spacer type=block width=1 height=5></form></td></tr></table>
-<table bgcolor="#CCCCCC" width="100%" cellpadding=0 cellspacing=0 border=0>
-<tr><td><font face="Arial,Helvetica" size="-2">&nbsp;Or try one of these search engines:</font></td></tr>
-<tr><td align=center><font face="Arial,Helvetica" size=-1>
-<a href="/go/to?tag=ex.sn.sr.6.av&destUrl=http%3A%2F%2Fwww%2Esearch%2Ecom%2FAltaVista%2F1%2C57%2C0%2C0200%2Ehtml%3Fmode%3Dsimple%26what%3Dweb%26suffix%3D%26query%3DBogus23688NoSuchWord942068632%26format%3D2">AltaVista</a> | 
-<a href="/main/finance/news/search/1,216,home-0,00.html?tag=st.sn.sr.6.bbn&keyword=Bogus23688NoSuchWord942068632">Bloomberg News</a> |
-<a href="/go/to?tag=ex.sn.sr.6.dn&destUrl=http%3A%2F%2Fx8%2Edejanews%2Ecom%2Fdnquery%2Exp%3FQRY%3DBogus23688NoSuchWord942068632%26defaultOp%3DAND%26svcclass%3Ddncurrent%26maxhits%3D20%26ST%3DQS%26format%3Dterse%26DBS%3D2">DejaNews</a> | 
-<a href="/go/to?tag=ex.sn.sr.6.xcit&destUrl=http%3A%2F%2Fwww%2Eexcite%2Ecom%2Fsearch%2Egw%3Fsearch%3DBogus23688NoSuchWord942068632%26searchType%3DKeyword%26category%3Ddefault%26mode%3Drelevance%26showqbe%3D1%26display%3Dhtml3%2Chb">Excite</a> | 
-<a href="/go/to?tag=ex.sn.sr.6.goto&destUrl=http%3A%2F%2Fwww%2Egoto%2Ecom%2Fd%2Fsearch%2Fp%2Fsnap%2F%3FKeywords%3DBogus23688NoSuchWord942068632"><b>GoTo</b></a> | 
-<a href="/go/to?tag=ex.sn.sr.6.kanoodle&destUrl=http%3A%2F%2Fwww%2Ekanoodle%2Ecom%2Freturn%2Ecool%3Fquery%3DBogus23688NoSuchWord942068632"><b>Kanoodle</b></a> | 
-<a href="/go/to?tag=ex.sn.sr.6.seek&destUrl=http%3A%2F%2Fwww%2Esearch%2Ecom%2FInfoseek%2F1%2C135%2C0%2C0200%2Ehtml%3FQUERY%3DBogus23688NoSuchWord942068632%26COLL%3DWW">Infoseek</a> | 
-<a href="/go/to?tag=ex.sn.sr.6.lcos&destUrl=http%3A%2F%2Fwww%2Elycos%2Ecom%2Fcgi%2Dbin%2Fpursuit%3Fquery%3DBogus23688NoSuchWord942068632">Lycos</a> | 
-<a href="/go/to?tag=ex.sn.sr.6.yhoo&destUrl=http%3A%2F%2Fsearch%2Eyahoo%2Ecom%2Fbin%2Fsearch%3Fp%3DBogus23688NoSuchWord942068632">Yahoo</a> |
-<a href="/directory/category/0,16,home-1269,00.html?st.sn.sr.6.more">More...</a></font></td></tr>
-<tr><td height=5><spacer type=block width=1 height=5></td></tr>
-</table>
+<table bgcolor="#CCCCCC" width="100%" cellpadding=0 cellspacing=0 border=0><tr><td bgcolor="#CCCCCC" height=5><spacer type=block width=1 height=1></td></tr>
+<tr><td align=center><font face="Arial,Helvetica" size="-1"><a href="/search/power/form/0,179,home-0,00.html">Power Search</a>&nbsp;<font size="-2">&#149;</font>&nbsp;<a href="/search/email/results/0,71,home-0,00.html">E-mail Look-up</a>&nbsp;<font size="-2">&#149;</font>&nbsp;<a href="/search/map/form/1,161,home-0,00.html">Maps & Driving Directions</a>&nbsp;<font size="-2">&#149;</font>&nbsp;<a href="/search/events/results/0,78,home-0,00.html">Online Events</a><br><a href="/download/init/0,19,home-0,102000.html">Software Downloads</a>&nbsp;<font size="-2">&#149;</font>&nbsp;<a href="/search/other/0,117,home-0,00.html">Specialty  Searches</a>&nbsp;<font size="-2">&#149;</font>&nbsp;<a href="/search/directory/results/0,61,home-0,00.html">Web Sites</a>&nbsp;<font size="-2">&#149;</font>&nbsp;<a href="/search/people/results/0,57,home-0,00.html">White Pages</a>&nbsp;<font size="-2">&#149;</font>&nbsp;<a href="/search/business/results/1,60,home-0,00.html">Yellow Pages</a></font></td></tr>
+<tr><td height=5><spacer type=block height=1 width=1></td></tr></table>
+<!-- c|net Fri Oct 22 11:13:37 1999  $Revision: 2.29 $  -->
 
 
-<!-- c|net Thu Nov  4 10:50:11 1999  $Revision: 2.29 $  -->
+<!-- c|net Wed Dec 22 17:32:18 1999  $Revision: 2.29 $  -->
 
 
  
  
 
 <table width="100%" cellspacing=0 cellpadding=0 border=0>
-<tr><td bgcolor="#666666" height=2 colspan=3><spacer type=block width=1 height=1></td></tr>
-<tr><td width="2%" rowspan=3><img src="/main/images/logos/logo_footer_fl.gif" width=105 height=20 border=0 alt="Snap.com"></td><td width="96%" align=center height=27><font face="MS Sans Serif, Geneva" size=-2><a href="/main/door/0,1,home-home,00.html?st.sn.ft.0.hm">Home</a>&nbsp;&nbsp;<a href="/search/directory/results/1,61,home-0,00.html?st.sn.ft.0.srch">Search</a>&nbsp;&nbsp;<a href="/main/help/item/0,11,home-8406,00.html?st.sn.ft.0.mmbr">Membership Info</a>&nbsp;&nbsp;<a href="/main/help/comment/0,98,home-0,00.html?st.sn.ft.0.fdbk">Feedback</a>&nbsp;&nbsp;<a href="/main/help/index/0,79,home-0,00.html?st.sn.ft.0.help">Help</a>&nbsp;&nbsp;<a href="/main/help/snapwire/0,445,home-0,00.html?st.sn.ft.0.wire">Free E-mail Newsletter</a></font></td><td width="2%">&nbsp;</td>
-</tr><tr><td bgcolor="#CC0000" height=2 colspan=2><spacer type=block width=1 height=1></td></tr>
-<tr><td align=center height=25><font face="MS Sans Serif, Geneva" size=-2><a href="/LMOID/resource/0,566,home-650,00.html?st.sn.ft.0.abt">About Snap</a>&nbsp;&nbsp;<a href="/media/index.html?st.sn.ft.o.adv">Ad Info</a>&nbsp;&nbsp;<a href="/LMOID/resource/0,566,home-772,00.html?st.sn.ft.0.job">Snap Jobs</a>&nbsp;&nbsp;<a href="/main/register/problems/0,135,home-0,00.html?st.sn.ft.0.prv">Privacy Policy</a>&nbsp;&nbsp;<a href="/main/help/item/0,11,home-8450,00.html?st.sn.ft.0.surl">List Your Site</a>&nbsp;&nbsp;<a href="/main/help/item/0,11,home-8707,00.html?st.sn.ft.0.tlbx">Add Snap to Your Site</a></font></td><td><spacer type=block width=1 height=1></td></tr></table>
-
-<p>
-<!-- c|net Thu Sep 30 15:53:01 1999  $Revision: 2.29 $  -->
-
-
-<font face="Arial,Helvetica" size=-2>Copyright &copy; 1997-1999 Snap and its content providers. All rights reserved. <a href="/LMOID/resource/0,566,home-764,00.html">Terms of Use and Copyright Info</a>.</font>
-
-</body
-</html>
-
-
+<tr><td height=2 bgcolor="#666666"><spacer type=block height=1 width=1></td></tr>
+<tr><td height=20 align=center><font face="MS Sans Serif, Geneva" size=-2><a href="/main/door/0,1,home-home,00.html?st.sn.ft.0.hm">Home</a>&nbsp;&nbsp;<a href="/search/directory/results/1,61,home-0,00.html?st.sn.ft.0.srch">Search</a>&nbsp;&nbsp;<a href="/LMOID/resource/0,566,home-487,00.html?st.sn.ft.0.mmbr">Membership Info</a>&nbsp;&nbsp;<a href="/main/help/support/0,120,home-0,00.html?st.sn.ft.0.fdbk">Feedback</a>&nbsp;&nbsp;<a href="/LMOID/resource/0,566,home-515,00.html?st.sn.ft.0.help">Help</a>&nbsp;&nbsp;<a href="/main/help/snapwire/0,445,home-0,00.html?st.sn.ft.0.wire">Free E-mail Newsletter</a></font></td>
+</tr>
+<tr>
+<td height=15 align=center><font face="MS Sans Serif, Geneva" size=-2><a href="/LMOID/resource/0,566,home-650,00.html?st.sn.ft.0.abt">About Snap</a>&nbsp;&nbsp;<a href="http://www.nbci.com/">About NBC Internet</a>&nbsp;&nbsp;<a href="/media/index.html?st.sn.ft.o.adv">Ad Info</a>&nbsp;&nbsp;<a href="/LMOID/resource/0,566,home-772,00.html?st.sn.ft.0.job">Snap Jobs</a>&nbsp;&nbsp;<a href="/main/register/problems/0,135,home-0,00.html?st.sn.ft.0.prv">Privacy Policy</a>&nbsp;&nbsp;<a href="/LMOID/resource/0,566,home-1078,00.html?st.sn.ft.0.surl">List Your Site</a>&nbsp;&nbsp;<a href="/main/help/item/0,11,home-8707,00.html?st.sn.ft.0.tlbx">Add Snap to Your Site</a></font></td>
+</tr>
+</table>
+<p><font face="Arial,Helvetica" size=-2>Copyright &copy; 1997-2000 Snap and its content providers. All rights reserved. <a href="/main/copyright/0,72,home-0,00.html">Terms of Use and Copyright Info</a>.</font></body></html>

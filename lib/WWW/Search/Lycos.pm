@@ -1,7 +1,7 @@
 # Lycos.pm
 # by Wm. L. Scheding and Martin Thurn
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: Lycos.pm,v 1.15 1999/12/22 20:31:49 mthurn Exp $
+# $Id: Lycos.pm,v 1.17 2000/01/03 15:14:20 mthurn Exp $
 
 =head1 NAME
 
@@ -10,7 +10,7 @@ WWW::Search::Lycos - class for searching Lycos
 =head1 SYNOPSIS
 
   use WWW::Search;
-  my $oSearch = new WWW::Search('Lycos::Sites');
+  my $oSearch = new WWW::Search('Lycos');
   my $sQuery = WWW::Search::escape_query("+sushi restaurant +Columbus Ohio");
   $oSearch->native_query($sQuery);
   while (my $oResult = $oSearch->next_result())
@@ -25,8 +25,6 @@ This class exports no public interface; all interaction should
 be done through L<WWW::Search> objects.
 
 =head1 NOTES
-
-WWW::Search::Lycos does not work by itself.  Use Lycos::Sites instead.
 
 www.lycos.com is sometimes slow to respond; but I have not had a
 problem with the default timeout.
@@ -45,7 +43,8 @@ Please tell the author if you find any!
 
 =head1 TESTING
 
-Testing is done only on the child module Lycos::Sites.
+This module adheres to the WWW::Search test mechanism.
+See $TEST_CASES below.
 
 =head1 AUTHOR
 
@@ -64,6 +63,10 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 =head1 VERSION HISTORY
 
 If it is not listed here, then it was not a meaningful nor released revision.
+
+=head2 2.09, 1999-12-26
+
+output format fixes, and query string changes for searching Lycos.com (dbradford@bdctechnologies.com)
 
 =head2 2.08, 1999-12-22
 
@@ -111,9 +114,13 @@ require Exporter;
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
 
-$VERSION = '2.08';
+$VERSION = '2.09';
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
-# $TEST_CASES can be found in Lycos::Sites.pm
+$TEST_CASES = <<"ENDTESTCASES";
+&test('Lycos', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_EXACTLY);
+&test('Lycos', '$MAINTAINER', 'one', 'vjb'.'rooks', \$TEST_RANGE, 1,9);
+&test('Lycos', '$MAINTAINER', 'three', 'pic'.'ablu', \$TEST_GREATER_THAN, 21);
+ENDTESTCASES
 
 use Carp ();
 use WWW::Search(qw( generic_option strip_tags unescape_query ));
@@ -144,13 +151,32 @@ sub native_setup_search
   if (!defined($self->{_options})) 
     {
     $self->{'search_base_url'} = 'http://lycospro.lycos.com';
+	
+	# -------------------------------------------------------------------------
+	# Modifications: 12/26/99 by dbradford@bdctechnologies.com
+	# New Query String: As of 12/26/99, here is what it looks like querying for "linux"
+	# Query String: http://lycospro.lycos.com/srchpro/?loc=searchhp&lpv=1&query=linux&t=all&type=websites
+	# Removed these options:
+    #		'maxhits' => $self->{_hits_per_page},
+    #       'matchmode' => 'or',
+    #       'cat' => 'lycos',
+    #       'mtemp' => 'nojava',
+    #       'adv' => 1,
+	#
+	# Added these one in:
+	#		'lpv' => '1',
+	#		'loc' => 'searchhp',
+	#		'type' => 'websites',
+	#		't' => 'all',
+	#		'query' => $native_query,
+	# -------------------------------------------------------------------------
     $self->{_options} = {
-                         'search_url' => $self->{'search_base_url'} .'/srchpro',
-                         'maxhits' => $self->{_hits_per_page},
-                         'matchmode' => 'or',
-                         'cat' => 'lycos',
-                         'mtemp' => 'nojava',
-                         'adv' => 1,
+                         'search_url' => $self->{'search_base_url'} .'/srchpro/',
+						 'lpv' => '1',
+						 'loc' => 'searchhp',
+						 'type' => 'websites',
+						 't' => 'all',
+						 'query' => $native_query,
                         };
     } # if
   $self->{_options}->{'query'} = $native_query;
@@ -255,9 +281,23 @@ sub native_retrieve_some
       $state = $HITS;
       } # if
 
+	# -------------------------------------------------------------------------
+	# Modifications: 12/26/99 by dbradford@bdctechnologies.com
+	#	Fixed reg expression to handle the font tags Lycos has added to output.
+	#	Old reg expression wouldn't grab the title, new one fixes this of course.
+	#	I have kept the old and new below to show the difference. You may cut out this
+	#	code if you so desire.
+	# Old: 
+    #       (m@^(?:<LI>|\s)?<a href=\"?([^">]+?)\"?\>(.*?)</a>\s-\s(.*)$@i ||
+    #        m@<LI><a href=\"?([^">]+?)\"?\>(.*?)</A>&nbsp;\<BR\>(.*)$@i))
+	# New: 
+    #       (m@^(?:<LI>|\s)?.*?<a href=\"?([^">]+?)\"?\>(.*?)</a>\s-\s(.*)$@i ||
+    #        m@<LI>.*?<a href=\"?([^">]+?)\"?\>(.*?)</A>&nbsp;\<BR\>(.*)$@i))
+	# -------------------------------------------------------------------------
+	
     elsif ($state eq $HITS && 
-           (m@^(?:<LI>|\s)?<a href=\"?([^">]+?)\"?\>(.*?)</a>\s-\s(.*)$@i ||
-            m@<LI><a href=\"?([^">]+?)\"?\>(.*?)</A>&nbsp;\<BR\>(.*)$@i))
+           (m@^(?:<LI>|\s)?.*?<a href=\"?([^">]+?)\"?\>(.*?)</a>\s-\s(.*?)</FONT>@i ||
+            m@<LI>.*?<a href=\"?([^">]+?)\"?\>(.*?)</A>&nbsp;\<BR\>(.*?)</FONT>@i))
       {
       # Actual line of input is:
       # <li><a href=http://www.cds.com/>CD Solutions Inc. CD-ROM, Replication, and Duplication page</a> - <font size=-1>CD Solutions makes CD-ROM production easy</font> 

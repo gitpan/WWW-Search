@@ -1,26 +1,27 @@
 <HTML><HEAD>
 <TITLE>Excite Search Results for "Alaska"</TITLE>
 </HEAD>
-<BODY bgcolor=ffffff text=000000 link=000099 vlink=990000>
+<BODY bgcolor="ffffff" text="000000" link="000099" vlink="990000">
 <CENTER>
 <center>
-<table cellspacing=0 cellpadding=0 border=0 width=600>
+<table cellspacing=0 cellpadding=0 border=0 width=98%>
 <tr>
-<td align=right VALIGN=TOP width=120>
-<a href=http://www.excite.com/><img src=/img/head/logo3.gif width=128 height=50 border=0></a>
+<td align=right valign=top width=128>
+<a href="/"><img src="/img/head/logo.gif" alt="Excite" width=128 height=50 border=0></a>
 </td>
-<td width=480>
-<table cellspacing=0 cellpadding=0 border=0 width=100%>
+<td>
+<table cellspacing=0 cellpadding=0 border=0 width="100%">
 <tr>
-<td ALIGN=LEFT VALIGN=bottom>
-<font size=4 face=helvetica>
-<b>News Search</b>
-</font>
-</TD>
+<td valign=bottom width=552 height=31>
+<font size=4 face=helvetica><b>&nbsp;News Search</b></font>
+</td>
 </tr>
-<tr BGCOLOR=#ffcc00>
-<td height=2 colspan=2>
-<table border=0 cellpadding=1 cellspacing=0 width=100%>
+<tr>
+<td>
+<table border=0 cellpadding=1 cellspacing=0 width="100%">
+<tr bgcolor="FFCC00">
+<td>
+<table border=0 cellpadding=0 cellspacing=0>
 <tr>
 <td>
 </td>
@@ -28,59 +29,51 @@
 </table>
 </td>
 </tr>
+</table>
+</td>
+</tr>
+</table>
+<table border=0 cellpadding=1 cellspacing=0 width="100%">
 <tr>
-<TD ALIGN=right colspan=2>
+<td align=right>
 <form action="/redir.dcg" method=get onChange="submit()">
 <td align=right>
 <font face="helvetica" size="-1">
-<a href="http://www.excite.com/r/co=hrex;http://www.excite.com/"><b>My Excite</b></a> | <a href="http://www.excite.com/r/co=hrma;http://mail.excite.com"><b>Check Email</b></a></font>&nbsp;
+<a href="http://www.excite.com/r/co=hrex;/"><b>My Excite</b></a> | <a href="http://www.excite.com/r/co=hrma;http://mail.excite.com"><b>Check Email</b></a></font>&nbsp;
 <select name="url" size="1" onChange="submit()">
-<option value="http://www.excite.com/">Excite Home
-<option value="http://auctions.excite.com/">Auctions
-<option value="http://www.excite.com/autos/">Autos
-<option value="http://careers.excite.com/">Careers
-<option value="http://www.excite.com/local/">City Guides
-<option value="http://classifieds.excite.com/">Classifieds
-<option value="http://www.excite.com/computers_and_internet/">Computers & Internet
-<option value="http://www.excite.com/education/">Education
-<option value="http://www.excite.com/entertainment/">Entertainment
-<option value="http://www.excite.com/family/">Family
-<option value="http://www.excite.com/games/">Games
-<option value="http://www.excite.com/health/">Health
-<option value="http://www.excite.com/home_and_real_estate/">Home &amp; Real Estate
-<option value="http://www.excite.com/horoscopes/">Horoscopes
-<option value="http://www.excite.com/lifestyle/">Lifestyle
-<option value="http://quicken.excite.com/">Money &amp; Investing
-<option value="http://news.excite.com/">News
-<option value="http://www.excite.com/people_and_chat/">People &amp; Chat
-<option value="http://www.excite.com/relationships/">Relationships
-<option value="http://www.excite.com/shopping/">Shopping
-<option value="http://www.excite.com/sports/">Sports
-<option value="http://city.net/">Travel
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/">Excite Home
+<option value="http://www.excite.com/r/co=hrsr;http://auctions.excite.com/">Auctions
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/autos/">Autos
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/business/">Business
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/careers/">Careers
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/local/">City Guides
+<option value="http://www.excite.com/r/co=hrsr;http://classifieds.excite.com/">Classifieds
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/computers_and_internet/">Computers & Internet
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/education/">Education
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/entertainment/">Entertainment
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/family/">Family
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/games/">Games
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/health/">Health
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/home_and_real_estate/">Home &amp; Real Estate
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/horoscopes/">Horoscopes
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/lifestyle/">Lifestyle
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/money/">Money &amp; Investing
+<option value="http://www.excite.com/r/co=hrsr;http://news.excite.com/">News
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/people_and_chat/">People &amp; Chat
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/relationships/">Relationships
+<option value="http://www.excite.com/r/co=hrsr;http://shopping.excite.com/">Shopping
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/sports/">Sports
+<option value="http://www.excite.com/r/co=hrsr;http://city.net/">Travel
 </select>
 <input type="submit" value="Go!">
-</td>
 </form>
-</TD>
-</tr>
-<TR>
-<td colspan=2>
-<table border=0 cellpadding=0 cellspacing=0>
-<tr>
-<td height=3>
 </td>
 </tr>
 </table>
-</td>
-</TR>
-</table>
-</TD>
-</TR>
-<TR>
-<TD COLSPAN=2>
-<FORM NAME=topbox ACTION=/search.gw>
+</td></tr></table>
 <TABLE border=0 cellpadding=1 cellspacing=0 width=600>
 <TR><TD bgcolor=#cccccc>
+<FORM NAME=topbox ACTION=/search.gw>
 <TABLE border=0 cellspacing=0 cellpadding=4 width=600 bgcolor=ffffff>
 <TR>
 <TD align=right bgcolor=ffffff>
@@ -111,9 +104,10 @@ More Search</a>
 </td>
 <td align=left colspan=3>
 <font face="helvetica" size=-1>&nbsp;&nbsp;
-<input type=radio name=c value=hourly ><img src=http://www.excite.com/pfp/excite/images/lep.gif> Newswires&nbsp;&nbsp;
+<input type=radio name=c value=hourly ><img src=http://www.excite.com/mesp/images/excite/lep.gif> Newswires&nbsp;&nbsp;
+<input type=radio name=c value=hourly.photo ><img src=http://www.excite.com/mesp/images/excite/lep.gif> News Photos&nbsp;&nbsp;
 <input type=radio name=c value=timely checked>Web News&nbsp;&nbsp;
-<input type=radio name=c value=hourtime >Both	</font>
+<input type=radio name=c value=hourtime >All	</font>
 </td>
 </tr>
 </table>
@@ -122,34 +116,38 @@ More Search</a>
 <table border=1 cellspacing=0 cellpadding=1 width=600 bordercolor=#ffcc00>
 <tr><td align=center bgcolor=ffffcc>
 <font face="helvetica" size=-1><b>
-Look at <A HREF=http://www.excite.com/relocate/co=xxsr_phot_more;http://news.excite.com/photo/topic/news>Photos</A>: <A HREF=http://www.excite.com/relocate/co=xxsr_phot_en;http://news.excite.com/photo/topic/entertainment>Entertainment</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_phot_mv;http://news.excite.com/photo/topic/entertainment/premiere>Movie Premieres</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_phot_nas;http://news.excite.com/photo/topic/sports/rac>NASCAR</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_phot_news;http://news.excite.com/photo/topic/news>Top News</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_phot_dis;http://news.excite.com/photo/topic/disaster>Disasters</A>
+<font color=CC0000>Free</font> Internet Services from Excite: <A href=/relocate/co=xxsr_fwintserv3_isp;http://freeworld.excite.com/>Free ISP</A> | <A href=/relocate/co=xxsr_fwintserv3_email;http://inbox.excite.com/>Free Email</A> | <A href=/relocate/co=xxsr_fwintserv3_vmail;http://inbox.excite.com/>Free Voicemail</A>
 </b></font>
 </td></tr>
 </table>
 </form>
-</TD>
-</TR>
-</table>
-<a href="http://www.excite.com/relocate/ad=108143_tourism_marketing_100499_wildlife.gif|pk=3336430;http://exc.travelalaska.com" onMouseOver="window.status='This year visit Alaska';return true" language="Javascript"><img src="http://image.eimg.com/ads/108143_tourism_marketing_100499_wildlife.gif" ALT="This year visit Alaska" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> This year visit Alaska </B></FONT></CENTER></a>
+<!-- The following html is Copyright 1997 by MatchLogic Inc. -->
+<!-- RICH=0 -->
+<IFRAME WIDTH=468 HEIGHT=60 NORESIZE SCROLLING=No FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 SRC="http://ad.preferences.com/iframe;spacedesc=FreeWallpaper3_Excite_468x60_RunOfSite_Any&ML_SSPKG=RunOfSiteSS&ML_CUSTOM=0&time=2000.01.31.21.10.33&ex_cookie=&ML_TARGET=_top&ML_REDIRECT=http%25253A%25252F%25252Fwww.excite.com%25252Frelocate%25252Fad%25253DLUCI%25257Cpk%25253D3809909%25253B">
+<SCRIPT
+SRC="http://ad.preferences.com/jscript;spacedesc=FreeWallpaper3_Excite_468x60_RunOfSite_Any&ML_SSPKG=RunOfSiteSS&ML_CUSTOM=0&ML_NIF=Y&ML_KW=Alaska&time=2000.01.31.21.10.33&ex_cookie=&ML_TARGET=_top&ML_REDIRECT=http%25253A%25252F%25252Fwww.excite.com%25252Frelocate%25252Fad%25253DLUCI%25257Cpk%25253D3809909%25253B">
+</SCRIPT>
+<NOSCRIPT>
+<A HREF="http://www.excite.com/relocate/ad=118339_htmlad.gif|pk=3809909;http://ad.preferences.com/click;spacedesc=FreeWallpaper3_Excite_468x60_RunOfSite_Any&ML_NIF=Y&time=2000.01.31.21.10.33&ex_cookie=" TARGET=_top>
+<IMG SRC="http://ad.preferences.com/image;spacedesc=FreeWallpaper3_Excite_468x60_RunOfSite_Any&ML_NIF=Y&time=2000.01.31.21.10.33&ex_cookie="></A>
+</NOSCRIPT>
+</IFRAME><CENTER><FONT SIZE=-1 COLOR=#0000FF FACE=arial, geneva><B>1,000s of FREE Desktop Images</B></FONT></CENTER>
+<!-- The above html is Copyright 1997 by MatchLogic Inc. -->
 </center>
 <small><br></small>
 </center>
-<a name=news></a>
-<TABLE border=0 CELLSPACING=0 cellpadding=0 width=100%><TR><TD>
+<a name=news-timely></a>
+<TABLE border=0 CELLSPACING=0 cellpadding=0><TR><TD>
 <img src=/img/logo/lep_w.gif>&nbsp;
-<FONT FACE=helvetica color=000000 SIZE=3><B>News Articles</B></FONT></TD>
+<FONT FACE=helvetica color=000000 SIZE=3><B>Web News</B></FONT></TD>
 </TR></TABLE>
-<TABLE border=0 cellpadding=1 cellspacing=0 width="100%">
+<table border=0 cellpadding=1 cellspacing=0 width=100%>
 <TR BGCOLOR=003366><TD><TABLE border=0 cellpadding=0 cellspacing=0><TR><TD></TD></TR></TABLE>
 </TD></TR>
 </TABLE>
-<table border=0 cellpadding=2 cellspacing=1 width=120 align=right>
-<tr>
-<td align=right>
-</td>
-</tr>
-<tr>
-<td align=right>
+<!--promo start-->
+<table border=0 cellpadding=2 cellspacing=5 width=120 align=right>
+<tr><td>
 <table border="2" cellspacing="0" cellpadding="3" bordercolor="#336600" width=120 height=66>
 <tr><td align="center" bgcolor="#ffffcc">
 <b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1">Amazon.com</font></b><br>
@@ -160,22 +158,29 @@ Search for:<br>
 <a href=/relocate/co=xsr_amazon;http://www.amazon.com/exec/obidos/excite-search/search=Alaska>ALASKA</a><br>
 </font>
 </td></tr></table>
-</td>
-</tr>
-</table>
-<font face="helvetica" size=-1>
-<b>Web News</b>
-(<i><a href="http://nt.excite.com/sources.html">Sources</a></i>) </font>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<table border="2" cellspacing="0" cellpadding="4" bordercolor="#330099" width=120 height=66>
+<tr><td align="center" bgcolor="#ffffcc">
+<center>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="-2"><b>Worldprints.com</b></font>
 <br>
+<FONT face="Verdana, Arial, Helvetica, sans-serif" size="-2">
+FREE Wallpaper
+</font>
+<br>
+<FONT face="Verdana, Arial, Helvetica, sans-serif" size="-2">
+<a href=/relocate/co=xsr_worldprints;http://wallpaper.worldprints.com/startpage?sid=5009>ALASKA</a><br>
+</font>
+</center></td></tr></table>
+</td></tr>
+</table>
+<!--promo end-->
 <font face="helvetica" size=-1>
-<font face="helvetica">
 Top <b>50</b>
 matches.
-<small>
-<a href=/search.gw?layout=about&num=261&s=Alaska&c=timely>
-<i>
-[261 hits. About Your Results]</i></a></small>
-</font>
 <br>
 <b>
 Show:&nbsp;
@@ -187,461 +192,518 @@ View by:&nbsp;
 or&nbsp;
 <a href="/search.gw?c=timely&sort=date&s=alaska">Date</a>&nbsp;
 </b>
-</font>
 <br>
+</font>
 <p>
 <font face="helvetica" size=-1>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.sltrib.com:80/1999/oct/10051999/obituari/34571.htm">The Salt Lake Tribune -- Barbara Atwood Hardman</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://deseretnews.com:80/dn/view/0,1249,150008860,00.html?">Bush, Forbes top Alaska poll</A>&nbsp;
 <SMALL>
-(Salt Lake Tribune)
+(Deseret News)
 </SMALL>
-<BR><SMALL>61% </SMALL> &nbsp;&nbsp;&nbsp;. &nbsp;&nbsp;&nbsp;.
-<BR><i>First found: </i>5 Oct 1999 &nbsp;
+<BR><SMALL>60% </SMALL> &nbsp; &nbsp; &nbsp; Texas Gov. &nbsp; &nbsp; &nbsp; Sen.
+<BR><i>First found: </i>25 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=21856&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=25512&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.adn.com:80/stories/T99100328.html">Alaska income highest 991003</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://insidedenver.com:80/college/0131du2.shtml">Alaska-Anchorage powers past DU 2-1 to gain series split </A>&nbsp;
 <SMALL>
-(Anchorage Daily News)
+(Denver Rocky Mountain News)
 </SMALL>
-<BR><SMALL>60% </SMALL> The state's median household income was $49,717 for the latest two-year period, down from $51,786 in 1996-97. The national median household income for 1997-98 was $38,233, up about $1,000 from the earlier two-year period.
-<BR><i>First found: </i>3 Oct 1999 &nbsp;
+<BR><SMALL>60% </SMALL> Health.
+<BR><i>First found: </i>31 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=25765&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=5672&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.npca.org:80/magazine/sept_oct_1999/alaska.html">National Parks Magazine | National Parks and Conservation Association:...</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.bestfares.com:80/travel_center/desks/public/200001/10058325L.asp">New Alaska Denali Park Lodging Packages Offered For The 2000 Season</A>&nbsp;
 <SMALL>
-(National Parks)
+(Best Fares Magazine)
 </SMALL>
-<BR><SMALL>58% </SMALL> Construction of a railroad, as well as related large-scale hotel facilities, would degrade the very attributes Denali is revered for-healthy wildlife populations, undisturbed ecosystems, and vast wilderness. For the estimated $214 million cost of building a railroad, nearly every NPS construction priority in all of the major Alaska park units could be funded.
-<BR><i>First found: </i>1 Sep 1999 &nbsp;
+<BR><SMALL>59% </SMALL>New Alaska Denali Park Lodging Packages Offered For The 2000 Season. Story Number: 10058325 Alaska's Denali Park Resorts offer two new packages for 2000, each affording the pleasures of the incomparable national park.
+<BR><i>First found: </i>29 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=30050&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=14815&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.21stcenturyadventures.com:80/articles/pwalaska.html">Penny-wise: Alaska </A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.seattlep-i.com:80/business/alas27.shtml">Alaska Air seen flying high despite income dip </A>&nbsp;
+<SMALL>
+(Seattle Post-Intelligencer)
+</SMALL>
+<BR><SMALL>58% </SMALL>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;HOME &nbsp;NORTHWEST &nbsp;SPORTS &nbsp;BUSINESS &nbsp;&nbsp;&nbsp;Sci-Tech &nbsp;&nbsp;&nbsp;VC Notebook &nbsp;&nbsp;&nbsp;WTO &nbsp;&nbsp;&nbsp;Boeing Watch &nbsp;&nbsp;&nbsp;Microsoft Watch &nbsp;&nbsp;&nbsp;Bruce Ramsey &nbsp;&nbsp;&nbsp;Carol Smith &nbsp;&nbsp;&nbsp;Biz Wire &nbsp;&nbsp;&nbsp;Tech Wire &nbsp;NATION/WORLD &nbsp;ART & LIFE &nbsp;COMICS & GAMES...
+<BR><i>First found: </i>29 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=15039&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www2.nando.net:80/noframes/story/0,2107,500161116-500202483-500909022-0,00.html">Alaska Airlines plans to test live TV on jets</A>&nbsp;
+<SMALL>
+(Nando Times)
+</SMALL>
+<BR><SMALL>58% </SMALL>Alaska Airlines plans to test live TV on jets Copyright &copy 2000 Nando Media. Copyright &copy 2000 Associated Press.
+<BR><i>First found: </i>30 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=11696&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.21stcenturyadventures.com:80/articles/pwalaska.html">Penny-wise: Alaska </A>&nbsp;
 <SMALL>
 (21st Century Adventures 'Ezine)
 </SMALL>
-<BR><SMALL>58% </SMALL> Penny-wise: Alaska. Pick up Fodors Alaska at your neighborhood library.
+<BR><SMALL>57% </SMALL> Penny-wise: Alaska. Pick up Fodors Alaska at your neighborhood library.
 <BR><i>First found: </i>22 Jan 1999 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=30509&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=28433&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.bestfares.com:80/travel_center/desks/public/199910/10031051L.asp">11 New Alaska Airlines Mileage Plan Bonus Offers</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://news.excite.com:80/news/ap/000129/22/alaska-airlines-tv">Alaska Airlines To Test TV on Jets</A>&nbsp;
 <SMALL>
-(Best Fares Magazine)
+(Associated Press)
 </SMALL>
-<BR><SMALL>58% </SMALL> Last Travel Date: 12/31/99. Purchase By: 12/31/99.
-<BR><i>First found: </i>8 Oct 1999 &nbsp;
+<BR><SMALL>56% </SMALL>&nbsp;. &nbsp;&nbsp;&nbsp; &nbsp;.
+<BR><i>First found: </i>31 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=661&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=8074&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.usnewswire.com:80/topnews/Current_Releases/1006-102.htm">Prominent African-American Pastors from Alaska Endorse Gary Bauer</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://insidedenver.com:80/college/0130du2.shtml">Despite 45 shots, DU settles for 2-2 tie in OT </A>&nbsp;
 <SMALL>
-(US Newswire)
+(Denver Rocky Mountain News)
 </SMALL>
-<BR><SMALL>58% </SMALL> U.S. Newswire. /U.S.
-<BR><i>First found: </i>6 Oct 1999 &nbsp;
+<BR><SMALL>56% </SMALL> &nbsp;&nbsp;Nuggets. &nbsp;&nbsp;Avalanche.
+<BR><i>First found: </i>30 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=14569&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=12254&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.bestfares.com:80/travel_center/desks/public/199910/10030498L.asp">Cruise Club Specials On Alaska Cruises</A>&nbsp;
-<SMALL>
-(Best Fares Magazine)
-</SMALL>
-<BR><SMALL>58% </SMALL> O/S was from $2,549/now from $1,549. O/S was from $2,895/now from $2,595.
-<BR><i>First found: </i>6 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=16464&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.adn.com:80/stories/T99100463.html">Left seat often left empty 991004</A>&nbsp;
-<SMALL>
-(Anchorage Daily News)
-</SMALL>
-<BR><SMALL>55% </SMALL> The phenomenon is occurring in Alaska and nationwide. Nationwide, there were 694,000 pilots in 1988, 616,342 in 1997.
-<BR><i>First found: </i>4 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=24050&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.adn.com:80/stories/T99100774.html">Safeway may have a buyer 991007</A>&nbsp;
-<SMALL>
-(Anchorage Daily News)
-</SMALL>
-<BR><SMALL>55% </SMALL>-based Safeway to buy Carr Gottstein Foods Co. It continues to service Alaska Commercial Co.
-<BR><i>First found: </i>7 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=9009&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://cnn.com:80/TRAVEL/NEWS/9910/06/alaska.cruise.reut/index.html">Juneau voters approve cruise-ship head tax</A>&nbsp;
-<SMALL>
-(CNN Interactive)
-</SMALL>
-<BR><SMALL>55% </SMALL> Web posted at: 12:28 p.m. EST (1628 GMT) JUNEAU, Alaska (Reuters) -- Voters in the Alaska capital city of Juneau on Tuesday overwhelmingly approved a $5-per-passenger tax on cruise ship visitors to help close a city budget gap. RELATED SITES: Juneau Web: Juneau, Alaska.
-<BR><i>First found: </i>6 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=14764&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.adn.com:80/stories/T99100574.html">APU bids for funds 991005</A>&nbsp;
-<SMALL>
-(Anchorage Daily News)
-</SMALL>
-<BR><SMALL>55% </SMALL> Target: $20 million By LARRY CAMPBELL. Daily news reporter Under the largest effort ever undertaken by the school, Alaska Pacific University has announced a new, five-year campaign to raise $20 million for capital improvements and academic programs.
-<BR><i>First found: </i>5 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=20277&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.iht.com:80/IHT/TODAY/WED/IN/socks.2.html">Flu Warning for U.S. </A>&nbsp;
-<SMALL>
-(International Herald Tribune)
-</SMALL>
-<BR><SMALL>55% </SMALL> Alaska is usually the first stop in the United States, and the viruses then reach the West and eventually the East Coast, said Dr. Mostow believes the flu is showing up in the Lower 48 a month earlier than expected.
-<BR><i>First found: </i>5 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=18845&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.canoe.ca:80/JamMoviesReviewsM/mysteryalaska_king.html">Crowd-pleasing Alaska a comedic power play</A>&nbsp;
-<SMALL>
-(Jam! Showbiz)
-</SMALL>
-<BR><SMALL>53% </SMALL> Mystery, Alaska. - More on Mystery, Alaska.
-<BR><i>First found: </i>6 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=16342&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.canoe.ca:80/JamMoviesReviewsM/mysteryalaska_thompson.html">Acting, dialogue gets Mystery off the ice</A>&nbsp;
-<SMALL>
-(Jam! Showbiz)
-</SMALL>
-<BR><SMALL>53% </SMALL> - Jam! - Jam!
-<BR><i>First found: </i>6 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=16341&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.sltrib.com:80/1999/oct/10021999/obituari/33549.htm">The Salt Lake Tribune -- Aimee Farrer</A>&nbsp;
-<SMALL>
-(Salt Lake Tribune)
-</SMALL>
-<BR><SMALL>52% </SMALL> &nbsp;&nbsp;&nbsp;. &nbsp;&nbsp;&nbsp;.
-<BR><i>First found: </i>2 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=28436&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://deseretnews.com:80/dn/view/1,1249,115013467,00.html?">deseretnews.com</A>&nbsp;
-<SMALL>
-(Deseret News)
-</SMALL>
-<BR><SMALL>52% </SMALL> Leg-hold traps are inhumane &nbsp; &nbsp; &nbsp; When Sen.. &nbsp; &nbsp; &nbsp; Just because the traps have been used for hundreds of years doesn't make it OK.
-<BR><i>First found: </i>4 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=23187&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.adn.com:80/stories/T99100577.html">Studded tires can make driving safer but put you in a rut too 991005</A>&nbsp;
-<SMALL>
-(Anchorage Daily News)
-</SMALL>
-<BR><SMALL>52% </SMALL> What to do? But that's OK, because I'll also do what all the experts say is the most important thing you can do to be a safer winter driver.
-<BR><i>First found: </i>5 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=20276&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://cnn.com:80/TRAVEL/NEWS/9910/04/millennium.ice.reut/index.html">Metaphor for peace</A>&nbsp;
-<SMALL>
-(CNN Interactive)
-</SMALL>
-<BR><SMALL>52% </SMALL> &nbsp; &nbsp; ALSO. &nbsp; &nbsp;.
-<BR><i>First found: </i>4 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=23315&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.spokane.net:80/news-story-body.asp?Date=100299&ID=s641175&cat=">Spokane.net - </A>&nbsp;
-<SMALL>
-(Spokesman Review/Spokane.net)
-</SMALL>
-<BR><SMALL>51% </SMALL> What are your thoughts on. Your comment: Your Email Address:.
-<BR><i>First found: </i>2 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=27303&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.canoe.ca:80/JamMoviesReviewsM/mysteryalaska_hobson.html">Small-town charmer</A>&nbsp;
-<SMALL>
-(Jam! Showbiz)
-</SMALL>
-<BR><SMALL>51% </SMALL> - Jam! - Jam!
-<BR><i>First found: </i>1 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=29113&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://deseretnews.com:80/dn/view/1,1249,115014581,00.html?">deseretnews.com</A>&nbsp;
-<SMALL>
-(Deseret News)
-</SMALL>
-<BR><SMALL>51% </SMALL> &nbsp; &nbsp; &nbsp; Word of Lowe's death spread quickly Tuesday. &nbsp; &nbsp; &nbsp; "The slide shows he gave were always so humble.
-<BR><i>First found: </i>6 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=14689&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.adn.com:80/stories/T99100275.html">Groups will wait and see 991002</A>&nbsp;
-<SMALL>
-(Anchorage Daily News)
-</SMALL>
-<BR><SMALL>51% </SMALL> Kenai is one. The Yukon River is one.
-<BR><i>First found: </i>2 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=27314&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://deseretnews.com:80/dn/view/1,1249,115013021,00.html?">deseretnews.com</A>&nbsp;
-<SMALL>
-(Deseret News)
-</SMALL>
-<BR><SMALL>50% </SMALL> &nbsp; &nbsp; &nbsp; Admittedly, it doesn't sound like a terrible premise for a movie. &nbsp; &nbsp; &nbsp; It doesn't help that the film is so poorly paced, either.
-<BR><i>First found: </i>1 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=29015&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.phillynews.com:80/daily_news/99/Oct/07/national/MONT07.htm">Body of climber to stay on Himalaya mountain</A>&nbsp;
-<SMALL>
-(Philadelphia Daily News)
-</SMALL>
-<BR><SMALL>50% </SMALL> &nbsp;BOZEMAN, Mont. &nbsp;.
-<BR><i>First found: </i>7 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=11574&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.adn.com:80/stories/T99100636.html">Voters back gas pipeline 991006</A>&nbsp;
-<SMALL>
-(Anchorage Daily News)
-</SMALL>
-<BR><SMALL>50% </SMALL> The Associated Press Voters in three Alaska municipalities on Tuesday overwhelmingly endorsed creation of a port authority to build and operate a natural gas pipeline from the North Slope to Valdez. North Slope voters were also choosing a borough mayor on Tuesday.
-<BR><i>First found: </i>6 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=16361&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.hollywood.com:80/news/topstories/10-06-99/html/1-3.html">Hollywood.com - Hollywood News ( Top Stories )</A>&nbsp;
-<SMALL>
-(Hollywood Online)
-</SMALL>
-<BR><SMALL>50% </SMALL> Projected Box- Estimated U.S. box-office office cost, in receipts, Movie title Studio rank millions in millions. Projected Box- Estimated U.S. box-office office cost, in receipts, Movie title Studio rank millions in millions.
-<BR><i>First found: </i>6 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=14004&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.courierpress.com:80/cgi-bin/view.cgi?199910/02+va10031999_news.html+19991002+news">Evansville Courier & Press - VA secretary under fire</A>&nbsp;
-<SMALL>
-(Evansville Courier & Press)
-</SMALL>
-<BR><SMALL>50% </SMALL> The inspector generals report said West should not have used government aircraft unless no commercial flights were reasonably available and the cost of using the government plane would not exceed the cost of flying commercially. The report said the party for Dalton and his wife cost $9,340 in government funds.
-<BR><i>First found: </i>2 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=27248&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.onroute.com:80/hotelguide/index.html">Onroute Hotel Guide | Information | Reservations</A>&nbsp;
-<SMALL>
-(Onroute Today)
-</SMALL>
-<BR><SMALL>50% </SMALL> To check out hotels in Canada and other countries, Go Here Directory for Online Reservations. Onroute Destinations pages.
-<BR><i>First found: </i>19 Aug 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=30130&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.iht.com:80/IHT/TODAY/TUE/FIN/box05.2.html">Weekend Box Office</A>&nbsp;
-<SMALL>
-(International Herald Tribune)
-</SMALL>
-<BR><SMALL>50% </SMALL>&nbsp; &nbsp;. Stigmata MGM $2.3 million &nbsp;
-<BR><i>First found: </i>4 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=22381&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.sfgate.com:80/cgi-bin/article.cgi?file=/chronicle/archive/1999/10/04/MNR1BA4.DTL">ALAMEDA COUNTY/Health Officials to Check Coast for Nuclear Fallout </A>&nbsp;
-<SMALL>
-(S.F. Gate/ San Francisco Examiner & Chronicle)
-</SMALL>
-<BR><SMALL>50% </SMALL> &nbsp; ALAMEDA COUNTY. &nbsp;.
-<BR><i>First found: </i>5 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=21007&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.edweek.org:80/ew/ewstory.cfm?slug=06nagb.h19">  Record Number of States Commit to NAEP --    October 6, 1999...</A>&nbsp;
-<SMALL>
-(Education Week)
-</SMALL>
-<BR><SMALL>50% </SMALL> October 6, 1999 Record Number of States. "NAEP provides a really strong benchmark for states.
-<BR><i>First found: </i>5 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=19295&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.adn.com:80/stories/T99100776.html">Texas vet takes over as director at SeaLife Center 991007</A>&nbsp;
-<SMALL>
-(Anchorage Daily News)
-</SMALL>
-<BR><SMALL>49% </SMALL> I tend to be a bit of a workaholic," he said. "That's because I love what I do."
-<BR><i>First found: </i>7 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=9008&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.adn.com:80/stories/T99100277.html">Feds take fisheries control 991002</A>&nbsp;
-<SMALL>
-(Anchorage Daily News)
-</SMALL>
-<BR><SMALL>49% </SMALL> U.S. Sen. State Sen.
-<BR><i>First found: </i>2 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=27313&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.bergen.com:80/morenews/climber199910075.htm">World renowned climber killed </A>&nbsp;
-<SMALL>
-(Bergen Record)
-</SMALL>
-<BR><SMALL>49% </SMALL> The Region. The Wire.
-<BR><i>First found: </i>7 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=9705&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.bergen.com:80/travel/takekid03199910034.htm">Alaskan wilderness trip has hands-on action </A>&nbsp;
-<SMALL>
-(Bergen Record)
-</SMALL>
-<BR><SMALL>49% </SMALL> Eagles. Glaciers.
-<BR><i>First found: </i>3 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=25521&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.sfgate.com:80/cgi-bin/article.cgi?file=/chronicle/archive/1999/10/05/DD15581.DTL">Untitled</A>&nbsp;
-<SMALL>
-(S.F. Gate/ San Francisco Examiner & Chronicle)
-</SMALL>
-<BR><SMALL>49% </SMALL> &nbsp; Food Movies Music & Nightlife Performance Art Events Books TVRadio. Food Movies Music & Nightlife Performance Art Events Books TVRadio
-<BR><i>First found: </i>5 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=20107&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.adn.com:80/stories/T99100760.html">Lien on Capitol? 991007</A>&nbsp;
-<SMALL>
-(Anchorage Daily News)
-</SMALL>
-<BR><SMALL>49% </SMALL> Turner said he heard a Haines assemblyman grumble that the borough ought to file a lien. "You can't put a lien on a state building," Turner said.
-<BR><i>First found: </i>7 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=9014&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.adn.com:80/stories/T99100782.html">Ship Creek gets dye-tied 991007</A>&nbsp;
-<SMALL>
-(Anchorage Daily News)
-</SMALL>
-<BR><SMALL>49% </SMALL>Thursday, October 7, 1999 Ship Creek gets dye-tied Engineer Steven Berger of the Anchorage Fire Department examines green liquid entering Ship Creek from a storm drain Wednesday along Viking Drive at Post Road. (ERIK HILL / Anchorage Daily News) Back | Top | Home | User Agreement.
-<BR><i>First found: </i>7 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=9006&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.herald.com:80/content/wed/news/national/digdocs/008737.htm">Miami Herald: The flu season shows up early</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.herald.com:80/content/wed/news/dade/digdocs/039481.htm">Miami Herald: High-bid couple wins Alaska trip</A>&nbsp;
 <SMALL>
 (Miami Herald)
 </SMALL>
-<BR><SMALL>49% </SMALL> Alaska usually is the first place in the United States to be affected, with the viruses eventually making their way south to the western United States and eventually to the East Coast, said Dr. ``This is early.
-<BR><i>First found: </i>7 Oct 1999 &nbsp;
+<BR><SMALL>55% </SMALL> BY ROXANA A. SOTO. One was a Miami Dolphins pennant signed by Jimmy Johnson.
+<BR><i>First found: </i>27 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=10353&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=19333&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.adn.com:80/stories/T99100830.html">Sun sets on autumn 991008</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://deseretnews.com:80/dn/view/0,1249,150009365,00.html?">Alaskan dies after she's hit on I-215</A>&nbsp;
+<SMALL>
+(Deseret News)
+</SMALL>
+<BR><SMALL>54% </SMALL> Alaskan dies after she's hit on I-215 &nbsp; &nbsp; &nbsp; An Alaska woman was killed Thursday morning when she darted across the interstate and was hit by a passing motorist. &nbsp; &nbsp; &nbsp; Killed was:.
+<BR><i>First found: </i>27 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=19601&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.bestfares.com:80/travel_center/desks/public/200001/10058335L.asp">Bestfares.com Bargains On Nine Seven Seas NavigatorAlaska 2000 Sail...</A>&nbsp;
+<SMALL>
+(Best Fares Magazine)
+</SMALL>
+<BR><SMALL>54% </SMALL> Rates begin at $4,795. Rates begin at $2,995.
+<BR><i>First found: </i>29 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=14825&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.bestfares.com:80/travel_center/desks/public/200001/10058304L.asp">Bestfares.com Bargains On Nine Seven Seas NavigatorAlaska 2000 Saili...</A>&nbsp;
+<SMALL>
+(Best Fares Magazine)
+</SMALL>
+<BR><SMALL>54% </SMALL> Rates begin at $4,795. Rates begin at $2,995.
+<BR><i>First found: </i>28 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=15988&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.foxnews.com:80/science/012800/sealions.sml">Judge Calls Sea Lion Protections Inadequate</A>&nbsp;
+<SMALL>
+(Fox News)
+</SMALL>
+<BR><SMALL>52% </SMALL>="t") {this.sec=1;pbw(vid,neth,netl,realh,reall);}} if (cm=="rh" && realh=="t") {cm="hi.rmm";if(aol||iebug){window.location=vid+cm;}else{showvid('rm',vid+cm);}} else {if (cm=="rh" && realh!="t") {this.sec=2;pbw(vid,neth,netl,realh,reall);}} if (cm=="rl" && reall=="t") {cm="lo.rmm";if(aol||iebug){window.location=vid+cm;}else{showvid('rm',vid+cm);}} else {if (cm=="rl" && reall!
+<BR><i>First found: </i>28 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=16140&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.phillynews.com:80/inquirer/2000/Jan/26/international/CAMPAIGN26.htm">Hatch to drop out of GOP race</A>&nbsp;
+<SMALL>
+(Philadelphia Inquirer)
+</SMALL>
+<BR><SMALL>51% </SMALL> Bush preps for primary.&quot; Bush wins Alaska straw poll.
+<BR><i>First found: </i>26 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=23800&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.phillynews.com:80/inquirer/2000/Jan/26/national/CAMPAIGN26.htm">Hatch to drop out of GOP race</A>&nbsp;
+<SMALL>
+(Philadelphia Inquirer)
+</SMALL>
+<BR><SMALL>51% </SMALL> January 26, 2000 if (document.referrer ) { if (document.referrer.toString().indexOf('usatoday') != -1) { document.writeln('. if (document.referrer ) { if (document.referrer.toString().indexOf('digitalcity') != -1) { document.writeln('.
+<BR><i>First found: </i>26 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=23822&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://abcnews.go.com:80/sections/business/DailyNews/bpamoco_000128.html">ABCNEWS.com : Regulators May Quash BP Amoco-Arco Deal</A>&nbsp;
+<SMALL>
+(ABC News)
+</SMALL>
+<BR><SMALL>51% </SMALL> &nbsp;&nbsp;&nbsp;&nbsp; Your Business &nbsp;&nbsp;&nbsp;&nbsp; Your Money &nbsp;&nbsp;&nbsp;&nbsp; Market Details &nbsp;&nbsp;&nbsp;&nbsp; The Sectors &nbsp;&nbsp;&nbsp;&nbsp; Mutual Funds &nbsp;&nbsp;&nbsp;&nbsp; Raw News. &nbsp;.
+<BR><i>First found: </i>28 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=15784&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www10.nytimes.com:80/library/politics/camp/012600campaign-briefing.html">Campaign Briefing</A>&nbsp;
+<SMALL>
+(New York Times, <A HREF="http://www.nytimes.com/auth/login">free registration</A>)
+</SMALL>
+<BR><SMALL>51% </SMALL> Mr. Mr.
+<BR><i>First found: </i>26 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=24749&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://abcnews.go.com:80/sections/science/DailyNews/sealions000128.html">ABCNEWS.com : Judge Says Sea Lion Rules Inadequate</A>&nbsp;
+<SMALL>
+(ABC News)
+</SMALL>
+<BR><SMALL>50% </SMALL> &nbsp;&nbsp;&nbsp;&nbsp;ABCNEWS.com. &nbsp;.
+<BR><i>First found: </i>28 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=16331&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.nando.net:80/24hour/adn/business/story/0,1968,500161116-500202482-500909022-0,00.html">Alaska Airlines plans to test live TV on jets</A>&nbsp;
 <SMALL>
 (Anchorage Daily News)
 </SMALL>
-<BR><SMALL>48% </SMALL> The snow line continues to creep down toward the Anchorage Bowl, but the National Weather Service has yet to predict snow for lower elevations. Highs should be in the low to mid-40s.
-<BR><i>First found: </i>8 Oct 1999 &nbsp;
+<BR><SMALL>50% </SMALL> Problems? Problems?
+<BR><i>First found: </i>30 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=452&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=11997&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.sltrib.com:80/1999/oct/10021999/obituari/33544.htm">The Salt Lake Tribune -- Marilyn Maxine Chynoweth Crowder</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.onroute.com:80/hotelguide/index.html">Onroute Hotel Guide | Information | Reservations</A>&nbsp;
 <SMALL>
-(Salt Lake Tribune)
+(Onroute Today)
 </SMALL>
-<BR><SMALL>48% </SMALL> &nbsp;&nbsp;&nbsp;. &nbsp;&nbsp;&nbsp;.
-<BR><i>First found: </i>2 Oct 1999 &nbsp;
+<BR><SMALL>49% </SMALL> To check out hotels in Canada and other countries, Go Here Directory for Online Reservations. Onroute Destinations pages.
+<BR><i>First found: </i>19 Aug 1999 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=28440&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=28373&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.latimes.com:80/excite/991006/t000089862.html">Francis Turner, 90; Chief Architect of America's Highways </A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.pioneerplanet.com:80/seven-days/5/outdoors/docs/003905.htm">Mr. Madden's Wild Ride (1/27/2000)</A>&nbsp;
 <SMALL>
-(Los Angeles Times)
+(St. Paul/Minneapolis Pioneer Planet)
 </SMALL>
-<BR><SMALL>48% </SMALL> &#160;. &#160;.
-<BR><i>First found: </i>6 Oct 1999 &nbsp;
+<BR><SMALL>49% </SMALL> ``I think that's what draws people to ride like this. But never to a stop.
+<BR><i>First found: </i>27 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=16227&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=19735&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.cleveland.com:80/news/pdnews/metro/w07clim.ssf">Premier peak climber to rest in mountain avalanche grave </A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.mushing.com:80/72chkpt.htm">Mushing Magazine Issue 72 Checkpoint</A>&nbsp;
 <SMALL>
-(Cleveland Live/Cleveland Plain Dealer)
+(Mushing)
 </SMALL>
-<BR><SMALL>48% </SMALL>Cleveland Live News. Chat live with others &copy; 1999 Cleveland Live.
-<BR><i>First found: </i>7 Oct 1999 &nbsp;
+<BR><SMALL>49% </SMALL> &#151;Todd Hoener &nbsp; &nbsp; &nbsp;Subscriptions&nbsp;&nbsp;&nbsp;&nbsp;Archives. Clubs &amp; Races&nbsp;&nbsp;&nbsp;&nbsp;Merchandise&nbsp;&nbsp;&nbsp;&nbsp;Advertising&nbsp;&nbsp;&nbsp;&nbsp;.
+<BR><i>First found: </i>31 Dec 1999 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=9376&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=28128&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.adn.com:80/stories/T99100585.html">Villages lose 'Monday Night Football' 991005</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.foxnews.com:80/national/013100/cities_side.sml">List of Best Cities</A>&nbsp;
 <SMALL>
-(Anchorage Daily News)
+(Fox News)
 </SMALL>
-<BR><SMALL>48% </SMALL> About 43 of those communities lack any cable service and the cost of cable service is beyond the reach of some residents of villages who have it, said Mark Badger, director of information and technology for the state. "That's the way the structure is," Bramstedt said.
-<BR><i>First found: </i>5 Oct 1999 &nbsp;
+<BR><SMALL>49% </SMALL> All rights reserved. All rights reserved.
+<BR><i>First found: </i>31 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=20273&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=411&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.adn.com:80/stories/T99100583.html">Salmon are top priority in unusual alliance 991005</A>&nbsp;
-<SMALL>
-(Anchorage Daily News)
-</SMALL>
-<BR><SMALL>48% </SMALL> "It benefits all of us," Eyak executive Lettich said. Let us hear from you.
-<BR><i>First found: </i>5 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=20274&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.planetout.com:80/news/article.html$1999/10/07/2">NewsPlanet: Moves to Recognize Couples</A>&nbsp;
-<SMALL>
-(PlanetOut)
-</SMALL>
-<BR><SMALL>48% </SMALL> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NewsPlanet Staff. Search PNO News &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; New Military Hate Crimes Law More Couples News &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.
-<BR><i>First found: </i>8 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=116&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.adn.com:80/stories/T99100609.html">Famed mountain climber Lowe feared dead 991006</A>&nbsp;
-<SMALL>
-(Anchorage Daily News)
-</SMALL>
-<BR><SMALL>48% </SMALL> It's sort of hype, really, and climbing just doesn't lend itself to that. " Because it really is the big adventure."
-<BR><i>First found: </i>6 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=16367&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.adn.com:80/stories/T99100324.html">Beavers are busier 991003</A>&nbsp;
-<SMALL>
-(Anchorage Daily News)
-</SMALL>
-<BR><SMALL>48% </SMALL> In Fairbanks, beavers are are clogging up culverts. One other change has been that the market for beaver caster glands has dried up, said Joe Mattie, a fur buyer in Fairbanks.
-<BR><i>First found: </i>3 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=25768&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.spokane.net:80/news-story-body.asp?Date=100699&ID=s642551&cat=">Spokane.net - 'Double Jeopardy' still dominant despite 3 new films</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.spokane.net:80/news-story-body.asp?Date=012900&ID=s737592&cat=">Spokane.net - Milestones</A>&nbsp;
 <SMALL>
 (Spokesman Review/Spokane.net)
 </SMALL>
-<BR><SMALL>48% </SMALL> 2. "Three Kings," $16.3 million. 'Double Jeopardy' still dominant despite 3 new films.
-<BR><i>First found: </i>6 Oct 1999 &nbsp;
+<BR><SMALL>49% </SMALL> What are your thoughts on. Your comment: Your Email Address:.
+<BR><i>First found: </i>29 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=13179&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=14022&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.adn.com:80/stories/T99100898.html">Escaped Peeping Tom caught 991008</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.nando.net:80/24hour/adn/nation/story/0,1972,500161227-500202623-500914811-1,00.html">How the largest U.S. cities scored</A>&nbsp;
 <SMALL>
 (Anchorage Daily News)
 </SMALL>
-<BR><SMALL>47% </SMALL> Authorities still didn't know Thursday where Lacy spent the remainder of the year. "The guy ought to be spending a lot of time in jail."
-<BR><i>First found: </i>8 Oct 1999 &nbsp;
+<BR><SMALL>49% </SMALL> B+. B-.
+<BR><i>First found: </i>31 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=446&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=2094&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> </font>
+<P>
+<center>
+<table border=0 cellpadding=3 cellspacing=0 width=100%><tr>
+<td align=center bgcolor=ffffcc>
+<font face="helvetica" size=-1><b>
+<font color=CC0000>Free</font> Internet Services from Excite: <A href=/relocate/co=xxsr_fwintserv3_isp;http://freeworld.excite.com/>Free ISP</A> | <A href=/relocate/co=xxsr_fwintserv3_email;http://inbox.excite.com/>Free Email</A> | <A href=/relocate/co=xxsr_fwintserv3_vmail;http://inbox.excite.com/>Free Voicemail</A>
+</b></font>
+</td></tr></table></center><p>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://news.excite.com:80/news/r/000127/18/energy-bpamoco">FTC abruptly postpones BP Amoco vote, talks with BP</A>&nbsp;
+<SMALL>
+(Reuters)
+</SMALL>
+<BR><SMALL>48% </SMALL>&nbsp;. &nbsp;&nbsp;&nbsp; &nbsp;.
+<BR><i>First found: </i>31 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=3208&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://news.excite.com:80/news/ap/000126/11/fuel-costs-list">List of States Receiving Energy Aid</A>&nbsp;
+<SMALL>
+(Associated Press)
+</SMALL>
+<BR><SMALL>48% </SMALL>&nbsp;. &nbsp;&nbsp; Books for Health & Happiness in 2000&nbsp;&nbsp; &nbsp;&nbsp;.
+<BR><i>First found: </i>27 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=21836&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.pcworld.com:80/pcwtoday/article/0,1510,15013,00.html">PC World News: Net Voting Leaves Alaskans Cold</A>&nbsp;
+<SMALL>
+(PC World)
+</SMALL>
+<BR><SMALL>48% </SMALL> Letters to PC World Online Corrections. Free Advertising-Join PC World Clicks!
+<BR><i>First found: </i>30 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=10956&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://starbulletin.com:80/2000/01/25/sports/kwon.html">Honolulu Star-Bulletin Sports</A>&nbsp;
+<SMALL>
+(Honolulu Star-Bulletin)
+</SMALL>
+<BR><SMALL>48% </SMALL> Exemption has come. That has compounded the scheduling problems for UH.
+<BR><i>First found: </i>26 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=24591&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://detnews.com:80/2000/sports/0001/30/01300175.htm">Rookie Scott Gomez leading Devils' run - 1/30/00</A>&nbsp;
+<SMALL>
+(Detroit News, The)
+</SMALL>
+<BR><SMALL>48% </SMALL> News Talk. Sports Talk.
+<BR><i>First found: </i>31 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=7538&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www2.nando.net:80/noframes/story/0,2107,500161227-500202623-500914811-1,00.html">How the largest U.S. cities scored</A>&nbsp;
+<SMALL>
+(Nando Times)
+</SMALL>
+<BR><SMALL>48% </SMALL> B+. B-.
+<BR><i>First found: </i>31 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=1107&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.bestfares.com:80/travel_center/desks/public/200001/10058350L.asp">InsideFlyerReaders Choose Best Frequent Flyer/Frequent Guest Progra...</A>&nbsp;
+<SMALL>
+(Best Fares Magazine)
+</SMALL>
+<BR><SMALL>48% </SMALL> Best Award Redemption Airline: Southwest Rapid Rewards Hotel: Starwood Preferred Guest. Best Customer Service Airline: Southwest Rapid Rewards Hotel: Starwood Preferred Guest.
+<BR><i>First found: </i>29 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=14839&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.wcco.com:80/news/stories/news-20000131-140740.html">Channel 4000 - Best-Run Cities</A>&nbsp;
+<SMALL>
+(Channel 4000)
+</SMALL>
+<BR><SMALL>48% </SMALL> Digital Daily. The Digital Daily.
+<BR><i>First found: </i>31 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=166&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.bestfares.com:80/travel_center/desks/public/200001/10058498L.asp">Continental Pulls $20 RT Hidden Fuel Charge On Southwest Airline Rou...</A>&nbsp;
+<SMALL>
+(Best Fares Magazine)
+</SMALL>
+<BR><SMALL>48% </SMALL> Date: 1/30/00. Last Travel Date: 1/30/00.
+<BR><i>First found: </i>30 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=10024&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.bestfares.com:80/travel_center/desks/public/200001/10058496L.asp">All Major Airlines Except TWA Have Rescinded $20 Fuel Surcharge On S...</A>&nbsp;
+<SMALL>
+(Best Fares Magazine)
+</SMALL>
+<BR><SMALL>47% </SMALL> Date: 1/30/00. Last Travel Date: 1/30/00.
+<BR><i>First found: </i>30 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=10022&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.bestfares.com:80/travel_center/desks/public/200001/10058453L.asp">GolfBagShipping.com Offers A Shipping Service For Golf Enthusiasts</A>&nbsp;
+<SMALL>
+(Best Fares Magazine)
+</SMALL>
+<BR><SMALL>47% </SMALL>GolfBagShipping.com Offers A Shipping Service For Golf Enthusiasts. To begin shipping, call GBS to obtain a travel package that contains a special container and all necessary shipping documents.
+<BR><i>First found: </i>30 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=12372&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.usatoday.com:80/usatonline/20000131/1893287s.htm">HOCKEY</A>&nbsp;
+<SMALL>
+(USA Today)
+</SMALL>
+<BR><SMALL>47% </SMALL>&nbsp; &nbsp; &nbsp; &nbsp; Search. &nbsp;
+<BR><i>First found: </i>31 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=2774&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.washingtonpost.com:80/wp-srv/WPlate/2000-01/30/036l-013000-idx.html">Cruise Contacts</A>&nbsp;
+<SMALL>
+(Washington Post)
+</SMALL>
+<BR><SMALL>47% </SMALL> Sunday Travel. Travel.
+<BR><i>First found: </i>30 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=12487&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://news.excite.com:80/news/r/000128/08/energy-bp">BP FTC talks: snowstorm or smokescreen?</A>&nbsp;
+<SMALL>
+(Reuters)
+</SMALL>
+<BR><SMALL>46% </SMALL>&nbsp;. &nbsp;&nbsp;&nbsp; &nbsp;.
+<BR><i>First found: </i>31 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=3083&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://news.excite.com:80/news/ap/000128/16/bp-amoco">BP Amoco Merger Bid Under Review</A>&nbsp;
+<SMALL>
+(Associated Press)
+</SMALL>
+<BR><SMALL>46% </SMALL>&nbsp;. &nbsp;&nbsp;&nbsp; &nbsp;.
+<BR><i>First found: </i>31 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=8104&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www7.mercurycenter.com:80/premium/nation/docs/list31.htm">HOW THEY SCORED (1/31/2000)</A>&nbsp;
+<SMALL>
+(San Jose Mercury News)
+</SMALL>
+<BR><SMALL>46% </SMALL> Mercury News Page 1A. Published Monday, January 31, 2000, in the San Jose Mercury News.
+<BR><i>First found: </i>31 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=3668&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.sltrib.com:80/2000/jan/01302000/sports/22009.htm">The Salt Lake Tribune -- Salt Lake's Cook Earns World Title</A>&nbsp;
+<SMALL>
+(Salt Lake Tribune)
+</SMALL>
+<BR><SMALL>46% </SMALL> &nbsp;&nbsp;&nbsp;. &nbsp;&nbsp;&nbsp; --.
+<BR><i>First found: </i>30 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=11297&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.washingtonpost.com:80/wp-srv/WPlate/2000-01/30/032l-013000-idx.html">Take These Cruises. Please.</A>&nbsp;
+<SMALL>
+(Washington Post)
+</SMALL>
+<BR><SMALL>45% </SMALL> 29-March 25, $1,535). 11 and 25, $2,980).
+<BR><i>First found: </i>30 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=12486&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.thisislondon.co.uk:80/dynamic/lifestyle/review.html?in_review_id=251592&in_review_text_id=199350">Lifestyle</A>&nbsp;
+<SMALL>
+(London Evening Standard/This is London)
+</SMALL>
+<BR><SMALL>45% </SMALL> Buy this book online from Amazon.co.uk. Buy this book online from Amazon.co.uk.
+<BR><i>First found: </i>31 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=3540&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.bestfares.com:80/travel_center/desks/public/200001/10058211L.asp">Fly To London Plus Another City In Europe Cheaper Than London!</A>&nbsp;
+<SMALL>
+(Best Fares Magazine)
+</SMALL>
+<BR><SMALL>45% </SMALL> Fly To London Plus Another City In Europe Cheaper Than London! Now through January 31, 2000, you can fly to select cities in Europe for cheaper than airfare to London.
+<BR><i>First found: </i>28 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=16675&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.latimes.com:80/class/realestate/todayshome/20000129/t000009127.html">LA Times Real Estate: Do It Yourself</A>&nbsp;
+<SMALL>
+(Los Angeles Times)
+</SMALL>
+<BR><SMALL>44% </SMALL> &nbsp; &nbsp;. &nbsp;&nbsp;&nbsp; &nbsp;.
+<BR><i>First found: </i>29 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=13383&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.sltrib.com:80/2000/jan/01302000/travel/21089.htm">The Salt Lake Tribune -- Workers Restoring Versailles After Freakish...</A>&nbsp;
+<SMALL>
+(Salt Lake Tribune)
+</SMALL>
+<BR><SMALL>44% </SMALL> &nbsp;&nbsp;&nbsp; 10. &nbsp;&nbsp;&nbsp; 10.
+<BR><i>First found: </i>31 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=4510&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.seattlep-i.com:80/national/natn278.shtml">News from around the nation </A>&nbsp;
+<SMALL>
+(Seattle Post-Intelligencer)
+</SMALL>
+<BR><SMALL>44% </SMALL>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;HOME &nbsp;NORTHWEST &nbsp;SPORTS &nbsp;BUSINESS &nbsp;NATION/WORLD &nbsp;&nbsp;&nbsp;Sci-Tech &nbsp;&nbsp;&nbsp;WTO &nbsp;&nbsp;&nbsp;U.S. Wire &nbsp;&nbsp;&nbsp;World Wire &nbsp;ART & LIFE &nbsp;COMICS & GAMES &nbsp;OPINION &nbsp;COLUMNISTS &nbsp;GETAWAYS &nbsp;NEIGHBORS &nbsp;CLASSIFIEDS.
+<BR><i>First found: </i>27 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=21323&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.austin360.com:80/news/1metro/2000/01/31austin2.html">Austin gets 'A-' on management report card -- 01/31/00</A>&nbsp;
+<SMALL>
+(Austin American-Statesman/Austin 360)
+</SMALL>
+<BR><SMALL>44% </SMALL>. Search 1,000,000 of the. Web Search.
+<BR><i>First found: </i>31 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=336&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Alaska;http://www.spokane.net:80/news-story-body.asp?Date=013000&ID=s736706&cat=">Spokane.net - When cruise ships change bases, jump on board</A>&nbsp;
+<SMALL>
+(Spokesman Review/Spokane.net)
+</SMALL>
+<BR><SMALL>44% </SMALL> Other reasons for considering a repositioning cruise are: One-of-a-kind itineraries. What are your thoughts on.
+<BR><i>First found: </i>30 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=13002&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+</font>
 <FORM ACTION="/search.gw" METHOD=GET>
 <INPUT TYPE=hidden NAME=c VALUE=timely>
 <INPUT TYPE=hidden NAME=s VALUE="Alaska">
@@ -654,11 +716,22 @@ or&nbsp;
 </FORM>
 <p>
 <center>
-<a href="http://www.excite.com/relocate/ad=108143_tourism_marketing_100499_wildlife.gif|pk=3336430;http://exc.travelalaska.com" onMouseOver="window.status='This year visit Alaska';return true" language="Javascript"><img src="http://image.eimg.com/ads/108143_tourism_marketing_100499_wildlife.gif" ALT="This year visit Alaska" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> This year visit Alaska </B></FONT></CENTER></a>
+<!-- The following html is Copyright 1997 by MatchLogic Inc. -->
+<!-- RICH=0 -->
+<IFRAME WIDTH=468 HEIGHT=60 NORESIZE SCROLLING=No FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 SRC="http://ad.preferences.com/iframe;spacedesc=FreeWallpaper3_Excite_468x60_RunOfSite_Any&ML_SSPKG=RunOfSiteSS&ML_CUSTOM=0&time=2000.01.31.21.10.33&ex_cookie=&ML_TARGET=_top&ML_REDIRECT=http%25253A%25252F%25252Fwww.excite.com%25252Frelocate%25252Fad%25253DLUCI%25257Cpk%25253D3809909%25253B">
+<SCRIPT
+SRC="http://ad.preferences.com/jscript;spacedesc=FreeWallpaper3_Excite_468x60_RunOfSite_Any&ML_SSPKG=RunOfSiteSS&ML_CUSTOM=0&ML_NIF=Y&ML_KW=Alaska&time=2000.01.31.21.10.33&ex_cookie=&ML_TARGET=_top&ML_REDIRECT=http%25253A%25252F%25252Fwww.excite.com%25252Frelocate%25252Fad%25253DLUCI%25257Cpk%25253D3809909%25253B">
+</SCRIPT>
+<NOSCRIPT>
+<A HREF="http://www.excite.com/relocate/ad=118339_htmlad.gif|pk=3809909;http://ad.preferences.com/click;spacedesc=FreeWallpaper3_Excite_468x60_RunOfSite_Any&ML_NIF=Y&time=2000.01.31.21.10.33&ex_cookie=" TARGET=_top>
+<IMG SRC="http://ad.preferences.com/image;spacedesc=FreeWallpaper3_Excite_468x60_RunOfSite_Any&ML_NIF=Y&time=2000.01.31.21.10.33&ex_cookie="></A>
+</NOSCRIPT>
+</IFRAME><CENTER><FONT SIZE=-1 COLOR=#0000FF FACE=arial, geneva><B>1,000s of FREE Desktop Images</B></FONT></CENTER>
+<!-- The above html is Copyright 1997 by MatchLogic Inc. -->
 <small><br></small>
-<FORM NAME=botbox ACTION=/search.gw>
 <TABLE border=0 cellpadding=1 cellspacing=0 width=600>
 <TR><TD bgcolor=#cccccc>
+<FORM NAME=botbox ACTION=/search.gw>
 <TABLE border=0 cellspacing=0 cellpadding=4 width=600 bgcolor=ffffff>
 <TR>
 <TD align=right bgcolor=ffffff>
@@ -689,9 +762,10 @@ More Search</a>
 </td>
 <td align=left colspan=3>
 <font face="helvetica" size=-1>&nbsp;&nbsp;
-<input type=radio name=c value=hourly ><img src=http://www.excite.com/pfp/excite/images/lep.gif> Newswires&nbsp;&nbsp;
+<input type=radio name=c value=hourly ><img src=http://www.excite.com/mesp/images/excite/lep.gif> Newswires&nbsp;&nbsp;
+<input type=radio name=c value=hourly.photo ><img src=http://www.excite.com/mesp/images/excite/lep.gif> News Photos&nbsp;&nbsp;
 <input type=radio name=c value=timely checked>Web News&nbsp;&nbsp;
-<input type=radio name=c value=hourtime >Both	</font>
+<input type=radio name=c value=hourtime >All	</font>
 </td>
 </tr>
 </table>
@@ -713,10 +787,10 @@ More Search</a>
 <A HREF=http://www.excite.com/reference/>More...</A></nobr><p>
 </font>
 <font size=-2>
-Copyright 1995-1999 Excite Inc. &nbsp; Powered by <A HREF="http://www.sun.com">Sun Microsystems</A> &nbsp;
+Copyright 1995-2000 Excite Inc. &nbsp; Powered by <A HREF="http://www.sun.com">Sun Microsystems</A> &nbsp;
 <A HREF=http://www.excite.com/info/disclaimer/>Disclaimer</A>
 </font>
 </center>
-<IMG SRC="http://ad.preferences.com/ping.ng;spacedesc=TCExciteData_Excite_1x1_RunOfSite_Any&event=KeywordResults&time=1999.10.08.10.59.46" HEIGHT=1 WIDTH=1 BORDER=0>
+<IMG SRC="http://ad.preferences.com/ping.ng;spacedesc=TCExciteData_Excite_1x1_RunOfSite_Any&event=KeywordResults&time=2000.01.31.16.10.33" HEIGHT=1 WIDTH=1 BORDER=0>
 </body>
 </html>

@@ -3,13 +3,16 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.08?  (1999-12-24)
+WHAT IS NEW IN WWW::Search 2.09?  (2000-02-08)
 ----------------------------------------------
-overview:
- * bug fixes for several backends (as usual)
- * two backends retired
 
-See the file ChangeLog for details.
+overview:
+ * new module WWW::Search::Test
+ * new methods maintainer(), gui_query()
+ * bug fixes for several backends (as usual)
+ * some backends removed to their own modules
+
+For details, see the file ChangeLog and/or the pod of each module.
 
 
 WHAT IS WWW::Search?
@@ -17,11 +20,13 @@ WHAT IS WWW::Search?
 
 WWW::Search is a collection of Perl modules which provide an API to
 WWW (and similar) search engines.  Currently WWW::Search includes
-backends for variations of AltaVista, Dejanews, Excite, HotBot,
-Infoseek, Lycos, Magellan, WebCrawler, and Yahoo, among others.  We
-include two applications built from this library: AutoSearch (a
-program to automate tracking of search results over time), and
-WebSearch, a small demonstration program to drive the library.
+backends for variations of AltaVista, Dejanews, Infoseek, Lycos,
+Magellan, and WebCrawler, among others.  Backends for some engines can
+be obtained separately, such as Excite, HotBot, and Yahoo.  This
+distribution includes two applications built from this library:
+AutoSearch (a program to automate tracking of search results over
+time), and WebSearch, a small demonstration program to drive the
+library.
 
 WWW::Search does NOT try to emulate the default search that you would
 get with each search engine's GUI.  WWW::Search performs the search in
@@ -35,7 +40,7 @@ backend will tell you about the more important tricks being used.
 Because WWW::Search depends on parsing the HTML output of web search
 engines it will fail if the search engine operators change their
 format (an unfortunately frequent occurrence).  WWW::Search includes a
-test suite for most backends which verifies that they are functioning
+test suite for many backends which verifies that they are functioning
 correctly.  The test suite can be run by typing 'make test_parsing';
 see under INSTALLATION below for details.  As of the day of the
 release the current backend status is:
@@ -51,7 +56,7 @@ AOL::Classifieds::Employment    working (not in test suite)
 Crawler			partially working?
 Deja/Dejanews		working
 Dice                    working? (not in test suite)
-Excite			working
+Euroseek                working? (not in test suite)
 Excite::News		working
 ExciteForWebServers	not working
 Fireball		working? (not in test suite)
@@ -60,7 +65,6 @@ Google  		working
 Gopher			not working? (not in test suite)
 GoTo                    working
 HeadHunter              working? (not in test suite)
-HotBot			working
 HotFiles		working
 Infoseek		working
 Infoseek::Companies	working
@@ -69,8 +73,9 @@ Infoseek::News		working
 Infoseek::Web		working
 Livelink		not working? (not in test suite)
 LookSmart		working
+Lycos   		working
 Lycos::Pages		defunct
-Lycos::Sites		working
+Lycos::Sites		defunct
 Magellan		working
 MetaCrawler             working
 Metapedia		working? (not in test suite)
@@ -88,11 +93,17 @@ Simple			not working? (not in test suite)
 Snap			working
 Verity			not working (not in test suite)
 WebCrawler		working
-Yahoo			working
 Yahoo::Classifieds::Employment  working? (not in test suite)
 ZDNet			working
 
-``Partially working'' indicates that some tests passed and some failed.
+''Partially working'' indicates that some tests passed and some failed.
+
+The following backends are now registered at CPAN independently (not
+included with the WWW::Search release):
+
+Excite
+HotBot
+Yahoo
 
 
 WHAT IS AutoSearch?
@@ -163,8 +174,8 @@ modules):
 On Win32, maintenance and testing is done with Microsoft's nmake.exe;
 use 'nmake' instead of 'make' in the above sequence of commands.  
 
-When you do `perl Makefile.PL` on Win32, you might get warnings that a
-whole bunch of 'zero.out' files are missing.  This seems to be a bug
+When you do `perl makefile.pl` on Win32, you might get warnings that a
+whole bunch of 'zero*.out' files are missing.  This seems to be a bug
 in some versions of WinZip which refuse to extract empty files from
 the archive.  You can ignore these warnings.
 
@@ -243,8 +254,8 @@ soon as they're fixed.
 
 Back-end-related bug reports ("search engine ABC doesn't work") should
 be sent to the author of the backend (backend authors are identified
-in the corresponding man page and in the output of ``make
-test_parsing'').  General bugs should be reported to
+in the corresponding man page and in the output of `make
+test_parsing`).  General bugs should be reported to
 <MartinThurn@iname.com>.
 
 When submitting a bug report or request for help, please remember to
@@ -294,7 +305,7 @@ DOCUMENTATION
 See `perldoc WWW::Search` after installation for an overview of the
 library.  POD-style documentation is also included in all modules and
 programs, so you can do `perldoc WebSearch` and `perldoc AutoSearch`
-and `perldoc WWW::Search::HotBot` after installation.
+and `perldoc WWW::Search::AltaVista` after installation.
 
 
 FUTURE PLANS
@@ -306,9 +317,9 @@ Some ideas:
 (I'm trying to decide what the API interface will look like; please
 send suggestions).  Contact <MartinThurn@iname.com>
 
-  - a global option that will force WWW::Search to perform the same
-search as the engine's web GUI (I'm looking for contributions of the
-precise arguments that will produce such a search for each engine;
+  - updates to each backend that will force WWW::Search to perform the
+same search as the engine's web GUI (I'm looking for contributions of
+the precise arguments that will produce such a search for each engine;
 i.e. the hash that should be passed as the second argument to
 native_query).  Contact <MartinThurn@iname.com>
 

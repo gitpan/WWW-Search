@@ -1,7 +1,7 @@
 # OpenDirectory.pm
 # by Jim Smyser
 # Copyright (c) 1999 by Jim Smyser & USC/ISI
-# $Id: OpenDirectory.pm,v 1.3 1999/07/13 17:21:09 mthurn Exp $
+# $Id: OpenDirectory.pm,v 1.4 2000/02/04 19:51:44 mthurn Exp $
 
 
 package WWW::Search::OpenDirectory;
@@ -81,13 +81,13 @@ Format changes.
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
-$VERSION = '2.01';
+$VERSION = '2.02';
 @ISA = qw(WWW::Search Exporter);
 
 $MAINTAINER = 'Jim Smyser <jsmyser@bigfoot.com>';
 $TEST_CASES = <<"ENDTESTCASES";
 &test('OpenDirectory', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_EXACTLY);
-&test('OpenDirectory', '$MAINTAINER', 'one', 'iRover', \$TEST_RANGE, 2,98);
+&test('OpenDirectory', '$MAINTAINER', 'one', 'iRover', \$TEST_RANGE, 2,10);
 &test('OpenDirectory', '$MAINTAINER', 'multi', 'Hasbro', \$TEST_GREATER_THAN, 26);
 ENDTESTCASES
 
@@ -103,9 +103,9 @@ sub native_setup_search
    $self->{_next_to_retrieve} = 0;
    if (!defined($self->{_options})) {
    $self->{_options} = {
-       'cat' => '&t=b&fb=0&fo=0&all=no',
-       'search_url' => 'http://search.dmoz.org/cgi-bin/osearch',
-   };
+       'search_url' => 'http://search.dmoz.org/cgi-bin/search',
+
+    };
     };
    my($options_ref) = $self->{_options};
    if (defined($native_options_ref)) {
@@ -130,7 +130,6 @@ sub native_setup_search
    $self->{_options}{'search_url'} .
    "?" . $options .
    "search=" . $native_query;
-   print $self->{_base_url} . "\n" if ($self->{_debug});
 }
 
 # private
@@ -154,10 +153,11 @@ sub native_retrieve_some {
    my($hit, $raw, $title, $url, $desc) = ();
    foreach ($self->split_lines($response->content())) {
        next if m@^$@; # short circuit for blank lines
-   if ($state == $HEADER && m@<!-- Begin Search Results -->@i) { 
+   if ($state == $HEADER && m|<b>Open Directory Sites</b>|i) { 
        print STDERR "PARSE(HEADER->HITS-1): $_\n" if ($self->{_debug} >= 2);
        $state = $HITS;
-  } elsif ($state == $HITS && m@<LI><a href="([^"]+)">(.*)</a>\s(.*)</LI>@i) { 
+
+  } elsif ($state == $HITS && m@<lI><a href="([^"]+)">(.*)</a>.*?-(.*)<br><small>@i) { 
        print STDERR "**Parsing URL, Title & Desc...\n" if 2 <= $self->{_debug};
        my($hit) = new WWW::SearchResult;
        $hit->add_url($1);
@@ -167,10 +167,10 @@ sub native_retrieve_some {
        $hits_found++;
        push(@{$self->{cache}}, $hit);
        $state = $HITS;
-  } elsif ($state == $HITS && m@<CENTER>@i) {
+  } elsif ($state == $HITS && m@</ol><p>@i) {
        print STDERR "PARSE(HITS->TRAILER): $_\n\n" if ($self->{_debug} >= 2);
        $state = $TRAILER;
-  } elsif ($state == $TRAILER && m@<a href="([^"]+)">\sNext</a>@i) { 
+  } elsif ($state == $TRAILER && m@<a href="([^"]+)">Next</a>@i) { 
        my($sURL) = $1;
        $self->{_next_url} = new URI::URL($sURL, $self->{_base_url});
        print STDERR "PARSE(TRAILER->POST_NEXT): $_\n\n" if ($self->{_debug} >= 2);

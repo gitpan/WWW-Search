@@ -22,7 +22,7 @@ print OUT <<'!NO!SUBS!';
 #
 # WebSearch.PL
 # Copyright (C) 1996-1997 by USC/ISI
-# $Id: WebSearch.PL,v 1.12 1999/10/08 14:25:24 mthurn Exp $
+# $Id: WebSearch.PL,v 1.14 2000/02/07 19:59:29 mthurn Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -33,7 +33,7 @@ sub usage
   my $msg = shift;
   defined($msg) && ($msg ne '') && print STDERR "$0: $msg\n";
   print STDERR <<"END";
-usage: WebSearch [--engine <name>] [--max <integer>] [--options <key=value>]... [--count] [--all] [--raw] [--verbose] [--VERSION] [--help] [--lwpdebug] [--debug] query
+usage: WebSearch [--engine <name>] [--gui] [--max <integer>] [--options <key=value>]... [--count] [--all] [--raw] [--verbose] [--VERSION] [--help] [--host <hostname>] [--port <portnum>] [--lwpdebug] [--debug] query
 
 Make a query to a web search engine, printing to STDOUT the URLs which match (one per line).
 
@@ -85,6 +85,11 @@ out what the default is (normally AltaVista)
 
 See L<WWW::Search> for a complete list of supported engines.
 
+=item --gui, -g
+
+Perform the search to mimic the default browser-based search.
+Not implemented for all backends, see the documentation for each backend.
+
 =item --max max_count, -m max_count
 
 Specify the maximum number of hits to retrieve.
@@ -122,6 +127,14 @@ Print version information and exit immediately.
 =item --debug <i>, -d <i>
 
 Display back-end debugging information (with debug level <i>)
+
+=item --host <hostname.sub.domain>
+
+Set the _host option for the WWW::Search object (backend-dependent).
+
+=item --port <i>
+
+Set the _port option for the WWW::Search object (backend-dependent).
 
 =item --lwpdebug, -l
 
@@ -187,12 +200,13 @@ use WWW::Search;
 use Getopt::Long;
 
 use vars qw( $VERSION );
-$VERSION = '2.10';
+$VERSION = '2.11';
 
 use vars qw( $sEngine $all $verbose $raw $maximum_to_retrieve $print_version $debuglwp $debug );
-use vars qw( @options $_host $_port $help $iShowCount );
+use vars qw( @options $_host $_port $help $iShowCount $iGui );
 # Set default values:
 $iShowCount = 0;
+$iGui = 0;
 $_host = '';
 $_port = '';
 undef $debug;
@@ -202,10 +216,11 @@ $debuglwp = 0;
 &usage('getopt failed') unless &GetOptions('all', \$all, 'raw', \$raw,
             'verbose', \$verbose,  'VERSION', \$print_version,
             'count', \$iShowCount,
-            'max=i', \$maximum_to_retrieve,
-            'engine=s', \$sEngine,
-            'lwpdebug', \$debuglwp,
             'debug:i', \$debug,
+            'engine=s', \$sEngine,
+            'gui', \$iGui,
+            'lwpdebug', \$debuglwp,
+            'max=i', \$maximum_to_retrieve,
             'options=s@', \@options,
             'host=s', \$_host,  'port=s', \$_port,
             'help', \$help,
@@ -319,15 +334,20 @@ sub main {
         } # foreach $sPair
       } # if @options
 
-    if (defined($maximum_to_retrieve)) {
-	$search->maximum_to_retrieve($maximum_to_retrieve);
-    } else {
-	$maximum_to_retrieve = 10000;
-    };
+    if (defined($maximum_to_retrieve)) 
+      {
+      $search->maximum_to_retrieve($maximum_to_retrieve);
+      }
+    else
+      {
+      $maximum_to_retrieve = 10000;
+      }
 
     $hsOptions{'search_debug'} = $debug if (defined($debug) and (0 < $debug));
 
-    $search->native_query(WWW::Search::escape_query($query), \%hsOptions);
+    $iGui ? 
+        $search->gui_query(WWW::Search::escape_query($query), \%hsOptions) 
+      : $search->native_query(WWW::Search::escape_query($query), \%hsOptions);
 
     my($way) = 0; # 0=piecemeal, 1=all at once
     my($result);

@@ -7,7 +7,66 @@
 <html>
 <head>
 <title>Deja.com: Power Search Results</title>
-<link rel="stylesheet" type="text/css" href="/templates/css.epl?diet=1">
+
+
+
+
+<style>
+<!--
+#blue 
+    { color: #6666cc;  }
+#gray 
+    { color: #666677;  }
+#green 
+    { color: #cccc66;  }
+#grey 
+    { color: #666677;  }
+#indigo 
+    { color: #003399;  }
+#red 
+    { color: #ff6600;  }
+#white 
+    { color: #ffffff;  }
+#yellow 
+    { color: #ffcc66;  }
+.boldorange 
+    { color: #ff6600; font-family: geneva,arial; font-size: 19px; font-weight: bold;  }
+.large 
+    { font-family: geneva,arial; font-size: 16px; letter-spacing: 1pt;  }
+.med 
+    { font-family: geneva,arial; font-size: 13px; letter-spacing: 0pt;  }
+.menu 
+    { background-color: #ffcc66; border-color: #000000; border-style: solid; border-width: 2px; color: #000000; font-family: geneva,arial; font-size: 11px; font-weight: normal; layer-background-color: #ffcc66; padding: 0px; position: absolute; visibility: hidden; width: 165;  }
+.size10 
+    { font-family: geneva,arial; font-size: 13px;  }
+.size12 
+    { font-family: geneva,arial; font-size: 16px;  }
+.size8 
+    { font-family: geneva,arial; font-size: 11px;  }
+.small 
+    { font-family: geneva,arial; font-size: 11px; letter-spacing: 0pt;  }
+.verdana 
+    { font-family: verdana,geneva,arial; font-size: 10px; letter-spacing: 0pt;  }
+.xlarge 
+    { font-family: geneva,arial; font-size: 19px; letter-spacing: 0pt;  }
+.xxlarge 
+    { font-family: geneva,arial; font-size: 24px; letter-spacing: 0pt;  }
+A.DARK2 
+    { color: #ff6600;  }
+A.DARK3 
+    { color: #ff3300;  }
+A.LIGHT2 
+    { color: #ffcc66;  }
+b.bold 
+    { color: #000000; font-family: geneva,arial; font-size: 13px; font-weight: bold; letter-spacing: 0pt;  }
+td 
+    { font-family: geneva,arial; font-size: 13px; letter-spacing: 0pt;  }
+td B 
+    { font-family: geneva,arial; font-size: 13px; font-weight: bold; letter-spacing: 0pt;  }
+
+-->
+</style>
+
 <meta name=keywords content="dejanews usenet newsgroup articles search query discussion">
 
 
@@ -16,15 +75,19 @@
 
 <body bgcolor=#ffffff text=#000000 link=#0000cc vlink=#663399 alink=#ff6600>
 
+<!-- HEADER : begin -->
+
 
 
 <!-- PLOC = d.search.query.hitlist.ps -->
 
 <table border=0 cellpadding=0 cellspacing=0 width=100%>
-<tr><td align=left bgcolor=#6666cc valign=bottom width=135><a href="./"><img src="http://g.deja.com/gifs/dlogo_130_b.gif" width=130 height=75 alt="deja.com" border=0 hspace=0 align=left></a></td>
-<td bgcolor=#ffffff width=12><img src="http://g.deja.com/gifs/20x20.gif" width=12 border=0 height=60 align=left></td>
-<td align=middle bgcolor=#ffffff valign=top><A HREF="/jump/http://gp1.deja.com/gtc?id=1020603&dejahi=0&tm=944588946.980747&site=dn&keyword=irover&channel=comptech.prod_sw&page=d.search.query.hitlist.ps&slot=468x60.1&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7ccomptech.%7cd.%7c468x60.1%7c%7c%7c%7c%7c%7c%7c">
-<IMG ALIGN=MIDDLE HEIGHT=60 WIDTH=468 SRC="http://web2.deja.com/ads/30/212013030-11971.gif" ALT="Please visit our sponsor" border=1></A><BR>
+<tr bgcolor=#ffffff><td align=left bgcolor=#6666cc valign=bottom width=135><a href="./"><img src="http://g.deja.com/gifs/dlogo_130_b.gif" width=130 height=75 alt="deja.com" border=0 hspace=0 align=left></a></td>
+<td width=12><img src="http://g.deja.com/gifs/20x20.gif" width=12 border=0 height=60 align=left></td>
+<td align=middle valign=top><script language="javascript1.2" src="http://a1.deja.com/onsale/468BScannersDesktop+Scanners.js"></script>
+<noscript>
+<a href="/jump/http://gp1.deja.com/gtc?id=1015289&dejahi=0&tm=948208627.659631&site=dn&keyword=irover&channel=comptech.soft.pc.prod_sw&page=d.search.query.hitlist.ps&slot=468x60.1&node=Productivity%20Software&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7ccomptech.%7cd.%7c468x60.1%7c%7c%7c%7c%7c%7c%7c"><img src="http://web2.deja.com/ads/45/2165683145-11924.gif" border=0 width=468 height=60 alt="Live Auctions at Onsale!"></a>
+</noscript>
 
 </td>
 <td align=right width=100%>
@@ -32,29 +95,30 @@
 </td>
 </tr></table>
 
-<table border=0 cellpadding=0 cellspacing=0  width="100%">
-<tr><td bgcolor=#6666cc><img src="http://g.deja.com/gifs/dmotto_b.gif" width=338  alt="Before You Buy" border=0 height=21 hspace=1 align=left></td>
+<table border=0 cellpadding=0 cellspacing=0 width=100%>
+<tr><td bgcolor=#6666cc><img src="http://g.deja.com/gifs/dmotto_b.gif" width=338 alt="Before You Buy" border=0 height=21 hspace=1 align=left></td>
 <td valign=middle align=right bgcolor=#6666cc id=white>
-<b class=verdana><a href="mydn_forums.xp"><font color="#FFFFFF">My Deja</font></a></b>&nbsp;&nbsp;<br></td>
+
+    <b class=verdana><a href="help/help_metasr.shtml"><font color=#ffffff>Help</font></a> &nbsp;|&nbsp; </b>
+
+<b class=verdana><a href="mailto.xp?category=Searching"><font color=#ffffff>Feedback</font></a> &nbsp;|&nbsp; </b>
+<b class=verdana><a href="/my/pr.xp"><font color=#ffffff>My Deja</font></a></b>
+
+&nbsp;&nbsp;
+<br></td>
 </tr></table>
 
-<table border=0 cellspacing=0 cellpadding=0 bgcolor=#cccc66 width=100%><tr bgcolor=#6666cc>
-<td width=4><img src=http://g.deja.com/gifs/20x20.gif width=4 height=1></td>
-<td width=100%><img src=http://g.deja.com/gifs/20x20.gif width=331 height=1></td>
-<td width=1><img src=http://g.deja.com/gifs/20x20.gif width=1 height=1></td>
-<td width=130><img src=http://g.deja.com/gifs/20x20.gif width=130 height=1></td>
-<td width=3><img src=http://g.deja.com/gifs/20x20.gif width=3 height=1></td>
-</tr>
-
-<tr><td width=1 bgcolor=#000000><img src=http://g.deja.com/gifs/20x20.gif width=1 height=1></td>
-<td valign=top width=100%>
+<!-- HEADER : end -->
 
 <!-- nav_chan : begin -->
 
 
-<table border=0 cellspacing=0 cellpadding=2><tr>
-<td bgcolor="#cccc66" nowrap>
-&nbsp;<a href="./"><b>Home</b></a>
+<table bgcolor=#cccc66 border=0 cellpadding=0 cellspacing=0 width=100%>
+<tr><td width=1 bgcolor=#000000 rowspan=2><img src=http://g.deja.com/gifs/20x20.gif width=1 height=1 hspace=0><br></td>
+<td valign=top width=760>
+
+<table border=0 cellspacing=0 cellpadding=2>
+<tr><td nowrap>&nbsp;<a href="./"><b>Home</b></a>
 
     
     
@@ -65,6 +129,22 @@
 		
 		
 		<a href="channels/forums.xp?CID=10121"><b>Computing & Tech</b></a>
+	    
+	    
+	
+	    &nbsp;<b>&#187;</b>&nbsp;
+	    
+		
+		
+		<a href="channels/forums.xp?CID=13019"><b>Software</b></a>
+	    
+	    
+	
+	    &nbsp;<b>&#187;</b>&nbsp;
+	    
+		
+		
+		<a href="channels/forums.xp?CID=13083"><b>PC</b></a>
 	    
 	    
 	
@@ -82,16 +162,15 @@
 	
 	<b class="xxlarge">Productivity Software&nbsp;</b></td>
     
-    
-</tr>
+    </tr>
 
 </table>
 
 
 
 
-<table border=0 cellspacing=2 cellpadding=2><tr>
-<td bgcolor="#cccc66"><span class="small">
+<table border=0 cellspacing=0 cellpadding=2>
+<tr><td nowrap><span class="small">
 
     
     
@@ -102,7 +181,7 @@
 	
 	
 	
-	    <a href="channels/forums.xp?CID=12024">Antivirus</a>
+	    <a href="channels/forums.xp?CID=13214">Database Report Writers</a>
 	
 	
 	|
@@ -114,7 +193,7 @@
 	
 	
 	
-	    <a href="channels/forums.xp?CID=12025">Database</a>
+	    <a href="channels/forums.xp?CID=12025">Databases: End User</a>
 	
 	
 	|
@@ -126,7 +205,7 @@
 	
 	
 	
-	    <a href="channels/forums.xp?CID=12026">Kids Reference</a>
+	    <a href="channels/forums.xp?CID=12027">Encyclopedia Software</a>
 	
 	
 	|
@@ -139,18 +218,6 @@
 	
 	
 	    <a href="channels/forums.xp?CID=12028">OCR</a>
-	
-	
-	|
-    
-	
-	
-	
-	
-	
-	
-	
-	    <a href="channels/forums.xp?CID=12029">Operating Systems</a>
 	
 	
 	|
@@ -186,30 +253,6 @@
 	
 	
 	
-	    <a href="channels/forums.xp?CID=12027">Reference</a>
-	
-	
-	|
-    
-	
-	
-	
-	
-	
-	
-	
-	    <a href="channels/forums.xp?CID=12032">Remote Access</a>
-	
-	
-	|
-    
-	
-	
-	
-	
-	
-	
-	
 	    <a href="channels/forums.xp?CID=12033">Speech Recognition</a>
 	
 	
@@ -234,18 +277,6 @@
 	
 	
 	
-	    <a href="channels/forums.xp?CID=12035">Utility</a>
-	
-	
-	|
-    
-	
-	
-	
-	
-	
-	
-	
 	    <a href="channels/forums.xp?CID=12299">Word Processor</a>
 	
 	
@@ -253,138 +284,42 @@
     
 </span></td>
 </tr></table>
-<!-- nav_chan : end -->
+
+
 
 </td>
 
-<td rowspan=2 width=1 bgcolor=#000000><img src=http://g.deja.com/gifs/20x20.gif width=1 height=1></td>
-<td rowspan=2 bgcolor=#6666cc valign=top align=center width=100%>
+<td valign=bottom align=right>
 
-<!-- third stage : begin -->
-
-
-
-
-<table width=100% border=0 cellspacing=0 cellpadding=6><tr align=center>
-<td bgcolor=#ffffff>
-<table bgcolor=#000000 width=120 cellspacing=0 cellpadding=0 border=0><tr>
-<td bgcolor=#000000><A HREF="/jump/http://gp1.deja.com/gtc?id=1019536&dejahi=0&tm=944588947.009819&site=dn&keyword=irover&channel=comptech.prod_sw&page=d.search.query.hitlist.ps&slot=promo.1&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7cpromo.1%7c%7c%7c%7c%7c%7c%7c">
-<IMG ALIGN=MIDDLE HEIGHT=30 WIDTH=120 SRC="http://web2.deja.com/ads/76/632976276-2086.gif" ALT="Just in time for HOLIDAY SHOPPING! Click to visit." border=1></A><BR></td>
-</tr></table>
-</td></tr>
+<table border=0 cellspacing=0 cellpadding=0>
+<tr><form action="qs.xp" method=get>
+<td valign=top align=left nowrap><font color="#FF6600"><b class=verdana>QUICK SEARCH</b></font><br></td>
+</tr> 
+<tr><td nowrap valign=bottom>
+<input type="hidden" name="OP" value="dnquery.xp">
+<input type="hidden" name="ST" value="MS"></span>
+<input type="hidden" name="DBS" value="2">
+<input type=text name=QRY size=15>
+<input type=image src="http://g.deja.com/gifs/button_search.gif" width=75 height=17 hspace=2 vspace=0 border=0>
+<br></td></form></tr>
 </table>
-
-<table width=100% cellpadding=0 cellspacing=0 bgcolor=#000000 border=0><tr>
-<td bgcolor=#000000 width=100%><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1 hspace=0 vspace=0><br></td>
-</tr></table>
-
-
-
-<table width=100% border=0 cellspacing=0 cellpadding=6><tr align=center>
-<td bgcolor=#ffffff>
-<table bgcolor=#000000 width=120 cellspacing=0 cellpadding=0 border=0><tr>
-<td bgcolor=#000000><A HREF="/jump/http://gp1.deja.com/gtc?id=1028994&dejahi=0&tm=944588947.039977&site=dn&keyword=irover&channel=comptech.prod_sw&page=d.search.query.hitlist.ps&slot=120x120.1&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7ccomptech.%7c%7c120x120.1%7c%7c%7c%7c%7c%7c%7c">
-<IMG ALIGN=MIDDLE HEIGHT=120 WIDTH=120 SRC="http://web2.deja.com/ads/00/1652208700-5120.gif" ALT="Please visit our sponsor" border=1></A><BR></td>
-</tr></table>
-</td></tr>
-</table>
-
-<table width=100% cellpadding=0 cellspacing=0 bgcolor=#000000 border=0><tr>
-<td bgcolor=#000000 width=100%><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1 hspace=0 vspace=0><br></td>
-</tr></table>
-
-
-
-
-
-
-
-
-<table width=100% border=0 cellspacing=0 cellpadding=6><tr>
-<td bgcolor=#000000><font color="#ff6600"><b>Net Interests:</b></font></td>
-</tr></table>
-
-<table width=100% border=0 cellspacing=0 cellpadding=6><tr bgcolor="#eeeeee">
-<td><table width="100%" border=0 cellspacing=0 cellpadding=6><tr>
-<td><span class="small"><font size=2 face="geneva,arial"><font size="2">Search <a href="/jump/http://gp1.deja.com/gtc?id=1011990&dejahi=0&tm=944588947.023694&site=dn&keyword=irover&channel=comptech.prod_sw&page=d.search.query.hitlist.ps&slot=promo.2&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7ccomptech.%7cd.%7cpromo.2%7c%7c%7c%7c%7c%7c%7c"><i>ComputerJobs Resource Center</i></a> 
-on Deja.com for careers in computers & tech. Upgrade your career today!</font></span></td>
-</tr></table>
-</td></tr></table>
-
-
-<table width=100% border=0 cellspacing=0 cellpadding=6><tr>
-<td bgcolor="#000000"><font color="#ff6600"><b>Explore More:</b></font></td>
-</tr></table>
-
-
-
-
-
-<table width=100% border=0 cellspacing=0 cellpadding=6>
-<tr><td bgcolor="#6666cc"><span class=small>
-<font color="#ffffff">
-
-<p>3Com, Dreamcast, DVD!<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=18323847&location=textlink.amazon.cat.comptech.cat.comptech.prod_sw">
-<font color="#ffcc66"><b>Bid @ Amazon.com Auctions</b></font></a>
-
-<p>Great PC Deals<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=18323847&location=textlink.necx.cat.comptech.cat.comptech.prod_sw">
-<font color="#ffcc66"><b>Visit NECX!</b></font></a>
-
-<p>Free personalized email<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=18323847&location=textlink.mailcom.cat.comptech.cat.comptech.prod_sw">
-<font color="#ffcc66"><b>Signup now!</b></font></a>
-
-<p>Computer & Tech Jobs<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=18323847&location=textlink.compjobs.cat.comptech.cat.comptech.prod_sw">
-<font color="#ffcc66"><b>Upgrade your Career!</b></font></a>
-
-<p>Great PC's and More!<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=18323847&location=textlink.gateway.cat.comptech.cat.comptech.prod_sw">
-<font color="#ffcc66"><b>Click for Gateway.com</b></font></a>
-
-<p>1 Source for Computers!<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=18323847&location=textlink.miw.cat.comptech.cat.comptech.prod_sw">
-<font color="#ffcc66"><b>Deals @ Microwarehouse</b></font></a>
-
-<p>Palm VII organizer<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=18323847&location=textlink.palmvii.cat.comptech.cat.comptech.prod_sw">
-<font color="#ffcc66"><b>Wireless Internet access</b></font></a>
-
-<p>Value America-Electronics<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=18323847&location=textlink.val.cat.comptech.cat.comptech.prod_sw">
-<font color="#ffcc66"><b>Best Brands & Prices-Now</b></font></a>
-
-<p>Thousands of Products<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=18323847&location=textlink.eco.cat.comptech.cat.comptech.prod_sw">
-<font color="#ffcc66"><b>Buy at cost @ eCOST.com</b></font></a>
-
-<p>Search for Jobs!<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=18323847&location=textlink.joboptions.cat.ros.cat.comptech.prod_sw">
-<font color="#ffcc66"><b>JobOptions</b></font></a>
-
-</span></td></tr>
-</table>
-
-<!-- third stage : end -->
 
 </td>
 
-<td rowspan=2 width=3 bgcolor=#000000><img src=http://g.deja.com/gifs/20x20.gif width=3 height=1></td>
-
+<td bgcolor=#000000 width=4 rowspan=2><img src="http://g.deja.com/gifs/20x20.gif" width=4 height=1 hspace=0></td>
 </tr>
 
+<tr><td colspan=2 height=5><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1 hspace=0><br></td></tr>
+
 <tr>
-<td bgcolor=#000000 width=4><img src=http://g.deja.com/gifs/20x20.gif width=4 height=1></td>
-<td bgcolor=#ffffff valign=top align=center height=800 width=100%>
+<td bgcolor=#000000 colspan=4 valign=top width=100%>
+<img src="http://g.deja.com/gifs/20x20.gif" width=1 height=4></td>
+</tr>
 
-<!-- second stage : begin -->
-<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=#000000><tr>
-<td bgcolor=#000000><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=5></td>
-</tr></table>
+</table>	
+<!-- nav_chan : end -->
 
-<!-- second stage nav_tab : begin -->
+<!-- nav_tab : begin -->
 
 
 
@@ -399,6 +334,7 @@ on Deja.com for careers in computers & tech. Upgrade your career today!</font></
 
 <table border=0 cellspacing=0 cellpadding=2>
 <tr>
+    <td bgcolor=#000000><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td>
 
 
     
@@ -440,9 +376,23 @@ on Deja.com for careers in computers & tech. Upgrade your career today!</font></
 
 
 
-<!-- second stage nav_tab : end -->
+<!-- nav_tab : end -->
 
-<!-- second stage content : begin -->
+<!-- content+ad silo : begin -->
+<table bgcolor=#ffffff border=0 cellpadding=0 cellspacing=0 width=100%>
+
+<tr><td width=100%><img src="http://g.deja.com/gifs/20x20.gif" width=130 height=1 hspace=0></td>
+<td width=20><img src="http://g.deja.com/gifs/20x20.gif" width=20 height=1 hspace=0></td>
+<td width=1 rowspan=3 bgcolor=#000000><IMG src="http://g.deja.com/gifs/20x20.gif" width=1 height=1 hspace=0></td>
+<td width=130><img src="http://g.deja.com/gifs/20x20.gif" width=130 height=1 hspace=0></td>
+</tr>
+
+<tr>
+<td width=100% align=left valign=top>
+<img src="http://g.deja.com/gifs/20x20.gif" width=1 height=8>
+<br>
+
+<!-- content : begin -->
 
 
 
@@ -452,9 +402,8 @@ on Deja.com for careers in computers & tech. Upgrade your career today!</font></
 
 
 
-<p>
 
-<table width=95% cellpadding=0 cellspacing=0 border=0><tr>
+<table width=100% cellpadding=0 cellspacing=0 border=0><tr>
 <td valign=top>
 <span class="xlarge">Results for:&nbsp;</span>
 <span class="xlarge" id="red">"irover&quot</span>
@@ -464,47 +413,41 @@ on Deja.com for careers in computers & tech. Upgrade your career today!</font></
 
 
 
-<table border=0 cellspacing=0 cellpadding=3><tr align=right>
 
+<table border=0 cellspacing=0 cellpadding=3><tr align=right>
     <td align=center nowrap valign=top class="small" bgcolor=#ffcc66>
 	<a href="home_ps.shtml?QRY=irover&TAB=D">Power Search</a>
     </td>
-
-<td align=center nowrap valign=top class="small" bgcolor=#eeeeee>
-
-    <a href="help/help_metasr.shtml">Help</a> | 
-
-<a href="mailto.xp?category=Searching">Feedback</a>
-<br></td>
 </tr></table>
 
 
 </td>
 </tr></table>
-</p>
 
 
 
-<table cellpadding=2 cellspacing=0 border=0 width=95%>
-<tr><td width=100% colspan=2>
+
+
+<table cellpadding=2 cellspacing=0 border=0 width=100%>
+<tr><td width=100%>
 <b>Messages</b><br>
-<b class="small">1-20 of exactly 20 matches</b>
-<br><a href="http://www.deja.com/trackquery.xp?query=irover&wp_query=svcclass%3ddnserver%26defaultOp%3d%257c%26ST%3dPS%26minAN%3d0%26ageweight%3d1%26query%3dirover%26search%3dword%26HT%3d0%26maxhits%3d100%26RN%3d0%26LNG%3dALL%26showsort%3dscore%26format%3dterse%26QRY%3dirover%26IS%3dirover%26agesign%3d0%26OP%3ddnquery.xp&return_to=http://x31.deja.com/qs.xp%3fLNG%3dALL%26OP%3ddnquery.xp%26QRY%3dirover%26ST%3dPS%26defaultOp%3dOR%26maxhits%3d100%26showsort%3dscore">Track this search for me</a>
-
+<b class="small">1-21 of exactly 21 matches</b>
+</td><td nowrap><span class="small"><a href="http://www.deja.com/my/pr/search_add.xp?query=irover&ss_query=svcclass%3ddnserver%26default_op%3dOR%26language%3dALL%26ageweight%3d1%26keywords%3dirover%26max_hits%3d100&return_to=http://x29.deja.com/qs.xp%3fLNG%3dALL%26OP%3ddnquery.xp%26QRY%3dirover%26ST%3dPS%26defaultOp%3dOR%26maxhits%3d100%26showsort%3dscore"><img src="http://g.deja.com/my/gifs/can_MY_white.gif" border=0 alt="add" vspace=2></a> Save this search</span>
 </td></tr>
 </table>
 
-<table width=95% cellspacing=0 cellpadding=6 border=0>
+
+<table width=100% cellspacing=0 cellpadding=6 border=0>
 
 <tr align=left valign=top>
 
-    <td><a href="http://x31.deja.com/qs.xp?LNG=ALL&OP=dnquery.xp&QRY=irover&ST=PS&defaultOp=OR&maxhits=100&showsort=date">Date</a> <img src="http://g.deja.com/gifs/sort_down_x.gif" width=11 height=6 border=0 hspace=3 vspace=1></td>
+    <td><a href="http://x29.deja.com/qs.xp?LNG=ALL&OP=dnquery.xp&QRY=irover&ST=PS&defaultOp=OR&maxhits=100&showsort=date">Date</a> <img src="http://g.deja.com/gifs/sort_down_x.gif" width=11 height=6 border=0 hspace=3 vspace=1></td>
 
-    <td><a href="http://x31.deja.com/qs.xp?LNG=ALL&OP=dnquery.xp&QRY=irover&ST=PS&defaultOp=OR&maxhits=100&showsort=subject">Subject</a> <img src="http://g.deja.com/gifs/sort_down_x.gif" width=11 height=6 border=0 hspace=3 vspace=1></td>
+    <td><a href="http://x29.deja.com/qs.xp?LNG=ALL&OP=dnquery.xp&QRY=irover&ST=PS&defaultOp=OR&maxhits=100&showsort=subject">Subject</a> <img src="http://g.deja.com/gifs/sort_down_x.gif" width=11 height=6 border=0 hspace=3 vspace=1></td>
 
-    <td><a href="http://x31.deja.com/qs.xp?LNG=ALL&OP=dnquery.xp&QRY=irover&ST=PS&defaultOp=OR&maxhits=100&showsort=newsgroup">Forum</a> <img src="http://g.deja.com/gifs/sort_down_x.gif" width=11 height=6 border=0 hspace=3 vspace=1></td>
+    <td><a href="http://x29.deja.com/qs.xp?LNG=ALL&OP=dnquery.xp&QRY=irover&ST=PS&defaultOp=OR&maxhits=100&showsort=newsgroup">Forum</a> <img src="http://g.deja.com/gifs/sort_down_x.gif" width=11 height=6 border=0 hspace=3 vspace=1></td>
 
-    <td><a href="http://x31.deja.com/qs.xp?LNG=ALL&OP=dnquery.xp&QRY=irover&ST=PS&defaultOp=OR&maxhits=100&showsort=author">Author</a> <img src="http://g.deja.com/gifs/sort_down_x.gif" width=11 height=6 border=0 hspace=3 vspace=1></td>
+    <td><a href="http://x29.deja.com/qs.xp?LNG=ALL&OP=dnquery.xp&QRY=irover&ST=PS&defaultOp=OR&maxhits=100&showsort=author">Author</a> <img src="http://g.deja.com/gifs/sort_down_x.gif" width=11 height=6 border=0 hspace=3 vspace=1></td>
 
 </tr>
 
@@ -517,14 +460,16 @@ on Deja.com for careers in computers & tech. Upgrade your career today!</font></
     
     
     <tr bgcolor=#dddddd valign=top>
-    <td>10/31/1999</td>
+    <td>01/13/2000</td>
     <td><b>
-    <a href="http://x31.deja.com/getdoc.xp?AN=542785564&CONTEXT=944588942.1954873486&hitnum=0">
-    Re: search engine software  
+    <a href="http://x29.deja.com/getdoc.xp?AN=571937018&CONTEXT=948208626.659488792&hitnum=0">
+    Re: Search Engine           
     </a>
     </b></td>
     <td>alt.comp.freeware    </td>
-    <td><a href="profile.xp?author=3f5908d416d54267c88a101a83b28124343884ad7a1cd56d555932dbd2e0c230965d52f531421c424f633880dd8e418227e670fc6c&ST=PS&ee=1">spcor          </a></td>
+
+    <td><a href="profile.xp?author=3f510ad417d343642153aec3970a7b52b029afb4ec0391a1b3db880f5e8e4ecbb25f9e14ce7a8d509a0a8001412169a182a19b319ad2da65ba686e71ad277978cfe1df4a7928f658e189030ee40db15689ee01860b5fe0&ST=PS&ee=1">Neerav         </a></td>
+
     </tr>
     
 
@@ -536,12 +481,14 @@ on Deja.com for careers in computers & tech. Upgrade your career today!</font></
     <tr bgcolor=#eeeeee valign=top>
     <td>09/26/1999</td>
     <td><b>
-    <a href="http://x31.deja.com/getdoc.xp?AN=529889969&CONTEXT=944588942.1954873486&hitnum=1">
+    <a href="http://x29.deja.com/getdoc.xp?AN=529889969&CONTEXT=948208626.659488792&hitnum=1">
     Re: I am ready to commit sui
     </a>
     </b></td>
     <td>soc.support.depressio</td>
-    <td><a href="profile.xp?author=3e5f0ad619d44262e5f23639051d48f756d100ec7e367e292bd202b7b8951e333c36ccb1f22f16c7f6c399449fe409e2b448b3c1ce92cadf7d32&ST=PS&ee=1">Mike Zulkoski  </a></td>
+
+    <td><a href="profile.xp?author=395a0fd61ed2416d6a0b6813a8f4093ab8451110df849a90677dff1a590563b38225bc93c885037a6b00597240def4e3aa25e3b4c816711018a0&ST=PS&ee=1">Mike Zulkoski  </a></td>
+
     </tr>
     
 
@@ -553,12 +500,14 @@ on Deja.com for careers in computers & tech. Upgrade your career today!</font></
     <tr bgcolor=#dddddd valign=top>
     <td>07/20/1999</td>
     <td><b>
-    <a href="http://x31.deja.com/getdoc.xp?AN=502982021&CONTEXT=944588942.1954873486&hitnum=2">
+    <a href="http://x29.deja.com/getdoc.xp?AN=502982021&CONTEXT=948208626.659488792&hitnum=2">
     Re: MSVBVM60.DLL            
     </a>
     </b></td>
     <td>microsoft.public.win9</td>
-    <td><a href="profile.xp?author=305900d71ddf4267915ed1a588121dfc7bc9d34756bb6d3bfaaaafdd965630fab3342b9aabb0f6a3baaf4f4f9fb72271324a14be5b873e038557&ST=PS&ee=1">Alan Edwards   </a></td>
+
+    <td><a href="profile.xp?author=305909da1ad14160661e24cfa0851dc3be64a7c4804711ff64ba8b8c3b1c1725a64046b7355ef7226c36ae15a18ce6cc8f27402193f5ec62e023&ST=PS&ee=1">Alan Edwards   </a></td>
+
     </tr>
     
 
@@ -570,12 +519,14 @@ on Deja.com for careers in computers & tech. Upgrade your career today!</font></
     <tr bgcolor=#eeeeee valign=top>
     <td>04/17/1999</td>
     <td><b>
-    <a href="http://x31.deja.com/getdoc.xp?AN=467353020&CONTEXT=944588942.1954873486&hitnum=3">
+    <a href="http://x29.deja.com/getdoc.xp?AN=467353020&CONTEXT=948208626.659488792&hitnum=3">
     Re: &quot;Puheen tunnistus&quot;      
     </a>
     </b></td>
     <td>sfnet.atk.ms-windows </td>
-    <td><a href="profile.xp?author=3f5e00d319d44466e82c7bc1fe7cc6bae7e434d3a536a148248f8ad38d42fb6b950cd15dbf39ace691a2681caccaf6ea6af428b5254452a272b2066a1f603db6db&ST=PS&ee=1">Raimo Suonio   </a></td>
+
+    <td><a href="profile.xp?author=3e510ed31dd1436cbb5f8313ce12925b3f113a3334e0e50bd43cd02db22f28a7c030852ab0d364bf87d4cf442e1b293d4e40fb8cba04ff7efd9c0504b6fb306b31&ST=PS&ee=1">Raimo Suonio   </a></td>
+
     </tr>
     
 
@@ -587,12 +538,14 @@ on Deja.com for careers in computers & tech. Upgrade your career today!</font></
     <tr bgcolor=#dddddd valign=top>
     <td>04/08/1999</td>
     <td><b>
-    <a href="http://x31.deja.com/getdoc.xp?AN=464071663&CONTEXT=944588942.1954873486&hitnum=4">
+    <a href="http://x29.deja.com/getdoc.xp?AN=464071663&CONTEXT=948208626.659488792&hitnum=4">
     Re: News Parrot             
     </a>
     </b></td>
     <td>alt.comp.freeware    </td>
-    <td><a href="profile.xp?author=3b5d0ad71dd14563f880964650d94fc39a4373394f57e6e5680e6ebcfa16dda879bdd4142be1a02af07350cf41056ba15fdebd34952ef3&ST=PS&ee=1">Daniel Madura  </a></td>
+
+    <td><a href="profile.xp?author=3f5e0fda1bde41601a0bbdca0a56153bad5d9f0bd56d40b2f57ffd452b18d3edc95e5d3a751cbcffd4e3d18517c29be852f7efb4f9aae6&ST=PS&ee=1">Daniel Madura  </a></td>
+
     </tr>
     
 
@@ -604,12 +557,14 @@ on Deja.com for careers in computers & tech. Upgrade your career today!</font></
     <tr bgcolor=#eeeeee valign=top>
     <td>03/27/1999</td>
     <td><b>
-    <a href="http://x31.deja.com/getdoc.xp?AN=459676605&CONTEXT=944588942.1954873486&hitnum=5">
+    <a href="http://x29.deja.com/getdoc.xp?AN=459676605&CONTEXT=948208626.659488792&hitnum=5">
     New files                   
     </a>
     </b></td>
     <td>fido7.f400.file      </td>
-    <td><a href="profile.xp?author=3b5d0cd31dd24963e578cb1cc01aa8ab7c1c764e73329c4728549777436838efef&ST=PS&ee=1">fnet           </a></td>
+
+    <td><a href="profile.xp?author=305e08da1bde4366042f0b5a0effcd43424c07a7d8d3c152c45a510dfe0a4ae111&ST=PS&ee=1">fnet           </a></td>
+
     </tr>
     
 
@@ -619,31 +574,35 @@ on Deja.com for careers in computers & tech. Upgrade your career today!</font></
     
     
     <tr bgcolor=#dddddd valign=top>
+    <td>10/31/1999</td>
+    <td><b>
+    <a href="http://x29.deja.com/getdoc.xp?AN=542785564&CONTEXT=948208626.659488792&hitnum=6">
+    Re: search engine software  
+    </a>
+    </b></td>
+    <td>alt.comp.freeware    </td>
+
+    <td><a href="profile.xp?author=3f5e0ed01ed3466177371db56f1a7653a6640cab2c2376b6658309d3605f96572a9ce0a3346732945339dde6273ac87ab7a01a8e92&ST=PS&ee=1">spcor          </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
     <td>10/01/1999</td>
     <td><b>
-    <a href="http://x31.deja.com/getdoc.xp?AN=531804969.2&CONTEXT=944588942.1954873486&hitnum=6">
+    <a href="http://x29.deja.com/getdoc.xp?AN=531804969.2&CONTEXT=948208626.659488792&hitnum=7">
     Neue Files sind eingetroffen
     </a>
     </b></td>
     <td>hamburg.announce     </td>
-    <td><a href="profile.xp?author=3f580ad31fdf4960c85e894eaaf8dd5d3f9a9a0208f8e811d80e28694804810ad73e6ca5d88dd56b4895b4ffa21814e43b9c48a512d7bbe7c302422b981af3e2f4b8ccfb99a9874278&ST=PS&ee=1">Klaus Wessel   </a></td>
-    </tr>
-    
 
-    
-    
-    
-    
-    
-    <tr bgcolor=#eeeeee valign=top>
-    <td>04/18/1999</td>
-    <td><b>
-    <a href="http://x31.deja.com/getdoc.xp?AN=467992418&CONTEXT=944588942.1954873486&hitnum=7">
-    Re: &quot;Puheen tunnistus&quot;      
-    </a>
-    </b></td>
-    <td>sfnet.atk.ms-windows </td>
-    <td><a href="profile.xp?author=3b5f0cd11bde4366a63524e4c765d3b242f9b47b149ca1f7041d9954c5c9aada65805d0d260c12a5f18c1525345ac0d205c2164e169293713880a8bf9da7786edb&ST=PS&ee=1">Timo Jutila    </a></td>
+    <td><a href="profile.xp?author=385e0dd316d6406678bacd8fcfb1426572d9548a41e26be6ea8ae3c67d1a3a2e366b1aabf3645d9bc7bbacc97fdc5c014a3fb72870fcdc6174fa5e4642999b05f4ef87ad74f910f78a&ST=PS&ee=1">Klaus Wessel   </a></td>
+
     </tr>
     
 
@@ -653,14 +612,16 @@ on Deja.com for careers in computers & tech. Upgrade your career today!</font></
     
     
     <tr bgcolor=#dddddd valign=top>
-    <td>04/13/1999</td>
+    <td>04/18/1999</td>
     <td><b>
-    <a href="http://x31.deja.com/getdoc.xp?AN=465695950&CONTEXT=944588942.1954873486&hitnum=8">
+    <a href="http://x29.deja.com/getdoc.xp?AN=467992418&CONTEXT=948208626.659488792&hitnum=8">
     Re: &quot;Puheen tunnistus&quot;      
     </a>
     </b></td>
     <td>sfnet.atk.ms-windows </td>
-    <td><a href="profile.xp?author=3a5b0bd519d04865e96e7d21eb92bc6ee51778a4e85cab2740ce68ed1f60539de90d429952ff9c31154239741a251895920f76556a859a7671655a20574c0a227c&ST=PS&ee=1">Raimo Suonio   </a></td>
+
+    <td><a href="profile.xp?author=3c5b0bdb16df4167e9ad60f9718d7e12053bcbff28ad3b63c9d24407baee9e381fc7894fedb170137e5f374f249e1343d5a9d3fffd086af0284cf8fb9363e3ed1c&ST=PS&ee=1">Timo Jutila    </a></td>
+
     </tr>
     
 
@@ -670,31 +631,35 @@ on Deja.com for careers in computers & tech. Upgrade your career today!</font></
     
     
     <tr bgcolor=#eeeeee valign=top>
+    <td>04/13/1999</td>
+    <td><b>
+    <a href="http://x29.deja.com/getdoc.xp?AN=465695950&CONTEXT=948208626.659488792&hitnum=9">
+    Re: &quot;Puheen tunnistus&quot;      
+    </a>
+    </b></td>
+    <td>sfnet.atk.ms-windows </td>
+
+    <td><a href="profile.xp?author=39500dd316d145672d00acf78ed6b305a2d2758221a3d25fb5437bcc14c5b8695a0730ea220cdb93a97eff1717de24e5816abd8b7eb97759a5b7ccfd2137120d9b&ST=PS&ee=1">Raimo Suonio   </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
     <td>04/02/1999</td>
     <td><b>
-    <a href="http://x31.deja.com/getdoc.xp?AN=462058080.2&CONTEXT=944588942.1954873486&hitnum=9">
+    <a href="http://x29.deja.com/getdoc.xp?AN=462058080.2&CONTEXT=948208626.659488792&hitnum=10">
     Lisa der absolute .... Neue 
     </a>
     </b></td>
     <td>braunschweig.newfiles</td>
-    <td><a href="profile.xp?author=3d5d0cd017df426d8392bc063f017364502a6ec05008837b84c02c5bfaa8f2c5c679b59e8ebdd90948f5233aafea97bc6bc100dca257&ST=PS&ee=1">Lisa           </a></td>
-    </tr>
-    
 
-    
-    
-    
-    
-    
-    <tr bgcolor=#dddddd valign=top>
-    <td>02/14/1999</td>
-    <td><b>
-    <a href="http://x31.deja.com/getdoc.xp?AN=444127264.4&CONTEXT=944588942.1954873486&hitnum=10">
-    SIMTEL UPLOADS: MS-News Dige
-    </a>
-    </b></td>
-    <td>comp.software.sharewa</td>
-    <td><a href="profile.xp?author=305c0ad01dd44661d84b15388994285c468fc013784c67981677a87d826cc0084ab4cb0206afb644b30666cd515abc77255dd42a72211ffec4caf439d7c62088&ST=PS&ee=1">Simtel Uploads </a></td>
+    <td><a href="profile.xp?author=3c5b09d71ad14365e476f6569b18936b95f599e1c022638a41dfefc29d164c2f6e07e0e8868746b1fb38b72afb173f11bf29590b54ca&ST=PS&ee=1">Lisa           </a></td>
+
     </tr>
     
 
@@ -704,14 +669,35 @@ on Deja.com for careers in computers & tech. Upgrade your career today!</font></
     
     
     <tr bgcolor=#eeeeee valign=top>
+    <td>02/14/1999</td>
+    <td><b>
+    <a href="http://x29.deja.com/getdoc.xp?AN=444127264.4&CONTEXT=948208626.659488792&hitnum=11">
+    SIMTEL UPLOADS: MS-News Dige
+    </a>
+    </b></td>
+    <td>comp.software.sharewa</td>
+
+    <td><a href="profile.xp?author=3a5f0bdb1bd24563c4de31cbd511e05c46e3575268a5b04fa9dcf7925f39554285f3d848cfe995a0108d06ea0e988329ed5ddef4e0fb9dd57bebeb73f55dc7d0&ST=PS&ee=1">Simtel Uploads </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
     <td>02/10/1999</td>
     <td><b>
-    <a href="http://x31.deja.com/getdoc.xp?AN=443028600&CONTEXT=944588942.1954873486&hitnum=11">
+    <a href="http://x29.deja.com/getdoc.xp?AN=443028600&CONTEXT=948208626.659488792&hitnum=12">
     rover22.zip - Advanced web s
     </a>
     </b></td>
     <td>comp.archives.ms-wind</td>
-    <td><a href="profile.xp?author=305d00d51ed045626f018ff4eb0c8f2f60049593651389469fa86e591b603786aaa2378ffc603d00368247c2abd5398e0122bc7a&ST=PS&ee=1">Jim Smyser     </a></td>
+
+    <td><a href="profile.xp?author=3e500cd61dd446656ca95570c3483c43d9c7a8c88d43fdc8ffec80831040a60ff797e2f17d8594a37a5cffe3180f0dab96479ee0&ST=PS&ee=1">Jim Smyser     </a></td>
+
     </tr>
     
 
@@ -720,15 +706,17 @@ on Deja.com for careers in computers & tech. Upgrade your career today!</font></
     
     
     
-    <tr bgcolor=#dddddd valign=top>
+    <tr bgcolor=#eeeeee valign=top>
     <td>05/02/1999</td>
     <td><b>
-    <a href="http://x31.deja.com/getdoc.xp?AN=473303460&CONTEXT=944588942.1954873486&hitnum=12">
+    <a href="http://x29.deja.com/getdoc.xp?AN=473303460&CONTEXT=948208626.659488792&hitnum=13">
     Re: &quot;Puheen tunnistus&quot;      
     </a>
     </b></td>
     <td>sfnet.atk.ms-windows </td>
-    <td><a href="profile.xp?author=3e5d0bdb1cd64765a146a55a30e03f1bdbafdeb26006289410893ad24aa45260c3ad7cea1666b8fafecaf3f530c08ee4104e9af25f19afd184875acfe5d35dc0ad&ST=PS&ee=1">Raimo Suonio   </a></td>
+
+    <td><a href="profile.xp?author=3f5808d318d34764c499b80465a720972e84b40e4eecce18e1e59519a082c34a48399026f069645247619891b2bc3d8fb6e4956d66baa5da00a5444cb6407be494&ST=PS&ee=1">Raimo Suonio   </a></td>
+
     </tr>
     
 
@@ -737,15 +725,17 @@ on Deja.com for careers in computers & tech. Upgrade your career today!</font></
     
     
     
-    <tr bgcolor=#eeeeee valign=top>
+    <tr bgcolor=#dddddd valign=top>
     <td>04/02/1999</td>
     <td><b>
-    <a href="http://x31.deja.com/getdoc.xp?AN=461868928.8&CONTEXT=944588942.1954873486&hitnum=13">
+    <a href="http://x29.deja.com/getdoc.xp?AN=461868928.8&CONTEXT=948208626.659488792&hitnum=14">
     NEW UPLOADS: Volume 0499 : #
     </a>
     </b></td>
     <td>alt.comp.shareware   </td>
-    <td><a href="profile.xp?author=3b5808d316df45627a09aa433368908e4cbc2d93405f4f5228cf74e5d88d274865&ST=PS&ee=1">@TSC-ONLINE.CO.</a></td>
+
+    <td><a href="profile.xp?author=315f0ad61cd04365a6ce51dc5ce05747200f4b9e74a548005bc59244af0c9608f0&ST=PS&ee=1">@TSC-ONLINE.CO.</a></td>
+
     </tr>
     
 
@@ -754,15 +744,17 @@ on Deja.com for careers in computers & tech. Upgrade your career today!</font></
     
     
     
-    <tr bgcolor=#dddddd valign=top>
+    <tr bgcolor=#eeeeee valign=top>
     <td>03/29/1999</td>
     <td><b>
-    <a href="http://x31.deja.com/getdoc.xp?AN=460222036&CONTEXT=944588942.1954873486&hitnum=14">
+    <a href="http://x29.deja.com/getdoc.xp?AN=460222036&CONTEXT=948208626.659488792&hitnum=15">
     New Files On UX5UL Station (
     </a>
     </b></td>
     <td>fido7.iskra.fileecho </td>
-    <td><a href="profile.xp?author=3a5d09d518d346610b24a337115bd0c59a853d9df1c0fe4165e00f4485d886f0f5cf1afa14346df0a3fdea0795eba83b9237c5c2715fc4b577eb92a1ba4aee8c194a991a54f2c60b851a086e1350d6899b7d0ad6&ST=PS&ee=1">AllFix 2:463/77</a></td>
+
+    <td><a href="profile.xp?author=3f510ed51bde4764963f2dcb7fb33ac48eabad2e5991059e05acbdba38fa7e074d4c5783fb72ab9d77a4b02a672fff90aacd9a1479ec50059f9612a8f6e10d6ea5b02a11eab4968be652d2028f2f92d28d928c29&ST=PS&ee=1">AllFix 2:463/77</a></td>
+
     </tr>
     
 
@@ -771,15 +763,17 @@ on Deja.com for careers in computers & tech. Upgrade your career today!</font></
     
     
     
-    <tr bgcolor=#eeeeee valign=top>
+    <tr bgcolor=#dddddd valign=top>
     <td>03/20/1999</td>
     <td><b>
-    <a href="http://x31.deja.com/getdoc.xp?AN=457304153.3&CONTEXT=944588942.1954873486&hitnum=15">
+    <a href="http://x29.deja.com/getdoc.xp?AN=457304153.3&CONTEXT=948208626.659488792&hitnum=16">
     Neue Files im KiSS System Ha
     </a>
     </b></td>
     <td>hamburg.announce     </td>
-    <td><a href="profile.xp?author=3f5d08db17df4463b951de63e91f01259cbedbb6944d30348e1b9f57dd215867ebf0767c1525cd6beb2e2f5a2abce02618873e9f4f014a2bb8b209633259b4f348aaef5f32babb2af74be77f71&ST=PS&ee=1">Thomas Lehmann </a></td>
+
+    <td><a href="profile.xp?author=3e5808d21fd74960a481df1cc7ab84598d9fa9fb1df7ee5021e8805d595dce7357c4d6711471c10ebb7a15ebf1a0bdc14bf3f68846e78617ab1964414f417a83d66a26f5f3b91cf6e4f67c09af&ST=PS&ee=1">Thomas Lehmann </a></td>
+
     </tr>
     
 
@@ -788,32 +782,17 @@ on Deja.com for careers in computers & tech. Upgrade your career today!</font></
     
     
     
-    <tr bgcolor=#dddddd valign=top>
+    <tr bgcolor=#eeeeee valign=top>
     <td>02/02/1999</td>
     <td><b>
-    <a href="http://x31.deja.com/getdoc.xp?AN=439993191&CONTEXT=944588942.1954873486&hitnum=16">
+    <a href="http://x29.deja.com/getdoc.xp?AN=439993191&CONTEXT=948208626.659488792&hitnum=17">
     rover167.zip - Advance web s
     </a>
     </b></td>
     <td>comp.archives.ms-wind</td>
-    <td><a href="profile.xp?author=3e5c00d71ed0406231284eb4d96de7c930827aa445e161a5dc64359e5b4a0760bdc80157603cb1e8e780ae56cfc4ed282c3a6b10&ST=PS&ee=1">Jim Smyser     </a></td>
-    </tr>
-    
 
-    
-    
-    
-    
-    
-    <tr bgcolor=#eeeeee valign=top>
-    <td>04/15/1999</td>
-    <td><b>
-    <a href="http://x31.deja.com/getdoc.xp?AN=466998280.1&CONTEXT=944588942.1954873486&hitnum=17">
-    Lisa der absolute .... Neue 
-    </a>
-    </b></td>
-    <td>braunschweig.newfiles</td>
-    <td><a href="profile.xp?author=3c5901d51fd3416178e6b1cc9cb03569779ba12a517fcfb30f97179b3924398ad93cf31f1fcd4d53fb3cf9119c4533e711bcabfc870a&ST=PS&ee=1">Lisa           </a></td>
+    <td><a href="profile.xp?author=3e5809da1bdf49617af5dc0ae6729a3432c07d1f497c581b64ea2be43b0bd7e5c8a7f3db7d950388448bb082a0289a4e3dabb790&ST=PS&ee=1">Jim Smyser     </a></td>
+
     </tr>
     
 
@@ -823,14 +802,16 @@ on Deja.com for careers in computers & tech. Upgrade your career today!</font></
     
     
     <tr bgcolor=#dddddd valign=top>
-    <td>02/05/1999</td>
+    <td>04/15/1999</td>
     <td><b>
-    <a href="http://x31.deja.com/getdoc.xp?AN=440885224.5&CONTEXT=944588942.1954873486&hitnum=18">
-    SIMTEL UPLOADS: MS-News Dige
+    <a href="http://x29.deja.com/getdoc.xp?AN=466998280.1&CONTEXT=948208626.659488792&hitnum=18">
+    Lisa der absolute .... Neue 
     </a>
     </b></td>
-    <td>comp.software.sharewa</td>
-    <td><a href="profile.xp?author=315c0ed018d0456525d4475f410f24a259e770136afa623fb5ddb26471c41cdb6de386fe7d0d9df04d158ca17c881c03ba28d15ed0b17bb61ea0024ec5b971f9&ST=PS&ee=1">Simtel Uploads </a></td>
+    <td>braunschweig.newfiles</td>
+
+    <td><a href="profile.xp?author=3c580dd018d4456560deb122166c6b1b08927e6e77c23e9f89964981b9bb106c2fa96c3547d781b7f4b3832f4d1cd016594d4802c63b&ST=PS&ee=1">Lisa           </a></td>
+
     </tr>
     
 
@@ -840,14 +821,35 @@ on Deja.com for careers in computers & tech. Upgrade your career today!</font></
     
     
     <tr bgcolor=#eeeeee valign=top>
+    <td>02/05/1999</td>
+    <td><b>
+    <a href="http://x29.deja.com/getdoc.xp?AN=440885224.5&CONTEXT=948208626.659488792&hitnum=19">
+    SIMTEL UPLOADS: MS-News Dige
+    </a>
+    </b></td>
+    <td>comp.software.sharewa</td>
+
+    <td><a href="profile.xp?author=30590ad51ad34462ed5aec52130cd79c37a68bf57a98fea94a4e5ecf55e9ffe4536062cb132ba6d17bb20ff2c8afcc5ed68addae61315c4fc8b9dc79dcd30fee&ST=PS&ee=1">Simtel Uploads </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
     <td>12/24/1997</td>
     <td><b>
-    <a href="http://x31.deja.com/getdoc.xp?AN=309914962&CONTEXT=944588942.1954873486&hitnum=19">
+    <a href="http://x29.deja.com/getdoc.xp?AN=309914962&CONTEXT=948208626.659488792&hitnum=20">
     Intereducazione             
     </a>
     </b></td>
     <td>it.sociale.scout     </td>
-    <td><a href="profile.xp?author=3f5b00d318de46622bc8ea02affd4d0121490c55bdb39b86e1fa9573477ac36a512f04dc6c4fe9d220e0902a847e5200443b9f82eea1a54d514fbe14f80c10023f6f0ffa&ST=PS&ee=1">Maurizio Tramon</a></td>
+
+    <td><a href="profile.xp?author=3f5f09d51bd34267cfcc3275ced7fdfb5a68897b9c1e793567b19ebb19ee23efee19f8c416734ef70e3ed089a866a7df053d9491cf99350130624d7476820fabff1161e4&ST=PS&ee=1">Maurizio Tramon</a></td>
+
     </tr>
     
 
@@ -867,11 +869,11 @@ on Deja.com for careers in computers & tech. Upgrade your career today!</font></
 
 
 
-<table width=95% cellspacing=0 cellpadding=6 border=0><tr><td>
+<table width=100% cellspacing=0 cellpadding=6 border=0><tr><td>
 <b class="small">Individual word match counts (exact)</b>
 <span class="small"><ul>
 
-<li> irover: 20</li>
+<li> irover: 21</li>
 </ul></span>
 </td></tr></table>
 
@@ -880,9 +882,9 @@ on Deja.com for careers in computers & tech. Upgrade your career today!</font></
 
 
 <p>
-<table width=95% cellspacing=0 cellpadding=0 border=0><tr>
+<table width=100% cellspacing=0 cellpadding=0 border=0><tr>
 <td>
-<a href="linkback.xp?act=f&res_type=search&res_title=irover&res_url=http://x31.deja.com/qs.xp%3fLNG%3dALL%26OP%3ddnquery.xp%26QRY%3dirover%26ST%3dPS%26defaultOp%3dOR%26maxhits%3d100%26showsort%3dscore"><b>Deja Linkback</b></a>: Create a custom link to these search results from your own Web site
+<a href="linkback.xp?act=f&res_type=search&res_title=irover&res_url=http://x29.deja.com/qs.xp%3fLNG%3dALL%26OP%3ddnquery.xp%26QRY%3dirover%26ST%3dPS%26defaultOp%3dOR%26maxhits%3d100%26showsort%3dscore"><b>Deja Linkback</b></a>: Create a custom link to these search results from your own Web site
 </td>
 </tr></table>
 
@@ -892,25 +894,25 @@ on Deja.com for careers in computers & tech. Upgrade your career today!</font></
 
 
 
-<table width=95% cellspacing=0 cellpadding=0 border=0><tr valign=top>
+<table width=100% cellspacing=0 cellpadding=0 border=0><tr valign=top>
 
 <td>
 
 
-    <a href="http://x31.deja.com/dnquery.xp?QRY=irover&DBS=&ST=MS">View all search results</a><br>
+    <a href="http://x29.deja.com/dnquery.xp?QRY=irover&DBS=&ST=MS">View all search results</a><br>
     
 
-    <a href="http://x31.deja.com/query_profile.xp?QRY=irover&DBS=&CONTEXT=944588942.1954873486">View forum search results</a><br>
+    <a href="http://x29.deja.com/query_profile.xp?QRY=irover&DBS=&CONTEXT=948208626.659488792">View forum search results</a><br>
     
 
 </td>
 
 <td align=right>
 
-    <a href="http://x31.deja.com/rate/search.xp?QRY=irover&DBS=&CONTEXT=944588942.1954873486">View product search results</a><br>
+    <a href="http://x29.deja.com/rate/search.xp?QRY=irover&DBS=&CONTEXT=948208626.659488792">View product search results</a><br>
     
 
-    <a href="http://x31.deja.com/rate/prod_cat.xp?CONTEXT=944588942.1954873486">View product category search results</a><br>
+    <a href="http://x29.deja.com/rate/prod_cat.xp?CONTEXT=948208626.659488792">View product category search results</a><br>
     
 
 </td>
@@ -921,7 +923,9 @@ on Deja.com for careers in computers & tech. Upgrade your career today!</font></
 
 
 
-<!-- second stage content : end -->
+<!-- content : end -->
+
+<p>
 
 <!-- search again : begin -->
 
@@ -932,7 +936,7 @@ on Deja.com for careers in computers & tech. Upgrade your career today!</font></
 
 
 <p>
-<table cellpadding=2 cellspacing=0 border=0  width=95% bgcolor=#cccc66>
+<table cellpadding=2 cellspacing=0 border=0  width=100% bgcolor=#cccc66>
 <form action="dnquery.xp">
 
 <tr>
@@ -978,7 +982,7 @@ For a more detailed search in Discussions go to <a href="home_ps.shtml?QRY=irove
 	
 	
 	
-	<input type=radio name=VW value=comptech.prod_sw > Computing & Tech >> Productivity Software<br>
+	<input type=radio name=VW value=comptech.soft.pc.prod_sw > Computing & Tech >> Software >> PC >> Productivity Software<br>
     
 	
 	
@@ -994,7 +998,7 @@ For a more detailed search in Discussions go to <a href="home_ps.shtml?QRY=irove
 	
 	
 	
-	<input type=radio name=VW value=comptech.prod_sw.os > Computing & Tech >> Productivity Software >> Operating Systems<br>
+	<input type=radio name=VW value=comptech.soft.os > Computing & Tech >> Software >> Operating Systems<br>
     
     
 	<input type=radio name=VW value="" checked> All Deja.com</span></font>
@@ -1043,10 +1047,164 @@ For a more detailed search in Discussions go to <a href="home_ps.shtml?QRY=irove
 <!-- search again : end -->
 
 <br>&nbsp;
+</td>
+
+<td></td>
+<td valign=top bgcolor=#6666cc>
+
+<!-- ad silo : begin -->
+
+
+
+
+
+
+
+
+<table width=100% border=0 cellspacing=0 cellpadding=6><tr align=center>
+<td bgcolor=#ffffff>
+<table bgcolor=#000000 width=120 cellspacing=0 cellpadding=0 border=0><tr>
+<td bgcolor=#000000><A HREF="/jump/http://gp1.deja.com/gtc?id=1029667&dejahi=0&tm=948208627.784670&site=dn&keyword=irover&channel=comptech.soft.pc.prod_sw&page=d.search.query.hitlist.ps&slot=120x120.2&node=Productivity%20Software&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7c120x120.2%7c%7c%7c%7c%7c%7c%7c">
+<img lowsrc="http://g.deja.com/gifs/20x20.gif" ALIGN=MIDDLE HEIGHT=120 WIDTH=120 SRC="http://web2.deja.com/ads/49/1528065349-4179.gif" ALT="Deja.com is hiring!!" border=1></A><BR></td>
+</tr></table>
+</td></tr>
+</table>
+
+<table width=100% cellpadding=0 cellspacing=0 bgcolor=#000000 border=0><tr>
+<td bgcolor=#000000 width=100%><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1 hspace=0 vspace=0><br></td>
+</tr></table>
+
+
+
+
+
+
+<table width=100% border=0 cellspacing=0 cellpadding=6><tr>
+<td bgcolor=#000000><font color="#ff6600"><b>Net Interests:</b></font></td>
+</tr></table>
+
+<table width=100% border=0 cellspacing=0 cellpadding=6><tr bgcolor="#eeeeee">
+<td><table width="100%" border=0 cellspacing=0 cellpadding=6><tr>
+<td><span class="small"><table width="120">
+<tr>
+<td><font size="2" face="Geneva, Arial">Smart.&nbsp;Deals.&nbsp;Online.
+<a href="/jump/http://gp1.deja.com/gtc?id=1011991&dejahi=0&tm=948208627.721012&site=dn&keyword=irover&channel=comptech.soft.pc.prod_sw&page=d.search.query.hitlist.ps&slot=promo.2&node=Productivity%20Software&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7ccomptech.%7cd.%7cpromo.2%7c%7c%7c%7c%7c%7c%7c"><b>Auctions&nbsp;at&nbsp;Onsale!</b></a></font></td>
+</tr>
+<tr><td>&nbsp;</td></tr>
+</table></span></td>
+</tr></table>
 </td></tr></table>
-<!-- second stage : end -->
+
+
+
+<table width=100% border=0 cellspacing=0 cellpadding=6><tr>
+<td bgcolor="#000000"><font color="#ff6600"><b>Explore More:</b></font></td>
+</tr></table>
+
+
+
+
+
+<table width=100% border=0 cellspacing=0 cellpadding=6>
+<tr><td bgcolor="#6666cc"><span class=small>
+<font color="#ffffff">
+
+    
+    
+    
+    <p>Computer & Tech Jobs<br>
+    <a href="/jump/http://gp1.deja.com/gtc?id=1024461&dejahi=0&tm=948208627.734364&site=dn&keyword=irover&channel=comptech.soft.pc.prod_sw&page=d.search.query.hitlist.ps&slot=expmore.1&node=Productivity%20Software&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7ccomptech.%7cd.%7cexpmore.1%7c%7c%7c%7c%7c%7c%7c">
+    <font face="geneva,arial" color="#ffcc66">
+    <b>Upgrade your Career!</b></font></a>
+
+    
+    
+    
+    <p>Search for Jobs!<br>
+    <a href="/jump/http://gp1.deja.com/gtc?id=1024439&dejahi=0&tm=948208627.734364&site=dn&keyword=irover&channel=comptech.soft.pc.prod_sw&page=d.search.query.hitlist.ps&slot=expmore.1&node=Productivity%20Software&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7ccomptech.%7cd.%7cexpmore.1%7c%7c%7c%7c%7c%7c%7c">
+    <font face="geneva,arial" color="#ffcc66">
+    <b>JobOptions</b></font></a>
+
+    
+    
+    
+    <p>Great PC Deals<br>
+    <a href="/jump/http://gp1.deja.com/gtc?id=1024471&dejahi=0&tm=948208627.734364&site=dn&keyword=irover&channel=comptech.soft.pc.prod_sw&page=d.search.query.hitlist.ps&slot=expmore.1&node=Productivity%20Software&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7ccomptech.%7cd.%7cexpmore.1%7c%7c%7c%7c%7c%7c%7c">
+    <font face="geneva,arial" color="#ffcc66">
+    <b>Visit NECX!</b></font></a>
+
+    
+    
+    
+    <p>Free personalized email<br>
+    <a href="/jump/http://gp1.deja.com/gtc?id=1024498&dejahi=0&tm=948208627.734364&site=dn&keyword=irover&channel=comptech.soft.pc.prod_sw&page=d.search.query.hitlist.ps&slot=expmore.1&node=Productivity%20Software&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7ccomptech.%7cd.%7cexpmore.1%7c%7c%7c%7c%7c%7c%7c">
+    <font face="geneva,arial" color="#ffcc66">
+    <b>YOU@techie.com</b></font></a>
+
+    
+    
+    
+    <p>Digicams under $299<br>
+    <a href="/jump/http://gp1.deja.com/gtc?id=1031820&dejahi=0&tm=948208627.734364&site=dn&keyword=irover&channel=comptech.soft.pc.prod_sw&page=d.search.query.hitlist.ps&slot=expmore.1&node=Productivity%20Software&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7ccomptech.%7cd.%7cexpmore.1%7c%7c%7c%7c%7c%7c%7c">
+    <font face="geneva,arial" color="#ffcc66">
+    <b>at Computers4Sure.com</b></font></a>
+
+    
+    
+    
+    <p>Palm VII organizer<br>
+    <a href="/jump/http://gp1.deja.com/gtc?id=1032606&dejahi=0&tm=948208627.734364&site=dn&keyword=irover&channel=comptech.soft.pc.prod_sw&page=d.search.query.hitlist.ps&slot=expmore.1&node=Productivity%20Software&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7ccomptech.%7c%7cexpmore.1%7c%7c%7c%7c%7c%7c%7c">
+    <font face="geneva,arial" color="#ffcc66">
+    <b>Wireless Internet access</b></font></a>
+
+    
+    
+    
+    <p>Palm VII organizer<br>
+    <a href="/jump/http://gp1.deja.com/gtc?id=1028486&dejahi=0&tm=948208627.734364&site=dn&keyword=irover&channel=comptech.soft.pc.prod_sw&page=d.search.query.hitlist.ps&slot=expmore.1&node=Productivity%20Software&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7ccomptech.%7cd.%7cexpmore.1%7c%7c%7c%7c%7c%7c%7c">
+    <font face="geneva,arial" color="#ffcc66">
+    <b>Wireless Internet access</b></font></a>
+
+    
+    
+    
+    <p>Mail.com offers you<br>
+    <a href="/jump/http://gp1.deja.com/gtc?id=1032181&dejahi=0&tm=948208627.734364&site=dn&keyword=irover&channel=comptech.soft.pc.prod_sw&page=d.search.query.hitlist.ps&slot=expmore.1&node=Productivity%20Software&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7c%7cexpmore.1%7c%7c%7c%7c%7c%7c%7c">
+    <font face="geneva,arial" color="#ffcc66">
+    <b>Free personalized email</b></font></a>
+
+    
+    
+    
+    <p>Thousands of Products<br>
+    <a href="/jump/http://gp1.deja.com/gtc?id=1032164&dejahi=0&tm=948208627.734364&site=dn&keyword=irover&channel=comptech.soft.pc.prod_sw&page=d.search.query.hitlist.ps&slot=expmore.1&node=Productivity%20Software&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7ccomptech.%7cd.%7cexpmore.1%7c%7c%7c%7c%7c%7c%7c">
+    <font face="geneva,arial" color="#ffcc66">
+    <b>Buy at cost @ eCOST.com</b></font></a>
+
+    
+    
+    
+    <p>Deja.com is Hiring!!<br>
+    <a href="/jump/http://gp1.deja.com/gtc?id=1030589&dejahi=0&tm=948208627.734364&site=dn&keyword=irover&channel=comptech.soft.pc.prod_sw&page=d.search.query.hitlist.ps&slot=expmore.1&node=Productivity%20Software&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7c%7cexpmore.1%7c%7c%7c%7c%7c%7c%7c">
+    <font face="geneva,arial" color="#ffcc66">
+    <b>Click here for jobs</b></font></a>
+
+</span></td></tr>
+</table>
+
+
+
+
+
+
+<!-- ad silo : end -->
+
+</td>
+</tr></table>
+<!-- content+ad silo : end -->
 
 <!-- FOOTER : begin -->
+
 
 
 
@@ -1150,41 +1308,105 @@ For a more detailed search in Discussions go to <a href="home_ps.shtml?QRY=irove
 <table width=100% bgcolor=#ffffff cellpadding=10 cellspacing=0 border=0>
 
 <tr><td colspan=2><center>
-<font size=1><span class="small">
+<span class="small">
 
 
-<span class=small>
-<a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.bfl.sitewide&cid=90811666381">Holiday Shopping</a> -
-<a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.freeshop.sitewide&cid=90811666381">FREE STUFF!</a> -
-<a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.datek.sitewide&cid=90811666381">Trade with Datek</a> -
-<nobr><a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.necx.sitewide&cid=90811666381">GET IT NOW @ NECX</a> -</nobr>
-<nobr><a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.ebay.sitewide&cid=90811666381">eBay Auctions</a> -</nobr>
-<nobr><a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.son.sitewide&cid=90811666381">The BEST Music Online</a> -</nobr>
-<nobr><a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.mailcom.sitewide&cid=90811666381">MAIL.COM</a> -</nobr>
-<nobr><a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.drkoop.sitewide&cid=90811666381">Get FREE Health Info@drkoop.com</a> -</nobr>
-<nobr><a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.eco.sitewide&cid=90811666381">BUY AT COST at eCOST.com</a> -</nobr>
-<nobr><a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.joboptions.sitewide&cid=90811666381">Search for Jobs! JobOptions</a> -</nobr>
-<nobr><a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.onsale.sitewide&cid=90811666381">Onsale Auctions</a></nobr>
-</span>
 
-</span></font></center>
+   
+   
+       
+       
+       
+       
+   
+       
+       
+       
+       
+   
+       
+       
+       
+       
+   
+       
+       
+       
+       
+   
+       
+       
+       
+       
+   
+       
+       
+       
+       
+   
+       
+       
+       
+       
+   
+       
+       
+       
+       
+   
+       
+       
+       
+       
+   
+   
+   <nobr><a href="/jump/http://gp1.deja.com/gtc?id=1032566&dejahi=0&tm=948208627.887970&site=dn&keyword=irover&channel=comptech.soft.pc.prod_sw&page=d.search.query.hitlist.ps&slot=sitewide.1&node=Productivity%20Software&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7c%7csitewide.1%7c%7c%7c%7c%7c%7c%7c">Computers4Sure.com</a></nobr> - <nobr><a href="/jump/http://gp1.deja.com/gtc?id=1024522&dejahi=0&tm=948208627.887970&site=dn&keyword=irover&channel=comptech.soft.pc.prod_sw&page=d.search.query.hitlist.ps&slot=sitewide.1&node=Productivity%20Software&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7c%7csitewide.1%7c%7c%7c%7c%7c%7c%7c">FreeShop</a></nobr> - <nobr><a href="/jump/http://gp1.deja.com/gtc?id=1024470&dejahi=0&tm=948208627.887970&site=dn&keyword=irover&channel=comptech.soft.pc.prod_sw&page=d.search.query.hitlist.ps&slot=sitewide.1&node=Productivity%20Software&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7csitewide.1%7c%7c%7c%7c%7c%7c%7c">GET IT NOW @ NECX</a></nobr> - <nobr><a href="/jump/http://gp1.deja.com/gtc?id=1031478&dejahi=0&tm=948208627.887970&site=dn&keyword=irover&channel=comptech.soft.pc.prod_sw&page=d.search.query.hitlist.ps&slot=sitewide.1&node=Productivity%20Software&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7csitewide.1%7c%7c%7c%7c%7c%7c%7c">Get FREE Health Info@drkoop.com</a></nobr> - <nobr><a href="/jump/http://gp1.deja.com/gtc?id=1024494&dejahi=0&tm=948208627.887970&site=dn&keyword=irover&channel=comptech.soft.pc.prod_sw&page=d.search.query.hitlist.ps&slot=sitewide.1&node=Productivity%20Software&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7csitewide.1%7c%7c%7c%7c%7c%7c%7c">MAIL.COM</a></nobr> - <nobr><a href="/jump/http://gp1.deja.com/gtc?id=1024474&dejahi=0&tm=948208627.887970&site=dn&keyword=irover&channel=comptech.soft.pc.prod_sw&page=d.search.query.hitlist.ps&slot=sitewide.1&node=Productivity%20Software&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7csitewide.1%7c%7c%7c%7c%7c%7c%7c">BUY AT COST at eCOST.com</a></nobr> - <nobr><a href="/jump/http://gp1.deja.com/gtc?id=1024464&dejahi=0&tm=948208627.887970&site=dn&keyword=irover&channel=comptech.soft.pc.prod_sw&page=d.search.query.hitlist.ps&slot=sitewide.1&node=Productivity%20Software&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7csitewide.1%7c%7c%7c%7c%7c%7c%7c">Search for Jobs! JobOptions</a></nobr> - <nobr><a href="/jump/http://gp1.deja.com/gtc?id=1032144&dejahi=0&tm=948208627.887970&site=dn&keyword=irover&channel=comptech.soft.pc.prod_sw&page=d.search.query.hitlist.ps&slot=sitewide.1&node=Productivity%20Software&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7csitewide.1%7c%7c%7c%7c%7c%7c%7c">Search used cars</a></nobr> - <nobr><a href="/jump/http://gp1.deja.com/gtc?id=1024515&dejahi=0&tm=948208627.887970&site=dn&keyword=irover&channel=comptech.soft.pc.prod_sw&page=d.search.query.hitlist.ps&slot=sitewide.1&node=Productivity%20Software&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7csitewide.1%7c%7c%7c%7c%7c%7c%7c">Onsale Auctions</a></nobr>
+
+
+
+</span></center>
 </td></tr>
 
 <tr><td class="small">
 <p>
-<a href="info/policy.shtml#copyright">Copyright</a> &copy; 1999 <a href="corp/">Deja.com, Inc.</a> All rights reserved.
-<br><a href="info/trademarks.shtml">Trademarks</a> &#183; <a href="info/policy.shtml">Terms &amp; Conditions of Use</a> &#183; <a href="info/privacy.shtml">Site Privacy Statement</a>.</FONT>
+
+
+
+<a href="http://www.deja.com/info/policy.shtml#copyright">Copyright</a> &copy; 1995-2000 <a href="http://www.deja.com/corp/">Deja.com, Inc.</a> All rights reserved.
+
+<br><a href="info/trademarks.shtml">Trademarks</a> &#183; <a href="info/policy.shtml">Terms &amp; Conditions of Use</a> &#183; <a href="info/privacy.shtml">Site Privacy Statement</a>.
 </td>
 
 <td align=right valign=bottom nowrap>
-<b><a href="corp/ad.shtml">Advertise with Us!</A> &nbsp;|&nbsp; 
-<a href="corp/">About Deja.com</a>
-</b></font>
+<b><a href="corp/ad.shtml">Advertise With Us!</A> &nbsp;|&nbsp; 
+<a href="corp/">About Deja.com</a> &nbsp;|&nbsp;
+<a href="corp/hire.shtml">We're Hiring</a>
+</b>
 </td>
-
 </tr></table>
 
 </td></tr></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- FOOTER : end -->
 

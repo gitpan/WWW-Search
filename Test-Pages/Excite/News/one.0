@@ -1,26 +1,27 @@
 <HTML><HEAD>
 <TITLE>Excite Search Results for "Hawaii AND Alaska"</TITLE>
 </HEAD>
-<BODY bgcolor=ffffff text=000000 link=000099 vlink=990000>
+<BODY bgcolor="ffffff" text="000000" link="000099" vlink="990000">
 <CENTER>
 <center>
-<table cellspacing=0 cellpadding=0 border=0 width=600>
+<table cellspacing=0 cellpadding=0 border=0 width=98%>
 <tr>
-<td align=right VALIGN=TOP width=120>
-<a href=http://www.excite.com/><img src=/img/head/logo3.gif width=128 height=50 border=0></a>
+<td align=right valign=top width=128>
+<a href="/"><img src="/img/head/logo.gif" alt="Excite" width=128 height=50 border=0></a>
 </td>
-<td width=480>
-<table cellspacing=0 cellpadding=0 border=0 width=100%>
+<td>
+<table cellspacing=0 cellpadding=0 border=0 width="100%">
 <tr>
-<td ALIGN=LEFT VALIGN=bottom>
-<font size=4 face=helvetica>
-<b>News Search</b>
-</font>
-</TD>
+<td valign=bottom width=552 height=31>
+<font size=4 face=helvetica><b>&nbsp;News Search</b></font>
+</td>
 </tr>
-<tr BGCOLOR=#ffcc00>
-<td height=2 colspan=2>
-<table border=0 cellpadding=1 cellspacing=0 width=100%>
+<tr>
+<td>
+<table border=0 cellpadding=1 cellspacing=0 width="100%">
+<tr bgcolor="FFCC00">
+<td>
+<table border=0 cellpadding=0 cellspacing=0>
 <tr>
 <td>
 </td>
@@ -28,59 +29,51 @@
 </table>
 </td>
 </tr>
+</table>
+</td>
+</tr>
+</table>
+<table border=0 cellpadding=1 cellspacing=0 width="100%">
 <tr>
-<TD ALIGN=right colspan=2>
+<td align=right>
 <form action="/redir.dcg" method=get onChange="submit()">
 <td align=right>
 <font face="helvetica" size="-1">
-<a href="http://www.excite.com/r/co=hrex;http://www.excite.com/"><b>My Excite</b></a> | <a href="http://www.excite.com/r/co=hrma;http://mail.excite.com"><b>Check Email</b></a></font>&nbsp;
+<a href="http://www.excite.com/r/co=hrex;/"><b>My Excite</b></a> | <a href="http://www.excite.com/r/co=hrma;http://mail.excite.com"><b>Check Email</b></a></font>&nbsp;
 <select name="url" size="1" onChange="submit()">
-<option value="http://www.excite.com/">Excite Home
-<option value="http://auctions.excite.com/">Auctions
-<option value="http://www.excite.com/autos/">Autos
-<option value="http://careers.excite.com/">Careers
-<option value="http://www.excite.com/local/">City Guides
-<option value="http://classifieds.excite.com/">Classifieds
-<option value="http://www.excite.com/computers_and_internet/">Computers & Internet
-<option value="http://www.excite.com/education/">Education
-<option value="http://www.excite.com/entertainment/">Entertainment
-<option value="http://www.excite.com/family/">Family
-<option value="http://www.excite.com/games/">Games
-<option value="http://www.excite.com/health/">Health
-<option value="http://www.excite.com/home_and_real_estate/">Home &amp; Real Estate
-<option value="http://www.excite.com/horoscopes/">Horoscopes
-<option value="http://www.excite.com/lifestyle/">Lifestyle
-<option value="http://quicken.excite.com/">Money &amp; Investing
-<option value="http://news.excite.com/">News
-<option value="http://www.excite.com/people_and_chat/">People &amp; Chat
-<option value="http://www.excite.com/relationships/">Relationships
-<option value="http://www.excite.com/shopping/">Shopping
-<option value="http://www.excite.com/sports/">Sports
-<option value="http://city.net/">Travel
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/">Excite Home
+<option value="http://www.excite.com/r/co=hrsr;http://auctions.excite.com/">Auctions
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/autos/">Autos
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/business/">Business
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/careers/">Careers
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/local/">City Guides
+<option value="http://www.excite.com/r/co=hrsr;http://classifieds.excite.com/">Classifieds
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/computers_and_internet/">Computers & Internet
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/education/">Education
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/entertainment/">Entertainment
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/family/">Family
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/games/">Games
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/health/">Health
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/home_and_real_estate/">Home &amp; Real Estate
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/horoscopes/">Horoscopes
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/lifestyle/">Lifestyle
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/money/">Money &amp; Investing
+<option value="http://www.excite.com/r/co=hrsr;http://news.excite.com/">News
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/people_and_chat/">People &amp; Chat
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/relationships/">Relationships
+<option value="http://www.excite.com/r/co=hrsr;http://shopping.excite.com/">Shopping
+<option value="http://www.excite.com/r/co=hrsr;http://www.excite.com/sports/">Sports
+<option value="http://www.excite.com/r/co=hrsr;http://city.net/">Travel
 </select>
 <input type="submit" value="Go!">
-</td>
 </form>
-</TD>
-</tr>
-<TR>
-<td colspan=2>
-<table border=0 cellpadding=0 cellspacing=0>
-<tr>
-<td height=3>
 </td>
 </tr>
 </table>
-</td>
-</TR>
-</table>
-</TD>
-</TR>
-<TR>
-<TD COLSPAN=2>
-<FORM NAME=topbox ACTION=/search.gw>
+</td></tr></table>
 <TABLE border=0 cellpadding=1 cellspacing=0 width=600>
 <TR><TD bgcolor=#cccccc>
+<FORM NAME=topbox ACTION=/search.gw>
 <TABLE border=0 cellspacing=0 cellpadding=4 width=600 bgcolor=ffffff>
 <TR>
 <TD align=right bgcolor=ffffff>
@@ -111,9 +104,10 @@ More Search</a>
 </td>
 <td align=left colspan=3>
 <font face="helvetica" size=-1>&nbsp;&nbsp;
-<input type=radio name=c value=hourly ><img src=http://www.excite.com/pfp/excite/images/lep.gif> Newswires&nbsp;&nbsp;
+<input type=radio name=c value=hourly ><img src=http://www.excite.com/mesp/images/excite/lep.gif> Newswires&nbsp;&nbsp;
+<input type=radio name=c value=hourly.photo ><img src=http://www.excite.com/mesp/images/excite/lep.gif> News Photos&nbsp;&nbsp;
 <input type=radio name=c value=timely checked>Web News&nbsp;&nbsp;
-<input type=radio name=c value=hourtime >Both	</font>
+<input type=radio name=c value=hourtime >All	</font>
 </td>
 </tr>
 </table>
@@ -122,30 +116,50 @@ More Search</a>
 <table border=1 cellspacing=0 cellpadding=1 width=600 bordercolor=#ffcc00>
 <tr><td align=center bgcolor=ffffcc>
 <font face="helvetica" size=-1><b>
-Visit <A HREF=http://www.excite.com/relocate/co=xxsr_sz2_more;http://www.excite.com/shop/sensual_zone/>The Sensual Zone</A>: <A HREF=http://www.excite.com/relocate/co=xxsr_sz2_lin;/shop/sensual_zone/lingerie/>Lingerie &amp; Underwear</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_sz2_mas;/shop/sensual_zone/massage_and_relaxation/>Massage Oils</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_sz2_vid;/shop/sensual_zone/music_and_video/>Sexy Videos</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_sz2_more;/shop/sensual_zone/>more</A>
+<font color=990000>Free!</font> Photo Personals Slide Show: <A HREF=http://www.excite.com/relocate/co=xxsr_phprs_msw;http://personals.excite.com/cgi-cls/display.exe?partner=excite&path=Personal~SlideShowIntro&>Men Seeking Women</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_phprs_wsm;http://personals.excite.com/cgi-cls/display.exe?partner=excite&path=Personal~SlideShowIntro&>Women Seeking Men</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_phprs_m;http://personals.excite.com/cgi-cls/display.exe?partner=excite&path=Personal~SlideShowIntro&>More</A>
 </b></font>
 </td></tr>
 </table>
 </form>
-</TD>
-</TR>
-</table>
-<a href="http://www.excite.com/relocate/ad=108142_tourism_marketing_100499_scenic.gif|pk=3336428;http://exc.travelalaska.com" onMouseOver="window.status='This year visit Alaska';return true" language="Javascript"><img src="http://image.eimg.com/ads/108142_tourism_marketing_100499_scenic.gif" ALT="This year visit Alaska" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> This year visit Alaska </B></FONT></CENTER></a>
+<IFRAME WIDTH=468 HEIGHT=60 NORESIZE SCROLLING=No FRAMEBORDER=0
+MARGINHEIGHT=0 MARGINWIDTH=0
+SRC="http://ad.preferences.com/iframe.ng;spacedesc=TargetingNetwork_ExciteNet_468x60_RunOfSite_Any&ML_CUSTOM=600&time=2000.01.31.21.10.03&ML_TARGET=_top&ex_cookie=&ex_reg=&TG_NETLOC=xsr/default&TG_COBRAND=&ML_REDIRECT=http%25253A%25252F%25252Fwww.excite.com%25252Frelocate%25252Fad%25253DLUCI%25257Cpk%25253D3754571%25253B">
+<SCRIPT
+SRC="http://ad.preferences.com/jscript.ng;spacedesc=TargetingNetwork_ExciteNet_468x60_RunOfSite_Any&ML_CUSTOM=600&ML_NIF=Y&time=2000.01.31.21.10.03&ML_TARGET=_top&ML_KW=Hawaii+AND+Alaska&ex_cookie=&ex_reg=&TG_NETLOC=xsr/default&TG_COBRAND=&ML_REDIRECT=http%25253A%25252F%25252Fwww.excite.com%25252Frelocate%25252Fad%25253DLUCI%25257Cpk%25253D3754571%25253B"></SCRIPT>
+<NOSCRIPT>
+<A
+TARGET=_top HREF="http://www.excite.com/relocate/ad=60411_htmlad.gif|pk=3754571;http://ad.preferences.com/click.ng;spacedesc=TargetingNetwork_ExciteNet_468x60_RunOfSite_Any&time=2000.01.31.21.10.03&ex_cookie=&ex_reg=&TG_NETLOC=xsr/default&TG_COBRAND=">
+<IMG
+SRC="http://ad.preferences.com/image.ng;spacedesc=TargetingNetwork_ExciteNet_468x60_RunOfSite_Any&ML_NIF=Y&time=2000.01.31.21.10.03&ex_cookie=&ex_reg=&TG_NETLOC=xsr/default&TG_COBRAND="
+WIDTH=468 HEIGHT=60 BORDER=1></A>
+</NOSCRIPT> </IFRAME>
 </center>
 <small><br></small>
 </center>
-<a name=news></a>
-<TABLE border=0 CELLSPACING=0 cellpadding=0 width=100%><TR><TD>
+<a name=news-timely></a>
+<TABLE border=0 CELLSPACING=0 cellpadding=0><TR><TD>
 <img src=/img/logo/lep_w.gif>&nbsp;
-<FONT FACE=helvetica color=000000 SIZE=3><B>News Articles</B></FONT></TD>
+<FONT FACE=helvetica color=000000 SIZE=3><B>Web News</B></FONT></TD>
 </TR></TABLE>
-<TABLE border=0 cellpadding=1 cellspacing=0 width="100%">
+<table border=0 cellpadding=1 cellspacing=0 width=100%>
 <TR BGCOLOR=003366><TD><TABLE border=0 cellpadding=0 cellspacing=0><TR><TD></TD></TR></TABLE>
 </TD></TR>
 </TABLE>
-<table border=0 cellpadding=2 cellspacing=1 width=120 align=right>
-<tr>
-<td align=right>
+<!--promo start-->
+<table border=0 cellpadding=2 cellspacing=5 width=120 align=right>
+<tr><td>
+<table border="2" cellspacing="0" cellpadding="3" bordercolor="#336600" width=120 height=66>
+<tr><td align="center" bgcolor="#ffffcc">
+<b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1">Amazon.com</font></b><br>
+</td></tr>
+<tr><td align="center">
+<font face="Verdana, Arial, Helvetica, sans-serif" size="-2">
+Search for:<br>
+<a href=/relocate/co=xsr_amazon;http://www.amazon.com/exec/obidos/excite-search/search=Hawaii+AND+Alaska>HAWAII AND ALA...</a><br>
+</font>
+</td></tr></table>
+</td></tr>
+<tr><td>
 <table border="2" cellspacing="0" cellpadding="3" bordercolor="#330099" bgcolor="#ffffcc" width=120 height=66>
 <tr>
 <td align="center" width=100%>
@@ -163,32 +177,27 @@ Visit <A HREF=http://www.excite.com/relocate/co=xxsr_sz2_more;http://www.excite.
 </FONT>
 </CENTER>
 </td></tr></table>
-</td>
-</tr>
-<tr>
-<td align=right>
-<table border="2" cellspacing="0" cellpadding="3" bordercolor="#336600" width=120 height=66>
-<tr><td align="center" bgcolor="#ffffcc">
-<b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1">Amazon.com</font></b><br>
 </td></tr>
-<tr><td align="center">
-<font face="Verdana, Arial, Helvetica, sans-serif" size="-2">
-Search for:<br>
-<a href=/relocate/co=xsr_amazon;http://www.amazon.com/exec/obidos/excite-search/search=Hawaii+AND+Alaska>HAWAII AND ALA...</a><br>
-</font>
-</td></tr></table>
-</td>
-</tr>
-</table>
-<font face="helvetica" size=-1>
-<b>Web News</b>
-(<i><a href="http://nt.excite.com/sources.html">Sources</a></i>) </font>
+<tr><td>
+<table border="2" cellspacing="0" cellpadding="4" bordercolor="#330099" width=120 height=66>
+<tr><td align="center" bgcolor="#ffffcc">
+<center>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="-2"><b>Worldprints.com</b></font>
 <br>
-<font face="helvetica" size=-1>
-<font face="helvetica">
-Articles
-&nbsp;1-34
+<FONT face="Verdana, Arial, Helvetica, sans-serif" size="-2">
+FREE Wallpaper
 </font>
+<br>
+<FONT face="Verdana, Arial, Helvetica, sans-serif" size="-2">
+<a href=/relocate/co=xsr_worldprints;http://wallpaper.worldprints.com/startpage?sid=5009>HAWAII AND ALA...</a><br>
+</font>
+</center></td></tr></table>
+</td></tr>
+</table>
+<!--promo end-->
+<font face="helvetica" size=-1>
+Top <b>50</b>
+matches.
 <br>
 <b>
 Show:&nbsp;
@@ -200,331 +209,546 @@ View by:&nbsp;
 or&nbsp;
 <a href="/search.gw?c=timely&sort=date&s=hawaii+AND+alaska">Date</a>&nbsp;
 </b>
-</font>
 <br>
+</font>
 <p>
 <font face="helvetica" size=-1>
-<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.adn.com:80/stories/T99100774.html">Safeway may have a buyer 991007</A>&nbsp;
-<SMALL>
-(Anchorage Daily News)
-</SMALL>
-<BR><SMALL>64% </SMALL>-based Safeway to buy Carr Gottstein Foods Co. It continues to service Alaska Commercial Co.
-<BR><i>First found: </i>7 Oct 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=9009&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.onroute.com:80/hotelguide/index.html">Onroute Hotel Guide | Information | Reservations</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.onroute.com:80/hotelguide/index.html">Onroute Hotel Guide | Information | Reservations</A>&nbsp;
 <SMALL>
 (Onroute Today)
 </SMALL>
-<BR><SMALL>63% </SMALL> To check out hotels in Canada and other countries, Go Here Directory for Online Reservations. Onroute Destinations pages.
+<BR><SMALL>62% </SMALL> To check out hotels in Canada and other countries, Go Here Directory for Online Reservations. Onroute Destinations pages.
 <BR><i>First found: </i>19 Aug 1999 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=30130&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=28373&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://starbulletin.com:80/1999/10/07/news/story6.html">Honolulu Star-Bulletin Local News</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://starbulletin.com:80/2000/01/25/sports/kwon.html">Honolulu Star-Bulletin Sports</A>&nbsp;
 <SMALL>
 (Honolulu Star-Bulletin)
 </SMALL>
-<BR><SMALL>63% </SMALL> James Michener, left, signs a copy of his novel, "Hawaii,". &copy; 1999 Honolulu Star-Bulletin.
-<BR><i>First found: </i>8 Oct 1999 &nbsp;
+<BR><SMALL>62% </SMALL> Exemption has come. That has compounded the scheduling problems for UH.
+<BR><i>First found: </i>26 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=4054&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=24591&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.spokane.net:80/news-story-body.asp?Date=100499&ID=s642252&cat=">Spokane.net - Race benefits lead to Hawaii lawsuit</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.bestfares.com:80/travel_center/desks/public/200001/10058453L.asp">GolfBagShipping.com Offers A Shipping Service For Golf Enthusiasts</A>&nbsp;
 <SMALL>
-(Spokesman Review/Spokane.net)
+(Best Fares Magazine)
 </SMALL>
-<BR><SMALL>63% </SMALL> October&nbsp;4, 1999 Race benefits lead to Hawaii lawsuit. Race benefits lead to Hawaii lawsuit.
-<BR><i>First found: </i>6 Oct 1999 &nbsp;
+<BR><SMALL>60% </SMALL>GolfBagShipping.com Offers A Shipping Service For Golf Enthusiasts. To begin shipping, call GBS to obtain a travel package that contains a special container and all necessary shipping documents.
+<BR><i>First found: </i>30 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=13311&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=12372&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.latimes.com:80/excite/991007/t000090318.html">Justices Review Hawaii Voting Restriction </A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.washingtonpost.com:80/wp-srv/WPlate/2000-01/30/036l-013000-idx.html">Cruise Contacts</A>&nbsp;
+<SMALL>
+(Washington Post)
+</SMALL>
+<BR><SMALL>58% </SMALL> Sunday Travel. Travel.
+<BR><i>First found: </i>30 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=12487&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.latimes.com:80/class/realestate/todayshome/20000129/t000009127.html">LA Times Real Estate: Do It Yourself</A>&nbsp;
 <SMALL>
 (Los Angeles Times)
 </SMALL>
-<BR><SMALL>61% </SMALL> &#160;. &#160;.
-<BR><i>First found: </i>7 Oct 1999 &nbsp;
+<BR><SMALL>58% </SMALL> &nbsp; &nbsp;. &nbsp;&nbsp;&nbsp; &nbsp;.
+<BR><i>First found: </i>29 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=10665&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=13383&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://starbulletin.com:80/1999/10/05/news/briefs.html">Honolulu Star-Bulletin Breaking Stories</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.sltrib.com:80/2000/jan/01302000/travel/21089.htm">The Salt Lake Tribune -- Workers Restoring Versailles After Freakish...</A>&nbsp;
 <SMALL>
-(Honolulu Star-Bulletin)
+(Salt Lake Tribune)
 </SMALL>
-<BR><SMALL>60% </SMALL> By Star-Bulletin Staff. By Star-Bulletin staff.
-<BR><i>First found: </i>6 Oct 1999 &nbsp;
+<BR><SMALL>58% </SMALL> &nbsp;&nbsp;&nbsp; 10. &nbsp;&nbsp;&nbsp; 10.
+<BR><i>First found: </i>31 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=17509&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=4510&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www10.nytimes.com:80/library/politics/index-tools.html">The New York Times: Political Tools</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.washingtonpost.com:80/wp-srv/WPlate/2000-01/30/032l-013000-idx.html">Take These Cruises. Please.</A>&nbsp;
+<SMALL>
+(Washington Post)
+</SMALL>
+<BR><SMALL>58% </SMALL> 29-March 25, $1,535). 11 and 25, $2,980).
+<BR><i>First found: </i>30 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=12486&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www10.nytimes.com:80/library/politics/index-tools.html">The New York Times: Political Tools</A>&nbsp;
 <SMALL>
 (New York Times, <A HREF="http://www.nytimes.com/auth/login">free registration</A>)
 </SMALL>
 <BR><SMALL>58% </SMALL> The guide includes contact information and facts about visiting the White House. Governor Guide.
 <BR><i>First found: </i>30 Aug 1999 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=30111&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=28363&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www2.nando.net:80/noframes/story/0,2107,500042802-500069570-500143242-0,00.html">Gay-marriage initiative backers urge IRS to investigate Mormon Church'...</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.latimes.com:80/class/realestate/todayshome/20000129/t000009130.html">LA Times Real Estate: Do It Yourself</A>&nbsp;
 <SMALL>
-(Nando Times)
+(Los Angeles Times)
 </SMALL>
-<BR><SMALL>58% </SMALL>Gay-marriage initiative backers urge IRS to investigate Mormon Church's opposition Copyright &copy 1999 Nando Media. Copyright &copy 1999 Associated Press.
-<BR><i>First found: </i>8 Oct 1999 &nbsp;
+<BR><SMALL>57% </SMALL> &nbsp; &nbsp;. &nbsp;&nbsp;&nbsp; &nbsp;.
+<BR><i>First found: </i>29 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=3198&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=13384&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.spokane.net:80/news-story-body.asp?Date=100699&ID=s642779&cat=">Spokane.net - Grants given Idaho banks for housing</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.latimes.com:80/class/realestate/news/20000130/t000009468.html">LA Times Real Estate News</A>&nbsp;
 <SMALL>
-(Spokesman Review/Spokane.net)
+(Los Angeles Times)
 </SMALL>
-<BR><SMALL>58% </SMALL> October&nbsp;6, 1999 Grants given Idaho banks for housing. Grants given Idaho banks for housing.
-<BR><i>First found: </i>6 Oct 1999 &nbsp;
+<BR><SMALL>57% </SMALL> &#160;&#160;&#160;&#160;&#160;MITCH LICHTERMAN. &#160;&#160;&#160;&#160;&#160;loanguy.com &nbsp; News.
+<BR><i>First found: </i>30 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=13218&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=9562&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.adn.com:80/stories/T99100765.html">Permanent Fund checks come and go 991007</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.fb.com:80/news/fbn/html/statefarmbureaus.html">StateFarmBureaus</A>&nbsp;
 <SMALL>
-(Anchorage Daily News)
+(American Farm Bureau - Voice of Agriculture)
 </SMALL>
-<BR><SMALL>58% </SMALL> "The dividend has a big impact for us," Gatts said. Let us hear from you.
-<BR><i>First found: </i>7 Oct 1999 &nbsp;
+<BR><SMALL>57% </SMALL> State Farm Bureaus from Maine and Nevada earned five gold stars each. [Return&nbsp;to&nbsp;Menu] &copy; 1996-2000 - American Farm Bureau Federation.
+<BR><i>First found: </i>30 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=9011&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=9605&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.usnewswire.com:80/topnews/Current_Releases/1005-115.htm">Cuomo Awards $24.5 Million in HUD Grants to Help More than 5,000</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.latimes.com:80/class/realestate/news/20000129/t000009468.html">LA Times Real Estate News</A>&nbsp;
 <SMALL>
-(US Newswire)
+(Los Angeles Times)
 </SMALL>
-<BR><SMALL>58% </SMALL> Housing and Comm. housing and related assistance for people with HIV/AIDS.
-<BR><i>First found: </i>5 Oct 1999 &nbsp;
+<BR><SMALL>57% </SMALL> Horoscope.
+<BR><i>First found: </i>30 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=19411&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=10228&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www2.nando.net:80/noframes/story/0,2107,500042843-500069647-500143487-1,00.html">Senate roll call on $312 spending bill</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.latimes.com:80/class/realestate/news/20000130/t000009466.html">LA Times Real Estate News</A>&nbsp;
 <SMALL>
-(Nando Times)
+(Los Angeles Times)
 </SMALL>
-<BR><SMALL>57% </SMALL> Conrad (D) No; Dorgan (D) Yes. Feingold (D) No; Kohl (D) Yes.
-<BR><i>First found: </i>8 Oct 1999 &nbsp;
+<BR><SMALL>57% </SMALL> &#160;&#160;&#160;&#160;&#160;As long as a contractor performs on the contract, the method of payment is irrelevant. &#160;&#160;&#160;&#160;&#160;The writer is a contractor.
+<BR><i>First found: </i>30 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=3203&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=9563&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.journalstar.com:80/archives/100499/nat/sto1">Lincoln Journal Star</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.latimes.com:80/class/realestate/news/20000130/t000009465.html">LA Times Real Estate News</A>&nbsp;
 <SMALL>
-(Lincoln Journal Star)
+(Los Angeles Times)
 </SMALL>
-<BR><SMALL>56% </SMALL> Life. Life in black and white.
-<BR><i>First found: </i>5 Oct 1999 &nbsp;
+<BR><SMALL>57% </SMALL> &#160;&#160;&#160;&#160;&#160;Los Angeles &nbsp; News. Shopping &nbsp Copyright 2000 Los Angeles Times &nbsp;&nbsp;&nbsp;&nbsp;
+<BR><i>First found: </i>30 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=21098&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=9564&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.seattlep-i.com:80/national/race04.shtml">Supreme Court to consider race issue involving native Hawaiians </A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.latimes.com:80/class/realestate/news/20000130/t000009467.html">LA Times Real Estate News</A>&nbsp;
 <SMALL>
-(Seattle Post-Intelligencer)
+(Los Angeles Times)
 </SMALL>
-<BR><SMALL>56% </SMALL>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;HOME &nbsp;NORTHWEST &nbsp;SPORTS &nbsp;BUSINESS &nbsp;NATION/WORLD &nbsp;&nbsp;&nbsp;Sci-Tech &nbsp;&nbsp;&nbsp;U.S. &nbsp;.
-<BR><i>First found: </i>6 Oct 1999 &nbsp;
+<BR><SMALL>57% </SMALL> &#160;&#160;&#160;&#160;&#160;GEORGE E. LEARN. &#160;&#160;&#160;&#160;&#160;Los Angeles &nbsp; News.
+<BR><i>First found: </i>30 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=17956&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=9565&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.spokane.net:80/news-story-body.asp?Date=100399&ID=s641898&cat=">Spokane.net - Mormon president urges faithful to fight gay marriage</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.latimes.com:80/class/realestate/news/20000129/t000009466.html">LA Times Real Estate News</A>&nbsp;
 <SMALL>
-(Spokesman Review/Spokane.net)
+(Los Angeles Times)
 </SMALL>
-<BR><SMALL>55% </SMALL> October&nbsp;3, 1999 Mormon president urges faithful to fight gay marriage. Mormon president urges faithful to fight gay marriage.
-<BR><i>First found: </i>6 Oct 1999 &nbsp;
+<BR><SMALL>57% </SMALL> &nbsp; &nbsp;. &nbsp;&nbsp;&nbsp; &nbsp;.
+<BR><i>First found: </i>30 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=13379&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=10229&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www7.mercurycenter.com:80/premium/nation/docs/washdig07.htm">Costly F-22 jet wins early OK with conditions (10/07/1999)</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.latimes.com:80/class/realestate/news/20000129/t000009465.html">LA Times Real Estate News</A>&nbsp;
 <SMALL>
-(San Jose Mercury News)
+(Los Angeles Times)
 </SMALL>
-<BR><SMALL>54% </SMALL> Weather Classifieds &amp; Services. Classifieds.
-<BR><i>First found: </i>8 Oct 1999 &nbsp;
+<BR><SMALL>56% </SMALL> Travel. Travel.
+<BR><i>First found: </i>30 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=2319&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=10230&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.spokane.net:80/news-story-body.asp?Date=100599&ID=s642447&cat=">Spokane.net - States take the lead in privacy protection</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.latimes.com:80/class/realestate/news/20000129/t000009467.html">LA Times Real Estate News</A>&nbsp;
 <SMALL>
-(Spokesman Review/Spokane.net)
+(Los Angeles Times)
 </SMALL>
-<BR><SMALL>54% </SMALL> October&nbsp;5, 1999 States take the lead in privacy protection. States take the lead in privacy protection.
-<BR><i>First found: </i>5 Oct 1999 &nbsp;
+<BR><SMALL>56% </SMALL> &#160;&#160;&#160;&#160;&#160;GEORGE E. LEARN. &#160;&#160;&#160;&#160;&#160;Los Angeles &nbsp; News.
+<BR><i>First found: </i>30 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=19130&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=10231&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.kentuckyconnect.com:80/heraldleader/news/100599/nationaldocs/05privacy.htm">Nation & World Herald-Leader Online | Kentucky Connect</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.latimes.com:80/class/realestate/news/20000130/t000009464.html">LA Times Real Estate News</A>&nbsp;
 <SMALL>
-(Lexington Herald-Leader)
+(Los Angeles Times)
 </SMALL>
-<BR><SMALL>54% </SMALL>&nbsp Just Go&nbsp; &nbsp;Jobs&nbsp; &nbsp;Homes&nbsp; &nbsp;Apartments&nbsp; &nbsp;Cars &nbsp; Yellow Pages&nbsp; &nbsp;Classifieds&nbsp;&nbsp;Archives &nbsp &nbsp HOME PAGE &#149&nbsp; Kentucky Connect &#149&nbsp; Herald-Leader &nbsp &nbsp &nbsp SECTION INDEX &#149&nbsp; NEWS &nbsp &#149City & Region. &nbsp Just Go&nbsp; &nbsp;Jobs&nbsp; &nbsp;Homes&nbsp; &nbsp;Apartments&nbsp; &nbsp;Cars &nbsp;...
-<BR><i>First found: </i>5 Oct 1999 &nbsp;
+<BR><SMALL>56% </SMALL> &nbsp; &nbsp;. &nbsp;&nbsp;&nbsp; &nbsp;.
+<BR><i>First found: </i>30 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=21949&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=9566&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.usnewswire.com:80/topnews/Current_Releases/1007-120.htm">Labor Department Reports Unemployment Insurance Weekly Claims</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.latimes.com:80/class/realestate/news/20000129/t000009464.html">LA Times Real Estate News</A>&nbsp;
 <SMALL>
-(US Newswire)
+(Los Angeles Times)
 </SMALL>
-<BR><SMALL>54% </SMALL> during the week ending Sept. The 4-week.
-<BR><i>First found: </i>7 Oct 1999 &nbsp;
+<BR><SMALL>56% </SMALL> &#160;&#160;&#160;&#160;&#160;President. &#160;&#160;&#160;&#160;&#160;Sacramento &nbsp; News.
+<BR><i>First found: </i>30 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=8075&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=10232&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.connectedtraveler.com:80/booking.html">Air, Hotel and Car Reservations</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://news.excite.com:80/news/ap/000128/12/gold-coins">Thursday Gold Coin Prices</A>&nbsp;
+<SMALL>
+(Associated Press)
+</SMALL>
+<BR><SMALL>56% </SMALL> American Eagle, 1 troy oz. $300.40 up $ 1.30 American Eagle, .50 oz.
+<BR><i>First found: </i>31 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=3940&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.bestfares.com:80/travel_center/desks/public/200001/10058456L.asp">KD River Cruises Of Europe Offers Savings For Spring &amp; Fall</A>&nbsp;
+<SMALL>
+(Best Fares Magazine)
+</SMALL>
+<BR><SMALL>55% </SMALL> October fares are $340 to $430 for two nights and $750 to $940 for five nights. Reduced fares for April range from $860 to $1,070 for five nights and $1,020 to $1,290 for six nights.
+<BR><i>First found: </i>30 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=12375&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.latimes.com:80/class/realestate/news/20000130/t000009463.html">LA Times Real Estate News</A>&nbsp;
+<SMALL>
+(Los Angeles Times)
+</SMALL>
+<BR><SMALL>55% </SMALL> &#160;&#160;&#160;&#160;&#160;Third grade. &#160;&#160;&#160;&#160;&#160;Third grade.
+<BR><i>First found: </i>30 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=9569&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.latimes.com:80/class/realestate/news/20000129/t000009463.html">LA Times Real Estate News</A>&nbsp;
+<SMALL>
+(Los Angeles Times)
+</SMALL>
+<BR><SMALL>55% </SMALL> &#160;&#160;&#160;&#160;&#160;Linda Vista Elementary School. &#160;&#160;&#160;&#160;&#160;KATSU FRAUSTO.
+<BR><i>First found: </i>30 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=10235&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.toledoblade.com:80/editorial/powell/0a30map.htm">Mary Alice Powell: Making friends on the road </A>&nbsp;
+<SMALL>
+(Toledo Blade)
+</SMALL>
+<BR><SMALL>55% </SMALL> January 30, 2000 LAHAINA, MAUI, Hawaii - A parrot, a ski boot glove, Switzerland, and a pedicure. SUMM--> LAHAINA, MAUI, Hawaii - A parrot, a ski boot glove, Switzerland, and a pedicure.
+<BR><i>First found: </i>30 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=10746&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<center>
+<table border=0 cellpadding=3 cellspacing=0 width=100%><tr>
+<td align=center bgcolor=ffffcc>
+<font face="helvetica" size=-1><b>
+<font color=990000>Free!</font> Photo Personals Slide Show: <A HREF=http://www.excite.com/relocate/co=xxsr_phprs_msw;http://personals.excite.com/cgi-cls/display.exe?partner=excite&path=Personal~SlideShowIntro&>Men Seeking Women</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_phprs_wsm;http://personals.excite.com/cgi-cls/display.exe?partner=excite&path=Personal~SlideShowIntro&>Women Seeking Men</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_phprs_m;http://personals.excite.com/cgi-cls/display.exe?partner=excite&path=Personal~SlideShowIntro&>More</A>
+</b></font>
+</td></tr></table></center><p>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://news.excite.com:80/news/bw/000125/speedware">Speedware First Quarter 2000 Results</A>&nbsp;
+<SMALL>
+(Business Wire)
+</SMALL>
+<BR><SMALL>54% </SMALL>&nbsp;. &nbsp;&nbsp;&nbsp; &nbsp;.
+<BR><i>First found: </i>31 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=8242&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www8.zdnet.com:80/pcweek/stories/news/0,4153,2421087,00.html">ZDNet: PC Week: DOJ and states to seek breakup of Microsoft?</A>&nbsp;
+<SMALL>
+(PC Week)
+</SMALL>
+<BR><SMALL>54% </SMALL> &nbsp;. &nbsp;.
+<BR><i>First found: </i>31 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=122&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.canoe.com:80/TopStories/nkorea_jan30.html">North Korea asks to be removed from terrorism list</A>&nbsp;
+<SMALL>
+(CNEWS/CANOE)
+</SMALL>
+<BR><SMALL>54% </SMALL> &#160;. &#160;.
+<BR><i>First found: </i>30 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=8930&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.latimes.com:80/class/realestate/todayshome/20000129/t000009135.html">LA Times Real Estate: Do It Yourself</A>&nbsp;
+<SMALL>
+(Los Angeles Times)
+</SMALL>
+<BR><SMALL>54% </SMALL> Food.
+<BR><i>First found: </i>29 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=13385&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.latimes.com:80/travel/cruises/stories/20000130/t000009526.html">Baja Whale Watching and Kayaking, Family Style </A>&nbsp;
+<SMALL>
+(Los Angeles Times)
+</SMALL>
+<BR><SMALL>54% </SMALL> &#160;&#160;&#160;&#160;&#160;Internet http://www.kayakbaja.com. &#160;&#160;&#160;&#160;&#160;Internet http://www.spectortravel.com.
+<BR><i>First found: </i>30 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=10248&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.connectedtraveler.com:80/booking.html">Air, Hotel and Car Reservations</A>&nbsp;
 <SMALL>
 (Connected Traveler, The)
 </SMALL>
-<BR><SMALL>53% </SMALL> You will be expected to pay for any gas, insurance, taxes, or extra equipment. If your reservation is for more than 5 days, a weekly rate will be quoted.
-<BR><i>First found: </i>17 May 1999 &nbsp;
+<BR><SMALL>53% </SMALL>= 2.0 ) && ( version numDays) { Dt.options.selectedIndex--; value=3; } else { //index is 31 or 30 value=2; } } return value; } //changes departure month when arrival month is changed function amadChange(inM,inD,inY,outM,outD,outY) { if ( !isBrowserSupp() ) { return; } var res = adjustDate(inM.options.selectedIndex, inD,inY); if ( res != 0 ) { outD.options.selectedIndex=0; outM.options.se...
+<BR><i>First found: </i>12 Nov 1999 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=30403&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=28299&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.edweek.org:80/ew/ewstory.cfm?slug=06honors.h19">  Honors & Awards --    October 6, 1999 -- Education Week</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://news.excite.com:80/news/r/000125/10/business-retail-venator">Venator to Cut Jobs And Close Some Stores</A>&nbsp;
 <SMALL>
-(Education Week)
+(Reuters)
 </SMALL>
-<BR><SMALL>53% </SMALL> Virginia. West Virginia.
-<BR><i>First found: </i>5 Oct 1999 &nbsp;
+<BR><SMALL>53% </SMALL>&nbsp;. &nbsp;&nbsp;&nbsp; &nbsp;.
+<BR><i>First found: </i>31 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=19274&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=3003&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.seattlep-i.com:80/business/casc04.shtml">Northwest fund has very few dot-coms </A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://news.excite.com:80/news/ap/000125/17/bonds">Bonds Prices Rise</A>&nbsp;
 <SMALL>
-(Seattle Post-Intelligencer)
+(Associated Press)
 </SMALL>
-<BR><SMALL>52% </SMALL> George Hosfield, the Cascadia Equity Fund's portfolio manager, is well aware of that. Hosfield is one of the principals of that firm.
-<BR><i>First found: </i>4 Oct 1999 &nbsp;
+<BR><SMALL>53% </SMALL>&nbsp;. &nbsp;&nbsp;&nbsp; &nbsp;.
+<BR><i>First found: </i>31 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=23432&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=3956&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www10.nytimes.com:80/library/politics/100899patients-rollcall.html">How the Lawmakers Voted</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://news.excite.com:80/news/ap/000125/17/earns-merrill-lynch">Merrill Lynch Beats Expectations</A>&nbsp;
 <SMALL>
-(New York Times, <A HREF="http://www.nytimes.com/auth/login">free registration</A>)
+(Associated Press)
 </SMALL>
-<BR><SMALL>52% </SMALL> Y is a "yes" vote. N is a "no" vote.
-<BR><i>First found: </i>8 Oct 1999 &nbsp;
+<BR><SMALL>53% </SMALL>&nbsp;. &nbsp;&nbsp;&nbsp; &nbsp;.
+<BR><i>First found: </i>31 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=4118&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=3958&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.journalstar.com:80/archives/100499/nat/stox">Lincoln Journal Star</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://news.excite.com:80/news/pr/000125/nc-cpl-storm-update">Winter Storm Knocks Out Power to 166,000 CP&L Customers</A>&nbsp;
 <SMALL>
-(Lincoln Journal Star)
+(PR Newswire)
 </SMALL>
-<BR><SMALL>52% </SMALL> 04, 1999 &nbsp; &nbsp;Missile test called a success. Missile test called a success.
-<BR><i>First found: </i>5 Oct 1999 &nbsp;
+<BR><SMALL>52% </SMALL>&nbsp;. &nbsp;&nbsp;&nbsp; &nbsp;.
+<BR><i>First found: </i>31 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=21104&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=2707&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.cleveland.com:80/news/pdnews/metro/index.html">Cleveland Live News</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.latimes.com:80/class/realestate/news/20000130/t000009473.html">LA Times Real Estate News</A>&nbsp;
 <SMALL>
-(Cleveland Live/Cleveland Plain Dealer)
+(Los Angeles Times)
 </SMALL>
-<BR><SMALL>50% </SMALL> C/L Sections.
-<BR><i>First found: </i>7 Oct 1999 &nbsp;
+<BR><SMALL>52% </SMALL> Science.
+<BR><i>First found: </i>30 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=9370&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=9567&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.journalstar.com:80/archives/100299/edd/sto4">Lincoln Journal Star</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.latimes.com:80/class/realestate/news/20000129/t000009473.html">LA Times Real Estate News</A>&nbsp;
 <SMALL>
-(Lincoln Journal Star)
+(Los Angeles Times)
 </SMALL>
-<BR><SMALL>42% </SMALL> &nbsp; Local. &nbsp; About LJS.
-<BR><i>First found: </i>3 Oct 1999 &nbsp;
+<BR><SMALL>52% </SMALL> &#160;&#160;&#160;&#160;&#160;Simply, this design concept uses a perforated metal collector sheet (painted black) inside a shallow insulated plywood box. &#160;&#160;&#160;&#160;&#160;The perforated collector is mounted on an angle inside the solar box.
+<BR><i>First found: </i>30 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=26496&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=10233&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.gotravel.com:80/html/desdoor_na.html">na</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://news.excite.com:80/news/pr/000125/ny-liz-claiborne-poon">Liz Claiborne Inc. Elects Christine A. Poon to Board of Directors</A>&nbsp;
 <SMALL>
-(Recommend's GoTravel)
+(PR Newswire)
 </SMALL>
-<BR><SMALL>40% </SMALL> WHATS NEXT. Whats New in Hawaii.
-<BR><i>First found: </i>2 Apr 1998 &nbsp;
+<BR><SMALL>52% </SMALL>&nbsp;. &nbsp;&nbsp;&nbsp; &nbsp;.
+<BR><i>First found: </i>31 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=30606&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=2626&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://deseretnews.com:80/dn/view/1,1249,115013901,00.html?">deseretnews.com</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.spokane.net:80/news-story-body.asp?Date=012900&ID=s737639&cat=">Spokane.net - Tsunamis offer steep learning curve</A>&nbsp;
 <SMALL>
-(Deseret News)
+(Spokesman Review/Spokane.net)
 </SMALL>
-<BR><SMALL>38% </SMALL> "This is out of the question. &nbsp; &nbsp; &nbsp; "This building of so many temples has been and is a tremendous undertaking.
-<BR><i>First found: </i>3 Oct 1999 &nbsp;
+<BR><SMALL>52% </SMALL> January&nbsp;29, 2000 Tsunamis offer steep learning curve. Tsunamis offer steep learning curve.
+<BR><i>First found: </i>29 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=26324&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=13967&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.sciam.com:80/1999/1099issue/1099profile.html">Infamy and Honor at the Atomic Caf&#233;</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.latimes.com:80/class/realestate/todayshome/20000129/t000009134.html">LA Times Real Estate: Do It Yourself</A>&nbsp;
 <SMALL>
-(Scientific American)
+(Los Angeles Times)
 </SMALL>
-<BR><SMALL>34% </SMALL> "My name is not Strangelove. "I'm not interested in Strangelove.
-<BR><i>First found: </i>13 Sep 1999 &nbsp;
+<BR><SMALL>52% </SMALL> &nbsp; &nbsp;. &nbsp;&nbsp;&nbsp; &nbsp;.
+<BR><i>First found: </i>29 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=29921&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=13386&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://starbulletin.com:80/1999/10/05/sports/story1.html">Honolulu Star-Bulletin Sports</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://news.excite.com:80/news/bw/000125/tx-corniche-group">Corniche Group Announces Stock Option Agreement with Reliance Integr...</A>&nbsp;
 <SMALL>
-(Honolulu Star-Bulletin)
+(Business Wire)
 </SMALL>
-<BR><SMALL>34% </SMALL> Hawaii high school sports seasons By Cindy Luis. "Hawaii can balance its high school sports schedule because we can take advantage of our climate.''
-<BR><i>First found: </i>6 Oct 1999 &nbsp;
+<BR><SMALL>52% </SMALL>&nbsp;. &nbsp;&nbsp;&nbsp; &nbsp;.
+<BR><i>First found: </i>31 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=17489&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=3996&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.sltrib.com:80/1999/oct/10031999/utah/34210.htm">The Salt Lake Tribune -- LDS Leader Defends Activism </A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.latimes.com:80/class/realestate/todayshome/20000129/t000009132.html">LA Times Real Estate: Do It Yourself</A>&nbsp;
 <SMALL>
-(Salt Lake Tribune)
+(Los Angeles Times)
 </SMALL>
-<BR><SMALL>32% </SMALL> &nbsp;&nbsp;&nbsp;. &nbsp;&nbsp;&nbsp;.
-<BR><i>First found: </i>3 Oct 1999 &nbsp;
+<BR><SMALL>52% </SMALL> &#160;&#160;&#160;&#160;&#160;* * *. &#160;&#160;&#160;&#160;&#160;Resources. &#160;&#160;&#160;&#160;&#160;* Monrovia Nursery Co.
+<BR><i>First found: </i>29 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=26851&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=13388&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.gotravel.com:80/html/taonly_tt.html">tt</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://news.excite.com:80/news/ap/000125/03/overnite-teamsters">Overnite Sues Teamsters for $5.2M</A>&nbsp;
 <SMALL>
-(Recommend's GoTravel)
+(Associated Press)
 </SMALL>
-<BR><SMALL>15% </SMALL> (800) 222-8888. (800) 813-GIFT.
-<BR><i>First found: </i>2 Apr 1998 &nbsp;
+<BR><SMALL>52% </SMALL>&nbsp;. &nbsp;&nbsp;&nbsp; &nbsp;.
+<BR><i>First found: </i>31 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=30609&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=3957&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.techreview.com:80/articles/oct99/scigliano.htm">Sept/Oct 99: Delayed Takeoff</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://news.excite.com:80/news/pr/000125/fl-blue-cross-award">Blue Cross and Blue Shield of Florida Receives Governor's Sterling Q...</A>&nbsp;
 <SMALL>
-(Technology Review)
+(PR Newswire)
 </SMALL>
-<BR><SMALL>13% </SMALL> By Eric Scigliano Birds do it. Even Orville Wright did it.
-<BR><i>First found: </i>7 Oct 1999 &nbsp;
+<BR><SMALL>52% </SMALL>&nbsp;. &nbsp;&nbsp;&nbsp; &nbsp;.
+<BR><i>First found: </i>31 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=9513&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=2620&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://www.kiplinger.com:80/magazine/archives/1999/October/alzheim.htm">Kiplinger's Personal Finance Magazine - He Was Such a Neat Guy - Octob...</A>&nbsp;
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://news.excite.com:80/news/bw/000125/az-white-electronics">White Electronic Designs Receives Additional $1.9 Million Continuati...</A>&nbsp;
 <SMALL>
-(Kiplinger's Personal Finance)
+(Business Wire)
 </SMALL>
-<BR><SMALL>12% </SMALL> (July 1999) Taxing Questions About Some Long-Term-Care Policies. (July 1999) Long-Term-Care Policies Get a Boost.
-<BR><i>First found: </i>7 Oct 1999 &nbsp;
+<BR><SMALL>52% </SMALL>&nbsp;. &nbsp;&nbsp;&nbsp; &nbsp;.
+<BR><i>First found: </i>31 Jan 2000 &nbsp;
 <SMALL>
-<A HREF="/search.gw?c=timely&qbe=7391&ctag=37FDF17B&showSummary=true">(Related Articles)</A>
+<A HREF="/search.gw?c=timely&qbe=4032&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
 </SMALL>
-<P> </font>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://news.excite.com:80/news/r/000126/13/arms-northrop-earns">FOCUS-Northrop Grumman earns $138 million in Q4</A>&nbsp;
+<SMALL>
+(Reuters)
+</SMALL>
+<BR><SMALL>51% </SMALL>&nbsp;. &nbsp;&nbsp;&nbsp; &nbsp;.
+<BR><i>First found: </i>31 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=3385&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://news.excite.com:80/news/bw/000125/ca-auto-town">Auto Town and Lease Marketing Announce Plans to Provide Dealers Imme...</A>&nbsp;
+<SMALL>
+(Business Wire)
+</SMALL>
+<BR><SMALL>51% </SMALL>&nbsp;. &nbsp;&nbsp;&nbsp; &nbsp;.
+<BR><i>First found: </i>31 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=4037&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://news.excite.com:80/news/r/000131/02/financial-natwest-royal">Royal Bank increases offer for NatWest</A>&nbsp;
+<SMALL>
+(Reuters)
+</SMALL>
+<BR><SMALL>51% </SMALL>&nbsp;. &nbsp;&nbsp;&nbsp; &nbsp;.
+<BR><i>First found: </i>31 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=3025&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://news.excite.com:80/news/bw/000125/ca-101communications-2">101communications Expands Its Conference and Event Business With Acq...</A>&nbsp;
+<SMALL>
+(Business Wire)
+</SMALL>
+<BR><SMALL>51% </SMALL>&nbsp;. &nbsp;&nbsp;&nbsp; &nbsp;.
+<BR><i>First found: </i>31 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=8700&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+<A HREF="http://search.excite.com/relocate/sr=news|ss=Hawaii+AND+Alaska;http://news.excite.com:80/news/dj/000127/20000127-006294">Lockheed Urges Quick Action By Congress On Comsat Bill</A>&nbsp;
+<SMALL>
+(Dow Jones)
+</SMALL>
+<BR><SMALL>51% </SMALL>&nbsp;. &nbsp;&nbsp;&nbsp; &nbsp;.
+<BR><i>First found: </i>31 Jan 2000 &nbsp;
+<SMALL>
+<A HREF="/search.gw?c=timely&qbe=2292&ctag=3895DC2F&showSummary=true">(Related Articles)</A>
+</SMALL>
+<P>
+</font>
 <FORM ACTION="/search.gw" METHOD=GET>
 <INPUT TYPE=hidden NAME=c VALUE=timely>
 <INPUT TYPE=hidden NAME=s VALUE="Hawaii AND Alaska">
 <INPUT TYPE=hidden NAME=showSummary VALUE=true>
 <INPUT TYPE=hidden NAME=start VALUE=0>
 <INPUT TYPE=hidden NAME=perPage VALUE=50>
+<font face="helvetica" size=-1>
+<INPUT TYPE=submit NAME=next VALUE="Next Results">
+</font>
 </FORM>
 <p>
 <center>
-<a href="http://www.excite.com/relocate/ad=108142_tourism_marketing_100499_scenic.gif|pk=3336428;http://exc.travelalaska.com" onMouseOver="window.status='This year visit Alaska';return true" language="Javascript"><img src="http://image.eimg.com/ads/108142_tourism_marketing_100499_scenic.gif" ALT="This year visit Alaska" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> This year visit Alaska </B></FONT></CENTER></a>
+<IFRAME WIDTH=468 HEIGHT=60 NORESIZE SCROLLING=No FRAMEBORDER=0
+MARGINHEIGHT=0 MARGINWIDTH=0
+SRC="http://ad.preferences.com/iframe.ng;spacedesc=TargetingNetwork_ExciteNet_468x60_RunOfSite_Any&ML_CUSTOM=600&time=2000.01.31.21.10.03&ML_TARGET=_top&ex_cookie=&ex_reg=&TG_NETLOC=xsr/default&TG_COBRAND=&ML_REDIRECT=http%25253A%25252F%25252Fwww.excite.com%25252Frelocate%25252Fad%25253DLUCI%25257Cpk%25253D3754571%25253B">
+<SCRIPT
+SRC="http://ad.preferences.com/jscript.ng;spacedesc=TargetingNetwork_ExciteNet_468x60_RunOfSite_Any&ML_CUSTOM=600&ML_NIF=Y&time=2000.01.31.21.10.03&ML_TARGET=_top&ML_KW=Hawaii+AND+Alaska&ex_cookie=&ex_reg=&TG_NETLOC=xsr/default&TG_COBRAND=&ML_REDIRECT=http%25253A%25252F%25252Fwww.excite.com%25252Frelocate%25252Fad%25253DLUCI%25257Cpk%25253D3754571%25253B"></SCRIPT>
+<NOSCRIPT>
+<A
+TARGET=_top HREF="http://www.excite.com/relocate/ad=60411_htmlad.gif|pk=3754571;http://ad.preferences.com/click.ng;spacedesc=TargetingNetwork_ExciteNet_468x60_RunOfSite_Any&time=2000.01.31.21.10.03&ex_cookie=&ex_reg=&TG_NETLOC=xsr/default&TG_COBRAND=">
+<IMG
+SRC="http://ad.preferences.com/image.ng;spacedesc=TargetingNetwork_ExciteNet_468x60_RunOfSite_Any&ML_NIF=Y&time=2000.01.31.21.10.03&ex_cookie=&ex_reg=&TG_NETLOC=xsr/default&TG_COBRAND="
+WIDTH=468 HEIGHT=60 BORDER=1></A>
+</NOSCRIPT> </IFRAME>
 <small><br></small>
-<FORM NAME=botbox ACTION=/search.gw>
 <TABLE border=0 cellpadding=1 cellspacing=0 width=600>
 <TR><TD bgcolor=#cccccc>
+<FORM NAME=botbox ACTION=/search.gw>
 <TABLE border=0 cellspacing=0 cellpadding=4 width=600 bgcolor=ffffff>
 <TR>
 <TD align=right bgcolor=ffffff>
@@ -555,9 +779,10 @@ More Search</a>
 </td>
 <td align=left colspan=3>
 <font face="helvetica" size=-1>&nbsp;&nbsp;
-<input type=radio name=c value=hourly ><img src=http://www.excite.com/pfp/excite/images/lep.gif> Newswires&nbsp;&nbsp;
+<input type=radio name=c value=hourly ><img src=http://www.excite.com/mesp/images/excite/lep.gif> Newswires&nbsp;&nbsp;
+<input type=radio name=c value=hourly.photo ><img src=http://www.excite.com/mesp/images/excite/lep.gif> News Photos&nbsp;&nbsp;
 <input type=radio name=c value=timely checked>Web News&nbsp;&nbsp;
-<input type=radio name=c value=hourtime >Both	</font>
+<input type=radio name=c value=hourtime >All	</font>
 </td>
 </tr>
 </table>
@@ -579,10 +804,10 @@ More Search</a>
 <A HREF=http://www.excite.com/reference/>More...</A></nobr><p>
 </font>
 <font size=-2>
-Copyright 1995-1999 Excite Inc. &nbsp; Powered by <A HREF="http://www.sun.com">Sun Microsystems</A> &nbsp;
+Copyright 1995-2000 Excite Inc. &nbsp; Powered by <A HREF="http://www.sun.com">Sun Microsystems</A> &nbsp;
 <A HREF=http://www.excite.com/info/disclaimer/>Disclaimer</A>
 </font>
 </center>
-<IMG SRC="http://ad.preferences.com/ping.ng;spacedesc=TCExciteData_Excite_1x1_RunOfSite_Any&event=KeywordResults&time=1999.10.08.10.59.37" HEIGHT=1 WIDTH=1 BORDER=0>
+<IMG SRC="http://ad.preferences.com/ping.ng;spacedesc=TCExciteData_Excite_1x1_RunOfSite_Any&event=KeywordResults&time=2000.01.31.16.10.03" HEIGHT=1 WIDTH=1 BORDER=0>
 </body>
 </html>

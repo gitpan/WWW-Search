@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.20 1999/12/23 14:58:18 mthurn Exp $
+# $Id: Search.pm,v 1.21 2000/02/08 16:09:47 mthurn Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -66,7 +66,8 @@ package WWW::Search;
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query generic_option strip_tags @ENGINES_WORKING);
-$VERSION = '2.08';
+$VERSION = '2.09';
+$MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
 use LWP::UserAgent;
@@ -90,7 +91,7 @@ To create a new WWW::Search, call
 where SearchEngineName is replaced with a particular search engine.
 For example:
 
-    $search = new WWW::Search('HotBot');
+    $search = new WWW::Search('Dejanews');
 
 If no search engine is specified a default (currently 'AltaVista')
 will be chosen for you.
@@ -158,6 +159,48 @@ sub version
   $iVersion ||= $VERSION;
   return $iVersion;
   } # version
+
+=head2 maintainer
+
+Returns the value of the $MAINTAINER variable of the backend engine,
+or $WWW::Search::MAINTAINER if the backend does not contain
+$MAINTAINER.
+
+=cut
+
+sub maintainer
+  {
+  my $self = shift;
+  my $sMaintainer = eval '$'.ref($self).'::MAINTAINER';
+  # print STDERR " + sMaintainer = >>>$sMaintainer<<<\n";
+  $sMaintainer ||= $MAINTAINER;
+  return $sMaintainer;
+  } # maintainer
+
+=head2 gui_query
+
+Specify a query to the current search object.  
+The query will be performed 
+with the default options as if it were typed by a user in a browser window.
+
+The query must be escaped; call L<WWW::Search/escape_query> to escape
+a plain query.  See C<native_query> below for more information.
+
+This feature is NOT supported by all backends; 
+conslut the documentation for each backend to see if it is implemented.
+
+=cut
+
+sub gui_query
+  {
+  # This function is a stub to prevent runtime errors.  This function
+  # should be defined in each backend as appropriate.  See HotBot.pm
+  # in the WWW-Search-HotBot distribution for an example of how to
+  # implement it.
+  my $self = shift;
+  return $self->native_query(@_);
+  } # gui_query
+
 
 =head2 native_query
 
@@ -237,19 +280,19 @@ or
 
 =cut
 
-sub native_query {
-    my($self) = shift;
-    return $self->_elem('native_query', @_)
-	if ($#_ != 1);
-    $self->{'native_query'} = $_[0];
-    $self->{'native_options'} = $_[1];
-    # promote generic options
-    my($opts_ref) = $_[1];
-    foreach (keys %$opts_ref) {
-	$self->{$_} = $opts_ref->{$_}
-	    if (generic_option($_));
-    };
-}
+sub native_query 
+  {
+  my($self) = shift;
+  return $self->_elem('native_query', @_) if ($#_ != 1);
+  $self->{'native_query'} = $_[0];
+  $self->{'native_options'} = $_[1];
+  # promote generic options
+  my $opts_ref = $_[1];
+  foreach (keys %$opts_ref) 
+    {
+    $self->{$_} = $opts_ref->{$_} if (generic_option($_));
+    }
+  } # native_query
 
 =head2 approximate_result_count
 
@@ -775,14 +818,14 @@ It calls C<native_setup_search> to do backend specific setup.
 
 
 sub setup_search
-{
-    my($self) = @_;
-    $self->{next_to_retrieve} = 1;
-    $self->{cache} = ();
-    $self->{number_retrieved} = 0;
-    $self->{state} = $SEARCH_UNDERWAY;
-    $self->native_setup_search($self->{'native_query'}, $self->{'native_options'});
-}
+  {
+  my ($self) = @_;
+  $self->{next_to_retrieve} = 1;
+  $self->{cache} = ();
+  $self->{number_retrieved} = 0;
+  $self->{state} = $SEARCH_UNDERWAY;
+  $self->native_setup_search($self->{'native_query'}, $self->{'native_options'});
+  } # setup_search
 
 
 =head2 user_agent_delay (PRIVATE)
@@ -961,14 +1004,13 @@ Crawler
 Deja
 Dejanews
 Dice                    
-Excite			
-Excite::News		
+Euroseek
+Excite::News
 Fireball
 FolioViews
 Google  	
 GoTo            
 HeadHunter      
-HotBot		
 HotFiles	
 Infoseek	
 Infoseek::Companies
@@ -976,7 +1018,6 @@ Infoseek::News
 Infoseek::Web		
 LookSmart		
 Lycos			
-Lycos::Sites		
 Magellan		
 MetaCrawler             
 Metapedia		
@@ -988,7 +1029,6 @@ OpenDirectory
 SFgate			
 Snap			
 WebCrawler		
-Yahoo			
 Yahoo::Classifieds::Employment
 ZDNet			
            );

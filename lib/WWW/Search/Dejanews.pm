@@ -1,6 +1,6 @@
 # Dejanews.pm
 # Copyright (C) 1998 by Martin Thurn
-# $Id: Dejanews.pm,v 1.15 1999/12/10 15:38:48 mthurn Exp $
+# $Id: Dejanews.pm,v 1.16 2000/01/18 15:19:43 mthurn Exp $
 
 =head1 NAME
 
@@ -61,6 +61,9 @@ format: "Newsgroup: comp.lang.perl; Author: Martin Thurn"
 Names of newsgroups ("forums") are unceremoniously truncated to 21
 characters by www.deja.com.
 
+Titles ("Subject:" line of messages) are unceremoniously truncated to 28
+characters by www.deja.com.
+
 =head1 SEE ALSO
 
 To make new back-ends, see L<WWW::Search>.
@@ -87,6 +90,10 @@ WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
 MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 =head1 VERSION HISTORY
+
+=head2 2.07, 2000-01-18
+
+handle www.deja.com's new output format
 
 =head2 2.06, 1999-12-07
 
@@ -138,7 +145,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.06';
+$VERSION = '2.07';
 
 use Carp ();
 use WWW::Search(generic_option);
@@ -230,9 +237,10 @@ sub native_retrieve_some
   my $hit;
   my $sDate = '';
   # The fields of each record appear in the following order: DATE, URL, TITLE, FORUM, AUTHOR
+ LINE_OF_INPUT:
   foreach ($self->split_lines($response->content())) 
     {
-    next if m/^\s*$/; # short circuit for blank lines
+    next LINE_OF_INPUT if m/^\s*$/; # short circuit for blank lines
     print STDERR " *   $state ===$_===" if 2 <= $self->{'_debug'};
     if ($state eq $START && 
         m=[-0-9]+\sof\s(?:about|exactly)\s(\d+)\smatches=)
@@ -257,6 +265,7 @@ sub native_retrieve_some
       $self->{_next_url} = $1;
       $self->{'_next_to_retrieve'} += $self->{'_hits_per_page'};
       $state = $ALLDONE;
+      last LINE_OF_INPUT;
       }
 
 #      elsif ($state eq $HITS &&
@@ -278,18 +287,18 @@ sub native_retrieve_some
     elsif ((($state eq $URL) || ($state eq $HITS)) && 
            m|<a\shref=\"?([^\">]+)\"?>([^<]+)?|i)
       {
-      next if m/previous\s(matches|messages)/i;
+      next LINE_OF_INPUT if m/previous\s(matches|messages)/i;
       if (m/\076Power\ssearch\074/i)
         {
         $state = $ALLDONE;
-        next;
+        last LINE_OF_INPUT;
         } # if
-      next if (m/Track\sthis\ssearch/i);
-      next if (m/sort_down_x\.gif/);
+      next LINE_OF_INPUT if (m/(Save|Track)\sthis\ssearch/i);
+      next LINE_OF_INPUT if (m/sort_down_x\.gif/);
       if (m/linkback\.xp/)
         {
         $state = $ALLDONE;
-        next;
+        last LINE_OF_INPUT;
         } # if
       print STDERR "hit url line\n" if 2 <= $self->{'_debug'};
       # Actual lines of input:

@@ -1,3 +1,57 @@
+2000-02-07  Kingpin  <mthurn@tasc.com>
+
+	* WebSearch: new option --gui to mimic query in browser
+
+2000-02-04  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search/OpenDirectory.pm: updated to 2.02
+
+	* lib/WWW/Search/Yahoo.pm: removed to its own separate registered module
+
+2000-02-01  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search.pm (maintainer): new method
+
+2000-01-31  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search/Test.pm: new module
+
+	* lib/WWW/Search/Magellan.pm: updated to 2.04 (new test cases)
+
+2000-01-28  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search/Excite.pm: removed to its own separate registered module
+
+2000-01-19  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search.pm (gui_query): new method
+
+	* lib/WWW/Search/HotBot.pm: removed to its own separate registered module
+
+2000-01-18  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search/Dejanews.pm: updated to 2.07 (new output format)
+
+2000-01-14  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search/Euroseek.pm: new backend
+
+2000-01-13  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search/Snap.pm: updated to 2.03
+
+	* lib/WWW/Search/Google.pm: updated to 2.16
+
+2000-01-03  Kingpin  <mthurn@tasc.com>
+
+	* Lycos::Sites retired
+
+	* Lycos.pm updated to 2.09 (thanks to dbradford@bdctechnologies.com)
+
+1999-12-24  Kingpin  <mthurn@tasc.com>
+
+	* WWW::Search VERSION 2.08 RELEASED!
+	
 1999-12-23  Kingpin  <mthurn@tasc.com>
 
 	* Google.pm updated to 2.15 (return more details for each result)

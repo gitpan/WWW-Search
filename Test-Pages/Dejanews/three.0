@@ -7,7 +7,66 @@
 <html>
 <head>
 <title>Deja.com: Power Search Results</title>
-<link rel="stylesheet" type="text/css" href="/templates/css.epl?diet=1">
+
+
+
+
+<style>
+<!--
+#blue 
+    { color: #6666cc;  }
+#gray 
+    { color: #666677;  }
+#green 
+    { color: #cccc66;  }
+#grey 
+    { color: #666677;  }
+#indigo 
+    { color: #003399;  }
+#red 
+    { color: #ff6600;  }
+#white 
+    { color: #ffffff;  }
+#yellow 
+    { color: #ffcc66;  }
+.boldorange 
+    { color: #ff6600; font-family: geneva,arial; font-size: 19px; font-weight: bold;  }
+.large 
+    { font-family: geneva,arial; font-size: 16px; letter-spacing: 1pt;  }
+.med 
+    { font-family: geneva,arial; font-size: 13px; letter-spacing: 0pt;  }
+.menu 
+    { background-color: #ffcc66; border-color: #000000; border-style: solid; border-width: 2px; color: #000000; font-family: geneva,arial; font-size: 11px; font-weight: normal; layer-background-color: #ffcc66; padding: 0px; position: absolute; visibility: hidden; width: 165;  }
+.size10 
+    { font-family: geneva,arial; font-size: 13px;  }
+.size12 
+    { font-family: geneva,arial; font-size: 16px;  }
+.size8 
+    { font-family: geneva,arial; font-size: 11px;  }
+.small 
+    { font-family: geneva,arial; font-size: 11px; letter-spacing: 0pt;  }
+.verdana 
+    { font-family: verdana,geneva,arial; font-size: 10px; letter-spacing: 0pt;  }
+.xlarge 
+    { font-family: geneva,arial; font-size: 19px; letter-spacing: 0pt;  }
+.xxlarge 
+    { font-family: geneva,arial; font-size: 24px; letter-spacing: 0pt;  }
+A.DARK2 
+    { color: #ff6600;  }
+A.DARK3 
+    { color: #ff3300;  }
+A.LIGHT2 
+    { color: #ffcc66;  }
+b.bold 
+    { color: #000000; font-family: geneva,arial; font-size: 13px; font-weight: bold; letter-spacing: 0pt;  }
+td 
+    { font-family: geneva,arial; font-size: 13px; letter-spacing: 0pt;  }
+td B 
+    { font-family: geneva,arial; font-size: 13px; font-weight: bold; letter-spacing: 0pt;  }
+
+-->
+</style>
+
 <meta name=keywords content="dejanews usenet newsgroup articles search query discussion">
 
 
@@ -16,15 +75,17 @@
 
 <body bgcolor=#ffffff text=#000000 link=#0000cc vlink=#663399 alink=#ff6600>
 
+<!-- HEADER : begin -->
+
 
 
 <!-- PLOC = d.search.query.hitlist.ps -->
 
 <table border=0 cellpadding=0 cellspacing=0 width=100%>
-<tr><td align=left bgcolor=#6666cc valign=bottom width=135><a href="./"><img src="http://g.deja.com/gifs/dlogo_130_b.gif" width=130 height=75 alt="deja.com" border=0 hspace=0 align=left></a></td>
-<td bgcolor=#ffffff width=12><img src="http://g.deja.com/gifs/20x20.gif" width=12 border=0 height=60 align=left></td>
-<td align=middle bgcolor=#ffffff valign=top><A HREF="/jump/http://gp1.deja.com/gtc?id=1021316&dejahi=0&tm=944588979.402128&site=dn&keyword=jabba&channel=ane.movies.intheater.scifi&page=d.search.query.hitlist.ps&slot=468x60.1&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7cane.%7cd.%7c468x60.1%7c%7c%7c%7c%7c%7c%7c">
-<IMG ALIGN=MIDDLE HEIGHT=60 WIDTH=468 SRC="http://view.avenuea.com/view/deja_sonicnet_BA477_093099tm_02/direct/01-944588979.402128" ALT="Sonicnet - the online music network" border=1></A><BR>
+<tr bgcolor=#ffffff><td align=left bgcolor=#6666cc valign=bottom width=135><a href="./"><img src="http://g.deja.com/gifs/dlogo_130_b.gif" width=130 height=75 alt="deja.com" border=0 hspace=0 align=left></a></td>
+<td width=12><img src="http://g.deja.com/gifs/20x20.gif" width=12 border=0 height=60 align=left></td>
+<td align=middle valign=top><A HREF="/jump/http://gp1.deja.com/gtc?id=1031615&dejahi=0&tm=948208662.999416&site=dn&keyword=jabba&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=468x60.1&node=Collecting&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7c%7c468x60.1%7c%7c%7c%7c%7c%7c%7c">
+<IMG ALIGN=MIDDLE HEIGHT=60 WIDTH=468 SRC="http://web2.deja.com/ads/66/62720266-9931.gif" ALT="Please visit our sponsor" border=1></A><BR>
 
 </td>
 <td align=right width=100%>
@@ -32,29 +93,52 @@
 </td>
 </tr></table>
 
-<table border=0 cellpadding=0 cellspacing=0  width="100%">
-<tr><td bgcolor=#6666cc><img src="http://g.deja.com/gifs/dmotto_b.gif" width=338  alt="Before You Buy" border=0 height=21 hspace=1 align=left></td>
+<table border=0 cellpadding=0 cellspacing=0 width=100%>
+<tr><td bgcolor=#6666cc><img src="http://g.deja.com/gifs/dmotto_b.gif" width=338 alt="Before You Buy" border=0 height=21 hspace=1 align=left></td>
 <td valign=middle align=right bgcolor=#6666cc id=white>
-<b class=verdana><a href="mydn_forums.xp"><font color="#FFFFFF">My Deja</font></a></b>&nbsp;&nbsp;<br></td>
+
+    <b class=verdana><a href="help/help_metasr.shtml"><font color=#ffffff>Help</font></a> &nbsp;|&nbsp; </b>
+
+<b class=verdana><a href="mailto.xp?category=Searching"><font color=#ffffff>Feedback</font></a> &nbsp;|&nbsp; </b>
+<b class=verdana><a href="/my/pr.xp"><font color=#ffffff>My Deja</font></a></b>
+
+&nbsp;&nbsp;
+<br></td>
 </tr></table>
 
-<table border=0 cellspacing=0 cellpadding=0 bgcolor=#cccc66 width=100%><tr bgcolor=#6666cc>
-<td width=4><img src=http://g.deja.com/gifs/20x20.gif width=4 height=1></td>
-<td width=100%><img src=http://g.deja.com/gifs/20x20.gif width=331 height=1></td>
-<td width=1><img src=http://g.deja.com/gifs/20x20.gif width=1 height=1></td>
-<td width=130><img src=http://g.deja.com/gifs/20x20.gif width=130 height=1></td>
-<td width=3><img src=http://g.deja.com/gifs/20x20.gif width=3 height=1></td>
-</tr>
-
-<tr><td width=1 bgcolor=#000000><img src=http://g.deja.com/gifs/20x20.gif width=1 height=1></td>
-<td valign=top width=100%>
+<!-- HEADER : end -->
 
 <!-- nav_chan : begin -->
 
 
-<table border=0 cellspacing=0 cellpadding=2><tr>
-<td bgcolor="#cccc66" nowrap>
-&nbsp;<a href="./"><b>Home</b></a>
+<table bgcolor=#cccc66 border=0 cellpadding=0 cellspacing=0 width=100%>
+<tr><td width=1 bgcolor=#000000 rowspan=2><img src=http://g.deja.com/gifs/20x20.gif width=1 height=1 hspace=0><br></td>
+<td valign=top width=760>
+
+<table border=0 cellspacing=0 cellpadding=2>
+<tr><td nowrap>&nbsp;<a href="./"><b>Home</b></a>
+
+    
+    
+    
+	
+	    &nbsp;<b>&#187;</b>&nbsp;
+	    
+		
+		
+		<a href="channels/forums.xp?CID=10407"><b>Recreation</b></a>
+	    
+	    
+	
+	    &nbsp;<b>&#187;</b>&nbsp;
+	    
+		
+		
+		<a href="channels/forums.xp?CID=10409"><b>Hobbies</b></a>
+	    
+	    
+	
+    </td></tr>
 
 
 
@@ -66,121 +150,55 @@
 	
 	    <b class="xxlarge" id="blue">&nbsp;&gt;&gt;&nbsp;</b>
 	
-	<b class="xxlarge">Search&nbsp;</b></td>
+	<b class="xxlarge">Collecting&nbsp;</b></td>
     
-    
-</tr>
+    </tr>
 
 </table>
 
 
 
 
-<table border=0 cellspacing=2 cellpadding=2><tr>
-<td bgcolor="#cccc66"><span class="small">
+<table border=0 cellspacing=0 cellpadding=2>
+<tr><td nowrap><span class="small">
 </span></td>
 </tr></table>
-<!-- nav_chan : end -->
+
+
 
 </td>
 
-<td rowspan=2 width=1 bgcolor=#000000><img src=http://g.deja.com/gifs/20x20.gif width=1 height=1></td>
-<td rowspan=2 bgcolor=#6666cc valign=top align=center width=100%>
+<td valign=bottom align=right>
 
-<!-- third stage : begin -->
-
-
-
-
-<table width=100% border=0 cellspacing=0 cellpadding=6><tr align=center>
-<td bgcolor=#ffffff>
-<table bgcolor=#000000 width=120 cellspacing=0 cellpadding=0 border=0><tr>
-<td bgcolor=#000000><A HREF="/jump/http://gp1.deja.com/gtc?id=1019536&dejahi=0&tm=944588979.470915&site=dn&keyword=jabba&channel=ane.movies.intheater.scifi&page=d.search.query.hitlist.ps&slot=promo.1&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7cpromo.1%7c%7c%7c%7c%7c%7c%7c">
-<IMG ALIGN=MIDDLE HEIGHT=30 WIDTH=120 SRC="http://web2.deja.com/ads/76/632976276-2086.gif" ALT="Just in time for HOLIDAY SHOPPING! Click to visit." border=1></A><BR></td>
-</tr></table>
-</td></tr>
+<table border=0 cellspacing=0 cellpadding=0>
+<tr><form action="qs.xp" method=get>
+<td valign=top align=left nowrap><font color="#FF6600"><b class=verdana>QUICK SEARCH</b></font><br></td>
+</tr> 
+<tr><td nowrap valign=bottom>
+<input type="hidden" name="OP" value="dnquery.xp">
+<input type="hidden" name="ST" value="MS"></span>
+<input type="hidden" name="DBS" value="2">
+<input type=text name=QRY size=15>
+<input type=image src="http://g.deja.com/gifs/button_search.gif" width=75 height=17 hspace=2 vspace=0 border=0>
+<br></td></form></tr>
 </table>
-
-<table width=100% cellpadding=0 cellspacing=0 bgcolor=#000000 border=0><tr>
-<td bgcolor=#000000 width=100%><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1 hspace=0 vspace=0><br></td>
-</tr></table>
-
-
-
-<table width=100% border=0 cellspacing=0 cellpadding=6><tr align=center>
-<td bgcolor=#ffffff>
-<table bgcolor=#000000 width=120 cellspacing=0 cellpadding=0 border=0><tr>
-<td bgcolor=#000000><A HREF="/jump/http://gp1.deja.com/gtc?id=1029029&dejahi=0&tm=944588979.499083&site=dn&keyword=jabba&channel=ane.movies.intheater.scifi&page=d.search.query.hitlist.ps&slot=120x120.1&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7cane.movies.%7c%7c120x120.1%7c%7c%7c%7c%7c%7c%7c">
-<IMG ALIGN=MIDDLE HEIGHT=120 WIDTH=120 SRC="http://web2.deja.com/ads/24/865317224-4991.gif" ALT="Please visit our sponsor" border=1></A><BR></td>
-</tr></table>
-</td></tr>
-</table>
-
-<table width=100% cellpadding=0 cellspacing=0 bgcolor=#000000 border=0><tr>
-<td bgcolor=#000000 width=100%><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1 hspace=0 vspace=0><br></td>
-</tr></table>
-
-
-
-
-
-
-
-
-
-<table width=100% border=0 cellspacing=0 cellpadding=6><tr>
-<td bgcolor="#000000"><font color="#ff6600"><b>Explore More:</b></font></td>
-</tr></table>
-
-
-
-
-
-<table width=100% border=0 cellspacing=0 cellpadding=6>
-<tr><td bgcolor="#6666cc"><span class=small>
-<font color="#ffffff">
-
-<p>Video Deals: 10 under $10<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=43448982&location=textlink.amazon.cat.ane.movies.sci-fi.cat.ane.movies.intheater.scifi">
-<font color="#ffcc66"><b>SHOP AMAZON.COM!</b></font></a>
-
-<p>Free personalized email<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=43448982&location=textlink.mailcom.cat.ros.cat.ane.movies.intheater.scifi">
-<font color="#ffcc66"><b>Signup now!</b></font></a>
-
-<p>Used & rare books<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=43448982&location=textlink.drd.cat.ane.cat.ane.movies.intheater.scifi">
-<font color="#ffcc66"><b>Discover them here</b></font></a>
-
-<p>SonicNet<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=43448982&location=textlink.son.cat.ane.cat.ane.movies.intheater.scifi">
-<font color="#ffcc66"><b>The best music online</b></font></a>
-
-<p>Search for Jobs!<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=43448982&location=textlink.joboptions.cat.ros.cat.ane.movies.intheater.scifi">
-<font color="#ffcc66"><b>JobOptions</b></font></a>
-
-</span></td></tr>
-</table>
-
-<!-- third stage : end -->
 
 </td>
 
-<td rowspan=2 width=3 bgcolor=#000000><img src=http://g.deja.com/gifs/20x20.gif width=3 height=1></td>
-
+<td bgcolor=#000000 width=4 rowspan=2><img src="http://g.deja.com/gifs/20x20.gif" width=4 height=1 hspace=0></td>
 </tr>
 
+<tr><td colspan=2 height=5><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1 hspace=0><br></td></tr>
+
 <tr>
-<td bgcolor=#000000 width=4><img src=http://g.deja.com/gifs/20x20.gif width=4 height=1></td>
-<td bgcolor=#ffffff valign=top align=center height=800 width=100%>
+<td bgcolor=#000000 colspan=4 valign=top width=100%>
+<img src="http://g.deja.com/gifs/20x20.gif" width=1 height=4></td>
+</tr>
 
-<!-- second stage : begin -->
-<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=#000000><tr>
-<td bgcolor=#000000><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=5></td>
-</tr></table>
+</table>	
+<!-- nav_chan : end -->
 
-<!-- second stage nav_tab : begin -->
+<!-- nav_tab : begin -->
 
 
 
@@ -195,6 +213,7 @@
 
 <table border=0 cellspacing=0 cellpadding=2>
 <tr>
+    <td bgcolor=#000000><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td>
 
 
     
@@ -236,9 +255,23 @@
 
 
 
-<!-- second stage nav_tab : end -->
+<!-- nav_tab : end -->
 
-<!-- second stage content : begin -->
+<!-- content+ad silo : begin -->
+<table bgcolor=#ffffff border=0 cellpadding=0 cellspacing=0 width=100%>
+
+<tr><td width=100%><img src="http://g.deja.com/gifs/20x20.gif" width=130 height=1 hspace=0></td>
+<td width=20><img src="http://g.deja.com/gifs/20x20.gif" width=20 height=1 hspace=0></td>
+<td width=1 rowspan=3 bgcolor=#000000><IMG src="http://g.deja.com/gifs/20x20.gif" width=1 height=1 hspace=0></td>
+<td width=130><img src="http://g.deja.com/gifs/20x20.gif" width=130 height=1 hspace=0></td>
+</tr>
+
+<tr>
+<td width=100% align=left valign=top>
+<img src="http://g.deja.com/gifs/20x20.gif" width=1 height=8>
+<br>
+
+<!-- content : begin -->
 
 
 
@@ -248,9 +281,8 @@
 
 
 
-<p>
 
-<table width=95% cellpadding=0 cellspacing=0 border=0><tr>
+<table width=100% cellpadding=0 cellspacing=0 border=0><tr>
 <td valign=top>
 <span class="xlarge">Results for:&nbsp;</span>
 <span class="xlarge" id="red">"Jabba&quot</span>
@@ -260,47 +292,41 @@
 
 
 
-<table border=0 cellspacing=0 cellpadding=3><tr align=right>
 
+<table border=0 cellspacing=0 cellpadding=3><tr align=right>
     <td align=center nowrap valign=top class="small" bgcolor=#ffcc66>
 	<a href="home_ps.shtml?QRY=Jabba&TAB=D">Power Search</a>
     </td>
-
-<td align=center nowrap valign=top class="small" bgcolor=#eeeeee>
-
-    <a href="help/help_metasr.shtml">Help</a> | 
-
-<a href="mailto.xp?category=Searching">Feedback</a>
-<br></td>
 </tr></table>
 
 
 </td>
 </tr></table>
-</p>
 
 
 
-<table cellpadding=2 cellspacing=0 border=0 width=95%>
-<tr><td width=100% colspan=2>
+
+
+<table cellpadding=2 cellspacing=0 border=0 width=100%>
+<tr><td width=100%>
 <b>Messages</b><br>
-<b class="small">1-100 of about 710000 matches</b>
-<br><a href="http://www.deja.com/trackquery.xp?query=Jabba&wp_query=svcclass%3ddnserver%26defaultOp%3d%257c%26ST%3dPS%26minAN%3d0%26ageweight%3d1%26query%3dJabba%26search%3dword%26HT%3d0%26maxhits%3d100%26RN%3d0%26LNG%3dALL%26showsort%3dscore%26format%3dterse%26QRY%3dJabba%26IS%3dJabba%26agesign%3d0%26OP%3ddnquery.xp&return_to=http://x34.deja.com/qs.xp%3fLNG%3dALL%26OP%3ddnquery.xp%26QRY%3dJabba%26ST%3dPS%26defaultOp%3dOR%26maxhits%3d100%26showsort%3dscore">Track this search for me</a>
-
+<b class="small">1-100 of about 66000 matches</b>
+</td><td nowrap><span class="small"><a href="http://www.deja.com/my/pr/search_add.xp?query=Jabba&ss_query=keywords%3dJabba%26svcclass%3ddnserver%26default_op%3dOR%26language%3dALL%26max_hits%3d100%26ageweight%3d1&return_to=http://x23.deja.com/qs.xp%3fLNG%3dALL%26OP%3ddnquery.xp%26QRY%3dJabba%26ST%3dPS%26defaultOp%3dOR%26maxhits%3d100%26showsort%3dscore"><img src="http://g.deja.com/my/gifs/can_MY_white.gif" border=0 alt="add" vspace=2></a> Save this search</span>
 </td></tr>
 </table>
 
-<table width=95% cellspacing=0 cellpadding=6 border=0>
+
+<table width=100% cellspacing=0 cellpadding=6 border=0>
 
 <tr align=left valign=top>
 
-    <td><a href="http://x34.deja.com/qs.xp?LNG=ALL&OP=dnquery.xp&QRY=Jabba&ST=PS&defaultOp=OR&maxhits=100&showsort=date">Date</a> <img src="http://g.deja.com/gifs/sort_down_x.gif" width=11 height=6 border=0 hspace=3 vspace=1></td>
+    <td><a href="http://x23.deja.com/qs.xp?LNG=ALL&OP=dnquery.xp&QRY=Jabba&ST=PS&defaultOp=OR&maxhits=100&showsort=date">Date</a> <img src="http://g.deja.com/gifs/sort_down_x.gif" width=11 height=6 border=0 hspace=3 vspace=1></td>
 
-    <td><a href="http://x34.deja.com/qs.xp?LNG=ALL&OP=dnquery.xp&QRY=Jabba&ST=PS&defaultOp=OR&maxhits=100&showsort=subject">Subject</a> <img src="http://g.deja.com/gifs/sort_down_x.gif" width=11 height=6 border=0 hspace=3 vspace=1></td>
+    <td><a href="http://x23.deja.com/qs.xp?LNG=ALL&OP=dnquery.xp&QRY=Jabba&ST=PS&defaultOp=OR&maxhits=100&showsort=subject">Subject</a> <img src="http://g.deja.com/gifs/sort_down_x.gif" width=11 height=6 border=0 hspace=3 vspace=1></td>
 
-    <td><a href="http://x34.deja.com/qs.xp?LNG=ALL&OP=dnquery.xp&QRY=Jabba&ST=PS&defaultOp=OR&maxhits=100&showsort=newsgroup">Forum</a> <img src="http://g.deja.com/gifs/sort_down_x.gif" width=11 height=6 border=0 hspace=3 vspace=1></td>
+    <td><a href="http://x23.deja.com/qs.xp?LNG=ALL&OP=dnquery.xp&QRY=Jabba&ST=PS&defaultOp=OR&maxhits=100&showsort=newsgroup">Forum</a> <img src="http://g.deja.com/gifs/sort_down_x.gif" width=11 height=6 border=0 hspace=3 vspace=1></td>
 
-    <td><a href="http://x34.deja.com/qs.xp?LNG=ALL&OP=dnquery.xp&QRY=Jabba&ST=PS&defaultOp=OR&maxhits=100&showsort=author">Author</a> <img src="http://g.deja.com/gifs/sort_down_x.gif" width=11 height=6 border=0 hspace=3 vspace=1></td>
+    <td><a href="http://x23.deja.com/qs.xp?LNG=ALL&OP=dnquery.xp&QRY=Jabba&ST=PS&defaultOp=OR&maxhits=100&showsort=author">Author</a> <img src="http://g.deja.com/gifs/sort_down_x.gif" width=11 height=6 border=0 hspace=3 vspace=1></td>
 
 </tr>
 
@@ -313,14 +339,16 @@
     
     
     <tr bgcolor=#dddddd valign=top>
-    <td>12/05/1999</td>
+    <td>01/18/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556871493&CONTEXT=944588976.1121452059&hitnum=0">
-    ATTN JABBA any more of Chris
+    <a href="http://x23.deja.com/getdoc.xp?AN=574190625&CONTEXT=948208660.1253179394&hitnum=0">
+    Re: Когда я на почте служил 
     </a>
     </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=3a5b09db1fde4165c9467057d332c2beb57981d2f243&ST=PS&ee=1">Andy           </a></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=30500ed116d34363c72d5f81b7af4982218ce70cee89a563b69f55e647e7b1f641a4d0ac04cc74699f4cb9126f9bb5c78b5603b4aba65cab648c1823&ST=PS&ee=1">&quot;Плюмаж&quot; &lt;ek_@c</a></td>
+
     </tr>
     
 
@@ -330,14 +358,16 @@
     
     
     <tr bgcolor=#eeeeee valign=top>
-    <td>12/05/1999</td>
+    <td>01/17/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556707383&CONTEXT=944588976.1121452059&hitnum=1">
-    Re: Jabba, re: Cable Modem A
+    <a href="http://x23.deja.com/getdoc.xp?AN=573945594&CONTEXT=948208660.1253179394&hitnum=1">
+    Re: Когда я на почте служил 
     </a>
     </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=3e5f0fd61fd648635675a99fd9a2314031531b47b739d543311447f6c34a0521d140adc43688bdc575562ff2d8560e0cc3bf&ST=PS&ee=1">Waldo          </a></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=30590ddb17de446798734941b44ea97ca91fbd81525c263a3cc4679df946fcbc0fb796836c18774e0b9286150a7661ecbb81a9455e7c79c62e0d32304febc7&ST=PS&ee=1">Old Woodoo     </a></td>
+
     </tr>
     
 
@@ -347,14 +377,206 @@
     
     
     <tr bgcolor=#dddddd valign=top>
-    <td>12/05/1999</td>
+    <td>01/16/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556870518.2&CONTEXT=944588976.1121452059&hitnum=2">
+    <a href="http://x23.deja.com/getdoc.xp?AN=573296412&CONTEXT=948208660.1253179394&hitnum=2">
+    Re: Когда я на почте служил 
+    </a>
+    </b></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=3c5a08d61dd1476334ea7f7f096996bbce6f4b4000e90f6bd07792fb5b2a2a0e719f53a71639b864321debe958f24dbaaa6466bb2b861b985621e1613d741cb1c5fdbf57a67879f4defa2c5fcf4a01daaf6d5cd4e4f4&ST=PS&ee=1">&quot;Чарли&quot; &lt;devush</a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>01/18/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=574085556&CONTEXT=948208660.1253179394&hitnum=3">
+    Is it worth it              
+    </a>
+    </b></td>
+    <td>alt.support.vasectomy</td>
+
+    <td><a href="profile.xp?author=3b5009d01cde43671005c5d195377b15b9a77cd32095666d887a074a749b5bd1baa22beedca72986bca5c5ee8f5df9f9f869f688&ST=PS&ee=1">Jabba          </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>01/18/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=574107371&CONTEXT=948208660.1253179394&hitnum=4">
+    Re: Is it worth it          
+    </a>
+    </b></td>
+    <td>alt.support.vasectomy</td>
+
+    <td><a href="profile.xp?author=3d5b0ed017d5446236b71a8f9e0614a497494497162d2b0ba4ed03303f32706e7d002e6a3e28a212f4eea0937e739825e67b340add4714cbdee85b566850ee0884&ST=PS&ee=1">David Brown    </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>01/18/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=574122008&CONTEXT=948208660.1253179394&hitnum=5">
+    Re: Warlords3:Reign Of Heroe
+    </a>
+    </b></td>
+    <td>comp.sys.ibm.pc.games</td>
+
+    <td><a href="profile.xp?author=3c590ad11adf466258d2fd4a6af3ff574211dce769c35878a7ac17b09ff7fb5e238c3bdc3e45a38dca61f773d9edd02e84adb7e2a6c410e110a95b4171449b4543&ST=PS&ee=1">Jeremy Reaban  </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>01/18/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=574151207&CONTEXT=948208660.1253179394&hitnum=6">
+    Re: Opening a document      
+    </a>
+    </b></td>
+    <td>comp.groupware.lotus-</td>
+
+    <td><a href="profile.xp?author=315e0ad21dd544602ced961eca8bd02288ecf239dbd8cce027ba0c10724fc11e4cf5711a2f27c85b791c4341cd89255cc6da2f7254a66f50a512fd&ST=PS&ee=1">Jabba          </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>01/17/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=573545744&CONTEXT=948208660.1253179394&hitnum=7">
+    Heizwerk Cologne presents th
+    </a>
+    </b></td>
+    <td>de.alt.music.dj      </td>
+
+    <td><a href="profile.xp?author=3b590dd01ad3436d01a6f9d2ac7df062b96330eb1791d9b24374bcdc00aaade4627866a266a172ed774bccd19e3461f3cdb8ee07c0&ST=PS&ee=1">Jabba          </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>01/17/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=573817215&CONTEXT=948208660.1253179394&hitnum=8">
+    Jabba's Palace Diorama FS - 
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+
+    <td><a href="profile.xp?author=305e08d61adf40646059dd10193a365b43a343b184fad3575d874697a31c60140e74a03f856957400353e429c8b713b002&ST=PS&ee=1">Bill Baier     </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>01/17/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=573931340&CONTEXT=948208660.1253179394&hitnum=9">
+    FT Jabba w/ 2 headed Announc
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+
+    <td><a href="profile.xp?author=3e5e08d219df4861ccf71491a0cd342e1e80bc0536ccbfe42f83ef67bd282a0a4d5d61d4c6bdf384f83d64721ffb7f2d4690aa8e5e7e03d4eca902c587822ec4964375780091&ST=PS&ee=1">Siobhan Shemman</a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>01/17/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=573995897&CONTEXT=948208660.1253179394&hitnum=10">
+    FT: (2) Jabba w/Hex Rex     
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+
+    <td><a href="profile.xp?author=385a0cd61ed14667a56e19419c3c79dc55f3af10dedb40aad0b1d7ce850803631fcc08ff86e05743a8&ST=PS&ee=1">MrCelo         </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>01/16/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=573260471&CONTEXT=948208660.1253179394&hitnum=11">
+    Re: JABBA -- one more try...
+    </a>
+    </b></td>
+    <td>alt.binaries.multimed</td>
+
+    <td><a href="profile.xp?author=3e5901d418d2406dedd5ef827f3ab7ba1fee6f6cf8e24ed6f1&ST=PS&ee=1">fisherboy      </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>01/16/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=573329325.2&CONTEXT=948208660.1253179394&hitnum=12">
     ** SWCCG: FS Jabba's Palace 
     </a>
     </b></td>
     <td>rec.arts.sf.starwars.</td>
-    <td><a href="profile.xp?author=3e5e09d51ed24362f4c8e42c962ea86f6a9d398a4386741e6ada978b518779557b18d114b237fa2888f23a6981c5cd969f6d84d096&ST=PS&ee=1">Frank James    </a></td>
+
+    <td><a href="profile.xp?author=3c5e01d61cd448611d44a1cef2956213600457c83e09436e268f62ca830ef178ba722b8d99730ed60c2d7c30dc2eeca9c870f86c66&ST=PS&ee=1">Frank James    </a></td>
+
     </tr>
     
 
@@ -364,14 +586,16 @@
     
     
     <tr bgcolor=#eeeeee valign=top>
-    <td>12/05/1999</td>
+    <td>01/16/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556870623.2&CONTEXT=944588976.1121452059&hitnum=3">
+    <a href="http://x23.deja.com/getdoc.xp?AN=573329425.2&CONTEXT=948208660.1253179394&hitnum=13">
     ** SWCCG: FS Jabba's Palace 
     </a>
     </b></td>
     <td>rec.games.trading-car</td>
-    <td><a href="profile.xp?author=305b0ad01dd7436de45c305e2f08e04ace68f9a0cc26310ab8208b2e9ce855b287c0e7f35743338b6ac2910fd02ba2245ebec7e6df&ST=PS&ee=1">Frank James    </a></td>
+
+    <td><a href="profile.xp?author=3d5d0fd718de4567e362240ecfddd32aefda3449e1bc18b720075b5f9f80b9ce8455b43a675b02c6e10a2705a96f7d402cc119600d&ST=PS&ee=1">Frank James    </a></td>
+
     </tr>
     
 
@@ -381,14 +605,16 @@
     
     
     <tr bgcolor=#dddddd valign=top>
-    <td>12/05/1999</td>
+    <td>01/16/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556893353&CONTEXT=944588976.1121452059&hitnum=4">
-    PLEASE REPOST: The following
+    <a href="http://x23.deja.com/getdoc.xp?AN=573375951&CONTEXT=948208660.1253179394&hitnum=14">
+    Attn: Jabba The Hutt        
     </a>
     </b></td>
     <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=3f5b0bd018d14061e1401de27409954211050cba7db6f64c77fad0b336c6a349451afca81c&ST=PS&ee=1">Iamhere        </a></td>
+
+    <td><a href="profile.xp?author=3b5c0bd319d0436c82cb76f1f7596ddf36dc328b6d77c548d48c0a4290f5bae515e1df7e25e188b51e9c57ac916b4651bdc3&ST=PS&ee=1">Pab The Ripper </a></td>
+
     </tr>
     
 
@@ -398,14 +624,16 @@
     
     
     <tr bgcolor=#eeeeee valign=top>
-    <td>12/05/1999</td>
+    <td>01/16/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=557012591&CONTEXT=944588976.1121452059&hitnum=5">
-    Req: Jabba please continue B
+    <a href="http://x23.deja.com/getdoc.xp?AN=573438996&CONTEXT=948208660.1253179394&hitnum=15">
+    Request: Jabba NML_8_a_00015
     </a>
     </b></td>
     <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=385d01d216de4467c5765b45ef726d563567aa11e2cc7c6d562db5909c226023f232863d19e07cd02f9ff0cd78ef929213f03f5a45c3088df2be51d7dfc7e22a9b&ST=PS&ee=1">lorissa        </a></td>
+
+    <td><a href="profile.xp?author=305b09d419de4565cd5dbf11325d110d3c916349d0efc50236896f6e859a01dc9606fe1a1c6b49&ST=PS&ee=1">Jimmy          </a></td>
+
     </tr>
     
 
@@ -415,14 +643,16 @@
     
     
     <tr bgcolor=#dddddd valign=top>
-    <td>12/05/1999</td>
+    <td>01/14/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=557012810&CONTEXT=944588976.1121452059&hitnum=6">
-    Re: Mara isn't in RotJ      
+    <a href="http://x23.deja.com/getdoc.xp?AN=572462106&CONTEXT=948208660.1253179394&hitnum=16">
+    Re: Когда я на почте служил 
     </a>
     </b></td>
-    <td>alt.fan.wedge        </td>
-    <td><a href="profile.xp?author=3b580ad117d244665a29f9231cd0d3597010622fd4bf5afa6fd7ae346c668b24ffdd0f8438e1c60d7f3b6edd484dff8555c40c1c4fe56380f4a802561bb9c0af6081&ST=PS&ee=1">Bernard Chalk  </a></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=385d08d31bd644670f84e4aea469173dc993a49069d7bb937021b21bf51664dca0fa6be4b1a5d8c75e84657dff0cc2f049bc9bd82db29f4d25aede&ST=PS&ee=1">&quot;Плюмаж&quot; &lt;ek@ch</a></td>
+
     </tr>
     
 
@@ -432,14 +662,35 @@
     
     
     <tr bgcolor=#eeeeee valign=top>
-    <td>12/07/1999</td>
+    <td>01/14/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=557496423&CONTEXT=944588976.1121452059&hitnum=7">
-    Ep. 1 DVD/VHS?              
+    <a href="http://x23.deja.com/getdoc.xp?AN=572838327&CONTEXT=948208660.1253179394&hitnum=17">
+    JABBA -- one more try...    
+    </a>
+    </b></td>
+    <td>alt.binaries.multimed</td>
+
+    <td><a href="profile.xp?author=3c590ed717de44628f0cd4f0861bf3933d86a04c9b6496db4987e8b73c9685c55427b547b8ebb558631b9169&ST=PS&ee=1">Bobr           </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>01/14/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=572851687&CONTEXT=948208660.1253179394&hitnum=18">
+    eBay: SWCCG Enhanced Jabba's
     </a>
     </b></td>
     <td>rec.arts.sf.starwars.</td>
-    <td><a href="profile.xp?author=3c5f0ed31dd64862a485ed4519bb323b0681d78c8685406ef2f27a0c9fb0cafc751fa7d9123127a04e85b9dd24f4bd&ST=PS&ee=1">VertigoDC      </a></td>
+
+    <td><a href="profile.xp?author=3f5800d516d44566cd3cdbeaed0a42eb189e32f401ca67efcf520cf1996f43924c51bf3d19e62a8c46b9cf0e410b73a50ef137dcf0e0155f62c3ae08d70d21a1cbd7&ST=PS&ee=1">Matt Parks     </a></td>
+
     </tr>
     
 
@@ -448,32 +699,17 @@
     
     
     
-    <tr bgcolor=#dddddd valign=top>
-    <td>12/07/1999</td>
+    <tr bgcolor=#eeeeee valign=top>
+    <td>01/18/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=557582153&CONTEXT=944588976.1121452059&hitnum=8">
-    Lot's to trade for New Figur
+    <a href="http://x23.deja.com/getdoc.xp?AN=574015767&CONTEXT=948208660.1253179394&hitnum=19">
+    WTB: Endor Complete Galaxy /
     </a>
     </b></td>
     <td>rec.arts.sf.starwars.</td>
-    <td><a href="profile.xp?author=3a5901da1ed54064721ecb29a071c4af0fd7d3b92a082f980822e9b055696014e041b4e94fc87f054983f1398d597f&ST=PS&ee=1">Kgirl2468      </a></td>
-    </tr>
-    
 
-    
-    
-    
-    
-    
-    <tr bgcolor=#eeeeee valign=top>
-    <td>12/06/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=557197065&CONTEXT=944588976.1121452059&hitnum=9">
-    Re: Problemi con Apache! (Ai
-    </a>
-    </b></td>
-    <td>it.comp.linux.setup  </td>
-    <td><a href="profile.xp?author=395c0ad31bd24067887e421daa5bebc8ce801c52615feec6664725bfd401ceb08c61890a4119911b2d72f2c3367f&ST=PS&ee=1">Jabba          </a></td>
+    <td><a href="profile.xp?author=385100d61fd646619c3bd86cb6fb3bd9217900a000038a4a2876d4c254961faf9db974e5d460c272cac1ad8f989fee96a2&ST=PS&ee=1">Rodentdawg     </a></td>
+
     </tr>
     
 
@@ -483,14 +719,16 @@
     
     
     <tr bgcolor=#dddddd valign=top>
-    <td>12/06/1999</td>
+    <td>01/18/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=557238104&CONTEXT=944588976.1121452059&hitnum=10">
-    [OT] Parkeren in A'dam      
+    <a href="http://x23.deja.com/getdoc.xp?AN=574022298&CONTEXT=948208660.1253179394&hitnum=20">
+    Re: Odp: Nowe komorki i 8 li
     </a>
     </b></td>
-    <td>nl.muziek            </td>
-    <td><a href="profile.xp?author=3b590bd51dd14061d51aa4eed7e07ef4b990a8718d76dd2ee2bf1b036b609eb3c46e571be3cd54efbaa02b0217d9f3d2dc2de82889394c639d91b8&ST=PS&ee=1">Jabba          </a></td>
+    <td>pl.misc.telefonia.gsm</td>
+
+    <td><a href="profile.xp?author=3c5e0fd71ad243623a9eeb2740aa86ed7f33b25f718049864fc21b487a971e8c15f0ee017f01e2d9eb&ST=PS&ee=1">valwit         </a></td>
+
     </tr>
     
 
@@ -500,14 +738,16 @@
     
     
     <tr bgcolor=#eeeeee valign=top>
-    <td>12/06/1999</td>
+    <td>01/18/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=557256211&CONTEXT=944588976.1121452059&hitnum=11">
-    Re: R: Non ci sono piu' i fi
+    <a href="http://x23.deja.com/getdoc.xp?AN=574062498&CONTEXT=948208660.1253179394&hitnum=21">
+    Re: Ordering Pizza Hut Onlin
     </a>
     </b></td>
-    <td>it.cultura.fantascien</td>
-    <td><a href="profile.xp?author=3f5b01d717d144625375aa0952d345d464717b6ab479d98f67ea01b3165a97b0e6918975fa4689becc9a226b1022&ST=PS&ee=1">Jabba          </a></td>
+    <td>nz.reg.canterbury.gen</td>
+
+    <td><a href="profile.xp?author=3f5e09d11bd34866d49289d8ad384d5bead510f1de82af48e792098515058dea0792a71fbf9e23fbad1e9d4ba46be86d4632f034d3efedd4a3d75b84a8556826ddc7582c&ST=PS&ee=1">Julian S Visch </a></td>
+
     </tr>
     
 
@@ -517,626 +757,16 @@
     
     
     <tr bgcolor=#dddddd valign=top>
-    <td>12/06/1999</td>
+    <td>01/18/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=557258518&CONTEXT=944588976.1121452059&hitnum=12">
-    Re: Ungereimtheiten Episode 
-    </a>
-    </b></td>
-    <td>de.rec.sf.starwars   </td>
-    <td><a href="profile.xp?author=3d5e0ad51dd64961ffe636412d82566b32ef81cf18dc833e5d0c497e315abe93731f11e053312e4cdedd4ce612762d443a99a56e97c32de9123beaf59f684d922e0f170eb14711916dc1b6&ST=PS&ee=1">Bjoern Tantau  </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#eeeeee valign=top>
-    <td>12/06/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=557273696&CONTEXT=944588976.1121452059&hitnum=13">
-    Re: GEEF ME NOU EENS ANTWOOR
-    </a>
-    </b></td>
-    <td>nl.actueel.big-brothe</td>
-    <td><a href="profile.xp?author=3a5108d21bd0436cf0c00ff72cc89859bd9947fd6304927d12c19c6958f80ac204443464738f8aff6f9af8dd033a97ddfe865e639137a70cb140ca&ST=PS&ee=1">Jabba          </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#dddddd valign=top>
-    <td>12/06/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=557273698&CONTEXT=944588976.1121452059&hitnum=14">
-    Re: Weekopdracht puzzelen   
-    </a>
-    </b></td>
-    <td>nl.actueel.big-brothe</td>
-    <td><a href="profile.xp?author=3d5f08d31ed54162546c75788d08cf25149a5adf1c4eae20be1a39cdbd2f8cb6ed08ebf752574049af9b4f3678382ee51417bc6c71c78774a423b8&ST=PS&ee=1">Jabba          </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#eeeeee valign=top>
-    <td>12/06/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=557277409&CONTEXT=944588976.1121452059&hitnum=15">
-    Re: Ruud lookalikes.....de c
-    </a>
-    </b></td>
-    <td>nl.actueel.big-brothe</td>
-    <td><a href="profile.xp?author=3c5e00d71bdf4865387fb3bbbf5393c7ba8b2c097a86fcdf8b09da46e24fdfd03309782c66a3492052efd6d59d8e502913562c6ca7d6407f17b52e&ST=PS&ee=1">Jabba          </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#dddddd valign=top>
-    <td>12/06/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=557280993&CONTEXT=944588976.1121452059&hitnum=16">
-    Re: Spreuk van de dag       
-    </a>
-    </b></td>
-    <td>nl.actueel.big-brothe</td>
-    <td><a href="profile.xp?author=3f5d00d41bd74463b518c97851dc02dc10db94938dd719fa0af7d99a50b0a6768acb582b19ae8b1c59e80466dbc53f76803d2b0b3fb90f9d179880&ST=PS&ee=1">Jabba          </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#eeeeee valign=top>
-    <td>12/06/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=557291111&CONTEXT=944588976.1121452059&hitnum=17">
-    Re: Ruud lookalikes.....de c
-    </a>
-    </b></td>
-    <td>nl.actueel.big-brothe</td>
-    <td><a href="profile.xp?author=305f0fda1cd541675a07109934bd74bf13f8297f775934970e81166b172462c1c4c07ffa767d998c33e359021815db1a79bf4b54bcdf2dc3cb1487&ST=PS&ee=1">Jabba          </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#dddddd valign=top>
-    <td>12/06/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=557291112&CONTEXT=944588976.1121452059&hitnum=18">
-    Re: Willem is achterbaks, du
-    </a>
-    </b></td>
-    <td>nl.actueel.big-brothe</td>
-    <td><a href="profile.xp?author=315c0ed01bd44467c5465863828a4632b18aaa11e0c625d52114177b3309c2c959ec593974d72d75f606a42927070f35cb86de23a2b3f12a309f16&ST=PS&ee=1">Jabba          </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#eeeeee valign=top>
-    <td>12/06/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=557296510&CONTEXT=944588976.1121452059&hitnum=19">
-    Re: Regarding &quot;Ben-Hur&quot;..   
-    </a>
-    </b></td>
-    <td>alt.video.dvd        </td>
-    <td><a href="profile.xp?author=3c5d0ed519de466108068937b8b453ddad143c29fe5b6db5de7c100865e08b08bf41374c45db&ST=PS&ee=1">davebowman     </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#dddddd valign=top>
-    <td>12/06/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=557319785&CONTEXT=944588976.1121452059&hitnum=20">
-    DIALOGUES YOU WON'T HEAR IN 
-    </a>
-    </b></td>
-    <td>alt.fan.starwars     </td>
-    <td><a href="profile.xp?author=3e5a00d616de47624a7e5f9da6291912e12d63d56f8a46bbd2e012ff004a1e5540263c8567d594af6c0dddb879a4650f47795403d420c24d3d1d591df5763f0868&ST=PS&ee=1">Darth Maul     </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#eeeeee valign=top>
-    <td>12/06/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=557421699&CONTEXT=944588976.1121452059&hitnum=21">
-    Re: Questo e' linux?Non ci v
-    </a>
-    </b></td>
-    <td>it.comp.linux.setup  </td>
-    <td><a href="profile.xp?author=305908d219de456212580f26e88709e4cbd272e24098aaccf7b9f136e643c16fb1464deba0e531f6caf39934bb&ST=PS&ee=1">Angelo         </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#dddddd valign=top>
-    <td>12/05/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556753245&CONTEXT=944588976.1121452059&hitnum=22">
-    JABBA'S PALACE RARES        
-    </a>
-    </b></td>
-    <td>rec.games.trading-car</td>
-    <td><a href="profile.xp?author=3f5b0ad01adf42616ccb81eb9ae7cbc314e5b2cbcd10039b3420168780bd26b6c51a67f7cdd475c6f1fbea0a581fa1bcc1&ST=PS&ee=1">RBrown5533     </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#eeeeee valign=top>
-    <td>12/05/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556793332.1&CONTEXT=944588976.1121452059&hitnum=23">
-    FS: SW JP, EN               
-    </a>
-    </b></td>
-    <td>rec.games.trading-car</td>
-    <td><a href="profile.xp?author=3f5a08d21bd6456d70ab7a6af2251e334bbc79910d7a717bed2606defed082dd0d7835e42c2efa68002b72480d3c0d3dc8682939d6d9f3974df32c6c0dafd32575dffa2c41e37447&ST=PS&ee=1">Scott Borror   </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#dddddd valign=top>
-    <td>12/05/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556870518.1&CONTEXT=944588976.1121452059&hitnum=24">
-    ** SWCCG: FS Jabba's Palace 
-    </a>
-    </b></td>
-    <td>rec.arts.sf.starwars.</td>
-    <td><a href="profile.xp?author=31510ada1dd74263c7e606879d93953e5b6e23b363668190110b0768ec7c07be8b4e378d5ac0395db037cf2783cb59e83e91415e32&ST=PS&ee=1">Frank James    </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#eeeeee valign=top>
-    <td>12/05/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556870518.3&CONTEXT=944588976.1121452059&hitnum=25">
-    ** SWCCG: FS Jabba's Palace 
-    </a>
-    </b></td>
-    <td>rec.arts.sf.starwars.</td>
-    <td><a href="profile.xp?author=3c5d0bd21ad4456399ac3bf0360e4c4aa12fb289f74c5642f899524e895707d434965cd50387991e67fc15e938d76309af850bdad6&ST=PS&ee=1">Frank James    </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#dddddd valign=top>
-    <td>12/05/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556870623.1&CONTEXT=944588976.1121452059&hitnum=26">
-    ** SWCCG: FS Jabba's Palace 
-    </a>
-    </b></td>
-    <td>rec.games.trading-car</td>
-    <td><a href="profile.xp?author=3e590ed51ad64062956c73c06d48cf663dadd47adc7866e57416789739734b8f03bdfe45d265e852c1d1dd626c422fcd4f2d2065f6&ST=PS&ee=1">Frank James    </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#eeeeee valign=top>
-    <td>12/05/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556870623.3&CONTEXT=944588976.1121452059&hitnum=27">
-    ** SWCCG: FS Jabba's Palace 
-    </a>
-    </b></td>
-    <td>rec.games.trading-car</td>
-    <td><a href="profile.xp?author=3a590ed61fd14560075f1a546930a557a0340a32d3bd48f0fd02684f7821a7a4ab3919fcbc62cd57a6834b74a7000523fb9d69b13f&ST=PS&ee=1">Frank James    </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#dddddd valign=top>
-    <td>12/05/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556871492&CONTEXT=944588976.1121452059&hitnum=28">
-    Re: STEF the Cheerleader - I
-    </a>
-    </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=3c5e0bd31bd0476c808b765c2fef0bf6bf55dbfc1bee77861fcb9f867f25b51a7637ef997ce13dbe2c5a92a55639cd36490439c54eda07&ST=PS&ee=1">Jabba the Hut  </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#eeeeee valign=top>
-    <td>12/05/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556899206&CONTEXT=944588976.1121452059&hitnum=29">
-    Ping Slave Trainer          
-    </a>
-    </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=3b580cdb1fde4563871cc8b4108924e1c2addb268c3200c4b449444997558c09d4cb05182da03c8169ec2007e38c2fffee50add5db6b20&ST=PS&ee=1">Jabba the Hut  </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#dddddd valign=top>
-    <td>12/04/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556402386&CONTEXT=944588976.1121452059&hitnum=30">
-    jabba the hut re beth ( solo
-    </a>
-    </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=3c500dd019d041614f8f59e7c9dda8946656e6f305b2ee27f45abfca243f8c63db00fdc5&ST=PS&ee=1">dumdum         </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#eeeeee valign=top>
-    <td>12/04/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556435507&CONTEXT=944588976.1121452059&hitnum=31">
-    ATTN: Jabba - a note of than
-    </a>
-    </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=315b0dd017d64267e9a7d1f11fd294aae742d8c878cbca7796386187a4c8d9e0114ba0eab872264afe482903a8285b882c5671e32b4f&ST=PS&ee=1">The Kraken     </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#dddddd valign=top>
-    <td>12/04/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556670502&CONTEXT=944588976.1121452059&hitnum=32">
-    ATTN:Jabba                  
-    </a>
-    </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=385901d61fde406dc701260fa1475fa5dad809efede9d5f4a98be7deac6d61853190313451c5bd1a114af6939dccbf3ddfc42d193a7bd2ede2ba5dd85fb2&ST=PS&ee=1">Angel          </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#eeeeee valign=top>
-    <td>12/04/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556707382&CONTEXT=944588976.1121452059&hitnum=33">
-    Re: Jabba, re: Cable Modem A
-    </a>
-    </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=3f5e0cd019d4446c88dfd01f30dd9ecff6c369da0ea6720a38caef9c13c4d2b903e87e2c5ea8f87b46d9fa075795f37a6eab90dc5d077f008aa3c4a82a80&ST=PS&ee=1">Angel          </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#dddddd valign=top>
-    <td>12/03/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556191693&CONTEXT=944588976.1121452059&hitnum=34">
-    Ping&gt;&gt;&gt;&gt; JABBA              
-    </a>
-    </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=3e5a0bd319d24964710673b92681bc433bc0cb82c34c7d65f327b4a14fc06aa95b9e5fa363b116bb4301a283fb66a3e774b437f08f7f2ead2b27770697e4f1f920fba5761717be784d2474821279bf&ST=PS&ee=1">Brenda &amp; new po</a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#eeeeee valign=top>
-    <td>12/03/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556244718&CONTEXT=944588976.1121452059&hitnum=35">
-    Re: Ping&gt;&gt;&gt;&gt; JABBA          
-    </a>
-    </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=3d5c0dd318d5406526ac6a756c59935f0aa9e71c100b5253794efab3e7cb17b86d1feafe1857474d8c880e0e0887361022435d5ad32467&ST=PS&ee=1">Jabba the Hut  </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#dddddd valign=top>
-    <td>12/03/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556388582&CONTEXT=944588976.1121452059&hitnum=36">
-    Re: Ping&gt;&gt;&gt;&gt; JABBA          
-    </a>
-    </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=305b0edb1fd54265494e579206947513776b748eedd657f2930e245d4a3964d2833e6e0fa1e5f56ab1f87c4330c9f365ad001bf6dd9fbdb280fd235d2afb5da279c027cc87ba2b3ae477ab3625de11&ST=PS&ee=1">Brenda &amp; new po</a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#eeeeee valign=top>
-    <td>12/02/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556064599&CONTEXT=944588976.1121452059&hitnum=37">
-    Mynock Hunt + Jabba's Dancer
-    </a>
-    </b></td>
-    <td>rec.arts.sf.starwars.</td>
-    <td><a href="profile.xp?author=3a500ad71ad748614c9fce1e932bf220cbfe1bf3c0e1fc28694f905dbc5356c6265355da3a5d9515f638b3ff45e471160267a544867908677118225ba4&ST=PS&ee=1">Nannicle       </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#dddddd valign=top>
-    <td>12/01/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=555072878&CONTEXT=944588976.1121452059&hitnum=38">
-    &lt;Jabba&gt; Finally found my mis
-    </a>
-    </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=315c09d61cd440643b5291ba121f5a3925a4166b5d1ed20174400c2ddaa1e6adcb64dfbfd11d2bc1793114867c858caf9cbe1dbaf1c083d3cb0718eb38fb8f50d1b5bb784c&ST=PS&ee=1">Deep Thought   </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#eeeeee valign=top>
-    <td>12/01/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=555162831&CONTEXT=944588976.1121452059&hitnum=39">
-    Jabba - Chriss_les Series   
-    </a>
-    </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=3c5a09d01cd7476609bfadf456af638e6c9415e438cffc509e1384cc1b19b4f87dc510d6a64d4dcfdd4e4b0b60babb25b6d689e96d23917a&ST=PS&ee=1">MsBehaving     </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#dddddd valign=top>
-    <td>12/03/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556003756&CONTEXT=944588976.1121452059&hitnum=40">
-    ~Jabba/2-Headed Announcer FT
-    </a>
-    </b></td>
-    <td>rec.arts.sf.starwars.</td>
-    <td><a href="profile.xp?author=3f5e0cd518de4063d8aefebb5e27f3db0cf2511e9a85f0030b38b4885acc58e1b3b167a90b4167d9fb64d4b268ddce&ST=PS&ee=1">Kgirl2468      </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#eeeeee valign=top>
-    <td>12/03/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556085620&CONTEXT=944588976.1121452059&hitnum=41">
-    Re: Star Wars Changes we wer
-    </a>
-    </b></td>
-    <td>alt.fan.starwars     </td>
-    <td><a href="profile.xp?author=315c08d516de4665ab2ac2aa7710aa1a73fa514f92aab90441870b70da36b0f7b6dc4da69be23a88c8e35e88d76a14d0c1bf624828907319c09389c8b84c&ST=PS&ee=1">Darth Bob      </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#dddddd valign=top>
-    <td>12/03/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556094625&CONTEXT=944588976.1121452059&hitnum=42">
-    FS: SW Jabba's Palace Rares 
-    </a>
-    </b></td>
-    <td>rec.games.trading-car</td>
-    <td><a href="profile.xp?author=3b5e0edb1dd343606958cc48bd58ed714cceeb2d5baa9d5dea0c75ce01148323686f489232ed64260a95bcf69feda7fe01&ST=PS&ee=1">SpecCards2     </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#eeeeee valign=top>
-    <td>12/03/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556121661&CONTEXT=944588976.1121452059&hitnum=43">
-    Re: I see there's another ca
-    </a>
-    </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=3c5e09d21fd4416226234e2615ef5b50cb6b70db131b7e3079903a70141d071eccbe41a08d7db871006877b4e96449f8800075d017a810&ST=PS&ee=1">Jabba the Hut  </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#dddddd valign=top>
-    <td>12/03/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556138297&CONTEXT=944588976.1121452059&hitnum=44">
-    Re: Aiuto, basta, riinizio d
-    </a>
-    </b></td>
-    <td>it.comp.linux.setup  </td>
-    <td><a href="profile.xp?author=315e0bd419d74063d2ef3fa1cd68d892054b60f0204a67d9af831167a8877dadf7c17404c5e51bdf864a9baeff71&ST=PS&ee=1">Jabba          </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#eeeeee valign=top>
-    <td>12/03/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556138310&CONTEXT=944588976.1121452059&hitnum=45">
-    Re: Kernel?                 
-    </a>
-    </b></td>
-    <td>it.comp.os.linux.iniz</td>
-    <td><a href="profile.xp?author=315e0bd11cd5406cf71ac895f80654d7c5aa049f573a3f9efdc8a5b2cd729c2bb19dbdbb477f955d2653a95afc02&ST=PS&ee=1">Jabba          </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#dddddd valign=top>
-    <td>12/03/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556138348&CONTEXT=944588976.1121452059&hitnum=46">
-    Re: R: R: Rosemary          
-    </a>
-    </b></td>
-    <td>it.discussioni.mister</td>
-    <td><a href="profile.xp?author=3c5b01d118d641679f4f261cb7a8f67c9c8a25b7923915fb796dfd359c16f2fe6868e9e6f2d6e22109103da0138d&ST=PS&ee=1">Jabba          </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#eeeeee valign=top>
-    <td>12/03/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556138768&CONTEXT=944588976.1121452059&hitnum=47">
-    Re: vraagje                 
+    <a href="http://x23.deja.com/getdoc.xp?AN=574122941&CONTEXT=948208660.1253179394&hitnum=22">
+    Re: Ja sory nog eentje met M
     </a>
     </b></td>
     <td>nl.humor             </td>
-    <td><a href="profile.xp?author=3f510ada1cd348629f293cd2e86bd85819e261a3fa1151223d1d2b40d1373a1da354e3cf2fdf9c5b95bd4ffe1b549f7c716fb2cf0ed091be89c24a0e900e42184d49bc3938d3dc691085466665&ST=PS&ee=1">Jan van Ekris  </a></td>
-    </tr>
-    
 
-    
-    
-    
-    
-    
-    <tr bgcolor=#dddddd valign=top>
-    <td>12/03/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556207423&CONTEXT=944588976.1121452059&hitnum=48">
-    Re: Rich Wyman !!!!         
-    </a>
-    </b></td>
-    <td>nl.muziek            </td>
-    <td><a href="profile.xp?author=3c5909d51dd1466de855b27f8609800fd3b4c0aa0fe6cc18a736be9f6a67ba280e8807fe86d7b8aa9c9951fb70000ce7d727652786f7f48bb9028e&ST=PS&ee=1">Jabba          </a></td>
+    <td><a href="profile.xp?author=395b0ed417d6486cac7f0fee1e2da04859d1dd1f332cd0ad739e4e578696e9b7ed2359ba218b1382a7c653c83f514c0142d668f658695bbbb1778d&ST=PS&ee=1">Jabba          </a></td>
+
     </tr>
     
 
@@ -1146,14 +776,16 @@
     
     
     <tr bgcolor=#eeeeee valign=top>
-    <td>12/03/1999</td>
+    <td>01/18/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556207424&CONTEXT=944588976.1121452059&hitnum=49">
-    Re: Nieuwe aanwinsten...    
+    <a href="http://x23.deja.com/getdoc.xp?AN=574122943&CONTEXT=948208660.1253179394&hitnum=23">
+    Re: Ja sory nog eentje met M
     </a>
     </b></td>
-    <td>nl.muziek            </td>
-    <td><a href="profile.xp?author=3f5a0cd61cd5476123557468b6af26e5bd1e87e5bb6b4b0b9c7cafce3edbf3bb1e8874521482d9e08fa0cdd968da812d814957075a0b7352d14a4f&ST=PS&ee=1">Jabba          </a></td>
+    <td>nl.humor             </td>
+
+    <td><a href="profile.xp?author=39510bda1adf4666ec05c020405ee79e3a924238487b418fb83dff83965fa046d85cc9cb07e4d9e63ad92c8e5cdfcef413b831ff8a2788d10e&ST=PS&ee=1">l.meijer       </a></td>
+
     </tr>
     
 
@@ -1163,14 +795,16 @@
     
     
     <tr bgcolor=#dddddd valign=top>
-    <td>12/03/1999</td>
+    <td>01/18/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556209758&CONTEXT=944588976.1121452059&hitnum=50">
-    Re: seti@home?              
+    <a href="http://x23.deja.com/getdoc.xp?AN=574136282&CONTEXT=948208660.1253179394&hitnum=24">
+    Re: AOE2 vs AOE &lt;-----------
     </a>
     </b></td>
-    <td>it.comp.linux        </td>
-    <td><a href="profile.xp?author=3c5f00d31cd6446c9dba495cd404167fb5da09e83f94bf78b67b0de434819cec1166f4afdb854137c60abd8ead6f&ST=PS&ee=1">Jabba          </a></td>
+    <td>comp.sys.ibm.pc.games</td>
+
+    <td><a href="profile.xp?author=3a510dd21bd34365ba48fa1be9dd618a4c259a203ca8f2f20ad94c63a18e0d2984b8cd4a016cb68c2b2b206e09fe2a4a5c8c11e57bdedac0b65d1f52486a&ST=PS&ee=1">Jabba          </a></td>
+
     </tr>
     
 
@@ -1180,14 +814,54 @@
     
     
     <tr bgcolor=#eeeeee valign=top>
-    <td>12/03/1999</td>
+    <td>01/18/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556209813&CONTEXT=944588976.1121452059&hitnum=51">
-    Re: R: R: R: R: R: Rosemary 
+    <a href="http://x23.deja.com/getdoc.xp?AN=574151208&CONTEXT=948208660.1253179394&hitnum=25">
+    uidoc.Close doesn't close???
+    </a>
+    </b></td>
+    <td>comp.groupware.lotus-</td>
+
+    <td><a href="profile.xp?author=3f510ad119d04464460569b8ab15b6a43cb6ea216965fd3e504a0ccdf5d21f6fa436465908e8974febcfe0f177f5fa9671e4d7714ba0796cdaeafc&ST=PS&ee=1">Jabba          </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>01/18/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=574157283&CONTEXT=948208660.1253179394&hitnum=26">
+    Re: Raadseltje              
+    </a>
+    </b></td>
+    <td>nl.humor             </td>
+
+    <td><a href="profile.xp?author=3b5a0cd01ad4466166ed7bb9e49f0e1e1972a203303ed9b81718334e25f33faaf32c67ba9aeefa1e3cf0eba1e228f0cf4e73b9ad8ebc0217dc29cf&ST=PS&ee=1">Jabba          </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>01/18/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=574189964&CONTEXT=948208660.1253179394&hitnum=27">
+    Re: R: R: Teletrasporto.. Si
     </a>
     </b></td>
     <td>it.discussioni.mister</td>
-    <td><a href="profile.xp?author=3f500ed71adf42626b24fe8cde8c9f303ecbc5962c4f6c6299f84adc7f20b7db1aa584a6fdd257bedc71e3aac8e9&ST=PS&ee=1">Jabba          </a></td>
+
+    <td><a href="profile.xp?author=305008d71cd5486d5166d23837b4b80061f7128f1d7a07981b64631958137898a146e7ef60da258c5b5a2b48cba7&ST=PS&ee=1">Jabba          </a></td>
+
     </tr>
     
 
@@ -1197,14 +871,16 @@
     
     
     <tr bgcolor=#dddddd valign=top>
-    <td>12/03/1999</td>
+    <td>01/18/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556216610&CONTEXT=944588976.1121452059&hitnum=52">
-    Re: Le Orchidee Home Page v.
+    <a href="http://x23.deja.com/getdoc.xp?AN=574189965&CONTEXT=948208660.1253179394&hitnum=28">
+    Re: R: R: R: Teletrasporto..
     </a>
     </b></td>
-    <td>it.hobby.giardinaggio</td>
-    <td><a href="profile.xp?author=3d5a0cda1bd14367a5cc6ed1e1cf689559cea8a1827b1b679b09785af7f8ab185684f1531985fddc907e645ddf7f&ST=PS&ee=1">Jabba          </a></td>
+    <td>it.discussioni.mister</td>
+
+    <td><a href="profile.xp?author=3a500eda1fd74561009bd3a4cde6bb733ee6bb9d320c6869650e8d63a1d390575ac292808dce77551c8c492f91f7&ST=PS&ee=1">Jabba          </a></td>
+
     </tr>
     
 
@@ -1214,14 +890,16 @@
     
     
     <tr bgcolor=#eeeeee valign=top>
-    <td>12/03/1999</td>
+    <td>01/18/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556226169&CONTEXT=944588976.1121452059&hitnum=53">
-    Re: C3PO ou Z6PO ?          
+    <a href="http://x23.deja.com/getdoc.xp?AN=574194829&CONTEXT=948208660.1253179394&hitnum=29">
+    Re: AOE2 vs AOE &lt;-----------
     </a>
     </b></td>
-    <td>fr.rec.arts.sf.starwa</td>
-    <td><a href="profile.xp?author=39500cd316d34163d59a241fbd4bfc9fe3cc62d64fd650d3818755c89b310f6d8b7f3665b1fdc45090f973a299c0b263c354b096c7045f14babd12747a58bb1e08c438340a&ST=PS&ee=1">Olivier ROUSSEL</a></td>
+    <td>comp.sys.ibm.pc.games</td>
+
+    <td><a href="profile.xp?author=305d0ad61fd14064d0cff38fd591897ff052198ba35870d1a69ce6e075f55200c7fcdfffbf4e0a3021e58243df4690ded11a68d49be2b6357636f4864be52afa0fc5e86e893cce&ST=PS&ee=1">Jeffrey L. Coop</a></td>
+
     </tr>
     
 
@@ -1231,14 +909,16 @@
     
     
     <tr bgcolor=#dddddd valign=top>
-    <td>12/03/1999</td>
+    <td>01/17/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556240034&CONTEXT=944588976.1121452059&hitnum=54">
-    Re: 8 uur Journaal gezocht v
+    <a href="http://x23.deja.com/getdoc.xp?AN=573542699&CONTEXT=948208660.1253179394&hitnum=30">
+    sorry ein w zuwenig.        
     </a>
     </b></td>
-    <td>nl.media.tv          </td>
-    <td><a href="profile.xp?author=395f09d51fd64563b2d5bd6bdb94ee040036796917e66ba2229c0b098dfce20cf2a3146e9dfec0c4e689654d8744c491ed74741e1e0d0c26dc63aadba17a6302d50fdd9a777e76&ST=PS&ee=1">Bas van Zomeren</a></td>
+    <td>de.alt.music.dj      </td>
+
+    <td><a href="profile.xp?author=3a5b0bd019d0446585e561e216aecb925c92ebfe3d88dadc2b446257db4b6034191ae4dab41c94b9dcd89e0eac72cd0a4687dee19e&ST=PS&ee=1">Jabba          </a></td>
+
     </tr>
     
 
@@ -1248,14 +928,16 @@
     
     
     <tr bgcolor=#eeeeee valign=top>
-    <td>12/03/1999</td>
+    <td>01/17/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556242831&CONTEXT=944588976.1121452059&hitnum=55">
-    Re: C3PO ou Z6PO ?          
+    <a href="http://x23.deja.com/getdoc.xp?AN=573545782&CONTEXT=948208660.1253179394&hitnum=31">
+    heizwerk cologne presents th
     </a>
     </b></td>
-    <td>fr.rec.arts.sf.starwa</td>
-    <td><a href="profile.xp?author=395808d71cd54665ff6759a2853e35782e00ddf032cb074d03af09caec88d5eae9&ST=PS&ee=1">mpt            </a></td>
+    <td>de.rec.music.elektron</td>
+
+    <td><a href="profile.xp?author=315d01d71dde466d5af2359d1eb676865735b9a8ec8445a4bba58977a16625e334168c61440995c08bb2856fefe0cad7a64c8ced1e&ST=PS&ee=1">Jabba          </a></td>
+
     </tr>
     
 
@@ -1265,14 +947,16 @@
     
     
     <tr bgcolor=#dddddd valign=top>
-    <td>12/02/1999</td>
+    <td>01/17/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=555691125&CONTEXT=944588976.1121452059&hitnum=56">
-    Phantom Menace-Mos Espa Help
+    <a href="http://x23.deja.com/getdoc.xp?AN=573665566&CONTEXT=948208660.1253179394&hitnum=32">
+    Re: Attn: NYC and NJ Bastard
     </a>
     </b></td>
-    <td>rec.arts.sf.starwars.</td>
-    <td><a href="profile.xp?author=3f5f01d51fde4264036aa46ee23613e4c58647e76f3ba9433f0b41b421e3db6b24396716b295008d7c2fe67445a678ff50bb26&ST=PS&ee=1">Sri            </a></td>
+    <td>alt.drunken.bastards </td>
+
+    <td><a href="profile.xp?author=3e5b09d51cd344629abdd2ee784ab630f0a1e6a52b679ebc4260a28906e73fb944fbd46437d5666fef2d09bb80000920cbbab1db&ST=PS&ee=1">Fetus          </a></td>
+
     </tr>
     
 
@@ -1282,14 +966,16 @@
     
     
     <tr bgcolor=#eeeeee valign=top>
-    <td>12/02/1999</td>
+    <td>01/17/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=555691126&CONTEXT=944588976.1121452059&hitnum=57">
-    Mos Espa help!              
+    <a href="http://x23.deja.com/getdoc.xp?AN=573690792&CONTEXT=948208660.1253179394&hitnum=33">
+    Re: excus [html] nederlandse
     </a>
     </b></td>
-    <td>rec.arts.sf.starwars.</td>
-    <td><a href="profile.xp?author=385900d21ed7476dfc600e73877f95bdcfe7178bf3af4639e5446e4873014a545f3bcd892c65da6b010f36df2b1a645b9a0641&ST=PS&ee=1">Sri            </a></td>
+    <td>nl.humor             </td>
+
+    <td><a href="profile.xp?author=385d0bdb18d04061d9f946b7f8b273b6bcce892431bc0b84e85ec2af87e9813bca557eb203dcc6ffc84349e5df340fbe5c2b714a40da00c1024106&ST=PS&ee=1">Jabba          </a></td>
+
     </tr>
     
 
@@ -1299,14 +985,16 @@
     
     
     <tr bgcolor=#dddddd valign=top>
-    <td>12/02/1999</td>
+    <td>01/17/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=555728796&CONTEXT=944588976.1121452059&hitnum=58">
-    Re: Je cherche un forum GdE,
+    <a href="http://x23.deja.com/getdoc.xp?AN=573765115&CONTEXT=948208660.1253179394&hitnum=34">
+    Opening a document          
     </a>
     </b></td>
-    <td>fr.rec.arts.sf.starwa</td>
-    <td><a href="profile.xp?author=305100d71cdf436cbc2128d51387c7c8e426c6b0273f93ce641516bf91f01f0b71bfa0f5fe34a82699ee7cc93e1d0808a0edfb90329ff9ac14329b51997e35dd643eb55ed845&ST=PS&ee=1">Olivier HaguИ  </a></td>
+    <td>comp.groupware.lotus-</td>
+
+    <td><a href="profile.xp?author=385f0bdb1bd04963c987dc6eba186b2e5844a1b93211bdb9132e218c0c2520613198cf621620339cc18b4e128a9e77fc511e0b6e68427018c57b16&ST=PS&ee=1">Jabba          </a></td>
+
     </tr>
     
 
@@ -1316,14 +1004,54 @@
     
     
     <tr bgcolor=#eeeeee valign=top>
-    <td>12/02/1999</td>
+    <td>01/17/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=556011547&CONTEXT=944588976.1121452059&hitnum=59">
-    attn : Jabba the Hut        
+    <a href="http://x23.deja.com/getdoc.xp?AN=573780752&CONTEXT=948208660.1253179394&hitnum=35">
+    Re: Opening a document      
+    </a>
+    </b></td>
+    <td>comp.groupware.lotus-</td>
+
+    <td><a href="profile.xp?author=3a500dd41fd4496c5c0a583f61652444edfe537cf5a0d4783c2810848a7932c24436df2f675aa33e6e1adf1d6f761d486cf8d46fb01bf34ae01c6128a758&ST=PS&ee=1">Michael Faribor</a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>01/17/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=573849779&CONTEXT=948208660.1253179394&hitnum=36">
+    Re: Lathe Of Heaven on DVD -
+    </a>
+    </b></td>
+    <td>alt.video.dvd        </td>
+
+    <td><a href="profile.xp?author=395e0bd31cde4067745ef17885168435ee12200a2d435de5a8c360b63fe29eed0586bc750dd3ca078978c534cd173e7be87d71d3fe8a7486&ST=PS&ee=1">miracleman     </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>01/17/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=573852870&CONTEXT=948208660.1253179394&hitnum=37">
+    Ping : BobCat               
     </a>
     </b></td>
     <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=3e5f0ed51fd2466398398e58b4e6a023057db360a0ca14fb7072a7f6cf716d867b6a21f2ac77ed1e05327c61e493e31f4caebecd0239fb5bbd1cc5dcf4c4584c42&ST=PS&ee=1">Hoopy          </a></td>
+
+    <td><a href="profile.xp?author=385f09d217d64160a06e87e9e0a23985707132b33e80b45d1d1409bdc3a3682b8d178201e20dccff89a12239d61c210bbb6f3b102d23bc&ST=PS&ee=1">Jabba the Hut  </a></td>
+
     </tr>
     
 
@@ -1333,14 +1061,16 @@
     
     
     <tr bgcolor=#dddddd valign=top>
-    <td>12/01/1999</td>
+    <td>01/17/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=555076568&CONTEXT=944588976.1121452059&hitnum=60">
-    So-- what was in the balcony
+    <a href="http://x23.deja.com/getdoc.xp?AN=573976496&CONTEXT=948208660.1253179394&hitnum=38">
+    Re: Lathe Of Heaven on DVD -
     </a>
     </b></td>
-    <td>alt.music.yes        </td>
-    <td><a href="profile.xp?author=3d5c0cdb1dd1466ce32cc22d018dacbba2f9b9841a1f24846fdd4fb5fde2d03f584c03cd2c7046f7a5&ST=PS&ee=1">BobDsn         </a></td>
+    <td>alt.video.dvd        </td>
+
+    <td><a href="profile.xp?author=305a0bd71bdf406753f931bb169016e059cd08d9d0b625c9f7adf1d565f7f6a3ba00878981817181deeeb619a37956aa4a105a8dc5a1330b&ST=PS&ee=1">Jabba          </a></td>
+
     </tr>
     
 
@@ -1350,14 +1080,16 @@
     
     
     <tr bgcolor=#eeeeee valign=top>
-    <td>12/01/1999</td>
+    <td>01/17/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=555111076&CONTEXT=944588976.1121452059&hitnum=61">
-    Is there a star trek alien t
+    <a href="http://x23.deja.com/getdoc.xp?AN=574046401&CONTEXT=948208660.1253179394&hitnum=39">
+    d16o leiras, 5110 LCD       
     </a>
     </b></td>
-    <td>alt.startrek.vs.starw</td>
-    <td><a href="profile.xp?author=3a5909d31dd2466dad703ab002e2585c9e03c3ef90656deae45d52b15655e02c89c6bead6db384dbd1e1badcda5efe5c9bd6d1d31e1c41295910fe93ded0f895&ST=PS&ee=1">mark winters   </a></td>
+    <td>hun.lists.hix.mobil  </td>
+
+    <td><a href="profile.xp?author=39510edb19d748656e57ebc303c02dade24f90a64891d5834f6b785231694435701cd94d1a51088203396f71a4067cb3d838a603de35dce49f837789&ST=PS&ee=1">Varga Szabolcs </a></td>
+
     </tr>
     
 
@@ -1367,184 +1099,16 @@
     
     
     <tr bgcolor=#dddddd valign=top>
-    <td>12/01/1999</td>
+    <td>01/16/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=555113910&CONTEXT=944588976.1121452059&hitnum=62">
-    Re: Is there a star trek ali
-    </a>
-    </b></td>
-    <td>alt.startrek.vs.starw</td>
-    <td><a href="profile.xp?author=3a5b00d41ad640635fb93535e45e801833540b73e84da3e8a31b1dc3c78cde2a85b24578417d00b986a8b041fa5ce272cd46ef029bc2&ST=PS&ee=1">PREDATOR       </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#eeeeee valign=top>
-    <td>12/01/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=555130778&CONTEXT=944588976.1121452059&hitnum=63">
-    Re: &lt;Slave Trainer, Jabba &amp; 
-    </a>
-    </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=3f5c0bd218df4060af9259ef58f91c5f88a34a31ca77dc9adda29dd726327d978348e3c3d7c3&ST=PS&ee=1">+2             </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#dddddd valign=top>
-    <td>12/01/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=555133818&CONTEXT=944588976.1121452059&hitnum=64">
-    Re: &lt;Slave Trainer, Jabba &amp; 
-    </a>
-    </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=3a5e09d21adf4965edfaee28e0d83df62ad0e487e15745413e4972d34e8f64510b725ec123ed&ST=PS&ee=1">+2             </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#eeeeee valign=top>
-    <td>12/01/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=555200427&CONTEXT=944588976.1121452059&hitnum=65">
-    Re: Jabba - Chriss_les Serie
-    </a>
-    </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=39500dd018d74362ea8417d50b2c0dcde05f11a47def0cd240d69dd40af5c2bd7bf5f65ffb31f765a3ec401cf6b31e2970f2372ea8318c8bf306b3f24b574fee397d89eb551b2647a6ac2ff6d47f63&ST=PS&ee=1">Brenda &amp; new po</a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#dddddd valign=top>
-    <td>12/01/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=555233493&CONTEXT=944588976.1121452059&hitnum=66">
-    Re: &lt;Slave Trainer, Jabba &amp; 
-    </a>
-    </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=3a5b0fd31ed2456292ad4df378f3feecce42a640399c472436eb2bd868dd4b230adc382f290e932e73c58c65f971eb0e983234ab222a34&ST=PS&ee=1">Jabba the Hut  </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#eeeeee valign=top>
-    <td>12/01/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=555245572&CONTEXT=944588976.1121452059&hitnum=67">
-    Re: KDE e i suoni           
-    </a>
-    </b></td>
-    <td>it.comp.linux        </td>
-    <td><a href="profile.xp?author=3d5d0cd01dd34164a1c23f7e7ea50fb710b2ca86311c1df56b7d3a1d1a6888abc4261a94eeeeca3111b021268fe6&ST=PS&ee=1">Jabba          </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#dddddd valign=top>
-    <td>12/01/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=555268110&CONTEXT=944588976.1121452059&hitnum=68">
-    Re: Attn Jabba: Please repos
-    </a>
-    </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=315c08db1cd0476169343038c4d31b1453c408e957e119d6013b1840d5d3f3af2874e97941d68747db3d4969&ST=PS&ee=1">John Smith     </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#eeeeee valign=top>
-    <td>12/01/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=555288553&CONTEXT=944588976.1121452059&hitnum=69">
-    Re: Attn Jabba: Please repos
-    </a>
-    </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=395a00d01bd64267b0814b9b48be10eb33934626d80b4be882bdd1c959513ed9ec4fe0b8b4dfb19967a692ab61a09932a6ed9a1d28d1d2&ST=PS&ee=1">Jabba the Hut  </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#dddddd valign=top>
-    <td>12/01/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=555288554&CONTEXT=944588976.1121452059&hitnum=70">
-    Re: Jabba - Chriss_les Serie
-    </a>
-    </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=385c0bda1bd4416394145f5547c517351fe83fb1ff9f63a9ae766c33ff74e00677ee60aacc05bcf8e38afebe4fcd30985dff2c5b6e0c1b&ST=PS&ee=1">Jabba the Hut  </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#eeeeee valign=top>
-    <td>12/01/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=555291874&CONTEXT=944588976.1121452059&hitnum=71">
-    Re: &lt;Slave Trainer, Jabba &amp; 
-    </a>
-    </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=3f5c01d31ede4963cb0628da133f53b8ab7dc9b1a6eb02f6879ca7490d4cee6ba0a88d01c9d8c534c65c42310ad625fee765d4fcbd1739&ST=PS&ee=1">Jabba the Hut  </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#dddddd valign=top>
-    <td>12/01/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=555321781.2&CONTEXT=944588976.1121452059&hitnum=72">
+    <a href="http://x23.deja.com/getdoc.xp?AN=573329325.1&CONTEXT=948208660.1253179394&hitnum=40">
     ** SWCCG: FS Jabba's Palace 
     </a>
     </b></td>
     <td>rec.arts.sf.starwars.</td>
-    <td><a href="profile.xp?author=315f08d31fd1406c537966154d1ca152633f030644a42a12bef3e3d89264b4ec307b8262b8d7e69ab20d6260626c8e3c5713a7f774&ST=PS&ee=1">Frank James    </a></td>
+
+    <td><a href="profile.xp?author=385900da19d0426148b12fa8b8058b5f6800144f349c5626ce81e8e421d91de31d65cf3a0e90480f0286a807c6dd8d720b74c935f3&ST=PS&ee=1">Frank James    </a></td>
+
     </tr>
     
 
@@ -1554,31 +1118,35 @@
     
     
     <tr bgcolor=#eeeeee valign=top>
-    <td>12/01/1999</td>
+    <td>01/16/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=555324610.2&CONTEXT=944588976.1121452059&hitnum=73">
+    <a href="http://x23.deja.com/getdoc.xp?AN=573329325.3&CONTEXT=948208660.1253179394&hitnum=41">
+    ** SWCCG: FS Jabba's Palace 
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+
+    <td><a href="profile.xp?author=315b00d21ad443641d01c9c10a949677e02e45aa8ee73e44a4808b980d7c3ef85a2df6461c8d70a264a1fdd2c3012de18a2c5689a1&ST=PS&ee=1">Frank James    </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>01/16/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=573329425.1&CONTEXT=948208660.1253179394&hitnum=42">
     ** SWCCG: FS Jabba's Palace 
     </a>
     </b></td>
     <td>rec.games.trading-car</td>
-    <td><a href="profile.xp?author=3e5f08d317d24966ef52f8608c564c6b877cc8f63f6eb0678dedb58667c1aeb8e210b3385bbbe8a8d2a0b9ebc7cb4ad363ff7eeb2a&ST=PS&ee=1">Frank James    </a></td>
-    </tr>
-    
 
-    
-    
-    
-    
-    
-    <tr bgcolor=#dddddd valign=top>
-    <td>12/01/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=555338815&CONTEXT=944588976.1121452059&hitnum=74">
-    Re: &lt;Jabba&gt; Finally found my
-    </a>
-    </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=3d5c0ed31bd347652cc2b4265af740eaaab4d8a013fd4b7a9cacd6a4e41b1620df750cbe9e227b4d7a5412dc2ee8b33418131ea38a615e&ST=PS&ee=1">Jabba the Hut  </a></td>
+    <td><a href="profile.xp?author=3b5809d118d74766180459024383635c9ac4859ed46cf235b870baf9bdd62ea3210325ee8908ac79525358f950a0e5cb3e07674ba5&ST=PS&ee=1">Frank James    </a></td>
+
     </tr>
     
 
@@ -1588,14 +1156,16 @@
     
     
     <tr bgcolor=#eeeeee valign=top>
-    <td>12/01/1999</td>
+    <td>01/16/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=555347364&CONTEXT=944588976.1121452059&hitnum=75">
-    Re: ATTN JABBA will you cont
+    <a href="http://x23.deja.com/getdoc.xp?AN=573329425.3&CONTEXT=948208660.1253179394&hitnum=43">
+    ** SWCCG: FS Jabba's Palace 
     </a>
     </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=3e5b08da1bd54966511ef6613238958eb1555da2e32c5452791158c1a0090eb997eb04b55cfe138d410c007ca15f6b484b1c&ST=PS&ee=1">Roche          </a></td>
+    <td>rec.games.trading-car</td>
+
+    <td><a href="profile.xp?author=385b0eda1fdf44667c2a5f1cd167ed1b4056fd67150326eceffa218cd88cc909094faa3a710899ee15d49d7b1dd65dbff2b5083ebe&ST=PS&ee=1">Frank James    </a></td>
+
     </tr>
     
 
@@ -1605,14 +1175,16 @@
     
     
     <tr bgcolor=#dddddd valign=top>
-    <td>12/01/1999</td>
+    <td>01/16/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=555347564&CONTEXT=944588976.1121452059&hitnum=76">
-    Re: Star Wars Changes we wer
+    <a href="http://x23.deja.com/getdoc.xp?AN=573353789.14&CONTEXT=948208660.1253179394&hitnum=44">
+    Star Wars Ltd &amp; all expansio
     </a>
     </b></td>
-    <td>alt.fan.starwars     </td>
-    <td><a href="profile.xp?author=38500edb1dde436168ebb62eef6cde254441dcb88d193bf2c8d585aad2b192eb6fea0b1af81705ef06a5c7a5071b3f092a55335b4358863b57cc6c0ab3c1fa885281ae009d050c&ST=PS&ee=1">Mike Snyder    </a></td>
+    <td>rec.games.trading-car</td>
+
+    <td><a href="profile.xp?author=3b5d0ed416df4667f1d7c86e35eccca60e8f9e36a62c842114e658afb8c367277bda3506363914a87e476a42827cf380695851927f566426c9c3daf5d30bc60ed6a2dd&ST=PS&ee=1">Bob &amp; Joyce Tro</a></td>
+
     </tr>
     
 
@@ -1622,14 +1194,16 @@
     
     
     <tr bgcolor=#eeeeee valign=top>
-    <td>12/01/1999</td>
+    <td>01/16/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=555401485&CONTEXT=944588976.1121452059&hitnum=77">
-    Re: Attn Jabba: Please repos
+    <a href="http://x23.deja.com/getdoc.xp?AN=573378062&CONTEXT=948208660.1253179394&hitnum=45">
+    kupie HDD od 1 do 4 GB tylko
     </a>
     </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=315f0dd119de4266206524e5ae65897cc006aeeb8d6e372e2331c555d63b754e9b0906c3e568a443c702cb8627dc47af9185&ST=PS&ee=1">Waldo          </a></td>
+    <td>pl.ogloszenia.kupie  </td>
+
+    <td><a href="profile.xp?author=3b5900d31cde42653b68c5d75110bc45bc3f92929f017dd246825eccad83d34598fd88a86aa811dce3714c92f9&ST=PS&ee=1">Jabba          </a></td>
+
     </tr>
     
 
@@ -1639,14 +1213,16 @@
     
     
     <tr bgcolor=#dddddd valign=top>
-    <td>12/01/1999</td>
+    <td>01/16/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=555530604&CONTEXT=944588976.1121452059&hitnum=78">
-    Thanks Jabba for the dom stu
+    <a href="http://x23.deja.com/getdoc.xp?AN=573378063&CONTEXT=948208660.1253179394&hitnum=46">
+    kupie tanio dwie karty sieci
     </a>
     </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=395c0ddb1dde416cf42f75e4b3e5655a969677443b4d779902342004fcb3a67e565f3779846355bb1d4c6932ed&ST=PS&ee=1">Deimos         </a></td>
+    <td>pl.ogloszenia.kupie  </td>
+
+    <td><a href="profile.xp?author=305f0bd017de49606393070f20244ef2b3d8bf0767778277ec868054f9321465b255388b9d917ab503ac07c675&ST=PS&ee=1">Jabba          </a></td>
+
     </tr>
     
 
@@ -1656,14 +1232,16 @@
     
     
     <tr bgcolor=#eeeeee valign=top>
-    <td>12/01/1999</td>
+    <td>01/16/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=555537110&CONTEXT=944588976.1121452059&hitnum=79">
-    Re: PING&gt;&gt;&gt; Jabba - Chriss_l
+    <a href="http://x23.deja.com/getdoc.xp?AN=573491326&CONTEXT=948208660.1253179394&hitnum=47">
+    Re: Attn: NYC and NJ Bastard
     </a>
     </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=3a5f0ddb1adf4264f98f90fa88bf3dad98a5ef48fa6bccabbb9c6eb20fc99b03a9c3c2c9d784176659237ee8a990b12d8ee9201b663829cffd25f8ace7c64fc6063046bce0&ST=PS&ee=1">Deep Thought   </a></td>
+    <td>alt.drunken.bastards </td>
+
+    <td><a href="profile.xp?author=395f0bd118d3486c6cec6d16a5e9e4999a2ac3948e849ec6f27b939470ff6cfff48ba346883b0782cf2d187f178eaf09ce&ST=PS&ee=1">Jaz            </a></td>
+
     </tr>
     
 
@@ -1673,218 +1251,16 @@
     
     
     <tr bgcolor=#dddddd valign=top>
-    <td>11/30/1999</td>
+    <td>01/16/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=554736676&CONTEXT=944588976.1121452059&hitnum=80">
-    REQ: more of the Beth bedroo
-    </a>
-    </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=3e500ddb1adf4063a4623a8913dc8b6c68e762c725f5e931c4d45a1d23bbc11a0805c76b54027fb3f58cbe1e6f18cf4bf361ddf4&ST=PS&ee=1">Molson         </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#eeeeee valign=top>
-    <td>11/30/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=554854149&CONTEXT=944588976.1121452059&hitnum=81">
-    &lt;Slave Trainer, Jabba &amp; Grou
-    </a>
-    </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=3a5c0ed318df456444c88a303dd93bb7799398a1e4ff5077de93a383b6027c5b27e939bf5cf84acbc86fe771da207523e8894c7a6a15daff9afaa33d7b71c8c5e892bf16e2&ST=PS&ee=1">thought deep   </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#dddddd valign=top>
-    <td>11/30/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=555015909&CONTEXT=944588976.1121452059&hitnum=82">
-    Jabba...You Da Man....anymor
-    </a>
-    </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=3b5b0bd21ad0416d20ac5593ef70469b91765d30bc82e72c2f7bd447e386002db01b98e8b62438&ST=PS&ee=1">Jimmy          </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#eeeeee valign=top>
-    <td>11/30/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=555118957&CONTEXT=944588976.1121452059&hitnum=83">
-    Attn Jabba: Please repost be
-    </a>
-    </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=31500dd21cd24567b3279ae888ba7ec85deb7259ca9fb1cd867aa7f2b48be65ad1cf11dcdf969ee3b78977cdae95e9f999a0ebb345641e6be8c0ea3fbda24343e0d5&ST=PS&ee=1">Richard Cranium</a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#dddddd valign=top>
-    <td>11/30/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=555165394&CONTEXT=944588976.1121452059&hitnum=84">
-    Jabba The Hut: Please repost
-    </a>
-    </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=3a5b00da1dd7486dfa747a500f6e419c8d7116261df3a24da7ad7c4310812b639be54497db29727d4bf8561160d747691665c2&ST=PS&ee=1">root           </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#eeeeee valign=top>
-    <td>11/29/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=554366042&CONTEXT=944588976.1121452059&hitnum=85">
-    Re: Dooie zooi.             
-    </a>
-    </b></td>
-    <td>nl.actueel.big-brothe</td>
-    <td><a href="profile.xp?author=30500ed41cd3426383ed938a2380efa26e1748c13b25cee3c2e9bed3178edeaeb537b05b847469b7ef2ebd9bd54199d2d5b365ce0e3ab9009ea55d&ST=PS&ee=1">Jabba          </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#dddddd valign=top>
-    <td>11/29/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=554476388&CONTEXT=944588976.1121452059&hitnum=86">
-    Re: Attn: Jabba - Pls Post (
-    </a>
-    </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=305c0ad21ad74666b42611e95484ac2fb5c826fdd5841bcccfc093bf5db73817981f330f335e8750e01245ad23275fd9dab8417f020400&ST=PS&ee=1">Jabba the Hut  </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#eeeeee valign=top>
-    <td>11/29/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=554580773&CONTEXT=944588976.1121452059&hitnum=87">
-    ATTN: Jabba Please post more
-    </a>
-    </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=3a580ed01ed144607bbbc288670890ddc99035b0aef26533410fddfbb8791c05ee5fc6fd5de023&ST=PS&ee=1">dave           </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#dddddd valign=top>
-    <td>11/29/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=554712670&CONTEXT=944588976.1121452059&hitnum=88">
-    Re: Star Wars Changes we wer
-    </a>
-    </b></td>
-    <td>alt.fan.starwars     </td>
-    <td><a href="profile.xp?author=3d580ada17d24065358265ef825e7192dce95c00e5c61f3a86f1677c79dd1677e9908a0139e2e7d7334ffcd2e1391c92b0d87e5c&ST=PS&ee=1">Kevin Payne    </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#eeeeee valign=top>
-    <td>11/28/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=553919230&CONTEXT=944588976.1121452059&hitnum=89">
-    Jabba please post more beth!
-    </a>
-    </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=3f5008da1fd6416239620768d439c0dabe557bd43c8dd135f9a73a97119e5bda9d725f69&ST=PS&ee=1">Tazzman        </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#dddddd valign=top>
-    <td>11/28/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=553973018&CONTEXT=944588976.1121452059&hitnum=90">
-    ATTN JABBA                  
-    </a>
-    </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=3f5a0bd016d44962e543499ebdc27e06fb6325467ad769bef975f0356793fb62a9e4a43a25cf1dc7bdcd25fcef4f7d57&ST=PS&ee=1">SamIAm         </a></td>
-    </tr>
-    
-
-    
-    
-    
-    
-    
-    <tr bgcolor=#eeeeee valign=top>
-    <td>11/28/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=554064968&CONTEXT=944588976.1121452059&hitnum=91">
-    FSFT JABBA PLAYSET SEALED   
+    <a href="http://x23.deja.com/getdoc.xp?AN=573588335&CONTEXT=948208660.1253179394&hitnum=48">
+    Need these Cinema Scenes    
     </a>
     </b></td>
     <td>rec.arts.sf.starwars.</td>
-    <td><a href="profile.xp?author=3e5c08d31fd64167d9896d52c3774dd730abd11e3b638bea8f9fa4b05338a2998c6e029343bc40b83a6d63b2fac163cf1f8512a650d41c5650438c1ce5&ST=PS&ee=1">Dave Degregory </a></td>
-    </tr>
-    
 
-    
-    
-    
-    
-    
-    <tr bgcolor=#dddddd valign=top>
-    <td>11/28/1999</td>
-    <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=554128959&CONTEXT=944588976.1121452059&hitnum=92">
-    Attn: Jabba - Pls Post (or R
-    </a>
-    </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=3d5d0bd41ed5476561d999539be58109b0d752266c71ef93875c6a7d0fcd2069916bf948021312b6514c7eca5dcab6ff612d319b78&ST=PS&ee=1">Sharon M       </a></td>
+    <td><a href="profile.xp?author=3d5d0bd517df406c757e73c3155d467f3b4f7f3173242fb090f763d329a2367550910f778c91a20dcc72e219870a6f3eb15fe43814c46574a275&ST=PS&ee=1">Matt Kregor    </a></td>
+
     </tr>
     
 
@@ -1894,14 +1270,16 @@
     
     
     <tr bgcolor=#eeeeee valign=top>
-    <td>11/26/1999</td>
+    <td>01/15/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=553168001&CONTEXT=944588976.1121452059&hitnum=93">
-    ATTN JABBA will you continue
+    <a href="http://x23.deja.com/getdoc.xp?AN=572938365&CONTEXT=948208660.1253179394&hitnum=49">
+    Attn Jabba Please repost New
     </a>
     </b></td>
     <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=3a5b0dda1fd447614e1f766db6e7e2e9d4931e26fbcd&ST=PS&ee=1">Andy           </a></td>
+
+    <td><a href="profile.xp?author=395c0dd71ad544640375edc26cfa3fbd39dd2e6a2c51ddef20a1e8f36b260228629076141976285054101ea7d254d345e245e4856a&ST=PS&ee=1">Stingray       </a></td>
+
     </tr>
     
 
@@ -1911,14 +1289,16 @@
     
     
     <tr bgcolor=#dddddd valign=top>
-    <td>11/25/1999</td>
+    <td>01/14/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=552850993&CONTEXT=944588976.1121452059&hitnum=94">
-    Where was Jabba originally f
+    <a href="http://x23.deja.com/getdoc.xp?AN=572374081&CONTEXT=948208660.1253179394&hitnum=50">
+    Amina JABBA                 
     </a>
     </b></td>
-    <td>alt.fan.starwars     </td>
-    <td><a href="profile.xp?author=385b0bdb1ed046600f0a1f1a7b1cb8b2c1ca9414a01012da9a4d10f3ada156f713525797e983&ST=PS&ee=1">mbpedro007     </a></td>
+    <td>soc.genealogy.african</td>
+
+    <td><a href="profile.xp?author=3c5f01d51cd746607b92e9037f67b4e68244abe9f9044b3cae4d4c398f403815beb5a76dc19cc6&ST=PS&ee=1">prcrooks       </a></td>
+
     </tr>
     
 
@@ -1928,14 +1308,16 @@
     
     
     <tr bgcolor=#eeeeee valign=top>
-    <td>11/23/1999</td>
+    <td>01/14/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=552367634&CONTEXT=944588976.1121452059&hitnum=95">
-    Attn Jabba The Hut: Where ca
+    <a href="http://x23.deja.com/getdoc.xp?AN=572614757&CONTEXT=948208660.1253179394&hitnum=51">
+    Re: Attn: Jabba -- Re: Newgu
     </a>
     </b></td>
     <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=30580ed71dde496d36cfb220a7a78ff05dddca9f7edcd58adabc7ab864f354&ST=PS&ee=1">IMRJS22        </a></td>
+
+    <td><a href="profile.xp?author=3a5e01d01cde436db920bcfcf3aae6a3347c6b32d2a89506cee94f32772052cf5742cd9f5a6e16eb89aa72d4e42d45fec9d62f2c08da2f&ST=PS&ee=1">Jabba the Hut  </a></td>
+
     </tr>
     
 
@@ -1945,14 +1327,16 @@
     
     
     <tr bgcolor=#dddddd valign=top>
-    <td>11/23/1999</td>
+    <td>01/14/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=552367635&CONTEXT=944588976.1121452059&hitnum=96">
-    Attn Jabba The Hut: Where ca
+    <a href="http://x23.deja.com/getdoc.xp?AN=572733553&CONTEXT=948208660.1253179394&hitnum=52">
+    E1 Jabba w/ Hex &amp; Rex Online
     </a>
     </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=385f0adb16d745653f88dbe419fe0dd565dd7cd0112db32fa735561d9c649c&ST=PS&ee=1">IMRJS22        </a></td>
+    <td>rec.arts.sf.starwars.</td>
+
+    <td><a href="profile.xp?author=3d5f00d31fd2426414ecdcdac1a3936b455f53934de0af638212979bc8ecd291cd880efd12cd3c5e26b0def0e818eaf00f104f3e09dc&ST=PS&ee=1">Eric Sansoni   </a></td>
+
     </tr>
     
 
@@ -1962,14 +1346,16 @@
     
     
     <tr bgcolor=#eeeeee valign=top>
-    <td>11/21/1999</td>
+    <td>01/14/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=551252529&CONTEXT=944588976.1121452059&hitnum=97">
-    ATTN JAbba looks like Chriss
+    <a href="http://x23.deja.com/getdoc.xp?AN=572952037&CONTEXT=948208660.1253179394&hitnum=53">
+    Re: Когда я на почте служил 
     </a>
     </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=395c0adb1bde43616304505d4c0a01d5c6fa74b8be97&ST=PS&ee=1">Andy           </a></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=3e5c0ad416d7456dd80e052b2759c3c4a81dcd3e2c65168558e8ec363e75c1d9ac1b43c3217c73e2d108fc8800b71ceaf6a393fee642effd46d3d3a7c957486bd4a0107d&ST=PS&ee=1">Valeriy V.Horko</a></td>
+
     </tr>
     
 
@@ -1979,14 +1365,16 @@
     
     
     <tr bgcolor=#dddddd valign=top>
-    <td>11/16/1999</td>
+    <td>01/14/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=549141350&CONTEXT=944588976.1121452059&hitnum=98">
-    ATTN JABBA                  
+    <a href="http://x23.deja.com/getdoc.xp?AN=572952040&CONTEXT=948208660.1253179394&hitnum=54">
+    Re: Когда я на почте служил 
     </a>
     </b></td>
-    <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=395d0bd31ed64165bd73953a2dd3f560b422d8e9480c&ST=PS&ee=1">Andy           </a></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=31580dd019d74364895851ad4d34645a2854a1bded8803d63fc6f10d5da1a28e89d29a07e73668231e0803b5281274b51968ab99e6299936989453f990f8fa106d811853&ST=PS&ee=1">Valeriy V.Horko</a></td>
+
     </tr>
     
 
@@ -1996,14 +1384,852 @@
     
     
     <tr bgcolor=#eeeeee valign=top>
-    <td>11/09/1999</td>
+    <td>01/13/2000</td>
     <td><b>
-    <a href="http://x34.deja.com/getdoc.xp?AN=546222112&CONTEXT=944588976.1121452059&hitnum=99">
-    ATTN Jabba CHRISS           
+    <a href="http://x23.deja.com/getdoc.xp?AN=571956670&CONTEXT=948208660.1253179394&hitnum=55">
+    Re: Когда я на почте служил 
+    </a>
+    </b></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=3e5a08d01bd2456d1a62d2b69185d01a00e6a0a0897f59d6cc0ff6c870502c5f4b05eb7dc9324283caab1715e702cabc9745b0e1ec971adf5cba596b79470f&ST=PS&ee=1">L.J.           </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>01/13/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=572051220&CONTEXT=948208660.1253179394&hitnum=56">
+    JABBA: Sylvia [German teen g
     </a>
     </b></td>
     <td>alt.binaries.multimed</td>
-    <td><a href="profile.xp?author=3d5008d21bd546610ef5fdadf9d85c1ee7451c6ab8d2&ST=PS&ee=1">Andy           </a></td>
+
+    <td><a href="profile.xp?author=3f5a00db18de4660d93adac89edc1d31840a691f17bac76658f50bde930ea5c6fb50f5b2d7f15957fb4232f17567e2b98140&ST=PS&ee=1">RRR            </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>01/12/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=571537590&CONTEXT=948208660.1253179394&hitnum=57">
+    Re: Когда я на почте служил 
+    </a>
+    </b></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=3b5e0fd01bdf4463a15738525bd062197f6e3d1583d8ec5ef65dd166ce680212b734244dd5db38a39ccce76c7e14e468a621242eca48f125899800c954e927&ST=PS&ee=1">L.J.           </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>01/12/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=571556977&CONTEXT=948208660.1253179394&hitnum=58">
+    Re: Когда я на почте служил 
+    </a>
+    </b></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=3a5f0eda17d24164c55c45a408d6ecb17a7d7e39fd4235e7d609b5edf1a274695dd60d9be5adc098a220d88fbca7145e603c4571a25a390fcfcb0a22&ST=PS&ee=1">&quot;Плюмаж&quot; &lt;ek_@c</a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>01/12/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=571556978&CONTEXT=948208660.1253179394&hitnum=59">
+    Re: Когда я на почте служил 
+    </a>
+    </b></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=3d5900d71dd64660c68c8bdf3b9ed75b900d68253ee3df347c38d0b6e33957c37c49a063d7f6e340502eb5e4029a354a28e25d20c53b87217626e197&ST=PS&ee=1">&quot;Плюмаж&quot; &lt;ek_@c</a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>01/12/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=571563892&CONTEXT=948208660.1253179394&hitnum=60">
+    Re: Когда я на почте служил 
+    </a>
+    </b></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=3d510bd018d64366e00ace5c1de5ca8a6df3ff94fa57767c6e4180ddd3bc0356c7b5e5be4494c0bec1bbee784cd6b2b43cf15ca3b679647bb829af0b&ST=PS&ee=1">&quot;Плюмаж&quot; &lt;ek_@c</a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>01/12/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=571621719&CONTEXT=948208660.1253179394&hitnum=61">
+    Re: Когда я на почте служил 
+    </a>
+    </b></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=3b5a0bd71bde47632b978e9c1fef03099092bb04fa63e823f7ad6f869fd8dcd79a0b973e40d0f58439d5b5f74bf1d151cda0f4110f84f0275cae95d8ea515f4f05c9f98d&ST=PS&ee=1">Valeriy V.Horko</a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>01/12/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=571751764&CONTEXT=948208660.1253179394&hitnum=62">
+    Re: Когда я на почте служил 
+    </a>
+    </b></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=3e590cd11dde47631a1800cc80ccccba2e688ea4e8181b66affacb330054689dd9b2a500e8c0c140d9f3c80f94bb4fc3605007352656ad62c2cd9b70543949&ST=PS&ee=1">Old Woodoo     </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>01/12/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=571834353&CONTEXT=948208660.1253179394&hitnum=63">
+    Ответ: Когда я на почте служ
+    </a>
+    </b></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=385f09d717d2466cee4f911eff59f97dad05d1282e13a121b9fb430369d9d5&ST=PS&ee=1">mask           </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>01/12/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=571837414&CONTEXT=948208660.1253179394&hitnum=64">
+    Re: Когда я на почте служил 
+    </a>
+    </b></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=3c5a0cd018d1466443e6674361604839ae2229ee9108dba9f41a9bad383335308629ecb9aca29cd3134a31462ec36fca00798a61835b861c8c96948bc6f452114a68a31859433444d2a4bd040b24f0ddc9ffcca55a3a404eee6b90da9a04f873f151fc8b323c8ccb0623c1&ST=PS&ee=1">&quot;Тетка Чарлея&quot; </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>01/12/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=571837415&CONTEXT=948208660.1253179394&hitnum=65">
+    Re: Когда я на почте служил 
+    </a>
+    </b></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=3e510dda1ad44966e2a64524eb0e62953225846159b1e00b759de57fcf73c12311d5d6df0b1faf651f82776f64ffce3c6afdefa10d54e25ff2453152e9e558ee4a6a7578f49ad73b363fc2078d32b278d7d973dd06e74784816c7492b39a5538960ce785d4baf23a4849b4&ST=PS&ee=1">&quot;Тетка Чарлея&quot; </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>01/11/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=570916006&CONTEXT=948208660.1253179394&hitnum=66">
+    Re: Когда я на почте служил 
+    </a>
+    </b></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=3f5c00d016d3446cf0d8cd433d0410ab2753c60b4f882355bd66fbbb827373182d0368e7f31cd9d369c945089d77d1634fb0679de38dde08160a864ba57188&ST=PS&ee=1">Old Woodoo     </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>01/11/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=571042203&CONTEXT=948208660.1253179394&hitnum=67">
+    Re: Когда я на почте служил 
+    </a>
+    </b></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=3e5c0eda18d149677c25b9f230bb4316940d9a94d42c717fd43b5d05c1190475dee403137a801fb891a8a7f4914b5ee388b1c33f272ebd3c0d8321eb1fa122&ST=PS&ee=1">L.J.           </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>01/11/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=571050735&CONTEXT=948208660.1253179394&hitnum=68">
+    Re: Когда я на почте служил 
+    </a>
+    </b></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=3e580dd61ed448614c861e89196d67879d4fa1aca16497123dca7b8f0f667488df920e1f9f83a3130e95dba1dd56ea7ac16990b7b3688ed9010ad7cbce5644&ST=PS&ee=1">L.J.           </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>01/11/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=571155558&CONTEXT=948208660.1253179394&hitnum=69">
+    Re: Когда я на почте служил 
+    </a>
+    </b></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=3c5a00d21ad549674284c958513484775b80d5fc204a2bea3ca454640e8c3754d0f430924296662bc8f32bd1b0dfefb2867e95&ST=PS&ee=1">Rif Robin      </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>01/11/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=571356162&CONTEXT=948208660.1253179394&hitnum=70">
+    Ответ: Re:Когда я на почте с
+    </a>
+    </b></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=3a5a01d01edf4960c740b55738326909fafbbe3d4e91bd17960cac96daf9ea&ST=PS&ee=1">mask           </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>01/11/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=571356192&CONTEXT=948208660.1253179394&hitnum=71">
+    Re: Когда я на почте служил 
+    </a>
+    </b></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=3d5b0cda1fd64766c57fa61360636000091f4e86b49860ac1f3e00a7600834c5eaab5e90b29f82e99dd3bb70a58f5bde5a24ecb8c891730ff6aba800ebab8872b6649d99eb08f60f04809d179ab4e01533492a942d0e79f79b77bd6496ddb98b40551a85176db4503d&ST=PS&ee=1">&quot;Тетка Чарлея&quot; </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>01/11/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=571356193&CONTEXT=948208660.1253179394&hitnum=72">
+    Re: Когда я на почте служил 
+    </a>
+    </b></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=31580ed716d04467d545518f1bc9b99b1520af392129c1d7ff70185af7ec826e764eb9e35f0c701e87014d17e36561a0970ccba5f0343087e9f54e0882cd75ff2b69f062319f26ba8fbd77837b74eaf6332c2d730ed0ac20544c7258e29b38a8d5ee0d0d6a8d9c7fe3&ST=PS&ee=1">&quot;Тетка Чарлея&quot; </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>01/10/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=570676594&CONTEXT=948208660.1253179394&hitnum=73">
+    Re: Attn: Jabba the Hut     
+    </a>
+    </b></td>
+    <td>alt.binaries.multimed</td>
+
+    <td><a href="profile.xp?author=3e5000d71bdf4961093f7a80194e7e80b0c4bec72d08612e04d0a3d77bf02eeed0412403292e441ea5d488dcc44d3ad707aa6f836b0758&ST=PS&ee=1">Jabba the Hut  </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>01/10/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=570684773&CONTEXT=948208660.1253179394&hitnum=74">
+    Re: Когда я на почте служил 
+    </a>
+    </b></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=38580ed31fd041641a98fe79127a44eb53f4947b5e9acef01b5d2aae7e2116af27f6dae2140077ba7364033b6dd4fad108e4174e92fe4166019bf9b5&ST=PS&ee=1">&quot;Плюмаж&quot; &lt;ek_@c</a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>01/10/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=570930281&CONTEXT=948208660.1253179394&hitnum=75">
+    Jabba                       
+    </a>
+    </b></td>
+    <td>alt.binaries.multimed</td>
+
+    <td><a href="profile.xp?author=31590fd219d14263270373cf8e3916e32c4e7cb4ca4856e71b2db2bb222da5125303c3137cf6929bfb40b4e3967c54a80e483ca46b5f9385491926e624d872e059306cb4fc679f4e&ST=PS&ee=1">T. K. Thomas   </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>01/10/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=570940343&CONTEXT=948208660.1253179394&hitnum=76">
+    Re: Когда я на почте служил 
+    </a>
+    </b></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=315c0bd51cd644624d3d3a3ed52c84eb3c4f022113339a35482149d0a4ff423de623efe2b7f68618109068a4736e55ff6397290227f3e862a85f4240&ST=PS&ee=1">&quot;Плюмаж&quot; &lt;ek_@c</a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>01/09/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=570507789&CONTEXT=948208660.1253179394&hitnum=77">
+    Attn: Jabba the Hut         
+    </a>
+    </b></td>
+    <td>alt.binaries.multimed</td>
+
+    <td><a href="profile.xp?author=395e0ddb1cde47643c9206d4854da681a6461803280bcff68dcc1caaa234763e0cd69cd2bbaae32c9dbdbcd1ee56ade0d5458618604970f53091f9980186&ST=PS&ee=1">Triton         </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>01/08/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=569725919&CONTEXT=948208660.1253179394&hitnum=78">
+    Re: Когда я на почте служил 
+    </a>
+    </b></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=3a5b0fd71bd74765a84113dd2d60e7f99b145f3c679fa1ffabd4e523d1679bb1f9ddfbe40493f2a588fec31be7519a02af7aba63fc6ba9b401698914f775b47777d9af4d5e343eee3373562b8d88c15f85608eb9a4632fb40ad1bed29982b3bed4307bb752ba4489a1&ST=PS&ee=1">&quot;Тетка Чарлея&quot; </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>01/08/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=569968768&CONTEXT=948208660.1253179394&hitnum=79">
+    Re: Когда я на почте служил 
+    </a>
+    </b></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=3e5a0ed318de41648848c99097c48b5add236de6fb5a59e568efccf66030131eedce038e26e086de7926d8dc5136e4eee6ed3cb8efcda5c12c9eece4eac4a2&ST=PS&ee=1">Old Woodoo     </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>01/08/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=570038620&CONTEXT=948208660.1253179394&hitnum=80">
+    Re: attn: Jabba             
+    </a>
+    </b></td>
+    <td>alt.binaries.multimed</td>
+
+    <td><a href="profile.xp?author=3d5d0cd419d4446c70bbd587afc3d866f4a1b66c607e0cbd278f92ee84ce7fe1feb4a3fc911cdb27e9b92a2422ec29d6d623e6a16cb50a&ST=PS&ee=1">Jabba the Hut  </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>01/07/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=569444159&CONTEXT=948208660.1253179394&hitnum=81">
+    Selling SWCCG-Cloud City &amp; J
+    </a>
+    </b></td>
+    <td>rec.games.trading-car</td>
+
+    <td><a href="profile.xp?author=305e0dda1dd3456cc392b957441816bccd576222b2a8ee17e15df7a928719c4bdb4140e3ce1aefb159f565ca88317fe4ec&ST=PS&ee=1">Rjohnson       </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>01/07/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=569528810&CONTEXT=948208660.1253179394&hitnum=82">
+    Rebel Pilots and Jabba 2 Hea
+    </a>
+    </b></td>
+    <td>alt.fan.mad-rmgrouper</td>
+
+    <td><a href="profile.xp?author=3f500fd31dd14360457c281a017e1edac3f90a43595ec1648ebbcf21490a4c43794c5992ca72b282464d259835cba6e7317cfc81c03ad1f10e90746546cd7f935e15ff2e&ST=PS&ee=1">Matt Calvert   </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>01/07/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=569686268&CONTEXT=948208660.1253179394&hitnum=83">
+    Ответ: Когда я на почте служ
+    </a>
+    </b></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=3b5a01d11ad04661c4b520ffbc66742804ac5803819a27641130f500a8d8cd&ST=PS&ee=1">mask           </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>01/06/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=568943357&CONTEXT=948208660.1253179394&hitnum=84">
+    Re: Amazon.com: Jabba with H
+    </a>
+    </b></td>
+    <td>alt.fan.mad-rmgrouper</td>
+
+    <td><a href="profile.xp?author=3b580ad019de4061f86e0b9cf9730fb690651b1a01498d19eaa4f6c047781579bc2a1e7d5db793818bbea0&ST=PS&ee=1">TK421cz        </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>01/06/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=569053843&CONTEXT=948208660.1253179394&hitnum=85">
+    Re: Когда я на почте служил 
+    </a>
+    </b></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=30580bd01ed343611fcf0578f944d2066803db902dc2386a38177c77eab9998c016146104ce83836faf0ef2c202888e770bc9a4ed10f08d9c6cfb0edbc38fd&ST=PS&ee=1">L.J.           </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>01/06/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=569076751&CONTEXT=948208660.1253179394&hitnum=86">
+    Re: Когда я на почте служил 
+    </a>
+    </b></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=39580dd51fde4166b1c1d6259325ae24345285cd565e87c94650822185b2bd47542fc7d6976228f5d429c6c4481bead8ab80c9e2215d49438c17b6c1&ST=PS&ee=1">&quot;Плюмаж&quot; &lt;ek_@c</a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>01/06/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=569243920&CONTEXT=948208660.1253179394&hitnum=87">
+    Re: Когда я на почте служил 
+    </a>
+    </b></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=3d5001d417d1456db29b726394a0691b8ac84a220492335b7ad0c5706266f20c406aed1be13ceb1e663e9dc4a8dd3a4948049b044c3488578d14881b18e0dff2050ab2f3788e72491c06c2bb9ee01853c73566c2cbd84c9ab2b6906e0cbc866e9eabbc4de700367ab3&ST=PS&ee=1">&quot;Тетка Чарлея&quot; </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>01/06/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=569243922&CONTEXT=948208660.1253179394&hitnum=88">
+    Re: Когда я на почте служил 
+    </a>
+    </b></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=395c08d219d1426c28f4eeca92fc367d1bf568bb0e181edb8999c24b49259bcef001412a2843f03265e61e847c98739617658b7b74e13e4ba8c54fe5992ac1424841452089e6b0f90f4c50ebe1ebef7ce235b071ab1a3125fac6603a8c82dcabd3cf7ad5e632181a11&ST=PS&ee=1">&quot;Тетка Чарлея&quot; </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>01/06/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=569243923&CONTEXT=948208660.1253179394&hitnum=89">
+    Re: Когда я на почте служил 
+    </a>
+    </b></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=30510dd517de406d6869b9d9a581c8ae677369b974a4b530e08eea4b710ad3fb294424970c0d094c0ee5d35dd1707e2ecde434a626b26ea171106cdb0e8579b03fd99bbb8fed2e721559e3e1e1f87b451a6db6ba66d1b37ec55be95760ba9a8c39cf8a74674e27bb5a&ST=PS&ee=1">&quot;Тетка Чарлея&quot; </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>01/06/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=569272258&CONTEXT=948208660.1253179394&hitnum=90">
+    Re: Jabba's Skiff Guards? An
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+
+    <td><a href="profile.xp?author=3d500dd11fd14160688f8af6d02045171c5868422b804e15e2325a8c3d1a728b85b0c9f93224ce38c7&ST=PS&ee=1">RJHNY1         </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>01/05/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=568581721&CONTEXT=948208660.1253179394&hitnum=91">
+    Re: Когда я на почте служил 
+    </a>
+    </b></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=3e5c0dd71ad64866e8757ef6eb6c71ae2c63c9a7d96498269708d3fcd50a248acf9590e150dde7a68bc4a1f2d6b41af6b29c76351552403cc31ac383&ST=PS&ee=1">&quot;Плюмаж&quot; &lt;ek_@c</a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>01/05/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=568769452&CONTEXT=948208660.1253179394&hitnum=92">
+    Re: Когда я на почте служил 
+    </a>
+    </b></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=315d0bd618d64466f021762ae12b1abbf561782d3f5dae5bde305fcb82b759955d53f775592718ad8a0113e755f1a60cb0fa2739714cb9fc9b2a5143ab265c78fba3cc4624ea4b8646f7ae24537adc986a2a847e52960fd36ba055f6846b3c231cdf233a6e22b2983b&ST=PS&ee=1">&quot;Тетка Чарлея&quot; </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>01/05/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=568769456&CONTEXT=948208660.1253179394&hitnum=93">
+    Re: Когда я на почте служил 
+    </a>
+    </b></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=31500fd216df4861901ea4773ec9e006f09beca2b2e41ab0758b5406b4c1f71b18b7941f8d5bfe2738622f9f1ba83d258aaa6d6d62bc824b792f16ad54d50b4bdffa96b9279d193381147463e9293e14f97e702c10744f9d8399a5c0b4d32d3ddf5868c72dbb464d1a&ST=PS&ee=1">&quot;Тетка Чарлея&quot; </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>01/05/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=568975079&CONTEXT=948208660.1253179394&hitnum=94">
+    WTB skiff &amp; jabba packs     
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+
+    <td><a href="profile.xp?author=395c01d21ed149655811612d510dfb629751d13d8ef469e0496e49ce903c04249ddf01599ff6171a5b8da2dd17&ST=PS&ee=1">ken            </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>01/03/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=567624905&CONTEXT=948208660.1253179394&hitnum=95">
+    Re: Когда я на почте служил 
+    </a>
+    </b></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=395d0ada1dde4462792251ef3af9d6b0608bf859a92a85037e8a983ad658cb40e274e52b5a14b704882646fce14f4726f37e61f647b3f4e540aea667bf406eb77a7c96ce&ST=PS&ee=1">Sestrenka      </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>01/03/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=568282572&CONTEXT=948208660.1253179394&hitnum=96">
+    Re: Когда я на почте служил 
+    </a>
+    </b></td>
+    <td>relcom.fido.flirt    </td>
+
+    <td><a href="profile.xp?author=385b0dd11ed7496ccbd1720cb907a2d7ede968fbf01b25b94aa86df579bfa85763386a42a2d5d67bf1bff67725647aa95ebd508c460ab9ec87d3b60ddc5e500e13f9e94625ca7627fe973af5cf9bcd93df029e7544e65f37785bc846ff8fe223d4d22f73b81d44951a&ST=PS&ee=1">&quot;Тетка Чарлея&quot; </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>01/02/2000</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=567574751&CONTEXT=948208660.1253179394&hitnum=97">
+    FA Jabba Dunden W/ POF Figs 
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+
+    <td><a href="profile.xp?author=3f580ed41cdf4362332c59f3545bda67797898a3655f0bca7deb71190fa9f421658848219df690df305761520e72d013a5&ST=PS&ee=1">Tom O'Neil     </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>12/31/1999</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=566958740&CONTEXT=948208660.1253179394&hitnum=98">
+    *** fs: Jabba with 2-Headed 
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+
+    <td><a href="profile.xp?author=3e5b09d11ad2456230d82b178e4f0183ce36e74802a982745ca4e6cae63921c659f222497054234161b2ec3837&ST=PS&ee=1">FFERNIEE       </a></td>
+
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>12/28/1999</td>
+    <td><b>
+    <a href="http://x23.deja.com/getdoc.xp?AN=565796531&CONTEXT=948208660.1253179394&hitnum=99">
+    thanks Jabba for continuing 
+    </a>
+    </b></td>
+    <td>alt.binaries.multimed</td>
+
+    <td><a href="profile.xp?author=3b590cdb18d0456664be8e7b3b13f4ae1cc5d2a139597234d3e959f14f&ST=PS&ee=1">FrozenNorth    </a></td>
+
     </tr>
     
 
@@ -2016,7 +2242,7 @@
 
 
 
-<table width=95% cellspacing=0 cellpadding=6 border=0><tr>
+<table width=100% cellspacing=0 cellpadding=6 border=0><tr>
 
 
 <td align=right>
@@ -2024,7 +2250,7 @@
 
 
 
-<span class="small"><a href="http://x34.deja.com/dnquery.xp?search=next&LNG=ALL&IS=Jabba&ST=PS&offsets=db99p9%02100&svcclass=dnserver&CONTEXT=944588976.1121452059">next messages</a></span>
+<span class="small"><a href="http://x23.deja.com/dnquery.xp?search=next&LNG=ALL&IS=Jabba&ST=PS&offsets=db99p10x%02100&svcclass=dnserver&CONTEXT=948208660.1253179394">next messages</a></span>
 <img src="http://g.deja.com/gifs/20x9orange-arrow.gif" alt="next" width=20 height=9 hspace=2 vspace=0 border=0> 
 
 </td>
@@ -2040,11 +2266,11 @@
 
 
 
-<table width=95% cellspacing=0 cellpadding=6 border=0><tr><td>
+<table width=100% cellspacing=0 cellpadding=6 border=0><tr><td>
 <b class="small">Individual word match counts (approximate)</b>
 <span class="small"><ul>
 
-<li> jabba: 710000</li>
+<li> jabba: 66000</li>
 </ul></span>
 </td></tr></table>
 
@@ -2053,9 +2279,9 @@
 
 
 <p>
-<table width=95% cellspacing=0 cellpadding=0 border=0><tr>
+<table width=100% cellspacing=0 cellpadding=0 border=0><tr>
 <td>
-<a href="linkback.xp?act=f&res_type=search&res_title=Jabba&res_url=http://x34.deja.com/qs.xp%3fLNG%3dALL%26OP%3ddnquery.xp%26QRY%3dJabba%26ST%3dPS%26defaultOp%3dOR%26maxhits%3d100%26showsort%3dscore"><b>Deja Linkback</b></a>: Create a custom link to these search results from your own Web site
+<a href="linkback.xp?act=f&res_type=search&res_title=Jabba&res_url=http://x23.deja.com/qs.xp%3fLNG%3dALL%26OP%3ddnquery.xp%26QRY%3dJabba%26ST%3dPS%26defaultOp%3dOR%26maxhits%3d100%26showsort%3dscore"><b>Deja Linkback</b></a>: Create a custom link to these search results from your own Web site
 </td>
 </tr></table>
 
@@ -2065,25 +2291,25 @@
 
 
 
-<table width=95% cellspacing=0 cellpadding=0 border=0><tr valign=top>
+<table width=100% cellspacing=0 cellpadding=0 border=0><tr valign=top>
 
 <td>
 
 
-    <a href="http://x34.deja.com/dnquery.xp?QRY=Jabba&DBS=&ST=MS">View all search results</a><br>
+    <a href="http://x23.deja.com/dnquery.xp?QRY=Jabba&DBS=&ST=MS">View all search results</a><br>
     
 
-    <a href="http://x34.deja.com/query_profile.xp?QRY=Jabba&DBS=&CONTEXT=944588976.1121452059">View forum search results</a><br>
+    <a href="http://x23.deja.com/query_profile.xp?QRY=Jabba&DBS=&CONTEXT=948208660.1253179394">View forum search results</a><br>
     
 
 </td>
 
 <td align=right>
 
-    <a href="http://x34.deja.com/rate/search.xp?QRY=Jabba&DBS=&CONTEXT=944588976.1121452059">View product search results</a><br>
+    <a href="http://x23.deja.com/rate/search.xp?QRY=Jabba&DBS=&CONTEXT=948208660.1253179394">View product search results</a><br>
     
 
-    <a href="http://x34.deja.com/rate/prod_cat.xp?CONTEXT=944588976.1121452059">View product category search results</a><br>
+    <a href="http://x23.deja.com/rate/prod_cat.xp?CONTEXT=948208660.1253179394">View product category search results</a><br>
     
 
 </td>
@@ -2094,7 +2320,9 @@
 
 
 
-<!-- second stage content : end -->
+<!-- content : end -->
+
+<p>
 
 <!-- search again : begin -->
 
@@ -2105,7 +2333,7 @@
 
 
 <p>
-<table cellpadding=2 cellspacing=0 border=0  width=95% bgcolor=#cccc66>
+<table cellpadding=2 cellspacing=0 border=0  width=100% bgcolor=#cccc66>
 <form action="dnquery.xp">
 
 <tr>
@@ -2151,15 +2379,7 @@ For a more detailed search in Discussions go to <a href="home_ps.shtml?QRY=Jabba
 	
 	
 	
-	<input type=radio name=VW value=ane.movies.intheater.scifi > Arts & Entertainment >> Movies >> In Theaters >> Sci-Fi<br>
-    
-	
-	
-	
-	
-	
-	
-	<input type=radio name=VW value=comptech.game_sw.board > Computing & Tech >> Game Software >> Board<br>
+	<input type=radio name=VW value=rec.hobbies.collecting > Recreation >> Hobbies >> Collecting<br>
     
 	
 	
@@ -2168,6 +2388,14 @@ For a more detailed search in Discussions go to <a href="home_ps.shtml?QRY=Jabba
 	
 	
 	<input type=radio name=VW value=adult > Adult<br>
+    
+	
+	
+	
+	
+	
+	
+	<input type=radio name=VW value=ane.starwars.actionfigures > Arts & Entertainment >> Star Wars >> Action Figures<br>
     
     
 	<input type=radio name=VW value="" checked> All Deja.com</span></font>
@@ -2216,10 +2444,161 @@ For a more detailed search in Discussions go to <a href="home_ps.shtml?QRY=Jabba
 <!-- search again : end -->
 
 <br>&nbsp;
-</td></tr></table>
-<!-- second stage : end -->
+</td>
+
+<td></td>
+<td valign=top bgcolor=#6666cc>
+
+<!-- ad silo : begin -->
+
+
+
+
+
+
+
+
+<table width=100% border=0 cellspacing=0 cellpadding=6><tr align=center>
+<td bgcolor=#ffffff>
+<table bgcolor=#000000 width=120 cellspacing=0 cellpadding=0 border=0><tr>
+<td bgcolor=#000000><A HREF="/jump/http://gp1.deja.com/gtc?id=1029667&dejahi=0&tm=948208663.373936&site=dn&keyword=jabba&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=120x120.2&node=Collecting&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7c120x120.2%7c%7c%7c%7c%7c%7c%7c">
+<img lowsrc="http://g.deja.com/gifs/20x20.gif" ALIGN=MIDDLE HEIGHT=120 WIDTH=120 SRC="http://web2.deja.com/ads/49/1528065349-4179.gif" ALT="Deja.com is hiring!!" border=1></A><BR></td>
+</tr></table>
+</td></tr>
+</table>
+
+<table width=100% cellpadding=0 cellspacing=0 bgcolor=#000000 border=0><tr>
+<td bgcolor=#000000 width=100%><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1 hspace=0 vspace=0><br></td>
+</tr></table>
+
+
+
+<table width=100% border=0 cellspacing=0 cellpadding=6><tr align=center>
+<td bgcolor=#ffffff>
+<table bgcolor=#000000 width=120 cellspacing=0 cellpadding=0 border=0><tr>
+<td bgcolor=#000000><TABLE WIDTH="120" BORDER="0" CELLSPACING="0" CELLPADDING="0" HEIGHT="120">
+<TR>
+<TD WIDTH="120" HEIGHT="36" VALIGN="TOP"><A HREF="/jump/http://gp1.deja.com/gtc?id=1028318&dejahi=0&tm=948208663.541475&site=dn&keyword=jabba&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=120x120.3&node=Collecting&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7crec.%7cd.%7c120x120.3%7c%7c%7c%7c%7c%7c%7c/cycles?cycle_id=87950"><img lowsrc="http://g.deja.com/gifs/20x20.gif" SRC="http://g.deja.com/ads/accompany120-a.gif" WIDTH="120" HEIGHT="36" ALIGN="TOP" BORDER="0"></TD></TR>
+<TR>
+<TD WIDTH="120" HEIGHT="72" VALIGN="TOP">
+<TABLE WIDTH="120" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+<TR>
+<TD WIDTH="6" VALIGN="TOP"><img lowsrc="http://g.deja.com/gifs/20x20.gif" SRC="http://g.deja.com/ads/accompany120-c.gif" WIDTH="6" HEIGHT="72" ALIGN="TOP" BORDER="0"></TD>
+<TD WIDTH="108" VALIGN="MIDDLE" BGCOLOR="white"><FONT SIZE="-2" FACE="arial,helvetica"><B><A HREF="/jump/http://gp1.deja.com/gtc?id=1028318&dejahi=0&tm=948208663.541475&site=dn&keyword=jabba&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=120x120.3&node=Collecting&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7crec.%7cd.%7c120x120.3%7c%7c%7c%7c%7c%7c%7c/cycles?cycle_id=87950">Women's All-In-One Starter Set</A></B></FONT><BR>
+<FONT SIZE="-2" COLOR="#000000" FACE="arial,helvetica">Lowest Price:</FONT> <FONT SIZE="-2" COLOR="#CC6600" FACE="arial,helvetica">$199.99</FONT><BR>
+<FONT SIZE="-2" COLOR="#000000" FACE="arial,helvetica">With</FONT> <FONT SIZE="-2" COLOR="#CC6600" FACE="arial,helvetica">12</FONT> <FONT SIZE="-2" COLOR="#000000" FACE="arial,helvetica">more buyers!</FONT></TD>
+<TD WIDTH="6" VALIGN="TOP"><img lowsrc="http://g.deja.com/gifs/20x20.gif" SRC="http://g.deja.com/ads/accompany120-d.gif" WIDTH="6" HEIGHT="72" ALIGN="TOP" BORDER="0"></TD></TR>
+</TABLE>
+</TD></TR>
+<TR>
+<TD WIDTH="120" HEIGHT="22" VALIGN="TOP"><A HREF="/jump/http://gp1.deja.com/gtc?id=1028318&dejahi=0&tm=948208663.541475&site=dn&keyword=jabba&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=120x120.3&node=Collecting&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7crec.%7cd.%7c120x120.3%7c%7c%7c%7c%7c%7c%7c/cycles?cycle_id=87950"><img lowsrc="http://g.deja.com/gifs/20x20.gif" SRC="http://g.deja.com/ads/accompany120-b.gif" WIDTH="120" HEIGHT="22" ALIGN="TOP" BORDER="0"></A></TD></TR>
+</TABLE>
+</td>
+</tr></table>
+</td></tr>
+</table>
+
+<table width=100% cellpadding=0 cellspacing=0 bgcolor=#000000 border=0><tr>
+<td bgcolor=#000000 width=100%><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1 hspace=0 vspace=0><br></td>
+</tr></table>
+
+
+
+
+
+
+<table width=100% border=0 cellspacing=0 cellpadding=6><tr>
+<td bgcolor="#000000"><font color="#ff6600"><b>Explore More:</b></font></td>
+</tr></table>
+
+
+
+
+
+<table width=100% border=0 cellspacing=0 cellpadding=6>
+<tr><td bgcolor="#6666cc"><span class=small>
+<font color="#ffffff">
+
+    
+    
+    
+    <p>Buy Tools at<br>
+    <a href="/jump/http://gp1.deja.com/gtc?id=1032078&dejahi=0&tm=948208663.127051&site=dn&keyword=jabba&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=expmore.1&node=Collecting&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7crec.%7cd.%7cexpmore.1%7c%7c%7c%7c%7c%7c%7c">
+    <font face="geneva,arial" color="#ffcc66">
+    <b>sears.com</b></font></a>
+
+    
+    
+    
+    <p>Search for Jobs!<br>
+    <a href="/jump/http://gp1.deja.com/gtc?id=1024446&dejahi=0&tm=948208663.127051&site=dn&keyword=jabba&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=expmore.1&node=Collecting&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7crec.%7cd.%7cexpmore.1%7c%7c%7c%7c%7c%7c%7c">
+    <font face="geneva,arial" color="#ffcc66">
+    <b>JobOptions</b></font></a>
+
+    
+    
+    
+    <p>TireRack.com<br>
+    <a href="/jump/http://gp1.deja.com/gtc?id=1031031&dejahi=0&tm=948208663.127051&site=dn&keyword=jabba&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=expmore.1&node=Collecting&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7crec.%7cd.%7cexpmore.1%7c%7c%7c%7c%7c%7c%7c">
+    <font face="geneva,arial" color="#ffcc66">
+    <b>Quality, Price & Service</b></font></a>
+
+    
+    
+    
+    <p>Clearance Sale<br>
+    <a href="/jump/http://gp1.deja.com/gtc?id=1031691&dejahi=0&tm=948208663.127051&site=dn&keyword=jabba&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=expmore.1&node=Collecting&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7crec.%7cd.%7cexpmore.1%7c%7c%7c%7c%7c%7c%7c">
+    <font face="geneva,arial" color="#ffcc66">
+    <b>Up to 40% Off</b></font></a>
+
+    
+    
+    
+    <p>Buy tools at<br>
+    <a href="/jump/http://gp1.deja.com/gtc?id=1031539&dejahi=0&tm=948208663.127051&site=dn&keyword=jabba&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=expmore.1&node=Collecting&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7crec.%7cd.%7cexpmore.1%7c%7c%7c%7c%7c%7c%7c">
+    <font face="geneva,arial" color="#ffcc66">
+    <b>sears.com</b></font></a>
+
+    
+    
+    
+    <p>Save Big<br>
+    <a href="/jump/http://gp1.deja.com/gtc?id=1031688&dejahi=0&tm=948208663.127051&site=dn&keyword=jabba&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=expmore.1&node=Collecting&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7crec.%7cd.%7cexpmore.1%7c%7c%7c%7c%7c%7c%7c">
+    <font face="geneva,arial" color="#ffcc66">
+    <b>on Fitness Equipment</b></font></a>
+
+    
+    
+    
+    <p>Mail.com offers you<br>
+    <a href="/jump/http://gp1.deja.com/gtc?id=1032181&dejahi=0&tm=948208663.127051&site=dn&keyword=jabba&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=expmore.1&node=Collecting&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7c%7cexpmore.1%7c%7c%7c%7c%7c%7c%7c">
+    <font face="geneva,arial" color="#ffcc66">
+    <b>Free personalized email</b></font></a>
+
+    
+    
+    
+    <p>Deja.com is Hiring!!<br>
+    <a href="/jump/http://gp1.deja.com/gtc?id=1030589&dejahi=0&tm=948208663.127051&site=dn&keyword=jabba&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=expmore.1&node=Collecting&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7c%7cexpmore.1%7c%7c%7c%7c%7c%7c%7c">
+    <font face="geneva,arial" color="#ffcc66">
+    <b>Click here for jobs</b></font></a>
+
+</span></td></tr>
+</table>
+
+
+
+
+
+
+<!-- ad silo : end -->
+
+</td>
+</tr></table>
+<!-- content+ad silo : end -->
 
 <!-- FOOTER : begin -->
+
 
 
 
@@ -2323,41 +2702,105 @@ For a more detailed search in Discussions go to <a href="home_ps.shtml?QRY=Jabba
 <table width=100% bgcolor=#ffffff cellpadding=10 cellspacing=0 border=0>
 
 <tr><td colspan=2><center>
-<font size=1><span class="small">
+<span class="small">
 
 
-<span class=small>
-<a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.bfl.sitewide&cid=84126166162">Holiday Shopping</a> -
-<a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.freeshop.sitewide&cid=84126166162">FREE STUFF!</a> -
-<a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.datek.sitewide&cid=84126166162">Trade with Datek</a> -
-<nobr><a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.necx.sitewide&cid=84126166162">GET IT NOW @ NECX</a> -</nobr>
-<nobr><a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.ebay.sitewide&cid=84126166162">eBay Auctions</a> -</nobr>
-<nobr><a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.son.sitewide&cid=84126166162">The BEST Music Online</a> -</nobr>
-<nobr><a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.mailcom.sitewide&cid=84126166162">MAIL.COM</a> -</nobr>
-<nobr><a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.drkoop.sitewide&cid=84126166162">Get FREE Health Info@drkoop.com</a> -</nobr>
-<nobr><a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.eco.sitewide&cid=84126166162">BUY AT COST at eCOST.com</a> -</nobr>
-<nobr><a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.joboptions.sitewide&cid=84126166162">Search for Jobs! JobOptions</a> -</nobr>
-<nobr><a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.onsale.sitewide&cid=84126166162">Onsale Auctions</a></nobr>
-</span>
 
-</span></font></center>
+   
+   
+       
+       
+       
+       
+   
+       
+       
+       
+       
+   
+       
+       
+       
+       
+   
+       
+       
+       
+       
+   
+       
+       
+       
+       
+   
+       
+       
+       
+       
+   
+       
+       
+       
+       
+   
+       
+       
+       
+       
+   
+       
+       
+       
+       
+   
+   
+   <nobr><a href="/jump/http://gp1.deja.com/gtc?id=1032566&dejahi=0&tm=948208663.871797&site=dn&keyword=jabba&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=sitewide.1&node=Collecting&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7c%7csitewide.1%7c%7c%7c%7c%7c%7c%7c">Computers4Sure.com</a></nobr> - <nobr><a href="/jump/http://gp1.deja.com/gtc?id=1024522&dejahi=0&tm=948208663.871797&site=dn&keyword=jabba&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=sitewide.1&node=Collecting&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7c%7csitewide.1%7c%7c%7c%7c%7c%7c%7c">FreeShop</a></nobr> - <nobr><a href="/jump/http://gp1.deja.com/gtc?id=1024470&dejahi=0&tm=948208663.871797&site=dn&keyword=jabba&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=sitewide.1&node=Collecting&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7csitewide.1%7c%7c%7c%7c%7c%7c%7c">GET IT NOW @ NECX</a></nobr> - <nobr><a href="/jump/http://gp1.deja.com/gtc?id=1031478&dejahi=0&tm=948208663.871797&site=dn&keyword=jabba&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=sitewide.1&node=Collecting&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7csitewide.1%7c%7c%7c%7c%7c%7c%7c">Get FREE Health Info@drkoop.com</a></nobr> - <nobr><a href="/jump/http://gp1.deja.com/gtc?id=1024494&dejahi=0&tm=948208663.871797&site=dn&keyword=jabba&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=sitewide.1&node=Collecting&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7csitewide.1%7c%7c%7c%7c%7c%7c%7c">MAIL.COM</a></nobr> - <nobr><a href="/jump/http://gp1.deja.com/gtc?id=1024474&dejahi=0&tm=948208663.871797&site=dn&keyword=jabba&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=sitewide.1&node=Collecting&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7csitewide.1%7c%7c%7c%7c%7c%7c%7c">BUY AT COST at eCOST.com</a></nobr> - <nobr><a href="/jump/http://gp1.deja.com/gtc?id=1024464&dejahi=0&tm=948208663.871797&site=dn&keyword=jabba&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=sitewide.1&node=Collecting&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7csitewide.1%7c%7c%7c%7c%7c%7c%7c">Search for Jobs! JobOptions</a></nobr> - <nobr><a href="/jump/http://gp1.deja.com/gtc?id=1032144&dejahi=0&tm=948208663.871797&site=dn&keyword=jabba&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=sitewide.1&node=Collecting&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7csitewide.1%7c%7c%7c%7c%7c%7c%7c">Search used cars</a></nobr> - <nobr><a href="/jump/http://gp1.deja.com/gtc?id=1024515&dejahi=0&tm=948208663.871797&site=dn&keyword=jabba&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=sitewide.1&node=Collecting&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7csitewide.1%7c%7c%7c%7c%7c%7c%7c">Onsale Auctions</a></nobr>
+
+
+
+</span></center>
 </td></tr>
 
 <tr><td class="small">
 <p>
-<a href="info/policy.shtml#copyright">Copyright</a> &copy; 1999 <a href="corp/">Deja.com, Inc.</a> All rights reserved.
-<br><a href="info/trademarks.shtml">Trademarks</a> &#183; <a href="info/policy.shtml">Terms &amp; Conditions of Use</a> &#183; <a href="info/privacy.shtml">Site Privacy Statement</a>.</FONT>
+
+
+
+<a href="http://www.deja.com/info/policy.shtml#copyright">Copyright</a> &copy; 1995-2000 <a href="http://www.deja.com/corp/">Deja.com, Inc.</a> All rights reserved.
+
+<br><a href="info/trademarks.shtml">Trademarks</a> &#183; <a href="info/policy.shtml">Terms &amp; Conditions of Use</a> &#183; <a href="info/privacy.shtml">Site Privacy Statement</a>.
 </td>
 
 <td align=right valign=bottom nowrap>
-<b><a href="corp/ad.shtml">Advertise with Us!</A> &nbsp;|&nbsp; 
-<a href="corp/">About Deja.com</a>
-</b></font>
+<b><a href="corp/ad.shtml">Advertise With Us!</A> &nbsp;|&nbsp; 
+<a href="corp/">About Deja.com</a> &nbsp;|&nbsp;
+<a href="corp/hire.shtml">We're Hiring</a>
+</b>
 </td>
-
 </tr></table>
 
 </td></tr></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- FOOTER : end -->
 
