@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.57 2001/07/05 13:34:55 mthurn Exp mthurn $
+# $Id: Search.pm,v 1.60 2001/09/13 17:50:54 mthurn Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -69,13 +69,14 @@ package WWW::Search;
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query generic_option strip_tags @ENGINES_WORKING);
-$VERSION = '2.23';
+$VERSION = '2.25';
 $MAINTAINER = 'Martin Thurn <mthurn@tasc.com>';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
 
 use Carp ();
 use Data::Dumper;  # for debugging only
+use HTML::TreeBuilder;
 use HTTP::Cookies;
 use HTTP::Request;
 use HTTP::Response;
@@ -133,7 +134,8 @@ sub new
                     interrequest_delay => 0.25,  # in seconds
                     agent_name => $default_agent_name,
                     agent_e_mail => $default_agent_e_mail,
-                    http_proxy => undef,
+                    env_proxy => 0,
+                    http_proxy => '',
                     http_proxy_user => undef,
                     http_proxy_pwd => undef,
                     timeout => 60,
@@ -159,7 +161,7 @@ sub reset_search
   my $self = shift;
   print STDERR " + reset_search(",$self->{'native_query'},")\n" if $self->{debug};
   $self->{'cache'} = ();
-  $self->{'debug'} = 0;
+  # $self->{'debug'} = 0;
   $self->{'native_query'} = '';
   $self->{'next_to_retrieve'} = 1;
   $self->{'next_to_return'} = 0;
@@ -411,6 +413,26 @@ sub date_to
   } # date_from
 
 
+=head2 env_proxy
+
+Enable loading proxy settings from *_proxy environment variables.
+
+This routine should be called before the first retrieval is attempted.
+
+Example:
+
+  $search->env_proxy('yes');  # Turn on with any true value
+  ...
+  $search->env_proxy(0);  # Turn off with zero or undef
+  ...
+  if ($search->env_proxy)  # Test
+
+=cut
+
+# contributed by Klaus Johannes Rusch
+sub env_proxy { return shift->_elem('env_proxy', @_); }
+
+
 =head2 http_proxy
 
 Set-up an HTTP proxy
@@ -421,7 +443,9 @@ functions (next_result or results).
 
 Example:
 
-    $search->http_proxy("http://gateway:8080");
+  $search->http_proxy('http://gateway:8080');  # Turn on and set address
+  ...
+  $search->http_proxy('');  # Turn off
 
 =cut
 
@@ -470,11 +494,11 @@ sub is_http_proxy_auth_data
   {
   my $self = shift;
   return (
-          defined($self->http_proxy()) &&
-          defined($self->http_proxy_user()) &&
-          defined($self->http_proxy_pwd())
+          ($self->http_proxy ne '') &&
+          defined($self->http_proxy_user) &&
+          defined($self->http_proxy_pwd)
          );
-  }
+  } # is_http_proxy_auth_data
 
 
 =head2 approximate_result_count
@@ -518,7 +542,10 @@ sub results
   # Put all the SearchResults into the cache:
   1 while ($self->retrieve_some());
   my $iMax = scalar(@{$self->{cache}});
+  # print STDERR " +   mtr is ", $self->{maximum_to_retrieve}, "\n" if $self->{debug};
+  # print STDERR " +   cache contains $iMax results\n" if $self->{debug};
   $iMax = $self->{maximum_to_retrieve} if ($self->{maximum_to_retrieve} < $iMax);
+  # print STDERR " +   returning $iMax results\n" if $self->{debug};
   return @{$self->{cache}}[0..$iMax-1];
   } # results
 
@@ -544,15 +571,15 @@ sub next_result
   return undef if ($self->{next_to_return} >= $self->{maximum_to_retrieve});
   while (1)
     {
-    if ($self->{next_to_return} <= $#{$self->{cache}}) 
+    if ($self->{next_to_return} <= $#{$self->{cache}})
       {
       # The cache already contains the desired element; return it:
       my $i = ($self->{next_to_return})++;
       return ${$self->{cache}}[$i];
       }
     # If we get here, then the desired element is beyond the end of
-    # the cache.  
-    if ($self->{state} == $SEARCH_DONE) 
+    # the cache.
+    if ($self->{state} == $SEARCH_DONE)
       {
       # There are no more results to be gotten; fail & bail:
       return undef;
@@ -757,6 +784,8 @@ sub strip_tags
   my @as = @_;
   foreach (@as)
     {
+    # Special case: change BR to space:
+    s!<BR>! !gi;
     # We assume for now that we will not be encountering tags with
     # embedded '>' characters!
     s/\074.+?\076//g;
@@ -859,7 +888,8 @@ sub user_agent
     $ua->delay($self->{'interrequest_delay'}/60.0);
     }
   $ua->timeout($self->{'timeout'});
-  $ua->proxy('http', $self->{'http_proxy'}) if (defined($self->{'http_proxy'}));
+  $ua->proxy('http', $self->{'http_proxy'}) if ($self->{'http_proxy'} ne '');
+  $ua->env_proxy if $self->{'env_proxy'};
   $self->{'user_agent'} = $ua;
   } # user_agent
 
@@ -915,10 +945,10 @@ sub http_request
       $request = new HTTP::Request($method, $url);
       }
 
-    if ($self->is_http_proxy_auth_data())
+    if ($self->is_http_proxy_auth_data)
       {
-      $request->proxy_authorization_basic($self->http_proxy_user(),
-                                          $self->http_proxy_pwd());
+      $request->proxy_authorization_basic($self->http_proxy_user,
+                                          $self->http_proxy_pwd);
       }
 
     $self->{'_cookie_jar'}->add_cookie_header($request) if ref($self->{'_cookie_jar'});
@@ -1169,30 +1199,65 @@ Checks for overflow.
 sub retrieve_some
   {
   my $self = shift;
-  print STDERR " + retrieve_some(",$self->{'native_query'},")\n" if $self->{debug};
+  print STDERR " + retrieve_some(", $self->{'native_query'}, ")\n" if $self->{debug};
   return undef if ($self->{state} == $SEARCH_DONE);
   # assume that caller has verified defined($self->{'native_query'}).
   $self->setup_search() if ($self->{state} == $SEARCH_BEFORE);
-  
   # got enough already?
   if ($self->{number_retrieved} >= $self->{'maximum_to_retrieve'})
     {
     $self->{state} = $SEARCH_DONE;
     return;
-    }
+    } # if
+  # spinning our wheels?
   if ($self->{requests_made} > $self->{'maximum_to_retrieve'}) {
     $self->{state} = $SEARCH_DONE;
     return;
-    }
-  
-  # do it
-  my $res = $self->native_retrieve_some();
+    } # if
+  # need more results
+  my $res = $self->native_retrieve_some() || 0;
   print STDERR " +   native_retrieve_some() returned $res\n" if $self->{debug};
   $self->{requests_made}++;
-  $self->{number_retrieved} += $res if (defined($res));
-  $self->{state} = $SEARCH_DONE if (!defined($res) || $res == 0);
+  $self->{number_retrieved} += $res;
+  $self->{state} = $SEARCH_DONE if ($res == 0);
   return $res;
   } # retrieve_some
+
+
+=head2 native_retrieve_some (PRIVATE)
+
+An internal routine to fetch the next page of results from the engine.
+Sets $self->{_prev_url} to the URL of the page just retrieved.
+Creates an HTML::TreeBuilder object and passes it to $self->parse_tree().
+
+If a backend defines parse_tree(), it need not also define
+native_retrieve_some().  See the WWW::Search::Yahoo distribution for
+example usage.
+
+=cut
+
+sub native_retrieve_some
+  {
+  my ($self) = @_;
+  printf STDERR (" +   %s::native_retrieve_some()\n", __PACKAGE__) if $self->{_debug};
+  # fast exit if already done
+  return undef if (!defined($self->{_next_url}));
+  # If this is not the first page of results, sleep so as to not overload the server:
+  $self->user_agent_delay if 1 < $self->{'_next_to_retrieve'};
+  # Get one page of results:
+  print STDERR " +   sending request (", $self->{'_next_url'}, ")\n" if $self->{_debug};
+  my $response = $self->http_request('GET', $self->{'_next_url'});
+  $self->{_prev_url} = $self->{_next_url};
+  $self->{'_next_url'} = undef;
+  $self->{response} = $response;
+  if (! $response->is_success)
+    {
+    return undef;
+    } # if
+  # Parse the output:
+  my $tree = HTML::TreeBuilder->new_from_content($response->content);
+  return $self->parse_tree($tree);
+  } # native_retrieve_some
 
 
 =head2 test_cases (deprecated)

@@ -1,3 +1,22 @@
+2001-09-10  Kingpin  <mthurn@copper.dulles.tasc.com>
+
+	* lib/WWW/Search.pm (native_retrieve_some): new method
+
+2001-09-07  Kingpin  <mthurn@copper.dulles.tasc.com>
+
+	* lib/WWW/Search.pm (strip_tags): convert <BR> to one space
+
+	* lib/WWW/Search/Test.pm (run_our_test): new argument to print results to STDERR
+	(run_our_test): do not set maximum if user expects an exact number of results
+
+2001-08-31  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search.pm (env_proxy): new method
+
+2001-08-29  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search.pm: tweaked debugging messages
+
 2001-07-16  Kingpin  <mthurn@tasc.com>
 
 	* lib/WWW/Search/Test.pm (run_gui_test): new method

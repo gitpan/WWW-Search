@@ -3,12 +3,13 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.23?  (2001-07-16)
+WHAT IS NEW IN WWW::Search 2.24?  (2001-09-13)
 ----------------------------------------------
 
-overview:
- * new mechanism for restricting search to a date-range
- * new infrastructure for testing GUI queries
+overview: 
+ * added generic method native_retrieve_some() 
+ * allow debugging in WWW::Search::Test
+ * note that the distribution version is no longer synchronized with the module version
 
 For details, see the ChangeLog file and/or the pod of each affected
 module.
@@ -88,7 +89,7 @@ Yahoo           http://www.perl.com/CPAN-local/modules/by-module/WWW/MTHURN/
 ZDNet           http://www.perl.com/CPAN-local/authors/by-module/WWW/JSMYSER/
 
 There are even more backends available for manual download and
-installation at http://members.nbci.com/backends/
+installation at http://www.idexer.com/backends/
 
 
 REQUIREMENTS
@@ -223,7 +224,7 @@ there as soon as they're fixed.
 Feedback about WWW::Search is encouraged.  If you're using it for a
 neat application, please let us know.  If you'd like to (or have
 already) implement and publish a new backend for WWW::Search, let us
-know so we don't duplicate work.  <MartinThurn@iname.com>
+know so we don't duplicate work.  <mthurn@tasc.com>
 
 Backend-related bug reports ("search engine ABC doesn't work") should
 be sent to the author of the backend (backend authors are identified
@@ -231,7 +232,7 @@ in the corresponding man page and in the output of `make
 test_parsing`).  
 
 All other feedback, bug reports, fixes, and new backends should be
-sent to Martin Thurn <MartinThurn@iname.com>.  When sending e-mail,
+sent to Martin Thurn <mthurn@tasc.com>.  When sending e-mail,
 please please put [WWW::Search] at the beginning of the subject line
 (or risk me losing the message among the spam).
 
@@ -300,30 +301,34 @@ each backend's maintainer.
 same search as the engine's web GUI (I'm looking for contributions of
 the precise arguments that will produce such a search for each engine;
 i.e. the hash that should be passed as the second argument to
-native_query).  Contact <MartinThurn@iname.com>
+native_query).  Contact <mthurn@tasc.com>
 
- - test cases for WebSearch.  Contact <MartinThurn@iname.com>
+ - test cases for WebSearch.  Contact <mthurn@tasc.com>
 
- - test cases for AutoSearch.  Contact <MartinThurn@iname.com>
+ - test cases for AutoSearch.  Contact <mthurn@tasc.com>
 
  - use LWP::ParallelUA to speed up multiple backend search requests
 (I'm trying to decide what the API interface will look like; please
-send suggestions).  Contact <MartinThurn@iname.com>
+send suggestions).  Contact <mthurn@tasc.com>
+
+ - add a "language" parameter to the WWW::Search object?  We would
+need a critical mass of backends/engines that can search multiple
+languages before this would be useful.
 
  - proxy support (I'm looking for a contribution here from someone who
 uses/needs proxy support and can test it).  Contact
-<MartinThurn@iname.com>
+<mthurn@tasc.com>
 
  - more widespread use of result tags such as description, date, size,
 etc. across all backends.  Contact backend maintainers.
 
  - a freeze/restore interface to suspend and resume in-progress queries.
 
- - more backends.
+ - more backends!
 
 Contributions are always welcome.  Send me e-mail if you plan a new
 backend, or to discuss architectural changes (to avoid duplicating
-work).  Contact <MartinThurn@iname.com>
+work).  Contact <mthurn@tasc.com>
 
 
 SUPPORT AND CREDITS
@@ -349,7 +354,7 @@ APPLICATIONS:
 BACKENDS:
 	AltaVista		John Heidemann
 	Dejanews		Cesare Feroldi de Rosa <C.Feroldi@it.net>
-				and Martin Thurn <MartinThurn@iname.com>
+				and Martin Thurn <mthurn@tasc.com>
 	Crawler			Andreas Borchert
 	Excite			GLen Pringle <pringle@cs.monash.edu.au>
 				and Martin Thurn
@@ -387,7 +392,7 @@ identified by William Scheding <wls@isi.edu>, T. V. Raman
 <raman@adobe.com> (proxy support), C. Feroldi <C.Feroldi@it.net>,
 Larry Virden <lvirden@cas.org>, Paul Lindner <paul.lindner@itu.int>,
 Guy Decoux <decoux@moulon.inra.fr>, R Chandrasekar (Mickey)
-<mickeyc@linc.cis.upenn.edu>, Martin Thurn <MartinThurn@iname.com>,
+<mickeyc@linc.cis.upenn.edu>, Martin Thurn <mthurn@tasc.com>,
 Chris Nandor <pudge@pobox.com>, Martin Valldeby
 <martin.valldeby@pakom.se>, Jim Smyser <jsmyser@bigfoot.com>, Darren
 Stalder <darren@u.washington.edu>, Neil Bowers

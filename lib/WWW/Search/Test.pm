@@ -26,7 +26,7 @@ use strict;
 
 use vars qw( $MODE_DUMMY $MODE_INTERNAL $MODE_EXTERNAL $MODE_UPDATE );
 use vars qw( $TEST_DUMMY $TEST_EXACTLY $TEST_BY_COUNTING $TEST_GREATER_THAN $TEST_RANGE );
-use vars qw( $iTest $oSearch );
+use vars qw( $iTest $oSearch $sEngine );
 
 require Exporter;
 use vars qw( @EXPORT @EXPORT_OK @ISA );
@@ -45,7 +45,7 @@ use File::Path;
 
 use vars qw( $VERSION $bogus_query );
 
-$VERSION = '2.12';
+$VERSION = '2.14';
 $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 
 ($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = qw(dummy internal external update);
@@ -515,7 +515,8 @@ to be used for all subsequent calls to run_test and run_gui_test (see below).
 sub new_engine
   {
   $iTest++;
-  $oSearch = new WWW::Search(shift);
+  $sEngine = shift;
+  $oSearch = new WWW::Search($sEngine);
   print ref($oSearch) ? '' : 'not ';
   print "ok $iTest\n";
   } # new_engine
@@ -547,7 +548,9 @@ sub run_gui_test
 
 sub run_our_test
   {
-  my ($sType, $sQuery, $iMin, $iMax, $iDebug) = @_;
+  my ($sType, $sQuery, $iMin, $iMax, $iDebug, $iPrintResults) = @_;
+  $iDebug ||= 0;
+  $iPrintResults ||= 0;
   carp ' --- min/max values out of order?' if defined($iMin) && defined($iMax) && ($iMax < $iMin);
   my $sExpect;
   if (! defined($iMax))
@@ -563,17 +566,27 @@ sub run_our_test
     $sExpect = "$iMin..$iMax";
     }
   $iMin ||= 0;
-  if (defined $iMax)
+  if ($iMin == $iMax)
     {
-    $oSearch->maximum_to_retrieve($iMax+1);
+    # The caller expects an exact result set.  Do not limit how many
+    # results are returned.
+    $oSearch->maximum_to_retrieve(99999);
     }
   else
     {
-    $oSearch->maximum_to_retrieve($iMin + 1);
-    $iMax = 999999;
+    if (defined $iMax)
+      {
+      $oSearch->maximum_to_retrieve($iMax + 1);
+      }
+    else
+      {
+      $oSearch->maximum_to_retrieve($iMin + 1);
+      $iMax = 999999;
+      }
     }
   $iTest++;
   $sQuery = WWW::Search::escape_query($sQuery);
+  # print STDERR " + in WWW::Search::Test::run_our_test, iDebug = $iDebug\n";
   if ($sType eq 'gui')
     {
     $oSearch->gui_query($sQuery,
@@ -587,10 +600,16 @@ sub run_our_test
                           );
     }
   my @aoResults = $oSearch->results();
+  if ($iPrintResults)
+    {
+    $, = "\n";
+    print map { $_->url .' == '. $_->description } @aoResults;
+    print "\n";
+    } # if
   my $iResults = scalar(@aoResults);
   if (($iResults < $iMin) || ($iMax < $iResults))
     {
-    print STDERR " --- got $iResults results for $sType query '$sQuery', but expected $sExpect\n";
+    print STDERR " --- got $iResults results for $sType $sEngine query '$sQuery', but expected $sExpect\n";
     print STDOUT 'not ';
     } # if
   print STDOUT "ok $iTest\n";

@@ -1,5 +1,5 @@
 # This -*- perl -*- script writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.15 2001/07/16 15:52:20 mthurn Exp $
+# $Id: Makefile.PL,v 1.17 2001/09/13 17:52:32 mthurn Exp $
 
 require 5.004;
 
@@ -19,7 +19,7 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
               'NAME' => 'WWW::Search',
-              'VERSION' => 2.23,
+              'VERSION' => 2.24,
 
               ($] ge '5.005') ? (
                                  'AUTHOR' => 'Martin Thurn <mthurn@tasc.com>',
@@ -43,5 +43,8 @@ sub MY::postamble
   return '
 test_parsing: pure_all
 	PERL_DL_NONLAZY=1 $(FULLPERL) -I$(INST_ARCHLIB) -I$(INST_LIB) -I$(PERL_ARCHLIB) -I$(PERL_LIB) t/test_parsing.pl $(TEST_ARGS)
+
+tags:
+	cat MANIFEST | etags -
 ';
   } # MY::postamble
