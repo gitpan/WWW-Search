@@ -20,7 +20,7 @@ See file test.pl in the WWW-Search-HotBot distribution for a detailed
 package WWW::Search::Test;
 
 use Carp;
-use File::Spec;
+use File::Spec::Functions qw( :ALL );
 
 use strict;
 
@@ -45,7 +45,7 @@ use File::Path;
 
 use vars qw( $VERSION $bogus_query );
 
-$VERSION = '2.17';
+$VERSION = '2.18';
 $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 
 ($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = qw(dummy internal external update);
@@ -214,9 +214,9 @@ sub test
     return;
     } # if
 
-  my $pwd = File::Spec->curdir();
+  my $pwd = curdir();
   my @asSE = split(/::/, $sSE);
-  my $path = File::Spec->catdir($pwd, 'Test-Pages', @asSE);
+  my $path = catdir($pwd, 'Test-Pages', @asSE);
   mkpath $path;
   if ($self->{'mode'} eq $MODE_UPDATE)
     {
@@ -224,17 +224,17 @@ sub test
     opendir DIR, $path;
     foreach my $afile (readdir DIR)
       {
-      unlink File::Spec->catfile($path, $afile) if $afile =~ m/^$file/;
+      unlink catfile($path, $afile) if $afile =~ m/^$file/;
       } # foreach
     closedir DIR;
     } # if MODE_UPDATE
   # Look at the filename argument we got:
-  my ($v,$d,$f) = File::Spec->splitpath($file);
+  my ($v,$d,$f) = splitpath($file);
   # If it contains no path element (file name only):
   if ($d eq '')
     {
     # Prepend path onto file:
-    $file = File::Spec->catfile($path, $file);
+    $file = catfile($path, $file);
     } # if
   my $o = new WWW::Search($sSE);
   my $version = $o->version;
@@ -248,7 +248,7 @@ sub test
   # --max 209 added by Martin Thurn 1999-09-27.  We never want to
   # fetch more than three pages, if we can at all help it (or do we?)
   my $websearch = $self->{websearch};
-  $websearch ||= File::Spec->catfile($pwd, 'blib', 'script', 'WebSearch');
+  $websearch ||= catfile($pwd, 'blib', 'script', 'WebSearch');
   my $cmd = $Config{'perlpath'} . " -MExtUtils::testlib $websearch ";
   $cmd .= $self->{debug} ? '--debug '.$self->{debug} : '';
   $cmd .= " --max 209 --engine $sSE ". $src{$self->{'mode'}} ." -- $query";

@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.64 2002/03/12 21:19:05 mthurn Exp $
+# $Id: Search.pm,v 1.66 2002/03/15 18:20:20 mthurn Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -33,12 +33,13 @@ request to avoid overloading either the client or the server.
 
 Here is a sample program:
 
+    my $query = 'Columbus Ohio sushi restaurant';
     my $search = new WWW::Search('AltaVista');
     $search->native_query(WWW::Search::escape_query($query));
     while (my $result = $search->next_result())
       {
       print $result->url, "\n";
-      }
+      } # while
 
 Results are objects of type C<WWW::SearchResult>
 (see L<WWW::SearchResult> for details).
@@ -69,7 +70,7 @@ package WWW::Search;
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query generic_option strip_tags @ENGINES_WORKING);
-$VERSION = '2.29';
+$VERSION = '2.31';
 $MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
@@ -1246,12 +1247,20 @@ Sets $self->{_prev_url} to the URL of the page just retrieved.
 
 Calls $self->preprocess_results_page() on the raw HTML of the page.
 
-Then, parses the page with an HTML::TreeBuilder object and
-passes that object to $self->parse_tree().
+Then, parses the page with an HTML::TreeBuilder object and passes that
+populated object to $self->parse_tree().
+
+If a backend needs to use a subclassed or modified HTML::TreeBuilder
+object, it should set $self->{'_treebuilder'} to that object before
+any results are retrieved (e.g. at the end of native_setup_search).
+
+  my $oTree = new HTML::TreeBuilder;
+  $oTree->store_comments(1);
+  $self->{'_treebuilder'} = $oTree;
 
 If a backend defines the method parse_tree(), it need not also define
-native_retrieve_some().  See the WWW::Search::Yahoo distribution for
-example usage.
+native_retrieve_some().  See the WWW::Search::Yahoo module for example
+usage.
 
 =cut
 
@@ -1274,7 +1283,23 @@ sub native_retrieve_some
     return undef;
     } # if
   # Parse the output:
-  my $tree = HTML::TreeBuilder->new_from_content($self->preprocess_results_page($response->content));
+  my $tree;
+  if (ref $self->{'_treebuilder'})
+    {
+    # Assume that the backend has installed their own TreeBuilder
+    $tree = $self->{'_treebuilder'};
+    # Get ready to start over:
+    $tree->delete;
+    }
+  else
+    {
+    $tree = HTML::TreeBuilder->new(
+                                   # use all default options
+                                  );
+    $self->{'_treebuilder'} = $tree;
+    }
+  $tree->parse($self->preprocess_results_page($response->content));
+  $tree->eof();
   return $self->parse_tree($tree);
   } # native_retrieve_some
 
@@ -1315,35 +1340,32 @@ sub test_cases
   return eval '$'.ref($self).'::TEST_CASES';
   } # test_cases
 
+
 =head1 IMPLEMENTING NEW BACKENDS
 
-C<WWW::Search> supports backends to separate search engines.
-Each backend is implemented as a subclass of C<WWW::Search>.
-L<WWW::Search::AltaVista> provides a good sample backend.
+C<WWW::Search> supports backends to separate search engines.  Each
+backend is implemented as a subclass of C<WWW::Search>.
+L<WWW::Search::Yahoo> provides a good sample backend.
 
-A backend must have the two routines
-C<native_retrieve_some> and C<native_setup_search>.
+A backend must have the routine C<native_setup_search>.  A backend
+must have the routine C<native_retrieve_some> or C<parse_tree>.
 
-C<native_retrieve_some> is the core of a backend.
-It will be called periodically to fetch URLs.
-It should retrieve several hits from the search service
-and add them to the cache.  It should return the number
+C<native_setup_search> is invoked before the search.  It is passed a
+single argument: the escaped, native version of the query.
+
+C<native_retrieve_some> is the core of a backend.  It will be called
+periodically to fetch URLs.  It should retrieve several hits from the
+search service and add them to the cache.  It should return the number
 of hits found, or undef when there are no more hits.
 
 Internally, C<native_retrieve_some> typically sends an HTTP request to
-the search service, parse the HTML, extract the links and
-descriptions, then save the URL for the next page of results.  See the
-code for the AltaVista implementation for an example.
+the search service, parses the HTML, extracts the links and
+descriptions, then saves the URL for the next page of results.  See
+the code for the C<WWW::Search::AltaVista> module for an example.
 
-C<native_setup_search> is invoked before the search.
-It is passed a single argument:  the escaped, native version
-of the query.
-
-The front- and backends share a single object (a hash).
-The backend can change any hash element beginning with underscore,
-and C<{response}> (an C<HTTP::Response> code) and C<{cache}>
-(the array of C<WWW::SearchResult> objects caching all results).
-Again, look at one of the existing web search backends as an example.
+Alternatively, a backend can define the method C<parse_tree> instead
+of C<native_retrieve_some>.  See the C<WWW::Search::Ebay> module for a
+good example.
 
 If you implement a new backend, please let the authors know.
 
@@ -1402,13 +1424,8 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 @ENGINES_WORKING = qw(
                       Crawler
-                      Excite::News
                       Fireball
-                      FolioViews
-                      HotFiles
-                      MetaCrawler
                       Metapedia
-                      NetFind
                       Null
                       SFgate
                       VoilaFr

@@ -4,18 +4,6 @@ MANIFEST
 Makefile.PL
 README
 TODO
-Test-Pages/Excite/News/multi
-Test-Pages/Excite/News/multi.0
-Test-Pages/Excite/News/multi.README
-Test-Pages/Excite/News/multi.out
-Test-Pages/Excite/News/one
-Test-Pages/Excite/News/one.0
-Test-Pages/Excite/News/one.README
-Test-Pages/Excite/News/one.out
-Test-Pages/Excite/News/zero
-Test-Pages/Excite/News/zero.0
-Test-Pages/Excite/News/zero.README
-Test-Pages/Excite/News/zero.out
 Test-Pages/Fireball/multi
 Test-Pages/Fireball/multi.0
 Test-Pages/Fireball/multi.README
@@ -101,7 +89,6 @@ diff.txt
 lib/WWW/Search.pm
 lib/WWW/Search.pm.rej
 lib/WWW/Search/Crawler.pm
-lib/WWW/Search/Excite/News.pm
 lib/WWW/Search/ExciteForWebServers.pm
 lib/WWW/Search/Fireball.pm
 lib/WWW/Search/FolioViews.pm

@@ -1,3 +1,7 @@
+2002-03-15  Kingpin  <mthurn@copper.dulles.tasc.com>
+
+	* lib/WWW/Search.pm (native_retrieve_some): allow backends to specify the HTML::TreeBuilder object to be used
+
 2002-03-12  Kingpin  <mthurn@copper.dulles.tasc.com>
 
 	* Makefile.PL: require 2 more modules

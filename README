@@ -3,12 +3,12 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.27?  (2002-03-12)
+WHAT IS NEW IN WWW::Search 2.28?  (2002-03-18)
 ----------------------------------------------
 
 overview: 
- * do not require backends or users to call user_agent()
- * other minor changes
+ * allow backend to provide their own HTML::TreeBuilder
+ * updated various lists, for currently broken backends
 
 For details, see the ChangeLog file and/or the pod of each affected
 module.
@@ -22,8 +22,8 @@ search engines on the world-wide web (and similar engines).
 Currently, WWW::Search includes backends for WebCrawler, among others.
 Backends for many engines can be obtained separately, such as
 AltaVista, Ebay, HotBot, and Yahoo.  This distribution includes two
-applications built from this library: AutoSearch (a program to
-automate tracking of search results over time), and WebSearch, a small
+applications built from this library: AutoSearch, a program to
+automate tracking of search results over time; and WebSearch, a small
 demonstration program to drive the library.
 
 WWW::Search does NOT try to emulate the default search that you would
@@ -44,47 +44,60 @@ engines, it will fail if the search engine operators change their
 format (an unfortunately frequent occurrence).  WWW::Search includes a
 test suite for a few backends, which verifies that they are
 functioning correctly.  The test suite can be run by typing 'make
-test_parsing'; see under INSTALLATION below for details.  As of the
-day of the release the current backend status is:
+test_parsing'; see under INSTALLATION below for details.  
 
-Crawler			partially working?
-Excite::News		working
+This base WWW::Search distribution contains backends for the following
+search engines.  Unfortunately, almost none are operational.  We would
+like to have volunteers to fix and/or take over maintenance of these
+backends.
+
+Crawler			not working
 ExciteForWebServers	not working
-Fireball		working? (not in test suite)
-FolioViews		working
+Fireball		partially working (not in test suite)
+FolioViews		not working
 Gopher			not working? (not in test suite)
 HotFiles		not working
 Livelink		not working? (not in test suite)
-MetaCrawler             working
-Metapedia		working? (not in test suite)
+MetaCrawler             not working?
+Metapedia		partially working? (not in test suite)
 MSIndexServer		not working?
 NetFind                 not working?
 Null			working
 PLweb			not working
 Profusion               defunct
 Search97		not working
-SFgate			working
+SFgate			partially working?
 Simple			not working? (not in test suite)
 Verity			not working (not in test suite)
-VoilaFr                 working (not in test suite)
+VoilaFr                 partially working? (not in test suite)
 
 ''Partially working'' indicates that some tests passed and some failed.
 
 The following backends (and more!) are registered at CPAN
 independently (not included with this WWW::Search distribution):
 
+AltaVista       http://www.perl.com/CPAN-local/authors/by-module/WWW
+AP              in the WWW::Search::News distribution
+Ebay            http://www.perl.com/CPAN-local/authors/by-module/WWW
 Euroseek        http://www.perl.com/CPAN-local/authors/by-module/WWW/JSMYSER/
+Go              http://www.perl.com/CPAN-local/authors/by-module/WWW
 GoTo            http://www.perl.com/CPAN-local/authors/by-module/WWW/JSMYSER/
 Google          http://www.perl.com/CPAN-local/authors/by-module/WWW/JSMYSER/
 HotBot          http://www.perl.com/CPAN-local/modules/by-module/WWW/
 LookSmart       http://www.perl.com/CPAN-local/modules/by-module/WWW/JSMYSER
 Lycos           http://www.perl.com/CPAN-local/modules/by-module/WWW/MTHURN/
 Magellan        http://www.perl.com/CPAN-local/modules/by-module/WWW/MTHURN/
+Newsbytes       in the WWW::Search::News distribution
+Nomade          http://www.perl.com/CPAN-local/authors/by-module/WWW
 NorthernLight   http://www.perl.com/CPAN-local/authors/by-module/WWW/JSMYSER/
 OpenDirectory   http://www.perl.com/CPAN-local/authors/by-module/WWW/JSMYSER/
+PRWire          http://www.perl.com/CPAN-local/authors/by-module/WWW
+Pubmed          http://www.perl.com/CPAN-local/authors/by-module/WWW
 Snap            http://www.perl.com/CPAN-local/authors/by-module/WWW/JSMYSER/
-Yahoo           http://www.perl.com/CPAN-local/modules/by-module/WWW/MTHURN/
+Yahoo           http://www.perl.com/CPAN-local/modules/by-module/WWW
 ZDNet           http://www.perl.com/CPAN-local/authors/by-module/WWW/JSMYSER/
+WashPost        in the WWW::Search::News distribution
+WashTech        in the WWW::Search::News distribution
 
 There are even more backends available for manual download and
 installation at http://www.idexer.com/backends/
@@ -104,7 +117,7 @@ AVAILABILITY
 ------------
 
 The latest version of WWW::Search should always be available on CPAN.
-Here is the best URL for finding it:
+Here is a good URL for finding it:
 http://www.perl.com/CPAN-local/modules/by-module/WWW
 
 
@@ -213,6 +226,15 @@ below for quick-start instructions.
 DISCUSSION, BUG REPORTS, AND IMPROVEMENTS
 -----------------------------------------
 
+When submitting a bug report or request for help, please remember to
+include:
+  - the operating system name and version
+  - the version of perl
+  - the version of WWW::Search
+  - the version of the backend
+  - the code you ran to produce the error (PLEASE cut-and-paste, do not just summarize!)
+  - actual output showing the error (PLEASE cut-and-paste, do not just summarize!)
+
 There is a mailing list for WWW::Search discussion.  To subscribe,
 send "subscribe info-www-search" as the body of a message to
 <info-www-search-request@isi.edu>.  If you use WWW::Search at all, you
@@ -229,19 +251,11 @@ be sent to the author of the backend (backend authors are identified
 in the corresponding man page and in the output of `make
 test_parsing`).  
 
-All other feedback, bug reports, fixes, and new backends should be
-sent to Martin Thurn <mthurn@cpan.org>.  When sending e-mail,
-please please put [WWW::Search] at the beginning of the subject line
-(or risk me losing the message among the spam).
-
-When submitting a bug report or request for help, please remember to
-include:
-  - the operating system name and version
-  - the version of perl
-  - the version of WWW::Search
-  - the version of the backend
-  - the code you ran to produce the error (PLEASE cut-and-paste, do not just summarize!)
-  - actual output showing the error (PLEASE cut-and-paste, do not just summarize!)
+All other feedback, bug reports, fixes, and new backends (if you want
+them to be included with the base distribution) should be sent to
+Martin Thurn <mthurn@cpan.org>.  When sending e-mail, please please
+put [WWW::Search] in the subject line (or risk me losing the message
+among the spam).
 
 
 DEMONSTRATION
@@ -284,7 +298,7 @@ DOCUMENTATION
 See `perldoc WWW::Search` after installation for an overview of the
 library.  POD-style documentation is also included in all modules and
 programs, so you can do `perldoc WebSearch` and `perldoc AutoSearch`
-and `perldoc WWW::Search::WebCrawler` after installation.
+and `perldoc WWW::Search::Crawler` after installation.
 
 
 FUTURE PLANS
