@@ -1,10 +1,34 @@
+2000-03-22  Kingpin  <mthurn@tasc.com>
+
+	* WWW::Search VERSION 2.11 RELEASED!
+	
+2000-03-21  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search/Excite/News.pm: updated to 2.03 (new output format)
+
+	* lib/WWW/Search/VoilaFr.pm: new backend for www.voila.fr GUI searches
+
+2000-03-13  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search/Snap.pm updated to 2.04
+
+	* lib/WWW/Search/Google.pm updated to 2.17
+
+2000-03-09  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search/AltaVista/Intranet.pm: updated to 2.04 (pod only)
+
+2000-02-28  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search/Magellan.pm: removed to its own separate registered module
+
 2000-02-26  Kingpin  <mthurn@tasc.com>
 
 	* WWW::Search VERSION 2.10 RELEASED!
 
 2000-02-25  Kingpin  <mthurn@tasc.com>
 
-	* lib/WWW/Search.pm (reset_search): new function.  New feature: if
+	* lib/WWW/Search.pm (reset_search): new method.  New feature: if
 	you call native_query() a second time on the same WWW::Search
 	object, a new search will be started.  (Before this change, you
 	would get the results of the first query all over again)

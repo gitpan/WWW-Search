@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.23 2000/02/25 18:13:08 mthurn Exp $
+# $Id: Search.pm,v 1.26 2000/03/21 20:16:14 mthurn Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -33,12 +33,12 @@ request to avoid overloading either the client or the server.
 Using the library should be straightforward.
 Here is a sample program:
 
-    my($search) = new WWW::Search('AltaVista');
+    my $search = new WWW::Search('AltaVista');
     $search->native_query(WWW::Search::escape_query($query));
-    my($result);
-    while ($result = $search->next_result()) {
-	print $result->url, "\n";
-    };
+    while (my $result = $search->next_result()) 
+      {
+      print $result->url, "\n";
+      }
 
 Results are objects of type C<WWW::SearchResult>
 (see L<WWW::SearchResult> for details).
@@ -66,7 +66,7 @@ package WWW::Search;
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query generic_option strip_tags @ENGINES_WORKING);
-$VERSION = '2.10';
+$VERSION = '2.11';
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
@@ -378,14 +378,14 @@ to the HTTP response code.
 
 sub next_result
 {
-    my($self) = shift;
+    my $self = shift;
     Carp::croak "search not yet specified"
 	if (!defined($self->{'native_query'}));
     return undef if ($self->{next_to_return} >= $self->{maximum_to_retrieve});
     for (;;) {
         # Something in the cache?  Return it.
         if ($self->{next_to_return} <= $#{$self->{cache}}) {
-            my($i) = ($self->{next_to_return})++;
+            my $i = ($self->{next_to_return})++;
             return ${$self->{cache}}[$i];
         };
         # Done?  Say so.
@@ -405,12 +405,12 @@ Return the HTTP Response code for the last query
 If the query returns C<undef>,
 errors could be reported like this:
 
-    my($response) = $search->response();
+    my $response = $search->response();
     if ($response->is_success) {
 	print "normal end of result list\n";
     } else {
 	print "error:  " . $response->as_string() . "\n";
-    };
+    }
 
 Note:  even if the backend does not involve the web
 it should return HTTP::Response-style codes.
@@ -419,7 +419,7 @@ it should return HTTP::Response-style codes.
 
 sub response
 {
-    my($self) = shift;
+    my $self = shift;
     $self->{response} = new HTTP::Response(RC_OK)
 	if (!defined($self->{response}));
     return $self->{response};
@@ -449,9 +449,9 @@ Example:
 
 sub seek_result
 {
-    my($self) = shift;
+    my $self = shift;
     return ($self->{next_to_return}) if ($#_ == -1);
-    my($old) = $self->{next_to_return};
+    my $old = $self->{next_to_return};
     $self->{next_to_return} = shift;
     return $old;
 }
@@ -525,7 +525,7 @@ NOTE that this is not a method, it is a plain function.
 
 sub escape_query {
     # code stolen from URI::Escape.pm.
-    my($text) = @_;
+    my $text = @_;
     $text = "" if (!defined($text));
     # Default unsafe characters except for space. (RFC1738 section 2.2)
 #    $text =~ s/([+\x00-\x1f"#%;<>?{}|\\\\^~`\[\]\x7F-\xFF])/$URI::Escape::escapes{$1}/g; #"
@@ -655,28 +655,28 @@ sub http_proxy { return shift->_elem('http_proxy', @_); }
 =head2 user_agent($NON_ROBOT) (PRIVATE)
 
 This internal routine creates a user-agent
-for dervived classes that query the web.
+for derived classes that query the web.
 If C<$NON_ROBOT>, a normal user-agent (rather than a robot-style user-agent)
 is used.
 
-backends should use robot-style user-agents whereever possible.
-Also, backends should call C<user_agent_delay> every page retrieval
+Backends should use robot-style user-agents whereever possible.
+Also, backends should call C<user_agent_delay> between every page retrieval
 to avoid swamping search-engines.
 
 =cut
 
 sub user_agent
 {
-    my($self) = shift;
-    my($non_robot) = @_;
+    my $self = shift;
+    my $non_robot = shift;
 
-    my($ua);
+    my $ua ;
     if ($non_robot) {
 	$ua = new LWP::UserAgent;
     } else {
 	$ua = new LWP::RobotUA($self->{agent_name}, $self->{agent_e_mail});
 	$ua->delay($self->{interrequest_delay}/60.0);
-    };
+    }
     $ua->timeout($self->{'timeout'});
     $ua->proxy('http', $self->{'http_proxy'})
 	if (defined($self->{'http_proxy'}));
@@ -694,17 +694,17 @@ in the request body.
 =cut
 
 sub http_request {
-    my($self) = shift;
-    my($method, $url) = @_;
-    my($response);
+    my $self = shift;
+    my ($method, $url) = @_;
+    my $response;
     if ($self->{search_from_file}) {
 	$response = $self->http_request_from_file($url);
     } else {
 	# fetch it
-        my($request);
+        my $request;
 	if ($method eq 'POST') {
-	    my($uri_url) = new URI::URL($url);
-	    my($equery) = $uri_url->equery;
+	    my $uri_url = new URI::URL($url);
+	    my $equery = $uri_url->equery;
 	    $uri_url->equery(undef);   # we will handle the query ourselves
 	    $request = new HTTP::Request($method, $uri_url->abs());
 	    $request->header('Content-Type', 'application/x-www-form-urlencoded');
@@ -712,13 +712,13 @@ sub http_request {
 	    $request->content($equery);
 	} else {
 	    $request = new HTTP::Request($method, $url);
-	};
-	my($ua) = $self->{user_agent};
+	}
+	my $ua = $self->{'user_agent'};
 
 	$response = $ua->request($request);
 
 	# save it for debugging?
-	if ($self->{search_to_file} && $response->is_success) {
+	if ($self->{'search_to_file'} && $response->is_success) {
 	    $self->http_request_to_file($url, $data, $response);
 	};
     };
@@ -726,28 +726,29 @@ sub http_request {
 }
 
 sub http_request_get_filename {
-    my($self) = shift;
+    my $self = shift;
+    my $fn;
     # filename?
     if (!defined($self->{search_filename})) {
-	my($fn) = $self->{search_from_file};
+	$fn = $self->{search_from_file};
 	$fn = $self->{search_to_file} if (!defined($fn));
 	$self->{search_filename} = WWW::Search::unescape_query($fn);
-    };
-    my($fn) = $self->{search_filename};
+    }
+    $fn = $self->{search_filename};
     die "$0: bogus filename.\n" if (!defined($fn));
     return $fn;
 }
 
 sub http_request_from_file {
-    my($self) = shift;
-    my($url) = @_;
+    my $self = shift;
+    my ($url) = @_;
 
-    my($fn) = $self->http_request_get_filename();
+    my $fn = $self->http_request_get_filename();
 
     # read index?
     if (!defined($self->{search_from_file_hash})) {
 	open(TABLE, "<$fn") || die "$0: open $fn failed.\n";
-	my($i) = 0;
+	my $i = 0;
 	while (<TABLE>) {
 	    chomp;
 	    $self->{search_from_file_hash}{$_} = $i;
@@ -758,18 +759,18 @@ sub http_request_from_file {
     };
 
     # read file
-    my($i) = $self->{search_from_file_hash}{$url};
+    my $i = $self->{search_from_file_hash}{$url};
     if (defined($i)) {
 	# print STDERR "$0: saved request <$url> found in $fn.$i\n";
 	# read the data
 	open(FILE, "<$fn.$i") || die "$0: open $fn.$i\n";
-	my($d) = "";
+	my $d = '';
 	while (<FILE>) {
 	    $d .= $_;
 	};
 	close FILE;
 	# make up the response
-	my($r) = new HTTP::Response(RC_OK);
+	my $r = new HTTP::Response(RC_OK);
 	$r->content($d);
 	return $r;
     } else {
@@ -780,18 +781,18 @@ sub http_request_from_file {
 }
 
 sub http_request_to_file {
-    my($self) = shift;
-    my($response) = pop;
-    my($url) = @_;
+    my $self = shift;
+    my $response = pop;
+    my ($url) = @_;
 
-    my($fn) = $self->http_request_get_filename();
+    my $fn = $self->http_request_get_filename();
 
     unlink($fn)
         if ($self->{search_to_file_index} == 0);
     open(TABLE, ">>$fn") || die "$0: open $fn\n";
     print TABLE "$url\n";
     close TABLE;
-    my($i) = ($self->{search_to_file_index})++;
+    my $i = ($self->{search_to_file_index})++;
     open (FILE, ">$fn.$i") || die "$0: open $fn.$i\n";
     print FILE $response->content();
     close FILE;
@@ -813,7 +814,7 @@ sub split_lines {
     # This probably fails on an EBCDIC box
     # where input is in text mode.
     # Too bad Macs do not just use binmode like Windows boxen.
-    my($self) = shift;
+    my $self = shift;
     return split(/\015?\012/, $_[0]);
 }
 
@@ -828,7 +829,7 @@ This routine is not a method.
 
 sub generic_option 
 {
-    my($option) = @_;
+    my ($option) = @_;
     return ($option =~ /^search_/);
 }
 
@@ -862,7 +863,7 @@ servers to avoid overloading them with many, fast back-to-back requests.
 
 =cut
 sub user_agent_delay {
-    my($self) = @_;
+    my ($self) = @_;
     # sleep for a qarter second
     select(undef, undef, undef, $self->{interrequest_delay})
 	 if ($self->{robot_p});
@@ -877,7 +878,7 @@ URL) and the URL to be converted.  Returns a URI::URL object.
 =cut
 
 sub absurl {
-    my($self, $base, $url) = @_;
+    my ($self, $base, $url) = @_;
 
     #$url =~ s,^http:/([^/]),/$1,; #bogus sfgate URL
 
@@ -895,7 +896,7 @@ Checks for overflow.
 
 sub retrieve_some
 {
-    my($self) = shift;
+    my $self = shift;
     print STDERR " + retrieve_some(",$self->{'native_query'},")\n" if $self->{debug};
     return undef
 	if ($self->{state} == $SEARCH_DONE);
@@ -914,7 +915,7 @@ sub retrieve_some
     };
 
     # do it
-    my($res) = $self->native_retrieve_some();
+    my $res = $self->native_retrieve_some();
     $self->{requests_made}++;
     $self->{number_retrieved} += $res if (defined($res));
     $self->{state} = $SEARCH_DONE if (!defined($res));
@@ -1043,16 +1044,15 @@ Infoseek::News
 Infoseek::Web		
 LookSmart		
 Lycos			
-Magellan		
 MetaCrawler             
 Metapedia		
 Monster                 
 NetFind                 
 NorthernLight		
 Null			
-OpenDirectory           
 SFgate			
 Snap			
+VoilaFr
 WebCrawler		
 Yahoo::Classifieds::Employment
 ZDNet			

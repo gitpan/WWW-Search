@@ -1,7 +1,7 @@
 # Snap.pm
 # by Jim Smyser
 # Copyright (C) 1996-2000 by Jim Smyser & USC/ISI
-# $Id: Snap.pm,v 1.6 2000/01/13 15:08:15 mthurn Exp $
+# $Id: Snap.pm,v 1.7 2000/03/13 14:49:00 mthurn Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -97,7 +97,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.03';
+$VERSION = '2.04';
 
 $MAINTAINER = 'Jim Smyser <jsmyser@bigfoot.com>';
 $TEST_CASES = <<"ENDTESTCASES";
@@ -194,15 +194,13 @@ sub native_retrieve_some
       {
      next if m@^$@; # short circuit for blank lines
      print STDERR " * $state ===$_=== " if 2 <= $self->{'_debug'};
-     if (m|<ul>|i) {
-      # $self->approximate_result_count($1);
-       print STDERR "**Approx. Count\n" if ($self->{_debug});
+     if (m|<br><blockquote><font face=.*?>|i) {
+       print STDERR "**Beginning Line...\n" if ($self->{_debug});
        $state = $HITS;
-       # Make sure we catch redirects Snap likes to randomly insert 
-       # and filter them.....
-   } if ($state eq $HITS && m|.*?<a href="http://redirect.*?u=([^"]+)\&q=.*?>(.*)</a></b><br>(.*)<br>|i) {
+
+   } if ($state eq $HITS && m|<font><b><a href="http://redirect.*?u=([^"]+)\&q=.*?>(.*)</a></b>.*?<br>(.*)<br>|i) {
        print STDERR "**Found a URL\n" if 2 <= $self->{_debug};
-	   my ($url,$title, $desc) = ($1,$2,$3);
+       my ($url,$title, $desc) = ($1,$2,$3);
        if (defined($hit)) 
          {
         push(@{$self->{cache}}, $hit);

@@ -1,8 +1,8 @@
 ###############################################################
-# ExciteNews.pm                                       
+# News.pm                                       
 # by Jim Smyser                                       
 # Copyright (c) 1999 by Jim Smyser & USC/ISI          
-# $Id: News.pm,v 1.5 1999/10/05 20:44:49 mthurn Exp $
+# $Id: News.pm,v 1.6 2000/03/21 19:25:47 mthurn Exp $
 # Complete copyright notice follows below.            
 ###############################################################
 
@@ -18,11 +18,14 @@ $search = new WWW::Search('Excite::News');
 =head1 DESCRIPTION
 
 Class for searching Excite News F<http://www.excite.com>.
-Excite has one of the best news bot on the web.
+Excite has one of the best news bot on the web. 
 
-If you use the raw method for this backend you will need to include
-a "<p>" at end of your print statement, example:
-     print $result->raw(), "<p>\n";
+Following results returned for printing are:
+
+$result->{'description'}  will return description if any
+$result->{'source'} articles news source
+$result->{'date'} articles date
+
 
 This class exports no public interface; all interaction should
 be done through WWW::Search objects.
@@ -56,6 +59,10 @@ See $TEST_CASES below.
 
 =head1 VERSION HISTORY
 
+=head2 2.03, 2000-03-21
+
+New format changes
+
 =head2 2.02, 1999-10-5
 
 Misc. formatting changes
@@ -86,7 +93,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.02';
+$VERSION = '2.03';
 
 $MAINTAINER = 'Jim Smyser <jsmyser@bigfoot.com>';
 $TEST_CASES = <<"ENDTESTCASES";
@@ -176,7 +183,7 @@ sub native_retrieve_some
   print STDERR "***Picked up a response..\n" if $self->{'_debug'};
   $self->{'_next_url'} = undef;
   # Parse the output
-  my ($HEADER, $HITS, $SOURCE, $DESC, $DATE, $TRAILER) = qw(HE HH SO DE DA TR);
+  my ($HEADER, $HITS, $TITLE, $SOURCE, $DESC, $DATE, $TRAILER) = qw(HE HH TL SO DE DA TR);
   my ($raw) = '';
   my $hits_found = 0;
   my $state = $HEADER;
@@ -186,7 +193,7 @@ sub native_retrieve_some
     next if m/^$/;              # short circuit for blank lines
     print STDERR " *** $state ===$_===" if 2 <= $self->{'_debug'};
     
-    if ($state eq $HEADER && m|\[(\d+) hits. About Your Results|i) 
+    if ($state eq $HEADER && m|matches.|i) 
       {
       print STDERR "**Result Count**\n" if 2 <= $self->{'_debug'};
       $self->approximate_result_count($1);
@@ -196,8 +203,25 @@ sub native_retrieve_some
       {
       print STDERR "**Next Page Header**\n" if 2 <= $self->{'_debug'};
       $state = $HITS;
+
       }
-    elsif ($state eq $HITS && m@<P>\s<A HREF=.*?;([^"]+)\">(.*)</A>@i) 
+    elsif ($state eq $HITS && m@^<A HREF=.*?;([^"]+)\">$@i) 
+      {
+      print STDERR "hit url line\n" if 2 <= $self->{'_debug'};
+      ($hit, $raw) = $self->begin_new_hit($hit, $raw);
+      $raw .= $_;
+      $self->{'_num_hits'}++;
+      $hits_found++;
+      $hit->add_url($1);
+      $state = $TITLE;
+      }
+    if ($state eq $TITLE && m@^(.+)</A>&nbsp;@i) 
+      {
+      $raw .= $_;
+      $hit->title($1);
+      $state = $SOURCE;
+      }
+    elsif ($state eq $HITS && m@^<A HREF=.*?;([^"]+)\">(.*)</A>&nbsp;@i) 
       {
       print STDERR "hit url line\n" if 2 <= $self->{'_debug'};
       ($hit, $raw) = $self->begin_new_hit($hit, $raw);
@@ -208,18 +232,20 @@ sub native_retrieve_some
       $hit->title($2);
       $state = $SOURCE;
       } 
-    elsif ($state eq $SOURCE && m@(\((.*))@i) 
+    if ($state eq $SOURCE && m@(\((.*))@i) 
       {
       print STDERR "**News Source**\n" if 2 <= $self->{'_debug'};
       $raw .= $_;
       $hit->score($1);
       $state = $DESC;
       } 
-    elsif ($state eq $DESC && m@\<BR>(.*)$@i) 
+    elsif ($state eq $DESC && m@\<BR>.*?</SMALL>(.*)$@i) 
       {
       print STDERR "**Found Description**\n" if 2 <= $self->{'_debug'};
       $raw .= $_;
-      $hit->description($1);
+      my ($desc) = $1;
+      $desc =~ s/\s+/ /g;
+      $hit->description($desc);
       $state = $DATE;
       }
     elsif ($state eq $DATE && m@\<BR>(\<i>(.*))&nbsp;@) 
@@ -229,9 +255,11 @@ sub native_retrieve_some
       $hit->index_date($1);
       $state = $HITS;
       } 
-    elsif ($state eq $HITS && m/\<INPUT\s[^>]*VALUE=\"Next\sResults\"/i) 
+    elsif ($state eq $HITS && m|<INPUT TYPE=submit NAME=next VALUE="Next Results">|i)
       {
       print STDERR "**Going to Next Page**\n" if 2 <= $self->{'_debug'};
+      ($hit, $raw) = $self->begin_new_hit($hit, $raw);
+     
       $self->{'_next_to_retrieve'} += $self->{'_hits_per_page'};
       $self->{'_options'}{'start'} = $self->{'_next_to_retrieve'};
       my($options) = '';
@@ -249,28 +277,13 @@ sub native_retrieve_some
       {
       print STDERR "**Nothing Matched**\n" if 2 <= $self->{'_debug'};
       }
-    } # foreach
+      } # foreach
   if ($state ne $TRAILER)
-    {
+      {
     # no other pages missed
     $self->{_next_url} = undef;
-    }
-  return $hits_found;
-  } # native_retrieve_some
+      }
+      return $hits_found;
+      } # native_retrieve_some
       
 1;
-__END__
-
-<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=kosovo;http://www7.mercurycenter.com:80/premium/front/docs/balkans03.htm">Independence for Kosovo hotly disputed (10/03/1999)</A>&nbsp;
-<SMALL>
-(San Jose Mercury News)
-</SMALL>
-<BR><SMALL>56% </SMALL> Weather Classifieds &amp; Services. Classifieds.
-<BR><i>First found: </i>5 Oct 1999 &nbsp;
-<SMALL>
-      
-
-
-
-
-

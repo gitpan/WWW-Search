@@ -2,7 +2,7 @@
 # Google.pm
 # by Jim Smyser
 # Copyright (C) 1996-1999 by Jim Smyser & USC/ISI
-# $Id: Google.pm,v 1.15 2000/01/13 15:08:24 mthurn Exp $
+# $Id: Google.pm,v 1.16 2000/03/13 14:47:47 mthurn Exp $
 ##########################################################
 
 
@@ -86,6 +86,9 @@ may code for any new variations.
 
 =head1 VERSION HISTORY
 
+2.17
+Insert url as a title when no title is found. 
+
 2.13
 New regexp to parse newly found results format with certain search terms.
 
@@ -133,7 +136,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.16';
+$VERSION = '2.17';
 
 $MAINTAINER = 'Jim Smyser <jsmyser@bigfoot.com>';
 $TEST_CASES = <<"ENDTESTCASES";
@@ -230,11 +233,13 @@ sub native_retrieve_some {
      } 
   elsif ($state == $HITS &&
      m|<a href=(.*)>(.*?)</a><font size=-1><br><font color=green>|i) {
+     my ($url, $title) = ($1,$2);
      ($hit, $raw) = $self->begin_new_hit($hit, $raw);
      print STDERR "**Found HIT1 Line**\n" if ($self->{_debug});
      $raw .= $_;
-     $hit->add_url($1);
+     $hit->add_url($url);
      $hits_found++;
+     $title = $url if ($title eq '');
      $hit->title(strip_tags($title));
      $state = $HITS;
      } 
@@ -251,6 +256,7 @@ sub native_retrieve_some {
      $raw .= $_;
      $hit->add_url($url);
      $hits_found++;
+     $title = $url if ($title eq '');
      $hit->title(strip_tags($title));
      $mDesc =~ s/<.*?>//g;
      $mDesc =  $mDesc . '<br>' if not $mDesc =~ m@<br>@;
@@ -299,6 +305,3 @@ sub native_retrieve_some {
      return $hits_found;
      }
 1;
-
-
-

@@ -1,5 +1,5 @@
 # This -*- perl -*- script writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.10 1999/12/13 14:27:10 mthurn Exp $
+# $Id: Makefile.PL,v 1.11 2000/03/21 20:16:06 mthurn Exp $
 
 require 5.004;
 
@@ -26,6 +26,7 @@ WriteMakefile(
                                 ) : (),
               'PREREQ_PM' => {
                               'URI::Escape' => 0,
+                              'HTML::Parse' => 0,
                               'HTML::Parser' => 2.23,
                               'HTML::TreeBuilder' => 0,  # HTML-Tree-0.51 is good
                               'LWP' => 5.30,

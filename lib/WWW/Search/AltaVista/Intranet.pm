@@ -1,6 +1,6 @@
 # AltaVista/Intranet.pm
 # by Martin Thurn
-# $Id: Intranet.pm,v 1.6 2000/02/15 14:02:48 mthurn Exp $
+# $Id: Intranet.pm,v 1.7 2000/03/09 16:07:08 mthurn Exp $
 #
 # Complete copyright notice follows below.
 
@@ -20,15 +20,28 @@ WWW::Search::AltaVista::Intranet - class for searching via AltaVista Search Intr
 
 =head1 DESCRIPTION
 
-This class implements a search on AltaVista's Intranet Search.
+This class implements a search on AltaVista's Intranet ("AVI") Search.
 
 This class exports no public interface; all interaction should
 be done through WWW::Search objects.
 
+=head1 NOTES
+
+If your query includes characters outside the 7-bit ascii,
+you must tell AVI how to interpret 8-bit characters.
+Add an option for 'enc' to the native_query() call:
+
+  $oSearch->native_query(WWW::Search::escape_query('Zürich'),
+                         { 'enc' => 'iso88591'},
+                        );
+
+Hopefully the correct values for various languages can be found in the
+AVI documentation (sorry, I haven't looked).
+
 =head1 TESTING
 
 There is no standard built-in test mechanism for this module, because
-very few users of WWW::Search will have AltaVista installed on their
+very few users of WWW::Search will have AVI installed on their
 intranet.  (How's that for an excuse? ;-)
 
 =head1 AUTHOR
@@ -58,6 +71,10 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 If it''s not listed here, then it wasn''t a meaningful nor released revision.
 
+=head2 2.04, 2000-03-09
+
+Added pod for selecting query language encoding
+
 =head2 2.03, 2000-02-14
 
 Added support for score/rank (thanks to Peter bon Burg <pvonburg@aspes.ch>)
@@ -80,7 +97,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search::AltaVista Exporter);
-$VERSION = '2.03';
+$VERSION = '2.04';
 
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 $TEST_CASES = <<"ENDTESTCASES";
