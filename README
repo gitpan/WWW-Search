@@ -3,13 +3,14 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.16?  (2001-03-28)
+WHAT IS NEW IN WWW::Search 2.17?  (2001-05-03)
 ----------------------------------------------
 
 overview:
- * new backend for altavista.nl
- * new method submit()
- * minor pod updates
+ * new option --mail for AutoSearch
+ * new module WWW::Search::Scraper
+ * moved job-search backends to the new WWW::Search::Jobs distribution
+ * other tiny invisible updates
 
 For details, see the file ChangeLog and/or the pod of each affected module.
 
@@ -21,7 +22,7 @@ WWW::Search is a collection of Perl modules which provide an API to
 search engines on the world-wide web (and similar engines).
 Currently, WWW::Search includes backends for variations of AltaVista
 and WebCrawler, among others.  Backends for some engines can be
-obtained separately, such as Excite, Go, HotBot, and Yahoo.  This
+obtained separately, such as Excite, HotBot, and Yahoo.  This
 distribution includes two applications built from this library:
 AutoSearch (a program to automate tracking of search results over
 time), and WebSearch, a small demonstration program to drive the
@@ -51,7 +52,6 @@ release the current backend status is:
 AltaVista		working
 AltaVista::AdvancedNews	not working
 AltaVista::AdvancedWeb	not working
-AltaVista::Careers	working? (not in test suite)
 AltaVista::Intranet	working
 AltaVista::News		not working
 AltaVista::NL		working? (not in test suite)
@@ -59,18 +59,15 @@ AltaVista::Web		working
 AOL                     (same as NetFind)
 AOL::Classifieds::Employment    working (not in test suite)
 Crawler			partially working?
-Dice                    working? (not in test suite)
 Excite::News		working
 ExciteForWebServers	not working
 Fireball		working? (not in test suite)
 FolioViews		working
 Gopher			not working? (not in test suite)
-HeadHunter              working? (not in test suite)
 HotFiles		not working
 Livelink		not working? (not in test suite)
 MetaCrawler             working
 Metapedia		working? (not in test suite)
-Monster                 working? (not in test suite)
 MSIndexServer		not working?
 NetFind                 working
 Null			working
@@ -82,7 +79,6 @@ Simple			not working? (not in test suite)
 Verity			not working (not in test suite)
 VoilaFr                 working (not in test suite)
 WebCrawler		working
-Yahoo::Classifieds::Employment  working? (not in test suite)
 
 ''Partially working'' indicates that some tests passed and some failed.
 
@@ -305,7 +301,9 @@ If you are on UNIX you can add
 	0 3 * * 1 AutoSearch /path/to/your/web/pages/me
 
 to your crontab to update this search every week at 3:00 Monday
-morning, for example.
+morning, for example.  If you install WWW::Search::Ebay, and add the
+--mail option to AutoSearch, you'll have your own private replacement
+for ebay's personal search service... WITHOUT the three-query limit!
 
 
 DOCUMENTATION

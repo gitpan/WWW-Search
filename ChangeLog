@@ -1,5 +1,19 @@
-2001-03-28  Kingpin  <mthurn@tasc.com>
+2001-05-02  Kingpin  <mthurn@tasc.com>
 
+	* lib/WWW/Search/Scraper.pm: new module contributed by Glenn Wood
+
+2001-04-10  Kingpin  <mthurn@tasc.com>
+
+	* AutoSearch-code.pl (main): new option --mail for emailing new results
+
+	* AutoSearch.PL: move real code to separate file (and update Makefile.PL)
+
+2001-03-28  Kingpin  <mthurn@tasc.com>
+	
+	* WWW::Search VERSION 2.16 RELEASED!
+	
+2001-03-27  Kingpin  <mthurn@tasc.com>
+	
 	* lib/WWW/Search.pm (submit): new method
 
 2001-03-20  Kingpin  <mthurn@tasc.com>

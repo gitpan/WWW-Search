@@ -8,7 +8,7 @@ use vars qw( $iNum );
 
 BEGIN 
   {
-  my $iExtraTests = 1;
+  my $iExtraTests = 0;
   $iNum = scalar(@WWW::Search::ENGINES_WORKING); 
   plan tests => $iNum + $iExtraTests;
   } # BEGIN
@@ -19,6 +19,8 @@ foreach my $sEngine (@WWW::Search::ENGINES_WORKING)
   eval { $o = new WWW::Search($sEngine) };
   ok(ref($o));
   } # foreach
+
+exit 0;
 
 # Now make sure we get *some* results from *some* engine:
 my $o = new WWW::Search('WebCrawler');

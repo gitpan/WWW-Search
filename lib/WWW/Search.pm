@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.53 2001/03/28 19:39:14 mthurn Exp $
+# $Id: Search.pm,v 1.53 2001/03/28 19:39:14 mthurn Exp mthurn $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -69,7 +69,7 @@ package WWW::Search;
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query generic_option strip_tags @ENGINES_WORKING);
-$VERSION = '2.16';
+$VERSION = '2.17';
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
@@ -327,7 +327,12 @@ sub native_query
   my $opts_ref = $_[1];
   foreach my $sKey (keys %$opts_ref)
     {
-    $self->{$sKey} = $opts_ref->{$sKey} if (generic_option($sKey));
+    if (generic_option($sKey))
+      {
+      # print STDERR " +   promoting $sKey to $self\n";
+      $self->{$sKey} = $opts_ref->{$sKey};
+      # delete $opts_ref->{$sKey};
+      } # if
     } # foreach
   } # native_query
 
@@ -408,7 +413,7 @@ sub approximate_result_count
   # prime the pump:
   $self->retrieve_some() if ($self->{'state'} == $SEARCH_BEFORE);
   return $self->_elem('approx_count', @_);
-  } # approximate_result_count 
+  } # approximate_result_count
 
 
 =head2 results
@@ -435,14 +440,7 @@ sub results
   Carp::croak "query string is empty" unless ($self->{'native_query'} ne '');
   # Put all the SearchResults into the cache:
   1 while ($self->retrieve_some());
-  if ($#{$self->{cache}} >= $self->{maximum_to_retrieve})
-    {
-    return @{$self->{cache}}[0..($self->{maximum_to_retrieve}-1)];
-    }
-  else
-    {
-    return @{$self->{cache}};
-    }
+  return @{$self->{cache}}[0..($self->{maximum_to_retrieve}-1)];
   } # results
 
 =head2 next_result
@@ -465,7 +463,7 @@ sub next_result
   my $self = shift;
   Carp::croak "search not yet specified" if (!defined($self->{'native_query'}));
   return undef if ($self->{next_to_return} >= $self->{maximum_to_retrieve});
-  while (1) 
+  while (1)
     {
     if ($self->{next_to_return} <= $#{$self->{cache}}) 
       {
@@ -1084,32 +1082,32 @@ Checks for overflow.
 =cut
 
 sub retrieve_some
-{
-    my $self = shift;
-    print STDERR " + retrieve_some(",$self->{'native_query'},")\n" if $self->{debug};
-    return undef
-	if ($self->{state} == $SEARCH_DONE);
-    # assume that caller has verified defined($self->{'native_query'}).
-    $self->setup_search()
-	if ($self->{state} == $SEARCH_BEFORE);
-
-    # got enough already?
-    if ($self->{number_retrieved} >= $self->{'maximum_to_retrieve'}) {
-        $self->{state} = $SEARCH_DONE;
-	return;
-    };
-    if ($self->{requests_made} > $self->{'maximum_to_retrieve'}) {
-        $self->{state} = $SEARCH_DONE;
-	return;
-    };
-
-    # do it
-    my $res = $self->native_retrieve_some();
-    $self->{requests_made}++;
-    $self->{number_retrieved} += $res if (defined($res));
-    $self->{state} = $SEARCH_DONE if (!defined($res));
-    return $res;
-}
+  {
+  my $self = shift;
+  print STDERR " + retrieve_some(",$self->{'native_query'},")\n" if $self->{debug};
+  return undef if ($self->{state} == $SEARCH_DONE);
+  # assume that caller has verified defined($self->{'native_query'}).
+  $self->setup_search() if ($self->{state} == $SEARCH_BEFORE);
+  
+  # got enough already?
+  if ($self->{number_retrieved} >= $self->{'maximum_to_retrieve'})
+    {
+    $self->{state} = $SEARCH_DONE;
+    return;
+    }
+  if ($self->{requests_made} > $self->{'maximum_to_retrieve'}) {
+    $self->{state} = $SEARCH_DONE;
+    return;
+    }
+  
+  # do it
+  my $res = $self->native_retrieve_some();
+  print STDERR " +   native_retrieve_some() returned $res\n" if $self->{debug};
+  $self->{requests_made}++;
+  $self->{number_retrieved} += $res if (defined($res));
+  $self->{state} = $SEARCH_DONE if (!defined($res) || $res == 0);
+  return $res;
+  } # retrieve_some
 
 
 =head2 test_cases (deprecated)
@@ -1213,26 +1211,20 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 @ENGINES_WORKING = qw(
                       AltaVista
-                      AltaVista::Careers
                       AltaVista::Intranet
                       AltaVista::Web
-                      AOL::Classifieds::Employment
                       Crawler
-                      Dice
                       Excite::News
                       Fireball
                       FolioViews
-                      HeadHunter
                       HotFiles
                       MetaCrawler
                       Metapedia
-                      Monster
                       NetFind
                       Null
                       SFgate
                       VoilaFr
                       WebCrawler
-                      Yahoo::Classifieds::Employment
                      );
 
 1;

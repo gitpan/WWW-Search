@@ -20,19 +20,21 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
               'NAME' => 'WWW::Search',
               'VERSION_FROM' => 'lib/WWW/Search.pm',
+
               ($] ge '5.005') ? (
                                  'AUTHOR' => 'Martin Thurn <MartinThurn@iname.com>',
                                  'ABSTRACT' => 'Query web search engines and get URLs',
                                 ) : (),
+              'EXE_FILES' => [ @programs_to_install ],
               'PREREQ_PM' => {
                               'File::Spec' => 0,
-                              'URI::Escape' => 0,
                               'HTML::Parse' => 0,
                               'HTML::Parser' => 2.23,
                               'HTML::TreeBuilder' => 0,  # HTML-Tree-0.51 is good
                               'LWP' => 5.30,
+                              'MIME::Lite' => 0,  # only needed for AutoSearch's --mail option
+                              'URI::Escape' => 0,
                              },
-              'EXE_FILES' => [ @programs_to_install ],
               'clean' => { FILES => join(' ', @programs_to_install) },
              );
 
