@@ -3,15 +3,15 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.42?  (2003-07-28)
+WHAT IS NEW IN WWW::Search 2.43?  (2003-10-07)
 ----------------------------------------------
 
 overview: 
 
- * WWW::Search::Test::count_results() now calls login() before getting results
- * no more warnings about WebSearch from WWW::Search::Test
+ * AutoSearch has new option --ignore_channels
+ * Finally fixed the `make test` path errors on Linux (I think)
 
-For details, see the ChangeLog file (updates after 2003-06-06) and/or
+For details, see the ChangeLog file (updates after 2003-07-28) and/or
 the pod of each affected module.
 
 
@@ -46,7 +46,8 @@ format.
 This base WWW::Search distribution contains a few backends that can be
 used for testing.  The backend Null::Empty always returns no results;
 Null::Error always returns an error condition; and Null::Count returns
-a number of sample results that you can specify.
+a number of sample results that you can specify.  After installation,
+consult `perldoc WWW::Search::Null::Count` for details.
 
 The following real, working backends (and more!) are registered at
 CPAN independently (not included with this WWW::Search distribution):
@@ -135,10 +136,11 @@ Don't forget to add /my/perl/lib to your PERL5LIB environment variable
 WHAT IS AutoSearch?
 -------------------
 
-WWW::Search's primary client is AutoSearch.  AutoSearch performs a
-web-based search and puts the results set in a web page.  It
-periodically updates this web page, indicating how the search changes
-over time.  Sample output from AutoSearch can be found at
+The WWW::Search distribution includes a search client called
+AutoSearch.  AutoSearch performs a web-based search and puts the
+results set into a series of web pages.  It periodically updates this
+web page, indicating how the search changes over time.  Sample output
+from AutoSearch can be found at
 <http://www.isi.edu/lsam/tools/autosearch/>.  Output format is
 configurable.
 
@@ -175,7 +177,7 @@ identified in the corresponding man page).
 All other feedback, bug reports, fixes, and new backends (if you are
 unwilling or unable to publish them on CPAN yourself) should be sent
 to Martin Thurn <mthurn@cpan.org>.  When sending e-mail, please please
-put [WWW::Search] in the subject line (or risk me losing the message
+put [WWW-Search] in the subject line (or risk me losing the message
 among the spam).
 
 
@@ -272,24 +274,24 @@ is no longer updated; consult the on-line documentation (i.e. man
 pages) to find out who is currently maintaining each component.
 
 PLATFORM SUPPORT:
-	Unix			John Heidemann <johnh@isi.edu>
-	Windows			Jim Smyser <jsmyser@bigfoot.com>
+	Unix			John Heidemann <johnh(at)isi.edu>
+	Windows			Jim Smyser <jsmyser(at)bigfoot.com>
                 		(see <http://members.xoom.com/WWW_Search>)
 
-COOKIE & HTTP_REFERER TESTING:  Jerry Hermel <jerryxh@earthlink.net>
+COOKIE & HTTP_REFERER TESTING:  Jerry Hermel <jerryxh(at)earthlink.net>
 
 APPLICATIONS:
 	WebSearch		John Heidemann
-	AutoSearch 		William Scheding <wls@isi.edu>
+	AutoSearch 		William Scheding <wls(at)isi.edu>
 
 BACKENDS:
 	AltaVista		John Heidemann
-	Dejanews		Cesare Feroldi de Rosa <C.Feroldi@it.net>
+	Dejanews		Cesare Feroldi de Rosa <C.Feroldi(at)it.net>
 				and Martin Thurn <mthurn@cpan.org>
 	Crawler			Andreas Borchert
-	Excite			GLen Pringle <pringle@cs.monash.edu.au>
+	Excite			GLen Pringle <pringle(at)cs.monash.edu.au>
 				and Martin Thurn
-	ExciteForWebServers	Paul Lindner <lindner@reliefweb.int>
+	ExciteForWebServers	Paul Lindner <lindner(at)reliefweb.int>
 	Fireball		Andreas Borchert
 	FolioViews		Paul Lindner
 	Gopher			Paul Lindner
@@ -316,25 +318,27 @@ BACKENDS:
 	ZDNet			Jim Smyser
 
 AutoSearch is based on an earlier implementation by Kedar Jog
-<jog@isi.edu> with advice from Joe Touch <touch@isi.edu>.
+<jog(at)isi.edu> with advice from Joe Touch <touch(at)isi.edu>.
 
 Bugs and extensions (to the software and documentation) have been
-identified by William Scheding <wls@isi.edu>, T. V. Raman
-<raman@adobe.com> (proxy support), C. Feroldi <C.Feroldi@it.net>,
-Larry Virden <lvirden@cas.org>, Paul Lindner <paul.lindner@itu.int>,
-Guy Decoux <decoux@moulon.inra.fr>, R Chandrasekar (Mickey)
-<mickeyc@linc.cis.upenn.edu>, Martin Thurn <mthurn@cpan.org>,
-Chris Nandor <pudge@pobox.com>, Martin Valldeby
-<martin.valldeby@pakom.se>, Jim Smyser <jsmyser@bigfoot.com>, Darren
-Stalder <darren@u.washington.edu>, Neil Bowers
-<neilb@cre.canon.co.uk>, Ave Wrigley <wrigley@cre.canon.co.uk>,
-Andreas Borchert <borchert@mathematik.uni-ulm.de>, Jim Smyser
-<jsmyser@bigfoot.com>.
+identified by William Scheding <wls(at)isi.edu>, T. V. Raman
+<raman(at)adobe.com> (proxy support), C. Feroldi
+<C.Feroldi(at)it.net>, Larry Virden <lvirden(at)cas.org>, Paul Lindner
+<paul.lindner(at)itu.int>, Guy Decoux <decoux(at)moulon.inra.fr>, R
+Chandrasekar (Mickey) <mickeyc(at)linc.cis.upenn.edu>, Martin Thurn
+<mthurn(at)cpan.org>, Chris Nandor <pudge(at)pobox.com>, Martin
+Valldeby <martin.valldeby(at)pakom.se>, Jim Smyser
+<jsmyser(at)bigfoot.com>, Darren Stalder <darren(at)u.washington.edu>,
+Neil Bowers <neilb(at)cre.canon.co.uk>, Ave Wrigley
+<wrigley(at)cre.canon.co.uk>, Andreas Borchert
+<borchert(at)mathematik.uni-ulm.de>, Jim Smyser
+<jsmyser(at)bigfoot.com>.
 
-Bugs have reported by Joseph McDonald <joe@smartlink.net>, Juan Jose
-Amor <jjamor@infor.es>, Bowen Dwelle <bowen@hotwired.com>, Vassilis
-Papadimos <vpapad@dblab.ece.ntua.gr>, Vidyut Luther <vluther@hpctc.org>, 
-Chris P. Acantilado <cacantil@spawar.navy.mil>.
+Bugs have reported by Joseph McDonald <joe(at)smartlink.net>, Juan
+Jose Amor <jjamor(at)infor.es>, Bowen Dwelle <bowen(at)hotwired.com>,
+Vassilis Papadimos <vpapad(at)dblab.ece.ntua.gr>, Vidyut Luther
+<vluther(at)hpctc.org>, Chris P. Acantilado
+<cacantil(at)spawar.navy.mil>.
 
 
 COPYRIGHT

@@ -1,5 +1,5 @@
-# This -*- perl -*- program writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.31 2003-07-28 21:45:17-04 kingpin Exp kingpin $
+# This -*- cperl -*- program writes the Makefile for WWW::Search
+# $Id: Makefile.PL,v 1.32 2003-09-16 21:54:34-04 kingpin Exp kingpin $
 
 require 5.004;
 
@@ -19,7 +19,7 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
               'NAME' => 'WWW::Search',
-              'VERSION' => 2.42,
+              'VERSION' => 2.43,
 
               ($] ge '5.005') ? (
                                  'AUTHOR' => 'Martin Thurn <mthurn@cpan.org>',
@@ -27,18 +27,30 @@ WriteMakefile(
                                 ) : (),
               'EXE_FILES' => [ @programs_to_install ],
               'PREREQ_PM' => {
+                              # For the defunct test_parsing rule, we
+                              # need a version that sets
+                              # FULLPERLRUNINST:
+                              # 'ExtUtils::MM_Unix' => 1.41,
+
+                              # These are needed for AutoSearch:
+                              'Getopt::Long' => 2.24,
+                              'POSIX' => 0,
+                              'MIME::Lite' => 0,  # only needed for
+                                                  # the --mail option
+
+                              # These are needed _only_ during `make
+                              # test`:
+                              'Test::Inline' => 0,
+                              'Test::More' => 0,
+                              # These are needed for WWW::Search base
+                              # module:
                               'File::Basename' => 0,
                               'File::Find' => 0,
                               'File::Spec' => 0,
-                              'Getopt::Long' => 2.24,  # for AutoSearch
                               'HTML::Parser' => 2.23,
                               'HTML::TreeBuilder' => 0,  # HTML-Tree-0.51 is good
                               'LWP::UserAgent' => 2.0,
-                              'MIME::Lite' => 0,  # only needed for AutoSearch's --mail option
                               'Net::Domain' => 0,
-                              'POSIX' => 0,  # for AutoSearch
-                              'Test::Inline' => 0,
-                              'Test::More' => 0,
                               'URI' => 0,
                               'URI::Escape' => 0,
                               'User' => 0,
@@ -61,21 +73,38 @@ AutoSearch :: FORCE
 
 sub MY::postamble
   {
-  return '
+  my $ret = '';
+  if (0)
+    {
+    $ret .= <<'PART1';
 AutoSearch :: code/AutoSearch-code.pl
 	$(FULLPERL) -MExtUtils::Command -e chmod 0755 AutoSearch.PL
-	$(PERLRUNINST) AutoSearch.PL AutoSearch
+	$(FULLPERL) AutoSearch.PL
+	$(FULLPERL) -MExtUtils::Command -e chmod 0755 $@
 WebSearch :: code/WebSearch-code.pl
 	$(FULLPERL) -MExtUtils::Command -e chmod 0755 WebSearch.PL
-	$(PERLRUNINST) WebSearch.PL WebSearch
+	$(FULLPERL) WebSearch.PL
+	$(FULLPERL) -MExtUtils::Command -e chmod 0755 $@
 
-test_parsing: pure_all
-	PERL_DL_NONLAZY=1 $(PERLRUNINST) t/test_parsing.pl $(TEST_ARGS)
+PART1
+    } # if
+  if (0)
+    {
+    $ret .= <<'PART2';
+test_parsing : pure_all
+	$(FULLPERLRUNINST) t/test_parsing.pl $(TEST_ARGS)
 
+PART2
+    } # if
+  if (1)
+    {
+    $ret .= <<'PART3';
 tags:
 	cat MANIFEST | etags -
 
-';
+PART3
+    } # if
+  return $ret;
   } # MY::postamble
 
 # The following was added for Test::Inline handling.  Derived from
@@ -83,17 +112,24 @@ tags:
 
   {
   package MY;
+  use File::Spec::Functions;
 
   sub top_targets
     {
     my $self = shift;
     # Use the default setting for (not) echoing commands during make:
     my $NOECHO = $self->{NOECHO};
+    # Turn it off for debugging this makefile:
+    # $NOECHO = '';
     # And, ignore error signals.  This is necessary because pod2test
     # carps if the file contains no test code!
     $NOECHO .= '-';
-    # Assume it's in the path:
-    my $out = "POD2TEST_EXE = pod2test\n";
+    # Assume that pod2test was installed into the same place as perl
+    # itself:
+    my $POD2TEST = '$(INSTALLBIN)/pod2test';
+    # But on Windows, it MUST be in the path:
+    $POD2TEST = 'pod2test' if $^O =~ m!win32!i;
+    my $out = "POD2TEST_EXE = $POD2TEST\n";
     $out .= $self->SUPER::top_targets(@_);
     $out .= "\n\ntestifypods : \n";
     $out .= "\t\$(FULLPERL) -MExtUtils::Command -e rm_f t/embedded-*.t\n";
@@ -129,7 +165,7 @@ tags:
     my $self = shift;
     my $out = $self->SUPER::test(@_);
     # Insert our target as a prerequisite for the main test goal:
-    $out =~ s!^(test :: )(.*)!$1 pure_all testifypods $2!m;
+    $out =~ s!^(test\s*::?\s+)(.*)!$1 pure_all testifypods $2!mg;
     return $out;
     } # MY::test
 

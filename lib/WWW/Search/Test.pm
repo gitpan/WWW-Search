@@ -1,4 +1,4 @@
-# $rcs = ' $Id: Test.pm,v 1.29 2003-07-14 23:02:26-04 kingpin Exp kingpin $ ' ;
+# $rcs = ' $Id: Test.pm,v 1.30 2003-08-31 22:09:35-04 kingpin Exp kingpin $ ' ;
 
 =head1 NAME
 
@@ -49,7 +49,7 @@ use vars qw( @EXPORT @EXPORT_OK @ISA );
 
 use vars qw( $VERSION $bogus_query $websearch );
 
-$VERSION = '2.25';
+$VERSION = '2.26';
 $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 
 ($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = qw(dummy internal external update);
@@ -579,9 +579,11 @@ sub run_gui_test
 
 sub count_results
   {
-  my ($sType, $sQuery, $iMin, $iMax, $iDebug, $iPrintResults) = @_;
+  my ($sType, $sQuery, $iMin, $iMax, $iDebug, $iPrintResults, $rh) = @_;
   $iDebug ||= 0;
   $iPrintResults ||= 0;
+  $rh->{'search_debug'} = $iDebug;
+
   carp ' --- min/max values out of order?' if defined($iMin) && defined($iMax) && ($iMax < $iMin);
   $oSearch->reset_search;
   $iMin ||= 0;
@@ -604,19 +606,15 @@ sub count_results
       }
     }
   $iTest++;
-  $sQuery = WWW::Search::escape_query($sQuery);
+  $sQuery = &WWW::Search::escape_query($sQuery);
   # print STDERR " + in WWW::Search::Test::run_our_test, iDebug = $iDebug\n";
   if ($sType eq 'gui')
     {
-    $oSearch->gui_query($sQuery,
-                          { 'search_debug' => $iDebug, },
-                       );
+    $oSearch->gui_query($sQuery, $rh);
     }
   else
     {
-    $oSearch->native_query($sQuery,
-                             { 'search_debug' => $iDebug, },
-                          );
+    $oSearch->native_query($sQuery, $rh);
     }
   $oSearch->login($ENV{WWW_SEARCH_USERNAME}, $ENV{WWW_SEARCH_PASSWORD});
   my @aoResults = $oSearch->results();
@@ -633,6 +631,7 @@ sub count_results
     } # if
   return scalar(@aoResults);
   } # count_results
+
 
 sub run_our_test
   {

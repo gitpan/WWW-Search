@@ -430,7 +430,7 @@ use WWW::Search;
 use strict;
 
 use vars qw( $VERSION );
-$VERSION = '2.07';
+$VERSION = '2.08';
 
 sub print_version
   {
@@ -449,7 +449,7 @@ sub print_version
 
 sub usage {
   print STDERR <<END;
-usage: $0 [--stats] [--verbose] -n "Query Name" -s "query string" --engine engine [--mail you\@where.com] [--options "query options"]... [--filter "filter"] [--host host] [--port port] [--userid bbunny --password c4rr0t5] query_id
+usage: $0 [--stats] [--verbose] -n "Query Name" -s "query string" --engine engine [--mail you\@where.com] [--options "query options"]... [--filter "filter"] [--host host] [--port port] [--userid bbunny --password c4rr0t5] [--ignore_channels KABC,KCBS,KNBC] query_id
 Update or create a web search-engine query.
 Unambiguous argument names can be abbreviated to one letter (e.g. -e engine -f "filter")
 END
@@ -464,7 +464,8 @@ $opts{'help'} = 0;
 $opts{'stats'} = 0;
 $opts{'debug'} = 0;
 $opts{'listnewurls'} = 0;
-&GetOptions(\%opts, qw(n|qn|queryname=s s|qs|querystring=s e|engine=s m|mail=s h|host=s p|port=s o|options=s@ f|uf|urlfilter=s listnewurls stats userid=s password=s v|verbose help V|VERSION debug));
+$opts{'ignore_channels'} = ();
+&GetOptions(\%opts, qw(n|qn|queryname=s s|qs|querystring=s e|engine=s m|mail=s h|host=s p|port=s o|options=s@ f|uf|urlfilter=s listnewurls stats userid=s password=s ignore_channels=s@ v|verbose help V|VERSION debug));
 if ($opts{'V'})
   {
   &print_version();
@@ -810,6 +811,19 @@ sub main {
   # submit search w/options.
   $search->native_query(WWW::Search::escape_query($SummaryQuery), $query_options);
   $search->login($opts{'userid'}, $opts{'password'});
+  # Process the --ignore_channels argument(s):
+  my @asChannel;
+  foreach my $sChannel (@{$opts{'ignore_channels'}})
+    {
+    push @asChannel, split(/,/, $sChannel);
+    } # foreach
+  if ($search->can('ignore_channels')
+      &&
+      scalar(@asChannel)
+     )
+    {
+    $search->ignore_channels(@asChannel);
+    } # if
   # examine search results
   my($result,@results);
   my($next_result);

@@ -1,3 +1,15 @@
+2003-09-16  Kingpin  <mthurn@verizon.net>
+
+	* Makefile.PL (MY::postamble): fixed path for pod2text; etc.
+
+2003-08-31  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search/Test.pm (count_results): new 7th argument = search options hash
+
+2003-08-30  Kingpin  <mthurn@verizon.net>
+
+	* code/AutoSearch-code.pl: new option --ignore_channels
+
 2003-07-28  Kingpin  <mthurn@megapipe.net>
 
 	* lib/WWW/Search.pm (preprocess_results_page): BUGFIX bad return value
