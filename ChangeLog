@@ -1,7 +1,45 @@
+2000-10-02  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search.pm (split_lines): new optional first arg: list of patterns
+
+2000-09-22  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search.pm (cookie_jar): new method to handle web cookies
+
+2000-08-08  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search/AltaVista.pm updated to version 2.9
+
+2000-06-15  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search/Lycos.pm: removed to its own separate registered module
+
+2000-06-12  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search/LookSmart.pm: removed to its own separate registered module
+
+	* lib/WWW/Search/NorthernLight.pm: removed to its own separate registered module
+
+2000-05-26  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search/AltaVista.pm: updated to 2.6 (parse only 1 result)
+
+2000-05-17  Kingpin  <mthurn@tasc.com>
+
+	* removed Lycos/Sites.pm from the distribution (finally)
+
+	* lib/WWW/Search/Yahoo/Classifieds/Employment.pm: updated to 1.02
+
+2000-05-04  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search/Test.pm: updated to 2.03 (fix pod typos)
+
 2000-05-02  Kingpin  <mthurn@tasc.com>
 
 	* WWW::Search VERSION 2.14 RELEASED!
 	
+	* lib/WWW/Search/AltaVista.pm (native_retrieve_some): fix next_url
+
 2000-05-01  Kingpin  <mthurn@tasc.com>
 
 	* lib/WWW/Search/Euroseek.pm: removed to its own separate registered module

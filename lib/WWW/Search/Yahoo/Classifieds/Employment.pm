@@ -439,8 +439,14 @@ Location can be one of the following:
 
 =head1 AUTHOR
 
-C<WWW::Search::YC> is written and maintained by Alexander Tkatchev
+C<WWW::Search::YC> is originally written by Alexander Tkatchev
 (Alexander.Tkatchev@cern.ch).
+
+=head1 VERSION HISTORY
+
+1.02 -- patches from Rick Myers (rik@sumthin.nu) that fixes important changes in Yahoo! Classifieds search engine. Plus some fixes of my own... 
+
+1.01 -- original release
 
 =head1 LEGALESE
 
@@ -458,7 +464,7 @@ require HTML::TokeParser;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '1.01';
+$VERSION = '1.02';
 
 use Carp ();
 use WWW::Search(generic_option);
@@ -471,10 +477,10 @@ sub native_setup_search
   $self->user_agent('non-robot');
 
   if (!defined($self->{_options})) {
-      $self->{'search_base_url'} = 'http://employment.classifieds.yahoo.com';
+      $self->{'search_base_url'} = 'http://classifieds.yahoo.com';
       $self->{_options} = {
-	  'search_url' => $self->{'search_base_url'} .'/yc',
-	  'cr' => 'national',
+	  'search_url' => $self->{'search_base_url'} . '/display' .'/employment',
+	  'cr' => '',
 	  'ck' => $native_query,
 	  'ce_f' => '',
 	  'cpo' => '',
@@ -483,7 +489,8 @@ sub native_setup_search
 	  'cs' => 'time+2',
 	  'cc' => 'employment',
 	  'cf' => '',
-	  'za'  => 'and'
+	  'za'  => 'and',
+	  'ct_hft' => 'table'
 	  };
   }
   my $options_ref = $self->{_options};
@@ -550,6 +557,17 @@ sub native_retrieve_some
   my $p = new HTML::TokeParser(\$response->content());
   my $tag;
 
+  $tag = $p->get_tag("form");
+  my $action = $tag->[1]{action};
+  my $extra_url = '';
+  while(1) {
+      $tag = $p->get_tag("input");
+      $extra_url .= $tag->[1]{name} . '=' .
+                    WWW::Search::escape_query($tag->[1]{value}) . '&';
+      last if $tag->[1]{name} eq 'search';
+#      exit;
+  }
+
   while(1) {
       $tag = $p->get_tag("td");
       my $data = $p->get_trimmed_text("/td");
@@ -562,6 +580,7 @@ sub native_retrieve_some
   while(1) {
       $tag = $p->get_tag("tr");
       $tag = $p->get_tag("td"); # first column contains only spaces
+      $tag = $p->get_tag("td"); # this one does as well
       $tag = $p->get_tag("td");
       my $date = $p->get_trimmed_text("/td");
       last unless($date =~ m|(\d+)/(\d+)/(\d+)|);
@@ -570,15 +589,21 @@ sub native_retrieve_some
       $tag = $p->get_tag("td");
       my $function = $p->get_trimmed_text("/td");
       $tag = $p->get_tag("td");
+      my $term = $p->get_trimmed_text("/td");
+      $tag = $p->get_tag("td");
       my $title = $p->get_trimmed_text("/td");
       $tag = $p->get_tag("td");
       my $location = $p->get_trimmed_text("/td");
-      $tag = $p->get_tag("a");
-      my $url = $tag->[1]{href};
-      $url =~ s/$CR?$LF//g;
-      $url =~ s/(pre\=)(\d+)(\&)//;
-      $url =~ s/\&cr\=national//;
-#      print STDERR "$location\t$title\t$company\t$date\t$url\n";
+      $tag = $p->get_tag("input");
+      my $name = $tag->[1]{name};
+      my $value = $tag->[1]{value};
+#      my $url = $tag->[1]{href};
+#      $url =~ s/$CR?$LF//g;
+#      $url =~ s/(pre\=)(\d+)(\&)//;
+#      $url =~ s/\&cr\=national//;
+      my $url = $self->{search_base_url}.
+                "$action?$extra_url&$name=$value&position0.x=1&position0.y=1";
+#     print STDERR "$location\t$title\t$company\t$date\t$url\n";
       $hit = new WWW::SearchResult;
       $hit->url($url);
       $hit->company($company);
@@ -610,7 +635,7 @@ sub native_retrieve_some
 	     print "No next link\n" if($debug);
 	     last;
 	 }
-	 $nextlink =~ s/$CR?$LF//g;
+	 $nextlink =~ s/[\r\n]//g; # not sure here but $CR and $LF are undefined
 	 print "$linklabel: $nextlink\n"  if($debug);
 	 $self->{'_next_url'} = $self->{'search_base_url'} . $nextlink;
 	 last;

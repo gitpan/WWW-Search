@@ -3,7 +3,7 @@
 
 Test - utilities to aid in testing WWW::Search backends
 
-=head1 SYNOPSYS
+=head1 SYNOPSIS
 
   $oTest = new WWW::Search::Test('HotBot,Yahoo,Excite');
   $oTest->test('HotBot', 'Kingpin', 'one', $sQuery, $TEST_RANGE, 1, 10);
@@ -42,7 +42,7 @@ use File::Path;
 
 use vars qw( $VERSION $bogus_query );
 
-$VERSION = '2.02';
+$VERSION = '2.03';
 $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 
 ($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = qw(dummy internal external update);
@@ -439,7 +439,7 @@ sub reset_error_count
 
 Given a filename, count the number of lines of text contained
 within the file.  
-(I.e. simulate running UNIX command wc -l on a file)
+(I.e. simulate running UNIX command C<wc -l> on a file)
 
 =cut
 

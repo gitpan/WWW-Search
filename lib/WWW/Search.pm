@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.40 2000/04/27 17:00:21 mthurn Exp mthurn $
+# $Id: Search.pm,v 1.44 2000/09/27 14:04:16 mthurn Exp mthurn $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -66,17 +66,19 @@ package WWW::Search;
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query generic_option strip_tags @ENGINES_WORKING);
-$VERSION = '2.14';
+$VERSION = '2.15';
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
-use LWP::UserAgent;
-use LWP::RobotUA;
-use HTTP::Status;
-use HTTP::Request;
-use HTTP::Response;
 
 use Carp ();
+use Data::Dumper;  # for debugging only
+use HTTP::Cookies;
+use HTTP::Request;
+use HTTP::Response;
+use HTTP::Status;
+use LWP::RobotUA;
+use LWP::UserAgent;
 use URI::Escape;
 
 # internal
@@ -162,12 +164,15 @@ sub reset_search
   # This method is called by native_query().  native_query() is called
   # either by gui_query() or by the user.  In the case that
   # gui_query() was called, we do NOT want to clear out the _options
-  # hash.  For now, I implement a terrible hack to make this work:
-  my @as = caller(2);
-  if (defined(@as) and 1 < scalar(@as))
+  # hash.  For now, I implement a pretty ugly hack to make this work:
+  if (caller(2))
     {
-    # print STDERR " in reset_search(), as is (", join(',', @as), ")\n";
-    return if $as[3] =~ m/gui_query/;
+    my @as = caller(2);
+    if (1 < scalar(@as))
+      {
+      # print STDERR " in reset_search(), as is (", join(',', @as), ")\n";
+      return if $as[3] =~ m/gui_query/;
+      } # if
     } # if
   $self->{_options} = ();
   } # reset_search
@@ -207,14 +212,14 @@ sub maintainer
 
 =head2 gui_query
 
-Specify a query to the current search object;  
+Specify a query to the current search object;
 the query will be performed with the engine's default options,
 as if it were typed by a user in a browser window.
 
-The query must be escaped; call L<WWW::Search/escape_query> to escape
+The query must be escaped; call L<&WWW::Search::escape_query> to escape
 a plain query.  See C<native_query> below for more information.
 
-Currently, this feature is supported by only a few backends; 
+Currently, this feature is supported by only a few backends;
 consult the documentation for each backend to see if it is implemented.
 
 =cut
@@ -299,17 +304,14 @@ might be found in the search-engine-specific manual pages
 
 After C<native_query>, the next step is usually:
 
-    @results = $search->results();
-
-or
-
-    while ($result = $search->next_result()) {
-	# do_something;
-    }
+    while ($result = $search->next_result())
+      {
+      # do_something;
+      }
 
 =cut
 
-sub native_query 
+sub native_query
   {
   my $self = shift;
   print STDERR " + native_query($_[0])\n" if $self->{debug};
@@ -324,6 +326,51 @@ sub native_query
     $self->{$sKey} = $opts_ref->{$sKey} if (generic_option($sKey));
     } # foreach
   } # native_query
+
+=head2 cookie_jar
+
+Call this method (anytime before asking for results) if you want to
+communicate cookie data with the search engine.  Takes one argument,
+either a filename or an HTTP::Cookies object.  If you give a filename,
+WWW::Search will attempt to read/store cookies there (by in turn
+passing the filename to HTTP::Cookies::new).
+
+  $oSearch->cookie_jar('/tmp/my_cookies');
+
+If you give an HTTP::Cookies object, it is up to you to save the
+cookies if you wish.
+
+  use HTTP::Cookies;
+  my $oJar = HTTP::Cookies->new(...);
+  $oSearch->cookie_jar($oJar);
+
+=cut
+
+sub cookie_jar
+  {
+  my $self = shift;
+  my $arg = shift;
+  if (ref($arg) eq 'HTTP::Cookies')
+    {
+    $self->{'cookie_jar'} = $arg;
+    }
+  elsif (! ref($arg))
+    {
+    # Assume that $arg is a file name:
+    $self->{'cookie_jar'} = HTTP::Cookies->new(
+                                               'file' => $arg,
+                                               'autosave' => 1,
+                                               'ignore_discard' => 1,
+                                               );
+    $self->{'cookie_jar'}->load;
+    # print STDERR " + WWW::Search just loaded cookies from $arg\n";
+    }
+  else
+    {
+    Carp::carp "argument to WWW::Search::cookie_jar() must be HTTP::Cookies or scalar";
+    }
+  } # cookie_jar
+
 
 =head2 approximate_result_count
 
@@ -364,7 +411,7 @@ sub results
   Carp::croak "search not yet specified" if (!defined($self->{'native_query'}));
   # Put all the SearchResults into the cache:
   1 while ($self->retrieve_some());
-  if ($#{$self->{cache}} >= $self->{maximum_to_retrieve}) 
+  if ($#{$self->{cache}} >= $self->{maximum_to_retrieve})
     {
     return @{$self->{cache}}[0..($self->{maximum_to_retrieve}-1)];
     }
@@ -430,18 +477,17 @@ errors could be reported like this:
 	print "error:  " . $response->as_string() . "\n";
     }
 
-Note:  even if the backend does not involve the web
+Note: even if the backend does not involve the web,
 it should return HTTP::Response-style codes.
 
 =cut
 
 sub response
-{
-    my $self = shift;
-    $self->{response} = new HTTP::Response(RC_OK)
-	if (!defined($self->{response}));
-    return $self->{response};
-}
+  {
+  my $self = shift;
+  $self->{response} ||= new HTTP::Response(RC_OK);
+  return $self->{response};
+  } # response
 
 
 =head2 seek_result($offset)
@@ -601,14 +647,17 @@ sub strip_tags
   return wantarray ? @as : $as[0];
   } # strip_tags
 
-=head2 hash_to_cgi_string (PRIVATE)
+=head2 hash_to_cgi_string (PRIVATE) (DEPRECATED)
+
+Deprecated.
 
 Given a reference to a hash of string => string, constructs a CGI
 parameter string that looks like 'key1=value1&key2=value2'.
 
-Backends should use this function rather than piecing the URL together
-by hand, to ensure that URLs are identical across platforms and
-software versions.  
+At one time, for testing purposes, we asked backends to use this
+function rather than piecing the URL together by hand, to ensure that
+URLs are identical across platforms and software versions.  But this
+is no longer necessary.
 
 Example:
 
@@ -619,7 +668,7 @@ Example:
                          'QRY' => $native_query,
                          'opt2' => 'val2',
                         };
-    $self->{_next_url} = $self->{_options}{'search_url'} .'?'. 
+    $self->{_next_url} = $self->{_options}{'search_url'} .'?'.
                          $self->hash_to_cgi_string($self->{_options});
 
 =cut
@@ -634,13 +683,13 @@ sub hash_to_cgi_string
   # keys will suffice.
   my $rh = shift;
   my $ret = '';
-  foreach my $key (sort keys %$rh) 
+  foreach my $key (sort keys %$rh)
     {
     # printf STDERR "option: $key is " . $rh->{$key} . "\n";
     next if generic_option($key);
     # If we want to let the user delete options, uncomment the next
     # line. (They can still blank them out, which may or may not have
-    # the same effect): 
+    # the same effect):
 
     # next unless $rh->{$key} ne '';
 
@@ -714,44 +763,61 @@ sub user_agent
 
 =head2 http_request($method, $url)
 
-Return the response from an http request,
-handling debugging.  Requires that user_agent already be set up.
-For POST methods, query is split off of the URL and passed
-in the request body.
+Return the response from an http request, handling debugging.
+Requires that user_agent already be set up.  For POST methods, query
+is split off of the URL and passed in the request body.
 
 =cut
 
-sub http_request {
-    my $self = shift;
-    my ($method, $url) = @_;
-    my $response;
-    if ($self->{search_from_file}) {
-	$response = $self->http_request_from_file($url);
-    } else {
-	# fetch it
-        my $request;
-	if ($method eq 'POST') {
-	    my $uri_url = new URI::URL($url);
-	    my $equery = $uri_url->equery;
-	    $uri_url->equery(undef);   # we will handle the query ourselves
-	    $request = new HTTP::Request($method, $uri_url->abs());
-	    $request->header('Content-Type', 'application/x-www-form-urlencoded');
-	    $request->header('Content-Length', length $equery);
-	    $request->content($equery);
-	} else {
-	    $request = new HTTP::Request($method, $url);
-	}
-	my $ua = $self->{'user_agent'};
+sub http_request
+  {
+  my $self = shift;
+  my ($method, $url) = @_;
+  my $response;
+  if ($self->{search_from_file})
+    {
+    $response = $self->http_request_from_file($url);
+    }
+  else
+    {
+    # fetch it
+    my $request;
+    if ($method eq 'POST')
+      {
+      my $uri_url = new URI::URL($url);
+      my $equery = $uri_url->equery;
+      $uri_url->equery(undef);   # we will handle the query ourselves
+      $request = new HTTP::Request($method, $uri_url->abs());
+      $request->header('Content-Type', 'application/x-www-form-urlencoded');
+      $request->header('Content-Length', length $equery);
+      $request->content($equery);
+      }
+    else
+      {
+      $request = new HTTP::Request($method, $url);
+      }
 
-	$response = $ua->request($request);
+    $self->{'cookie_jar'}->add_cookie_header($request) if ref($self->{'cookie_jar'});
 
-	# save it for debugging?
-	if ($self->{'search_to_file'} && $response->is_success) {
-	    $self->http_request_to_file($url, $data, $response);
-	};
-    };
-    return $response;
-}
+    my $ua = $self->{'user_agent'};
+    $response = $ua->request($request);
+
+    if (ref($self->{'cookie_jar'}))
+      {
+      $self->{'cookie_jar'}->extract_cookies($response);
+      $self->{'cookie_jar'}->save;
+      # print STDERR " + WWW::Search just saved cookies\n";
+      # print STDERR $self->{'cookie_jar'}->as_string;
+      # print STDERR Dumper($self->{'cookie_jar'});
+      }
+
+    if ($self->{'search_to_file'} && $response->is_success)
+      {
+      $self->http_request_to_file($url, $data, $response);
+      } # if
+    } # if not from_file
+  return $response;
+  } # http_request
 
 sub http_request_get_filename {
     my $self = shift;
@@ -829,22 +895,36 @@ sub http_request_to_file {
 =head2 split_lines (PRIVATE)
 
 This internal routine splits data (typically the result of the web
-page retrieval) into lines in a way that is OS independent.
+page retrieval) into lines in a way that is OS independent.  If the
+first argument is a reference to an array, that array is taken to be a
+list of possible delimiters for this split.  For example, Yahoo.pm
+uses <p> and <dd><li> as "line" delimiters for convenience.
 
 =cut
 
-sub split_lines {
-    # eventually this should be
-    # use Socket qw(:crlf :DEFAULT);
-    # split(/$CR?$LF/,$_[0])
-    # but I do not have perl5.005 yet.
-    #
-    # This probably fails on an EBCDIC box
-    # where input is in text mode.
-    # Too bad Macs do not just use binmode like Windows boxen.
-    my $self = shift;
-    return split(/\015?\012/, $_[0]);
-}
+sub split_lines
+  {
+  # This probably fails on an EBCDIC box where input is in text mode.
+  # Too bad Macs do not just use binmode like Windows boxen.
+  my $self = shift;
+  my $s = shift;
+  my $patt = '\015?\012';
+  if (ref($s))
+    {
+    $patt = '('. $patt;
+    foreach (@$s)
+      {
+      $patt .= "|$_";
+      } # foreach
+    $patt .= ')';
+    # print STDERR " +     patt is >>>$patt<<<\n";
+    $s = shift;
+    } # if
+  return split(/$patt/i, $s);
+  # If we require perl 5.005, this can be done by:
+  # use Socket qw(:crlf :DEFAULT);
+  # split(/$CR?$LF/,$_[0])
+  } # split_lines
 
 =head2 generic_option (PRIVATE)
 
@@ -1068,13 +1148,10 @@ Infoseek
 Infoseek::Companies
 Infoseek::News		
 Infoseek::Web		
-LookSmart		
-Lycos			
 MetaCrawler             
 Metapedia		
 Monster                 
 NetFind                 
-NorthernLight		
 Null			
 SFgate			
 VoilaFr

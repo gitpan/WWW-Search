@@ -3,10 +3,11 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.14?  (2000-05-01)
+WHAT IS NEW IN WWW::Search 2.15?  (2000-10-02)
 ----------------------------------------------
 
 overview:
+ * now supports Cookies!
  * minor bug fixes
  * minor updates for some search engines, as usual
  * several backends removed to separate modules
@@ -19,21 +20,25 @@ WHAT IS WWW::Search?
 
 WWW::Search is a collection of Perl modules which provide an API to
 WWW (and similar) search engines.  Currently WWW::Search includes
-backends for variations of AltaVista, Infoseek, Lycos, and WebCrawler,
-among others.  Backends for some engines can be obtained separately,
-such as Deja, Excite, HotBot, and Yahoo.  This distribution includes
-two applications built from this library: AutoSearch (a program to
+backends for variations of AltaVista, Infoseek, and WebCrawler, among
+others.  Backends for some engines can be obtained separately, such as
+Deja, Excite, HotBot, and Yahoo.  This distribution includes two
+applications built from this library: AutoSearch (a program to
 automate tracking of search results over time), and WebSearch, a small
 demonstration program to drive the library.
 
 WWW::Search does NOT try to emulate the default search that you would
-get with each search engine's GUI.  WWW::Search performs the search in
-a way that is efficient and convenient for text processing.  This
-might include getting "text-only" pages, making "OR" the default query
-term operator instead of "AND", ungrouping same-site results, making
-sure descriptions are turned on, and increasing the number of hits per
-page, among other tricks.  Hopefully, the documentation for each
-backend will tell you about the more important tricks being used.
+get with each search engine's GUI.  I.e. WWW::Search does NOT
+necessarily return the same results you would get by visiting the
+search engine's web page.  A few backends implement the method
+gui_query which does get the same results as the engine's web page;
+see `perldoc WWW::Search` for details.  See also below under FUTURE
+PLANS.  WWW::Search performs the search in a way that is efficient and
+convenient for text processing.  This might include getting
+"text-only" pages, making "OR" the default query term operator instead
+of "AND", ungrouping same-site results, making sure descriptions are
+turned on, and increasing the number of hits per page, among other
+tricks.
 
 Because WWW::Search depends on parsing the HTML output of web search
 engines it will fail if the search engine operators change their
@@ -67,16 +72,11 @@ Infoseek::Email		not working
 Infoseek::News		working
 Infoseek::Web		working
 Livelink		not working? (not in test suite)
-LookSmart		working
-Lycos   		working
-Lycos::Pages		defunct
-Lycos::Sites		defunct
 MetaCrawler             working
 Metapedia		working? (not in test suite)
 Monster                 working? (not in test suite)
 MSIndexServer		not working?
 NetFind                 working
-NorthernLight		working
 Null			working
 PLweb			not working
 Profusion               defunct
@@ -94,20 +94,22 @@ The following backends are now registered at CPAN independently (not
 included with the WWW::Search release):
 
 Deja/Dejanews   http://www.perl.com/CPAN-local/modules/by-module/WWW/
-Euroseek        http://www.perl.com/CPAN-local/authors/id/J/JS/JSMYSER/
+Euroseek        http://www.perl.com/CPAN-local/authors/by-module/WWW/JSMYSER/
 Excite          http://www.perl.com/CPAN-local/modules/by-module/WWW/
-GoTo            http://www.perl.com/CPAN-local/authors/id/J/JS/JSMYSER/
-Google          http://www.perl.com/CPAN-local/authors/id/J/JS/JSMYSER/
+GoTo            http://www.perl.com/CPAN-local/authors/by-module/WWW/JSMYSER/
+Google          http://www.perl.com/CPAN-local/authors/by-module/WWW/JSMYSER/
 HotBot          http://www.perl.com/CPAN-local/modules/by-module/WWW/
+LookSmart       http://www.perl.com/CPAN-local/modules/by-module/WWW/JSMYSER
+Lycos           http://www.perl.com/CPAN-local/modules/by-module/WWW/MTHURN/
 Magellan        http://www.perl.com/CPAN-local/modules/by-module/WWW/MTHURN/
-OpenDirectory   http://www.perl.com/CPAN-local/authors/id/J/JS/JSMYSER/
-Snap            http://www.perl.com/CPAN-local/authors/id/J/JS/JSMYSER/
+NorthernLight   http://www.perl.com/CPAN-local/authors/by-module/WWW/JSMYSER/
+OpenDirectory   http://www.perl.com/CPAN-local/authors/by-module/WWW/JSMYSER/
+Snap            http://www.perl.com/CPAN-local/authors/by-module/WWW/JSMYSER/
 Yahoo           http://www.perl.com/CPAN-local/modules/by-module/WWW/MTHURN/
-ZDNet           http://www.perl.com/CPAN-local/authors/id/J/JS/JSMYSER/
+ZDNet           http://www.perl.com/CPAN-local/authors/by-module/WWW/JSMYSER/
 
-There are more backends available for manual download and installation
-at http://members.xoom.com/backends (sorry about the annoying
-advertising bar).
+There are even more backends available for manual download and
+installation at http://members.xoom.com/_XMCM/backends/index.htm
 
 
 REQUIREMENTS
@@ -168,7 +170,8 @@ use 'nmake' instead of 'make' in the above sequence of commands.
 When you do `perl makefile.pl` on Win32, you might get warnings that a
 whole bunch of 'zero*.out' files are missing.  This seems to be a bug
 in some versions of WinZip which refuse to extract empty files from
-the archive.  You can ignore these warnings.
+the archive.  Since those files are supposed to be empty anyway, you
+can ignore these warnings.
 
 If you want to install a private copy of WWW::Search in your home
 directory, then you should do the installation with something like
@@ -323,6 +326,12 @@ FUTURE PLANS
 
 Some things we need, and ideas for new features:
 
+ - updates to each backend that will force WWW::Search to perform the
+same search as the engine's web GUI (I'm looking for contributions of
+the precise arguments that will produce such a search for each engine;
+i.e. the hash that should be passed as the second argument to
+native_query).  Contact <MartinThurn@iname.com>
+
  - test cases for WebSearch.  Contact <MartinThurn@iname.com>
 
  - test cases for AutoSearch.  Contact <MartinThurn@iname.com>
@@ -330,12 +339,6 @@ Some things we need, and ideas for new features:
  - use LWP::ParallelUA to speed up multiple backend search requests
 (I'm trying to decide what the API interface will look like; please
 send suggestions).  Contact <MartinThurn@iname.com>
-
- - updates to each backend that will force WWW::Search to perform the
-same search as the engine's web GUI (I'm looking for contributions of
-the precise arguments that will produce such a search for each engine;
-i.e. the hash that should be passed as the second argument to
-native_query).  Contact <MartinThurn@iname.com>
 
  - application-level proxy support (I'm looking for a contribution
 here from someone who uses/needs proxy support and can test it).

@@ -4,7 +4,7 @@
 # AltaVista.pm
 # by John Heidemann
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: AltaVista.pm,v 1.6 1999/11/09 16:48:51 mthurn Exp $
+# $Id: AltaVista.pm,v 1.8 2000/08/08 16:48:51 mthurn Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -144,7 +144,8 @@ require Exporter;
 @ISA = qw(WWW::Search Exporter);
 # note that the AltaVista version number is not synchronized
 # with the WWW::Search version number.
-$VERSION = '2.4';
+$VERSION = '2.9';
+#'
 
 use Carp ();
 use WWW::Search(generic_option);
@@ -257,11 +258,11 @@ sub native_retrieve_some
 	# HEADER PARSING: find the number of hits
 	#
 	if (0) {
-	} elsif ($state == $HEADER && /no document matching/) {
+	} elsif ($state == $HEADER && /no document matching/i) {
 	    # 25-Oct-99
 	    $self->approximate_result_count(0);
 	    $state = $TRAILER;
-	} elsif ($state == $HEADER && /([\d,]+) pages found/) {
+	} elsif ($state == $HEADER && /([\d,]+) pages? found/i) {
 	    # 25-Oct-99
 	    my($n) = $1;
 	    $n =~ s/,//g;
@@ -283,31 +284,33 @@ sub native_retrieve_some
 	    $state = $INHIT;
 	    print STDERR "PARSE(12:HITS->INHIT): hit start.\n" if ($self->{_debug} >= 2);
 
-	} elsif ($state == $INHIT && /^<a.*href="([^"]+)"/) { #"
+	} elsif ($state == $INHIT && /^<a.*href="([^"]+)"/i) { #"
 	    # 25-Oct-99
 	    $raw .= $_;
 	    $hit->add_url($1);
 	    print STDERR "PARSE(13:INHIT): url: $1.\n" if ($self->{_debug} >= 2);
 
-	} elsif ($state == $INHIT && /^<b>([^<]+)<\/b>.*<\/dt>/) {
+	} elsif ($state == $INHIT && /^<b>(.+)<\/b>.*<\/dt>/i) {
 	    # 25-Oct-99
 	    $raw .= $_;
-	    $hit->title($1);
+	    my($title) = $1;
+	    # $title =~ s/<\/?em>//ig;  # strip keyword emphasis (use raw if you want to get it bacK)
+	    $hit->title($title);
 	    print STDERR "PARSE(13:INHIT): title: $1.\n" if ($self->{_debug} >= 2);
 
-	} elsif ($state == $INHIT && /^<dd>(.*)<\/dd>/) {
+	} elsif ($state == $INHIT && /^<dd>(.*)<\/dd>/i) {
 	    # 25-Oct-99
 	    $raw .= $_;
 	    $hit->description($1);
 	    print STDERR "PARSE(13:INHIT): description.\n" if ($self->{_debug} >= 2);
 
-	} elsif ($state == $INHIT && /^Last modified on: (.*)$/) {
+	} elsif ($state == $INHIT && /^Last modified on: (.*)$/i) {
 	    # 25-Oct-99
 	    $raw .= $_;
 	    $hit->change_date($1);
 	    print STDERR "PARSE(13:INHIT): mod date.\n" if ($self->{_debug} >= 2);
 
-	} elsif ($state == $INHIT && /^<\/dl>/) {
+	} elsif ($state == $INHIT && /^<\/dl>/i) {
 	    # 25-Oct-99
 	    $raw .= $_;
 	    ($hit, $raw) = $self->save_old_hit($hit, $raw);
@@ -320,15 +323,15 @@ sub native_retrieve_some
 	    print STDERR "PARSE(14:INHIT): no match.\n" if ($self->{_debug} >= 2);
             print STDERR ' 'x 12, "$_\n" if ($self->{_debug} >= 3);
 
-	} elsif ($hits_found && ($state == $TRAILER || $state == $HITS) && /<a[^>]+href="([^"]+)".*\&gt;\&gt;/) { # "
+	} elsif ($hits_found && ($state == $TRAILER || $state == $HITS) && /<a[^>]+href="([^"]+)".*\&gt;\&gt;/i) { # "
 	    # (above, note the trick $hits_found so we don't prematurely terminate.)
 	    # set up next page
 	    my($relative_url) = $1;
 	    # hack:  make sure fmt=d stays on news URLs
-	    $relative_url =~ s/what=news/what=news\&fmt=d/ if ($relative_url !~ /fmt=d/);
-	    $self->{_next_url} = new URI::URL($relative_url, $self->{_base_url});
-	    my($n) = $self->{_next_url};
-	    $state = $POST_NEXT;
+	    $relative_url =~ s/what=news/what=news\&fmt=d/ if ($relative_url !~ /fmt=d/i);
+            my($n) = new URI::URL($relative_url, $self->{_base_url});
+            $n = $n->abs;
+            $self->{_next_url} = $n;	    $state = $POST_NEXT;
 	    print STDERR "PARSE(15:->POST_NEXT): found next, $n.\n" if ($self->{_debug} >= 2);
 
 	} else {
