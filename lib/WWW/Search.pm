@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.70 2002/06/04 15:26:03 mthurn Exp mthurn $
+# $Id: Search.pm,v 1.71 2002/09/04 16:10:17 mthurn Exp mthurn $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -13,8 +13,8 @@ WWW::Search - Virtual base class for WWW searches
 =head1 SYNOPSIS
 
     require WWW::Search;
-    $search_engine = "AltaVista";
-    $search = new WWW::Search($search_engine);
+    $sEngine = "AltaVista";
+    $oSearch = new WWW::Search($sEngine);
 
 
 =head1 DESCRIPTION
@@ -33,18 +33,18 @@ request to avoid overloading either the client or the server.
 
 Here is a sample program:
 
-    my $query = 'Columbus Ohio sushi restaurant';
-    my $search = new WWW::Search('AltaVista');
-    $search->native_query(WWW::Search::escape_query($query));
-    $search->login($sUser, $sPassword);
-    while (my $result = $search->next_result())
+    my $sQuery = 'Columbus Ohio sushi restaurant';
+    my $oSearch = new WWW::Search('AltaVista');
+    $oSearch->native_query(WWW::Search::escape_query($sQuery));
+    $oSearch->login($sUser, $sPassword);
+    while (my $oResult = $oSearch->next_result())
       {
-      print $result->url, "\n";
+      print $oResult->url, "\n";
       } # while
-    $search->logout;
+    $oSearch->logout;
 
-Results are objects of type C<WWW::SearchResult>
-(see L<WWW::SearchResult> for details).
+Results are objects of type C<WWW::Search::Result>
+(see L<WWW::Search::Result> for details).
 Note that different backends support different result fields.
 All backends are required to support title and url.
 
@@ -55,7 +55,7 @@ For specific search engines, see L<WWW::Search::TheEngineName>
 (replacing TheEngineName with a particular search engine).
 
 For details about the results of a search,
-see L<WWW::SearchResult>.
+see L<WWW::Search::Result>.
 
 
 =head1 METHODS AND FUNCTIONS
@@ -72,7 +72,7 @@ package WWW::Search;
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw( escape_query unescape_query generic_option strip_tags );
-$VERSION = '2.35';
+$VERSION = '2.36';
 $MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
@@ -101,24 +101,23 @@ use constant SEARCH_DONE => 3;
 
 To create a new WWW::Search, call
 
-    $search = new WWW::Search('SearchEngineName');
+    $oSearch = new WWW::Search('SearchEngineName');
 
 where SearchEngineName is replaced with a particular search engine.
 For example:
 
-    $search = new WWW::Search('Google');
+    $oSearch = new WWW::Search('Yahoo');
 
-If no search engine is specified a default (currently 'AltaVista')
-will be chosen for you.
-The next step is usually:
+If no search engine is specified, a default (currently 'Null::Empty')
+will be chosen for you.  The next step is usually:
 
-    $search->native_query('search-engine-specific+query+string');
+    $oSearch->native_query('search-engine-specific+query+string');
 
 =cut
 
 
 # the default (not currently more configurable :-< )
-$default_engine = 'AltaVista';
+$default_engine = 'Null::Empty';
 $default_agent_name = "WWW::Search/$VERSION";
 $default_agent_e_mail = User->Login .'@'. hostfqdn;
 
@@ -131,7 +130,7 @@ sub new
   $engine = $default_engine if (!defined($engine));
   # Load the engine, if necessary.
   my $subclass = "${class}::$engine";
-  if (!defined(&$subclass)) 
+  if (!defined(&$subclass))
     {
     eval "use $subclass";
     Carp::croak("unknown search engine backend $engine ($@)") if ($@);
@@ -209,6 +208,7 @@ We can not tell if they are up-to-date or working, though.
 
 =cut
 
+use constant DEBUG_COOKIES => 1;
 use constant DEBUG_FIND => 0;
 
 sub wanted
@@ -274,7 +274,7 @@ C<next_result> is called (lazy!), so native_query does not return anything.
 
 Example:
 
-  $search->native_query('search-engine-specific+escaped+query+string',
+  $oSearch->native_query('search-engine-specific+escaped+query+string',
                         { option1 => 'able', option2 => 'baker' } );
 
 The hash of options following the query string is optional.
@@ -327,9 +327,9 @@ might be found in the search-engine-specific manual pages
 
 After C<native_query>, the next step is usually:
 
-    while ($result = $search->next_result())
+    while ($oResult = $oSearch->next_result())
       {
-      # do_something;
+      # do_something($oResult);
       }
 
 =cut
@@ -414,12 +414,14 @@ sub cookie_jar
   my $arg = shift;
   if (ref($arg) eq 'HTTP::Cookies')
     {
+    print STDERR " + WWW::Search using caller's HTTP::Cookies object\n" if DEBUG_COOKIES;
     $self->{'_cookie_jar'} = $arg;
     $self->{'_cookie_jar_we_save'} = 0;
     } # if
   elsif (! ref($arg))
     {
     # Assume that $arg is a file name:
+    print STDERR " + WWW::Search using Cookies from file $arg\n" if DEBUG_COOKIES;
     $self->{'_cookie_jar'} = HTTP::Cookies->new(
                                                'file' => $arg,
                                                'autosave' => 1,
@@ -469,11 +471,11 @@ This routine should be called before the first retrieval is attempted.
 
 Example:
 
-  $search->env_proxy('yes');  # Turn on with any true value
+  $oSearch->env_proxy('yes');  # Turn on with any true value
   ...
-  $search->env_proxy(0);  # Turn off with zero or undef
+  $oSearch->env_proxy(0);  # Turn off with zero or undef
   ...
-  if ($search->env_proxy)  # Test
+  if ($oSearch->env_proxy)  # Test
 
 =cut
 
@@ -491,9 +493,9 @@ functions (next_result or results).
 
 Example:
 
-  $search->http_proxy('http://gateway:8080');  # Turn on and set address
+  $oSearch->http_proxy('http://gateway:8080');  # Turn on and set address
   ...
-  $search->http_proxy('');  # Turn off
+  $oSearch->http_proxy('');  # Turn off
 
 =cut
 
@@ -510,11 +512,11 @@ and password are available.
 
 Example:
 
-    $search->http_proxy_user("myuser");
-    $search->http_proxy_pwd("mypassword");
-    $search->http_proxy_user(undef);   # Example for no authentication
+    $oSearch->http_proxy_user("myuser");
+    $oSearch->http_proxy_pwd("mypassword");
+    $oSearch->http_proxy_user(undef);   # Example for no authentication
 
-    $username = $search->http_proxy_user();
+    $username = $oSearch->http_proxy_user();
 
 =cut
 
@@ -560,7 +562,7 @@ search engines might return less than this number.
 Defaults to 500.
 
 Example:
-    $max = $search->maximum_to_retrieve(100);
+    $max = $oSearch->maximum_to_retrieve(100);
 
 You can also spell this method "maximum_to_return".
 
@@ -578,7 +580,7 @@ in seconds.
 Defaults to 60.
 
 Example:
-    $search->timeout(120);
+    $oSearch->timeout(120);
 
 =cut
 
@@ -603,13 +605,13 @@ sub approximate_result_count
 
 =head2 results
 
-Return all the results of a query as an array of SearchResult objects.
+Return all the results of a query as an array of WWW::Search::Result objects.
 
 Example:
 
-    @results = $search->results();
-    foreach $result (@results) {
-        print $result->url(), "\n";
+    @results = $oSearch->results();
+    foreach $oResult (@results) {
+        print $oResult->url(), "\n";
     };
 
 On error, results() will return undef and set C<response()>
@@ -623,7 +625,7 @@ sub results
   print STDERR " + results(",$self->{'native_query'},")\n" if $self->{_debug};
   Carp::croak "query string is not defined" if (!defined($self->{'native_query'}));
   Carp::croak "query string is empty" unless ($self->{'native_query'} ne '');
-  # Put all the SearchResults into the cache:
+  # Put all the search results into the cache:
   1 while ($self->retrieve_some());
   $self->{cache} ||= [];
   my $iMax = scalar(@{$self->{cache}});
@@ -637,15 +639,15 @@ sub results
 =head2 next_result
 
 Call this method repeatedly to return each result of a query as a
-SearchResult object.  Example:
+WWW::Search::Result object.  Example:
 
-    while ($result = $search->next_result())
+    while ($oResult = $oSearch->next_result())
       {
-      print $result->url(), "\n";
-      }
+      print $oResult->url(), "\n";
+      } # while
 
 On error, next_result() will return undef and set C<response()>
-to the HTTP response code.
+to an HTTP response object.
 
 =cut
 
@@ -706,10 +708,10 @@ sub logout
 
 Returns the an HTTP::Response object which resulted from the
 most-recently-sent query (see L<HTTP::Response>).  If the query
-returns no results (i.e. $search->results is C<undef>), errors can
+returns no results (i.e. $oSearch->results is C<undef>), errors can
 be reported like this:
 
-    my $response = $search->response();
+    my $response = $oSearch->response();
     if ($response->is_success) {
 	print "normal end of result list\n";
     } else {
@@ -745,7 +747,7 @@ To re-do the query, create a new search object.
 
 Example:
 
-    $search->seek_result(0);
+    $oSearch->seek_result(0);
 
 =cut
 
@@ -886,7 +888,7 @@ sub unescape_query
 
 Given a string, returns a copy of that string with HTML tags removed.
 This should be used by each backend as they insert the title and
-description values into the SearchResults.
+description values into the search results objects.
 
 NOTE that this is not a method, it is a plain function.
 
@@ -1116,9 +1118,9 @@ sub http_request
         {
         $self->{'_cookie_jar'}->extract_cookies($response);
         $self->{'_cookie_jar'}->save if $self->{'_cookie_jar_we_save'};
-        # print STDERR " + WWW::Search just extracted cookies\n";
-        # print STDERR $self->{'_cookie_jar'}->as_string;
-        # print STDERR Dumper($self->{'_cookie_jar'});
+        print STDERR " + WWW::Search just extracted cookies\n" if DEBUG_COOKIES;
+        print STDERR $self->{'_cookie_jar'}->as_string if DEBUG_COOKIES;
+        # print STDERR Dumper($self->{'_cookie_jar'}) if DEBUG_COOKIES;
         } # if
 
       if ($self->{'search_to_file'} && $response->is_success)
@@ -1418,7 +1420,7 @@ WWW::Search::AltaVista module for example usage of the
 native_retrieve_some method.
 
 An easier way to achieve this is to inherit native_retrieve_some from
-WWW::Search, and do only the parsing in the backend code.  Simple
+WWW::Search, and do only the parsing in the backend code.  Simply
 define a method parse_tree which takes one argument, an
 HTML::TreeBuilder object, and returns an integer, the number of
 results found on this page.  See the WWW::Search::Yahoo module for
@@ -1438,19 +1440,23 @@ populated object to $self->parse_tree().
 
 Additional notes on using the parse_tree method:
 
-If a backend needs to use a subclassed or modified HTML::TreeBuilder
-object, the backend should set $self->{'_treebuilder'} to that object
-before any results are retrieved.  The best place to do this is at the
-end of native_setup_search.
+The built-in HTML::TreeBuilder object used to parse the page has
+store_comments turned ON.  If a backend needs to use a subclassed or
+modified HTML::TreeBuilder object, the backend should set
+$self->{'_treebuilder'} to that object before any results are
+retrieved.  The best place to do this is at the end of
+native_setup_search.
 
-  my $oTree = new HTML::TreeBuilder;
-  $oTree->store_comments(1);  # for example
+  my $oTree = new myTreeBuilder;
+  $oTree->store_pis(1);  # for example
   $self->{'_treebuilder'} = $oTree;
 
 When parse_tree() is called, the $self->next_url is cleared.
 During parsing, the backend should set $self->next_url to the appropriate URL for the next page of results.
-(If parse_tree does not set the value, the search will end after parsing this page of results.)
-When parse_tree() is called, the URL for this page of results can be found in $self->{_prev_url}.
+(If parse_tree() does not set the value, the search will end after parsing this page of results.)
+
+When parse_tree() is called, the URL for the page being parsed can be
+found in $self->{_prev_url}.
 
 =cut
 
@@ -1494,6 +1500,7 @@ sub native_retrieve_some
     $tree = HTML::TreeBuilder->new(
                                    # use all default options
                                   );
+    $tree->store_comments('yes');
     $self->{'_treebuilder'} = $tree;
     }
   # If a reset() method becomes available in HTML::TreeBuilder, we can

@@ -1,5 +1,5 @@
 # This -*- perl -*- script writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.27 2002/07/18 21:46:10 mthurn Exp $
+# $Id: Makefile.PL,v 1.27 2002/07/18 21:46:10 mthurn Exp mthurn $
 
 require 5.004;
 
@@ -19,7 +19,7 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
               'NAME' => 'WWW::Search',
-              'VERSION' => 2.36,
+              'VERSION' => 2.37,
 
               ($] ge '5.005') ? (
                                  'AUTHOR' => 'Martin Thurn <mthurn@cpan.org>',
@@ -36,6 +36,7 @@ WriteMakefile(
                               'MIME::Lite' => 0,  # only needed for AutoSearch's --mail option
                               'Net::Domain' => 0,
                               'POSIX' => 0,  # for AutoSearch
+                              'Test::Inline' => 0,
                               'Test::More' => 0,
                               'URI' => 0,
                               'URI::Escape' => 0,
@@ -69,4 +70,59 @@ tags:
 ';
   } # MY::postamble
 
+# The following was added for Test::Inline handling.  Derived from
+# `perldoc Test::Inline::Tutoral`.
 
+  {
+  package MY;
+
+  sub top_targets
+    {
+    my $self = shift;
+    # Use the default setting for (not) echoing commands during make:
+    my $NOECHO = $self->{NOECHO};
+    # And, ignore error signals.  This is necessary because pod2test
+    # carps if the file contains no test code!
+    $NOECHO .= '-';
+    # Assume it's in the path:
+    my $out = "POD2TEST_EXE = pod2test\n";
+    $out .= $self->SUPER::top_targets(@_);
+    $out .= "\n\ntestifypods : \n";
+    $out .= "\t\$(FULLPERL) -MExtUtils::Command -e rm_f t/embedded-*.t\n";
+    use Data::Dumper;
+    # print STDERR " + self is ", Dumper($self);
+    my %hsPOD;
+    foreach my $pod (keys %{$self->{MAN1PODS}},
+                     keys %{$self->{MAN3PODS}},
+                     # Win32 has no MANPODS, so we add these:
+                     keys %{$self->{PM}},
+                    )
+      {
+      # print STDERR " +   will testifypod $pod\n";
+      $hsPOD{$pod}++;
+      } # foreach $pod
+    foreach my $pod (keys %hsPOD)
+      {
+      # print STDERR " +   writing code to testifypod $pod\n";
+      (my $test = $pod) =~ s/\.(pm|pod)$//;
+      $test =~ s|/|-|g;
+      $test =~ s/^lib\W//;
+      $test =~ s/\W/-/;
+      $test = "embedded-$test.t";
+      my $sCode = "\$(POD2TEST_EXE) $pod t/$test";
+      # print STDERR " +     code to testifypod $pod is $sCode\n";
+      $out .= "\t$NOECHO $sCode\n";
+      } # foreach
+    return $out;
+    } # MY::top_targets
+
+  sub test
+    {
+    my $self = shift;
+    my $out = $self->SUPER::test(@_);
+    # Insert our target as a prerequisite for the main test goal:
+    $out =~ s!^(test :: )(.*)!$1 pure_all testifypods $2!m;
+    return $out;
+    } # MY::test
+
+  } # end of package MY block

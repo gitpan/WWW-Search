@@ -3,11 +3,14 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.35?  (2002-07-18)
+WHAT IS NEW IN WWW::Search 2.37?  (2002-09-04)
 ----------------------------------------------
 
 overview: 
- * new function WWW::Search::Test::count_results()
+ * new backends for testing: Null::Count, Null::Empty, and Null::Error
+ * all other backends moved out to their own distribution
+ * default search engine changed to Null::Empty (since AltaVista is in this distribution)
+ * minor pod improvements
 
 For details, see the ChangeLog file and/or the pod of each affected
 module.
