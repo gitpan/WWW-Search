@@ -1,0 +1,9 @@
+README
+MANIFEST
+CLIENTS/AutoSearch.pl
+CLIENTS/Time.pm
+CLIENTS/search.pl
+Makefile.PL
+WWW/Search.pm
+WWW/Search/AltaVista.pm
+WWW/SearchResult.pm
