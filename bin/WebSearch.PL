@@ -22,7 +22,7 @@ print OUT <<'!NO!SUBS!';
 #
 # WebSearch.PL
 # Copyright (C) 1996-1997 by USC/ISI
-# $Id: WebSearch.PL,v 1.26 1997/10/03 21:28:19 johnh Exp $
+# $Id: WebSearch.PL,v 1.27 1997/10/24 17:13:07 johnh Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -74,6 +74,10 @@ see L<AutoSearch>.
 Specify the search engine.
 Capitalization matters.
 See L<WWW::Search> for a complete list of supported engines.
+
+=item C<-m> max_count
+
+Specify the maximum number of hits to retrieve.
 
 =item C<-o>
 
@@ -146,13 +150,14 @@ use Getopt::Long;
 
 my(%opts);
 $Getopt::Long::getopt_compat = 1;   # avoid parsing +'s as options (doesn't work!)
-&GetOptions(\%opts, qw(v a e=s o=s@ r)); # i.e -v -e=<string> -o=<options>
+&GetOptions(\%opts, qw(v a e=s m=s o=s@ r)); # i.e -v -e=<string> -o=<options>
 
 &usage if ($#ARGV == -1); # we MUST have one left, the query
 
 my($verbose) = $opts{'v'};
 my($all) = $opts{'a'};
 my($raw) = $opts{'r'};
+my($maximum_to_retrieve) = $opts{'m'};
 
 &main(join(" ", @ARGV));
 
@@ -201,6 +206,12 @@ sub main {
         };
     };
 
+    if (defined($maximum_to_retrieve)) {
+	$search->maximum_to_retrieve($maximum_to_retrieve);
+    } else {
+	$maximum_to_retrieve = 10000;
+    };
+
     $search->native_query(WWW::Search::escape_query($query), $query_options_ref);
 
     my($way) = 0; # 0=piecemeal, 1=all at once
@@ -208,10 +219,12 @@ sub main {
     if ($way) { # return all at once.
         foreach $result ($search->results()) {
             print_result($result, ++$count);
+	    last if ($count > $maximum_to_retrieve);
         };
     } else { # return page by page
         while ($result = $search->next_result()) {
             print_result($result, ++$count);
+	    last if ($count > $maximum_to_retrieve);
         };
     };
     # handle errors

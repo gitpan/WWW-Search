@@ -4,7 +4,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.42 1997/10/08 23:02:27 johnh Exp $
+# $Id: Search.pm,v 1.44 1997/11/04 01:04:08 johnh Exp $
 #
 # A complete copyright notice appears at the end of this file.
 # 
@@ -17,6 +17,13 @@ package WWW::Search;
 WWW::Search - Virtual base class for WWW searches
 
 
+=head1 SYNOPSIS
+    
+    require WWW::Search;
+    $search_engine = "AltaVista";
+    $search = new WWW::Search($search_engine);
+
+
 =head1 DESCRIPTION
 
 This class is the parent for all access methods supported by the
@@ -27,9 +34,14 @@ Current search engines supported include
 AltaVista (both web and news),
 Dejanews,
 Excite (web only),
+Gopher,
 HotBot (web only),
-Infoseek (e-mail, web, and news)
-and Lycos.
+Infoseek (e-mail, web, and news),
+Lycos,
+PLweb,
+SFgate,
+Simple (retrieve links on a page),
+Verity.
 
 Search results are limited and there is a pause between each request 
 for results to avoid overloading either the client or the server.
@@ -71,7 +83,7 @@ see L<WWW::SearchResult>.
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query generic_option);
-$VERSION = '1.011';
+$VERSION = '1.012';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
 use LWP::UserAgent;

@@ -4,7 +4,7 @@
 # Lycos.pm
 # by Wm. L. Scheding, John Heidemann
 # Copyright (C) 1996-1997 by USC/ISI
-# $Id: Lycos.pm,v 1.4 1997/10/08 23:00:52 johnh Exp $
+# $Id: Lycos.pm,v 1.6 1997/11/04 01:04:11 johnh Exp $
 #
 # Complete copyright notice follows below.
 # 
@@ -15,6 +15,13 @@ package WWW::Search::Lycos;
 =head1 NAME
 
 WWW::Search::Lycos - class for searching Lycos 
+
+
+=head1 SYNOPSIS
+    
+    require WWW::Search;
+    $search = new WWW::Search('Lycos');
+
 
 =head1 DESCRIPTION
 
@@ -169,25 +176,25 @@ sub native_retrieve_some
     my($hit, $raw, $title, $url, $rating, $desc) = ();
     foreach (split(/\n/, $response->content())) {
         next if m@^$@; # short circuit for blank lines
-	if ($state == $HEADER && m@\s+of\s+(\d+)\s+relevant\s+result@i) { # new as of  7-Oct-97
+	if ($state == $HEADER && m@\s+of.*(\d+).*relevant\s+result@i) { # new as of  7-Oct-97
 	    $self->approximate_result_count($1);
             print STDERR "PARSE(HEADER->HITS): $_\n" if ($self->{_debug} >= 2);
 	    $state = $HITS;
-	} elsif ($state == $HITS && m@<FONT.*<b>\d+\)\s+<a\s+href="([^"]+)">(.*)\<\/a\>@i) { #"
+	} elsif ($state == $HITS && m@(<FONT.*<b>\d+\)|<b><li>)\s+<a\s+href="([^"]+)">(.*)\<\/a\>@i) { #"
 	    $raw = $_;
-	    $url = $1;
-	    $title = $2;
+	    $url = $2;
+	    $title = $3;
 	    print STDERR "PARSE(HITS->DESC): $_\n" if ($self->{_debug} >= 2);
 	    $state = $DESC;
 	} elsif ($state == $DESC) {
 	    $raw .= $_;
-	    m@<br><[^>]+>(.*)</font>@;
-	    $desc = $1;
+	    m@<br>(.*)@;
+	    $desc = $2;
 	    print STDERR "PARSE(DESC->RATING): $_\n" if ($self->{_debug} >= 2);
 	    $state = $RATING;	    
 	} elsif ($state == $RATING) {
 	    $raw .= $_;
-	    m@<br><[^>]+>.*\[(\d+)\%\]</font>@;
+	    m@<br>.*\[.*(\d+)\%\]@;
 	    $rating = $1;
 	    my($hit) = new WWW::SearchResult;
 	    $hit->add_url($url);

@@ -4,7 +4,7 @@
 # Web.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Web.pm,v 1.4 1997/02/25 19:21:55 johnh Exp $
+# $Id: Web.pm,v 1.6 1997/11/04 01:04:15 johnh Exp $
 #
 # Complete copyright notice follows below.
 # 
@@ -15,6 +15,12 @@ package WWW::Search::AltaVista::Web;
 =head1 NAME
 
 WWW::Search::AltaVista::Web - class for Alta Vista web searching
+
+
+=head1 SYNOPSIS
+    
+    require WWW::Search;
+    $search = new WWW::Search('AltaVista::Web');
 
 
 =head1 DESCRIPTION
@@ -81,6 +87,7 @@ sub native_setup_search
     if (!defined($self->{_options})) {
 	$self->{_options} = {
 	    pg => 'q',
+	    'text' => 'yes',
 	    what => 'web',
 	    fmt => 'd',
 	    'search_url' => 'http://www.altavista.digital.com/cgi-bin/query',

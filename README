@@ -3,15 +3,22 @@ WWW::Search and AutoSearch
 ==========================
 
 
-WHAT IS NEW WITH WWW::Search 1.011?
+WHAT IS NEW WITH WWW::Search 1.012?
 -----------------------------------
 
 Overview:  an alpha release for test-suite testing
 - new: for testing, HTTP results can be saved to disk and played back
 - new: test scripts (try "make test")
 - bug-fix: Lycos works again and is now maintained by John Heidemann
+- bug-fix: AltaVista advanced and news searches have been repaired
 - bug-fix: some uninitialized value warnings suppressed
-	(fix submitted by a user whose name I misplaced)
+	(fix suggested by R. Chandrasekar (Mickey))
+- new: new back-ends PLweb
+- new: documentation for PLweb (contributed by Paul Linder)
+- new: new back-ends: Gopher, Simple (contributed by Paul Linder)
+- new: WWW::Search mailing list:
+	to subscribe, send "subscribe info-www-search" as
+	the body of a message to <info-www-search-request@isi.edu>
 
 
 WHAT IS WWW::Search?
@@ -52,8 +59,7 @@ Both are also available from the Comprehensive Perl Archive
 Network (CPAN). Visit <http://www.perl.com/CPAN/> to find a CPAN
 site near you.
 
-At this time WWW::Search has been tested with Perl versions 5.002 and
-5.003.
+At this time WWW::Search has been tested with Perl version 5.003.
 
 
 
@@ -126,13 +132,32 @@ find out who maintains the back-end by looking at the man page or code
 for the back-end in the lib/WWW/Search directory.
 
 
+DISCUSSION, BUG REPORTS, AND IMPROVEMENTS
+-----------------------------------------
+
+A mailing list for WWW::Search discussion exists.  To subscribe, send
+"subscribe info-www-search" as the body of a message to
+<info-www-search-request@isi.edu>.
+
+Back-end-related bug reports (search engine xxx doesn't work) should
+be sent to the author of the back-end (back-end authors are identified
+in the corresponding man page and the output of ``make test'').
+General bugs should be reported to <johnh@isi.edu>.
+
+When submitting a bug report, please remember to include
+	- your version of perl
+	- your version of WWW::Search
+	- sample output showing the error
+	- the output of "make test"
+
+
 
 DEMONSTRATION
 -------------
 
 After installing the client programs,
 try
-	search '"Your Name Here"'
+	WebSearch '"Your Name Here"'
 to see who's talking about you on the web.
 
 Then (in your web page directory), try
@@ -167,18 +192,14 @@ Some ideas:
 
   - more widespread use of new results tags across all back-ends
 
-  - a test suite
-
   - a freeze/restore interface to suspend and resume in-progress queries
 
   - more back-ends
 
-Other than a test suite I don't have major plans in the immediate
-future (through 1Q1997); WWW::Search will be in maintenance mode.
-
-Contributions from others are always welcome.  Send me e-mail if you
-plan a new back-end and to discuss architectural changes (to avoid
-duplicating work).
+Now that the test suite is done I don't plans to add major new
+features, but contributions from others are always welcome.  Send me
+e-mail if you plan a new back-end and to discuss architectural changes
+(to avoid duplicating work).
 
 
 
@@ -245,6 +266,9 @@ overview:  an interim release to fix altavista
 - bug-fix: update for AltaVista (page format changed Jul 97)
 	(some information wrt fix provided by Guy Decoux)
 
+1.011:  (8 October 1997)
+- internal alpha release, see 1.012 for list of new features
+
 
 SUPPORT AND CREDITS
 -------------------
@@ -271,8 +295,9 @@ AutoSearch is based on an earlier implementation by Kedar Jog
 Bugs and extensions (to the software and documentation) have been
 identified by William Scheding <wls@isi.edu>, T. V. Raman
 <raman@adobe.com> (proxy support), C. Feroldi <C.Feroldi@it.net>,
-Larry Virden <lvirden@cas.org>, Paul Lindner <PAUL.LINDNER@itu.ch>,
-Guy Decoux <decoux@moulon.inra.fr>.
+Larry Virden <lvirden@cas.org>, Paul Lindner <paul.lindner@itu.int>,
+Guy Decoux <decoux@moulon.inra.fr>, R Chandrasekar (Mickey)
+<mickeyc@linc.cis.upenn.edu>.
 
 Bugs have reported by Joseph McDonald <joe@smartlink.net>, Juan Jose
 Amor <jjamor@infor.es>, Bowen Dwelle <bowen@hotwired.com>.

@@ -13,7 +13,7 @@ require Exporter;
 use Carp ();
 require WWW::SearchResult;
 
-my($Debug) = 1;
+my($Debug) = 0;
 
 
 
@@ -57,7 +57,7 @@ sub native_retrieve_some
     print "GET " . $self->{_next_url} . "\n" if ($Debug);
     my($request) = $self->HTTPrequest($self->{search_method}, $self->{_next_url});
     my($response) = $self->{user_agent}->request($request);
-
+    $self->{response} = $response;
     if (!$response->is_success) {
 	print "Some problem\n" if ($Debug);
 	return undef;
@@ -82,7 +82,7 @@ sub native_retrieve_some
 	    my($hit) = new WWW::SearchResult;
 	    $hit->add_url($linkobj->abs->as_string());
 	    $hit->title(join(' ',@{$linkelem->content}));
-	    $hit->uniformscore($score);
+	    $hit->normalized_score($score);
 	    $hit->ref($self->{'search_ref'});
 
 	    $hit->score($score);
@@ -91,7 +91,7 @@ sub native_retrieve_some
 	    $s = join(' ', @{$s[0]->content}) . "\n";
 	    $hit->score($s);
 
-	    $hit->uniformscore($s * 1000.0);
+	    $hit->normalized_score($s * 1000.0);
 
 
 	    push(@{$self->{cache}}, $hit);
@@ -102,5 +102,4 @@ sub native_retrieve_some
     $self->{_next_url} = undef;
     return($hits_found);
 }
-
 1;

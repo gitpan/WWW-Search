@@ -4,7 +4,7 @@
 # AltaVista.pm
 # by John Heidemann
 # Copyright (C) 1996-1997 by USC/ISI
-# $Id: AltaVista.pm,v 1.23 1997/10/08 23:02:30 johnh Exp $
+# $Id: AltaVista.pm,v 1.25 1997/11/04 01:04:11 johnh Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -15,6 +15,13 @@ package WWW::Search::AltaVista;
 =head1 NAME
 
 WWW::Search::AltaVista - class for searching Alta Vista 
+
+
+=head1 SYNOPSIS
+    
+    require WWW::Search;
+    $search = new WWW::Search('AltaVista');
+
 
 =head1 DESCRIPTION
 
@@ -225,11 +232,7 @@ sub native_retrieve_some
     my($raw) = '';
     foreach (split(/\n/, $response->content())) {
          next if m@^$@; # short circuit for blank lines
-	 if ($state == $HEADER && /Documents?.*of\s*(about)?\s*(\d+)\s+matching/) {   # prior to July 1997
-	    $self->approximate_result_count($2);
-	    $state = $HITS;
-	    print STDERR "PARSE(1:HEADER->HITS): $2 documents found.\n" if ($self->{_debug} >= 2);
-	} elsif ($state == $HEADER && /(<b>)?(no|\d+)<\/b>\s+documents? match/i) {  # post July 1997
+	if ($state == $HEADER && /(<b>)?(no|\d+)<\/b>\s+documents? match/i) {  # post July 1997
 	    my($n) = $2;
 	    $n = 0 if ($n =~ /no/i);
 	    $self->approximate_result_count($n);
@@ -243,15 +246,15 @@ sub native_retrieve_some
 	    $hit->title($3);
 	    $hit->description(undef_to_emptystring($4) . undef_to_emptystring($5));
 	    print STDERR "PARSE(3:HITS): hit found.\n" if ($self->{_debug} >= 2);
-	} elsif ($state == $HITS && m@^(<[Pp]><dt>|<dt>)<a href=\"([^"]+)"><strong>(.*)</strong></a><dd>(.*)<br><a href=\"([^"]+)">@) {
+	} elsif ($state == $HITS && m@^<a href=\"([^"]+)"[^>]*>.*</a>\s*<a href="([^"]+)"[^>]*>.*</a>(.*)</a>@) { # "
 	    # news is slightly different
 	    ($hit, $raw) = $self->begin_new_hit($hit, $raw);
 	    $raw .= $_;
-	    $hit->add_url($2);   # AltaVista's news gateway URL
+	    $hit->add_url($2);   # news:
+	    $hit->add_url($1);   # alta vista url
 	    $hits_found++;
-	    $hit->title($3);
-	    $hit->description(undef_to_emptystring($4));
-	    $hit->add_url(undef_to_emptystring($5));   # news: URL
+	    $hit->title(undef_to_emptystring($3));
+	    $hit->description(undef_to_emptystring($3));
 	    $hits_found++;
 	    print STDERR "PARSE(4:HITS): news hit found.\n" if ($self->{_debug} >= 2);
 	} elsif ($state == $HITS && /^<cite><a href="([^"]+)">/) { #"
@@ -266,16 +269,11 @@ sub native_retrieve_some
 	    ($hit, $raw) = $self->begin_new_hit($hit, $raw);
 	    $state = $TRAILER;
 	    print STDERR "PARSE(6:HITS->TRAILER).\n" if ($self->{_debug} >= 2);
-	} elsif ($state == $HITS && /^<CENTER>.*\s+p\./) {   # pre july 97
-	    # end, with a list of other pages to go to
+	} elsif ($state == $HITS && m@^<\/font><P>.*href="([^"]+)">\s*\[\s*[Nn]ext\s*\]\s*</a>@) { #"
+	    # AdvancedSearch has no Tip
+	    my($relative_url) = $1;
 	    ($hit, $raw) = $self->begin_new_hit($hit, $raw);
-	    if (/\[[Nn]ext\]/) {
-		# set up next page
-		my($relative_url) = m@<a\s+href="([^"]+)">\s*\[\s*[Nn]ext\s*\]\s*</a>@; #"
-		$self->{_next_url} = new URI::URL($relative_url, $self->{_base_url});
-	    } else {
-		$self->{_next_url} = undef;
-	    };
+	    $self->{_next_url} = new URI::URL($relative_url, $self->{_base_url});
 	    $state = $POST_NEXT;
 	    print STDERR "PARSE(7:HITS->POST_NEXT).\n" if ($self->{_debug} >= 2);
 	} elsif ($state == $TRAILER && /\>\[[Nn]ext\]\</) {
@@ -283,7 +281,7 @@ sub native_retrieve_some
 	    my($relative_url) = m@<a\s+href="([^"]+)">\s*\[\s*[Nn]ext\s*\]\s*</a>@; # "
 	    $self->{_next_url} = new URI::URL($relative_url, $self->{_base_url});
 	    $state = $POST_NEXT;
-	    print STDERR "PARSE(7:TRAILER->POST_NEXT): found next.\n" if ($self->{_debug} >= 2);
+	    print STDERR "PARSE(9:TRAILER->POST_NEXT): found next.\n" if ($self->{_debug} >= 2);
 	} else {
 	    # accumulate raw
 	    $raw .= $_;

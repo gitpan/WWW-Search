@@ -1,8 +1,66 @@
 #!/usr/local/bin/perl
 
-# contributed from Paul Lindner <lindner@reliefweb.int>
+# contributed from Paul Lindner <lindner@itu.int>
 
 package WWW::Search::SFgate;
+
+=head1 NAME
+
+WWW::Search::SFgate - class for searching SFgate/Wais search engine
+
+=head1 DESCRIPTION
+
+This class is a SFgate specialization of WWW:Search.  It queries and
+interprets searches based on SFgate, which is available at
+F<http://ls6-www.informatik.uni-dortmund.de/SFgate/welcome.html>
+
+This class exports no public interface; all interaction should be
+done through WWW::Search objects.
+
+This object rewrites URLs to use the preformatted, verbose output
+format of SFgate.  This allows it to get the 'score' and 'size'
+information easily.  The url portions it rewrites are 'verbose=1' 
+and 'listenv=pre'.
+
+=head1 OPTIONS
+
+This search supports standard WWW::Search arguments
+
+=over 8
+
+=item search_url
+
+The SFgate URL to search.  This usually looks like
+F<http://somehost/cgi-bin/SFgate>
+
+=item search_args
+
+The arguments used for the search engine, separate them by &.
+
+=back
+
+=head1 SEE ALSO
+
+To make new back-ends, see L<WWW::Search>,
+
+=head1 AUTHOR
+
+C<WWW::Search::SFgate> is written by Paul Lindner, <lindner@itu.int>
+
+=head1 BUGS
+
+Things not supported: $result->raw(), options: search_debug.
+
+=head1 COPYRIGHT
+
+Copyright (c) 1997 by the United Nations Administrative Committee 
+on Coordination (ACC)
+
+All rights reserved.
+
+=cut
+
+
 
 require Exporter;
 @EXPORT = qw();
@@ -17,30 +75,56 @@ my($debug) = 0;
 
 #private
 
+
+
 sub native_setup_search {
     my($self, $native_query, $native_opt) = @_;
     my($native_url);
     my($default_native_url) =
-	"http://www.itu.int/cgi-bin/SFgate?application=itu&database=local//usr/local/wais/WWW/www-pages&listenv=table&httppath=/usr/local/www-data/&httpprefix=/&tie=and&maxhits=%n&text=%s";
+	"http://www.itu.int/cgi-bin/SFgate?application=itu&database=local//usr/local/wais/WWW/www-pages&httppath=/usr/local/www-data/&httpprefix=/&tie=and&verbose=1&text=%s";
     
     if (defined($native_opt)) {
 	#print "Got " . join(' ', keys(%$native_opt)) . "\n";
 	# Process options..
-	# Substitute query terms for %s...
 
 	if ($self->{'search_url'} && $native_opt->{'search_args'}) {
 	    $native_url = $native_opt->{'search_url'} . "?" . $native_opt->{'search_args'};
 	}
     } 
 
-    
     $native_url = $default_native_url if (!$native_url);
 
-    $native_url =~ s/%s/$native_query/g; # Substitute search terms...
+    ## Get the system into a mode we can parse..
+    $native_url =~ s/listenv=(table|dl)/listenv=pre/i;
+    $native_url .= "&listenv=pre" if ($native_url !~ /listenv=pre/i);
+    $native_url =~ s/verbose=0/verbose=1/i;
+    $native_url .= "&verbose=1" if ($native_url !~ /verbose=1/i);
 
-    $self->user_agent();
+    ## Change behaviour depending on 'search_how'
+    if ($self->{search_how} eq 'match_any') {
+	## remove any tieinternal from the query string
+	$native_url =~ s/tieinternal=[^&]+(&?)/$1/ig;
+    } elsif ($self->{search_how} eq 'match_all') {
+	## change tieinternal to and, or add it..
+	$native_url =~ s/tieinternal=[^&]+/tieinternal=and/ig;
+	if ($native_url !~ /tieinternal/) {
+	    $native_url .= "&tieinternal=and";
+	}
+    } elsif ($self->{search_how} eq 'match_phrase') {
+	$native_query =~ s/[\'\"]+//g;
+	$native_query =~ s/\+/ /g;
+	$native_query = "'$native_query'";
+    }
+
+    $native_url =~ s/%s/$native_query/g; # Substitute search terms...
+    $native_url =~ s/%n/40/g; # Substitute num hits...
+
+    $native_url .= "&maxhits=40" if ($native_url !~ /maxhits=/);
+
+    $self->user_agent(1);
     $self->{_next_to_retrieve} = 0;
-    $self->{_base_url} = $self->{_next_url} = $native_url;
+    $self->{_base_url} = $native_url;
+    $self->{_next_url} = $native_url;
 }
 
 
@@ -58,50 +142,66 @@ sub native_retrieve_some
     print "GET " . $self->{_next_url} . "\n" if ($debug);
     my($request) = $self->HTTPrequest($self->{search_method}, $self->{_next_url});
     my($response) = $self->{user_agent}->request($request);
-#    $self->{response} = $response;
+
+    $self->{response} = $response;
+
     if (!$response->is_success) {
+	#print $response->as_string();
 	print "Some problem\n" if ($Debug);
-	return undef;
+	return (undef);
     };
-    # parse the output
-    use HTML::TreeBuilder;
 
-
-    my $score = 800;
     my $results = $response->content();
-
-    my($h) = new HTML::TreeBuilder;
-    $h->parse($results);
-
-
-    for (@{ $h->extract_links(qw(a)) }) {
-	my($link, $linkelem) = @$_;
+    # parse the output
 	
-	if ((($linkelem->parent->starttag() =~ /^<TD/) &&
-	     ($linkelem->parent->endtag()   eq '</TD>')) ||
-	    (($linkelem->parent->starttag() =~ /^<DT/) && 
-	     ($linkelem->parent->endtag()   eq '</DT>'))) {
-	    my($linkobj)       = $self->absurl($self->{_next_url}, $link);
-	    print "Fixing $link\n" if ($Debug);
+    @{$self->{cache}} = (1);
+    @{$self->{cache}} = ();
+    if (!$results) {
+	return(0);
+    }
+	
+    my ($size, $url);
+    my (@lines) = split(/\n/, $results);
+    while ($#lines > -1) {
+	$_ = shift(@lines);
+	if ((m,^<B>\d+:</B>.*<A,) &&
+	    (m,<A HREF=\"([^\"]+)\">(.*)</A>,i)) {
+	    #print "Found $1" . $self->{_next_url} . "<BR>\n";
 	    $hits_found++;
+	    $url = $1;
+	    my($hittitle) = $2;
+
+	    $url =~ s,http:/cgi-bin,/cgi-bin,i;	# weird sfgate thing..
+	    $url =~ s,http:/([^/]),/$1,i;	# weird sfgate thing..
+	    my($linkobj) = $self->absurl($self->{_next_url}, $url);
 
 	    my($hit) = new WWW::SearchResult;
-	    $hit->add_url($linkobj->abs->as_string());
-	    $hit->title(join(' ',@{$linkelem->content}));
-	    $hit->score($score);
-	    $hit->uniformscore($score);
+	    $hit->add_url($linkobj->abs->as_string);
+	    $hit->title($hittitle);
+
+	    my ($other) = shift(@lines);
+	    $other =~ s,</?B>,,ig;
+	    $other =~ s,\s+, ,g;
+
+	    $other =~ m,Score: (\d+),i;
+
+	    $hit->score($1);
+	    $hit->normalized_score($1);
+
+	    $other =~ m/Size: ([0-9\.]+)/;
+	    $size = $1;
+	    $size = $size * 1024 if ($other =~ /kbytes/);
+
+	    $hit->size($size);
+
 	    $hit->ref($self->{'search_ref'});
 
 	    push(@{$self->{cache}}, $hit);
-		
-	    #$srchitem{'origin'} = $self->{'myurl'};
-	    #$srchitem{'index'}  = $self->{'index'};
-
-	    $score = int ($score * .95);
 	}
     }
     $self->approximate_result_count($hits_found);
     $self->{_next_url} = undef;
+
     return($hits_found);
 }
 

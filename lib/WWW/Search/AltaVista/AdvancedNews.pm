@@ -4,7 +4,7 @@
 # AdvancedNews.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: AdvancedNews.pm,v 1.4 1997/02/25 19:22:03 johnh Exp $
+# $Id: AdvancedNews.pm,v 1.6 1997/11/04 01:04:13 johnh Exp $
 #
 # Complete copyright notice follows below.
 # 
@@ -14,7 +14,13 @@ package WWW::Search::AltaVista::AdvancedNews;
 
 =head1 NAME
 
-WWW::Search::AltaVista::Web - class for advanced Alta Vista news searching
+WWW::Search::AltaVista::AdvancedNews - class for advanced Alta Vista news searching
+
+
+=head1 SYNOPSIS
+    
+    require WWW::Search;
+    $search = new WWW::Search('AltaVista::AdvancedNews');
 
 
 =head1 DESCRIPTION
@@ -74,6 +80,7 @@ sub native_setup_search
     if (!defined($self->{_options})) {
 	$self->{_options} = {
 	    pg => 'aq',
+	    'text' => 'yes',
 	    what => 'news',
 	    fmt => 'd',
 	    'search_url' => 'http://www.altavista.digital.com/cgi-bin/query',

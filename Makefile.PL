@@ -1,5 +1,5 @@
 # This -*- perl -*- script writes the Makefile for libwww-perl
-# $Id: Makefile.PL,v 1.8 1997/10/08 23:02:19 johnh Exp $
+# $Id: Makefile.PL,v 1.11 1997/11/04 02:07:06 johnh Exp $
 
 #--- Configuration section ---
 
@@ -64,7 +64,7 @@ WriteMakefile(
 );
 
 
-# # Some code to install programs the way we want
+# Some code to install programs the way we want
 # sub MY::postamble {
 #     my @m;
 #     if (@request_aliases && grep($_ eq 'lwp-request', @programs_to_install)) {
@@ -78,6 +78,18 @@ WriteMakefile(
 #     join "", @m;
 # }
 
+# This is a workaround that I can't get make install to install the binaries
+sub MY::postamble {
+    my @m;
+    foreach (@programs_to_install) {
+	push @m, "install :: bin/$_\n" .
+	    "\trm -f \$(INSTALLSCRIPT)/$_\n" .
+	    "\tcp bin/$_ \$(INSTALLSCRIPT)\n" .
+	    "\n";
+    };
+    return join "", @m;
+}
+
 # What happens when we say 'make test'
 sub MY::test {
     q(
@@ -88,11 +100,15 @@ FORCE:
 # .PHONY: a gnu-ism
 .PHONY: test
 
+TEST_VERBOSE= 
+
+TEST_ENGINE=
+
 test: FORCE
-	$(FULLPERL) test/test.pl $(TEST_VERBOSE)
+	$(FULLPERL) test/test.pl $(TEST_VERBOSE) $(TEST_ENGINE)
 
 test-v:
-	$(FULLPERL) test/test.pl -v
+	$(FULLPERL) test/test.pl -v $(TEST_ENGINE)
 
 );
 }
@@ -103,6 +119,6 @@ sub MY::libscan {
     my($self, $path) = @_;
     return '' if $path =~ m/.(pl|dtd|sgml)$/;
     return '' if $path =~ m:\bCVS/:;
-    return '' if $path =~ m/~$/;
+    return '' if $path !~ m/\.pm$/;
     $path;
 }
