@@ -1,5 +1,5 @@
 # This -*- cperl -*- program writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.32 2003-09-16 21:54:34-04 kingpin Exp kingpin $
+# $Id: Makefile.PL,v 1.33 2003-10-21 09:18:29-04 kingpin Exp kingpin $
 
 require 5.004;
 
@@ -19,7 +19,7 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
               'NAME' => 'WWW::Search',
-              'VERSION' => 2.43,
+              'VERSION' => 2.44,
 
               ($] ge '5.005') ? (
                                  'AUTHOR' => 'Martin Thurn <mthurn@cpan.org>',

@@ -3,15 +3,14 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.43?  (2003-10-07)
+WHAT IS NEW IN WWW::Search 2.44?  (2003-10-21)
 ----------------------------------------------
 
-overview: 
+Overview of changes: 
 
- * AutoSearch has new option --ignore_channels
- * Finally fixed the `make test` path errors on Linux (I think)
+ * approximate_result_count() can now be called without explicitly calling retrieve_some() first
 
-For details, see the ChangeLog file (updates after 2003-07-28) and/or
+For details, see the ChangeLog file (updates after 2003-10-07) and/or
 the pod of each affected module.
 
 
@@ -26,18 +25,18 @@ applications built from this library: AutoSearch, a program to
 automate tracking of search results over time; and WebSearch, a small
 demonstration program to drive the library.
 
-WWW::Search does NOT try to emulate the default search that you would
-get with each search engine's GUI.  I.e. WWW::Search does NOT
-necessarily return the same results you would get by visiting the
-search engine's web page.  A few backends implement the method
-gui_query which does get the same results as searches from the
-engine's default web page; see `perldoc WWW::Search` for details.  See
-also below under FUTURE PLANS.  WWW::Search performs the search in a
+By default, WWW::Search does NOT try to emulate the default search
+that you would get with each search engine's GUI.  I.e. WWW::Search
+does NOT necessarily return the same results you would get by visiting
+the search engine's web page.  WWW::Search performs the search in a
 way that is efficient and convenient for text processing.  This might
 include using the "advanced search" interface; getting "text-only"
 pages; making "OR" the default query term operator instead of "AND";
 ungrouping same-site results; making sure descriptions are turned on;
-and increasing the number of hits per page, among other tricks.
+and increasing the number of hits per page, among other tricks.  A few
+backends implement the method gui_query(), which does get the same
+results as searches from the engine's default web page; after
+installation, see `perldoc WWW::Search::Backend` for details.
 
 Because WWW::Search depends on parsing the HTML output of web search
 engines, it will fail if the search engine operators change their

@@ -1,3 +1,9 @@
+2003-10-21  Kingpin  <mthurn@verizon.net>
+
+	* code/AutoSearch-code.pl (usage): new option --ignore_channels
+
+	* lib/WWW/Search.pm (approximate_result_count): fixed so can be called without explicitly calling retrieve_some() first
+
 2003-09-16  Kingpin  <mthurn@verizon.net>
 
 	* Makefile.PL (MY::postamble): fixed path for pod2text; etc.

@@ -4,13 +4,13 @@ exit 0;
 # AutoSearch-code.pl
 # Copyright (c) 1996-1997 University of Southern California.
 # All rights reserved.
-# $Id: AutoSearch-code.pl,v 1.7 2003-06-06 07:41:13-04 kingpin Exp kingpin $
+# $Id: AutoSearch-code.pl,v 1.8 2003-10-21 09:13:46-04 kingpin Exp kingpin $
 #
 # Complete copyright notice follows below.
 
 =head1 NAME
 
-AutoSearch -- a web-searching application
+AutoSearch -- a web-search tracking application
 
 =head1 SYNOPSIS
 
@@ -430,22 +430,12 @@ use WWW::Search;
 use strict;
 
 use vars qw( $VERSION );
-$VERSION = '2.08';
+$VERSION = '2.09';
 
 sub print_version
   {
   print STDERR "$0 version $VERSION;  WWW::Search version $WWW::Search::VERSION\n";
   } # print_version
-
-#=head1 NAME
-#
-#usage -  on command line errors list usage.
-#
-#
-#=head1 DESCRIPTION
-#
-#
-#=cut
 
 sub usage {
   print STDERR <<END;

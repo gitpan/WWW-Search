@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 2.45 2003-07-28 21:25:43-04 kingpin Exp kingpin $
+# $Id: Search.pm,v 2.47 2003-10-21 09:11:07-04 kingpin Exp kingpin $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -90,6 +90,7 @@ use User;
 use constant SEARCH_BEFORE => 1;
 use constant SEARCH_UNDERWAY => 2;
 use constant SEARCH_DONE => 3;
+use constant SEARCH_RETRIEVING => 4;
 
 use strict qw( vars );
 
@@ -98,7 +99,7 @@ use vars qw( @ISA @EXPORT @EXPORT_OK $VERSION $MAINTAINER );
 @EXPORT_OK = qw( escape_query unescape_query generic_option strip_tags );
 @ISA = qw(Exporter LWP::MemberMixin);
 $MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
-$VERSION = sprintf("%d.%02d", q$Revision: 2.45 $ =~ /(\d+)\.(\d+)/o);
+$VERSION = sprintf("%d.%02d", q$Revision: 2.47 $ =~ /(\d+)\.(\d+)/o);
 
 =head2 new
 
@@ -605,9 +606,46 @@ sub approximate_hit_count
 sub approximate_result_count
   {
   my $self = shift;
-  # prime the pump:
-  $self->retrieve_some() if ($self->{'state'} == SEARCH_BEFORE);
-  return $self->_elem('approx_count', @_);
+  # Optional arg1 = new value for this option.
+  my $iArg = shift;
+  # print STDERR " + a_r_c(state=$self->{state},iArg=$iArg)\n";
+  if (defined($iArg) && (0 <= $iArg))
+    {
+    # Caller is trying to SET the value:
+    # print STDERR " + a_r_cSET(state=$self->{state},iArg=$iArg)\n";
+    $self->{'approx_count'} =  $iArg;
+    } # if
+  if (
+      # This prevents infinite recursion, for when retrieve_some()
+      # calls this function in order to SET the value:
+      ($self->{state} ne SEARCH_RETRIEVING)
+      &&
+      # This prevents useless repeat calls to retrieve_some() after
+      # the search has been completed:
+      ($self->{state} ne SEARCH_DONE))
+    {
+    # Prime the pump, if necessary:
+    $self->retrieve_some();
+    }
+  if (
+      # Haven't done anything yet:
+      ($self->{'state'} == SEARCH_BEFORE)
+      ||
+      (
+       # We've started retrieving...
+       ($self->{'state'} == SEARCH_UNDERWAY)
+       &&
+       # ...and caller is getting, not setting,
+       # this value:
+       ($iArg < 0)
+      )
+     )
+    {
+    # Old code.
+    }
+  $iArg = $self->{'approx_count'};
+  # print STDERR " + a_r_cGET(state=$self->{state},answer=$iArg)\n";
+  return $iArg;
   } # approximate_result_count
 
 
@@ -787,7 +825,7 @@ sub reset_search
   $self->{'requests_made'} = 0;
   $self->{'state'} = SEARCH_BEFORE;
   $self->{'_next_url'} = '';
-  $self->_elem('approx_count', 0);
+  $self->{'approx_count'} = 0;
   # This method is called by native_query().  native_query() is called
   # either by gui_query() or by the user.  In the case that
   # gui_query() was called, we do NOT want to clear out the _options
@@ -1391,6 +1429,7 @@ sub retrieve_some
   print STDERR " + retrieve_some(", $self->{'native_query'}, ")\n" if $self->{_debug};
   return undef if ($self->{state} == SEARCH_DONE);
   $self->setup_search() if ($self->{state} == SEARCH_BEFORE);
+  $self->{state} = SEARCH_RETRIEVING;
   if (! $self->{'_allow_empty_query'})
     {
     if (! defined($self->{'native_query'}))
