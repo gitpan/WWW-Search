@@ -96,9 +96,9 @@ sub mode
   my $new_mode = shift;
   if ($new_mode)
     {
-    $self->{mode} = $new_mode;
+    $self->{'mode'} = $new_mode;
     }
-  return $self->{mode};
+  return $self->{'mode'};
   } # mode
 
 =head2 relevant_test
@@ -192,8 +192,8 @@ sub test
   
   return if (!$self->relevant_test($sSE));
   
-  print "  trial $file (", $self->{mode}, ")\n";
-  if (($self->{mode} eq $MODE_INTERNAL) && ($query =~ m/$bogus_query/))
+  print "  trial $file (", $self->{'mode'}, ")\n";
+  if (($self->{'mode'} eq $MODE_INTERNAL) && ($query =~ m/$bogus_query/))
     {
     print "  skipping test on this platform.\n";
     return;
@@ -203,7 +203,7 @@ sub test
   my $path = "$pwd/Test-Pages/$sSE";
   $path =~ s!::!\/!g;
   mkpath $path;
-  if ($self->{mode} eq $MODE_UPDATE)
+  if ($self->{'mode'} eq $MODE_UPDATE)
     {
     # Delete all existing test result files for this Engine:
     unlink <$path/$file*>;
@@ -228,21 +228,21 @@ sub test
   $websearch ||= "$pwd/blib/script/WebSearch";
   my $cmd = $Config{'perlpath'} . " -MExtUtils::testlib $websearch ";
   $cmd .= $self->{debug} ? '--debug '.$self->{debug} : '';
-  $cmd .= " --max 209 --engine $sSE ". $src{$self->{mode}} ." -- $query";
+  $cmd .= " --max 209 --engine $sSE ". $src{$self->{'mode'}} ." -- $query";
   print "  $cmd\n" if ($self->{verbose} || $self->{debug});
   open(TRIALSTREAM, "$cmd|") || die "$0: cannot run test ($!)\n";
   open(TRIALFILE, ">$file.trial") || die "$0: cannot open $file.trial ($!)\n";
-  open(OUTFILE, ">$file.out") || die "$0: cannot open $file.out ($!)\n" if ($self->{mode} eq $MODE_UPDATE);
+  open(OUTFILE, ">$file.out") || die "$0: cannot open $file.out ($!)\n" if ($self->{'mode'} eq $MODE_UPDATE);
   my $iActual = 0;
   while (<TRIALSTREAM>) 
     {
     print TRIALFILE $_;
     $iActual++;
-    print OUTFILE $_ if ($self->{mode} eq $MODE_UPDATE);
+    print OUTFILE $_ if ($self->{'mode'} eq $MODE_UPDATE);
     }
   close TRIALSTREAM;
   close TRIALFILE;
-  if ($self->{mode} eq $MODE_UPDATE)
+  if ($self->{'mode'} eq $MODE_UPDATE)
     {
     close OUTFILE;
     if (open TS, ">$file.README")

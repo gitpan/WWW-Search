@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.26 2000/03/21 20:16:14 mthurn Exp $
+# $Id: Search.pm,v 1.28 2000/03/23 14:16:16 mthurn Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -66,7 +66,7 @@ package WWW::Search;
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query generic_option strip_tags @ENGINES_WORKING);
-$VERSION = '2.11';
+$VERSION = '2.12';
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
@@ -523,18 +523,17 @@ NOTE that this is not a method, it is a plain function.
 
 =cut
 
-sub escape_query {
-    # code stolen from URI::Escape.pm.
-    my $text = @_;
-    $text = "" if (!defined($text));
-    # Default unsafe characters except for space. (RFC1738 section 2.2)
-#    $text =~ s/([+\x00-\x1f"#%;<>?{}|\\\\^~`\[\]\x7F-\xFF])/$URI::Escape::escapes{$1}/g; #"
-    # The modern trend seems to be to quote almost everything.
-    $text =~ s/([^ A-Za-z0-9])/$URI::Escape::escapes{$1}/g; #"
-    # space
-    $text =~ s/ /+/g;
-    return $text;
-}
+sub escape_query 
+  {
+  my $text = join(' ', @_);
+  $text ||= '';
+  # print STDERR " +   escape_query($text)\n";
+  $text =~ s/([^ A-Za-z0-9])/$URI::Escape::escapes{$1}/g; #"
+  # print STDERR " +   escape_query($text)\n";
+  $text =~ s/ /+/g;
+  # print STDERR " +   escape_query($text)\n";
+  return $text;
+  } # escape_query
 
 =head2 unescape_query
 

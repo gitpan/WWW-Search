@@ -1,3 +1,9 @@
+2000-03-23  Kingpin  <mthurn@tasc.com>
+
+	* t/use.t: added test for *any* results
+
+	* lib/WWW/Search.pm (escape_query): fixed BUG in argument parsing
+
 2000-03-22  Kingpin  <mthurn@tasc.com>
 
 	* WWW::Search VERSION 2.11 RELEASED!
