@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 2.39 2002/12/20 22:13:16 mthurn Exp $
+# $Id: Search.pm,v 2.42 2003-04-16 00:39:29-04 kingpin Exp kingpin $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -98,7 +98,7 @@ use vars qw( @ISA @EXPORT @EXPORT_OK $VERSION $MAINTAINER );
 @EXPORT_OK = qw( escape_query unescape_query generic_option strip_tags );
 @ISA = qw(Exporter LWP::MemberMixin);
 $MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
-$VERSION = sprintf("%d.%02d", q$Revision: 2.39 $ =~ /(\d+)\.(\d+)/o);
+$VERSION = sprintf("%d.%02d", q$Revision: 2.42 $ =~ /(\d+)\.(\d+)/o);
 
 =head2 new
 
@@ -340,7 +340,6 @@ sub native_query
   {
   my $self = shift;
   print STDERR " + native_query($_[0])\n" if $self->{_debug};
-  # return $self->_elem('native_query', @_) if ($#_ != 1);
   $self->reset_search();
   $self->{'native_query'} = $_[0];
   $self->{'native_options'} = $_[1];
@@ -350,7 +349,7 @@ sub native_query
     {
     if (generic_option($sKey))
       {
-      # print STDERR " +   promoting $sKey to $self\n";
+      print STDERR " +   promoting $sKey to $self\n" if $self->{_debug};
       $self->{$sKey} = $opts_ref->{$sKey};
       # delete $opts_ref->{$sKey};
       } # if
@@ -456,13 +455,13 @@ supported for each search engine.
 
 sub date_from
   {
-  return shift->_elem('date_from', @_);
+  return shift->_elem('date_from', @_) || '';
   } # date_from
 
 sub date_to
   {
-  return shift->_elem('date_to', @_);
-  } # date_from
+  return shift->_elem('date_to', @_) || '';
+  } # date_to
 
 
 =head2 env_proxy
@@ -630,8 +629,6 @@ sub results
   {
   my $self = shift;
   print STDERR " + results(",$self->{'native_query'},")\n" if $self->{_debug};
-  Carp::croak "query string is not defined" if (!defined($self->{'native_query'}));
-  Carp::croak "query string is empty" unless ($self->{'native_query'} ne '');
   # Put all the search results into the cache:
   1 while ($self->retrieve_some());
   $self->{cache} ||= [];
@@ -661,7 +658,7 @@ to an HTTP response object.
 sub next_result
   {
   my $self = shift;
-  Carp::croak "search not yet specified" if (!defined($self->{'native_query'}));
+  # Carp::croak "search not yet specified" if (!defined($self->{'native_query'}));
   return undef if ($self->{next_to_return} >= $self->{maximum_to_retrieve});
   while (1)
     {
@@ -670,14 +667,14 @@ sub next_result
       # The cache already contains the desired element; return it:
       my $i = ($self->{next_to_return})++;
       return ${$self->{cache}}[$i];
-      }
+      } # if
     # If we get here, then the desired element is beyond the end of
     # the cache.
     if ($self->{state} == SEARCH_DONE)
       {
       # There are no more results to be gotten; fail & bail:
       return undef;
-      }
+      } # if
     # Get some more results into the cache:
     $self->retrieve_some();
     # Go back and try again:
@@ -905,17 +902,20 @@ sub strip_tags
   {
   # This is not a method; there is no $self
   my @as = @_;
+ STRING:
   foreach (@as)
     {
+    next STRING unless $_;
     # Special case: change BR to space:
     s!<BR>! !gi;
     # We assume for now that we will not be encountering tags with
     # embedded '>' characters!
     s/\074.+?\076//g;
     s/&nbsp;/ /g;
+    s/&quot;/\042/g;
+    s/&amp;/\046/g;
     s/&lt;/\074/g;
     s/&gt;/\076/g;
-    s/&quot;/\042/g;
     } # foreach
   return wantarray ? @as : shift @as;
   } # strip_tags
@@ -1113,7 +1113,7 @@ sub http_request
       $s = $s->as_string if ref($s) =~ m!URI!;
       $request->referer($s);
       } # if referer
-    print STDERR " +   original HTTP::Request is:\n", $request->as_string if 3 <= $self->{_debug};
+    print STDERR " +   original HTTP::Request is:\n", $request->as_string if (3 <= $self->{_debug});
 
     my $ua = $self->user_agent();
     while (1)
@@ -1360,7 +1360,6 @@ sub absurl
   $base ||= '';
   # print STDERR " +   this is WWW::Search::absurl($base,$url)\n" if 1 < $self->{_debug};
   $base = $self->{_prev_url} if $base eq '';
-  #$url =~ s,^http:/([^/]),/$1,; #bogus sfgate URL
   my $link = URI->new_abs($url, $base);
   return $link;
   } # absurl
@@ -1378,9 +1377,22 @@ sub retrieve_some
   my $self = shift;
   print STDERR " + retrieve_some(", $self->{'native_query'}, ")\n" if $self->{_debug};
   return undef if ($self->{state} == SEARCH_DONE);
-  # assume that caller has verified defined($self->{'native_query'}),
-  # hopefully by calling $self->native_query().
   $self->setup_search() if ($self->{state} == SEARCH_BEFORE);
+  if (! $self->{'_allow_empty_query'})
+    {
+    if (! defined($self->{'native_query'}))
+      {
+      $self->{response} = new HTTP::Response(500, "query string is not defined");
+      $self->{state} = SEARCH_DONE;
+      return;
+      } # if
+    if ($self->{'native_query'} eq '')
+      {
+      $self->{response} = new HTTP::Response(500, "query string is empty");
+      $self->{state} = SEARCH_DONE;
+      return;
+      } # if
+    } # if
   # got enough already?
   if ($self->{number_retrieved} >= $self->{'maximum_to_retrieve'})
     {
@@ -1493,6 +1505,8 @@ sub native_retrieve_some
       } # if
     return undef;
     } # if
+  # Pre-process the output:
+  my $sPage = $self->preprocess_results_page($response->content);
   # Parse the output:
   my $tree;
   if (ref $self->{'_treebuilder'})
@@ -1514,7 +1528,7 @@ sub native_retrieve_some
   # change this:
   $tree->www_search_reset;
   # print STDERR " +   parsing content, tree is ", Dumper(\$tree) if 1 < $self->{_debug};
-  $tree->parse($self->preprocess_results_page($response->content));
+  $tree->parse($sPage);
   # print STDERR " +   done parsing content.\n" if 1 < $self->{_debug};
   $tree->eof();
   # print STDERR " +   calling parse_tree...\n" if 1 < $self->{_debug};

@@ -4,7 +4,7 @@ exit 0;
 # AutoSearch-code.pl
 # Copyright (c) 1996-1997 University of Southern California.
 # All rights reserved.
-# $Id: AutoSearch-code.pl,v 1.5 2002/12/16 14:24:42 mthurn Exp mthurn $
+# $Id: AutoSearch-code.pl,v 1.7 2003-06-06 07:41:13-04 kingpin Exp kingpin $
 #
 # Complete copyright notice follows below.
 
@@ -14,7 +14,7 @@ AutoSearch -- a web-searching application
 
 =head1 SYNOPSIS
 
-B<AutoSearch -n "My Query On Engine" -s "unescaped query" [--engine SearchEngine] [--option QueryOptions]... [--filter FilterRegExp] [--verbose] [--stats] qid>
+B<AutoSearch -n "My Query On Engine" -s "unescaped query" --engine SearchEngine [--listnewurls] [--option QueryOptions]... [--filter FilterRegExp] [--verbose] [--stats] qid>
 
 B<AutoSearch qid>
 
@@ -23,11 +23,12 @@ B<AutoSearch qid>
 B<AutoSearch> performs a web-based search and puts the results
 set in F<qid/index.html>.
 Subsequent searches (i.e., the second form above)
-B<AutoSearch> determine what changes (if any) occured to the 
+B<AutoSearch> determine what changes (if any) occured to the
 results sent since the last run.
 These incremental changes are recorded in F<qid/YYYYMMDD.html>.
+
 B<AutoSearch> is amenable to be run as a B<cron> job because all
-the input parameters are saved in the web pages.  B<AutoSearch> 
+the input parameters are saved in the web pages.  B<AutoSearch>
 can act as a automated query agent for a particular search.  The output
 files are designed to be a set of web pages to easily display the
 results set with a web browser.
@@ -41,7 +42,7 @@ Example:
 
 This query (which should be all on one line)
 creates a directory replication_query
-and fills it with the facinating output of the AltaVista query
+and fills it with the fascinating output of the AltaVista query
 on C<"lsam replication">,
 with pages titled ``LSAM Replication''.
 (Note the quoting:  the single quotes in
@@ -95,14 +96,17 @@ characters to group or to qualify the search.
 =item C<-e> C<--engine>
 
 Specify the search engine.  The query string will be submitted 
-to the user specified search engine.  The default is B<AltaVista>.
-Other search engines supported are B<Lycos>, B<HotBot>, and B<Yahoo>.
+to the user specified search engine.
 
 In many cases there are specialized versions of search engines.
 For example, B<AltaVista::AdvancedWeb> and B<AltaVista::News>
 allow more powerful and Usenet searches.
 See L<AltaVista> or the man page for your search engine
 for details about specialized variations.
+
+=item C<--listnewurls>
+
+Print all new URLs to STDOUT, one per line.
 
 =item C<-o> C<--options>
 
@@ -182,7 +186,8 @@ available).  The title is a link to the original web page.
 
 =head1 AUTOMATED SEARCHING
 
-Cron(1) may be used to establish periodic searches and the web pages
+On UNIX-like systems,
+cron(1) may be used to establish periodic searches and the web pages
 will be maintained by B<AutoSearch>.  To establish the first search,
 use the first example under SYNOPSIS.  You must specify the qid, query
 name and query string.  If any of the items are missing, you will be
@@ -425,11 +430,11 @@ use WWW::Search;
 use strict;
 
 use vars qw( $VERSION );
-$VERSION = '2.06';
+$VERSION = '2.07';
 
 sub print_version
   {
-  print "$0 version $VERSION;  WWW::Search version $WWW::Search::VERSION\n";
+  print STDERR "$0 version $VERSION;  WWW::Search version $WWW::Search::VERSION\n";
   } # print_version
 
 #=head1 NAME
@@ -458,7 +463,8 @@ $opts{'v'} = 0;
 $opts{'help'} = 0;
 $opts{'stats'} = 0;
 $opts{'debug'} = 0;
-&GetOptions(\%opts, qw(n|qn|queryname=s s|qs|querystring=s e|engine=s m|mail=s h|host=s p|port=s o|options=s@ f|uf|urlfilter=s stats userid=s password=s v|verbose help V|VERSION debug));
+$opts{'listnewurls'} = 0;
+&GetOptions(\%opts, qw(n|qn|queryname=s s|qs|querystring=s e|engine=s m|mail=s h|host=s p|port=s o|options=s@ f|uf|urlfilter=s listnewurls stats userid=s password=s v|verbose help V|VERSION debug));
 if ($opts{'V'})
   {
   &print_version();
@@ -476,9 +482,9 @@ my $v_dbg = $opts{'v'};
 my $d_dbg = $opts{'debug'};
 if ($v_dbg)
   {
-  print "v     option: defined\n";
-  print "stats option: ", ! $opts{'stats'} ? 'not ' : '', "defined\n";
-  print "debug option: ", ! $opts{'debug'} ? 'not ' : '', "defined\n";
+  print STDERR "v     option: defined\n";
+  print STDERR "stats option: ", ! $opts{'stats'} ? 'not ' : '', "defined\n";
+  print STDERR "debug option: ", ! $opts{'debug'} ? 'not ' : '', "defined\n";
   } # if
 if ($opts{'m'} ne '')
   {
@@ -508,17 +514,17 @@ if (defined($opts{'o'}))
 $url_filter =    $opts{'f'} if defined($opts{'f'});
 my($local_filter) = 0; # shall we exclude our own old pages? (1=y,0=n)
 
-#print "n = \"$opts{'n'}\"\n" if defined($opts{'n'});
-#print "s = \"$opts{'s'}\"\n" if defined($opts{'s'});
-#print "e = \"$opts{'e'}\"\n" if defined($opts{'e'});
-#print "o = \"$opts{'o'}\"\n" if defined($opts{'o'});
-#print "f = \"$opts{'f'}\"\n" if defined($opts{'f'});
+#print STDERR "n = \"$opts{'n'}\"\n" if defined($opts{'n'});
+#print STDERR "s = \"$opts{'s'}\"\n" if defined($opts{'s'});
+#print STDERR "e = \"$opts{'e'}\"\n" if defined($opts{'e'});
+#print STDERR "o = \"$opts{'o'}\"\n" if defined($opts{'o'});
+#print STDERR "f = \"$opts{'f'}\"\n" if defined($opts{'f'});
 
-##print "query_list   = \"$query_list[0]\" \"$query_list[1]\"\n";
-#print "query_name    = \"$query_name\"\n"    if defined($opts{'n'});
-#print "query_string  = \"$query_string\"\n"  if defined($opts{'s'});
-#print "search_engine = \"$search_engine\"\n" if defined($opts{'e'});
-#print "url_filter    = \"$url_filter\"\n"    if defined($opts{'f'});
+##print STDERR "query_list   = \"$query_list[0]\" \"$query_list[1]\"\n";
+#print STDERR "query_name    = \"$query_name\"\n"    if defined($opts{'n'});
+#print STDERR "query_string  = \"$query_string\"\n"  if defined($opts{'s'});
+#print STDERR "search_engine = \"$search_engine\"\n" if defined($opts{'e'});
+#print STDERR "url_filter    = \"$url_filter\"\n"    if defined($opts{'f'});
 
 &main(join(" ", @ARGV));
 
@@ -611,13 +617,13 @@ sub main {
 # get the date.
   my($now) = &time_now;
   my($today) = &time_today;
-  print "Now = ", $now if $v_dbg;
-  print ", Today = ", $today, "\n" if $v_dbg;
+  print STDERR "Now = ", $now if $v_dbg;
+  print STDERR ", Today = ", $today, "\n" if $v_dbg;
 # build query directory string.
   my($qid) = $query_dir;
   die ("qid is a required field.") unless ($qid);
   $qid .= '/' unless substr($qid,-1,1) eq '/'; # we MUST have a /
-  print "query directory: $qid, " if $v_dbg;
+  print STDERR "query directory: $qid, " if $v_dbg;
 # do we have the necessary infrastructure?
 # we require two files. 1) the Summary of searches and 2) weekly updates
 # look for index.html, or default first_index.html or make one.
@@ -684,7 +690,7 @@ sub main {
       $QueryName = &read_query("Please enter a Query Name:");
     }
     $SummaryTop =~ s/AutoSearch WEB Searching/$QueryName/i;
-    print "Query Name is \"$QueryName\"\n" if $v_dbg;
+    print STDERR "Query Name is \"$QueryName\"\n" if $v_dbg;
   }
 
   if ($SummaryQuery =~ m/ask user/i)
@@ -695,7 +701,7 @@ sub main {
         $QueryString = &read_query("Please enter a Query String:");
         }
     $SummaryQuery =~ s/ask user/$QueryString/i;
-    print "Query String is \"$QueryString\"\n" if $v_dbg;
+    print STDERR "Query String is \"$QueryString\"\n" if $v_dbg;
     }
   my $sTitle = "<Title> Search results for $SummaryQuery as of $now </Title>\n";
   
@@ -716,7 +722,7 @@ sub main {
     }
     $SummarySearchEngine = $SearchEngine;
   }
-  print "Search Engine is \"$SearchEngine\"\n" if $v_dbg;
+  print STDERR "Search Engine is \"$SearchEngine\"\n" if $v_dbg;
 
 # this is not a required field.
 # this MUST BE ask user to get AutoSeatch to ask.
@@ -725,16 +731,16 @@ sub main {
   if ($SummaryQueryOptions[0] =~ m/ask user/i) { # either ask or use command line
 #    print $SummaryQueryOptions[0], " is ask user\n";
     if (defined($opts{'o'})) { # from command line ?
-#      print "defined.\n";
+#      print STDERR "defined.\n";
       # use $query_options
     } else { # no, ask 'em
-#      print "not defined.\n";
+#      print STDERR "not defined.\n";
       @SummaryQueryOptions = &read_query_list("Please enter Query Options:");
       $query_options = {};
       foreach (@SummaryQueryOptions) {
         next if m/^$/;
         my($key, $value) = m/^([^=]+)=(.*)$/;
-#        print "option:$_ is $key=$value\n";
+#        print STDERR "option:$_ is $key=$value\n";
         &add_to_hash($key, &WWW::Search::escape_query($value), $query_options);
       }
     }
@@ -743,7 +749,7 @@ sub main {
     foreach (@SummaryQueryOptions) {
       next if m/^$/;
       my($key, $value) = m/^([^=]+)=(.*)$/;
-      # print "option:$_ is $key=$value\n";
+      # print STDERR "option:$_ is $key=$value\n";
       &add_to_hash($key, &WWW::Search::escape_query($value), $query_options);
     }
   }
@@ -765,7 +771,7 @@ sub main {
     }
     $SummaryURLFilter = $URLFilter;
   }
-  print "URL Filter is \"$URLFilter\"\n" if $v_dbg;
+  print STDERR "URL Filter is \"$URLFilter\"\n" if $v_dbg;
 #
 # now locate the weekly format file.
 # 1) qid/date.html, or 2) first_date.html, or 3) create one.
@@ -811,9 +817,9 @@ sub main {
   my(@weekly_url,@weekly_title);
 
 # care to see the old summary list?
-#  print "old summary:\n";
+#  print STDERR "old summary:\n";
 #  foreach $line (@old_summary_url) {
-#    print "$line\n";
+#    print STDERR "$line\n";
 #  }
 
   # how many hits?
@@ -831,7 +837,7 @@ sub main {
     }
     # let the user filter out URLs.
     if ( ($SummaryURLFilter) && ($url =~ m,$SummaryURLFilter,oi) ) {
-#      print "filter out $url \n with filter: $SummaryURLFilter\n";
+#      print STDERR "filter out $url \n with filter: $SummaryURLFilter\n";
       $url_filter_count++;
       next;
     }
@@ -839,17 +845,18 @@ sub main {
     push(@weekly_url,$url); # the complete set of hits
     $title = $next_result->title;
     push(@weekly_title,$title);
-    # was it in the old summary? if so, don't save it.
-    # if not, it is a new search results for this week.
+    # Was it in the old summary? If so, don't save it.
+    # If not, it is a new search results for this week.
     foreach $line (@old_summary_url) {
-      # see if this url is in the summary
-      # skip if we've seen this b4
+      # See if this url is in the summary
+      # Skip if we've seen this b4
       next NEXT_URL if $url eq $line;
     }
-    print "url:$url ** new result **\n" if $dbg_search;
+    print STDERR "url:$url ** new result **\n" if $dbg_search;
+    print "$url\n" if $opts{'listnewurls'};
     $description = $next_result->description;
-    print "description: ", $description, "\n" if $dbg_search;
-    print "title: ", $title, "\n" if $dbg_search;
+    print STDERR "description: ", $description, "\n" if $dbg_search;
+    print STDERR "title: ", $title, "\n" if $dbg_search;
     push(@new_weekly_url,$url); # the newest set of hits (added)
     push(@new_weekly_description,$description);
     push(@new_weekly_title,$title);
@@ -858,9 +865,9 @@ sub main {
   if ($hits == 0) {
     my($response) = $search->response();
     if ($response->is_success) {
-      print "Warning:  Empty results set.\n" if defined($v_dbg);
+      print STDERR "Warning:  Empty results set.\n" if defined($v_dbg);
     } else {
-      print "Error: " . http_error_as_nice_string($response) . "\n";
+      print STDERR "Error: " . http_error_as_nice_string($response) . "\n";
     }
   }
 
@@ -878,25 +885,25 @@ sub main {
       # if we match the weekly (active search) hits, skip it.
       next OLD_URL if $url eq $line;
     }
-    printf "suspend: [%02d]%s\n",$i,$url if $dbg_search;
+    printf STDERR "suspend: [%02d]%s\n",$i,$url if $dbg_search;
     # not found? save it, it's been suspended
     push(@suspended_url,$url);
     $title = $old_summary_title[$i];
     push(@suspended_title,$title);
   }
   # stats?? (to see 'em use -stats)
-  print "Query is : \"$SummaryQuery\" on \"$SummarySearchEngine\"" if defined($s_dbg);
-  print " with \"@SummaryQueryOptions\"" if (defined($s_dbg) && $#SummaryQueryOptions);
-  print "\n" if defined($s_dbg);
-  print "old summary count: ",$#old_summary_url + 1,"\n" if defined($s_dbg);
-  print "new raw hits     : ",$hits,"\n" if defined($s_dbg);
-  print "urls filtered    : ",$url_filter_count,", filter \"",$URLFilter,"\"\n" if defined($s_dbg);
-  print "not filtered     : ",$saved,"\n" if defined($s_dbg);
-  print "results set count: ",$#new_weekly_url + 1,"\n" if defined($s_dbg);
-  print "suspended count  : ",$#suspended_url + 1,"\n" if defined($s_dbg);
-  print "final count      : ",$#weekly_url + 1,"\n" if defined($s_dbg);
+  print STDERR "Query is : \"$SummaryQuery\" on \"$SummarySearchEngine\"" if defined($s_dbg);
+  print STDERR " with \"@SummaryQueryOptions\"" if (defined($s_dbg) && $#SummaryQueryOptions);
+  print STDERR "\n" if defined($s_dbg);
+  print STDERR "old summary count: ",$#old_summary_url + 1,"\n" if defined($s_dbg);
+  print STDERR "new raw hits     : ",$hits,"\n" if defined($s_dbg);
+  print STDERR "urls filtered    : ",$url_filter_count,", filter \"",$URLFilter,"\"\n" if defined($s_dbg);
+  print STDERR "not filtered     : ",$saved,"\n" if defined($s_dbg);
+  print STDERR "results set count: ",$#new_weekly_url + 1,"\n" if defined($s_dbg);
+  print STDERR "suspended count  : ",$#suspended_url + 1,"\n" if defined($s_dbg);
+  print STDERR "final count      : ",$#weekly_url + 1,"\n" if defined($s_dbg);
   my($changes) = (($#new_weekly_url != -1) || ($#suspended_url != -1));
-#  printf "changes is %d\n",$changes if defined($v_dbg);
+#  printf STDERR "changes is %d\n",$changes if defined($v_dbg);
 
 # For every search, AutoSearch (aka AS) will make a 'weekly' file.
 # Usually AutoSearch is run as a 'cron' job; but can be run manually.
@@ -915,14 +922,14 @@ sub main {
 #
 # do we have a reason to care? New Results, Appensions, Suspensions???
   if ($changes) {
-#    print "test file: $qid$file\n";
+#    print STDERR "test file: $qid$file\n";
     if (-e $qid.$file) { # file already there modify it.
-#      print "modify existing weekly file.\n" if defined($v_dbg);
+#      print STDERR "modify existing weekly file.\n" if defined($v_dbg);
       # copy in previous file from today
       open (PARTS,'<'.$qid.$file) || die "Can't open weekly input file.\nReason: $!\n";
       my($part) = <PARTS>;
       close (PARTS);
-#      print "Part:\"$part\"\n";
+#      print STDERR "Part:\"$part\"\n";
       # break into parts to insert modifications
       my($part1,$part2) = split (/<!--\/Appended-->/,$part,2);
       my($part3,$part4) = split (/<!--\/Suspended-->/,$part2,2);
@@ -959,7 +966,7 @@ sub main {
       close (HTML);
   
     } else { # create the file
-#      print "make new weekly file.\n" if defined($v_dbg);
+#      print STDERR "make new weekly file.\n" if defined($v_dbg);
       open (HTML,'>'.$qid.$file) || die "Can't open weekly output file.\nReason: $!\n";
       print HTML $sTitle;
       print HTML "<!-- created by AutoSearch.pl by wls -->\n";
@@ -1006,7 +1013,7 @@ sub main {
       close (HTML);
     }
   } else {
-#    print "no weekly changes required.\n" if defined($v_dbg);
+#    print STDERR "no weekly changes required.\n" if defined($v_dbg);
   }
 
 # now write the new index file.
@@ -1019,7 +1026,7 @@ sub main {
   print HTML "<!--Query{$SummaryQuery}/Query-->\n";
   print HTML "<!--SearchEngine{$SummarySearchEngine}/SearchEngine-->\n" if ($SummarySearchEngine);
   foreach $key (keys (%{$query_options})) {
-#    print "option::$key=$query_options->{$key}\n";
+#    print STDERR "option::$key=$query_options->{$key}\n";
     print HTML "<!--QueryOptions{$key\=$query_options->{$key}\}QueryOptions-->\n";
   }
   print HTML "<!--URLFilter{$SummaryURLFilter}/URLFilter-->\n" if ($SummaryURLFilter);
@@ -1063,7 +1070,7 @@ sub main {
   if ($changes) { # there were changes.
     # second run today?
     if ($Weekly =~ m/^No unique results found for(.*)$today/i) { # yes
-#      print "change 'No' to 'Yes'\n";
+#      print STDERR "change 'No' to 'Yes'\n";
       # change No to Yes.
       # the first line SHOULD be today's, assume so.
       # delete first line of $Weekly and write new link
@@ -1071,19 +1078,19 @@ sub main {
       ($junk,$Weekly) = split (/\n/,$Weekly,2); # split off first line
       print HTML "Web search results for <a href=\"$file\">search on ",$today,"</a><br>\n"; 
     } elsif ($Weekly =~ m/^Web search results for(.*)$today/) { # yes we already have a link, leave it.
-#      print "leave 'Yes'\n";
+#      print STDERR "leave 'Yes'\n";
     } else { # no link for today of any kind. add one.
-#      print "insert 'Yes'\n";
+#      print STDERR "insert 'Yes'\n";
       print HTML "Web search results for <a href=\"$file\">search on ",$today,"</a><br>\n"; 
     }
   } else { # no changes.
     # second run today?
     if ($Weekly =~ m/^No unique results found for(.*)$today/i) { # yes
-#      print "leave 'No'\n";
+#      print STDERR "leave 'No'\n";
     } elsif ($Weekly =~ m/^Web search results for(.*)$today/) { # yes we already have a link, leave it.
-#      print "leave 'Yes'\n";      # do nothing, still no results.
+#      print STDERR "leave 'Yes'\n";      # do nothing, still no results.
     } else { # no results, add a line.
-#      print "insert 'No'\n";
+#      print STDERR "insert 'No'\n";
       print HTML "No unique results found for search on ",$today,"<br>\n";
     }
   }
@@ -1145,7 +1152,7 @@ sub check_index_file {
     chmod 0755, $qid || die "Can't chmod directory $qid.\nReason $!";
     &make_index($qid);
   }
-  print "index.html exists, " if $main::v_dbg;
+  print STDERR "index.html exists, " if $main::v_dbg;
 }
 
 #=head1 NAME
@@ -1177,7 +1184,7 @@ sub check_date_file {
     chmod 0755, $qid || die "Can't chmod directory $qid.\nReason $!";
     &make_date($qid,$qn,$qs);
   }
-  print "date exists, " if $main::v_dbg;
+  print STDERR "date exists, " if $main::v_dbg;
 }
 
 #=head1 NAME
@@ -1198,7 +1205,7 @@ sub read_query {
  my($oldfh) = select(STDOUT); $| =1; select ($oldfh);
  print $prompt;
  while (read(STDIN,$c,1)) { # get a byte.
-#   printf "%02x",ord($c);
+#   printf STDERR "%02x",ord($c);
    last if $c eq "\x0a";
    if ($c eq "\x08") {
      chop ($query);
@@ -1207,7 +1214,7 @@ sub read_query {
      $query .= $c;
    }
  }
-# print "\ni see $query\n";
+# print STDERR "\ni see $query\n";
  return ($query);
 }
 
@@ -1231,7 +1238,7 @@ sub read_query_list {
    last unless ($s);
    push(@query_list,$s);
  }
-# print "\ni see $query_list\n";
+# print STDERR "\ni see $query_list\n";
  return (@query_list);
 }
 
@@ -1338,7 +1345,7 @@ sub get_weekly_parts {
   open (PARTS,'<'.$qid.'date.html') || die "Can't open first date input file.\nReason: $!\n";
   my($part) = <PARTS>;
   close (PARTS);
-#  print "Part:\"$part\"\n";
+#  print STDERR "Part:\"$part\"\n";
 
   $Top = &get_pair_part($part,"Top");
 
@@ -1378,7 +1385,7 @@ sub get_summary_parts {
   open (PARTS,'<'.$qid.'index.html') || die "Can't open index.html input file.\nReason: $!\n";
   my($part) = <PARTS>;
   close (PARTS);
-#  print "Part:\"$part\"\n";
+#  print STDERR "Part:\"$part\"\n";
 
   $Top = &get_pair_part($part,"Top");
   $Query = &get_inline_part($part,"Query");
@@ -1419,10 +1426,10 @@ sub get_summary_parts {
 sub get_pair_part {
   my($part,$mark) = @_;
   if ($part =~ m,<!--$mark-->\n(.*)<!--/$mark-->,s) {
-#    print "$mark: \"$1\"\n";
+#    print STDERR "$mark: \"$1\"\n";
     return ($1);
   }
-  # print "Warning: can't find <!--$mark--> ... <--/$mark-->\n" if defined($v_dbg);
+  # print STDERR "Warning: can't find <!--$mark--> ... <--/$mark-->\n" if defined($v_dbg);
   return ("");
 }
 
@@ -1444,10 +1451,10 @@ sub get_pair_part {
 sub get_part {
   my($part,$mark) = @_;
   if ($part =~ m,<!--$mark\n(.*)/$mark-->,s) {
-#    print "$mark: \"$1\"\n";
+#    print STDERR "$mark: \"$1\"\n";
     return ($1);
   }
-  # print "Warning: can't find <!--$mark\\n ... /$mark-->\n" if defined($v_dbg);
+  # print STDERR "Warning: can't find <!--$mark\\n ... /$mark-->\n" if defined($v_dbg);
   return ("");
 }
 
@@ -1469,10 +1476,10 @@ sub get_part {
 sub get_inline_part {
   my($part,$mark) = @_;
   if ($part =~ m,<!--$mark\{(.*)\}/$mark-->,s) {
-#    print "inline $mark: \{$1\}\n";
+#    print STDERR "inline $mark: \{$1\}\n";
     return ($1);
   }
-  # print "Warning: can't find <!--$mark\{ ... \}/$mark-->\n" if defined($v_dbg);
+  # print STDERR "Warning: can't find <!--$mark\{ ... \}/$mark-->\n" if defined($v_dbg);
   return ("");
 }
 
@@ -1500,12 +1507,12 @@ sub get_inline_list {
     my(@LIST,$is);
     foreach (@LINES) {
       next unless ($_ =~ m,<!--$mark\{(.*)\}/$mark-->,s);
-#      print "inline $mark: \{$1\}\n";
+#      print STDERR "inline $mark: \{$1\}\n";
       push (@LIST,$1);
     }
     return (@LIST);
   }
-  # print "Warning: can't find <!--$mark\{ ... \}/$mark-->\n" if defined($v_dbg);
+  # print STDERR "Warning: can't find <!--$mark\{ ... \}/$mark-->\n" if defined($v_dbg);
   return ("");
 }
 

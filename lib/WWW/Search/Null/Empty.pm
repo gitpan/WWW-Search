@@ -1,4 +1,4 @@
-
+# $Id: Empty.pm,v 1.3 2003-04-16 00:33:31-04 kingpin Exp $
 
 =head1 NAME
 
@@ -6,7 +6,7 @@ WWW::Search::Null::Empty - class for testing WWW::Search clients
 
 =head1 SYNOPSIS
 
-=for example begin
+=begin example
 
   require WWW::Search;
   my $oSearch = new WWW::Search('Null::Empty');
@@ -16,7 +16,7 @@ WWW::Search::Null::Empty - class for testing WWW::Search clients
   my $oResponse = $oSearch->response;
   # ...But you get an HTTP::Response object with a code of 200
 
-=for example end
+=end example
 
 =for example_testing
 ok($oResponse->is_success, 'did not get a 500 HTTP::Response');
@@ -60,3 +60,4 @@ sub native_retrieve_some
 
 
 1;
+

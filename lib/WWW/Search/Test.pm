@@ -1,3 +1,4 @@
+# $rcs = ' $Id: Test.pm,v 1.25 2003-05-27 08:47:18-04 kingpin Exp kingpin $ ' ;
 
 =head1 NAME
 
@@ -25,6 +26,7 @@ use Cwd;
 use Exporter;
 use File::Path;
 use File::Spec::Functions qw( :ALL );
+use Test::More;
 use WWW::Search;
 
 use strict;
@@ -40,12 +42,14 @@ use vars qw( @EXPORT @EXPORT_OK @ISA );
               $TEST_DUMMY $TEST_EXACTLY $TEST_BY_COUNTING $TEST_GREATER_THAN $TEST_RANGE
               new_engine run_test run_gui_test skip_test count_results
             );
-@EXPORT_OK = qw( );
+@EXPORT_OK = qw(
+                 new_engine_test_more run_test_test_more
+               );
 @ISA = qw( Exporter );
 
 use vars qw( $VERSION $bogus_query );
 
-$VERSION = '2.22';
+$VERSION = '2.23';
 $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 
 ($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = qw(dummy internal external update);
@@ -524,6 +528,23 @@ sub new_engine
   print "ok $iTest\n";
   } # new_engine
 
+sub new_engine_test_more
+  {
+  my $sEngine = shift;
+  $oSearch = new WWW::Search($sEngine);
+  ok(ref($oSearch), "instantiate WWW::Search::$sEngine object");
+  } # new_engine_test_more
+
+sub run_test_test_more
+  {
+  # Same arguments as count_results()
+  my ($sType, $sQuery, $iMin, $iMax, $iDebug, $iPrintResults) = @_;
+  my $iCount = &count_results(@_);
+  cmp_ok($iMin, '<=', $iCount, qq{lower-bound num-hits for query=$sQuery}) if defined $iMin;
+  cmp_ok($iCount, '<=', $iMax, qq{upper-bound num-hits for query=$sQuery}) if defined $iMax;
+  } # run_test_test_more
+
+
 =head2 run_test
 
 =head2 run_gui_test
@@ -594,7 +615,7 @@ sub count_results
   if ($iPrintResults)
     {
     $, = "\n";
-    print map { $_->url .' == '. $_->description } @aoResults;
+    print map { join(' == ', $_->url, $_->title, $_->description) } @aoResults;
     print "\n";
     } # if
   return scalar(@aoResults);

@@ -6,7 +6,7 @@ WWW::Search::Null::Error - class for testing WWW::Search clients
 
 =head1 SYNOPSIS
 
-=for example begin
+=begin example
 
   require WWW::Search;
   my $oSearch = new WWW::Search('Null::Error');
@@ -15,7 +15,7 @@ WWW::Search::Null::Error - class for testing WWW::Search clients
   my $oResponse = $oSearch->response;
   # You get an HTTP::Response object with a code of 500
 
-=for example end
+=end example
 
 =for example_testing
 is($oResponse->code, 500, 'did not get a 500 HTTP::Response');

@@ -4,7 +4,7 @@ exit 0;
 #
 # WebSearch.PL
 # Copyright (C) 1996-1997 by USC/ISI
-# $Id: WebSearch-code.pl,v 1.3 2002/10/22 20:37:16 mthurn Exp $
+# $Id: WebSearch-code.pl,v 1.5 2003-05-22 22:09:38-04 kingpin Exp kingpin $
 #
 # Complete copyright notice follows below.
 
@@ -13,7 +13,7 @@ sub usage
   my $msg = shift;
   defined($msg) && ($msg ne '') && print STDERR "$0: $msg\n";
   print STDERR <<"END";
-usage: WebSearch [--engine <name>] [--gui] [--max <integer>] [--options <key=value>]... [--count] [--terse] [--all] [--raw] [--verbose] [--VERSION] [--help] [--host <hostname>] [--port <portnum>] [--lwpdebug] [--debug] query
+usage: WebSearch [--engine <name>] [--gui] [--max <integer>] [--options <key=value>]... [--count] [--terse] [--all] [--raw] [--list] [--verbose] [--VERSION] [--help] [--host <hostname>] [--port <portnum>] [--username bbunny --password c4rr0t5] [--lwpdebug] [--debug] query
 
 Make a query to a web search engine, printing to STDOUT the URLs which match (one per line).
 
@@ -40,8 +40,8 @@ This program is provides a command-line interface to web search engines,
 listing all URLs found for a given query.  This program also provides
 a simple demonstration of the WWW::Search Perl library for web searches.
 
-The program current supports a number of search engines;
-see L<WWW::Search> for a list.
+The program supports a number of search engines;
+use WebSearch --list to see which backends are installed.
 
 A more sophisticated client is L<AutoSearch>
 which maintains a change list of found objects.
@@ -63,12 +63,16 @@ The string e_name is the name of (the module for) the desired search
 engine.  Capitalization matters.  See `perldoc WWW::Search` to find
 out what the default is (probably Null).
 
-See L<WWW::Search> for a complete list of supported engines.
+Use --list to get a list of installed backends.
 
 =item --gui, -g
 
 Perform the search to mimic the default browser-based search.
 Not implemented for all backends, see the documentation for each backend.
+
+=item --list
+
+Prints to STDERR a \n-separated list of installed backends.
 
 =item --max max_count, -m max_count
 
@@ -124,6 +128,14 @@ Set the _host option for the WWW::Search object (backend-dependent).
 =item --port <i>
 
 Set the _port option for the WWW::Search object (backend-dependent).
+
+=item --username <bbunny>
+
+Set the username with which to login to the backend.
+
+=item --password <c4rr0t5>
+
+Set the password with which to login to the backend.
 
 =item --lwpdebug, -l
 
@@ -185,7 +197,8 @@ use vars qw( $VERSION );
 $VERSION = '2.14';
 
 use vars qw( $sEngine $all $verbose $raw $iMax $print_version $debuglwp $debug );
-use vars qw( @options $_host $_port $help $iShowCount $iGui );
+use vars qw( @options $_host $_port $help $iShowCount $iGui $opt_list );
+use vars qw( $opt_username $opt_password );
 # Set default values:
 $iShowCount = 0;
 $iGui = 0;
@@ -195,6 +208,7 @@ $_port = '';
 $sEngine = '';
 undef $debug;
 $debuglwp = 0;
+$opt_list = 0;
 # Get the command-line options:
 &Getopt::Long::config(qw(no_ignore_case no_getopt_compat));
 &usage('getopt failed') unless &GetOptions('all', \$all,
@@ -204,19 +218,23 @@ $debuglwp = 0;
                                            'gui', \$iGui,
                                            'help', \$help,
                                            'host=s', \$_host,
+                                           'list',
                                            'lwpdebug', \$debuglwp,
                                            'max=i', \$iMax,
                                            'options=s@', \@options,
+                                           'password=s',
                                            'port=s', \$_port,
                                            'raw', \$raw,
                                            'terse', \$iTerse,
+                                           'username=s',
                                            'verbose', \$verbose,
                                            'VERSION', \$print_version,
                                           );
 &usage('user requested help') if $help;
 $debug = 1 if (defined($debug) and ($debug < 1));
 
-&print_version if defined($print_version);
+&print_version() if defined($print_version);
+&list_engines() if ($opt_list);
 # there MUST be some argument(s) left, the query:
 &usage('no query found on command line') if (scalar(@ARGV) <= 0);
 
@@ -242,7 +260,15 @@ sub print_version
   exit 0;
   } # print_version
 
-my($verbose_code);
+sub list_engines
+  {
+  my @as = WWW::Search::installed_engines();
+  $, = "\n";
+  print STDERR (sort @as), '';
+  exit 0;
+  } # list_engines
+
+my $verbose_code;
 
 sub print_result {
     my($result, $count) = @_;
@@ -348,6 +374,7 @@ sub main {
     $iGui
     ? $search->gui_query(WWW::Search::escape_query($query), \%hsOptions)
     : $search->native_query(WWW::Search::escape_query($query), \%hsOptions);
+    $search->login($opt_username, $opt_password);
 
     my($way) = 0; # 0=piecemeal, 1=all at once
     my($result);

@@ -1,3 +1,35 @@
+2003-06-06  Kingpin  <mthurn@megapipe.net>
+
+	* code/AutoSearch-code.pl: new option --listnewurls
+
+2003-05-27  Kingpin  <mthurn@megapipe.net>
+
+	* lib/WWW/Search/Test.pm (new_engine_test_more): new function for use with Test::More
+	(run_test_test_more): new function for use with Test::More
+
+2003-05-22  Kingpin  <mthurn@megapipe.net>
+
+	* code/WebSearch-code.pl (list_engines): new option --list
+	new options --username --password
+
+2003-05-14  Kingpin  <mthurn@megapipe.net>
+
+	* lib/WWW/Search/Test.pm (count_results): when dumping, print title as well as url and description
+
+2003-04-16  Kingpin  <mthurn@megapipe.net>
+
+	* lib/WWW/Search/Null/Count.pm: fixed the Test::Inline pod directives (also in Empty.pm and Error.pm)
+
+	* lib/WWW/Search.pm (retrieve_some): do not complain about empty query if $self->{'_allow_empty_query'} is set
+
+2003-03-13  Kingpin  <mthurn@megapipe.net>
+
+	* lib/WWW/Search.pm (strip_tags): avoid undef warnings
+
+2003-02-06  Kingpin  <mthurn@megapipe.net>
+
+	* lib/WWW/Search.pm: don't croak if query is undef or empty
+
 2002-12-20  Kingpin  <mthurn@carbon.>
 
 	* lib/WWW/Search.pm (approximate_hit_count): new method (synonym for approximate_result_count)

@@ -6,7 +6,7 @@ $codefile = "code/$file-code.pl";
 open IN, "<$codefile" or die "Can't read $codefile: $!";
 open OUT,">$file" or die "Can't create $file: $!";
 chmod(0755, $file);
-print "Extracting $file (with variable substitutions)\n";
+print "Converting $codefile to $file...\n";
 
 print OUT <<"!GROK!THIS!";
 $Config{'startperl'} -w
