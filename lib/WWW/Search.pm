@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 2.530 2004/10/10 12:41:44 Daddy Exp $
+# $Id: Search.pm,v 2.531 2004/10/14 03:17:04 Daddy Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -100,7 +100,7 @@ use vars qw( @ISA @EXPORT @EXPORT_OK $VERSION $MAINTAINER );
 @EXPORT_OK = qw( escape_query unescape_query generic_option strip_tags );
 @ISA = qw(Exporter LWP::MemberMixin);
 $MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
-$VERSION = do { my @r = (q$Revision: 2.530 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.531 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 =head2 new
 
@@ -746,11 +746,6 @@ Backends which need to login to the search engine should implement
 this function.  Takes two arguments, user and password.  Return
 nonzero if login was successful.  Return 0 if login failed.
 
-=head2 logout
-
-Backends which need to logout from the search engine should implement
-this function.
-
 =cut
 
 sub login
@@ -760,6 +755,13 @@ sub login
   # Here is just a stub.
   return 1;
   } # login
+
+=head2 logout
+
+Backends which need to logout from the search engine should implement
+this function.
+
+=cut
 
 sub logout
   {

@@ -6,7 +6,7 @@ WWW::Search::Null::Count - class for testing WWW::Search clients
 
 =head1 SYNOPSIS
 
-=for example begin 
+=for example begin
 
   require WWW::Search;
   my $iCount = 4;
@@ -17,7 +17,7 @@ WWW::Search::Null::Count - class for testing WWW::Search clients
   my @aoResults = $oSearch->results;
   # ...You get $iCount results.
 
-=for example end 
+=for example end
 
 =for example_testing
 is(scalar(@aoResults), $iCount, 'got the right number of results');

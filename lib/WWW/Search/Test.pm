@@ -1,4 +1,4 @@
-# $rcs = ' $Id: Test.pm,v 2.266 2004/10/09 23:26:45 Daddy Exp $ ' ;
+# $rcs = ' $Id: Test.pm,v 2.266 2004/10/09 23:26:45 Daddy Exp Daddy $ ' ;
 
 =head1 NAME
 
@@ -66,11 +66,16 @@ sub find_websearch
       {
       my $sCmd = "$sTry --VERSION";
       # print STDERR " + cmd ==$sCmd==\n";
-      my @as = split(/\s/, eval{`$sCmd`});
-      $websearch = shift @as || undef;
+        {
+        # Turn off warnings:
+        local $^W = 0;
+        # Wrap it in an eval so we don't die if it fails:
+        my @as = split(/\s/, eval{`$sCmd`});
+        $websearch = shift(@as) || undef;
+        }
       last if $websearch;
       } # foreach
-    undef $websearch unless $websearch =~ m/WebSearch/;
+    undef $websearch unless ($websearch =~ m/WebSearch/);
     # print STDERR "in WWW::Search::Test, websearch is $websearch\n";
     } # unless
   return $websearch;
@@ -609,7 +614,7 @@ sub tm_run_test
   Test::More::is($oSearch->response->code, 200, 'got valid HTTP response');
   if (defined $iMin)
     {
-    Test::More::cmp_ok($iCount, '>=', $iMin, qq{lower-bound num-hits for query=$sQuery});
+    Test::More::cmp_ok($iMin, '<=', $iCount, qq{lower-bound num-hits for query=$sQuery});
     Test::More::cmp_ok($iMin, '<=', $oSearch->approximate_result_count,
                        qq{lower-bound approximate_result_count});
     } # if

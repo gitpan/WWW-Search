@@ -1,3 +1,9 @@
+2004-10-26  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search/Test.pm (find_websearch): avoid warnings
+
+	* lib/WWW/Search/Null/Count.pm: delete extra spaces in pod directives
+
 2004-10-10  Kingpin  <mthurn@verizon.net>
 
 	* lib/WWW/Search.pm (new): do NOT put login name into agent_e_mail

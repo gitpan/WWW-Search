@@ -4,7 +4,7 @@
 use inc::Module::Install;
 
 name('WWW-Search');
-version(2.474);
+version(2.475);
 author('Martin Thurn <mthurn@cpan.org>');
 abstract('Query web search engines and get URLs');
 requires(perl => 5.004);
