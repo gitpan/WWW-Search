@@ -1,3 +1,9 @@
+2001-07-05  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search/Test.pm (run_test): new functionality for simple test-running
+
+	* lib/WWW/Search.pm (http_proxy): added proxy support
+
 2001-06-14  Kingpin  <mthurn@tasc.com>
 
 	* WWW::Search VERSION 2.21 RELEASED!

@@ -19,10 +19,10 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
               'NAME' => 'WWW::Search',
-              'VERSION' => 2.21,
+              'VERSION' => 2.22,
 
               ($] ge '5.005') ? (
-                                 'AUTHOR' => 'Martin Thurn <MartinThurn@iname.com>',
+                                 'AUTHOR' => 'Martin Thurn <mthurn@tasc.com>',
                                  'ABSTRACT' => 'Query web search engines and get URLs',
                                 ) : (),
               'EXE_FILES' => [ @programs_to_install ],

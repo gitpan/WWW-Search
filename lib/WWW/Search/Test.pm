@@ -19,20 +19,23 @@ See file test.pl in the WWW-Search-HotBot distribution for a detailed
 
 package WWW::Search::Test;
 
-use strict;
-
+use Carp;
 use File::Spec;
+
+use strict;
 
 use vars qw( $MODE_DUMMY $MODE_INTERNAL $MODE_EXTERNAL $MODE_UPDATE );
 use vars qw( $TEST_DUMMY $TEST_EXACTLY $TEST_BY_COUNTING $TEST_GREATER_THAN $TEST_RANGE );
+use vars qw( $iTest $oSearch );
 
 require Exporter;
 use vars qw( @EXPORT @EXPORT_OK @ISA );
-@EXPORT = qw( eval_test test 
-no_test not_working not_working_with_tests not_working_and_abandoned 
-$MODE_DUMMY $MODE_INTERNAL $MODE_EXTERNAL $MODE_UPDATE
-$TEST_DUMMY $TEST_EXACTLY $TEST_BY_COUNTING $TEST_GREATER_THAN $TEST_RANGE
-);
+@EXPORT = qw( eval_test test
+              no_test not_working not_working_with_tests not_working_and_abandoned
+              $MODE_DUMMY $MODE_INTERNAL $MODE_EXTERNAL $MODE_UPDATE
+              $TEST_DUMMY $TEST_EXACTLY $TEST_BY_COUNTING $TEST_GREATER_THAN $TEST_RANGE
+              new_engine run_test
+            );
 @EXPORT_OK = qw( );
 @ISA = qw( Exporter );
 
@@ -42,7 +45,7 @@ use File::Path;
 
 use vars qw( $VERSION $bogus_query );
 
-$VERSION = '2.03';
+$VERSION = '2.11';
 $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 
 ($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = qw(dummy internal external update);
@@ -105,12 +108,12 @@ sub mode
 
 =head2 relevant_test
 
-Given the name of a backend, 
+Given the name of a backend,
 returns true if this Test object is able to test that backend.
 
 =cut
 
-sub relevant_test 
+sub relevant_test
   {
   my $self = shift;
   return 1 if ($self->{engines} eq ',,');
@@ -122,7 +125,7 @@ sub relevant_test
 
 =head2 eval_test
 
-Given the name of a backend, 
+Given the name of a backend,
 grabs the $TEST_CASES variable from that backend and evaluates it.
 
 =cut
@@ -174,7 +177,7 @@ and
 
 =cut
 
-sub test 
+sub test
   {
   my $self = shift;
   my $sSE = shift;
@@ -348,7 +351,7 @@ Takes two arguments, the backend name and the name of the maintainer.
 
 =cut
 
-sub no_test 
+sub no_test
   {
   my $self = shift;
   my ($engine, $maint) = @_;
@@ -367,7 +370,7 @@ Takes two arguments, the backend name and the name of the maintainer.
 
 =cut
 
-sub not_working 
+sub not_working
   {
   my $self = shift;
   my ($engine, $maint) = @_;
@@ -388,7 +391,7 @@ Takes two arguments, the backend name and the name of the maintainer.
 
 =cut
 
-sub not_working_with_tests 
+sub not_working_with_tests
   {
   my $self = shift;
   my ($engine, $maint) = @_;
@@ -493,4 +496,84 @@ sub diff
   return $iResult;
   } # diff
 
+
+=head2 Shortcuts for running backend tests
+
+WWW::Search::Test keeps its own count of test numbers,
+so if you want to mix-and-match these functions with your own tests,
+use the $WWW::Search::Test::iTest counter.
+
+=head2 new_engine
+
+One argument: the name of a backend suitable to be passed to WWW::Search::new().
+Prints 'ok' or 'not ok' and the test number.
+Creates a WWW::Search object internally,
+to be used for all subsequent calls to run_test (see below).
+
+=cut
+
+sub new_engine
+  {
+  $iTest++;
+  $oSearch = new WWW::Search(shift);
+  print ref($oSearch) ? '' : 'not ';
+  print "ok $iTest\n";
+  } # new_engine
+
+=head2 run_test
+
+Three arguments: a query string, NOT escaped; a minimum number of expected results; and
+a maximum number of expected results.
+Optional fourth argument: integer value to be used as the search_debug.
+
+If the minimum is undef, assumes zero.
+If the maximum is undef, does not check.
+
+Prints 'ok' or 'not ok' and the test number.
+
+=cut
+
+sub run_test
+  {
+  my ($sQuery, $iMin, $iMax, $iDebug) = @_;
+  carp ' --- min/max values out of order?' if defined($iMin) && defined($iMax) && ($iMax < $iMin);
+  my $sExpect;
+  if (! defined($iMax))
+    {
+    $sExpect = "more than $iMin";
+    }
+  elsif (! defined($iMin))
+    {
+    $sExpect = "fewer than $iMax";
+    }
+  else
+    {
+    $sExpect = "$iMin..$iMax";
+    }
+  $iMin ||= 0;
+  if (defined $iMax)
+    {
+    $oSearch->maximum_to_retrieve($iMax+1);
+    }
+  else
+    {
+    $oSearch->maximum_to_retrieve($iMin + 1);
+    $iMax = 999999;
+    }
+  $iTest++;
+  $oSearch->native_query(WWW::Search::escape_query($sQuery),
+                           { 'search_debug' => $iDebug, },
+                        );
+  my @aoResults = $oSearch->results();
+  my $iResults = scalar(@aoResults);
+  if (($iResults < $iMin) || ($iMax < $iResults))
+    {
+    print STDERR " --- got $iResults results for $sQuery, but expected $sExpect\n";
+    print STDOUT 'not ';
+    } # if
+  print STDOUT "ok $iTest\n";
+  } # run_test
+
 1;
+
+__END__

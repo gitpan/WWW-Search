@@ -3,13 +3,12 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.21?  (2001-06-13)
+WHAT IS NEW IN WWW::Search 2.22?  (2001-07-05)
 ----------------------------------------------
 
-Administrative release only.  No change in functionality.
-
 overview:
- * remove Sherlock and Scraper
+ * proxy support (thanks to Gaetano Vocca)
+ * AltaVista backends moved to their own distribution
 
 For details, see the ChangeLog file and/or the pod of each affected
 module.
@@ -20,13 +19,12 @@ WHAT IS WWW::Search?
 
 WWW::Search is a collection of Perl modules which provide an API to
 search engines on the world-wide web (and similar engines).
-Currently, WWW::Search includes backends for variations of AltaVista
-and WebCrawler, among others.  Backends for some engines can be
-obtained separately, such as Ebay, Excite, HotBot, and Yahoo.  This
-distribution includes two applications built from this library:
-AutoSearch (a program to automate tracking of search results over
-time), and WebSearch, a small demonstration program to drive the
-library.
+Currently, WWW::Search includes backends for WebCrawler, among others.
+Backends for many engines can be obtained separately, such as
+AltaVista, Ebay, Excite, HotBot, and Yahoo.  This distribution
+includes two applications built from this library: AutoSearch (a
+program to automate tracking of search results over time), and
+WebSearch, a small demonstration program to drive the library.
 
 WWW::Search does NOT try to emulate the default search that you would
 get with each search engine's GUI.  I.e. WWW::Search does NOT
@@ -44,20 +42,11 @@ and increasing the number of hits per page, among other tricks.
 Because WWW::Search depends on parsing the HTML output of web search
 engines, it will fail if the search engine operators change their
 format (an unfortunately frequent occurrence).  WWW::Search includes a
-test suite for many backends which verifies that they are functioning
-correctly.  The test suite can be run by typing 'make test_parsing';
-see under INSTALLATION below for details.  As of the day of the
-release the current backend status is:
+test suite for a few backends, which verifies that they are
+functioning correctly.  The test suite can be run by typing 'make
+test_parsing'; see under INSTALLATION below for details.  As of the
+day of the release the current backend status is:
 
-AltaVista		working
-AltaVista::AdvancedNews	not working
-AltaVista::AdvancedWeb	not working
-AltaVista::Intranet	working
-AltaVista::News		not working
-AltaVista::NL		working? (not in test suite)
-AltaVista::Web		working
-AOL                     (same as NetFind)
-AOL::Classifieds::Employment    working (not in test suite)
 Crawler			partially working?
 Excite::News		working
 ExciteForWebServers	not working
@@ -69,7 +58,7 @@ Livelink		not working? (not in test suite)
 MetaCrawler             working
 Metapedia		working? (not in test suite)
 MSIndexServer		not working?
-NetFind                 working
+NetFind                 not working?
 Null			working
 PLweb			not working
 Profusion               defunct
@@ -172,9 +161,9 @@ The "make test_parsing" command compares expected output
 the internet).  Sorry, the "make test_parsing" command does not run on
 Win32, only in UNIX-type shells.  You can give arguments to the
 test_parsing program by using the TEST_ARGS macro.  For example, the
-following command only runs the external queries for AltaVista:
+following command only runs the external queries for WebCrawler:
 
-make test_parsing TEST_ARGS='-e AltaVista -x'
+make test_parsing TEST_ARGS='-e WebCrawler -x'
 
 To see all the available options, do this:
 
@@ -296,7 +285,7 @@ DOCUMENTATION
 See `perldoc WWW::Search` after installation for an overview of the
 library.  POD-style documentation is also included in all modules and
 programs, so you can do `perldoc WebSearch` and `perldoc AutoSearch`
-and `perldoc WWW::Search::AltaVista` after installation.
+and `perldoc WWW::Search::WebCrawler` after installation.
 
 
 FUTURE PLANS

@@ -1,9 +1,9 @@
 ###############################################################
-# News.pm                                       
-# by Jim Smyser                                       
-# Copyright (c) 1999 by Jim Smyser & USC/ISI          
-# $Id: News.pm,v 1.6 2000/03/21 19:25:47 mthurn Exp $
-# Complete copyright notice follows below.            
+# News.pm
+# by Jim Smyser
+# Copyright (c) 1999 by Jim Smyser & USC/ISI
+# $Id: News.pm,v 1.6 2000/03/21 19:25:47 mthurn Exp mthurn $
+# Complete copyright notice follows below.
 ###############################################################
 
 =head1 NAME
@@ -78,7 +78,7 @@ following copyright notice:
 
 Copyright (c) 1996-1998 University of Southern California.
 All rights reserved.
-                                                                
+
 THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
 WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
 MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
@@ -93,10 +93,10 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.03';
+my $VERSION = '2.03';
 
-$MAINTAINER = 'Jim Smyser <jsmyser@bigfoot.com>';
-$TEST_CASES = <<"ENDTESTCASES";
+my $MAINTAINER = 'Jim Smyser <jsmyser@bigfoot.com>';
+my $TEST_CASES = <<"ENDTESTCASES";
 &test('Excite::News', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_EXACTLY);
 &test('Excite::News', '$MAINTAINER', 'one', 'Haw'.'aii AND Alask'.'a', \$TEST_RANGE, 1,49);
 &test('Excite::News', '$MAINTAINER', 'multi', 'Alaska', \$TEST_GREATER_THAN, 51);
@@ -110,7 +110,7 @@ require WWW::SearchResult;
 sub native_setup_search
   {
   my ($self, $native_query, $native_options_ref) = @_;
-  
+
   # Set some private variables:
   $self->{_debug} = $native_options_ref->{'search_debug'};
   $self->{_debug} = 2 if ($native_options_ref->{'search_parse_debug'});

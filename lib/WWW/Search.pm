@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.55 2001/05/07 13:44:23 mthurn Exp mthurn $
+# $Id: Search.pm,v 1.57 2001/07/05 13:34:55 mthurn Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -69,8 +69,8 @@ package WWW::Search;
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query generic_option strip_tags @ENGINES_WORKING);
-$VERSION = '2.18';
-$MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
+$VERSION = '2.22';
+$MAINTAINER = 'Martin Thurn <mthurn@tasc.com>';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
 
@@ -134,6 +134,8 @@ sub new
                     agent_name => $default_agent_name,
                     agent_e_mail => $default_agent_e_mail,
                     http_proxy => undef,
+                    http_proxy_user => undef,
+                    http_proxy_pwd => undef,
                     timeout => 60,
                     debug => 0,
                     search_from_file => undef,
@@ -157,6 +159,7 @@ sub reset_search
   my $self = shift;
   print STDERR " + reset_search(",$self->{'native_query'},")\n" if $self->{debug};
   $self->{'cache'} = ();
+  $self->{'debug'} = 0;
   $self->{'native_query'} = '';
   $self->{'next_to_retrieve'} = 1;
   $self->{'next_to_return'} = 0;
@@ -398,6 +401,55 @@ Example:
 =cut
 
 sub http_proxy { return shift->_elem('http_proxy', @_); }
+
+
+=head2 http_proxy_user, http_proxy_pwd
+
+Set/get HTTP proxy authentication data.
+
+These routines set/get username and password used in proxy
+authentication.  Authentication is performed only if proxy, username
+and password are available.
+
+Example:
+
+    $search->http_proxy_user("myuser");
+    $search->http_proxy_pwd("mypassword");
+    $search->http_proxy_user(undef);   # Example for no authentication
+
+    $username = $search->http_proxy_user();
+
+=cut
+
+sub http_proxy_user
+  {
+  my $obj = shift;
+  @_ ? $obj->{http_proxy_user} = shift() : $obj->{http_proxy_user};
+  }
+
+sub http_proxy_pwd
+  {
+  my $obj = shift;
+  @_ ? $obj->{http_proxy_pwd} = shift() : $obj->{http_proxy_pwd};
+  }
+
+
+=head2 is_http_proxy_auth_data (PRIVATE)
+
+Checks if authentication data (proxy name, username, and password) are available.
+In this case proxy authentication is performed.
+
+=cut
+
+sub is_http_proxy_auth_data
+  {
+  my $self = shift;
+  return (
+          defined($self->http_proxy()) &&
+          defined($self->http_proxy_user()) &&
+          defined($self->http_proxy_pwd())
+         );
+  }
 
 
 =head2 approximate_result_count
@@ -838,6 +890,12 @@ sub http_request
       $request = new HTTP::Request($method, $url);
       }
 
+    if ($self->is_http_proxy_auth_data())
+      {
+      $request->proxy_authorization_basic($self->http_proxy_user(),
+                                          $self->http_proxy_pwd());
+      }
+
     $self->{'_cookie_jar'}->add_cookie_header($request) if ref($self->{'_cookie_jar'});
     # print STDERR " + the request with cookies is >>>", $request->as_string, "<<<\n";
 
@@ -1212,9 +1270,6 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 
 @ENGINES_WORKING = qw(
-                      AltaVista
-                      AltaVista::Intranet
-                      AltaVista::Web
                       Crawler
                       Excite::News
                       Fireball

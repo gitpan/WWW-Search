@@ -1,0 +1,61 @@
+***************
+*** 137,138
+-                     http_proxy_user => undef,  
+-                     http_proxy_pwd => undef,                      
+--- 0 -----
+***************
+*** 405,449
+- =head2 http_proxy_user, http_proxy_pwd
+- 
+- Set/get HTTP proxy authentication data.
+- 
+- These routines set/get username and password used in proxy authentication.
+- To avoid authentication use undef 
+- 
+- Example:
+- 
+-     $search->http_proxy_user("myuser");
+-     $search->http_proxy_pwd("mypassword");
+-     $search->http_proxy_user(undef);
+-     
+-     $username = $search->http_proxy_user();
+- 
+- =cut
+- 
+- sub http_proxy_user {
+-     my $obj = shift;
+-     @_ ? $obj->{http_proxy_user} = shift            # modify attribute
+-        : $obj->{http_proxy_user};                   # retrieve attribute
+- }
+- 
+- sub http_proxy_pwd {
+-     my $obj = shift;
+-     @_ ? $obj->{http_proxy_pwd} = shift            # modify attribute
+-        : $obj->{http_proxy_pwd};                   # retrieve attribute
+- }
+- 
+- 
+- =head2 is_http_proxy_auth_data (PRIVATE)
+- 
+- Checks if authentication data (username and password) are present.
+- In this case proxy authentication is performed.
+- 
+- =cut
+- 
+- sub is_http_proxy_auth_data { 
+- 	$self = shift;
+- 	return defined($self->http_proxy()) and 
+- 		defined($self->http_proxy_user()) and 
+- 		defined($self->http_proxy_pwd());
+- }
+- 
+- 
+--- 0 -----
+***************
+*** 887,891
+- 
+- 	if ($self->is_http_proxy_auth_data()) {
+-     	$request->proxy_authorization_basic($self->http_proxy_user(), 
+-     		$self->http_proxy_pwd());
+-     }
+--- 0 -----
