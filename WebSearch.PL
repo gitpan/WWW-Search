@@ -22,7 +22,7 @@ print OUT <<'!NO!SUBS!';
 #
 # WebSearch.PL
 # Copyright (C) 1996-1997 by USC/ISI
-# $Id: WebSearch.PL,v 1.4 1999/08/16 19:09:10 mthurn Exp $
+# $Id: WebSearch.PL,v 1.7 1999/09/28 17:18:32 mthurn Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -33,9 +33,11 @@ sub usage
   my $msg = shift;
   defined($msg) && ($msg ne '') && print STDERR "$0: $msg\n";
   print STDERR <<"END";
-usage: WebSearch [-m MaxCount] [-e SearchEngine] [-o option] [-o option...] [-arvV] query
+usage: WebSearch [--engine <name>] [--max <integer>] [--options <key=value>]... [--count] [--all] [--raw] [--verbose] [--VERSION] [--help] [--lwpdebug] [--debug] query
 
-Make a query to a web search engine, showing the primary URLs which match.
+Make a query to a web search engine, printing to STDOUT the URLs which match (one per line).
+
+See `perldoc WebSearch` for details.
 
 END
   exit 1;
@@ -70,41 +72,60 @@ see L<AutoSearch>.
 
 =head1 OPTIONS
 
+WebSearch uses Getopt::Long, so you can use double-minus with long
+option names, or single-minus with one-letter abbreviations.
+
 =over 8
 
-=item C<-e>
+=item --engine e_name, -e e_name
 
-Specify the search engine.
-Capitalization matters.
+The string e_name is the name of (the module for) the desired search
+engine.  Capitalization matters.  See `perldoc WWW::Search` to find
+out what the default is (normally AltaVista)
+
 See L<WWW::Search> for a complete list of supported engines.
 
-=item C<-m> max_count
+=item --max max_count, -m max_count
 
 Specify the maximum number of hits to retrieve.
 
-=item C<-o>
+=item --option o_string, -o o_string
 
-Specify a search-engine option.
+Specify a search-engine option in the form 'key=value' (or just
+'key').  Can be repeated for as many options are needed.  Keys can be
+repeated.
 
-=item C<-a>
+=item --count, -c
 
-Return all URLs.  Some different URLs may refer to the same object.
+As the first line of output, print the approximate hit count. 
 
-=item C<-r>
+=item --all, -a
 
-Return the raw entries (HTML).
+For each hit result, print all the URLs that the search engine
+indicated were equivalent to it.  (Some URLs may refer to the same
+object.)  Can be combined with --verbose; can not be combined with
+--raw.
 
-=item C<-v>
+=item --raw, -r
 
-Verbose mode.  Enumerate the returned URLs.
+For each hit result, print the raw HTML.
 
-=item C<-V>
+=item --verbose, -v
 
-Display version string.
+Verbose mode.  Enumerate the returned URLs and show the description,
+score, date, etc. for each.
 
-=item C<-d>
+=item --VERSION, -V
 
-Display back-end libwww-perl debugging information
+Print version information and exit immediately.
+
+=item --debug <i>, -d <i>
+
+Display back-end debugging information (with debug level <i>)
+
+=item --lwpdebug, -l
+
+Display low-level libwww-perl debugging information
 
 =back
 
@@ -166,23 +187,31 @@ use WWW::Search;
 use Getopt::Long;
 
 use vars qw( $VERSION );
-$VERSION = '2.04';
+$VERSION = '2.07';
 
-use vars qw( $sEngine $all $verbose $raw $maximum_to_retrieve $print_version $debuglwp );
-use vars qw( @options $_host $_port $help );
+use vars qw( $sEngine $all $verbose $raw $maximum_to_retrieve $print_version $debuglwp $debug );
+use vars qw( @options $_host $_port $help $iShowCount );
+# Set default values:
+$iShowCount = 0;
+$_host = '';
+$_port = '';
+undef $debug;
+$debuglwp = 0;
+# Get the command-line options:
 &Getopt::Long::config(qw(no_ignore_case no_getopt_compat));
 &usage('getopt failed') unless &GetOptions('all', \$all, 'raw', \$raw,
             'verbose', \$verbose,  'VERSION', \$print_version,
+            'count', \$iShowCount,
             'max=i', \$maximum_to_retrieve,
             'engine=s', \$sEngine,
-            'debug', \$debuglwp,
+            'lwpdebug', \$debuglwp,
+            'debug:i', \$debug,
             'options=s@', \@options,
             'host=s', \$_host,  'port=s', \$_port,
             'help', \$help,
            );
 &usage('user requested help') if $help;
-$_host ||= '';
-$_port ||= '';
+$debug = 1 if (defined($debug) and ($debug < 1));
 
 &print_version if defined($print_version);
 # there MUST be some argument(s) left, the query:
@@ -250,7 +279,7 @@ sub main {
     $search->{_port} = $_port if $_port ne '';
     my %hsOptions = ();
 
-    if (defined($debuglwp)) {
+    if (0 < $debuglwp) {
 	require LWP::Debug;
 	LWP::Debug::level('+');
     }
@@ -262,25 +291,32 @@ sub main {
       {
       foreach my $sPair (@options) 
         {
-        my ($key, $value) = $sPair =~ m/^([^=]+)=(.*)$/;
-        # This is a bit of a hack.  A set of CGI options is not
-        # strictly a hash, because multiple values for the same key
-        # can be specified.  To get around this, we rely on the fact
-        # that this hash of options is only used to construct a CGI
-        # parameter list.  If we see multiple values for the same key,
-        # we append the multiple values onto the value of the key in
-        # CGI '?key=value' format.
-        if (exists($hsOptions{$key}) && $hsOptions{$key} ne '')
+        if ($sPair =~ m/^([^=]+)=(.*)$/)
           {
-          # There was already an option of this key given; append
-          # multiple values as CGI arguments:
-          $hsOptions{$key} .= '&'.$key.'='.WWW::Search::escape_query($value);
-          } # if exists
+          my ($key, $value) = ($1, $2);
+          # This is a bit of a hack.  A set of CGI options is not
+          # strictly a hash, because multiple values for the same key
+          # can be specified.  To get around this, we rely on the fact
+          # that this hash of options is only used to construct a CGI
+          # parameter list.  If we see multiple values for the same key,
+          # we append the multiple values onto the value of the key in
+          # CGI '?key=value' format.
+          if (exists($hsOptions{$key}) && $hsOptions{$key} ne '')
+            {
+            # There was already an option of this key given; append
+            # multiple values as CGI arguments:
+            $hsOptions{$key} .= '&'.$key.'='.WWW::Search::escape_query($value);
+            } # if exists
+          else
+            {
+            # This is the only instance of this key; just insert the
+            # hash value:
+            $hsOptions{$key} = WWW::Search::escape_query($value);
+            }
+          } # if option is of the form key=value
         else
           {
-          # This is the only instance of this key; just insert the
-          # hash value:
-          $hsOptions{$key} = WWW::Search::escape_query($value);
+          $hsOptions{$sPair} = '';
           }
         } # foreach $sPair
       } # if @options
@@ -291,21 +327,39 @@ sub main {
 	$maximum_to_retrieve = 10000;
     };
 
+    $hsOptions{'search_debug'} = $debug if (defined($debug) and (0 < $debug));
+
     $search->native_query(WWW::Search::escape_query($query), \%hsOptions);
 
     my($way) = 0; # 0=piecemeal, 1=all at once
     my($result);
     if ($way) { # return all at once.
-        foreach $result ($search->results()) {
-            print_result($result, ++$count);
-	    last if ($count > $maximum_to_retrieve);
-        };
+        foreach $result ($search->results()) 
+          {
+          if (($count == 0) and ($iShowCount) and defined($search->approximate_result_count))
+            {
+            print "There are approximately " if $verbose;
+            print $search->approximate_result_count;
+            print " results." if $verbose;
+            print "\n";
+            }
+          print_result($result, ++$count);
+	  last if ($count > $maximum_to_retrieve);
+          };
     } else { # return page by page
-        while ($result = $search->next_result()) {
-            print_result($result, ++$count);
-	    last if ($count > $maximum_to_retrieve);
-        };
-    };
+        while ($result = $search->next_result()) 
+          {
+          if (($count == 0) and ($iShowCount) and defined($search->approximate_result_count))
+            {
+            print "There are approximately " if $verbose;
+            print $search->approximate_result_count;
+            print " results." if $verbose;
+            print "\n";
+            }
+          print_result($result, ++$count);
+	  last if ($count > $maximum_to_retrieve);
+          } # while
+      } # else page by page
     # handle errors
     if ($count == 0) {
         my($response) = $search->response();

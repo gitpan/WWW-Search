@@ -1,12 +1,12 @@
 <html><head>
-<title>AltaVista: Simple Query +perl +Bogus26745NoSuchWord934834683</title>
+<title>AltaVista: Simple Query +perl +Bogus1242NoSuchWord938637211</title>
 </head><body>
 <font face="Arial,Helvetica" size="+1"><a href="/cgi-bin/query?text&pg=q&what=news">AltaVista Search Service</a></font><p><FORM name=mfrmaction="/cgi-bin/query">
 <INPUT TYPE=hidden NAME=pg VALUE=q><INPUT TYPE=hidden NAME=what VALUE="news"><INPUT TYPE=hidden NAME=text VALUE=yes><font size=-1><b>Search Usenet for postings on:</b>
-</font><p><input type=text name=q size=50 maxlength=800 value="+perl +Bogus26745NoSuchWord934834683">&nbsp; <input type=submit name=search value="Search"><p><P><font size=-1>Search - <a href="/cgi-bin/query?pg=aq&what=news&text=yes">Advanced Text Search</a> - <a href="/cgi-bin/query?pg=q&text=yes">The Web</a></font></FORM>
+</font><p><input type=text name=q size=50 maxlength=800 value="+perl +Bogus1242NoSuchWord938637211">&nbsp; <input type=submit name=search value="Search"><p><P><font size=-1>Search - <a href="/cgi-bin/query?pg=aq&what=news&text=yes">Advanced Text Search</a> - <a href="/cgi-bin/query?pg=q&text=yes">The Web</a></font></FORM>
 AltaVista found no document matching your query. <P><dl>
 </dl>
-<font size=-2>word count: perl: 384888<BR>Ignored:    Bogus26745NoSuchWord934834683:<b>0</b><BR></font><P>
+<font size=-2>word count: perl: 238440<BR>Ignored:    Bogus1242NoSuchWord938637211:<b>0</b><BR></font><P>
 <p><font face="Arial,Helvetica" size="-2">
 <a href="/">AltaVista.com</a> |
 <a href="/av/content/about.htm">About AltaVista</a> |

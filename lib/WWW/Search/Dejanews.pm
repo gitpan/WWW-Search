@@ -1,6 +1,6 @@
 # Dejanews.pm
 # Copyright (C) 1998 by Martin Thurn
-# $Id: Dejanews.pm,v 1.9 1999/07/13 18:35:50 mthurn Exp $
+# $Id: Dejanews.pm,v 1.10 1999/09/17 13:01:03 mthurn Exp $
 
 =head1 NAME
 
@@ -77,6 +77,10 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 =head1 VERSION HISTORY
 
+=head2 2.02, 1999-09-17
+
+BUGFIX: was returning "power search" link (thanks to Jim Smyser for noticing)
+
 =head2 2.01, 1999-07-13
 
 =head2 1.12, 1999-07-06
@@ -91,11 +95,11 @@ sync with WWW::Search distribution's version number
 
 =head2 1.4, 1998-08-27
 
-New Dejanews output format
+New Dejanews.com output format
 
 =head2 1.3, 1998-08-20
 
-New Dejanews output format
+New Dejanews.com output format
 
 =head2 1.2
 
@@ -111,7 +115,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.01';
+$VERSION = '2.02';
 
 use Carp ();
 use WWW::Search(generic_option);
@@ -254,10 +258,17 @@ sub native_retrieve_some
     elsif ((($state eq $URL) || ($state eq $HITS)) && 
            m|<a\shref=\"?([^\">]+)\"?>([^<]+)|i)
       {
-      next if m/Previous\smatches/;
+      next if m/Previous\smatches/i;
+      if (m/\076Power\ssearch\074/i)
+        {
+        $state = $ALLDONE;
+        next;
+        } # if
       print STDERR "hit url line\n" if 2 <= $self->{'_debug'};
-      # Actual line of input:
+      # Actual lines of input:
       # <td align=left><a href=http://x10.deja.com/getdoc.xp?AN=365996516&CONTEXT=899408575.427622419&hitnum=8><b>Stuffed Chewbacca</b></a><br>
+      # <font face="geneva,arial" size=2 color="#999999">Previous matches</font></b>
+      # For a more detailed search go to <a href="http://www.deja.com/home_ps.shtml?QRY=perlcom">Power Search</a></font></td>
       my $sURL = $1 . '&fmt=raw';
       my $sTitle = $2;
       if (defined($hit))
@@ -287,6 +298,7 @@ sub native_retrieve_some
       {
       # Actual line of input is:
       # 	<b>Date</b>: 1998/08/20 <b>Author</b>: James Hanst
+      print STDERR "date and author\n" if 2 <= $self->{'_debug'};
       $hit->change_date($1);
       $sDescription .= "; Author: $2";
       $hit->description($sDescription);

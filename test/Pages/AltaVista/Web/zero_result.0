@@ -1,5 +1,5 @@
 <html><head>
-<title>AltaVista: Simple Query +LSAM +Bogus26745NoSuchWord934834683</title>
+<title>AltaVista: Simple Query +LSAM +Bogus1230NoSuchWord938637189</title>
 </head><body>
 <font face="Arial,Helvetica" size="+1"><a href="/cgi-bin/query?text&pg=q&what=web">AltaVista Search Service</a></font><p><FORM name=mfrmaction="/cgi-bin/query">
 <INPUT TYPE=hidden NAME=pg VALUE=q><INPUT TYPE=hidden NAME=text VALUE=yes><font size=-1><B>Ask AltaVista<sup><small>TM</small></sup> a question.</B>&nbsp;&nbsp;Or enter a few words in
@@ -29,9 +29,9 @@
 <OPTION VALUE=ru>Russian
 <OPTION VALUE=es>Spanish
 <OPTION VALUE=sv>Swedish
-</SELECT></font><p><input type=text name=q size=50 maxlength=800 value="+LSAM +Bogus26745NoSuchWord934834683">&nbsp;<INPUT TYPE=submit name=search VALUE="Search"><br>
+</SELECT></font><p><input type=text name=q size=50 maxlength=800 value="+LSAM +Bogus1230NoSuchWord938637189">&nbsp;<INPUT TYPE=submit name=search VALUE="Search"><br>
  <P><font size=-1>Search - <a href="/cgi-bin/query?pg=aq&what=web&text=yes">Advanced Text Search</a> - <a href="/cgi-bin/query?pg=q&what=news&text=yes">Usenet</a></font></FORM>
-AltaVista found no document matching your query. <P><font size=-1></font><font size=-2>word count: LSAM: 820<BR>Ignored:    Bogus26745NoSuchWord934834683:<b>0</b><BR></font><P>
+AltaVista found no document matching your query. <P><font size=-1></font><font size=-2>word count: LSAM: 820<BR>Ignored:    Bogus1230NoSuchWord938637189:<b>0</b><BR></font><P>
 <p><font face="Arial,Helvetica" size="-2">
 <a href="/">AltaVista.com</a> |
 <a href="/av/content/about.htm">About AltaVista</a> |

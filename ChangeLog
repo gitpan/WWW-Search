@@ -1,3 +1,74 @@
+1999-09-30  Kingpin  <mthurn@tasc.com>
+
+	* cleaned up the output of `make test`
+
+1999-09-29  Kingpin  <mthurn@tasc.com>
+
+	* new module Lycos::Sites.pm for searching Lycos categorized sites
+	
+	* new module Lycos::Pages.pm for searching Lycos indexed web pages
+	
+	* Lycos.pm updated to 2.02 to recognize Sites searches
+	
+	* Yahoo.pm updated to 2.02 (new test cases, and pod update)
+
+	* Infoseek.pm updated to 2.03 
+	(handle \n in descriptions and ignore "company profile" URLs)
+
+1999-09-28  Kingpin  <mthurn@tasc.com>
+
+	* Infoseek.pm updated to 2.02 (fixed "next" page URL parsing)
+
+	* WebSearch has a new option --debug to turn on debugging in backends
+	
+	* WebSearch has a new option --lwpdebug to turn on low-level LWP debugging
+
+1999-09-27  Kingpin  <mthurn@tasc.com>
+
+	* Google.pm updated to 2.05
+
+	* Metapedia.pm updated to 2.06
+
+1999-09-22  Kingpin  <mthurn@tasc.com>
+
+	* GoTo.pm updated to 1.03 (format change, URL unencryption fixed)
+
+	* WebSearch pod reflects long option names
+
+1999-09-20  Kingpin  <mthurn@tasc.com>
+
+	* NetFind.pm updated to 0.7 (AOL moved/merged their search services)
+
+1999-09-17  Kingpin  <mthurn@tasc.com>
+
+	* Dejanews.pm updated to version 2.02 (fixed URL parsing)
+
+	* new backend Deja.pm for searching www.deja.com
+
+1999-09-15  Kingpin  <mthurn@tasc.com>
+
+	* new backend GoTo.pm for searching www.goto.com
+
+	* WebSearch has a new option --count to show the approximate_result_count
+
+1999-09-13  Kingpin  <mthurn@tasc.com>
+
+	* `make test -u` now deletes existing test files before updating
+
+	* NorthernLight.pm updated to version 2.03 (fixed URL parsing)
+
+1999-09-09  Kingpin  <mthurn@tasc.com>
+
+	* new backend NetFind.pm for searching netfind2.aol.com
+
+1999-09-07  Kingpin  <mthurn@tasc.com>
+
+	* extraneous warnings removed from AutoSearch
+
+1999-08-19  Kingpin  <mthurn@tasc.com>
+
+	* WWW::Search VERSION 2.03 RELEASED!
+
 1999-08-18  Kingpin  <mthurn@tasc.com>
 
 	* AutoSearch updated to version 2.01, with new command-line arguments -host and -port
@@ -51,15 +122,15 @@
 
 	* NorthernLight.pm updated
 
-	* new backend for Google
+	* new backend Google.pm for searching www.google.com
 
-	* new backend for OpenDirectory
+	* new backend OpenDirectory.pm for searching search.dmoz.org
 
 1999-07-09  Kingpin  <mthurn@tasc.com>
 
 	* Infoseek.pm updated to version 1.18; warnings removed
 
-	* new backend for LookSmart
+	* new backend LookSmart.pm for searching looksmart.com
 
 1999-07-06  Kingpin  <mthurn@tasc.com>
 

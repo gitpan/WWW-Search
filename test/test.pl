@@ -2,7 +2,7 @@
 
 # test.pl
 # Copyright (C) 1997 by USC/ISI
-# $Id: test.pl,v 1.23 1999/08/18 15:18:18 mthurn Exp $
+# $Id: test.pl,v 1.30 1999/09/30 13:43:21 mthurn Exp $
 #
 # Copyright (c) 1997 University of Southern California.
 # All rights reserved.                                            
@@ -53,8 +53,9 @@ use WWW::Search;
 use vars qw( $verbose $debug $desired_search_engine $mode $update_saved_files );
 use vars qw( $do_internal $do_external );
 $do_internal = $do_external = 0;
+undef $debug;
 &usage unless &GetOptions(
-                          'd' => \$debug,
+                          'd:i' => \$debug,
                           'e=s' => \$desired_search_engine,
                           'u' => \$update_saved_files,
                           'v' => \$verbose,
@@ -62,6 +63,7 @@ $do_internal = $do_external = 0;
                           'X' => \$do_external,
                          );
 ($do_internal, $do_external) = (1,1) unless ($do_internal || $do_external);
+$debug = 1 if (defined($debug) and ($debug < 1));
 
 my $error_count = 0;
 my $fullperl;
@@ -82,7 +84,8 @@ sub relevant_test
 
 sub web_search_bin 
   {
-  return "$fullperl -I$pwd/lib $pwd/blib/script/WebSearch ";
+  my $sDebug = $debug ? "--debug $debug" : '';
+  return "$fullperl -I$pwd/lib $pwd/blib/script/WebSearch $sDebug ";
   }
 
 sub eval_test
@@ -95,10 +98,11 @@ sub eval_test
   $code ||= '';
   unless ($code ne '')
     {
-    print "\t$sSE version $iVersion contains no TEST_CASES\n";
+    print "  $sSE version $iVersion contains no TEST_CASES\n";
     $error_count++;
     }
-  # print STDERR "\t$code\n" if $verbose;
+  # print STDERR "  $code\n" if $verbose;
+  print "\n";  # put a little space between each engine's results
   eval $code;
   } # eval_test
 
@@ -116,34 +120,42 @@ sub test
   my $file = shift;
   my $query = shift;
   my $test_method = shift;
-  # print "\tmode=$mode, method=$test_method\n";
+  # print "  mode=$mode, method=$test_method\n";
   
   return if (!relevant_test($sSE));
   
-  print "trial $file ($mode)\n";
+  print "  trial $file ($mode)\n";
   if (($mode eq $MODE_INTERNAL) && ($query =~ m/$bogus_query/))
     {
-    print "\tskipping test on this platform.\n";
+    print "  skipping test on this platform.\n";
     return;
     } # if
 
   my $path = "$pwd/test/Pages/$sSE";
   $path =~ s!::!\/!g;
   mkpath $path;
+  if ($mode eq $MODE_UPDATE)
+    {
+    # Delete all existing test result files for this Engine:
+    unlink <$path/$file*>;
+    } # if MODE_UPDATE
   if ($file =~ m!([^/]+)$!)
     {
+    # Prepend path onto file
     $file = $path.'/'.$1;
     } # if
   my $o = new WWW::Search($sSE);
   my $version = $o->version;
-  print "\t($sSE $version, $sM)\n";
+  print "  ($sSE $version, $sM)\n";
   my %src = (
              $MODE_INTERNAL => "--option search_from_file=$file",
              $MODE_EXTERNAL => '',
              $MODE_UPDATE => "--option search_to_file=$file",
             );
-  my $cmd = &web_search_bin . "--engine $sSE $src{$mode} -- $query";
-  print "\t$cmd\n" if ($verbose);
+  # --max 201 added by Martin Thurn 1999-09-27.  We never want to
+  # fetch more than three pages, no matter what (?)
+  my $cmd = &web_search_bin . "--max 201 --engine $sSE $src{$mode} -- $query";
+  print "  $cmd\n" if ($verbose);
   open(TRIALSTREAM, "$cmd|") || die "$0: cannot run test\n";
   open(TRIALFILE, ">$file.trial") || die "$0: cannot open $file.trial\n";
   open(OUTFILE, ">$file.out") || die "$0: cannot open $file.out\n" if ($mode eq $MODE_UPDATE);
@@ -169,7 +181,7 @@ sub test
     my $sExpected = join('..', @_);
     $sExpected .= '..' if ($test_method == $TEST_GREATER_THAN);
     $sExpected = 0 if $sExpected eq '';
-    print "\t$query --> $iURLCount urls (should be $sExpected) on $iPageCount pages\n";
+    print "  $query --> $iURLCount urls (should be $sExpected) on $iPageCount pages\n";
     return;
     } # if
 
@@ -224,66 +236,71 @@ sub test
 
     if ($e == 0) 
       {
-      print "ok.\n";
+      print "  ok.\n";
       unlink("$file.trial");   # clean up
       } 
     elsif ($e == 1) 
       {
-      print "\t$query --> DIFFERENCE DETECTED$sMsg.\n";
+      print "DIFFERENCE DETECTED: $query --> $sMsg.\n";
       $error_count++;
       }
     else 
       {
-      print "\t$query --> DIFF ERROR.\n";
+      print "INTERNAL ERROR $query --> e is $e.\n";
       $error_count++;
       }
     } 
   else 
     {
-    print "\tno saved output.\n";
+    print "NO SAVED OUTPUT.\n";
     }
-  print "\n";
   } # test
 
 sub no_test 
   {
   my ($engine, $maint) = @_;
   return if (!relevant_test($engine));
-  print "trial none ($engine)\n";
-  print "\tThis search engine doesn't have any tests,\n";
-  print "\tbut report problems for it to\n\t$maint.\n";
-  print "\n";
+  print <<"NONE";
+  trial none ($engine)
+  This search engine doesn't have any tests,
+  but report problems with it to $maint.
+NONE
   } # no_test
 
 sub not_working 
   {
   my ($engine, $maint) = @_;
   return if (!relevant_test($engine));
-  print "trial none ($engine)\n";
-  print "\tThis search engine is known to be non-functional.  You are encouraged\n";
-  print "\tto investigate the problem or send mail to its maintainer\n\t$maint.\n";
-  print "\n";
+  print <<"BROKEN";
+  trial none ($engine)
+  This search engine is known to be non-functional.  
+  You are encouraged to investigate the problem and email its maintainer, 
+  $maint.
+BROKEN
   } # not_working
 
 sub not_working_with_tests 
   {
   my ($engine, $maint) = @_;
   return if (!relevant_test($engine));
-  print "trial none ($engine)\n";
-  print "\tThis search engine is known to be non-functional.  You are encouraged\n";
-  print "\tto investigate the problem or send mail to its maintainer\n\t$maint.\n";
-  print "\t(The test sets below are known to fail.)\n";
-  print "\n";
+  print <<"KNOWNFAILURE";
+  trial none ($engine)
+  Test cases for this search engine are known to fail.  
+  You are encouraged to investigate the problem and email its maintainer,
+  $maint.
+KNOWNFAILURE
   } # not_working_with_tests 
 
 sub not_working_and_abandonded
   {
   my ($engine, $maint) = @_;
   return if (!relevant_test($engine));
-  print "trial none ($engine)\n";
-  print "\tThis search engine is known to be non-functional.  You are encouraged\n";
-  print "\tto adopt it from its original author\n\t$maint.\n";
-  print "\n";
+  print <<"ADOPT";
+  trial none ($engine)
+  This search engine is known to be non-functional.  
+  You are encouraged to adopt it from its last known maintainer, 
+  $maint.
+ADOPT
   } # not_working_and_abandonded
         
 sub test_cases 
@@ -293,18 +310,18 @@ sub test_cases
   $sSE = 'AltaVista';
   $sM = 'John Heidemann <johnh@isi.edu>';
   
-  $file = 'test/AltaVista/zero_result_no_plus';
+  $file = 'zero_result_no_plus';
   test($sSE, $sM, $file, $bogus_query, $TEST_EXACTLY);
   
-  $file = 'test/AltaVista/zero_result';
+  $file = 'zero_result';
   $query = '+LSAM +' . $bogus_query;
   test($sSE, $sM, $file, $query, $TEST_EXACTLY);
   
-  $file = 'test/AltaVista/one_page_result';
+  $file = 'one_page_result';
   $query = '+LS'.'AM +Aut'.'oSearch';
   test($sSE, $sM, $file, $query, $TEST_RANGE, 2, 10);
   
-  $file = 'test/AltaVista/two_page_result';
+  $file = 'two_page_result';
   $query = '+LS'.'AM +IS'.'I +I'.'B';
   test($sSE, $sM, $file, $query, $TEST_GREATER_THAN, 10);
   
@@ -313,15 +330,15 @@ sub test_cases
   $sSE = 'AltaVista::Web';
   $sM = 'John Heidemann <johnh@isi.edu>';
   
-  $file = 'test/AltaVista/Web/zero_result';
+  $file = 'zero_result';
   $query = '+LSA'.'M +' . $bogus_query;
   test($sSE, $sM, $file, $query, $TEST_EXACTLY);
   
-  $file = 'test/AltaVista/Web/one_page_result';
+  $file = 'one_page_result';
   $query = '+LSA'.'M +AutoSea'.'rch';
   test($sSE, $sM, $file, $query, $TEST_RANGE, 2, 10);
   
-  $file = 'test/AltaVista/Web/two_page_result';
+  $file = 'two_page_result';
   $query = '+LSA'.'M +IS'.'I +I'.'B';
   test($sSE, $sM, $file, $query, $TEST_GREATER_THAN, 10);
   
@@ -330,15 +347,15 @@ sub test_cases
   $sSE = 'AltaVista::AdvancedWeb';
   $sM = 'John Heidemann <johnh@isi.edu>';
   
-  $file = 'test/AltaVista/AdvancedWeb/zero_result';
+  $file = 'zero_result';
   $query = 'LS'.'AM and ' . $bogus_query;
   test($sSE, $sM, $file, $query, $TEST_EXACTLY);
   
-  $file = 'test/AltaVista/AdvancedWeb/one_page_result';
+  $file = 'one_page_result';
   $query = 'LSA'.'M and AutoSea'.'rch';
   test($sSE, $sM, $file, $query, $TEST_RANGE, 2, 11);
   
-  $file = 'test/AltaVista/AdvancedWeb/two_page_result';
+  $file = 'two_page_result';
   $query = 'LSA'.'M and IS'.'I and I'.'B';
   test($sSE, $sM, $file, $query, $TEST_GREATER_THAN, 10);
   
@@ -356,13 +373,13 @@ sub test_cases
   $sSE = 'AltaVista::AdvancedNews';
   $sM = 'John Heidemann <johnh@isi.edu>';
   
-  $file = 'test/AltaVista/AdvancedNews/multi_result';
-  $query = 'Per'.'l and CP'.'AN';
-  test($sSE, $sM, $file, $query, $TEST_GREATER_THAN, 70); # 30 hits/page
-  
-  $file = 'test/AltaVista/AdvancedNews/zero_result';
+  $file = 'zero_result';
   $query = 'per'.'l and ' . $bogus_query;
   test($sSE, $sM, $file, $query, $TEST_EXACTLY);
+  
+  $file = 'multi_result';
+  $query = 'Per'.'l and CP'.'AN';
+  test($sSE, $sM, $file, $query, $TEST_GREATER_THAN, 70); # 30 hits/page
   
   ######################################################################
 
@@ -418,6 +435,8 @@ sub test_cases
   
   &no_test('Gopher', 'Paul Lindner <paul.lindner@itu.int>');
 
+  &eval_test('GoTo');
+  
   &eval_test('HotBot');
   
   &eval_test('HotFiles');
@@ -429,9 +448,20 @@ sub test_cases
 
   &no_test('Livelink', 'Paul Lindner <paul.lindner@itu.int>');
 
-  &eval_test('LookSmart');
+  # 1999-09-28, Martin Thurn.  I am removing LookSmart from the test
+  # suite.  LookSmart is USELESS because: 1) it is the same as
+  # AltaVista.  It even says so at the bottom of the page.  2) it
+  # returns hundreds of URLs for the "Bogus" query.  It even returns
+  # hundreds of random URLs if you search for
+  # "qqqqqqqqqqqqqqqqqqqqqqqqqqqqqq" or no matter what garbage you
+  # type in !
 
-  &eval_test('Lycos');
+  # &eval_test('LookSmart');
+  use WWW::Search::LookSmart;
+  &no_test('LookSmart', $WWW::Search::LookSmart::MAINTAINER);
+
+  &eval_test('Lycos::Pages');
+  &eval_test('Lycos::Sites');
   
   &eval_test('Magellan');
   
@@ -455,6 +485,8 @@ sub test_cases
   # test($sSE, $sM, 'one', $query, $TEST_RANGE, 2, 99);
   
   ######################################################################
+
+  &eval_test('NetFind');
 
   &eval_test('NorthernLight');
   
@@ -523,7 +555,7 @@ sub main
   $pwd = cwd;
   $fullperl = $Config{'perlpath'};
   
-  print "\nVERSION INFO:\n\t";
+  print "\nVERSION INFO:\n  ";
   my ($cmd) = &web_search_bin . " --VERSION";
   print `$cmd`;
   
@@ -538,7 +570,7 @@ sub main
   
   if ($do_internal) 
     {
-    print "\nTESTING INTERNAL PARSING.\n\t(Errors here should be reported to the WWW::Search maintainer.)\n\n";
+    print "\nTESTING INTERNAL PARSING.\n  (Errors here should be reported to the WWW::Search maintainer.)\n\n";
     $error_count = 0;
     $mode = $MODE_INTERNAL;
     &test_cases();
@@ -555,7 +587,7 @@ sub main
     
   if ($do_external) 
     {
-    print "\n\nTESTING EXTERNAL QUERIES.\n\t(Errors here suggest search-engine reformatting and should be\n\treported to the maintainer of the back-end for the search engine.)\n\n";
+    print "\n\nTESTING EXTERNAL QUERIES.\n  (Errors here suggest search-engine reformatting and should be\n  reported to the maintainer of the back-end for the search engine.)\n\n";
     $error_count = 0;
     $mode = $MODE_EXTERNAL;
     &test_cases();
@@ -610,7 +642,28 @@ sub diff ($$)
 
 =head2 TO DO
 
-=item  When updating, first delete the files for the existing test results.
+=item  No identified needs at the moment...
+
+=cut
+
+=head2 HOW IT WORKS
+
+At present there is only one function available, namely &test().  It
+takes at least 5 arguments.  These are: 1) the name of the search
+engine (string); 2) the maintainer's name (and email address)
+(string); 3) a filename (unique among tests for this backend)
+(string); 4) the raw query string; 5) the test method (one of the
+constants $TEST_EXACTLY, $TEST_RANGE, $TEST_GREATER_THAN,
+$TEST_BY_COUNTING); optional arguments 6 and 7 are integers to be used
+when counting the results.
+
+The query is sent to the engine, and the results are compared to
+previously stored results as follows: If the method is $TEST_EXACTLY,
+the two lists of URLs must match exactly.  If the method is
+$TEST_RANGE, the number of URLs must be between arg6 and arg7.  If the
+method is $TEST_GREATER_THAN, the number of URLs must be greater than
+arg6.  If the method is $TEST_BY_COUNTING, the number of URLs must be
+exactly arg6 (but we don't care what the URLs are).
 
 =cut
 

@@ -1,6 +1,6 @@
 # Infoseek.pm
 # Copyright (C) 1998 by Martin Thurn
-# $Id: Infoseek.pm,v 1.19 1999/07/13 13:49:11 mthurn Exp $
+# $Id: Infoseek.pm,v 1.23 1999/09/29 20:04:51 mthurn Exp $
 
 =head1 NAME
 
@@ -56,6 +56,15 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 =head1 VERSION HISTORY
 
 If it is not listed here, then it was not a meaningful nor released revision.
+
+=head2 2.04, 1999-09-29
+
+BUGFIX: handle descriptions with embedded \n;
+ignore "company profile" URLs during Web search
+
+=head2 2.02, 1999-09-28
+
+BUGFIX: was going to the "previous" page instead of the "next" page!
 
 =head2 2.01, 1999-07-13
 
@@ -118,7 +127,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.01';
+$VERSION = '2.04';
 
 use Carp ();
 use WWW::Search(qw( generic_option strip_tags ));
@@ -177,7 +186,6 @@ sub native_setup_search
     } # if
 
   # Copy in options which were set by a child object:
-  my $rhChildOptions = $self->{'_child_options'};
   if (defined($self->{'_child_options'})) 
     {
     foreach (keys %{$self->{'_child_options'}}) 
@@ -232,15 +240,25 @@ sub native_retrieve_some
   $self->{'_next_url'} = undef;
   # Parse the output
   my ($START, $HEADER, $HITS, $DESC,$PERCENT,$SIZE,$DATE, $NEXT,$COMP_NEXT, $TRAILER,
-     $WEB_HITS, $WEB_NEXT) = qw( ST HE HI DE PE SI DA NE CN TR WH WN );
+     $WEB_HITS, $WEB_NEXT, $DESC_SPLIT) = qw( ST HE HI DE PE SI DA NE CN TR WH WN DS );
   my $hits_found = 0;
   my $state = $START;
   my $hit;
   my $sContent = $response->content();
   $sContent =~ s/\<p\>/\n/g;
+  my $sPrevLine = '';
   foreach ($self->split_lines($sContent))
     {
     next if m/^$/; # short circuit for blank lines
+    if ($state eq $DESC_SPLIT)
+      {
+      # On the previous line we noticed that the description contained
+      # a \n.  Prepend that previous line onto this line and continue
+      # as normal.
+      $_ = $sPrevLine .' '. $_;
+      $state = $WEB_HITS;
+      $sPrevLine = '';
+      } # if
     print STDERR " *   $state ===$_===" if 2 <= $self->{'_debug'};
     if ($state eq $START && 
 	m=web\ssearch\sresults=i &&
@@ -291,10 +309,18 @@ sub native_retrieve_some
 
     if ((($state eq $NEXT) || 
          ($state eq $WEB_NEXT)) &&
-        s@\<a href=\"(.*?)\"\>Next$SPACE\d+@WWWSEARCHDELETED@i)
+        s@\<a href=\"([^<>]*?)\"\> < Previous$SPACE\d+@WWWSEARCHDELETED@i)
+      {
+      print STDERR " deleted 'previous' link\n" if 2 <= $self->{'_debug'};
+      # Stay on this line of input!
+      }
+    if ((($state eq $NEXT) || 
+         ($state eq $WEB_NEXT)) &&
+        s@\<a href=\"([^<>]*?)\"\>Next$SPACE\d+@WWWSEARCHDELETED@i)
       {
       # Actual line of input is:
       # <font face="Helvetica,Arial" size="2"><b><a href="http://infoseek.go.com/Titles?qt=martin+thurn&col=WW&sv=IS&lk=noframes&svx=home_searchbox&st=10">Next 10 ></a></b> &nbsp;|&nbsp; ...
+      # <font face="Helvetica,Arial" size="2"><b><a href="http://infoseek.go.com/Titles?rf=0&qt=%22Star+Wars%22&col=WW&nh=25&st=0&&sf=1"> < Previous 25</a></b>  &nbsp;|&nbsp;<b><a href="http://infoseek.go.com/Titles?rf=0&qt=%22Star+Wars%22&col=WW&nh=25&st=50&&sf=1">Next 25 ></a></b> &nbsp;|&nbsp; <a href="http://infoseek.go.com/Titles?rf=0&qt=%22Star+Wars%22&col=WW&nh=20&st=25&&sf=1&ud4=1">Hide summaries</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href="http://infoseek.go.com/Titles?rf=0&qt=%22Star+Wars%22&col=WW&nh=25&st=25&&sf=3">Sort by date</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://infoseek.go.com/Titles?rf=0&qt=%22Star+Wars%22&col=WW&nh=25&st=25&&sf=0">Group results</a></font><br><br><font face="Helvetica,Arial" size="2"><b><a href="http://starwars.countingdown.com/">Countdown to <b style="background:#FFFF99">Star Wars</b>: Episode One: The Phantom Menace</a></b><br>Fan site features the very latest 'Phantom Menace' news and a large multimedia archive. Also, live web-cams of <b style="background:#FFFF99">Star Wars</b> fans waiting in line.<br><font face="Helvetica,Arial" size="2">74% &nbsp;<b>Date: 30 Jun 1999</b>, &nbsp;Size 4.3K, &nbsp;http://starwars.countingdown.com/&nbsp;</font><br><a href="http://infoseek.go.com/Titles?rf=0&col=WW&nh=25&&sf=1&cat=RES&fsd=651896046062219394&fs=http%3A//starwars.countingdown.com/&svx=find_similar">Find similar pages</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://translator.go.com/search_trans?url=http%3A//starwars.countingdown.com/">Translate this page</a>
       print STDERR " found 'next' link\n" if 2 <= $self->{'_debug'};
       # There is a "next" link on this page, therefore there are
       # indeed more results for us to go after next time.
@@ -303,7 +329,7 @@ sub native_retrieve_some
       # Stay on this line of input!
       }
     elsif ($state eq $NEXT &&
-           (s@^.*?\<a href=\"(.*?)\"\>Group\sresults@WWWSEARCHDELETED@i ||
+           (s@^.*?\<a href=\"([^<>]*?)\"\>Group\sresults@WWWSEARCHDELETED@i ||
             m!\">Hide\ssummaries!i))
       {
       print STDERR " no 'next' link\n" if 2 <= $self->{'_debug'};
@@ -312,10 +338,32 @@ sub native_retrieve_some
       # Stay on this line of input!
       }
 
-    if ($state eq $WEB_HITS && s!\<b\>\<a href=\"(.*?)\"\>(.*?)\</a\>!!i)
+    if ($state eq $WEB_HITS && m!\<b\>\<a href=\"([^<>]*?)\"\>(.*?)\</a\>!i)
       {
-      print STDERR " webhit URL line\n" if 2 <= $self->{'_debug'};
+      # Sample line of input:
+      # ...<br><br><img src="/images/rnarrow.gif" width=13 height=13><font face="Helvetica,Arial" size="2"> <b><a href="http://www.mortgageselect.com">American Home Mortgage Holdings, Inc.</a>:</b>&nbsp; <a href="/Content?arn=60482&qt=home+mortgage+Atlanta&col=HV&svx=lhscaps">company profile</a><br><font face="Helvetica,Arial" size="2">http://www.mortgageselect.com</font>
       my ($sURL,$sTitle) = ($1,$2);
+      if ($sURL =~ m/infoseek\.go\.com/ && $sTitle =~ m/Previous\s\d+/)
+        {
+        print STDERR " ignoring 'previous page' link\n" if 2 <= $self->{'_debug'};
+        next;
+        } # if
+      if (m!>company profile<!)
+        {
+        print STDERR " ignoring 'company profile' link\n" if 2 <= $self->{'_debug'};
+        next;
+        } # if
+      print STDERR " webhit URL line\n" if 2 <= $self->{'_debug'};
+      if (($self->{_options}->{'col'} eq 'WW') && (! m!</(a|center|table)>$!i))
+        {
+        print STDERR " SPLIT DESCRIPTION!!!\n" if 2 <= $self->{'_debug'};
+        # There is a \n in the middle of the description.  We need to
+        # append the next line onto this line and try again...
+        $sPrevLine = $_;
+        chomp $sPrevLine;
+        $state = $DESC_SPLIT;
+        next;
+        } # if
       if (defined($hit))
         {
         push(@{$self->{cache}}, $hit);
@@ -478,7 +526,7 @@ sub native_retrieve_some
       }
     } # foreach line of query results HTML page
 
-  if (defined($hit))
+  if (ref($hit))
     {
     push(@{$self->{cache}}, $hit);
     }

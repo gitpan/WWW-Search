@@ -1,7 +1,7 @@
 # Yahoo.pm
 # by Wm. L. Scheding and Martin Thurn
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: Yahoo.pm,v 1.14 1999/07/13 13:54:49 mthurn Exp $
+# $Id: Yahoo.pm,v 1.17 1999/09/29 14:36:30 mthurn Exp $
 
 =head1 NAME
 
@@ -26,13 +26,18 @@ that Yahoo might tell us about.
 This class exports no public interface; all interaction should
 be done through L<WWW::Search> objects.
 
+=head1 CAVEATS
+
+Because www.yahoo.com can categorize websites into more than one
+category, Yahoo.pm sometimes returns the same URL more than once.
+
 =head1 SEE ALSO
 
 To make new back-ends, see L<WWW::Search>.
 
 =head1 BUGS
 
-Please tell the author if you find any!
+Please tell the maintainer if you find any!
 
 =head1 TESTING
 
@@ -56,7 +61,14 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 If it''s not listed here, then it wasn''t a meaningful nor released revision.
 
+=head2 2.02, 1999-09-29
+
+update test cases; add caveat about repeated URLs
+
 =head2 2.01, 1999-07-13
+
+version number alignment with new WWW::Search;
+new test mechanism
 
 =head2 1.12, 1998-10-22
 
@@ -83,13 +95,13 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.01';
+$VERSION = '2.02';
 
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 $TEST_CASES = <<"ENDTESTCASES";
 &test('Yahoo', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_EXACTLY);
-&test('Yahoo', '$MAINTAINER', 'one_page', 'LSA'.'M', \$TEST_RANGE, 2,84);
-&test('Yahoo', '$MAINTAINER', 'two_page', 'rep'.'lication', \$TEST_GREATER_THAN, 87);
+&test('Yahoo', '$MAINTAINER', 'one', 'LSA'.'M', \$TEST_RANGE, 2,84);
+&test('Yahoo', '$MAINTAINER', 'two', 'pok'.'emon', \$TEST_GREATER_THAN, 87);
 ENDTESTCASES
 
 use Carp ();

@@ -1,7 +1,7 @@
 # Lycos.pm
 # by Wm. L. Scheding and Martin Thurn
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: Lycos.pm,v 1.7 1999/07/14 18:45:45 mthurn Exp $
+# $Id: Lycos.pm,v 1.8 1999/09/30 13:23:19 mthurn Exp $
 
 =head1 NAME
 
@@ -26,9 +26,11 @@ be done through L<WWW::Search> objects.
 
 =head1 NOTES
 
-By default, WWW::Search::Lycos returns results only from
-www.lycos.com's "Web Pages" search result section; results from
-"Categories", "Web Sites", and "News & Media" are ignored.
+WWW::Search::Lycos returns results only from www.lycos.com's "Web
+Pages"; results from "Categories", "Web Sites", and "News & Media" are
+ignored.
+If you want to get results from www.lycos.com's categorized "Web
+Sites", use Lycos::Sites instead.
 
 The default search mode is "any" of the query terms.  If you want to
 search for "ALL" of the query terms, add {'matchmode' => 'and'} as the
@@ -52,21 +54,8 @@ Please tell the author if you find any!
 
 =head1 TESTING
 
-This module adheres to the C<WWW::Search> test suite mechanism. 
-
-  Test cases (accurate as of 1998-12-10):
-
-    $file = 'test/Lycos/zero_result';
-    $query = 'Bogus' . $bogus_query;
-    test($mode, $TEST_EXACTLY);
-
-    $file = 'test/Lycos/one_page_result';
-    $query = '"Chri'.'stie Ab'.'bott"';
-    test($mode, $TEST_RANGE, 2, 50);
-
-    $file = 'test/Lycos/multi_page_result';
-    $query = 'repli'.'cation';
-    test($mode, $TEST_GREATER_THAN, 100);
+Testing is done only on the children modules Lycos::Sites and
+Lycos::Pages.
 
 =head1 AUTHOR
 
@@ -85,6 +74,10 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 =head1 VERSION HISTORY
 
 If it is not listed here, then it was not a meaningful nor released revision.
+
+=head2 2.02, 1999-09-30
+
+Now able to get Web Sites results via child module Sites.pm
 
 =head2 2.01, 1999-07-13
 
@@ -106,17 +99,12 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.01';
 
+$VERSION = '2.02';
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
-$TEST_CASES = <<"ENDTESTCASES";
-&test('Lycos', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_EXACTLY);
-&test('Lycos', '$MAINTAINER', 'one', 'establis'.'hmentarian', \$TEST_RANGE, 2,99);
-&test('Lycos', '$MAINTAINER', 'two', 'Vad'.'er and ch'.'oke', \$TEST_GREATER_THAN, 101);
-ENDTESTCASES
 
 use Carp ();
-use WWW::Search(generic_option);
+use WWW::Search(qw( generic_option strip_tags ));
 require WWW::SearchResult;
 
 sub native_setup_search
@@ -127,6 +115,8 @@ sub native_setup_search
   $self->{_debug} = 2 if ($native_options_ref->{'search_parse_debug'});
   $self->{_debug} = 0 if (!defined($self->{_debug}));
 
+  # During Sites searches, lycos.com returns 10 hits per page no
+  # matter what, so we don't depend on this value for our processing:
   my $DEFAULT_HITS_PER_PAGE = 100;
   $DEFAULT_HITS_PER_PAGE = 20 if 0 < $self->{_debug};
   $self->{'_hits_per_page'} = $DEFAULT_HITS_PER_PAGE;
@@ -142,23 +132,35 @@ sub native_setup_search
     $self->{'search_base_url'} = 'http://lycospro.lycos.com';
     $self->{_options} = {
                          'search_url' => $self->{'search_base_url'} .'/cgi-bin/pursuit',
-                         'mtemp' => 'nojava',
-                         # 'first' => $self->{_next_to_retrieve},
                          'maxhits' => $self->{_hits_per_page},
                          'query' => $native_query,
                          'matchmode' => 'or',
+                         'cat' => 'lycos',
+                         'mtemp' => 'nojava',
                          'adv' => 1,
                         };
     } # if
+
   my $options_ref = $self->{_options};
+
+  # Copy in options which were passed in our second argument:
   if (defined($native_options_ref)) 
     {
-    # Copy in new options.
     foreach (keys %$native_options_ref) 
       {
       $options_ref->{$_} = $native_options_ref->{$_};
       } # foreach
     } # if
+
+  # Copy in options which were set by a child object:
+  if (defined($self->{'_child_options'})) 
+    {
+    foreach (keys %{$self->{'_child_options'}}) 
+      {
+      $self->{'_options'}->{$_} = $self->{'_child_options'}->{$_};
+      } # foreach
+    } # if
+
   # Process the options.
   my($options) = '';
   foreach (sort keys %$options_ref) 
@@ -200,7 +202,7 @@ sub native_retrieve_some
   $self->{'_next_url'} = undef;
   print STDERR " *   got response\n" if $self->{_debug};
   # parse the output
-  my ($HEADER, $HITS, $DESC, $COLLECT) = qw(HE HI DE CO);
+  my ($HEADER, $HITS, $DESC, $COLLECT, $SKIP1, $SKIP2) = qw( HE HI DE CO K1 K2 );
   my $hits_found = 0;
   my $state = $HEADER;
   my $cite = "";
@@ -211,10 +213,27 @@ sub native_retrieve_some
     next if m@^$@; # short circuit for blank lines
 
     print STDERR " * $state ===$_=== " if 2 <= $self->{'_debug'};
+
     # Note: if Lycos finds no Lycos-registered sites that match, it
     # automatically forward the query to Alta Vista.  If we see that
-    # this has happened, we quit immediately:
-    if ($state eq $HEADER && m|<b>Web\sPages|i)
+    # this has happened, we quit immediately.
+
+    if ($state eq $HEADER && m|^Web\sSites</b></TD>|i)
+      {
+      # Actual line of input:
+      # Web Sites</b></TD>
+      $state = $SKIP2;
+      }
+    elsif ($state eq $SKIP1 && m|^<B>Featured On Lycos</B>$|)
+      {
+      $state = $SKIP2;
+      }
+    elsif ($state eq $SKIP2 && m|end vertical partner offers|)
+      {
+      #                        <!-- end vertical partner offers -->
+      $state = $HITS;
+      }
+    elsif ($state eq $HEADER && m|<b>Web\sPages|i)
       {
       # Actual lines of input are:
       # <B>Web Pages</B>&nbsp;<I>(37054)</I>
@@ -225,11 +244,13 @@ sub native_retrieve_some
       } # if
 
     elsif ($state eq $HITS && 
-           (m@<LI><A HREF=\"?([^">]+?)\"?\>(.*?)</A>\s-\s(.*)$@i ||
+           (m@^(?:<LI>|\s)?<a href=\"?([^">]+?)\"?\>(.*?)</a>\s-\s(.*)$@i ||
             m@<LI><a href=\"?([^">]+?)\"?\>(.*?)</A>&nbsp;\<BR\>(.*)$@i))
       {
       # Actual line of input is:
       # <li><a href=http://www.cds.com/>CD Solutions Inc. CD-ROM, Replication, and Duplication page</a> - <font size=-1>CD Solutions makes CD-ROM production easy</font> 
+      #  <a href="http://www.toysrgus.com">The <b>Star</b> <b>Wars</b> Collectors Archive</a> - <font size=-1>An archive of <b>Star</b> <b>Wars</b> Collectibles.</font> <font size=1>&nbsp;<br><br></font>
+      # <a href="http://www.madal.com">Wholesale Only! Pokemon, Magic, <b>Star</b> <b>Wars</b>, <b>Star</b> Trek.  Sales to Qualified retail stores only!</a> - <font size=-1>Wholesale Sales to qualified retail outlets only. We are authorized distributors for Wizards of the Coast, Decipher and most other trading card game companies.  We have Pokemon.</font> <font size=1>&nbsp;<br><br></font>
       print STDERR "hit url+desc line\n" if 2 <= $self->{_debug};
       if (defined($hit)) 
         {
@@ -239,15 +260,20 @@ sub native_retrieve_some
       $hit->add_url($1);
       $hits_found++;
       $hit->title($2);
-      $hit->description(&stripHTML($3));
+      $hit->description(strip_tags($3));
       }
     elsif ($state eq $HITS && m@<LI><A HREF=\"?([^">]+?)\"?>(.*)</A>@i)
       {
       # Actual line of input is:
       # <LI><A HREF="http://www.fortunecity.com/lavendar/python/134/">WISHBONE - A SHORT BIO OF THE GREAT SHOW FOR CHILDREN</A>&nbsp;<BR>
       # <p><b><a href="http://scifireplicas.com/movies/masks.htm">Merchandise Collector Masks - Star Wars</A></b>
-      print STDERR "hit url line\n" if 2 <= $self->{_debug};
       my ($url, $title) = ($1,$2);
+      if ($url =~ m/dir\.lycos\.com/)
+        {
+        print STDERR "skip lycos category name\n" if 2 <= $self->{_debug};
+        next;
+        } # if
+      print STDERR "hit url line\n" if 2 <= $self->{_debug};
       if (defined($hit)) 
         {
         push(@{$self->{cache}}, $hit);
@@ -333,17 +359,16 @@ sub native_retrieve_some
   } # native_retrieve_some
 
 
-# private
-sub stripHTML
-  {
-  my $s = shift;
-  $s =~ s/<.*?>//g;
-  return $s;
-  } # stripHTML
-
 1;
 
 __END__
 
 ADVENCED QUERY RESULTS:
 http://lycospro.lycos.com/cgi-bin/pursuit?mtemp=nojava&etemp=error_nojava&rt=1&qs=gt%7Cdate&npl=matchmode%3Dand%26adv%3D1&query=replication&maxhits=40&cat=lycos&npl1=ignore%3Dfq&fq=&lang=&rtwm=45000&rtpy=2500&rttf=5000&rtfd=2500&rtpn=2500&rtor=2500
+
+OTHER OPTIONS:
+
+cat=lycos&mtemp=nojava   Show results from Web Pages index only
+cat=dirw&mtemp=sites     Show results from Lycos categorized Web Sites only
+cat=dirw&mtemp=news      Search in News articles and Media only
+cat=dir                  Search for Lycos named Categories only

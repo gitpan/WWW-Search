@@ -1,7 +1,7 @@
 # Profusion.pm
 # by Jim Smyser
 # Copyright (c) 1999 by Jim Smyser & USC/ISI
-# $Id: Profusion.pm,v 1.3 1999/07/13 17:26:55 mthurn Exp $
+# $Id: Profusion.pm,v 1.4 1999/09/27 13:36:55 mthurn Exp $
 
 
 package WWW::Search::Profusion;
@@ -122,7 +122,7 @@ require Exporter;
 @ISA = qw(WWW::Search Exporter);
 @EXPORT = qw();
 @EXPORT_OK = qw();
-$VERSION = '2.01';
+$VERSION = '2.02';
 
 $MAINTAINER = 'Jim Smyser <jsmyser@bigfoot.com>';
 $TEST_CASES = <<"ENDTESTCASES";
@@ -144,8 +144,9 @@ sub native_setup_search
     if (!defined($self->{_options})) {
     $self->{_options} = {
      'search_url' => 'http://www.profusion.com/cgi-bin/nph-ProFusion.pl',
-     'option' => 'all', # see USAGE OPTIONS
-     'display' => 'all&summary=yes&totalverify=0&auto=all&search=web',
+     'option' => 'default', # see USAGE OPTIONS
+     'display' => 'all&summary=yes&totalverify=0&auto=all&engine1=AltaVista&engine4=InfoSeek&engine5=LookSmart&engine2=Excite&engine8=Magellan&engine6=WebCrawler&engine9=GoTo&engine3=Google&engine7=Yahoo&search=web&log=yes&current=0&customEngines=1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9&pid=profusion',
+
       };
         };
     my($options_ref) = $self->{_options};

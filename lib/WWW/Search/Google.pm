@@ -1,9 +1,8 @@
-
 ##########################################################
 # Google.pm
 # by Jim Smyser
 # Copyright (C) 1996-1999 by Jim Smyser & USC/ISI
-# $Id: Google.pm,v 1.4 1999/07/14 13:19:43 mthurn Exp $
+# $Id: Google.pm,v 1.8 1999/09/30 13:03:45 mthurn Exp $
 ##########################################################
 
 
@@ -88,6 +87,10 @@ Since this is a new Backend there are undoubtly one. Report any ASAP.
 
 =head1 VERSION HISTORY
 
+2.05
+Matching overhaul to get the code parsing right due to multiple 
+tags being used by google on the hit lines. 9/25/99
+
 2.02
 Last Minute description changes  7/13/99
 
@@ -105,13 +108,13 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.02';
+$VERSION = '2.05';
 
 $MAINTAINER = 'Jim Smyser <jsmyser@bigfoot.com>';
 $TEST_CASES = <<"ENDTESTCASES";
 &test('Google', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_EXACTLY);
-&test('Google', '$MAINTAINER', 'one_page', 'iro'.'ver', \$TEST_RANGE, 2,49);
-&test('Google', '$MAINTAINER', 'multi', 'LI'.'NUX ca'.'rd ga'.'mes', \$TEST_GREATER_THAN, 101);
+&test('Google', '$MAINTAINER', 'one_page', '+LS'.'AM +rep'.'lication', \$TEST_RANGE, 2,49);
+&test('Google', '$MAINTAINER', 'multi', 'dir'.'ty ha'.'rr'.'y bimbo', \$TEST_GREATER_THAN, 101);
 ENDTESTCASES
 
 use Carp ();
@@ -174,48 +177,65 @@ sub native_retrieve_some
      print STDERR "**Sending request (",$self->{_next_url},")\n" if $self->{_debug};    
      my($response) = $self->http_request('GET', $self->{_next_url});      
      $self->{response} = $response;        
-     if (!$response->is_success)         {
+     if (!$response->is_success) {
        return undef;
        }
      $self->{'_next_url'} = undef;
      print STDERR "**Parse the Results**\n" if $self->{_debug};
+
      # parse the output
-     my ($HEADER, $HITS, $DESC, $OTHER) = qw(HE HI DE OT);
+     my ($HEADER, $HITS)  = qw(HE HI);
      my $hits_found = 0;
-     my $state = $HEADER;
      my $hit = ();
      foreach ($self->split_lines($response->content()))
      {
      next if m@^$@; # short circuit for blank lines
      print STDERR " $state ===$_=== " if 2 <= $self->{'_debug'};
-     if (m|<b>(\d+)</b></font>\smatches|i) {
+     if (m|<html>|i) {
      print STDERR "**Header Found**\n" if ($self->{_debug});
      $self->approximate_result_count($1);
      $state = $HITS;
- } if ($state eq $HITS && m@.*?</A> <A HREF=([^"]+)>(.*)</A>@i) {
+
+ } if ($state eq $HITS && m@<p><a href=([^<]+)>(.*)</a>@i) {
      print "**Found Hit URL**\n" if 2 <= $self->{_debug};
+     my ($url, $title) = ($1,$2);
      if (defined($hit)) 
      {
      push(@{$self->{cache}}, $hit);
      };
      $hit = new WWW::SearchResult;
      $hits_found++;
-     $hit->add_url($1);
-     $hit->title($2);
-     $state = $DESC;
+     $hit->add_url($url);
+     $hit->title($title);
+     $state = $HITS;
 
-     # This engine has a real funky way of presenting a desription...
- } elsif ($state eq $DESC && m@<font size=-1><br>(.*)<br>@i) {
+     # There is either a </UL> or <UL> tag
+ } elsif ($state eq $HITS && m@<.?UL><a href=([^<]+)>(.*)</a>@i) {
+     print "**Found Hit URL**\n" if 2 <= $self->{_debug};
+     my ($url, $title) = ($1,$2);
+     if (defined($hit)) 
+     {
+     push(@{$self->{cache}}, $hit);
+     };
+     $hit = new WWW::SearchResult;
+     $hits_found++;
+     $hit->add_url($url);
+     $hit->title($title);
+     $state = $HITS;
+
+ } elsif ($state eq $HITS && m@<font size=-1><br>(.*)<br>@i) {
       print "**Found Description**\n" if 2 <= $self->{_debug};
       $mDesc .= $1;
       $mDesc =  $mDesc . '<br>'; 
- } elsif ($state eq $DESC && m@^\.(.+)@i) {
-     print "**Found Next Description**\n" if 2 <= $self->{_debug};
+
+ } elsif ($state eq $HITS && m@^(\.(.+))@i) {
+      print "**Found Next Description**\n" if 2 <= $self->{_debug};
       $mDesc .= $1;
-      $hit->description($mDesc) if defined($hit);
+      $hit->description($mDesc) if (defined($hit)); 
       $mDesc = '';
       $state = $HITS;
- } elsif ($state eq $HITS && m@10</A></td><td><a href=(.*)><IMG SRC=.*?>@i) {
+
+ } elsif ($state eq $HITS && m|<a href=([^<]+)><IMG SRC=/nav_next.gif.*?><br><.*?>Next page</A>|i) {
      print STDERR "**Going to Next Page**\n" if 2 <= $self->{_debug};
      my $URL = $1;
      $self->{'_next_to_retrieve'} = $1; 
@@ -232,3 +252,7 @@ sub native_retrieve_some
         return $hits_found;
      } # native_retrieve_some
 1;
+
+
+
+

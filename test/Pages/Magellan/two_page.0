@@ -19,20 +19,17 @@
   <FORM ACTION="/search.gw" METHOD=get>
    <TR>
     <TD ALIGN=left VALIGN=top COLSPAN=3 NOWRAP>
-     <INPUT NAME=search VALUE="+ISI +division" SIZE=30>
+     <INPUT NAME=search VALUE="charmeleon" SIZE=30>
      <INPUT TYPE=IMAGE SRC="/img/magellan/searchbut.gif" BORDER=0 ALIGN="top" VALUE="Search Magellan" WIDTH=67 HEIGHT=30>
     </TD>
    </TR>
 
    <TR>
     <TD ALIGN=left NOWRAP>
-     <INPUT TYPE=radio NAME=c VALUE=web  CHECKED>     <FONT SIZE="-1">The Entire Web</FONT>
      <INPUT TYPE=hidden NAME=look VALUE=magellan>
     </TD>
     <TD WIDTH=3 ROWSPAN=2></TD>
     <TD ALIGN=left>
-     <INPUT TYPE=radio NAME=c VALUE=web.green >     <FONT SIZE="-1" COLOR=#008C05>Green Light</FONT>
-     <FONT SIZE="-1"> sites only</FONT>
     </TD>
    </TR>
 
@@ -56,15 +53,58 @@
 
  <CENTER>
       <!-- Ad Start -->
-<!-- Ad param svcpage=/search.gw keyword=isi+division svccobrand=magellan svcname=xsr ip=147.81.3.197 user_agent=WWW::Search/2.03 -->
-<a href="http://www.excite.com/relocate/ad=90760_casinosunrise050799_suncopy.gif|pk=2683256;http://www.casino-sunrise.com/cgi-bin/englsun.pl?301550" onMouseOver="window.status='Click Here !';return true" language="Javascript"><img src="http://image.eimg.com/ads/90760_casinosunrise050799_suncopy.gif" ALT="Click Here !" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> Click Here ! </B></FONT></CENTER></a>
+<!-- Ad param svcpage=/search.gw keyword=charmeleon svccobrand=magellan svcname=xsr ip=147.81.3.197 user_agent=WWW::Search/2.04 -->
+
+<form action="http://www.excite.com/relocate/ad=106963_htmlad.gif|pk=3276033;http://209.185.164.201/dump" method="get">
+<INPUT TYPE=HIDDEN NAME="_adid" VALUE="fitness_quiz">
+<INPUT TYPE=HIDDEN NAME="_conid" VALUE="excite_lifestyle_family">
+<INPUT TYPE=HIDDEN NAME="_java" VALUE="T">
+<INPUT TYPE=HIDDEN NAME="_data" VALUE="Y">
+<INPUT TYPE=HIDDEN NAME="_transnum" VALUE="1">
+<INPUT TYPE=HIDDEN NAME="_page"
+VALUE="http://onhealth.com/ch1/redir/adredir.asp">
+<input type="hidden" name="quiz" value="muscle">
+<TABLE BORDER=1 CELLPADDING=0 CELLSPACING=0 WIDTH=468 HEIGHT=60><TR><TD>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td colspan="2" valign="middle" width="468" height="26"><a href="http://www.excite.com/relocate/ad=106963_htmlad.gif|pk=3276033;http://209.185.164.201/dump?_adid=fitness_quiz&_conid=excite_lifestyle_family&_java=T&_page=http://onhealth.com"><img
+src="http://image.eimg.com/ads/106963_oh28aa.gif" width=468 height=26 border=0 alt="[ o n h e a l t h ]"
+align="middle"></a></td>
+</tr>
+<tr>
+<td valign="left" width="234" height="34"><a href="http://www.excite.com/relocate/ad=106963_htmlad.gif|pk=3276033;http://209.185.164.201/dump?_adid=fitness_quiz&_conid=excite_lifestyle_family&_java=T&_page=http://onhealth.com"><img
+src="http://image.eimg.com/ads/106963_oh28b.gif" width=234 height=34 border=0 alt="[ o n h e a l t h ]"
+align="middle"></a></td>
+<td bgcolor="#993300" align="middle" height="34"
+width="234"><font color="#FFFFFF" face="arial,helvetica"
+size="1">Sex:<input type="radio" name="optSex" value="M">M<input
+type="radio" name="optSex" value="F">F</font>
+<font color="#FFFFFF" size="2">Age:</font><input type="text" name="txtAge"
+size="3">
+<input type="submit" value="Submit">
+<iframe align=right width=2 height=1 marginwidth=0 marginheight=0 hspace=0
+vspace=0 border=0 frameborder=0
+framespacing=0 scrolling=no
+src="http://209.185.164.201/servlet/filedump/empty.html?_adid=fitness_quiz&_conid=excite_lifestyle_family&_java=I">
+</iframe>
+<img align=right src="http://209.185.164.201/servlet/filedump/trans.gif?_adid=fitness_quiz&_conid=excite_lifestyle_family&_java=N4"
+border=0 width=1 height=1>
+ </td>
+</tr>
+</table>
+</TD></TR></TABLE><A HREF="http://www.excite.com/relocate/ad=106963_htmlad.gif|pk=3276033;http://www.excite.com"></A><CENTER><FONT
+SIZE=-1 COLOR=#0000FF FACE=arial, geneva><B>Click Here!</B></FONT></CENTER>
+</form>
+
+          
+
 <!-- Ad Stop -->
 
    </CENTER>
 
 <BLOCKQUOTE>
 
-<B>140</B> results returned, ranked by relevance.
+<B>15</B> results returned, ranked by relevance.
 
 <!-- IF statement for Green Light text -->
 
@@ -73,7 +113,7 @@
 
 
 <FORM ACTION="/search.gw" METHOD=get>
-    <INPUT TYPE=hidden NAME=search VALUE="+ISI +division">
+    <INPUT TYPE=hidden NAME=search VALUE="charmeleon">
     <INPUT TYPE=hidden NAME=look VALUE=magellan>
           <INPUT TYPE=hidden NAME=start VALUE=0>
     <INPUT TYPE=hidden NAME=collection VALUE=web>
@@ -81,91 +121,91 @@
 <!--search results-->
 
    <HR>
-  <B><A HREF="http://www.isi.norgren.com/">ISI Norgren - automotive division </A></B>&nbsp;&nbsp;&nbsp;
-  <B>67%</B>&nbsp;&nbsp;&nbsp;
-  <A HREF="/search.gw?lk=magellan&c=web&qbe=812803&ctag=37AE6922&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
-      This page is designed to be viewed by a browser which supports Frames.  This text will be shown by browsers which do not support the Frames extension.   
-    <BR>
-  <I> <A HREF="http://www.isi.norgren.com/">http://www.isi.norgren.com/</A></I>
-  <BR>
-   <HR>
-  <B><A HREF="http://www.procite.com/welcome.html">ProCite and Reference Manager and Reference Web Poster, Bibliographic ...</A></B>&nbsp;&nbsp;&nbsp;
-  <B>62%</B>&nbsp;&nbsp;&nbsp;
-  <A HREF="/search.gw?lk=magellan&c=web&qbe=1182452&ctag=37AE6922&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
-      Collect references from online and Web databases Organize your personal reference collection easily Create bibliographies in one step Share references on a network or on the Internet  
-    <BR>
-  <I> <A HREF="http://www.procite.com/welcome.html">http://www.procite.com/welcome.html</A></I>
-  <BR>
-   <HR>
-  <B><A HREF="http://www.kfa-juelich.de/isi/isi_e.html">Institute for Thin Film and Ion Technology</A></B>&nbsp;&nbsp;&nbsp;
-  <B>61%</B>&nbsp;&nbsp;&nbsp;
-  <A HREF="/search.gw?lk=magellan&c=web&qbe=1920695&ctag=37AE6922&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
-      Interna (For members of the center only)  Member of the Hermann von Helmholtz Association of National Research Centres (HGF)  deutsch/ english  Oscillator of a Josephson junction array coupled to a Josephson mixer   
-    <BR>
-  <I> <A HREF="http://www.kfa-juelich.de/isi/isi_e.html">http://www.kfa-juelich.de/isi/isi_e.html</A></I>
-  <BR>
-   <HR>
-  <B><A HREF="http://www.ast.cam.ac.uk/~ioalib/otherlit.html">Institute of Astronomy</A></B>&nbsp;&nbsp;&nbsp;
-  <B>59%</B>&nbsp;&nbsp;&nbsp;
-  <A HREF="/search.gw?lk=magellan&c=web&qbe=829069&ctag=37AE6922&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
-      BIDS ISI Science Citation Index.  Coverage 4,500 journals in all scientific subjects, 1981 to date (abstracts from 1991).  This service requires a password.   
-    <BR>
-  <I> <A HREF="http://www.ast.cam.ac.uk/~ioalib/otherlit.html">http://www.ast.cam.ac.uk/~ioalib/otherlit.html</A></I>
-  <BR>
-   <HR>
-  <B><A HREF="http://www.isibrno.cz/~hanca/index.html">Homepage Hana Kucharova, ISI Brno</A></B>&nbsp;&nbsp;&nbsp;
-  <B>59%</B>&nbsp;&nbsp;&nbsp;
-  <A HREF="/search.gw?lk=magellan&c=web&qbe=787270&ctag=37AE6922&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
-      born in Boskovice, Czech Republic, in 1971  Ing. degree in Electrotechnical Engineering (Electrotechnology), Technical University Brno, 1994 PhD student at Technical University Brno, Faculty of Electrotechnical Engineering and Computer Science external PhD student at the Institute of Scientific Instruments, Acad. of Sc.   
-    <BR>
-  <I> <A HREF="http://www.isibrno.cz/~hanca/index.html">http://www.isibrno.cz/~hanca/index.html</A></I>
-  <BR>
-   <HR>
-  <B><A HREF="http://www.hscc.net/">Home</A></B>&nbsp;&nbsp;&nbsp;
-  <B>56%</B>&nbsp;&nbsp;&nbsp;
-  <A HREF="/search.gw?lk=magellan&c=web&qbe=394616&ctag=37AE6922&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
-      High Speed Connectivity Consortium Capable of gigabit end user connections  Using end-to-end optical fiber connections Or mostly fiber-only connections   
-    <BR>
-  <I> <A HREF="http://www.hscc.net/">http://www.hscc.net/</A></I>
-  <BR>
-   <HR>
-  <B><A HREF="http://www.isi-bltv.co.uk/ricochet/services.htm">Services</A></B>&nbsp;&nbsp;&nbsp;
-  <B>56%</B>&nbsp;&nbsp;&nbsp;
-  <A HREF="/search.gw?lk=magellan&c=web&qbe=606353&ctag=37AE6922&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
-      Established for over 10 years, the Ricochet Group opened up its first operation in the heart of Slough.  Since then we have undergone rapid expansion in order to attain our goal of developing an extensive network of offices throughout the UK mainland.  
-    <BR>
-  <I> <A HREF="http://www.isi-bltv.co.uk/ricochet/services.htm">http://www.isi-bltv.co.uk/ricochet/services.htm</A></I>
-  <BR>
-   <HR>
-  <B><A HREF="http://www.isibrno.cz/~malczyk/index.html">Homepage Roman Malczyk, ISI Brno</A></B>&nbsp;&nbsp;&nbsp;
-  <B>55%</B>&nbsp;&nbsp;&nbsp;
-  <A HREF="/search.gw?lk=magellan&c=web&qbe=54196&ctag=37AE6922&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
-      born on April 27, 1972, in Karvina, Czech Republic  Ing. degree with distinction and the Rector's Award in Electrotechnical Engineering (Cybernetics, Biocybernetics), Technical University Brno, 1995   
-    <BR>
-  <I> <A HREF="http://www.isibrno.cz/~malczyk/index.html">http://www.isibrno.cz/~malczyk/index.html</A></I>
-  <BR>
-   <HR>
-  <B><A HREF="http://inform.bnl.gov/RESLIB/reslib.html">Research Library at BNL</A></B>&nbsp;&nbsp;&nbsp;
-  <B>55%</B>&nbsp;&nbsp;&nbsp;
-  <A HREF="/search.gw?lk=magellan&c=web&qbe=1458549&ctag=37AE6922&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
-      Welcome to the Research Library at Brookhaven National Laboratory Information Services Division - Brookhaven National Laboratory  Research Library  (See also: Inform System)   
-    <BR>
-  <I> <A HREF="http://inform.bnl.gov/RESLIB/reslib.html">http://inform.bnl.gov/RESLIB/reslib.html</A></I>
-  <BR>
-   <HR>
-  <B><A HREF="http://www.hindustantimes.com/">The Hindustan Times</A></B>&nbsp;&nbsp;&nbsp;
+  <B><A HREF="http://members.delphi.com/gogostop/index.html">Pokemon Online</A></B>&nbsp;&nbsp;&nbsp;
   <B>54%</B>&nbsp;&nbsp;&nbsp;
-  <A HREF="/search.gw?lk=magellan&c=web&qbe=1259084&ctag=37AE6922&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
-      FRONT PAGE  GOURMET FARE  TODAY'S POLL  HT INVESTOR  "CALL INDIA FROM US: 39 CENTS/MIN"  ABOUT US  An injured soldier being airlifted from Ghumri  Pak backtracks, links pullout to Siachen Backtracking from its commitment to US President Bill Clinton, Pakistan has made it conditional that infiltrators would withdraw from Kargil only if India agreed to vacate the areas, including Siachen.   
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=266442&ctag=37C72505&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+      Pokemon Online Hey, About me and my site Hi, My name is Travis and I love pokemon.  My web site will get better and better as I go along.  I'm just learning but pretty soon I will add more to my site.   
     <BR>
-  <I> <A HREF="http://www.hindustantimes.com/">http://www.hindustantimes.com/</A></I>
+  <I> <A HREF="http://members.delphi.com/gogostop/index.html">http://members.delphi.com/gogostop/index.html</A></I>
+  <BR>
+   <HR>
+  <B><A HREF="http://members.tripod.com/charizardpkm/toys.html">Untitled</A></B>&nbsp;&nbsp;&nbsp;
+  <B>49%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=562424&ctag=37C72505&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+      Toys This section will soon include instructions on how to make many Pokemon out of clay.  This picture just in.  I think it is a picture of some of the new Pokemon figures that will be released soon.   
+    <BR>
+  <I> <A HREF="http://members.tripod.com/charizardpkm/toys.html">http://members.tripod.com/charizardpkm/toys.html</A></I>
+  <BR>
+   <HR>
+  <B><A HREF="http://www.pokemon.com/pokedex/index.html">Pok&eacute;mon World - Pok&eacute;dex</A></B>&nbsp;&nbsp;&nbsp;
+  <B>48%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=647558&ctag=37C72505&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+      The Pok&eacute;mon Encyclopedia will tell you everything you need to know about them: their powers, their evolution, who they can beat in a duel...and who to watch out for!   
+    <BR>
+  <I> <A HREF="http://www.pokemon.com/pokedex/index.html">http://www.pokemon.com/pokedex/index.html</A></I>
+  <BR>
+   <HR>
+  <B><A HREF="http://www.maxpages.com/4gamesharkS">Cheats -- gameshark codes -- http://www.maxpages.com/4gamesharks/Home</A></B>&nbsp;&nbsp;&nbsp;
+  <B>47%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=801013&ctag=37C72505&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+      Cheats, gameshark codes  
+    <BR>
+  <I> <A HREF="http://www.maxpages.com/4gamesharkS">http://www.maxpages.com/4gamesharkS</A></I>
+  <BR>
+   <HR>
+  <B><A HREF="http://people.mw.mediaone.net/mwardynski/charmander.htm">charmander.htm</A></B>&nbsp;&nbsp;&nbsp;
+  <B>46%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=302270&ctag=37C72505&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+      Type 1: Fire  Weight: 19 lb.  Evolution: Charmeleon at lv. 16, Charizard at lv. 36  Attack Type  -- Scratch -- Growl lv.9- Ember lv.15- Leer lv.22- Rage  
+    <BR>
+  <I> <A HREF="http://people.mw.mediaone.net/mwardynski/charmander.htm">http://people.mw.mediaone.net/mwardynski/charmander.htm</A></I>
+  <BR>
+   <HR>
+  <B><A HREF="http://www.angelfire.com/pa2/joespkmn/index.html">Joe's Poke'mon Page</A></B>&nbsp;&nbsp;&nbsp;
+  <B>45%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=319309&ctag=37C72505&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+      Welcome to my home page.  In my guest book, write what your favorite Poke'mon is in the comments box and what level it is on your game.  So far I have 132 Poke'mon.   
+    <BR>
+  <I> <A HREF="http://www.angelfire.com/pa2/joespkmn/index.html">http://www.angelfire.com/pa2/joespkmn/index.html</A></I>
+  <BR>
+   <HR>
+  <B><A HREF="http://www.angelfire.com/nm/mypokemonhomepage/">My Pokemo Page</A></B>&nbsp;&nbsp;&nbsp;
+  <B>40%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=318942&ctag=37C72505&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+      Other pokemon pages  It is my recomedation not to use gameshark (or game geine) since it can scruw up your game, but here are codes if you chosse.  GameShark Code Table   
+    <BR>
+  <I> <A HREF="http://www.angelfire.com/nm/mypokemonhomepage/">http://www.angelfire.com/nm/mypokemonhomepage/</A></I>
+  <BR>
+   <HR>
+  <B><A HREF="http://members.tripod.com/~Riyachu/Pokeraplyrics.html">Poke Rap</A></B>&nbsp;&nbsp;&nbsp;
+  <B>40%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=1463689&ctag=37C72505&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+      My Club Members' Pokémon Owned - Please e-mail me if your name(id) isn't there!  Pokérap!  Pokémon!  Okay guys, we're gonna do some rappin'!  You just do the singing...   
+    <BR>
+  <I> <A HREF="http://members.tripod.com/~Riyachu/Pokeraplyrics.html">http://members.tripod.com/~Riyachu/Pokeraplyrics.html</A></I>
+  <BR>
+   <HR>
+  <B><A HREF="http://www.freeyellow.com/members3/gamogroup/">Poké Lyrics!</A></B>&nbsp;&nbsp;&nbsp;
+  <B>33%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=1735579&ctag=37C72505&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+      Yes that's right, I am a Pokémon Trainer!  And this is the best Web Page for Pokémon Lyrics!  HOT LINKS  You Are Visitor Poké Lyrics!  Poké Forest  Pokémon Home Page   
+    <BR>
+  <I> <A HREF="http://www.freeyellow.com/members3/gamogroup/">http://www.freeyellow.com/members3/gamogroup/</A></I>
+  <BR>
+   <HR>
+  <B><A HREF="http://gamesdomain.iol.ie/faqdir/pokemon_stadium_2.txt">Untitled</A></B>&nbsp;&nbsp;&nbsp;
+  <B>32%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=367826&ctag=37C72505&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+      Pokemon Stadium 2 FAQ --------------------- Copyright 1999 Paul Springer oddish@iname.com ICQ # 306806 This FAQ may not be copied or distrbuted in any form without the written consent of or credit to it's owner.   
+    <BR>
+  <I> <A HREF="http://gamesdomain.iol.ie/faqdir/pokemon_stadium_2.txt">http://gamesdomain.iol.ie/faqdir/pokemon_stadium_2.txt</A></I>
   <BR>
  <HR>
 </FORM>
 
 <FORM ACTION="/search.gw" METHOD=get>
              <INPUT TYPE=submit NAME=next VALUE="Next Results">
-       <INPUT TYPE=hidden NAME=search VALUE="+ISI +division">
+       <INPUT TYPE=hidden NAME=search VALUE="charmeleon">
     <INPUT TYPE=hidden NAME=look VALUE=magellan>
        <INPUT TYPE=hidden NAME=start VALUE=0>
     <INPUT TYPE=hidden NAME=collection VALUE=web>
@@ -173,8 +213,9 @@
 
 
 Try your search on:&nbsp;
-  <A HREF="http://www.excite.com/search.gw?s=%2Bisi+%2Bdivision"><B>Excite</B></A>
-
+  <A HREF="http://www.excite.com/search.gw?s=charmeleon"><B>Excite</B></A>
+    or <A HREF="http://webcrawler.com/cgi-bin/WebQuery?text=charmeleon&src=exciterecip"><B>Webcrawler</B></A><P>
+   
 
 </BLOCKQUOTE>
 <CENTER>
@@ -182,7 +223,50 @@ Try your search on:&nbsp;
 <P><CENTER>
 
       <!-- Ad Start -->
-<a href="http://www.excite.com/relocate/ad=90760_casinosunrise050799_suncopy.gif|pk=2683256;http://www.casino-sunrise.com/cgi-bin/englsun.pl?301550" onMouseOver="window.status='Click Here !';return true" language="Javascript"><img src="http://image.eimg.com/ads/90760_casinosunrise050799_suncopy.gif" ALT="Click Here !" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> Click Here ! </B></FONT></CENTER></a>
+
+<form action="http://www.excite.com/relocate/ad=106963_htmlad.gif|pk=3276033;http://209.185.164.201/dump" method="get">
+<INPUT TYPE=HIDDEN NAME="_adid" VALUE="fitness_quiz">
+<INPUT TYPE=HIDDEN NAME="_conid" VALUE="excite_lifestyle_family">
+<INPUT TYPE=HIDDEN NAME="_java" VALUE="T">
+<INPUT TYPE=HIDDEN NAME="_data" VALUE="Y">
+<INPUT TYPE=HIDDEN NAME="_transnum" VALUE="1">
+<INPUT TYPE=HIDDEN NAME="_page"
+VALUE="http://onhealth.com/ch1/redir/adredir.asp">
+<input type="hidden" name="quiz" value="muscle">
+<TABLE BORDER=1 CELLPADDING=0 CELLSPACING=0 WIDTH=468 HEIGHT=60><TR><TD>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td colspan="2" valign="middle" width="468" height="26"><a href="http://www.excite.com/relocate/ad=106963_htmlad.gif|pk=3276033;http://209.185.164.201/dump?_adid=fitness_quiz&_conid=excite_lifestyle_family&_java=T&_page=http://onhealth.com"><img
+src="http://image.eimg.com/ads/106963_oh28aa.gif" width=468 height=26 border=0 alt="[ o n h e a l t h ]"
+align="middle"></a></td>
+</tr>
+<tr>
+<td valign="left" width="234" height="34"><a href="http://www.excite.com/relocate/ad=106963_htmlad.gif|pk=3276033;http://209.185.164.201/dump?_adid=fitness_quiz&_conid=excite_lifestyle_family&_java=T&_page=http://onhealth.com"><img
+src="http://image.eimg.com/ads/106963_oh28b.gif" width=234 height=34 border=0 alt="[ o n h e a l t h ]"
+align="middle"></a></td>
+<td bgcolor="#993300" align="middle" height="34"
+width="234"><font color="#FFFFFF" face="arial,helvetica"
+size="1">Sex:<input type="radio" name="optSex" value="M">M<input
+type="radio" name="optSex" value="F">F</font>
+<font color="#FFFFFF" size="2">Age:</font><input type="text" name="txtAge"
+size="3">
+<input type="submit" value="Submit">
+<iframe align=right width=2 height=1 marginwidth=0 marginheight=0 hspace=0
+vspace=0 border=0 frameborder=0
+framespacing=0 scrolling=no
+src="http://209.185.164.201/servlet/filedump/empty.html?_adid=fitness_quiz&_conid=excite_lifestyle_family&_java=I">
+</iframe>
+<img align=right src="http://209.185.164.201/servlet/filedump/trans.gif?_adid=fitness_quiz&_conid=excite_lifestyle_family&_java=N4"
+border=0 width=1 height=1>
+ </td>
+</tr>
+</table>
+</TD></TR></TABLE><A HREF="http://www.excite.com/relocate/ad=106963_htmlad.gif|pk=3276033;http://www.excite.com"></A><CENTER><FONT
+SIZE=-1 COLOR=#0000FF FACE=arial, geneva><B>Click Here!</B></FONT></CENTER>
+</form>
+
+          
+
 <!-- Ad Stop -->
 
   
@@ -192,21 +276,16 @@ Try your search on:&nbsp;
  <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=2>
   <TR>
    <TD ALIGN=left VALIGN=top COLSPAN=3 NOWRAP>
-    <INPUT NAME=search VALUE="+ISI +division" SIZE=30>
+    <INPUT NAME=search VALUE="charmeleon" SIZE=30>
     <INPUT TYPE=IMAGE SRC="/img/magellan/searchbut.gif" BORDER=0 ALIGN="top" VALUE="Search Magellan" WIDTH=67 HEIGHT=30>
    </TD>
   </TR>
   <TR>
    <TD ALIGN=left>
-    <INPUT TYPE=radio NAME=c VALUE=web
-     CHECKED> 
-    <FONT SIZE="-1">The Entire Web</FONT>    <INPUT TYPE=hidden NAME=look VALUE=magellan>
+    <INPUT TYPE=hidden NAME=look VALUE=magellan>
    </TD>
    <TD WIDTH=3 ROWSPAN=2></TD>
    <TD ALIGN=left>
-    <INPUT TYPE=radio NAME=c VALUE=web.green
-    >    <FONT SIZE="-1" COLOR=#008C05>Green Light</FONT>
-    <FONT SIZE="-1"> sites only</FONT>
    </TD>
   </TR>
   <TR>

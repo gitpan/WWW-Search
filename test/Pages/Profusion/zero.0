@@ -249,13 +249,21 @@ document.write ('<A HREF=\"' + clickurl + '@Top\">');document.write ('<IMG SRC=\
 </td></tr>
 <tr><td nowrap>
 <font face="arial" size="-1" >
-<img name=T1 src="/images/probul.gif" width="7" height="11"><a href="http://entertainment.profusion.com/" onmouseout="ArrowOff('T1')" onmouseover="ArrowOn('T1')">Entertainment</a><br>
-<img name=T2 src="/images/probul.gif" width="7" height="11"><a href="http://health.profusion.com/" onmouseout="ArrowOff('T2')" onmouseover="ArrowOn('T2')">Health</a><br>
-<img name=T3 src="/images/probul.gif" width="7" height="11"><a href="http://kidfusion.profusion.com/" onmouseout="ArrowOff('T3')" onmouseover="ArrowOn('T3')">KidFusion</a><br>
-<img name=T4 src="/images/probul.gif" width="7" height="11"><a href="http://mp3.profusion.com/" onmouseout="ArrowOff('T4')" onmouseover="ArrowOn('T4')">MP3</a><br>
-<img name=T5 src="/images/probul.gif" width="7" height="11"><a href="http://sports.profusion.com/" onmouseout="ArrowOff('T5')" onmouseover="ArrowOn('T5')">Sports</a><br>
-<img name=T6 src="/images/probul.gif" width="7" height="11"><a href="http://usenet.profusion.com/" onmouseout="ArrowOff('T6')" onmouseover="ArrowOn('T6')">Usenet</a>
+<img name=T1 src="/images/probul.gif" width="7" height="11"><a href="http://www.profusion.com/entertainment.html" onmouseout="ArrowOff('T1')" onmouseover="ArrowOn('T1')">Entertainment</a><br>
+<img name=T2 src="/images/probul.gif" width="7" height="11"><a href="http://www.profusion.com/health.html" onmouseout="ArrowOff('T2')" onmouseover="ArrowOn('T2')">Health</a><br>
+<img name=T3 src="/images/probul.gif" width="7" height="11"><a href="http://www.profusion.com/kidfusion.html" onmouseout="ArrowOff('T3')" onmouseover="ArrowOn('T3')">KidFusion</a><br>
+<img name=T4 src="/images/probul.gif" width="7" height="11"><a href="http://www.profusion.com/mp3.html" onmouseout="ArrowOff('T4')" onmouseover="ArrowOn('T4')">MP3</a><br>
+<img name=T5 src="/images/probul.gif" width="7" height="11"><a href="http://www.profusion.com/sports.html" onmouseout="ArrowOff('T5')" onmouseover="ArrowOn('T5')">Sports</a><br>
+<img name=T6 src="/images/probul.gif" width="7" height="11"><a href="http://www.profusion.com/usenet.html" onmouseout="ArrowOff('T6')" onmouseover="ArrowOn('T6')">Usenet</a>
 <br><br></td></tr>
+</font>
+   <tr>
+      <td bgcolor="#d9c698" align="center" valign="middle" nowrap><a href="/about/personalize.html"><font color="#000066" face="arial"><b>Personalize</b></font></a>
+</td></tr>
+<tr><td nowrap>
+<font face="arial" size="-1">
+      <img name=P1 src="/images/probul.gif" width="7" height="11"><a href="/custom/login.html" onmouseout="ArrowOff('P1')" onmouseover="ArrowOn('P1')">My ProFusion</a>
+   <br><br></td></tr>
 </font>
 <tr><td bgcolor="#d9c698" align="center" valign="middle" nowrap><a href="/about/guides.html"><font color="#000066" face="arial"><b>Guides</b></font></a>
 </td></tr>
@@ -276,7 +284,9 @@ document.write ('<A HREF=\"' + clickurl + '@Top\">');document.write ('<IMG SRC=\
 <img name=S3 src="/images/probul.gif" width="7" height="11"><a href="/users/newsfuse.html" onmouseout="ArrowOff('S3')" onmouseover="ArrowOn('S3')">Subscribe</a><br>
 <img name=S4 src="/images/probul.gif" width="7" height="11"><a href="/users/feedback.html" onmouseout="ArrowOff('S4')" onmouseover="ArrowOn('S4')">User Feedback</a><br>
 <img name=S5 src="/images/probul.gif" width="7" height="11"><a href="/users/usersurvey.html" onmouseout="ArrowOff('S5')" onmouseover="ArrowOn('S5')">User Survey</a><br>
-<img name=S6 src="/images/probul.gif" width="7" height="11"><a href="/webmasters/add.html" onmouseout="ArrowOff('S6')" onmouseover="ArrowOn('S6')">Link To Us</a>
+<img name=S6 src="/images/probul.gif" width="7" height="11"><a href="/webmasters/add.html" onmouseout="ArrowOff('S6')" onmouseover="ArrowOn('S6')">Link To Us</a><br>
+<img name=S7 src="/images/probul.gif" width="7" height="11"><a href="/users/sitesee.html" onmouseout="ArrowOff('S7')" onmouseover="ArrowOn('S7')">Add Your URL</a>
+
 </font><br>
 </td></tr></table>
 <img src="/images/pix.gif" width="150" height="1"></td>

@@ -3,14 +3,12 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.03?  (1999-qqq)
+WHAT IS NEW IN WWW::Search 2.04?  (1999-09-30)
 ----------------------------------------------
 overview:
- * Bug fixes for some backends (as usual)
- * WebSearch and AutoSearch have new options --host and --port for
-   AltaVista::Intranet (and any future modules that might need them)
- * WebSearch and AutoSearch correctly handle multiple options with the
-   same key (e.g. -options key=val1 -options key=val2)
+ * Bug fixes for several backends (as usual)
+ * NEW backends: GoTo, Deja, NetFind, Lycos::Sites, Lycos::Pages
+ * WebSearch has new/changed options: --count, --debug, --lwpdebug
 
 See the file ChangeLog for details.
 
@@ -46,7 +44,7 @@ AltaVista::News		working
 AltaVista::Web		working
 AltaVista::Intranet	working
 Crawler			partially working?
-Dejanews		working
+Deja/Dejanews		working
 Excite			working
 Excite::News		working
 ExciteForWebServers	not working
@@ -54,6 +52,7 @@ Fireball		not working?
 FolioViews		working
 Google  		working
 Gopher			not working? (not in test suite)
+GoTo                    working
 HotBot			working
 HotFiles		working
 Infoseek		working
@@ -62,12 +61,15 @@ Infoseek::Email		not working
 Infoseek::News		working
 Infoseek::Web		working
 Livelink		not working? (not in test suite)
-LookSmart		working
+LookSmart		working? (not in test suite)
 Lycos			working
+Lycos::Pages		working
+Lycos::Sites		working
 Magellan		working
 Metacrawler             not working
-Metapedia		not working
+Metapedia		working? (not in test suite)
 MSIndexServer		not working?
+NetFind                 working
 NorthernLight		working
 Null			working
 OpenDirectory           working
@@ -110,12 +112,12 @@ Perl5, see <http://www.perl.com>.  For all the modules, see
 <http://www.perl.com/CPAN/> to find a CPAN site near you.
 
 At the time of this release, the primary WWW::Search development and
-testing is under perl version 5.005_03 on Sun Sparc Solaris 7 and
+testing is under perl version 5.005_03 on Sun UltraSparc Solaris 7 and
 under ActiveState perl build 519 on Windows NT 4.0 with service pack
 5.
 
-WWW::Search has also been built and tested successfully on Win98J with
-ActiveState perl build 517.
+WWW::Search has also been built and tested successfully on Win98J
+(that's Japanese) with ActiveState perl build 517.
 
 If you have successfully built and tested WWW::Search on any other
 (obscure) platform / version combination, please let me know!
@@ -137,13 +139,15 @@ In order to use this package you will need Perl version 5.002 or
 better.  
 
 It is hightly recommended that you use CPAN.pm to install WWW::Search.
-On a unix system, just type 
+It will automatically install all the prerequisite modules and put
+everything in the right places.  On a unix system, just type
 
    perl -MCPAN -e 'install WWW::Search'.
 
-Otherwise, You can install WWW::Search as you would any perl module
-library, by running these commands in the WWW-Search-2.03 directory
-after unpacking the archive:
+Otherwise, you can install WWW::Search as you would any perl module
+library, by running these commands in the WWW-Search-2.04 directory
+after unpacking the archive (and after installing all the prerequisite
+modules):
 
     perl Makefile.PL
     make
@@ -153,7 +157,7 @@ after unpacking the archive:
 On Win32, maintenance and testing is done with Microsoft's nmake.exe;
 use 'nmake' instead of 'make' in the above sequence of commands.
 
-See below for a description of what "make test" does.
+See "TESTING" below for a description of what "make test" does.
 
 If you want to install a private copy of WWW::Search in your home
 directory, then you should produce the initial Makefile with something
@@ -161,7 +165,8 @@ like this command:
 
     perl Makefile.PL PREFIX=/my/perl/lib
 
-Don't forget to add /my/perl/lib to your PERL5LIB environment variable!
+Don't forget to add /my/perl/lib to your PERL5LIB environment variable
+(or 'use lib' it, or unshift it onto @INC)!
 
 
 TESTING
@@ -182,14 +187,16 @@ actual output.  It detects two kinds of errors:
 
 External queries can fail for several reasons:
 
-- new pages have been added which match the test queries
-	(not a bad thing)
+- new pages have been added which match the test queries, or matching
+  pages have been deleted, causing the page count to go too far out of
+  whack from the expected number (not necessarily a bad thing)
 
 - changes in the web search engine output which break WWW::Search's
-	parsers (a bad thing)
+  parsers, usually resulting in no URLs being returned (a bad thing)
 
 If the external tests fail, please either investigate the error or
-send a description of the problem and the output of "make test" to the
+send a description of the problem, a list of your operating system and
+all relevant perl version number, and the output of "make test" to the
 maintainer of the back-end for the search engine that fails.
 
 
@@ -199,10 +206,15 @@ DISCUSSION, BUG REPORTS, AND IMPROVEMENTS
 Feedback about WWW::Search is encouraged.  If you're using it for a
 neat application, please let us know.  If you'd like to (or have)
 implemented a new back-end for WWW::Search, let us know so we don't
-duplicate work.
+duplicate work.  <MartinThurn@iname.com>
 
-A mailing list for WWW::Search discussion exists.  To subscribe, send
-"subscribe info-www-search" as the body of a message to
+Feedback, bug reports, fixes, and new back-ends should be sent to
+Martin Thurn <MartinThurn@iname.com>.  When sending e-mail, please
+please put [WWW::Search] at the beginning of the subject line (or risk
+me losing the message in the pile).
+
+There is a mailing list for WWW::Search discussion.  To subscribe,
+send "subscribe info-www-search" as the body of a message to
 <info-www-search-request@isi.edu>.
 
 Back-end-related bug reports ("search engine ABC doesn't work") should
@@ -242,19 +254,21 @@ or, if you are on Win32:
 	AutoSearch -n me_on_the_web -s "\"Your Name Here\"" me
 
 and the web page /path/to/your/web/pages/me/index.html will be created
-summarizing this information.  Then if you are on UNIX you can add
+summarizing this information.  If you are on UNIX you can add
 
 	0 3 * * 1 AutoSearch /path/to/your/web/pages/me
 
-to your crontab(1) to update this search every week at 3:00 Monday
-morning.
+to your crontab to update this search every week at 3:00 Monday
+morning, for example.
 
 
 DOCUMENTATION
 -------------
 
-See `perldoc WWW::Search` for an overview of the library.  POD-style
-documentation is also included in all modules and scripts.
+See `perldoc WWW::Search` after installation for an overview of the
+library.  POD-style documentation is also included in all modules and
+scripts, so you can do `perldoc WebSearch` and `perldoc AutoSearch`
+and `perldoc WWW::Search::HotBot` after installation.
 
 
 FUTURE PLANS
@@ -266,22 +280,26 @@ Some ideas:
 search as the engine's web GUI (I'm looking for contributions of the
 precise arguments that will produce such a search for each engine;
 i.e. the hash that should be passed as the second argument to
-native_query)
+native_query).  Contact <MartinThurn@iname.com>
 
   - application-level proxy support (I'm looking for a contribution
-here from someone who uses/needs proxy support and can test it)
+here from someone who uses/needs proxy support and can test it).
+Contact <MartinThurn@iname.com>
 
   - use LWP::ParallelUA to speed up multiple backend search requests
+(I'm trying to decide what the API interface will look like; please
+send suggestions).  Contact <MartinThurn@iname.com>
 
-  - more widespread use of new results tags across all back-ends
+  - more widespread use of new result tags across all back-ends
+(i.e. description, date, size, etc.)
 
   - a freeze/restore interface to suspend and resume in-progress queries
 
   - more back-ends
 
-Contributions from others are always welcome.  Send me e-mail if you
-plan a new back-end and to discuss architectural changes (to avoid
-duplicating work).
+Contributions are always welcome.  Send me e-mail if you plan a new
+back-end and to discuss architectural changes (to avoid duplicating
+work).  Contact <MartinThurn@iname.com>
 
 
 SUPPORT AND CREDITS
@@ -289,8 +307,8 @@ SUPPORT AND CREDITS
 
 The WWW::Search architecture is by John Heidemann with feedback from
 the other contributors.  NOTE: This list is no longer updated; consult
-the on-line documentation to find out who is currently maintaining
-each component.
+the on-line documentation and/or the output of `make test` to find out
+who is currently maintaining each component.
 
 PLATFORM SUPPORT:
 	Unix			John Heidemann <johnh@isi.edu>
@@ -354,11 +372,6 @@ Bugs have reported by Joseph McDonald <joe@smartlink.net>, Juan Jose
 Amor <jjamor@infor.es>, Bowen Dwelle <bowen@hotwired.com>, Vassilis
 Papadimos <vpapad@dblab.ece.ntua.gr>, Vidyut Luther <vluther@hpctc.org>, 
 Chris P. Acantilado <cacantil@spawar.navy.mil>.
-
-Feedback, bug reports and fixes, and new back-ends should be sent to
-Martin Thurn <MartinThurn@iname.com>.  When sending e-mail, please
-please put [WWW::Search] at the beginning of the subject line (or risk
-me losing the message in the pile).
 
 
 COPYRIGHT

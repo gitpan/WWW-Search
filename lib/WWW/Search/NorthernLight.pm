@@ -3,7 +3,7 @@
 # NorthernLight.pm
 # by Jim Smyser
 # Copyright (C) 1996-1999 by Jim Smyser & USC/ISI
-# $Id: NorthernLight.pm,v 1.8 1999/07/23 13:47:45 mthurn Exp $
+# $Id: NorthernLight.pm,v 1.9 1999/09/13 12:56:07 mthurn Exp $
 
 package WWW::Search::NorthernLight;
 
@@ -82,6 +82,9 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 =head1 VERSION HISTORY
 
+2.03
+Next Page url change and weeding out a new edit search url.
+
 2.02
 Minor parsing change to get the new description line that had changed.
 
@@ -112,7 +115,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.02';
+$VERSION = '2.03';
 
 $MAINTAINER = 'Jim Smyser <jsmyser@bigfoot.com>';
 $TEST_CASES = <<"ENDTESTCASES";
@@ -134,8 +137,6 @@ sub native_setup_search {
    $self->user_agent('user');
    $self->{_next_to_retrieve} = 1;
    $self->{'_num_hits'} = 0;
-   $native_query =~ s/(\w)\053/$1\053\AND+/g;
- 
    if (!defined($self->{_options})) {
      $self->{'search_base_url'} = 'http://www.northernlight.com';
      $self->{_options} = {
@@ -153,7 +154,7 @@ sub native_setup_search {
        {
        $options_ref->{$_} = $native_options_ref->{$_};
        } # foreach
-       } # if
+     } # if
    # Process the options.
    my($options) = '';
    foreach (sort keys %$options_ref) 
@@ -165,7 +166,7 @@ sub native_setup_search {
    chop $options;
    # Finally figure out the url.
    $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
-    } # native_setup_search
+   } # native_setup_search
  
 # private
 sub native_retrieve_some
@@ -203,14 +204,14 @@ sub native_retrieve_some
        print STDERR "**Found Header Count**\n" if ($self->{_debug});
        $self->approximate_result_count($1);
        $state = $START;
-  } elsif ($state eq $START && m{<!-- result -->}i) {
+  } elsif ($state eq $START && m{<!--NLResultListStart-->}i) {
        print STDERR "Found START line\n" if 2 <= $self->{_debug};
        $state = $HITS;
   } if ($state eq $HITS && m@<td.*?><font.*?><a href="(.*?)">(.*?)</a><br>@i) {
        print STDERR "**Found Hit URL**\n" if 2 <= $self->{_debug};
        my ($URL, $Title) = ($1,$2);
-       # ignore NorthernLights own URL's.
-       if ($URL ne 'http://special.northernlight.com')
+       # ignore the Edit URL links
+    if ($Title ne 'Edit this search')
          {
      if (defined($hit)) 
          {
@@ -219,11 +220,11 @@ sub native_retrieve_some
        $hit = new WWW::SearchResult;
        $hit->add_url($URL);
        $hits_found++;
+       $Title =~ s/amp;//g;
        $hit->title($Title);
        $state = $DESC;
-       } #URL does eq
+       } #Title does eq
        # score and date is returned with the description. 
-
   } elsif ($state eq $DESC && m|<!.*?>(.*)<br>|i) {
        print STDERR "**Found Description**\n" if 2 <= $self->{_debug};
        my ($description) = ($1);
@@ -234,7 +235,7 @@ sub native_retrieve_some
        $description =~ s/\s+/ /g;
        $hit->description($description);
        $state = $HITS;
-  } elsif ($state eq $HITS && m@.*?<a href="(.*)"><img src="(.*)alt="Next Page"></a>@i) {
+  } elsif ($state eq $HITS && m@.*?<a href="(.*)"><img src=.*?alt="Next Page"></a>@i) {
        print STDERR "**Going to Next Page**\n" if 2 <= $self->{_debug};
        my $URL = $1;
        $self->{'_next_url'} = $self->{'search_base_url'} . $URL;
@@ -249,4 +250,8 @@ sub native_retrieve_some
        return $hits_found;
         } # native_retrieve_some
  1;
+
+
+
+
 

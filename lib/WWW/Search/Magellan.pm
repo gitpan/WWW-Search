@@ -1,6 +1,6 @@
 # Magellan.pm
 # Copyright (c) 1998 by Martin Thurn
-# $Id: Magellan.pm,v 1.12 1999/07/13 16:56:24 mthurn Exp $
+# $Id: Magellan.pm,v 1.13 1999/09/30 13:19:38 mthurn Exp $
 
 =head1 NAME
 
@@ -82,7 +82,7 @@ $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 $TEST_CASES = <<"ENDTESTCASES";
 &test('Magellan', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_EXACTLY);
 &test('Magellan', '$MAINTAINER', 'one_page', 'dise'.'stablishmentarianism', \$TEST_RANGE, 1,9);
-&test('Magellan', '$MAINTAINER', 'two_page', '+IS'.'I +divisi'.'on', \$TEST_GREATER_THAN, 11);
+&test('Magellan', '$MAINTAINER', 'two_page', 'cha'.'rmeleon', \$TEST_GREATER_THAN, 11);
 ENDTESTCASES
 
 use Carp ();

@@ -23,29 +23,30 @@
 <form action="/redir.dcg" method=get onChange="submit()">
 <td align=right>
 <font face="helvetica" size="-1">
-<a href="http://www.excite.com/"><b>My Excite</b></a> | <a href="http://mail.excite.com"><b>Check Email</b></a></font>&nbsp;
+<a href="http://www.excite.com/r/co=hrex;http://www.excite.com/"><b>My Excite</b></a> | <a href="http://www.excite.com/r/co=hrma;http://mail.excite.com"><b>Check Email</b></a></font>&nbsp;
 <select name="url" size="1" onChange="submit()">
-<option value=";http://www.excite.com/">Excite Home
-<option value=";http://www.excite.com/auctions/">Auctions
-<option value=";http://www.excite.com/autos/">Autos
-<option value=";http://www.excite.com/careers/">Careers
-<option value=";http://www.excite.com/local/">City Guides
-<option value=";http://www.excite.com/classifieds/">Classifieds
-<option value=";http://www.excite.com/computers_and_internet/">Computers & Internet
-<option value=";http://www.excite.com/education/">Education
-<option value=";http://www.excite.com/entertainment/">Entertainment
-<option value=";http://www.excite.com/family/">Family
-<option value=";http://www.excite.com/games/">Games
-<option value=";http://www.excite.com/health/">Health
-<option value=";http://www.excite.com/home_and_real_estate/">Home &amp; Real Estate
-<option value=";http://www.excite.com/horoscopes/">Horoscopes
-<option value=";http://www.excite.com/lifestyle/">Lifestyle
-<option value=";http://quicken.excite.com/">Money &amp; Investing
-<option value=";http://news.excite.com/">News
-<option value=";http://www.excite.com/people_and_chat/">People &amp; Chat
-<option value=";http://www.excite.com/shopping/">Shopping
-<option value=";http://sports.excite.com/">Sports
-<option value=";http://city.net/">Travel
+<option value="http://www.excite.com/">Excite Home
+<option value="http://auctions.excite.com/">Auctions
+<option value="http://www.excite.com/autos/">Autos
+<option value="http://careers.excite.com/">Careers
+<option value="http://www.excite.com/local/">City Guides
+<option value="http://classifieds.excite.com/">Classifieds
+<option value="http://www.excite.com/computers_and_internet/">Computers & Internet
+<option value="http://www.excite.com/education/">Education
+<option value="http://www.excite.com/entertainment/">Entertainment
+<option value="http://www.excite.com/family/">Family
+<option value="http://www.excite.com/games/">Games
+<option value="http://www.excite.com/health/">Health
+<option value="http://www.excite.com/home_and_real_estate/">Home &amp; Real Estate
+<option value="http://www.excite.com/horoscopes/">Horoscopes
+<option value="http://www.excite.com/lifestyle/">Lifestyle
+<option value="http://quicken.excite.com/">Money &amp; Investing
+<option value="http://news.excite.com/">News
+<option value="http://www.excite.com/people_and_chat/">People &amp; Chat
+<option value="http://www.excite.com/relationships/">Relationships
+<option value="http://www.excite.com/shopping/">Shopping
+<option value="http://www.excite.com/sports/">Sports
+<option value="http://city.net/">Travel
 </select>
 <input type="submit" value="Go!">
 </td>
@@ -167,7 +168,7 @@ hoth
 <table border=0 cellspacing=0 cellpadding=1 width=100%>
 <tr><td align=center bgcolor=ffcc00>
 <font face="helvetica" size=-1><b>
-<A HREF=http://www.excite.com/r/co=xxsr_teen_buys;http://quicken.excite.com/teens/>Top 10 Teen Buys</A> | <A HREF=http://www.excite.com/r/co=xxsr_teen_ch;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/teenchat.html>Excite Teen Chat</A> | <A HREF=http://www.excite.com/r/co=xxsr_teen_col;/education/>Find Your Ideal College</A>
+Pick your <A HREF=http://www.excite.com/relocate/co=xxsr_mchat2;/communities/chat/rooms>Chat</A>: <A HREF=http://www.excite.com/relocate/co=xxsr_mchat2;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/teenchat.html>Teen</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_mchat2;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/20ish.html>20ish</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_mchat2;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/30ish.html>30ish</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_mchat2;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/40ish.html>40ish</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_mchat2;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/peers/50plus.html>50+</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_mchat2;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/peers/christians.html>Christian</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_mchat2;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/grrls_domain.html>Grrls</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_mchat2;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/pink_triangle.html>Gay</A> | <A HREF=http://www.excite.com/relocate/co=xxsr_mchat2;/communities/chat/rooms>more</A>
 </b></font>
 </td></tr>
 </table>
@@ -177,40 +178,163 @@ hoth
 </TD>
 </TR>
 </table>
-<!-- The following html is Copyright 1997 by MatchLogic Inc. -->
-<!-- RICH=0 -->
-<IFRAME WIDTH=468 HEIGHT=60 NORESIZE SCROLLING=No FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 SRC="http://ad.preferences.com/iframe;spacedesc=ATTClick2Dial_Excite_468x60_RunOfSite_Any&ML_SSPKG=RunOfSiteSS&ML_CUSTOM=0&time=1999.08.16.20.20.33&ex_cookie=&ML_TARGET=_top&ML_REDIRECT=http%25253A%25252F%25252Fwww.excite.com%25252Frelocate%25252Fad%25253DLUCI%25257Cpk%25253D2961922%25253B">
-<SCRIPT
-SRC="http://ad.preferences.com/jscript;spacedesc=ATTClick2Dial_Excite_468x60_RunOfSite_Any&ML_SSPKG=RunOfSiteSS&ML_CUSTOM=0&ML_NIF=Y&ML_KW=chirpa+paploo+teebo&time=1999.08.16.20.20.33&ex_cookie=&ML_TARGET=_top&ML_REDIRECT=http%25253A%25252F%25252Fwww.excite.com%25252Frelocate%25252Fad%25253DLUCI%25257Cpk%25253D2961922%25253B">
-</SCRIPT>
-<NOSCRIPT>
-<A HREF="http://www.excite.com/relocate/ad=94093_htmlad.gif|pk=2961922;http://ad.preferences.com/click;spacedesc=ATTClick2Dial_Excite_468x60_RunOfSite_Any&ML_NIF=Y&time=1999.08.16.20.20.33&ex_cookie=" TARGET=_top>
-<IMG SRC="http://ad.preferences.com/image;spacedesc=ATTClick2Dial_Excite_468x60_RunOfSite_Any&ML_NIF=Y&time=1999.08.16.20.20.33&ex_cookie="></A>
-</NOSCRIPT>
-</IFRAME><CENTER><FONT SIZE=-1 COLOR=#0000FF FACE=arial, geneva><B>Click Here!</B></FONT></CENTER>
-<!-- The above html is Copyright 1997 by MatchLogic Inc.
+<form name="cigi" METHOD="get"
+ACTION="http://www.excite.com/relocate/ad=105976_htmlad.gif|pk=3225385;http://89.eterm.com/cgi-bin/cigiqtr.exe">
+<input type="hidden" name="sysId" value="CIGI">
+<input type="hidden" name="genCount" value="8">
+<input type="hidden" name="gen_7" value="FK">
+<TABLE BORDER=1 CELLPADDING=0 CELLSPACING=0 WIDTH=468 HEIGHT=60><TR><TD>
+<table border="0" width="100%" CELLPADDING="0" CELLSPACING="0"
+height="60" bgcolor="#CCCCCC">
+<tr><TD ALIGN=center VALIGN=TOP>
+<table border="0" width="100%" CELLPADDING="0" CELLSPACING="0"
+height="100%" bgcolor="#CCCCCC">
+<tr><TD ALIGN=center VALIGN=TOP COLSPAN=6>
+<input TYPE="image" SRC="http://image.eimg.com/ads/105976_image3.gif" border="0" width=450
+height=17 Value="submit">
+</td>
+</tr>
+<tr align="center" valign="bottom">
+<td align="center" valign="middle"><img src="http://image.eimg.com/ads/105976_c1999.gif"
+width="10" height="30"></td>
+<td align="center" valign="top"><font SIZE="-2"
+face="Arial,Helvetica" color="#000000">Coverage</font><br>
+<font face="Arial,Helv,Sans-Serif" size="-2">
+<select name="gen_6" size="1">
+<option value="!">Select</option>
+<option value="100,000">$100k</option>
+<option value="150,000">$150k</option>
+<option value="200,000">$200k</option>
+<option value="250,000">$250k</option>
+<option value="300,000">$300k</option>
+<option value="350,000">$350k</option>
+<option value="400,000">$400k</option>
+<option value="450,000">$450k</option>
+<option value="500,000">$500k</option>
+<option value="750,000">$750k</option>
+<option value="1,000,000">$1Mil</option>
+<option value="1,500,000">$1.5Mil</option>
+<option value="2,000,000">$2Mil</option>
+<option value="2,500,000">$2.5Mil</option>
+<option value="3,000,000">$3Mil</option>
+<option value="3,500,000">$3.5Mil</option>
+<option value="4,000,000">$4Mil</option>
+<option value="4,500,000">$4.5Mil</option>
+</select>
+</font></td>
+<td align="center" valign="top"><font SIZE="-2"
+face="Arial,Helvetica" color="#000000">State</font><br>
+<font face="Arial,Helv,Sans-Serif" size="-2">
+<select NAME="gen_4" size="1">
+<option value="AL">AL </option>
+<option value="AK">AK </option>
+<option value="AZ">AZ </option>
+<option value="AR">AR </option>
+<option value="CA">CA </option>
+<option value="CO">CO </option>
+<option value="CT">CT </option>
+<option value="DE">DE </option>
+<option value="DC">DC </option>
+<option value="FL">FL </option>
+<option value="GA">GA </option>
+<option value="ID">ID </option>
+<option value="IL">IL </option>
+<option value="IN">IN </option>
+<option value="IA">IA </option>
+<option value="KS">KS </option>
+<option value="KY">KY </option>
+<option value="LA">LA </option>
+<option value="ME">ME </option>
+<option value="MD">MD </option>
+<option value="MA">MA </option>
+<option value="MI">MI </option>
+<option value="MN">MN </option>
+<option value="MS">MS </option>
+<option value="MO">MO </option>
+<option value="MT">MT </option>
+<option value="NE">NE </option>
+<option value="NV">NV </option>
+<option value="NH">NH </option>
+<option value="NJ">NJ </option>
+<option value="NM">NM </option>
+<option value="NY">NY </option>
+<option value="NC">NC </option>
+<option value="ND">ND </option>
+<option value="OH">OH </option>
+<option value="OK">OK </option>
+<option value="OR">OR </option>
+<option value="PA">PA </option>
+<option value="RI">RI </option>
+<option value="SC">SC </option>
+<option value="SD">SD </option>
+<option value="TN">TN </option>
+<option value="TX">TX </option>
+<option value="UT">UT </option>
+<option value="VT">VT </option>
+<option value="VA">VA </option>
+<option value="WA">WA </option>
+<option value="WV">WV </option>
+<option value="WI">WI </option>
+<option value="WY">WY </option>
+</select>
+</font></td>
+<td align="center"
+valign="top"><font SIZE="-2" face="Arial,Helvetica"
+color="#000000">Tobacco
+Use</font><br>
+<font face="Arial,Helv,Sans-Serif" size="-2">
+<select name="gen_5" size="1">
+<option value="!">Select</option>
+<option value="Never">Never</option>
+<option value="None In Last 5 Yrs">None 5 Yrs</option>
+<option value="None In Last 4 Yrs">None 4 Yrs</option>
+<option value="None In Last 3 Yrs">None 3 Yrs</option>
+<option value="None In Last 2 Yrs">None 2 Yrs</option>
+<option value="None In Last Year">None 1 Yr</option>
+<option value="Used Within Last Year">In Past Yr</option>
+<option value="Current User">Currently</option>
+</select>
+</font></td>
+<td align="center"
+valign="top"><font SIZE="-2" face="Arial,Helvetica"
+color="#000000">Birthdate(mmddyyyy)</font><br>
+<font face="Arial,Helv,Sans-Serif" size="-2">
+<input type="text" name="gen_0" size="2" maxlength="2"
+value="">
+<input type="text" name="gen_1" size="2" maxlength="2"
+value="">
+<input type="text" name="gen_2" size="4" maxlength="4"
+value="">
+</font></td>
+<td align="center" valign="top"><font
+SIZE="-2" color="#000000" FACE="ARIAL,HELVETICA">Gender</font><br>
+<font face="Arial,Helv,Sans-Serif" size="-2">
+<select name="gen_3" size="1">
+<option selected value="M">M</option>
+<option value="F">F</option>
+</select>
+</font></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</TD></TR></TABLE><A HREF="http://www.excite.com/relocate/ad=105976_htmlad.gif|pk=3225385;http://www.excite.com"></A><CENTER><FONT
+SIZE=-1 COLOR=#0000FF FACE=arial, geneva><B>Click Here!</B></FONT></CENTER>
+</form>
 </center>
 <small><br></small>
 </center>
 <a name=web><img src=/img/pixel/trans.gif height=1 width=1><BR></a>
 <table border=0 cellpadding=0 cellspacing=0 width=100%><tr>
 <td bgcolor=ffcc00 width=25%>
-<table border=1 cellspacing=0 cellpadding=1 width=100%>
-<tr><td align=center nowrap>
-<b><font face="helvetica" size=-1>
-<img src=/img/logo/lep_y.gif height=16 width=16> Web Results
-</font></b>
-</td></tr></table>
+<table border=1 cellpadding=1 cellspacing=0 width=100%><tr>
+<td align=center><font face="helvetica" size=-1><b>
+<img src=/img/logo/lep_y.gif height=16 width=16>Web Results
+</b></font></td></tr></table>
 </td><td valign=bottom width=100%>
-<table border=0 cellspacing=0 cellpadding=0 width=100%><tr>
-<td bgcolor=999999>
-<table border=0 cellspacing=1 cellpadding=0 width=100%>
-<tr bgcolor=ffffcc align=center nowrap>
-<td><font face="helvetica" size=-1><b>
-<a href=#news>News Articles</a>
-</b></font></td>
-</tr></table>
-</td></tr></table>
+<table border=0 cellspacing=0 cellpadding=0 width=100%>
+<tr><td bgcolor=999999 width=100%><img src=/img/pixel/trans.gif height=2 width=1></td></tr></table>
 </td></tr></table>
 <table border=0 cellpadding=2 cellspacing=0 width=100%>
 <tr><td VALIGN=TOP width=40% nowrap>
@@ -218,9 +342,9 @@ SRC="http://ad.preferences.com/jscript;spacedesc=ATTClick2Dial_Excite_468x60_Run
 Top <b>50</b>
 matches.
 <small>
-<a href=/search.gw?layout=about&num=476&s=chirpa+paploo+teebo>
+<a href=/search.gw?layout=about&num=448&s=chirpa+paploo+teebo>
 <i>
-[476 hits. About Your Results]</i></a></small>
+[448 hits. About Your Results]</i></a></small>
 </font>
 </td>
 <td align=right width=60% nowrap><font face="helvetica"><b>
@@ -238,11 +362,11 @@ View by:&nbsp;
 </font>
 <table border=0 cellpadding=2 cellspacing=1 width=120 align=right>
 <tr>
-<td>
+<td align=right>
 </td>
 </tr>
 <tr>
-<td align=center>
+<td align=right>
 <table border="2" cellspacing="0" cellpadding="3" bordercolor="#336600" width=120 height=66>
 <tr><td align="center" bgcolor="#ffffcc">
 <b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1">Amazon.com</font></b><br>
@@ -258,204 +382,204 @@ Search for:<br>
 </table>
 <font face="helvetica" size=-1>
 <SMALL>77% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=10409478;http://www.angelfire.com./ma/EwokAtEndor/info.html">Info on Endor</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=14201836;http://www.angelfire.com./ma/EwokAtEndor/info.html">Info on Endor</A>&nbsp;
 - Info on Endor: Endor is a planet of Forests and home to many creatures including The Ewoks. It's home of the shield-generator of the death star.The ewok villages are high in trees,and they use Bridges to get from one house to another.Endor is Pretty much like one of our Tropical Rainforests except for the different life forms. <BR><SMALL>http://www.angelfire.com./ma/EwokAtEndor/info.html
 <P></SMALL>
 <SMALL>76% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=14563421;http://www.eos.net/theearth/coins.htm">Power of the Force</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=674560;http://www.eos.net/theearth/coins.htm">Power of the Force</A>&nbsp;
 - ORIGINAL POWER OF THE FORCE COINS &amp; MAIL-INS ORIGINAL POTF COINS AT-ST Driver A-Wing Pilot Ben Kenobi Biker Scout Boba Fett B-Wing Pilot Cheif Chirpa <BR><SMALL>http://www.eos.net/theearth/coins.htm
 <P></SMALL>
 <SMALL>76% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=18612842;http://www.hhs.dk/~k00274/page7.html">Titel på side</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=9541120;http://www.hhs.dk/~k00274/page7.html">Titel på side</A>&nbsp;
 - Action Figures 1977-1985 Here is a list of the figures from the Return of the Jedi line.The price is their price i DKK in Denmark. All prises is for loose figures. <BR><SMALL>http://www.hhs.dk/~k00274/page7.html
 <P></SMALL>
 <SMALL>75% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=11455221;http://www.jinglealltheway.com/animated/html/ewstory.htm">The World of the Ewoks</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=6518922;http://www.jinglealltheway.com/animated/html/ewstory.htm">The World of the Ewoks</A>&nbsp;
 - On the forest moon of Endor, tucked into a tiny village known as Bright Tree, a band of furry creatures named the Ewoks live in huts high up in the trees. <BR><SMALL>http://www.jinglealltheway.com/animated/html/ewstory.htm
 <P></SMALL>
 <SMALL>75% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=20026851;http://members.aol.com/KF6ITH/vote.html">Star Wars Survey</A>&nbsp;
-- Favorite Weapon See-Threepio's Non-Stop Talking Dathcha's Ion Blaster LightSaber Chewbacca's BowCaster Han's DL-44 Blaster Concussion Missles The Death Star I Laser The Death Star II Laser Gaffi Stick Artoo Detoo's Shocker Thermal Detonator Jabba's Breath <BR><SMALL>http://members.aol.com/KF6ITH/vote.html
-<P></SMALL>
-<SMALL>75% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=8635549;http://www2.netdoor.com/~edmonson/blister.html">John Edmonson's Star Wars Action Figure Blister Card Front Page</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=11197796;http://www2.netdoor.com/~edmonson/blister.html">John Edmonson's Star Wars Action Figure Blister Card Front Page</A>&nbsp;
 - Vintage Star Wars Action Figures Blister Card Fronts. <BR><SMALL>http://www2.netdoor.com/~edmonson/blister.html
 <P></SMALL>
 <SMALL>75% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=3153038;http://www.execpc.com/~seventh/weapon.html">7th- Weapons (graphical)</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=876055;http://www.execpc.com/~seventh/weapon.html">7th- Weapons (graphical)</A>&nbsp;
 - Star Wars Weapons These are the weapons that we have available, at this time. Prices and availability subject to change without notice! ** PLEASE INQUIRE ON WEAPON AVAILABILITY ** <BR><SMALL>http://www.execpc.com/~seventh/weapon.html
 <P></SMALL>
 <SMALL>74% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=17060316;http://www.geocities.com\/Area51/Corridor/4299/check1.html">Untitled</A>&nbsp;
-- Star Wars Figures Checklist <BR><SMALL>http://www.geocities.com\/Area51/Corridor/4299/check1.html
-<P></SMALL>
-<SMALL>74% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=6455221;http://www.xmission.com./~gastown/cfti/loose.htm">Star Wars Action Figure Web - Loose Figures (1977-1985)</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=5162119;http://www.xmission.com./~gastown/cfti/loose.htm">Star Wars Action Figure Web - Loose Figures (1977-1985)</A>&nbsp;
 - Return to SWAFW's home page, Clique Hear <BR><SMALL>http://www.xmission.com./~gastown/cfti/loose.htm
 <P></SMALL>
 <SMALL>74% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=8855559;http://www.idcomm.com/personal/Fabulous/StarWars/Classic.htm">Classic Star Wars Figures</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=13102046;http://www.idcomm.com/personal/Fabulous/StarWars/Classic.htm">Classic Star Wars Figures</A>&nbsp;
 - (Most weapons and accessories not shown.) Darth Vader, Luke Skywalker, C-3P0, R2-D2, Princess Leia, Han Solo, Chewbacca, Obi-Wan Kenobi, Jawa, Death Squad Commander, Stormtrooper, Tusken Raider (Sand People). <BR><SMALL>http://www.idcomm.com/personal/Fabulous/StarWars/Classic.htm
 <P></SMALL>
 <SMALL>74% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=2830849;http://www.execpc.com/~seventh/weapon_plain.html">7th- Weapons (text)</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=1911469;http://www.execpc.com/~seventh/weapon_plain.html">7th- Weapons (text)</A>&nbsp;
 - Star Wars Weapons These are the weapons that we have available, at this time. Prices and availability subject to change without notice! ** PLEASE INQUIRE ON ITEMS WITH AN ASTERISK ** 21-B Staff: $5 4-LOM Rifle: $4 Admiral Ackbar Staff: $4 AT-AT Driver Rifle: $3 Bib Fortuna Staff: $3 Biker Scout Blaster: $4 * Blaster 1 (Stromtrooper, Death Squad Commander, Hammerhead, Walrus Man, Boba Fett,... <BR><SMALL>http://www.execpc.com/~seventh/weapon_plain.html
 <P></SMALL>
 <SMALL>73% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=13585997;http://index.echostation.com/ewok.html">The Star Wars Index - Ewoks</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=18626420;http://index.echostation.com/ewok.html">The Star Wars Index - Ewoks</A>&nbsp;
 - Ewok The Ewoks are sentient furred bipeds native to the moon of Endor. They are curious individuals that stand about one meter tall. Although extremely skilled in forest survival and the construction of primitive technology like gliders and catapults, the Ewoks have yet to progress past stone-level technology. <BR><SMALL>http://index.echostation.com/ewok.html
 <P></SMALL>
 <SMALL>73% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=8635548;http://www2.netdoor.com/~edmonson/actionfigurelist.html">John Edmonson's Star Wars Action Figures Page</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=11197795;http://www2.netdoor.com/~edmonson/actionfigurelist.html">John Edmonson's Star Wars Action Figures Page</A>&nbsp;
 - Vintage Star Wars Action Figures. <BR><SMALL>http://www2.netdoor.com/~edmonson/actionfigurelist.html
 <P></SMALL>
 <SMALL>73% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=896319;http://www.execpc.com/~seventh/loose.html">Star Wars Toys</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=55526;http://www.execpc.com/~seventh/loose.html">Star Wars Toys</A>&nbsp;
 - Loose Star Wars Figures, 1977-1985 These are the figures that we have available at present. We sell the figures and weapons SEPERATE. These figures are the loose figures ONLY. <BR><SMALL>http://www.execpc.com/~seventh/loose.html
 <P></SMALL>
 <SMALL>73% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=17359041;http://keith.simplenet.com/toys/vintage/vintage.htm">Vintage Figures</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=13510687;http://keith.simplenet.com/toys/vintage/vintage.htm">Vintage Figures</A>&nbsp;
 - Figure: Power of the Force 2 Topps Promo Cards Art of Dave Dorman Jedi Strength Award My Awards Jawa Swap Meet What's New <BR><SMALL>http://keith.simplenet.com/toys/vintage/vintage.htm
 <P></SMALL>
 <SMALL>73% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=18739221;http://ourworld.compuserve.com/homepages/stephane_faucourt/swactff.htm">Figurines Star Wars de 1978 à 85</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=9667499;http://ourworld.compuserve.com/homepages/stephane_faucourt/swactff.htm">Figurines Star Wars de 1978 à 85</A>&nbsp;
 - Cliquez sur l'affiche du film de votre choix... Artoo-Deeto (R2-D2) with pop-up Lightsaber 3. Han Solo (in Carbonite Chamber) 4. Warok 5. Imperial Dignitary 6. <BR><SMALL>http://ourworld.compuserve.com/homepages/stephane_faucourt/s...
 <P></SMALL>
-<SMALL>73% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=10098453;http://ourworld.compuserve.co\m/homepages/stephane_faucourt/SWCollec.htm">List of Star Wars collectible toys 1/2</A>&nbsp;
-- Click the movie poster of your choice... Date of First availability / figure description Packaging / Type de boîte Star Wars 1978 Luke Blond hair Luke Brown hair Princess Leia Han Solo small head Han Solo large head C3PO R2D2 Stormtrooper Ben Kenobi White hair Ben Kenobi Grey hair Darth Vader Chewbacca Jawa Jawa Plastic cape Sand People <BR><SMALL>http://ourworld.compuserve.co\m/homepages/stephane_faucourt/...
-<P></SMALL>
 <SMALL>72% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=14497807;http://www.kahless.com/lfl.htm">Loose But Complete</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=10772477;http://www.kahless.com/lfl.htm">Loose But Complete</A>&nbsp;
 - price guide <BR><SMALL>http://www.kahless.com/lfl.htm
 <P></SMALL>
 <SMALL>72% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=7660901;http://www.kahless.com/trilogo.htm">Tri-Logo</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=11560649;http://www.kahless.com/trilogo.htm">Tri-Logo</A>&nbsp;
 - price guide <BR><SMALL>http://www.kahless.com/trilogo.htm
 <P></SMALL>
 <SMALL>72% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=5741174;http://www.personalhomepages.com/cimages/Starwars.htm">Star Wars vintage merchandise</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=5717522;http://www.personalhomepages.com/cimages/Starwars.htm">Star Wars vintage merchandise</A>&nbsp;
 - All merchandise below are original releases.Call for prices and allow 6 to 8 weeks for delivery. 3 inch figures Mini rigs Die-cast vehicles Star Wars playsets <BR><SMALL>http://www.personalhomepages.com/cimages/Starwars.htm
 <P></SMALL>
 <SMALL>71% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=39087717;http://www.geocities.net/Area51/Corridor/9391/Return_of_the_Jedi.html">Return of the Jedi Collectable</A>&nbsp;
-- This is my current collection of Return of the Jedi action figures, produced by Kenner starting in 1983. I am not necessarily a variant hunter so don't expect to see all the product variations here. <BR><SMALL>http://www.geocities.net/Area51/Corridor/9391/Return_of_the_...
-<P></SMALL>
-<SMALL>71% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=4426945;http://www.yakface.com/vintage/figures.html">Figures List</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=455101;http://www.yakface.com/vintage/figures.html">Figures List</A>&nbsp;
 - 1 Complete Set of Star Wars Action Figures. 100, Loose &amp; complete, includes Yakface and Blue Snaggletooth - $1950.00 P=Punched U=Unpunched Kenner POTF Tatooine Skiff in SEALED never opened C9.5 box $690.00 <BR><SMALL>http://www.yakface.com/vintage/figures.html
 <P></SMALL>
 <SMALL>71% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=9042587;http://theforce.net/collecting/vintage/weapons.shtml">Vintage Accessories</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=10944036;http://theforce.net/collecting/vintage/weapons.shtml">Vintage Accessories</A>&nbsp;
 - TheForce.Net TheForce.Net Main The DEN Entertainment Earth VINTAGE WEAPONS AND ACCESSORIES Here you will find a reference for which weapon/accessory goes with which figure. <BR><SMALL>http://theforce.net/collecting/vintage/weapons.shtml
 <P></SMALL>
 <SMALL>71% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=17652796;http://www.kahless.com/rotjmocl.htm">Return of the Jedi</A>&nbsp;
-- price guide <BR><SMALL>http://www.kahless.com/rotjmocl.htm
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=234914;http://www.starwars.com/episode-vi/cast/">Star Wars: Episode VI - Cast</A>&nbsp;
+- Han Solo Voice Of Darth Vader Moff Jerjerrod Bib Fortuna General Madine Sy Snootles Fat Dancer Chief Chirpa Ewok Warrior Ewok Warrior Stardestroyer Controller #1 <BR><SMALL>http://www.starwars.com/episode-vi/cast/
 <P></SMALL>
 <SMALL>71% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=978626;http://www.jarjar.com/episode-vi/cast/index.html">Star Wars: Episode VI - Cast</A>&nbsp;
-- Han Solo Voice Of Darth Vader Moff Jerjerrod Bib Fortuna General Madine Sy Snootles Fat Dancer Chief Chirpa Ewok Warrior Ewok Warrior Stardestroyer Controller #1 <BR><SMALL>http://www.jarjar.com/episode-vi/cast/index.html
-<P></SMALL>
-<SMALL>71% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=17279661;http://www.angelfire.com./pa/edg000/starwars.html">Edg000's Star Wars Page</A>&nbsp;
-- I am very interested in buying these weapons. I am also interested in figures if the price is low enough. A recipe list for custom figures that I've made. <BR><SMALL>http://www.angelfire.com./pa/edg000/starwars.html
-<P></SMALL>
-<SMALL>71% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=1057914;http://members.aol.com/monotoys/swlist.htm">swlist</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=228529;http://members.aol.com/monotoys/swlist.htm">swlist</A>&nbsp;
 - SMALL KENNER ACTION FIGURES (PACKAGED) Packaged figures are listed by the series and number of figures shown on the back of the packaging (i.e. 65ROJ KLAATU is a 65 back Return of the Jedi Klaatu figure and 95POF* JAWA is a Power of the Force Jawa with the coin. <BR><SMALL>http://members.aol.com/monotoys/swlist.htm
 <P></SMALL>
 <SMALL>71% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=9777207;http://theforce.net/collecting/vintage/figures.shtml">TheForce.net Vintage Kenner Action Figures</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=13431307;http://www.angelfire.com./pa/edg000/starwars.html">Edg000's Star Wars Page</A>&nbsp;
+- I am very interested in buying these weapons. I am also interested in figures if the price is low enough. A recipe list for custom figures that I've made. <BR><SMALL>http://www.angelfire.com./pa/edg000/starwars.html
+<P></SMALL>
+<SMALL>71% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=8602455;http://theforce.net/collecting/vintage/figures.shtml">TheForce.net Vintage Kenner Action Figures</A>&nbsp;
 - TheForce.Net TheForce.Net Main The DEN Entertainment Earth Kenner began producing 3 3/4" figures for Star Wars in 1978 and set the standard for action figures for years to come. <BR><SMALL>http://theforce.net/collecting/vintage/figures.shtml
 <P></SMALL>
 <SMALL>70% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=6528872;http://www.aphoto.com/sw/caractor.htm">Caractors And Caractors Names</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=6738582;http://www.aphoto.com/sw/caractor.htm">Caractors And Caractors Names</A>&nbsp;
 - Here Is The List Of Caractors And Caractors Names: (To Go To A Entry, Dubble-Click it) Adar Tallon Admiral Acbar Admiral Daala Admiral Drayson <BR><SMALL>http://www.aphoto.com/sw/caractor.htm
 <P></SMALL>
 <SMALL>70% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=1187827;http://home.netinc.ca/~jedi/starwars/jaysw.htm">A Long Time Ago..........</A>&nbsp;
-- My page of Star Wars <BR><SMALL>http://home.netinc.ca/~jedi/starwars/jaysw.htm
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=18757109;http://pages.map.com/starwars/cklist.html">SW TRP: Checklist of Star Wars Action Figures</A>&nbsp;
+- This is a checklist of all figures offered in the standard Kenner Star Wars line. Also included are the major variations. Kenner produced millions of figures between '78 and '85 in factories in three countries; Taiwan, Hong Kong, and Mexico. <BR><SMALL>http://pages.map.com/starwars/cklist.html
 <P></SMALL>
 <SMALL>70% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=5626357;http://www.irvine.quik.com/cotf/Figs.html">Figures</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=1462602;http://www.irvine.quik.com/cotf/Figs.html">Figures</A>&nbsp;
 - Collectors of the Force - Figures Click on the figures you'd like to see or scroll through the whole list... LUKE (BLONDE HAIR) - $25.00 LUKE (BROWN HAIR) - $40.00 <BR><SMALL>http://www.irvine.quik.com/cotf/Figs.html
 <P></SMALL>
 <SMALL>70% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=17672045;http://www.angelfire.com./ny/POTF2/vintage.html">Vintage Action Figures</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=17798561;http://www.angelfire.com./ny/POTF2/vintage.html">Vintage Action Figures</A>&nbsp;
 - *These pictures were taken with permission from The Ultimate Star Wars Action Figure Price Guide A-Wing Fighter AT-ST (Scout Walker) ATL Interceptor <BR><SMALL>http://www.angelfire.com./ny/POTF2/vintage.html
 <P></SMALL>
 <SMALL>70% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=6432271;http://members.aol.com/DMamer4442/stwsindex.html">Original Star Wars Toys</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=6641981;http://members.aol.com/DMamer4442/stwsindex.html">Original Star Wars Toys</A>&nbsp;
 - (packaged figures &amp; Playsets are after the loose section) This is the LOOSE section (ALL ARE COMPLETE and C-9 UNLESS SPECIFIED OTHERWISE) Star Wars <BR><SMALL>http://members.aol.com/DMamer4442/stwsindex.html
 <P></SMALL>
-<SMALL>69% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=9812435;http://www.geocities.com/Area51/Rampart/1072/page12.html">Return Of The Jedi Price Guide</A>&nbsp;
-- Price Guide Legend: MOMC=Mint on mint card MU=Mint uncarded (+)=Rise in value (-)=Decline in value (nc)=No change in value Values are listed as carded first MOMC, then uncarded MU. <BR><SMALL>http://www.geocities.com/Area51/Rampart/1072/page12.html
-<P></SMALL>
 <SMALL>68% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=27098245;http://www.mds.mdh.se/~frv95pen/starwar/ewok/returnjedi/ewokpart.htm">StarWars Episode VI Return of the Jedi - EwokParts</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=41136268;http://www.mds.mdh.se/~frv95pen/starwar/ewok/returnjedi/ewokpart.htm">StarWars Episode VI Return of the Jedi - EwokParts</A>&nbsp;
 - BY LAWRENCE KASDAN AND GEORGE LUCAS FROM THE NOVEL BY GEORGE LUCAS SECOND DRAFT - DECEMBER 19, 1982 Luke Skywalker has returned to his home planet of Tatooine in an attempt to rescue his friend Han Solo from the clutches of the vile gangster Jabba the Hutt. <BR><SMALL>http://www.mds.mdh.se/~frv95pen/starwar/ewok/returnjedi/ewok...
 <P></SMALL>
 <SMALL>68% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=11600984;http://www.planetforce.com/starwars.html">PLANET FORCE / STAR WARS</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=6654282;http://www.planetforce.com/starwars.html">PLANET FORCE / STAR WARS</A>&nbsp;
 - STAR WARS Buy* Sell* Trade* PICTURES AVAILABLE UPON REQUEST! 12&quot; FIGURES ALL ARE C9 AND COMPLETE STAR WARS (1979) -Luke Skywalker (w/ box) ($250.00) <BR><SMALL>http://www.planetforce.com/starwars.html
 <P></SMALL>
 <SMALL>68% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=299218;http://freeweb.pdq.net/nighthawk/vintfigs.htm">Vintage Trilogy Figure Page</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=8634598;http://www.geocities.com/Area51/Rampart/1072/page12.html">Return Of The Jedi Price Guide</A>&nbsp;
+- Price Guide Legend: MOMC=Mint on mint card MU=Mint uncarded Red Background =Rise in value Blue Background=Decline in value White Background=No change in value <BR><SMALL>http://www.geocities.com/Area51/Rampart/1072/page12.html
+<P></SMALL>
+<SMALL>68% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=4533719;http://freeweb.pdq.net/nighthawk/vintfigs.htm">Vintage Trilogy Figure Page</A>&nbsp;
 - Figures missing:(BEWARE!!! There are many fakes of these 3 figures. Buy with caution) (click figure names below to see full screen pictures) These are the 130 different types of figures I have in my collection from the Trilogy movies. <BR><SMALL>http://freeweb.pdq.net/nighthawk/vintfigs.htm
 <P></SMALL>
 <SMALL>68% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=8447094;http://www.depeche.mode.net/~myrkr/20deb.html">The Great Top 20 Debate</A>&nbsp;
-- Like, this appears as it did in YAWP 7: Plif! So, remember the list I made of the top 20 Star Wars characters? If you don't, that's ok, cuz it wasn't that much to write home about. <BR><SMALL>http://www.depeche.mode.net/~myrkr/20deb.html
-<P></SMALL>
-<SMALL>68% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=4342848;http://www2.gdi.net/~sdp1/rojprice.htm">Jawa's RETURN OF THE JEDI Action Figure Price Guide</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=5934146;http://www2.gdi.net/~sdp1/rojprice.htm">Jawa's RETURN OF THE JEDI Action Figure Price Guide</A>&nbsp;
 - All prices for figures are taken from "Whites Guide to Collecting Figures". Prices last updated on 10-98. SW = On Star Wars Card ESB = On Empire Strikes Back Card <BR><SMALL>http://www2.gdi.net/~sdp1/rojprice.htm
 <P></SMALL>
 <SMALL>68% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=3654107;https://wwwssl.eos.net:80/theearth/safeorder.htm">The Earth's Secure Order Area</A>&nbsp;
-- This Page is secure, so feel free to include credit card info etc. Zip Lock Bags can be ordered at our Collector Supply Secure Order area LUKE SKYWALKER w/Blonde hair <BR><SMALL>https://wwwssl.eos.net:80/theearth/safeorder.htm
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=11009341;http://www.depeche.mode.net/~myrkr/20deb.html">The Great Top 20 Debate</A>&nbsp;
+- Like, this appears as it did in YAWP 7: Plif! So, remember the list I made of the top 20 Star Wars characters? If you don't, that's ok, cuz it wasn't that much to write home about. <BR><SMALL>http://www.depeche.mode.net/~myrkr/20deb.html
 <P></SMALL>
-<SMALL>68% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=15996825;http://dianoga.com/ericscollection.html">Dianoga.com - Erik's collection</A>&nbsp;
+<SMALL>67% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=11752467;http://dianoga.com/ericscollection.html">Dianoga.com - Erik's collection</A>&nbsp;
 - UNOPENED OLD FIGURES STAR WARS RELEASE TO1143 Sandperson (12 Back) EMPIRE STRIKES BACK RELEASE TO1101 Chewbacca (21 Back) TO1279 Cloud Car Pilot TO???? IG-88 TO???? Princess Leia Bespin Gown <BR><SMALL>http://dianoga.com/ericscollection.html
 <P></SMALL>
 <SMALL>67% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=1855297;http://www.toyarchive.com/STApriceguide/StarWars.html">Star Wars Price Guide</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=2079191;http://www.toyarchive.com/STApriceguide/StarWars.html">Star Wars Price Guide</A>&nbsp;
 - All figures are listed as the name-plate on the package is spelled out. You willfind certain figures with name-plate changes right next to the earlier name in the same catagory as the character¹s first appearence package. <BR><SMALL>http://www.toyarchive.com/STApriceguide/StarWars.html
 <P></SMALL>
 <SMALL>67% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=2582856;http://www.foxhome.com/animated/html/ewfriend.htm">Ewoks Characters</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=1663476;http://www.foxhome.com/animated/html/ewfriend.htm">Ewoks Characters</A>&nbsp;
 - Princess Kneesaa: Daughter of Chief Chirpa and Wicket's best friend, Kneesaa is sweet and gentle, as befitting a true princess, but she's not the type to be spoiled. <BR><SMALL>http://www.foxhome.com/animated/html/ewfriend.htm
 <P></SMALL>
 <SMALL>67% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=5534869;http://www.toysrgus.com/images-coins/coin-article.html">Power of the Force</A>&nbsp;
-- Power of the Force Coins By Gus Lopez Most Star Wars collectors are aware of the aluminum coins that Kenner bundled with figures during the "Power of the Force" (POTF) promotion, and it is not uncommon to find a few of these coins in most large Star Wars collections. <BR><SMALL>http://www.toysrgus.com/images-coins/coin-article.html
-<P></SMALL>
-<SMALL>67% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=11051732;http://toysrgus.com/images-coins/coin-article.html~">Power of the Force</A>&nbsp;
-- Power of the Force Coins By Gus Lopez Most Star Wars collectors are aware of the aluminum coins that Kenner bundled with figures during the "Power of the Force" (POTF) promotion, and it is not uncommon to find a few of these coins in most large Star Wars collections. <BR><SMALL>http://toysrgus.com/images-coins/coin-article.html~
-<P></SMALL>
-<SMALL>67% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=10089622;http://www.stwing.upenn.edu/starwars/collect/swfigrs.txt">Untitled</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=8741723;http://www.stwing.upenn.edu/starwars/collect/swfigrs.txt">Untitled</A>&nbsp;
 - ACTION FIGURES Small Action Figures, Kenner, 1978-1985, came blister packaged on color photo headers. They were released in eight series (I-VIII), new figures added with each film. <BR><SMALL>http://www.stwing.upenn.edu/starwars/collect/swfigrs.txt
 <P></SMALL>
 <SMALL>67% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=3285080;http://www.acsu.buffalo.edu/~rwleach/swtoys.html">untitled</A>&nbsp;
-- Star Wars Collectibles This page is maintained by: Rob Leach &quot;Look at the size of that thing!&quot; &quot;That's a Shadow Red 2. Accelerate to attack speed!&quot; <BR><SMALL>http://www.acsu.buffalo.edu/~rwleach/swtoys.html
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=5511217;http://www.toysrgus.com/images-coins/coin-article.html">Power of the Force</A>&nbsp;
+- Power of the Force Coins By Gus Lopez Most Star Wars collectors are aware of the aluminum coins that Kenner bundled with figures during the "Power of the Force" (POTF) promotion, and it is not uncommon to find a few of these coins in most large Star Wars collections. <BR><SMALL>http://www.toysrgus.com/images-coins/coin-article.html
 <P></SMALL>
 <SMALL>67% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=15764796;http://w3.nai.net/~wingnut/Star_Wars.html">Star Wars According To Wingnut</A>&nbsp;
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=16964961;http://toysrgus.com/images-coins/coin-article.html~">Power of the Force</A>&nbsp;
+- Power of the Force Coins By Gus Lopez Most Star Wars collectors are aware of the aluminum coins that Kenner bundled with figures during the "Power of the Force" (POTF) promotion, and it is not uncommon to find a few of these coins in most large Star Wars collections. <BR><SMALL>http://toysrgus.com/images-coins/coin-article.html~
+<P></SMALL>
+<SMALL>67% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=19664665;http://w3.nai.net/~wingnut/Star_Wars.html">Star Wars According To Wingnut</A>&nbsp;
 - A long time ago in a galaxy far, far away... Here is a list of "STAR WARS" figures from Kenner (1977-1979) Boba Fett Darth Vader Power Droid Here is a list of "The Empire Strikes Back" figures from Kenner (1980-1982): <BR><SMALL>http://w3.nai.net/~wingnut/Star_Wars.html
 <P></SMALL>
-<SMALL>67% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=18848990;http://members.ultracom.net/wolfe/fatz/ROTJ/PAPLOO.HTM">FATZ:Paploo</A>&nbsp;
-- About 1 Meter Home World: Political Affiliation: Weapon(s) of Choice: Double-bladed Spear Vehicle of Choice: When the Battle of Endor began, Paploo stole an Imperial speeder bike to lure some guards away from their secret Imperial facility. <BR><SMALL>http://members.ultracom.net/wolfe/fatz/ROTJ/PAPLOO.HTM
+<SMALL>66% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=5077838;http://www2.bc.edu/~swick/wish.html">Hammerhead Guide: Power of the Force Wishlist</A>&nbsp;
+- This page was last updated April 16, 1998. Power of the Force Figures A NEW HOPE Admiral Motti Baniss Keeg (Duros) Bom Vindin (Advosze) Captain Antilles <BR><SMALL>http://www2.bc.edu/~swick/wish.html
 <P></SMALL>
-<SMALL>67% </SMALL>
-<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=1104052;http://www.swdatabase.com/newpics/allfigs.html">Untitled</A>&nbsp;
-- STAR WARS LOOSE FIGURE VARIATIONS ************************************ (revised 5-19-95) NOTES: ------ 1) Prototypes are not listed (hence rocket firing Boba Fett does not appear on the list). 2) This list is undoubtedly beyond the point that even the most anal completist would want to find variations, so I'm not advocating searching out all these variations. <BR><SMALL>http://www.swdatabase.com/newpics/allfigs.html
+<SMALL>66% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=11518373;http://toysrgus.com/images-coins/coin-chart.html">The Comprehensive Guide to POTF, Droids, and Ewoks Coins</A>&nbsp;
+- The Comprehensive Guide to POTF, Droids, and Ewoks Coins By Gus Lopez A couple of years ago, I came up with a category system for POTF coins based on their relative scarcities as they fell into well-defined categories after collecting a large number of data points. <BR><SMALL>http://toysrgus.com/images-coins/coin-chart.html
+<P></SMALL>
+<SMALL>66% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=7256246;http://members.ultracom.net/wolfe/fatz/ROTJ/LOGRAY.HTM">FATZ:Logray</A>&nbsp;
+- About 1 Meter Home World: Political Affiliation: Medicine Man Weapon(s) of Choice: Vehicle of Choice: Feared and admired by the Ewok village, Logray worked as a medicine man. <BR><SMALL>http://members.ultracom.net/wolfe/fatz/ROTJ/LOGRAY.HTM
+<P></SMALL>
+<SMALL>65% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=3991945;http://sw.simplenet.com/newpics/priceguide.html">Untitled</A>&nbsp;
+- KENNER "STAR WARS" U.S./CANADA ACTION FIGURE PRICE GUIDE (update: 8/24/94) To support the collecting market for "Star Wars" action figures through the Net, this guide has been compiled for the benefit of collectors, buyers and curiosity seekers. <BR><SMALL>http://sw.simplenet.com/newpics/priceguide.html
+<P></SMALL>
+<SMALL>65% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=14818566;http://www.tncbeanie.com/starwars/00vintage.htm">Vintage Star Wars Toys, Collectibles, and Memorabillia - TNC Universe</A>&nbsp;
+- Vintage Star Wars Toys, Collectibles, and Memorabillia... <BR><SMALL>http://www.tncbeanie.com/starwars/00vintage.htm
+<P></SMALL>
+<SMALL>65% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=17850222;http://www.stwing.upenn.edu./starwars/collect/swprice.txt">Untitled</A>&nbsp;
+- KENNER "STAR WARS" U.S./CANADA ACTION FIGURE PRICE GUIDE (update: 8/24/94) To support the collecting market for "Star Wars" action figures through the Net, this guide has been compiled for the benefit of collectors, buyers and curiosity seekers. <BR><SMALL>http://www.stwing.upenn.edu./starwars/collect/swprice.txt
+<P></SMALL>
+<SMALL>64% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=11427469;http://www.stwing.upenn.edu./starwars/collect/vartions.txt">Untitled</A>&nbsp;
+- **** LOOSE STAR WARS FIGURE VARIATIONS **** 1. I've left prototypes off the list, except in the case of RocketFett, since it's a well-known prototype. 2. <BR><SMALL>http://www.stwing.upenn.edu./starwars/collect/vartions.txt
+<P></SMALL>
+<SMALL>63% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=6783786;http://www.ndh.net/home/reiff/stwans.htm">STAR WARS QUIZ ANSWERS</A>&nbsp;
+- Hier gibt's die Antworten zum großen STAR WARS Quiz! In ROTJ: In the Death Star assault, what was Lando's co-pilot's name and RACE? ANSWER: Nein Nunb and he was a Sullustan. 2. <BR><SMALL>http://www.ndh.net/home/reiff/stwans.htm
+<P></SMALL>
+<SMALL>63% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=chirpa+paploo+teebo|id=2237959;http://lonestar.rcclub.org/~dkgaddy/droids.htm">Gaddy's Droids/Ewoks Action Figures</A>&nbsp;
+- My JAVA enhancement to this page!The Gaddy DROIDS Machine.A graphical reference for collectors. Here's my current collection of DROIDS figures: They are from left to right: Boba Fett, Jord Dusat, Thall Joben, Kea Moll, R2, 3P0, Kez Iban, Jann Tosh, Uncle Gundy, and A-Wing Pilot. <BR><SMALL>http://lonestar.rcclub.org/~dkgaddy/droids.htm
 <P></SMALL>
 </font>
 <FORM ACTION="/search.gw" METHOD=GET>
@@ -474,92 +598,156 @@ Search for:<br>
 <font face="helvetica" size=-1>
 <small>
 See what other people are searching for, try <a href="http://www.excite.com/voyeur_xt">Search Voyeur</a><br>
-For simplified results, try <a href="/relocate/co=webcraw;http://webcrawler.com/cgi-bin/WebQuery?text=chirpa+paploo+teebo&src=exciterecip">Webcrawler Search</a>
+For simplified results, try <a href="/relocate/co=webcraw;http://webcrawler.com/cgi-bin/WebQuery?text=chirpa+paploo+teebo&src=exciterecip">WebCrawler Search</a>
 </small><br>
 </font>
 <small><br></small>
-<a name=news><img src=/img/pixel/trans.gif height=1 width=1><BR></a>
-<table border=0 cellpadding=0 cellspacing=0 width=100%><tr>
-<td bgcolor=ffcc00 width=25%>
-<table border=1 cellpadding=1 cellspacing=0 width=100%><tr>
-<td align=center><font face="helvetica" size=-1><b>
-<img src=/img/logo/lep_y.gif height=16 width=16>News Articles
-</b></font></td></tr></table>
-</td><td valign=bottom width=100%>
-<table border=0 cellspacing=0 cellpadding=0 width=100%>
-<tr><td bgcolor=999999 width=100%><img src=/img/pixel/trans.gif height=2 width=1></td></tr></table>
-</td></tr></table>
-<font face="helvetica">
-<p><b>&nbsp;Web News</b>
-(<i><a href="http://nt.excite.com/sources.html"> Sources </a></i>) </font>
-<br>
-<table border=0 cellpadding=2 cellspacing=0 width=100%>
-<tr><td VALIGN=TOP width=40% nowrap>
-<font face="helvetica">
-</font>
-</td>
-<td align=right width=60% nowrap><font face="helvetica"><b>
-Show:&nbsp;
-<a href="/search.gw?s=chirpa+paploo+teebo&c=timely&start=0&showSummary=false
-">Headlines</a>
-&nbsp;
-View by:&nbsp;
-<a href="/search.gw?sort=pub&c=timely&s=chirpa+paploo+teebo">Publication</a>&nbsp;
-or&nbsp;
-<a href="/search.gw?c=timely&sort=date&s=chirpa+paploo+teebo">Date</a>&nbsp;
-</b></font>
-</td>
-</tr></table>
-<br>
-<font face="helvetica" size=-1>
-<b><A HREF="http://search.excite.com/relocate/sr=news|ss=chirpa+paploo+teebo;http://www.cbs.com:80/flat/story_151038.html">CBS</A></b>&nbsp;
-<SMALL>
-(CBS News)
-</SMALL>
-<BR><SMALL>46% </SMALL> &nbsp;Showbiz &nbsp;. &nbsp; &nbsp;&nbsp; NEWS | Showbiz.
-<BR><i>First found: </i>25 Jun 1999 &nbsp;
-<SMALL>
-<A HREF="/search.gw?c=timely&qbe=27656&ctag=37B853A2&showSummary=true">(Related Articles)</A>
-</SMALL>
-<P> </font>
-<BR>
-<A HREF=http://www.excite.com/relocate/co=addthis_srch_news;http://reg.excite.com/mps/credirect?pname=pfp&amp;brand=xcit&amp;targeturl=http://www.excite.com/&amp;ctopic=newsh&amp;ml_id=link:xcit:1049::>
-<FONT COLOR=ff0000 FACE="helvetica" size=-1>Track your favorite news topics daily with Excite</FONT></A>
-<br><i>
-<font face="helvetica" size=-1>
-<a href=/search.gw?s=chirpa+paploo+teebo&c=timely&showSummary=true&perPage=20&start=0>More Web News...</a>
-</font>
-</i><p>
-<table border=0 cellspacing=0 cellpadding=0 width=100%><tr>
-<td bgcolor=999999>
-<table border=0 cellspacing=1 cellpadding=0 width=100%>
-<tr bgcolor=ffffcc>
-<td align=center nowrap>
-<font face="helvetica" size=-1><b>
-<a href=#web>Web Results</a>
-</b></font>
-</td>
-<td align=center nowrap>
-<font face="helvetica" size=-1><b>
-<a href=#news>News Articles</a>
-</b></font>
-</td>
-</tr></table>
-</td></tr></table>
 <p>
 <center>
-<!-- The following html is Copyright 1997 by MatchLogic Inc. -->
-<!-- RICH=0 -->
-<IFRAME WIDTH=468 HEIGHT=60 NORESIZE SCROLLING=No FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 SRC="http://ad.preferences.com/iframe;spacedesc=ATTClick2Dial_Excite_468x60_RunOfSite_Any&ML_SSPKG=RunOfSiteSS&ML_CUSTOM=0&time=1999.08.16.20.20.33&ex_cookie=&ML_TARGET=_top&ML_REDIRECT=http%25253A%25252F%25252Fwww.excite.com%25252Frelocate%25252Fad%25253DLUCI%25257Cpk%25253D2961922%25253B">
-<SCRIPT
-SRC="http://ad.preferences.com/jscript;spacedesc=ATTClick2Dial_Excite_468x60_RunOfSite_Any&ML_SSPKG=RunOfSiteSS&ML_CUSTOM=0&ML_NIF=Y&ML_KW=chirpa+paploo+teebo&time=1999.08.16.20.20.33&ex_cookie=&ML_TARGET=_top&ML_REDIRECT=http%25253A%25252F%25252Fwww.excite.com%25252Frelocate%25252Fad%25253DLUCI%25257Cpk%25253D2961922%25253B">
-</SCRIPT>
-<NOSCRIPT>
-<A HREF="http://www.excite.com/relocate/ad=94093_htmlad.gif|pk=2961922;http://ad.preferences.com/click;spacedesc=ATTClick2Dial_Excite_468x60_RunOfSite_Any&ML_NIF=Y&time=1999.08.16.20.20.33&ex_cookie=" TARGET=_top>
-<IMG SRC="http://ad.preferences.com/image;spacedesc=ATTClick2Dial_Excite_468x60_RunOfSite_Any&ML_NIF=Y&time=1999.08.16.20.20.33&ex_cookie="></A>
-</NOSCRIPT>
-</IFRAME><CENTER><FONT SIZE=-1 COLOR=#0000FF FACE=arial, geneva><B>Click Here!</B></FONT></CENTER>
-<!-- The above html is Copyright 1997 by MatchLogic Inc.
+<form name="cigi" METHOD="get"
+ACTION="http://www.excite.com/relocate/ad=105976_htmlad.gif|pk=3225385;http://89.eterm.com/cgi-bin/cigiqtr.exe">
+<input type="hidden" name="sysId" value="CIGI">
+<input type="hidden" name="genCount" value="8">
+<input type="hidden" name="gen_7" value="FK">
+<TABLE BORDER=1 CELLPADDING=0 CELLSPACING=0 WIDTH=468 HEIGHT=60><TR><TD>
+<table border="0" width="100%" CELLPADDING="0" CELLSPACING="0"
+height="60" bgcolor="#CCCCCC">
+<tr><TD ALIGN=center VALIGN=TOP>
+<table border="0" width="100%" CELLPADDING="0" CELLSPACING="0"
+height="100%" bgcolor="#CCCCCC">
+<tr><TD ALIGN=center VALIGN=TOP COLSPAN=6>
+<input TYPE="image" SRC="http://image.eimg.com/ads/105976_image3.gif" border="0" width=450
+height=17 Value="submit">
+</td>
+</tr>
+<tr align="center" valign="bottom">
+<td align="center" valign="middle"><img src="http://image.eimg.com/ads/105976_c1999.gif"
+width="10" height="30"></td>
+<td align="center" valign="top"><font SIZE="-2"
+face="Arial,Helvetica" color="#000000">Coverage</font><br>
+<font face="Arial,Helv,Sans-Serif" size="-2">
+<select name="gen_6" size="1">
+<option value="!">Select</option>
+<option value="100,000">$100k</option>
+<option value="150,000">$150k</option>
+<option value="200,000">$200k</option>
+<option value="250,000">$250k</option>
+<option value="300,000">$300k</option>
+<option value="350,000">$350k</option>
+<option value="400,000">$400k</option>
+<option value="450,000">$450k</option>
+<option value="500,000">$500k</option>
+<option value="750,000">$750k</option>
+<option value="1,000,000">$1Mil</option>
+<option value="1,500,000">$1.5Mil</option>
+<option value="2,000,000">$2Mil</option>
+<option value="2,500,000">$2.5Mil</option>
+<option value="3,000,000">$3Mil</option>
+<option value="3,500,000">$3.5Mil</option>
+<option value="4,000,000">$4Mil</option>
+<option value="4,500,000">$4.5Mil</option>
+</select>
+</font></td>
+<td align="center" valign="top"><font SIZE="-2"
+face="Arial,Helvetica" color="#000000">State</font><br>
+<font face="Arial,Helv,Sans-Serif" size="-2">
+<select NAME="gen_4" size="1">
+<option value="AL">AL </option>
+<option value="AK">AK </option>
+<option value="AZ">AZ </option>
+<option value="AR">AR </option>
+<option value="CA">CA </option>
+<option value="CO">CO </option>
+<option value="CT">CT </option>
+<option value="DE">DE </option>
+<option value="DC">DC </option>
+<option value="FL">FL </option>
+<option value="GA">GA </option>
+<option value="ID">ID </option>
+<option value="IL">IL </option>
+<option value="IN">IN </option>
+<option value="IA">IA </option>
+<option value="KS">KS </option>
+<option value="KY">KY </option>
+<option value="LA">LA </option>
+<option value="ME">ME </option>
+<option value="MD">MD </option>
+<option value="MA">MA </option>
+<option value="MI">MI </option>
+<option value="MN">MN </option>
+<option value="MS">MS </option>
+<option value="MO">MO </option>
+<option value="MT">MT </option>
+<option value="NE">NE </option>
+<option value="NV">NV </option>
+<option value="NH">NH </option>
+<option value="NJ">NJ </option>
+<option value="NM">NM </option>
+<option value="NY">NY </option>
+<option value="NC">NC </option>
+<option value="ND">ND </option>
+<option value="OH">OH </option>
+<option value="OK">OK </option>
+<option value="OR">OR </option>
+<option value="PA">PA </option>
+<option value="RI">RI </option>
+<option value="SC">SC </option>
+<option value="SD">SD </option>
+<option value="TN">TN </option>
+<option value="TX">TX </option>
+<option value="UT">UT </option>
+<option value="VT">VT </option>
+<option value="VA">VA </option>
+<option value="WA">WA </option>
+<option value="WV">WV </option>
+<option value="WI">WI </option>
+<option value="WY">WY </option>
+</select>
+</font></td>
+<td align="center"
+valign="top"><font SIZE="-2" face="Arial,Helvetica"
+color="#000000">Tobacco
+Use</font><br>
+<font face="Arial,Helv,Sans-Serif" size="-2">
+<select name="gen_5" size="1">
+<option value="!">Select</option>
+<option value="Never">Never</option>
+<option value="None In Last 5 Yrs">None 5 Yrs</option>
+<option value="None In Last 4 Yrs">None 4 Yrs</option>
+<option value="None In Last 3 Yrs">None 3 Yrs</option>
+<option value="None In Last 2 Yrs">None 2 Yrs</option>
+<option value="None In Last Year">None 1 Yr</option>
+<option value="Used Within Last Year">In Past Yr</option>
+<option value="Current User">Currently</option>
+</select>
+</font></td>
+<td align="center"
+valign="top"><font SIZE="-2" face="Arial,Helvetica"
+color="#000000">Birthdate(mmddyyyy)</font><br>
+<font face="Arial,Helv,Sans-Serif" size="-2">
+<input type="text" name="gen_0" size="2" maxlength="2"
+value="">
+<input type="text" name="gen_1" size="2" maxlength="2"
+value="">
+<input type="text" name="gen_2" size="4" maxlength="4"
+value="">
+</font></td>
+<td align="center" valign="top"><font
+SIZE="-2" color="#000000" FACE="ARIAL,HELVETICA">Gender</font><br>
+<font face="Arial,Helv,Sans-Serif" size="-2">
+<select name="gen_3" size="1">
+<option selected value="M">M</option>
+<option value="F">F</option>
+</select>
+</font></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</TD></TR></TABLE><A HREF="http://www.excite.com/relocate/ad=105976_htmlad.gif|pk=3225385;http://www.excite.com"></A><CENTER><FONT
+SIZE=-1 COLOR=#0000FF FACE=arial, geneva><B>Click Here!</B></FONT></CENTER>
+</form>
 <small><br></small>
 <FORM NAME=botbox ACTION=/search.gw>
 <TABLE border=0 cellpadding=1 cellspacing=0 width=600>
@@ -673,6 +861,6 @@ Copyright 1995-1999 Excite Inc. &nbsp; Powered by <A HREF="http://www.sun.com">S
 <A HREF=http://www.excite.com/info/disclaimer/>Disclaimer</A>
 </font>
 </center>
-<IMG SRC="http://ad.preferences.com/ping.ng;spacedesc=TCExciteData_Excite_1x1_RunOfSite_Any&event=KeywordResults&time=1999.08.16.16.20.33" HEIGHT=1 WIDTH=1 BORDER=0>
+<IMG SRC="http://ad.preferences.com/ping.ng;spacedesc=TCExciteData_Excite_1x1_RunOfSite_Any&event=KeywordResults&time=1999.09.29.16.56.11" HEIGHT=1 WIDTH=1 BORDER=0>
 </body>
 </html>

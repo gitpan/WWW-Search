@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.8 1999/07/16 18:39:29 mthurn Exp mthurn $
+# $Id: Search.pm,v 1.11 1999/09/29 19:44:18 mthurn Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -80,7 +80,7 @@ package WWW::Search;
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query generic_option strip_tags);
-$VERSION = '2.03';
+$VERSION = '2.04';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
 use LWP::UserAgent;
@@ -520,6 +520,7 @@ sub strip_tags
     # We assume for now that we will not be encountering tags with
     # embedded '>' characters!
     s/\074.+?\076//g;
+    s/&nbsp;/ /g;
     } # foreach
   return wantarray ? @as : $as[0];
   } # strip_tags

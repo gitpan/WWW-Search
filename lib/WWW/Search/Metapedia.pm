@@ -4,11 +4,7 @@
 # Metapedia.pm
 # by Jim Smyser
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: Metapedia.pm,v 1.1 1999/06/18 19:15:36 mthurn Exp $
-#
-# Complete copyright notice follows below.
-# 
-
+# $Id: Metapedia.pm,v 1.2 1999/09/27 13:05:17 mthurn Exp $
 
 package WWW::Search::Metapedia;
 
@@ -25,13 +21,20 @@ WWW::Search::Metapedia - class for searching online Encyclopedias
 
 =head1 DESCRIPTION
 
+F<http://www.savvysearch.com>.
+
 Silly class I made to sponge off a Encyclopedia meta search engine. 
 Searches multi online Encyclopedias.
-Built off the old lycos.pm so to have 'RAW' output ability.
- 
+
+Covers:
+
+Encylopedia Britannica - paid subscription service
+Encarta  
+Knowledge Adventure 
+Infoplease
+
 This class exports no public interface; all interaction should
 be done through WWW::Search objects.
-
 
 =head1 SEE ALSO
 
@@ -53,34 +56,9 @@ it sets C<{_next_url}> to point to the page for the next
 set of results, otherwise it sets it to undef to indicate we're done.
 
 
-=head1 BUGS
-
-Looks OK to me.
-
 =head1 AUTHOR
+
 Jim Smyser <jsmyser@bigfoot.com>
-
-based upon C<WWW::Search::Lycos>.
-
-=head1 TESTING
-
-This module adheres to the C<WWW::Search> test routines. 
-
-    $search_engine = 'Metapedia';
-    $maintainer = 'Jim Smyser <jsmyser@bigfoot.com>';
-
-    $file = 'test/Metapedia/zero_result'; 
-    $query = $bogus_query; 
-    test($mode, $TEST_EXACTLY); 
-     
-    $file = 'test/Metapedia/one_page_result'; 
-    $query = 'hydro' . 'celphy'; 
-    test($mode, $TEST_RANGE, 2, 15); 
-      
-    $file = 'test/Metapedia/multi_page_result'; 
-    $query = 'Ast' . 'ronomy';
-    test($mode, $TEST_GREATER_THAN, 30); 
-
 
 =head1 COPYRIGHT
 
@@ -109,6 +87,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
+$VERSION = '2.04';
 
 use Carp ();
 use WWW::Search(generic_option);
@@ -122,24 +101,24 @@ sub native_setup_search {
     $self->user_agent('user');
     $self->{_next_to_retrieve} = 0;
     if (!defined($self->{_options})) {
-	$self->{_options} = {
-	    'cat' => '63',
-	    'search_url' => 'http://www.savvysearch.com/search',
+    $self->{_options} = {
+        'cat' => '63',
+        'search_url' => 'http://www.savvysearch.com/search',
         };
     };
     my($options_ref) = $self->{_options};
     if (defined($native_options_ref)) {
-	# Copy in new options.
-	foreach (keys %$native_options_ref) {
-	    $options_ref->{$_} = $native_options_ref->{$_};
-	};
+    # Copy in new options.
+    foreach (keys %$native_options_ref) {
+        $options_ref->{$_} = $native_options_ref->{$_};
+    };
     };
     # Process the options.
     my($options) = '';
     foreach (keys %$options_ref) {
-	# printf STDERR "option: $_ is " . $options_ref->{$_} . "\n";
-	next if (generic_option($_));
-	$options .= $_ . '=' . $options_ref->{$_} . '&';
+    # printf STDERR "option: $_ is " . $options_ref->{$_} . "\n";
+    next if (generic_option($_));
+    $options .= $_ . '=' . $options_ref->{$_} . '&';
     };
     $self->{_debug} = $options_ref->{'search_debug'};
     $self->{_debug} = 2 if ($options_ref->{'search_parse_debug'});
@@ -147,12 +126,12 @@ sub native_setup_search {
     
     # Finally figure out the url.
     $self->{_base_url} = 
-	$self->{_next_url} =
-	$self->{_options}{'search_url'} .
-	"?" . $options .
-	"q=" . $native_query;
+    $self->{_next_url} =
+    $self->{_options}{'search_url'} .
+    "?" . $options .
+    "q=" . $native_query;
     print $self->{_base_url} . "\n" if ($self->{_debug});
-}
+    }
 # private
 sub native_retrieve_some {
     my ($self) = @_;
@@ -164,76 +143,79 @@ sub native_retrieve_some {
     my($response) = $self->http_request('GET', $self->{_next_url});
     $self->{response} = $response;
     if (!$response->is_success) {
-	return undef;
+    return undef;
     };
-
     # parse the output
-    my($HEADER, $HITS, $DESC, $TRAILER, $POST_NEXT) = (1..10);
-    my(@ST) = ("", "HD", "HI", "DE", "TR", "PN"); 
+    my($HEADER, $HITS, $TRAILER, $POST_NEXT) = (1..10);
     my($hits_found) = 0;
     my($state) = ($HEADER);
-    my($hit, $raw, $title, $url, $desc) = ();
+    my($hit, $title, $url, $sDesc) = ();
     foreach ($self->split_lines($response->content())) {
         next if m@^$@; # short circuit for blank lines
-	print STDERR $ST[$state], ": " if ($self->{_debug} >= 2);
-	if ($state == $HEADER && m@metasearch results (\d+) thru (\d+) of (\d+)@i) { 
-	    $self->approximate_result_count($1);
-            print STDERR "PARSE(HEADER->HITS-1): $_\n" if ($self->{_debug} >= 2);
-	    $state = $HITS;
-
-   } elsif ($state == $HITS && m@<dt><a href="([^"]+)">(.*)</font>@i) { 
-	    print STDERR "PARSE(HITS->HITS): $_\n" if ($self->{_debug} >= 2);
-	    my($hit) = new WWW::SearchResult;
-	    $hit->add_url($1);
-	    $hit->title($2);
-	    $hit->description($3);
-	    $hit->raw($_);
-	    $hits_found++;
-	    push(@{$self->{cache}}, $hit);
-	} elsif ($state == $HITS && m@^<dt><a href="([^"]+)">(.*)\<\/a\>@i) { 
-	    $raw = $_;
-	    $url = $1;
-	    $title = $2;
-	    print STDERR "PARSE(HITS->DESC): $_\n" if ($self->{_debug} >= 2);
-	    $state = $DESC;
-	} elsif ($state == $DESC) {
-	    $raw .= $_;
-	    m@<dd>(.*)<br>@;
-	    $desc = $2;
-	    print STDERR "PARSE(DESC->HITS): $_\n" if ($self->{_debug} >= 2);
-	    #
-	    my($hit) = new WWW::SearchResult;
-	    $hit->add_url($url);
-	    $hit->title($title);
-	    $hit->description($desc);
-	    $hit->score($rating);
-	    $hit->raw($raw);
-	    $hits_found++;
-	    push(@{$self->{cache}}, $hit);
-	    $state = $HITS;
-	} elsif ($state == $HITS && (m@</font></dl>@i)) {
-	    print STDERR "PARSE(HITS->TRAILER): $_\n\n" if ($self->{_debug} >= 2);
-	    $state = $TRAILER;
-	} elsif ($state == $TRAILER && m@<a href="([^"]+)">next\<\/a\>(.*)@i) { 
-	    my($relative_url) = $1;
-	    $self->{_next_url} = new URI::URL($relative_url, $self->{_base_url});
-	    print STDERR "PARSE(TRAILER->POST_NEXT): $_\n\n" if ($self->{_debug} >= 2);
-	    $state = $POST_NEXT;
-	} else {
-            print STDERR "PARSE: read:\"$_\"\n" if ($self->{_debug} >= 2);
-	};
-    };
-    if ($state != $POST_NEXT) {
-	# end, no other pages (missed ``next'' tag)
-	if (defined($hit)) {
-	    push(@{$self->{cache}}, $hit);
-	};
-	$self->{_next_url} = undef;
-    };
-    # sleep so as to not overload server
-    $self->user_agent_delay if (defined($self->{_next_url}));
-    return $hits_found;
-}
+     if ($state == $HEADER && m@metasearch results.*?of\s(\d+)@i) { 
+        $self->approximate_result_count($1);
+        print STDERR "PARSE(HEADER->HITS-1): $_\n" if ($self->{_debug} >= 2);
+        $state = $HITS;
+   } elsif ($state == $HITS && m@<dt><a href=.*?,http%3A%2F%2F(.*?)\">(.*)</font></dt><dd><.*?>(.*)<br>@i) { 
+        my ($url, $title, $sDesc) = ($1,$2,$3);
+        print STDERR "PARSE(HITS->HITS): $_\n" if ($self->{_debug} >= 2);
+        my($hit) = new WWW::SearchResult;
+        $url = 'http://'. $url;        
+        $title =~ s/<b>//g;
+        $hit->add_url(&decodeURL($url));
+        $hit->title($title);
+        $hit->description($sDesc);
+        $hits_found++;
+        push(@{$self->{cache}}, $hit);
+        $state = $HITS;
+        # Make sure we don't miss anything
+   } elsif ($state == $HITS && m@<dt><a href=.*?,http%3A%2F%2F(.*?)\">(.*)</font></dd><br>@i) { 
+        my ($url, $title, $sDesc) = ($1,$2,$3);
+        $sDesc .= $3;
+        print STDERR "PARSE(HITS->HITS): $_\n" if ($self->{_debug} >= 2);
+        my($hit) = new WWW::SearchResult;
+        $url = 'http://'. $url; 
+        $title =~ s/<b>//g;
+        $hit->add_url(&decodeURL($url));
+        $hit->title($title);
+        $hit->description($sDesc);
+        $hits_found++;
+        push(@{$self->{cache}}, $hit);
+        $state = $HITS;
+    } elsif ($state == $HITS && (m@</font></dl>@i)) {
+        print STDERR "PARSE(HITS->TRAILER): $_\n\n" if ($self->{_debug} >= 2);
+        $state = $TRAILER;
+    } elsif ($state == $TRAILER && m@<a href="([^"]+)">next\<\/a\>(.*)@i) { 
+        my($relative_url) = $1;
+        $self->{_next_url} = new URI::URL($relative_url, $self->{_base_url});
+        print STDERR "PARSE(TRAILER->POST_NEXT): $_\n\n" if ($self->{_debug} >= 2);
+        $state = $POST_NEXT;
+        } else {
+        print STDERR "PARSE: read:\"$_\"\n" if ($self->{_debug} >= 2);
+        };
+        };
+        if ($state != $POST_NEXT) {
+        # no "next" tag
+    if (defined($hit)) {
+        push(@{$self->{cache}}, $hit);
+        };
+        $self->{_next_url} = undef;
+        };
+        # sleep so as to not overload server
+        $self->user_agent_delay if (defined($self->{_next_url}));
+        return $hits_found;
+        }
+# private
+sub decodeURL {
+     # rolled my own unescape stuff 
+     my $url = shift;
+           $url=~ s/%2E/./g;
+           $url=~ s/%2F/\//g;
+           $url=~ s/%3A/:/g;
+           $url=~ s/%2D/-/g;
+           $url=~ s/%5F/_/g;
+           $url=~ s/%7E/~/g;
+     return $url;
+        } 
 1;
-
 

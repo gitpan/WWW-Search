@@ -2,7 +2,7 @@
 # LookSmart.pm
 # by Jim Smyser
 # Copyright (C) 1996-1999 by Jim Smyser & USC/ISI
-# $Id: LookSmart.pm,v 1.3 1999/07/14 17:10:30 mthurn Exp $
+# $Id: LookSmart.pm,v 1.4 1999/09/28 14:30:08 mthurn Exp $
 ##########################################################
 
 
@@ -123,9 +123,9 @@ sub native_setup_search {
      $self->{'_num_hits'} = 0;
  
      if (!defined($self->{_options})) {
-     $self->{'search_base_url'} = 'http://looksmart.com';
+     $self->{'search_base_url'} = 'http://www.looksmart.com';
      $self->{_options} = {
-         'search_url' => 'http://looksmart.com/r_search',
+         'search_url' => 'http://www.looksmart.com/r_search',
          'key' => $native_query,
               };
            }
