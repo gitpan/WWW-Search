@@ -1,59 +1,37 @@
 #!/usr/local/bin/perl -w
 
 #
-# AltaVista.pm
-# by John Heidemann
+# Yahoo.pm
+# by Wm. L. Scheding
 # Copyright (C) 1996 by USC/ISI
-# $Id: AltaVista.pm,v 1.13 1996/11/11 18:14:50 johnh Exp $
+# $Id: Yahoo.pm,v 1.2 1996/11/11 18:14:51 johnh Exp $
 #
 # Complete copyright notice follows below.
 # 
 
 
-package WWW::Search::AltaVista;
+package WWW::Search::Yahoo;
 
 =head1 NAME
 
-WWW::Search::AltaVista - class for searching Alta Vista 
+WWW::Search::Yahoo - class for searching Yahoo 
 
 =head1 DESCRIPTION
 
-This class is an AltaVista specialization of WWW::Search.
-It handles making and interpreting AltaVista searches
-F<http://www.altavista.digital.com>.
+WARNING:  This class has not been fully debugged yet.
+Use at your own risk.
+
+This class is an Yahoo specialization of WWW::Search.
+It handles making and interpreting Yahoo searches
+F<http://www.yahoo.com>.
 
 This class exports no public interface; all interaction should
 be done through WWW::Search objects.
 
 
-=head1 OPTIONS
-
-The default is for simple web queries.
-Specialized back-ends for simple and advanced web and news searches
-are available (see
-L<WWW::Search::AltaVista::Web>,
-L<WWW::Search::AltaVista::AdvancedWeb>,
-L<WWW::Search::AltaVista::News>,
-L<WWW::Search::AltaVista::AdvancedNews>).
-These back-ends set the following options.
-
-=over 8
-
-=item pg=aq
-
-Do advanced queries.
-
-=item what=news
-
-Search Usenet instead of the web.
-
-=back
-
-
 =head1 SEE ALSO
 
-To make new back-ends, see L<WWW::Search>,
-or the specialized AltaVista searches described in options.
+To make new back-ends, see L<WWW::Search>.
 
 
 =head1 HOW DOES IT WORK?
@@ -74,6 +52,7 @@ set of results, otherwise it sets it to undef to indicate we're done.
 =head1 AUTHOR
 
 C<WWW::Search> is written by John Heidemann, <johnh@isi.edu>.
+C<WWW::Yahoo> is written by Wm. L. Scheding, <wls@isi.edu>.
 
 
 =head1 COPYRIGHT
@@ -100,9 +79,11 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 #
 #  Test cases:
-# ./altavista.pl xxxasdf                        --- no hits
-# ./altavista.pl '"lsam replication"'           --- single page return
-# ./altavista.pl '+"john heidemann" +work'      --- 9 page return
+# ./yahoo.pl 'xxxxasdf'         --- no hits
+# ./yahoo.pl 'repographics      --- 2 hits 
+# ./yahoo.pl 'reprographics     --- 33 hits 
+# ./yahoo.pl 'replication       --- 73 hits 
+# ./yahoo.pl 'reproduction      --- 255 hits 
 #
 
 
@@ -112,43 +93,25 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
+# $VERSION = 1.000;
 @ISA = qw(WWW::Search Exporter);
 
 use Carp ();
 require WWW::SearchResult;
 
-
-
+# alta vista via yahoo
+# http://av.yahoo.com/bin/search?p=lsam+replication&d=y&g=0&s=a&w=s&n=100
+# plain old yahoo, words (not substrings)
+# http://search.yahoo.com/bin/search?p=replication&d=y&g=0&s=a&w=w&n=100
 # private
 sub native_setup_search
 {
-    my($self, $native_query, $native_options_ref) = @_;
+    my($self, $native_query) = @_;
     $self->{_user_agent} = WWW::Search::setup_user_agent;
     $self->{_next_to_retrieve} = 0;
-    if (!defined($self->{_default_options})) {
-	$self->{_default_options} = {
-	    pg => 'q',
-	    what => 'web',
-	    fmt => 'd',
-        };
-    };
-    my($options_ref) = $self->{_default_options};
-    if (defined($native_options_ref)) {
-	# copy options
-	foreach (keys %$native_options_ref) {
-	    $options_ref->{$_} = $native_options_ref->{$_};
-	};
-    };
-    # process the options
-    my($options) = '';
-    foreach (keys %$options_ref) {
-	$options .= $_ . '=' . $options_ref->{$_} . '&';
-    };
-    
-    $self->{_base_url} = 
-	$self->{_next_url} =
-	"http://www.altavista.digital.com/cgi-bin/query?" . $options .
-	"q=" . $native_query;
+    $self->{_base_url} = $self->{_next_url} =
+	"http://search.yahoo.com/bin/search?d=y&g=0&s=a&w=s&n=100" .
+	"&p=" . $native_query;
 }
 
 
@@ -172,49 +135,47 @@ sub native_retrieve_some
     my($HEADER, $HITS, $TRAILER) = (1..10);
     my($hits_found) = 0;
     my($state) = ($HEADER);
+    my($cite) = "";
     my($hit) = ();
     foreach (split(/\n/, $response->content())) {
-         next if m@^$@; # short circuit for blank lines
-	 if ($state == $HEADER && /Documents?.*of\s*(about)?\s*(\d+)\s+matching/) {
-	    $self->approximate_result_count($2);
+        next if m@^$@; # short circuit for blank lines
+	if ($state == $HEADER && m@<center>Found\s+(\d+)\s+matches\s+containing\s*<b>(.*)</b>\.\s+$@i) {
+#	    print STDOUT "header:\"$_\"\n";
+	    $self->approximate_result_count($1); # search is $2
 	    $state = $HITS;
-	} elsif ($state == $HITS && m@^(<[Pp]><dt>|<dt>)<a href=\"([^"]+)"><strong>(.*)</strong></a><dd>(.*)\.<br>@) {
+	} elsif ($state == $HITS && m@^<a href=\"([^"]+)">(.*)</a>(.*)<ul>@i) { #"
+#	    print STDOUT "cite:\"$_\"\n";
+	    $cite = $1; # in Yahoo the cites are first, then the URLs
+	} elsif ($state == $HITS && m@^<li><a href="([^"]+)">(.*)</a>(.*)$@i) { #"
+#	    print STDOUT "hits:\"$_\"\n";
 	    if (defined($hit)) {
 	        push(@{$self->{cache}}, $hit);
 	    };
 	    $hit = new WWW::SearchResult;
-	    $hit->add_url($2);
-	    $hits_found++;
-	    $hit->title($3);
-	    $hit->description($4);
-	} elsif ($state == $HITS && m@^(<[Pp]><dt>|<dt>)<a href=\"([^"]+)"><strong>(.*)</strong></a><dd>(.*)<br><a href=\"([^"]+)">@) {
-	    # news is slightly different
-	    if (defined($hit)) {
-	        push(@{$self->{cache}}, $hit);
-	    };
-	    $hit = new WWW::SearchResult;
-	    $hit->add_url($2);   # AltaVista's news gateway URL
-	    $hits_found++;
-	    $hit->title($3);
-	    $hit->description($4);
-	    $hit->add_url($5);   # news: URL
-	    $hits_found++;
-	} elsif ($state == $HITS && /^<cite><a href="([^"]+)">/) { #"
 	    $hit->add_url($1);
-	    $hits_found++;   # altavista counts URL==hit
-	} elsif ($state == $HITS && /^<CENTER>.*\s+p\./) {
+	    $hits_found++;
+	    $hit->title($2);
+	    $hit->description($3);
+	    if ($cite) { # add cites
+	      $hit->add_url($cite);
+	      $hits_found++;   # yahoo has cite first
+	    }
+	} elsif ($state == $HITS && m@^<center>@) {
+#	    print STDOUT "next:\"$_\"\n";
 	    # end, with a list of other pages to go to
 	    if (defined($hit)) {
 	        push(@{$self->{cache}}, $hit);
 	    };
-	    if (/Next\]/) {
+	    if (m@<b><a href="([^"]+)">Next\s+(\d*)\s+Matches</a>@i) {
 		# set up next page
-		my($relative_url) = m@<a\s+href="([^"]+)">\s*\[\s*[Nn]ext\s*\]\s*</a>@; #"
+		my($relative_url) = $1; #"
 		$self->{_next_url} = new URI::URL($relative_url, $self->{_base_url});
 	    } else {
 		$self->{_next_url} = undef;
 	    };
 	    $state = $TRAILER;
+	} else {
+#	    print STDOUT "read:\"$_\"\n";
 	};
     };
     if ($state != $TRAILER) {
@@ -225,7 +186,7 @@ sub native_retrieve_some
 	$self->{_next_url} = undef;
     };
 
-    # sleep so as to not overload altavista
+    # sleep so as to not overload yahoo
     $self->user_agent_delay if (defined($self->{_next_url}));
 
     return $hits_found;

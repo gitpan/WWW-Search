@@ -1,59 +1,34 @@
 #!/usr/local/bin/perl -w
 
 #
-# AltaVista.pm
-# by John Heidemann
+# Lycos.pm
+# by Wm. L. Scheding
 # Copyright (C) 1996 by USC/ISI
-# $Id: AltaVista.pm,v 1.13 1996/11/11 18:14:50 johnh Exp $
+# $Id: Lycos.pm,v 1.1 1996/11/01 23:44:20 wls Exp $
 #
 # Complete copyright notice follows below.
 # 
 
 
-package WWW::Search::AltaVista;
+package WWW::Search::Lycos;
 
 =head1 NAME
 
-WWW::Search::AltaVista - class for searching Alta Vista 
+WWW::Search::Lycos - class for searching Lycos 
 
 =head1 DESCRIPTION
 
-This class is an AltaVista specialization of WWW::Search.
-It handles making and interpreting AltaVista searches
-F<http://www.altavista.digital.com>.
+This class is an Lycos specialization of WWW::Search.
+It handles making and interpreting Lycos searches
+F<http://www.lycos.com>.
 
 This class exports no public interface; all interaction should
 be done through WWW::Search objects.
 
 
-=head1 OPTIONS
-
-The default is for simple web queries.
-Specialized back-ends for simple and advanced web and news searches
-are available (see
-L<WWW::Search::AltaVista::Web>,
-L<WWW::Search::AltaVista::AdvancedWeb>,
-L<WWW::Search::AltaVista::News>,
-L<WWW::Search::AltaVista::AdvancedNews>).
-These back-ends set the following options.
-
-=over 8
-
-=item pg=aq
-
-Do advanced queries.
-
-=item what=news
-
-Search Usenet instead of the web.
-
-=back
-
-
 =head1 SEE ALSO
 
-To make new back-ends, see L<WWW::Search>,
-or the specialized AltaVista searches described in options.
+To make new back-ends, see L<WWW::Search>.
 
 
 =head1 HOW DOES IT WORK?
@@ -100,9 +75,9 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 #
 #  Test cases:
-# ./altavista.pl xxxasdf                        --- no hits
-# ./altavista.pl '"lsam replication"'           --- single page return
-# ./altavista.pl '+"john heidemann" +work'      --- 9 page return
+# ./search.pl xxxasdf         --- no hits
+# ./search.pl 'lsam replication&matchmode=and'  --- single page return
+# ./search.pl 'scheding'      --- 3 page return
 #
 
 
@@ -112,6 +87,7 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
+# $VERSION = 1.000;
 @ISA = qw(WWW::Search Exporter);
 
 use Carp ();
@@ -122,33 +98,12 @@ require WWW::SearchResult;
 # private
 sub native_setup_search
 {
-    my($self, $native_query, $native_options_ref) = @_;
+    my($self, $native_query) = @_;
     $self->{_user_agent} = WWW::Search::setup_user_agent;
     $self->{_next_to_retrieve} = 0;
-    if (!defined($self->{_default_options})) {
-	$self->{_default_options} = {
-	    pg => 'q',
-	    what => 'web',
-	    fmt => 'd',
-        };
-    };
-    my($options_ref) = $self->{_default_options};
-    if (defined($native_options_ref)) {
-	# copy options
-	foreach (keys %$native_options_ref) {
-	    $options_ref->{$_} = $native_options_ref->{$_};
-	};
-    };
-    # process the options
-    my($options) = '';
-    foreach (keys %$options_ref) {
-	$options .= $_ . '=' . $options_ref->{$_} . '&';
-    };
-    
-    $self->{_base_url} = 
-	$self->{_next_url} =
-	"http://www.altavista.digital.com/cgi-bin/query?" . $options .
-	"q=" . $native_query;
+    $self->{_base_url} = $self->{_next_url} =
+	"http://www.lycos.com/cgi-bin/pursuit?cat=lycos&x=13&y=15" .
+	"&query=" . $native_query;
 }
 
 
@@ -169,16 +124,18 @@ sub native_retrieve_some
     };
 
     # parse the output
-    my($HEADER, $HITS, $TRAILER) = (1..10);
+    my($HEADER, $HITS, $DD, $DESC, $CENTER, $PREV, $NBSP, $NEXT, $TRAILER) = (1..10);
     my($hits_found) = 0;
     my($state) = ($HEADER);
     my($hit) = ();
     foreach (split(/\n/, $response->content())) {
-         next if m@^$@; # short circuit for blank lines
-	 if ($state == $HEADER && /Documents?.*of\s*(about)?\s*(\d+)\s+matching/) {
-	    $self->approximate_result_count($2);
+        next if m@^$@; # short circuit for blank lines
+	if ($state == $HEADER && m@^<P>\s+You\s+found\s+(\d+)\s+relevant\s+documents@i) {
+#            print STDOUT "header:\"$_\"\n";
+	    $self->approximate_result_count($1);
 	    $state = $HITS;
-	} elsif ($state == $HITS && m@^(<[Pp]><dt>|<dt>)<a href=\"([^"]+)"><strong>(.*)</strong></a><dd>(.*)\.<br>@) {
+	} elsif ($state == $HITS && m@^<DT><b>(\d+)\)\s+<a href=\"([^"]+)\">(.*)</a></b>@i) { #"
+#            print STDOUT "hit:\"$_\"\n";
 	    if (defined($hit)) {
 	        push(@{$self->{cache}}, $hit);
 	    };
@@ -186,35 +143,46 @@ sub native_retrieve_some
 	    $hit->add_url($2);
 	    $hits_found++;
 	    $hit->title($3);
-	    $hit->description($4);
-	} elsif ($state == $HITS && m@^(<[Pp]><dt>|<dt>)<a href=\"([^"]+)"><strong>(.*)</strong></a><dd>(.*)<br><a href=\"([^"]+)">@) {
-	    # news is slightly different
-	    if (defined($hit)) {
-	        push(@{$self->{cache}}, $hit);
-	    };
-	    $hit = new WWW::SearchResult;
-	    $hit->add_url($2);   # AltaVista's news gateway URL
-	    $hits_found++;
-	    $hit->title($3);
-	    $hit->description($4);
-	    $hit->add_url($5);   # news: URL
-	    $hits_found++;
-	} elsif ($state == $HITS && /^<cite><a href="([^"]+)">/) { #"
-	    $hit->add_url($1);
-	    $hits_found++;   # altavista counts URL==hit
-	} elsif ($state == $HITS && /^<CENTER>.*\s+p\./) {
+	    $state = $DD;
+	} elsif ($state == $DD && m@^<DD>\s+@i) { #"
+#            print STDOUT "DD:\"$_\"\n";
+	    $state = $DESC;
+	} elsif ($state == $DESC && m@^(.*)$@i) { #"
+#            print STDOUT "DESC:\"$_\"\n";
+	    $hit->description($1);
+	    $state = $HITS;
+	} elsif ($state == $HITS && m@^<CENTER>$@i) { #"
+#            print STDOUT "center:\"$_\"\n";
+	    $state = $CENTER;
+	} elsif ($state == $CENTER && m@^Previous Page$@i) { #"
+#            print STDOUT "prev:\"$_\"\n";
+	    $state = $PREV;
+	} elsif ($state == $CENTER && m@^<A HREF="([^"]+)">Previous Page</A>$@i) { #"
+#            print STDOUT "prev:\"$_\"\n";
+	    $state = $PREV;
+	} elsif ($state == $PREV && m@^&nbsp;&nbsp;$@i) { #"
+#            print STDOUT "nbsp:\"$_\"\n";
+	    $state = $NBSP;
+	} elsif ($state == $NBSP && m@<A HREF="([^"]+)">Next Page</a><BR>@i) { #"
+#            print STDOUT "next:\"$_\"\n";
 	    # end, with a list of other pages to go to
 	    if (defined($hit)) {
 	        push(@{$self->{cache}}, $hit);
 	    };
-	    if (/Next\]/) {
-		# set up next page
-		my($relative_url) = m@<a\s+href="([^"]+)">\s*\[\s*[Nn]ext\s*\]\s*</a>@; #"
-		$self->{_next_url} = new URI::URL($relative_url, $self->{_base_url});
-	    } else {
-		$self->{_next_url} = undef;
-	    };
+	    # set up next page
+    	    my($relative_url) = $1; #"
+	    $self->{_next_url} = new URI::URL($relative_url, $self->{_base_url});
 	    $state = $TRAILER;
+	} elsif ($state == $NBSP && m@^Next Page<BR>$@i) { #"
+#            print STDOUT "last:\"$_\"\n";
+	    # end, with no other pages to go to
+	    if (defined($hit)) {
+	        push(@{$self->{cache}}, $hit);
+	    };
+	    $self->{_next_url} = undef;
+	    $state = $TRAILER;
+	} else {
+#            print STDOUT "read:\"$_\"\n";
 	};
     };
     if ($state != $TRAILER) {
@@ -225,7 +193,7 @@ sub native_retrieve_some
 	$self->{_next_url} = undef;
     };
 
-    # sleep so as to not overload altavista
+    # sleep so as to not overload lycos
     $self->user_agent_delay if (defined($self->{_next_url}));
 
     return $hits_found;

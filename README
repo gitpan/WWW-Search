@@ -1,19 +1,33 @@
 
-
 WWW::Search
------------
+===========
+
+
+WHAT IS NEW WITH WWW::Search 1.005?
+-----------------------------------
+
+- new: back-ends for HotBot, Lycos, and several AltaVista variants
+- new: application support for search-engine selection
+- new: application and library support for search-engine options
+
+
+
+WHAT IS WWW::Search?
+--------------------
 
 WWW::Search is a collection of Perl modules which provide an API to
 WWW search engines like AltaVista, Lycos, Hotbot, WebCrawler, and so
-on.  Currently WWW::Search includes the generic library, a back-end
-for AltaVista, AutoSearch (an program to automate tracking of search
+on.  Currently WWW::Search includes back-ends for variations of
+AltaVista, Lycos, and HotBot.  We include two applications built from
+this library: AutoSearch (an program to automate tracking of search
 results over time), and a small demonstration program to drive the
 library.  Back-ends for other search engines and more sophisticated
 clients are currently under development.
 
 
-AutoSearch
-----------
+
+WHAT IS AutoSearch?
+-------------------
 
 WWW::Search's primary client is AutoSearch.  AutoSearch performs a
 web-based search and puts the results set in a web page.  It
@@ -26,7 +40,7 @@ below for the quick-start instructions.
 
 
 
-Requirements
+REQUIREMENTS
 ------------
 
 WWW::Search requires Perl5 and libwww-perl.
@@ -36,36 +50,55 @@ Both are also available from the Comprehensive Perl Archive
 Network (CPAN). Visit <http://www.perl.com/CPAN/> to find a CPAN
 site near you.
 
+At this time WWW::Search has been tested with Perl versions 5.002 and
+5.003.
 
 
-Availability
+
+AVAILABILITY
 ------------
 
 The latest version of WWW::Search should always be available from
 <http://www.isi.edu/lsam/tools/WWW_SEARCH/>.
 
+WWW::Search is also available as part of CPAN.  Visit
+<URL:http://www.perl.com/CPAN/> to find a CPAN site near you.
+
+Feedback about WWW::Search is encouraged.  If you're using it for a
+neat application, please let us know.  If you'd like to (or have)
+implemented a new back-end for WWW::Search, let us know so we don't
+duplicate work.
 
 
-Installation
+
+
+INSTALLATION
 ------------
 
 In order to use this package you will need Perl version 5.002 or
 better.  You install WWW::Search, as you would install any perl module
 library, by running these commands:
 
-   perl Makefile.PL
-   make
-   make install
+    perl Makefile.PL
+    make
+    make install
 
 If you want to install a private copy of WWW::Search in your home
 directory, then you should try to produce the initial Makefile with
 something like this command:
 
-  perl Makefile.PL PREFIX=~/perl
+    perl Makefile.PL PREFIX=~/perl
+
+
+Note:  make of the current release reports the following error which can be ignored:
+
+    /usr/local/bin/pod2man: bad option in paragraph 35 of lib/WWW/Search.pm: ``native_query('search-engine-specific+query+string',
+        { option1 => 'able', option2 => 'baker' } )'' should be [LCI]<native_query('search-engine-specific+query+string',
+        { option1 => 'able', option2 => 'baker' } )>
 
 
 
-Demonstration
+DEMONSTRATION
 -------------
 
 After installing the client programs,
@@ -83,7 +116,7 @@ to your crontab(1) to update this search once a week.
 
 
 
-Documentation
+DOCUMENTATION
 -------------
 
 See WWW/Search.pm for an overview of the library.
@@ -95,15 +128,19 @@ module files directly.
 
 
 
-Support
--------
+SUPPORT AND CREDITS
+-------------------
 
 Question about how to use this library should be directed to 
 <johnh@isi.edu> at this time.
 
+WWW::Search is based on code written by John Heidemann and William
+Scheding.  An earlier implementation of AutoSearch was done by Kedar
+Jog with advice from Joe Touch.
 
 
-Copyright
+
+COPYRIGHT
 ---------
 
 Copyright (c) 1996 University of Southern California.
@@ -127,9 +164,9 @@ Portions of this README are derived from the README for libwww-perl.
 
 
 
-Ispell
+ISPELL
 ------
 
  LocalWords:  AltaVista Lycos Hotbot WebCrawler libwww perl com sn CPAN isi PL
  LocalWords:  lsam pl pm perldoc README LocalWords AutoSearch Search's html
- LocalWords:  crontab
+ LocalWords:  crontab HotBot autosearch Scheding Kedar

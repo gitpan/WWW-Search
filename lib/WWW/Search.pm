@@ -4,7 +4,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.16 1996/10/31 01:52:57 johnh Exp $
+# $Id: Search.pm,v 1.23 1996/11/07 00:18:42 johnh Exp $
 #
 # A complete copyright notice appears at the end of this file.
 # 
@@ -20,7 +20,13 @@ WWW::Search - Virtual base class for WWW searches
 =head1 DESCRIPTION
 
 This class is the parent for all access method supported by the
-C<WWW::Search> library.
+C<WWW::Search> library.  This library implements a Perl API
+to web-based search engines.
+
+Current search engines supported include
+AltaVista (both web and Usenet searches),
+Lycos,
+and HotBot.
 
 Search results are limited and there is a pause between each request 
 for results to avoid overloading either the client or the server.
@@ -45,6 +51,9 @@ Results are objects of C<WWW::SearchResult>
 
 For more details see L<LWP>.
 
+For specific search engines, see L<WWW::Search::TheEngineName>
+(replacing TheEngineName with a particular search engine).
+
 
 =head1 METHODS AND FUNCTIONS
 
@@ -56,7 +65,7 @@ For more details see L<LWP>.
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query);
-$VERSION = 1.004;
+$VERSION = 1.005;
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
 require LWP::UserAgent;
@@ -75,21 +84,36 @@ use URI::Escape;
 =head2 new
 
 To create a new WWW::Search, call
-    $search = new WWW::Search::SearchEngineName();
+    $search = new WWW::Search('SearchEngineName');
 where SearchEngineName is replaced with a particular search engine.
 For example:
-    $search = new WWW::Search::AltaVista();
+    $search = new WWW::Search('AltaVista');
+
+If no search engine is specified a default will be chosen for you.
 
 The next step is usually:
-    $search->native_query('search-engine-specific query string');
+    $search->native_query('search-engine-specific+query+string');
 
 =cut
 
+
+# the default (not currently more configurable :-< )
+$default_engine = 'AltaVista';
+
 sub new
 { 
-    my($class) = @_;
+    my($class, $engine) = @_;
+
+    $engine = $default_engine if (!defined($engine));
+    # Load the engine, if necessary.
+    my($subclass) = "${class}::$engine";
+    if (!defined(&$subclass)) {
+	eval "use $subclass";
+	Carp::croak("unknown search engine back-end $engine") if ($@);
+    };
 
     my $self = bless {
+	engine => $engine,
 	state => $SEARCH_BEFORE,
 	next_to_return => 0,
 	maximum_to_retrieve => 500,  # both pages and hits
@@ -97,23 +121,32 @@ sub new
 	requests_made => 0,
 	interrequest_delay => 0.25,
 	# variable initialization goes here
-    }, $class;
+    }, $subclass;
     return $self;
 }
 
 
 =head2 native_query
 
-Specify a query to the current search object.
-The query must be escaped; call L<WWW::Search/escape_query>
+Specify a query (and optional options) to the current search object.
+The query and options must be escaped; call L<WWW::Search/escape_query>
 to escape a plain query.
-Doesn't actually begin the search until C<results> or
+The actual search is not actually begun until C<results> or
 C<next_result> is called.
 
 Example:
-    $search->native_query('search-engine-specific query string');
+    $search->native_query('search-engine-specific+query+string',
+	{ option1 => 'able', option2 => 'baker' } );
 
-The next step is usually:
+The hash of options following the query string is optional.  Both the
+query string and the hash of options are interpreted in
+search-engine-specific manner.
+
+Details about how the search string and option hash are interpreted
+in the search-engine-specific manual pages
+(WWW::Search::SearchEngineName).
+
+After C<native_query>, the next step is usually:
 
     @results = $search->results();
 
@@ -126,7 +159,13 @@ or
 =cut
 #'
 
-sub native_query { return shift->_elem('native_query', @_); }
+sub native_query {
+    my($self) = shift;
+    return $self->_elem('native_query', @_)
+	if ($#_ != 1);
+    $self->{'native_query'} = $_[0];
+    $self->{'native_options'} = $_[1];
+}
 sub approximate_result_count { return shift->_elem('approx_count', @_); }
 
 
@@ -295,7 +334,7 @@ sub setup_search
     $self->{cache} = ();
     $self->{number_retrieved} = 0;
     $self->{state} = $SEARCH_UNDERWAY;
-    $self->native_setup_search($self->{'native_query'});
+    $self->native_setup_search($self->{'native_query'}, $self->{'native_options'});
 }
 
 
@@ -402,6 +441,11 @@ If you implement a new back-end, please let the authors know.
 =head1 AUTHOR
 
 C<WWW::Search> is written by John Heidemann, <johnh@isi.edu>.
+
+Back-ends and applications for WWW::Search have been done by 
+John Heidemann,
+Wm. L. Scheding,
+and others.
 
 
 =head1 COPYRIGHT
