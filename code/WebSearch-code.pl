@@ -4,7 +4,7 @@ exit 0;
 #
 # WebSearch.PL
 # Copyright (C) 1996-1997 by USC/ISI
-# $Id: WebSearch-code.pl,v 1.5 2003-05-22 22:09:38-04 kingpin Exp kingpin $
+# $Id: WebSearch-code.pl,v 1.10 2005/01/16 04:20:21 Daddy Exp $
 #
 # Complete copyright notice follows below.
 

@@ -1,4 +1,4 @@
-# $Id: WebSearch.PL,v 1.17 2004/08/21 19:45:28 Daddy Exp $
+# $Id: WebSearch.PL,v 1.18 2005/01/16 04:05:28 Daddy Exp $
 use Config;
 use File::Basename qw(basename dirname);
 chdir(dirname($0));
@@ -24,3 +24,4 @@ shift @as;
 $" = "\n";
 print OUT @as;
 close OUT;
+__END__

@@ -1,4 +1,4 @@
-# $rcs = ' $Id: Test.pm,v 2.266 2004/10/09 23:26:45 Daddy Exp Daddy $ ' ;
+# $rcs = ' $Id: Test.pm,v 2.268 2005/01/16 04:07:48 Daddy Exp $ ' ;
 
 =head1 NAME
 
@@ -23,6 +23,7 @@ package WWW::Search::Test;
 use Carp;
 use Config;
 use Cwd;
+use Data::Dumper;  # for debugging only
 use Exporter;
 use File::Path;
 use File::Spec::Functions qw( :ALL );
@@ -47,11 +48,13 @@ use vars qw( @EXPORT @ISA );
 
 use vars qw( $VERSION $bogus_query $websearch );
 
-$VERSION = do { my @r = (q$Revision: 2.266 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.268 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 
 ($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = qw(dummy internal external update);
 ($TEST_DUMMY, $TEST_EXACTLY, $TEST_BY_COUNTING, $TEST_GREATER_THAN, $TEST_RANGE) = (1..10);
+
+use constant DEBUG => 0;
 
 sub find_websearch
   {
@@ -62,19 +65,24 @@ sub find_websearch
     my @asTry = ( $sProg );
     # Try local directory, in case . is not in the path:
     push @asTry, catfile(curdir, $sProg);
+    # See if WebSearch.BAT has been create/installed, and try it with
+    # explicit 'perl' in front:
+    push @asTry, map { ("$_.bat", "$Config{perlpath} $_") } @asTry;
+    DEBUG && print STDERR Dumper(\@asTry);
+ WEBSEARCH_TRY:
     foreach my $sTry (@asTry)
       {
       my $sCmd = "$sTry --VERSION";
-      # print STDERR " + cmd ==$sCmd==\n";
-        {
-        # Turn off warnings:
-        local $^W = 0;
-        # Wrap it in an eval so we don't die if it fails:
-        my @as = split(/\s/, eval{`$sCmd`});
-        $websearch = shift(@as) || undef;
-        }
-      last if $websearch;
+      DEBUG && print STDERR " + W::S::T::find_websearch() cmd ==$sCmd==\n";
+      # Turn off warnings:
+      local $^W = 0;
+      # Wrap it in an eval so we don't die if it fails:
+      my @as = split(/\s/, eval{`$sCmd`});
+      $websearch = shift(@as) || undef;
+      last WEBSEARCH_TRY if $websearch;
       } # foreach
+    # Prevent undef warning:
+    $websearch ||= '';
     undef $websearch unless ($websearch =~ m/WebSearch/);
     # print STDERR "in WWW::Search::Test, websearch is $websearch\n";
     } # unless
@@ -730,3 +738,4 @@ sub skip_test
 1;
 
 __END__
+

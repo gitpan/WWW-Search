@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 2.531 2004/10/14 03:17:04 Daddy Exp $
+# $Id: Search.pm,v 2.534 2005/02/03 03:35:12 Daddy Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -9,13 +9,11 @@
 
 WWW::Search - Virtual base class for WWW searches
 
-
 =head1 SYNOPSIS
 
     require WWW::Search;
     $sEngine = "AltaVista";
     $oSearch = new WWW::Search($sEngine);
-
 
 =head1 DESCRIPTION
 
@@ -48,7 +46,6 @@ Results are objects of type C<WWW::Search::Result>
 Note that different backends support different result fields.
 All backends are required to support title and url.
 
-
 =head1 SEE ALSO
 
 For specific search engines, see L<WWW::Search::TheEngineName>
@@ -56,7 +53,6 @@ For specific search engines, see L<WWW::Search::TheEngineName>
 
 For details about the results of a search,
 see L<WWW::Search::Result>.
-
 
 =head1 METHODS AND FUNCTIONS
 
@@ -100,7 +96,7 @@ use vars qw( @ISA @EXPORT @EXPORT_OK $VERSION $MAINTAINER );
 @EXPORT_OK = qw( escape_query unescape_query generic_option strip_tags );
 @ISA = qw(Exporter LWP::MemberMixin);
 $MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
-$VERSION = do { my @r = (q$Revision: 2.531 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.534 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 =head2 new
 
@@ -129,23 +125,18 @@ sub new
   # the default (not currently more configurable :-< )
   my $default_engine = 'Null::Empty';
   my $default_agent_name = "WWW::Search/$VERSION";
-  my $default_agent_e_mail = ''; # User->Login .'@'. hostfqdn;
-
+  my $default_agent_email = '';
   $engine = $default_engine if (!defined($engine));
   # Load the engine, if necessary.
   my $subclass = "${class}::$engine";
-  if (!defined(&$subclass))
-    {
-    eval "use $subclass";
-    Carp::croak("unknown search engine backend $engine ($@)") if ($@);
-    } # if
-
+  eval "use $subclass";
+  Carp::croak("unknown search engine backend $engine ($@)") if ($@);
   my $self = bless {
                     engine => $engine,
                     maximum_to_retrieve => 500,  # both pages and hits
                     interrequest_delay => 0.25,  # in seconds
                     agent_name => $default_agent_name,
-                    agent_e_mail => $default_agent_e_mail,
+                    agent_email => $default_agent_email,
                     env_proxy => 0,
                     http_method => 'GET',
                     http_proxy => undef,
@@ -212,8 +203,11 @@ We can not tell if they are up-to-date or working, though.
 
 =cut
 
+use constant DEBUG_ARC     => 0;
 use constant DEBUG_COOKIES => 0;
-use constant DEBUG_FIND => 0;
+use constant DEBUG_FIND    => 0;
+use constant DEBUG_FUNC    => 0;
+use constant DEBUG_RETR    => 0;
 
 sub _wanted
   {
@@ -230,7 +224,7 @@ sub _wanted
     # This is so we don't go down site_perl etc too early (whatever
     # that means):
     $File::Find::prune = 1;
-    print STDERR " +     prune\n" if DEBUG_FIND;
+    DEBUG_FIND && print STDERR " +     prune\n";
     return;
     } # if
   unless ($sFullPath =~ s!\.pm\Z!!)
@@ -347,7 +341,7 @@ After C<native_query()>, the next step is usually:
 sub native_query
   {
   my $self = shift;
-  print STDERR " + native_query($_[0])\n" if $self->{_debug};
+  print STDERR " FFF native_query($_[0])\n" if (DEBUG_FUNC || $self->{_debug});
   $self->reset_search();
   $self->{'native_query'} = $_[0];
   $self->{'native_options'} = $_[1];
@@ -494,14 +488,17 @@ Example:
   $ENV{http_proxy_pwd } = 'c4rr0t5';
   $oSearch->env_proxy('yes');  # Turn on with any true value
   ...
-  $oSearch->env_proxy(0);  # Turn off with zero or undef
+  $oSearch->env_proxy(0);  # Turn off with zero
   ...
   if ($oSearch->env_proxy)  # Test
 
 =cut
 
 # contributed by Klaus Johannes Rusch
-sub env_proxy { return shift->_elem('env_proxy', @_); }
+sub env_proxy
+  {
+  return shift->_elem('env_proxy', @_);
+  } # env_proxy
 
 
 =head2 http_proxy
@@ -527,8 +524,15 @@ sub http_proxy
   {
   my $self = shift;
   # Make a copy of our arguments:
-  my @a = @_;
-  return $self->_elem('http_proxy', \@a);
+  if (@_)
+    {
+    my @a = @_;
+    return $self->_elem('http_proxy', \@a);
+    }
+  else
+    {
+    return $self->_elem('http_proxy');
+    }
   } # http_proxy
 
 
@@ -562,6 +566,28 @@ sub http_proxy_pwd
   }
 
 
+=head2 is_http_proxy (PRIVATE)
+
+Returns true if proxy information is available.
+
+=cut
+
+sub is_http_proxy
+  {
+  my $self = shift;
+  my $ra = $self->http_proxy;
+  my $ret = (
+             ('ARRAY' eq ref($ra))
+             &&
+             defined($ra->[0])
+             &&
+             ($ra->[0] ne '')
+            );
+  # print STDERR " DDD is_http_proxy() return =$ret=\n";
+  return $ret;
+  } # is_http_proxy
+
+
 =head2 is_http_proxy_auth_data (PRIVATE)
 
 Returns true if all authentication data
@@ -572,12 +598,20 @@ Returns true if all authentication data
 sub is_http_proxy_auth_data
   {
   my $self = shift;
-  return (
-          defined($self->http_proxy) &&
-          ($self->http_proxy ne '') &&
-          defined($self->http_proxy_user) &&
-          defined($self->http_proxy_pwd)
-         );
+  # print STDERR (" DDD http_proxy is ", Dumper(\$self));
+  my $ret = (
+             $self->is_http_proxy
+             &&
+             defined($self->http_proxy_user)
+             &&
+             ($self->http_proxy_user ne '')
+             &&
+             defined($self->http_proxy_pwd)
+             &&
+             ($self->http_proxy_pwd ne '')
+            );
+  # print STDERR " DDD is_http_proxy_auth_data() return =$ret=\n";
+  return $ret;
   } # is_http_proxy_auth_data
 
 
@@ -598,8 +632,15 @@ You can also spell this method "maximum_to_return".
 
 =cut
 
-sub maximum_to_retrieve { return shift->_elem('maximum_to_retrieve', @_); }
-sub maximum_to_return { return shift->_elem('maximum_to_retrieve', @_); }
+sub maximum_to_retrieve
+  {
+  return shift->_elem('maximum_to_retrieve', @_);
+  }
+
+sub maximum_to_return
+  {
+  return shift->_elem('maximum_to_retrieve', @_);
+  }
 
 
 =head2 timeout
@@ -614,7 +655,10 @@ Example:
 
 =cut
 
-sub timeout { return shift->_elem('timeout', @_); }
+sub timeout
+  {
+  return shift->_elem('timeout', @_);
+  }
 
 
 =head2 approximate_result_count
@@ -630,11 +674,12 @@ sub approximate_result_count
   # Optional arg1 = new value for this option.
   my $iArg = shift;
   $iArg = undef if (defined($iArg) && ($iArg eq ''));
-  # print STDERR " + a_r_c(state=$self->{state},iArg=$iArg)\n";
+  DEBUG_FUNC && print STDERR " FFF a_r_c(state=$self->{state},iArg=$iArg)\n";
+  DEBUG_ARC && print STDERR " + a_r_c(state=$self->{state},iArg=$iArg)\n";
   if (defined($iArg) && (0 <= $iArg))
     {
     # Caller is trying to SET the value:
-    # print STDERR " + a_r_cSET(state=$self->{state},iArg=$iArg)\n";
+    DEBUG_ARC && print STDERR " + a_r_cSET(state=$self->{state},iArg=$iArg)\n";
     $self->{'approx_count'} =  $iArg;
     return $iArg;
     } # if
@@ -647,9 +692,10 @@ sub approximate_result_count
       # the search has been completed:
       ($self->{state} ne SEARCH_DONE))
     {
+    DEBUG_ARC && print STDERR " DDD a_r_c prime the pump\n";
     # Prime the pump, if necessary:
     $self->retrieve_some();
-    }
+    } # if
   $iArg = $self->{'approx_count'} || 0;
   # print STDERR " + a_r_cGET(state=$self->{state},answer=$iArg)\n";
   return $iArg;
@@ -686,7 +732,7 @@ to the HTTP response code.
 sub results
   {
   my $self = shift;
-  print STDERR " + results(",$self->{'native_query'},")\n" if $self->{_debug};
+  print STDERR " FFF results(",$self->{'native_query'},")\n" if (DEBUG_FUNC || $self->{_debug});
   # Put all the search results into the cache:
   1 while ($self->retrieve_some());
   $self->{cache} ||= [];
@@ -744,16 +790,17 @@ sub next_result
 
 Backends which need to login to the search engine should implement
 this function.  Takes two arguments, user and password.  Return
-nonzero if login was successful.  Return 0 if login failed.
+nonzero if login was successful.  Return undef or 0 if login failed.
 
 =cut
 
 sub login
   {
   my $self = shift;
-  my ($sUser, $sPassword) = @_;
   # Here is just a stub.
   return 1;
+  # These are the arguments:
+  my ($sUser, $sPassword) = @_;
   } # login
 
 =head2 logout
@@ -836,7 +883,7 @@ the same engine).
 sub reset_search
   {
   my $self = shift;
-  print STDERR " + reset_search(",$self->{'native_query'},")\n" if $self->{_debug};
+  print STDERR " FFF reset_search(",$self->{'native_query'},")\n" if (DEBUG_FUNC || $self->{_debug});
   $self->{'cache'} = ();
   $self->{'native_query'} = '';
   $self->{'next_to_retrieve'} = 1;
@@ -1045,7 +1092,19 @@ sub hash_to_cgi_string
 
 =cut
 
-sub agent_name { return shift->_elem('agent_name', @_); }
+sub agent_name
+  {
+  return shift->_elem('agent_name', @_);
+  }
+
+=head2 agent_email($sName)
+
+=cut
+
+sub agent_email
+  {
+  return shift->_elem('agent_email', @_);
+  }
 
 =head2 user_agent($NON_ROBOT) (PRIVATE)
 
@@ -1057,8 +1116,8 @@ Returns the user-agent object.
 
 If a backend needs the low-level LWP::UserAgent or LWP::RobotUA to
 have a particular name, $oSearch->agent_name() and possibly
-$oSearch->{'agent_e_mail'} should be set to the desired values
-*before* calling $oSearch->user_agent():
+$oSearch->agent_email() should be called to set the desired values
+*before* calling $oSearch->user_agent().
 
 If the environment variable WWW_SEARCH_USERAGENT has a value, it will
 be used as the class for a new user agent object.  This class should
@@ -1068,9 +1127,16 @@ be a subclass of LWP::UserAgent.  For example,
   # If this env.var. has no value,
   # LWP::UserAgent or LWP::RobotUA will be used.
   $oSearch = new WWW::Search('MyBackend');
-  $oSearch->{'agent_e_mail'} = $oSearch->agent_name; # The old value
-  $oSearch->agent_name('Mozilla/MSIE 5.5');
-  $oSearch->user_agent('non-robot');
+  $oSearch->agent_name('MySpider');
+  if ($iBackendWebsiteRequiresNonRobot)
+    {
+    $oSearch->user_agent('non-robot');
+    }
+  else
+    {
+    $oSearch->agent_email('me@here.com');
+    $oSearch->user_agent();
+    }
 
 Backends should use robot-style user-agents whenever possible.
 
@@ -1124,21 +1190,15 @@ sub user_agent
       {
       $ua = new LWP::UserAgent;
       $ua->agent($self->agent_name);
-      $ua->from($self->{'agent_e_mail'});
+      $ua->from($self->agent_email);
       }
     else
       {
-      $ua = new LWP::RobotUA($self->agent_name, $self->{'agent_e_mail'});
+      $ua = LWP::RobotUA->new($self->agent_name, $self->agent_email);
       $ua->delay($self->{'interrequest_delay'}/60.0);
       }
     $ua->timeout($self->{'timeout'});
-    $ua->proxy(@{$self->{'http_proxy'}}) if (
-                                             ('ARRAY' eq ref($self->{'http_proxy'}))
-                                             &&
-                                             defined($self->{'http_proxy'}->[0])
-                                             &&
-                                             ($self->{'http_proxy'}->[0] ne '')
-                                            );
+    $ua->proxy(@{$self->{'http_proxy'}}) if $self->is_http_proxy;
     if ($self->env_proxy)
       {
       $ua->env_proxy($self->env_proxy);
@@ -1164,7 +1224,10 @@ Call this method before calling http_request.
 
 =cut
 
-sub http_referer { return shift->_elem('_http_referer', @_); }
+sub http_referer
+  {
+  return shift->_elem('_http_referer', @_);
+  }
 
 
 =head2 http_method (PRIVATE)
@@ -1179,7 +1242,10 @@ The default is 'GET'.
 
 =cut
 
-sub http_method { shift->_elem('http_method', @_); }
+sub http_method
+  {
+  shift->_elem('http_method', @_);
+  }
 
 
 =head2 http_request($method, $url)
@@ -1392,7 +1458,10 @@ middle of a list of search results, for example.)
 
 =cut
 
-sub next_url { return shift->_elem('_next_url', @_); }
+sub next_url
+  {
+  return shift->_elem('_next_url', @_);
+  }
 
 
 =head2 split_lines (PRIVATE)
@@ -1458,6 +1527,7 @@ It calls C<_native_setup_search()> to do backend-specific setup.
 sub _native_setup_search
   {
   my $self = shift;
+  print STDERR " FFF _n_s_s\n" if (DEBUG_FUNC || $self->{_debug});
   # This function is for backward-compatibility, for backends that
   # define the old native_setup_search(), but not the new
   # _native_setup_search()
@@ -1469,12 +1539,13 @@ sub native_setup_search
   my $self = shift;
   # This is a NOP.  It is here in case a backend does not need to do
   # any native setup!
+  print STDERR " FFF n_s_s\n" if (DEBUG_FUNC || $self->{_debug});
   } # native_setup_search
 
 sub setup_search
   {
   my ($self) = @_;
-  print STDERR " + setup_search(",$self->{'native_query'},")\n" if $self->{_debug};
+  print STDERR " FFF setup_search(",$self->{'native_query'},")\n" if (DEBUG_FUNC || $self->{_debug});
   $self->{cache} = ();
   $self->{next_to_retrieve} = 1;
   $self->{number_retrieved} = 0;
@@ -1527,7 +1598,7 @@ Checks for overflow.
 sub retrieve_some
   {
   my $self = shift;
-  print STDERR " + retrieve_some(", $self->{'native_query'}, ")\n" if $self->{_debug};
+  print STDERR " FFF retrieve_some(", $self->{'native_query'}, ")\n" if (DEBUG_FUNC || $self->{_debug});
   return undef if ($self->{state} == SEARCH_DONE);
   $self->setup_search() if ($self->{state} == SEARCH_BEFORE);
   $self->{state} = SEARCH_RETRIEVING;
@@ -1549,17 +1620,20 @@ sub retrieve_some
   # got enough already?
   if ($self->{number_retrieved} >= $self->{'maximum_to_retrieve'})
     {
+    print STDERR " DDD retrieve_some() got enough already\n" if (DEBUG_RETR || $self->{_debug});
     $self->{state} = SEARCH_DONE;
     return;
     } # if
   # spinning our wheels?
-  if ($self->{requests_made} > $self->{'maximum_to_retrieve'}) {
+  if ($self->{requests_made} > $self->{'maximum_to_retrieve'})
+    {
+    print STDERR " DDD retrieve_some() too many requests\n" if (DEBUG_RETR || $self->{_debug});
     $self->{state} = SEARCH_DONE;
     return;
     } # if
   # need more results
   my $res = $self->_native_retrieve_some() || 0;
-  print STDERR " +   _native_retrieve_some() returned $res\n" if $self->{_debug};
+  print STDERR " +   _native_retrieve_some() returned $res\n" if (DEBUG_RETR || $self->{_debug});
   $self->{requests_made}++;
   $self->{number_retrieved} += $res;
   $self->{state} = SEARCH_DONE if ($res == 0);
@@ -1658,16 +1732,18 @@ sub parse_tree
 
 sub _native_retrieve_some
   {
+  my $self = shift;
+  print STDERR " FFF _n_r_s\n" if (DEBUG_FUNC || $self->{_debug});
   # This function is for backward-compatibility, for backends that
   # define the old native_retrieve_some(), but not the new
   # _native_retrieve_some()
-  shift->native_retrieve_some(@_);
-  } # native_retrieve_some
+  $self->native_retrieve_some(@_);
+  } # _native_retrieve_some
 
 sub native_retrieve_some
   {
   my ($self) = @_;
-  # printf STDERR (" +   %s::_native_retrieve_some()\n", __PACKAGE__) if $self->{_debug};
+  print STDERR " FFF n_r_s\n" if (DEBUG_FUNC || $self->{_debug});
   # Fast exit if already done:
   return undef if (!defined($self->{_next_url}));
   # If this is not the first page of results, sleep so as to not
@@ -1723,7 +1799,7 @@ sub native_retrieve_some
   $tree->eof();
   # print STDERR " +   calling parse_tree...\n" if 1 < $self->{_debug};
   return $self->parse_tree($tree);
-  } # _native_retrieve_some
+  } # native_retrieve_some
 
 
 =head2 preprocess_results_page (PRIVATE)
@@ -1848,3 +1924,6 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 
 1;
+
+__END__
+

@@ -1,10 +1,10 @@
 # This -*- cperl -*- program writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.40 2004/09/25 21:43:16 Daddy Exp Daddy $
+# $Id: Makefile.PL,v 1.43 2005/02/20 03:14:33 Daddy Exp $
 
 use inc::Module::Install;
 
 name('WWW-Search');
-version(2.475);
+version(2.476);
 author('Martin Thurn <mthurn@cpan.org>');
 abstract('Query web search engines and get URLs');
 requires(perl => 5.004);
@@ -130,7 +130,6 @@ PART3
 
   sub top_targets
     {
-    use File::Temp;
     my $self = shift;
     # Use the default setting for (not) echoing commands during make:
     my $NOECHO = $self->{NOECHO};
@@ -143,9 +142,10 @@ PART3
     # pod2test (or pod2test.exe or pod2test.bat) is in the path.
     my $sPod2testCmd = 'pod2test %s %s';
     # There is a bug in Pod::Tests (or is it Pod::Parser).  We can not
-    # read Win32 pod Unix:
+    # read MSWin32 pod on Unix:
     if ($^O =~ m!(solaris|linux)!)
       {
+      use File::Temp;
       my $sTempFname = tmpnam();
       $sPod2testCmd = 'cat %s | dos2unix > $sTempFname ; pod2test $sTempFname %s';
       # $sPod2testCmd = 'cat %s | dos2unix | pod2test > %s';
@@ -195,3 +195,4 @@ PART3
   } # end of package MY block
 
 __END__
+

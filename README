@@ -3,14 +3,16 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.475?  (2004-10-27)
+WHAT IS NEW IN WWW::Search 2.476?  (2005-02-18)
 -----------------------------------------------
 
 Overview of changes: 
 
- * minor fixes for errors and warnings during `make test` on linux (thanks to Rob Roy Barreca)
+ * new method agent_email()
+ * bugfix for http_proxy() getting no args
+ * more coverage testing
 
-For details, see the ChangeLog file (updates after 2004-10-10) and/or
+For details, see the ChangeLog file (updates after 2004-10-31) and/or
 the pod of each affected module.
 
 
@@ -55,6 +57,8 @@ CPAN independently (not included with this WWW::Search distribution):
 AltaVista       http://www.perl.com/CPAN/modules/by-module/WWW
 AP              in the WWW::Search::News distribution
 Ebay            http://www.perl.com/CPAN/modules/by-module/WWW
+Ebay::Motors    in the Ebay distro
+Ebay::Complete  contact author, mthurn@cpan.org
 Ebay::Mature    contact author, mthurn@cpan.org
 Euroseek        http://www.perl.com/CPAN/modules/by-module/WWW/JSMYSER/
 Go              http://www.perl.com/CPAN/modules/by-module/WWW
@@ -110,17 +114,16 @@ type
    perl -MCPAN -e 'install WWW::Search'
 
 Otherwise, you can install WWW::Search as you would any perl module
-library, by running these commands in the WWW-Search-x.xx directory
-after unpacking the archive (and after installing all the prerequisite
-modules):
+library, by running the following commands in the WWW-Search-x.xx
+directory after unpacking the archive (and after installing all the
+prerequisite modules):
 
     perl Makefile.PL
     make test
     make install
 
-On Win32, maintenance and testing is done with ActiveState's perl and
-Microsoft's nmake.exe; if that's true for you, use 'nmake' instead of
-'make' in the above sequence of commands.
+On Win32, use 'nmake' instead of 'make' in the above sequence of
+commands.
 
 If you want to install a private copy of WWW::Search in your home
 directory, then you should do the installation with something like

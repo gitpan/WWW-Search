@@ -1,13 +1,11 @@
-
 exit 0;
-
 
 # The above line(s) will be stripped off during `make`
 #
 # AutoSearch-code.pl
 # Copyright (c) 1996-1997 University of Southern California.
 # All rights reserved.
-# $Id: AutoSearch-code.pl,v 2.132 2004/10/07 10:47:39 Daddy Exp $
+# $Id: AutoSearch-code.pl,v 2.135 2005/02/20 02:57:47 Daddy Exp $
 #
 # Complete copyright notice follows below.
 
@@ -37,7 +35,7 @@ use WWW::Search;
 use strict;
 
 use vars qw( $VERSION );
-$VERSION = do { my @r = (q$Revision: 2.132 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.135 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 use constant DEBUG_EMAIL => 0;
 
@@ -634,7 +632,9 @@ sub main
     if ($response->is_success) {
       print STDERR "Warning:  Empty results set.\n" if ($v_dbg);
     } else {
-      print STDERR "Error: " . http_error_as_nice_string($response) . "\n";
+      my $sMsg = "Error: " . http_error_as_nice_string($response);
+      print STDERR "$sMsg\n";
+      $sEmail .= "$sMsg\n";
     }
   } # if no hits
 
@@ -828,14 +828,20 @@ sub main
   $section = "Weekly"; # the section of the file/output.
   print HTML "<!--$section-->\n";
   # report errors FIRST.
-  if ($hits == 0) {
+  if ($hits == 0)
+    {
     my($response) = $search->response();
-    if ($response->is_success) { # dbg message, normally we're quiet
-#      print HTML "AutoSearch Warning: Empty Results Set. <br>\n";
-    } else { # SearchEngine error message:
-      print HTML "AutoSearch Error during search on $today: " . http_error_as_nice_string($response) . "<br>\n";
-    }
-  }
+    if ($response->is_success)
+      { # dbg message, normally we're quiet
+      #      print HTML "AutoSearch Warning: Empty Results Set. <br>\n";
+      }
+    else
+      { # SearchEngine error message:
+      my $sMsg = "AutoSearch Error during search on $today: " . http_error_as_nice_string($response);
+      print HTML "$sMsg<br>\n";
+      $sEmail .= "$sMsg\n";
+      }
+    } # if no hits
   # Let's use reverse chronological order.
   # Update the 'weekly' status:
   if ($changes)
@@ -2025,3 +2031,4 @@ if any crop up.
 =cut
 
 __END__
+

@@ -1,3 +1,11 @@
+2005-02-02  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search.pm (http_proxy): BUGFIX for calling with no args setting the value
+
+2004-11-05  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search/Test.pm (find_websearch): try harder to find a working WebSearch
+
 2004-10-26  Kingpin  <mthurn@verizon.net>
 
 	* lib/WWW/Search/Test.pm (find_websearch): avoid warnings
