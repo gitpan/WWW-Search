@@ -111,6 +111,10 @@ At the time of this release, the primary WWW::Search development and
 testing is under perl version 5.005_03 on Sun Sparc Solaris 7 and
 ActiveState perl build 517 on Windows NT 4.0 with service pack 5.
 
+*** NOTE: The maintainer has NOT been able to install WWW::Search with
+ActivePerl 518 on Windows NT *** Please email MartinThurn@iname.com if
+you get WWW::Search to install with ActivePerl 518 ***
+
 
 AVAILABILITY
 ------------
@@ -197,17 +201,30 @@ When submitting a bug report, please remember to include
 DEMONSTRATION
 -------------
 
-After installing the client programs, try
-	WebSearch '"Your Name Here"'
-to see who's talking about you on the web.
+After installing the client programs, try:
 
-Then (in your web page directory), try
-	AutoSearch -n 'me on the web' -s '"Your Name Here"' me
-and the web page me/index.html will be created summarizing
-this information.
-Then add
+	WebSearch '"Your Name Here"'
+
+or, if you are on Win32:
+
+        WebSearch "\"Your Name Here\""
+
+to see who's talking about you on the web.  Then (in your web page
+directory), try:
+
+	AutoSearch -n me_on_the_web -s '"Your Name Here"' me
+
+or, if you are on Win32:
+
+	AutoSearch -n me_on_the_web -s "\"Your Name Here\"" me
+
+and the web page me/index.html will be created summarizing this
+information.  Then add
+
 	0 3 * * 1 AutoSearch /path/to/your/web/pages/me
-to your crontab(1) to update this search once a week.
+
+to your crontab(1) to update this search every week at 3:00 Monday
+morning.
 
 
 DOCUMENTATION
@@ -246,9 +263,9 @@ SUPPORT AND CREDITS
 -------------------
 
 The WWW::Search architecture is by John Heidemann with feedback from
-the other contributors.  NOTE: This list is not updated; consult the
-on-line documentation to find out who is currently maintaining each
-component.
+the other contributors.  NOTE: This list is no longer updated; consult
+the on-line documentation to find out who is currently maintaining
+each component.
 
 PLATFORM SUPPORT:
 	Unix			John Heidemann <johnh@isi.edu>

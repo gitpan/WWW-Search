@@ -2,7 +2,7 @@
 
 # test.pl
 # Copyright (C) 1997 by USC/ISI
-# $Id: test.pl,v 1.19 1999/07/14 18:47:53 mthurn Exp $
+# $Id: test.pl,v 1.20 1999/07/16 15:12:11 mthurn Exp $
 #
 # Copyright (c) 1997 University of Southern California.
 # All rights reserved.                                            
@@ -82,7 +82,7 @@ sub relevant_test
 
 sub web_search_bin 
   {
-  return "$fullperl -I$pwd/lib $pwd/bin/WebSearch ";
+  return "$fullperl -I$pwd/lib $pwd/blib/script/WebSearch ";
   }
 
 sub eval_test

@@ -1,12 +1,10 @@
+AutoSearch.PL
 ChangeLog
 MANIFEST
 Makefile.PL
 README
 TODO
-bin/AutoSearch
-bin/AutoSearch.PL
-bin/WebSearch
-bin/WebSearch.PL
+WebSearch.PL
 lib/WWW/Search.pm
 lib/WWW/Search/AltaVista.pm
 lib/WWW/Search/AltaVista/AdvancedNews.pm
