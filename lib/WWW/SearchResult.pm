@@ -4,7 +4,7 @@
 # SearchResult.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: SearchResult.pm,v 1.7 1997/11/04 01:04:09 johnh Exp $
+# $Id: SearchResult.pm,v 1.8 1998/05/30 18:55:39 johnh Exp $
 #
 # Copyright (c) 1996 University of Southern California.
 # All rights reserved.                                            
@@ -31,7 +31,7 @@ package WWW::SearchResult;
 WWW::SearchResult - class for results returned from WWW::Search
 
 =head1 SYNOPSIS
-    
+
     require WWW::Search;
     require WWW::SearchResult;
     $search = new WWW::Search;

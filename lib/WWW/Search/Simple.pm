@@ -6,7 +6,7 @@ package WWW::Search::Simple;
 
 =head1 NAME
 
-WWW::Search::Simple
+WWW::Search::Simple - class for searching Simple
 
 
 =head1 SYNOPSIS

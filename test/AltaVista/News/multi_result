@@ -1,7 +1,7 @@
-http://www.altavista.digital.com/cgi-bin/query?what=news&text=yes&fmt=d&pg=q&q=perl
-/cgi-bin/query?pg=q&what=news&text=yes&q=perl&stq=30
-/cgi-bin/query?pg=q&what=news&text=yes&q=perl&stq=60
-/cgi-bin/query?pg=q&what=news&text=yes&q=perl&stq=90
-/cgi-bin/query?pg=q&what=news&text=yes&q=perl&stq=120
-/cgi-bin/query?pg=q&what=news&text=yes&q=perl&stq=150
-/cgi-bin/query?pg=q&what=news&text=yes&q=perl&stq=180
+http://www.altavista.digital.com/cgi-bin/query?what=news&text=yes&fmt=d&pg=q&q=%2BPerl+%2BCPAN
+/cgi-bin/query?pg=q&what=news&fmt=d&text=yes&q=%2bPerl+%2bCPAN&stq=30&c9k
+/cgi-bin/query?pg=q&what=news&fmt=d&text=yes&q=%2bPerl+%2bCPAN&stq=60&c9k
+/cgi-bin/query?pg=q&what=news&fmt=d&text=yes&q=%2bPerl+%2bCPAN&stq=90&c9k
+/cgi-bin/query?pg=q&what=news&fmt=d&text=yes&q=%2bPerl+%2bCPAN&stq=120&c9k
+/cgi-bin/query?pg=q&what=news&fmt=d&text=yes&q=%2bPerl+%2bCPAN&stq=150&c9k
+/cgi-bin/query?pg=q&what=news&fmt=d&text=yes&q=%2bPerl+%2bCPAN&stq=180&c9k

@@ -1,20 +1,28 @@
 #!/usr/local/bin/perl -w
 
 # Excite.pm
-# Copyright (C) 1998 by USC/ISI
 # by Martin Thurn
-# $Id: Excite.pm,v 1.10 1998/05/28 04:05:38 johnh Exp $
+# Copyright (C) 1998 by USC/ISI
+# $Id: Excite.pm,v 1.11 1998/05/30 18:55:41 johnh Exp $
 
 package WWW::Search::Excite;
+
 
 =head1 NAME
 
 WWW::Search::Excite - class for searching Excite 
 
+
 =head1 SYNOPSIS
 
-    require WWW::Search;
-    $search = new WWW::Search('Excite');
+    use WWW::Search;
+    my $oSearch = new WWW::Search('Excite');
+    my $sQuery = WWW::Search::escape_query("+sushi restaurant +Columbus Ohio");
+    $oSearch->native_query($sQuery);
+    while (my $oResult = $oSearch->next_result()) {
+        print $oResult->url, "\n";
+    }
+
 
 =head1 DESCRIPTION
 
@@ -47,6 +55,12 @@ it sets C<{_next_url}> to point to the page for the next
 set of results, otherwise it sets it to undef to indicate we''re done.
 
 
+=head1 CAVEATS
+
+Only returns results from Excite's "Web Results".
+Ignores all other sections of Excite's query results.
+
+
 =head1 BUGS
 
 Please tell the author if you find any!
@@ -58,8 +72,8 @@ This module adheres to the C<WWW::Search> test suite mechanism.
 
   Test cases:
  '+mrfglbqnx +NoSuchWord'          ---   no hits
- 'disestablishmentarianism'        ---   13 hits on one page
- '+Jabba +bounty +hunter +Greedo'  ---  129 hits on two pages
+ '+LSAM +replication'              ---   13 hits on one page
+ '+Jabba +bounty +hunter +Greedo'  ---  138 hits on two pages
 
 
 =head1 AUTHOR
@@ -80,6 +94,10 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 =head1 VERSION HISTORY
 
+=head2 1.4
+
+Modified for new Excite output format.
+
 =head2 1.2
 
 First publicly-released version.
@@ -93,6 +111,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
+$VERSION = '1.4';
 
 use Carp ();
 use WWW::Search(generic_option);
@@ -199,7 +218,7 @@ sub native_retrieve_some
   print STDERR " *   got response\n" if $self->{'_debug'};
   $self->{'_next_url'} = undef;
   # Parse the output
-  my ($HEADER, $HITS, $DESC, $TRAILER) = qw(HE HH DE TR);
+  my ($HEADER, $HITS, $URL, $DESC, $TRAILER) = qw(HE HH UR DE TR);
   my $hits_found = 0;
   my $state = $HEADER;
   my $hit;
@@ -208,19 +227,19 @@ sub native_retrieve_some
     next if m/^$/; # short circuit for blank lines
     print STDERR " *   $state ===$_===" if 2 <= $self->{'_debug'};
     if ($state eq $HEADER && 
-        m=^\s\s\smatches.+?\[(\d+)\shits\.\sAbout\sYour\sResults\]=)
+        m=^<small>.+?\[(\d+)$=)
       {
       # Actual line of input is:
-      #    matches. <FONT SIZE=-1><A HREF=/search.gw?s=&numDocs=66469&mode=about&sorig=a><I>[66469 hits. About Your Results]</I></A></FONT>
+      # <small><a href=/search.gw?layout=about&num=138&s=%2BJabba><i>[138
       print STDERR "header line\n" if 2 <= $self->{'_debug'};
       $self->approximate_result_count($1);
       $state = $HITS;
       } # we're in HEADER mode, and line has number of results
     elsif ($state eq $HEADER && 
-           m=^\s+&nbsp;\d+-(\d+)</FONT>=)
+           m=^&nbsp;\d+-(\d+)=)
       {
       # Actual line of input is:
-      #       &nbsp;1-4</FONT>
+      # &nbsp;85-138
       print STDERR "header line\n" if 2 <= $self->{'_debug'};
       unless (defined($self->approximate_result_count) and 0 < $self->approximate_result_count)
         {
@@ -229,26 +248,35 @@ sub native_retrieve_some
       $state = $HITS;
       } # we're in HEADER mode, and line has number of results
     elsif ($state eq $HITS && 
-           m|<B>\d+\%\s*</B>.+?<A\s+HREF=\"([^\"]+)\">([^<]+)|i)
+           m=^<SMALL>(\d+)\%\s*</SMALL>$=i)
       {
-      print STDERR "hit url line\n" if 2 <= $self->{'_debug'};
+      print STDERR "hit percentage line\n" if 2 <= $self->{'_debug'};
       # Actual line of input:
-      #          <FONT COLOR=navy><B>66% </B></FONT>          <B><A HREF="http://www.wwwishbone.com/WWWishbone/MyShow/TheCast/cast.html">WORLDWIDE WISHBONE(TM)</A></B>&nbsp;
-      # Sometimes the </A> is on the next line.
-      # Sometimes there is a /r right before the </A>
+      # <SMALL>92% </SMALL>
       if (defined($hit))
         {
         push(@{$self->{cache}}, $hit);
         }
       $hit = new WWW::SearchResult;
-      $hit->add_url($1);
+      $hit->score($1);
       $self->{'_num_hits'}++;
       $hits_found++;
+      $state = $URL;
+      } # in HITS mode, saw percentage line
+    elsif ($state eq $URL && 
+           m|^<A\s+HREF=\"([^\"]+)\">([^<]+)|i)
+      {
+      print STDERR "hit url line\n" if 2 <= $self->{'_debug'};
+      # Actual line of input:
+      # <A HREF="http://buteo.colorado.edu/~yosh/psi/system2/aliens/greedo/">Greedo</A>&nbsp;
+      # Sometimes the </A> is on the next line.
+      # Sometimes there is a /r right before the </A>
+      $hit->add_url($1);
       $hit->title($2);
       $state = $DESC;
       }
     elsif ($state eq $DESC &&
-           m=Summary:\s*</I></B>(.+?)<BR><B><I>More=)
+           m/^\-\s(.+)$/)
       {
       print STDERR "hit description line\n" if 2 <= $self->{'_debug'};
       $hit->description($1);
@@ -256,11 +284,11 @@ sub native_retrieve_some
       } # line is description
 
     elsif ($state eq $HITS &&
-           m/<input\s[^>]*value=\"Next\sResults\"/i)
+           m/<input\s[^>]*VALUE=\"Next\sResults\"/i)
       {
       # Actual lines of input include:
-      #                 <INPUT TYPE=submit NAME=next VALUE="Next Results">
-      #                 <input value="Next Results" type="submit" name="next">
+      # <INPUT TYPE=submit NAME=next VALUE="Next Results">
+      # <input value="Next Results" type="submit" name="next">
       print STDERR " found next button\n" if 2 <= $self->{'_debug'};
       # There is a "next" button on this page, therefore there are
       # indeed more results for us to go after next time.

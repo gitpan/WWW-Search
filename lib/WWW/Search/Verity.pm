@@ -6,7 +6,7 @@ package WWW::Search::Verity;
 
 =head1 NAME
 
-WWW::Search::Verity
+WWW::Search::Verity - class for searching Verity
 
 
 =head1 SYNOPSIS

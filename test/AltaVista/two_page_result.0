@@ -1,79 +1,105 @@
 <html><head>
-<title>AltaVista: Simple Query +LSAM +ISI +work</title>
+<title>AltaVista: Simple Query +LSAM +ISI +IB</title>
 </head><body>
-<a href="/cgi-bin/query?text=yes"><b>AltaVista Search</b></a><br>
-
+<font size=+1>
+<a href="/cgi-bin/query?text">AltaVista Search Service</a>
+</font> - 
+<a href="/cgi-bin/query?text">Search</a> - 
+<a href="/av/content/zones.html">Zones</a> - 
+<a href="/av/content/services.html">Services</a> - 
+<a href="/av/content/help.htm">Help</a> - 
+<a href="/av/content/questions.htm">Feedback</a>
+<br>
 <FORM name=mfrm method=GET action="/cgi-bin/query">
 <INPUT TYPE=hidden NAME=pg VALUE=q>
 <INPUT TYPE=hidden NAME=text VALUE=yes>
+<font size=-1><B>Search the Web for documents in</B> <SELECT NAME=kl><OPTION VALUE=XX SELECTED>any language 
+<OPTION VALUE=zh>Chinese
+<OPTION VALUE=cs>Czech
+<OPTION VALUE=da>Danish
+<OPTION VALUE=nl>Dutch
+<OPTION VALUE=en>English
+<OPTION VALUE=et>Estonian
+<OPTION VALUE=fi>Finnish
+<OPTION VALUE=fr>French
+<OPTION VALUE=de>German
+<OPTION VALUE=el>Greek
+<OPTION VALUE=he>Hebrew
+<OPTION VALUE=hu>Hungarian
+<OPTION VALUE=is>Icelandic
+<OPTION VALUE=it>Italian
+<OPTION VALUE=ja>Japanese
+<OPTION VALUE=ko>Korean
+<OPTION VALUE=lv>Latvian
+<OPTION VALUE=lt>Lithuanian
+<OPTION VALUE=no>Norwegian
+<OPTION VALUE=pl>Polish
+<OPTION VALUE=pt>Portuguese
+<OPTION VALUE=ro>Romanian
+<OPTION VALUE=ru>Russian
+<OPTION VALUE=es>Spanish
+<OPTION VALUE=sv>Swedish
+</SELECT></font><br><INPUT NAME=q size=50 maxlength=800 VALUE="+LSAM +ISI +IB">
+<br><INPUT TYPE=radio NAME=act VALUE=search CHECKED>search <INPUT TYPE=radio NAME=act VALUE=refine>refine <INPUT TYPE=submit VALUE=Submit><br>
+ <font face=arial size=-2><b>Tip: </b>
 
-<a href="http://babelfish.altavista.digital.com/cgi-bin/translate?">Translations</a> .
-<a href="http://altavista.iname.com/">Free eMail</a> .
-<a href="http://altavista.looksmart.com/altavista.html">Browse by Subject</a> . 
-<a href="http://altavista.switchboard.com/bin/cgiqa.dll?MG=&MEM=212">People Search</a> . 
-<a href="http://altavista.switchboard.com/bin/cgidir.dll?MG=&MEM=212">Business Search</a>
+
+You can restrict your search to the title: <b>title:museum</b>.
+<a href="/av/content/help.htm#simple">More tips</a></font><br>
+<P><font size=-2>Search - <a href="/cgi-bin/query?pg=aq&text=yes">Advanced</a> - <a href="http://altavista.switchboard.com/bin/cgiqa.dll?MG=&MEM=212">Find a Person</a> - <a href="http://altavista.switchboard.com/bin/cgidir.dll?MG=&MEM=212">Find a Business</a> - <a href="http://altavista.looksmart.com/altavista.html">Browse Categories</a> - <a href="/cgi-bin/query?pg=q&what=news&text=yes">Search Usenet</a></font><BR></FORM>
+<font size=-1><b>16</b> matches were found. </font><P><font size=-1>Pages: <b>1</b> <a href="/cgi-bin/query?pg=q&text=yes&q=%2bLSAM+%2bISI+%2bIB&stq=10&c9k">2</a>
+<a href="/cgi-bin/query?pg=q&text=yes&q=%2bLSAM+%2bISI+%2bIB&stq=10&c9k">[<b>&gt;&gt;</b>]</a> <P>
+</font><font size=-1><dl>
+<dt><b>1. </b><a href="http://www.isi.edu/~oswal/design.html"><b>IB - Reliable Multicast Transport protocol</b></a><dd>
+<font size=-2>[<b>URL:</b> www.isi.edu/~oswal/design.html]</font><br>
+IB - Reliable Multicast Transport protocol. Reliability Mechanism: The idea of multicasting NACks is based on the fact that multicast losses are...<br><font size=-2>Last modified 22-Oct-97 - page size 4K - in English [ <a href="http://babelfish.altavista.digital.com/cgi-bin/translate?urltext=http%3a%2f%2fwww%2eisi%2eedu%2f%7eoswal%2fdesign%2ehtml&language=en">Translate</a> ]</font><P>
+<dt><b>2. </b><a href="http://www.isi.edu/div7/ib/plan.html"><b>IB Research Plan</b></a><dd>
+<font size=-2>[<b>URL:</b> www.isi.edu/div7/ib/plan.html]</font><br>
+IB Research Plan. For the experiments in this research, we will make use of traffic generators that emulate WWW browser request streams, to evaluate the...<br><font size=-2>Last modified 13-Jan-97 - page size 4K - in English [ <a href="http://babelfish.altavista.digital.com/cgi-bin/translate?urltext=http%3a%2f%2fwww%2eisi%2eedu%2fdiv7%2fib%2fplan%2ehtml&language=en">Translate</a> ]</font><P>
+<dt><b>3. </b><a href="http://www.isi.edu/div7/cities/ib/rmc/investigate.html"><b>IB - Reliable Multicast Transport protocol</b></a><dd>
+<font size=-2>[<b>URL:</b> www.isi.edu/div7/cities/ib/rmc/investigate.html]</font><br>
+IB - Reliable Multicast Transport protocol. AFDP. Dynamically selects from available transmission modes so as to maximize efficiency and throughput while..<br><font size=-2>Last modified 12-Feb-98 - page size 3K - in English [ <a href="http://babelfish.altavista.digital.com/cgi-bin/translate?urltext=http%3a%2f%2fwww%2eisi%2eedu%2fdiv7%2fcities%2fib%2frmc%2finvestigate%2ehtml&language=en">Translate</a> ]</font><P>
+<dt><b>4. </b><a href="http://www.isi.edu/div7/cities/ib/projects.html"><b>IB Research Plan</b></a><dd>
+<font size=-2>[<b>URL:</b> www.isi.edu/div7/cities/ib/projects.html]</font><br>
+IB Research Projects. &nbsp; &nbsp; Lowlat. &nbsp;Anticipatory document caching reduces request latency. &nbsp; Multicast Web Tuner. Multicasting popular..<br><font size=-2>Last modified 12-Feb-98 - page size 2K - in English [ <a href="http://babelfish.altavista.digital.com/cgi-bin/translate?urltext=http%3a%2f%2fwww%2eisi%2eedu%2fdiv7%2fcities%2fib%2fprojects%2ehtml&language=en">Translate</a> ]</font><P>
+<dt><b>5. </b><a href="http://www.isi.edu/div7/ib/example.html"><b>IB Research Plan</b></a><dd>
+<font size=-2>[<b>URL:</b> www.isi.edu/div7/ib/example.html]</font><br>
+IB Research Plan. For the experiments in this research, we will make use of traffic generators that emulate WWW browser request streams, to evaluate the...<br><font size=-2>Last modified 13-Jan-97 - page size 6K - in English [ <a href="http://babelfish.altavista.digital.com/cgi-bin/translate?urltext=http%3a%2f%2fwww%2eisi%2eedu%2fdiv7%2fib%2fexample%2ehtml&language=en">Translate</a> ]</font><P>
+<dt><b>6. </b><a href="http://www.isi.edu/div7/ib/discussion.html"><b>IB Discussion</b></a><dd>
+<font size=-2>[<b>URL:</b> www.isi.edu/div7/ib/discussion.html]</font><br>
+IB Discussion. Response time and bandwidth are key resources in this project. Current Internet user interfaces, such as Web browsers, Gopher and WAIS...<br><font size=-2>Last modified 13-Jan-97 - page size 6K - in English [ <a href="http://babelfish.altavista.digital.com/cgi-bin/translate?urltext=http%3a%2f%2fwww%2eisi%2eedu%2fdiv7%2fib%2fdiscussion%2ehtml&language=en">Translate</a> ]</font><P>
+<dt><b>7. </b><a href="http://www.isi.edu/~oswal/req.html"><b>IB - Reliable Multicast Transport protocol</b></a><dd>
+<font size=-2>[<b>URL:</b> www.isi.edu/~oswal/req.html]</font><br>
+IB - Reliable Multicast Transport protocol. &nbsp Reliability Mechanism. Retransmission is event driven (off-line). Retransmission requests uses selactive.<br><font size=-2>Last modified 22-Oct-97 - page size 2K - in English [ <a href="http://babelfish.altavista.digital.com/cgi-bin/translate?urltext=http%3a%2f%2fwww%2eisi%2eedu%2f%7eoswal%2freq%2ehtml&language=en">Translate</a> ]</font><P>
+<dt><b>8. </b><a href="http://www.isi.edu/div7/ib/"><b>About IB</b></a><dd>
+<font size=-2>[<b>URL:</b> www.isi.edu/div7/ib/]</font><br>
+About Intelligent BW. In today's Internet, information services such as WWW, Gopher, WAIS, etc. are oriented towards a reactive model: the Internet and...<br><font size=-2>Last modified 6-Oct-97 - page size 3K - in English [ <a href="http://babelfish.altavista.digital.com/cgi-bin/translate?urltext=http%3a%2f%2fwww%2eisi%2eedu%2fdiv7%2fib%2f&language=en">Translate</a> ]</font><P>
+<dt><b>9. </b><a href="http://www.isi.edu/lsam/ib/index.html"><b>About IB</b></a><dd>
+<font size=-2>[<b>URL:</b> www.isi.edu/lsam/ib/index.html]</font><br>
+Intelligent Bandwidth. &nbsp; About Intelligent Bandwidth. &nbsp; Research Projects. &nbsp; People. &nbsp; Related Work. &nbsp; Page maintainer: Joe Touch.<br><font size=-2>Last modified 15-Jan-98 - page size 2K - in English [ <a href="http://babelfish.altavista.digital.com/cgi-bin/translate?urltext=http%3a%2f%2fwww%2eisi%2eedu%2flsam%2fib%2findex%2ehtml&language=en">Translate</a> ]</font><P>
+<dt><b>10. </b><a href="http://theory.uwinnipeg.ca/CPAN/data/WWW-Search/test/Lycos/README.html"><b>/usr/local/lib/perl5/site_perl/WAIT/DB/cpan/data/WWW-Search/test/Lycos/README</b></a><dd>
+<font size=-2>[<b>URL:</b> theory.uwinnipeg.ca/CPAN/data/WWW-Search/test/Lycos/README.h]</font><br>
+Contained in WWW-Search-1.014.tar.gz. requires perl 5.002 or later. uses LWP::UserAgent in libwww-perl-5.30.tar.gz. NAME. DESCRIPTION. NAME. WWW-Search...<br><font size=-2>Last modified 27-Mar-98 - page size 1K - in English [ <a href="http://babelfish.altavista.digital.com/cgi-bin/translate?urltext=http%3a%2f%2ftheory%2euwinnipeg%2eca%2fCPAN%2fdata%2fWWW%2dSearch%2ftest%2fLycos%2fREADME%2ehtml&language=en">Translate</a> ]</font><P>
+</dl>
+</font><font size=-1>Pages: <b>1</b> <a href="/cgi-bin/query?pg=q&text=yes&q=%2bLSAM+%2bISI+%2bIB&stq=10&c9k">2</a>
+<a href="/cgi-bin/query?pg=q&text=yes&q=%2bLSAM+%2bISI+%2bIB&stq=10&c9k">[<b>&gt;&gt;</b>]</a> <P>
+</font><font size=-2>word count: LSAM: 909; ISI: 176948; IB: 225329<BR></font><P>
 <br>
-<font size=-1 face=arial><B>Search <SELECT NAME=what><OPTION VALUE=web SELECTED>the Web<OPTION VALUE=news >Usenet</SELECT>
-for documents in <SELECT NAME=kl><OPTION VALUE=XX SELECTED>any language 
-<OPTION VALUE=zh >Chinese
-<OPTION VALUE=cs >Czech
-<OPTION VALUE=da >Danish
-<OPTION VALUE=nl >Dutch
-<OPTION VALUE=en >English
-<OPTION VALUE=et >Estonian
-<OPTION VALUE=fi >Finnish
-<OPTION VALUE=fr >French
-<OPTION VALUE=de >German
-<OPTION VALUE=el >Greek
-<OPTION VALUE=he >Hebrew
-<OPTION VALUE=hu >Hungarian
-<OPTION VALUE=is >Icelandic
-<OPTION VALUE=it >Italian
-<OPTION VALUE=ja >Japanese
-<OPTION VALUE=ko >Korean
-<OPTION VALUE=lv >Latvian
-<OPTION VALUE=lt >Lithuanian
-<OPTION VALUE=no >Norwegian
-<OPTION VALUE=pl >Polish
-<OPTION VALUE=pt >Portuguese
-<OPTION VALUE=ro >Romanian
-<OPTION VALUE=ru >Russian
-<OPTION VALUE=es >Spanish
-<OPTION VALUE=sv >Swedish
-</SELECT></B></font><br><INPUT NAME=q size=65 maxlength=800 wrap=virtual VALUE="+LSAM +ISI +work"><br><INPUT TYPE=radio NAME=act VALUE=search CHECKED>search <INPUT TYPE=radio NAME=act VALUE=refine>refine <INPUT TYPE=submit VALUE=Submit>
- <BR><a href="/av/content/help_simple.htm">Help</a> . <a href="/cgi-bin/query?pg=tmpl&v=pref.html&text=yes">Preferences</a> . <a href="/cgi-bin/query?pg=q&text=yes">New Search</a> . <a href="/cgi-bin/query?pg=aq&text=yes">Advanced Search</a><br>Click here to find related books at <a href="http://www.amazon.com/exec/obidos/av-search/q=%2bLSAM+%2bISI+%2bwork">amazon.com</a>
-<br>
-
-
-
-
-<b>40</b> documents match your query.<dl>
-<dt><b>1. </b><a href="http://gost.isi.edu/people/johnh/SOFTWARE/"><b>Software Written by John Heidemann</b></a><dd>Software Written by John Heidemann. Writing software is both my job and one of my hobbies. The following packages are currently available: Operating...<br><i>http://gost.isi.edu/people/johnh/SOFTWARE/ - size 8K - 15-Aug-97 - English - <a href="http://babelfish.altavista.digital.com/cgi-bin/translate?urltext=http%3a%2f%2fgost%2eisi%2eedu%2fpeople%2fjohnh%2fSOFTWARE%2f&language=en">Translate</a></i><br>
-<P><dt><b>2. </b><a href="http://gost.isi.edu/~johnh/SOFTWARE/"><b>Software Written by John Heidemann</b></a><dd>Software Written by John Heidemann. Writing software is both my job and one of my hobbies. The following packages are currently available: Operating...<br><i>http://gost.isi.edu/~johnh/SOFTWARE/ - size 8K - 12-Feb-98 - English - <a href="http://babelfish.altavista.digital.com/cgi-bin/translate?urltext=http%3a%2f%2fgost%2eisi%2eedu%2f%7ejohnh%2fSOFTWARE%2f&language=en">Translate</a></i><br>
-<P><dt><b>3. </b><a href="http://gost.isi.edu/~johnh/WORK/"><b>John Heidemann's Work</b></a><dd>John Heidemann's Work. I am computer scientist at Information Sciences Institute and a research assistant professor at the University of Southern...<br><i>http://gost.isi.edu/~johnh/WORK/ - size 6K - 10-Feb-98 - English - <a href="http://babelfish.altavista.digital.com/cgi-bin/translate?urltext=http%3a%2f%2fgost%2eisi%2eedu%2f%7ejohnh%2fWORK%2f&language=en">Translate</a></i><br>
-<P><dt><b>4. </b><a href="http://gost.isi.edu/people/johnh/WORK/"><b>John Heidemann's Work</b></a><dd>John Heidemann's Work. I am computer scientist at Information Sciences Institute of the University of Southern California. I will also be teaching at USC..<br><i>http://gost.isi.edu/people/johnh/WORK/ - size 6K - 25-Jun-97 - English - <a href="http://babelfish.altavista.digital.com/cgi-bin/translate?urltext=http%3a%2f%2fgost%2eisi%2eedu%2fpeople%2fjohnh%2fWORK%2f&language=en">Translate</a></i><br>
-<P><dt><b>5. </b><a href="http://www.wls.org/resume.html"><b>wls' resume @ moviola.com</b></a><dd>William L. Scheding. 12301 Clover Ave. Los Angeles, CA, 90066-1020 work: 213.467.3107 -- home: 310.398.6502 -- pager: 310.775.6502 bill@moviola.com....<br><i>http://www.wls.org/resume.html - size 9K - 10-Sep-97 - English - <a href="http://babelfish.altavista.digital.com/cgi-bin/translate?urltext=http%3a%2f%2fwww%2ewls%2eorg%2fresume%2ehtml&language=en">Translate</a></i><br>
-<P><dt><b>6. </b><a href="http://www.cs.arizona.edu/xkernel/www/ipsec/ipsec-mail4.html"><b>Mailing list archive ipsec-mail4</b></a><dd>Mailing list archive ipsec-mail4. From ipsec-request@neptune.tis.com Tue Mar 19 06:39:26 1996 X-Sender: t3125rm@pop3hub.is.chrysler.com X-Mailer: Windows..<br><i>http://www.cs.arizona.edu/xkernel/www/ipsec/ipsec-mail4.html - size 577K - 6-Mar-98 - English - <a href="http://babelfish.altavista.digital.com/cgi-bin/translate?urltext=http%3a%2f%2fwww%2ecs%2earizona%2eedu%2fxkernel%2fwww%2fipsec%2fipsec%2dmail4%2ehtml&language=en">Translate</a></i><br>
-<P><dt><b>7. </b><a href="http://boggy.epistat.m.u-tokyo.ac.jp:6080/=@=:www2.umin.u-tokyo.ac.jp/internet/drafts/1id-abstracts.txt"><b>No Title</b></a><dd>Current Internet-Drafts This summary sheet provides a short synopsis of each Internet-Draft available within the "internet-drafts" directory at the shadow.<br><i>http://boggy.epistat.m.u-tokyo.ac.jp:6080/=@=:www2.umin.u-tokyo.ac.jp/internet/drafts/1id-abstracts.txt - size 574K - 24-Apr-97 - English - <a href="http://babelfish.altavista.digital.com/cgi-bin/translate?urltext=http%3a%2f%2fboggy%2eepistat%2em%2eu%2dtokyo%2eac%2ejp%3a6080%2f%3d%40%3d%3awww2%2eumin%2eu%2dtokyo%2eac%2ejp%2finternet%2fdrafts%2f1id%2dabstracts%2etxt&language=en">Translate</a></i><br>
-<P><dt><b>8. </b><a href="http://boggy.epistat.m.u-tokyo.ac.jp:6080/=@=:www2.umin.u-tokyo.ac.jp/internet/drafts/1id-abstracts.txt"><b>No Title</b></a><dd>Current Internet-Drafts This summary sheet provides a short synopsis of each Internet-Draft available within the "internet-drafts" directory at the shadow.<br><i>http://boggy.epistat.m.u-tokyo.ac.jp:6080/=@=:www2.umin.u-tokyo.ac.jp/internet/drafts/1id-abstracts.txt - size 574K - 24-Apr-97 - English - <a href="http://babelfish.altavista.digital.com/cgi-bin/translate?urltext=http%3a%2f%2fboggy%2eepistat%2em%2eu%2dtokyo%2eac%2ejp%3a6080%2f%3d%40%3d%3awww2%2eumin%2eu%2dtokyo%2eac%2ejp%2finternet%2fdrafts%2f1id%2dabstracts%2etxt&language=en">Translate</a></i><br>
-<P><dt><b>9. </b><a href="http://www.isi.edu/div7/cities/about/replication.html"><b>About LSAM Replication</b></a><dd>About LSAM Replication. Why Replication? Although the Web is widely used today, for it to be truly effective part of daily work, it must provide both...<br><i>http://www.isi.edu/div7/cities/about/replication.html - size 4K - 6-Jan-97 - English - <a href="http://babelfish.altavista.digital.com/cgi-bin/translate?urltext=http%3a%2f%2fwww%2eisi%2eedu%2fdiv7%2fcities%2fabout%2freplication%2ehtml&language=en">Translate</a></i><br>
-<P><dt><b>10. </b><a href="http://www.isi.edu/~johnh/home_page.html"><b>Real Home Page</b></a><dd>Real Home Page. Congratulations, you've found John Heidemann's real home-page (where my browser starts). Make me get as many hits as netscape.com, I dare..<br><i>http://www.isi.edu/~johnh/home_page.html - size 7K - 30-Jan-98 - English - <a href="http://babelfish.altavista.digital.com/cgi-bin/translate?urltext=http%3a%2f%2fwww%2eisi%2eedu%2f%7ejohnh%2fhome%5fpage%2ehtml&language=en">Translate</a></i><br>
-<P></dl>
-<font size=-1 face=arial><font size=-1>Word count: LSAM: 396; ISI: 134165; work: 25435668<BR></font>
-</font><P>1 <a href="/cgi-bin/query?pg=q&text=yes&q=%2bLSAM+%2bISI+%2bwork&stq=10">2 </a><a href="/cgi-bin/query?pg=q&text=yes&q=%2bLSAM+%2bISI+%2bwork&stq=20">3 </a><a href="/cgi-bin/query?pg=q&text=yes&q=%2bLSAM+%2bISI+%2bwork&stq=30">4 </a><a href="/cgi-bin/query?pg=q&text=yes&q=%2bLSAM+%2bISI+%2bwork&stq=10">[Next]</a><br>
-<HR><font face="arial, helvetica" size=-1>
-<a href="/av/content/av_network.htm">Our Network</a> | 
-<a href="/av/content/addurl.htm">Add/Remove URL</a> | 
-<a href="/av/content/questions.htm">Feedback</a> | 
-<a href="/av/content/help.htm">Help</a><br>
-
-<a href="http://www.doubleclick.net/jumps/jump1217.htm">Advertising Info</a> | 
-<a href="/av/content/about.htm">About AltaVista</a> | 
-<a href="/av/content/jobs.htm">Jobs</a> | 
-<a href="/cgi-bin/query?pg=q">Graphics</a></font><HR>
+<font size=-2 face=arial>
+<a href="/cgi-bin/query?text">Search</a> | 
+<a href="/av/content/zones.html">Zones</a> | 
+<a href="/av/content/services.html">Services</a> | 
+<a href="/av/content/help.htm">Help</a> | 
+<a href="/av/content/questions.htm">Feedback</a>
+<br> 
+Copyright (c) 1995-98 
+<a href="http://www.digital.com">Digital Equipment Corporation</a> | 
 <a href="/av/content/disclaimer.htm">Disclaimer</a> | 
-<a href="/av/content/privacy.htm">Privacy Statement</a><br>
-
-<a href="http://www.digital.com"><b>DIGITAL</b></a> Copyright 1995-98. All Rights Reserved
-</FORM>
+<a href="/av/content/privacy.htm">Privacy</a>
+<br>
+<a href="/av/content/about.htm">About AltaVista</a> | 
+<a href="/cgi-bin/query?pg=tmpl&v=pref.html">Set your Preferences</a> | 
+<a href="/av/content/addurl.htm">Add a Page</a> | 
+<a href="/cgi-bin/query">Graphic Version</a>
+</font>
 </BODY></HTML>

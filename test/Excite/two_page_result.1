@@ -1,577 +1,718 @@
-
-   <script language = "javascript">
-   <!-- hide from other browsers
-   function Array() {this.length = 20;}
-   var W=new Array(), W2=new Array(),C=new Array(),C2=new Array(),i,j,N=0,M=0,top_suggest_count=0, bottom_suggest_count=0;
-   function S(w) {
-	W[N++] = w;
-	W2[M++] = w;
-	}
-   function Init(){
-      for (var j=0;j<C.length;++j) 
-	  C[j] = false;
-      for (var j=0;j<C2.length;++j)
-	 C2[j] = false;
-	}
-   function T(i){
-   var update;
-   old = document.topsearchbox.elements[1].value;
-
-   instring = old.lastIndexOf(" " + W[i] + " ");
-   if (instring == -1) {
-	instring = old.lastIndexOf(W[i] + " ");
-	if (instring != -1) {
-		C[i] = true;
-	}
-   }
-   else {
-	C[i] = true;
-   }
-
-   if (C[i] == false){
-      C[i] = true;
-      top_suggest_count++;
-      if (old.lastIndexOf(" ") != old.length-1) {
-         update = old + ' ' + W[i] + ' ';
-	 document.topsearchbox.elements[1].value = update;
-	}
-      else {
-         update = old + W[i] + ' ';
-	 document.topsearchbox.elements[1].value = update;
-	}
-      }
-   else {
-      C[i] = false;
-      top_suggest_count--;
-      replace = old.lastIndexOf(" " + W[i] + " ");
-      if (replace == -1) {
-         replace = old.lastIndexOf(W[i] + " ");
-	 if (replace != -1) {
-	    update = old.substring(0,replace) + old.substring(replace + W[i].length + 1,old.length);
-	    document.topsearchbox.elements[1].value = update;
-	 }
-      }
-      else {
-	update = old.substring(0,replace) + old.substring(replace + W[i].length + 1,old.length);
-	    document.topsearchbox.elements[1].value = update;
-	}
-   }
-   document.topsearchbox.elements[2].value = top_suggest_count;
-}
-
-   function U(i){
-   var update;
-   old = document.bottomsearchbox.elements[1].value;
-
-   instring = old.lastIndexOf(" " + W2[i] + " ");
-   if (instring == -1) {
-	instring = old.lastIndexOf(W2[i] + " ");
-	if (instring != -1) {
-		C2[i] = true;
-	}
-   }
-   else {
-	C2[i] = true;
-   }
-
-   if (C2[i] == false){
-      C2[i] = true;
-      bottom_suggest_count++;
-      if (old.lastIndexOf(" ") != old.length-1) {
-         update = old + ' ' + W2[i] + ' ';
-	 document.bottomsearchbox.elements[1].value = update;
-	}
-      else {
-         update = old + W2[i] + ' ';
-	 document.bottomsearchbox.elements[1].value = update;
-	}
-      }
-   else {
-      C2[i] = false;
-      bottom_suggest_count--;
-      replace = old.lastIndexOf(" " + W2[i] + " ");
-      if (replace == -1) {
-         replace = old.lastIndexOf(W2[i] + " ");
-	 if (replace != -1) {
-	    update = old.substring(0,replace) + old.substring(replace + W2[i].length + 1,old.length);
-	    document.bottomsearchbox.elements[1].value = update;
-	 }
-      }
-      else {
-	update = old.substring(0,replace) + old.substring(replace + W2[i].length + 1,old.length);
-	    document.bottomsearchbox.elements[1].value = update;
-	}
-   }
-   document.bottomsearchbox.elements[2].value = bottom_suggest_count;
-}
-
-   Init();
-    S("boba"); S("hunters");      // stop hiding -->
-   </script>
-
-<HEAD><TITLE>Excite Search Results: +Jabba +bounty +hunter +Greedo</TITLE>
-<!--BASE HREF=http://www.excite.com/search.gw-->
+<HTML><HEAD>
+<TITLE>Excite Search Results for "+Jabba +bounty +hunter +Greedo"</TITLE>
 </HEAD>
-<BODY BGCOLOR=FFFFFF TEXT=#000000 LINK=#000066 VLINK=#666666>
-
+<BODY bgcolor=ffffff>
 <CENTER>
-<A HREF=/?b-a-b><IMG SRC=/img/art4/search_results.gif WIDTH=600 HEIGHT=35 BORDER=0 ISMAP USEMAP=#bumper ALT="Excite Search Results"></A>
-
-
-
-<FORM NAME="topsearchbox" ACTION="/search.gw" METHOD=get>
-<INPUT TYPE=hidden NAME=look VALUE=default>
-
-<TABLE BORDER=0  CELLPADDING=1 CELLSPACING=0>
-<TR>
-<TD BGCOLOR=#cccccc>
-
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=4 WIDTH=600 BGCOLOR=#ffffff>
-<TR>
-<TD ALIGN=right>
-  <INPUT SIZE=45 NAME=search VALUE="+Jabba +bounty +hunter +Greedo">
-</TD>
-  <INPUT TYPE=hidden NAME=tsug VALUE=-1>
-  <INPUT TYPE=hidden NAME=csug VALUE=2>
-<TD>
-  <INPUT TYPE=submit NAME="Search" VALUE="Search Again">
-  <INPUT TYPE=hidden NAME=collection VALUE=web>
-</TD>
-<TD NOWRAP>
-<FONT FACE=arial,helvetica SIZE=-1 VALIGN=bottom>
-<B>
-<A HREF=/relocate/co=help;http://www.excite.com/Info/suggest.html>Help</A> &nbsp;<BR>
-</B>
-</FONT></TD>
-<TD>&nbsp;</TD>
-</TR>
-</TABLE>
-   <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=1 WIDTH=600 BGCOLOR=#ffffff>
-   <TR>
-   <TD ROWSPAN=1 NOWRAP>   <FONT FACE=arial,helvetica SIZE=2>
-        <B>Try adding one or more of<BR>these words to your search...</B>
-      </FONT>
-   </TD>
-
-      <TD NOWRAP>
-   <FONT FACE=geneva,arial SIZE=2>
-            boba
-   </FONT>
-   </TD>
-      <TD NOWRAP>
-   <FONT FACE=geneva,arial SIZE=2>
-            hunters
-   </FONT>
-   </TD>
-   
-   </TR>
-
-   
-   </TABLE>
-</td></tr></table>
-<INPUT TYPE=hidden NAME=clk VALUE=b-b-F1>
-<INPUT TYPE=hidden NAME=showSummary VALUE=true>
-<INPUT TYPE=hidden NAME=sorig VALUE=rpage>
-<INPUT TYPE=hidden NAME=trace VALUE=b>
-</FORM>
-
-<CENTER>
-<TABLE BORDER=0 WIDTH=600>
-<TR>
-<TD ALIGN=center>
-  <!-- Ad Start -->
-<!-- Ad param svcpage=/search.gw keyword=jabba+bounty+hunter+greedo svcname=xsr ip=128.9.160.184 user_agent=WWW::Search/1.015 -->
-<a href="/relocate/ad=http://ad.preferences.com/image.ng;spacedesc=ExciteNetwork_Excite_468x60-RunOfSite_Any&time=1998.04.02.18.55.25|pk=362117;http://ad.preferences.com/click.ng;spacedesc=ExciteNetwork_Excite_468x60-RunOfSite_Any&time=1998.04.02.18.55.25" onMouseOver="window.status='Click Here!';return true" language="Javascript"><img src="http://ad.preferences.com/image.ng;spacedesc=ExciteNetwork_Excite_468x60-RunOfSite_Any&time=1998.04.02.18.55.25" ALT="Click Here!" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> Click Here! </B></FONT></CENTER></a>
-<!-- Ad Stop -->
-
-</TD>
-</TR>
-</TABLE>
-</CENTER>
-
-<P>
-
- <TABLE BORDER=0 CELLPADDING=2 CELLSPACING=0 WIDTH=100%>
-<TR>
-     <TD ALIGN=left WIDTH=40% NOWRAP>
-   <FONT FACE=arial,helvetica>
-        Documents
-      &nbsp;85-152</FONT>
-    </TD>
-
-<TD ALIGN=right WIDTH=60% NOWRAP><FONT FACE=arial,helvetica>
-               <A HREF="/search.gw?lk=default&c=web&start=84&showSummary=false&s=%2Bjabba+%2Bbounty+%2Bhunter+%2Bgreedo&sorig=b"><B>Show Titles only</B></A>&nbsp;
-            	
-               <A HREF="/search.gw?lk=default&c=web&s=%2Bjabba+%2Bbounty+%2Bhunter+%2Bgreedo&sort=site&sorig=c"><B>List by Web site</B></A>&nbsp;
-            
-
-</FONT></TD>
-
-</TR></TABLE></CENTER>
-
-
-
-<TABLE BORDER=0  CELLPADDING=1 CELLSPACING=0 WIDTH=100%>
-<TR>
-<TD BGCOLOR=#000000>
-
-<TABLE BORDER=0  CELLPADDING=3 CELLSPACING=0 WIDTH=100%>
-<TR><TD BGCOLOR=#ffffcc VALIGN=middle NOWRAP> <FONT FACE=arial,helvetica>
-<B>Try these first:</B></FONT></TD>
-<TD WIDTH=88% ALIGN=left BGCOLOR=#ffffcc NOWRAP>
-<FONT SIZE=-1 FACE=geneva,arial><B>
-  Buy <A HREF="http://www.excite.com/relocate/co=xsr_xlnk_music_artists_blues;http://www.musicblvd.com/cgi-bin/tw/1263_42_268087^S&TEMPLATE_PATH=/site/excite&FS=EXCITE">Hunter/Hegamin/Spivey</A> CD's &nbsp;
-  <BR>
-</B></FONT></TD>
-</TR></TABLE>
-
-</TD>
-</TR>
-</TABLE>
-
-
-<table border=0 cellpadding=2 cellspacing=0 width=100 align=right>
-<tr>
-<td bgcolor=ff0000 align=center>
-<table border=0 cellpadding=3 cellspacing=0 width=100>
-<tr>
-<td bgcolor=ffcc00 align=center>
-<font face="verdana,helvetica,arial" size=-1 color="#000000"><b>AMAZON.COM</b></font>
-<font face="verdana,helvetica,arial" size=-2 color="#ff0000"><a href="/relocate/co=xsr_amazon;http://www.amazon.com/exec/obidos/excite-search/search=%2Bjabba+%2Bbounty+%2Bhunter+%2Bgreedo">FIND Related Books</a></font>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-</table>
-
-<P>
-  
-         <FONT COLOR=navy><B>71% </B></FONT>          <B><A HREF="http://www2.bc.edu/~swick/case.html">Hammerhead Guide: Kenner Case Assortments</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www2.bc.edu/~swick/case.html                        <BR><B><I>Summary: </I></B> Power of the Force/Shadows of the Empire Figures.  Power of the Force/Shadows of the Empire Light Vehicles.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=29541603&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>71% </B></FONT>          <B><A HREF="http://www.csi.ull.es/alumnado/alu339/journal4.txt">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.csi.ull.es/alumnado/alu339/journal4.txt                        <BR><B><I>Summary: </I></B> But the Special Edition has already put ANH to the 1st slot in less than a month!  You then hear Chewie growl and towards the end of the less than 3 min.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=31524986&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>71% </B></FONT>          <B><A HREF="http://www.execulink.com/~ego/starwars/rotj.html">Star Wars Trilogy Blooper Viewers Guide - SWVI:  Return Of The Jedi
-</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.execulink.com/~ego/starwars/rotj.html                        <BR><B><I>Summary: </I></B> Later on, when Luke and Leia swing from the sail barge to the waiting skiff, you can tell this is a stunt double, as the birthmark is no longer there.  SUBJECT: Hold On SCENE: Luke and Leia swing away from the soon to be destroyed Sail Barge.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=1245249&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>69% </B></FONT>          <B><A HREF="http://lonestar.texas.net/~cgregg/dark_complete_spoiler.html">UNOFFICIAL SW:CCG COMPLETE DARK SIDE SPOILER LIST</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://lonestar.texas.net/~cgregg/dark_complete_spoiler.html                        <BR><B><I>Summary: </I></B>If you occupy with Tarkin, Piett or any admiral, your starships may 'react' to same system. During your move phase, you may move free from here directly to Mountains (or vice versa).                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=25043921&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>68% </B></FONT>          <B><A HREF="http://www.scican.net/~gcheek/common/info/spoiler_dark_complete.html">UNOFFICIAL SW:CCG COMPLETE DARK SIDE SPOILER LIST</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.scican.net/~gcheek/common/info/spoiler_dark_complete.html                        <BR><B><I>Summary: </I></B>Pilot, Warrior Adds 2 to power of any starship he pilots (3 if starship is Tyrant). Warrior While at a Death Star or Executor site, your troopers deploy free there and are power and forfeit +1 there, and you may use 1 Force to search your Reserve Deck and take one Tactical Support into hand.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=21673268&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>68% </B></FONT>          <B><A HREF="http://www.primenet.com/~btn/area.html">Action Figure Times -Area Reports</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.primenet.com/~btn/area.html                        <BR><B><I>Summary: </I></B>net date:=3/10/98. ! date: =3-11-98.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=747447&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>67% </B></FONT>          <B><A HREF="http://www2.bc.edu/~swick/versus.html">Hammerhead Guide: Old Figures vs. PotF2</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www2.bc.edu/~swick/versus.html                        <BR><B><I>Summary: </I></B> This includes Star Wars(SW), The Empire Strikes Back(tESB), Return of the Jedi(RotJ), Power of the Force(PotF), Tri-Logo(TRI), Droids(D), and Ewoks(E) cards.  Old FigureAvailabilityNew FigureAvailibility ChewbaccaSW, tESB, RotJ, PotF, TRIChewbaccaOC, GC, SuB Luke SkywalkerSW, tESB, RotJ, TRILuke SkywalkerOC Artoo-Detoo (R2-D2)SW, tESBR2-D2OC, GC, SuB Princess Leia OrganaSW, tESB, RotJ,.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=29546580&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>66% </B></FONT>          <B><A HREF="http://members.tripod.com/~jessrob/">Jabba's Palace</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://members.tripod.com/~jessrob/                        <BR><B><I>Summary: </I></B> Here you'll find sounds, pictures, links, Star Wars book timeline, where to order the books, where to buy the Star Wars movies for cheapest, Star Wars bloopers, Star Wars games (coming when I find some! wav "He's no good to me dead" -Boba Fett The Empire Strikes Back.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=1003639&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>66% </B></FONT>          <B><A HREF="http://www.azstarnet.com/~newmann/swgenbbs.html">Star Wars: General Bulletin Board: Postings</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.azstarnet.com/~newmann/swgenbbs.html                        <BR><B><I>Summary: </I></B>None Available                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=21879101&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>65% </B></FONT>          <B><A HREF="http://lonestar.texas.net/~cgregg/dark_dagobah_spoiler.html">UNOFFICIAL SW:CCG DAGOBAH DARK SIDE SPOILER LIST</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://lonestar.texas.net/~cgregg/dark_dagobah_spoiler.html                        <BR><B><I>Summary: </I></B> Dagobah CAvian Creature5P:* R:2 D:2 F:0.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=11207844&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>65% </B></FONT>          <B><A HREF="http://www.scican.net/~gcheek/common/info/spoiler_dark_dagobah.html">UNOFFICIAL SW:CCG DAGOBAH DARK SIDE SPOILER LIST</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.scican.net/~gcheek/common/info/spoiler_dark_dagobah.html                        <BR><B><I>Summary: </I></B> Adds 1 to attrition against opponent in battles at same site.  Ineffective against particle deflector.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=21280579&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>64% </B></FONT>          <B><A HREF="http://www.pitt.edu/~thurn/SWB/westend.html">The Star Wars Collector's Bible (West End Games)</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.pitt.edu/~thurn/SWB/westend.html                        <BR><B><I>Summary: </I></B> Brak Sector 96-page paperback 0-87431-253-1 1995 $15 40080 Creatures of the Galaxy 96-page paperback 0-87431-221-3 1994-12 $15 40082 TOJ hardcover supplement 0-87431-289-2 1996-11 $25 40083 Classic Adventures 128-page paperback collection of 40053 Abduction and 40067 Politics of Contraband; updated to second edition rules 0-87431-261-2 1995-11 $18 40084 Cracken's Rebel Operatives 96-page.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=4240193&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>64% </B></FONT>          <B><A HREF="http://www.bookcase.com/library/faq/usenet/starwars/www/part1.html">[rec.arts.sf.starwars.*] The Complete Star Wars WWW Listing Part 1/2</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.bookcase.com/library/faq/usenet/starwars/www/part1.html                        <BR><B><I>Summary: </I></B>com/hollywood/hills/3650/ Site includes the Star Wars Encyclopedia Star Wars en Espan~ol http://www. net/~jedi/ The Imperial Star Destroyer Vindicator http://www.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=14298009&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>63% </B></FONT>          <B><A HREF="http://www.pitt.edu/~thurn/SWB/kenner-figures.html">The Star Wars Collector's Bible (Kenner classic action figures)</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.pitt.edu/~thurn/SWB/kenner-figures.html                        <BR><B><I>Summary: </I></B> 38190 Princess Leia Organa [white pants suit; removable white plastic robe, small gun] SW, ESB, ROJ, TRI, POF photo 38200 Artoo-Detoo (R2-D2) [short, blue and white barrel droid, silver dome top] SW, ESB, ROJ? )] SW, ESB, ROJ 39060 Luke Skywalker X-Wing Pilot [orange flight suit and helmet; gun] SW, ESB, ROJ, TRI, POF 39070 R5-D4 [short white and red barrel droid, white top] SW, ESB, TRI?                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=4692710&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>62% </B></FONT>          <B><A HREF="http://www.pitt.edu/~thurn/SWB/kenner-1995.html">The Star Wars Collector's Bible (Kenner 1995- action figures)</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.pitt.edu/~thurn/SWB/kenner-1995.html                        <BR><B><I>Summary: </I></B> orange 1995-08 c1 green holo 1997-07 69576 OBI-WAN (BEN) KENOBI with LIGHTSABER c1 slide 1998-01 69577 Han Solo With Heavy Assault Rifle and Blaster orange 1995-08 c1 green holo 1997-04 69578 Chewbacca With Bowcaster and Heavy Blaster Rifle orange 1995-08 c1 green holo 1997-07 69579 Princess Leia Organa With "Laser" Pistol and Assault Rifle!  orange 1995-09 c1 green holo 1997-07 69581 Luke.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=4293245&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>58% </B></FONT>          <B><A HREF="http://frodo.hiof.no/~deak/pics/miniroj.html">Deak's Den</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://frodo.hiof.no/~deak/pics/miniroj.html                        <BR><B><I>Summary: </I></B> File size: 60,164 bytes.  File size: 31,994 bytes.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=30141027&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>58% </B></FONT>          <B><A HREF="http://www.nerf-herder.com/tuskentrader/lists/dausti.htm">The Tusken Trader Lists</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.nerf-herder.com/tuskentrader/lists/dausti.htm                        <BR><B><I>Summary: </I></B> Snowspeeder C10 MIB (.00 no Widevision card inside).  Lobot ESB Card C7 P FOC.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=13971267&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>58% </B></FONT>          <B><A HREF="http://www.cartoonlogic.com/actionizer/swcatalog.html">Cartoon Logic - Actionizer - Kenner&reg; Star Wars&reg; Catalog</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.cartoonlogic.com/actionizer/swcatalog.html                        <BR><B><I>Summary: </I></B>  - short saber, long tray - BKI501.02.   - short saber, long tray - DVR501.01.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=24404343&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>57% </B></FONT>          <B><A HREF="http://www.primenet.com/~btn/faq/ptof.html">Action Figure Times-The Unofficial Star Wars POTF FAQ</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.primenet.com/~btn/faq/ptof.html                        <BR><B><I>Summary: </I></B>None Available                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=20964349&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>57% </B></FONT>          <B><A HREF="http://www.sirstevesguide.com/pf/figureassortment.html">SSG Figures Case Assortment</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.sirstevesguide.com/pf/figureassortment.html                        <BR><B><I>Summary: </I></B>  2 Luke Skywalker in Hoth Gear (.01).  2 Luke Skywalker in Stormtrooper Disguise (.02).  1 Obi-Wan (Ben) Kenobi (.02).  1 C-3PO (.01).  1 Princess Leia Organa (.01).  1 Yoda (.03) Assortment #69570.24 May 1997.   &nbsp;&nbsp;Assortment 1.  &nbsp;&nbsp;Note: All are GC RB 1st Hook except Ben + Yoda.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=10442087&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>57% </B></FONT>          <B><A HREF="http://empire.res.wabash.edu/nri/audio/index.htm">Star Wars Sounds</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://empire.res.wabash.edu/nri/audio/index.htm                        <BR><B><I>Summary: </I></B> wav: "They'd be crazy to follow us wouldn't they?"                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=20305545&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>57% </B></FONT>          <B><A HREF="http://hollywoodfactory.com/starwars/links.htm">Star Wars - List of Sites - Links</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://hollywoodfactory.com/starwars/links.htm                        <BR><B><I>Summary: </I></B>  CNN presents - STAR WARS: Twenty Years Later.   Friday Knight's Return of the Jedi Page.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=1498971&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>56% </B></FONT>          <B><A HREF="http://www.gamecards.com/lists/starwars/Dagobah_Spoiler.html">Star Wars - Dagobah Spoiler List</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.gamecards.com/lists/starwars/Dagobah_Spoiler.html                        <BR><B><I>Summary: </I></B> *Take Evasive Action (4) Dark Lost Interrupt [C] Set: Dagobah Lore: Aoooga!  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= Rebel Jedi Tests A Jedi's Strength (2) Light Jedi Test #2 [U] Set: Dagobah Text: *{Deploy} on an unoccupied Dagobah site.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=25676467&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>54% </B></FONT>          <B><A HREF="http://members.tripod.com/~itsallgood_/allgood-2.html">It's All Good</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://members.tripod.com/~itsallgood_/allgood-2.html                        <BR><B><I>Summary: </I></B> fuck sexmen Too late, I started tight sexmen coming inside her but fuck pussy held myself very fuck sexmen still hoping I could tight sexmen control how much I fuck pussy came.  I fuck sexmen kept up the pace, tight pussy going in and out, as fuck sexmen deep as I could, tight pussy her writhing and fuck sexmen moaning driving me tight pussy to animal passion fuck sexmen that almost scared.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=206167&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>54% </B></FONT>          <B><A HREF="http://www.tncmagic.com/starwfig.htm">TNC - Star Wars Action Figures</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.tncmagic.com/starwfig.htm                        <BR><B><I>Summary: </I></B>None Available                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=16296510&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>51% </B></FONT>          <B><A HREF="http://ourworld.compuserve.com/homepages/mmccord/links.htm">Links</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://ourworld.compuserve.com/homepages/mmccord/links.htm                        <BR><B><I>Summary: </I></B> Darth Vader's Bounty Hunters Home Page.  Friday Knight's Return of the Jedi Page.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=571382&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://www.wild-things.com/naf.html">R U S H - SW New Action Figures</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.wild-things.com/naf.html                        <BR><B><I>Summary: </I></B>.  PROTECTIVE SOFT SHELL CASES MADE SPECIFICALLY FOR STAR WARS FIGURES QTY OF 1 - 9 PRICED $2.50 EACH QTY OF 10+ PRICED $2.25 EACH QTY OF 100+ PRICED $1.95 EACH Star Wars New Power of the Force Carded Figures Card Figure Price GC 2-1B $ 6.95 GC 4 - Lom $ 9.95 GC Admiral Ackbar $ 9.95 GC ASP-7 Droid $14.95 GC ATST $ 8.95 GC Ben (Obi-Wan) Kenobi $ 9.95 OC Ben (Obi-Wan) Kenobi $14.95 OC Ben.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=16794771&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://www.chrysalis.org/riemondi/starwars.htm">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.chrysalis.org/riemondi/starwars.htm                        <BR><B><I>Summary: </I></B> His face is a mass of computer lights surrounding a radar eye.  BEN: The Jundland wastes are not to be traveled lightly.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=53722&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://w1.340.telia.com/~u34001000/storage/starwars.txt">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://w1.340.telia.com/~u34001000/storage/starwars.txt                        <BR><B><I>Summary: </I></B> Artoo isn't happy with Threepio's stubbornness, and he beeps and twangs angrily.  Commander Tagge, a young, slimy-looking general, is speaking.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=862506&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://www.stwing.upenn.edu/starwars/films/anh.txt">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.stwing.upenn.edu/starwars/films/anh.txt                        <BR><B><I>Summary: </I></B> LUKE: But I was going into Toshi Station to pick up some power converters.  THREEPIO: With all we've been through, sometimes I'm amazed we're in as good condition as we are, what with the Rebellion and all.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=1108612&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://www.duke.edu/~pms5/humor/starwars.html">"Star Wars: A New Hope" Script
-</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.duke.edu/~pms5/humor/starwars.html                        <BR><B><I>Summary: </I></B> A long time ago, in a galaxy far, far, away.  She starts to run but is felled by a paralyzing ray.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=1375798&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://www.engr.orst.edu/~volzmi/starwars/newhope.txt">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.engr.orst.edu/~volzmi/starwars/newhope.txt                        <BR><B><I>Summary: </I></B> The little R2 unit makes a series of electronic sounds that only another robot could understand.  LUKE: Old Ben Kenobi lives out in this direction somewhere, but I don't see how that R2 unit could have come this far.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=1493414&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://home.cwnet.com/vader/anh.txt">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://home.cwnet.com/vader/anh.txt                        <BR><B><I>Summary: </I></B> The nervous Rebel troopers aim their weapons.  Well, on the other hand if you hadn't removed his restraining bolt.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=1999082&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://pine.shu.ac.uk/~bbriggs/starwars/scripts/anewhope.txt">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://pine.shu.ac.uk/~bbriggs/starwars/scripts/anewhope.txt                        <BR><B><I>Summary: </I></B>.. Luke, amazed and stunned, is almost speechless.  LUKE: (sighing) Oh, God, my uncle.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=6392529&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                            <CENTER>     
-  		    <TABLE BORDER=0 CELLPADDING=3 CELLSPACING=0 WIDTH=100%>
-		    <TR>
-		     <TD ALIGN=center BGCOLOR=#ffffcc>
-		       			 				
-                           <FONT FACE=arial,helvetica>Try Excite <A HREF=/search/options.html>Power Search</A> for a simple way to search like the pros...</FONT>			  		       		     </TD>
-		    </TR>
-		    </TABLE>
-		    </CENTER>
-                  <P>
-                                               <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://www.flg21.com/starwars/anh.txt">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.flg21.com/starwars/anh.txt                        <BR><B><I>Summary: </I></B> Sir -- My first job was programming binary load lifter.  LUKE: Well, not unless you can alter time, speed up the harvest, or teleport me off this rock!                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=7921907&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://www.daforce.demon.nl/starwars/scripts/anhscript4.txt">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.daforce.demon.nl/starwars/scripts/anhscript4.txt                        <BR><B><I>Summary: </I></B> I wanted to surprise you, hot shot.  Artoo whistles his surprise as he pretends to just notice the hologram.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=7987458&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://www.epix.net/~bgrose/anh.html">A New Hope</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.epix.net/~bgrose/anh.html                        <BR><B><I>Summary: </I></B> THREEPIO: That's how we came to be in your service, if you take my meaning, sir.  THREEPIO: He says the restraining bolt has short circuited his recording system.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=9801137&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://www.linkline.be/user/duncan/starwars/scripts/anh.html">Star Wars - A New Hope</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.linkline.be/user/duncan/starwars/scripts/anh.html                        <BR><B><I>Summary: </I></B> Threepio, on the other hand, is a tall, slender robot of human proportions.  This year we'll make enough on the harvest so I'll be able to hire some more hands.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=12454717&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://home.sprynet.com/sprynet/kiousis/anh.txt">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://home.sprynet.com/sprynet/kiousis/anh.txt                        <BR><B><I>Summary: </I></B>..I just came to say good-bye to all you unfortunate landlocked simpletons.  BIGGS: Luke, I didn't come back just to say good-bye.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=14415568&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://www.bcpl.lib.md.us/~jgelner/homepage/anh.html">Star Wars - A New Hope</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.bcpl.lib.md.us/~jgelner/homepage/anh.html                        <BR><B><I>Summary: </I></B> The group stumbles out into the stifling desert sun.  LUKE: Well, not unless you can alter time, speed up the harvest, or teleport me off this rock!                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=16020228&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://www.ensma.fr/cercle/eleve/lagadicry/SW-ANH_Script">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.ensma.fr/cercle/eleve/lagadicry/SW-ANH_Script                        <BR><B><I>Summary: </I></B> The troopers inspect her inert body.  As the farmer carefully inspects each robot, he is closely followed by his slump- shouldered nephew, Luke Skywalker.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=16312290&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://swa.simplenet.com/iforce/texts/scripts/anh.txt">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://swa.simplenet.com/iforce/texts/scripts/anh.txt                        <BR><B><I>Summary: </I></B> A voice of recognition calls out from the gloom.  Luke is in one corner repairing Threepio's arm, as old Ben sits thinking.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=18046453&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://www.eaglequest.com/~sbrown/texts/movies/scripts/starwars.txt">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.eaglequest.com/~sbrown/texts/movies/scripts/starwars.txt                        <BR><B><I>Summary: </I></B> INTERIOR: REBEL BLOCKADE RUNNER -- SUBHALLWAY.  INTERIOR: REBEL BLOCKADE RUNNER -- SUBHALLWAY.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=18596052&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://pioneer.cc.edu/96/cronning/cir/anh.txt">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://pioneer.cc.edu/96/cronning/cir/anh.txt                        <BR><B><I>Summary: </I></B> OWEN: (to the head Jawa) Hey, what're you trying to push on us?  The Sandpeople are easily startled but they will soon be back and in greater numbers.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=18597058&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://bme.inje.ac.kr/~mate/pub/starwars.htm">STAR WARS: A NEW HOPE</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://bme.inje.ac.kr/~mate/pub/starwars.htm                        <BR><B><I>Summary: </I></B> What are you waiting for?  THREEPIO: Wait a minute, where are you going?                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=18951435&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://www.bubba.com/Stories/Lucas/sw-anh.txt">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.bubba.com/Stories/Lucas/sw-anh.txt                        <BR><B><I>Summary: </I></B> Luke becomes intrigued by the beautiful girl.  Luke's gazes at the beautiful young princess for a few moments.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=20639582&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://www.telmarcorp.com/download/Music/Midi/StarWars/Scripts/ANewHope.txt">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.telmarcorp.com/download/Music/Midi/StarWars/Scripts/ANewHope.txt                        <BR><B><I>Summary: </I></B>..when our frigate goes to one of the central systems, we're going to jump ship and join the Alliance. ...You know they're starting to nationalize commerce in the central systems.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=20956101&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://www.chestud.chalmers.se/~k94056/anh.html">Star Wars IV - A New Hope: Multimedia Script</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.chestud.chalmers.se/~k94056/anh.html                        <BR><B><I>Summary: </I></B> Resigned to his fate, Luke paddles out of the room.  The Sandpeople are easily startled but they will soon be back and in greater numbers.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=21945596&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://hem1.passagen.se/tas/SW4.TXT">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://hem1.passagen.se/tas/SW4.TXT                        <BR><B><I>Summary: </I></B> Camie and The Fixer complain and are forced to shade their eyes. .. OWEN: What I really need is a droid that understands the binary language of moisture vaporators.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=22606072&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://www.ece.orst.edu/~volzmi/starwars/engr/newhope.txt">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.ece.orst.edu/~volzmi/starwars/engr/newhope.txt                        <BR><B><I>Summary: </I></B> THREEPIO: And I am See-Threepio, human-cyborg relations, and this is my counterpart, Artoo-Detoo.  Artoo lets out a pathetic beep causing Luke to remember something.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=23207899&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://www.edu.isy.liu.se/~d94thojo/texter/anh.txt">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.edu.isy.liu.se/~d94thojo/texter/anh.txt                        <BR><B><I>Summary: </I></B> The deadly bolts ricochet in wild random patterns creating huge explosions.  Not as clumsy or as random as a blaster.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=23259793&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://www.chestud.chalmers.se/~k94056/anh/anh.txt">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.chestud.chalmers.se/~k94056/anh/anh.txt                        <BR><B><I>Summary: </I></B> Vader squeezes the neck of the Rebel Officer, who struggles in vain.  Why I should stick my neck out for you is quite beyond my capacity!                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=23800259&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://www.info2000.net/~curtisw/anh.txt">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.info2000.net/~curtisw/anh.txt                        <BR><B><I>Summary: </I></B> The little robot appears to be barely functioning and moves with jerky motions.  THREEPIO: (quickly) Sir -- not in an environment such as this -- that's why I've also been programmed for over thirty secondary functions that.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=24325663&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://www.bus.miami.edu/~jdavis/StarWars/sw-script.html">Star Wars - A New Hope</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.bus.miami.edu/~jdavis/StarWars/sw-script.html                        <BR><B><I>Summary: </I></B> INTERIOR: REBEL BLOCKADE RUNNER -- MAIN PASSAGEWAY.  INTERIOR: REBEL BLOCKADE RUNNER -- MAIN HALLWAY.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=24335013&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://www2.gsu.edu/~gcirdh/starwars/starwars.txt">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www2.gsu.edu/~gcirdh/starwars/starwars.txt                        <BR><B><I>Summary: </I></B> THREEPIO: (pointing to Artoo) Excuse me, sir, but that R2 unit is in prime condition.  LUKE: You know, I think that R2 unit we bought might have been stolen.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=24639064&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://pages.prodigy.com/J/E/I/Jedii/a_new_hope_script.txt">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://pages.prodigy.com/J/E/I/Jedii/a_new_hope_script.txt                        <BR><B><I>Summary: </I></B> OWEN: (to the head Jawa) Hey, what're you trying to push on us?  Threepio is startled and backs away, right off the side if the cliff.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=25331354&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://www.novehs.dk/elev/ia209/Anh.txt">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.novehs.dk/elev/ia209/Anh.txt                        <BR><B><I>Summary: </I></B> There has been a lot of unrest among the Sandpeople since you left.  BERU: Luke, tell Owen that if he gets a translator to be sure it speaks Bocce.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=27439446&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://www.creativemediaonline.com/special/star_wars/scripts/anewhope.txt">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.creativemediaonline.com/special/star_wars/scripts/anewhope.txt                        <BR><B><I>Summary: </I></B> The bitter Admiral Motti twists nervously in his chair.  MOTTI: Don't try to frighten us with your sorcerer's ways, Lord Vader.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=29374724&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://www.cache.cow.net/~draith/sw/scripts/SW-ANH_Script">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.cache.cow.net/~draith/sw/scripts/SW-ANH_Script                        <BR><B><I>Summary: </I></B> LUKE: Well, things haven't been the same since you left, Biggs.  There has been a lot of unrest among the Sandpeople since you left.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=30651433&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://138.192.11.42/scripts/anh.txt">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://138.192.11.42/scripts/anh.txt                        <BR><B><I>Summary: </I></B> I'm never gonna get out of here!  Boy, am I gonna get it.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=31145857&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://doublemirrors.com/SWscript.html">SWscript</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://doublemirrors.com/SWscript.html                        <BR><B><I>Summary: </I></B> INTERIOR: SANDCRAWLER -- HOLD AREA.  INTERIOR: SANDCRAWLER -- PRISON AREA.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=31169381&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://www.ccc.nottingham.ac.uk/~avykdel/scripts/star.wars">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.ccc.nottingham.ac.uk/~avykdel/scripts/star.wars                        <BR><B><I>Summary: </I></B>.. Luke agrees, although it's obvious he isn't sure why.  THREEPIO: Uh, I'm quite sure you'll be very pleased with that one, sir.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=32887704&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://www.serve.com/dgil/ANH.htm">Star Wars: A New Hope</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.serve.com/dgil/ANH.htm                        <BR><B><I>Summary: </I></B> A battered Threepio scrambles up to Artoo and embraces him.  Threepio stumbles forward, but Artoo is still nowhere in sight.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=35905926&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>48% </B></FONT>          <B><A HREF="http://watt.seas.virginia.edu/~adl2d/scripts/starwars.txt">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://watt.seas.virginia.edu/~adl2d/scripts/starwars.txt                        <BR><B><I>Summary: </I></B> In a huff of anger and frustration, Threepio knocks the sand from his joints.  Luke swings his rifle into position and looks to the south.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=36126168&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>45% </B></FONT>          <B><A HREF="http://www.tncmagic.com/starwcd.htm">TNC - Star Wars Collectible Card Game</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.tncmagic.com/starwcd.htm                        <BR><B><I>Summary: </I></B>None Available                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=1112958&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>43% </B></FONT>          <B><A HREF="http://frodo.hiof.no/~deak/pics/minisw.html">Deak's Den</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://frodo.hiof.no/~deak/pics/minisw.html                        <BR><B><I>Summary: </I></B> Color depth: 256.  Color depth: 256.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=30873794&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>43% </B></FONT>          <B><A HREF="http://www.bus.miami.edu/~jdavis/StarWars/March-comments.html">Fan Comments</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.bus.miami.edu/~jdavis/StarWars/March-comments.html                        <BR><B><I>Summary: </I></B>Im going to say sorry now for all my spelling mistakes, you'll all just have to muddle on by. Im going to say sorry now for all my spelling mistakes, you'll all just have to muddle on by.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=14127475&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>42% </B></FONT>          <B><A HREF="http://www.bus.miami.edu/~jdavis/StarWars/Au8-14.html">August 8-14 Comments</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.bus.miami.edu/~jdavis/StarWars/Au8-14.html                        <BR><B><I>Summary: </I></B> We're around the same age.  that's for around Miami.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=14134529&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                 
-
-<FORM ACTION="/search.gw" METHOD=GET>   
- <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
- <TR>
-  <TD WIDTH=40% ALIGN=left NOWRAP>        
-  <FONT FACE=arial,helvetica><B>
-   <INPUT TYPE=hidden NAME=look VALUE=default>
-   <INPUT TYPE=hidden NAME=collection VALUE=web>
-   <INPUT TYPE=hidden NAME=search VALUE="+Jabba +bounty +hunter +Greedo">
-   <INPUT TYPE=hidden NAME=start VALUE=84>
-   <INPUT TYPE=hidden NAME=showSummary VALUE=true>
-           <INPUT TYPE=hidden NAME=perPage VALUE=84>
-               <INPUT TYPE=submit NAME=prev VALUE="Previous Results">
-      
-               </B></FONT>
-</TD>
-<TD ALIGN=right WIDTH=60% NOWRAP><FONT FACE=arial,helvetica>
-               <A HREF="/search.gw?lk=default&c=web&start=84&showSummary=false&s=%2Bjabba+%2Bbounty+%2Bhunter+%2Bgreedo&sorig=b"><B>Show Titles only</B></A>&nbsp;
-            	
-               <A HREF="/search.gw?lk=default&c=web&s=%2Bjabba+%2Bbounty+%2Bhunter+%2Bgreedo&sort=site&sorig=c"><B>List by Web site</B></A>&nbsp;
-            
-
-</FONT></TD>
-</TR>
-</TABLE>
-</FORM>
-
-
-
-  
-<P>
-<CENTER>
-<TABLE BORDER=0 WIDTH=600>
-<TR>
-<TD ALIGN=center>
-  <!-- Ad Start -->
-<a href="/relocate/ad=http://ad.preferences.com/image.ng;spacedesc=ExciteNetwork_Excite_468x60-RunOfSite_Any&time=1998.04.02.18.55.25|pk=362117;http://ad.preferences.com/click.ng;spacedesc=ExciteNetwork_Excite_468x60-RunOfSite_Any&time=1998.04.02.18.55.25" onMouseOver="window.status='Click Here!';return true" language="Javascript"><img src="http://ad.preferences.com/image.ng;spacedesc=ExciteNetwork_Excite_468x60-RunOfSite_Any&time=1998.04.02.18.55.25" ALT="Click Here!" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> Click Here! </B></FONT></CENTER></a>
-<!-- Ad Stop -->
-
-</TD>
-</TR>
-</TABLE>
-</CENTER>
-
-
-<P>
-<CENTER>
-<TABLE BORDER=0  CELLPADDING=1 CELLSPACING=0>
-<TR>
-<TD BGCOLOR=#cccccc>
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=4 WIDTH=600 BGCOLOR=#ffffff>
-<FORM NAME="bottomsearchbox" ACTION="/search.gw" METHOD=get>
-<INPUT TYPE=hidden NAME=look VALUE=default>
-<TR>
-<TD NOWRAP ALIGN=right>
-<FONT FACE=arial,helvetica SIZE=-2>
- <A HREF="/Info/add_url.html">Add URL</A><BR>
-</FONT></TD>
-   <TD ALIGN=right><INPUT NAME=search VALUE="+Jabba +bounty +hunter +Greedo" SIZE=45></TD>
-</TD>
-  <INPUT TYPE=hidden NAME=bsug VALUE=-1>
-  <INPUT TYPE=hidden NAME=csug VALUE=2>
-<TD>
-  <INPUT TYPE=submit NAME="Search" VALUE="Search Again">
-  <INPUT TYPE=hidden NAME=collection VALUE=web>
-</TD>
-<TD NOWRAP>
-<FONT FACE=arial,helvetica SIZE=-1 VALIGN=bottom>
-<B>
-<A HREF=/relocate/co=help;http://www.excite.com/Info/suggest.html>Help</A> &nbsp;<BR>
-</B>
-</FONT></TD>
-<TD>&nbsp;</TD>
-</TR>
-</TABLE>
-   <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=1 WIDTH=600 BGCOLOR=#ffffff>
-   <TR>
-   <TD ROWSPAN=1 NOWRAP>   <FONT FACE=arial,helvetica SIZE=2>
-        <B>Try adding one or more of<BR>these words to your search...</B>
-      </FONT>
-   </TD>
-
-      <TD NOWRAP>
-   <FONT FACE=geneva,arial SIZE=2>
-            boba
-   </FONT>
-   </TD>
-      <TD NOWRAP>
-   <FONT FACE=geneva,arial SIZE=2>
-            hunters
-   </FONT>
-   </TD>
-   
-   </TR>
-
-   
-   </TABLE>
-</td></tr></table>
-<INPUT TYPE=hidden NAME=clk VALUE=b-b-F1>
-<INPUT TYPE=hidden NAME=showSummary VALUE=true>
-<INPUT TYPE=hidden NAME=sorig VALUE=rpage>
-<INPUT TYPE=hidden NAME=trace VALUE=b>
-</FORM>
-
-<A HREF=/?b-a-b><IMG SRC=/img/art4/search_results.gif WIDTH=600 HEIGHT=35 BORDER=0 ISMAP USEMAP=#bumper ALT="Excite Search Results"></A>
-</CENTER>
-
-<BR>
-<CENTER>
-
-<font face=geneva,arial size=-1>
-
-<nobr><b>More Search Services:</b>&nbsp;&nbsp;
-<A HREF=/relocate/co=srchtips;http://www.excite.com/Info/searching.html#anchor4665304>Search Help</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=power;http://www.excite.com/search/options.html>Power Search</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=srchnews;http://nt.excite.com>Search the News</A></font></nobr><p>
-
-<font face=geneva,arial size=-1>
-<nobr><b>Channels:</b>&nbsp;&nbsp;
-<A HREF=/relocate/co=xsr_botnav_autos;http://www.excite.com/channel/auto/>Autos</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_business;http://quicken.excite.com/>Business</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_careers;http://my.excite.com/careers_and_education/>Careers & Education</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_computers;http://my.excite.com/computers_and_internet/>Computers</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_entertainment;http://my.excite.com/entertainment/>Entertainment</A><br>
-<A HREF=/relocate/co=xsr_botnav_games;http://www.excite.com/channel/games/>Games</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_lifestyle;http://my.excite.com/lifestyle/>Lifestyle</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_mychannel;http://my.excite.com/>My Channel</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_news;http://nt.excite.com/>News</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_chat;http://www.excite.com/channel/chat/>People & Chat</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_shopping;http://www.excite.com/channel/shopping/>Shopping</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_sports;http://my.excite.com/sports/>Sports</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_travel;http://city.net/>Travel</A></font></nobr>
-<p>
-
-<font face=geneva,arial size=-1>
-<b>Services:</b>&nbsp;&nbsp;
-<A HREF=/relocate/co=xsr_botnav_advertise;http://www.excite.com/Info/advertising.html>Advertise on Excite</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_bookflights;http://city.net/forms/reservations/>Book Flights</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_classifieds;http://www.excite.com/channel/classifieds/>Classifieds</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_EmailLook-up;http://www.excite.com/Reference/email.html>Email Lookup</A></font>
-
-<BR>
-<font face=geneva,arial size=-1>
-<A HREF="/relocate/co=xsr_botnav_FreeEmail;http://mailexcite.com/">Free Email</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_horoscopes;http://my.excite.com/horoscopes/>Horoscopes</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_maps;http://city.net/maps/>Maps</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_newsgroups;http://www.excite.com/Reference/usenet.html>Newsgroups</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_peoplefinder;http://www.excite.com/Reference/people.html>People Finder</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_shareware;http://www.excite.com/Reference/shareware.html>Shareware</A></font>
-
-<BR>
-<font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_sportsscores;http://sports.excite.com>Sports Scores</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_stockquotes;http://live.excite.com/stocks/>Stock Quotes</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_taxinfo;http://quicken.excite.com/taxes/>Tax Info</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_driving;http://city.net/maps/driving/>U.S. Driving Directions</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_weather;http://my.excite.com/weather/>Weather</A></font>
-
-<BR>
-<font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_gteyp;http://www.excite.com/Reference/yellow.html>Yellow Pages</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_instantinfo;http://www.excite.com/Reference/instant.html>More ...</A></font>
-
-<BR>
-
-<FONT SIZE=-2><BR>Copyright 1998 Excite Inc. <A HREF=/Info/disclaimer.html>Disclaimer</A></FONT>
-
-</CENTER>
-
-<MAP NAME=bumper>
-<AREA SHAPE=rect COORDS=21,0,127,34 HREF=http://www.excite.com/>
-<AREA SHAPE=rect COORDS=421,16,511,31 HREF=http://www.excite.com/>
-<AREA SHAPE=rect COORDS=512,16,600,31 HREF=http://my.excite.com/>
+<FORM NAME=topbox ACTION=/search.gw>
+<A HREF=http://www.excite.com/>
+<IMG SRC=/img/exc/hdr/search.gif BORDER=0 WIDTH=600 HEIGHT=45 ALT="Excite Search" ISMAP USEMAP=#navstripe></A><BR>
+<MAP NAME=navstripe>
+<AREA SHAPE=rect COORDS=0,0,122,45 HREF=http://www.excite.com/>
+<AREA SHAPE=rect COORDS=159,10,600,45 HREF=http://www.excite.com/>
 </MAP>
+<table border=0 cellpadding=1 cellspacing=0>
+<tr><td bgcolor=cccccc>
+<table border=0 cellspacing=0 cellpadding=4 width=598 bgcolor=ffffff><tr>
+<td align=right bgcolor=ffffff>
+<b><font face=arial size=-1>You searched for</font></b>
+<input size=30 name=search value="+Jabba +bounty +hunter +Greedo">
+<input type=hidden name=tsug value=-1>
+<input type=hidden name=csug value=0>
+</td>
+<td><input type=submit value="Search Again"></td>
+<td nowrap><font face=arial,helvetica size=-1><b>
+<a href=/relocate/co=help;http://www.excite.com/Info/suggest.html>Help</a>
+&nbsp;<br>
+</b></font></td>
+<td>&nbsp;</td>
+</tr></table>
+<input type=hidden name=sorig value=rpage>
+</td></tr></table>
+</form>
+<small><br></small>
+<a href="/relocate/ad=35754_468impress.gif|pk=390216;http://www.netgrocer.com/default.cfm?s=1001032500310105" onMouseOver="window.status='Click Here to Buy Groceries at NetGrocer!';return true" language="Javascript"><img src="/img/ads/35754_468impress.gif" ALT="Click Here to Buy Groceries at NetGrocer!" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> Click Here to Buy Groceries at NetGrocer! </B></FONT></CENTER></a>
+</center>
+<small><br></small>
+<table border=0 cellpadding=0 cellspacing=0 width=100%><tr>
+<td bgcolor=ffcc00 width=25%>
+<table border=1 cellpadding=1 cellspacing=0 width=100%><tr>
+<td align=center><font face=geneva,arial size=-1><b>
+<a name=web>Web Results</a>
+</b></font></td></tr></table>
+</td><td valign=bottom width=100%>
+<table border=0 cellspacing=0 cellpadding=0 width=100%>
+<tr><td bgcolor=999999 width=100%><img src=/img/pixel/trans.gif height=2 width=1></td></tr></table>
+</td></tr></table>
+<table border=0 cellpadding=2 cellspacing=0 width=100%>
+<tr><td width=40% nowrap><font face=arial>
+Documents
+&nbsp;85-166
+</font></td>
+<td align=right width=60% nowrap><font face=arial><b>
+<a href="/search.gw?s=%2Bjabba+%2Bbounty+%2Bhunter+%2Bgreedo&c=web&start=84&showSummary=false&sorig=b">Show
+Titles only</a>
+&nbsp;
+<a href="/search.gw?sort=site&c=web&s=%2Bjabba+%2Bbounty+%2Bhunter+%2Bgreedo&sorig=c">List
+by Web site</a>
+</b></font></td></tr></table>
+<br>
+<table border=0 cellpadding=1 cellspacing=0 bgcolor=000000 align=right>
+<tr>
+<td>
+<table border=0 cellspacing=0 cellpadding=4><tr>
+<td bgcolor=ffffff align=center nowrap>
+<font face=verdana,arial size=-1><b>AMAZON.COM</b></font><br>
+<small><a href=/relocate/co=xsr_amazon;http://www.amazon.com/exec/obidos/excite-search/search=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo>Find Related Books</a></small><br>
+&nbsp;
+</td></tr></table>
+</td></tr></table>
+<SMALL>81% </SMALL>
+<A HREF="http://www.filmthreat.com/reviews/reader.htm">Film Threat Online - Reader Reviews</A>&nbsp;
+- None Available
+<BR><SMALL>http://www.filmthreat.com/reviews/reader.htm
+<BR><A HREF="/search.gw?c=web&qbe=21744038&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>81% </SMALL>
+<A HREF="http://www.geocities.com/Area51/Vault/6023/index.html">The Mos Eisley Trading Post</A>&nbsp;
+- com J.R. Due to his large number of Haves and Wants, i put the lists on a seperate page. com Marc Dannik Jerriko He's got massive lists as well, so i put them Here.
+<BR><SMALL>http://www.geocities.com/Area51/Vault/6023/index.html
+<BR><A HREF="/search.gw?c=web&qbe=1012673&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>81% </SMALL>
+<A HREF="http://www.mindspring.com/~rosco29/rules/swtse.txt">Untitled</A>&nbsp;
+- Ramp: Shoot to spell FALCON and start Falcon Multiball. Falcon Multiball Loop the ramp to spell FALCON and start Falcon Multiball.
+<BR><SMALL>http://www.mindspring.com/~rosco29/rules/swtse.txt
+<BR><A HREF="/search.gw?c=web&qbe=21717686&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>81% </SMALL>
+<A HREF="http://www.mindspring.com/~galarsen/planetdb/nfrm.html">The Planetary Tour of Star Wars -"N" Database</A>&nbsp;
+- The world's population consists of nearly seven billion inhabitants, three billion of them Hutts. Most of the moon's 72 to 95 billion inhabitants live in the highest levels of the spaceport-cities.
+<BR><SMALL>http://www.mindspring.com/~galarsen/planetdb/nfrm.html
+<BR><A HREF="/search.gw?c=web&qbe=4478528&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>81% </SMALL>
+<A HREF="http://www.fgn.org/rebels/n.html">N </A>&nbsp;
+- . [DESB] A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T ...
+<BR><SMALL>http://www.fgn.org/rebels/n.html
+<BR><A HREF="/search.gw?c=web&qbe=36913563&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>81% </SMALL>
+<A HREF="http://users.vnet.net/hehman/pinball/rules/sw.txt">Untitled</A>&nbsp;
+- Collect all 6 for, um, something related to Extra Ball I'm guessing :) Start a mode by shooting the Mode Start hole. Han Hurry-up is lit at the Han Hole to escape from the Space Slug.
+<BR><SMALL>http://users.vnet.net/hehman/pinball/rules/sw.txt
+<BR><A HREF="/search.gw?c=web&qbe=15771235&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>80% </SMALL>
+<A HREF="http://www.bama.ua.edu/~mcphe002/sw.htm">Star Wars essay</A>&nbsp;
+- HOW AUDIENCES GAIN IMPRESSIONS FROM THE CHARACTERS Researchers have studied what traits audiences pull from media characters. Liking or Disliking We have discussed that people evaluate characters based on physical, speech, and behavioral characteristics, but their decisions are based on which trait they find most desirable.
+<BR><SMALL>http://www.bama.ua.edu/~mcphe002/sw.htm
+<BR><A HREF="/search.gw?c=web&qbe=41290272&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>80% </SMALL>
+<A HREF="http://www.roughcut.com/star_wars/take/index.html">Take One- Star Wars Special Edition Issue</A>&nbsp;
+- Perhaps he should consider more meaty roles than the been-there, done-that Beverly Hills Cop types. 9. (6) BEVERLY HILLS NINJA.
+<BR><SMALL>http://www.roughcut.com/star_wars/take/index.html
+<BR><A HREF="/search.gw?c=web&qbe=3585745&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>80% </SMALL>
+<A HREF="http://jedinet.com/literature/">JediNet Property Under Construction</A>&nbsp;
+- (3) The Essential Guide to Planets and Moons has been pushed back to the fall for release, and can hit the shelves anytime between August-November 1998. And last but not least, Essential Guide to Planets and Moons has been pushed back from an April release to an August release.
+<BR><SMALL>http://jedinet.com/literature/
+<BR><A HREF="/search.gw?c=web&qbe=27071695&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>79% </SMALL>
+<A HREF="http://hot.virtual-pc.com/mufty/swccg/interviews/tonycase.html">Interview: Tony Case</A>&nbsp;
+- As for good guy- I'll step outside of Star Wars and go with any of the Doctors from Doctor Who. A bit sappy, I know, but it's that sort of morality I like in the character ( and in the whole series for that matter).
+<BR><SMALL>http://hot.virtual-pc.com/mufty/swccg/interviews/tonycase.ht...
+<BR><A HREF="/search.gw?c=web&qbe=33083597&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>79% </SMALL>
+<A HREF="http://friko2.onet.pl/ns/hare/gielda.htm">Gie³da</A>&nbsp;
+- Rogue 1. Rogue 3 (x2).
+<BR><SMALL>http://friko2.onet.pl/ns/hare/gielda.htm
+<BR><A HREF="/search.gw?c=web&qbe=41387349&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>77% </SMALL>
+<A HREF="http://www.vvm.com/~nopes/stapp3.html">Untitled</A>&nbsp;
+- Star Wars is stuffed with "mythemes"--the atomic elements, so to speak, of mythic material. It doesn't take long for Besson to put The Fifth Element into overdrive and keep it there.
+<BR><SMALL>http://www.vvm.com/~nopes/stapp3.html
+<BR><A HREF="/search.gw?c=web&qbe=11066880&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>77% </SMALL>
+<A HREF="http://geraldton.lakeheadu.ca/~dward/Thunder.html">Thunder42698</A>&nbsp;
+- This Web Page is dedicated to " Pudin ", without her my life is not complete !!. Little about myself :Sitting in a theater , you have some idea how that first Star Destroyer, from overhead would leave an impression on a young child of 10 years old.
+<BR><SMALL>http://geraldton.lakeheadu.ca/~dward/Thunder.html
+<BR><A HREF="/search.gw?c=web&qbe=29609152&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>75% </SMALL>
+<A HREF="http://www.digiphy.com/swccg/anh_spoiler_dark.html">SW:CCG A NEW HOPE DARK SIDE SPOILER LIST</A>&nbsp;
+- R2Creature3P:* S:5 D:4 F:0 *Ferocity=(power/ferocity of last character or creature eaten)+destiny. If destiny &gt character's ability, "suck up" character (relocate to related interior Sandcrawler site or owner's Used Pile).
+<BR><SMALL>http://www.digiphy.com/swccg/anh_spoiler_dark.html
+<BR><A HREF="/search.gw?c=web&qbe=4077286&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>75% </SMALL>
+<A HREF="http://lonestar.texas.net/~cgregg/dark_anh_spoiler.html">UNOFFICIAL SW:CCG A NEW HOPE DARK SIDE SPOILER LIST</A>&nbsp;
+- R2-Q2 spent several decades serving with an Imperial reconnaissance fleet in the Expansion Region. Full Imperial scans include full-spectrum transceivers, dedicated energy receptors, crystal gravfield traps, and hyperwave signal interceptors.
+<BR><SMALL>http://lonestar.texas.net/~cgregg/dark_anh_spoiler.html
+<BR><A HREF="/search.gw?c=web&qbe=36529606&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>75% </SMALL>
+<A HREF="http://www.personal.kent.edu/~psekula/figures.html">Star Wars Collectors Temple Figure Page</A>&nbsp;
+- Weequay Skiff Guard&#153; 7/97 Wave 10: Scheduled Release Collection 1: Princess Leia Organa&#153; as Jabba's&#153; Prisoner. Malakili &#153; (Rancor Keeper) 10/97 Wave 12: Scheduled Release Collection 1: Luke in Ceremonial Outfit 11/97 Wave 13: Scheduled Release Collection 1: Bespin Luke Skywalker&#153;.
+<BR><SMALL>http://www.personal.kent.edu/~psekula/figures.html
+<BR><A HREF="/search.gw?c=web&qbe=33696914&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>74% </SMALL>
+<A HREF="http://www.geocities.com/Area51/Corridor/6073/index2.html">The Jawa Bazaar SW:CCG Trading Post</A>&nbsp;
+- , Cloud City: Guest Quarters, Courage Of A Skywalker, Dark Approach, Haven, Hindsight, Aiiii! !!, Cloud City: Guest Quarters, *LS* Lando Calrissian, Off The Edge, Punch It!
+<BR><SMALL>http://www.geocities.com/Area51/Corridor/6073/index2.html
+<BR><A HREF="/search.gw?c=web&qbe=4324988&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>73% </SMALL>
+<A HREF="http://www.4berea.com/bereaboard/messages/388.html">Re: WANTED:WILL BUY STAR WARS STUFF POST WHAT YOU HAVE</A>&nbsp;
+- Original Obi Wan Kenobi - Short Saber ............... 1 $9.00. .. 1 $50.00 : Original Obi Wan Kenobi - Long Saber (French) ....... 1 $50.00+ : Original Obi Wan Kenobi - Short Saber ............... 1 $9.00 : 3. Original Stormtrooper ............................... 3 $12.00 : 4. Original Princess Leia .............................. 3 $20.00 : Original Princess Leia (Green Card) ........
+<BR><SMALL>http://www.4berea.com/bereaboard/messages/388.html
+<BR><A HREF="/search.gw?c=web&qbe=11828138&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>73% </SMALL>
+<A HREF="http://www.stwing.upenn.edu/starwars/films/quizbook.txt">Untitled</A>&nbsp;
+- 3. What was the name of the creature who worked for Jabba the Hutt and was shot by Han Solo? She shot one and was then knocked unconscious by a stun blast.
+<BR><SMALL>http://www.stwing.upenn.edu/starwars/films/quizbook.txt
+<BR><A HREF="/search.gw?c=web&qbe=27464046&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>72% </SMALL>
+<A HREF="http://www.wiseacres.com/feb.htm">Philip's Kenner Star Wars Toy Up To Date Info</A>&nbsp;
+- I found two Wal-Marts in Houston yesterday (unfortunately I was there for a funeral) that had .00 Deluxe Stormtroopers. 1, 1997 - I found Luke's T-16 Skyhoppers last Monday at Wal-Mart in Dallas (Southlake).
+<BR><SMALL>http://www.wiseacres.com/feb.htm
+<BR><A HREF="/search.gw?c=web&qbe=37859221&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>71% </SMALL>
+<A HREF="http://spaceport.simplenet.com/bios/nopicleia.html">T H E S P A C E P O R T leia organa solo</A>&nbsp;
+- She remained the voice of reason, and most of the time backed Mon Mothma and Admiral Ackbar above others. Without Mothma and Ackbar, the Princess Leia Organa Solo was the only voice of reason in the Council.
+<BR><SMALL>http://spaceport.simplenet.com/bios/nopicleia.html
+<BR><A HREF="/search.gw?c=web&qbe=31415443&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>71% </SMALL>
+<A HREF="http://spaceport.simplenet.com/bios/leia.html">T H E S P A C E P O R T leia organa solo</A>&nbsp;
+- Han: That bounty hunter we ran into on Ord Mantell changed my mind. (Moving closer to her, Leia looks radiant) Believe me, you could use a good kiss.
+<BR><SMALL>http://spaceport.simplenet.com/bios/leia.html
+<BR><A HREF="/search.gw?c=web&qbe=35278423&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>71% </SMALL>
+<A HREF="http://www.rocketcom.com/toy/starwars.html">Quake's Collectibles - Star Wars</A>&nbsp;
+- 50 Leia good cond, w/gun 20 Han Solo Large head, good cond 18 Han Solo Large head, good cond but with small paint chip in shirt 16 C3PO worn chrome on foot 9 C3PO faded chrome- silver appearance 7 Ben Kenobi white hair ,no cape, no saber, avg cond 16 Ben Kenobi grey hair ,no cape, no saber, avg cond 16 Luke Pilot tight, some worn paint 11 Luke Pilot good 11 Luke Pilot good, some paint wear.
+<BR><SMALL>http://www.rocketcom.com/toy/starwars.html
+<BR><A HREF="/search.gw?c=web&qbe=39838354&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>71% </SMALL>
+<A HREF="http://www.csi.ull.es/alumnado/alu339/journal5.txt">Untitled</A>&nbsp;
+- NO DOUBT CD TRAGIC EMPIRE On the NO DOUBT CD TRAGIC KINGDOM, the last track features a brass section, and at the end of the song, the section starts playing rhythms that have nothing to do with the song at all. NAVY WARS In the movie NAVY SEALS there is a scene at the end of the movie where Charlie Sheen is hiding out.
+<BR><SMALL>http://www.csi.ull.es/alumnado/alu339/journal5.txt
+<BR><A HREF="/search.gw?c=web&qbe=6980607&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>71% </SMALL>
+<A HREF="http://www.execulink.com/~ego/starwars/rotj.html">Star Wars Trilogy Blooper Viewers Guide - SWVI: Return Of The Jedi
+</A>&nbsp;
+- EVENT: Luke swings at the bounty hunter with his lightsaber and chops Fett's gun in two. EVENT: As we follow Fett's flight, we cut to a scene showing the front half of a skiff.
+<BR><SMALL>http://www.execulink.com/~ego/starwars/rotj.html
+<BR><A HREF="/search.gw?c=web&qbe=1577538&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>71% </SMALL>
+<A HREF="http://spaceport.simplenet.com/bios/nopichan.html">T H E S P A C E P O R T han solo</A>&nbsp;
+- Han wanted Lando to help him repair the Millennium Falcon, and he didn't realize that Lando had betrayed him to Empire. And, as if to add coda to his past, Han and Lando finally settled on the ownership of the Millennium Falcon.
+<BR><SMALL>http://spaceport.simplenet.com/bios/nopichan.html
+<BR><A HREF="/search.gw?c=web&qbe=29840284&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>71% </SMALL>
+<A HREF="http://spaceport.simplenet.com/bios/han.html">T H E S P A C E P O R T han solo</A>&nbsp;
+- Dropping Luke and Leia at the Rebel base, Han would have been content to leave with his reward, Chewbacca played his conscience. Han helped the Alliance scout new bases, and helped establish Echo Base on Hoth.
+<BR><SMALL>http://spaceport.simplenet.com/bios/han.html
+<BR><A HREF="/search.gw?c=web&qbe=35285017&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>67% </SMALL>
+<A HREF="http://www.wiseacres.com/sep.htm">Philip's Kenner Star Wars Toy Up To Date Info</A>&nbsp;
+- JC Penney's just got in the 12" Greedo, has Yak wave figures and will let you order the new deluxe playsets. Luke Skywalker in Ceremonial Gear - Looks exactly like the Catalog photos you see on the web.
+<BR><SMALL>http://www.wiseacres.com/sep.htm
+<BR><A HREF="/search.gw?c=web&qbe=32759107&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>67% </SMALL>
+<A HREF="http://geraldton.lakeheadu.ca/~dward/Thunder2.html">MAY5</A>&nbsp;
+- GOT Han Solo in Carbonite Block 6/96 Wave 5: First Released Collection 1: GOT X2 Greedo . GOT Momaw Nadon "Hammerhead" 11/96 Wave 7: First Released Collection 2: GOT X3 AT-ST Driver .
+<BR><SMALL>http://geraldton.lakeheadu.ca/~dward/Thunder2.html
+<BR><A HREF="/search.gw?c=web&qbe=27907433&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>66% </SMALL>
+<A HREF="http://members.tripod.com/~jessrob/">Jabba's Palace</A>&nbsp;
+- This is Rogue 2. I found them, repeat, I found them" -Rouge 2 pilot The Emperor Strikes Back. ...we don't need their scum" -Admiral Piett The Emperor Strikes Back.
+<BR><SMALL>http://members.tripod.com/~jessrob/
+<BR><A HREF="/search.gw?c=web&qbe=607127&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>66% </SMALL>
+<A HREF="http://sf.www.lysator.liu.se/sf_archive/sf-texts/html_index/sf-texts/movies/Star_Wars_Special_Edition.mbox">Linköping Science Fiction Archive: Star Wars Special Edition</A>&nbsp;
+- But "not bad" wasn't good enough for Lucas, and his vision of what they should have been fills the screen in the SPECIAL EDITION. No bullets (but with bullet sounds).
+<BR><SMALL>http://sf.www.lysator.liu.se/sf_archive/sf-texts/html_index/...
+<BR><A HREF="/search.gw?c=web&qbe=19177370&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>66% </SMALL>
+<A HREF="http://www.azstarnet.com/~newmann/swgenbbs.html">Star Wars: General Bulletin Board: Postings</A>&nbsp;
+- Reply to this message. Reply to message.
+<BR><SMALL>http://www.azstarnet.com/~newmann/swgenbbs.html
+<BR><A HREF="/search.gw?c=web&qbe=25794531&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>65% </SMALL>
+<A HREF="http://astro.caltech.edu/~rrg/starwars_coll.html">Star Wars Stuff</A>&nbsp;
+- S. Orange1.00 Jedi LukeTrilogo Green Jedi LukeMovie Edition Green Limited Jedi LukeU. S. SOTE Dash RendarTrilogo SOTE Bounty Hunter ChewbaccaU.
+<BR><SMALL>http://astro.caltech.edu/~rrg/starwars_coll.html
+<BR><A HREF="/search.gw?c=web&qbe=13633247&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>65% </SMALL>
+<A HREF="http://www.worldaxes.com/anduril/dagdk.htm">UNOFFICIAL SW:CCG DAGOBAH DARK SIDE SPOILER LIST</A>&nbsp;
+- Warrior, Pilot Adds 2 to power of any starship he pilots. &quot; Fear Will Keep Them In Line is destiny +2 and, when it adds 1 to your power, also adds 1 to attrition against opponent.
+<BR><SMALL>http://www.worldaxes.com/anduril/dagdk.htm
+<BR><A HREF="/search.gw?c=web&qbe=37017137&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>64% </SMALL>
+<A HREF="http://www.jedinet.com/datapad/messages/36/443.shtml">The DataPad</A>&nbsp;
+- I will admit, I do believe that the only stuff which should be considered &#34;official canon&#34; is stuff from the only official source - the movies. ..we dont need their scum,&#34; will have a racist connontation in relation to the prequels, a well as the snooty &#34;be all you can be Im an officer in the fleet you&#39;re a mercenary&#34; attitude.
+<BR><SMALL>http://www.jedinet.com/datapad/messages/36/443.shtml
+<BR><A HREF="/search.gw?c=web&qbe=20019039&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>64% </SMALL>
+<A HREF="http://www.premier.net/~exar/PAGE6/PAGE6.htm">Star Wars Character List</A>&nbsp;
+- One of Vader's main quests while serving the Empire was to destroy the Rebel Alliance. This was part of the Emperor's plot to lure the rebel fleet to the Death Star and then destroy the rebels.
+<BR><SMALL>http://www.premier.net/~exar/PAGE6/PAGE6.htm
+<BR><A HREF="/search.gw?c=web&qbe=40419148&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>64% </SMALL>
+<A HREF="http://spaceport.simplenet.com/potf2/pricelist.html">T H E S P A C E P O R T price list</A>&nbsp;
+- None Available
+<BR><SMALL>http://spaceport.simplenet.com/potf2/pricelist.html
+<BR><A HREF="/search.gw?c=web&qbe=34994318&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>63% </SMALL>
+<A HREF="http://frodo.hiof.no/~deak/blooper/online/bloop31.txt">Untitled</A>&nbsp;
+- It looks like a medium-brown macrame blanket. 5---==>}]SUBJECT: Threepio's Falling Apart SCENE: Just as C-3PO walks in on Han and Leia kissing and he taps Han on the shoulder.
+<BR><SMALL>http://frodo.hiof.no/~deak/blooper/online/bloop31.txt
+<BR><A HREF="/search.gw?c=web&qbe=7352548&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>63% </SMALL>
+<A HREF="http://homepages.ihug.co.nz/~brian/pqweeduk.htm">PQWEEDUK'S REVENGE</A>&nbsp;
+- &quot;Shhhhh,&quot; she whispered, covering him with several blankets Chewie brought from the bedroom. Yawning, Jacen and Jaina crawled in and Anakin followed.
+<BR><SMALL>http://homepages.ihug.co.nz/~brian/pqweeduk.htm
+<BR><A HREF="/search.gw?c=web&qbe=31310438&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>62% </SMALL>
+<A HREF="http://oneclick.ucr.edu/chamber/aflist/swlist01.htm">Kenner's Star Wars Action Figures</A>&nbsp;
+- None Available
+<BR><SMALL>http://oneclick.ucr.edu/chamber/aflist/swlist01.htm
+<BR><A HREF="/search.gw?c=web&qbe=30802036&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>61% </SMALL>
+<A HREF="http://www.hamline.edu/~jstoller/class.html">Star Wars Classifieds</A>&nbsp;
+- Tattoine Skiff wanted, loose, good condition, and complete. For Sale or Trade:FAO exclusive 12" Luke/Bib Fortuna 2-pack--JCPennys exclusive 12" Greedo--Luke Jedi Movie Edition.
+<BR><SMALL>http://www.hamline.edu/~jstoller/class.html
+<BR><A HREF="/search.gw?c=web&qbe=837322&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<CENTER> <TABLE BORDER=0 CELLPADDING=3 CELLSPACING=0 WIDTH=100%><TR>
+<TD ALIGN=center BGCOLOR=FFFFCC>
+<FONT FACE=arial>Try Excite <A HREF=http://www.excite.com/search/options.html>Power Search</A>
+for a simple way to search like the pros...</FONT>
+</TD></TR></TABLE></CENTER><P>
+<SMALL>61% </SMALL>
+<A HREF="http://www.math.uga.edu/~don/starwars/ordmant.html">Escape from Ord Mantell: by Linda Bindner</A>&nbsp;
+- ``It's not poisonous, is it?''
+<BR><SMALL>http://www.math.uga.edu/~don/starwars/ordmant.html
+<BR><A HREF="/search.gw?c=web&qbe=32517278&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>60% </SMALL>
+<A HREF="http://www.filmsite.org/starw.html">Star Wars (1977)
+</A>&nbsp;
+- After a valiant and brave fight, the Rebel ship is brought under Imperial control. I recognized your foul stench when I was brought on board.
+<BR><SMALL>http://www.filmsite.org/starw.html
+<BR><A HREF="/search.gw?c=web&qbe=28500766&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>58% </SMALL>
+<A HREF="http://frodo.hiof.no/~deak/pics/miniroj.html">Deak's Den</A>&nbsp;
+- Size: 288 x 427 pixels. Size: 288 x 218 pixels.
+<BR><SMALL>http://frodo.hiof.no/~deak/pics/miniroj.html
+<BR><A HREF="/search.gw?c=web&qbe=21004139&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>58% </SMALL>
+<A HREF="http://frodo.hiof.no/~deak/blooper/online/txtswb1.txt">Untitled</A>&nbsp;
+- Event2: The dent has moved to his right side again. Silent saber Type: Blooper Time: 01h:44m:50s Scene: After Vader cut of Luke's right hand.
+<BR><SMALL>http://frodo.hiof.no/~deak/blooper/online/txtswb1.txt
+<BR><A HREF="/search.gw?c=web&qbe=6947698&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>58% </SMALL>
+<A HREF="http://www.digitalheroes.com/ActionF.idc">Action Figures for Sale</A>&nbsp;
+- Star Wars (1977 Loose & Complete). Star Wars (1977 Loose & Complete).
+<BR><SMALL>http://www.digitalheroes.com/ActionF.idc
+<BR><A HREF="/search.gw?c=web&qbe=34268710&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>57% </SMALL>
+<A HREF="http://www.primenet.com/~btn/faq/ptof.html">Action Figure Times -The Unofficial Star Wars POTF FAQ</A>&nbsp;
+- Trays are customized to the figure so that the tray holds the figure and all accessories. Emperor Palpatine (.01) Back of Card: "Figures Sold Separately".
+<BR><SMALL>http://www.primenet.com/~btn/faq/ptof.html
+<BR><A HREF="/search.gw?c=web&qbe=590365&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>54% </SMALL>
+<A HREF="http://members.tripod.com/~itsallgood_/allgood-2.html">It's All Good</A>&nbsp;
+- She fuck smutshack grabbed my cock tight pussy with her hands and fuck smutshack closed her mouth fuck smutshack about the head, slowly tight smutshack sucking it in fuck pussy until she had tight pussy about half of fuck smutshack it in her tight pussy mouth. She ground her tight pussy against my fuck smutshack stomach, twisting tight pussy her head back fuck smutshack and forth, then tight.
+<BR><SMALL>http://members.tripod.com/~itsallgood_/allgood-2.html
+<BR><A HREF="/search.gw?c=web&qbe=225844&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>54% </SMALL>
+<A HREF="http://users.aol.com/A2trmp/jsp.html">Jabba's Palace Spoilers!!!</A>&nbsp;
+- May Force drain at Droid Workshop, Droid Junkheap or Incinerator (+1 for each other droid present, including captive droids). During your control phase, may cause opponent to reveal entire hand by using X Force, where X = number of cards in opponent's hand.
+<BR><SMALL>http://users.aol.com/A2trmp/jsp.html
+<BR><A HREF="/search.gw?c=web&qbe=26077219&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>54% </SMALL>
+<A HREF="http://www.tcomics.com/Cjuly.html">July releases</A>&nbsp;
+- Top Shelf Comics. This page is a partial listing of comic books and related material due out July 1998.
+<BR><SMALL>http://www.tcomics.com/Cjuly.html
+<BR><A HREF="/search.gw?c=web&qbe=25594459&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>53% </SMALL>
+<A HREF="http://www.jedinet.com/datapad/messages/38/56.shtml">The DataPad</A>&nbsp;
+- ...I&#39;d better yell it out at him to get it though his thick neanderthal skull. Maybe that&#39;s where KJA got the idea for Mara&#39;s little silver jumpsuit!
+<BR><SMALL>http://www.jedinet.com/datapad/messages/38/56.shtml
+<BR><A HREF="/search.gw?c=web&qbe=19373833&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>49% </SMALL>
+<A HREF="http://www.bus.miami.edu/~jdavis/Starwars/March-quotes.html">Favorite Quotes</A>&nbsp;
+- Thursday, March 28, 1996 at 13:12:17 (EST) "Jabba waninchico." Thursday, March 28, 1996 at 09:28:38 (EST) "I've got a bad feeling about this!"
+<BR><SMALL>http://www.bus.miami.edu/~jdavis/Starwars/March-quotes.html
+<BR><A HREF="/search.gw?c=web&qbe=6234944&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>48% </SMALL>
+<A HREF="http://138.192.11.42/scripts/anh.txt">Untitled</A>&nbsp;
+- WOMAN: I've told you kids to slow down! .. BIGGS: I've missed you kid.
+<BR><SMALL>http://138.192.11.42/scripts/anh.txt
+<BR><A HREF="/search.gw?c=web&qbe=127993&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>48% </SMALL>
+<A HREF="http://www.engr.orst.edu/~volzmi/starwars/newhope.txt">Untitled</A>&nbsp;
+- Luke goes over to the edge and sees his Aunt Beru standing in the main courtyard. THREEPIO: With all we've been through, sometimes I'm amazed we're in as good condition as we are, what with the Rebellion and all.
+<BR><SMALL>http://www.engr.orst.edu/~volzmi/starwars/newhope.txt
+<BR><A HREF="/search.gw?c=web&qbe=1074271&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>48% </SMALL>
+<A HREF="http://www.erols.com/njesuele/script1.htm">Untitled</A>&nbsp;
+- Threepio struggles out of the homestead and on the salt flat as Luke scans the landscape with his electrobinoculars. A long beam shoots out about four feet and flickers there.
+<BR><SMALL>http://www.erols.com/njesuele/script1.htm
+<BR><A HREF="/search.gw?c=web&qbe=1198342&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>48% </SMALL>
+<A HREF="http://www.stwing.upenn.edu/starwars/films/anh.txt">Untitled</A>&nbsp;
+- Threepio lowers himself into a large tub filled with warm oil. Threepio climbs out of the oil tub and begins wiping oil from his bronze body.
+<BR><SMALL>http://www.stwing.upenn.edu/starwars/films/anh.txt
+<BR><A HREF="/search.gw?c=web&qbe=1843223&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>48% </SMALL>
+<A HREF="http://isir.kaist.ac.kr/yeyoung/md/script/Star_Wars.txt">Untitled</A>&nbsp;
+- Biggs takes the binoculars from Luke as the others strain to see something with the naked eye. I have placed information vital to the survival of the Rebellion into the memory systems of this R2 unit.
+<BR><SMALL>http://isir.kaist.ac.kr/yeyoung/md/script/Star_Wars.txt
+<BR><A HREF="/search.gw?c=web&qbe=2379495&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>48% </SMALL>
+<A HREF="http://frodo.hiof.no/~deak/script/online/txtswpub.txt">Untitled</A>&nbsp;
+- The fear in her eyes slowly gives way to anger as the muted crushing sounds of the approaching stormtroopers grow louder. The Jawa goes into a loud spiel.
+<BR><SMALL>http://frodo.hiof.no/~deak/script/online/txtswpub.txt
+<BR><A HREF="/search.gw?c=web&qbe=6462728&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>48% </SMALL>
+<A HREF="http://bbutton.com/irc/skywalker/newhope.txt">Untitled</A>&nbsp;
+- Luke and the two robots start off for the garage when a plate pops off the head of the red astro-droid's head plate and it sparks wildly. Luke enters the garage to discover the robots nowhere in sight.
+<BR><SMALL>http://bbutton.com/irc/skywalker/newhope.txt
+<BR><A HREF="/search.gw?c=web&qbe=7810694&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>48% </SMALL>
+<A HREF="http://www.ebc.ee/~jp/jp/txt/fiction/starwar4.txt">Untitled</A>&nbsp;
+- EXTERIOR: TATOOINE -- ROCK CANYON -- RIDGE -- DAY. EXTERIOR: TATOOINE -- ROCK CANYON -- FLOOR -- DAY.
+<BR><SMALL>http://www.ebc.ee/~jp/jp/txt/fiction/starwar4.txt
+<BR><A HREF="/search.gw?c=web&qbe=8562713&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>48% </SMALL>
+<A HREF="http://mcw.on.ca/NEMESIS/sw-script.txt">Untitled</A>&nbsp;
+- Stormtroopers can be heard battling in the distance. There's a battle going on!
+<BR><SMALL>http://mcw.on.ca/NEMESIS/sw-script.txt
+<BR><A HREF="/search.gw?c=web&qbe=9459039&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>48% </SMALL>
+<A HREF="http://www.the-cantina.com/library/script-anh.html">Untitled</A>&nbsp;
+- Artoo looks around and sheepishly beeps an answer for Threepio to translate. He looks around and sheepishly beeps an answer for Threepio to translate.
+<BR><SMALL>http://www.the-cantina.com/library/script-anh.html
+<BR><A HREF="/search.gw?c=web&qbe=10819843&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>48% </SMALL>
+<A HREF="http://www.info2000.net/~curtisw/anh.txt">Untitled</A>&nbsp;
+- ..they've even raided the outskirts of Anchorhead. As a matter of fact, I'm not even sure which planet I'm on.
+<BR><SMALL>http://www.info2000.net/~curtisw/anh.txt
+<BR><A HREF="/search.gw?c=web&qbe=14146095&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>48% </SMALL>
+<A HREF="http://www.ece.orst.edu/~volzmi/starwars/engr/newhope.txt">Untitled</A>&nbsp;
+- Luke becomes intrigued by the beautiful girl. THREEPIO: Sir, if you'll not be needing me, I'll close down for awhile.
+<BR><SMALL>http://www.ece.orst.edu/~volzmi/starwars/engr/newhope.txt
+<BR><A HREF="/search.gw?c=web&qbe=14207103&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>48% </SMALL>
+<A HREF="http://locals.onslowonline.net/~osgood/drevfourthpub.html">STARKILLER: Revised Fourth Draft, Public Version</A>&nbsp;
+- . Luke's surprise at the appearance of Biggs gives way to.
+<BR><SMALL>http://locals.onslowonline.net/~osgood/drevfourthpub.html
+<BR><A HREF="/search.gw?c=web&qbe=16192581&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>48% </SMALL>
+<A HREF="http://ftp.std.com/obi/alt.quotations/Archive/SW-ANH_Script">Untitled</A>&nbsp;
+- INTERIOR: REBEL BLOCKADE RUNNER -- MAIN PASSAGEWAY. INTERIOR: REBEL BLOCKADE RUNNER -- MAIN HALLWAY.
+<BR><SMALL>http://ftp.std.com/obi/alt.quotations/Archive/SW-ANH_Script
+<BR><A HREF="/search.gw?c=web&qbe=19343951&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>48% </SMALL>
+<A HREF="http://www.d.umn.edu/~chouse/movierack/a_new_hope_script.html">Untitled</A>&nbsp;
+- INTERIOR/EXTERIOR: LUKE'S SPEEDER -- DESERT WASTELAND -- TRAVELING -- DAY. Ben puts his hand on Luke's forehead and he begins to come around.
+<BR><SMALL>http://www.d.umn.edu/~chouse/movierack/a_new_hope_script.htm...
+<BR><A HREF="/search.gw?c=web&qbe=20526156&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>48% </SMALL>
+<A HREF="http://www.ntsource.com/~penfold/sw/scripts/swanh.html">Untitled</A>&nbsp;
+- Threepio's fist bangs the head of Artoo whose computer lights pop on as he begins beeping. OWEN: (to the head Jawa) Hey, what're you trying to push on us?
+<BR><SMALL>http://www.ntsource.com/~penfold/sw/scripts/swanh.html
+<BR><A HREF="/search.gw?c=web&qbe=21088890&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>48% </SMALL>
+<A HREF="http://skyhigh.com/~mpinto/swanh.txt">Untitled</A>&nbsp;
+- Luke, I'm not going to wait for the Empire to draft me into service. What good is all your uncle's work if it's taken over by the Empire?
+<BR><SMALL>http://skyhigh.com/~mpinto/swanh.txt
+<BR><A HREF="/search.gw?c=web&qbe=25843869&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>48% </SMALL>
+<A HREF="http://www-leland.stanford.edu/~dpuryear/starwars.shtml">Daryl's Homepage</A>&nbsp;
+- THREEPIO: He says the restraining bolt has short circuited his recording system. As Luke finishes repairing Threepio and starts to fit the restraining bolt back on, Threepio looks at him nervously.
+<BR><SMALL>http://www-leland.stanford.edu/~dpuryear/starwars.shtml
+<BR><A HREF="/search.gw?c=web&qbe=25943308&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>48% </SMALL>
+<A HREF="http://www.crosswinds.net/birmingham-us/~acejr/star_wars_episode_iv.htm">STAR WARS Episode IV A NEW HOPE From the JOURNAL OF THE WHILLS by Geor...</A>&nbsp;
+- ..Take care of yourself, you'll always be the best friend I've got. A long beam shoots out about four feet and flickers there.
+<BR><SMALL>http://www.crosswinds.net/birmingham-us/~acejr/star_wars_epi...
+<BR><A HREF="/search.gw?c=web&qbe=26424918&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>48% </SMALL>
+<A HREF="http://www.bus.miami.edu/~jdavis/Starwars/sw-script.html">Star Wars - A New Hope</A>&nbsp;
+- THREEPIO: That's funny, the damage doesn't look as bad from out here. As it was I busted up the Skyhopper pretty bad.
+<BR><SMALL>http://www.bus.miami.edu/~jdavis/Starwars/sw-script.html
+<BR><A HREF="/search.gw?c=web&qbe=30647063&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>48% </SMALL>
+<A HREF="http://www.nottingham.ac.uk/~avykdel/scripts/star.wars">Untitled</A>&nbsp;
+- Artoo isn't happy with Threepio's stubbornness, and he beeps and twangs angrily. Threepio's fist bangs the head of Artoo whose computer lights pop on as he begins beeping.
+<BR><SMALL>http://www.nottingham.ac.uk/~avykdel/scripts/star.wars
+<BR><A HREF="/search.gw?c=web&qbe=32339916&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>48% </SMALL>
+<A HREF="http://www.skyhigh.com/~bamboo7/episode4.txt">Untitled</A>&nbsp;
+- LUKE: I almost forgot. My joints are almost frozen.
+<BR><SMALL>http://www.skyhigh.com/~bamboo7/episode4.txt
+<BR><A HREF="/search.gw?c=web&qbe=32706790&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>48% </SMALL>
+<A HREF="http://spaceport.simplenet.com/scripts/swr4publ.txt">Untitled</A>&nbsp;
+- As it was I busted up the Skyhopper pretty bad. He takes one final look across the dim horizon.
+<BR><SMALL>http://spaceport.simplenet.com/scripts/swr4publ.txt
+<BR><A HREF="/search.gw?c=web&qbe=34753061&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>48% </SMALL>
+<A HREF="http://www.box.net.au/~rowanb/starwars/anh.txt">Untitled</A>&nbsp;
+- WOMAN: I've told you kids to slow down! The Sandcrawler moves slowly down a great sand dune.
+<BR><SMALL>http://www.box.net.au/~rowanb/starwars/anh.txt
+<BR><A HREF="/search.gw?c=web&qbe=38799580&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>48% </SMALL>
+<A HREF="http://www.regiong.k12.ca.us/students/tm678832/www/script1.html">Untitled</A>&nbsp;
+- Luke bounces into a small room behind the office where Deak and Windy, two. . A women's voice calls out from another room.
+<BR><SMALL>http://www.regiong.k12.ca.us/students/tm678832/www/script1.h...
+<BR><A HREF="/search.gw?c=web&qbe=39714494&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>48% </SMALL>
+<A HREF="http://www.bcpl.lib.md.us/~jgelner/homepage/anh.html">Star Wars - A New Hope</A>&nbsp;
+- THREEPIO: Don't call me a mindless philosopher, you overweight glob of grease! A voice of recognition calls out from the gloom.
+<BR><SMALL>http://www.bcpl.lib.md.us/~jgelner/homepage/anh.html
+<BR><A HREF="/search.gw?c=web&qbe=40863187&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>48% </SMALL>
+<A HREF="http://home.rogerswave.ca/gbarnes/sw.txt">Untitled</A>&nbsp;
+- I was so close I thought I was going to fry my instruments. ..quiet. Biggs looks around then leans close to Luke.
+<BR><SMALL>http://home.rogerswave.ca/gbarnes/sw.txt
+<BR><A HREF="/search.gw?c=web&qbe=41066093&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>48% </SMALL>
+<A HREF="http://www.jedinet.com/datapad/messages/38/198.shtml">The DataPad</A>&nbsp;
+- By BANDOL on Friday, February 13, 1998 - 03:10 am: &#34;I&#39;M THE PRESIDENT OF THE UNITED STATES! ~M By Fettish on Thursday, February 19, 1998 - 01:48 am: lol.
+<BR><SMALL>http://www.jedinet.com/datapad/messages/38/198.shtml
+<BR><A HREF="/search.gw?c=web&qbe=20934919&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>43% </SMALL>
+<A HREF="http://frodo.hiof.no/~deak/pics/minisw.html">Deak's Den</A>&nbsp;
+- File size: 40,067 bytes. File size: 40,067 bytes.
+<BR><SMALL>http://frodo.hiof.no/~deak/pics/minisw.html
+<BR><A HREF="/search.gw?c=web&qbe=21843055&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>32% </SMALL>
+<A HREF="http://www.wiseacres.com/kenner3.htm">Philip's New Kenner Star Wars Action Figure Photo Archive</A>&nbsp;
+- Lando, Luke Dagobah, Tie Fighter Pilot. Green Card Holo Photo .00 Collection 2. Slide Card .01 Collection 2. Card ID Holo Photo.
+<BR><SMALL>http://www.wiseacres.com/kenner3.htm
+<BR><A HREF="/search.gw?c=web&qbe=32305148&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<FORM ACTION="/search.gw" METHOD=GET>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR><TD>
+<INPUT TYPE=hidden NAME=c VALUE=web>
+<INPUT TYPE=hidden NAME=s VALUE="+Jabba +bounty +hunter +Greedo">
+<INPUT TYPE=hidden NAME=showSummary VALUE=true>
+<INPUT TYPE=hidden NAME=start VALUE=84>
+<INPUT TYPE=hidden NAME=perPage VALUE=84>
+<INPUT TYPE=submit NAME=prev VALUE="Previous Results">
+</TD></TR></TABLE>
+</FORM>
+<small><a href="/relocate/co=webcraw;http://webcrawler.com/cgi-bin/WebQuery?text=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo&src=exciterecip">Try Your Search on WebCrawler</a></small><br>
+<small><br></small>
+<table border=0 cellspacing=0 cellpadding=0 width=100%><tr>
+<td bgcolor=999999>
+<table border=0 cellspacing=1 cellpadding=0 width=100%>
+<tr bgcolor=ffffcc>
+<td align=center nowrap>
+<font face=geneva,arial size=-1><b>
+<a href=#web>Web Results</a>
+</b></font>
+</td>
+</tr></table>
+</td></tr></table>
+<p>
+<center>
+<a href="/relocate/ad=35754_468impress.gif|pk=390216;http://www.netgrocer.com/default.cfm?s=1001032500310105" onMouseOver="window.status='Click Here to Buy Groceries at NetGrocer!';return true" language="Javascript"><img src="/img/ads/35754_468impress.gif" ALT="Click Here to Buy Groceries at NetGrocer!" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> Click Here to Buy Groceries at NetGrocer! </B></FONT></CENTER></a>
+<small><br></small>
+<table border=0 cellpadding=1 cellspacing=0>
+<FORM NAME=botbox ACTION=/search.gw>
+<tr><td bgcolor=cccccc>
+<a name="botbox"> </a>
+<table border=0 cellspacing=0 cellpadding=4 width=598 bgcolor=ffffff><tr>
+<td align=right bgcolor=ffffff>
+<b><font face=arial size=-1>You searched for</font></b>
+<input size=30 name=search value="+Jabba +bounty +hunter +Greedo">
+<input type=hidden name=tsug value=-1>
+<input type=hidden name=csug value=0>
+</td>
+<td><input type=submit value="Search Again"></td>
+<td nowrap><font face=arial,helvetica size=-1><b>
+<a href=/relocate/co=help;http://www.excite.com/Info/suggest.html>Help</a>
+&nbsp;<br>
+</b></font></td>
+<td>&nbsp;</td>
+</tr></table>
+<input type=hidden name=sorig value=rpage>
+</td></tr></table>
+</form>
+<small><br></small>
+<p>
+<font face=geneva,arial size=-1>
+<nobr><b>More Search Services:</b>&nbsp;
+<A HREF=http://www.excite.com/Info/comments.dcg>Feedback</A> &nbsp; <A HREF=http://www.excite.com/Info/searching.html>Search
+Help</A> &nbsp; <A HREF=http://www.excite.com/search/options.html>Power Search</A>&nbsp;
+<A HREF=http://nt.excite.com>Search the News</A></nobr><p>
+<nobr><b>Services:</b>&nbsp;
+<A HREF=http://www.excite.com/Info/advertising.html>Advertise on Excite</A>&nbsp; <A HREF=/relocate/co=xsr_botnav_bookflights;http://city.net/forms/reservations/>Book Flights</A>&nbsp;
+<A HREF=/relocate/co=xsr_botnav_classifieds;http://classifieds2000.com/cgi-cls/display.exe?partner=excite&path=class&template=none&>Classifieds</A>&nbsp;
+<A HREF=/relocate/co=xsr_botnav_gteyp;http://yp.gte.net/excite/>Yellow Pages</A>&nbsp;
+<A HREF=http://www.excite.com/Reference/instant.html>More...</A></nobr><p>
+</font>
+<font size=-2>
+Copyright 1998 Excite Inc. &nbsp; <A HREF=/Info/disclaimer.html>Disclaimer</A>
+</font>
+</center>
 <IMG SRC="http://ad.preferences.com/ping.ng;spacedesc=TCExciteData_Excite_1x1_RunOfSite_Any&event=KeywordResults" HEIGHT=1 WIDTH=1 BORDER=0>
-</BODY>
-</HTML>
-
-	
+</body>
+</html>

@@ -1,611 +1,732 @@
-
-   <script language = "javascript">
-   <!-- hide from other browsers
-   function Array() {this.length = 20;}
-   var W=new Array(), W2=new Array(),C=new Array(),C2=new Array(),i,j,N=0,M=0,top_suggest_count=0, bottom_suggest_count=0;
-   function S(w) {
-	W[N++] = w;
-	W2[M++] = w;
-	}
-   function Init(){
-      for (var j=0;j<C.length;++j) 
-	  C[j] = false;
-      for (var j=0;j<C2.length;++j)
-	 C2[j] = false;
-	}
-   function T(i){
-   var update;
-   old = document.topsearchbox.elements[1].value;
-
-   instring = old.lastIndexOf(" " + W[i] + " ");
-   if (instring == -1) {
-	instring = old.lastIndexOf(W[i] + " ");
-	if (instring != -1) {
-		C[i] = true;
-	}
-   }
-   else {
-	C[i] = true;
-   }
-
-   if (C[i] == false){
-      C[i] = true;
-      top_suggest_count++;
-      if (old.lastIndexOf(" ") != old.length-1) {
-         update = old + ' ' + W[i] + ' ';
-	 document.topsearchbox.elements[1].value = update;
-	}
-      else {
-         update = old + W[i] + ' ';
-	 document.topsearchbox.elements[1].value = update;
-	}
-      }
-   else {
-      C[i] = false;
-      top_suggest_count--;
-      replace = old.lastIndexOf(" " + W[i] + " ");
-      if (replace == -1) {
-         replace = old.lastIndexOf(W[i] + " ");
-	 if (replace != -1) {
-	    update = old.substring(0,replace) + old.substring(replace + W[i].length + 1,old.length);
-	    document.topsearchbox.elements[1].value = update;
-	 }
-      }
-      else {
-	update = old.substring(0,replace) + old.substring(replace + W[i].length + 1,old.length);
-	    document.topsearchbox.elements[1].value = update;
-	}
-   }
-   document.topsearchbox.elements[2].value = top_suggest_count;
-}
-
-   function U(i){
-   var update;
-   old = document.bottomsearchbox.elements[1].value;
-
-   instring = old.lastIndexOf(" " + W2[i] + " ");
-   if (instring == -1) {
-	instring = old.lastIndexOf(W2[i] + " ");
-	if (instring != -1) {
-		C2[i] = true;
-	}
-   }
-   else {
-	C2[i] = true;
-   }
-
-   if (C2[i] == false){
-      C2[i] = true;
-      bottom_suggest_count++;
-      if (old.lastIndexOf(" ") != old.length-1) {
-         update = old + ' ' + W2[i] + ' ';
-	 document.bottomsearchbox.elements[1].value = update;
-	}
-      else {
-         update = old + W2[i] + ' ';
-	 document.bottomsearchbox.elements[1].value = update;
-	}
-      }
-   else {
-      C2[i] = false;
-      bottom_suggest_count--;
-      replace = old.lastIndexOf(" " + W2[i] + " ");
-      if (replace == -1) {
-         replace = old.lastIndexOf(W2[i] + " ");
-	 if (replace != -1) {
-	    update = old.substring(0,replace) + old.substring(replace + W2[i].length + 1,old.length);
-	    document.bottomsearchbox.elements[1].value = update;
-	 }
-      }
-      else {
-	update = old.substring(0,replace) + old.substring(replace + W2[i].length + 1,old.length);
-	    document.bottomsearchbox.elements[1].value = update;
-	}
-   }
-   document.bottomsearchbox.elements[2].value = bottom_suggest_count;
-}
-
-   Init();
-    S("boba"); S("hunters");      // stop hiding -->
-   </script>
-
-<HEAD><TITLE>Excite Search Results: +Jabba +bounty +hunter +Greedo</TITLE>
-<!--BASE HREF=http://www.excite.com/search.gw-->
+<HTML><HEAD>
+<TITLE>Excite Search Results for "+Jabba +bounty +hunter +Greedo"</TITLE>
 </HEAD>
-<BODY BGCOLOR=FFFFFF TEXT=#000000 LINK=#000066 VLINK=#666666>
-
+<BODY bgcolor=ffffff>
 <CENTER>
-<A HREF=/?b-a-b><IMG SRC=/img/art4/search_results.gif WIDTH=600 HEIGHT=35 BORDER=0 ISMAP USEMAP=#bumper ALT="Excite Search Results"></A>
-
-
-
-<FORM NAME="topsearchbox" ACTION="/search.gw" METHOD=get>
-<INPUT TYPE=hidden NAME=look VALUE=default>
-
-<TABLE BORDER=0  CELLPADDING=1 CELLSPACING=0>
-<TR>
-<TD BGCOLOR=#cccccc>
-
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=4 WIDTH=600 BGCOLOR=#ffffff>
-<TR>
-<TD ALIGN=right>
-  <INPUT SIZE=45 NAME=search VALUE="+Jabba +bounty +hunter +Greedo">
-</TD>
-  <INPUT TYPE=hidden NAME=tsug VALUE=-1>
-  <INPUT TYPE=hidden NAME=csug VALUE=2>
-<TD>
-  <INPUT TYPE=submit NAME="Search" VALUE="Search Again">
-  <INPUT TYPE=hidden NAME=collection VALUE=web>
-</TD>
-<TD NOWRAP>
-<FONT FACE=arial,helvetica SIZE=-1 VALIGN=bottom>
-<B>
-<A HREF=/relocate/co=help;http://www.excite.com/Info/suggest.html>Help</A> &nbsp;<BR>
-</B>
-</FONT></TD>
-<TD>&nbsp;</TD>
-</TR>
-</TABLE>
-   <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=1 WIDTH=600 BGCOLOR=#ffffff>
-   <TR>
-   <TD ROWSPAN=1 NOWRAP>   <FONT FACE=arial,helvetica SIZE=2>
-        <B>Try adding one or more of<BR>these words to your search...</B>
-      </FONT>
-   </TD>
-
-      <TD NOWRAP>
-   <FONT FACE=geneva,arial SIZE=2>
-            boba
-   </FONT>
-   </TD>
-      <TD NOWRAP>
-   <FONT FACE=geneva,arial SIZE=2>
-            hunters
-   </FONT>
-   </TD>
-   
-   </TR>
-
-   
-   </TABLE>
-</td></tr></table>
-<INPUT TYPE=hidden NAME=clk VALUE=b-b-F1>
-<INPUT TYPE=hidden NAME=showSummary VALUE=true>
-<INPUT TYPE=hidden NAME=sorig VALUE=rpage>
-<INPUT TYPE=hidden NAME=trace VALUE=b>
-</FORM>
-
-<CENTER>
-<TABLE BORDER=0 WIDTH=600>
-<TR>
-<TD ALIGN=center>
-  <!-- Ad Start -->
-<!-- Ad param svcpage=/search.gw keyword=jabba+bounty+hunter+greedo svcname=xsr ip=128.9.160.184 user_agent=WWW::Search/1.015 -->
-<a href="/relocate/ad=34206_valupage0331_fs_29a.gif|pk=370797;http://www.valupage.com/?From=Excite" onMouseOver="window.status='Click Here!';return true" language="Javascript"><img src="/img/ads/34206_valupage0331_fs_29a.gif" ALT="Click Here!" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> Click Here! </B></FONT></CENTER></a>
-<!-- Ad Stop -->
-
-</TD>
-</TR>
-</TABLE>
-</CENTER>
-
-<P>
-
- <TABLE BORDER=0 CELLPADDING=2 CELLSPACING=0 WIDTH=100%>
-<TR>
-  <TD ALIGN=left WIDTH=40% NOWRAP>
-  <FONT FACE=arial,helvetica>
-  Top <B>84</B>
-   matches. <FONT SIZE=-1><A HREF=/search.gw?s=%2Bjabba+%2Bbounty+%2Bhunter+%2Bgreedo&numDocs=152&mode=about&sorig=a><I>[152 hits. About Your Results]</I></A></FONT>
-    </FONT>
-  </TD>
-
-<TD ALIGN=right WIDTH=60% NOWRAP><FONT FACE=arial,helvetica>
-               <A HREF="/search.gw?lk=default&c=web&start=0&showSummary=false&s=%2Bjabba+%2Bbounty+%2Bhunter+%2Bgreedo&sorig=b"><B>Show Titles only</B></A>&nbsp;
-            	
-               <A HREF="/search.gw?lk=default&c=web&s=%2Bjabba+%2Bbounty+%2Bhunter+%2Bgreedo&sort=site&sorig=c"><B>List by Web site</B></A>&nbsp;
-            
-
-</FONT></TD>
-
-</TR></TABLE></CENTER>
-
-
-
-<TABLE BORDER=0  CELLPADDING=1 CELLSPACING=0 WIDTH=100%>
-<TR>
-<TD BGCOLOR=#000000>
-
-<TABLE BORDER=0  CELLPADDING=3 CELLSPACING=0 WIDTH=100%>
-<TR><TD BGCOLOR=#ffffcc VALIGN=middle NOWRAP> <FONT FACE=arial,helvetica>
-<B>Try these first:</B></FONT></TD>
-<TD WIDTH=88% ALIGN=left BGCOLOR=#ffffcc NOWRAP>
-<FONT SIZE=-1 FACE=geneva,arial><B>
-  Buy <A HREF="http://www.excite.com/relocate/co=xsr_xlnk_music_artists_blues;http://www.musicblvd.com/cgi-bin/tw/1263_42_268087^S&TEMPLATE_PATH=/site/excite&FS=EXCITE">Hunter/Hegamin/Spivey</A> CD's &nbsp;
-  <BR>
-</B></FONT></TD>
-</TR></TABLE>
-
-</TD>
-</TR>
-</TABLE>
-
-
-<table border=0 cellpadding=2 cellspacing=0 width=100 align=right>
-<tr>
-<td bgcolor=ff0000 align=center>
-<table border=0 cellpadding=3 cellspacing=0 width=100>
-<tr>
-<td bgcolor=ffcc00 align=center>
-<font face="verdana,helvetica,arial" size=-1 color="#000000"><b>AMAZON.COM</b></font>
-<font face="verdana,helvetica,arial" size=-2 color="#ff0000"><a href="/relocate/co=xsr_amazon;http://www.amazon.com/exec/obidos/excite-search/search=%2Bjabba+%2Bbounty+%2Bhunter+%2Bgreedo">FIND Related Books</a></font>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-</table>
-
-<P>
-  
-         <FONT COLOR=navy><B>92% </B></FONT>          <B><A HREF="http://hollywoodfactory.com/starwars/mask_greedo.htm">GREEDO- Star Wars Collector Masks Greedo</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://hollywoodfactory.com/starwars/mask_greedo.htm                        <BR><B><I>Summary: </I></B>  Size: 11&quot; - 28 cm $39.95.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=40914130&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>91% </B></FONT>          <B><A HREF="http://buteo.colorado.edu/~yosh/psi/system2/aliens/greedo/">Greedo</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://buteo.colorado.edu/~yosh/psi/system2/aliens/greedo/                        <BR><B><I>Summary: </I></B> Last seen with Captain Han Solo in the Mos Eisley Cantina: PROFILE (taken from Biographies of 10 Cantina Characters): Bounty hunting is a profession veiled in honor on Rodia.  Every year, prizes are awarded to those who surpass in various categories such as "greatest accuracy with a distance blaster" and "quickest catch".                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=147504&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>91% </B></FONT>          <B><A HREF="http://users.aol.com/dallathblk/RblTr.html">Rebel Transmissions</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://users.aol.com/dallathblk/RblTr.html                        <BR><B><I>Summary: </I></B>  COMMENT: I think greedo should have shot and missed as he see's him and miss and Han shoots back NAME:Billy Todd.   COMMENT:There is no way someone who's species is designed for bounty hunting could have missed the point blank shot that Greedo had.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=1822285&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>91% </B></FONT>          <B><A HREF="http://members.aol.com/FettFan/TheBounty">&quotThe Bounty!!!&quot</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://members.aol.com/FettFan/TheBounty                        <BR><B><I>Summary: </I></B> If you have anything eles that you think deserves points, or if you have questions, email my assistant at Smuggler86@aol. .  If you can answer these questions correctly, then you get 5 points for each right answer.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=1219488&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>90% </B></FONT>          <B><A HREF="http://www.frii.com/~joe/txt/hunters.html">other bounty hunters</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.frii.com/~joe/txt/hunters.html                        <BR><B><I>Summary: </I></B> IG-88(Phlutdroid): The battered war droid IG-88 was among the bounty hunters payed by Jabba the Hutt to hunt down and capture the Millenium Falcon and its crew after the Battle of Hoth.  Joda Kast: The ruthless bounty hunter Joda Kast wears the same type of mandalore battle armor the Boba Fett wears.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=3131151&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>90% </B></FONT>          <B><A HREF="http://members.aol.com/AdlerX4/rodian.html">Rodia (Rodian Language)</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://members.aol.com/AdlerX4/rodian.html                        <BR><B><I>Summary: </I></B> Phrase: Prog mnete enyaz ftt sove shuss.  Chas kin yanee ke chusko.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=14512036&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>89% </B></FONT>          <B><A HREF="http://members.wbs.net/homepages/d/i/a/diableu/pants.html">Starwars</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://members.wbs.net/homepages/d/i/a/diableu/pants.html                        <BR><B><I>Summary: </I></B>  Lines from Star Wars can be vastly improved is you substitute "pants" for key words.  -- Jabba doesn't have time for smugglers who drop their pants at the first sign of an Imperial Cruiser.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=1159571&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>89% </B></FONT>          <B><A HREF="http://www.galoob.com/bbs1/thread28/message364.html">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.galoob.com/bbs1/thread28/message364.html                        <BR><B><I>Summary: </I></B> I sure hope JKF does make a M. Falcon for his &quot;Special Project&quot; it will be larger then the regular AF and comes wityh more people maybe like four.  And here is a few new Battle Pack ideas: 1. Ewok Ceromony -- Includes the drum set and ewok (You know where the ewok uses the helmats of all the dead imp.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=28489883&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>89% </B></FONT>          <B><A HREF="http://playwickia.org/feb1497/entertainment/starwars.html">Playwickia: February 14, 1997: Entertainment: Star Wars return to big ...</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://playwickia.org/feb1497/entertainment/starwars.html                        <BR><B><I>Summary: </I></B>  Staff Writer After twenty years of absence on the Big Screen, George Lucas's Star Wars Trilogy has returned with new digitally remastered video, THX surround sound and 4 1/2 minutes of brand new footage.  Making use of today's technology in video and sound, Lucas re-mastered the old blurry and degraded films that first aired in the seventies.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=31489776&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>89% </B></FONT>          <B><A HREF="http://empire.res.wabash.edu/nri/char\/beedo.htm">Beedo</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://empire.res.wabash.edu/nri/char\/beedo.htm                        <BR><B><I>Summary: </I></B>  Beedo took over his relative Greedo's place in Jabba the Hutt's organization after Han Solo shot the green bounty hunter.  Solo and his friends, Luke Skywalker and Leia Organa, were then responisble for Beedo's, Jabba's, and a number of other deaths aboard Jabba's Sail Barge.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=41715948&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>88% </B></FONT>          <B><A HREF="http://www.cyberspc.mb.ca/~phidalgo/zardra.html">The Star Wars Index - Zardra</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.cyberspc.mb.ca/~phidalgo/zardra.html                        <BR><B><I>Summary: </I></B> Some time before the Battle of Yavin, Zardra and Jodo Kast teamed up to hunt the Thig Brothers, a pair of shipjackers running loose in the Stenness system.   Shortly after the Battle of Yavin, Zardra again teamed up with Jodo Kast and Puggles Trodd to pursue the bounty posted on Adar Tallon.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=14566336&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>88% </B></FONT>          <B><A HREF="http://www.digisys.net/fhspub/96-97/Mar14/jedi.htm">Return of the Jedi: Scraping the bottom of a very fine barrel</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.digisys.net/fhspub/96-97/Mar14/jedi.htm                        <BR><B><I>Summary: </I></B> In comparison, "Jedi" gives Ewoks, the most pathetic beings since those Kurds who were killed by parachuted U.N. relief boxes.  Those little, furry munchkins give us possibly the worst defect of the three films, all at the hands of George Lucas.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=40668678&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>88% </B></FONT>          <B><A HREF="http://www.cyberspc.mb.ca/~phidalgo/crime.html">The Star Wars Index to Criminal Organizations</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.cyberspc.mb.ca/~phidalgo/crime.html                        <BR><B><I>Summary: </I></B> Han Solo mentions Jabba the Hutt to bounty hunter Greedo in Star Wars IV: A New Hope, suggesting a criminal background that we wouldn't fully glimpse until Return of the Jedi.  West End Games explored the nature of loan-sharks in Galaxy Guide 6: Trampfreighters, and the criminal underwold in Galaxy Guide 11: Criminal Organizations.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=27441998&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>87% </B></FONT>          <B><A HREF="http://www.infoaomori.or.jp/~yamada/starwars/star01.html">‚r‚s‚`‚q ‚v‚`‚q‚r</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.infoaomori.or.jp/~yamada/starwars/star01.html                        <BR><B><I>Summary: </I></B>rs`q v`qr.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=5424208&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>87% </B></FONT>          <B><A HREF="http://www.geocities.com/Area51/Cavern/3997/">Justin's Action Figure Section</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.geocities.com/Area51/Cavern/3997/                        <BR><B><I>Summary: </I></B>I will add to this page and show some of the figures.   Collector's Planet:Action Figure Exchange.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=1002070&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>87% </B></FONT>          <B><A HREF="http://eshanks.pepperdine.edu/toys/SWToys.htm">Star Wars POTF2 Action Figures</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://eshanks.pepperdine.edu/toys/SWToys.htm                        <BR><B><I>Summary: </I></B>None Available                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=5374499&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>87% </B></FONT>          <B><A HREF="http://www.spindia.com/personal/faisalsiddiqisiddiqi.htm">Star Wars</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.spindia.com/personal/faisalsiddiqisiddiqi.htm                        <BR><B><I>Summary: </I></B> Han Solo in Hoth Gear.  Princess Leiain Ewok Celebration Gear.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=1322876&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>87% </B></FONT>          <B><A HREF="http://www.futuretoys.com/starwars/starwars.html">Star Wars</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.futuretoys.com/starwars/starwars.html                        <BR><B><I>Summary: </I></B> (Due to the large size of this set, shipping charges will be determined upon receipt of order.  (Due to the large size of this set, shipping charges will be determined upon receipt of order.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=16997733&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>87% </B></FONT>          <B><A HREF="http://members.aol.com/DavenSeven/index4.html">Hyperspace: Star Wars Prequel</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://members.aol.com/DavenSeven/index4.html                        <BR><B><I>Summary: </I></B>  star wars prequel with jedi knights boba fett trilogy movies lucasfilm lucasarts war prequels prequal prequals prequels pics pictures jpeg jpegs skywalker lord darth vader sith knight THE HOLLYWOOD STAR WARS PREQUEL UNIVERSE.   CLICK HERE TO GO TO THE HOLLYWOOD STAR WARS PREQUEL UNIVERSE.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=31262105&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>87% </B></FONT>          <B><A HREF="http://www.angelfire.com/nm/MosEislyCantina/">Welcome to the Mos Eisly Cantina</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.angelfire.com/nm/MosEislyCantina/                        <BR><B><I>Summary: </I></B>toGMTString())) + ((path == null) ? "" : ("; path=" + path)) + ((domain == null) ? "" : ("; domain=" + domain)) + ((secure == true) ? "; secure" : ""); } // --> Welcome to the Mos Eisly Cantina"Pass the Beer!"  Weapon of Choice:Heavy Blaster Cannon Email: trizor_sinister@hotmail.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=1419590&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>87% </B></FONT>          <B><A HREF="http://www.lehigh.edu/~inbrw/spring97/970321/pageb011.htm">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.lehigh.edu/~inbrw/spring97/970321/pageb011.htm                        <BR><B><I>Summary: </I></B> and 20th Century Fox have chosen to celebrate the 20th anniversary of 'Star Wars' by bringing all three movies and generations of fans back to the theatres.  Now, the rubbery, slug-like Hutt that first appeared in "Return of the Jedi" is brought into the first movie, thanks to the digital wizardry at Lucas' disposal.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=27513758&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>87% </B></FONT>          <B><A HREF="http://webserver.igrin.co.nz/~carppe/sw/encyd_l.html">Galactic Encyclopedia D-L</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://webserver.igrin.co.nz/~carppe/sw/encyd_l.html                        <BR><B><I>Summary: </I></B> &#160; &#160; &#160; Hoth: see Planet Directory - H IG88: Droid bounty hunter.  &#160; &#160; &#160; Imperial Security Bureau: Lead by Colonel Wullf Yularen.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=14853007&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>87% </B></FONT>          <B><A HREF="http://www.cinema1.com/movies97/returnofthejedi/us.html">Return of the Jedi - © 1997 Cinema1</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.cinema1.com/movies97/returnofthejedi/us.html                        <BR><B><I>Summary: </I></B> It starts off with Luke (Mark Hamill) rescuing Han (Harrison Ford) from the clutches of the slug-like Jabba the Hutt.   The notorious crime lord Jabba the Hutt ran his organization from a fortress-like palace on the planet Tatooine.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=27855524&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>87% </B></FONT>          <B><A HREF="http://www.mania.com/movies/features/starwars.html">Mania: Return of Return of the Jedi - The Newly Redone Star Wars Trilo...</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.mania.com/movies/features/starwars.html                        <BR><B><I>Summary: </I></B> The legendary films of the Star Wars trilogy are being re-released in 1997, and George Lucas and Industrial Light & Magic are spending most of their efforts giving the original Star Wars: A New Hope (Episode IV of the projected nine-part trilogy of trilogies) an enormous face-lift. The Empire Strikes Back and Return of the Jedi will not feature as many new effects as the original film, but.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=19397971&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>87% </B></FONT>          <B><A HREF="http://expage.com/page/swwave">Star Wars World   </A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://expage.com/page/swwave                        <BR><B><I>Summary: </I></B>Star Wars World.  ___ Death Star Gunner.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=7976633&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>86% </B></FONT>          <B><A HREF="http://members.aol.com/shedmun/index2.html">The Official Unofficial STAR WARS Page</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://members.aol.com/shedmun/index2.html                        <BR><B><I>Summary: </I></B> Little did I know then, that in a few short years I would come to love everything about STAR WARS.  Finally, as the Falcon escapes from Bespin, a new shot of Vader's shuttle landing in his Star Destroyer's hangar bay has been inserted, with Vader exiting and walking toward stormtroopers.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=31785052&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>86% </B></FONT>          <B><A HREF="http://paddle4.canoe.ca/JamStarWars/jan31_starwars_hobson.html">Force remains with Star Wars </A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://paddle4.canoe.ca/JamStarWars/jan31_starwars_hobson.html                        <BR><B><I>Summary: </I></B>  Never a great movie, always a flawed movie, Star Wars was and is pure popcorn fun.   The humor and the wisecracks were always as much fun as the gun play, sword fights and daring escapes.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=27877273&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>86% </B></FONT>          <B><A HREF="http://www.uiowa.edu/~dlyiowan/issue/v128/i129/stories/B0801A.html">The Daily Iowan</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.uiowa.edu/~dlyiowan/issue/v128/i129/stories/B0801A.html                        <BR><B><I>Summary: </I></B>  The Daily Iowan The jump to light speed finally looks like a jump to light speed.  This is an invaluable experience for someone who likes the movie, let alone anyone whose life has evolved around "Star Wars."                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=25811027&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>86% </B></FONT>          <B><A HREF="http://www.regiong.k12.ca.us/students/ml678618/www/stwars.html">Mark's Star Wars Page</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.regiong.k12.ca.us/students/ml678618/www/stwars.html                        <BR><B><I>Summary: </I></B> note: this is fully created by me (non-pirated), therefore I owe it and is now copyrighted.  Therefore, please ask permission before taking my work for your own use.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=19085744&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>86% </B></FONT>          <B><A HREF="http://www.stl-online.net/milligan/starwars/toys.html">STAR WARS TOYS</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.stl-online.net/milligan/starwars/toys.html                        <BR><B><I>Summary: </I></B>None Available                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=28819376&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>86% </B></FONT>          <B><A HREF="http://www.umcsc.org/Jedi/index.htm">Jedi's Corner</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.umcsc.org/Jedi/index.htm                        <BR><B><I>Summary: </I></B> THE EMPIRE STRIKES BACK made 22 million the first week.   THE EMPIRE STRIKES BACK.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=20948423&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>86% </B></FONT>          <B><A HREF="http://www.zanshin.com/~bobg/swthoughts.html">Star Wars: Special Edition thoughts</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.zanshin.com/~bobg/swthoughts.html                        <BR><B><I>Summary: </I></B> First there's a loud, new deceleration sound associated with dropping back into regular space.  Then there are these swoopy sounds associated with chunks of rubble speeding by.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=41549791&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>86% </B></FONT>          <B><A HREF="http://seattle.sidewalk.com/link/12690">Star Wars: Special Edition: seattle.sidewalk</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://seattle.sidewalk.com/link/12690                        <BR><B><I>Summary: </I></B>None Available                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=13768442&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>85% </B></FONT>          <B><A HREF="http://www.flagpole.com/Issues/02.19.97/StarWars2.html">This Week's Issue</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.flagpole.com/Issues/02.19.97/StarWars2.html                        <BR><B><I>Summary: </I></B>This Week's Issue. net Return to Table of Contents for This Week's Issue Return to Home Page.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=38458908&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>85% </B></FONT>          <B><A HREF="http://cinemania.msn.com/Movie/Review/70285/1">Microsoft&reg; Cinemania&reg; Star Wars: Special Edition</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://cinemania.msn.com/Movie/Review/70285/1                        <BR><B><I>Summary: </I></B> The digital Jabba was painstakingly added to footage originally filmed in 1976 but eliminated by Lucas when time and budget constraints prevented the addition of an animatronic Jabba.  I won't spoil the fun of the scene between Solo and the slovenly Jabba, but if you're wondering why Solo sarcastically calls Jabba "a wonderful human being," perhaps it's because Harrison Ford shot the scene.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=28465323&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>85% </B></FONT>          <B><A HREF="http://www.geocities.com/Area51/Cavern/8573/index.html">The Star Wars and Boba Fett Shrine</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.geocities.com/Area51/Cavern/8573/index.html                        <BR><B><I>Summary: </I></B>). Boba Fett's original ship, the Slave I, was sacrafised by Fett himself in a dog-fight to destroy an IG-88. ..NOTICE! This storyline is consists of four novels, so I really can't tell you what happens in the next three!                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=1211909&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>85% </B></FONT>          <B><A HREF="http://www.galactic-hwy.com/swars.htm">Star Wars CCG Singles</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.galactic-hwy.com/swars.htm                        <BR><B><I>Summary: </I></B>None Available                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=35301688&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>85% </B></FONT>          <B><A HREF="http://www.geocities.com/Area51/3642/lando.htm">Lando Calrissian, The Suavest Man in Space</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.geocities.com/Area51/3642/lando.htm                        <BR><B><I>Summary: </I></B> He surveyed the palace, sending messages and layouts back to the other members of the team.  General Calrissian was Gold Leader, in charge of the attack, working under Admiral Ackbar.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=1480182&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>85% </B></FONT>          <B><A HREF="http://users.aol.com/nate2450/myletter.htm">My Star Wars Newsletter</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://users.aol.com/nate2450/myletter.htm                        <BR><B><I>Summary: </I></B> For me, every single SW book I have ever read has been worth it, even those three Lando books by L. Neil Smith.  Along those same lines, if you haven't read the original three SW books, read them.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=32927285&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>85% </B></FONT>          <B><A HREF="http://www.angelfire.com/wi/Boush/index.html">Boushh Online:Unoffical Boba Fett and Boushh Fan Club</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.angelfire.com/wi/Boush/index.html                        <BR><B><I>Summary: </I></B>I pronounce it B-A-BA,but some people pronounce it B-O-BA,I don't know. Is it Ba-Ba or Boe-Ba?                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=1010702&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>85% </B></FONT>          <B><A HREF="http://counterpoint.mit.edu/v12/n1/2-5.html">Arts</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://counterpoint.mit.edu/v12/n1/2-5.html                        <BR><B><I>Summary: </I></B> The original movies themselves are among the biggest hits ever; Star Wars ranks fourth among the top grossing films of all time, while The Empire Strikes Back ranks fourteenth, and Return of the Jedi clocks in at number eight.  Why is the Star Wars trilogy, which began in 1977, starred no-name actors, and sported special effects which would be considered below average today, so popular?                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=24467357&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>85% </B></FONT>          <B><A HREF="http://members.aol.com/yoda027/shipping.htm">Power of the Force 2 Figure Shipping Dates (1995)</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://members.aol.com/yoda027/shipping.htm                        <BR><B><I>Summary: </I></B>  1995-1997 3 " Basic Figures Wave 1: First Released: 7/95 Luke Skywalker Darth Vader C-3PO R2-D2 Obi-Wan (Ben) Kenobi Han Solo Chewbacca Princess Leia Organa Stormtrooper Wave 2: First Released: 2/96 Luke Skywalker in X-wing Gear Boba Fett Lando Calrissian Wave 3: First Released: 3/96 TIE Fighter Pilot Yoda Han Solo in Hoth Gear Luke Skywalker in Dagobah Gear Wave 4: First Released 6/96 Dash.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=31725598&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                            <CENTER>     
-  		    <TABLE BORDER=0 CELLPADDING=3 CELLSPACING=0 WIDTH=100%>
-		    <TR>
-		     <TD ALIGN=center BGCOLOR=#ffffcc>
-		       			 				
-                           <FONT FACE=arial,helvetica>Try Excite <A HREF=/search/options.html>Power Search</A> for a simple way to search like the pros...</FONT>			  		       		     </TD>
-		    </TR>
-		    </TABLE>
-		    </CENTER>
-                  <P>
-                                               <FONT COLOR=navy><B>85% </B></FONT>          <B><A HREF="http://www.nerf-herder.com/tuskentrader/lists/cwalke.htm">The Tusken Trader Lists</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.nerf-herder.com/tuskentrader/lists/cwalke.htm                        <BR><B><I>Summary: </I></B>  Ben Kenobi short saber w/ long tray.   Falcon Carrying Case .00 w/ Wedge (Rebel insignia on helmet).                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=13358261&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>85% </B></FONT>          <B><A HREF="http://us.imdb.org/Reviews/68/6838">Review for </A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://us.imdb.org/Reviews/68/6838                        <BR><B><I>Summary: </I></B>  STAR WARS: A NEW HOPE (SPECIAL EDITION) A film review by Ram Samudrala Copyright 1997 Ram Samudrala If you've never seen Star Wars, I think you're in an enviable position, as I consider it one of the most impactful sci-fi movies of all time.  I was impressed with the interaction between Han Solo (a young and dashing Harrison Ford) and Jabba the Hut.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=4882132&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>84% </B></FONT>          <B><A HREF="http://www.personal.kent.edu/~nwillis/RPG.html">Beedo's Star Wars RPG Templates</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.personal.kent.edu/~nwillis/RPG.html                        <BR><B><I>Summary: </I></B> Soon after, he was approached by the B'omarr monks, and was kept on as their communications specialist.  As a result, the fleece can be "rendered" and resolidified into many useful forms.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=996173&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>84% </B></FONT>          <B><A HREF="http://www.ipass.net/~adamcas/anh_line.htm">A New Hope Character Line Up</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.ipass.net/~adamcas/anh_line.htm                        <BR><B><I>Summary: </I></B>  Danz Borin (human bounty hunter in silver spacesuit, cantina).   Dice Ibegon (Lamproid talking to Shistavanen wolfman in cantina).                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=12638127&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>84% </B></FONT>          <B><A HREF="http://hydromail.supelec-rennes.fr/rennes/etudiants/pages.eleves/2a/sbenmans/main/jdr/starwars/planets/k.html">Planet Database Section K
-</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://hydromail.supelec-rennes.fr/rennes/etudiants/pages.eleves/2a/sbenmans/main/jdr/starwars/planets/k.html                        <BR><B><I>Summary: </I></B> [DFR] Ku'Bakai system - The Ku'Bakai system is named for its blue giant star, whose unpredictable solar flares have left the first four planets of the system scorched and lifeless.  [MTS] Kubindi - Kubindi, the fifth planet in the Ku'Bakai system, is the homeworld of the insect-loving Kubaz.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=37442004&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>84% </B></FONT>          <B><A HREF="http://www.goodthink.com/harris/bh.starwars.html">bh.star wars</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.goodthink.com/harris/bh.starwars.html                        <BR><B><I>Summary: </I></B> Even though it -- it -- is a genderless robot, &quot;he's&quot; treated by everyone as male, albeit sexless.  Not if we can trust our own eyes: the Princess considers herself entitled to command Luke and Han, simply by birthright; Obi-Wan's occult powers allow him to gleefully command &quot;weak minds&quot; against their own will -- a manifestly fascist goal; the rebel alliance salutes.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=11940843&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>84% </B></FONT>          <B><A HREF="http://www.geocities.com/Area51/6690/swccg.html">The Massasi Ruins : SWCCG Trading Post</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.geocities.com/Area51/6690/swccg.html                        <BR><B><I>Summary: </I></B>None Available                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=1843697&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>84% </B></FONT>          <B><A HREF="http://ftp.uakom.sk/pub/doc/FAQ/starwars/www/part3">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://ftp.uakom.sk/pub/doc/FAQ/starwars/www/part3                        <BR><B><I>Summary: </I></B>com/Area51/4560/ Recruiting all Palpatines Star Wars: The Ithorian Home Page http://www. com/Area51/7712/ Lord Vader's Death Star http://members.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=6608811&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>84% </B></FONT>          <B><A HREF="http://ftp.cs.tu-berlin.de/pub/os/doc/news.answers/starwars/www/part3">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://ftp.cs.tu-berlin.de/pub/os/doc/news.answers/starwars/www/part3                        <BR><B><I>Summary: </I></B> Better places to ask would be the Star Wars FAQ, rec. net/~curb/ Jedi On The Net - SSD Executor http://www.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=39527745&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>84% </B></FONT>          <B><A HREF="http://www.qmw.ac.uk/~zgap4023/starwars/html/guide/n.html">Planet Database Section N
-</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.qmw.ac.uk/~zgap4023/starwars/html/guide/n.html                        <BR><B><I>Summary: </I></B> Nal Hutta and its moon, Nar Shaddaa, are located in the center of "Hutt Space" and receive a constant traffic of freight haulers, smugglers, and other galactic traders.  Nar Shaddaa, the birthplace of Jabba the Hutt, is controlled by Hutts and various "smuggling guilds" who control various sections of the moon, and is widely regarded as the center of smuggling operations in the known galaxy.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=18139643&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>83% </B></FONT>          <B><A HREF="http://www.sunnews.com/entertain/movies97/movies020697.htm">Movies020697</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.sunnews.com/entertain/movies97/movies020697.htm                        <BR><B><I>Summary: </I></B> &quot;When Kevin couldn't do it, we looked at the &quot;A' list of actors that was available and could play the part and we wanted him to have a certain power and presence about him,&quot; Drescher explains in &quot;Nanny&quot;-like fashion.  &quot;I don't mean to sound flippant,&quot; he says when asked how he chooses his roles, &quot;but when you've been out of work for a long time and the.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=10007790&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>83% </B></FONT>          <B><A HREF="http://www.erols.com/njesuele/kenner.htm">Neil's Star Wars Universe and CCG Homepage List of all Kenner Star War...</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.erols.com/njesuele/kenner.htm                        <BR><B><I>Summary: </I></B>None Available                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=38567685&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>83% </B></FONT>          <B><A HREF="http://www.qmw.ac.uk/~zgap4023/starwars/html/guide/r.html">Planet Database Section R
-</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.qmw.ac.uk/~zgap4023/starwars/html/guide/r.html                        <BR><B><I>Summary: </I></B> [LCMH] Rafa XI - The outermost planet in the Rafa system, Rafa XI is a world of icy slush orbiting in the dark.  [DFR] Roche system - The Roche system contains the Roche asteroid field, a relatively stable configuration of asteroids orbiting a small yellow sun.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=18191607&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>82% </B></FONT>          <B><A HREF="http://www.b-movie.com/sideshow/ss3.html">SIDE SHOW 2/3/97</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.b-movie.com/sideshow/ss3.html                        <BR><B><I>Summary: </I></B> Sorry, but he needs the vacation (well, half the time down there will be vacation). html) is done (most quotable on-set line, by Chris Alexander, was "If another B-movie goes into that VCR, I'm going to vomit!                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=17744500&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>82% </B></FONT>          <B><A HREF="http://www.fanfix.com/stories/humor/wedgexpl.txt">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.fanfix.com/stories/humor/wedgexpl.txt                        <BR><B><I>Summary: </I></B> As soon as the battle began, he pulled off from the main group and disposed of a group of TIEs and an escort frigate quickly to give the other pilots a little breathing room.  He then watched as Gold group failed its attack run, and part of Red group dove in.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=15236556&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>82% </B></FONT>          <B><A HREF="http://pilot.msu.edu/user/mccannr1/rules/swtse.txt">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://pilot.msu.edu/user/mccannr1/rules/swtse.txt                        <BR><B><I>Summary: </I></B> If you fail to shoot at least the Ramp jackpot before draining down to 1 ball, the ramp and Mode Start VUK are lit for 15 seconds to load the X-Wing for another shot at starting Multiball.  Shoot the right orbit for 250K, the left orbit for 300K, and then the ramp for 350K to finish the mode.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=34588696&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>82% </B></FONT>          <B><A HREF="http://www2.epix.net/~pagoda/starwars.html">Star Wars page </A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www2.epix.net/~pagoda/starwars.html                        <BR><B><I>Summary: </I></B>Star Wars page.   Welcome to our Star Wars webpage.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=39440094&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>82% </B></FONT>          <B><A HREF="http://www.collectoys.com/2tvmovie.html">John Wesley Hardin Trading Co: TV/Movie Action Figures</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.collectoys.com/2tvmovie.html                        <BR><B><I>Summary: </I></B>None Available                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=28270157&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>82% </B></FONT>          <B><A HREF="http://www.eden.rutgers.edu/~reevesjd/previousupdates.html">SWAF: PREVIOUS UPDATES</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.eden.rutgers.edu/~reevesjd/previousupdates.html                        <BR><B><I>Summary: </I></B>.  (04/11/97) I added more figures to Future Releases and changed the picture on my page (Wave 6?!).  (04/04/97) I have received several rumors pertaining to an exclusive Kool Aid figure.  (03/28/97) Rich Dionisio bought several Princess Leias, Stormtroopers, Han Solos, Luke Skywalkers, and Luke Stormtroopers.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=19926243&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>82% </B></FONT>          <B><A HREF="http://www.books.com/starwars/lists.htm">Star Wars: A Guide for the Literate Fan</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.books.com/starwars/lists.htm                        <BR><B><I>Summary: </I></B> 8. Shoots dinner guests, *then* apologizes for the mess.   4. If they ask why the place is in sucha mess reply with, "Your eyes can deceive you - don't trust them ... I've let go my conscious self and acted on instinct."                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=28430622&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>82% </B></FONT>          <B><A HREF="http://home.ptd.net/~dbohr/wars.html">SPICE WARS</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://home.ptd.net/~dbohr/wars.html                        <BR><B><I>Summary: </I></B> "Mel C," she introduces herself, "Captian of the Saturday Night Diva.  "She's captive in one of the detention blocks, and scheduled for execution."                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=659455&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>81% </B></FONT>          <B><A HREF="http://tmcgaugh.campus.vt.edu/r.htm">The Planetary Tour of Star Wars -&quot;R&quot; Database</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://tmcgaugh.campus.vt.edu/r.htm                        <BR><B><I>Summary: </I></B> [HSR, CSSB] Ropagi system The Ropagi system is one endpoint of the Kira Run; the Lazerian system is the other.  [SWAJ] Rudrig The quiet planet Rudrig, in the system of the same name, is home to the vast University of Rudrig, the only respected higher school in the Tion Hegemony.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=9339494&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>81% </B></FONT>          <B><A HREF="http://www.scican.net/~gcheek/cantina/tradepag.html">Trade Page</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.scican.net/~gcheek/cantina/tradepag.html                        <BR><B><I>Summary: </I></B>  WANTS:&gt;all main characters&gt;the falcon&gt;vaders cust.  Wants: IG-2000, Bossk, IG-88's Neural Inhibitor, IG-88's Pulse Cannon,and Devastator.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=13188886&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>81% </B></FONT>          <B><A HREF="http://www.geocities.com/Area51/Vault/6023/index.html">The Mos Eisley Trading Post</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.geocities.com/Area51/Vault/6023/index.html                        <BR><B><I>Summary: </I></B>com J.R. Due to his large number of Haves and Wants, i put the lists on a seperate page.  Obi-Wan (For all of my wants), Grand Moff Tarkin WB, Lots of premiere BBs adamsack@visi.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=802444&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>81% </B></FONT>          <B><A HREF="http://tmcgaugh.campus.vt.edu/k.htm">The Planetary Tour of Star Wars -&quot;K&quot; Database</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://tmcgaugh.campus.vt.edu/k.htm                        <BR><B><I>Summary: </I></B> [DFR] Kanchen sector The Kanchen sector contains the planet Xa Fel.  [TLC] Kanz sector The Kanz sector contains the planets Argazda and Lorrd.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=9305435&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>81% </B></FONT>          <B><A HREF="http://tmcgaugh.campus.vt.edu/n.htm">The Planetary Tour of Star Wars -&quot;N&quot; Database</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://tmcgaugh.campus.vt.edu/n.htm                        <BR><B><I>Summary: </I></B> [SWAJ] Nal Hutta A bruised green, blue, and brown planet in the Y'Toub system, Nal Hutta (meaning &quot;glorious jewel&quot; in Huttese) is one of the primary planets settled by the Hutts after leaving their ancestral home of Varl.  The planet is ruled by a council of the eldest members of the &quot;Clans of the Ancients,&quot; the oldest Hutt families.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=9323315&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>81% </B></FONT>          <B><A HREF="http://130.127.9.20/~jvalice/starB.htm">STARB</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://130.127.9.20/~jvalice/starB.htm                        <BR><B><I>Summary: </I></B>  BOOK REVIEWS . The following are in Chronological order: The Tales Trilogy edited by Kevin J. Anderson Tales from the Mos Eisley Cantina Tales from Jabba's Palace Tales of the Bounty Hunters SYNOPSIS: A Trilogy of tales dealing with the minor background characters in the Star Wars Trilogy.  I give this Book: . DarkSaber by Kevin J. Anderson SYNOPSIS: Fan favorite Kevin J. Anderson returns.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=20543942&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>80% </B></FONT>          <B><A HREF="http://hamptonroads.digitalcity.com/dailypress/cyberlife/gamesJediKnight.htm">cyberlife: Jedi Knight</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://hamptonroads.digitalcity.com/dailypress/cyberlife/gamesJediKnight.htm                        <BR><B><I>Summary: </I></B>  PCI graphics card, 3D cards supported.   Fast graphics card, or 3D card.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=14652575&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>80% </B></FONT>          <B><A HREF="http://www.primenet.com/~btn/areview/review.html">Action Figure Times-Toy Reviews</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.primenet.com/~btn/areview/review.html                        <BR><B><I>Summary: </I></B> *Play Value(7): He is another cool alien debuting in the Star Wars toys universe.  good detail on both ewoks pretty neat how you can take off their hoods.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=7503126&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>80% </B></FONT>          <B><A HREF="http://www.sff.net/locus/year/t1.html">Contents Lists </A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.sff.net/locus/year/t1.html                        <BR><B><I>Summary: </I></B> 20 &#149; Eye of the Beholder &#149; Shirley Parenteau &#149; ss Perry Rhodan #103 '76.  223 &#149; Extenuating Circumstances &#149; Ann Orhelein &#149; ss Perry Rhodan #108 '77.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=16376048&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>79% </B></FONT>          <B><A HREF="http://www.tc.umn.edu/nlhome/m238/tato0004/jokes/starwars.html">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.tc.umn.edu/nlhome/m238/tato0004/jokes/starwars.html                        <BR><B><I>Summary: </I></B> -This is not my fault!                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=22343267&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>79% </B></FONT>          <B><A HREF="http://www.mufty.com/swccg/interviews/edmiller.html">Interview: Ed Miller</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.mufty.com/swccg/interviews/edmiller.html                        <BR><B><I>Summary: </I></B>, to "Boba Fett IS dead!"  Ok ok, Greedo's shot was cheesy, Vader's shuttle scene in ESB slowed the already tightly-knit pacing, and that Boba Fett/Dancer scene was just lame.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=20487115&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>79% </B></FONT>          <B><A HREF="http://hot.virtual-pc.com/mufty/swccg/interviews/tonycase.html">Interview: Tony Case</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://hot.virtual-pc.com/mufty/swccg/interviews/tonycase.html                        <BR><B><I>Summary: </I></B>.  Q. First let's start off with some background information about yourself, just a summary of your current life?  All the other expansions have had cool stuff about it, but ANH really breathed life into the game for me.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=19483257&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>78% </B></FONT>          <B><A HREF="http://www.state.vt.us/schools/mmu/chatter/current.htm">The Mad Chatter 4/7/97</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.state.vt.us/schools/mmu/chatter/current.htm                        <BR><B><I>Summary: </I></B> It was more like the "I'm sitting here daydreaming and I don't know what to do with my hands; I think I'll use one finger and shove it up my nose" picks.  But don't be sad and depressed about that; you have plenty of other sad and depressing things to think about.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=18569976&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>76% </B></FONT>          <B><A HREF="http://www.novehs.dk/elev/ia209/SW-Quote.txt">Untitled</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.novehs.dk/elev/ia209/SW-Quote.txt                        <BR><B><I>Summary: </I></B> -Han to Leia (TESB) "Why you slimy, double-crossing, no-good swindler!"  -Han to Leia (TESB) "Afraid I was going to leave without giving you a goodbye kiss?"                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=27438561&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>75% </B></FONT>          <B><A HREF="http://lonestar.texas.net/~cgregg/dark_anh_spoiler.html">UNOFFICIAL SW:CCG A NEW HOPE DARK SIDE SPOILER LIST</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://lonestar.texas.net/~cgregg/dark_anh_spoiler.html                        <BR><B><I>Summary: </I></B> Imperial Starships NameTypeDestinyStatisticsLoreIcons & Game Text Black 4. A New Hope U2Starfighter: TIE/ln2P:2 M:3 D:2 F:3.  OR Use X Force to capture all characters on board a captured starship, where X=twice the number of characters.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=29525942&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>75% </B></FONT>          <B><A HREF="http://pw2.netcom.com/~kestral/Wes2.html">Wes' Sci-Fi Home Page</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://pw2.netcom.com/~kestral/Wes2.html                        <BR><B><I>Summary: </I></B> for a great guide try Star Wars: Customizable Card Game Rulebook.  The Empire chases the Rebellion to the planet Hoth and destroys the base there.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=1829069&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>75% </B></FONT>          <B><A HREF="http://www.datasync.com/~xwing/prequel.htm">Xwing's Prequel News Page</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.datasync.com/~xwing/prequel.htm                        <BR><B><I>Summary: </I></B>&nbsp; I tried to get a question or two answered, but no luck as usual. &nbsp; Their email address is treegate@aol.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=41467283&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>75% </B></FONT>          <B><A HREF="http://www.scican.net/~gcheek/common/info/spoiler_dark_anh.html">UNOFFICIAL SW:CCG A NEW HOPE DARK SIDE SPOILER LIST</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.scican.net/~gcheek/common/info/spoiler_dark_anh.html                        <BR><B><I>Summary: </I></B> R1Alien2P:2 A:1 D:1 F:1/2Bounty Hunter, Warrior During opponent's control phase, may 'threaten' one smuggler at same site.  When at a Scomp link during your draw phase, may use 1 Force to look at top three cards of your Reserve Pile.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=13967244&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>73% </B></FONT>          <B><A HREF="http://starwars.hasbro.com/low/toy/listp.html">Hasbro's Star Wars Toys and Games Page</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://starwars.hasbro.com/low/toy/listp.html                        <BR><B><I>Summary: </I></B> Obi-Wan Kenobi&#153; Third Quarter 1998 Wave 5: Chewbacca&#153; Forth Quarter 1998 Gunner Stations: First/Scheduled Released Wave 1: Han Solo&#153; with Falcon Gunner Station.   Luke Skywalker&#153; with Falcon Gunner Station Second Quarter 1998 &nbsp; Wave 2: Darth Vader&#153; with TIE Fighter Gunner Station.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=1870461&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>73% </B></FONT>          <B><A HREF="http://www.wiseacres.com/listing.htm">Philip's New Kenner Star Wars Action Figure Photo Archive Kenner Toy L...</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://www.wiseacres.com/listing.htm                        <BR><B><I>Summary: </I></B>  Malakili&#153;&nbsp;(Rancor Keeper) 10/97 Wave 12: Scheduled Release Collection 1: Luke in Ceremonial Outfit 11/97 Wave 13: Scheduled Release Collection 1: Bespin Luke Skywalker&#153;.   Third Quarter 1998 &nbsp; Princess Leia&#153; Collection: First/Scheduled Release Princess Leia&#153; and R2-D2&#153;.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=23757208&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                       <FONT COLOR=navy><B>72% </B></FONT>          <B><A HREF="http://starwars.hasbro.com/toy/listp.html">Hasbro's Star Wars Toys and Games Page</A></B>&nbsp;
-                          <BR><B><I>URL: </I></B>http://starwars.hasbro.com/toy/listp.html                        <BR><B><I>Summary: </I></B>  Lando Calrissian&#153;&nbsp;as Skiff Guard 4/97 Wave 9: Scheduled Release Collection 1: Rebel Fleet Trooper&#153;&nbsp; Collection 2: ASP-7 Droid&#153;.   Ronto&#153;&nbsp;with Jawa&#153;&nbsp; Scheduled Release 8/97 Wave 2: Tauntaun&#153;&nbsp;with Luke Skywalker&#153;&nbsp;in Hoth Gear Scheduled Release First Quarter Wave 3: Wampa&#153;&nbsp;with Luke Skywalker&#153;&nbsp;in Hoth Gear.                                 <BR><B><I>More Like This:</I></B><A HREF="/search.gw?lk=default&c=web&qbe=17172045&ctag=35197E30&showSummary=true&sorig=d"> Click here to perform a search for documents like this one.<P></A>
-                         	                                 
-
-<FORM ACTION="/search.gw" METHOD=GET>   
- <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
- <TR>
-  <TD WIDTH=40% ALIGN=left NOWRAP>        
-  <FONT FACE=arial,helvetica><B>
-   <INPUT TYPE=hidden NAME=look VALUE=default>
-   <INPUT TYPE=hidden NAME=collection VALUE=web>
-   <INPUT TYPE=hidden NAME=search VALUE="+Jabba +bounty +hunter +Greedo">
-   <INPUT TYPE=hidden NAME=start VALUE=0>
-   <INPUT TYPE=hidden NAME=showSummary VALUE=true>
-           <INPUT TYPE=hidden NAME=perPage VALUE=84>
-                <INPUT TYPE=submit NAME=next VALUE="Next Results">
-   
-               </B></FONT>
-</TD>
-<TD ALIGN=right WIDTH=60% NOWRAP><FONT FACE=arial,helvetica>
-               <A HREF="/search.gw?lk=default&c=web&start=0&showSummary=false&s=%2Bjabba+%2Bbounty+%2Bhunter+%2Bgreedo&sorig=b"><B>Show Titles only</B></A>&nbsp;
-            	
-               <A HREF="/search.gw?lk=default&c=web&s=%2Bjabba+%2Bbounty+%2Bhunter+%2Bgreedo&sort=site&sorig=c"><B>List by Web site</B></A>&nbsp;
-            
-
-</FONT></TD>
-</TR>
-</TABLE>
-</FORM>
-
-
-
-  
-<P>
-<CENTER>
-<TABLE BORDER=0 WIDTH=600>
-<TR>
-<TD ALIGN=center>
-  <!-- Ad Start -->
-<a href="/relocate/ad=34206_valupage0331_fs_29a.gif|pk=370797;http://www.valupage.com/?From=Excite" onMouseOver="window.status='Click Here!';return true" language="Javascript"><img src="/img/ads/34206_valupage0331_fs_29a.gif" ALT="Click Here!" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> Click Here! </B></FONT></CENTER></a>
-<!-- Ad Stop -->
-
-</TD>
-</TR>
-</TABLE>
-</CENTER>
-
-
-<P>
-<CENTER>
-<TABLE BORDER=0  CELLPADDING=1 CELLSPACING=0>
-<TR>
-<TD BGCOLOR=#cccccc>
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=4 WIDTH=600 BGCOLOR=#ffffff>
-<FORM NAME="bottomsearchbox" ACTION="/search.gw" METHOD=get>
-<INPUT TYPE=hidden NAME=look VALUE=default>
-<TR>
-<TD NOWRAP ALIGN=right>
-<FONT FACE=arial,helvetica SIZE=-2>
- <A HREF="/Info/add_url.html">Add URL</A><BR>
-</FONT></TD>
-   <TD ALIGN=right><INPUT NAME=search VALUE="+Jabba +bounty +hunter +Greedo" SIZE=45></TD>
-</TD>
-  <INPUT TYPE=hidden NAME=bsug VALUE=-1>
-  <INPUT TYPE=hidden NAME=csug VALUE=2>
-<TD>
-  <INPUT TYPE=submit NAME="Search" VALUE="Search Again">
-  <INPUT TYPE=hidden NAME=collection VALUE=web>
-</TD>
-<TD NOWRAP>
-<FONT FACE=arial,helvetica SIZE=-1 VALIGN=bottom>
-<B>
-<A HREF=/relocate/co=help;http://www.excite.com/Info/suggest.html>Help</A> &nbsp;<BR>
-</B>
-</FONT></TD>
-<TD>&nbsp;</TD>
-</TR>
-</TABLE>
-   <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=1 WIDTH=600 BGCOLOR=#ffffff>
-   <TR>
-   <TD ROWSPAN=1 NOWRAP>   <FONT FACE=arial,helvetica SIZE=2>
-        <B>Try adding one or more of<BR>these words to your search...</B>
-      </FONT>
-   </TD>
-
-      <TD NOWRAP>
-   <FONT FACE=geneva,arial SIZE=2>
-            boba
-   </FONT>
-   </TD>
-      <TD NOWRAP>
-   <FONT FACE=geneva,arial SIZE=2>
-            hunters
-   </FONT>
-   </TD>
-   
-   </TR>
-
-   
-   </TABLE>
-</td></tr></table>
-<INPUT TYPE=hidden NAME=clk VALUE=b-b-F1>
-<INPUT TYPE=hidden NAME=showSummary VALUE=true>
-<INPUT TYPE=hidden NAME=sorig VALUE=rpage>
-<INPUT TYPE=hidden NAME=trace VALUE=b>
-</FORM>
-
-<A HREF=/?b-a-b><IMG SRC=/img/art4/search_results.gif WIDTH=600 HEIGHT=35 BORDER=0 ISMAP USEMAP=#bumper ALT="Excite Search Results"></A>
-</CENTER>
-
-<BR>
-<CENTER>
-
-<font face=geneva,arial size=-1>
-
-<nobr><b>More Search Services:</b>&nbsp;&nbsp;
-<A HREF=/relocate/co=srchtips;http://www.excite.com/Info/searching.html#anchor4665304>Search Help</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=power;http://www.excite.com/search/options.html>Power Search</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=srchnews;http://nt.excite.com>Search the News</A></font></nobr><p>
-
-<font face=geneva,arial size=-1>
-<nobr><b>Channels:</b>&nbsp;&nbsp;
-<A HREF=/relocate/co=xsr_botnav_autos;http://www.excite.com/channel/auto/>Autos</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_business;http://quicken.excite.com/>Business</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_careers;http://my.excite.com/careers_and_education/>Careers & Education</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_computers;http://my.excite.com/computers_and_internet/>Computers</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_entertainment;http://my.excite.com/entertainment/>Entertainment</A><br>
-<A HREF=/relocate/co=xsr_botnav_games;http://www.excite.com/channel/games/>Games</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_lifestyle;http://my.excite.com/lifestyle/>Lifestyle</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_mychannel;http://my.excite.com/>My Channel</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_news;http://nt.excite.com/>News</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_chat;http://www.excite.com/channel/chat/>People & Chat</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_shopping;http://www.excite.com/channel/shopping/>Shopping</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_sports;http://my.excite.com/sports/>Sports</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_travel;http://city.net/>Travel</A></font></nobr>
-<p>
-
-<font face=geneva,arial size=-1>
-<b>Services:</b>&nbsp;&nbsp;
-<A HREF=/relocate/co=xsr_botnav_advertise;http://www.excite.com/Info/advertising.html>Advertise on Excite</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_bookflights;http://city.net/forms/reservations/>Book Flights</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_classifieds;http://www.excite.com/channel/classifieds/>Classifieds</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_EmailLook-up;http://www.excite.com/Reference/email.html>Email Lookup</A></font>
-
-<BR>
-<font face=geneva,arial size=-1>
-<A HREF="/relocate/co=xsr_botnav_FreeEmail;http://mailexcite.com/">Free Email</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_horoscopes;http://my.excite.com/horoscopes/>Horoscopes</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_maps;http://city.net/maps/>Maps</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_newsgroups;http://www.excite.com/Reference/usenet.html>Newsgroups</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_peoplefinder;http://www.excite.com/Reference/people.html>People Finder</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_shareware;http://www.excite.com/Reference/shareware.html>Shareware</A></font>
-
-<BR>
-<font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_sportsscores;http://sports.excite.com>Sports Scores</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_stockquotes;http://live.excite.com/stocks/>Stock Quotes</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_taxinfo;http://quicken.excite.com/taxes/>Tax Info</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_driving;http://city.net/maps/driving/>U.S. Driving Directions</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_weather;http://my.excite.com/weather/>Weather</A></font>
-
-<BR>
-<font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_gteyp;http://www.excite.com/Reference/yellow.html>Yellow Pages</A></font> &nbsp;&#183;&nbsp; <font face=geneva,arial size=-1>
-<A HREF=/relocate/co=xsr_botnav_instantinfo;http://www.excite.com/Reference/instant.html>More ...</A></font>
-
-<BR>
-
-<FONT SIZE=-2><BR>Copyright 1998 Excite Inc. <A HREF=/Info/disclaimer.html>Disclaimer</A></FONT>
-
-</CENTER>
-
-<MAP NAME=bumper>
-<AREA SHAPE=rect COORDS=21,0,127,34 HREF=http://www.excite.com/>
-<AREA SHAPE=rect COORDS=421,16,511,31 HREF=http://www.excite.com/>
-<AREA SHAPE=rect COORDS=512,16,600,31 HREF=http://my.excite.com/>
+<FORM NAME=topbox ACTION=/search.gw>
+<A HREF=http://www.excite.com/>
+<IMG SRC=/img/exc/hdr/search.gif BORDER=0 WIDTH=600 HEIGHT=45 ALT="Excite Search" ISMAP USEMAP=#navstripe></A><BR>
+<MAP NAME=navstripe>
+<AREA SHAPE=rect COORDS=0,0,122,45 HREF=http://www.excite.com/>
+<AREA SHAPE=rect COORDS=159,10,600,45 HREF=http://www.excite.com/>
 </MAP>
+<table border=0 cellpadding=1 cellspacing=0>
+<tr><td bgcolor=cccccc>
+<table border=0 cellspacing=0 cellpadding=4 width=598 bgcolor=ffffff><tr>
+<td align=right bgcolor=ffffff>
+<b><font face=arial size=-1>You searched for</font></b>
+<input size=30 name=search value="+Jabba +bounty +hunter +Greedo">
+<input type=hidden name=tsug value=-1>
+<input type=hidden name=csug value=0>
+</td>
+<td><input type=submit value="Search Again"></td>
+<td nowrap><font face=arial,helvetica size=-1><b>
+<a href=/relocate/co=help;http://www.excite.com/Info/suggest.html>Help</a>
+&nbsp;<br>
+</b></font></td>
+<td>&nbsp;</td>
+</tr></table>
+<input type=hidden name=sorig value=rpage>
+</td></tr></table>
+</form>
+<small><br></small>
+<a href="/relocate/ad=34965_468rain.gif|pk=415538;http://www.netgrocer.com/default.cfm?s=1001032500310102" onMouseOver="window.status='Click Here to Buy Groceries at NetGrocer!';return true" language="Javascript"><img src="/img/ads/34965_468rain.gif" ALT="Click Here to Buy Groceries at NetGrocer!" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> Click Here to Buy Groceries at NetGrocer! </B></FONT></CENTER></a>
+</center>
+<small><br></small>
+<table border=0 cellpadding=0 cellspacing=0 width=100%><tr>
+<td bgcolor=ffcc00 width=25%>
+<table border=1 cellpadding=1 cellspacing=0 width=100%><tr>
+<td align=center><font face=geneva,arial size=-1><b>
+<a name=web>Web Results</a>
+</b></font></td></tr></table>
+</td><td valign=bottom width=100%>
+<table border=0 cellspacing=0 cellpadding=0 width=100%>
+<tr><td bgcolor=999999 width=100%><img src=/img/pixel/trans.gif height=2 width=1></td></tr></table>
+</td></tr></table>
+<table border=0 cellpadding=2 cellspacing=0 width=100%>
+<tr><td width=40% nowrap><font face=arial>
+Top <b>84</b>
+matches.
+<small><a href=/search.gw?layout=about&num=166&s=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo><i>[166
+hits. About Your Results]</i></a></small>
+</font></td>
+<td align=right width=60% nowrap><font face=arial><b>
+<a href="/search.gw?s=%2Bjabba+%2Bbounty+%2Bhunter+%2Bgreedo&c=web&start=0&showSummary=false&sorig=b">Show
+Titles only</a>
+&nbsp;
+<a href="/search.gw?sort=site&c=web&s=%2Bjabba+%2Bbounty+%2Bhunter+%2Bgreedo&sorig=c">List
+by Web site</a>
+</b></font></td></tr></table>
+<br>
+<table border=0 cellpadding=1 cellspacing=0 bgcolor=000000 align=right>
+<tr>
+<td>
+<table border=0 cellspacing=0 cellpadding=4><tr>
+<td bgcolor=ffffff align=center nowrap>
+<font face=verdana,arial size=-1><b>AMAZON.COM</b></font><br>
+<small><a href=/relocate/co=xsr_amazon;http://www.amazon.com/exec/obidos/excite-search/search=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo>Find Related Books</a></small><br>
+&nbsp;
+</td></tr></table>
+</td></tr></table>
+<SMALL>92% </SMALL>
+<A HREF="http://empire.res.wabash.edu/nri/char/greedo.htm">Greedo</A>&nbsp;
+- Spurch "Warhog" Goa and Dyyz Nataz (Megadeth as he was known) were killing an Imperial officer who had illegally used his position to smuggle spice. His dream of buying his own ship was totally crushed one day when at Shug Ninx's ship barn.
+<BR><SMALL>http://empire.res.wabash.edu/nri/char/greedo.htm
+<BR><A HREF="/search.gw?c=web&qbe=10970367&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>92% </SMALL>
+<A HREF="http://pages.nyu.edu/~vgv6397/bio/index.html">Greedo's Bio</A>&nbsp;
+- - DECEASED - NAME: Greedo RACE:Rodian EYE COLOR:Purple SEX:Male HEIGHT:1.65 meters OCCUPATION: Bounty Hunter - Bounty hunting is a profession veiled in honor on Rodia. Every year, prizes are awarded to those who surpass in various categories such as "greatest accuracy with a distance blaster" and "quickest catch".
+<BR><SMALL>http://pages.nyu.edu/~vgv6397/bio/index.html
+<BR><A HREF="/search.gw?c=web&qbe=38367126&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>92% </SMALL>
+<A HREF="http://people.a2000.nl/tvdbrink/greedo.html">Greedo</A>&nbsp;
+- When they were finally tracked by the men who killed his father, they flee again to the Corellian Sector to start all over again. One day, Greedo witnessed two bounty hunters, Spurch "Warthog" Goa and Dyyz Nataz, killing a rogue Imperial spice inspector.
+<BR><SMALL>http://people.a2000.nl/tvdbrink/greedo.html
+<BR><A HREF="/search.gw?c=web&qbe=19031215&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>91% </SMALL>
+<A HREF="http://buteo.colorado.edu/~yosh/psi/system2/aliens/greedo/">Greedo</A>&nbsp;
+- Last seen with Captain Han Solo in the Mos Eisley Cantina: PROFILE (taken from Biographies of 10 Cantina Characters): Bounty hunting is a profession veiled in honor on Rodia. Every year, prizes are awarded to those who surpass in various categories such as "greatest accuracy with a distance blaster" and "quickest catch".
+<BR><SMALL>http://buteo.colorado.edu/~yosh/psi/system2/aliens/greedo/
+<BR><A HREF="/search.gw?c=web&qbe=145081&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>91% </SMALL>
+<A HREF="http://users.aol.com/dallathblk/RblTr.html">Rebel Transmissions</A>&nbsp;
+- COMMENT:I think the new seen was somewhat a waist of time and money. But anyways, I think that he should have had a larger part because either Han Solo is above any bounty hunter, or Greedo just sucked as a bounty hunter.
+<BR><SMALL>http://users.aol.com/dallathblk/RblTr.html
+<BR><A HREF="/search.gw?c=web&qbe=625772&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>91% </SMALL>
+<A HREF="http://www.arts.mcgill.ca/programs/polisci/faculty/rexb/greedo.html">The Greedo Assassination Conspiracy Page </A>&nbsp;
+- However, Solo's vessel, the Millennium Falcon, was intercepted by an Imperial patrol, forcing the smuggler to jettison all of said spice to avoid arrest. Solo refused on the grounds that it was not his fault he was forced to drop said cargo, and even suggested that it was Doole that alerted the Imperials.
+<BR><SMALL>http://www.arts.mcgill.ca/programs/polisci/faculty/rexb/gree...
+<BR><A HREF="/search.gw?c=web&qbe=31732938&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>91% </SMALL>
+<A HREF="http://www.cusd.claremont.edu/~ekaplan/movies/starwars/greedo.html">The Ethan Kaplan Greedo Page</A>&nbsp;
+- wav (121kb) - Greedo: "Jabba has put a price on your head so high, every bounty hunter in the galaxy will be looking for you, heh heh heh." wav (496 kb) - Han blasts Greedo.
+<BR><SMALL>http://www.cusd.claremont.edu/~ekaplan/movies/starwars/greed...
+<BR><A HREF="/search.gw?c=web&qbe=15311423&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>90% </SMALL>
+<A HREF="http://spaceport.simplenet.com/bios/nopicjabba.html">T H E S P A C E P O R T jabba</A>&nbsp;
+- Born Jabba Desilijic Tiure, he was a member of a slug like race known as the Hutts. The Hutts renamed the the planet Nal Hutta, &quot;Glorious Jewel&quot; in Huttese.
+<BR><SMALL>http://spaceport.simplenet.com/bios/nopicjabba.html
+<BR><A HREF="/search.gw?c=web&qbe=31183428&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>90% </SMALL>
+<A HREF="http://spaceport.simplenet.com/bios/jabba.html">T H E S P A C E P O R T jabba</A>&nbsp;
+- The two competitors for the next majordomo were a Corellian smuggler named Bidlo Kwerve and a Twi'lek named Bib Fortuna. Meanwhile, Bib Fortuna had given Jabba the gift of a beautiful Twi'lek named Oola.
+<BR><SMALL>http://spaceport.simplenet.com/bios/jabba.html
+<BR><A HREF="/search.gw?c=web&qbe=35290923&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>90% </SMALL>
+<A HREF="http://www.nerf-herder.com/gswp/hide/theguys.html">The Hunters ofthe Hideout</A>&nbsp;
+- One droid, IG-72, became a bounty hunter in the Outer Rim Territories, while a second, IG-88, became one of the most fearsome bounty hunters in the Galactic Core. When the Empire enslaved Kashyyyk, the Wookiees' homeworld, many Trandoshans became bounty hunters, tracking down still-free or escaped Wookiees for their Imperial employers.
+<BR><SMALL>http://www.nerf-herder.com/gswp/hide/theguys.html
+<BR><A HREF="/search.gw?c=web&qbe=41200093&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>90% </SMALL>
+<A HREF="http://priv.onet.pl/wr/starwars/sw-wave-15.html">CHATO's STAR WARS - waves 15</A>&nbsp;
+- None Available
+<BR><SMALL>http://priv.onet.pl/wr/starwars/sw-wave-15.html
+<BR><A HREF="/search.gw?c=web&qbe=40453270&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>90% </SMALL>
+<A HREF="http://people.a2000.nl/tvdbrink/photo.html">The Bounty Hunter Picture Gallery</A>&nbsp;
+- The Slave II (techguide). Boba Fett in Docking Bay 94.
+<BR><SMALL>http://people.a2000.nl/tvdbrink/photo.html
+<BR><A HREF="/search.gw?c=web&qbe=20068311&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>90% </SMALL>
+<A HREF="http://www.geocities.com/Area51/Corridor/5015/greedo.html">Greedo</A>&nbsp;
+- Greedo, a member of the Rodian species, was one of many bounty hunters hired by Jabba the Hutt to apprehend or dispose of Han Solo after Solo failed to complete a sumggling job for the crime lord. Greedo, with his multifaceted eyes, skull-ridge spines, and tapirlike snout, caught up with Solo at a cantina in Mos Eisley Spaceport.
+<BR><SMALL>http://www.geocities.com/Area51/Corridor/5015/greedo.html
+<BR><A HREF="/search.gw?c=web&qbe=24396399&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>90% </SMALL>
+<A HREF="http://www.clinton-massie.k12.oh.us/1997_review/scombs_1997/jan.html">January 1997</A>&nbsp;
+- A major event in January that every Star Wars fan lining up at the box office, and even those who had never seen it before, was the release of the Star Wars Special Edition. . Hackers break into the Air Force's home page, replacing the usual stuff with pornography, obscenities, and antigovernment diatribes.
+<BR><SMALL>http://www.clinton-massie.k12.oh.us/1997_review/scombs_1997/...
+<BR><A HREF="/search.gw?c=web&qbe=8309002&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>90% </SMALL>
+<A HREF="http://www-personal.umich.edu/~spheley/rants.html">Rants</A>&nbsp;
+- In early 1997, people oohed and ahhed over the Star Wars "Special Edition" trilogy, a rerelease of the greatest series of movies ever, with some new scenes and special effects added in. Not only that, but Jabba the Hutt was a computer-generated image (CGI -- more on that later) in the Star Wars Special Edition, only to be seen as a model in Return of the Jedi, causing an inconsistent look.
+<BR><SMALL>http://www-personal.umich.edu/~spheley/rants.html
+<BR><A HREF="/search.gw?c=web&qbe=4450818&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>90% </SMALL>
+<A HREF="http://www.roughcut.com/star_wars/backlot/roughcutbb/messages/46.html">Star Wars Figures With Darth Vader Carrying Case</A>&nbsp;
+- [ Follow Ups ] [ Post Followup ] [ Rough Cut Bulletin Board ] [ FAQ ] Posted by Mike Thomas on February 16, 1997 at 13:50:35: I have tons of Star Wars figures with the Darth Vader. Re: Star Wars Figures With Darth Vader Carrying Case Mike Thomas 13:53:15 2/16/97 (0).
+<BR><SMALL>http://www.roughcut.com/star_wars/backlot/roughcutbb/message...
+<BR><A HREF="/search.gw?c=web&qbe=4781835&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>89% </SMALL>
+<A HREF="http://www.toysrgus.com/images-coins/p-greedo.html">Power of the Force Greedo, "Bounty Hunter"</A>&nbsp;
+- Power of the Force Greedo, "Bounty Hunter". Character: Greedo - Bounty Hunter.
+<BR><SMALL>http://www.toysrgus.com/images-coins/p-greedo.html
+<BR><A HREF="/search.gw?c=web&qbe=25843887&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>89% </SMALL>
+<A HREF="http://www.cusd.claremont.edu/~ekaplan/movies/starwars/bountyhunt.html">The Ethan Kaplan Bounty Hunter Page</A>&nbsp;
+- They're friends of Jabba the Hutt (that tells you exactly how bad they are. I HAVE READ TALES OF THE BOUNTY HUNTERS!
+<BR><SMALL>http://www.cusd.claremont.edu/~ekaplan/movies/starwars/bount...
+<BR><A HREF="/search.gw?c=web&qbe=15496245&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>89% </SMALL>
+<A HREF="http://playwickia.org/feb1497/entertainment/starwars.html">Playwickia: February 14, 1997: Entertainment: Star Wars return to big ...</A>&nbsp;
+- Staff Writer After twenty years of absence on the Big Screen, George Lucas's Star Wars Trilogy has returned with new digitally remastered video, THX surround sound and 4 1/2 minutes of brand new footage. Making use of today's technology in video and sound, Lucas re-mastered the old blurry and degraded films that first aired in the seventies.
+<BR><SMALL>http://playwickia.org/feb1497/entertainment/starwars.html
+<BR><A HREF="/search.gw?c=web&qbe=28426574&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>89% </SMALL>
+<A HREF="http://www.angelfire.com/me/BobaFetter/adopt.html">The Star Wars adoption center</A>&nbsp;
+- weapon of choice: Blaster DL-44 heavy blaster. Status: Rebel co-pilot, Star ship mechanic.
+<BR><SMALL>http://www.angelfire.com/me/BobaFetter/adopt.html
+<BR><A HREF="/search.gw?c=web&qbe=425098&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>88% </SMALL>
+<A HREF="http://hydrogen.cis.umassd.edu/~s12281jl/jabba.html">Jabba the Hutt</A>&nbsp;
+- Jabba the Hutt. Jabba the Hutt.
+<BR><SMALL>http://hydrogen.cis.umassd.edu/~s12281jl/jabba.html
+<BR><A HREF="/search.gw?c=web&qbe=6040994&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>88% </SMALL>
+<A HREF="http://www.zdnet.com.au/macuser/people/andyi/starwarsse.html">Star Wars Special Edition</A>&nbsp;
+- I tend to lean toward the "Good" side of the argument. Fett wasn't even conceptualized until the STAR WARS HOLIDAY SPECIAL, where he was premiered in an animated segment.
+<BR><SMALL>http://www.zdnet.com.au/macuser/people/andyi/starwarsse.html
+<BR><A HREF="/search.gw?c=web&qbe=13082894&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>88% </SMALL>
+<A HREF="http://www4.zdnet.com/macuser/andyi/starwarsse.html">Star Wars Special Edition</A>&nbsp;
+- Imagined what it must be like to try on a costume. Can you imagine John Gotti personally dealing with such a seemingly trivial matter?
+<BR><SMALL>http://www4.zdnet.com/macuser/andyi/starwarsse.html
+<BR><A HREF="/search.gw?c=web&qbe=40676688&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>88% </SMALL>
+<A HREF="http://www-personal.umich.edu/~psholtes/StarWars/Starsounds.html">MOFO's Star Wars Soundz</A>&nbsp;
+- What Is Thy Bidding My Master?
+<BR><SMALL>http://www-personal.umich.edu/~psholtes/StarWars/Starsounds....
+<BR><A HREF="/search.gw?c=web&qbe=29332176&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>88% </SMALL>
+<A HREF="http://www.expage.com/page/swquiz">Tattooine's Star Wars Quiz </A>&nbsp;
+- Tattooine's Star Wars Quiz. Please visit our sponsor today, click the banner below!
+<BR><SMALL>http://www.expage.com/page/swquiz
+<BR><A HREF="/search.gw?c=web&qbe=23395242&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>88% </SMALL>
+<A HREF="http://www.greensboro.com/nronline/projects/starwars/swar3.htm">News & Record Online: Star Wars</A>&nbsp;
+- . 1/28/97 "A famous filmmaker once said that films are never completed, they are only abandoned," says George Lucas, the creator of the "Star Wars Trilogy." In the cantina scene in Mos Eisley, Lucas makes it clear that Han Solo shoots in self-defense when he kills the bounty hunter Greedo.
+<BR><SMALL>http://www.greensboro.com/nronline/projects/starwars/swar3.h...
+<BR><A HREF="/search.gw?c=web&qbe=7169542&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>88% </SMALL>
+<A HREF="http://home.cc.umanitoba.ca/~kuppem/trivia.htm">The Tantive IV - Databanks: Trivia</A>&nbsp;
+- What planet were the infamous &quot;spice mines&quot; located? . {Answer} In Star Wars, Luke's X-Wing was designated as &quot;Red 5&quot;.
+<BR><SMALL>http://home.cc.umanitoba.ca/~kuppem/trivia.htm
+<BR><A HREF="/search.gw?c=web&qbe=6818959&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>88% </SMALL>
+<A HREF="http://smash.mgz.com/movies/swdb/wuher.htm">Mania: Wuher</A>&nbsp;
+- Though his gruff exterior may indicate a total lack of sympathy, Wuher is one of the more understanding characters in the cantina. All promotional art, characters, logos and other depictions are TM &amp &copy their respective owners.
+<BR><SMALL>http://smash.mgz.com/movies/swdb/wuher.htm
+<BR><A HREF="/search.gw?c=web&qbe=37330133&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>88% </SMALL>
+<A HREF="http://www.cyberspc.mb.ca/~phidalgo/crime.html">The Star Wars Index to Criminal Organizations</A>&nbsp;
+- Han Solo mentions Jabba the Hutt to bounty hunter Greedo in Star Wars IV: A New Hope, suggesting a criminal background that we wouldn't fully glimpse until Return of the Jedi. West End Games explored the nature of loan-sharks in Galaxy Guide 6: Trampfreighters, and the criminal underwold in Galaxy Guide 11: Criminal Organizations.
+<BR><SMALL>http://www.cyberspc.mb.ca/~phidalgo/crime.html
+<BR><A HREF="/search.gw?c=web&qbe=38925232&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>88% </SMALL>
+<A HREF="http://ftp.cdrom.com/pub/obi/alt.quotations/Archive/fortune/sw">Untitled</A>&nbsp;
+- - Han Solo %% There's no mystical force that controls MY destiny. ESB: Leia & Han--When Han is being lowered into the deep freeze.
+<BR><SMALL>http://ftp.cdrom.com/pub/obi/alt.quotations/Archive/fortune/...
+<BR><A HREF="/search.gw?c=web&qbe=31836971&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>88% </SMALL>
+<A HREF="http://www.cae.wisc.edu/~ramsey/starpics.html">Krazy Kurt's Star Wars Pictures</A>&nbsp;
+- Luke Skywalker [W1: 7/95] X-Wing Pilot Gear [W2: 2/96] Dagobah Fatigues [W3: 3/96] Imperial Guard [W4: 6/96] Jedi Knight [W4: 6/96] Stormtrooper [W6-2: 11/96] Endor Gear [2/97] Hoth Gear [W7-2: 2/97] Ceremonial Outfit [W12-1: 11/97] Bespin Outfit [W13-1: 98] w/ Blast Shield Helmet [W16-1: 98]. . Dewback & Sandtrooper [W1: 8/97] Ronto & Jawa [W1: 8/97] Tauntaun & Luke (Hoth Gear) [W2: 98].
+<BR><SMALL>http://www.cae.wisc.edu/~ramsey/starpics.html
+<BR><A HREF="/search.gw?c=web&qbe=23677016&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>88% </SMALL>
+<A HREF="http://www.anotheruniverse.com/movies/swdb/han.htm">Mania: Han Solo</A>&nbsp;
+- Solo could not stand to watch the atrocity so he rescued a Wookiee named Chewbacca and together they freed the Wookiees. They captured the slavers though, freed the slaves, and turned them over to the now free beings to torment the way they had been.
+<BR><SMALL>http://www.anotheruniverse.com/movies/swdb/han.htm
+<BR><A HREF="/search.gw?c=web&qbe=40154613&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>88% </SMALL>
+<A HREF="http://frodo.hiof.no/~deak/video/minisw.html">Deak's Den</A>&nbsp;
+- File size: 253,736 bytes. File size: 19,083,788 bytes.
+<BR><SMALL>http://frodo.hiof.no/~deak/video/minisw.html
+<BR><A HREF="/search.gw?c=web&qbe=38372130&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>88% </SMALL>
+<A HREF="http://www.azstarnet.com/~newmann/sw_notab.txt">Untitled</A>&nbsp;
+- "Oota goota, Solo? edu Wed May 20 13:44:53 1992 G: Oota-goota, Solo?
+<BR><SMALL>http://www.azstarnet.com/~newmann/sw_notab.txt
+<BR><A HREF="/search.gw?c=web&qbe=3089758&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>87% </SMALL>
+<A HREF="http://www.spindia.com/personal/faisalsiddiqisiddiqi.htm">Star Wars</A>&nbsp;
+- Princess Leia Organa as Jabba's Prisoner. Princess Leiain Ewok Celebration Gear.
+<BR><SMALL>http://www.spindia.com/personal/faisalsiddiqisiddiqi.htm
+<BR><A HREF="/search.gw?c=web&qbe=198458&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>87% </SMALL>
+<A HREF="http://lausd.k12.ca.us/~dtonione/swpics-low.htm">Star Wars Pictures....(Experience in 24- bit color!!!!)</A>&nbsp;
+- None Available
+<BR><SMALL>http://lausd.k12.ca.us/~dtonione/swpics-low.htm
+<BR><A HREF="/search.gw?c=web&qbe=23619327&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>87% </SMALL>
+<A HREF="http://lausd.k12.ca.us/~dtonione/swpics.htm">Star Wars Pictures....(Experience in 24- bit color!!!!)</A>&nbsp;
+- Leia Organa Solo. Leia Organa Solo.
+<BR><SMALL>http://lausd.k12.ca.us/~dtonione/swpics.htm
+<BR><A HREF="/search.gw?c=web&qbe=35166669&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>87% </SMALL>
+<A HREF="http://www.usatoday.org/life/enter/movies/lef596.htm">Untitled</A>&nbsp;
+- Maybe, says Garth Jowett, professor of film at the University of Houston. Now, he says, &quot;not only will we see our favorite movie on the big screen for the first time, but we will have some new surprises to enhance our experience.
+<BR><SMALL>http://www.usatoday.org/life/enter/movies/lef596.htm
+<BR><A HREF="/search.gw?c=web&qbe=8905173&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>87% </SMALL>
+<A HREF="http://www.netcantina.com/starwars/newhope.html">Mos Eisley Network Cantina - A New Hope</A>&nbsp;
+- He quietly sips his drink, looking over the crowd for a more sympathetic ear or whatever. Luke, shaking and totally amazed at the old man's abilities, attempts to stand.
+<BR><SMALL>http://www.netcantina.com/starwars/newhope.html
+<BR><A HREF="/search.gw?c=web&qbe=26456528&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>86% </SMALL>
+<A HREF="http://www.greatwest.ca/See/Issues/1997/970130/op.html">SEE Magazine:Thursday, January 30,1997</A>&nbsp;
+- They claim Special Edition is simply what Star Wars always should have been and write off any changes as a &quot;Director's Cut&quot; - something that happens quite often with big movies (Blade Runner, for example). I used to teeter towards the &quot;If it ain't broke, don't fix it&quot; side, but I recently had the opportunity to see Star Wars: Special Edition and my views became somewhat.
+<BR><SMALL>http://www.greatwest.ca/See/Issues/1997/970130/op.html
+<BR><A HREF="/search.gw?c=web&qbe=35196317&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>86% </SMALL>
+<A HREF="http://www.negia.net/~terrypet/starwars.html">Untitled</A>&nbsp;
+- Darth Vader's Tie Fighter. Final Jedi Duel (3-Pack): Darth Vader, Luke, Emperor.
+<BR><SMALL>http://www.negia.net/~terrypet/starwars.html
+<BR><A HREF="/search.gw?c=web&qbe=21963411&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>86% </SMALL>
+<A HREF="http://spaceport.simplenet.com/potf2/productionlist.html">T H E S P A C E P O R T production list</A>&nbsp;
+- 3-pack 1: Sams Club: Luke, Ben, Vader. Electronic Power F/X Ben (Obi-Wan) Kenobi.
+<BR><SMALL>http://spaceport.simplenet.com/potf2/productionlist.html
+<BR><A HREF="/search.gw?c=web&qbe=35042401&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<CENTER> <TABLE BORDER=0 CELLPADDING=3 CELLSPACING=0 WIDTH=100%><TR>
+<TD ALIGN=center BGCOLOR=FFFFCC>
+<FONT FACE=arial>Try Excite <A HREF=http://www.excite.com/search/options.html>Power Search</A>
+for a simple way to search like the pros...</FONT>
+</TD></TR></TABLE></CENTER><P>
+<SMALL>86% </SMALL>
+<A HREF="http://canoe2.canoe.ca/JamStarWars/jan31_starwars_hobson.html">Force remains with Star Wars </A>&nbsp;
+- No one except Lucas had apoplexy 20 years ago because Han never actually spoke to Jabba the Hutt as he does in the new version. What made Star Wars appealing 20 years ago is what makes it appealing today.
+<BR><SMALL>http://canoe2.canoe.ca/JamStarWars/jan31_starwars_hobson.htm...
+<BR><A HREF="/search.gw?c=web&qbe=9006069&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>86% </SMALL>
+<A HREF="http://www.uiowa.edu/~dlyiowan/issue/v128/i129/stories/B0801A.html">The Daily Iowan</A>&nbsp;
+- The Daily Iowan The jump to light speed finally looks like a jump to light speed. This is an invaluable experience for someone who likes the movie, let alone anyone whose life has evolved around "Star Wars."
+<BR><SMALL>http://www.uiowa.edu/~dlyiowan/issue/v128/i129/stories/B0801...
+<BR><A HREF="/search.gw?c=web&qbe=37967164&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>86% </SMALL>
+<A HREF="http://shell12.ba.best.com/~zzmaster/SF/star_wars_tales.html">Star Wars Tales, edited by Kevin J. Anderson</A>&nbsp;
+- Garfield, --see Reeves-Stevens, Judith, and Garfield Reeves-Stevens Reeves-Stevens, Judith, and Garfield Reeves-Stevens, --One Last Night in the Mos Eisley Cantina: The Tale of the Wolfman and the Lamproid, ME, 1995. Veitch, Martha, --see Veitch, Tom, and Martha Veitch Veitch, Tom, and Martha Veitch, --A Hunter&#39;s Fate: Greedo&#39;s Tale, ME, 1995.
+<BR><SMALL>http://shell12.ba.best.com/~zzmaster/SF/star_wars_tales.html
+<BR><A HREF="/search.gw?c=web&qbe=8003695&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>86% </SMALL>
+<A HREF="http://users.why.net/radrock/movies/star4.html">COMING SOON - - EMPIRE REVIEW</A>&nbsp;
+- I am completely for the Jabba scene, which maybe hypocritical considering it didn't look real either. . I liked the Biggs scene toward the end and I still don't know why this wasn't in the original version.
+<BR><SMALL>http://users.why.net/radrock/movies/star4.html
+<BR><A HREF="/search.gw?c=web&qbe=34144879&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>86% </SMALL>
+<A HREF="http://www.toysrgus.com/images-coins/coin-chart.html">The Comprehensive Guide to POTF, Droids, and Ewoks Coins</A>&nbsp;
+- Luke Skywalker (X-Wing Pilot) II SW A young farmer who became a REBEL pilot and JEDI KNIGHT. Luke Skywalker (Jedi Knight) II POTF2 As a brave JEDI KNIGHT, LUKE SKYWALKER gained entrance to JABBA THE HUTT's throne room by using a JEDI mind trick on the guards.
+<BR><SMALL>http://www.toysrgus.com/images-coins/coin-chart.html
+<BR><A HREF="/search.gw?c=web&qbe=26767454&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>86% </SMALL>
+<A HREF="http://www.webdart.com/starwars/page2.html">Star Wars Toy List</A>&nbsp;
+- Star Wars Early Bird - 1977 Artoo-Detoo (R2-D2), dark blue eye Chewbacca, green gun Luke Skywalker, blonde hair with extending lightsaber Princess Leia Organa, green gun 12 Back Star Wars - 1978 38180 Luke Skywalker, blonde hair 38190 Princess Leia Organa 38200 Artoo-Detoo (R2-D2) 38210 Chewbacca 38220 See-Threepio (C-3P0) 38230 Darth Vader 38240 Stormtrooper 38250 Ben (Obi-Wan) Kenobi,.
+<BR><SMALL>http://www.webdart.com/starwars/page2.html
+<BR><A HREF="/search.gw?c=web&qbe=19330565&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>85% </SMALL>
+<A HREF="http://sac.uky.edu/~bacich1/starwars/sw_cgi01.html">Star Wars POTF2 Figure Checklist Utility</A>&nbsp;
+- This many collectors have come to the page: since Fri Apr 11 01:28:53 EDT 1997 ABOUT THE STAR WARS POTF CHECKLIST UTILITY Ok, I think everything is working. com/) Yoda Yoda Cantina Bend Member (Star Wars Fan Club Exclusive) Tusken Raider Tusken Raider Tusken Raider with bantha AT-ST driver Dash Rendar Swoop (Shadows of the Empire) Prince Xizor Prince Xizor vs.
+<BR><SMALL>http://sac.uky.edu/~bacich1/starwars/sw_cgi01.html
+<BR><A HREF="/search.gw?c=web&qbe=7966706&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>85% </SMALL>
+<A HREF="http://www.robotrobot.com/htmls/sw.html">STAR WARS</A>&nbsp;
+- Talking Obi vs DarthVader (12&quot; J.C.Penny Exclusive) \23,800. SOLD OUT Obi Wan Kenobi (Short Saber-Short Saber Tray-Full Photo Orange Card/Holo) \3,500.
+<BR><SMALL>http://www.robotrobot.com/htmls/sw.html
+<BR><A HREF="/search.gw?c=web&qbe=26480270&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>85% </SMALL>
+<A HREF="http://www.princeton.edu/~nieder/sw/swthematic.html">The Complete Star Wars Listing: Character/Actor Specific and Thematic ...</A>&nbsp;
+- None Available
+<BR><SMALL>http://www.princeton.edu/~nieder/sw/swthematic.html
+<BR><A HREF="/search.gw?c=web&qbe=29549925&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>85% </SMALL>
+<A HREF="http://www.personal.kent.edu/~nwillis/SWTopTen.html">Beedo Sookcool's Star Wars Top Ten</A>&nbsp;
+- 6. Make sure Lando "has an accident." . 3. Making sure Jabba gets his burger's worth.
+<BR><SMALL>http://www.personal.kent.edu/~nwillis/SWTopTen.html
+<BR><A HREF="/search.gw?c=web&qbe=8685037&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>84% </SMALL>
+<A HREF="http://www.ingame.com/servizi/siti_ospiti/cloud_city/colkenn.html">blank</A>&nbsp;
+- Tali copyrights rimangono di esclusiva propriet dei legittimi detentori. Il logo di Cloud City on the Web stato realizzato da Giovanni Gentili.
+<BR><SMALL>http://www.ingame.com/servizi/siti_ospiti/cloud_city/colkenn...
+<BR><A HREF="/search.gw?c=web&qbe=18890386&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>84% </SMALL>
+<A HREF="http://w3.nai.net/~wingnut/Star_Wars.html">Star Wars According To Wingnut</A>&nbsp;
+- None Available
+<BR><SMALL>http://w3.nai.net/~wingnut/Star_Wars.html
+<BR><A HREF="/search.gw?c=web&qbe=17472096&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>84% </SMALL>
+<A HREF="http://members.tripod.com/~SWToys/ideas.html">Figure Ideas</A>&nbsp;
+- Chief Bast-The only Imperial other than Darth Vader to survive destruction of the 1st Death Star. General Tagge-The daring buisness man and member of the House of Tagge, this officer was present at the meeting in the War Room of the first Death Star.
+<BR><SMALL>http://members.tripod.com/~SWToys/ideas.html
+<BR><A HREF="/search.gw?c=web&qbe=31416219&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>84% </SMALL>
+<A HREF="http://www.icrdl.net/cybervad/planetek.htm">Planete K</A>&nbsp;
+- Customs of the Wookiee people include the &quot;life debt,&quot; where wookiees feel they must repay the person who has saved their life, and the &quot;honor family,&quot; or those people to whom a wookiee feels a particular bond of friendship. Garindan, the Mos Eisley spy known as &quot;Long Snoot,&quot; was a Kubaz.
+<BR><SMALL>http://www.icrdl.net/cybervad/planetek.htm
+<BR><A HREF="/search.gw?c=web&qbe=21446198&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>84% </SMALL>
+<A HREF="http://www.dnai.com/~pcombs/harris/bh.starwars.html">bh.star wars</A>&nbsp;
+- Try not to laugh when the droids fool the Storm Troopers by hiding in a closet.
+<BR><SMALL>http://www.dnai.com/~pcombs/harris/bh.starwars.html
+<BR><A HREF="/search.gw?c=web&qbe=8437928&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>84% </SMALL>
+<A HREF="http://mcw.on.ca/NEMESIS/planet_k.htm">Planet Database Section K </A>&nbsp;
+- &quot; While Kessel was under control by the Empire it was a common smuggling destination for those dealing in spice, and Han Solo once boasted he had made the Kessel Run in &quot;less than 12 parsecs&quot; by flying dangerously close to the Maw. [HSSE] Kimm systems - In addition to its trafficking in Senex sector slaves, the stock light freighter &quot;Smelly Saint&quot; runs counterfeit.
+<BR><SMALL>http://mcw.on.ca/NEMESIS/planet_k.htm
+<BR><A HREF="/search.gw?c=web&qbe=9848342&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>84% </SMALL>
+<A HREF="http://www.nclack.k12.or.us/www/NCSD_HTTP/Dist_Schools/Skills_center/NEW_TELECOM/ROTJ.HTM">Untitled</A>&nbsp;
+- The camera goes to other shots and when the shot comes back to the skiff guard prodding Luke to jump, and after Jabba says &quot;Put him in&quot;, there is a quick shot where Lando is in the background on Luke's LEFT side. EVENT: During the scene in which Vader says &quot;If YOU will not turn to the dark side, then perhaps she will,&quot; he is holding Luke's lightsaber in his left hand.
+<BR><SMALL>http://www.nclack.k12.or.us/www/NCSD_HTTP/Dist_Schools/Skill...
+<BR><A HREF="/search.gw?c=web&qbe=13807129&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>84% </SMALL>
+<A HREF="http://www.geocities.com/Area51/6690/swccg.html">The Massasi Ruins : SWCCG Trading Post</A>&nbsp;
+- All Bounty Hunters;All thier weapons;All thier Ships;Obi-wan Kenobi;Yoda;Son of Skywalker(x2);Executor;Millenium Falcon;Chewbacca;C-3PO;R2-D2;Bliz 1 and Blizz. Have Tyrant, Conquest, and V SD Star Destroyers, Yoda, Darth Vader, andCA$H!
+<BR><SMALL>http://www.geocities.com/Area51/6690/swccg.html
+<BR><A HREF="/search.gw?c=web&qbe=24407642&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>84% </SMALL>
+<A HREF="http://ftp.freebsd.org/pub/internet/rtfm/news/answers/starwars/www/part3">Untitled</A>&nbsp;
+- html The Unofficial Harrison Ford Stuff Homepage http://www. html Harrison Ford http://www.
+<BR><SMALL>http://ftp.freebsd.org/pub/internet/rtfm/news/answers/starwa...
+<BR><A HREF="/search.gw?c=web&qbe=5641317&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>84% </SMALL>
+<A HREF="http://ftp.univie.ac.at/archive/faq/starwars/www/part3">Untitled</A>&nbsp;
+- The universe also spawned many Star Wars fans, who occasionally find their way onto the Internet where they can discuss Star Wars with other fans." com/ Star Wars Fan Club The Bounty Hunters Guild http://www.
+<BR><SMALL>http://ftp.univie.ac.at/archive/faq/starwars/www/part3
+<BR><A HREF="/search.gw?c=web&qbe=7792638&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>84% </SMALL>
+<A HREF="http://www.faqs.org/faqs/starwars/www/part3/">[rec.arts.sf.starwars.*] The Complete Star Wars WWW Listing Part 3/4</A>&nbsp;
+- com/Hollywood/Hills/3950/JabbasPalace. com/lbowser267/yjk/ For Star Wars fans under 18 The Boba Fett Fan Club http://bobafett.
+<BR><SMALL>http://www.faqs.org/faqs/starwars/www/part3/
+<BR><A HREF="/search.gw?c=web&qbe=24409075&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>84% </SMALL>
+<A HREF="http://obelix.unicamp.br/pub/FAQ/starwars/www/part3">Untitled</A>&nbsp;
+- org/groups/FoE/FoEhp/ CompuServe Star Wars Fan Club on the Web http://www. com/ Star Wars Fan Club The Bounty Hunters Guild http://www.
+<BR><SMALL>http://obelix.unicamp.br/pub/FAQ/starwars/www/part3
+<BR><A HREF="/search.gw?c=web&qbe=28306256&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>84% </SMALL>
+<A HREF="http://www.frc.ri.cmu.edu/news.answers/starwars/www/part3">Untitled</A>&nbsp;
+- com/Area51/Vault/7271/ Info and pics on the bounty hunters The Wedge Antilles Home Page http://www. com/~nhallman/ Ship Specs, pics, sounds Star Wars: Comprehensive Guide to Starships http://ourworld.
+<BR><SMALL>http://www.frc.ri.cmu.edu/news.answers/starwars/www/part3
+<BR><A HREF="/search.gw?c=web&qbe=28735520&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>84% </SMALL>
+<A HREF="http://www.univie.ac.at/ftp/archive/faq/starwars/www/part3">Untitled</A>&nbsp;
+- htm A guide to the ancient Dark Lords of the Sith Rancor's Star Wars Page http://pages. htm A tribute to the Dark Side Coruscant Databanks http://www.
+<BR><SMALL>http://www.univie.ac.at/ftp/archive/faq/starwars/www/part3
+<BR><A HREF="/search.gw?c=web&qbe=34720748&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>84% </SMALL>
+<A HREF="http://www.psextreme.com/excavate/mastertk.html">EXcavate (Masters of Teras Kasi)</A>&nbsp;
+- Published and Developed by LucasArts LucasArts has a very unsteady rep as a game developer. All the weapon effects were nice, from the moving light source that followed blaster fire to the all-important glow of the lightsaber.
+<BR><SMALL>http://www.psextreme.com/excavate/mastertk.html
+<BR><A HREF="/search.gw?c=web&qbe=31747634&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>84% </SMALL>
+<A HREF="http://mcw.on.ca/NEMESIS/planet_n.htm">Planet Database Section N </A>&nbsp;
+- Planetary Database : Section N Nal Hutta - A large, terrestrial planet in the Y'Toub system, Nal Hutta (meaning &quot;glorious jewel&quot; in Huttese) is one of the primary planets settled by the Hutts after leaving their ancestral planet of Varl. Nal Hutta and its moon, Nar Shaddaa, are located in the center of &quot;Hutt Space&quot; and receive a constant traffic of freight haulers,.
+<BR><SMALL>http://mcw.on.ca/NEMESIS/planet_n.htm
+<BR><A HREF="/search.gw?c=web&qbe=6205140&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>84% </SMALL>
+<A HREF="http://www.icrdl.net/cybervad/planeten.htm">Planete N</A>&nbsp;
+- The planet is ruled by a council of the eldest members of the &quot;Clans of the Ancients,&quot; the oldest Hutt families. Nar Shaddaa, the birthplace of Jabba the Hutt, is controlled by Hutts and various &quot;smuggling guilds&quot; who control various sections of the moon, and is widely regarded as the center of smuggling operations in the known galaxy.
+<BR><SMALL>http://www.icrdl.net/cybervad/planeten.htm
+<BR><A HREF="/search.gw?c=web&qbe=18260337&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>83% </SMALL>
+<A HREF="http://www.netwalk.com/~meena/starwars.html">A Long Time Ago...</A>&nbsp;
+- which hints at the Wookie oath (I forget the name at the moment) which he gave to Han (in the prequels I would guess). In the first three films he was going to show the Wookie's being enslaved (Han released Chewbacca who became his companion) so it would be a nice way to end Jedi.
+<BR><SMALL>http://www.netwalk.com/~meena/starwars.html
+<BR><A HREF="/search.gw?c=web&qbe=17578290&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>83% </SMALL>
+<A HREF="http://www.erols.com/njesuele/kenner.htm">Neil's Star Wars Universe and CCG Homepage List of all Kenner Star War...</A>&nbsp;
+- A-Wing Pilot - green flight suit, gun (VIII 93830). A-Wing Pilot - same figure as Star Wars A-Wing Pilot (93830).
+<BR><SMALL>http://www.erols.com/njesuele/kenner.htm
+<BR><A HREF="/search.gw?c=web&qbe=365448&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>83% </SMALL>
+<A HREF="http://www.usmo.com/~starwars/humor/top10.html">sky Walkers Star Wars Top 10 Lists page</A>&nbsp;
+- 6. Nowhere in any "Star Wars" storyline is the line: "Why would GOD need a starship?" TOP 10 REJECTED STAR WARS ACTION FIGURES / PLAYSETS.
+<BR><SMALL>http://www.usmo.com/~starwars/humor/top10.html
+<BR><A HREF="/search.gw?c=web&qbe=7103457&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>83% </SMALL>
+<A HREF="http://mcw.on.ca/NEMESIS/planet_r.htm">Planet Database Section R </A>&nbsp;
+- [LCMH] Rafa XI - The outermost planet in the Rafa system, Rafa XI is a world of icy slush orbiting in the dark. Navik the Red, the Rodian leader of the Chattza clan, eliminated many opposing clan leaders and nearly wiped out the entire Tetsus clan.
+<BR><SMALL>http://mcw.on.ca/NEMESIS/planet_r.htm
+<BR><A HREF="/search.gw?c=web&qbe=6270882&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>83% </SMALL>
+<A HREF="http://www.icrdl.net/cybervad/planetr.htm">Planet R</A>&nbsp;
+- None Available
+<BR><SMALL>http://www.icrdl.net/cybervad/planetr.htm
+<BR><A HREF="/search.gw?c=web&qbe=21458318&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>82% </SMALL>
+<A HREF="http://pilot.msu.edu/user/mccannr1/rules/swtse.txt">Untitled</A>&nbsp;
+- Carbonite Han: Toy #4 with 8 blinking LED's that tell you how many more Han Hole lights you need to Thaw Han. Han Hurry-up is lit at the Han Hole to escape from the Space Slug.
+<BR><SMALL>http://pilot.msu.edu/user/mccannr1/rules/swtse.txt
+<BR><A HREF="/search.gw?c=web&qbe=5391399&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>82% </SMALL>
+<A HREF="http://www.fanfix.com/stories/series/travil09.txt">Untitled</A>&nbsp;
+- Looking a little doubtful, Data cocked his head to the side. She eventually decided to examine for herself what was at work.
+<BR><SMALL>http://www.fanfix.com/stories/series/travil09.txt
+<BR><A HREF="/search.gw?c=web&qbe=19770327&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>82% </SMALL>
+<A HREF="http://www.eden.rutgers.edu/~reevesjd/previousupdates.html">SWAF: PREVIOUS UPDATES</A>&nbsp;
+- In addition I also bought Darth Vader, C-3P0, R2-D2, and Boba Fett all on green cards. (02/25/97) Found and Bought the Three Electronic F/X Figures from Kenner (R2-D2, Obi Wan, and Darth Vader).
+<BR><SMALL>http://www.eden.rutgers.edu/~reevesjd/previousupdates.html
+<BR><A HREF="/search.gw?c=web&qbe=8654222&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>82% </SMALL>
+<A HREF="http://www.collectoys.com/2tvmovie.html">John Wesley Hardin Trading Co: TV/Movie Action Figures</A>&nbsp;
+- Freeze $ 37.98 BAT010d 1997 Movie 12&quot; Robin $ 37.98 BAT012 ICEGLOW BATTHAMMER Batmobile $ 35.00 BAT013 SONIC BATMOBILE $ 14.00 BAT014 R/C BATMOBILE $ 30.00 BAT015 BATMAN ROADRACE SET $ 25.50 BAT042 15&quot; BATMAN &amp; ROBIN (Movie Set) $ 74.99 BAT021 MR. SET BAT014 R/C BATMOBILE $ 34.99 BAT015 BATMAN RODRACE SET $ 25.43 BAT012 ICEGLOW BATHAMMER BATMOBILE ELECTRONIC $ 34.98 BAT013.
+<BR><SMALL>http://www.collectoys.com/2tvmovie.html
+<BR><A HREF="/search.gw?c=web&qbe=32274389&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>82% </SMALL>
+<A HREF="http://hot.virtual-pc.com/mufty/swccg/info/listservfaq.txt">Untitled</A>&nbsp;
+- html FTP: ftp://ftp. TXT (plain text) ftp://ftp.
+<BR><SMALL>http://hot.virtual-pc.com/mufty/swccg/info/listservfaq.txt
+<BR><A HREF="/search.gw?c=web&qbe=36683095&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>82% </SMALL>
+<A HREF="http://hot.virtual-pc.com/mufty/swccg/info/listservfaq.html">ListServe FAQ</A>&nbsp;
+- BB: Black Border, indicating a Limited Edition card. WB: White Border, indicating an Unlimited Edition or 2-Player Set card.
+<BR><SMALL>http://hot.virtual-pc.com/mufty/swccg/info/listservfaq.html
+<BR><A HREF="/search.gw?c=web&qbe=40972827&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>82% </SMALL>
+<A HREF="http://bondo.wsc.mass.edu/friends/katieD/fettstories.htm">Fett</A>&nbsp;
+- Fett was about to fire on Luke, visions of millions of credits dancing in his head. Fett cried as the rioting and general chaos (wasn't he demoted to Private?
+<BR><SMALL>http://bondo.wsc.mass.edu/friends/katieD/fettstories.htm
+<BR><A HREF="/search.gw?c=web&qbe=39900107&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>82% </SMALL>
+<A HREF="http://www.geocities.com/Area51/Vault/6793/b.htm">A Guide to the Star Wars Universe -B-</A>&nbsp;
+- The Badlands of the planet Kamar is a flat, desolate area near the arid equator. These he transported to his home planet of Moltok for further study by his botanist colleagues.
+<BR><SMALL>http://www.geocities.com/Area51/Vault/6793/b.htm
+<BR><A HREF="/search.gw?c=web&qbe=19151712&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>82% </SMALL>
+<A HREF="http://home.ptd.net/~dbohr/wars.html">SPICE WARS</A>&nbsp;
+- * * * The X-Wing force approaches the Death Star at the same time that the Death Star approaches Yavin 4. "Look at the size of it," Wedge gasps over the radio. * * * Meanwhile, aboard the Death Star, an officer approaches Grand Moff Tarkin.
+<BR><SMALL>http://home.ptd.net/~dbohr/wars.html
+<BR><A HREF="/search.gw?c=web&qbe=478180&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>81% </SMALL>
+<A HREF="http://www.mindspring.com/~galarsen/planetdb/rfrm.html">The Planetary Tour of Star Wars -"R" Database</A>&nbsp;
+- Rachuk sector Lying close to the Galactic Core, the Rachuk sector borders the Morobe sector and contains the Chorax, Hensara, and Rachuk systems. [XWRS] Rachuk system The Rachuk system is located in the Rachuk sector and contains the planet Vladet, site of an Imperial sector headquarters.
+<BR><SMALL>http://www.mindspring.com/~galarsen/planetdb/rfrm.html
+<BR><A HREF="/search.gw?c=web&qbe=4496365&ctag=356A2862&showSummary=true&sorig=d">
+Search for more documents like this one</A>
+<P></SMALL>
+<FORM ACTION="/search.gw" METHOD=GET>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR><TD>
+<INPUT TYPE=hidden NAME=c VALUE=web>
+<INPUT TYPE=hidden NAME=s VALUE="+Jabba +bounty +hunter +Greedo">
+<INPUT TYPE=hidden NAME=showSummary VALUE=true>
+<INPUT TYPE=hidden NAME=start VALUE=0>
+<INPUT TYPE=hidden NAME=perPage VALUE=84>
+<INPUT TYPE=submit NAME=next VALUE="Next Results">
+</TD></TR></TABLE>
+</FORM>
+<small><a href="/relocate/co=webcraw;http://webcrawler.com/cgi-bin/WebQuery?text=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo&src=exciterecip">Try Your Search on WebCrawler</a></small><br>
+<small><br></small>
+<table border=0 cellspacing=0 cellpadding=0 width=100%><tr>
+<td bgcolor=999999>
+<table border=0 cellspacing=1 cellpadding=0 width=100%>
+<tr bgcolor=ffffcc>
+<td align=center nowrap>
+<font face=geneva,arial size=-1><b>
+<a href=#web>Web Results</a>
+</b></font>
+</td>
+</tr></table>
+</td></tr></table>
+<p>
+<center>
+<a href="/relocate/ad=34965_468rain.gif|pk=415538;http://www.netgrocer.com/default.cfm?s=1001032500310102" onMouseOver="window.status='Click Here to Buy Groceries at NetGrocer!';return true" language="Javascript"><img src="/img/ads/34965_468rain.gif" ALT="Click Here to Buy Groceries at NetGrocer!" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> Click Here to Buy Groceries at NetGrocer! </B></FONT></CENTER></a>
+<small><br></small>
+<table border=0 cellpadding=1 cellspacing=0>
+<FORM NAME=botbox ACTION=/search.gw>
+<tr><td bgcolor=cccccc>
+<a name="botbox"> </a>
+<table border=0 cellspacing=0 cellpadding=4 width=598 bgcolor=ffffff><tr>
+<td align=right bgcolor=ffffff>
+<b><font face=arial size=-1>You searched for</font></b>
+<input size=30 name=search value="+Jabba +bounty +hunter +Greedo">
+<input type=hidden name=tsug value=-1>
+<input type=hidden name=csug value=0>
+</td>
+<td><input type=submit value="Search Again"></td>
+<td nowrap><font face=arial,helvetica size=-1><b>
+<a href=/relocate/co=help;http://www.excite.com/Info/suggest.html>Help</a>
+&nbsp;<br>
+</b></font></td>
+<td>&nbsp;</td>
+</tr></table>
+<input type=hidden name=sorig value=rpage>
+</td></tr></table>
+</form>
+<small><br></small>
+<p>
+<font face=geneva,arial size=-1>
+<nobr><b>More Search Services:</b>&nbsp;
+<A HREF=http://www.excite.com/Info/comments.dcg>Feedback</A> &nbsp; <A HREF=http://www.excite.com/Info/searching.html>Search
+Help</A> &nbsp; <A HREF=http://www.excite.com/search/options.html>Power Search</A>&nbsp;
+<A HREF=http://nt.excite.com>Search the News</A></nobr><p>
+<nobr><b>Services:</b>&nbsp;
+<A HREF=http://www.excite.com/Info/advertising.html>Advertise on Excite</A>&nbsp; <A HREF=/relocate/co=xsr_botnav_bookflights;http://city.net/forms/reservations/>Book Flights</A>&nbsp;
+<A HREF=/relocate/co=xsr_botnav_classifieds;http://classifieds2000.com/cgi-cls/display.exe?partner=excite&path=class&template=none&>Classifieds</A>&nbsp;
+<A HREF=/relocate/co=xsr_botnav_gteyp;http://yp.gte.net/excite/>Yellow Pages</A>&nbsp;
+<A HREF=http://www.excite.com/Reference/instant.html>More...</A></nobr><p>
+</font>
+<font size=-2>
+Copyright 1998 Excite Inc. &nbsp; <A HREF=/Info/disclaimer.html>Disclaimer</A>
+</font>
+</center>
 <IMG SRC="http://ad.preferences.com/ping.ng;spacedesc=TCExciteData_Excite_1x1_RunOfSite_Any&event=KeywordResults" HEIGHT=1 WIDTH=1 BORDER=0>
-</BODY>
-</HTML>
-
-	
+</body>
+</html>

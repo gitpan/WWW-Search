@@ -3,17 +3,20 @@ WWW::Search and AutoSearch
 ==========================
 
 
-WHAT IS NEW WITH WWW::Search 1.017?  (27-May-98)
+WHAT IS NEW WITH WWW::Search 1.018?  (pending)
 -----------------------------------
-overview:  this is the public release since 1.012
+overview:  back-end updates
 
-- bug fix: Lycos bug fix
+- bug fix: Excite and WebCrawler (by Martin Thurn),
+	AltaVista (by John Heidemann)
+	updated 30-May-98
 
-(Major additions since 1.012, the last public release:
-- new back-ends: Yahoo, Magellan, WebCrawler (Martin Thurn)
-- fixed back-ends: HotBot, InfoSeek (Martin Thurn), Lycos, AltaVista
-- test suites are more lenient to hopefully reduce false negatives
-)
+- known bugs:  WWW::Search doesn't work on MacPerl because of
+	end-of-line differences.  A fix for this problem is in
+	progress.  (Problem identified and fix suggested by 
+	Chris Nandor.)
+
+	
 
 Note:  WWW::Search may have problems with older libwww's (5.08).  If
 "make test" dies with an error in RobotUA, upgrade libwww.  (Tested
@@ -42,18 +45,22 @@ correctly.  As of the day of the release the current back-end
 status is:
 
 AltaVista		working		(in test suite)
-Dejanews		?		not in test suite
-Excite			not working	(but in test suite)
+Dejanews		not working?	not in test suite
+Excite			working		(in test suite)
+Gopher			not working?	not in test suite
 HotBot			working		(in test suite)
 Infoseek		working		(in test suite)
 Lycos			working		(in test suite)
-Magellan		working		(in test suite)
-PLweb			?		not in test suite
-SFgate			?		not in test suite
-Verity			not working	not in test suite
+Magellan		not working	(in test suite)
+PLweb			not working?	not in test suite
+SFgate			not working?	not in test suite
+Verity			not working?	not in test suite
+Simple			not working?	not in test suite
 WebCrawler		working		(in test suite)
-Yahoo			working		(in test suite)
+Verity			not working	not in test suite
+Yahoo			not working	(in test suite)
 
+(others are currently under development, see contributors below for details)
 
 
 
@@ -358,6 +365,10 @@ overview: this is an alpha to fix HotBot/Infoseek
 - addition: Infoseek test suite
 - addition: test output now includes the version number
 
+1.017, 27-May-98
+overview:  this is the public release since 1.012
+- bug fix: Lycos bug fix
+
 
 
 SUPPORT AND CREDITS
@@ -376,9 +387,19 @@ BACK-ENDS:
 	Dejanews		Cesare Feroldi de Rosa <C.Feroldi@it.net>
 	Excite			GLen Pringle <pringle@cs.monash.edu.au>
 				and Martin Thurn <mthurn@tasc.com>
+	ExciteForWebServers	Paul Lindner <lindner@reliefweb.int>
+				(under development)
+	Gopher			Paul Lindner
 	HotBot			William Scheding and Martin Thurn
-	Infoseek		Cesare Feroldi de Rosa
+	Infoseek		Cesare Feroldi de Rosa and Martin Thurn
+	MSIndexServer		Paul Lindner (under development)
 	Lycos			William Scheding and John Heidemann
+	Magellan		Martin Thurn
+	PLWeb			Paul Lindner
+	SFgate			Paul Lindner
+	Simple			Paul Lindner
+	Verity			Paul Lindner
+	WebCrawler		Martin Thurn
 	Yahoo			William Scheding and Martin Thurn
 
 AutoSearch is based on an earlier implementation by Kedar Jog
@@ -389,7 +410,8 @@ identified by William Scheding <wls@isi.edu>, T. V. Raman
 <raman@adobe.com> (proxy support), C. Feroldi <C.Feroldi@it.net>,
 Larry Virden <lvirden@cas.org>, Paul Lindner <paul.lindner@itu.int>,
 Guy Decoux <decoux@moulon.inra.fr>, R Chandrasekar (Mickey)
-<mickeyc@linc.cis.upenn.edu>, Martin Thurn <mthurn@tasc.com>.
+<mickeyc@linc.cis.upenn.edu>, Martin Thurn <mthurn@tasc.com>,
+Chris Nandor <pudge@pobox.com>.
 
 Bugs have reported by Joseph McDonald <joe@smartlink.net>, Juan Jose
 Amor <jjamor@infor.es>, Bowen Dwelle <bowen@hotwired.com>.

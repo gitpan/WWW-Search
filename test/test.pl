@@ -3,7 +3,7 @@
 #
 # test.pl
 # Copyright (C) 1997 by USC/ISI
-# $Id: test.pl,v 1.12 1998/05/28 04:05:54 johnh Exp $
+# $Id: test.pl,v 1.14 1998/06/01 04:43:53 johnh Exp $
 #
 # Copyright (c) 1997 University of Southern California.
 # All rights reserved.                                            
@@ -182,16 +182,16 @@ sub test_cases {
 
     $file = 'test/AltaVista/zero_result';
     $query = '+LSAM +Bogus' . 'NoSuchWord';
-    $date = 'Fri Oct  3 16:30:25 PDT 1997';
+    $date = 'Sat May 30 11:40:02 PDT 1998';
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/AltaVista/one_page_result';
     $query = '+LSAM +AutoSearch';
-    test($mode, $TEST_RANGE, 2, 19);
+    test($mode, $TEST_RANGE, 2, 10);
 
     $file = 'test/AltaVista/two_page_result';
-    $query = '+LSAM +ISI +work';
-    test($mode, $TEST_GREATER_THAN, 22);
+    $query = '+LSAM +ISI +IB';
+    test($mode, $TEST_GREATER_THAN, 10);
 
 
     ######################################################################
@@ -200,16 +200,15 @@ sub test_cases {
 
     $file = 'test/AltaVista/Web/zero_result';
     $query = '+LSAM +Bogus' . 'NoSuchWord';
-    $date = 'Thu Oct 23 17:08:48 PDT 1997';
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/AltaVista/Web/one_page_result';
     $query = '+LSAM +AutoSearch';
-    test($mode, $TEST_RANGE, 2, 19);
+    test($mode, $TEST_RANGE, 2, 10);
 
     $file = 'test/AltaVista/Web/two_page_result';
-    $query = '+LSAM +ISI +work';
-    test($mode, $TEST_GREATER_THAN, 22);
+    $query = '+LSAM +ISI +IB';
+    test($mode, $TEST_GREATER_THAN, 10);
 
     ######################################################################
     $search_engine = 'AltaVista::AdvancedWeb';
@@ -217,25 +216,23 @@ sub test_cases {
 
     $file = 'test/AltaVista/AdvancedWeb/zero_result';
     $query = 'LSAM and Bogus' . 'NoSuchWord';
-    $date = 'Thu Oct 23 17:08:48 PDT 1997';
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/AltaVista/AdvancedWeb/one_page_result';
     $query = 'LSAM and AutoSearch';
-    test($mode, $TEST_RANGE, 2, 19);
+    test($mode, $TEST_RANGE, 2, 10);
 
     $file = 'test/AltaVista/AdvancedWeb/two_page_result';
-    $query = 'LSAM and ISI and work';
-    test($mode, $TEST_GREATER_THAN, 22);
+    $query = 'LSAM and ISI and IB';
+    test($mode, $TEST_GREATER_THAN, 10);
 
     ######################################################################
     $search_engine = 'AltaVista::News';
     $maintainer = 'John Heidemann <johnh@isi.edu>';
 
     $file = 'test/AltaVista/News/multi_result';
-    $query = 'perl';
-    $date = 'Thu Oct 23 18:04:51 PDT 1997';
-    test($mode, $TEST_GREATER_THAN, 70);   # 30 hits/page
+    $query = '+Perl +CPAN';
+    test($mode, $TEST_GREATER_THAN, 30);   # 30 hits/page
 
     $file = 'test/AltaVista/News/zero_result';
     $query = '+perl +Bogus' . 'NoSuchWord';
@@ -246,8 +243,7 @@ sub test_cases {
     $maintainer = 'John Heidemann <johnh@isi.edu>';
 
     $file = 'test/AltaVista/AdvancedNews/multi_result';
-    $query = 'perl';
-    $date = 'Thu Oct 23 18:04:51 PDT 1997';
+    $query = 'Perl and CPAN';
     test($mode, $TEST_GREATER_THAN, 70);   # 30 hits/page
 
     $file = 'test/AltaVista/AdvancedNews/zero_result';
@@ -280,9 +276,9 @@ sub test_cases {
     test($mode, $TEST_GREATER_THAN, 86);
 
     ######################################################################
-#    $search_engine = 'Gopher';
-#    $maintainer = 'Paul Lindner <lindner@reliefweb.int>';
-#    not_working;
+    $search_engine = 'Gopher';
+    $maintainer = 'Paul Lindner <lindner@reliefweb.int>';
+    not_working;
 
     ######################################################################
     $search_engine = 'HotBot';
@@ -404,9 +400,10 @@ sub test_cases {
     $maintainer = 'Paul Lindner <lindner@reliefweb.int>';
     not_working;
 
-#    $search_engine = 'Simple';
-#    $maintainer = 'Paul Lindner <lindner@reliefweb.int>';
-#    not_working;
+    ######################################################################
+    $search_engine = 'Simple';
+    $maintainer = 'Paul Lindner <lindner@reliefweb.int>';
+    not_working;
 
     ######################################################################
     $search_engine = 'Verity';

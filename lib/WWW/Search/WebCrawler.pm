@@ -2,7 +2,7 @@
 
 # WebCrawler.pm
 # Copyright (C) 1998 by Martin Thurn
-# $Id: WebCrawler.pm,v 1.2 1998/05/28 04:05:43 johnh Exp $
+# $Id: WebCrawler.pm,v 1.3 1998/06/01 04:43:52 johnh Exp $
 
 package WWW::Search::WebCrawler;
 
@@ -12,9 +12,12 @@ WWW::Search::WebCrawler - class for searching WebCrawler
 
 =head1 SYNOPSIS
 
-    require WWW::Search;
-    $search = new WWW::Search('WebCrawler');
-
+  use WWW::Search;
+  my $oSearch = new WWW::Search('WebCrawler');
+  my $sQuery = WWW::Search::escape_query("+sushi restaurant +Columbus Ohio");
+  $oSearch->native_query($sQuery);
+  while (my $oResult = $oSearch->next_result())
+    print $oResult->url, "\n";
 
 =head1 DESCRIPTION
 
@@ -56,6 +59,12 @@ Please tell the author if you find any!
 
 This module adheres to the C<WWW::Search> test suite mechanism. 
 
+   Test cases (results as of 1998-05-29):
+  '+mrfglbqnx +NoSuchWord'    ---   no hits
+  'LSAM'                      ---    1 hit  on one page
+  'disestablishmentarianism'  ---    5 hits on one page
+  'Greedo'                    ---  121 hits on two pages
+
 
 =head1 AUTHOR
 
@@ -75,17 +84,16 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 =head1 VERSION HISTORY
 
+=head2 1.5
+
+1998-05-29: New format of www.webcrawler.com output.
+
 =head2 1.3
 
 First publicly-released version.
 
 
 =cut
-
-#  Test cases:
-# '+mrfglbqnx +NoSuchWord'    ---   no hits
-# 'disestablishmentarianism'  ---   13 hits on one page
-# 'Greedo'                    ---  129 hits on two pages
 
 #####################################################################
 
@@ -104,8 +112,13 @@ sub native_setup_search
   {
   my($self, $native_query, $native_options_ref) = @_;
 
+  # Set some private variables:
+  $self->{_debug} = $native_options_ref->{'search_debug'};
+  $self->{_debug} = 2 if ($native_options_ref->{'search_parse_debug'});
+  $self->{_debug} ||= 0;
+
   my $DEFAULT_HITS_PER_PAGE = 100;
-  # $DEFAULT_HITS_PER_PAGE = 30;  # for debugging
+  $DEFAULT_HITS_PER_PAGE = 10 if $self->{_debug};
   $self->{'_hits_per_page'} = $DEFAULT_HITS_PER_PAGE;
 
   # Add one to the number of hits needed, because Search.pm does ">"
@@ -142,7 +155,7 @@ sub native_setup_search
   if (!defined($self->{_options})) 
     {
     $self->{_options} = {
-                         'search_url' => 'http://webcrawler.com/cgi-bin/WebQuery',
+                         'search_url' => 'http://www.webcrawler.com/cgi-bin/WebQuery',
                          'search' => $native_query,
                          'start' => $self->{'_next_to_retrieve'},
                          'showSummary' => 'true',
@@ -172,11 +185,6 @@ sub native_setup_search
 
   # Finally figure out the url.
   $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
-
-  # Set some private variables:
-  $self->{_debug} = $options_ref->{'search_debug'};
-  $self->{_debug} = 2 if ($options_ref->{'search_parse_debug'});
-  $self->{_debug} = 0 if (!defined($self->{_debug}));
   } # native_setup_search
 
 
@@ -203,53 +211,82 @@ sub native_retrieve_some
   print STDERR " *   got response\n" if $self->{'_debug'};
   $self->{'_next_url'} = undef;
   # Parse the output
-  my ($HEADER, $HITS, $DESC, $TRAILER) = qw(HE HH DE TR);
+  my ($HEADER, $HITS, $NBSP, $URL, $DESC, $TRAILER) = qw(HE HH NB UR DE TR);
   my $hits_found = 0;
   my $state = $HEADER;
   my $hit;
   foreach (split(/\n/, $response->content())) 
     {
     next if m/^$/; # short circuit for blank lines
-    print STDERR " *   $state ===$_===" if 2 <= $self->{'_debug'};
+    print STDERR " * $state ===$_===" if 2 <= $self->{'_debug'};
     if ($state eq $HEADER && 
-        m@^Results\s+\d+-\d+\s+of\s+(\d+)\s+for\s+<B>(.*)</B>@i) 
+        m=^Result$=i) 
       {
       # Actual line of input is:
-      # Results 26-50 of 46642 for <B>star wars collecting</B>
+      # Result
+      $self->approximate_result_count(1);
       print STDERR "header line\n" if 2 <= $self->{'_debug'};
-      $self->approximate_result_count($1);
+      $state = $HITS;
+      }
+    elsif ($state eq $HEADER && 
+        m=^Results\s+\d+-\d+\s+of\s+(\d+)=i) 
+      {
+      # Actual line of input is:
+      # Results 26-50 of 46642
+      print STDERR "header line\n" if 2 <= $self->{'_debug'};
+      unless (defined($self->approximate_result_count) and 0 < $self->approximate_result_count)
+        {
+        $self->approximate_result_count($1);
+        } # if
       $state = $HITS;
       } # we're in HEADER mode, and line has number of results
     elsif ($state eq $HEADER && 
-           m@^Top\s+\d+\s+of\s+(\d+)\s+for\s+<B>(.*)</B>@i) 
+           m=^Top\s+\d+\s+of\s+(\d+)=i) 
       {
       # Actual line of input is:
-      # Top 6 of 6 for <B>LSAM</B>
+      # Top 84 of 4399
       print STDERR "header line\n" if 2 <= $self->{'_debug'};
       $self->approximate_result_count($1);
       $state = $HITS;
       } # we're in HEADER mode, and line has number of results
     elsif ($state eq $HITS && 
-           m|<B>\d+\%\s*</B>.+?<A\s+HREF=\"([^\"]+)\">([^<]+)|i)
+           m=^<DT>.+?(\d+)\%=)
       {
-      print STDERR "hit url line\n" if 2 <= $self->{'_debug'};
+      print STDERR "hit percent line\n" if 2 <= $self->{'_debug'};
       # Actual line of input:
-      # <BR><FONT FACE="Times" COLOR="#006699"><B>79% </B></FONT>&nbsp;&nbsp;<A HREF="http://www.geocities.com/Area51/Chamber/4729/">BACK TO THE FUTURE COLLECTABLES</A>
-      # Sometimes the </A> is on the next line.
-      # Sometimes there is a /r right before the </A>
+      # <DT><FONT FACE="Times" COLOR="#006699"><B>64% </B></FONT>
       if (defined($hit))
         {
         push(@{$self->{cache}}, $hit);
         }
       $hit = new WWW::SearchResult;
-      $hit->add_url($1);
       $self->{'_num_hits'}++;
       $hits_found++;
+      $hit->score($1);
+      $state = $NBSP;
+      }
+    elsif ($state eq $NBSP && 
+           m=^&nbsp;&nbsp;$=)
+      {
+      print STDERR "hit double nbsp line\n" if 2 <= $self->{'_debug'};
+      # Actual line of input:
+      # &nbsp;&nbsp;
+      $state = $URL;
+      }
+    elsif ($state eq $URL && 
+           m|<A\s+HREF=\"([^\"]+)\">([^<]+)|i)
+      {
+      print STDERR "hit url line\n" if 2 <= $self->{'_debug'};
+      # Actual line of input:
+      # <A HREF="http://www.geocities.com/Area51/Chamber/4729/">BACK TO THE FUTURE COLLECTABLES</A>
+      # Sometimes the </A> is on the next line.
+      # Sometimes there is a /r right before the </A>
+      $hit->add_url($1);
       $hit->title($2);
       $state = $DESC;
       }
     elsif ($state eq $DESC &&
-           m|^<DD>(.+)$|)
+           m|^<DD>(.*)$|)
       {
       print STDERR "hit description line\n" if 2 <= $self->{'_debug'};
       $hit->description($1);
@@ -303,9 +340,9 @@ Martin''s page download results, 1998-02:
 
 simplest arbitrary page:
 
-http://webcrawler.com/cgi-bin/WebQuery?search=star+wars+collecting;showSummary=true;perPage=25;start=0
+http://www.webcrawler.com/cgi-bin/WebQuery?search=star+wars+collecting;showSummary=true;perPage=25;start=0
 
 Here''s what I''m generating:
 
-http://webcrawler.com/cgi-bin/WebQuery?search=LSAM;perPage=24;start=0;showSummary=true;
-http://webcrawler.com/cgi-bin/WebQuery?search=LSAM;perPage=30;start=0;showSummary=true;
+http://www.webcrawler.com/cgi-bin/WebQuery?search=LSAM;perPage=24;start=0;showSummary=true;
+http://www.webcrawler.com/cgi-bin/WebQuery?search=LSAM;perPage=30;start=0;showSummary=true;
