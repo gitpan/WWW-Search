@@ -34,7 +34,7 @@ use vars qw( @EXPORT @EXPORT_OK @ISA );
               no_test not_working not_working_with_tests not_working_and_abandoned
               $MODE_DUMMY $MODE_INTERNAL $MODE_EXTERNAL $MODE_UPDATE
               $TEST_DUMMY $TEST_EXACTLY $TEST_BY_COUNTING $TEST_GREATER_THAN $TEST_RANGE
-              new_engine run_test run_gui_test
+              new_engine run_test run_gui_test skip_test
             );
 @EXPORT_OK = qw( );
 @ISA = qw( Exporter );
@@ -45,16 +45,21 @@ use File::Path;
 
 use vars qw( $VERSION $bogus_query );
 
-$VERSION = '2.14';
+$VERSION = '2.16';
 $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 
 ($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = qw(dummy internal external update);
 ($TEST_DUMMY, $TEST_EXACTLY, $TEST_BY_COUNTING, $TEST_GREATER_THAN, $TEST_RANGE) = (1..10);
 
 # At the time this module is loaded, try to find a working WebSearch:
-my @as = split(/\s/, `WebSearch --VERSION`);
+my @as = split(/\s/, eval{`WebSearch --VERSION`});
 my $websearch = shift @as;
+# Try local directory, in case . is not in the path:
+@as = split(/\s/, eval{`./WebSearch --VERSION`});
+$websearch ||= shift @as;
+$websearch ||= 'not in the path';
 undef $websearch unless $websearch =~ m/WebSearch/;
+# print STDERR "in WWW::Search::Test, websearch is $websearch\n";
 
 =head2 new
 
@@ -398,7 +403,7 @@ sub not_working_with_tests
   return if (!$self->relevant_test($engine));
   print <<"KNOWNFAILURE";
   trial none ($engine)
-  Test cases for this search engine are known to fail.  
+  Test cases for this search engine are known to fail.
   You are encouraged to investigate the problem and email its maintainer,
   $maint.
 KNOWNFAILURE
@@ -419,12 +424,12 @@ sub not_working_and_abandonded
   return if (!$self->relevant_test($engine));
   print <<"ADOPT";
   trial none ($engine)
-  This search engine is known to be non-functional.  
-  You are encouraged to adopt it from its last known maintainer, 
+  This search engine is known to be non-functional.
+  You are encouraged to adopt it from its last known maintainer,
   $maint.
 ADOPT
   } # not_working_and_abandonded
-        
+
 =head2 reset_error_count
 
 Reset the counter of errors to zero.
@@ -614,6 +619,19 @@ sub run_our_test
     } # if
   print STDOUT "ok $iTest\n";
   } # run_test
+
+=head2 skip_test
+
+You can call this function instead of run_test() or run_gui_test()
+if the current test must be skipped for any reason.
+
+=cut
+
+sub skip_test
+  {
+  $iTest++;
+  print STDOUT "skip $iTest\n";
+  } # skip_test
 
 1;
 

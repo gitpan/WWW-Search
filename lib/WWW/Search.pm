@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.60 2001/09/13 17:50:54 mthurn Exp $
+# $Id: Search.pm,v 1.61 2001/11/23 20:20:03 mthurn Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -69,7 +69,7 @@ package WWW::Search;
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query generic_option strip_tags @ENGINES_WORKING);
-$VERSION = '2.25';
+$VERSION = '2.26';
 $MAINTAINER = 'Martin Thurn <mthurn@tasc.com>';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
@@ -976,7 +976,7 @@ sub http_request
 
     if ($self->{'search_to_file'} && $response->is_success)
       {
-      $self->http_request_to_file($url, $data, $response);
+      $self->http_request_to_file($url, $response);
       } # if
     } # if not from_file
   return $response;
@@ -1039,8 +1039,10 @@ sub http_request_from_file {
 
 sub http_request_to_file {
     my $self = shift;
+    # The LAST arg is a LWP::Response object:
     my $response = pop;
-    my ($url) = @_;
+    # The only other arg we care about is the FIRST arg, a url:
+    my ($url, ) = @_;
 
     my $fn = $self->http_request_get_filename();
 

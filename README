@@ -3,13 +3,13 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.24?  (2001-09-13)
+WHAT IS NEW IN WWW::Search 2.25?  (2001-12-18)
 ----------------------------------------------
 
 overview: 
- * added generic method native_retrieve_some() 
- * allow debugging in WWW::Search::Test
- * note that the distribution version is no longer synchronized with the module version
+ * new function WWW::Search::Test::skip_test
+ * AutoSearch has a new optional argument, --debug
+ * other tiny maintenance issues
 
 For details, see the ChangeLog file and/or the pod of each affected
 module.

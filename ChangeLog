@@ -1,3 +1,15 @@
+2001-11-23  Kingpin  <mthurn@copper.dulles.tasc.com>
+
+	* lib/WWW/Search.pm (http_request): delete bogus argument to http_request_to_file() call
+
+2001-11-02  Kingpin  <mthurn@copper.dulles.tasc.com>
+
+	* code/AutoSearch-code.pl: new option --debug
+
+2001-10-25  Kingpin  <mthurn@copper.dulles.tasc.com>
+
+	* lib/WWW/Search/Test.pm (skip_test): new method
+
 2001-09-10  Kingpin  <mthurn@copper.dulles.tasc.com>
 
 	* lib/WWW/Search.pm (native_retrieve_some): new method

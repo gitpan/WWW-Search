@@ -16,7 +16,7 @@ BEGIN
 eval 'use WWW::Search';
 # print STDERR ">>>$@<<<\n";
 ok($@ eq '');
-eval 'use WWW::Search::Test';
+eval 'require WWW::Search::Test';
 # print STDERR ">>>$@<<<\n";
 ok($@ eq '');
 eval 'use WWW::SearchResult';

@@ -4,7 +4,7 @@ exit 0;
 # AutoSearch-code.pl
 # Copyright (c) 1996-1997 University of Southern California.
 # All rights reserved.
-# $Id: AutoSearch-code.pl,v 1.2 2001/04/11 14:42:21 mthurn Exp mthurn $
+# $Id: AutoSearch-code.pl,v 1.3 2001/11/02 15:59:17 mthurn Exp $
 #
 # Complete copyright notice follows below.
 
@@ -428,7 +428,7 @@ use POSIX qw(strftime);
 use WWW::Search;
 
 use vars qw( $VERSION );
-$VERSION = '2.03';
+$VERSION = '2.04';
 
 sub print_version
   {
@@ -459,17 +459,20 @@ my(%opts,@query_list,$query_name,$query_string,$search_engine,$query_options,$ur
 $opts{'m'} = '';
 $opts{'v'} = 0;
 $opts{'stats'} = 0;
-&GetOptions(\%opts, qw(n|qn|queryname=s s|qs|querystring=s e|engine=s m|mail=s h|host=s p|port=s o|options=s@ f|uf|urlfilter=s stats v|verbose V|VERSION));
+$opts{'debug'} = 0;
+&GetOptions(\%opts, qw(n|qn|queryname=s s|qs|querystring=s e|engine=s m|mail=s h|host=s p|port=s o|options=s@ f|uf|urlfilter=s stats v|verbose V|VERSION debug));
 &print_version if $opts{'V'};
 
 &usage if ($#ARGV == -1); # we MUST have one left, the qid
 
 my $s_dbg = $opts{'stats'};
 my $v_dbg = $opts{'v'};
+my $d_dbg = $opts{'debug'};
 if ($v_dbg)
   {
   print "v     option: defined\n";
   print "stats option: ", ! $opts{'stats'} ? 'not ' : '', "defined\n";
+  print "debug option: ", ! $opts{'debug'} ? 'not ' : '', "defined\n";
   } # if
 if ($opts{'m'} ne '')
   {
@@ -595,7 +598,7 @@ exit 0;
 #
 sub main {
   my($query_dir) = @_;
-  my($dbg_search) = 0;
+  my($dbg_search) = $d_dbg || 0;
   my($v_dbg) = $v_dbg; # shall we be verbose??
   my $sEmail = '';
   my($url_filter_count) = 0;
@@ -868,7 +871,7 @@ sub main {
       # if we match the weekly (active search) hits, skip it.
       next OLD_URL if $url eq $line;
     }
-    printf "suspend:\n [%02d]%s\n",$i,$url if $dbg_search;
+    printf "suspend: [%02d]%s\n",$i,$url if $dbg_search;
     # not found? save it, it's been suspended
     push(@suspended_url,$url);
     $title = $old_summary_title[$i];
@@ -879,7 +882,7 @@ sub main {
   print " with \"@SummaryQueryOptions\"" if (defined($s_dbg) && $#SummaryQueryOptions);
   print "\n" if defined($s_dbg);
   print "old summary count: ",$#old_summary_url + 1,"\n" if defined($s_dbg);
-  print "raw hits         : ",$hits,"\n" if defined($s_dbg);
+  print "new raw hits     : ",$hits,"\n" if defined($s_dbg);
   print "urls filtered    : ",$url_filter_count,", filter \"",$URLFilter,"\"\n" if defined($s_dbg);
   print "not filtered     : ",$saved,"\n" if defined($s_dbg);
   print "results set count: ",$#new_weekly_url + 1,"\n" if defined($s_dbg);
