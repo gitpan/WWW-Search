@@ -1,6 +1,18 @@
+2000-04-03  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search.pm (reset_search): correctly and siltently handle intermixed calls to gui_query() and native_query()
+
+2000-03-24  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search/Google.pm: updated to 2.18 (fix rare garbage in URLs)
+
 2000-03-23  Kingpin  <mthurn@tasc.com>
 
-	* t/use.t: added test for *any* results
+	* WWW::Search VERSION 2.12 RELEASED!
+	
+2000-03-23  Kingpin  <mthurn@tasc.com>
+
+	* t/use.t: added test to make sure we're getting *any* results
 
 	* lib/WWW/Search.pm (escape_query): fixed BUG in argument parsing
 

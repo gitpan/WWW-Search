@@ -2,7 +2,7 @@
 # Google.pm
 # by Jim Smyser
 # Copyright (C) 1996-1999 by Jim Smyser & USC/ISI
-# $Id: Google.pm,v 1.16 2000/03/13 14:47:47 mthurn Exp $
+# $Id: Google.pm,v 1.17 2000/03/24 15:21:31 mthurn Exp $
 ##########################################################
 
 
@@ -136,7 +136,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.17';
+$VERSION = '2.18';
 
 $MAINTAINER = 'Jim Smyser <jsmyser@bigfoot.com>';
 $TEST_CASES = <<"ENDTESTCASES";
@@ -232,19 +232,20 @@ sub native_retrieve_some {
      $state = $HITS;
      } 
   elsif ($state == $HITS &&
-     m|<a href=(.*)>(.*?)</a><font size=-1><br><font color=green>|i) {
+     m|<a href=(.*)\>(.*?)</a><font size=-1><br><font color=green>|i) {
      my ($url, $title) = ($1,$2);
      ($hit, $raw) = $self->begin_new_hit($hit, $raw);
      print STDERR "**Found HIT1 Line**\n" if ($self->{_debug});
      $raw .= $_;
-     $hit->add_url($url);
+     $url =~ s/(>.*)//g;
+     $hit->add_url(strip_tags($url));
      $hits_found++;
-     $title = $url if ($title eq '');
+	 $title = $url if ($title eq '');
      $hit->title(strip_tags($title));
      $state = $HITS;
      } 
   elsif ($state == $HITS &&
-     m@^<p><a href=([^<]+)&.*?>(.*)</a><font size=-1><br>(.*)@i ||
+     m@^<p><a href=([^<]+)\&.*?>(.*)</a><font size=-1><br>(.*)@i ||
      m@^<p><a href=([^<]+)>(.*)</a>.*?<font size=-1><br>(.*)@i)
      {
      ($hit, $raw) = $self->begin_new_hit($hit, $raw);
@@ -253,10 +254,11 @@ sub native_retrieve_some {
      $mDesc = $3;
      $url =~ s/\/url\?sa=\w&start=\d+&q=//g;
      $url =~ s/&(.*)//g;
+     $url =~ s/(>.*)//g;
      $raw .= $_;
-     $hit->add_url($url);
+     $hit->add_url(strip_tags($url));
      $hits_found++;
-     $title = $url if ($title eq '');
+	 $title = $url if ($title eq '');
      $hit->title(strip_tags($title));
      $mDesc =~ s/<.*?>//g;
      $mDesc =  $mDesc . '<br>' if not $mDesc =~ m@<br>@;

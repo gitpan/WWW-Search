@@ -4,7 +4,7 @@
 # GoTo.pm
 # by Jim Smyser
 # Copyright (C) 1996-1999 by Jim Smyser & USC/ISI
-# $Id: GoTo.pm,v 1.7 1999/11/05 19:16:05 mthurn Exp $
+# $Id: GoTo.pm,v 1.8 2000/04/03 14:56:14 mthurn Exp $
 ######################################################
 
 package WWW::Search::GoTo;
@@ -83,7 +83,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '1.05';
+$VERSION = '1.06';
 
 $MAINTAINER = 'Jim Smyser <jsmyser@bigfoot.com>';
 $TEST_CASES = <<"ENDTESTCASES";
@@ -97,108 +97,113 @@ use WWW::Search(generic_option);
 require WWW::SearchResult;
 
 
-# private
 sub native_setup_search {
+       my($self, $native_query, $native_options_ref) = @_;
+       $self->{_debug} = $native_options_ref->{'search_debug'};
+       $self->{_debug} = 2 if ($native_options_ref->{'search_parse_debug'});
+       $self->{_debug} = 0 if (!defined($self->{_debug}));
 
-      my($self, $native_query, $native_options_ref) = @_;
-      $self->user_agent('user');
-      $self->{_next_to_retrieve} = 0;
-      if (!defined($self->{_options})) {
-      $self->{_options} = {
-           'search_url' => 'http://www.goto.com/d/search/p/befree/',
-      };
-      };
-      my($options_ref) = $self->{_options};
-      if (defined($native_options_ref)) {
-      # Copy in new options.
-      foreach (keys %$native_options_ref) {
-          $options_ref->{$_} = $native_options_ref->{$_};
-      };
-      };
-      # Process the options.
-      my($options) = '';
-      foreach (keys %$options_ref) {
-      # printf STDERR "option: $_ is " . $options_ref->{$_} . "\n";
-      next if (generic_option($_));
-      $options .= $_ . '=' . $options_ref->{$_} . '&';
-      };
-      $self->{_debug} = $options_ref->{'search_debug'};
-      $self->{_debug} = 2 if ($options_ref->{'search_parse_debug'});
-      $self->{_debug} = 0 if (!defined($self->{_debug}));
-      # Finally figure out the url.
-      $self->{_base_url} = 
-      $self->{_next_url} =
-      $self->{_options}{'search_url'} .
-      "?" . $options .
-      "Keywords=" . $native_query;
-      print $self->{_base_url} . "\n" if ($self->{_debug});
-}
-
+       #Define default number of hit per page
+       $self->{agent_e_mail} = 'jsmyser@bigfoot.com';
+       $self->user_agent('user');
+       $self->{_next_to_retrieve} = 0;
+       if (!defined($self->{_options})) {
+       $self->{'search_base_url'} = 'http://www.goto.com';
+       $self->{_options} = {
+            'search_url' => 'http://www.goto.com/d/search/p/befree/',
+            'Keywords' => $native_query,
+            };
+            }
+       my $options_ref = $self->{_options};
+       if (defined($native_options_ref)) 
+            {
+       # Copy in new options.
+            foreach (keys %$native_options_ref) 
+            {
+            $options_ref->{$_} = $native_options_ref->{$_};
+            } 
+            } 
+       # Process the options.
+       my($options) = '';
+             foreach (sort keys %$options_ref) 
+            {
+       # printf STDERR "option: $_ is " . $options_ref->{$_} . "\n";
+       next if (generic_option($_));
+       $options .= $_ . '=' . $options_ref->{$_} . '&';
+       }
+       chop $options;
+       # Finally figure out the url.
+       $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $self->hash_to_cgi_string($self->{_options});
+       } 
 
 # private
 sub native_retrieve_some {
+       my ($self) = @_;
+       print STDERR "**GoTo::native_retrieve_some()\n" if $self->{_debug};
+       
+       # Fast exit if already done:
+       return undef if (!defined($self->{_next_url}));
+       
+       # If this is not the first page of results, sleep so as to not
+       # overload the server:
+       $self->user_agent_delay if 1 < $self->{'_next_to_retrieve'};
+       
+       # Get some:
+       print STDERR "**Requesting (",$self->{_next_url},")\n" if $self->{_debug};
+       my($response) = $self->http_request('GET', $self->{_next_url});
+       $self->{response} = $response;
+       if (!$response->is_success) 
+          {
+         return undef;
+          }
+       $self->{'_next_url'} = undef;
+       print STDERR "**Found Some\n" if $self->{_debug};
+       # parse the output
+       my ($HEADER, $HITS, $DESC) = qw(HE HI DE);
+       my $state = $HEADER;
+       my $hit = ();
+       my $hits_found = 0;
+       foreach ($self->split_lines($response->content()))
+          {
+       next if m@^$@; # short circuit for blank lines
+       print STDERR " * $state ===$_=== " if 2 <= $self->{'_debug'};
 
-      my ($self) = @_;
-      # fast exit if already done
-      return undef if (!defined($self->{_next_url}));
-   
-      # get some
-      print STDERR "**FETCHING: " . $self->{_next_url} . "**\n" if ($self->{_debug});
-      my($response) = $self->http_request('GET', $self->{_next_url});
-      $self->{response} = $response;
-      if (!$response->is_success) {
-      return undef;
-      };
-   
-      # parse the output
-      my($HEADER, $HITS, $DESC, $SCORE, $POST_NEXT) = (1..10);
-      my($hits_found) = 0;
-      my($state) = ($HEADER);
-      my($hit, $raw, $title, $url, $rating, $desc) = ();
-      foreach ($self->split_lines($response->content())) {
-      next if m@^$@; # short circuit for blank lines
-   if ($state == $HEADER && m@<head>@i) { 
-      # GoTo doesn't appear to display total pages found
-      print STDERR "**FOUND HEADER**" if ($self->{_debug} >= 2);
-      $state = $HITS;
-
- } elsif ($state == $HITS && 
-      m|.*?<b><a href="(.*?)"\ target.*?>(.*)</a></b>.*?<font face=.*?>(.*)<br><em>(.*?)</em>|i) 
-      { 
-      print STDERR "**PARSING URL, TITLE, DESC.**\n" if ($self->{_debug} >= 2);
-      my ($url, $title, $description, $sURL) = ($1,$2,$3,$4);
-      my($hit) = new WWW::SearchResult;
-      $url = 'http://goto.com' . $url;
-      $hit->add_url($url);
-      $hit->title($title);
-      $hit->description($description);
-      $hit->source($sURL);
-      $hit->raw($_);
-      $hits_found++;
-      push(@{$self->{cache}}, $hit);
-      $state = $HITS;
-
- } elsif ($state == $HITS && m@<.*?href="([^"]+)"><.*?>More Results<.*?>@i) { 
-      my($relative_url) = $1;
-      $self->{_next_url} = new URI::URL($relative_url, $self->{_base_url});
-      print STDERR "**GOING TO NEXT PAGE**\n" if ($self->{_debug} >= 2);
-      $state = $POST_NEXT;
-      } else {
-      };
-      };
-   if ($state != $POST_NEXT) {
-      # End here if no other 'next' page to get
-      if (defined($hit)) {
-      push(@{$self->{cache}}, $hit);
-      };
-      $self->{_next_url} = undef;
-      };
-      # zZZzZZZZZZZZzZZZZZZZZ
-      $self->user_agent_delay if (defined($self->{_next_url}));
-      return $hits_found;
-      }
+   if ($state eq $HEADER && m|<layer>|i) {
+       print STDERR "**Beginning Line...\n" ;
+       $state = $HITS;
+       }
+   elsif ($state eq $HITS && m/^<li>.*?<a href="([^"]+)".*?>(.*)<\/a>.*?/i) {
+       my ($url, $title) = ($1,$2);
+         if (defined($hit)) 
+            {
+         push(@{$self->{cache}}, $hit);
+            };
+       $hit = new WWW::SearchResult;
+       $hits_found++;
+       $url = "http://goto.com" . $url;
+       $hit->add_url($url) if (defined($hit));
+       $hit->title($title);
+       $state = $DESC;
+       } 
+   elsif ($state eq $DESC && m/^<br>(.*)<br>/i) {
+       $hit->description($1);
+       $state = $HITS;
+       } 
+   elsif ($state eq $HITS && m@<a href="([^"]+)"><.*?>More Results<.*?>@i) { 
+       print STDERR "**Found 'next' Tag\n" if 2 <= $self->{_debug};
+       my $sURL = $1;
+       $self->{'_next_url'} = $self->{'search_base_url'} . $sURL;
+       # print STDERR " **Next Tag is: ", $self->{'_next_url'}, "\n" ;
+       $state = $HITS;
+          } 
+       else 
+          {
+       print STDERR "**Nothing Matched\n" if 2 <= $self->{_debug};
+           }
+           } 
+       if (defined($hit)) {
+           push(@{$self->{cache}}, $hit);
+           } 
+       return $hits_found;
+}
 1;
-
-
-
-

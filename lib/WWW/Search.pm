@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.28 2000/03/23 14:16:16 mthurn Exp $
+# $Id: Search.pm,v 1.36 2000/04/03 16:26:57 mthurn Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -66,7 +66,7 @@ package WWW::Search;
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query generic_option strip_tags @ENGINES_WORKING);
-$VERSION = '2.12';
+$VERSION = '2.13';
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
@@ -158,6 +158,20 @@ sub reset_search
   $self->{'number_retrieved'} = 0;
   $self->{'requests_made'} = 0;
   $self->{'state'} = $SEARCH_BEFORE;
+  $self->{'_next_url'} = '';
+  $self->{'search_base_url'} = '';
+  # This method is called by native_query().  native_query() is called
+  # either by gui_query() or by the user.  In the case that
+  # gui_query() was called, we do NOT want to clear out the _options
+  # hash.  For now, I implement a terrible hack to make this work:
+  my @as = caller(2);
+  if (defined(@as) and 1 < scalar(@as))
+    {
+    # print STDERR " in reset_search(), as is (", join(',', @as), ")\n";
+    return if $as[3] =~ m/gui_query/;
+    } # if
+  $self->{_options} = ();
+  # $self->{search_base_url} = '';
   } # reset_search
 
 =head2 version
@@ -210,8 +224,8 @@ consult the documentation for each backend to see if it is implemented.
 sub gui_query
   {
   # This function is a stub to prevent runtime errors.  This function
-  # should be defined in each backend as appropriate.  See HotBot.pm
-  # in the WWW-Search-HotBot distribution for an example of how to
+  # should be defined in each backend as appropriate.  See Yahoo.pm in
+  # the WWW-Search-Yahoo distribution for an example of how to
   # implement it.
   my $self = shift;
   return $self->native_query(@_);
@@ -367,9 +381,10 @@ sub results
 Call this method repeatedly to return each result of a query as a
 SearchResult object.  Example:
 
-    while ($result = $search->next_result()) {
-	print $result->url(), "\n";
-    };
+    while ($result = $search->next_result()) 
+      {
+      print $result->url(), "\n";
+      }
 
 On error, next_result() will return undef and set C<response()>
 to the HTTP response code.
@@ -377,25 +392,30 @@ to the HTTP response code.
 =cut
 
 sub next_result
-{
-    my $self = shift;
-    Carp::croak "search not yet specified"
-	if (!defined($self->{'native_query'}));
-    return undef if ($self->{next_to_return} >= $self->{maximum_to_retrieve});
-    for (;;) {
-        # Something in the cache?  Return it.
-        if ($self->{next_to_return} <= $#{$self->{cache}}) {
-            my $i = ($self->{next_to_return})++;
-            return ${$self->{cache}}[$i];
-        };
-        # Done?  Say so.
-        if ($self->{state} == $SEARCH_DONE) {
-            return undef;
-        };
-        # Try to fill cache, then try again.
-	$self->retrieve_some();
-    };
-}
+  {
+  my $self = shift;
+  Carp::croak "search not yet specified" if (!defined($self->{'native_query'}));
+  return undef if ($self->{next_to_return} >= $self->{maximum_to_retrieve});
+  while (1) 
+    {
+    if ($self->{next_to_return} <= $#{$self->{cache}}) 
+      {
+      # The cache already contains the desired element; return it:
+      my $i = ($self->{next_to_return})++;
+      return ${$self->{cache}}[$i];
+      }
+    # If we get here, then the desired element is beyond the end of
+    # the cache.  
+    if ($self->{state} == $SEARCH_DONE) 
+      {
+      # There are no more results to be gotten; fail & bail:
+      return undef;
+      }
+    # Get some more results into the cache:
+    $self->retrieve_some();
+    # Go back and try again:
+    } # while infinite
+  } # next_result
 
 
 =head2 response
@@ -448,13 +468,12 @@ Example:
 =cut
 
 sub seek_result
-{
-    my $self = shift;
-    return ($self->{next_to_return}) if ($#_ == -1);
-    my $old = $self->{next_to_return};
-    $self->{next_to_return} = shift;
-    return $old;
-}
+  {
+  my ($self, $desired) = @_;
+  my $old = $self->{next_to_return};
+  $self->{next_to_return} = $desired if (defined($desired) and (0 <= $desired));
+  return $old;
+  } # seek_result
 
 
 =head2 maximum_to_retrieve
@@ -850,7 +869,7 @@ sub setup_search
   $self->{next_to_retrieve} = 1;
   $self->{number_retrieved} = 0;
   $self->{state} = $SEARCH_UNDERWAY;
-  $self->{_options} = ();
+  # $self->{_options} = ();
   $self->native_setup_search($self->{'native_query'}, $self->{'native_options'});
   } # setup_search
 
@@ -1030,6 +1049,7 @@ AltaVista::Web
 AOL::Classifieds::Employment
 Crawler			
 Dice                    
+EuroSeek
 Excite::News
 Fireball
 FolioViews

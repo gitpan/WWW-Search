@@ -3,13 +3,12 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.11?  (2000-03-22)
+WHAT IS NEW IN WWW::Search 2.13?  (2000-04-04)
 ----------------------------------------------
 
 overview:
- * new backend VoilaFr for www.voila.fr
- * new method reset_search
- * minor updates to various backends
+ * BUGFIX for mixing gui_query() and native_query() calls on same object
+ * minor updates for some search engines
 
 For details, see the file ChangeLog and/or the pod of each affected module.
 
@@ -19,13 +18,12 @@ WHAT IS WWW::Search?
 
 WWW::Search is a collection of Perl modules which provide an API to
 WWW (and similar) search engines.  Currently WWW::Search includes
-backends for variations of AltaVista, Dejanews, Infoseek, Lycos, and
-WebCrawler, among others.  Backends for some engines can be obtained
-separately, such as Deja, Excite, HotBot, and Yahoo.  This
-distribution includes two applications built from this library:
-AutoSearch (a program to automate tracking of search results over
-time), and WebSearch, a small demonstration program to drive the
-library.
+backends for variations of AltaVista, Infoseek, Lycos, and WebCrawler,
+among others.  Backends for some engines can be obtained separately,
+such as Deja, Excite, HotBot, and Yahoo.  This distribution includes
+two applications built from this library: AutoSearch (a program to
+automate tracking of search results over time), and WebSearch, a small
+demonstration program to drive the library.
 
 WWW::Search does NOT try to emulate the default search that you would
 get with each search engine's GUI.  WWW::Search performs the search in
@@ -54,7 +52,7 @@ AltaVista::Web		working
 AOL::Classifieds::Employment    working (not in test suite)
 Crawler			partially working?
 Dice                    working? (not in test suite)
-Euroseek                working? (not in test suite)
+EuroSeek                working? (not in test suite)
 Excite::News		working
 ExciteForWebServers	not working
 Fireball		working? (not in test suite)

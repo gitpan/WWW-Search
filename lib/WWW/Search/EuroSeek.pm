@@ -1,17 +1,47 @@
 # EuroSeek.pm
 # by Jim Smyser
 # Copyright (c) 2000 by Jim Smyser 
-# $Id: Euroseek.pm,v 1.1 2000/02/08 16:10:17 mthurn Exp $
+# $Id: EuroSeek.pm,v 1.2 2000/04/03 14:54:43 mthurn Exp $
 
-package WWW::Search::a;
+package WWW::Search::EuroSeek;
 
 =head1 NAME
 
 WWW::Search::EuroSeek - class for searching EuroSeek
 
+=head1 SYNOPSIS
+
+  use WWW::Search;
+  %opts = (
+  ilang => param(lang),
+  domain => param(domain),
+  );
+ my $search = new WWW::Search('EuroSeek');
+ $search->native_query(WWW::Search::escape_query($query),\%opts);
+ $search->maximum_to_retrieve('100'); 
+  while (my $result = $search->next_result())
+    { 
+    print $result->url, "\n"; 
+    }
+
+=head1 DESCRIPTION
+
+EuroSeek is a class specialization of WWW::Search.
+It handles making and interpreting EuroSeek searches
+F<http://www.euroseek.com>.
+
+This class exports no public interface; all interaction should
+be done through L<WWW::Search> objects. See SYNOPSIS and OPTIONS
+for usage insight.
+
+=head1 NOTES
+
+EuroSeek does not seem to return uniform number of hits per page.
+Seem like only 8 or 9 are returned per page unlike standard 10+.
+
 =head1 OPTIONS
 
-Example:
+WebSearch Example:
 -o ilang=english -o domain=ru
 
 
@@ -103,7 +133,6 @@ DOMAIN:
 <option value="au">Australia
 <option value="africa">Africa
 
-
 <option value="">=Special Domains=
 <option value="com">Companies
 <option value="mil">Military
@@ -111,6 +140,24 @@ DOMAIN:
 <option value="gov">Government
 <option value="org">Organizations
 <option value="net">Networks
+
+=head1 SEE ALSO
+
+To make new back-ends, see L<WWW::Search>.
+
+=head1 AUTHOR
+
+C<WWW::Search::EuroSeek> is written by Jim Smyser
+Author e-mail <jsmyser@bigfoot.com>
+
+=head1 COPYRIGHT
+
+Copyright (c) 1996-1999 University of Southern California.
+All rights reserved.                                            
+
+THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 =cut
 #'
@@ -120,7 +167,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '1.01';
+$VERSION = '1.02';
 
 use Carp ();
 use WWW::Search(qw(generic_option strip_tags));
@@ -134,8 +181,6 @@ sub native_setup_search {
    $self->{_debug} = 2 if ($native_options_ref->{'search_parse_debug'});
    $self->{_debug} = 0 if (!defined($self->{_debug}));
 
-   #Define default number of hit per page
-   $self->{'_hits_per_page'} = 100;
    $self->{agent_e_mail} = 'jsmyser@bigfoot.com';
    $self->user_agent('user');
    $self->{_next_to_retrieve} = 0;
@@ -143,7 +188,6 @@ sub native_setup_search {
      $self->{'search_base_url'} = 'http://www.euroseek.com';
      $self->{_options} = {
          'search_url' => 'http://www.euroseek.com/query',
-         'lang' => 'world',
          'query' => $native_query,
            };
            }
@@ -205,7 +249,7 @@ sub native_retrieve_some
        $state = $HITS;
        } 
    if ($state eq $HITS && 
-       m|<TD COLSPAN.*?><.*?>.*?<A HREF=".*?"><IMG SRC.*?>.*?<A HREF=".*?url=(.*)">(.*)</A></FONT></TD>|i) 
+       m|<TD COLSPAN.*?><.*?>.*?<A HREF=".*?"><IMG SRC.*?>.*?<A HREF=".*?url=(.*)">(.*)</A>|i) 
        {
        print STDERR "**Found a URL\n" if 2 <= $self->{_debug};
 	   my ($url,$title) = ($1,$2);
@@ -249,9 +293,11 @@ sub native_retrieve_some
        {
        print STDERR "**Nothing Matched\n" if 2 <= $self->{_debug};
        }
-   } if (defined($hit)) {
+       } 
+   if (defined($hit)) {
      push(@{$self->{cache}}, $hit);
      } 
    return $hits_found;
    } # native_retrieve_some
+
 1;

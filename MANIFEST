@@ -329,7 +329,7 @@ lib/WWW/Search/AltaVista/News.pm
 lib/WWW/Search/AltaVista/Web.pm
 lib/WWW/Search/Crawler.pm
 lib/WWW/Search/Dice.pm
-lib/WWW/Search/Euroseek.pm
+lib/WWW/Search/EuroSeek.pm
 lib/WWW/Search/Excite/News.pm
 lib/WWW/Search/ExciteForWebServers.pm
 lib/WWW/Search/Fireball.pm
