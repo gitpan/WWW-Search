@@ -1,4 +1,4 @@
-# $Id: Empty.pm,v 1.4 2004/05/24 12:20:04 Daddy Exp $
+# $Id: Empty.pm,v 1.5 2004/07/24 18:44:37 Daddy Exp $
 
 =head1 NAME
 
@@ -6,7 +6,7 @@ WWW::Search::Null::Empty - class for testing WWW::Search clients
 
 =head1 SYNOPSIS
 
-=begin example
+=for example begin
 
   require WWW::Search;
   my $oSearch = new WWW::Search('Null::Empty');
@@ -16,7 +16,7 @@ WWW::Search::Null::Empty - class for testing WWW::Search clients
   my $oResponse = $oSearch->response;
   # ...But you get an HTTP::Response object with a code of 200
 
-=end example
+=for example end
 
 =for example_testing
 ok($oResponse->is_success, 'did not get a 500 HTTP::Response');
@@ -42,7 +42,7 @@ use strict;
 
 use vars qw( @ISA $VERSION );
 @ISA = qw( WWW::Search );
-$VERSION = do { my @r = (q$Revision: 1.4 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 1.5 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 sub _native_setup_search
   {

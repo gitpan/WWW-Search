@@ -6,7 +6,7 @@ WWW::Search::Null::Count - class for testing WWW::Search clients
 
 =head1 SYNOPSIS
 
-=begin example
+=for example begin 
 
   require WWW::Search;
   my $iCount = 4;
@@ -17,7 +17,7 @@ WWW::Search::Null::Count - class for testing WWW::Search clients
   my @aoResults = $oSearch->results;
   # ...You get $iCount results.
 
-=end example
+=for example end 
 
 =for example_testing
 is(scalar(@aoResults), $iCount, 'got the right number of results');
@@ -56,7 +56,7 @@ use strict;
 
 use vars qw( @ISA $VERSION );
 @ISA = qw( WWW::Search );
-$VERSION = do { my @r = (q$Revision: 1.7 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 1.8 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 sub _native_setup_search
   {

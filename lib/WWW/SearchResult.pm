@@ -1,7 +1,7 @@
 # SearchResult.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: SearchResult.pm,v 2.61 2004/05/24 00:14:18 Daddy Exp Daddy $
+# $Id: SearchResult.pm,v 2.62 2004/07/24 18:48:27 Daddy Exp $
 #
 # Copyright (c) 1996 University of Southern California.
 # All rights reserved.
@@ -61,7 +61,7 @@ package WWW::SearchResult;
 require LWP::MemberMixin;
 @ISA = qw(LWP::MemberMixin);
 use Carp ();
-$VERSION = do { my @r = (q$Revision: 2.61 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.62 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 =head2 new
 
@@ -307,5 +307,11 @@ More attributes of the result.  Backend-specific.
 sub company { return shift->_elem('company', @_); }
 sub location { return shift->_elem('location', @_); }
 
+=head1 AUTHOR
+
+WWW::SearchResult was written by John Heidemann.
+WWW::SearchResult is maintained by Martin Thurn.
+
+=cut
 
 1;

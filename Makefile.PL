@@ -1,10 +1,10 @@
 # This -*- cperl -*- program writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.38 2004/07/01 03:49:33 Daddy Exp $
+# $Id: Makefile.PL,v 1.39 2004/08/21 19:43:49 Daddy Exp $
 
 use inc::Module::Install;
 
 name('WWW-Search');
-version(2.471);
+version(2.472);
 author('Martin Thurn <mthurn@cpan.org>');
 abstract('Query web search engines and get URLs');
 requires(perl => 5.004);
@@ -25,10 +25,13 @@ clean_files($_) foreach @programs_to_install;
 # These are needed for AutoSearch:
 requires('Data::Dumper');
 requires('Date::Manip');
+recommends('Email::Send');
+recommends('Email::Send::SMTP::Auth');
+recommends('Email::MIME');
+recommends('Email::MIME::Creator');
 requires('File::Copy');
 requires('Getopt::Long' => 2.24);
 requires('POSIX');
-requires('MIME::Lite');  # only needed for the --mail option
 # These are needed for WebSearch:
 requires('Getopt::Long' => 2.24);
 # These are needed for WWW::Search base module:
@@ -46,7 +49,8 @@ requires('User');
 # These are needed during `make all`:
 build_requires('File::Spec');
 # These are needed during `make test`:
-build_requires('Test::Inline');
+build_requires('Pod::Tests' => 0.12);
+build_requires('Test::Inline' => 0.16);
 build_requires('Test::More');
 build_requires('Test::Pod');
 # I think there's a bug in Module::CoreList or something, because this

@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 2.528 2004/07/01 02:22:24 Daddy Exp $
+# $Id: Search.pm,v 2.529 2004/08/20 02:07:58 Daddy Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -100,7 +100,7 @@ use vars qw( @ISA @EXPORT @EXPORT_OK $VERSION $MAINTAINER );
 @EXPORT_OK = qw( escape_query unescape_query generic_option strip_tags );
 @ISA = qw(Exporter LWP::MemberMixin);
 $MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
-$VERSION = do { my @r = (q$Revision: 2.528 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.529 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 =head2 new
 
@@ -1039,6 +1039,12 @@ sub hash_to_cgi_string
   } # hash_to_cgi_string
 
 
+=head2 agent_name($sName)
+
+=cut
+
+sub agent_name { return shift->_elem('agent_name', @_); }
+
 =head2 user_agent($NON_ROBOT) (PRIVATE)
 
 This internal routine creates a user-agent for derived classes that
@@ -1048,9 +1054,9 @@ LWP::UserAgent (rather than a LWP::RobotUA) is used.
 Returns the user-agent object.
 
 If a backend needs the low-level LWP::UserAgent or LWP::RobotUA to
-have a particular name, $oSearch->{'agent_name'} (and possibly
-$oSearch->{'agent_e_mail'}) should be set to the desired values *before*
-calling $oSearch->user_agent():
+have a particular name, $oSearch->agent_name() and possibly
+$oSearch->{'agent_e_mail'} should be set to the desired values
+*before* calling $oSearch->user_agent():
 
 If the environment variable WWW_SEARCH_USERAGENT has a value, it will
 be used as the class for a new user agent object.  This class should
@@ -1060,8 +1066,8 @@ be a subclass of LWP::UserAgent.  For example,
   # If this env.var. has no value,
   # LWP::UserAgent or LWP::RobotUA will be used.
   $oSearch = new WWW::Search('MyBackend');
-  $oSearch->{'agent_e_mail'} = $oSearch->{'agent_name'};
-  $oSearch->{'agent_name'} = 'Mozilla/MSIE 5.5';
+  $oSearch->{'agent_e_mail'} = $oSearch->agent_name; # The old value
+  $oSearch->agent_name('Mozilla/MSIE 5.5');
   $oSearch->user_agent('non-robot');
 
 Backends should use robot-style user-agents whenever possible.
@@ -1099,7 +1105,6 @@ sub _load_env_useragent
     } # if found WWW_SEARCH_USERAGENT in environment
   } # _load_env_useragent
 
-
 sub user_agent
   {
   my $self = shift;
@@ -1116,12 +1121,12 @@ sub user_agent
     if ($non_robot)
       {
       $ua = new LWP::UserAgent;
-      $ua->agent($self->{'agent_name'});
+      $ua->agent($self->agent_name);
       $ua->from($self->{'agent_e_mail'});
       }
     else
       {
-      $ua = new LWP::RobotUA($self->{'agent_name'}, $self->{'agent_e_mail'});
+      $ua = new LWP::RobotUA($self->agent_name, $self->{'agent_e_mail'});
       $ua->delay($self->{'interrequest_delay'}/60.0);
       }
     $ua->timeout($self->{'timeout'});

@@ -1,10 +1,13 @@
+
 exit 0;
-# The above line will be stripped off during `make`
+
+
+# The above line(s) will be stripped off during `make`
 #
 # AutoSearch-code.pl
 # Copyright (c) 1996-1997 University of Southern California.
 # All rights reserved.
-# $Id: AutoSearch-code.pl,v 2.126 2004/03/05 12:45:55 Daddy Exp Daddy $
+# $Id: AutoSearch-code.pl,v 2.130 2004/08/21 19:50:32 Daddy Exp $
 #
 # Complete copyright notice follows below.
 
@@ -34,7 +37,11 @@ use WWW::Search;
 use strict;
 
 use vars qw( $VERSION );
-$VERSION = do { my @r = (q$Revision: 2.126 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.130 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+
+use constant DEBUG_EMAIL => 0;
+
+my $TESTONLY = 0;
 
 sub print_version
   {
@@ -50,12 +57,11 @@ $opts{'emailfrom'} = '';
 $opts{'v'} = 0;
 $opts{'help'} = 0;
 $opts{'man'} = 0;
-$opts{'smtp'} = '';
 $opts{'stats'} = 0;
 $opts{'debug'} = 0;
 $opts{'listnewurls'} = 0;
 $opts{'ignore_channels'} = ();
-&GetOptions(\%opts, qw(n|qn|queryname=s s|qs|querystring=s e|engine=s m|mail=s emailfrom=s h|host=s p|port=s o|options=s@ f|uf|urlfilter=s listnewurls stats userid=s password=s ignore_channels=s@ cleanup=i cmdline smtp v|verbose help man V|VERSION debug),
+&GetOptions(\%opts, qw(n|qn|queryname=s s|qs|querystring=s e|engine=s m|mail=s emailfrom=s host=s p|port=s o|options=s@ f|uf|urlfilter=s listnewurls stats userid=s password=s ignore_channels=s@ cleanup=i cmdline v|verbose help man V|VERSION debug),
             'http_proxy=s',
             'http_proxy_user=s',
             'http_proxy_pwd=s',
@@ -84,19 +90,30 @@ if ($v_dbg)
   print STDERR "stats option: ", ! $opts{'stats'} ? 'not ' : '', "defined\n";
   print STDERR "debug option: ", ! $opts{'debug'} ? 'not ' : '', "defined\n";
   } # if
+sub module_loaded
+  {
+  my $sModule = shift;
+  eval "use $sModule";
+  return ($@ eq '');
+  } # module_loaded
 if ($opts{'m'} ne '')
   {
-  eval 'use MIME::Lite';
-  if ($@ ne '')
+ MODULE:
+  foreach my $sMod (qw( Email::MIME Email::MIME::Creator Email::Send Email::Send::Sendmail Email::Send::Qmail Email::Send::SMTP Email::Send::SMTP::Auth ))
     {
-    print STDERR " --- can not load MIME::Lite module: ==$@==\n";
-    $opts{'m'} = '';
-    } # if
-  else
-    {
-    print STDERR "will send email summary to: ", $opts{'m'}, "\n" if $v_dbg;
-    }
+    if (! &module_loaded($sMod))
+      {
+      print STDERR " --- can not load $sMod module: ==$@==\n";
+      $opts{'m'} = '';
+      last MODULE;
+      } # if
+    else
+      {
+      # print STDERR " + loaded $sMod\n";
+      }
+    } # foreach MODULE
   } # if
+print STDERR "will send email summary to: ", $opts{'m'}, "\n" if ($v_dbg && ($opts{'m'} ne ''));
 
 # if we want a list of args:
 #@query_list = split(/[,\s]+/, $opts{'n'},2) if defined($opts{'n'});
@@ -232,7 +249,7 @@ sub main
   # index.html, or default first_index.html, or make one from scratch.
   # index.html contains the previous search results. (aka old summary)
   &check_index_file($qid); # make qid/index.html
-
+  $v_dbg && print STDERR " + found/created $qid/index.html\n";
   if ($opts{'cmdline'})
     {
     # Show the original cmdline and exit:
@@ -326,6 +343,7 @@ sub main
       $SummaryHeading, $SummaryTemplate, $Summary,
       $WeeklyHeading, $WeeklyTemplate, $Weekly,
       $SummaryBottom, @SummaryQueryOptions) = &get_summary_parts($qid);
+  $v_dbg && print STDERR " + got summary parts...\n";
   # Split the old summary into a list. (later sort it)
   my ($url, $description, $title);
   my (@old_summary_url,@old_summary_title);
@@ -333,8 +351,7 @@ sub main
   my ($line);
   my ($i, $n, $j, $m);
   # Break each hyperlink into its url and title.
-  $n = $#old_summary;
-  for my $i (0..$n)
+  for my $i (0..$#old_summary)
     {
     # $old_summary -> $url & $title
     $line = $old_summary[$i];
@@ -509,6 +526,7 @@ sub main
 # usually this is not set up, because when we created the file we didn't
 # have the data.  Do we have the Query Name?
   $WeeklyTop =~ s/>AutoSearch WEB Searching</$QueryName/;
+  $v_dbg && print STDERR " + got weekly parts...\n";
 
   my $hits = 0; # actual no. of hits.
   my $saved = 0; # actual no. saved.
@@ -593,13 +611,14 @@ sub main
     push(@weekly_url,$url); # the complete set of hits
     $title = $next_result->title;
     push(@weekly_title,$title);
-    # Was it in the old summary? If so, don't save it.
+    # Was it in the old summary?  If so, don't save it.
     # If not, it is a new search results for this week.
-    foreach $line (@old_summary_url) {
-      # See if this url is in the summary
-      # Skip if we've seen this b4
-      next NEXT_URL if $url eq $line;
-    }
+    foreach $line (@old_summary_url)
+      {
+      # See if this url is in the summary; skip this url if it's in
+      # the summary:
+      next NEXT_URL if ($url eq $line);
+      } # foreach
     print STDERR "url:$url ** new result **\n" if $dbg_search;
     print "$url\n" if $opts{'listnewurls'};
     $description = $next_result->description;
@@ -619,10 +638,11 @@ sub main
     }
   } # if no hits
 
-  # only save the ones that don't show up in the current query list.
-  # those we shall call suspended_*
+  # Only save the ones that don't show up in the current query list.
+  # Those we shall call suspended_*
   my(@suspended_url,@suspended_title);
-  # we must use for loop to get the urls to match their descr & title.
+  # We must use a for loop, to get the urls to match their descr &
+  # title.
   $n = $#old_summary_url + 1;
   $m = $#weekly_url + 1;
   OLD_URL:
@@ -647,14 +667,14 @@ sub main
   print STDERR "results set count: ",$#new_weekly_url + 1,"\n" if ($s_dbg);
   print STDERR "suspended count  : ",$#suspended_url + 1,"\n" if ($s_dbg);
   print STDERR "final count      : ",$#weekly_url + 1,"\n" if ($s_dbg);
-  my($changes) = (($#new_weekly_url != -1) || ($#suspended_url != -1));
+  my $changes = (($#new_weekly_url != -1) || ($#suspended_url != -1));
 #  printf STDERR "changes is %d\n",$changes if ($v_dbg);
 
 # For every search, AutoSearch (aka AS) will make a 'weekly' file.
 # Usually AutoSearch is run as a 'cron' job; but can be run manually.
 # AS will attempt to handle multiple (non-concurrent) runs per day.
-  my($file) = (&time_file_of_the_day_numeric).'.html';
-  my($section);
+  my $file = (&time_file_of_the_day_numeric).'.html';
+  my $section;
 
 # to test this 'diff' code 1) rm -r qid/* 2) run AS -stats qid -qn -qs
 # 3) edit qid/index.html remove some, add some (new urls)
@@ -666,15 +686,18 @@ sub main
 # now if this is a run that adds information (re) write the file.
 #
 # do we have a reason to care? New Results, Appensions, Suspensions???
-  if ($changes) {
-#    print STDERR "test file: $qid$file\n";
-    if (-e $qid.$file) { # file already there modify it.
-#      print STDERR "modify existing weekly file.\n" if ($v_dbg);
-      # copy in previous file from today
+  if ($changes)
+    {
+    # print STDERR "test file: $qid$file\n";
+    if (-e $qid.$file)
+      {
+      # File already exists; modify it.
+      print STDERR "modify existing weekly file.\n" if ($v_dbg);
+      # Copy in previous file from today:
       open (PARTS,'<'.$qid.$file) || die "Can't open weekly input file.\nReason: $!\n";
       my($part) = <PARTS>;
       close (PARTS);
-#      print STDERR "Part:\"$part\"\n";
+      #      print STDERR "Part:\"$part\"\n";
       # break into parts to insert modifications
       my($part1,$part2) = split (/<!--\/Appended-->/,$part,2);
       my($part3,$part4) = split (/<!--\/Suspended-->/,$part2,2);
@@ -685,55 +708,56 @@ sub main
       if ($n) {
         print HTML "<!--more...-->\n";
         print HTML "<h4>Recently Added:</h4><p>\n";
-      }
+        }
       # format each unique result.
       for ($i=0; $i < $n; $i++) {
         $url = $new_weekly_url[$i];
         $title = $new_weekly_title[$i];
         $description = $new_weekly_description[$i];
         print HTML &make_link($AppendedTemplate,$url,$title,$description),"\n";
-      }
+        }
       print HTML "<!--/Appended-->"; # replace due to split
       print HTML $part3;
       $n = $#suspended_url + 1;
       if ($n) {
         print HTML "<!--less...-->\n";
         print HTML "<h4>Recently Suspended:</h4><p>\n";
-      }
+        }
       # format each suspended result.
       for ($i=0; $i < $n; $i++) {
         $url = $suspended_url[$i];
         $title = $suspended_title[$i];
         print HTML &make_link($SuspendedTemplate,$url,$title,""),"\n";
-      }
+        }
       print HTML "<!--/Suspended-->"; # replace due to split
       print HTML $part4;
       close (HTML);
-  
-    } else { # create the file
-#      print STDERR "make new weekly file.\n" if ($v_dbg);
+      }
+    else
+      { # create the file
+      #      print STDERR "make new weekly file.\n" if ($v_dbg);
       open (HTML,'>'.$qid.$file) || die "Can't open weekly output file.\nReason: $!\n";
       print HTML $sTitle;
       print HTML "<!-- created by AutoSearch.pl by wls -->\n";
       print HTML "<!--Top-->\n$WeeklyTop<!--/Top-->\n";
-    
-      # output weekly search status: appended
+      DEBUG_EMAIL && print STDERR " + start creating email, new_weekly_url is ", Dumper(\@new_weekly_url);
+      # Output weekly search status: appended
       $n = $#new_weekly_url + 1;
-      # always do the heading
+      # Always do the header:
       print HTML "<!--AppendedHeading\n$AppendedHeading/AppendedHeading-->\n";
-      print HTML &format_link($AppendedHeading,"DATE","$now") if $n;
+      print HTML &format_link($AppendedHeading,"DATE", $now) if $n;
       print HTML "<!--AppendedTemplate\n$AppendedTemplate/AppendedTemplate-->\n";
       $section = "Appended"; # the section of the file/output.
       print HTML "<!--$section-->\n";
-      # format each unique result.
+      # Format each unique result:
       for my $i (0..$n-1)
         {
         $url = $new_weekly_url[$i];
         $title = $new_weekly_title[$i];
         $description = $new_weekly_description[$i];
-        my $sHTML = &make_link($AppendedTemplate,$url,$title,$description)."\n";
-        print HTML $sHTML;
-        $sEmail .= $sHTML;
+        my $sHTML = &make_link($AppendedTemplate, $url, $title, $description);
+        print HTML "$sHTML\n";
+        $sEmail .= "<P>$sHTML\n";
         } # for $i
       print HTML $Appended;
       print HTML "<!--/$section-->\n\n";
@@ -757,12 +781,14 @@ sub main
       print HTML "<!--Bottom-->\n$WeeklyBottom<!--/Bottom-->\n";
       close (HTML);
     }
-  } else {
-#    print STDERR "no weekly changes required.\n" if ($v_dbg);
+  }
+  else
+    {
+    print STDERR "no weekly changes required.\n" if ($v_dbg);
   }
 
-# now write the new index file.
-# create the index.html output file
+  # Now write the new index file.
+  # Create the index.html output file:
   open (HTML,'>'.$qid.'index.html') || die "Can't open summary output file.\nReason: $!\n";
   print HTML "<Title> Summary of Search results for $SummaryQuery</Title>\n";
   print HTML "<!-- created by AutoSearch.pl by wls -->\n";
@@ -778,7 +804,7 @@ sub main
   print HTML "\n";
 # output summary of updated unique findings
   print HTML "<!--SummaryHeading\n$SummaryHeading/SummaryHeading-->\n";
-  print HTML &format_link($SummaryHeading,"DATE","$now");
+  print HTML &format_link($SummaryHeading, "DATE", $now);
   print HTML "<!--SummaryTemplate\n$SummaryTemplate/SummaryTemplate-->\n";
   $section = "Summary"; # the section of the file/output.
   print HTML "<!--$section-->\n";
@@ -797,7 +823,7 @@ sub main
 # output daily results status (none or ptr to new file).
   print HTML "<!--/$section-->\n\n";
   print HTML "<!--WeeklyHeading\n$WeeklyHeading/WeeklyHeading-->\n";
-  print HTML &format_link($WeeklyHeading,"DATE","$now");
+  print HTML &format_link($WeeklyHeading,"DATE", $now);
   print HTML "<!--WeeklyTemplate\n$WeeklyTemplate/WeeklyTemplate-->\n";
   $section = "Weekly"; # the section of the file/output.
   print HTML "<!--$section-->\n";
@@ -810,8 +836,8 @@ sub main
       print HTML "AutoSearch Error during search on $today: " . http_error_as_nice_string($response) . "<br>\n";
     }
   }
-  # let's use reverse chronological order.
-  # update the 'weekly' status:
+  # Let's use reverse chronological order.
+  # Update the 'weekly' status:
   if ($changes)
     { # there were changes.
     # second run today?
@@ -875,43 +901,111 @@ sub main
   print HTML "<!--Bottom-->\n$SummaryBottom<!--/Bottom-->\n";
   close (HTML);
 
+  # DEBUG_EMAIL && print STDERR " +   opts{m} =$opts{m}=\n";
+  # DEBUG_EMAIL && print " +   raw sEmail =====$sEmail=====\n";
   if (($opts{'m'} ne '') && ($sEmail ne ''))
     {
     $sEmail = <<"EMAILEND";
 <HTML>
-<HEAD>
-$sTitle
-</HEAD>
+<HEAD>$sTitle</HEAD>
 <BODY>
 <h2>The following URLs are new matches for your query '$SummaryQuery':</h2>
-<P>
 $sEmail
-</BODY>
-</HTML>
+</BODY></HTML>
 EMAILEND
-    my $oMsg = MIME::Lite->new(
-                               To => $opts{'m'},
-                               Subject => "Results of AutoSearch query '$SummaryQuery'",
-                               Type => 'text/html',
-                               Data => $sEmail,
-                          );
+    # DEBUG_EMAIL && print STDERR " +   cooked sEmail =====$sEmail=====\n";
+    # DEBUG_EMAIL && exit 88;
+    my $sSubject = "Results of AutoSearch query '$SummaryQuery'";
+    my $sFrom = 'AutoSearch@localhost';
+    $sFrom = $opts{emailfrom} if ($opts{emailfrom} ne '');
+    my $oMsg = Email::MIME->create(
+                                   header => [
+                                              To => $opts{'m'},
+                                              Subject => $sSubject,
+                                              From => $sFrom,
+                                             ],
+                                   attributes => {
+                                                 'content_type' => 'text/html',
+                                                },
+                                   body => $sEmail,
+                                  );
+    DEBUG_EMAIL && print STDERR " + oMsg is ", Dumper($oMsg);
     if (ref($oMsg))
       {
-      $oMsg->add(From => $opts{'emailfrom'}) if ($opts{emailfrom} ne '');
-      if ((($opts{'smtp'} ne '') && ! $oMsg->send('smtp', $opts{'smtp'}))
-          ||
-          (($opts{'smtp'} eq '') && ! $oMsg->send)
-         )
-        {
-        print STDERR " --- could not send email\n";
-        } # if
+      DEBUG_EMAIL && print STDERR " + oMsg in sendable format is:\n";
+      DEBUG_EMAIL && Email::Send::send(IO => $oMsg);
+      $Email::Send::SMTP::Auth::VERBOSE = $Email::Send::SMTP::Auth::VERBOSE = 1;
+      my $sRes = &send_email($oMsg);
+      # print STDERR " + result of send_email() is ==$sRes=\n";
+      print STDERR $sRes if ($v_dbg || ($sRes ne '1'));
       }
     else
       {
-      print STDERR " --- could not create MIME::Lite object\n";
+      print STDERR " --- could not create Email::Simple object\n";
       }
     } # if
   } # main
+
+sub send_email
+  {
+  my $oMessage = shift;
+  my $sSMTPserver = $ENV{SMTPSERVER} || shift || '';
+  if ($sSMTPserver ne '')
+    {
+    my $sUsername = $ENV{SMTPUSERNAME} || shift || '';
+    my $sPassword = $ENV{SMTPPASSWORD} || shift || '';
+    if ($TESTONLY)
+      {
+      $sUsername = '<empty>' if ($sUsername eq '');
+      $sPassword = ($sPassword eq '') ? '<empty>' : '<hidden>';
+      return qq{$0 chose method SMTP::Auth with server=$sSMTPserver, username=$sUsername, password=$sPassword};
+      } # if
+    return Email::Send::SMTP::Auth::send($oMessage, $sSMTPserver,
+                                         # The ::SMTP::Auth module
+                                         # will properly handle the
+                                         # case where username and/or
+                                         # password is blank:
+                                         $sUsername, $sPassword,
+                                         @_);
+    } # if SMTP
+  if (
+      # User has customized the pointer to the qmail program:
+      ($Email::Send::Qmail::QMAIL ne 'qmail-inject')
+      ||
+      # I hate that "used only once" warning:
+      ($Email::Send::Qmail::QMAIL ne 'qmail-inject')
+      # HOW else do we indicate in the environment that we want to use
+      # Qmail?
+     )
+    {
+    if ($TESTONLY)
+      {
+      return qq{$0 chose method Qmail};
+      } # if
+    return Email::Send::Qmail::send($oMessage, @_);
+    } # if qmail
+  # For undef warnings:
+  $ENV{SENDMAIL} ||= '';
+  if (
+      ($^O =~ m!solaris!i)  # A fair assumption?
+      ||
+      ($^O =~ m!linux!i)  # A fair assumption?
+     )
+    {
+    # User has customized the pointer to the sendmail program:
+    if ($ENV{SENDMAIL} ne '')
+      {
+      $Email::Send::Sendmail::SENDMAIL = $Email::Send::Sendmail::SENDMAIL = $ENV{SENDMAIL};
+      } # if
+    if ($TESTONLY)
+      {
+      return qq{$0 chose method Sendmail};
+      } # if
+    return Email::Send::Sendmail::send($oMessage, @_);
+    } # if solaris or linux
+  return "Error: can not determine email send method\n";
+  } # send_email
+
 
 #=head1 NAME
 #
@@ -942,15 +1036,13 @@ sub check_index_file {
     &make_index($qid);
   }
   print STDERR "index.html exists, " if $main::v_dbg;
-}
+} # check_index_file
 
 #=head1 NAME
 #
 #check_date_file($qid) -  insure the date.html file exists.
 #
-#
 #=head1 DESCRIPTION
-#
 #
 #If qid/date.html exists just return.
 #Else create qid/ if necessary and call make_date
@@ -979,7 +1071,6 @@ sub check_date_file {
 #=head1 NAME
 #
 #read_query($prompt) -  read a string from STDIN.
-#
 #
 #=head1 DESCRIPTION
 #
@@ -1011,7 +1102,6 @@ sub read_query {
 #
 #read_query_list($prompt) -  read a list from STDIN.
 #
-#
 #=head1 DESCRIPTION
 #
 #read STDIN, with a prompt and backspace editing, until <blank-line>
@@ -1034,7 +1124,6 @@ sub read_query_list {
 #=head1 NAME
 #
 #C<format_link($template,$field,$data)> -  create hyper links from a template.
-#
 #
 #=head1 DESCRIPTION
 #
@@ -1061,7 +1150,6 @@ sub format_link {
 #
 #C<make_link($template,$url,$title,$description)> -  create url.
 #
-#
 #=head1 DESCRIPTION
 #
 #Replace the URL, TITLE, and DESCRIPTION  with $url, $title, and
@@ -1084,7 +1172,6 @@ sub make_link {
 #
 #C<make_no_link($template,$url,$title,$description)> -  create url.
 #
-#
 #=head1 DESCRIPTION
 #
 #Replace the URL, TITLE, and DESCRIPTION  with $url, $title, and
@@ -1106,7 +1193,6 @@ sub make_no_link {
 #=head1 NAME
 #
 #C<get_weekly_parts($qid)> -  break input file into sub-fields.
-#
 #
 #=head1 DESCRIPTION
 #
@@ -1157,7 +1243,6 @@ sub get_weekly_parts {
 #
 #C<get_summary_parts($qid)> -  break input file into sub-fields.
 #
-#
 #=head1 DESCRIPTION
 #
 #Used to convert an input file into the data elements, template and headings
@@ -1202,7 +1287,6 @@ sub get_summary_parts {
 #
 #C<get_pair_part($part,$mark)> -  locate and return sub-fields.
 #
-#
 #=head1 DESCRIPTION
 #
 #Use regular expressions to locate <!--$mark--> and <!--/$mark--> and
@@ -1225,7 +1309,6 @@ sub get_pair_part {
 #=head1 NAME
 #
 #C<get_part($part,$mark)> -  locate and return sub-fields.
-#
 #
 #=head1 DESCRIPTION
 #
@@ -1251,7 +1334,6 @@ sub get_part {
 #
 #C<get_inline_part($part,$mark)> -  locate and return sub-fields.
 #
-#
 #=head1 DESCRIPTION
 #
 #Use regular expressions to locate <!--$mark{ and }/$mark--> and
@@ -1276,7 +1358,6 @@ sub get_inline_part {
 #=head1 NAME
 #
 #C<get_inline_list($part,$mark)> -  locate and return sub-fields.
-#
 #
 #=head1 DESCRIPTION
 #
@@ -1308,7 +1389,6 @@ sub get_inline_list {
 #=head1 NAME
 #
 #C<make_index($qid)> -  make working copy of F<index.html>.
-#
 #
 #=head1 DESCRIPTION
 #
@@ -1397,7 +1477,6 @@ EOF
 #
 #make_date($qid) -  make working copy of F<date.html>.
 #
-#
 #=head1 DESCRIPTION
 #
 #Create F<qid/date.html> from either F<first_date.html>
@@ -1443,9 +1522,7 @@ sub make_date {
 <!--The list of 'hits' including a url, title and description.-->
 <!--AppendedTemplate
 <a href="URL">TITLE</a><br>
-<blockquote>
 DESCRIPTION
-</blockquote>
 /AppendedTemplate-->
 
 <!--Appended-->
@@ -1473,10 +1550,8 @@ Web searches maintained by <a href="http://www.isi.edu/lsam/autosearch/index.htm
 <!--/Bottom-->
 </BODY>
 EOF
-
   $it =~ s/{ask user}/\{$qs\}/ if ($it =~ m,Query\{ask user\}/Query,);
   $it =~ s/AutoSearch WEB Searching/$qn/ if ($it =~ m,AutoSearch WEB Searching,);
-
   print FIRST $it;
   close(FIRST);
 }
@@ -1615,7 +1690,8 @@ for details about specialized variations.
 
 =item C<--listnewurls>
 
-Print all new URLs to STDOUT, one per line.
+In addition to all the normal file maintenance,
+print all new URLs to STDOUT, one per line.
 
 =item C<-o> or C<--options>
 
@@ -1655,38 +1731,58 @@ arguments) that was used to create the query results.  Command line
 will be shown on STDERR.  If --cmdline is given, all other options
 other than the qid will be ignored.
 
+=item C<--mail user@address> or C<-m user@address>
+
+After search is complete, send email to that user, listing the NEW results.
+Email is HTML format.
+Requires the Email::Send and related modules.
+If you send email through an SMTP server, you must set environment variable SMTPSERVER to your server name or IP address.
+If your SMTP server requires password, you must set environment variables SMTPUSERNAME and SMTPPASSWORD.
+If you send email via sendmail, you should set environment variable SENDMAIL if the sendmail executable is not in the path.
+
+=item C<--emailfrom user@address>
+
+If your outgoing mail server rejects email from certain users,
+you can use this argument to set the From: header.
+
+=item C<--userid bbunny>
+
+If the search engine requires a login/password (e.g. Ebay::Completed), use this.
+
+=item C<--password Carr0t5>
+
+If the search engine requires a login/password (e.g. Ebay::Mature), use this.
+
 =back
 
 
 =head1 DESCRIPTION
 
-B<AutoSearch> submits a query to a search engine, produces HTML
-pages that reflect the set of 'hits' (filtered search results)
-returned by the search engine, and tracks these results over time. 
-The URL and title are displayed in the F<qid/index.html>, the URL, 
-the title, and description are displayed in the 'weekly' files.
+B<AutoSearch> submits a query to a search engine, produces HTML pages
+that reflect the set of 'hits' (filtered search results) returned by
+the search engine, and tracks these results over time.  The URL and
+title are displayed in the F<qid/index.html>, the URL, the title, and
+description are displayed in the 'weekly' files.
 
 To organize these results, each search result is placed in a query
-information directory (qid).  The directory becomes the search
-results 'handle', an easy way to track a set of results.
-Thus a qid of C</usr/local/htdocs/lsam/autosearch/load_balancing>
-might locate the results on your web server at
+information directory (qid).  The directory becomes the search results
+'handle', an easy way to track a set of results.  Thus a qid of
+C</usr/local/htdocs/lsam/autosearch/load_balancing> might locate the
+results on your web server at
 C<http://www.isi.edu/lsam/autosearch/load_balancing>.
 
 Inside the qid directory you will find files relating to this query.
-The primary file is F<index.html>, which reflects the latest
-search results.  Every not-filtered hit for every search is stored
-in F<index.html>.
-When a hit is no longer found by the search engine
-it a removed from F<index.html>.
-As new results for a search are returned from the search engine they are placed
-in F<index.html>.
+The primary file is F<index.html>, which reflects the latest search
+results.  Every not-filtered hit for every search is stored in
+F<index.html>.  When a hit is no longer found by the search engine it
+a removed from F<index.html>.  As new results for a search are
+returned from the search engine they are placed in F<index.html>.
 
-At the bottom of F<index.html>, there is a heading "Weekly Search Results",
-which is updated each time the search is submitted
-(see L<AUTOMATED SEARCHING>).
-The list of search runs is stored in reverse chronological order.
-Runs which provide no new information are identified with
+At the bottom of F<index.html>, there is a heading "Weekly Search
+Results", which is updated each time the search is submitted (see
+L<AUTOMATED SEARCHING>).  The list of search runs is stored in reverse
+chronological order.  Runs which provide no new information are
+identified with
 
 	No Unique Results found for search on <date>
 
@@ -1704,22 +1800,23 @@ available).  The title is a link to the original web page.
 
 =head1 AUTOMATED SEARCHING
 
-On UNIX-like systems,
-cron(1) may be used to establish periodic searches and the web pages
-will be maintained by B<AutoSearch>.  To establish the first search,
-use the first example under SYNOPSIS.  You must specify the qid, query
-name and query string.  If any of the items are missing, you will be
-interactively prompted for the missing item(s).
+On UNIX-like systems, cron(1) may be used to establish periodic
+searches and the web pages will be maintained by B<AutoSearch>.  To
+establish the first search, use the first example under SYNOPSIS.  You
+must specify the qid, query name and query string.  If any of the
+items are missing, you will be interactively prompted for the missing
+item(s).
 
 Once the first search is complete you can re-run the search with the
 second form under SYNOPSIS.
+
 A cron entry like:
 
     0 3 * * 1 /nfs/u1/wls/AutoSearch.pl /www/div7/lsam/autosearch/caching
 
-might be used to run the search each Monday at 3:00 AM.  The
-query name and query string may be repeated; but they will not be
-used.  This means that with a cron line like:
+might be used to run the search each Monday at 3:00 AM.  The query
+name and query string may be repeated; but they will not be used.
+This means that with a cron line like:
 
     0 3 * * 1 /nfs/u1/wls/AutoSearch.pl /www/div7/lsam/autosearch/caching -n caching -s caching
 
@@ -1727,14 +1824,13 @@ a whole new search series can be originated by
 
     rm -r /www/div7/lsam/autosearch/caching
 
-However, the only reason to start a new search series would be to 
+However, the only reason to start a new search series would be to
 throw away the old weekly files.
 
-We don't recommend running searches more than once per day,
-but if so the per-run files will be updated in-place.
-Any changes are added to the page with a comment that
-"Recently Added:"; and deletions are indicated with "Recently Suspended:."
-
+We don't recommend running searches more than once per day, but if so
+the per-run files will be updated in-place.  Any changes are added to
+the page with a comment that "Recently Added:"; and deletions are
+indicated with "Recently Suspended:."
 
 =head1 CHANGING THE LOOK OF THE PAGES
 
@@ -1752,25 +1848,25 @@ Noteworthy tags and their meaning:
 
 The text contained within this tag is placed at the top of the output
 page.  If the text contains I<AutoSearch WEB Searching>, then the
-query name will replace it.  If the text does not contain this
-magic string and it is the first ever search, the user will be asked for
-a query name.
+query name will replace it.  If the text does not contain this magic
+string and it is the first ever search, the user will be asked for a
+query name.
 
 =item <!--Query{.*}/Query-->
 
-The text contained between the braces is the query string.  This is how
-B<AutoSearch> maintains the query string.  You may edit this
-string to change the query string; but only in F<qid/index.html>.
-The text I<ask user> is special and will force B<AutoSearch>
-to request the search string from the user.
+The text contained between the braces is the query string.  This is
+how B<AutoSearch> maintains the query string.  You may edit this
+string to change the query string; but only in F<qid/index.html>.  The
+text I<ask user> is special and will force B<AutoSearch> to request
+the search string from the user.
 
 =item <!--SearchEngine{.*}/SearchEngine-->
 
 The text contained between the braces is the search engine.  Other
 engines supported are HotBot and Lycos.  You may edit this string to
-change the engine used; but only in F<qid/index.html>.  The text
-I<ask user> is special and will force B<AutoSearch> to to request the
-search string from the user.
+change the engine used; but only in F<qid/index.html>.  The text I<ask
+user> is special and will force B<AutoSearch> to to request the search
+string from the user.
 
 =item <!--QueryOptions{.*}/QueryOptions-->
 
@@ -1781,28 +1877,28 @@ options.
 =item <!--URLFilter{.*}/URLFilter-->
 
 The text contained between the braces is the URL filter.  This is how
-B<AutoSearch> maintains the filter.  Again you may edit this
-string to change the query string; but only in F<qid/index.html>.
-The text I<ask user> is special and will force B<AutoSearch> to
-ask the user (STDIN) for the query string.  When setting up the first
-search, you must edit F<first_index.html>, not F<qid/index.html>.
-The URL filter is a standard perl5 regular expression.  URLs which
-do not match will be kept.
+B<AutoSearch> maintains the filter.  Again you may edit this string to
+change the query string; but only in F<qid/index.html>.  The text
+I<ask user> is special and will force B<AutoSearch> to ask the user
+(STDIN) for the query string.  When setting up the first search, you
+must edit F<first_index.html>, not F<qid/index.html>.  The URL filter
+is a standard perl5 regular expression.  URLs which do not match will
+be kept.
 
 =item <!--Bottom-->.*<!--/Bottom-->
 
-The text contained within this tag is placed at the bottom of the output
-page.  This is a good place 
-to put navigation, page owner information, etc.
+The text contained within this tag is placed at the bottom of the
+output page.  This is a good place to put navigation, page owner
+information, etc.
 
 =back
 
 The remainder of the tags fall into a triplet of I<~Heading>,
-I<~Template>, and I<~>, where ~ is Summary, Weekly, Appended,
-and Suspended. The sub-sections appear in the order given. 
-To produce a section B<AutoSearch> outputs the heading, the template,
-the section, n copies of the formatted data, and an /section.
-The tags and their function are:
+I<~Template>, and I<~>, where ~ is Summary, Weekly, Appended, and
+Suspended. The sub-sections appear in the order given.  To produce a
+section B<AutoSearch> outputs the heading, the template, the section,
+n copies of the formatted data, and an /section.  The tags and their
+function are:
 
 =over 16
 
@@ -1810,13 +1906,13 @@ The tags and their function are:
 
 The heading tag identifies the heading for a section of the output
 file.  The SummaryHeading is for the summary portion, etc.  The
-section may be empty (e.g., Suspended) and thus no heading is output. 
+section may be empty (e.g., Suspended) and thus no heading is output.
 
 =item ~Template
 
 The template tag identifies how each item is to be formatted.  Simple
-text replacement is used to change the template into the actual
-output text.  The text to be replaced is noted in ALLCAPS.
+text replacement is used to change the template into the actual output
+text.  The text to be replaced is noted in ALLCAPS.
 
 =item ~
 
@@ -1830,9 +1926,8 @@ search.  The file F<first_index.html> (in the directory above F<qid>)
 will be used as a default template for new queries.
 
 Examples of these files can be seen in the pages under
-C<http://www.isi.edu/lsam/autosearch/>,
-or in the output generated by a new AutoSearch.
-
+C<http://www.isi.edu/lsam/autosearch/>, or in the output generated by
+a new AutoSearch.
 
 =head1 FILES
 
@@ -1840,17 +1935,18 @@ or in the output generated by a new AutoSearch.
 
 =item F<first_index.html>
 
-optional file to determine the default format of the F<index.html> file
-of a new query.
+optional file to determine the default format of the F<index.html>
+file of a new query.
 
 =item F<first_date.html>
 
-optional file to determine the default format of the F<YYYYMMDD.html> file
-for a new query.
+optional file to determine the default format of the F<YYYYMMDD.html>
+file for a new query.
 
 =item F<qid/index.html>
 
-latest search results and reverse chronological list of periodic searches.
+(automatically created) latest search results, and reverse
+chronological list of periodic searches.
 
 =item F<qid/date.html>
 
@@ -1858,32 +1954,31 @@ file used as a template for the F<YYYYMMDD.html> files.
 
 =item F<qid/YYYYMMDD.html>
 
-summary of changes for a particular date (AKA 'Weekly' file).
+(automatically created) summary of changes for a particular date (AKA
+'Weekly' file).
 
 =back
 
-Optional files F<first_index.html> and F<first_date.html> are used for the
-initial search as a template for F<qid/index.html> and F<date.html>,
-respectively.  If either of these files does not exist; a default-default 
-template is stored within the F<AutoSearch> source.  The intention
-of these two files is to permit a user to establish a framework for
-a group of search sets which have a common format.  By  leaving the 
-default query name and query string alone, they will be overridden by
-command line inputs.
-
+Optional files F<first_index.html> and F<first_date.html> are used for
+the initial search as a template for F<qid/index.html> and
+F<date.html>, respectively.  If either of these files does not exist;
+a default-default template is stored within the F<AutoSearch> source.
+The intention of these two files is to permit a user to establish a
+framework for a group of search sets which have a common format.  By
+leaving the default query name and query string alone, they will be
+overridden by command line inputs.
 
 =head1 SEE ALSO
 
 For the library, see L<WWW::Search>,
 for the perl regular expressions, see L<perlre>.
 
-
 =head1 AUTHORS
 
 Wm. L. Scheding
 
-B<AutoSearch> is  a re-implementation of an earlier version written by Kedar Jog.
-
+B<AutoSearch> is a re-implementation of an earlier version written by
+Kedar Jog.
 
 =head1 COPYRIGHT
 
@@ -1903,7 +1998,6 @@ THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
 WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
 MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
-
 =head1 DESIRED FEATURES
 
 These are good ideas that people have suggested.
@@ -1912,23 +2006,21 @@ These are good ideas that people have suggested.
 
 =item URL validation.
 
-Validate the status of each URL (with HTTP HEAD requests)
-and indicate this status in the output.
+Validate the status of each URL (with HTTP HEAD requests) and indicate
+this status in the output.
 
 =item Multi-search.
 
 It should be possible to merge the results of searches from two
-search-engines.
-If this merger were done as a new search engine,
-this operation would be transparent to AutoSearch.
+search-engines.  If this merger were done as a new search engine, this
+operation would be transparent to AutoSearch.
 
 =back
 
-
 =head1 BUGS
 
-None known at this time; please inform the maintainer
-mthurn@cpan.org if any crop up.
+None known at this time; please inform the maintainer mthurn@cpan.org
+if any crop up.
 
 =cut
 

@@ -1,3 +1,16 @@
+2004-08-21  Kingpin  <mthurn@verizon.net>
+
+	* code/AutoSearch-code.pl: added pod
+
+2004-08-19  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search.pm (agent_name): new method
+
+2004-07-31  Kingpin  <mthurn@verizon.net>
+
+	* code/AutoSearch-code.pl (send_email): use Email::Send
+	* code/AutoSearch-code.pl (send_email): send HTML using proper MIME-type
+
 2004-06-30  Kingpin  <mthurn@verizon.net>
 
 	* lib/WWW/Search.pm (installed_engines): make it run much faster!

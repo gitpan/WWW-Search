@@ -1,3 +1,4 @@
+# $Id: WebSearch.PL,v 1.17 2004/08/21 19:45:28 Daddy Exp $
 use Config;
 use File::Basename qw(basename dirname);
 chdir(dirname($0));

@@ -1,10 +1,10 @@
-# $Id: 0_versions.t,v 1.3 2004/07/01 02:25:49 Daddy Exp $
+# $Id: 0_versions.t,v 1.4 2004/08/21 19:43:23 Daddy Exp $
 
 use strict;
 use Test::More tests => 1;
 
 # Create a list of modules we're interested in:
-my @asModule = qw( File::Find File::Spec Getopt::Long HTML::Parser HTML::TreeBuilder HTTP::Cookies LWP::UserAgent MIME::Lite Net::Domain URI User );
+my @asModule = qw( File::Find File::Spec Getopt::Long HTML::Parser HTML::TreeBuilder HTTP::Cookies LWP::UserAgent MIME::Lite Net::Domain Pod::Parser Pod::Tests Pod::Usage Test::Inline URI User );
 
 # Extract the version number from each module:
 my %hsvVersion;
@@ -26,6 +26,7 @@ if($@)
   } # if
 
 # Print on STDERR details of installed modules:
+diag('');
 diag(sprintf("\r#  %-30s %s\n", 'Module', 'Version'));
 foreach my $sModule (sort keys %hsvVersion)
   {

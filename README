@@ -3,17 +3,15 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.471?  (2004-05-01)
+WHAT IS NEW IN WWW::Search 2.472?  (2004-08-20)
 ----------------------------------------------
 
 Overview of changes: 
 
- * better testing of Null:: modules
- * better testing for coverage
- * make installed_engines() smarter and faster
- * minor code clean-ups
+ * AutoSearch now uses Email::Send
+ * AutoSearch now sends well-formed HTML email
 
-For details, see the ChangeLog file (updates after 2004-05-01) and/or
+For details, see the ChangeLog file (updates after 2004-07-02) and/or
 the pod of each affected module.
 
 
