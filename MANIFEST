@@ -2,7 +2,7 @@ MANIFEST
 README
 Makefile.PL
 bin/AutoSearch.PL
-bin/search.PL
+bin/WebSearch.PL
 lib/WWW/Search.pm
 lib/WWW/Search/AltaVista.pm
 lib/WWW/Search/AltaVista/AdvancedNews.pm

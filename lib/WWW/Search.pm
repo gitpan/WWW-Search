@@ -4,7 +4,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.33 1996/11/25 22:21:37 johnh Exp $
+# $Id: Search.pm,v 1.36 1997/01/15 02:15:13 johnh Exp $
 #
 # A complete copyright notice appears at the end of this file.
 # 
@@ -71,7 +71,7 @@ see L<WWW::SearchResult>.
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query);
-$VERSION = 1.007;
+$VERSION = 1.009;
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
 use LWP::UserAgent;
@@ -107,7 +107,8 @@ The next step is usually:
 
 # the default (not currently more configurable :-< )
 $default_engine = 'AltaVista';
-$default_agent_name = 'WWW::Search/johnh@isi.edu';
+$default_agent_name = "WWW::Search/$VERSION";
+$default_agent_e_mail = 'johnh@isi.edu';
 
 sub new
 { 
@@ -130,7 +131,9 @@ sub new
 	requests_made => 0,
 	interrequest_delay => 0.25,  # in seconds
 	agent_name => $default_agent_name,
+	agent_e_mail => $default_agent_e_mail,
 	http_proxy => undef,
+	debug => 0,
 	# variable initialization goes here
     }, $subclass;
     return $self;
@@ -146,6 +149,7 @@ The actual search is not actually begun until C<results> or
 C<next_result> is called.
 
 Example:
+
 	$search->native_query('search-engine-specific+query+string',
 		{ option1 => 'able', option2 => 'baker' } );
 
@@ -424,7 +428,7 @@ sub user_agent
     if ($non_robot) {
 	$ua = new LWP::UserAgent;
     } else {
-	$ua = new LWP::RobotUA($self->{agent_name});
+	$ua = new LWP::RobotUA($self->{agent_name}, $self->{agent_e_mail});
 	$ua->delay($self->{interrequest_delay}/60.0);
     };
     $ua->proxy('http', $self->{'http_proxy'})

@@ -3,26 +3,20 @@ WWW::Search and AutoSearch
 ==========================
 
 
-WHAT IS NEW WITH WWW::Search 1.007?
+WHAT IS NEW WITH WWW::Search 1.009?
 -----------------------------------
 
-- new: back-ends for Dejanews (from Cesare Feroldi de Rosa),
-	Infoseek (also from Cesare Feroldi de Rosa),
-	and Excite (from GLen Pringle)
-- new: more fields in SearchResult (score, dates, etc., see the man page)
-	(problem found by Cesare Feroldi de Rosa)
-- new: better error handling on network failures
-	(AutoSearch should report errors on its pages,
-	$search->response() provides an API for error reporting)
-- new (internal):  user_agent handling has changed
-- new:  proxy support added to WWW::Search (still needed in applications)
-	(problem and fix suggested by T. V. Raman)
-- bug-fix: numerous documentation updates
-	(problems found by Larry Virden)
-- bug-fix: AltaVista web search was occasionally dropping hits
-	(problem found by Larry Virden, fixed by Bill Scheding)
-- bug-fix: all non-alphanumeric characters are now escaped
-	(problem found by Larry Virden)
+overview:  1.009 is primarily a maintenance release to accommodate
+	changes to LWP and some search engines.
+
+- change:  search application renamed WebSearch (a more specific name)
+- bug-fix:  the WWW::Search error in formatting is fixed
+	(problem found by Larry Virden, fix by him and johnh)
+- bug-fix:  RobotUA handling updated for new LWP in Search.pm
+- bug-fix:  update for Infoseek (page format changed about 1 Jan 97)
+	(problem found by Joseph McDonald, fix by Cesare Feroldi de Rosa)
+- bug-fix:  update for Excite (page format changed about 9 Jan 97)
+	(problem found by Juan Jose Amor, fix by GLen Pringle)
 
 
 WHAT IS WWW::Search?
@@ -33,7 +27,7 @@ WWW search engines.  Currently WWW::Search includes back-ends for
 variations of AltaVista, Dejanews, Excite, HotBot, Infoseek, and
 Lycos.  We include two applications built from this library:
 AutoSearch (an program to automate tracking of search results over
-time), a small demonstration program to drive the library.
+time), and WebSearch, a small demonstration program to drive the library.
 Back-ends for other search engines and more sophisticated clients are
 currently under development.
 
@@ -103,12 +97,6 @@ something like this command:
     perl Makefile.PL PREFIX=~/perl
 
 
-Note:  make of the current release reports the following error which can be ignored:
-
-    /usr/local/bin/pod2man: bad option in paragraph 35 of lib/WWW/Search.pm: ``native_query('search-engine-specific+query+string',
-        { option1 => 'able', option2 => 'baker' } )'' should be [LCI]<native_query('search-engine-specific+query+string',
-        { option1 => 'able', option2 => 'baker' } )>
-
 
 
 DEMONSTRATION
@@ -158,7 +146,7 @@ Some ideas:
   - more back-ends
 
 Other than a test suite I don't have major plans in the immediate
-future (through 1Q1997); WWW::Search will be in maintenence mode.
+future (through 1Q1997); WWW::Search will be in maintenance mode.
 
 Contributions from others are always welcome.  Send me e-mail if you
 plan a new back-end and to discuss architectural changes (to avoid
@@ -185,6 +173,27 @@ RELEASE HISTORY
 1.006:  (25 November 1996)
 - private beta release, see 1.007 for list of new features
 
+1.007: (17 December 1996)
+- new: back-ends for Dejanews (from Cesare Feroldi de Rosa),
+	Infoseek (also from Cesare Feroldi de Rosa),
+	and Excite (from GLen Pringle)
+- new: more fields in SearchResult (score, dates, etc., see the man page)
+	(problem found by Cesare Feroldi de Rosa)
+- new: better error handling on network failures
+	(AutoSearch should report errors on its pages,
+	$search->response() provides an API for error reporting)
+- new (internal):  user_agent handling has changed
+- new:  proxy support added to WWW::Search (still needed in applications)
+	(problem and fix suggested by T. V. Raman)
+- bug-fix: numerous documentation updates
+	(problems found by Larry Virden)
+- bug-fix: AltaVista web search was occasionally dropping hits
+	(problem found by Larry Virden, fixed by Bill Scheding)
+- bug-fix: all non-alphanumeric characters are now escaped
+	(problem found by Larry Virden)
+
+1.008:  (8 January 1997)
+- private alpha release, see 1.009 for list of new features
 
 
 SUPPORT AND CREDITS
@@ -215,8 +224,13 @@ identified by William Scheding <wls@isi.edu>, T. V. Raman
 <C.Feroldi@it.net> (fix included), Larry Virden <lvirden@cas.org> (fix
 included).
 
+Bugs have reported by Joseph McDonald <joe@smartlink.net>, Juan Jose
+Amor <jjamor@infor.es>.
+
 Feedback, bug reports and fixes, and new back-ends should be sent to
-John Heidemann <johnh@isi.edu>.
+John Heidemann <johnh@isi.edu>.  Before submitting a bug report,
+please check <http://www.isi.edu/lsam/tools/WWW_SEARCH/> for any
+announcements about known bugs.
 
 
 
@@ -251,4 +265,5 @@ ISPELL
  LocalWords:  lsam pl pm perldoc README LocalWords AutoSearch Search's html usr
  LocalWords:  crontab HotBot autosearch Scheding Kedar Dejanews Infoseek lib de
  LocalWords:  SearchResult LCI wls Cesare Feroldi GLen Pringle pringle monash
- LocalWords:  au Raman raman Virden lvirden cas org
+ LocalWords:  au Raman raman Virden lvirden cas org LWP WebSearch RobotUA Amor
+ LocalWords:  joe smartlink jjamor infor es

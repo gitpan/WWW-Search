@@ -1,9 +1,9 @@
 # This -*- perl -*- script writes the Makefile for libwww-perl
-# $Id: Makefile.PL,v 1.5 1996/10/29 21:28:08 johnh Exp $
+# $Id: Makefile.PL,v 1.6 1996/12/18 02:57:02 johnh Exp $
 
 #--- Configuration section ---
 
-@programs_to_install = qw(search AutoSearch);
+@programs_to_install = qw(WebSearch AutoSearch);
 
 #--- End Configuration - You should not have to change anything below this line
 
@@ -55,7 +55,7 @@ WriteMakefile(
    NAME          => 'WWW::Search',
    VERSION_FROM  => 'lib/WWW/Search.pm',
    PL_FILES      => {
-                      'bin/search.PL' => 'bin/search',
+                      'bin/WebSearch.PL' => 'bin/WebSearch',
                       'bin/AutoSearch.PL' => 'bin/AutoSearch',
 	            },
    EXE_FILES     => [ map {"bin/$_"} @programs_to_install ],

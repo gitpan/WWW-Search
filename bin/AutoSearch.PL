@@ -21,26 +21,11 @@ print OUT <<'!NO!SUBS!';
 
 #
 # AutoSearch.pl
-# Copyright (C) 1996 by USC/ISI
-# $Id: AutoSearch.PL,v 1.27 1996/12/17 21:21:27 johnh Exp $
-#
-# Copyright (c) 1996 University of Southern California.
+# Copyright (c) 1996-1997 University of Southern California.
 # All rights reserved.                                            
-#                                                                
-# Redistribution and use in source and binary forms are permitted
-# provided that the above copyright notice and this paragraph are
-# duplicated in all such forms and that any documentation, advertising
-# materials, and other materials related to such distribution and use
-# acknowledge that the software was developed by the University of
-# Southern California, Information Sciences Institute.  The name of the
-# University may not be used to endorse or promote products derived from
-# this software without specific prior written permission.
-# 
-# THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
-# WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
-# MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-# 
+# $Id: AutoSearch.PL,v 1.28 1997/01/08 20:03:25 johnh Exp $
 #
+# Complete copyright notice follows below.
 #
 
 =head1 NAME
@@ -71,12 +56,27 @@ results set with a web browser.
 
 Example:
 
-    AutoSearch -n "LSAM Replication" -s '"lsam replication"' -e AltaVista replication_query
+    AutoSearch -n 'LSAM Replication'
+	-s '"lsam replication"'
+	-e AltaVista
+	replication_query
 
-This query creates a directory replication_query
+This query (which should be all on one line)
+creates a directory replication_query
 and fills it with the facinating output of the AltaVista query
 on C<"lsam replication">,
 with pages titled ``LSAM Replication''.
+
+A more complicated example:
+
+    AutoSearch -n 'External Links to LSAM'
+	-s '(link:www.isi.edu/lsam or link:www.isi.edu/~lsam) -url:isi.edu'
+	-e AltaVista::AdvancedWeb
+	-o coolness=hot
+
+This query does an advanced AltaVista search
+and specifies the (hypothetical) ``coolness'' option
+to the search engine.
 
 
 =head1 OPTIONS
@@ -373,6 +373,25 @@ for the perl regular expressions, see L<perlre>.
 Wm. L. Scheding
 
 B<AutoSearch> is  a re-implementation of an earlier version written by Kedar Jog.
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 1996-1997 University of Southern California.
+All rights reserved.                                            
+                                                               
+Redistribution and use in source and binary forms are permitted
+provided that the above copyright notice and this paragraph are
+duplicated in all such forms and that any documentation, advertising
+materials, and other materials related to such distribution and use
+acknowledge that the software was developed by the University of
+Southern California, Information Sciences Institute.  The name of the
+University may not be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 
 =head1 DESIRED FEATURES

@@ -6,7 +6,7 @@
 # AltaVista.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Web.pm,v 1.3 1996/11/25 22:21:40 johnh Exp $
+# $Id: Web.pm,v 1.4 1997/01/08 19:51:22 johnh Exp $
 #
 # Complete copyright notice follows below.
 # 
@@ -128,7 +128,7 @@ sub native_retrieve_some
     $self->{response} = $response;
     if (!$response->is_success) {
 		return undef;
-    };
+    } 
 
     # parse the output
     #define constants:
@@ -175,6 +175,10 @@ sub native_retrieve_some
 				next;
 			}
 			$raw.=$_;
+		} elsif (m#</html>#) {
+			$self->{_next_url}= undef unless $NextPage;
+			$self->user_agent_delay if (defined($self->{_next_url}));
+			return $hits_found;            
 		}
     }
 

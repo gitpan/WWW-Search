@@ -20,9 +20,9 @@ print OUT <<'!NO!SUBS!';
 
 
 #
-# search.pl
+# WebSearch.PL
 # Copyright (C) 1996 by USC/ISI
-# $Id: search.PL,v 1.22 1996/11/13 00:49:44 wls Exp $
+# $Id: WebSearch.PL,v 1.23 1996/12/18 02:57:05 johnh Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -32,7 +32,7 @@ sub usage {
     print STDERR <<END;
 usage: $0 [-e SearchEngine] [-o option] [-o option...] [-v] query
 
-Make a query to Alta Vista, showing the primary URLs which match.
+Make a query to a web search engine, showing the primary URLs which match.
 END
     exit 1;
 }
@@ -40,12 +40,12 @@ END
 
 =head1 NAME
 
-search - a web-searching application demonstrating WWW::Search
+WebSearch - a web-searching application demonstrating WWW::Search
 
 
 =head1 SYNOPSIS
 
-B<search [-e SearchEngine] [-o option] [-o option...] [-va] query>
+B<WebSearch [-e SearchEngine] [-o option] [-o option...] [-va] query>
 
 
 =head1 DESCRIPTION
@@ -54,18 +54,11 @@ This program is provides a command-line interface to web search engines,
 listing all URLs found for a given query.  This program also provides
 a simple demonstration of the WWW::Search Perl library for web searches.
 
-Currently the program does searches on AltaVista 
-F<http://www.altavista.digital.com>.
-We plan to expand WWW::Search to support other search engines 
-in late 1996.
+The program current supports a number of search engines;
+see L<WWW::Search> for a list.
 
-We plan to provide more sophisticated services using WWW::Search.
-One service is an periodic service where we automatically search
-the web for relevant documents.  A prototype of this system 
-(not yet using WWW::Search) is available at
-F<http://www.isi.edu/lsam/tools/index.html>
-with sample output at
-F<http://www.isi.edu/div7/ib/jog/index.html>.
+A more sophisticated client is L<AutoSearch>
+which maintains a change list of found objects.
 
 
 =head1 OPTIONS
@@ -76,8 +69,7 @@ F<http://www.isi.edu/div7/ib/jog/index.html>.
 
 Specify the search engine.
 Capitalization matters.
-Currently AltaVista, Lycos, and HotBot are possible engines.
-See L<WWW::Search> for a possibly more complete list of supported engines.
+See L<WWW::Search> for a complete list of supported engines.
 
 =item C<-o>
 
@@ -103,8 +95,7 @@ For a more sophisticated client, see L<AutoSearch>.
 
 =head1 AUTHOR
 
-C<WWW::Search> is written by John Heidemann, <johnh@isi.edu>,
-with some additions by Wm. L. Scheding, <wls@isi.edu>.
+C<WebSearch> is written by John Heidemann, <johnh@isi.edu>.
 
 
 =head1 COPYRIGHT
@@ -219,8 +210,6 @@ sub main {
     };
 
 };
-
-
 
 
 !NO!SUBS!

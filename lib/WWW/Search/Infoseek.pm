@@ -1,12 +1,12 @@
 #!/usr/local/bin/perl -w
 
 # Back-end for Infoseek search engine
-# Cesare Feroldi de Rosa, <C.Feroldi@IT.net> 1996
+# Cesare Feroldi de Rosa <C.Feroldi@IT.net> 1996
 # derived from:
 # AltaVista.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Infoseek.pm,v 1.3 1996/11/25 22:21:39 johnh Exp $
+# $Id: Infoseek.pm,v 1.4 1997/01/08 20:03:27 johnh Exp $
 #
 # Complete copyright notice follows below.
 # 

@@ -7,7 +7,7 @@
 # based upon Lycos.pm
 # by Wm. L. Scheding
 # Copyright (C) 1996 by USC/ISI
-# $Id: Excite.pm,v 1.5 1996/11/25 19:43:10 johnh Exp $
+# $Id: Excite.pm,v 1.7 1997/01/15 01:24:47 johnh Exp $
 #
 # Complete copyright notice follows below.
 # 
@@ -87,7 +87,7 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 #
 #  Test cases:
 # search xxxasdf                    --- no matches
-# search 'lsam AND replication'     --- four matches
+# search 'lsam AND replication'     --- three matches
 # search 'glen AND pringle'         --- tons of matches
 #
 
@@ -105,6 +105,7 @@ use Carp ();
 require WWW::SearchResult;
 
 
+my($debug) = 0;
 
 # private
 sub native_setup_search
@@ -113,8 +114,9 @@ sub native_setup_search
     $self->user_agent();
     $self->{_next_to_retrieve} = 0;
     $self->{_base_url} = $self->{_next_url} =
-	"http://www.excite.com/search.gw?trace=a&collection=web" .
-	"&search=" . $native_query;
+	"http://www.excite.com/search.gw?trace=a" .
+	"&search=" . $native_query .
+	"&collection=web";
 }
 
 
@@ -127,6 +129,7 @@ sub native_retrieve_some
     return undef if (!defined($self->{_next_url}));
 
     # get some
+    print "GET " . $self->{_next_url} . "\n" if ($debug);
     my($request) = new HTTP::Request('GET', $self->{_next_url});
     my($response) = $self->{user_agent}->request($request);
     $self->{response} = $response;
@@ -135,40 +138,46 @@ sub native_retrieve_some
     };
 
     # parse the output
-    my($HEADER, $HITS, $DESC, $FORM, $INPUT, $TRAILER) = (1..6);
+    my($HEADER, $HITS, $URL, $DESC, $FORM, $INPUT, $TRAILER) = (1..7);
     my($hits_found) = 0;
     my($state) = ($HEADER);
     my($hit) = ();
     my($next) = "";
+	my($matches_found) = -1;
     foreach (split(/\n/, $response->content())) {
         next if m@^$@; # short circuit for blank lines
-	if ($state == $HEADER && m@^<B>Excite\s+Search\s*</B>\s*found\s+<B>\s*(\d+)\s*</B>\s*documents\s+about@i) {
-#            print STDOUT "header:\"$+\" matches\n";
+	if ($state == $HEADER && m@^\s*<B>Excite\s+Search\s*</B>\s*found\s+<B>\s*(\d+)\s*</B>\s*document@i) {
+            print STDOUT "header:\"$+\" matches\n" if ($debug);
+		$matches_found = $1;
 	    $self->approximate_result_count($1);
 	    $state = $HITS;
-	} elsif ($state == $HITS && m@^<DT><font\s+color=\#ff0000><B>(\d+)\%\s+</B></font><B><a href=\"([^"]+)\">(.*)</a></b>@i) { #"
-#            print STDOUT "hit: \"$_\"\n";
+	} elsif ($state == $HITS && m@^\s*<DT><font\s+color=\#ff0000><B>(\d+)\%\s+</B></font>@i) { #"
+            print STDOUT "hit: $1% \"$_\"\n" if ($debug);
+	    $state = $URL;
+	} elsif ($state == $URL && m@^\s*<B><a href=\"([^"]+)\">([^<]*)@i) { #"
+            print STDOUT "url: \"$_\"\n" if ($debug);
+            print STDOUT "URL: $1\n" if ($debug);
 	    if (defined($hit)) {
 	        push(@{$self->{cache}}, $hit);
 	    };
 	    $hit = new WWW::SearchResult;
-	    $hit->add_url($2);
+	    $hit->add_url($1);
 	    $hits_found++;
-	    $hit->title($3);
+	    $hit->title($2);
 	    $state = $DESC;
-	} elsif ($state == $DESC && m@^<BR><B><I>Summary:</I></B>\s+(.*)<p>$@i) { #"
-#            print STDOUT "desc:\"$+\"\n";
+	} elsif ($state == $DESC && m@^\s*<BR><B><I>Summary:\s*</I></B>\s*(.*)<p>$@i) { #"
+            print STDOUT "desc:\"$+\"\n" if ($debug);
 	    $hit->description($1);
 	    $state = $HITS;
-	} elsif ($state == $HITS && m@^</DL>$@i) { #"
-#            print STDOUT "hits:\"$_\"\n";
+	} elsif ($state == $HITS && m@^\s*</DL>$@i) { #"
+            print STDOUT "hits:\"$_\"\n" if ($debug);
 	    $state = $FORM;
-	} elsif ($state == $FORM && m@^<FORM\sACTION="([^"]+)"@i) { #"
-#            print STDOUT "form:\"$_\"\n";
+	} elsif ($state == $FORM && m@^<FORM\sACTION="([^"]+)"@i && $matches_found>10) { #"
+            print STDOUT "form:\"$_\"\n" if ($debug);
 	    $state = $INPUT;
 		$next = "http://www.excite.com".$1."?";
-	} elsif ($state == $INPUT && m@^<INPUT\s+TYPE=(\w*)\s+NAME="*([^"]+)"*\s+VALUE=\"([^"]+)\">$@i) { #"
-#            print STDOUT "input:\"$_\"\n";
+	} elsif ($state == $INPUT && m@^\s*<INPUT\s+TYPE=(\w*)\s+NAME="*([^"]+)"*\s+VALUE=\"*([^">]+)\"*>$@i) { #"
+            print STDOUT "input:\"$_\"\n" if ($debug);
 		my($type) = $1;
 		my($name) = $2;
 		my($value) = $3;
@@ -180,7 +189,7 @@ sub native_retrieve_some
 		$next =~ s/ /+/g;
 		my($c) = chop($next);
 		if ($c ne "&") { $next = $next.$c; }
-#            print STDOUT "input:\"$_\"\n";
+            print STDOUT "input:\"$_\"\n" if ($debug);
 	    # end, with a list of other pages to go to
 	    if (defined($hit)) {
 	        push(@{$self->{cache}}, $hit);
@@ -189,7 +198,7 @@ sub native_retrieve_some
 	    $self->{_next_url} = $next;
 	    $state = $TRAILER;
 	} else {
-#            print STDOUT "read:\"$_\"\n";
+            print STDOUT "read:\"$_\"\n" if ($debug);
 	};
     };
     if ($state != $TRAILER) {
