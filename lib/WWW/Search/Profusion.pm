@@ -1,7 +1,7 @@
 # Profusion.pm
 # by Jim Smyser
 # Copyright (c) 1999 by Jim Smyser & USC/ISI
-# $Id: Profusion.pm,v 1.4 1999/09/27 13:36:55 mthurn Exp $
+# $Id: Profusion.pm,v 1.5 1999/10/12 13:29:03 mthurn Exp $
 
 
 package WWW::Search::Profusion;
@@ -127,7 +127,7 @@ $VERSION = '2.02';
 $MAINTAINER = 'Jim Smyser <jsmyser@bigfoot.com>';
 $TEST_CASES = <<"ENDTESTCASES";
 &test('Profusion', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_EXACTLY);
-&test('Profusion', '$MAINTAINER', 'one', 'astronomy', \$TEST_GREATER_THAN, 84);
+&test('Profusion', '$MAINTAINER', 'one', 'astronomy', \$TEST_GREATER_THAN, 10);
 ENDTESTCASES
 
 use Carp ();

@@ -1,6 +1,6 @@
 # Magellan.pm
 # Copyright (c) 1998 by Martin Thurn
-# $Id: Magellan.pm,v 1.13 1999/09/30 13:19:38 mthurn Exp $
+# $Id: Magellan.pm,v 1.14 1999/10/05 19:57:52 mthurn Exp $
 
 =head1 NAME
 
@@ -52,6 +52,10 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 =head1 VERSION HISTORY
 
+=head2 2.02, 1999-10-05
+
+now uses hash_to_cgi_string()
+
 =head2 2.01, 1999-07-13
 
 =head2 1.7, 1998-10-09
@@ -76,7 +80,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.01';
+$VERSION = '2.02';
 
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 $TEST_CASES = <<"ENDTESTCASES";
@@ -133,17 +137,8 @@ sub native_setup_search
       } # foreach
     } # if
 
-  # Process the options.
-  my $options = '';
-  foreach (keys %$options_ref) 
-    {
-    # printf STDERR "option: $_ is " . $options_ref->{$_} . "\n";
-    next if (generic_option($_));
-    $options .= $_ . '=' . $options_ref->{$_} . '&';
-    }
-
   # Finally, figure out the url.
-  $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
+  $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $self->hash_to_cgi_string($options_ref);
 
   # Set some private variables:
   $self->{_debug} = $options_ref->{'search_debug'};

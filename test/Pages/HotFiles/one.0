@@ -47,7 +47,7 @@
 <TR><TD><FONT FACE=VERDANA,HELVETICA,ARIAL SIZE=-2><A HREF="http://www.lycos.com/network/"><FONT COLOR=#000000>Lycos Network</FONT></A>: <A HREF="http://www.lycos.com/cgi-bin/nph-bounce?nbv|http://www.tripod.com/"><FONT COLOR=#000000>Tripod.com</FONT></A> | <A HREF="http://www.lycos.com/cgi-bin/nph-bounce?nb_r|http://www.angelfire.com/"><FONT COLOR=#000000>Angelfire.com</FONT></A> | <A HREF="http://www.lycos.com/cgi-bin/nph-bounce?nb_r|http://mailcity.lycos.com/"><FONT COLOR=#000000>MailCity.com</FONT></A> | <A HREF="http://www.lycos.com/cgi-bin/nph-bounce?nb_r|http://www.whowhere.lycos.com/"><FONT COLOR=#000000>WhoWhere.com</FONT></A> | <A HREF="http://www.lycos.com/cgi-bin/nph-bounce?nb_r|http://www.hotbot.com/"><FONT COLOR=#000000>HotBot.com</FONT></A></FONT></TD><TD><FONT FACE=VERDANA,HELVETICA,ARIAL SIZE=-2><A HREF="http://www.lycos.com/cgi-bin/nph-bounce?nb_r|http://www.lycos.com/network/"><FONT COLOR=#000000>All Sites...</FONT></A></FONT></TD></TR></TABLE>
 
 <P>
-<FONT FACE="VERDANA,HELVETICA,ARIAL" COLOR="#000000" SIZE="-2"><!-- ad http://www.lycos.com/cgi-bin/aeapi?id=135&client_ip=147.81.3.197&service=ZDNET&uri=/search_zdnet&user-agent=libwww-perl/5.45 --> <CENTER><FONT SIZE=-2><a href="http://www.lycos.com/cgi-bin/nph-adclick.exe/CID=000726a58388a96800000000/ST=lycos/SV=ZDNET/A=.lycos.search_zdnet."><img  src="http://ads.lycos.com/ads/onsale165.gif" alt="Laptops at Onsale.com" border=0 WIDTH=468 HEIGHT=60></a><br><a href="http://www.lycos.com/cgi-bin/nph-adclick.exe/CID=000726a58388a96800000000/ST=lycos/SV=ZDNET/A=.lycos.search_zdnet.">Click here to visit site</a>
+<FONT FACE="VERDANA,HELVETICA,ARIAL" COLOR="#000000" SIZE="-2"><!-- ad http://www.lycos.com/cgi-bin/aeapi?id=135&client_ip=147.81.3.197&service=ZDNET&uri=/search_zdnet&user-agent=libwww-perl/5.45 --> <CENTER><FONT SIZE=-2><!-- no ad available -->
 </FONT></CENTER>
 <!--ea--><P>
 <TABLE BORDER=0  WIDTH=600 CELLSPACING=0 CELLPADDING=0>
@@ -92,6 +92,11 @@
 </TD><TD VALIGN=top ALIGN=right><A HREF="http://www.zdnet.com/chkpt/hud0005200/www.zdnet.com/swlib/"><IMG SRC="http://www.zdnet.com/swlib/images/zdnet_swl3.gif" WIDTH=147 HEIGHT=31 BORDER=0 ALT="ZDNet Software Library"></A><IMG SRC="http://www.zdnet.com/swlib/images/spacer.gif" WIDTH=14 HEIGHT=1 BORDER=0></TD>
 </TD>
 </TR></TABLE><BR>
+
+
+
+
+
 <TABLE BORDER=0 CELLSPACING=0 WIDTH=454><TR BGCOLOR="#CDEDFF">
 <TD></TD>
 <TD COLSPAN=2><FONT SIZE=2 COLOR="#000000" FACE="Arial"><b>Title/Synopsis<IMG SRC="http://www.zdnet.com/swlib/images/spacer.gif" WIDTH=1 HEIGHT=20 BORDER=0 ALIGN=absmiddle></TD>
@@ -126,7 +131,7 @@
 <TD ALIGN=left><FONT SIZE=2>Win95
 </FONT></TD>
 <TD>&nbsp;</TD>
-<TD ALIGN=left><FONT SIZE=2>6,799</FONT></TD>
+<TD ALIGN=left><FONT SIZE=2>6,875</FONT></TD>
 </TR>
 <TR BGCOLOR="#FFFFFF">
 <TD VALIGN=top BGCOLOR="#FFFFFF"></TD>
@@ -140,7 +145,7 @@
 <TD ALIGN=left><FONT SIZE=2>NT 3.51
 </FONT></TD>
 <TD>&nbsp;</TD>
-<TD ALIGN=left><FONT SIZE=2>2,177</FONT></TD>
+<TD ALIGN=left><FONT SIZE=2>2,212</FONT></TD>
 </TR>
 <TR BGCOLOR="#CDEDFF">
 <TD VALIGN=top BGCOLOR="#FFFFFF"></TD>
@@ -154,7 +159,7 @@
 <TD ALIGN=left><FONT SIZE=2>NT 3.1
 </FONT></TD>
 <TD>&nbsp;</TD>
-<TD ALIGN=left><FONT SIZE=2>752</FONT></TD>
+<TD ALIGN=left><FONT SIZE=2>762</FONT></TD>
 </TR>
 <TR BGCOLOR="#FFFFFF">
 <TD VALIGN=top BGCOLOR="#FFFFFF"></TD>
@@ -168,7 +173,7 @@
 <TD ALIGN=left><FONT SIZE=2>OS/2 2.0
 </FONT></TD>
 <TD>&nbsp;</TD>
-<TD ALIGN=left><FONT SIZE=2>220</FONT></TD>
+<TD ALIGN=left><FONT SIZE=2>222</FONT></TD>
 </TR>
 <TR BGCOLOR="#CDEDFF">
 <TD VALIGN=top BGCOLOR="#FFFFFF"></TD>
@@ -196,7 +201,7 @@
 <TD ALIGN=left><FONT SIZE=2>Win95, 98, or NT
 </FONT></TD>
 <TD>&nbsp;</TD>
-<TD ALIGN=left><FONT SIZE=2>667</FONT></TD>
+<TD ALIGN=left><FONT SIZE=2>697</FONT></TD>
 </TR>
 <TR BGCOLOR="#CDEDFF">
 <TD VALIGN=top BGCOLOR="#FFFFFF"></TD>
@@ -210,7 +215,35 @@
 <TD ALIGN=left><FONT SIZE=2>NT 3.5
 </FONT></TD>
 <TD>&nbsp;</TD>
-<TD ALIGN=left><FONT SIZE=2>428</FONT></TD>
+<TD ALIGN=left><FONT SIZE=2>437</FONT></TD>
+</TR>
+<TR BGCOLOR="#FFFFFF">
+<TD VALIGN=top BGCOLOR="#FFFFFF"></TD>
+<TD ALIGN=left><FONT SIZE=2><b><A HREF="http://hotfiles.lycos.com/cgi-bin/texis/swlib/lycos/info.html?fcode=000C5C">Lotus Organizer 97 Web Calendar for Win95</b></FONT></A><BR>
+<FONT SIZE=2>Share your calendar on web</FONT><IMG SRC="http://www.zdnet.com/swlib/images/spacer.gif" WIDTH=1 HEIGHT=20 BORDER=0 ALIGN=top></TD>
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN=left><FONT SIZE=2>11-18-97</FONT></TD>
+<TD>&nbsp;</TD>
+<TD ALIGN=left><IMG SRC="http://www.zdnet.com/swlib/images/nr.gif" WIDTH=58 HEIGHT=10 BORDER=0 ALT="Not Rated"></TD>
+<TD>&nbsp;</TD>
+<TD ALIGN=left><FONT SIZE=2>Win95
+</FONT></TD>
+<TD>&nbsp;</TD>
+<TD ALIGN=left><FONT SIZE=2>2,632</FONT></TD>
+</TR>
+<TR BGCOLOR="#CDEDFF">
+<TD VALIGN=top BGCOLOR="#FFFFFF"></TD>
+<TD ALIGN=left><FONT SIZE=2><b><A HREF="http://hotfiles.lycos.com/cgi-bin/texis/swlib/lycos/info.html?fcode=000RH7">SnapBack Live</b></FONT></A><BR>
+<FONT SIZE=2>Get up and running after a disaster</FONT><IMG SRC="http://www.zdnet.com/swlib/images/spacer.gif" WIDTH=1 HEIGHT=20 BORDER=0 ALIGN=top></TD>
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN=left><FONT SIZE=2>08-24-98</FONT></TD>
+<TD>&nbsp;</TD>
+<TD ALIGN=left><IMG SRC="http://www.zdnet.com/swlib/images/nr.gif" WIDTH=58 HEIGHT=10 BORDER=0 ALT="Not Rated"></TD>
+<TD>&nbsp;</TD>
+<TD ALIGN=left><FONT SIZE=2>Win95, 98, or NT
+</FONT></TD>
+<TD>&nbsp;</TD>
+<TD ALIGN=left><FONT SIZE=2>582</FONT></TD>
 </TR>
 <TR BGCOLOR="#FFFFFF">
 <TD VALIGN=top BGCOLOR="#FFFFFF"></TD>
@@ -224,7 +257,7 @@
 <TD ALIGN=left><FONT SIZE=2>NT 4.x
 </FONT></TD>
 <TD>&nbsp;</TD>
-<TD ALIGN=left><FONT SIZE=2>461</FONT></TD>
+<TD ALIGN=left><FONT SIZE=2>470</FONT></TD>
 </TR>
 <TR BGCOLOR="#CDEDFF">
 <TD VALIGN=top BGCOLOR="#FFFFFF"></TD>
@@ -242,34 +275,6 @@
 </TR>
 <TR BGCOLOR="#FFFFFF">
 <TD VALIGN=top BGCOLOR="#FFFFFF"></TD>
-<TD ALIGN=left><FONT SIZE=2><b><A HREF="http://hotfiles.lycos.com/cgi-bin/texis/swlib/lycos/info.html?fcode=000RH7">SnapBack Live</b></FONT></A><BR>
-<FONT SIZE=2>Get up and running after a disaster</FONT><IMG SRC="http://www.zdnet.com/swlib/images/spacer.gif" WIDTH=1 HEIGHT=20 BORDER=0 ALIGN=top></TD>
-<TD>&nbsp;</TD>
-<TD NOWRAP ALIGN=left><FONT SIZE=2>08-24-98</FONT></TD>
-<TD>&nbsp;</TD>
-<TD ALIGN=left><IMG SRC="http://www.zdnet.com/swlib/images/nr.gif" WIDTH=58 HEIGHT=10 BORDER=0 ALT="Not Rated"></TD>
-<TD>&nbsp;</TD>
-<TD ALIGN=left><FONT SIZE=2>Win95, 98, or NT
-</FONT></TD>
-<TD>&nbsp;</TD>
-<TD ALIGN=left><FONT SIZE=2>576</FONT></TD>
-</TR>
-<TR BGCOLOR="#CDEDFF">
-<TD VALIGN=top BGCOLOR="#FFFFFF"></TD>
-<TD ALIGN=left><FONT SIZE=2><b><A HREF="http://hotfiles.lycos.com/cgi-bin/texis/swlib/lycos/info.html?fcode=000C5C">Lotus Organizer 97 Web Calendar for Win95</b></FONT></A><BR>
-<FONT SIZE=2>Share your calendar on web</FONT><IMG SRC="http://www.zdnet.com/swlib/images/spacer.gif" WIDTH=1 HEIGHT=20 BORDER=0 ALIGN=top></TD>
-<TD>&nbsp;</TD>
-<TD NOWRAP ALIGN=left><FONT SIZE=2>11-18-97</FONT></TD>
-<TD>&nbsp;</TD>
-<TD ALIGN=left><IMG SRC="http://www.zdnet.com/swlib/images/nr.gif" WIDTH=58 HEIGHT=10 BORDER=0 ALT="Not Rated"></TD>
-<TD>&nbsp;</TD>
-<TD ALIGN=left><FONT SIZE=2>Win95
-</FONT></TD>
-<TD>&nbsp;</TD>
-<TD ALIGN=left><FONT SIZE=2>2,586</FONT></TD>
-</TR>
-<TR BGCOLOR="#FFFFFF">
-<TD VALIGN=top BGCOLOR="#FFFFFF"></TD>
 <TD ALIGN=left><FONT SIZE=2><b><A HREF="http://hotfiles.lycos.com/cgi-bin/texis/swlib/lycos/info.html?fcode=0008SF">Moraff's Ultra Blast for Windows 95 v5.0</b></FONT></A><BR>
 <FONT SIZE=2>Breakout the paddles again</FONT><IMG SRC="http://www.zdnet.com/swlib/images/spacer.gif" WIDTH=1 HEIGHT=20 BORDER=0 ALIGN=top></TD>
 <TD>&nbsp;</TD>
@@ -280,7 +285,7 @@
 <TD ALIGN=left><FONT SIZE=2>Win95
 </FONT></TD>
 <TD>&nbsp;</TD>
-<TD ALIGN=left><FONT SIZE=2>38,951</FONT></TD>
+<TD ALIGN=left><FONT SIZE=2>39,166</FONT></TD>
 </TR>
 <TR BGCOLOR="#CDEDFF">
 <TD VALIGN=top BGCOLOR="#FFFFFF"></TD>
@@ -294,7 +299,7 @@
 <TD ALIGN=left><FONT SIZE=2>Win95
 </FONT></TD>
 <TD>&nbsp;</TD>
-<TD ALIGN=left><FONT SIZE=2>1,417</FONT></TD>
+<TD ALIGN=left><FONT SIZE=2>1,427</FONT></TD>
 </TR>
 </table>
 <P>

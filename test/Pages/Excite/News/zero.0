@@ -1,12 +1,12 @@
 <HTML><HEAD>
-<TITLE>Excite Search Results for "Bogus26745NoSuchWord934834683"</TITLE>
+<TITLE>Excite Search Results for "Bogus21746NoSuchWord939394601"</TITLE>
 </HEAD>
-<BODY bgcolor=ffffff>
+<BODY bgcolor=ffffff text=000000 link=000099 vlink=990000>
 <CENTER>
 <center>
 <table cellspacing=0 cellpadding=0 border=0 width=600>
 <tr>
-<td align=right VALIGN=BOTTOM width=120>
+<td align=right VALIGN=TOP width=120>
 <a href=http://www.excite.com/><img src=/img/head/logo3.gif width=128 height=50 border=0></a>
 </td>
 <td width=480>
@@ -14,48 +14,11 @@
 <tr>
 <td ALIGN=LEFT VALIGN=bottom>
 <font size=4 face=helvetica>
-<b>Search</b>
+<b>News Search</b>
 </font>
 </TD>
-<TD> <table cellspacing=0 cellpadding=0 border=0 width=100%>
-<TR>
-<TD ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>
-<form action="/redir.dcg" method=get onChange="submit()">
-<td align=right>
-<font face="helvetica" size="-1">
-<a href="http://www.excite.com/"><b>My Excite</b></a> | <a href="http://mail.excite.com"><b>Check Email</b></a></font>&nbsp;
-<select name="url" size="1" onChange="submit()">
-<option value=";http://www.excite.com/">Excite Home
-<option value=";http://www.excite.com/auctions/">Auctions
-<option value=";http://www.excite.com/autos/">Autos
-<option value=";http://www.excite.com/careers/">Careers
-<option value=";http://www.excite.com/local/">City Guides
-<option value=";http://www.excite.com/classifieds/">Classifieds
-<option value=";http://www.excite.com/computers_and_internet/">Computers & Internet
-<option value=";http://www.excite.com/education/">Education
-<option value=";http://www.excite.com/entertainment/">Entertainment
-<option value=";http://www.excite.com/family/">Family
-<option value=";http://www.excite.com/games/">Games
-<option value=";http://www.excite.com/health/">Health
-<option value=";http://www.excite.com/home_and_real_estate/">Home &amp; Real Estate
-<option value=";http://www.excite.com/horoscopes/">Horoscopes
-<option value=";http://www.excite.com/lifestyle/">Lifestyle
-<option value=";http://quicken.excite.com/">Money &amp; Investing
-<option value=";http://news.excite.com/">News
-<option value=";http://www.excite.com/people_and_chat/">People &amp; Chat
-<option value=";http://www.excite.com/shopping/">Shopping
-<option value=";http://sports.excite.com/">Sports
-<option value=";http://city.net/">Travel
-</select>
-<input type="submit" value="Go!">
-</td>
-</form>
-</TD>
-</TR>
-</TABLE>
-</TD>
 </tr>
-<tr BGCOLOR=#ff0000>
+<tr BGCOLOR=#ffcc00>
 <td height=2 colspan=2>
 <table border=0 cellpadding=1 cellspacing=0 width=100%>
 <tr>
@@ -65,24 +28,64 @@
 </table>
 </td>
 </tr>
-<tr VALIGN=top>
+<tr>
+<TD ALIGN=right colspan=2>
+<form action="/redir.dcg" method=get onChange="submit()">
+<td align=right>
+<font face="helvetica" size="-1">
+<a href="http://www.excite.com/r/co=hrex;http://www.excite.com/"><b>My Excite</b></a> | <a href="http://www.excite.com/r/co=hrma;http://mail.excite.com"><b>Check Email</b></a></font>&nbsp;
+<select name="url" size="1" onChange="submit()">
+<option value="http://www.excite.com/">Excite Home
+<option value="http://auctions.excite.com/">Auctions
+<option value="http://www.excite.com/autos/">Autos
+<option value="http://careers.excite.com/">Careers
+<option value="http://www.excite.com/local/">City Guides
+<option value="http://classifieds.excite.com/">Classifieds
+<option value="http://www.excite.com/computers_and_internet/">Computers & Internet
+<option value="http://www.excite.com/education/">Education
+<option value="http://www.excite.com/entertainment/">Entertainment
+<option value="http://www.excite.com/family/">Family
+<option value="http://www.excite.com/games/">Games
+<option value="http://www.excite.com/health/">Health
+<option value="http://www.excite.com/home_and_real_estate/">Home &amp; Real Estate
+<option value="http://www.excite.com/horoscopes/">Horoscopes
+<option value="http://www.excite.com/lifestyle/">Lifestyle
+<option value="http://quicken.excite.com/">Money &amp; Investing
+<option value="http://news.excite.com/">News
+<option value="http://www.excite.com/people_and_chat/">People &amp; Chat
+<option value="http://www.excite.com/relationships/">Relationships
+<option value="http://www.excite.com/shopping/">Shopping
+<option value="http://www.excite.com/sports/">Sports
+<option value="http://city.net/">Travel
+</select>
+<input type="submit" value="Go!">
+</td>
+</form>
+</TD>
+</tr>
+<TR>
 <td colspan=2>
-&nbsp;
+<table border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td height=3>
 </td>
 </tr>
+</table>
+</td>
+</TR>
 </table>
 </TD>
 </TR>
 <TR>
 <TD COLSPAN=2>
 <FORM NAME=topbox ACTION=/search.gw>
-<TABLE border=0 cellpadding=1 cellspacing=0>
+<TABLE border=0 cellpadding=1 cellspacing=0 width=600>
 <TR><TD bgcolor=#cccccc>
-<TABLE border=0 cellspacing=0 cellpadding=4 width='598' bgcolor=ffffff>
+<TABLE border=0 cellspacing=0 cellpadding=4 width=600 bgcolor=ffffff>
 <TR>
 <TD align=right bgcolor=ffffff>
 <b><font face="helvetica" size=-1>You searched for </font></b>
-<input size=30 name=search value="Bogus26745NoSuchWord934834683">
+<input size=30 name=search value="Bogus21746NoSuchWord939394601">
 </td>
 <td>
 <font face="helvetica" size=-1>
@@ -99,7 +102,7 @@ More Search</a>
 </TD>
 </TR>
 </TABLE>
-<TABLE border=0 cellspacing=0 cellpadding=4 width=598 bgcolor=ffffff>
+<TABLE border=0 cellspacing=0 cellpadding=4 width=600 bgcolor=ffffff>
 <TR>
 <td align=right colspan=1>
 <font face="helvetica" size=-1>
@@ -114,98 +117,153 @@ More Search</a>
 </td>
 </tr>
 </table>
+</td></tr></table>
 <input type=hidden name=showSummary value=true>
-<table border=0 cellspacing=0 cellpadding=1 width=100%>
-<tr><td align=center bgcolor=ffcc00>
+<table border=1 cellspacing=0 cellpadding=1 width=600 bordercolor=#ffcc00>
+<tr><td align=center bgcolor=ffffcc>
 <font face="helvetica" size=-1><b>
-Hot clubs! <A HREF=http://www.excite.com/r/co=xxsr_exclub_chk;http://comm.excite.com/comm/area/pw/welcome/main.asp?cid=.DWChByPV3rS&auth=>Chick Flicks</A> | <A HREF=http://www.excite.com/r/co=xxsr_exclub_boy;http://comm.excite.com/comm/area/pw/welcome/main.asp?cid=.qu_52ZGTdGG&auth=>
-Boy Bands</A> | <A HREF=http://www.excite.com/r/co=xxsr_exclub_am;http://comm.excite.com/comm/area/pw/welcome/main.asp?cid=.2n5GN2TezDT&auth=>Amateur Artists</A> | <A HREF=http://www.excite.com/r/co=xxsr_exclub_trp;http://comm.excite.com/comm/area/pw/welcome/main.asp?cid=.74oWusebbSP&auth=>Tropical Paradise</A> | <A HREF=http://www.excite.com/r/co=xxsr_exclub_more;http://www.excite.com/communities/directory>more</A>
+Listen to MP3s: <A HREF=http://www.excite.com/r/co=xxsr_mp3_rk;http://listen.excite.com/sub1.jsp?parent=100>Rock</A> | <A HREF=http://www.excite.com/r/co=xxsr_mp3_el;http://listen.excite.com/sub1.jsp?parent=109>Techno</A> | <A HREF=http://www.excite.com/r/co=xxsr_mp3_rp;http://listen.excite.com/sub1.jsp?parent=494>Rap</A> | <A HREF=http://www.excite.com/r/co=xxsr_mp3_cn;http://listen.excite.com/sub1.jsp?parent=260>Country</A> | <A HREF=http://www.excite.com/r/co=xxsr_mp3_jz;http://listen.excite.com/sub1.jsp?parent=336>Jazz</A> | <A HREF=http://www.excite.com/r/co=xxsr_mp3_rg;http://listen.excite.com/sub1.jsp?parent=549>Reggae</A> | <A HREF=http://www.excite.com/r/co=xxsr_mp3_more;http://music.excite.com/>More</A>
 </b></font>
-</td></tr>
-</table>
 </td></tr>
 </table>
 </form>
 </TD>
 </TR>
 </table>
-<a href="http://www.excite.com/relocate/ad=91861_casinoonnet051399_anidealgirlsonnet.gif|pk=3121896;http://www.casino-on-net.com/cgi-bin/engl.pl?Excite_ROS" onMouseOver="window.status='Click Here !';return true" language="Javascript"><img src="http://image.eimg.com/ads/91861_casinoonnet051399_anidealgirlsonnet.gif" ALT="Click Here !" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> Click Here ! </B></FONT></CENTER></a>
+<!-- The following html is Copyright 1997 by MatchLogic Inc. -->
+<!-- RICH=0 -->
+<IFRAME WIDTH=468 HEIGHT=60 NORESIZE SCROLLING=No FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 SRC="http://ad.preferences.com/iframe;spacedesc=ATTNetwork_Excite_468x60_RunOfSite_Any&ML_SSPKG=RunOfSiteSS&ML_CUSTOM=0&time=1999.10.08.14.59.32&ex_cookie=&ML_TARGET=_top&ML_REDIRECT=http%25253A%25252F%25252Fwww.excite.com%25252Frelocate%25252Fad%25253DLUCI%25257Cpk%25253D3227618%25253B">
+<SCRIPT
+SRC="http://ad.preferences.com/jscript;spacedesc=ATTNetwork_Excite_468x60_RunOfSite_Any&ML_SSPKG=RunOfSiteSS&ML_CUSTOM=0&ML_NIF=Y&ML_KW=Bogus21746NoSuchWord939394601&time=1999.10.08.14.59.32&ex_cookie=&ML_TARGET=_top&ML_REDIRECT=http%25253A%25252F%25252Fwww.excite.com%25252Frelocate%25252Fad%25253DLUCI%25257Cpk%25253D3227618%25253B">
+</SCRIPT>
+<NOSCRIPT>
+<A HREF="http://www.excite.com/relocate/ad=106025_htmlad.gif|pk=3227618;http://ad.preferences.com/click;spacedesc=ATTNetwork_Excite_468x60_RunOfSite_Any&ML_NIF=Y&time=1999.10.08.14.59.32&ex_cookie=" TARGET=_top>
+<IMG SRC="http://ad.preferences.com/image;spacedesc=ATTNetwork_Excite_468x60_RunOfSite_Any&ML_NIF=Y&time=1999.10.08.14.59.32&ex_cookie="></A>
+</NOSCRIPT>
+</IFRAME><CENTER><FONT SIZE=-1 COLOR=#0000FF FACE=arial, geneva><B>Click Here!</B></FONT></CENTER>
+<!-- The above html is Copyright 1997 by MatchLogic Inc. -->
 </center>
 <small><br></small>
 </center>
 <center>
-<B>Your search produced no results.</B>
-<HR NOSHADE SIZE=1>
-<B>Please refer to the tips below before trying your search again:</B>
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=8 WIDTH=100%>
+<TR>
+<td ALIGN=center bgcolor=ffcc00 width=600>
+<font face="helvetica">
+<B>Your search produced no results.<BR>
+Please refer to the tips below before trying your search again:</B>
+</font>
+</td>
+</tr>
+</table>
+<TABLE BORDER=0 CELLPADDING=2 CELLSPACING=0 WIDTH=600>
+<tr>
+<td WIDTH=595 bgcolor=000000>
+<TABLE BORDER=0 CELLPADDING=4 CELLSPACING=1 WIDTH=100% bgcolor=ffffff>
+<TR>
+<TD valign=middle bgcolor=red>
+<B><font size=+2 color=ffcc00><tt>1.</tt></font></B>
+</td>
+<td valign=middle>
+<font face="helvetica"><b>Searching on more than one word produces much better results.</b></font>
+</TD>
+</tr>
+<tr>
+<TD valign=middle bgcolor=red>
+<B><font size=+2 color=ffcc00><tt>2.</tt></font></B>
+</td>
+<td valign=middle>
+<font face="helvetica"><b>Use more specific terms.</b><br>Eg. <i>ferrari</i> instead of <i>sports cars</i>.</font>
+</TD>
+</TR>
+<TR>
+<TD valign=middle bgcolor=red>
+<B><font size=+2 color=ffcc00><tt>3.</tt></font></B>
+</td>
+<td valign=middle>
+<font face="helvetica"><b>Be explicit.</b><br>Eg. <i>john f kennedy</i> along with <i>jfk</i>.</font>
+</TD>
+</tr>
+<tr>
+<TD valign=middle bgcolor=red>
+<B><font size=+2 color=ffcc00><tt>4.</tt></font></B>
+</td>
+<td valign=middle>
+<font face="helvetica"><b>Insert spaces between words.</b></font>
+</TD>
+</TR>
+<TR>
+<TD valign=middle bgcolor=red>
+<B><font size=+2 color=ffcc00><tt>5.</tt></font></B>
+</td>
+<td valign=middle>
+<font face="helvetica"><B>Spelling matters.</B><BR> Are your search terms in Webster's dictionary?
+<BR>&nbsp;&nbsp;&nbsp;check ->
+<a href=http://www.m-w.com/cgi-bin/netdict?Bogus21746NoSuchWord939394601>Bogus21746NoSuchWord939394601</a>&nbsp;
+</font>
+</TD>
+</TR>
+<TR>
+<TD valign=top bgcolor=red>
+<B><font size=+2 color=ffcc00><tt>6.</tt></font></B>
+</td>
+<td valign=middle>
+<font face="helvetica"><b>Did you know? You can search on:</b></font>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 <TR>
 <TD>
-<B> &#183; Be explicit.</B><BR>Eg. <I>john f kennedy</I> along with <I>jfk</I>.
+<font face="helvetica" size=-1><A HREF="http://webcrawler.com">WebCrawler</A></font>
 </TD>
 <TD>
-<B> &#183; Use more specific terms.</B><BR>Eg. <I>ferrari</I> instead of <I>sports cars</I>.
+<font face="helvetica" size=-1><A HREF=http://www.excite.com/>Selected Web Sites</A></font>
+</TD>
+<TD>
+<font face="helvetica" size=-1><A HREF="http://www.excite.com/Reference/usenet.html">Newsgroup Postings</A></font>
 </TD>
 </TR>
 <TR>
 <TD>
-<B> &#183; Spelling matters.</B><BR> Are your terms in <a href="http://www.m-w.com/mw/netdict.htm">Webster's dictionary</a>?
+<font face="helvetica" size=-1><A HREF="http://www.mckinley.com">Magellan</A></font>
 </TD>
 <TD>
-<B> &#183; Insert spaces between words.</B>
-</TD>
-</TR>
-<TR>
-<TD>
-<B> &#183; Searching on more than one word produces much better results.</B>
+<font face="helvetica" size=-1><A HREF=http://news.excite.com/>Current News Articles</A></font>
 </TD>
 <TD>
-<B> &#183; Double quote phrase or name searches.</B><BR>Eg.<I>"frida kahlo"</I>, <I>"seven wonders of the world"</I>, etc.
-</TD>
-</TR>
-<TR>
-<TD>
-<B> &#183; Did you know? You can search on:</B>
-<TABLE BORDER=0 CELLPADDING=3 CELLSPACING=0 WIDTH=100%>
-<TR>
-<TD>
-<A HREF="http://webcrawler.com">WebCrawler</A>
-</TD>
-<TD>
-<A HREF=http://www.excite.com/>Selected Web Sites</A>
-</TD>
-<TD>
-<A HREF="http://www.excite.com/Reference/usenet.html">Newsgroup Postings</A>
-</TD>
-</TR>
-<TR>
-<TD>
-<A HREF="http://www.mckinley.com">Magellan</A>
-</TD>
-<TD>
-<A HREF=http://news.excite.com/>Current News Articles</A>
-</TD>
-<TD>
-<A HREF="http://city.net">City.Net Travel Guide</A>
+<font face="helvetica" size=-1><A HREF="http://city.net">City.Net Travel Guide</A></font>
 </TD>
 </TR>
 </TABLE>
 </TD>
 </TR>
 </TABLE>
+</TD>
+</TR>
+</TABLE>
+<P><font face="helvetica"><B>To learn how to search more effectively with Excite, read these <A HREF=http://www.excite.com/Info/searching.html?#general>search tips</A>.</B></font>
 </center>
 &nbsp;<p>
 <p>
 <center>
-<a href="http://www.excite.com/relocate/ad=91861_casinoonnet051399_anidealgirlsonnet.gif|pk=3121896;http://www.casino-on-net.com/cgi-bin/engl.pl?Excite_ROS" onMouseOver="window.status='Click Here !';return true" language="Javascript"><img src="http://image.eimg.com/ads/91861_casinoonnet051399_anidealgirlsonnet.gif" ALT="Click Here !" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> Click Here ! </B></FONT></CENTER></a>
+<!-- The following html is Copyright 1997 by MatchLogic Inc. -->
+<!-- RICH=0 -->
+<IFRAME WIDTH=468 HEIGHT=60 NORESIZE SCROLLING=No FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 SRC="http://ad.preferences.com/iframe;spacedesc=ATTNetwork_Excite_468x60_RunOfSite_Any&ML_SSPKG=RunOfSiteSS&ML_CUSTOM=0&time=1999.10.08.14.59.32&ex_cookie=&ML_TARGET=_top&ML_REDIRECT=http%25253A%25252F%25252Fwww.excite.com%25252Frelocate%25252Fad%25253DLUCI%25257Cpk%25253D3227618%25253B">
+<SCRIPT
+SRC="http://ad.preferences.com/jscript;spacedesc=ATTNetwork_Excite_468x60_RunOfSite_Any&ML_SSPKG=RunOfSiteSS&ML_CUSTOM=0&ML_NIF=Y&ML_KW=Bogus21746NoSuchWord939394601&time=1999.10.08.14.59.32&ex_cookie=&ML_TARGET=_top&ML_REDIRECT=http%25253A%25252F%25252Fwww.excite.com%25252Frelocate%25252Fad%25253DLUCI%25257Cpk%25253D3227618%25253B">
+</SCRIPT>
+<NOSCRIPT>
+<A HREF="http://www.excite.com/relocate/ad=106025_htmlad.gif|pk=3227618;http://ad.preferences.com/click;spacedesc=ATTNetwork_Excite_468x60_RunOfSite_Any&ML_NIF=Y&time=1999.10.08.14.59.32&ex_cookie=" TARGET=_top>
+<IMG SRC="http://ad.preferences.com/image;spacedesc=ATTNetwork_Excite_468x60_RunOfSite_Any&ML_NIF=Y&time=1999.10.08.14.59.32&ex_cookie="></A>
+</NOSCRIPT>
+</IFRAME><CENTER><FONT SIZE=-1 COLOR=#0000FF FACE=arial, geneva><B>Click Here!</B></FONT></CENTER>
+<!-- The above html is Copyright 1997 by MatchLogic Inc. -->
 <small><br></small>
 <FORM NAME=botbox ACTION=/search.gw>
-<TABLE border=0 cellpadding=1 cellspacing=0>
+<TABLE border=0 cellpadding=1 cellspacing=0 width=600>
 <TR><TD bgcolor=#cccccc>
-<TABLE border=0 cellspacing=0 cellpadding=4 width='598' bgcolor=ffffff>
+<TABLE border=0 cellspacing=0 cellpadding=4 width=600 bgcolor=ffffff>
 <TR>
 <TD align=right bgcolor=ffffff>
 <b><font face="helvetica" size=-1>You searched for </font></b>
-<input size=30 name=search value="Bogus26745NoSuchWord934834683">
+<input size=30 name=search value="Bogus21746NoSuchWord939394601">
 </td>
 <td>
 <font face="helvetica" size=-1>
@@ -222,7 +280,7 @@ More Search</a>
 </TD>
 </TR>
 </TABLE>
-<TABLE border=0 cellspacing=0 cellpadding=4 width=598 bgcolor=ffffff>
+<TABLE border=0 cellspacing=0 cellpadding=4 width=600 bgcolor=ffffff>
 <TR>
 <td align=right colspan=1>
 <font face="helvetica" size=-1>
@@ -237,9 +295,8 @@ More Search</a>
 </td>
 </tr>
 </table>
+</td></tr></table>
 <input type=hidden name=showSummary value=true>
-</td></tr>
-</table>
 </form>
 <p>
 <font face="helvetica" size=-1>
@@ -260,6 +317,6 @@ Copyright 1995-1999 Excite Inc. &nbsp; Powered by <A HREF="http://www.sun.com">S
 <A HREF=http://www.excite.com/info/disclaimer/>Disclaimer</A>
 </font>
 </center>
-<IMG SRC="http://ad.preferences.com/ping.ng;spacedesc=TCExciteData_Excite_1x1_RunOfSite_Any&event=KeywordResults&time=1999.08.16.16.21.03" HEIGHT=1 WIDTH=1 BORDER=0>
+<IMG SRC="http://ad.preferences.com/ping.ng;spacedesc=TCExciteData_Excite_1x1_RunOfSite_Any&event=KeywordResults&time=1999.10.08.10.59.32" HEIGHT=1 WIDTH=1 BORDER=0>
 </body>
 </html>

@@ -146,7 +146,6 @@ test/Pages/Excite/News/multi.README
 test/Pages/Excite/News/multi.out
 test/Pages/Excite/News/one
 test/Pages/Excite/News/one.0
-test/Pages/Excite/News/one.1
 test/Pages/Excite/News/one.README
 test/Pages/Excite/News/one.out
 test/Pages/Excite/News/zero
@@ -162,7 +161,6 @@ test/Pages/Excite/two_page.0
 test/Pages/Excite/two_page.1
 test/Pages/Excite/two_page.2
 test/Pages/Excite/two_page.3
-test/Pages/Excite/two_page.4
 test/Pages/Excite/two_page.README
 test/Pages/Excite/two_page.out
 test/Pages/Excite/zero
@@ -180,6 +178,7 @@ test/Pages/FolioViews/zero.out
 test/Pages/GoTo/multi
 test/Pages/GoTo/multi.0
 test/Pages/GoTo/multi.1
+test/Pages/GoTo/multi.2
 test/Pages/GoTo/multi.README
 test/Pages/GoTo/multi.out
 test/Pages/GoTo/one_page
@@ -245,6 +244,7 @@ test/Pages/Infoseek/Companies/zero.out
 test/Pages/Infoseek/News/multi
 test/Pages/Infoseek/News/multi.0
 test/Pages/Infoseek/News/multi.1
+test/Pages/Infoseek/News/multi.2
 test/Pages/Infoseek/News/multi.README
 test/Pages/Infoseek/News/multi.out
 test/Pages/Infoseek/News/zero
@@ -264,6 +264,19 @@ test/Pages/Infoseek/Web/zero
 test/Pages/Infoseek/Web/zero.0
 test/Pages/Infoseek/Web/zero.README
 test/Pages/Infoseek/Web/zero.out
+test/Pages/LookSmart/one
+test/Pages/LookSmart/one.0
+test/Pages/LookSmart/one.README
+test/Pages/LookSmart/one.out
+test/Pages/LookSmart/two
+test/Pages/LookSmart/two.0
+test/Pages/LookSmart/two.1
+test/Pages/LookSmart/two.README
+test/Pages/LookSmart/two.out
+test/Pages/LookSmart/zero
+test/Pages/LookSmart/zero.0
+test/Pages/LookSmart/zero.README
+test/Pages/LookSmart/zero.out
 test/Pages/Lycos/Pages/one
 test/Pages/Lycos/Pages/one.0
 test/Pages/Lycos/Pages/one.README
@@ -284,6 +297,7 @@ test/Pages/Lycos/Sites/one.out
 test/Pages/Lycos/Sites/two
 test/Pages/Lycos/Sites/two.0
 test/Pages/Lycos/Sites/two.1
+test/Pages/Lycos/Sites/two.2
 test/Pages/Lycos/Sites/two.README
 test/Pages/Lycos/Sites/two.out
 test/Pages/Lycos/Sites/zero
@@ -310,6 +324,9 @@ test/Pages/Metapedia/zero_result.out
 test/Pages/NetFind/multi_gv
 test/Pages/NetFind/multi_gv.0
 test/Pages/NetFind/multi_gv.1
+test/Pages/NetFind/multi_gv.2
+test/Pages/NetFind/multi_gv.3
+test/Pages/NetFind/multi_gv.4
 test/Pages/NetFind/multi_gv.README
 test/Pages/NetFind/multi_gv.out
 test/Pages/NetFind/one_gv
@@ -329,6 +346,7 @@ test/Pages/NorthernLight/two_page.0
 test/Pages/NorthernLight/two_page.1
 test/Pages/NorthernLight/two_page.2
 test/Pages/NorthernLight/two_page.3
+test/Pages/NorthernLight/two_page.4
 test/Pages/NorthernLight/two_page.README
 test/Pages/NorthernLight/two_page.out
 test/Pages/NorthernLight/zero
@@ -340,6 +358,7 @@ test/Pages/Null/zero.out
 test/Pages/OpenDirectory/multi
 test/Pages/OpenDirectory/multi.0
 test/Pages/OpenDirectory/multi.1
+test/Pages/OpenDirectory/multi.2
 test/Pages/OpenDirectory/multi.README
 test/Pages/OpenDirectory/multi.out
 test/Pages/OpenDirectory/one
@@ -373,8 +392,6 @@ test/Pages/Snap/one.out
 test/Pages/Snap/two
 test/Pages/Snap/two.0
 test/Pages/Snap/two.1
-test/Pages/Snap/two.2
-test/Pages/Snap/two.3
 test/Pages/Snap/two.README
 test/Pages/Snap/two.out
 test/Pages/Snap/zero
@@ -401,7 +418,6 @@ test/Pages/Yahoo/one.out
 test/Pages/Yahoo/two
 test/Pages/Yahoo/two.0
 test/Pages/Yahoo/two.1
-test/Pages/Yahoo/two.2
 test/Pages/Yahoo/two.README
 test/Pages/Yahoo/two.out
 test/Pages/Yahoo/zero

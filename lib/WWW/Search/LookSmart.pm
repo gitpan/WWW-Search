@@ -2,7 +2,7 @@
 # LookSmart.pm
 # by Jim Smyser
 # Copyright (C) 1996-1999 by Jim Smyser & USC/ISI
-# $Id: LookSmart.pm,v 1.4 1999/09/28 14:30:08 mthurn Exp $
+# $Id: LookSmart.pm,v 1.6 1999/10/05 20:42:13 mthurn Exp $
 ##########################################################
 
 
@@ -99,13 +99,13 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.01';
+$VERSION = '2.02';
 
 $MAINTAINER = 'Jim Smyser <jsmyser@bigfoot.com>';
 $TEST_CASES = <<"ENDTESTCASES";
 &test('LookSmart', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_EXACTLY);
-&test('LookSmart', '$MAINTAINER', 'one', '+LSA'.'M +I'.'B +repl'.'ication', \$TEST_RANGE, 1,10);
-&test('LookSmart', '$MAINTAINER', 'two', '+LS'.'AM +I'.'B', \$TEST_GREATER_THAN, 10);
+&test('LookSmart', '$MAINTAINER', 'one', 'oh'.'me'.'ohmy', \$TEST_RANGE, 1,10);
+&test('LookSmart', '$MAINTAINER', 'two', 'sat'.'urnV', \$TEST_GREATER_THAN, 10);
 ENDTESTCASES
 
 use Carp ();
@@ -172,7 +172,7 @@ sub native_retrieve_some
      my ($HEADER, $HITS, $DESC, $DATE) = qw(HE HI DE DA);
      my $hits_found = 0;
      my $state = $HEADER;
-	 my($raw);
+  my($raw);
      my $hit = ();
      foreach ($self->split_lines($response->content()))
      {
@@ -184,7 +184,7 @@ sub native_retrieve_some
  } elsif (m|(\d+)-(\d+)\s+site\s+matches|i) {
      print STDERR "Total Pages Returned\n" if ($self->{_debug});
      $state = $HITS;
- } elsif ($state eq $HITS && m@<a[^>]*href="\http://([^"]+)\"[^>]*>(.*)</a>@i) {
+ } elsif ($state eq $HITS && m@<a href="([^"]+)">(.*)</a><br>@i) {
      print STDERR "**Found Hit URL**\n" if 2 <= $self->{_debug};
      my ($url, $title) = ($1,$2);
      if (defined($hit)) 
@@ -230,3 +230,8 @@ sub native_retrieve_some
         return $hits_found;
      } # native_retrieve_some
 1;
+
+
+
+
+

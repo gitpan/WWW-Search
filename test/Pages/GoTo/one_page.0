@@ -1,13 +1,13 @@
 
   <html>
 <head>
- <gotostate name="merope.back">
+ <gotostate name="kocab.back">
  <gotostate userAdultStatus="expired">
  <gotostate bannerAdultStatus="cleanBanner">
  <gotostate queryAdultStatus="cleanQuery">
  <gotostate searchRatings="">
 
- <title>GoTo.com Search Results:
+ <title>GoTo.com - Search Results:
   saturnV</title>
  
 
@@ -27,7 +27,7 @@ function infoWindow() { window.open('/d/search/shared/adult/moreinfo.jhtml','',
 
  <center>
 
-  <table border=0 cellpadding=0 cellspacing=0 width=610 bgcolor="#FFCC00"><form method=GET action="/d/search/p/befree/;$sessionid$S5ZYHFYAA03Y5QFIEFAAPUQ" name=Search target="_top"><input type=hidden name=type value=topbar><tr><td rowspan=3 width=132><a href="http://www.goto.com/" target="_top"><img src="/images/shared/lil.gif" border=0 width=132 height=105 hspace=0 vspace=0 alt="GoTo.com"></a></td><td colspan=2 align=right valign=top bgcolor="#ffcc00"><iframe WIDTH=468 HEIGHT=60 NORESIZE SCROLLING=No FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 SRC="http://adforce.imgis.com/?adiframe|2.0|2|29014|1|1|KEY=CLEAN_saturnV;"><a href="http://adforce.imgis.com/?adlink|2.0|2|29014|1|1|KEY=CLEAN_saturnV;" target="_top"><img src="http://adforce.imgis.com/?adserv|2.0|2|29014|1|1|KEY=CLEAN_saturnV;" border=0 width=468 height=60 alt="GoTo.com ad"></a></iframe></td></tr><tr><td rowspan=2>&nbsp;&nbsp;</td><td><table border=0 cellpadding=3 cellspacing=0 bgcolor="#FFCC00"><tr valign=middle><td><input type=text value="saturnV" name=Keywords size=30></td><td><input type=image src="/images/shared/ar2.gif" alt="GoTo It!" border=0></td></tr></table></td></tr><tr valign=top><td><img src="/images/shared/st2.gif" width=236 height=12 border=0 hspace=0 vspace=0 alt="Simply type what you're looking for and GoTo It!"></td> </form></tr></table>
+  <table border=0 cellpadding=0 cellspacing=0 width=610 bgcolor="#FFCC00"><form method=GET action="/d/search/p/befree/;$sessionid$1STBLTAAAYPD3QFIEFOQPUQ" name=Search target="_top"><input type=hidden name=type value=topbar><tr><td rowspan=3 width=132><a href="http://www.goto.com/" target="_top"><img src="/images/shared/lil.gif" border=0 width=132 height=105 hspace=0 vspace=0 alt="GoTo.com"></a></td><td colspan=2 align=right valign=top bgcolor="#ffcc00"><iframe WIDTH=468 HEIGHT=60 NORESIZE SCROLLING=No FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 SRC="http://adforce.imgis.com/?adiframe|2.0|2|29014|1|1|KEY=CLEAN_saturnV;"><a href="http://adforce.imgis.com/?adlink|2.0|2|29014|1|1|KEY=CLEAN_saturnV;" target="_top"><img src="http://adforce.imgis.com/?adserv|2.0|2|29014|1|1|KEY=CLEAN_saturnV;" border=0 width=468 height=60 alt="GoTo.com ad"></a></iframe></td></tr><tr><td rowspan=2>&nbsp;&nbsp;</td><td><table border=0 cellpadding=3 cellspacing=0 bgcolor="#FFCC00"><tr valign=middle><td><input type=text value="saturnV" name=Keywords size=30></td><td><input type=image src="/images/shared/ar2.gif" alt="GoTo It!" border=0></td></tr></table></td></tr><tr valign=top><td><img src="/images/shared/st2.gif" width=236 height=12 border=0 hspace=0 vspace=0 alt="Simply type what you're looking for and GoTo It!"></td> </form></tr></table>
 <gotostate pop=>
 
 
@@ -48,16 +48,15 @@ function infoWindow() { window.open('/d/search/shared/adult/moreinfo.jhtml','',
 
 &nbsp;</td><td align=right valign=middle>
 <font face="helvetica, arial" size=2>
-  <a href="/d/about/advertisers/test.jhtml;$sessionid$S5ZYHFYAA03Y5QFIEFAAPUQ" target="_top">List Your Site For $25</a> | <a href=/d/about/howto/ht_bookmark.jhtml;$sessionid$S5ZYHFYAA03Y5QFIEFAAPUQ
+  <a href="/d/about/advertisers/test.jhtml;$sessionid$1STBLTAAAYPD3QFIEFOQPUQ" target="_top">List Your Site For $25</a> | <a href=/d/about/howto/ht_bookmark.jhtml;$sessionid$1STBLTAAAYPD3QFIEFOQPUQ
   target=_top><nobr>Bookmark GoTo</nobr></a></font>
   <font face="helvetica, arial" size=2> | 
-  <a href="/d/popular/;$sessionid$S5ZYHFYAA03Y5QFIEFAAPUQ" target="_top">Try Our Popular Searches!</a></td> </tr>
+  <a href="/d/popular/;$sessionid$1STBLTAAAYPD3QFIEFOQPUQ" target="_top">Try Our Popular Searches!</a></td> </tr>
  </table>
 <br clear=left>
 
 
-<a name=1><table border=0 width=610 cellspacing=5 cellpadding=1><tr><td align=right width=20><font face="Helvetica, Arial" size=-1>1.</font></td><td width=590><font face="Helvetica, Arial"><b><a href=/d/search-redirect;$sessionid$S5ZYHFYAA03Y5QFIEFAAPUQ?xargs=00u3hs9yoahSumGpxqaqgGlCBESyNTkkEyQOrmIlmpiSmZZUApenZmTglxTpCEM20YlqiYnJ%2BXaFecW1JYlFqGV4lwuYWRoZmLo6GlobObsZE5oxHEZRBqYfsAJpKt target=_top>Index of /~jdavid/glist/f1</a></b></font></td></tr><tr valign=top><td align=right>&nbsp;</td><td><font face="Helvetica, Arial" size=-1>Index of /~jdavid/glist/f1 Name Last modified Size Description Parent Directory 10-Oct-1997 17:25 - brushblu.jpg 10-Oct-1997 17:26 4k f1.html 10-Oct-1997 17:25 4k f1_s.gif 10-Oct-1997 17:26 11k f1hm_s.gif 10-Oct-1997 17:26 25k saturnV.gif  10-Oct..<br><em>http://www.tcdi.com/</em>&nbsp;</font></td></tr></table></a>
-<a name=2><table border=0 width=610 cellspacing=5 cellpadding=1><tr><td align=right width=20><font face="Helvetica, Arial" size=-1>2.</font></td><td width=590><font face="Helvetica, Arial"><b><a href=/d/search-redirect;$sessionid$S5ZYHFYAA03Y5QFIEFAAPUQ?xargs=00u3hs9yoahSumGpxqaqgGlPlExUl6eXn5SXpARXFOaUZJSSpOJMS1I8Tk%2FLxCvOLbksSi0jK8xYTmFkaGZi6OhpaGzm7GRuaOOxDKIdTCqwAhZWs%3D target=_top>Index of /shuttle</a></b></font></td></tr><tr valign=top><td align=right>&nbsp;</td><td><font face="Helvetica, Arial" size=-1>Index of /shuttle Name Last modified Size Description Parent directory 90h000.gif 14-Jul-94 16:38 49K challenger.gif 26-Jul-94 12:16 133K DeployA.gif 30-Apr-96 11:12 16K DeployB.gif 30-Apr-96 11:15 436K Diagram.gif 30-Apr-96 11:17 432K  discovery..<br><em>http://obsn.on.br/</em>&nbsp;</font></td></tr></table></a>
+<a name=1><table border=0 width=610 cellspacing=5 cellpadding=1><tr><td align=right width=20><font face="Helvetica, Arial" size=-1>1.</font></td><td width=590><font face="Helvetica, Arial"><b><a href=/d/search-redirect;$sessionid$1STBLTAAAYPD3QFIEFOQPUQ?xargs=00u3hs9yoahSumGpxqaqgGlCBE8yOBMkCKQQrmQlmpiSmZZUApenZmTglxTpCEM22YlqiYnJ%2BXaFecW1JYlFqGV4pwqaOFo7mLubmzs5GxsZk5kxXEZRBqYTAAJ0I2 target=_top>www.nicom.com - /~jdavid/glist/f1/</a></b></font></td></tr><tr valign=top><td align=right>&nbsp;</td><td><font face="Helvetica, Arial" size=-1>www.nicom.com - /~jdavid/glist/f1/ [To Parent Directory] 10/13/97 7:51 PM 4209 brushblu.jpg 10/13/97 7:51 PM 4451 f1.html 10/13/97 7:51 PM 10937 f1_s.gif 10/13/97 7:51 PM 25657 f1hm_s.gif 10/13/97 7:51 PM 15207 saturnV.gif 10/13/97 7:50 PM  7217..<br><em>http://www.nicom.com/</em>&nbsp;</font></td></tr></table></a>
 <br><br clear=left>
 <table border=0 width=610 cellspacing=0 cellpadding=1>
  <tr><td align=left valign=middle>
@@ -83,20 +82,20 @@ function infoWindow() { window.open('/d/search/shared/adult/moreinfo.jhtml','',
   <br clear=left>
   <gotostate pop=>
 <table border=0 cellpadding=0 cellspacing=0 width=610 bgcolor="#FFCC00"><tr width=610><td rowspan=3 width=132><a href="http://www.goto.com/" target="_top"><img src="/images/shared/lil.gif" border=0 width=132 height=105 hspace=0 vspace=0 alt="GoTo.com"></a></td><td colspan=2 align=right valign=top bgcolor="#ffcc00">
-<a href="/d/redirect;$sessionid$S5ZYHFYAA03Y5QFIEFAAPUQ?url=http%3A%2F%2Fwww.goto.com%2Fd%2Faffiliate%2Fp%2Fbefree%2F%3FPromo%3Dbottombar&special=bottombanner" onmouseover="window.status='Become a GoTo affiliate and make money from your site!';return true;" onmouseout="window.status='';"><img src="/images/banners/goto/affiliate_03_99.gif" border=0 width=468 height=60 alt="Make money as a GoTo affiliate."></a>
-</td></tr><tr><td rowspan=2>&nbsp;&nbsp;</td><td><form method=GET action="/d/search/p/befree/;$sessionid$S5ZYHFYAA03Y5QFIEFAAPUQ" name=Search><input type=hidden name=type value=bottombar><table border=0 cellpadding=3 cellspacing=0 bgcolor="#FFCC00"><tr valign=middle><td><input type=text value="saturnV" name=Keywords size=30></td><td><input type=image src="/images/shared/ar2.gif" width=21 height=21 alt="GoTo It!" border=0></td></tr></table></td></tr><tr valign=top><td><img src="/images/shared/st2.gif" width=236 height=12 border=0 hspace=0 vspace=0 alt="Simply type what you're looking for and GoTo It!"></td></tr></table></form>
+<a href="/d/redirect;$sessionid$1STBLTAAAYPD3QFIEFOQPUQ?url=http%3A%2F%2Fwww.goto.com%2Fd%2Faffiliate%2Fp%2Fbefree%2F%3FPromo%3Dbottombar&special=bottombanner" onmouseover="window.status='Become a GoTo affiliate and make money from your site!';return true;" onmouseout="window.status='';"><img src="/images/banners/goto/affiliate_03_99.gif" border=0 width=468 height=60 alt="Make money as a GoTo affiliate."></a>
+</td></tr><tr><td rowspan=2>&nbsp;&nbsp;</td><td><form method=GET action="/d/search/p/befree/;$sessionid$1STBLTAAAYPD3QFIEFOQPUQ" name=Search><input type=hidden name=type value=bottombar><table border=0 cellpadding=3 cellspacing=0 bgcolor="#FFCC00"><tr valign=middle><td><input type=text value="saturnV" name=Keywords size=30></td><td><input type=image src="/images/shared/ar2.gif" width=21 height=21 alt="GoTo It!" border=0></td></tr></table></td></tr><tr valign=top><td><img src="/images/shared/st2.gif" width=236 height=12 border=0 hspace=0 vspace=0 alt="Simply type what you're looking for and GoTo It!"></td></tr></table></form>
 <br>
 
   <table border=0 cellpadding=0 cellspacing=0 width=610>
  <tr>
-<td align=center valign=middle width=203><a href="/d/redirect;$sessionid$S5ZYHFYAA03Y5QFIEFAAPUQ?url=http%3A%2F%2Fhome.netscape.com%2Fcomprod%2Fmirror%2F" target="_top"><img src="/images/netscape/netscape_now_static.gif" width=90 height=30 border=0 hspace=0 vspace=0 alt="Netscape"></a></td>
+<td align=center valign=middle width=203><a href="/d/redirect;$sessionid$1STBLTAAAYPD3QFIEFOQPUQ?url=http%3A%2F%2Fhome.netscape.com%2Fcomprod%2Fmirror%2F" target="_top"><img src="/images/netscape/netscape_now_static.gif" width=90 height=30 border=0 hspace=0 vspace=0 alt="Netscape"></a></td>
 <td align=center valign=middle width=204><a href="http://www.inktomi.com/products/search/partners/goto.html" target="_top"><img src="/images/inktomi/PowByInkMed.gif" width=126 height=40 border=0 alt="Inktomi"></a></td>  
-<td align=center valign=middle width=153><a href="/d/about/company/contact.jhtml;$sessionid$S5ZYHFYAA03Y5QFIEFAAPUQ" onmouseover="window.status='Contact GoTo.com';return true;" onmouseout="window.status='';" target="_top"><img src="/images/about/contact_button.gif" width=90 height=30 border=0 hspace=0 vspace=5 alt="Contact GoTo"></a></td></tr></table>
+<td align=center valign=middle width=153><a href="/d/about/company/contact.jhtml;$sessionid$1STBLTAAAYPD3QFIEFOQPUQ" onmouseover="window.status='Contact GoTo.com';return true;" onmouseout="window.status='';" target="_top"><img src="/images/about/contact_button.gif" width=90 height=30 border=0 hspace=0 vspace=5 alt="Contact GoTo"></a></td></tr></table>
 
 
 
 <BR><BR>
-<table border=0 width=610 cellspacing=5 cellpadding=1><tr><td align=center><font face="helvetica, arial" size=2>&copy; 1997-99 GoTo.com, Inc. All rights reserved. Patent pending.<br><a href="/d/about/company/copyright.jhtml;$sessionid$S5ZYHFYAA03Y5QFIEFAAPUQ" target="_top" onmouseover="window.status='Copyright Act Information';return true;" onmouseout="window.status='';">Copyright Act Information</a><br><a href="/d/about/company/privacypolicy.jhtml;$sessionid$S5ZYHFYAA03Y5QFIEFAAPUQ" target="_top" onmouseover="window.status='GoTo.com Privacy Policy';return true;" onmouseout="window.status='';">GoTo.com Privacy Policy</a></font>
+<table border=0 width=610 cellspacing=5 cellpadding=1><tr><td align=center><font face="helvetica, arial" size=2>&copy; 1997-99 GoTo.com, Inc. All rights reserved. Patent pending.<br><a href="/d/about/company/copyright.jhtml;$sessionid$1STBLTAAAYPD3QFIEFOQPUQ" target="_top" onmouseover="window.status='Copyright Act Information';return true;" onmouseout="window.status='';">Copyright Act Information</a><br><a href="/d/about/company/privacypolicy.jhtml;$sessionid$1STBLTAAAYPD3QFIEFOQPUQ" target="_top" onmouseover="window.status='GoTo.com Privacy Statement';return true;" onmouseout="window.status='';">GoTo.com Privacy Statement</a></font>
 </td></tr></table>
 </center>
 </body>

@@ -1,7 +1,7 @@
 # SearchResult.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: SearchResult.pm,v 1.2 1999/06/30 15:03:27 mthurn Exp $
+# $Id: SearchResult.pm,v 1.3 1999/10/05 20:05:30 mthurn Exp mthurn $
 #
 # Copyright (c) 1996 University of Southern California.
 # All rights reserved.                                            
@@ -45,7 +45,7 @@ L<WWW::Search>
 
 =head1 REQUIRED RESULTS
 
-The particular fields returned in a result are back-end
+The particular fields returned in a result are backend
 (search-engine) dependent.  However, all search engines are required 
 to return a url and title.
 (This list may grow in the future.)
@@ -62,9 +62,7 @@ package WWW::SearchResult;
 require LWP::MemberMixin;
 @ISA = qw(LWP::MemberMixin);
 use Carp ();
-
-my ($SEARCH_UNSPECIFIED, $SEARCH_SPECIFIED, $SEARCH_UNDERWAY, $SEARCH_DONE) = (1..10);
-
+$VERSION = '2.05';
 
 =head2 new
 
@@ -77,8 +75,7 @@ sub new
 { 
     my($class) = @_;
 
-    my $self = bless {
-    }, $class;
+    my $self = bless { }, $class;
     $self->{urls} = ();
     return $self;
 }
@@ -155,7 +152,7 @@ sub add_related_title { return shift->_add_elem_array('related_titles', @_); }
 Set or get attributes of the result.
 
 None of these attributes is guaranteed to be provided by 
-a given back-end.  If an attribute is not provided
+a given backend.  If an attribute is not provided
 its method will return C<undef>.
 
 Typical contents of these attributes:
@@ -171,18 +168,31 @@ HTML tag).
 A brief description of the result, as provided (or not) by the search engine.
 Often the first few sentences of the document.
 
+=item source
+
+Source is either the base url for this result (as listed on the search
+engine's results page) or another copy of the full url path of the
+result.  It might also indicate the source site address where the
+resource was found, for example, 'http://www.cnn.com' if the search
+result page said "found at CNN.com".
+
+This value is backend-specific; in fact very few backends set this
+value.
+
 =item score
 
-A back-end specific, numeric score of the search result.
+A backend specific, numeric score of the search result.
 The exact range of scores is search-engine specific.
 Usually larger scores are better, but this is no longer required.
-See normalized_score for a back-end independent score.
+See normalized_score for a backend independent score.
 
 =item normalized_score
 
-A back-end independent score of the search result.
-The range of this score is between 0 and 1000.
-Higher values indicate better quality results.
+SORRY, THIS IS NOT IMPLEMENTED.
+
+This is intended to be a backend-independent score of the search
+result.  The range of this score is between 0 and 1000.  Higher values
+indicate better quality results.
 
 =item change_date
 
@@ -202,24 +212,27 @@ of 18.4 * 1024.
 =item raw
 
 The raw HTML for the entire result.  Raw should be exactly the raw
-HTML for one entry.  It should not include list or table setup commands
-(like the ul tag), but it may include list or table item commands
-(like li).  Whether raw returns a list entries, table entries, or just
-br or unformatted HTML is search-engine dependent.  In fact, many
-backends do not even return it at all.
+HTML for one entry.  It should not include list or table setup
+commands (like ul or table tags), but it may include list item or
+table data commands (like li, tr, or td).  Whether raw contains a list
+entry, table row, br-separated lines, or plain text is search-engine
+dependent.  In fact, many backends do not even return it at all.
 
 =back
 
 =cut
 
-sub title { return shift->_elem('title', @_); }
-sub description { return shift->_elem('description', @_); }
-sub score { return shift->_elem('score', @_); }
-sub normalized_score { return shift->_elem('normalized_score', @_); }
 sub change_date { return shift->_elem('change_date', @_); }
+sub company { return shift->_elem('company', @_); }
+sub description { return shift->_elem('description', @_); }
 sub index_date { return shift->_elem('index_date', @_); }
-sub size { return shift->_elem('size', @_); }
+sub location { return shift->_elem('location', @_); }
+sub normalized_score { return shift->_elem('normalized_score', @_); }
 sub raw { return shift->_elem('raw', @_); }
+sub score { return shift->_elem('score', @_); }
+sub size { return shift->_elem('size', @_); }
+sub source { return shift->_elem('source', @_); }
+sub title { return shift->_elem('title', @_); }
 
 
 1;

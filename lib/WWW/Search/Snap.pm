@@ -1,7 +1,7 @@
 # Snap.pm
 # by Jim Smyser
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: Snap.pm,v 1.3 1999/07/13 17:45:09 mthurn Exp $
+# $Id: Snap.pm,v 1.4 1999/10/08 12:55:31 mthurn Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -70,11 +70,6 @@ set of results, otherwise it sets it to undef to indicate we're done.
 C<WWW::Search::Snap> is written and maintained
 by Jim Smyser - <jsmyser@bigfoot.com>.
 
-=head1 TESTING
-
-This backend adheres to the C<WWW::Search> test mechanism.
-See $TEST_CASES below.      
-
 =head1 COPYRIGHT
 
 Copyright (c) 1996-1998 University of Southern California.
@@ -102,7 +97,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.01';
+$VERSION = '2.02';
 
 $MAINTAINER = 'Jim Smyser <jsmyser@bigfoot.com>';
 $TEST_CASES = <<"ENDTESTCASES";
@@ -128,13 +123,13 @@ sub native_setup_search {
    $self->{'_num_hits'} = 0;
    $self->timeout(60);
 # Hack of mine to force AND between words in Boolean mode
-#   $native_query =~ s/(\w)\053/$1\053\AND\053/g;
+   $native_query =~ s/(\w)\053/$1\053\%2B/g;
    if (!defined($self->{_options})) {
      $self->{'search_base_url'} = 'http://home.snap.com';
      $self->{_options} = {
          'search_url' => 'http://home.snap.com/search/power/results/1,180,home-0,00.html',
            'KM' => 'a', 
-           'KW' => $native_query,
+           'KW' => "%2B" . $native_query,
            'AM0' => 'm',
            'AT0' => 'w',
            'AN' => '1',
@@ -200,24 +195,25 @@ sub native_retrieve_some
       {
      next if m@^$@; # short circuit for blank lines
      print STDERR " * $state ===$_=== " if 2 <= $self->{'_debug'};
-     if (m|Results:\s(\d+)|i) {
-       $self->approximate_result_count($1);
+     if (m|<ul><font face="Arial,Helvetica" size=-1>|i) {
+      # $self->approximate_result_count($1);
        print STDERR "**Approx. Count\n" if ($self->{_debug});
        $state = $HITS;
        # Make sure we catch redirects Snap likes to randomly insert 
        # and filter them.....
   } if ($state eq $HITS && m@<b><a href="http://redirect.*?u=([^"]+)\&q=.*?>(.*)</a></b><br>@i) {
        print STDERR "**Found a URL\n" if 2 <= $self->{_debug};
+    my ($url,$title) = ($1,$2);
        if (defined($hit)) 
          {
         push(@{$self->{cache}}, $hit);
          };
        $hit = new WWW::SearchResult;
-       $hit->add_url($1);
+       $hit->add_url($url);
        $hits_found++;
-       $hit->title($2);
+    $title =~ s/amp;//g;
+       $hit->title($title);
        $state = $DESC;
-
   } elsif ($state eq $HITS && m@<b><a href="([^"]+)">(.*)</a></b><br>@i) {
        print STDERR "**Found a URL\n" if 2 <= $self->{_debug};
        if (defined($hit)) 
@@ -251,4 +247,6 @@ sub native_retrieve_some
    return $hits_found;
    } # native_retrieve_some
 1;
+
+
 

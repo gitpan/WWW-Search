@@ -22,7 +22,7 @@ print OUT <<'!NO!SUBS!';
 #
 # WebSearch.PL
 # Copyright (C) 1996-1997 by USC/ISI
-# $Id: WebSearch.PL,v 1.7 1999/09/28 17:18:32 mthurn Exp $
+# $Id: WebSearch.PL,v 1.12 1999/10/08 14:25:24 mthurn Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -187,7 +187,7 @@ use WWW::Search;
 use Getopt::Long;
 
 use vars qw( $VERSION );
-$VERSION = '2.07';
+$VERSION = '2.10';
 
 use vars qw( $sEngine $all $verbose $raw $maximum_to_retrieve $print_version $debuglwp $debug );
 use vars qw( @options $_host $_port $help $iShowCount );
@@ -223,7 +223,7 @@ exit 0;
 
 sub print_version 
   {
-  print "$0 version $VERSION;  WWW::Search version $WWW::Search::VERSION\n";
+  print "$0 version $VERSION\n  WWW::Search version $WWW::Search::VERSION\n";
   exit 0;
   } # print_version
 
@@ -233,7 +233,7 @@ sub print_result {
     my($result, $count) = @_;
 
     my($prefix) = "";
-    if (defined($verbose)) {
+    if ($verbose) {
 	my(@attribs) = ();
         $prefix = "$count. ";
 	if (!defined($verbose_code)) {
@@ -263,12 +263,10 @@ sub print_result {
 }
 
 sub print_error {
-    my($error, $count) = @_;
-
-    my($prefix) = "";
-    $prefix = sprintf("[%3d] ", $count) if defined($verbose);
-
-    print $prefix, $error, "\n";
+    my ($msg, $count) = @_;
+    my $error = $verbose ? sprintf("[%3d] ", $count) : '';
+    $error .= $msg;
+    print STDERR $error, "\n" if $error ne '';
 }
 
 sub main {
@@ -333,29 +331,22 @@ sub main {
 
     my($way) = 0; # 0=piecemeal, 1=all at once
     my($result);
+    if (($iShowCount) and defined($search->approximate_result_count))
+      {
+      print "There are approximately " if $verbose;
+      print $search->approximate_result_count;
+      print " results." if $verbose;
+      print "\n";
+      }
     if ($way) { # return all at once.
         foreach $result ($search->results()) 
           {
-          if (($count == 0) and ($iShowCount) and defined($search->approximate_result_count))
-            {
-            print "There are approximately " if $verbose;
-            print $search->approximate_result_count;
-            print " results." if $verbose;
-            print "\n";
-            }
           print_result($result, ++$count);
 	  last if ($count > $maximum_to_retrieve);
           };
     } else { # return page by page
         while ($result = $search->next_result()) 
           {
-          if (($count == 0) and ($iShowCount) and defined($search->approximate_result_count))
-            {
-            print "There are approximately " if $verbose;
-            print $search->approximate_result_count;
-            print " results." if $verbose;
-            print "\n";
-            }
           print_result($result, ++$count);
 	  last if ($count > $maximum_to_retrieve);
           } # while
@@ -363,7 +354,7 @@ sub main {
     # handle errors
     if ($count == 0) {
         my($response) = $search->response();
-	my($nothing) = "Nothing found.";
+	my $nothing = $verbose ? "Nothing found." : '';
         if ($response->is_success) {
             print_error($nothing, $count);
         } else {

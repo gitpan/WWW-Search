@@ -1,7 +1,7 @@
 # Yahoo.pm
 # by Wm. L. Scheding and Martin Thurn
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: Yahoo.pm,v 1.17 1999/09/29 14:36:30 mthurn Exp $
+# $Id: Yahoo.pm,v 1.19 1999/10/11 16:56:58 mthurn Exp $
 
 =head1 NAME
 
@@ -19,17 +19,15 @@ WWW::Search::Yahoo - class for searching Yahoo
 =head1 DESCRIPTION
 
 This class is a Yahoo specialization of L<WWW::Search>.  It handles
-making and interpreting Yahoo-site searches F<http://www.yahoo.com>.
-Performs the search on "Yahoo sites", and ignores AltaVista results
-that Yahoo might tell us about.
+making and interpreting Yahoo searches F<http://www.yahoo.com>.
 
 This class exports no public interface; all interaction should
 be done through L<WWW::Search> objects.
 
-=head1 CAVEATS
+=head1 NOTES
 
-Because www.yahoo.com can categorize websites into more than one
-category, Yahoo.pm sometimes returns the same URL more than once.
+The default search is: Yahoo's Inktomi-based index (not usenet); "OR"
+of all query terms (not "AND").
 
 =head1 SEE ALSO
 
@@ -60,6 +58,14 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 =head1 VERSION HISTORY
 
 If it''s not listed here, then it wasn''t a meaningful nor released revision.
+
+=head2 2.04, 1999-10-11
+
+fixed parser
+
+=head2 2.03, 1999-10-05
+
+now uses hash_to_cgi_string()
 
 =head2 2.02, 1999-09-29
 
@@ -95,7 +101,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.02';
+$VERSION = '2.04';
 
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 $TEST_CASES = <<"ENDTESTCASES";
@@ -145,9 +151,12 @@ sub native_setup_search
     $self->{_options} = {
                          'search_url' => $self->{'search_base_url'} .'/search',
                          'b' => $self->{_next_to_retrieve},
-                         'h' => 's',
+                         'd' => 'y',  # Yahoo's index, not usenet
+                         'h' => 's',  # web sites
                          'n' => $self->{_hits_per_page},
+                         'o' => 1,
                          'p' => $native_query,
+                         'za' => 'or',  # OR of query words
                         };
     } # if
   my $options_ref = $self->{_options};
@@ -159,16 +168,8 @@ sub native_setup_search
       $options_ref->{$_} = $native_options_ref->{$_};
       } # foreach
     } # if
-  # Process the options.
-  my($options) = '';
-  foreach (sort keys %$options_ref) 
-    {
-    # printf STDERR "option: $_ is " . $options_ref->{$_} . "\n";
-    next if (generic_option($_));
-    $options .= $_ . '=' . $options_ref->{$_} . '&';
-    }
-  # Finally figure out the url.
-  $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
+  # Finally, figure out the url.
+  $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $self->hash_to_cgi_string($options_ref);
 
   $self->{_debug} = $options_ref->{'search_debug'};
   $self->{_debug} = 2 if ($options_ref->{'search_parse_debug'});
@@ -210,16 +211,7 @@ sub native_retrieve_some
     {
     next if m@^$@; # short circuit for blank lines
     print STDERR " * $state ===$_=== " if 2 <= $self->{'_debug'};
-    # Note: if Yahoo finds no Yahoo-registered sites that match, it
-    # automatically forward the query to Alta Vista.  If we see that
-    # this has happened, we quit immediately:
-    if (m|<center><p><font size="+1"><b>Alta Vista Web Pages</b></font>|i)
-      {
-      # Actual line of input is:
-      # <center><p><font size="+1"><b>Alta Vista Web Pages</b></font>
-      print STDERR "alta vista page list intro\n";
-      last;
-      } # if
+
     if ($state eq $HITS && s@^\s-\s(.+)(</UL>|<LI>)@$2@i)
       {
       # Actual line of input is:
@@ -248,13 +240,22 @@ sub native_retrieve_some
         $state = $HITS;
         } # if hit
       } # CITATION line
+
     if ($state eq $HEADER && m|^and\s<b>(\d+)</b>\s*$|)
       {
       print STDERR "header line\n" if 2 <= $self->{_debug};
       $self->approximate_result_count($1);
       $state = $HITS;
       }
-    if ($state eq $HEADER && m|^<CENTER>Found\s<B>\d+</B>\sCategory\sand\s<B>(\d+)</B>\sSite\sMatches\sfor|i)
+    elsif ($state eq $HEADER && m|<b>\(\d+-\d+\s+of\s+(\d+)\)</b>|)
+      {
+      print STDERR "header count line\n" if 2 <= $self->{_debug};
+      # Actual line of input:
+      # &nbsp; <FONT SIZE="-1"><b>(1-20 of 801)</b></FONT></center><ul>
+      $self->approximate_result_count($1);
+      $state = $HITS;
+      }
+    elsif ($state eq $HEADER && m|^<CENTER>Found\s<B>\d+</B>\sCategory\sand\s<B>(\d+)</B>\sSite\sMatches\sfor|i)
       {
       # Actual line of input is:
       # <CENTER>Found <B>15</B> Category and <B>1297</B> Site Matches for
@@ -312,10 +313,3 @@ sub native_retrieve_some
 
 __END__
 
-Yahoo categories & sites:
-
-http://search.yahoo.com/search?p=star+wars&n=20
-
-Yahoo Sites only:
-http://search.yahoo.com/search?p=star+wars&n=20&h=s
-http://search.yahoo.com/search?p=star+wars&n=20&h=s&b=21

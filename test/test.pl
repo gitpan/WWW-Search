@@ -2,7 +2,7 @@
 
 # test.pl
 # Copyright (C) 1997 by USC/ISI
-# $Id: test.pl,v 1.30 1999/09/30 13:43:21 mthurn Exp $
+# $Id: test.pl,v 1.30 1999/09/30 13:43:21 mthurn Exp mthurn $
 #
 # Copyright (c) 1997 University of Southern California.
 # All rights reserved.                                            
@@ -152,9 +152,10 @@ sub test
              $MODE_EXTERNAL => '',
              $MODE_UPDATE => "--option search_to_file=$file",
             );
-  # --max 201 added by Martin Thurn 1999-09-27.  We never want to
-  # fetch more than three pages, no matter what (?)
-  my $cmd = &web_search_bin . "--max 201 --engine $sSE $src{$mode} -- $query";
+  # --max 201 added by Martin Thurn 1999-09-27, changed to 199 on
+  # 1999-10-05.  We never want to fetch more than two pages, if we can
+  # at all help it (or do we?)
+  my $cmd = &web_search_bin . "--max 199 --engine $sSE $src{$mode} -- $query";
   print "  $cmd\n" if ($verbose);
   open(TRIALSTREAM, "$cmd|") || die "$0: cannot run test\n";
   open(TRIALFILE, ">$file.trial") || die "$0: cannot open $file.trial\n";
@@ -193,24 +194,24 @@ sub test
       my ($low_end) = @_;
       if ($iActual < $low_end)
         {
-        $sMsg .= ": expected more than $low_end, but got $iActual";
+        $sMsg .= "expected more than $low_end, but got $iActual; ";
         $e = 1;
         }
       } # TEST_GREATER_THAN
     elsif ($test_method == $TEST_RANGE) 
       {
       my ($low_end, $high_end) = @_;
-      $sMsg .= ": INTERNAL ERROR, low_end has no value" unless defined($low_end);
-      $sMsg .= ": INTERNAL ERROR, high_end has no value" unless defined($high_end);
-      $sMsg .= ": INTERNAL ERROR, high_end is zero" unless 0 < $high_end;
+      $sMsg .= "INTERNAL ERROR, low_end has no value; " unless defined($low_end);
+      $sMsg .= "INTERNAL ERROR, high_end has no value; " unless defined($high_end);
+      $sMsg .= "INTERNAL ERROR, high_end is zero; " unless 0 < $high_end;
       if ($iActual < $low_end)
         {
-        $sMsg .= ": expected $low_end..$high_end, but got $iActual";
+        $sMsg .= "expected $low_end..$high_end, but got $iActual; ";
         $e = 1;
         }
       if ($high_end < $iActual)
         {
-        $sMsg .= ": expected $low_end..$high_end, but got $iActual";
+        $sMsg .= "expected $low_end..$high_end, but got $iActual; ";
         $e = 1;
         }
       } # TEST_RANGE
@@ -224,14 +225,14 @@ sub test
       my $iActual = &wc_l("$file.trial");
       if ($iActual != $iExpected)
         {
-        $sMsg .= ": expected $iExpected, but got $iActual";
+        $sMsg .= "expected $iExpected, but got $iActual; ";
         $e = 1;
         }
       }
     else
       {
       $e = 0;
-      $sMsg = ": INTERNAL ERROR, unknown test method $test_method";
+      $sMsg = "INTERNAL ERROR, unknown test method $test_method; ";
       }
 
     if ($e == 0) 
@@ -241,7 +242,7 @@ sub test
       } 
     elsif ($e == 1) 
       {
-      print "DIFFERENCE DETECTED: $query --> $sMsg.\n";
+      print "DIFFERENCE DETECTED: $query --> $sMsg\n";
       $error_count++;
       }
     else 
@@ -448,17 +449,9 @@ sub test_cases
 
   &no_test('Livelink', 'Paul Lindner <paul.lindner@itu.int>');
 
-  # 1999-09-28, Martin Thurn.  I am removing LookSmart from the test
-  # suite.  LookSmart is USELESS because: 1) it is the same as
-  # AltaVista.  It even says so at the bottom of the page.  2) it
-  # returns hundreds of URLs for the "Bogus" query.  It even returns
-  # hundreds of random URLs if you search for
-  # "qqqqqqqqqqqqqqqqqqqqqqqqqqqqqq" or no matter what garbage you
-  # type in !
-
-  # &eval_test('LookSmart');
-  use WWW::Search::LookSmart;
-  &no_test('LookSmart', $WWW::Search::LookSmart::MAINTAINER);
+  &eval_test('LookSmart');
+  # use WWW::Search::LookSmart;
+  # &no_test('LookSmart', $WWW::Search::LookSmart::MAINTAINER);
 
   &eval_test('Lycos::Pages');
   &eval_test('Lycos::Sites');
@@ -604,7 +597,7 @@ sub main
   
   } # main
 
-sub wc_l ($)
+sub wc_l
   {
   # Given a filename, count the number of lines of text contained
   # within the file.  (I.e. simulate running UNIX command wc -l on it)
@@ -620,7 +613,7 @@ sub wc_l ($)
   return $i;
   } # wc_l
 
-sub diff ($$)
+sub diff
   {
   # Given two files, returns TRUE if contents are line-by-line
   # different, or FALSE if contents are line-by-line same
@@ -632,7 +625,18 @@ sub diff ($$)
          ($iResult ne 1))
     {
     my $s2 = <DIFF2>;
-    $iResult = 1 if $s1 ne $s2;
+    unless (defined($s2))
+      {
+      $iResult = 1;
+      last;
+      }
+    chomp $s1;
+    chomp $s2;
+    if ($s1 ne $s2)
+      {
+      $iResult = 1;
+      last;
+      }
     } # while
   close DIFF1;
   close DIFF2;

@@ -4,7 +4,7 @@
 # AltaVista.pm
 # by John Heidemann
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: AltaVista.pm,v 1.2 1999/06/30 20:13:00 mthurn Exp $
+# $Id: AltaVista.pm,v 1.3 1999/09/30 19:38:35 mthurn Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -233,7 +233,7 @@ sub native_retrieve_some
     foreach ($self->split_lines($response->content())) {
         next if m@^$@; # short circuit for blank lines
 	if (0) {
-	} elsif ($state == $HEADER && (/(no|[0-9,]+)[< ].*match.*found/i || /AltaVista\s+found\s+.*(no|[0-9,]+)\s+(Web|document|posting)/i)) {
+	} elsif ($state == $HEADER && (/(no|[0-9,]+)[< ].*match.*found/i || /AltaVista\s+found.*[^,0-9](no|[0-9,]+)\s+(Web|document|posting)/i)) {
 	    # post 30-May-98
 	    # <font size=-1>No matches were found.</font><P><font size=-1><dl>
 	    # <font size=-1><b>10</b> matches were found. </font><P><font size=-1><P>

@@ -1,6 +1,6 @@
 # Dejanews.pm
 # Copyright (C) 1998 by Martin Thurn
-# $Id: Dejanews.pm,v 1.10 1999/09/17 13:01:03 mthurn Exp $
+# $Id: Dejanews.pm,v 1.11 1999/10/05 19:42:21 mthurn Exp $
 
 =head1 NAME
 
@@ -77,6 +77,10 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 =head1 VERSION HISTORY
 
+=head2 2.03, 1999-10-05
+
+now uses hash_to_cgi_string()
+
 =head2 2.02, 1999-09-17
 
 BUGFIX: was returning "power search" link (thanks to Jim Smyser for noticing)
@@ -115,7 +119,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.02';
+$VERSION = '2.03';
 
 use Carp ();
 use WWW::Search(generic_option);
@@ -166,17 +170,8 @@ sub native_setup_search
       } # foreach
     } # if
 
-  # Build the options part of the URL:
-  my $options = '';
-  foreach (keys %{$self->{'_options'}})
-    {
-    # printf STDERR "option: $_ is " . $self->{'_options'}->{$_} . "\n";
-    next if (generic_option($_));
-    $options .= $_ . '=' . $self->{'_options'}->{$_} . '&';
-    }
-
   # Finally, figure out the url.
-  $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
+  $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $self->hash_to_cgi_string($self->{_options});
 
   # Set some private variables:
   $self->{_debug} = $self->{'_options'}->{'search_debug'};

@@ -1,9 +1,8 @@
-
 ##########################################################
 # NetFind.pm
 # by Gil Vidals 
 # Copyright (C) 1999-2000 by Gil Vidals at PositionGeek.com 
-# $Id: NetFind.pm,v 1.4 1999/09/27 13:01:51 mthurn Exp $
+# $Id: NetFind.pm,v 1.7 1999/10/11 16:58:51 mthurn Exp $
 ##########################################################
 
 
@@ -19,7 +18,8 @@ Originally based on Google.pm
 
 use WWW::Search;
 my $Search = new WWW::Search('NetFind'); # cAsE matters
-my $Query = WWW::Search::escape_query("search engine consultant");
+		my $Query = WWW::Search::escape_query("search engine
+consultant");
 $Search->native_query($Query);
 while (my $Result = $Search->next_result()) {
 print $Result->url, "\n";
@@ -98,6 +98,9 @@ Since this is a new Backend there are undoubtly one. Report any ASAP.
 
 =head1 VERSION HISTORY
 
+1.5
+Formatting change 10/08/99
+
 0.7
 First release  09/19/99
 
@@ -109,13 +112,13 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '0.7';
+$VERSION = '1.5';
 
 $MAINTAINER = 'Gil Vidals <gil@positiongeek.com>';
 $TEST_CASES = <<"ENDTESTCASES";
 &test('NetFind', '$MAINTAINER', 'zero_gv', 'dlslkdkjd ' . \$bogus_query, \$TEST_EXACTLY);
 &test('NetFind', '$MAINTAINER', 'one_gv', 'Zuckus', \$TEST_RANGE, 2, 49);
-&test('NetFind', '$MAINTAINER', 'multi_gv', 'ferfer it', \$TEST_GREATER_THAN, 12);
+&test('NetFind', '$MAINTAINER', 'multi_gv', 'salsa tacos', \$TEST_GREATER_THAN, 12);
 ENDTESTCASES
 
 use Carp ();
@@ -228,7 +231,7 @@ foreach ($self->split_lines($response->content())) {
        print "\$next_query: ", $next_query, "\n" if 2 <= $self->{_debug};
        $state = $NEXT;  
        # print "\n\n\n"; 
-  } elsif ($state eq $NEXT and m@^Some of the following results are from the World Wide Web.*?$@) {
+  } elsif ($state eq $NEXT and m@following results are from the World Wide Web@) {
        print "***HITS WILL START HERE***\n" if 2 <= $self->{_debug};
        $state = $HITS;
   }
@@ -248,7 +251,7 @@ foreach ($self->split_lines($response->content())) {
     $state = $HITS;
 
   ## MATCHING WEB VIA dirsearch.adp
-  } elsif ($state eq $HITS and m@(\d+%).+?<A HREF="(.+?)".*?$@i) {
+  } elsif ($state eq $HITS and m@(\d+%).+?<A HREF="(.+?)".+?<B>(.+?)</B>.*?$@i) {
      print "*** MATCHING WEB HIT ***\n" if 2 <= $self->{_debug};
     if (defined($hit)) {
       push(@{$self->{cache}}, $hit);
@@ -257,11 +260,14 @@ foreach ($self->split_lines($response->content())) {
     $hits_found++;
     $hit->score($1);
     $hit->add_url($2); ###  if defined($hit);
-    $state = $TITLE;
-  } elsif ($state eq $TITLE and m@^\s*(.+?)</B></A><BR>(.*?)<BR><I>.+$@i) {
-    print "*** TITLE ***\n" if 2 <= $self->{_debug};
-    $hit->title($1);
-    $hit->description($2);
+    $hit->title($3); ###  if defined($hit);
+    $state = $DESC;
+  } elsif ($state eq $DESC and m@^<I>http://.+?</I>.*?@i) {
+    print "*** MISSING DESC ***\n" if 2 <= $self->{_debug};
+    $state = $HITS;
+  } elsif ($state eq $DESC and m@^(.+?)<BR>$@i) {
+    print "*** DESC ***\n" if 2 <= $self->{_debug};
+    $hit->description($1);
     $state = $HITS;
 
   ## MATCHING WEB via web.adp
@@ -280,7 +286,7 @@ foreach ($self->split_lines($response->content())) {
   ## END OF web.adp
   ## <FONT STYLE="font-weight:bold">&lt;&lt;</FONT> <FONT STYLE="font-family: Arial, helv, helvetica; font-weight:bold; font-size:12px"><A HREF="dirsearch.adp?query=kansas%20state%20laws&first=-4&last=10">back</A></FONT>  &nbsp;(11 - 25)&nbsp;  <FONT STYLE="font-family: Arial, helv, helvetica; font-weight:bold; font-size:12px"><A HREF="dirsearch.adp?query=kansas%20state%20laws&first=26&last=40&next=item">next</A></FONT> <FONT STYLE="font-weight:bold">&gt;&gt;</FONT> <P>
 
-  } elsif ($state eq $HITS and (m@<FORM ACTION=".+?.adp">@i or m@^.+?</FONT>\s+&nbsp;\(\d+ - \d+\)&nbsp;\s+<FONT.+?$@i)) {
+  } elsif ($state eq $HITS and (m@<FORM ACTION=.+?.adp>@i or m@^.+?</FONT>\s+&nbsp;\(\d+ - \d+\)&nbsp;\s+<FONT.+?$@i)) {
      print STDERR "**Going to Next Page**\n" if 2 <= $self->{_debug};
      if ($next_query =~ /\S/o) {
        $self->{'_next_to_retrieve'}++; ## can't see much use in this field other than pg counter; 
@@ -292,15 +298,17 @@ foreach ($self->split_lines($response->content())) {
      $next_query = '';
      last; ## $state = $TRAILER;
   } else {
-     print STDERR "**Nothing Matched.**\n" if 2 <= $self->{_debug};
+     print STDERR "**Nothing Matched**\n" if 2 <= $self->{_debug};
   }
 } # end of for loop 
 
 if (defined($hit)) {
    push(@{$self->{cache}}, $hit);
 } 
-print "**Hits found** ", $hits_found if 2 <= $self->{_debug};
+print "**Hits found** ", $hits_found, "\n" if 2 <= $self->{_debug};
 return $hits_found;
 } # native_retrieve_some
 
 1;
+
+

@@ -1,6 +1,6 @@
 # WebCrawler.pm
 # Copyright (C) 1998 by Martin Thurn
-# $Id: WebCrawler.pm,v 1.16 1999/07/13 19:06:38 mthurn Exp $
+# $Id: WebCrawler.pm,v 1.17 1999/10/05 19:59:55 mthurn Exp $
 
 =head1 NAME
 
@@ -70,6 +70,10 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 If it's not listed here, then it wasn't a meaningful or released version.
 
+=head2 2.02, 1999-10-05
+
+now uses hash_to_cgi_string()
+
 =head2 2.01, 1999-07-13
 
 =head2 1.13, 1999-03-29
@@ -106,7 +110,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.01';
+$VERSION = '2.02';
 
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 $TEST_CASES = <<"ENDTESTCASES";
@@ -170,19 +174,8 @@ sub native_setup_search
       } # foreach
     } # if
 
-  # Process the options.
-  my $options = '';
-  foreach (keys %$options_ref) 
-    {
-    # printf STDERR "option: $_ is " . $options_ref->{$_} . "\n";
-    next if (generic_option($_));
-    $options .= $_ . '=' . $options_ref->{$_} . '&';
-    }
-  # Delete the last '&' (WebCrawler chokes if it is there!) :
-  chop $options;
-
   # Finally figure out the url.
-  $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
+  $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $self->hash_to_cgi_string($options_ref);
   } # native_setup_search
 
 

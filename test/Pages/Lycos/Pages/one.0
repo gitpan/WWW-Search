@@ -9,36 +9,21 @@
 <!-- header-network bar -->
 <TABLE WIDTH=100% CELLPADDING=0 CELLSPACING=0 BORDER=0 BGCOLOR=#000000>
 <TR><TD><A HREF="/"><IMG SRC="http://lygo.com/ly/i/inv/ly_ypig.gif" VSPACE=2 WIDTH=232 HEIGHT=29 ALT="" BORDER=0></A></TD><TD ALIGN=RIGHT><FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE=-1 color=#FFFFFF><font size=4>&nbsp;</font><A HREF="http://www.lycos.com/att/member.html"><font color=#FFCC00>Get Online</font></a> &shy; <a href=http://personal.lycos.com/partners/email.asp><font color=#FFCC00>Check Email</font></a> &shy; <a href=http://personal.lycos.com><font color=#FFCC00>My Lycos</font></a>&nbsp;&nbsp;</font></TD></TR></TABLE>
-<TABLE WIDTH=100% BGCOLOR=#EEEEEE CELLSPACING=0 CELLPADDING=0 HEIGHT=20 BORDER=0><TR><TD><FONT FACE=VERDANA SIZE=-2><B>&nbsp;&nbsp;<A HREF=http://www.lycos.com/network/>Lycos Network</A></b>: <A HREF=http://www.lycos.com/cgi-bin/nph-bounce?nb|http://www.tripod.com/>Tripod.com</A> | <A HREF=http://www.lycos.com/cgi-bin/nph-bounce?nb|http://www.angelfire.com/>Angelfire.com</A> | <A HREF=http://www.lycos.com/cgi-bin/nph-bounce?nb|http://mailcity.lycos.com/>MailCity.com</A> | <A HREF=http://www.lycos.com/cgi-bin/nph-bounce?nb|http://www.whowhere.lycos.com/>WhoWhere.com</A> | <A HREF=http://www.lycos.com/cgi-bin/nph-bounce?nb|http://www.hotbot.com/>HotBot.com</A></FONT></TD><TD align=right><FONT FACE=Verdana SIZE=-2><A HREF=http://www.lycos.com/cgi-bin/nph-bounce?nb|http://www.lycos.com/network/>All Sites...</A>&nbsp;&nbsp;</FONT></TD></TR></TABLE><!-- /header-network bar -->
+<TABLE WIDTH=100% BGCOLOR=#EEEEEE CELLSPACING=0 CELLPADDING=0 HEIGHT=20 BORDER=0><TR><TD><FONT FACE=VERDANA SIZE=-2><B>&nbsp;&nbsp;<A HREF=http://www.lycos.com/network/>Lycos Network</A></b>: <A HREF=http://www.lycos.com/cgi-bin/nph-bounce?nb|http://www.tripod.com/>Tripod.com</A> | <A HREF=http://www.lycos.com/cgi-bin/nph-bounce?nb|http://www.quote.com/>Quote.com</A> | <A HREF=http://www.lycos.com/cgi-bin/nph-bounce?nb|http://mailcity.lycos.com/>MailCity.com</A> | <A HREF=http://www.lycos.com/cgi-bin/nph-bounce?nb|http://www.whowhere.lycos.com/>WhoWhere.com</A> | <A HREF=http://www.lycos.com/cgi-bin/nph-bounce?nb|http://www.hotbot.com/>HotBot.com</A></FONT></TD><TD align=right><FONT FACE=Verdana SIZE=-2><A HREF=http://www.lycos.com/cgi-bin/nph-bounce?nb|http://www.lycos.com/network/>All Sites...</A>&nbsp;&nbsp;</FONT></TD></TR></TABLE>
+<!-- /header-network bar -->
 
 <P>
 <!-- advertisement -->
 <DIV ALIGN=CENTER>
-<FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="-2"><TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="468" bgcolor=#ccff99>
-<form method="GET" action="http://www.lycos.com/cgi-bin/nph-adclick.exe/CID=0006a07470700e1d00000000/ST=lycos/SV=search/A=.lycos.search_lycos.">
-<input type="hidden" name="cid" value="furniture-something_d-468x60">
-<input type="hidden" name="hid"  value="lycos">
-<input type="hidden" name="tid" value="11405">
-<TR><TD ROWSPAN=2><INPUT TYPE="IMAGE" SRC="http://ads.lycos.com/ads/furniture.com10.gif" WIDTH="117" HEIGHT="60" BORDER="0"></TD>
-<TD COLSPAN=2><INPUT TYPE="IMAGE" SRC="http://ads.lycos.com/ads/furniture.com9.gif" WIDTH="351" HEIGHT="34" BORDER="0"></TD>
-</TR><TR><TD NOWRAP> 
-<select name=answer>
-<option value=0>beautiful
-<option value=0>comfortable
-<option value=0>practical
-<option value=0>interesting                     
-</select>
-<FONT SIZE=4 FACE="times, times new roman" color=#CC0000"><I><B>to</B></I></FONT>
-<select name=answer1>
-<option value=0>sit on
-<option value=0>sleep on
-<option value=0>walk on
-<option value=0>rest on
-<option value=0>eat at
-<option value=0>keep stuff in
-</select>
-</TD><TD ALIGN=RIGHT><INPUT TYPE="IMAGE" SRC="http://ads.lycos.com/ads/furniture.com8.gif" WIDTH="37" HEIGHT="26" BORDER="0"></TD>
-</TR></form></TABLE></FONT>
+<FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="-2"><IFRAME SRC="http://ad.doubleclick.net/adi/Beyond.bi.lycos.com/B15574;sz=468x60;ord=1999.10.08.11.03.42?" WIDTH=470 HEIGHT=62 MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no BORDERCOLOR='#000000'>
+<SCRIPT language='JavaScript1.1' SRC="http://ad.doubleclick.net/adj/Beyond.bi.lycos.com/B15574;abr=!ie;sz=468x60;ord=1999.10.08.11.03.42?"></SCRIPT>
+<NOSCRIPT>
+<A HREF="http://www.lycos.com/cgi-bin/nph-adclick.exe/CID=0007430f70700e1d00000000/ST=lycos/SV=search/A=.lycos.search_lycos./T=1999.10.08.11.03.42">
+<IMG SRC="http://ad.doubleclick.net/ad/Beyond.bi.lycos.com/B15574;abr=!ie4;abr=!ie5;sz=468x60;ord=1999.10.08.11.03.42?" BORDER=0 WIDTH=468 HEIGHT=60 ALT="Click Here For Free Personalized Business News">Click Here For Free Personalized Business News</A>
+</NOSCRIPT>
+</IFRAME>
+
+</FONT>
 </DIV>
 <!-- /advertisement -->
 <P>
@@ -46,12 +31,24 @@
 
 <!-- search box -->
 <DIV ALIGN=CENTER>
-<!-- lycos.test.searchbar -->
+<!-- lycos.prosearchbar.top -->
 <FORM ACTION="http://lycospro.lycos.com/cgi-bin/pursuit" METHOD=GET>
 <INPUT TYPE="hidden" NAME="cat" VALUE="lycos">
 <INPUT TYPE="hidden" NAME="mtemp" VALUE="nojava">
 <INPUT TYPE="hidden" NAME="etemp" VALUE="error_nojava">
 <INPUT TYPE="hidden" NAME="adv" VALUE="1">
+<INPUT TYPE="hidden" NAME="matchmode" VALUE="or">
+<INPUT TYPE="hidden" NAME="maxhits" VALUE="100">
+<INPUT TYPE="hidden" NAME="ignore" VALUE="">
+<INPUT TYPE="hidden" NAME="fs" VALUE="">
+<INPUT TYPE="hidden" NAME="lang" VALUE="">
+<INPUT TYPE="hidden" NAME="rt" VALUE="">
+<INPUT TYPE="hidden" NAME="rtwm" VALUE="">
+<INPUT TYPE="hidden" NAME="rtpy" VALUE="">
+<INPUT TYPE="hidden" NAME="rttf" VALUE="">
+<INPUT TYPE="hidden" NAME="rtfd" VALUE="">
+<INPUT TYPE="hidden" NAME="rtpn" VALUE="">
+<INPUT TYPE="hidden" NAME="rtor" VALUE="">
 <TABLE WIDTH=525 BGCOLOR=#CCCCCC BORDER=0 CELLPADDING=1 CELLSPACING=0>
 <TR><TD>
 <TABLE WIDTH=100% BORDER=0 CELLPADDING=10 CELLSPACING=0>
@@ -64,11 +61,9 @@
 </TD></TR>
 <TR><TD>&nbsp;</TD><TD>
 <FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE=-2>
-<INPUT TYPE=HIDDEN NAME="prquery" VALUE="">
-<INPUT TYPE=RADIO NAME="str" VALUE="N" CHECKED><B>New</B> Search
-<INPUT TYPE=RADIO NAME="pq" VALUE="+LSAM +replication">Search These Results
-</FONT>
-</TD></TR>
+<INPUT TYPE=RADIO NAME="npl" VALUE="" CHECKED><B>New</B> Search
+<INPUT TYPE=RADIO NAME="npl" VALUE="pq=+LSAM +replication">Search These Results
+</FONT></TD></TR>
 </TABLE>
 </TD></TR>
 </TABLE>
@@ -158,13 +153,26 @@ http://www.isi.edu/ib/discussion.html<br><A HREF="http://www.isi.edu">isi.edu</A
 <BR>
 <!-- search box -->
 <DIV ALIGN=CENTER>
-
-<TABLE WIDTH=525 BGCOLOR=#CCCCCC BORDER=0 CELLPADDING=1 CELLSPACING=0>
-<TR><FORM ACTION="http://lycospro.lycos.com/cgi-bin/pursuit" METHOD=GET>
+<!-- lycos.prosearchbar.bottom -->
+<FORM ACTION="http://lycospro.lycos.com/cgi-bin/pursuit" METHOD=GET>
+<INPUT TYPE="hidden" NAME="cat" VALUE="lycos">
 <INPUT TYPE="hidden" NAME="mtemp" VALUE="nojava">
 <INPUT TYPE="hidden" NAME="etemp" VALUE="error_nojava">
 <INPUT TYPE="hidden" NAME="adv" VALUE="1">
-<TD>
+<INPUT TYPE="hidden" NAME="matchmode" VALUE="or">
+<INPUT TYPE="hidden" NAME="maxhits" VALUE="100">
+<INPUT TYPE="hidden" NAME="ignore" VALUE="">
+<INPUT TYPE="hidden" NAME="fs" VALUE="">
+<INPUT TYPE="hidden" NAME="lang" VALUE="">
+<INPUT TYPE="hidden" NAME="rt" VALUE="">
+<INPUT TYPE="hidden" NAME="rtwm" VALUE="">
+<INPUT TYPE="hidden" NAME="rtpy" VALUE="">
+<INPUT TYPE="hidden" NAME="rttf" VALUE="">
+<INPUT TYPE="hidden" NAME="rtfd" VALUE="">
+<INPUT TYPE="hidden" NAME="rtpn" VALUE="">
+<INPUT TYPE="hidden" NAME="rtor" VALUE="">
+<TABLE WIDTH=525 BGCOLOR=#CCCCCC BORDER=0 CELLPADDING=1 CELLSPACING=0>
+<TR><TD>
 <TABLE WIDTH=100% BORDER=0 CELLPADDING=10 CELLSPACING=0>
 <TR><TD BGCOLOR=#FFFFFF>
 <TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
@@ -175,11 +183,9 @@ http://www.isi.edu/ib/discussion.html<br><A HREF="http://www.isi.edu">isi.edu</A
 </TD></TR>
 <TR><TD>&nbsp;</TD><TD>
 <FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE=-2>
-<INPUT TYPE=HIDDEN NAME="prquery" VALUE="">
-<INPUT TYPE=RADIO NAME="str" VALUE="N" CHECKED><B>New</B> Search
-<INPUT TYPE=RADIO NAME="pq" VALUE="+LSAM +replication">Search These Results
-</FONT>
-</TD></TR>
+<INPUT TYPE=RADIO NAME="npl" VALUE="" CHECKED><B>New</B> Search
+<INPUT TYPE=RADIO NAME="npl" VALUE="pq=+LSAM +replication">Search These Results
+</FONT></TD></TR>
 </TABLE>
 </TD></TR>
 </TABLE>
@@ -192,34 +198,18 @@ http://www.isi.edu/ib/discussion.html<br><A HREF="http://www.isi.edu">isi.edu</A
 <!-- /search box -->
 <BR>
 <FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE=-2>
-<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="468" bgcolor=#ccff99>
-<form method="GET" action="http://www.lycos.com/cgi-bin/nph-adclick.exe/CID=0006a07470700e1d00000000/ST=lycos/SV=search/A=.lycos.search_lycos.">
-<input type="hidden" name="cid" value="furniture-something_d-468x60">
-<input type="hidden" name="hid"  value="lycos">
-<input type="hidden" name="tid" value="11405">
-<TR><TD ROWSPAN=2><INPUT TYPE="IMAGE" SRC="http://ads.lycos.com/ads/furniture.com10.gif" WIDTH="117" HEIGHT="60" BORDER="0"></TD>
-<TD COLSPAN=2><INPUT TYPE="IMAGE" SRC="http://ads.lycos.com/ads/furniture.com9.gif" WIDTH="351" HEIGHT="34" BORDER="0"></TD>
-</TR><TR><TD NOWRAP> 
-<select name=answer>
-<option value=0>beautiful
-<option value=0>comfortable
-<option value=0>practical
-<option value=0>interesting                     
-</select>
-<FONT SIZE=4 FACE="times, times new roman" color=#CC0000"><I><B>to</B></I></FONT>
-<select name=answer1>
-<option value=0>sit on
-<option value=0>sleep on
-<option value=0>walk on
-<option value=0>rest on
-<option value=0>eat at
-<option value=0>keep stuff in
-</select>
-</TD><TD ALIGN=RIGHT><INPUT TYPE="IMAGE" SRC="http://ads.lycos.com/ads/furniture.com8.gif" WIDTH="37" HEIGHT="26" BORDER="0"></TD>
-</TR></form></TABLE></FONT>
+<IFRAME SRC="http://ad.doubleclick.net/adi/Beyond.bi.lycos.com/B15574;sz=468x60;ord=1999.10.08.11.03.42?" WIDTH=470 HEIGHT=62 MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no BORDERCOLOR='#000000'>
+<SCRIPT language='JavaScript1.1' SRC="http://ad.doubleclick.net/adj/Beyond.bi.lycos.com/B15574;abr=!ie;sz=468x60;ord=1999.10.08.11.03.42?"></SCRIPT>
+<NOSCRIPT>
+<A HREF="http://www.lycos.com/cgi-bin/nph-adclick.exe/CID=0007430f70700e1d00000000/ST=lycos/SV=search/A=.lycos.search_lycos./T=1999.10.08.11.03.42">
+<IMG SRC="http://ad.doubleclick.net/ad/Beyond.bi.lycos.com/B15574;abr=!ie4;abr=!ie5;sz=468x60;ord=1999.10.08.11.03.42?" BORDER=0 WIDTH=468 HEIGHT=60 ALT="Click Here For Free Personalized Business News">Click Here For Free Personalized Business News</A>
+</NOSCRIPT>
+</IFRAME>
+
+</FONT>
 <P>
 <!-- toolbar -->
-<FONT FACE=VERDANA SIZE=-2><B>Tools</B> <a href=/L/sv1/>Chat</a> &nbsp;<a href=/L/sv2/>Clubs</a> &nbsp;<a href=/L/sv3/>Email</a> &nbsp;<a href=/L/sv4/>Message Boards</a> &nbsp;<a href=http://ftpsearch.lycos.com/>Software</a>&nbsp; <B>Build</B>&nbsp; <a href=/L/sv6/>Home Pages</a> &nbsp;<a href=/L/sv7/>My Lycos</a><br><B>Find</B> <a href=/l/sv18/>MP3</a> &nbsp;<a href=/L/sv8/>News</a> &nbsp;<a href=/L/sv9/>Weather</a> &nbsp;<a href=/L/sv10/>Stocks</a>  &nbsp;<a href=/L/sv13/>Yellow Pages</a> &nbsp;<a href=/L/sv11/>Cities</a> &nbsp;<a href=/L/sv14/>People</a> &nbsp;<a href=/L/sv12/>Road Maps</a> &nbsp;<b>Buy</b> &nbsp;<a href=/L/sv16/>Books</a> &nbsp;<a href=/L/sv17/>Music</a><font>&nbsp;</font><!-- /toolbar -->
+<FONT FACE=VERDANA SIZE=-2><B>Tools</B> <a href=/L/sv1/>Chat</a> &nbsp;<a href=/L/sv2/>Clubs</a> &nbsp;<a href=/L/sv3/>Email</a> &nbsp;<a href=/L/sv4/>Message Boards</a> &nbsp;<a href=http://ftpsearch.lycos.com/>Shareware</a>&nbsp; <B>Build</B>&nbsp; <a href=/L/sv6/>Home Pages</a> &nbsp;<a href=/L/sv7/>My Lycos</a><br><B>Find</B> <a href=/l/sv18/>MP3</a> &nbsp;<a href=/L/sv8/>News</a> &nbsp;<a href=/L/sv9/>Weather</a> &nbsp;<a href=/L/sv10/>Stocks</a>  &nbsp;<a href=/L/sv13/>Yellow Pages</a> &nbsp;<a href=/L/sv11/>Cities</a> &nbsp;<a href=/L/sv14/>People</a> &nbsp;<a href=/L/sv12/>Road Maps</a> &nbsp;<b>Buy</b> &nbsp;<a href=/L/sv16/>Books</a> &nbsp;<a href=/L/sv17/>Music</a><font>&nbsp;</font><!-- /toolbar -->
 </DIV>
 <BR>
 <TABLE WIDTH=100% CELLPADDING=0 CELLSPACING=0 BGCOLOR=#CCCCCC><TR><TD><TABLE BORDER=0 CELLPADDING=1 CELLSPACING=0><TR><TD></TD></TR></TABLE></TD></TR></TABLE>

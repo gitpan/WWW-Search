@@ -1,7 +1,7 @@
 # Sites.pm
 # by Martin Thurn
 # Copyright (C) 1996 by USC/ISI
-# $Id: Sites.pm,v 1.1 1999/09/29 20:25:17 mthurn Exp $
+# $Id: Sites.pm,v 1.1 1999/09/29 20:25:17 mthurn Exp mthurn $
 #
 # Complete copyright notice follows below.
 
@@ -71,8 +71,8 @@ $VERSION = '2.04';
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 $TEST_CASES = <<"ENDTESTCASES";
 &test('Lycos::Sites', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_EXACTLY);
-&test('Lycos::Sites', '$MAINTAINER', 'one', 'Ja'.'bba', \$TEST_RANGE, 2,9);
-&test('Lycos::Sites', '$MAINTAINER', 'two', 'Fet'.'t', \$TEST_GREATER_THAN, 10);
+&test('Lycos::Sites', '$MAINTAINER', 'one', 'fabri'.'kal', \$TEST_RANGE, 2,9);
+&test('Lycos::Sites', '$MAINTAINER', 'two', 'polemi'.'st', \$TEST_GREATER_THAN, 11);
 ENDTESTCASES
 
 use WWW::Search::Lycos;

@@ -2,7 +2,7 @@
 # ExciteNews.pm                                       
 # by Jim Smyser                                       
 # Copyright (c) 1999 by Jim Smyser & USC/ISI          
-# $Id: News.pm,v 1.4 1999/07/14 17:09:16 mthurn Exp $
+# $Id: News.pm,v 1.5 1999/10/05 20:44:49 mthurn Exp $
 # Complete copyright notice follows below.            
 ###############################################################
 
@@ -56,6 +56,10 @@ See $TEST_CASES below.
 
 =head1 VERSION HISTORY
 
+=head2 2.02, 1999-10-5
+
+Misc. formatting changes
+
 =head2 2.01, 1999-07-13
 
 New test mechanism
@@ -82,7 +86,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.01';
+$VERSION = '2.02';
 
 $MAINTAINER = 'Jim Smyser <jsmyser@bigfoot.com>';
 $TEST_CASES = <<"ENDTESTCASES";
@@ -182,7 +186,7 @@ sub native_retrieve_some
     next if m/^$/;              # short circuit for blank lines
     print STDERR " *** $state ===$_===" if 2 <= $self->{'_debug'};
     
-    if ($state eq $HEADER && m=^\[(\d+)\s+hits.=i) 
+    if ($state eq $HEADER && m|\[(\d+) hits. About Your Results|i) 
       {
       print STDERR "**Result Count**\n" if 2 <= $self->{'_debug'};
       $self->approximate_result_count($1);
@@ -193,7 +197,7 @@ sub native_retrieve_some
       print STDERR "**Next Page Header**\n" if 2 <= $self->{'_debug'};
       $state = $HITS;
       }
-    elsif ($state eq $HITS && m@.*?\<A HREF=.*?;([^"]+)\">(.*)\</A>\</b>&nbsp;@i) 
+    elsif ($state eq $HITS && m@<P>\s<A HREF=.*?;([^"]+)\">(.*)</A>@i) 
       {
       print STDERR "hit url line\n" if 2 <= $self->{'_debug'};
       ($hit, $raw) = $self->begin_new_hit($hit, $raw);
@@ -255,4 +259,18 @@ sub native_retrieve_some
   } # native_retrieve_some
       
 1;
+__END__
+
+<P> <A HREF="http://search.excite.com/relocate/sr=news|ss=kosovo;http://www7.mercurycenter.com:80/premium/front/docs/balkans03.htm">Independence for Kosovo hotly disputed (10/03/1999)</A>&nbsp;
+<SMALL>
+(San Jose Mercury News)
+</SMALL>
+<BR><SMALL>56% </SMALL> Weather Classifieds &amp; Services. Classifieds.
+<BR><i>First found: </i>5 Oct 1999 &nbsp;
+<SMALL>
       
+
+
+
+
+

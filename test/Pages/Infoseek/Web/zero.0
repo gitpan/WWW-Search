@@ -8,22 +8,22 @@
 <td height="23" width="100%">&nbsp;</td></tr>
 <tr><td bgcolor="#000000" height="15"><spacer type="block" width="1" height="15"></td></tr>
 </table><center>
-<br> <script language="JavaScript">function MM_openBrWindow(){window.open("http://transfer.go.com/cgi/aftransfer.pl?name=50503&srvc=go&guid=none&goto=http://www.compaq.com/nonstop/motion/index.html","popup","width=400,height=430");}</script><table cellpadding="0" cellspacing="0" border="0" width="468" height="60" bgcolor="#000000"><tr><td><NOBR><a href="#" onClick="MM_openBrWindow(this);"><img src="http://adimages.go.com/ad/sponsors/compaq/comp-ban0002/comp-ban0002.gif" width=276 height=60 border=0><img src="http://adimages.go.com/ad/sponsors/compaq/comp-ban0002/motion_logo_12.gif" width=192 height=60 border=0></NOBR></a></td></tr></table><br></center>
+<br> <center><a href="http://transfer.go.com/cgi/atransfer.pl?goto=http://ads07.focalink.com/SmartBanner/page%3F15161.171%2D1999.10.08.08.01.23&name=34250&srvc=go&guid=2D94FDBD-7D91-11D3-8DF9-0090273025CD" target=""><img src="http://ads07.focalink.com/SmartBanner/nph-graphic?15161.171-1999.10.08.08.01.23" width=468 height=60 border="1" alt="ConsumerInfo.com" align="center"><FONT FACE="verdana,arial,helvetica" SIZE="1"><b><br>Click here</b></font></a></center><br></center>
 <table  width="100%"  border=0 cellpadding=3 cellspacing=0>
 <tr><td valign=top colspan=2 align=left bgcolor="003366">
 &nbsp;<font face="sans-serif" color="#FFFFFF"><b>No Results Found</b></font>
 </td></tr>
 <tr><td bgcolor="EEEEFF"><font face="Helvetica, Arial" size="2"><a href="http://www.go.com/?svx=nohit">GO</a> 
- &gt; <b>Bogus21384NoSuchWord938613293</b></font>
+ &gt; <b>Bogus21746NoSuchWord939394601</b></font>
 </td>
 <td valign=top align=right bgcolor="EEEEFF">
-<font face="Helvetica, Arial" size="2"><a target="GOHelp" href="/Help/help.html?key=HELP_T00002_SRCHINTRO&nh=25" onclick="window.open('/Help/help.html?key=HELP_T00002_SRCHINTRO&nh=25', 'GOHelp', 'width=575,height=400,scrollbars=yes,resizable=yes,toolbar=yes'); return false;">Help</a></font>
+<font face="Helvetica, Arial" size="2"><a target="GOHelp" href="/Help/help.html?key=HELP_T00002_SRCHINTRO&nh=25" onclick="window.open('/Help/help.html?key=HELP_T00002_SRCHINTRO&nh=25', 'GOHelp', 'width=575,height=400,scrollbars=yes,resizable=yes,toolbar=yes'); return false;">
+Help</a></font>
 </td></tr></table>
-<p>
 <!-- Begin searchbox placement -->
 <table border="0" cellpadding="1" cellspacing="0">
 <tr><td colspan=3><img src="/images/clear.gif" align=right width="1" HEIGHT="2" hspace="0" vspace="0" border="0"></td></tr><tr>
-<form action="/Titles" method="get" name="bottomform">
+<form action="http://www.go.com/Titles" method="get" name="bottomform">
 <td rowspan=4  width=10>&nbsp;</td>
 <td nowrap colspan=2>
 <b><font face="Helvetica,Arial" size="3">Search&nbsp;&nbsp;</font></b>
@@ -32,14 +32,14 @@
 <INPUT TYPE=hidden NAME="lk" VALUE="noframes">
 <INPUT TYPE=hidden NAME="nh" VALUE="25">
  <input type=hidden name="cc" value="WW">
-	<input type=hidden name="oq" value="Bogus21384NoSuchWord938613293">
+	<input type=hidden name="oq" value="Bogus21746NoSuchWord939394601">
 </font></b>
 </td>
 <td rowspan=4 width=10 >&nbsp;</td>
 </tr>
 <tr>
 <td nowrap colspan=2 align=right>
-<input type="text" name="qt" size="42" maxlength="511" value="Bogus21384NoSuchWord938613293">
+<input type="text" name="qt" size="42" maxlength="511" value="Bogus21746NoSuchWord939394601">
 &nbsp;<input type="submit" value="Find">
 </td>
 </tr>
@@ -47,8 +47,8 @@
 <td>
 <font face="geneva,arial" size=1>
 <a href="/find?pg=advanced_www.html&ud9=advanced_www&nh=25">Search&nbsp;options</a>&nbsp;|&nbsp;
-<a target="GOHelp" href="/Help/help.html?key=HELP_T00008_SRCHQUIK&nh=25" onclick="window.open('/Help/help.html?key=HELP_T00008_SRCHQUIK&nh=25', 'GOHelp', 'width=575,height=400,scrollbars=yes,resizable=yes,toolbar=yes'); return false;">How&nbsp;to&nbsp;search</a>
-&nbsp;|&nbsp;</font>		
+<a target="GOHelp" href="/Help/help.html?key=HELP_T00008_SRCHQUIK&nh=25" onclick="window.open('/Help/help.html?key=HELP_T00008_SRCHQUIK&nh=25', 'GOHelp', 'width=575,height=400,scrollbars=yes,resizable=yes,toolbar=yes'); return false;">
+How &nbsp;to&nbsp;search</a>&nbsp;|&nbsp;</font>		
 </td>
 <td align=right><font face="verdana,geneva,arial" size=1 color="gray"><b>Powered by Infoseek</b></font></td>
 </tr>
@@ -70,23 +70,24 @@
 <b><li></b>Use a comma to separate capitalized names or phrases.
 For example: <strong>Bill Clinton, Boris Yeltsin</strong>
 <b><li></b>Use the correct case (uppercase for proper names, lowercase for common words and phrases).
-<b><li></b>Check the  
-<a target="GOHelp" href="/Help/help.html?key=HELP_T00006_OPERATR&nh=25" onclick="window.open('/Help/help.html?key=HELP_T00006_OPERATR&nh=25', 'GOHelp', 'width=575,height=400,scrollbars=yes,resizable=yes,toolbar=yes'); return false;">syntax</a> of your search query. (See 
-<a target="GOHelp" href="/Help/help.html?key=HELP_T00002_SRCHINTRO&nh=25" onclick="window.open('/Help/help.html?key=HELP_T00002_SRCHINTRO&nh=25', 'GOHelp', 'width=575,height=400,scrollbars=yes,resizable=yes,toolbar=yes'); return false;">Help</a> for more information.)
+<b><li></b>Check the  <a target="GOHelp" href="/Help/help.html?key=HELP_T00006_OPERATR&nh=25" onclick="window.open('/Help/help.html?key=HELP_T00006_OPERATR&nh=25', 'GOHelp', 'width=575,height=400,scrollbars=yes,resizable=yes,toolbar=yes'); return false;">
+syntax</a> of your search query. (See <a target="GOHelp" href="/Help/help.html?key=HELP_T00002_SRCHINTRO&nh=25" onclick="window.open('/Help/help.html?key=HELP_T00002_SRCHINTRO&nh=25', 'GOHelp', 'width=575,height=400,scrollbars=yes,resizable=yes,toolbar=yes'); return false;">
+ Help</a> for more information.)
 <b><li></b>Try synonyms and variations of words. For example: <b>Bill Clinton</b>, <b>William Clinton</b>
 </ul>
 <table cellspacing=0 cellpadding=0 border=0>
 <tr><td colspan=2>&nbsp;
 <font face="Helvetica, Arial" size="3"><b>Free download</b></font>
-</td> </tr> 
+</td> </tr>
 <tr><td colspan=2 height=1 bgcolor="#000000"><img src="/images/clear.gif" width=1 height=1></td></tr>
 <tr><td colspan=2 height=15 ><img src="/images/clear.gif" width=1 height=15></td></tr>
 <tr><td><img src="/images/clear.gif" width=30 height=1></td>
 <td>
 <font face="sans-serif" size="2">
-If you are using Windows 95/98 or Windows NT, you can also search with <a href="http://express.go.com/subdocuments/nr_details.html">GO Network Express Search</a>, 
-which lets you <b>search all the major search engines at the same time</b>. 
-Express Search delivers comprehensive and relevant search results. Download express at 
+If you are using Windows 95/98 or Windows NT, you can also search 
+with <a href="http://express.go.com/subdocuments/nr_details.html">GO Network Express Search</a>,
+which lets you <b>search all the major search engines at the same time</b>.
+Express Search delivers comprehensive and relevant search results. Download Express at
 <a href="http://express.go.com/nr_download.html">http://express.go.com</a>. </font>
 </td></tr>
 </table>

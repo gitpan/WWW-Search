@@ -3,12 +3,12 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.04?  (1999-09-30)
+WHAT IS NEW IN WWW::Search 2.05?  (1999-10-12)
 ----------------------------------------------
 overview:
  * Bug fixes for several backends (as usual)
- * NEW backends: GoTo, Deja, NetFind, Lycos::Sites, Lycos::Pages
- * WebSearch has new/changed options: --count, --debug, --lwpdebug
+ * new result fields WWW::SearchResult->source, ->company, ->location
+ * new method WWW::Search::hash_to_cgi_string
 
 See the file ChangeLog for details.
 
@@ -18,7 +18,7 @@ WHAT IS WWW::Search?
 
 WWW::Search is a collection of Perl modules which provide an API to
 WWW (and similar) search engines.  Currently WWW::Search includes
-back-ends for variations of AltaVista, Dejanews, Excite, HotBot,
+backends for variations of AltaVista, Dejanews, Excite, HotBot,
 Infoseek, Lycos, Magellan, WebCrawler, and Yahoo, among others.  We
 include two applications built from this library: AutoSearch (a
 program to automate tracking of search results over time), and
@@ -33,8 +33,8 @@ on, and increasing the number of hits per page, among other tricks.
 Because WWW::Search depends on parsing the HTML output of web search
 engines it will fail if the search engine operators change their
 format (an unfortunately frequent occurrence).  WWW::Search includes a
-test suite for most back-ends which verifies that it is functioning
-correctly.  As of the day of the release the current back-end status
+test suite for most backends which verifies that it is functioning
+correctly.  As of the day of the release the current backend status
 is:
 
 AltaVista		working
@@ -61,7 +61,7 @@ Infoseek::Email		not working
 Infoseek::News		working
 Infoseek::Web		working
 Livelink		not working? (not in test suite)
-LookSmart		working? (not in test suite)
+LookSmart		working
 Lycos			working
 Lycos::Pages		working
 Lycos::Sites		working
@@ -145,7 +145,7 @@ everything in the right places.  On a unix system, just type
    perl -MCPAN -e 'install WWW::Search'.
 
 Otherwise, you can install WWW::Search as you would any perl module
-library, by running these commands in the WWW-Search-2.04 directory
+library, by running these commands in the WWW-Search-x.xx directory
 after unpacking the archive (and after installing all the prerequisite
 modules):
 
@@ -155,7 +155,12 @@ modules):
     make install
 
 On Win32, maintenance and testing is done with Microsoft's nmake.exe;
-use 'nmake' instead of 'make' in the above sequence of commands.
+use 'nmake' instead of 'make' in the above sequence of commands.  
+
+When you do `perl Makefile.PL` on Win32, you might get warnings that a
+whole bunch of 'zero.out' files are missing.  This seems to be a bug
+in some versions of WinZip which refuse to extract empty files from
+the archive.  
 
 See "TESTING" below for a description of what "make test" does.
 
@@ -197,7 +202,7 @@ External queries can fail for several reasons:
 If the external tests fail, please either investigate the error or
 send a description of the problem, a list of your operating system and
 all relevant perl version number, and the output of "make test" to the
-maintainer of the back-end for the search engine that fails.
+maintainer of the backend for the search engine that fails.
 
 
 DISCUSSION, BUG REPORTS, AND IMPROVEMENTS
@@ -205,10 +210,10 @@ DISCUSSION, BUG REPORTS, AND IMPROVEMENTS
 
 Feedback about WWW::Search is encouraged.  If you're using it for a
 neat application, please let us know.  If you'd like to (or have)
-implemented a new back-end for WWW::Search, let us know so we don't
+implemented a new backend for WWW::Search, let us know so we don't
 duplicate work.  <MartinThurn@iname.com>
 
-Feedback, bug reports, fixes, and new back-ends should be sent to
+Feedback, bug reports, fixes, and new backends should be sent to
 Martin Thurn <MartinThurn@iname.com>.  When sending e-mail, please
 please put [WWW::Search] at the beginning of the subject line (or risk
 me losing the message in the pile).
@@ -218,11 +223,12 @@ send "subscribe info-www-search" as the body of a message to
 <info-www-search-request@isi.edu>.
 
 Back-end-related bug reports ("search engine ABC doesn't work") should
-be sent to the author of the back-end (back-end authors are identified
+be sent to the author of the backend (backend authors are identified
 in the corresponding man page and in the output of ``make test'').
 General bugs should be reported to <MartinThurn@iname.com>.
 
-When submitting a bug report, please remember to include
+When submitting a bug report or request for help, please remember to
+include:
         - your operating system name and version
 	- your version of perl
 	- your version of WWW::Search
@@ -267,7 +273,7 @@ DOCUMENTATION
 
 See `perldoc WWW::Search` after installation for an overview of the
 library.  POD-style documentation is also included in all modules and
-scripts, so you can do `perldoc WebSearch` and `perldoc AutoSearch`
+programs, so you can do `perldoc WebSearch` and `perldoc AutoSearch`
 and `perldoc WWW::Search::HotBot` after installation.
 
 
@@ -275,6 +281,10 @@ FUTURE PLANS
 ------------
 
 Some ideas:
+
+  - use LWP::ParallelUA to speed up multiple backend search requests
+(I'm trying to decide what the API interface will look like; please
+send suggestions).  Contact <MartinThurn@iname.com>
 
   - a global option that will force WWW::Search to perform the same
 search as the engine's web GUI (I'm looking for contributions of the
@@ -286,19 +296,15 @@ native_query).  Contact <MartinThurn@iname.com>
 here from someone who uses/needs proxy support and can test it).
 Contact <MartinThurn@iname.com>
 
-  - use LWP::ParallelUA to speed up multiple backend search requests
-(I'm trying to decide what the API interface will look like; please
-send suggestions).  Contact <MartinThurn@iname.com>
-
-  - more widespread use of new result tags across all back-ends
+  - more widespread use of new result tags across all backends
 (i.e. description, date, size, etc.)
 
   - a freeze/restore interface to suspend and resume in-progress queries
 
-  - more back-ends
+  - more backends
 
 Contributions are always welcome.  Send me e-mail if you plan a new
-back-end and to discuss architectural changes (to avoid duplicating
+backend and to discuss architectural changes (to avoid duplicating
 work).  Contact <MartinThurn@iname.com>
 
 

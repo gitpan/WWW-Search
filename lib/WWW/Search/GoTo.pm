@@ -4,7 +4,7 @@
 # GoTo.pm
 # by Jim Smyser
 # Copyright (C) 1996-1999 by Jim Smyser & USC/ISI
-# $Id: GoTo.pm,v 1.3 1999/09/24 13:56:36 mthurn Exp $
+# $Id: GoTo.pm,v 1.4 1999/10/05 17:08:44 mthurn Exp $
 ######################################################
 
 package WWW::Search::GoTo;
@@ -83,7 +83,7 @@ $MAINTAINER = 'Jim Smyser <jsmyser@bigfoot.com>';
 $TEST_CASES = <<"ENDTESTCASES";
 &test('GoTo', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_EXACTLY);
 &test('GoTo', '$MAINTAINER', 'one_page', 'satur'.'nV', \$TEST_RANGE, 1,39);
-&test('GoTo', '$MAINTAINER', 'multi', 'gol' . 'deen', \$TEST_GREATER_THAN, 41);
+&test('GoTo', '$MAINTAINER', 'multi', 'mewt'.'wo', \$TEST_GREATER_THAN, 41);
 ENDTESTCASES
 
 use Carp ();

@@ -1,5 +1,5 @@
 <html><head>
-<title>AltaVista: Advanced Query LSAM AND Bogus1260NoSuchWORd938637291</title>
+<title>AltaVista: Advanced Query LSAM AND Bogus21746NoSuchWORd939394601</title>
 </head><body>
 <font face="Arial,Helvetica" size="+1"><a href="/cgi-bin/query?text&pg=q&what=web">AltaVista Search Service</a></font><p><FORM name=mfrmaction="/cgi-bin/query">
 <INPUT TYPE=hidden NAME=pg VALUE=aq><INPUT TYPE=hidden NAME=text VALUE=yes><font size=-1><B>Enter ranking keywords in</B>
@@ -29,13 +29,13 @@
 <OPTION VALUE=ru>Russian
 <OPTION VALUE=es>Spanish
 <OPTION VALUE=sv>Swedish
-</SELECT></font><font size=-1><p><input type=text name=r size=50 value="LSAM Bogus1260NoSuchWd938637291">
+</SELECT></font><font size=-1><p><input type=text name=r size=50 value="LSAM Bogus21746NoSuchWd939394601">
 <INPUT TYPE=submit name=search VALUE="Search"><br>
  Enter boolean expression:<br>
-<textarea name=q cols=50 rows=3 maxlength=800 wrap=virtual>LSAM AND Bogus1260NoSuchWORd938637291</textarea><p>Range of Dates (e.g. 21/Mar/96): <b> From </b><INPUT TYPE=text NAME=d0 SIZE=9 MAXLENGTH=32 VALUE="">
+<textarea name=q cols=50 rows=3 maxlength=800 wrap=virtual>LSAM AND Bogus21746NoSuchWORd939394601</textarea><p>Range of Dates (e.g. 21/Mar/96): <b> From </b><INPUT TYPE=text NAME=d0 SIZE=9 MAXLENGTH=32 VALUE="">
 <b> To </b><INPUT TYPE=text NAME=d1 SIZE=9 MAXLENGTH=32 VALUE=""><p><INPUT TYPE=checkbox name=fmt value=n> <b>Count documents matching the boolean expression.</b> 
 <P><font size=-1><a href="/cgi-bin/query?pg=q&what=web&text=yes">Search</a> - Advanced Text Search - <a href="/cgi-bin/query?pg=aq&what=news&text=yes">Usenet</a></font></font></FORM>
-AltaVista found no document matching your query. <P><font size=-1></font><font size=-2>word count: LSAM: 820<BR>Ignored:    Bogus1260NoSuchWd938637291:<b>0</b><BR></font><P>
+AltaVista found no document matching your query. <P><font size=-1></font><font size=-2>word count: LSAM: 817<BR>Ignored:    Bogus21746NoSuchWd939394601:<b>0</b><BR></font><P>
 <p><font face="Arial,Helvetica" size="-2">
 <a href="/">AltaVista.com</a> |
 <a href="/av/content/about.htm">About AltaVista</a> |

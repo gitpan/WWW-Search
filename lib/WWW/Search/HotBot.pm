@@ -1,7 +1,7 @@
 # HotBot.pm
 # by Wm. L. Scheding and Martin Thurn
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: HotBot.pm,v 1.39 1999/09/28 17:39:17 mthurn Exp $
+# $Id: HotBot.pm,v 1.41 1999/10/05 19:39:38 mthurn Exp $
 
 =head1 NAME
 
@@ -296,6 +296,10 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 If it''s not listed here, then it wasn''t a meaningful nor released revision.
 
+=head2 2.05, 1999-10-05
+
+now uses hash_to_cgi_string(); new test cases
+
 =head2 2.03, 1999-09-28
 
 BUGFIX: was missing the "Next page" link sometimes.
@@ -381,17 +385,17 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.03';
+$VERSION = '2.05';
 
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 $TEST_CASES = <<"ENDTESTCASES";
 &test('HotBot', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_EXACTLY);
 &test('HotBot', '$MAINTAINER', 'one', 'LSAM replication', \$TEST_RANGE, 2,80);
-&test('HotBot', '$MAINTAINER', 'two', 'IG-88', \$TEST_GREATER_THAN, 101);
+&test('HotBot', '$MAINTAINER', 'two', 'Calri'.'ssian', \$TEST_GREATER_THAN, 101);
 ENDTESTCASES
 
 use Carp ();
-use WWW::Search(generic_option);
+use WWW::Search( generic_option );
 require WWW::SearchResult;
 use URI::Escape;
 
@@ -448,22 +452,9 @@ sub native_setup_search
       $options_ref->{$_} = $native_options_ref->{$_};
       } # foreach
     } # if
-  # Process the options.
-  my($options) = '';
-  foreach (keys %$options_ref) 
-    {
-    # printf STDERR "option: $_ is " . $options_ref->{$_} . "\n";
-    next if (generic_option($_));
-    # If we want to let the user delete options, do the
-    # following. (They can still blank them out, which may or may not
-    # have the same effect, anyway):
-    # next unless $options_ref->{$_} ne '';
-    $options .= $_ . '=' . $options_ref->{$_} . '&';
-    }
-  # Ugh!  HotBot chokes if our URL has a dangling '&' at the end:
-  chop $options;
+
   # Finally, figure out the url.
-  $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
+  $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $self->hash_to_cgi_string($options_ref);
   } # native_setup_search
 
 

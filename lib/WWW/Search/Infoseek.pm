@@ -1,6 +1,6 @@
 # Infoseek.pm
 # Copyright (C) 1998 by Martin Thurn
-# $Id: Infoseek.pm,v 1.23 1999/09/29 20:04:51 mthurn Exp $
+# $Id: Infoseek.pm,v 1.25 1999/10/05 19:49:46 mthurn Exp $
 
 =head1 NAME
 
@@ -56,6 +56,11 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 =head1 VERSION HISTORY
 
 If it is not listed here, then it was not a meaningful nor released revision.
+
+=head2 2.05, 1999-10-05
+
+BUGFIX: parser for ::Companies and ::News;
+now uses hash_to_cgi_string()
 
 =head2 2.04, 1999-09-29
 
@@ -127,7 +132,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.04';
+$VERSION = '2.05';
 
 use Carp ();
 use WWW::Search(qw( generic_option strip_tags ));
@@ -194,17 +199,8 @@ sub native_setup_search
       } # foreach
     } # if
 
-  # Build the options part of the URL:
-  my $options = '';
-  foreach (keys %{$self->{'_options'}})
-    {
-    # printf STDERR "option: $_ is " . $self->{'_options'}->{$_} . "\n";
-    next if (generic_option($_));
-    $options .= $_ . '=' . $self->{'_options'}->{$_} . '&';
-    }
-
   # Finally figure out the url.
-  $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
+  $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $self->hash_to_cgi_string($self->{_options});
 
   # Set some private variables:
   $self->{_debug} = $self->{'_options'}->{'search_debug'};
@@ -306,6 +302,14 @@ sub native_retrieve_some
 #        $state = $COMP_NEXT;
 #        next;
 #        } # we're in HEADER mode, and line talks about hide summaries
+
+    if ($state eq $HEADER &&
+       m/^<!--\s+End\sRHS\s+-->$/i)
+      {
+      print STDERR " End RHS line\n" if 2 <= $self->{'_debug'};
+      $state = $NEXT;
+      next;
+      }
 
     if ((($state eq $NEXT) || 
          ($state eq $WEB_NEXT)) &&
@@ -430,7 +434,7 @@ sub native_retrieve_some
     elsif ($state eq $HITS && m/\>Hide\ssummaries\</)
       {
       print STDERR "show/hide line\n" if 2 <= $self->{'_debug'};
-      $state = $TRAILER;
+      # $state = $TRAILER;
       }
 
     elsif ($state eq $HITS && 

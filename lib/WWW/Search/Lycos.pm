@@ -1,7 +1,7 @@
 # Lycos.pm
 # by Wm. L. Scheding and Martin Thurn
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: Lycos.pm,v 1.8 1999/09/30 13:23:19 mthurn Exp $
+# $Id: Lycos.pm,v 1.9 1999/10/05 19:52:47 mthurn Exp $
 
 =head1 NAME
 
@@ -75,6 +75,10 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 If it is not listed here, then it was not a meaningful nor released revision.
 
+=head2 2.03, 1999-10-05
+
+now uses hash_to_cgi_string()
+
 =head2 2.02, 1999-09-30
 
 Now able to get Web Sites results via child module Sites.pm
@@ -100,7 +104,7 @@ require Exporter;
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
 
-$VERSION = '2.02';
+$VERSION = '2.03';
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 
 use Carp ();
@@ -161,17 +165,8 @@ sub native_setup_search
       } # foreach
     } # if
 
-  # Process the options.
-  my($options) = '';
-  foreach (sort keys %$options_ref) 
-    {
-    # printf STDERR "option: $_ is " . $options_ref->{$_} . "\n";
-    next if (generic_option($_));
-    $options .= $_ . '=' . $options_ref->{$_} . '&';
-    }
-  chop $options;
   # Finally figure out the url.
-  $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
+  $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $self->hash_to_cgi_string($self->{_options});
 
   } # native_setup_search
 

@@ -9,12 +9,13 @@
 <!-- header-network bar -->
 <TABLE WIDTH=100% CELLPADDING=0 CELLSPACING=0 BORDER=0 BGCOLOR=#000000>
 <TR><TD><A HREF="/"><IMG SRC="http://lygo.com/ly/i/inv/ly_ypig.gif" VSPACE=2 WIDTH=232 HEIGHT=29 ALT="" BORDER=0></A></TD><TD ALIGN=RIGHT><FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE=-1 color=#FFFFFF><font size=4>&nbsp;</font><A HREF="http://www.lycos.com/att/member.html"><font color=#FFCC00>Get Online</font></a> &shy; <a href=http://personal.lycos.com/partners/email.asp><font color=#FFCC00>Check Email</font></a> &shy; <a href=http://personal.lycos.com><font color=#FFCC00>My Lycos</font></a>&nbsp;&nbsp;</font></TD></TR></TABLE>
-<TABLE WIDTH=100% BGCOLOR=#EEEEEE CELLSPACING=0 CELLPADDING=0 HEIGHT=20 BORDER=0><TR><TD><FONT FACE=VERDANA SIZE=-2><B>&nbsp;&nbsp;<A HREF=http://www.lycos.com/network/>Lycos Network</A></b>: <A HREF=http://www.lycos.com/cgi-bin/nph-bounce?nb|http://www.tripod.com/>Tripod.com</A> | <A HREF=http://www.lycos.com/cgi-bin/nph-bounce?nb|http://www.angelfire.com/>Angelfire.com</A> | <A HREF=http://www.lycos.com/cgi-bin/nph-bounce?nb|http://mailcity.lycos.com/>MailCity.com</A> | <A HREF=http://www.lycos.com/cgi-bin/nph-bounce?nb|http://www.whowhere.lycos.com/>WhoWhere.com</A> | <A HREF=http://www.lycos.com/cgi-bin/nph-bounce?nb|http://www.hotbot.com/>HotBot.com</A></FONT></TD><TD align=right><FONT FACE=Verdana SIZE=-2><A HREF=http://www.lycos.com/cgi-bin/nph-bounce?nb|http://www.lycos.com/network/>All Sites...</A>&nbsp;&nbsp;</FONT></TD></TR></TABLE><!-- /header-network bar -->
+<TABLE WIDTH=100% BGCOLOR=#EEEEEE CELLSPACING=0 CELLPADDING=0 HEIGHT=20 BORDER=0><TR><TD><FONT FACE=VERDANA SIZE=-2><B>&nbsp;&nbsp;<A HREF=http://www.lycos.com/network/>Lycos Network</A></b>: <A HREF=http://www.lycos.com/cgi-bin/nph-bounce?nb|http://www.tripod.com/>Tripod.com</A> | <A HREF=http://www.lycos.com/cgi-bin/nph-bounce?nb|http://www.quote.com/>Quote.com</A> | <A HREF=http://www.lycos.com/cgi-bin/nph-bounce?nb|http://mailcity.lycos.com/>MailCity.com</A> | <A HREF=http://www.lycos.com/cgi-bin/nph-bounce?nb|http://www.whowhere.lycos.com/>WhoWhere.com</A> | <A HREF=http://www.lycos.com/cgi-bin/nph-bounce?nb|http://www.hotbot.com/>HotBot.com</A></FONT></TD><TD align=right><FONT FACE=Verdana SIZE=-2><A HREF=http://www.lycos.com/cgi-bin/nph-bounce?nb|http://www.lycos.com/network/>All Sites...</A>&nbsp;&nbsp;</FONT></TD></TR></TABLE>
+<!-- /header-network bar -->
 
 <P>
 <!-- advertisement -->
 <DIV ALIGN=CENTER>
-<FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="-2"><a href="/cgi-bin/nph-adclick.exe/CID=0006bff470700e1d00000000/ST=lycos/SV=search/A=.lycos.search_lycos./T=1999.09.29.16.26.30"><img  src="http://ads10.focalink.com/SmartBanner/nph-graphic?198.2510-1999.09.29.16.26.30" alt="Bank Rate Monitor"  WIDTH=468 HEIGHT=60></a></FONT>
+<FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="-2"><a href="/cgi-bin/nph-adclick.exe/CID=0007380d70700e1d00000000/ST=lycos/SV=search/A=.lycos.search_lycos."><img  src="http://ads.lycos.com/ads/healthaxis1114.gif" alt="Health Axis" border=0 WIDTH=468 HEIGHT=60></a><br><a href="/cgi-bin/nph-adclick.exe/CID=0007380d70700e1d00000000/ST=lycos/SV=search/A=.lycos.search_lycos.">Click here to visit site</a></FONT>
 </DIV>
 <!-- /advertisement -->
 <P>
@@ -22,12 +23,24 @@
 
 <!-- search box -->
 <DIV ALIGN=CENTER>
-<!-- lycos.test.searchbar -->
+<!-- lycos.prosearchbar.top -->
 <FORM ACTION="http://lycospro.lycos.com/cgi-bin/pursuit" METHOD=GET>
 <INPUT TYPE="hidden" NAME="cat" VALUE="lycos">
 <INPUT TYPE="hidden" NAME="mtemp" VALUE="nojava">
 <INPUT TYPE="hidden" NAME="etemp" VALUE="error_nojava">
 <INPUT TYPE="hidden" NAME="adv" VALUE="1">
+<INPUT TYPE="hidden" NAME="matchmode" VALUE="or">
+<INPUT TYPE="hidden" NAME="maxhits" VALUE="100">
+<INPUT TYPE="hidden" NAME="ignore" VALUE="">
+<INPUT TYPE="hidden" NAME="fs" VALUE="">
+<INPUT TYPE="hidden" NAME="lang" VALUE="">
+<INPUT TYPE="hidden" NAME="rt" VALUE="">
+<INPUT TYPE="hidden" NAME="rtwm" VALUE="">
+<INPUT TYPE="hidden" NAME="rtpy" VALUE="">
+<INPUT TYPE="hidden" NAME="rttf" VALUE="">
+<INPUT TYPE="hidden" NAME="rtfd" VALUE="">
+<INPUT TYPE="hidden" NAME="rtpn" VALUE="">
+<INPUT TYPE="hidden" NAME="rtor" VALUE="">
 <TABLE WIDTH=525 BGCOLOR=#CCCCCC BORDER=0 CELLPADDING=1 CELLSPACING=0>
 <TR><TD>
 <TABLE WIDTH=100% BORDER=0 CELLPADDING=10 CELLSPACING=0>
@@ -40,11 +53,9 @@
 </TD></TR>
 <TR><TD>&nbsp;</TD><TD>
 <FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE=-2>
-<INPUT TYPE=HIDDEN NAME="prquery" VALUE="">
-<INPUT TYPE=RADIO NAME="str" VALUE="N" CHECKED><B>New</B> Search
-<INPUT TYPE=RADIO NAME="pq" VALUE="LSAM">Search These Results
-</FONT>
-</TD></TR>
+<INPUT TYPE=RADIO NAME="npl" VALUE="" CHECKED><B>New</B> Search
+<INPUT TYPE=RADIO NAME="npl" VALUE="pq=LSAM">Search These Results
+</FONT></TD></TR>
 </TABLE>
 </TD></TR>
 </TABLE>
@@ -53,7 +64,7 @@
 </TABLE>
 <TABLE WIDTH=525 BORDER=0 CELLPADDING=4 BGCOLOR=#FFCC66 CELLSPACING=0><TR><TD ALIGN=CENTER><FONT FACE="VERDANA,ARIAL,HELVETICA" SIZE=-1></FONT></TD></TR></TABLE><!-- /search box -->
 </DIV>
-                                      <table width=100% cellpadding=4>
+                                                  <table width=100% cellpadding=4>
 	<tr><td colspan=2 height=2><img src=http://lygo.com/s.gif HEIGHT=2 WIDTH=1></td></tr>
 	<tr>
 	<td width=50% align=center><font face=verdana size=-1><a href="http://bn.bfast.com/booklink/click?sourceid=15862&categoryid=bargain"> <IMG SRC="http://lygo.com/ly/p/p_books.gif" BORDER=0 WIDTH=25 HEIGHT=20>Save up to 90% on Books!</a></font></td>
@@ -61,7 +72,7 @@
 	</tr>
 	<tr><td colspan=2 height=2><img src=http://lygo.com/s.gif HEIGHT=2 WIDTH=1></td></tr>
 </table>
-                                        <FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE=-1>
+                         <FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE=-1>
 
 <!-- WP handling -->
 
@@ -306,13 +317,26 @@ http://www.isi.edu/~johnh/PAPERS/Heidemann97a.html<br><A HREF="http://www.isi.ed
 <BR>
 <!-- search box -->
 <DIV ALIGN=CENTER>
-
-<TABLE WIDTH=525 BGCOLOR=#CCCCCC BORDER=0 CELLPADDING=1 CELLSPACING=0>
-<TR><FORM ACTION="http://lycospro.lycos.com/cgi-bin/pursuit" METHOD=GET>
+<!-- lycos.prosearchbar.bottom -->
+<FORM ACTION="http://lycospro.lycos.com/cgi-bin/pursuit" METHOD=GET>
+<INPUT TYPE="hidden" NAME="cat" VALUE="lycos">
 <INPUT TYPE="hidden" NAME="mtemp" VALUE="nojava">
 <INPUT TYPE="hidden" NAME="etemp" VALUE="error_nojava">
 <INPUT TYPE="hidden" NAME="adv" VALUE="1">
-<TD>
+<INPUT TYPE="hidden" NAME="matchmode" VALUE="or">
+<INPUT TYPE="hidden" NAME="maxhits" VALUE="100">
+<INPUT TYPE="hidden" NAME="ignore" VALUE="">
+<INPUT TYPE="hidden" NAME="fs" VALUE="">
+<INPUT TYPE="hidden" NAME="lang" VALUE="">
+<INPUT TYPE="hidden" NAME="rt" VALUE="">
+<INPUT TYPE="hidden" NAME="rtwm" VALUE="">
+<INPUT TYPE="hidden" NAME="rtpy" VALUE="">
+<INPUT TYPE="hidden" NAME="rttf" VALUE="">
+<INPUT TYPE="hidden" NAME="rtfd" VALUE="">
+<INPUT TYPE="hidden" NAME="rtpn" VALUE="">
+<INPUT TYPE="hidden" NAME="rtor" VALUE="">
+<TABLE WIDTH=525 BGCOLOR=#CCCCCC BORDER=0 CELLPADDING=1 CELLSPACING=0>
+<TR><TD>
 <TABLE WIDTH=100% BORDER=0 CELLPADDING=10 CELLSPACING=0>
 <TR><TD BGCOLOR=#FFFFFF>
 <TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
@@ -323,11 +347,9 @@ http://www.isi.edu/~johnh/PAPERS/Heidemann97a.html<br><A HREF="http://www.isi.ed
 </TD></TR>
 <TR><TD>&nbsp;</TD><TD>
 <FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE=-2>
-<INPUT TYPE=HIDDEN NAME="prquery" VALUE="">
-<INPUT TYPE=RADIO NAME="str" VALUE="N" CHECKED><B>New</B> Search
-<INPUT TYPE=RADIO NAME="pq" VALUE="LSAM">Search These Results
-</FONT>
-</TD></TR>
+<INPUT TYPE=RADIO NAME="npl" VALUE="" CHECKED><B>New</B> Search
+<INPUT TYPE=RADIO NAME="npl" VALUE="pq=LSAM">Search These Results
+</FONT></TD></TR>
 </TABLE>
 </TD></TR>
 </TABLE>
@@ -340,10 +362,10 @@ http://www.isi.edu/~johnh/PAPERS/Heidemann97a.html<br><A HREF="http://www.isi.ed
 <!-- /search box -->
 <BR>
 <FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE=-2>
-<a href="/cgi-bin/nph-adclick.exe/CID=0006bff470700e1d00000000/ST=lycos/SV=search/A=.lycos.search_lycos./T=1999.09.29.16.26.30"><img  src="http://ads10.focalink.com/SmartBanner/nph-graphic?198.2510-1999.09.29.16.26.30" alt="Bank Rate Monitor"  WIDTH=468 HEIGHT=60></a></FONT>
+<a href="/cgi-bin/nph-adclick.exe/CID=0007380d70700e1d00000000/ST=lycos/SV=search/A=.lycos.search_lycos."><img  src="http://ads.lycos.com/ads/healthaxis1114.gif" alt="Health Axis" border=0 WIDTH=468 HEIGHT=60></a><br><a href="/cgi-bin/nph-adclick.exe/CID=0007380d70700e1d00000000/ST=lycos/SV=search/A=.lycos.search_lycos.">Click here to visit site</a></FONT>
 <P>
 <!-- toolbar -->
-<FONT FACE=VERDANA SIZE=-2><B>Tools</B> <a href=/L/sv1/>Chat</a> &nbsp;<a href=/L/sv2/>Clubs</a> &nbsp;<a href=/L/sv3/>Email</a> &nbsp;<a href=/L/sv4/>Message Boards</a> &nbsp;<a href=http://ftpsearch.lycos.com/>Software</a>&nbsp; <B>Build</B>&nbsp; <a href=/L/sv6/>Home Pages</a> &nbsp;<a href=/L/sv7/>My Lycos</a><br><B>Find</B> <a href=/l/sv18/>MP3</a> &nbsp;<a href=/L/sv8/>News</a> &nbsp;<a href=/L/sv9/>Weather</a> &nbsp;<a href=/L/sv10/>Stocks</a>  &nbsp;<a href=/L/sv13/>Yellow Pages</a> &nbsp;<a href=/L/sv11/>Cities</a> &nbsp;<a href=/L/sv14/>People</a> &nbsp;<a href=/L/sv12/>Road Maps</a> &nbsp;<b>Buy</b> &nbsp;<a href=/L/sv16/>Books</a> &nbsp;<a href=/L/sv17/>Music</a><font>&nbsp;</font><!-- /toolbar -->
+<FONT FACE=VERDANA SIZE=-2><B>Tools</B> <a href=/L/sv1/>Chat</a> &nbsp;<a href=/L/sv2/>Clubs</a> &nbsp;<a href=/L/sv3/>Email</a> &nbsp;<a href=/L/sv4/>Message Boards</a> &nbsp;<a href=http://ftpsearch.lycos.com/>Shareware</a>&nbsp; <B>Build</B>&nbsp; <a href=/L/sv6/>Home Pages</a> &nbsp;<a href=/L/sv7/>My Lycos</a><br><B>Find</B> <a href=/l/sv18/>MP3</a> &nbsp;<a href=/L/sv8/>News</a> &nbsp;<a href=/L/sv9/>Weather</a> &nbsp;<a href=/L/sv10/>Stocks</a>  &nbsp;<a href=/L/sv13/>Yellow Pages</a> &nbsp;<a href=/L/sv11/>Cities</a> &nbsp;<a href=/L/sv14/>People</a> &nbsp;<a href=/L/sv12/>Road Maps</a> &nbsp;<b>Buy</b> &nbsp;<a href=/L/sv16/>Books</a> &nbsp;<a href=/L/sv17/>Music</a><font>&nbsp;</font><!-- /toolbar -->
 </DIV>
 <BR>
 <TABLE WIDTH=100% CELLPADDING=0 CELLSPACING=0 BGCOLOR=#CCCCCC><TR><TD><TABLE BORDER=0 CELLPADDING=1 CELLSPACING=0><TR><TD></TD></TR></TABLE></TD></TR></TABLE>

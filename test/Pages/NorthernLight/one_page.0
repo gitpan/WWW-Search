@@ -1,4 +1,4 @@
-<html><!--Northern Light Search Results (Build 10016)--><!--    -->
+<html><!--Northern Light Search Results (Build 10027)--><!--    -->
 
 <head><title>Northern Light Search: +Biathlon +weltcups +Athleten +deutschland</title></head>
 
@@ -54,12 +54,23 @@ else;
 
 <table border=0 cellspacing=0 cellpadding=0><tr>
 <form action="/nlquery.fcg" method=get>
-<input type=hidden name=dx value=""><input type=hidden name=ho value=""><input type=hidden name=st value=""><input type=hidden name=la value=""><input type=hidden name=qc value=""><input type=hidden name=po value=""><input type=hidden name=si value=""><input type=hidden name=us value="025"><input type=hidden name=xd value=""><input type=hidden name=or value=""><input type=hidden name=qb value=""><input type=hidden name=qf value=""><input type=hidden name=qt value=""><input type=hidden name=pu value=""><input type=hidden name=qu value=""><input type=hidden name=d1 value=""><input type=hidden name=d2 value=""><input type=hidden name=rv value=""><input type=hidden name=jt value=""><input type=hidden name=it value=""><input type=hidden name=in value=""><input type=hidden name=dr value="">
+<input type=hidden name=dx value=""><input type=hidden name=ho value="">
+<input type=hidden name=la value="">
+<input type=hidden name=qc value=""><input type=hidden name=po value="">
+<input type=hidden name=si value=""><input type=hidden name=us value="025">
+<input type=hidden name=xd value=""><input type=hidden name=or value="">
+<input type=hidden name=qb value=""><input type=hidden name=qf value="">
+<input type=hidden name=qt value=""><input type=hidden name=pu value="">
+<input type=hidden name=qu value=""><input type=hidden name=d1 value="">
+<input type=hidden name=d2 value=""><input type=hidden name=rv value="">
+<input type=hidden name=jt value=""><input type=hidden name=it value="">
+<input type=hidden name=in value=""><input type=hidden name=dr value="">
+<input type=hidden name=so value="">
 <td><font size=2 face=arial,helvetica> <b>9 items</b><!-- audit cluster -->  <!-- result -->for:<!-- end --></font></td>
 </tr><tr><td><table border=0 cellspacing=0 cellpadding=0><tr>
 <td><input type=text size=37 name=qr value="+Biathlon +weltcups +Athleten +deutschland"></td><td>&nbsp;</td>
 <td><input name=search type=image src=docs/gif/btn_search2.gif border=0 alt=Search></td><td>&nbsp;</td>
-<td align=center nowrap><font size=1 face=arial,helvetica><A href=docs/search_help_results.html>Tips</A>&nbsp;<!-- Clipping Service -->|&nbsp;<a href=http://standard.northernlight.com/cgi-bin/cl_alert.pl?qr=%2BBiathlon+%2Bweltcups+%2BAthleten+%2Bdeutschland&cb=0&us=025>Save Alert</a><!-- end0 --><!-- Clipping Service --><BR><A href="/nlquery.fcg?qr=%2BBiathlon+%2Bweltcups+%2BAthleten+%2Bdeutschland&cb=0&ed=1&us=025">Edit this search</A><br></font></td>
+<td align=center nowrap><font size=1 face=arial,helvetica><A href=docs/search_help_optimize.html>Tips</A>&nbsp;<!-- Clipping Service -->|&nbsp;<a href=http://standard.northernlight.com/cgi-bin/cl_alert.pl?qr=%2BBiathlon+%2Bweltcups+%2BAthleten+%2Bdeutschland&cb=0&us=025>Save Alert</a><!-- end0 --><!-- Clipping Service --><BR><A href="/nlquery.fcg?qr=%2BBiathlon+%2Bweltcups+%2BAthleten+%2Bdeutschland&cb=0&ed=1&us=025">Edit this search</A><br></font></td>
 </tr></table></td>
 </form>
 </tr></table>
@@ -67,11 +78,11 @@ else;
 &nbsp;<br>
 
 <table border=0 cellspacing=0 cellpadding=0 width=730><TR><!---1:1---->
-<TD width=220 valign=middle><FONT size=2 face=arial,helvetica color="#666666"><IMG src=t.gif width=220 height=1><br>
+<TD width=220 valign=middle><FONT size=2 face=arial,helvetica color=#666666><IMG src=t.gif width=220 height=1><br>
 <!-- any clusters -->
 </font></TD>
 <td width=55 valign=middle><img src=docs/gif/img_doc_big.gif width=55 height=33></td>
-<TD width=460 valign=middle><FONT face=arial,helvetica color="#666666"><IMG src=t.gif width=460 height=1><br>&nbsp;<b>Documents that best match your search</b><BR></font></TD>
+<TD width=460 valign=middle><FONT face=arial,helvetica color=#666666><IMG src=t.gif width=460 height=1><br>&nbsp;<b>Documents that best match your search</b><BR></font></TD>
 </TR></TABLE>
 
 <SCRIPT LANGUAGE="JavaScript"><!--
@@ -97,7 +108,7 @@ else document.write("<table border=0 cellspacing=0 cellpadding=0 width=220 align
 <a href=/cgi-bin/cl_cliplist.pl><img src=docs/gif/chanl_alerts_off.gif width=76 height=30 border=0 alt=Alerts hspace=4></a><br>
 <a href="http://finance.northernlight.com/portfolio.asp"><img src=docs/gif/chanl_portfolio_off.gif alt=Portfolio hspace=4 width=76 height=30 border=0></a><br>
 <img src=t.gif width=1 height=19><br>
-<a href="http://www.compaq.com/openvms/"><img src=docs/gif/ad_compaq_results.gif width=100 height=35 border=0 alt="Compaq Open VMS Alpha Server Solutions"></a><br>
+<a href="http://www.openvms.digital.com/northernlight.html"><img src=docs/gif/ad_compaq_results.gif width=100 height=35 border=0 alt="Compaq Open VMS Alpha Server Solutions"></a><br>
 <!-- Min results test -->
  </td>
 </tr></table>
@@ -229,10 +240,21 @@ else document.write("<!-- Min results test --><tr><td><img src=t.gif width=220 h
 <!-- Min results test -->
 <table border=0 cellspacing=0 cellpadding=0><tr>
 <form action="/nlquery.fcg" method=get name=simpleSearch>
-<input type=hidden name=dx value=""><input type=hidden name=ho value=""><input type=hidden name=st value=""><input type=hidden name=la value=""><input type=hidden name=qc value=""><input type=hidden name=po value=""><input type=hidden name=si value=""><input type=hidden name=us value="025"><input type=hidden name=xd value=""><input type=hidden name=or value=""><input type=hidden name=qb value=""><input type=hidden name=qf value=""><input type=hidden name=qt value=""><input type=hidden name=pu value=""><input type=hidden name=qu value=""><input type=hidden name=d1 value=""><input type=hidden name=d2 value=""><input type=hidden name=rv value=""><input type=hidden name=jt value=""><input type=hidden name=it value=""><input type=hidden name=in value=""><input type=hidden name=dr value="">
+<input type=hidden name=dx value=""><input type=hidden name=ho value="">
+<input type=hidden name=la value="">
+<input type=hidden name=qc value=""><input type=hidden name=po value="">
+<input type=hidden name=si value=""><input type=hidden name=us value="025">
+<input type=hidden name=xd value=""><input type=hidden name=or value="">
+<input type=hidden name=qb value=""><input type=hidden name=qf value="">
+<input type=hidden name=qt value=""><input type=hidden name=pu value="">
+<input type=hidden name=qu value=""><input type=hidden name=d1 value="">
+<input type=hidden name=d2 value=""><input type=hidden name=rv value="">
+<input type=hidden name=jt value=""><input type=hidden name=it value="">
+<input type=hidden name=in value=""><input type=hidden name=dr value="">
+<input type=hidden name=so value="">
 <td><input type=text size=37 name=qr value="+Biathlon +weltcups +Athleten +deutschland"></td><td>&nbsp;</td>
 <td><input name=search type=image src=docs/gif/btn_search2.gif border=0 alt=Search></td><td>&nbsp;</td>
-<td align=center nowrap><font size=1 face=arial,helvetica><A href=docs/search_help_results.html>Tips</A>&nbsp;<!-- Clipping Service -->|&nbsp;<a href=http://standard.northernlight.com/cgi-bin/cl_alert.pl?qr=%2BBiathlon+%2Bweltcups+%2BAthleten+%2Bdeutschland&cb=0&us=025>Save Alert</a><!-- end0 --><!-- Clipping Service --><BR><A href="/nlquery.fcg?qr=%2BBiathlon+%2Bweltcups+%2BAthleten+%2Bdeutschland&cb=0&ed=1&us=025">Edit this search</A><br></font></td>
+<td align=center nowrap><font size=1 face=arial,helvetica><A href=docs/search_help_optimize.html>Tips</A>&nbsp;<!-- Clipping Service -->|&nbsp;<a href=http://standard.northernlight.com/cgi-bin/cl_alert.pl?qr=%2BBiathlon+%2Bweltcups+%2BAthleten+%2Bdeutschland&cb=0&us=025>Save Alert</a><!-- end0 --><!-- Clipping Service --><BR><A href="/nlquery.fcg?qr=%2BBiathlon+%2Bweltcups+%2BAthleten+%2Bdeutschland&cb=0&ed=1&us=025">Edit this search</A><br></font></td>
 </form>
 </tr></table>
 &nbsp;<br>&nbsp;<br>
@@ -275,4 +297,3 @@ document.write(' ');
 <!-- end0 -->
 </body>
 </html>
-

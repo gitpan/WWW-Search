@@ -1,3 +1,60 @@
+1999-10-12  Kingpin  <mthurn@tasc.com>
+
+	* Google.pm updated to 2.06 (fixed parser for new output format)
+
+1999-10-11  Kingpin  <mthurn@tasc.com>
+
+	* Yahoo.pm updated to 2.04 (fixed parser for new output)
+
+	* NetFind.pm updated to 1.5 (fixed parser for new output format)
+
+1999-10-08  Kingpin  <mthurn@tasc.com>
+
+	* new fields in WWW::SearchResult (company, location, source)
+
+	* cleaned up output of test.pl (again)
+
+	* WebSearch now prints error messages to STDERR instead of STDOUT, and only prints "Nothing found." in verbose mode
+
+1999-10-05  Kingpin  <mthurn@tasc.com>
+
+	* Yahoo.pm updated to 2.03 (use hash_to_cgi_string)
+
+	* WebCrawler.pm updated to 2.02 (use hash_to_cgi_string)
+
+	* Magellan.pm updated to 2.02 (use hash_to_cgi_string)
+
+	* Lycos.pm updated to 2.03 (use hash_to_cgi_string)
+
+	* LookSmart.pm updated to 2.02 (fixed)
+	
+	* Infoseek.pm updated to 2.05 (fix parser for Companies and News searches, and use hash_to_cgi_string)
+
+	* HotBot.pm updated to 2.05 (new test cases and uses hash_to_cgi_string)
+
+	* Excite::News.pm updated to 2.02 (fix parser)
+
+	* Excite.pm updated to 2.02 (use hash_to_cgi_string)
+
+	* Dejanews.pm updated to 2.03 (use hash_to_cgi_string)
+
+	* new method WWW::Search::hash_to_cgi_string to control construction of parameter lists
+	
+1999-10-04  Kingpin  <mthurn@tasc.com>
+
+	* fixed pod2man error in NetFind.pm pod
+
+1999-10-02  Kingpin  <mthurn@tasc.com>
+
+	* AltaVista.pm updated (gets approximate_result_count better now)
+
+	* Search.pm updated (no longer screws up if
+	approximate_result_count is called before parsing any results)
+	
+1999-10-01  Kingpin  <mthurn@tasc.com>
+
+	* WWW::Search VERSION 2.04 RELEASED!
+	
 1999-09-30  Kingpin  <mthurn@tasc.com>
 
 	* cleaned up the output of `make test`

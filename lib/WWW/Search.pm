@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.11 1999/09/29 19:44:18 mthurn Exp $
+# $Id: Search.pm,v 1.15 1999/10/12 14:08:08 mthurn Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -23,22 +23,10 @@ This class is the parent for all access methods supported by the
 C<WWW::Search> library.  This library implements a Perl API
 to web-based search engines.
 
-Current search engines supported include
-AltaVista (both web and news),
-Dejanews,
-Excite (web only),
-Gopher,
-HotBot (web only),
-Infoseek (e-mail, web, and news),
-Lycos,
-Magellan,
-PLweb,
-SFgate,
-Simple (retrieve links on a page),
-Verity.
+See README for a list of search engines currently supported.
 
-Search results are limited and there is a pause between each request 
-for results to avoid overloading either the client or the server.
+Search results can be limited, and there is a pause between each
+request to avoid overloading either the client or the server.
 
 =head2 Sample program
 
@@ -54,8 +42,8 @@ Here is a sample program:
 
 Results are objects of type C<WWW::SearchResult>
 (see L<WWW::SearchResult> for details).
-Note that different back-ends support different result fields.
-All back-ends are required to support title and url.
+Note that different backends support different result fields.
+All backends are required to support title and url.
 
 
 =head1 SEE ALSO
@@ -80,7 +68,7 @@ package WWW::Search;
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query generic_option strip_tags);
-$VERSION = '2.04';
+$VERSION = '2.05';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
 use LWP::UserAgent;
@@ -130,7 +118,7 @@ sub new
   if (!defined(&$subclass)) 
     {
     eval "use $subclass";
-    Carp::croak("unknown search engine back-end $engine ($@)") if ($@);
+    Carp::croak("unknown search engine backend $engine ($@)") if ($@);
     } # if
   
   my $self = bless {
@@ -155,24 +143,9 @@ sub new
   return $self;
   } # new
 
-=head2 test_cases
-
-Returns the value of the $TEST_CASES variable of the back-end engine.
-All backends should set $TEST_CASES to a string containing perl code
-which will be eval-ed during 'make test'.
-See Excite.pm for an example.
-
-=cut
-
-sub test_cases 
-  { 
-  my $self = shift;
-  return eval '$'.ref($self).'::TEST_CASES';
-  } # test_cases
-
 =head2 version
 
-Returns the value of the $VERSION variable of the back-end engine, or
+Returns the value of the $VERSION variable of the backend engine, or
 $WWW::Search::VERSION if the backend does not contain $VERSION.
 
 =cut
@@ -200,10 +173,10 @@ Example:
 		{ option1 => 'able', option2 => 'baker' } );
 
 The hash of options following the query string is optional.  
-The query string is back-end specific.
+The query string is backend specific.
 There are two kinds of options:
-options specific to the back-end
-and generic options applicable to mutliple back-ends.
+options specific to the backend
+and generic options applicable to mutliple backends.
 
 Generic options all begin with 'search_'.
 Currently a few are supported:
@@ -211,38 +184,45 @@ Currently a few are supported:
 =over 4
 
 =item search_url
-Specifies the root of the URL for the 
+
+Specifies the base URL for the search engine.
 
 =item search_debug
-Enables back-end debugging.
+
+Enables backend debugging.  The default is 0 (no debugging).
 
 =item search_parse_debug
-Enables back-end parser debugging.
+
+Enables backend parser debugging.  The default is 0 (no debugging).
 
 =item search_method
+
 Specifies the HTTP method (C<GET> or C<POST>) for HTTP-based queries.
+The default is GET
 
 =item search_to_file FILE
+
 Causes the search results to be saved in a set of files 
 prefixed by FILE.
 (Used internally by the test-suite, not intended for general use.)
 
 =item search_from_file FILE
+
 Reads a search from a set of files prefixed by FILE.
 (Used internally by the test-suite, not intended for general use.)
 
 =back
 
-Some back-ends may not implement generic options,
+Some backends may not implement generic options,
 but any which do implement them must provide these semantics.
 
-Back-end-specific options are described
-in the documentation for each back-ends.
+backend-specific options are described
+in the documentation for each backend.
 Typically they are packed together to create the query portion of
 the final URL.
 
 Details about how the search string and option hash are interpreted
-in the search-engine-specific manual pages
+might be found in the search-engine-specific manual pages
 (WWW::Search::SearchEngineName).
 
 After C<native_query>, the next step is usually:
@@ -273,20 +253,26 @@ sub native_query {
 
 =head2 approximate_result_count
 
-Some back-ends indicate how many hits they have found.
+Some backends indicate how many hits they have found.
 Typically this is an approximate value.
 
 =cut
 
-sub approximate_result_count { return shift->_elem('approx_count', @_); }
+sub approximate_result_count 
+  {
+  my $self = shift;
+  # prime the pump:
+  $self->retrieve_some() if ($self->{'state'} == $SEARCH_BEFORE);
+  return $self->_elem('approx_count', @_);
+  } # approximate_result_count 
 
 
 =head2 results
 
 Return all the results of a query as a reference to array 
 of SearchResult objects.
-
 Example:
+
     @results = $search->results();
     foreach $result (@results) {
         print $result->url(), "\n";
@@ -314,17 +300,18 @@ sub results
 
 =head2 next_result
 
-Return each result of a query as a SearchResult object.
+Call this method repeatedly to return each result of a query as a
+SearchResult object.  Example:
 
-Example:
     while ($result = $search->next_result()) {
 	print $result->url(), "\n";
     };
 
-On error, results() will return undef and set C<response()>
+On error, next_result() will return undef and set C<response()>
 to the HTTP response code.
 
 =cut
+
 sub next_result
 {
     my($self) = shift;
@@ -356,15 +343,16 @@ errors could be reported like this:
 
     my($response) = $search->response();
     if ($response->is_success) {
-	print "no search results\n";
+	print "normal end of result list\n";
     } else {
 	print "error:  " . $response->as_string() . "\n";
     };
 
-Note:  even if the back-end does not involve the web
+Note:  even if the backend does not involve the web
 it should return HTTP::Response-style codes.
 
 =cut
+
 sub response
 {
     my($self) = shift;
@@ -374,13 +362,13 @@ sub response
 }
 
 
-=head2 C<seek_result($offset)>
+=head2 seek_result($offset)
 
 Set which result C<next_result> should return
 (like C<lseek> in Unix).
 Results are zero-indexed.
 
-The only guaranteed valid offset is 0
+The only guaranteed valid offset is 0,
 which will replay the results from the beginning.
 In particular, seeking past the end of the current cached
 results probably will not do what you might think it should.
@@ -390,6 +378,7 @@ or cause IO (unless you go off the end of the results).
 To re-do the query, create a new search object.
 
 Example:
+
     $search->seek_result(0);
 
 =cut
@@ -410,7 +399,7 @@ The maximum number of hits to return.
 Queries resulting in more than this many hits will return
 the first hits, up to this limit.
 Although this specifies a maximum limit,
-search engines may impose a lower limit.
+search engines might return less than this number.
 
 Defaults to 500.
 
@@ -418,6 +407,7 @@ Example:
     $max = $search->maximum_to_retrieve(100);
 
 =cut
+
 sub maximum_to_retrieve { return shift->_elem('maximum_to_retrieve', @_); }
 # xxx: This should actually be called "maxiumum to return", I suppose.
 
@@ -433,8 +423,8 @@ Example:
     $search->timeout(120);
 
 =cut
-sub timeout { return shift->_elem('timeout', @_); }
 
+sub timeout { return shift->_elem('timeout', @_); }
 
 
 =head2 opaque
@@ -446,6 +436,7 @@ maintain client-specific information in each active query
 when you have multiple concurrent queries. 
 
 =cut
+
 sub opaque { return shift->_elem('opaque', @_); }
 
 
@@ -455,7 +446,7 @@ Escape a query.
 Before queries are made special characters must be escaped
 so that a proper URL can be formed.
 
-This is like escaping a URL
+This is like escaping a URL,
 but all non-alphanumeric characters are escaped and
 and spaces are converted to "+"s.
 
@@ -466,7 +457,7 @@ Example:
 See also C<unescape_query>.
 
 =cut
-# '
+
 sub escape_query {
     # code stolen from URI::Escape.pm.
     my($text) = @_;
@@ -525,30 +516,108 @@ sub strip_tags
   return wantarray ? @as : $as[0];
   } # strip_tags
 
+=head2 hash_to_cgi_string (PRIVATE)
+
+Given a reference to a hash of string => string, constructs a CGI
+parameter string that looks like 'key1=value1&key2=value2'.
+
+Backends should use this function rather than piecing the URL together
+by hand, to ensure that URLs are identical across platforms and
+software versions.  
+
+Example (from Dejanews.pm):
+
+    $self->{_options} = {
+                         'search_url' => 'http://www.deja.com/dnquery.xp',
+                         'QRY' => $native_query,
+                        };
+    $self->{_next_url} = $self->{_options}{'search_url'} .'?'. 
+                         $self->hash_to_cgi_string($self->{_options});
+
+=cut
+
+sub hash_to_cgi_string
+  {
+  my $self = shift;
+  # We need our URLs to be identical on all systems, all versions of
+  # perl.  Ergo we must explicitly control the order in which our CGI
+  # parameter strings are cobbled together.  For now, I assume sorting
+  # the hash keys will suffice.
+  my $rh = shift;
+  my $ret = '';
+  foreach my $key (sort keys %$rh) 
+    {
+    # printf STDERR "option: $key is " . $rh->{$key} . "\n";
+    next if generic_option($key);
+    # If we want to let the user delete options, do the
+    # following. (They can still blank them out, which may or may not
+    # have the same effect, anyway):
+    # next unless $rh->{$key} ne '';
+    $ret .= $key .'='. $rh->{$key} .'&';
+    }
+  # Remove the trailing '&':
+  chop $ret;
+  return $ret;
+  } # hash_to_cgi_string
+
+
 =head2 http_proxy
 
 Set-up an HTTP proxy
-(Perhaps for connections from behind a firewall.)
+(for connections from behind a firewall).
 
-This routine should be called before the first retrival is attempted.
+This routine should be called before the first retrieval is attempted.
 
 Example:
 
     $search->http_proxy("http://gateway:8080");
 
 =cut
+
 sub http_proxy { return shift->_elem('http_proxy', @_); }
 
+
+=head2 user_agent($NON_ROBOT) (PRIVATE)
+
+This internal routine creates a user-agent
+for dervived classes that query the web.
+If C<$NON_ROBOT>, a normal user-agent (rather than a robot-style user-agent)
+is used.
+
+backends should use robot-style user-agents whereever possible.
+Also, backends should call C<user_agent_delay> every page retrieval
+to avoid swamping search-engines.
+
+=cut
+
+sub user_agent
+{
+    my($self) = shift;
+    my($non_robot) = @_;
+
+    my($ua);
+    if ($non_robot) {
+	$ua = new LWP::UserAgent;
+    } else {
+	$ua = new LWP::RobotUA($self->{agent_name}, $self->{agent_e_mail});
+	$ua->delay($self->{interrequest_delay}/60.0);
+    };
+    $ua->timeout($self->{'timeout'});
+    $ua->proxy('http', $self->{'http_proxy'})
+	if (defined($self->{'http_proxy'}));
+    $self->{user_agent} = $ua;
+}
 
 
 =head2 http_request($method, $url)
 
 Return the response from an http request,
-handling debugging.  Requires that user_agent be setup.
+handling debugging.  Requires that user_agent already be set up.
 For POST methods, query is split off of the URL and passed
 in the request body.
 
 =cut
+
 sub http_request {
     my($self) = shift;
     my($method, $url) = @_;
@@ -676,7 +745,7 @@ sub split_lines {
 =head2 generic_option (PRIVATE)
 
 This internal routine checks if an option
-is generic or back-end specific.
+is generic or backend specific.
 Currently all generic options begin with 'search_'.
 This routine is not a method.
 
@@ -693,7 +762,7 @@ sub generic_option
 =head2 setup_search (PRIVATE)
 
 This internal routine does generic Search setup.
-It calls C<native_setup_search> to do back-end specific setup.
+It calls C<native_setup_search> to do backend specific setup.
 
 =cut
 
@@ -706,38 +775,6 @@ sub setup_search
     $self->{number_retrieved} = 0;
     $self->{state} = $SEARCH_UNDERWAY;
     $self->native_setup_search($self->{'native_query'}, $self->{'native_options'});
-}
-
-
-=head2 user_agent($NON_ROBOT) (PRIVATE)
-
-This internal routine creates a user-agent
-for dervived classes that query the web.
-If C<$NON_ROBOT>, a normal user-agent (rather than a robot-style user-agent)
-is used.
-
-Back-ends should use robot-style user-agents whereever possible.
-Also, back-ends should call C<user_agent_delay> every page retrival
-to avoid swamping search-engines.
-
-=cut
-
-sub user_agent
-{
-    my($self) = shift;
-    my($non_robot) = @_;
-
-    my($ua);
-    if ($non_robot) {
-	$ua = new LWP::UserAgent;
-    } else {
-	$ua = new LWP::RobotUA($self->{agent_name}, $self->{agent_e_mail});
-	$ua->delay($self->{interrequest_delay}/60.0);
-    };
-    $ua->timeout($self->{'timeout'});
-    $ua->proxy('http', $self->{'http_proxy'})
-	if (defined($self->{'http_proxy'}));
-    $self->{user_agent} = $ua;
 }
 
 
@@ -807,16 +844,31 @@ sub retrieve_some
 }
 
 
-=head1 IMPLEMENTING NEW BACK-ENDS
+=head2 test_cases
 
-C<WWW::Search> supports back-ends to separate search engines.
-Each back-end is implemented as a subclass of C<WWW::Search>.
-L<WWW::Search::AltaVista> provides a good sample back-end.
+Returns the value of the $TEST_CASES variable of the backend engine.
+All backends should set $TEST_CASES to a string containing perl code
+which will be eval-ed during 'make test'.
+See Excite.pm for an example.
 
-A back-end must have the two routines
+=cut
+
+sub test_cases 
+  { 
+  my $self = shift;
+  return eval '$'.ref($self).'::TEST_CASES';
+  } # test_cases
+
+=head1 IMPLEMENTING NEW BACKENDS
+
+C<WWW::Search> supports backends to separate search engines.
+Each backend is implemented as a subclass of C<WWW::Search>.
+L<WWW::Search::AltaVista> provides a good sample backend.
+
+A backend must have the two routines
 C<native_retrieve_some> and C<native_setup_search>.
 
-C<native_retrieve_some> is the core of a back-end.
+C<native_retrieve_some> is the core of a backend.
 It will be called periodically to fetch URLs.
 It should retrieve several hits from the search service
 and add them to the cache.  It should return the number
@@ -831,13 +883,13 @@ C<native_setup_search> is invoked before the search.
 It is passed a single argument:  the escaped, native version
 of the query.
 
-The front- and back-ends share a single object (a hash).
-The back-end can change any hash element beginning with underscore,
+The front- and backends share a single object (a hash).
+The backend can change any hash element beginning with underscore,
 and C<{response}> (an C<HTTP::Response> code) and C<{cache}>
 (the array of C<WWW::SearchResult> objects caching all results).
 Again, look at one of the existing web search backends as an example.
 
-If you implement a new back-end, please let the authors know.
+If you implement a new backend, please let the authors know.
 
 
 =head1 BUGS AND DESIRED FEATURES
@@ -861,9 +913,9 @@ maintainers.  If you want to take a shot at it, please let me know.
 =head1 AUTHOR
 
 C<WWW::Search> was written by John Heidemann, E<lt>johnh@isi.eduE<gt>.
-C<WWW::Search> is currently maintained by Martin Thurn, E<lt>MartinThurn@iname.com<gt>.
+C<WWW::Search> is currently maintained by Martin Thurn, E<lt>MartinThurn@iname.comE<gt>.
 
-Back-ends and applications for WWW::Search were originally written by
+backends and applications for WWW::Search were originally written by
 John Heidemann,
 Wm. L. Scheding,
 Cesare Feroldi de Rosa,
