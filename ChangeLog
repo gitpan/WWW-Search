@@ -1,6 +1,34 @@
+2000-05-02  Kingpin  <mthurn@tasc.com>
+
+	* WWW::Search VERSION 2.14 RELEASED!
+	
+2000-05-01  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search/Euroseek.pm: removed to its own separate registered module
+	* lib/WWW/Search/GoTo.pm: removed to its own separate registered module
+	* lib/WWW/Search/Google.pm: removed to its own separate registered module
+	* lib/WWW/Search/Snap.pm: removed to its own separate registered module
+	* lib/WWW/Search/ZDNet.pm: removed to its own separate registered module
+
+2000-04-27  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search.pm (reset_search): do not clear search_base_url
+
+2000-04-12  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search/Test.pm: now uses File::Spec for all paths and filenames
+
+2000-04-11  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search.pm (user_agent): now sets agent_name for non-robot UserAgent
+
 2000-04-03  Kingpin  <mthurn@tasc.com>
 
-	* lib/WWW/Search.pm (reset_search): correctly and siltently handle intermixed calls to gui_query() and native_query()
+	* WWW::Search VERSION 2.13 RELEASED!
+	
+2000-04-02  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search.pm (reset_search): correctly and silently handle intermixed calls to gui_query() and native_query()
 
 2000-03-24  Kingpin  <mthurn@tasc.com>
 

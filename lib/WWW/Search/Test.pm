@@ -21,6 +21,8 @@ package WWW::Search::Test;
 
 use strict;
 
+use File::Spec;
+
 use vars qw( $MODE_DUMMY $MODE_INTERNAL $MODE_EXTERNAL $MODE_UPDATE );
 use vars qw( $TEST_DUMMY $TEST_EXACTLY $TEST_BY_COUNTING $TEST_GREATER_THAN $TEST_RANGE );
 
@@ -40,7 +42,7 @@ use File::Path;
 
 use vars qw( $VERSION $bogus_query );
 
-$VERSION = '2.01';
+$VERSION = '2.02';
 $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 
 ($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = qw(dummy internal external update);
@@ -140,10 +142,15 @@ sub eval_test
     $self->{error_count}++;
     }
   # print STDERR " BEFORE SUBST: $code\n";
-  $code =~ s/&test\(/\$self->test\(/g;
+  $code =~ s!&test\(!\$self->test\(!g;
+  $code =~ s/&no_test\(/\$self->no_test\(/g;
+  $code =~ s/&not_working\(/\$self->not_working\(/g;
+  $code =~ s/&not_working_and_abandoned\(/\$self->not_working_and_abandoned\(/g;
+  $code =~ s/&not_working_with_tests\(/\$self->not_working_with_tests\(/g;
   # print STDERR " AFTER SUBST: $code\n";
   print "\n";  # put a little space between each engine's results
-  eval $code; warn $@ if $@;
+  eval $code; 
+  warn $@ if $@;
   } # eval_test
 
 
@@ -199,19 +206,27 @@ sub test
     return;
     } # if
 
-  my $pwd = cwd;
-  my $path = "$pwd/Test-Pages/$sSE";
-  $path =~ s!::!\/!g;
+  my $pwd = File::Spec->curdir();
+  my @asSE = split(/::/, $sSE);
+  my $path = File::Spec->catdir($pwd, 'Test-Pages', @asSE);
   mkpath $path;
   if ($self->{'mode'} eq $MODE_UPDATE)
     {
     # Delete all existing test result files for this Engine:
-    unlink <$path/$file*>;
+    opendir DIR, $path;
+    foreach my $afile (readdir DIR)
+      {
+      unlink File::Spec->catfile($path, $afile) if $afile =~ m/^$file/;
+      } # foreach
+    closedir DIR;
     } # if MODE_UPDATE
-  if ($file =~ m!([^/]+)$!)
+  # Look at the filename argument we got:
+  my ($v,$d,$f) = File::Spec->splitpath($file);
+  # If it contains no path element (file name only):
+  if ($d eq '')
     {
-    # Prepend path onto file
-    $file = $path.'/'.$1;
+    # Prepend path onto file:
+    $file = File::Spec->catfile($path, $file);
     } # if
   my $o = new WWW::Search($sSE);
   my $version = $o->version;
@@ -225,14 +240,14 @@ sub test
   # --max 209 added by Martin Thurn 1999-09-27.  We never want to
   # fetch more than three pages, if we can at all help it (or do we?)
   my $websearch = $self->{websearch};
-  $websearch ||= "$pwd/blib/script/WebSearch";
+  $websearch ||= File::Spec->catfile($pwd, 'blib', 'script', 'WebSearch');
   my $cmd = $Config{'perlpath'} . " -MExtUtils::testlib $websearch ";
   $cmd .= $self->{debug} ? '--debug '.$self->{debug} : '';
   $cmd .= " --max 209 --engine $sSE ". $src{$self->{'mode'}} ." -- $query";
   print "  $cmd\n" if ($self->{verbose} || $self->{debug});
   open(TRIALSTREAM, "$cmd|") || die "$0: cannot run test ($!)\n";
-  open(TRIALFILE, ">$file.trial") || die "$0: cannot open $file.trial ($!)\n";
-  open(OUTFILE, ">$file.out") || die "$0: cannot open $file.out ($!)\n" if ($self->{'mode'} eq $MODE_UPDATE);
+  open(TRIALFILE, ">$file.trial") || die "$0: cannot open $file.trial for writing ($!)\n";
+  open(OUTFILE, ">$file.out") || die "$0: cannot open $file.out for writing ($!)\n" if ($self->{'mode'} eq $MODE_UPDATE);
   my $iActual = 0;
   while (<TRIALSTREAM>) 
     {
@@ -337,7 +352,7 @@ sub no_test
   {
   my $self = shift;
   my ($engine, $maint) = @_;
-  return if (!$self->relevant_test($engine));
+  return unless ($self->relevant_test($engine));
   print <<"NONE";
   trial none ($engine)
   This search engine does not have any tests,
@@ -356,7 +371,7 @@ sub not_working
   {
   my $self = shift;
   my ($engine, $maint) = @_;
-  return if (!$self->relevant_test($engine));
+  return unless ($self->relevant_test($engine));
   print <<"BROKEN";
   trial none ($engine)
   This search engine is known to be non-functional.  

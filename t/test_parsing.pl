@@ -2,7 +2,7 @@
 
 # test.pl
 # Copyright (C) 1997 by USC/ISI
-# $Id: test_parsing.pl,v 1.38 2000/02/25 18:15:49 mthurn Exp $
+# $Id: test_parsing.pl,v 1.39 2000/04/12 13:56:53 mthurn Exp $
 #
 # Copyright (c) 1997 University of Southern California.
 # All rights reserved.                                            
@@ -218,7 +218,7 @@ sub test_cases
   $sSE = 'Metapedia';
   $sM = 'Jim Smyser <jsmyser@bigfoot.com>';
   
-  $file = 'test/Metapedia/zero_result';
+  $file = 'zero';
   $oTest->test($sSE, $sM, $file, $bogus_query, $TEST_EXACTLY);
   
   ######################################################################
@@ -260,9 +260,9 @@ sub test_cases
   $sSE = 'Search97';
   $sM = 'Paul Lindner <paul.lindner@itu.int>';
   $oTest->not_working($sSE, $sM);
-  # $file = 'test/Search97/zero_result';
+  # $file = 'zero';
   # $oTest->test($sSE, $sM, $file, $bogus_query, $TEST_EXACTLY);
-  # $file = 'test/Search97/one_page_result';
+  # $file = 'one';
   # $query = 'bur'.'undi';
   # $oTest->test($sSE, $sM, $file, $query, $TEST_RANGE, 2, 99);
   

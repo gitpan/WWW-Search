@@ -3,12 +3,13 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.13?  (2000-04-04)
+WHAT IS NEW IN WWW::Search 2.14?  (2000-05-01)
 ----------------------------------------------
 
 overview:
- * BUGFIX for mixing gui_query() and native_query() calls on same object
- * minor updates for some search engines
+ * minor bug fixes
+ * minor updates for some search engines, as usual
+ * several backends removed to separate modules
 
 For details, see the file ChangeLog and/or the pod of each affected module.
 
@@ -49,17 +50,15 @@ AltaVista::Careers	working? (not in test suite)
 AltaVista::Intranet	working
 AltaVista::News		not working
 AltaVista::Web		working
+AOL                     (same as NetFind)
 AOL::Classifieds::Employment    working (not in test suite)
 Crawler			partially working?
 Dice                    working? (not in test suite)
-EuroSeek                working? (not in test suite)
 Excite::News		working
 ExciteForWebServers	not working
 Fireball		working? (not in test suite)
 FolioViews		working
-Google  		working
 Gopher			not working? (not in test suite)
-GoTo                    working
 HeadHunter              working? (not in test suite)
 HotFiles		working
 Infoseek		working
@@ -84,12 +83,10 @@ Profusion               defunct
 Search97		not working
 SFgate			working
 Simple			not working? (not in test suite)
-Snap			working
 Verity			not working (not in test suite)
 VoilaFr                 working (not in test suite)
 WebCrawler		working
 Yahoo::Classifieds::Employment  working? (not in test suite)
-ZDNet			working
 
 ''Partially working'' indicates that some tests passed and some failed.
 
@@ -97,25 +94,20 @@ The following backends are now registered at CPAN independently (not
 included with the WWW::Search release):
 
 Deja/Dejanews   http://www.perl.com/CPAN-local/modules/by-module/WWW/
+Euroseek        http://www.perl.com/CPAN-local/authors/id/J/JS/JSMYSER/
 Excite          http://www.perl.com/CPAN-local/modules/by-module/WWW/
+GoTo            http://www.perl.com/CPAN-local/authors/id/J/JS/JSMYSER/
+Google          http://www.perl.com/CPAN-local/authors/id/J/JS/JSMYSER/
 HotBot          http://www.perl.com/CPAN-local/modules/by-module/WWW/
 Magellan        http://www.perl.com/CPAN-local/modules/by-module/WWW/MTHURN/
 OpenDirectory   http://www.perl.com/CPAN-local/authors/id/J/JS/JSMYSER/
+Snap            http://www.perl.com/CPAN-local/authors/id/J/JS/JSMYSER/
 Yahoo           http://www.perl.com/CPAN-local/modules/by-module/WWW/MTHURN/
+ZDNet           http://www.perl.com/CPAN-local/authors/id/J/JS/JSMYSER/
 
-
-WHAT IS AutoSearch?
--------------------
-
-WWW::Search's primary client is AutoSearch.  AutoSearch performs a
-web-based search and puts the results set in a web page.  It
-periodically updates this web page, indicating how the search changes
-over time.  Sample output from AutoSearch can be found at
-<http://www.isi.edu/lsam/tools/autosearch/>.  Output format is
-configurable.
-
-See the man page for AutoSearch details, or the DEMONSTRATION section
-below for quick-start instructions.
+There are more backends available for manual download and installation
+at http://members.xoom.com/backends (sorry about the annoying
+advertising bar).
 
 
 REQUIREMENTS
@@ -236,6 +228,20 @@ test_parsing" to the maintainer of the backend for the search engine
 that fails.
 
 
+WHAT IS AutoSearch?
+-------------------
+
+WWW::Search's primary client is AutoSearch.  AutoSearch performs a
+web-based search and puts the results set in a web page.  It
+periodically updates this web page, indicating how the search changes
+over time.  Sample output from AutoSearch can be found at
+<http://www.isi.edu/lsam/tools/autosearch/>.  Output format is
+configurable.
+
+See the man page for AutoSearch details, or the DEMONSTRATION section
+below for quick-start instructions.
+
+
 DISCUSSION, BUG REPORTS, AND IMPROVEMENTS
 -----------------------------------------
 
@@ -274,7 +280,7 @@ include:
 DEMONSTRATION
 -------------
 
-After installing the distribution, try:
+After installing the distribution, connect to the internet and type:
 
 	WebSearch '"Your Name Here"'
 
@@ -315,28 +321,32 @@ and `perldoc WWW::Search::AltaVista` after installation.
 FUTURE PLANS
 ------------
 
-Some ideas:
+Some things we need, and ideas for new features:
 
-  - use LWP::ParallelUA to speed up multiple backend search requests
+ - test cases for WebSearch.  Contact <MartinThurn@iname.com>
+
+ - test cases for AutoSearch.  Contact <MartinThurn@iname.com>
+
+ - use LWP::ParallelUA to speed up multiple backend search requests
 (I'm trying to decide what the API interface will look like; please
 send suggestions).  Contact <MartinThurn@iname.com>
 
-  - updates to each backend that will force WWW::Search to perform the
+ - updates to each backend that will force WWW::Search to perform the
 same search as the engine's web GUI (I'm looking for contributions of
 the precise arguments that will produce such a search for each engine;
 i.e. the hash that should be passed as the second argument to
 native_query).  Contact <MartinThurn@iname.com>
 
-  - application-level proxy support (I'm looking for a contribution
+ - application-level proxy support (I'm looking for a contribution
 here from someone who uses/needs proxy support and can test it).
 Contact <MartinThurn@iname.com>
 
-  - more widespread use of result tags description, date, size,
-etc. across all backends 
+ - more widespread use of result tags description, date, size,
+etc. across all backends.  Contact backend authors.
 
-  - a freeze/restore interface to suspend and resume in-progress queries
+ - a freeze/restore interface to suspend and resume in-progress queries.
 
-  - more backends.  In particular: www.alltheweb.com, ...
+ - more backends.
 
 Contributions are always welcome.  Send me e-mail if you plan a new
 backend and to discuss architectural changes (to avoid duplicating

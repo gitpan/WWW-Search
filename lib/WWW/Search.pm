@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.36 2000/04/03 16:26:57 mthurn Exp $
+# $Id: Search.pm,v 1.40 2000/04/27 17:00:21 mthurn Exp mthurn $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -66,7 +66,7 @@ package WWW::Search;
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query generic_option strip_tags @ENGINES_WORKING);
-$VERSION = '2.13';
+$VERSION = '2.14';
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
@@ -159,7 +159,6 @@ sub reset_search
   $self->{'requests_made'} = 0;
   $self->{'state'} = $SEARCH_BEFORE;
   $self->{'_next_url'} = '';
-  $self->{'search_base_url'} = '';
   # This method is called by native_query().  native_query() is called
   # either by gui_query() or by the user.  In the case that
   # gui_query() was called, we do NOT want to clear out the _options
@@ -171,7 +170,6 @@ sub reset_search
     return if $as[3] =~ m/gui_query/;
     } # if
   $self->{_options} = ();
-  # $self->{search_base_url} = '';
   } # reset_search
 
 =head2 version
@@ -672,34 +670,46 @@ sub http_proxy { return shift->_elem('http_proxy', @_); }
 
 =head2 user_agent($NON_ROBOT) (PRIVATE)
 
-This internal routine creates a user-agent
-for derived classes that query the web.
-If C<$NON_ROBOT>, a normal user-agent (rather than a robot-style user-agent)
-is used.
+This internal routine creates a user-agent for derived classes that
+query the web.  If non-empty argument $non_robot is given, a normal
+user-agent (rather than a robot-style user-agent) is used.
 
-Backends should use robot-style user-agents whereever possible.
+If a backend needs the low-level LWP::UserAgent or LWP::RobotUA to
+have a particular name, $oSearch->{'agent_name'} (and possibly
+$oSearch->{'agent_e_mail'}) should be set to the desired values before
+calling $oSearch->user_agent():
+
+  $oSearch = new WWW::Search('NewBackend');
+  $oSearch->{'agent_e_mail'} = $oSearch->{'agent_name'};
+  $oSearch->{'agent_name'} = 'Mozilla/5.5';
+  $oSearch->user_agent('non-robot');
+
+Backends should use robot-style user-agents whenever possible.
 Also, backends should call C<user_agent_delay> between every page retrieval
 to avoid swamping search-engines.
 
 =cut
 
 sub user_agent
-{
-    my $self = shift;
-    my $non_robot = shift;
-
-    my $ua ;
-    if ($non_robot) {
-	$ua = new LWP::UserAgent;
-    } else {
-	$ua = new LWP::RobotUA($self->{agent_name}, $self->{agent_e_mail});
-	$ua->delay($self->{interrequest_delay}/60.0);
+  {
+  my ($self, $non_robot) = @_;
+  $non_robot ||= '';
+  my $ua;
+  if ($non_robot ne '')
+    {
+    $ua = new LWP::UserAgent;
+    $ua->agent($self->{'agent_name'});
+    $ua->from($self->{'agent_e_mail'});
+    } 
+  else 
+    {
+    $ua = new LWP::RobotUA($self->{'agent_name'}, $self->{'agent_e_mail'});
+    $ua->delay($self->{'interrequest_delay'}/60.0);
     }
-    $ua->timeout($self->{'timeout'});
-    $ua->proxy('http', $self->{'http_proxy'})
-	if (defined($self->{'http_proxy'}));
-    $self->{user_agent} = $ua;
-}
+  $ua->timeout($self->{'timeout'});
+  $ua->proxy('http', $self->{'http_proxy'}) if (defined($self->{'http_proxy'}));
+  $self->{'user_agent'} = $ua;
+  } # user_agent
 
 
 =head2 http_request($method, $url)
@@ -882,7 +892,7 @@ servers to avoid overloading them with many, fast back-to-back requests.
 =cut
 sub user_agent_delay {
     my ($self) = @_;
-    # sleep for a qarter second
+    # sleep for a quarter second
     select(undef, undef, undef, $self->{interrequest_delay})
 	 if ($self->{robot_p});
 }
@@ -1049,12 +1059,9 @@ AltaVista::Web
 AOL::Classifieds::Employment
 Crawler			
 Dice                    
-EuroSeek
 Excite::News
 Fireball
 FolioViews
-Google  	
-GoTo            
 HeadHunter      
 HotFiles	
 Infoseek	
@@ -1070,11 +1077,9 @@ NetFind
 NorthernLight		
 Null			
 SFgate			
-Snap			
 VoilaFr
 WebCrawler		
 Yahoo::Classifieds::Employment
-ZDNet			
            );
 
 1;

@@ -1,5 +1,5 @@
 # This -*- perl -*- script writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.11 2000/03/21 20:16:06 mthurn Exp $
+# $Id: Makefile.PL,v 1.12 2000/05/01 13:58:13 mthurn Exp $
 
 require 5.004;
 
@@ -25,6 +25,7 @@ WriteMakefile(
                                  'ABSTRACT' => 'Query web search engines and get URLs',
                                 ) : (),
               'PREREQ_PM' => {
+                              'File::Spec' => 0,
                               'URI::Escape' => 0,
                               'HTML::Parse' => 0,
                               'HTML::Parser' => 2.23,
