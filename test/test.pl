@@ -3,7 +3,7 @@
 #
 # test.pl
 # Copyright (C) 1997 by USC/ISI
-# $Id: test.pl,v 1.14 1998/06/01 04:43:53 johnh Exp $
+# $Id: test.pl,v 1.16 1998/06/25 18:10:27 johnh Exp $
 #
 # Copyright (c) 1997 University of Southern California.
 # All rights reserved.                                            
@@ -180,9 +180,12 @@ sub test_cases {
     $search_engine = 'AltaVista';
     $maintainer = 'John Heidemann <johnh@isi.edu>';
 
+    $file = 'test/AltaVista/zero_result_no_plus';
+    $query = 'Bogus' . 'NoSuchWord';
+    test($mode, $TEST_EXACTLY);
+
     $file = 'test/AltaVista/zero_result';
     $query = '+LSAM +Bogus' . 'NoSuchWord';
-    $date = 'Sat May 30 11:40:02 PDT 1998';
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/AltaVista/one_page_result';
@@ -259,8 +262,6 @@ sub test_cases {
     $search_engine = 'Excite';
     # $maintainer = 'GLen Pringle <pringle@cs.monash.edu.au>';
     $maintainer = 'Martin Thurn <mthurn@irnet.rest.tasc.com>';
-
-    not_working_with_tests;
 
     $file = 'test/Excite/zero_result';
     $query = '+mrfglbqnx +Bogus' . 'NoSuchWord';
@@ -387,8 +388,8 @@ sub test_cases {
 
     # 10 hits/page
     $file = 'test/Magellan/two_page_result';
-    $query = '+Martin +Thurn';
-    test($mode, $TEST_GREATER_THAN, 12);
+    $query = '+ISI +divisions';
+    test($mode, $TEST_GREATER_THAN, 11);
 
     ######################################################################
     $search_engine = 'PLweb';
@@ -420,16 +421,15 @@ sub test_cases {
 
     $file = 'test/WebCrawler/one_page_result';
     $query = 'disestablishmentarianism';
-    test($mode, $TEST_EXACTLY);
+    test($mode, $TEST_RANGE, 2, 99);
 
     $file = 'test/WebCrawler/two_page_result';
     $query = 'Greedo';
-    test($mode, $TEST_EXACTLY);
+    test($mode, $TEST_GREATER_THAN, 100);
 
     ######################################################################
     $search_engine = 'Yahoo';
     $maintainer = 'Martin Thurn <mthurn@irnet.rest.tasc.com>';
-    $date = 'Mon Mar 30 22:25:59 PST 1998';
 
     $file = 'test/Yahoo/zero_result';
     $query = '"mrfglbqnx Bogus' . 'NoSuchWord"';
@@ -437,7 +437,7 @@ sub test_cases {
 
     $file = 'test/Yahoo/one_page_result';
     $query = 'LSAM';
-    test($mode, $TEST_EXACTLY);
+    test($mode, $TEST_RANGE, 2, 10);
 
     $file = 'test/Yahoo/two_page_result';
     $query = 'Star Wars';

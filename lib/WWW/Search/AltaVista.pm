@@ -4,7 +4,7 @@
 # AltaVista.pm
 # by John Heidemann
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: AltaVista.pm,v 1.30 1998/05/30 18:55:41 johnh Exp $
+# $Id: AltaVista.pm,v 1.32 1998/06/05 18:36:52 johnh Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -244,7 +244,7 @@ sub native_retrieve_some
 	    $self->approximate_result_count($n);
 	    $state = $HITS;
 	    print STDERR "PARSE(2:HEADER->HITS): $n documents found.\n" if ($self->{_debug} >= 2);
-	} elsif ($state == $HITS && m@(<p><dt>|<dt>|<dt><b>)[^"]*<a[^>]*href=\"([^"]+)"[^>]*>(.*)</a>.*<dd>\s+(\d+\s+\w+\s+\d+)([^"]+)<a@i) {  # post 30-May-98 "
+	} elsif ($state == $HITS && m@(<p><dt>|<dt>|<dt><b>)[^"]*\d+\.[^"]*<a[^>]*href=\"([^"]+)"[^>]*>(.*)</a>.*<dd>\s+(\d+\s+\w+\s+\d+)([^"]+)<a@i) {  # post 30-May-98 "
 	    # news is, of course, slightly different
 	    # <dt><b>1. </b><a href="http://ww2.altavista.digital.com/cgi-bin/news?msg@96138@comp%2elang%2eperl%2emisc"><strong>How to Tar &amp; unzip Perl mods on CPAN site on Win32?</strong></a><dd> 8 Jan 98 - <b>comp.lang.perl.misc</b><br><a href="news:34B53D7D.2CED@fast.net">&lt;34B53D7D.2CED@fast.net&gt;</a><br>  <a href="mailto:emorr@fast.net">&quot;Edward Morris, Jr.&quot; &lt;emorr@fast.net&gt;</a><P>
 	    ($hit, $raw) = $self->begin_new_hit($hit, $raw);
@@ -257,7 +257,7 @@ sub native_retrieve_some
 	    $hit->change_date($4);
 	    $hit->description($5);
 	    print STDERR "PARSE(3:HITS): news hit found.\n" if ($self->{_debug} >= 2);
-	} elsif ($state == $HITS && m@(<p><dt>|<dt>|<dt><b>)[^"]*<a[^>]*href=\"([^"]+)"[^>]*>(.*)</a>@i) {  # post 30-May-98
+	} elsif ($state == $HITS && m@(<p><dt>|<dt>|<dt><b>)[^"]*\d+\.[^"]*<a[^>]*href=\"([^"]+)"[^>]*>(.*)</a>@i) {  # post 30-May-98
 	    # <dt><b>1. </b><a href="http://www.isi.edu/lsam/tools/autosearch/"><b>index.html directory page</b></a><dd>
 	    ($hit, $raw) = $self->begin_new_hit($hit, $raw);
 	    $raw .= $_;
@@ -268,7 +268,7 @@ sub native_retrieve_some
 	    $hit->title($title);
 	    $hit->description("");
 	    print STDERR "PARSE(3:HITS): hit found.\n" if ($self->{_debug} >= 2);
-	} elsif ($state == $HITS && m@^([^<]+).*last modified\s+(\S+)\s.*page size\s+(\S+)\s@) { # "
+	} elsif ($state == $HITS && m@^([^<]+).*last modified\s+(\S+)\s.*page size\s+(\S+)\s@i) { # "
 	    # AutoSearch WEB Searching. What is AutoSearch? AutoSearch performs a web-based search and puts the results set in a web page. It periodically updates this..<br><font size=-2>Last modified 3-Feb-97 - page size 2K - in English [ <a href="http://babelfish.altavista.digital.com/cgi-bin/translate?urltext=http%3a%2f%2fwww%2eisi%2eedu%2flsam%2ftools%2fautosearch%2f&language=en">Translate</a> ]</font><P>
 	    $raw .= $_;
 	    $hit->description($1);
@@ -276,7 +276,7 @@ sub native_retrieve_some
 	    my($size) = $3;
 	    $size *= 1024 if ($size =~ s@k$@@i);
 	    $size *= 1024*1024 if ($size =~ s@m$@@i);
-	    $hit->change_size($size);
+	    $hit->size($size);
 	} elsif ($state == $HITS && /<\/dl>/) {
 	    # end of hits
 	    ($hit, $raw) = $self->begin_new_hit($hit, $raw);

@@ -37,6 +37,15 @@ test/AltaVista/AdvancedNews/.cvsignore
 test/AltaVista/AdvancedNews/multi_result
 test/AltaVista/AdvancedNews/multi_result.0
 test/AltaVista/AdvancedNews/multi_result.1
+test/AltaVista/AdvancedNews/multi_result.10
+test/AltaVista/AdvancedNews/multi_result.11
+test/AltaVista/AdvancedNews/multi_result.12
+test/AltaVista/AdvancedNews/multi_result.13
+test/AltaVista/AdvancedNews/multi_result.14
+test/AltaVista/AdvancedNews/multi_result.15
+test/AltaVista/AdvancedNews/multi_result.16
+test/AltaVista/AdvancedNews/multi_result.17
+test/AltaVista/AdvancedNews/multi_result.18
 test/AltaVista/AdvancedNews/multi_result.2
 test/AltaVista/AdvancedNews/multi_result.3
 test/AltaVista/AdvancedNews/multi_result.4
@@ -103,6 +112,9 @@ test/AltaVista/two_page_result.out
 test/AltaVista/zero_result
 test/AltaVista/zero_result.0
 test/AltaVista/zero_result.out
+test/AltaVista/zero_result_no_plus
+test/AltaVista/zero_result_no_plus.0
+test/AltaVista/zero_result_no_plus.out
 test/Excite/one_page_result
 test/Excite/one_page_result.0
 test/Excite/one_page_result.out

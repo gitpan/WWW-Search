@@ -3,20 +3,31 @@ WWW::Search and AutoSearch
 ==========================
 
 
-WHAT IS NEW WITH WWW::Search 1.018?  (pending)
+WHAT IS NEW WITH WWW::Search 1.019?  (25-Jun-98)
 -----------------------------------
 overview:  back-end updates
 
-- bug fix: Excite and WebCrawler (by Martin Thurn),
-	AltaVista (by John Heidemann)
-	updated 30-May-98
+- bug fix: test suite bugs were causing false negatives on
+	Yahoo, Excite, Magellan, WebCrawler (reported by Martin Thurn,
+	fixed John Heidemann)
+- new feature:  the test suite is now run daily (automatically).
+	Output can be found at
+	<http://www.isi.edu/~johnh/WORK/LSAM/WWW_SEARCH/>.
+- new feature: verbose mode of WebSearch is more verbose
+- bug fix: AltaVista was recording the RealName URL on some queries
+	(bug reported by Vassilis Papadimos <vpapad@dblab.ece.ntua.gr>)
+- bug fix: AltaVista wasn't correctly reporting change_time/size 
+	(bug and fix from Martin Valldeby <martin.valldeby@pakom.se>)
 
-- known bugs:  WWW::Search doesn't work on MacPerl because of
+- known bug:  WWW::Search doesn't work on MacPerl because of
 	end-of-line differences.  A fix for this problem is in
 	progress.  (Problem identified and fix suggested by 
 	Chris Nandor.)
-
+- known bug:  I'm told there are installation problems on Windows.
+	Suggestions about how to improve Windows support are welcome.
+	(I don't run Windows and so can't write or test this code.)
 	
+
 
 Note:  WWW::Search may have problems with older libwww's (5.08).  If
 "make test" dies with an error in RobotUA, upgrade libwww.  (Tested
@@ -51,14 +62,14 @@ Gopher			not working?	not in test suite
 HotBot			working		(in test suite)
 Infoseek		working		(in test suite)
 Lycos			working		(in test suite)
-Magellan		not working	(in test suite)
+Magellan		working		(in test suite)
 PLweb			not working?	not in test suite
 SFgate			not working?	not in test suite
 Verity			not working?	not in test suite
 Simple			not working?	not in test suite
 WebCrawler		working		(in test suite)
 Verity			not working	not in test suite
-Yahoo			not working	(in test suite)
+Yahoo			working		(in test suite)
 
 (others are currently under development, see contributors below for details)
 
@@ -71,7 +82,7 @@ WWW::Search's primary client is AutoSearch.  AutoSearch performs a
 web-based search and puts the results set in a web page.  It
 periodically updates this web page, indicating how the search changes
 over time.  Sample output from WWW::Search can be found at
-<http://www.isi.edu/lsam/autosearch/>.  Output format is configurable.
+<http://www.isi.edu/lsam/tools/autosearch/>.  Output format is configurable.
 
 See the man page for AutoSearch details, or Demonstration section
 below for the quick-start instructions.
@@ -369,6 +380,16 @@ overview: this is an alpha to fix HotBot/Infoseek
 overview:  this is the public release since 1.012
 - bug fix: Lycos bug fix
 
+1.018, 31-May-98
+overview:  back-end updates
+- bug fix: Excite and WebCrawler (by Martin Thurn),
+	AltaVista (by John Heidemann)
+	updated 30-May-98
+- known bugs:  WWW::Search doesn't work on MacPerl because of
+	end-of-line differences.  A fix for this problem is in
+	progress.  (Problem identified and fix suggested by 
+	Chris Nandor.)
+
 
 
 SUPPORT AND CREDITS
@@ -410,11 +431,12 @@ identified by William Scheding <wls@isi.edu>, T. V. Raman
 <raman@adobe.com> (proxy support), C. Feroldi <C.Feroldi@it.net>,
 Larry Virden <lvirden@cas.org>, Paul Lindner <paul.lindner@itu.int>,
 Guy Decoux <decoux@moulon.inra.fr>, R Chandrasekar (Mickey)
-<mickeyc@linc.cis.upenn.edu>, Martin Thurn <mthurn@tasc.com>,
-Chris Nandor <pudge@pobox.com>.
+<mickeyc@linc.cis.upenn.edu>, Martin Thurn <mthurn@tasc.com>, Chris
+Nandor <pudge@pobox.com>, Martin Valldeby <martin.valldeby@pakom.se>.
 
 Bugs have reported by Joseph McDonald <joe@smartlink.net>, Juan Jose
-Amor <jjamor@infor.es>, Bowen Dwelle <bowen@hotwired.com>.
+Amor <jjamor@infor.es>, Bowen Dwelle <bowen@hotwired.com>, Vassilis
+Papadimos <vpapad@dblab.ece.ntua.gr>.
 
 Feedback, bug reports and fixes, and new back-ends should be sent to
 John Heidemann <johnh@isi.edu>.  Before submitting a bug report,

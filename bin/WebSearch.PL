@@ -22,7 +22,7 @@ print OUT <<'!NO!SUBS!';
 #
 # WebSearch.PL
 # Copyright (C) 1996-1997 by USC/ISI
-# $Id: WebSearch.PL,v 1.29 1998/03/31 22:29:31 johnh Exp $
+# $Id: WebSearch.PL,v 1.30 1998/06/25 17:52:03 johnh Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -30,7 +30,7 @@ print OUT <<'!NO!SUBS!';
 
 sub usage {
     print STDERR <<END;
-usage: $0 [-e SearchEngine] [-o option] [-o option...] [-vr] query
+usage: $0  [-m MaxCount] [-e SearchEngine] [-o option] [-o option...] [-arvV] query
 
 Make a query to a web search engine, showing the primary URLs which match.
 
@@ -154,6 +154,7 @@ use Getopt::Long;
 
 my(%opts);
 $Getopt::Long::getopt_compat = 1;   # avoid parsing +'s as options (doesn't work!)
+&Getopt::Long::config(qw(no_ignore_case no_getopt_compat));
 &GetOptions(\%opts, qw(a r v V e=s m=s o=s@));
 
 &print_version if ($opts{'V'});
@@ -176,6 +177,8 @@ sub print_version {
     $version = $WWW::Search::VERSION;
 }
 
+my($verbose_code);
+
 sub print_result {
     my($result, $count) = @_;
 
@@ -183,13 +186,15 @@ sub print_result {
     if (defined($verbose)) {
 	my(@attribs) = ();
         $prefix = "$count. ";
-	push(@attribs, "score: " . $result->score())
-	    if (defined($result->score()));
-	push(@attribs, "normalized_score: " . $result->normalized_score())
-	    if (defined($result->normalized_score()));
-	push(@attribs, "size: " . $result->size())
-	    if (defined($result->size()));
-        $prefix .= "(" . join(", ", @attribs) . ") "
+	if (!defined($verbose_code)) {
+	    $verbose_code = "";
+	    foreach (qw(title description score normalized_score size change_date index_date)) {
+	        $verbose_code .= "push(\@attribs, \"$_: \" . \$result->$_())\n" .
+		    "\tif (defined(\$result->$_()));\n";
+            };
+	};
+	eval $verbose_code;
+        $prefix .= "(" . join(",\n\t", @attribs) . ")\n\t"
 	    if ($#attribs >= 0);
     };
 

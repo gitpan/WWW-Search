@@ -22,7 +22,7 @@
 
 <FORM ACTION="/search.gw" METHOD=get>
 <TD ALIGN=left VALIGN=top COLSPAN=3 NOWRAP>
-<INPUT NAME=search VALUE="+Martin +Thurn" SIZE=30>
+<INPUT NAME=search VALUE="+ISI +divisions" SIZE=30>
 <INPUT TYPE=IMAGE SRC="/img/magellan/searchbut.gif" BORDER=0 ALIGN="top" VALUE="Search Magellan" WIDTH=67 HEIGHT=30>
 </TD></TR>
 <TR>
@@ -53,8 +53,8 @@
 
 
  <CENTER><!-- Ad Start -->
-<!-- Ad param svcpage=/search.gw keyword=martin+thurn svcname=msr ip=128.9.160.184 user_agent=WWW::Search/1.015 -->
-<a href="/relocate/ad=http://ads02.focalink.com/SmartBanner/nph-graphic/108.29|pk=360271;http://ads02.focalink.com/SmartBanner/page/108.29" onMouseOver="window.status='Click Here!';return true" language="Javascript"><img src="http://ads02.focalink.com/SmartBanner/nph-graphic/108.29" ALT="Click Here!" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> Click Here! </B></FONT></CENTER></a>
+<!-- Ad param svcpage=/search.gw keyword=isi+divisions svcname=msr ip=128.125.187.56 user_agent=WWW::Search/1.018 -->
+<a href="/relocate/ad=http://ad.preferences.com/image.ng;spacedesc=ExciteNetwork_Excite_468x60-RunOfSite_Any&time=1998.06.01.17.03.54|pk=456150;http://ad.preferences.com/click.ng;spacedesc=ExciteNetwork_Excite_468x60-RunOfSite_Any&time=1998.06.01.17.03.54" onMouseOver="window.status='Click Here!';return true" language="Javascript"><img src="http://ad.preferences.com/image.ng;spacedesc=ExciteNetwork_Excite_468x60-RunOfSite_Any&time=1998.06.01.17.03.54" ALT="Click Here!" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> Click Here! </B></FONT></CENTER></a>
 <!-- Ad Stop -->
 </CENTER>
 
@@ -67,7 +67,7 @@
 
 
 <FORM ACTION="/search.gw" METHOD=get>
-    <INPUT TYPE=hidden NAME=search VALUE="+Martin +Thurn">
+    <INPUT TYPE=hidden NAME=search VALUE="+ISI +divisions">
     <INPUT TYPE=hidden NAME=look VALUE=magellan>
              <INPUT TYPE=submit NAME=next VALUE="Next Results">
           <INPUT TYPE=hidden NAME=start VALUE=0>
@@ -76,103 +76,104 @@
 <!--search results-->
 
    <HR>
-  <B><A HREF="http://www.pitt.edu/~thurn/SWB/">The Star Wars Collector's Bible (Introduction)</A></B>&nbsp;&nbsp;&nbsp;
-  <B>66%</B>&nbsp;&nbsp;&nbsp;
-  <A HREF="/search.gw?lk=magellan&c=web&qbe=339464&ctag=35197E30&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
-        The Star Wars Collector's Bible (hereafter The SW Bible or SWB) is a detailed hypertext list of U.S.-released Star Wars-related merchandise.  For example, if you search for "star wars collector's bible" "alarm clock", the first item listed should be "The Star Wars Bible (B companies)".
+  <B><A HREF="http://www.isi.edu/">USC Information Sciences
+Institute</A></B>&nbsp;&nbsp;&nbsp;
+  <B>76%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=636925&ctag=356A2862&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+      [ About ISI | Publications | Services | Divisions | Projects | People | News Items | Employment Opportunities ].  [ ISI East | USC School of Engineering | USC Homepage ] While most of the material available at ISI is easily accessed via the World Wide Web, we also maintain a large anonymous FTP archive.  This web site requires a browser that supports HTML tables and jpeg files for proper.
     <BR>
-  <I> <A HREF="http://www.pitt.edu/~thurn/SWB/">http://www.pitt.edu/~thurn/SWB/</A></I>
+  <I> <A HREF="http://www.isi.edu/">http://www.isi.edu/</A></I>
   <BR>
    <HR>
-  <B><A HREF="http://www.pitt.edu/~thurn/SWC/">The Star Wars Collector</A></B>&nbsp;&nbsp;&nbsp;
+  <B><A HREF="http://www.isi.edu/about.html">About ISI</A></B>&nbsp;&nbsp;&nbsp;
+  <B>74%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=779229&ctag=356A2862&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+      Part of the University of Southern California (USC), ISI is involved in a broad spectrum of information processing research and in the development of advanced computer and communication technologies.   In April 1972, Keith Uncapher founded the Information Sciences Institute as an off-campus research facility of the University of Southern California's School of Engineering.
+    <BR>
+  <I> <A HREF="http://www.isi.edu/about.html">http://www.isi.edu/about.html</A></I>
+  <BR>
+   <HR>
+  <B><A HREF="http://www.isi.edu/divisionlist.html">ISI Divisions</A></B>&nbsp;&nbsp;&nbsp;
+  <B>72%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=1784167&ctag=356A2862&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+      Automated software generation; formalized system development; automated development environments; scenario generation; and softwarearchitectures, composition, and integration.  Artificial intelligence: knowledge representation, knowledge based systems, intelligent agents, knowledge acquisition, intelligent integration of information, machine translation, human computer interaction, ...
+    <BR>
+  <I> <A HREF="http://www.isi.edu/divisionlist.html">http://www.isi.edu/divisionlist.html</A></I>
+  <BR>
+   <HR>
+  <B><A HREF="http://www.isitrans.com/">ISI, Your Language Solution</A></B>&nbsp;&nbsp;&nbsp;
+  <B>67%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=229796&ctag=356A2862&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+      This knowledge, coupled with language ability, will provide the healthcare professional with a clearer picture of each patient.  The workshop experience will provide the healthcare professional with a clearer picture of each patient.
+    <BR>
+  <I> <A HREF="http://www.isitrans.com/">http://www.isitrans.com/</A></I>
+  <BR>
+   <HR>
+  <B><A HREF="http://www.detnews.com/1996/menu/poli0904.htm">Election  96</A></B>&nbsp;&nbsp;&nbsp;
   <B>65%</B>&nbsp;&nbsp;&nbsp;
-  <A HREF="/search.gw?lk=magellan&c=web&qbe=1391966&ctag=35197E30&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
-        The Star Wars Collector is a magazine by collectors, for collectors, about all aspects of collecting all Star Wars-related items of all time periods. , that appear in The Star Wars Collector are &copy;The Star Wars Collector (unless otherwise noted at the time of publication), and may not be reprinted without the express written permission of the author and The Star Wars Collector (hey,.
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=887947&ctag=356A2862&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+      Tax cuts, smaller government and welfare reforms are leading items on Dole's agenda.  Please put "Issues" in the subject field of the message, and include your name in the body of the text.
     <BR>
-  <I> <A HREF="http://www.pitt.edu/~thurn/SWC/">http://www.pitt.edu/~thurn/SWC/</A></I>
+  <I> <A HREF="http://www.detnews.com/1996/menu/poli0904.htm">http://www.detnews.com/1996/menu/poli0904.htm</A></I>
   <BR>
    <HR>
-  <B><A HREF="http://www.cvm.umn.edu/departments/Diagnostic/C-vdm.htm">CVM Veterinary Diagnostic Medicine</A></B>&nbsp;&nbsp;&nbsp;
+  <B><A HREF="http://www.cvalim.co.il/cvalim.htm">Cvalim</A></B>&nbsp;&nbsp;&nbsp;
   <B>64%</B>&nbsp;&nbsp;&nbsp;
-  <A HREF="/search.gw?lk=magellan&c=web&qbe=582571&ctag=35197E30&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
-        612/625-8787.   fax: 612/624-8707.
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=113488&ctag=356A2862&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+      (If after installing Acrobat reader you don't see the catalog, you can use the following link to help you conigure the reader configure).   (If after installing Acrobat reader you don't see the catalog, you can use the following link to help you conigure the reader configure)
     <BR>
-  <I> <A HREF="http://www.cvm.umn.edu/departments/Diagnostic/C-vdm.htm">http://www.cvm.umn.edu/departments/Diagnostic/C-vdm.htm</A></I>
+  <I> <A HREF="http://www.cvalim.co.il/cvalim.htm">http://www.cvalim.co.il/cvalim.htm</A></I>
   <BR>
    <HR>
-  <B><A HREF="http://www.freelaunch.com/index.html">A Free Launch</A></B>&nbsp;&nbsp;&nbsp;
-  <B>63%</B>&nbsp;&nbsp;&nbsp;
-  <A HREF="/search.gw?lk=magellan&c=web&qbe=639427&ctag=35197E30&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
-       American Dog Trainers Network - Resource center for dog owners and trainers.  Scone's Scottish Internet Book - An impressive collection of Scottish resources, by Nancy MacCorkill.
+  <B><A HREF="http://www.gospelcom.net/shofar/untilv4i6.html">Until Prophecy Newsletter</A></B>&nbsp;&nbsp;&nbsp;
+  <B>61%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=712980&ctag=356A2862&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+      Check out our UNTIL info page if you would like to learn how to order the UNTIL Newsletter in it's entirety -or- Fill out a form to receive a FREE trial UNTIL CONTACT US Division Hurts Celebration The Jewish new year, 5758 (1998), was going to be one long party, marking a century since the founding of the Zionist movement and 50 years since the tumultuous, exhilarating.
     <BR>
-  <I> <A HREF="http://www.freelaunch.com/index.html">http://www.freelaunch.com/index.html</A></I>
+  <I> <A HREF="http://www.gospelcom.net/shofar/untilv4i6.html">http://www.gospelcom.net/shofar/untilv4i6.html</A></I>
   <BR>
    <HR>
-  <B><A HREF="http://www.freelaunch.com/">A Free Launch</A></B>&nbsp;&nbsp;&nbsp;
-  <B>63%</B>&nbsp;&nbsp;&nbsp;
-  <A HREF="/search.gw?lk=magellan&c=web&qbe=1673253&ctag=35197E30&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
-      None Available
+  <B><A HREF="http://members.tripod.com/~bud_lite/buds_resume.html">Robert Bud James's Resume (Information Technology Team Leader) CIO, MB...</A></B>&nbsp;&nbsp;&nbsp;
+  <B>52%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=1904028&ctag=356A2862&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+      Proven project management skills in multi-project, multi-disciplinary, multi-location environments.  For Cross State Electric, a $7 million Electrical Sub-Contractor:.
     <BR>
-  <I> <A HREF="http://www.freelaunch.com/">http://www.freelaunch.com/</A></I>
+  <I> <A HREF="http://members.tripod.com/~bud_lite/buds_resume.html">http://members.tripod.com/~bud_lite/buds_resume.html</A></I>
   <BR>
    <HR>
-  <B><A HREF="http://www.netwing.at/italy/altoa/">ATS Tourist Service -  SUEDTIROL  SUEDTIROL  SUEDTIROL  SUEDTIROL  SUE...</A></B>&nbsp;&nbsp;&nbsp;
-  <B>62%</B>&nbsp;&nbsp;&nbsp;
-  <A HREF="/search.gw?lk=magellan&c=web&qbe=1449219&ctag=35197E30&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
-        Ortsverzeichnis: A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | R | S | T | U | V | W | Z.  &nbsp; Andere Tourismus-Server &uuml;ber SUEDTIROL: D.Net - Der netwing Partner-Provider in S&uuml;dtirol.   Offizielle Site der S&uuml;dtiroler Informatik AG.
+  <B><A HREF="http://adsabs.harvard.edu/abs_doc/whatsnew.html">What's New with the ADS Abstract Service</A></B>&nbsp;&nbsp;&nbsp;
+  <B>35%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=1255916&ctag=356A2862&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+      To exclude a word from synonym replacement, use the "=" sign before that word (to exactly match that word and no synonyms).  If you have turned off synonym replacement but want it on for a given word, use the "#" sign before the word.
     <BR>
-  <I> <A HREF="http://www.netwing.at/italy/altoa/">http://www.netwing.at/italy/altoa/</A></I>
+  <I> <A HREF="http://adsabs.harvard.edu/abs_doc/whatsnew.html">http://adsabs.harvard.edu/abs_doc/whatsnew.html</A></I>
   <BR>
    <HR>
-  <B><A HREF="http://www.feefhs.org/FRGGCRA/gcra3.html">GCRA - Glueckstal Colonies Research Association - Surnames (St. Peters...</A></B>&nbsp;&nbsp;&nbsp;
-  <B>60%</B>&nbsp;&nbsp;&nbsp;
-  <A HREF="/search.gw?lk=magellan&c=web&qbe=386978&ctag=35197E30&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
-      GCRA - Glueckstal Colonies Research Association - Surnames (St.   Gl&uuml;ckstal Surnames.
+  <B><A HREF="http://www.fuqua.duke.edu/Faculty/Daweb/PWref.htm">Untitled</A></B>&nbsp;&nbsp;&nbsp;
+  <B>19%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=1260461&ctag=356A2862&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+      % boundaries x1=x2, &quot;shift&quot;. &quot; (Revised edition: Cranefield P.F. (1976, Ed.
     <BR>
-  <I> <A HREF="http://www.feefhs.org/FRGGCRA/gcra3.html">http://www.feefhs.org/FRGGCRA/gcra3.html</A></I>
-  <BR>
-   <HR>
-  <B><A HREF="http://users.uniserve.com/~canyon/booklist.html">a.t.r. FAQ Bibliography</A></B>&nbsp;&nbsp;&nbsp;
-  <B>36%</B>&nbsp;&nbsp;&nbsp;
-  <A HREF="/search.gw?lk=magellan&c=web&qbe=907799&ctag=35197E30&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
-       &nbsp; Serg, 1973 &#149; Gauthier, Guy.   &nbsp; Quadrangle, 1973 &#149; Marquis of Ruvigny &amp; Raineval.
-    <BR>
-  <I> <A HREF="http://users.uniserve.com/~canyon/booklist.html">http://users.uniserve.com/~canyon/booklist.html</A></I>
-  <BR>
-   <HR>
-  <B><A HREF="http://www.cranium.co.nz/A.htm">Cranium Music Online Catalogue - A</A></B>&nbsp;&nbsp;&nbsp;
-  <B>31%</B>&nbsp;&nbsp;&nbsp;
-  <A HREF="/search.gw?lk=magellan&c=web&qbe=1199781&ctag=35197E30&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
-       Michael Gunther recorded local musicians they met and jammed with on the tour.  This is Daevid Allen experimenting with rock band Material whom he met whilst in New York.
-    <BR>
-  <I> <A HREF="http://www.cranium.co.nz/A.htm">http://www.cranium.co.nz/A.htm</A></I>
-  <BR>
-   <HR>
-  <B><A HREF="http://www.cals.cornell.edu/cals/dept/flori/theses.html">Floriculture and Ornamental Horticulture Theses</A></B>&nbsp;&nbsp;&nbsp;
-  <B>14%</B>&nbsp;&nbsp;&nbsp;
-  <A HREF="/search.gw?lk=magellan&c=web&qbe=1348575&ctag=35197E30&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
-        18 - M.S. - Theresa E. Schindler - The monograph and studies on the genus Antirrhinum.   74 - M.S. - Thomas J. Sheehan - Studies on the breeding of cattleya orchids.
-    <BR>
-  <I> <A HREF="http://www.cals.cornell.edu/cals/dept/flori/theses.html">http://www.cals.cornell.edu/cals/dept/flori/theses.html</A></I>
+  <I> <A HREF="http://www.fuqua.duke.edu/Faculty/Daweb/PWref.htm">http://www.fuqua.duke.edu/Faculty/Daweb/PWref.htm</A></I>
   <BR>
  <HR>
 </FORM>
 <FORM ACTION="/search.gw" METHOD=get>
              <INPUT TYPE=submit NAME=next VALUE="Next Results">
-       <INPUT TYPE=hidden NAME=search VALUE="+Martin +Thurn">
+       <INPUT TYPE=hidden NAME=search VALUE="+ISI +divisions">
     <INPUT TYPE=hidden NAME=look VALUE=magellan>
        <INPUT TYPE=hidden NAME=start VALUE=0>
     <INPUT TYPE=hidden NAME=collection VALUE=web>
           </FORM>
 
 Try your search on:&nbsp;
-  <A HREF="http://www.excite.com/search.gw?s=%2Bmartin+%2Bthurn"><B>Excite</B></A>
+  <A HREF="http://www.excite.com/search.gw?s=%2Bisi+%2Bdivisions"><B>Excite</B></A>
 
 </BLOCKQUOTE>
 <CENTER>
 
 <P><CENTER><!-- Ad Start -->
-<a href="/relocate/ad=http://ads02.focalink.com/SmartBanner/nph-graphic/108.29|pk=360271;http://ads02.focalink.com/SmartBanner/page/108.29" onMouseOver="window.status='Click Here!';return true" language="Javascript"><img src="http://ads02.focalink.com/SmartBanner/nph-graphic/108.29" ALT="Click Here!" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> Click Here! </B></FONT></CENTER></a>
+<a href="/relocate/ad=http://ad.preferences.com/image.ng;spacedesc=ExciteNetwork_Excite_468x60-RunOfSite_Any&time=1998.06.01.17.03.54|pk=456150;http://ad.preferences.com/click.ng;spacedesc=ExciteNetwork_Excite_468x60-RunOfSite_Any&time=1998.06.01.17.03.54" onMouseOver="window.status='Click Here!';return true" language="Javascript"><img src="http://ad.preferences.com/image.ng;spacedesc=ExciteNetwork_Excite_468x60-RunOfSite_Any&time=1998.06.01.17.03.54" ALT="Click Here!" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> Click Here! </B></FONT></CENTER></a>
 <!-- Ad Stop -->
 </CENTER><P>
 
@@ -189,7 +190,7 @@ Magellan<BR></FONT>NOW!<BR>
 
 
 <TD ALIGN=left VALIGN=top COLSPAN=3 NOWRAP>
-<INPUT NAME=search VALUE="+Martin +Thurn" SIZE=30>
+<INPUT NAME=search VALUE="+ISI +divisions" SIZE=30>
 <INPUT TYPE=IMAGE SRC="/img/magellan/searchbut.gif" BORDER=0 ALIGN="top" VALUE="Search Magellan" WIDTH=67 HEIGHT=30>
 </TD></TR>
 <TR>

@@ -4,7 +4,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.51 1998/06/01 04:43:51 johnh Exp $
+# $Id: Search.pm,v 1.52 1998/06/01 17:12:30 johnh Exp $
 #
 # A complete copyright notice appears at the end of this file.
 # 
@@ -84,7 +84,7 @@ see L<WWW::SearchResult>.
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query generic_option);
-$VERSION = '1.018';
+$VERSION = '1.019';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
 use LWP::UserAgent;
