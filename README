@@ -3,15 +3,17 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.46?  (2003-12-27)
+WHAT IS NEW IN WWW::Search 2.47?  (2004-05-01)
 ----------------------------------------------
 
 Overview of changes: 
 
- * Search.pm: fix for undef warnings in LWP::UserAgent::proxy()
- * AutoSearch: new option --cmdline
+ * new method need_to_delay()
+ * detect HTTP-Redirect loops and avoid infinite loop
+ * fix "undefined" warnings in AutoSearch
+ * Makefile.PL now uses Module::Install
 
-For details, see the ChangeLog file (updates after 2003-11-25) and/or
+For details, see the ChangeLog file (updates after 2003-12-25) and/or
 the pod of each affected module.
 
 
@@ -19,12 +21,13 @@ WHAT IS WWW::Search?
 --------------------
 
 WWW::Search is a collection of Perl modules which provide an API to
-search engines on the world-wide web (and similar engines).
-Backends for many engines can be obtained separately, such as
-AltaVista, Ebay, HotBot, and Yahoo.  This distribution includes two
-applications built from this library: AutoSearch, a program to
-automate tracking of search results over time; and WebSearch, a small
-demonstration program to drive the library.
+search engines on the world-wide web (and similar HTTP-based search
+engines).  Backends for many specific engines can be obtained
+separately, such as AltaVista, Ebay, HotBot, and Yahoo.  This
+distribution includes two applications built from this library:
+AutoSearch, a program to automate tracking of search results over
+time; and WebSearch, a small demonstration program to drive the
+library.
 
 By default, WWW::Search does NOT try to emulate the default search
 that you would get with each search engine's GUI.  I.e. WWW::Search
@@ -186,25 +189,25 @@ DEMONSTRATION
 
 After installing the distribution, connect to the internet and type:
 
-	WebSearch '"Your Name Here"'
+	# WebSearch '"Your Name Here"'
 
 or, if you are on Win32:
 
-        WebSearch "\"Your Name Here\""
+        C:\> WebSearch "\"Your Name Here\""
 
 to see where your name is mentioned on the web.  Then try:
 
-	AutoSearch -n me_on_the_web -s '"Your Name Here"' me
-        netscape me/index.html &
+	# AutoSearch -n me_on_the_web -s '"Your Name Here"' me
+        # netscape me/index.html &
 
 or, if you are on Win32:
 
-	AutoSearch -n me_on_the_web -s "\"Your Name Here\"" me
-        netscape me\index.html
+	C:\> AutoSearch -n me_on_the_web -s "\"Your Name Here\"" me
+        C:\> netscape me\index.html
 
 If you are on UNIX you can add
 
-	0 3 * * 1 AutoSearch /path/to/me
+	0 3 * * 1 /usr/local/bin/AutoSearch /path/to/me
 
 to your crontab to update this search every week at 3:00 Monday
 morning.  If you install WWW::Search::Ebay, and add the --mail option

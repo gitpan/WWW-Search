@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 2.51 2003/12/28 04:16:55 Daddy Exp $
+# $Id: Search.pm,v 2.524 2004/05/02 03:16:29 Daddy Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -99,7 +99,7 @@ use vars qw( @ISA @EXPORT @EXPORT_OK $VERSION $MAINTAINER );
 @EXPORT_OK = qw( escape_query unescape_query generic_option strip_tags );
 @ISA = qw(Exporter LWP::MemberMixin);
 $MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
-$VERSION = sprintf("%d.%02d", q$Revision: 2.51 $ =~ /(\d+)\.(\d+)/o);
+$VERSION = do { my @r = (q$Revision: 2.524 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 =head2 new
 
@@ -214,7 +214,7 @@ We can not tell if they are up-to-date or working, though.
 use constant DEBUG_COOKIES => 0;
 use constant DEBUG_FIND => 0;
 
-sub wanted
+sub _wanted
   {
   # Code adapted from the following netnews post (Thank you, Tom!):
   # From: Tom Christiansen (tchrist@mox.perl.com)
@@ -223,7 +223,7 @@ sub wanted
   # Date: 1999/02/15
   my $startdir = shift;
   my $sFullPath = $File::Find::name;
-  # print STDERR " +   wanted($startdir, $sFullPath)\n" if DEBUG_FIND;
+  # print STDERR " +   _wanted($startdir, $sFullPath)\n" if DEBUG_FIND;
   if (-d && /^[a-z]/)
     {
     # this is so we don't go down site_perl etc too early
@@ -247,7 +247,7 @@ sub wanted
   $sFullPath =~ s{/}{::}g;
   $sFullPath =~ s!\A::!!;
   return $sFullPath;
-  } # wanted
+  } # _wanted
 
 sub installed_engines
   {
@@ -256,7 +256,7 @@ sub installed_engines
   foreach my $sDir (@INC)
     {
     File::Find::find(sub {
-                       $hsi{&wanted($sDir) || 'JUNKJUNK'}++;
+                       $hsi{&_wanted($sDir) || 'JUNKJUNK'}++;
                        }, $sDir);
     } # foreach
   delete $hsi{'JUNKJUNK'};
@@ -612,27 +612,24 @@ sub timeout { return shift->_elem('timeout', @_); }
 
 =head2 approximate_result_count
 
-Some backends indicate how many hits they have found.
+Some backends indicate how many results they have found.
 Typically this is an approximate value.
 
 =cut
-
-sub approximate_hit_count
-  {
-  shift->approximate_result_count(@_);
-  } # approximate_hit_count
 
 sub approximate_result_count
   {
   my $self = shift;
   # Optional arg1 = new value for this option.
   my $iArg = shift;
+  $iArg = undef if (defined($iArg) && ($iArg eq ''));
   # print STDERR " + a_r_c(state=$self->{state},iArg=$iArg)\n";
   if (defined($iArg) && (0 <= $iArg))
     {
     # Caller is trying to SET the value:
     # print STDERR " + a_r_cSET(state=$self->{state},iArg=$iArg)\n";
     $self->{'approx_count'} =  $iArg;
+    return $iArg;
     } # if
   if (
       # This prevents infinite recursion, for when retrieve_some()
@@ -646,26 +643,21 @@ sub approximate_result_count
     # Prime the pump, if necessary:
     $self->retrieve_some();
     }
-  if (
-      # Haven't done anything yet:
-      ($self->{'state'} == SEARCH_BEFORE)
-      ||
-      (
-       # We've started retrieving...
-       ($self->{'state'} == SEARCH_UNDERWAY)
-       &&
-       # ...and caller is getting, not setting,
-       # this value:
-       ($iArg < 0)
-      )
-     )
-    {
-    # Old code.
-    }
-  $iArg = $self->{'approx_count'};
+  $iArg = $self->{'approx_count'} || 0;
   # print STDERR " + a_r_cGET(state=$self->{state},answer=$iArg)\n";
   return $iArg;
   } # approximate_result_count
+
+=head2 approximate_hit_count
+
+This is an alias for approximate_result_count().
+
+=cut
+
+sub approximate_hit_count
+  {
+  shift->approximate_result_count(@_);
+  } # approximate_hit_count
 
 
 =head2 results
@@ -961,7 +953,8 @@ NOTE that this is not a method, it is a plain function.
 
 sub strip_tags
   {
-  # This is not a method; there is no $self
+  # Prevent undef warnings if we get passed any undefined values:
+  @_ = map { $_ ||= '' } @_;
   my $s = join('', @_);
   # Special case: change BR to space:
   $s =~ s!<BR>! !gi;
@@ -1185,7 +1178,7 @@ sub http_request
     } # if
   if ($self->{search_from_file})
     {
-    $response = $self->http_request_from_file($url);
+    $response = $self->_http_request_from_file($url);
     }
   else
     {
@@ -1222,13 +1215,15 @@ sub http_request
       $request->referer($s);
       } # if referer
     print STDERR " +   original HTTP::Request is:\n", $request->as_string if (3 <= $self->{_debug});
-
     my $ua = $self->user_agent();
+
+  TRY_GET:
     while (1)
       {
       $response = $ua->request($request);
-      print STDERR " +   got HTTP::Response:\n", $response->headers->as_string if 3 <= $self->{_debug};
-
+      printf(STDERR " +   got HTTP::Response (code=%d):\n%s",
+             $response->code,
+             $response->headers->as_string) if (3 <= $self->{_debug});
       if (ref($self->{'_cookie_jar'}))
         {
         $self->{'_cookie_jar'}->extract_cookies($response);
@@ -1237,23 +1232,32 @@ sub http_request
         print STDERR $self->{'_cookie_jar'}->as_string if DEBUG_COOKIES;
         # print STDERR Dumper($self->{'_cookie_jar'}) if DEBUG_COOKIES;
         } # if
-
       if ($self->{'search_to_file'} && $response->is_success)
         {
-        $self->http_request_to_file($url, $response);
+        $self->_http_request_to_file($url, $response);
         } # if
-      last if ($response->is_success);
-      last if ($response->is_error);
-      if ($response->is_redirect || ($response->message =~ m!Object moved!i))
+      last TRY_GET if ($response->is_success);
+      last TRY_GET if ($response->is_error);
+      last TRY_GET if ($response->headers->header('Client-Warning') =~ m!redirect loop detected!i);
+      if ($response->is_redirect
+          ||
+          # Some engines spoof us with a false 302 code, so look at
+          # the message rather than the code:
+          ($response->message =~ m!Object moved!i)
+         )
         {
-        # Some engines spoof us with a false 302 code.
+        my $sURL = $response->request->uri->as_string;
+        my $sURLredir = $response->headers->header('Location');
+        # Low-level loop detection:
+        last TRY_GET if ($sURLredir eq $sURL);
+        print STDERR " +   'Object moved' from $sURL to $sURLredir\n" if (2 <= $self->{_debug});
+        # Follow the redirect:
         $request = new HTTP::Request('GET',
-                                     URI->new_abs($response->headers->header('Location'),
-                                                  $response->request->uri),
+                                     URI->new_abs($sURLredir, $sURL),
                                     );
-        $request->referer($response->request->uri->as_string);
+        $request->referer($sURL);
         $self->{'_cookie_jar'}->add_cookie_header($request) if ref($self->{'_cookie_jar'});
-        print STDERR " +   Object moved, new HTTP::Request is:\n", $request->as_string if 3 <= $self->{_debug};
+        print STDERR " +   'Object moved', new HTTP::Request is:\n", $request->as_string if (3 <= $self->{_debug});
         # Go back and try again
         } # if
       } # while infinite
@@ -1261,7 +1265,7 @@ sub http_request
   return $response;
   } # http_request
 
-sub http_request_get_filename {
+sub _http_request_get_filename {
     my $self = shift;
     my $fn;
     # filename?
@@ -1273,13 +1277,13 @@ sub http_request_get_filename {
     $fn = $self->{search_filename};
     die "$0: bogus filename.\n" if (!defined($fn));
     return $fn;
-}
+} # _http_request_get_filename
 
-sub http_request_from_file {
+sub _http_request_from_file {
     my $self = shift;
     my ($url) = @_;
 
-    my $fn = $self->http_request_get_filename();
+    my $fn = $self->_http_request_get_filename();
 
     # read index?
     if (!defined($self->{search_from_file_hash})) {
@@ -1314,16 +1318,16 @@ sub http_request_from_file {
 	my $r = new HTTP::Response(RC_NOT_FOUND);
 	return $r;
     };
-}
+} # _http_request_from_file
 
-sub http_request_to_file {
+sub _http_request_to_file {
     my $self = shift;
     # The LAST arg is a LWP::Response object:
     my $response = pop;
     # The only other arg we care about is the FIRST arg, a url:
     my ($url, ) = @_;
 
-    my $fn = $self->http_request_get_filename();
+    my $fn = $self->_http_request_get_filename();
 
     unlink($fn)
         if ($self->{search_to_file_index} == 0);
@@ -1334,7 +1338,7 @@ sub http_request_to_file {
     open (FILE, ">$fn.$i") || die "$0: open $fn.$i\n";
     print FILE $response->content();
     close FILE;
-}
+} # _http_request_to_file
 
 =head2 next_url (PRIVATE)
 
@@ -1544,6 +1548,23 @@ sub HTML::TreeBuilder::www_search_reset
   } # HTML::TreeBuilder::www_search_reset
 
 
+=head2 need_to_delay
+
+A backend should override this method in order to dictate whether
+user_agent_delay() needs to be called before the next HTTP request is
+sent.  Return any perlish true or zero value.
+
+=cut
+
+sub need_to_delay
+  {
+  my $self = shift;
+  # This is a NOP stub.  Unless the subclass overrides this method,
+  # there is no reason to delay.
+  return 0;
+  } # need_to_delay
+
+
 =head2 native_retrieve_some (PRIVATE)
 
 Fetch the next page of results from the web engine, parse the results,
@@ -1554,9 +1575,9 @@ fetch, parsing, and preparing for the next page of results.  See the
 WWW::Search::AltaVista module for example usage of the
 native_retrieve_some method.
 
-An easier way to achieve this is to inherit native_retrieve_some from
-WWW::Search, and do only the parsing in the backend code.  Simply
-define a method parse_tree which takes one argument, an
+An easier way to achieve this in a backend is to inherit
+native_retrieve_some from WWW::Search, and do only the HTML parsing.
+Simply define a method parse_tree which takes one argument, an
 HTML::TreeBuilder object, and returns an integer, the number of
 results found on this page.  See the WWW::Search::Yahoo module for
 example usage of the parse_tree method.
@@ -1606,10 +1627,15 @@ sub native_retrieve_some
   {
   my ($self) = @_;
   # printf STDERR (" +   %s::native_retrieve_some()\n", __PACKAGE__) if $self->{_debug};
-  # fast exit if already done
+  # Fast exit if already done:
   return undef if (!defined($self->{_next_url}));
-  # If this is not the first page of results, sleep so as to not overload the server:
-  $self->user_agent_delay if 1 < $self->{'_next_to_retrieve'};
+  # If this is not the first page of results, sleep so as to not
+  # overload the server:
+  $self->user_agent_delay if (
+                              (1 < $self->{'_next_to_retrieve'})
+                              ||
+                              $self->need_to_delay
+                             );
   # Get one page of results:
   print STDERR " +   submitting URL (", $self->{'_next_url'}, ")\n" if $self->{_debug};
   my $response = $self->http_request($self->http_method, $self->{'_next_url'});

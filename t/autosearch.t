@@ -17,7 +17,8 @@ SKIP:
   skip 'Can not check "executable" file flag on Win32', 1 if $iWIN32;
   ok(-x $sProg, "$sProg is not executable");
   } # end of SKIP block
-
+print STDERR "\r# ";
+diag(`$sProg -V`);
 exit 0;
 
 __END__

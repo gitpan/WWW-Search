@@ -4,7 +4,7 @@ exit 0;
 # AutoSearch-code.pl
 # Copyright (c) 1996-1997 University of Southern California.
 # All rights reserved.
-# $Id: AutoSearch-code.pl,v 1.12 2003-11-27 23:58:44-05 kingpin Exp kingpin $
+# $Id: AutoSearch-code.pl,v 2.126 2004/03/05 12:45:55 Daddy Exp $
 #
 # Complete copyright notice follows below.
 
@@ -14,480 +14,65 @@ AutoSearch -- a web-search tracking application
 
 =head1 SYNOPSIS
 
-B<AutoSearch -n "My Query On Engine" -s "unescaped query" --engine SearchEngine [--listnewurls] [--option QueryOptions]... [--filter FilterRegExp] [--verbose] [--stats] qid>
+AutoSearch [--stats] [--verbose] -n "Query Name" -s "query string" --engine engine [--mail you@where.com] [--options "opt=val"]... [--filter "filter"] [--host host] [--port port] [--userid bbunny --password c4rr0t5] [--ignore_channels KABC,KCBS,KNBC] qid
 
-B<AutoSearch qid>
+AutoSearch --help
 
-=head1 DESCRIPTION
-
-B<AutoSearch> performs a web-based search and puts the results
-set in F<qid/index.html>.
-Subsequent searches (i.e., the second form above)
-B<AutoSearch> determine what changes (if any) occured to the
-results sent since the last run.
-These incremental changes are recorded in F<qid/YYYYMMDD.html>.
-
-B<AutoSearch> is amenable to be run as a B<cron> job because all
-the input parameters are saved in the web pages.  B<AutoSearch>
-can act as a automated query agent for a particular search.  The output
-files are designed to be a set of web pages to easily display the
-results set with a web browser.
-
-Example:
-
-    AutoSearch -n 'LSAM Replication'
-	-s '"lsam replication"'
-	-e AltaVista
-	replication_query
-
-This query (which should be all on one line)
-creates a directory replication_query
-and fills it with the fascinating output of the AltaVista query
-on C<"lsam replication">,
-with pages titled ``LSAM Replication''.
-(Note the quoting:  the single quotes in
-C<'"lsam replication"'> are for the shell,
-the double quotes are for AltaVista
-to search for the phrase rather than the separate words.)
-
-A more complicated example:
-
-    AutoSearch -n 'External Links to LSAM'
-	-s '(link:www.isi.edu/lsam or link:www.isi.edu/~lsam) -url:isi.edu'
-	-e AltaVista::AdvancedWeb
-	-o coolness=hot
-
-This query does an advanced AltaVista search
-and specifies the (hypothetical) ``coolness'' option
-to the search engine.
-
-=head1 OPTIONS
-
-=over 8
-
-=item qid
-
-The I<query identifer> specifies the directory in which all the
-files that relate to this query and search results will live.
-
-=item C<-stats>
-
-Show search statistics: the query string,
-number of hits, number of filtered hits,
-filter string, number of suspended (deleted) hits,
-previous set size, current set size.
-
-=item C<-v>
-
-Verbose: output additional messages and warnings.
-
-=item C<-n>
-
-Specify the query name.  The query name is used to construct the web
-page.  The query name is used as a heading for the web pages and
-should be a 'nice' looking version of the query string.
-
-=item C<-s>
-
-Specify the query string.  The query string is the character string
-which will be submitted to the search engine.  You may include special
-characters to group or to qualify the search.
-
-=item C<-e> C<--engine>
-
-Specify the search engine.  The query string will be submitted 
-to the user specified search engine.
-
-In many cases there are specialized versions of search engines.
-For example, B<AltaVista::AdvancedWeb> and B<AltaVista::News>
-allow more powerful and Usenet searches.
-See L<AltaVista> or the man page for your search engine
-for details about specialized variations.
-
-=item C<--listnewurls>
-
-Print all new URLs to STDOUT, one per line.
-
-=item C<-o> C<--options>
-
-Specify the query options.  The query options will be submitted 
-to the user search engine with the query string.  This feature
-permits modification of the query string for a specific search
-engine or option.  More than one query option may be specified.
-
-Example:
-C<-o what=news>
-causes AltaVista to search Usenet.
-Although this works, the preferred mechanism
-in this case would be C<-e AltaVista::News> or C<-e AltaVista::AdvancedNews>.
-Options are intended for internal or expert use.
-
-
-=item C<-f> C<--filter>
-
-Specify the URL filter regular expression.
-This option specifies a regular expression which will
-be compared against the URLs of any results;
-if they match the case-insensitive regular expression, they will be removed
-from the hit set.
-If the web pages created by AutoSearch are
-publically available (and indexed),
-they should be filtered out with this option.
-
-Example:
-C<-f '.*\.isi\.edu'> avoids all of ISI's web pages.
-
-=item C<--cleanup i>
-
-Delete all traces of query results from more than i days ago.  If
---cleanup is given, all other options other than the query_id will be
-ignored.
-
-=item C<--cmdline>
-
-Reconstruct the complete command line (AutoSearch and all its
-arguments) that was used to create the query results.  Command line
-will be shown on STDERR.  If --cmdline is given, all other options
-other than the query_id will be ignored.
-
-=back
-
-
-=head1 DESCRIPTION
-
-B<AutoSearch> submits a query to a search engine, produces HTML
-pages that reflect the set of 'hits' (filtered search results)
-returned by the search engine, and tracks these results over time. 
-The URL and title are displayed in the F<qid/index.html>, the URL, 
-the title, and description are displayed in the 'weekly' files.
-
-To organize these results, each search result is placed in a query
-information directory (qid).  The directory becomes the search
-results 'handle', an easy way to track a set of results.
-Thus a qid of C</usr/local/htdocs/lsam/autosearch/load_balancing>
-might locate the results on your web server at
-C<http://www.isi.edu/lsam/autosearch/load_balancing>.
-
-Inside the qid directory you will find files relating to this query.
-The primary file is F<index.html>, which reflects the latest
-search results.  Every not-filtered hit for every search is stored
-in F<index.html>.
-When a hit is no longer found by the search engine
-it a removed from F<index.html>.
-As new results for a search are returned from the search engine they are placed
-in F<index.html>.
-
-At the bottom of F<index.html>, there is a heading "Weekly Search Results",
-which is updated each time the search is submitted
-(see L<AUTOMATED SEARCHING>).
-The list of search runs is stored in reverse chronological order.
-Runs which provide no new information are identified with
-
-	No Unique Results found for search on <date>
-
-Runs which contain changes are identified by
-
-	Web search results for search on <date>
-
-which will be linked a page detailing the changes from that run.
-
-Detailed search results are noted in weekly files.  These files are
-named F<YYYYMMDD.html> and are stored in the qid directory.  The
-weekly files include THE URL, title, and a the description (if
-available).  The title is a link to the original web page.
-
-
-=head1 AUTOMATED SEARCHING
-
-On UNIX-like systems,
-cron(1) may be used to establish periodic searches and the web pages
-will be maintained by B<AutoSearch>.  To establish the first search,
-use the first example under SYNOPSIS.  You must specify the qid, query
-name and query string.  If any of the items are missing, you will be
-interactively prompted for the missing item(s).
-
-Once the first search is complete you can re-run the search with the
-second form under SYNOPSIS.
-A cron entry like:
-
-    0 3 * * 1 /nfs/u1/wls/AutoSearch.pl /www/div7/lsam/autosearch/caching
-
-might be used to run the search each Monday at 3:00 AM.  The
-query name and query string may be repeated; but they will not be
-used.  This means that with a cron line like:
-
-    0 3 * * 1 /nfs/u1/wls/AutoSearch.pl /www/div7/lsam/autosearch/caching -n caching -s caching
-
-a whole new search series can be originated by
-
-    rm -r /www/div7/lsam/autosearch/caching
-
-However, the only reason to start a new search series would be to 
-throw away the old weekly files.
-
-We don't recommend running searches more than once per day,
-but if so the per-run files will be updated in-place.
-Any changes are added to the page with a comment that
-"Recently Added:"; and deletions are indicated with "Recently Suspended:."
-
-
-=head1 CHANGING THE LOOK OF THE PAGES
-
-The basic format of these two pages is simple and customizable.  One
-requirement is that the basic structure remain unchanged.  HTML
-comments are used to identify sections of the document.  Almost
-everything can be changed except for the strings which identify the
-section starts and ends.
-
-Noteworthy tags and their meaning:
-
-=over 16
-
-=item <!--Top-->.*<!--/Top-->
-
-The text contained within this tag is placed at the top of the output
-page.  If the text contains I<AutoSearch WEB Searching>, then the
-query name will replace it.  If the text does not contain this
-magic string and it is the first ever search, the user will be asked for
-a query name.
-
-=item <!--Query{.*}/Query-->
-
-The text contained between the braces is the query string.  This is how
-B<AutoSearch> maintains the query string.  You may edit this
-string to change the query string; but only in F<qid/index.html>.
-The text I<ask user> is special and will force B<AutoSearch>
-to request the search string from the user.
-
-=item <!--SearchEngine{.*}/SearchEngine-->
-
-The text contained between the braces is the search engine.  Other
-engines supported are HotBot and Lycos.  You may edit this string to
-change the engine used; but only in F<qid/index.html>.  The text
-I<ask user> is special and will force B<AutoSearch> to to request the
-search string from the user.
-
-=item <!--QueryOptions{.*}/QueryOptions-->
-
-The text contained between the braces specifies a query options.
-Multiple occurrencs of this command are allowed to specify multiple
-options.
-
-=item <!--URLFilter{.*}/URLFilter-->
-
-The text contained between the braces is the URL filter.  This is how
-B<AutoSearch> maintains the filter.  Again you may edit this
-string to change the query string; but only in F<qid/index.html>.
-The text I<ask user> is special and will force B<AutoSearch> to
-ask the user (STDIN) for the query string.  When setting up the first
-search, you must edit F<first_index.html>, not F<qid/index.html>.
-The URL filter is a standard perl5 regular expression.  URLs which
-do not match will be kept.
-
-=item <!--Bottom-->.*<!--/Bottom-->
-
-The text contained within this tag is placed at the bottom of the output
-page.  This is a good place 
-to put navigation, page owner information, etc.
-
-=back
-
-The remainder of the tags fall into a triplet of I<~Heading>,
-I<~Template>, and I<~>, where ~ is Summary, Weekly, Appended,
-and Suspended. The sub-sections appear in the order given. 
-To produce a section B<AutoSearch> outputs the heading, the template,
-the section, n copies of the formatted data, and an /section.
-The tags and their function are:
-
-=over 16
-
-=item ~Heading
-
-The heading tag identifies the heading for a section of the output
-file.  The SummaryHeading is for the summary portion, etc.  The
-section may be empty (e.g., Suspended) and thus no heading is output. 
-
-=item ~Template
-
-The template tag identifies how each item is to be formatted.  Simple
-text replacement is used to change the template into the actual
-output text.  The text to be replaced is noted in ALLCAPS.
-
-=item ~
-
-This tag is used to locate the section (Summary, Weekly, etc.).  This
-section represents the actual n-items of data.
-
-=back
-
-You can edit these values in the F<qid/index.html> page of an existing
-search.  The file F<first_index.html> (in the directory above F<qid>)
-will be used as a default template for new queries.
-
-Examples of these files can be seen in the pages under
-C<http://www.isi.edu/lsam/autosearch/>,
-or in the output generated by a new AutoSearch.
-
-
-=head1 FILES
-
-=over 20
-
-=item F<first_index.html>
-
-optional file to determine the default format of the F<index.html> file
-of a new query.
-
-=item F<first_date.html>
-
-optional file to determine the default format of the F<YYYYMMDD.html> file
-for a new query.
-
-=item F<qid/index.html>
-
-latest search results and reverse chronological list of periodic searches.
-
-=item F<qid/date.html>
-
-file used as a template for the F<YYYYMMDD.html> files.
-
-=item F<qid/YYYYMMDD.html>
-
-summary of changes for a particular date (AKA 'Weekly' file).
-
-=back
-
-Optional files F<first_index.html> and F<first_date.html> are used for the
-initial search as a template for F<qid/index.html> and F<date.html>,
-respectively.  If either of these files does not exist; a default-default 
-template is stored within the F<AutoSearch> source.  The intention
-of these two files is to permit a user to establish a framework for
-a group of search sets which have a common format.  By  leaving the 
-default query name and query string alone, they will be overridden by
-command line inputs.
-
-
-=head1 SEE ALSO
-
-For the library, see L<WWW::Search>,
-for the perl regular expressions, see L<perlre>.
-
-
-=head1 AUTHORS
-
-Wm. L. Scheding
-
-B<AutoSearch> is  a re-implementation of an earlier version written by Kedar Jog.
-
-
-=head1 COPYRIGHT
-
-Copyright (C) 1996-1997 University of Southern California.
-All rights reserved.
-
-Redistribution and use in source and binary forms are permitted
-provided that the above copyright notice and this paragraph are
-duplicated in all such forms and that any documentation, advertising
-materials, and other materials related to such distribution and use
-acknowledge that the software was developed by the University of
-Southern California, Information Sciences Institute.  The name of the
-University may not be used to endorse or promote products derived from
-this software without specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
-WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
-MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-
-
-=head1 DESIRED FEATURES
-
-These are good ideas that people have suggested.
-
-=over 4
-
-=item URL validation.
-
-Validate the status of each URL (with HTTP HEAD requests)
-and indicate this status in the output.
-
-=item Multi-search.
-
-It should be possible to merge the results of searches from two
-search-engines.
-If this merger were done as a new search engine,
-this operation would be transparent to AutoSearch.
-
-=back
-
-
-=head1 BUGS
-
-None known at this time; please inform the maintainer
-mthurn@cpan.org if any crop up.
+AutoSearch --man
 
 =cut
-
-BEGIN
-  {
-  # next line is a release hack
-  # push (@INC, "..");
-  # unshift (@INC, "/nfs/u1/wls/cvs/lsam/rendezvous/lib");
-  }
 
 use Data::Dumper;  # for debugging
 use Date::Manip;
 use File::Copy;
 use Getopt::Long qw( :config no_ignore_case );
 # use LWP::Debug qw(+ ); # -conns);
+use Pod::Usage;
 use POSIX qw(strftime);
 use WWW::Search;
 
 use strict;
 
 use vars qw( $VERSION );
-$VERSION = '2.11';
+$VERSION = do { my @r = (q$Revision: 2.126 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 sub print_version
   {
-  print STDERR "$0 version $VERSION;  WWW::Search version $WWW::Search::VERSION\n";
+  print STDERR "$0 version $VERSION; WWW::Search version $WWW::Search::VERSION\n";
   } # print_version
-
-sub usage {
-  print STDERR <<END;
-usage: $0 [--stats] [--verbose] -n "Query Name" -s "query string" --engine engine [--mail you\@where.com] [--options "query options"]... [--filter "filter"] [--host host] [--port port] [--userid bbunny --password c4rr0t5] [--ignore_channels KABC,KCBS,KNBC] query_id
-Update or create a web search-engine query.
-Unambiguous argument names can be abbreviated to one letter (e.g. -e engine -f "filter")
-END
-  exit 1;
-}
 
 my (%opts,@query_list,$query_name,$query_string,$search_engine,$query_options,$url_filter);
 # Default options:
 $opts{'m'} = '';
 $opts{'cleanup'} = 0;
 $opts{'cmdline'} = 0;
+$opts{'emailfrom'} = '';
 $opts{'v'} = 0;
 $opts{'help'} = 0;
+$opts{'man'} = 0;
 $opts{'stats'} = 0;
 $opts{'debug'} = 0;
 $opts{'listnewurls'} = 0;
 $opts{'ignore_channels'} = ();
-&GetOptions(\%opts, qw(n|qn|queryname=s s|qs|querystring=s e|engine=s m|mail=s h|host=s p|port=s o|options=s@ f|uf|urlfilter=s listnewurls stats userid=s password=s ignore_channels=s@ cleanup=i cmdline v|verbose help V|VERSION debug),
+&GetOptions(\%opts, qw(n|qn|queryname=s s|qs|querystring=s e|engine=s m|mail=s emailfrom=s h|host=s p|port=s o|options=s@ f|uf|urlfilter=s listnewurls stats userid=s password=s ignore_channels=s@ cleanup=i cmdline v|verbose help man V|VERSION debug),
             'http_proxy=s',
             'http_proxy_user=s',
             'http_proxy_pwd=s',
-           );
+           ) or pod2usage(2);
 if ($opts{'V'})
   {
   &print_version();
   exit 0;
   } # if
-if ($opts{'help'})
-  {
-  &usage;
-  exit 0;
-  } # if
-&usage if ($#ARGV == -1); # we MUST have one left, the qid
+&pod2usage(1) if ($opts{'help'});
+&pod2usage(
+           -verbose => 2,
+          ) if ($opts{'man'});
+&pod2usage(
+           -verbose => 0,
+           -exitval => 1,
+           -message => 'missing argument "qid"',
+          ) if ($#ARGV == -1);
 
 my $s_dbg = $opts{'stats'};
 my $v_dbg = $opts{'v'};
@@ -500,20 +85,24 @@ if ($v_dbg)
   } # if
 if ($opts{'m'} ne '')
   {
-  print STDERR "will send email summary to: ", $opts{'m'}, "\n" if $v_dbg;
   eval 'use MIME::Lite';
   if ($@ ne '')
     {
     print STDERR " --- can not load MIME::Lite module: ==$@==\n";
+    $opts{'m'} = '';
     } # if
+  else
+    {
+    print STDERR "will send email summary to: ", $opts{'m'}, "\n" if $v_dbg;
+    }
   } # if
 
 # if we want a list of args:
 #@query_list = split(/[,\s]+/, $opts{'n'},2) if defined($opts{'n'});
 
-$query_name =    $opts{'n'} if defined($opts{'n'});
-$query_string =  $opts{'s'} if defined($opts{'s'});
-$search_engine = $opts{'e'} if defined($opts{'e'});
+$query_name =    $opts{'n'} || '';
+$query_string =  $opts{'s'} || '';
+$search_engine = $opts{'e'} || '';
 if (defined($opts{'o'}))
   {
   $query_options = {};
@@ -533,9 +122,9 @@ my($local_filter) = 0; # shall we exclude our own old pages? (1=y,0=n)
 #print STDERR "f = \"$opts{'f'}\"\n" if defined($opts{'f'});
 
 ##print STDERR "query_list   = \"$query_list[0]\" \"$query_list[1]\"\n";
-#print STDERR "query_name    = \"$query_name\"\n"    if defined($opts{'n'});
-#print STDERR "query_string  = \"$query_string\"\n"  if defined($opts{'s'});
-#print STDERR "search_engine = \"$search_engine\"\n" if defined($opts{'e'});
+#print STDERR "query_name    = \"$query_name\"\n";
+#print STDERR "query_string  = \"$query_string\"\n";
+#print STDERR "search_engine = \"$search_engine\"\n";
 #print STDERR "url_filter    = \"$url_filter\"\n"    if defined($opts{'f'});
 
 &main(join(" ", @ARGV));
@@ -785,43 +374,66 @@ sub main
   my ($QueryName, $QueryString, $SearchEngine, $URLFilter);
   $QueryName = $query_name;
 # did we get a Query Name/String/Engine/Options/Filter from existing files?
-  if ($SummaryTop =~ m/AutoSearch WEB Searching/i) { # no
-    if (! defined($query_name)) { # from command line
+  if ($SummaryTop =~ m/AutoSearch WEB Searching/i)
+    {
+    if ($query_name eq '')
+      {
+      # We did not get --queryname from command line
       $QueryName = &read_query("Please enter a Query Name:");
-    }
+      } # if
     $SummaryTop =~ s/AutoSearch WEB Searching/$QueryName/i;
-  }
+    } # if
   print STDERR "Query Name is \"$QueryName\"\n" if $v_dbg;
 
   if ($SummaryQuery =~ m/ask user/i)
-    { # no
-    if (defined($query_string)) { # from command line
+    {
+    if ($query_string ne '')
+      {
+      # We did get --querystring from command line
       $QueryString = $query_string;
-      } else { # no, ask 'em
-        $QueryString = &read_query("Please enter a Query String:");
-        }
+      }
+    else
+      {
+      # We did NOT get --querystring, ask the user:
+      $QueryString = &read_query("Please enter a Query String:");
+      }
     $SummaryQuery =~ s/ask user/$QueryString/i;
     print STDERR "Query String is \"$QueryString\"\n" if $v_dbg;
-    }
+    } # if
   my $sTitle = "<Title> Search results for $SummaryQuery as of $now </Title>\n";
 
-# this is not a required field.
-# this MUST BE ask user to get AutoSearch to ask.
-  if ($SummarySearchEngine =~ m/ask user/i) { # no, shall we ask the user
-    if (defined($search_engine)) { # from command line ?
+  # This is not a required field.
+  # This MUST BE 'ask user' to get AutoSearch to ask.
+  if ($SummarySearchEngine =~ m/ask user/i)
+    {
+    if ($search_engine ne '')
+      {
+      # We DID get --engine on command line:
       $SearchEngine = $search_engine;
-    } else { # no, ask 'em
+      }
+    else
+      {
+      # We did NOT get --engine, ask user:
       $SearchEngine = &read_query("Please enter a Search Engine:");
-    }
+      }
     $SummarySearchEngine =~ s/ask user/$SearchEngine/i;
-  } else { # don't ask; try command line
-    if (defined($search_engine)) { # from command line ?
-      $SearchEngine = $search_engine; # yes
-    } else { # if no command line, no Search Engine!!
-      $SearchEngine = $SummarySearchEngine; # use whatever was in the first_index.html file
     }
+  else
+    {
+    # don't ask; try command line:
+    if ($search_engine ne '')
+      {
+      # We DID get --engine on command line:
+      $SearchEngine = $search_engine;
+      }
+    else
+      {
+      # No --engine on command line, no Search Engine in index file.
+      # Use whatever was in the first_index.html file
+      $SearchEngine = $SummarySearchEngine;
+      }
     $SummarySearchEngine = $SearchEngine;
-  }
+    }
   print STDERR "Search Engine is \"$SearchEngine\"\n" if $v_dbg;
 
 # This is not a required field.
@@ -871,6 +483,12 @@ sub main
     }
     $SummaryURLFilter = $URLFilter;
   }
+  if ($s_dbg)
+    {
+    print STDERR qq{Query is : "$SummaryQuery"};
+    print STDERR qq{ with "@SummaryQueryOptions"} if ($#SummaryQueryOptions);
+    print STDERR "\n";
+    } # if
   print STDERR "URL Filter is \"$URLFilter\"\n" if $v_dbg;
 #
 # now locate the weekly format file.
@@ -954,7 +572,7 @@ sub main
   # how many hits?
   # convert latest search results to a list of urls (descriptions & titles)
   # filtered by $SummaryURLFilter called new_weekly_*
-  NEXT_URL:
+ NEXT_URL:
   while ($next_result = $search->next_result()) { # page-by-page
     $url = $next_result->url;
     $hits++; # how many were returned?
@@ -989,7 +607,7 @@ sub main
     push(@new_weekly_url,$url); # the newest set of hits (added)
     push(@new_weekly_description,$description);
     push(@new_weekly_title,$title);
-  }
+  } # while NEXT_URL
   # report errors
   if ($hits == 0) {
     my($response) = $search->response();
@@ -998,7 +616,7 @@ sub main
     } else {
       print STDERR "Error: " . http_error_as_nice_string($response) . "\n";
     }
-  }
+  } # if no hits
 
   # only save the ones that don't show up in the current query list.
   # those we shall call suspended_*
@@ -1021,9 +639,6 @@ sub main
     push(@suspended_title,$title);
   }
   # stats?? (to see 'em use -stats)
-  print STDERR "Query is : \"$SummaryQuery\" on \"$SummarySearchEngine\"" if ($s_dbg);
-  print STDERR " with \"@SummaryQueryOptions\"" if ($s_dbg && $#SummaryQueryOptions);
-  print STDERR "\n" if ($s_dbg);
   print STDERR "old summary count: ",$#old_summary_url + 1,"\n" if ($s_dbg);
   print STDERR "new raw hits     : ",$hits,"\n" if ($s_dbg);
   print STDERR "urls filtered    : ",$url_filter_count,", filter \"",$URLFilter,"\"\n" if ($s_dbg);
@@ -1259,7 +874,7 @@ sub main
   print HTML "<!--Bottom-->\n$SummaryBottom<!--/Bottom-->\n";
   close (HTML);
 
-  if ($opts{'m'} && ($sEmail ne ''))
+  if (($opts{'m'} ne '') && ($sEmail ne ''))
     {
     $sEmail = <<"EMAILEND";
 <HTML>
@@ -1279,7 +894,18 @@ EMAILEND
                                Type => 'text/html',
                                Data => $sEmail,
                           );
-    my $res = $oMsg->send;
+    if (ref($oMsg))
+      {
+      $oMsg->add(From => $opts{'emailfrom'}) if ($opts{emailfrom} ne '');
+      if (! $oMsg->send)
+        {
+        print STDERR " --- could not send email\n";
+        } # if
+      }
+    else
+      {
+      print STDERR " --- could not create MIME::Lite object\n";
+      }
     } # if
   } # main
 
@@ -1895,3 +1521,411 @@ sub add_to_hash
     }
   } # add_to_hash
 
+=head1 DESCRIPTION
+
+B<AutoSearch> performs a web-based search and puts the results
+set in F<qid/index.html>.
+Subsequent searches (i.e., the second form above)
+B<AutoSearch> determine what changes (if any) occured to the
+results sent since the last run.
+These incremental changes are recorded in F<qid/YYYYMMDD.html>.
+
+B<AutoSearch> is amenable to be run as a B<cron> job because all
+the input parameters are saved in the web pages.  B<AutoSearch>
+can act as a automated query agent for a particular search.  The output
+files are designed to be a set of web pages to easily display the
+results set with a web browser.
+
+Example:
+
+    AutoSearch -n 'LSAM Replication'
+	-s '"lsam replication"'
+	-e AltaVista
+	replication_query
+
+This query (which should be all on one line)
+creates a directory replication_query
+and fills it with the fascinating output of the AltaVista query
+on C<"lsam replication">,
+with pages titled ``LSAM Replication''.
+(Note the quoting:  the single quotes in
+C<'"lsam replication"'> are for the shell,
+the double quotes are for AltaVista
+to search for the phrase rather than the separate words.)
+
+A more complicated example:
+
+    AutoSearch -n 'External Links to LSAM'
+	-s '(link:www.isi.edu/lsam or link:www.isi.edu/~lsam) -url:isi.edu'
+	-e AltaVista::AdvancedWeb
+	-o coolness=hot
+
+This query does an advanced AltaVista search
+and specifies the (hypothetical) ``coolness'' option
+to the search engine.
+
+=head1 OPTIONS
+
+=over
+
+=item C<qid>
+
+The I<query identifer> specifies the directory in which all the
+files that relate to this query and search results will live.
+It can be an absolute path, or a relative path from cwd.
+If the directory does not exist, it will be created and a new search started.
+
+=item C<--stats>
+
+Show search statistics: the query string,
+number of hits, number of filtered hits,
+filter string, number of suspended (deleted) hits,
+previous set size, current set size, etc.
+
+=item C<-v> or C<--verbose>
+
+Verbose: output additional messages and warnings.
+
+=item C<-n> or C<--qn> or C<--queryname>
+
+Specify the query name.  The query name is used as a heading in the
+web pages, therefore it should be a 'nice' looking version of the
+query string.
+
+=item C<-s> or C<--qs> or C<--querystring>
+
+Specify the query string.  The query string is the character string
+which will be submitted to the search engine.  You may include special
+characters to group or to qualify the search.
+
+=item C<-e> or C<--engine>
+
+Specify the search engine.  The query string will be submitted 
+to the user specified search engine.
+
+In many cases there are specialized versions of search engines.
+For example, B<AltaVista::AdvancedWeb> and B<AltaVista::News>
+allow more powerful and Usenet searches.
+See L<AltaVista> or the man page for your search engine
+for details about specialized variations.
+
+=item C<--listnewurls>
+
+Print all new URLs to STDOUT, one per line.
+
+=item C<-o> or C<--options>
+
+Specify the query options.  The query options will be submitted 
+to the user search engine with the query string.  This feature
+permits modification of the query string for a specific search
+engine or option.  More than one query option may be specified.
+
+Example:
+C<-o what=news>
+causes AltaVista to search Usenet.
+Although this works, the preferred mechanism
+in this case would be C<-e AltaVista::News> or C<-e AltaVista::AdvancedNews>.
+Options are intended for internal or expert use.
+
+
+=item C<-f> or C<--uf> or C<--urlfilter>
+
+This option specifies a regular expression which will
+be compared against the URLs of any results;
+if they match the case-insensitive regular expression, they will be removed
+from the hit set.
+
+Example:
+C<-f '.*\.isi\.edu'> avoids all of ISI's web pages.
+
+=item C<--cleanup i>
+
+Delete all traces of query results from more than i days ago.  If
+--cleanup is given, all other options other than the qid will be
+ignored.
+
+=item C<--cmdline>
+
+Reconstruct the complete command line (AutoSearch and all its
+arguments) that was used to create the query results.  Command line
+will be shown on STDERR.  If --cmdline is given, all other options
+other than the qid will be ignored.
+
+=back
+
+
+=head1 DESCRIPTION
+
+B<AutoSearch> submits a query to a search engine, produces HTML
+pages that reflect the set of 'hits' (filtered search results)
+returned by the search engine, and tracks these results over time. 
+The URL and title are displayed in the F<qid/index.html>, the URL, 
+the title, and description are displayed in the 'weekly' files.
+
+To organize these results, each search result is placed in a query
+information directory (qid).  The directory becomes the search
+results 'handle', an easy way to track a set of results.
+Thus a qid of C</usr/local/htdocs/lsam/autosearch/load_balancing>
+might locate the results on your web server at
+C<http://www.isi.edu/lsam/autosearch/load_balancing>.
+
+Inside the qid directory you will find files relating to this query.
+The primary file is F<index.html>, which reflects the latest
+search results.  Every not-filtered hit for every search is stored
+in F<index.html>.
+When a hit is no longer found by the search engine
+it a removed from F<index.html>.
+As new results for a search are returned from the search engine they are placed
+in F<index.html>.
+
+At the bottom of F<index.html>, there is a heading "Weekly Search Results",
+which is updated each time the search is submitted
+(see L<AUTOMATED SEARCHING>).
+The list of search runs is stored in reverse chronological order.
+Runs which provide no new information are identified with
+
+	No Unique Results found for search on <date>
+
+Runs which contain changes are identified by
+
+	Web search results for search on <date>
+
+which will be linked a page detailing the changes from that run.
+
+Detailed search results are noted in weekly files.  These files are
+named F<YYYYMMDD.html> and are stored in the qid directory.  The
+weekly files include THE URL, title, and a the description (if
+available).  The title is a link to the original web page.
+
+
+=head1 AUTOMATED SEARCHING
+
+On UNIX-like systems,
+cron(1) may be used to establish periodic searches and the web pages
+will be maintained by B<AutoSearch>.  To establish the first search,
+use the first example under SYNOPSIS.  You must specify the qid, query
+name and query string.  If any of the items are missing, you will be
+interactively prompted for the missing item(s).
+
+Once the first search is complete you can re-run the search with the
+second form under SYNOPSIS.
+A cron entry like:
+
+    0 3 * * 1 /nfs/u1/wls/AutoSearch.pl /www/div7/lsam/autosearch/caching
+
+might be used to run the search each Monday at 3:00 AM.  The
+query name and query string may be repeated; but they will not be
+used.  This means that with a cron line like:
+
+    0 3 * * 1 /nfs/u1/wls/AutoSearch.pl /www/div7/lsam/autosearch/caching -n caching -s caching
+
+a whole new search series can be originated by
+
+    rm -r /www/div7/lsam/autosearch/caching
+
+However, the only reason to start a new search series would be to 
+throw away the old weekly files.
+
+We don't recommend running searches more than once per day,
+but if so the per-run files will be updated in-place.
+Any changes are added to the page with a comment that
+"Recently Added:"; and deletions are indicated with "Recently Suspended:."
+
+
+=head1 CHANGING THE LOOK OF THE PAGES
+
+The basic format of these two pages is simple and customizable.  One
+requirement is that the basic structure remain unchanged.  HTML
+comments are used to identify sections of the document.  Almost
+everything can be changed except for the strings which identify the
+section starts and ends.
+
+Noteworthy tags and their meaning:
+
+=over 16
+
+=item <!--Top-->.*<!--/Top-->
+
+The text contained within this tag is placed at the top of the output
+page.  If the text contains I<AutoSearch WEB Searching>, then the
+query name will replace it.  If the text does not contain this
+magic string and it is the first ever search, the user will be asked for
+a query name.
+
+=item <!--Query{.*}/Query-->
+
+The text contained between the braces is the query string.  This is how
+B<AutoSearch> maintains the query string.  You may edit this
+string to change the query string; but only in F<qid/index.html>.
+The text I<ask user> is special and will force B<AutoSearch>
+to request the search string from the user.
+
+=item <!--SearchEngine{.*}/SearchEngine-->
+
+The text contained between the braces is the search engine.  Other
+engines supported are HotBot and Lycos.  You may edit this string to
+change the engine used; but only in F<qid/index.html>.  The text
+I<ask user> is special and will force B<AutoSearch> to to request the
+search string from the user.
+
+=item <!--QueryOptions{.*}/QueryOptions-->
+
+The text contained between the braces specifies a query options.
+Multiple occurrencs of this command are allowed to specify multiple
+options.
+
+=item <!--URLFilter{.*}/URLFilter-->
+
+The text contained between the braces is the URL filter.  This is how
+B<AutoSearch> maintains the filter.  Again you may edit this
+string to change the query string; but only in F<qid/index.html>.
+The text I<ask user> is special and will force B<AutoSearch> to
+ask the user (STDIN) for the query string.  When setting up the first
+search, you must edit F<first_index.html>, not F<qid/index.html>.
+The URL filter is a standard perl5 regular expression.  URLs which
+do not match will be kept.
+
+=item <!--Bottom-->.*<!--/Bottom-->
+
+The text contained within this tag is placed at the bottom of the output
+page.  This is a good place 
+to put navigation, page owner information, etc.
+
+=back
+
+The remainder of the tags fall into a triplet of I<~Heading>,
+I<~Template>, and I<~>, where ~ is Summary, Weekly, Appended,
+and Suspended. The sub-sections appear in the order given. 
+To produce a section B<AutoSearch> outputs the heading, the template,
+the section, n copies of the formatted data, and an /section.
+The tags and their function are:
+
+=over 16
+
+=item ~Heading
+
+The heading tag identifies the heading for a section of the output
+file.  The SummaryHeading is for the summary portion, etc.  The
+section may be empty (e.g., Suspended) and thus no heading is output. 
+
+=item ~Template
+
+The template tag identifies how each item is to be formatted.  Simple
+text replacement is used to change the template into the actual
+output text.  The text to be replaced is noted in ALLCAPS.
+
+=item ~
+
+This tag is used to locate the section (Summary, Weekly, etc.).  This
+section represents the actual n-items of data.
+
+=back
+
+You can edit these values in the F<qid/index.html> page of an existing
+search.  The file F<first_index.html> (in the directory above F<qid>)
+will be used as a default template for new queries.
+
+Examples of these files can be seen in the pages under
+C<http://www.isi.edu/lsam/autosearch/>,
+or in the output generated by a new AutoSearch.
+
+
+=head1 FILES
+
+=over 20
+
+=item F<first_index.html>
+
+optional file to determine the default format of the F<index.html> file
+of a new query.
+
+=item F<first_date.html>
+
+optional file to determine the default format of the F<YYYYMMDD.html> file
+for a new query.
+
+=item F<qid/index.html>
+
+latest search results and reverse chronological list of periodic searches.
+
+=item F<qid/date.html>
+
+file used as a template for the F<YYYYMMDD.html> files.
+
+=item F<qid/YYYYMMDD.html>
+
+summary of changes for a particular date (AKA 'Weekly' file).
+
+=back
+
+Optional files F<first_index.html> and F<first_date.html> are used for the
+initial search as a template for F<qid/index.html> and F<date.html>,
+respectively.  If either of these files does not exist; a default-default 
+template is stored within the F<AutoSearch> source.  The intention
+of these two files is to permit a user to establish a framework for
+a group of search sets which have a common format.  By  leaving the 
+default query name and query string alone, they will be overridden by
+command line inputs.
+
+
+=head1 SEE ALSO
+
+For the library, see L<WWW::Search>,
+for the perl regular expressions, see L<perlre>.
+
+
+=head1 AUTHORS
+
+Wm. L. Scheding
+
+B<AutoSearch> is  a re-implementation of an earlier version written by Kedar Jog.
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 1996-1997 University of Southern California.
+All rights reserved.
+
+Redistribution and use in source and binary forms are permitted
+provided that the above copyright notice and this paragraph are
+duplicated in all such forms and that any documentation, advertising
+materials, and other materials related to such distribution and use
+acknowledge that the software was developed by the University of
+Southern California, Information Sciences Institute.  The name of the
+University may not be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+
+=head1 DESIRED FEATURES
+
+These are good ideas that people have suggested.
+
+=over 4
+
+=item URL validation.
+
+Validate the status of each URL (with HTTP HEAD requests)
+and indicate this status in the output.
+
+=item Multi-search.
+
+It should be possible to merge the results of searches from two
+search-engines.
+If this merger were done as a new search engine,
+this operation would be transparent to AutoSearch.
+
+=back
+
+
+=head1 BUGS
+
+None known at this time; please inform the maintainer
+mthurn@cpan.org if any crop up.
+
+=cut
+
+__END__

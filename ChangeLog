@@ -1,3 +1,49 @@
+2004-05-01  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search.pm (need_to_delay): new method
+
+2004-03-05  Kingpin  <mthurn@verizon.net>
+
+	* code/AutoSearch-code.pl (main): new option --emailfrom
+
+2004-03-03  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search.pm (approximate_result_count): clean up args
+	(http_request): clean up redirect-following code
+
+2004-02-24  Kingpin  <mthurn@verizon.net>
+
+	* t/use.t: add tests for approximate_result_count() args
+
+	* lib/WWW/Search.pm (approximate_result_count): fix empty-string warning
+
+	* code/AutoSearch-code.pl (print_version): convert to Pod::Usage
+	(main): reorder --stats messages
+
+2004-02-09  Kingpin  <mthurn@verizon.net>
+
+	* code/AutoSearch-code.pl (main): do not try to send email if MIME::Lite is not available
+
+	* lib/WWW/Search.pm: convert to 3-digit version number; code cleanups
+
+	* t/pod.t: new file
+
+2004-01-30  Kingpin  <mthurn@verizon.net>
+
+	* Makefile.PL: converted to use Module::Install
+
+2004-01-20  Kingpin  <mthurn@verizon.net>
+
+	* code/AutoSearch-code.pl: minor clean ups and prevent undef warnings
+
+2004-01-09  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search.pm (http_request): detect redirect loops
+
+2003-12-29  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search.pm (strip_tags): avoid warnings if we get undef argument
+
 2003-12-19  Kingpin  <mthurn@verizon.net>
 
 	* lib/WWW/Search.pm (user_agent): fix for undef warnings in LWP::UserAgent::proxy

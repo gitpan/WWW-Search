@@ -1,8 +1,7 @@
 # Emacs, please use -*- cperl -*- mode when editing this file
 
 use ExtUtils::testlib;
-# use Test::More qw(no_plan);
-use Test::More tests => 13;
+use Test::More no_plan;
 
 use strict;
 
@@ -14,7 +13,8 @@ BEGIN { use_ok('WWW::Search::Test',
 
 my @as;
 eval { @as = &WWW::Search::installed_engines };
-ok(0 < scalar(@as), 'No installed engines!?!');
+ok(0 < scalar(@as), 'any installed engines');
+diag('FYI the following backends are already installed (including ones in this distribution): '. join(', ', sort @as));
 
 # Make sure an undef query does not die;
 my $o1 = new WWW::Search; # NO BACKEND SPECIFIED
@@ -31,6 +31,10 @@ my @ao2 = $o2->results();
 ok(ref $o2->response);
 ok($o2->response->is_error);
 ok(scalar(@ao2) == 0);
+# Tests for approx_result_count:
+is($o2->approximate_result_count(3), 3);
+is($o2->approximate_result_count(undef), 3);
+is($o2->approximate_result_count(''), 3);
 
 exit 0;
 
@@ -49,4 +53,3 @@ my $o = new WWW::Search('WebCrawler');
 $o->maximum_to_retrieve(10);
 $o->native_query('Ohio');
 ok(5 < scalar($o->results()));
-

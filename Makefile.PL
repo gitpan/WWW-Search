@@ -1,9 +1,15 @@
 # This -*- cperl -*- program writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.35 2003-11-29 23:17:51-05 kingpin Exp kingpin $
+# $Id: Makefile.PL,v 1.37 2004/01/31 00:43:25 Daddy Exp Daddy $
 
-require 5.004;
+use inc::Module::Install;
 
-@programs_to_install = qw( WebSearch AutoSearch );
+name('WWW-Search');
+version(2.47);
+author('Martin Thurn <mthurn@cpan.org>');
+abstract('Query web search engines and get URLs');
+requires(perl => 5.004);
+
+my @programs_to_install = qw( WebSearch AutoSearch );
 
 # Allow us to suppress all program installation with the -n (library only)
 # option.  This is for those that don't want to mess with the configuration
@@ -13,52 +19,45 @@ my $opt_n;
 unless (getopts("n")) { die "Usage: $0 [-n]\n"; }
 @programs_to_install = () if $opt_n;
 
-# Ok, now it is time to really generate the Makefile
-use ExtUtils::MakeMaker;
-# $ExtUtils::MakeMaker::Verbose = 99;
+install_script($_) foreach @programs_to_install;
+clean_files($_) foreach @programs_to_install;
 
-WriteMakefile(
-              'NAME' => 'WWW::Search',
-              'VERSION' => 2.46,
+# These are needed for AutoSearch:
+requires('Data::Dumper');
+requires('Date::Manip');
+requires('File::Copy');
+requires('Getopt::Long' => 2.24);
+requires('POSIX');
+requires('MIME::Lite');  # only needed for the --mail option
+# These are needed for WebSearch:
+requires('Getopt::Long' => 2.24);
+# These are needed for WWW::Search base module:
+requires('File::Basename');
+requires('File::Find');
+requires('File::Spec');
+requires('HTML::Parser' => 2.23);
+requires('HTML::TreeBuilder');  # HTML-Tree-0.51 is good
+requires('LWP::UserAgent' => 2.0);
+requires('Net::Domain');
+requires('Pod::Usage');
+requires('URI');
+requires('URI::Escape');
+requires('User');
+# These are needed during `make all`:
+build_requires('File::Spec');
+# These are needed during `make test`:
+build_requires('Test::Inline');
+build_requires('Test::More');
+build_requires('Test::Pod');
+# I think there's a bug in Module::CoreList or something, because this
+# comes up missing on some platforms:
+build_requires('Test::Simple');
+# For the defunct test_parsing rule, we need a version that sets
+# FULLPERLRUNINST:
+build_requires('ExtUtils::MM_Unix' => 1.41);
 
-              ($] ge '5.005') ? (
-                                 'AUTHOR' => 'Martin Thurn <mthurn@cpan.org>',
-                                 'ABSTRACT' => 'Query web search engines and get URLs',
-                                ) : (),
-              'EXE_FILES' => [ @programs_to_install ],
-              'PREREQ_PM' => {
-                              # For the defunct test_parsing rule, we
-                              # need a version that sets
-                              # FULLPERLRUNINST:
-                              # 'ExtUtils::MM_Unix' => 1.41,
-
-                              # These are needed for AutoSearch:
-                              'Date::Manip' => 0,
-                              'File::Copy' => 0,
-                              'Getopt::Long' => 2.24,
-                              'POSIX' => 0,
-                              'MIME::Lite' => 0,  # only needed for
-                                                  # the --mail option
-
-                              # These are needed _only_ during `make
-                              # test`:
-                              'Test::Inline' => 0,
-                              'Test::More' => 0,
-                              # These are needed for WWW::Search base
-                              # module:
-                              'File::Basename' => 0,
-                              'File::Find' => 0,
-                              'File::Spec' => 0,
-                              'HTML::Parser' => 2.23,
-                              'HTML::TreeBuilder' => 0,  # HTML-Tree-0.51 is good
-                              'LWP::UserAgent' => 2.0,
-                              'Net::Domain' => 0,
-                              'URI' => 0,
-                              'URI::Escape' => 0,
-                              'User' => 0,
-                             },
-              'clean' => { FILES => join(' ', @programs_to_install) },
-             );
+check_nmake();      # check and download nmake.exe for Win32
+&Makefile->write;
 
 sub MY::preamble
   {
@@ -174,3 +173,5 @@ PART3
     } # MY::test
 
   } # end of package MY block
+
+__END__
