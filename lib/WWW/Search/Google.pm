@@ -2,7 +2,7 @@
 # Google.pm
 # by Jim Smyser
 # Copyright (C) 1996-1999 by Jim Smyser & USC/ISI
-# $Id: Google.pm,v 1.9 1999/10/18 15:23:19 mthurn Exp $
+# $Id: Google.pm,v 1.10 1999/12/10 18:27:20 mthurn Exp $
 ##########################################################
 
 
@@ -98,6 +98,9 @@ any like there were with 2.08.
 
 =head1 VERSION HISTORY
 
+2.10
+removed warning on absence of description; new test case
+
 2.09
 Google NOW returning url and title on one line.
 
@@ -136,13 +139,13 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.09';
+$VERSION = '2.10';
 
 $MAINTAINER = 'Jim Smyser <jsmyser@bigfoot.com>';
 $TEST_CASES = <<"ENDTESTCASES";
 # Google looks for partial words it can find results for so it will end up finding "Bogus" pages.
 &test('Google', '$MAINTAINER', 'zero', '4036e7757s5', \$TEST_EXACTLY);
-&test('Google', '$MAINTAINER', 'one_page', '+LS'.'AM +rep'.'lication', \$TEST_RANGE, 2,49);
+&test('Google', '$MAINTAINER', 'one_page', '+LS'.'AM +rep'.'lication', \$TEST_RANGE, 2,99);
 &test('Google', '$MAINTAINER', 'multi', 'dir'.'ty ha'.'rr'.'y bimbo', \$TEST_GREATER_THAN, 101);
 ENDTESTCASES
 
@@ -268,9 +271,10 @@ sub native_retrieve_some
            m@^<br><font color=green>(.*)\s@i) { 
       print "**Found Second Description**\n" if 2 <= $self->{_debug};
       $sDesc = $1; 
+      $sDesc ||= '';
       $sDesc =~ s/<.*?>//g; 
       $sDesc = $mDesc . $sDesc;
-      $hit->description($sDesc); 
+      $hit->description($sDesc) if $sDesc ne ''; 
       $sDesc ='';
       $state = $HITS;
       } 

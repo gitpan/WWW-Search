@@ -1,48 +1,53 @@
+
 <html><head>
-<title>AltaVista: Simple Query +LSAM +Bogus21746NoSuchWord939394601</title>
-</head><body>
-<font face="Arial,Helvetica" size="+1"><a href="/cgi-bin/query?text&pg=q&what=web">AltaVista Search Service</a></font><p><FORM name=mfrmaction="/cgi-bin/query">
-<INPUT TYPE=hidden NAME=pg VALUE=q><INPUT TYPE=hidden NAME=text VALUE=yes><font size=-1><B>Ask AltaVista<sup><small>TM</small></sup> a question.</B>&nbsp;&nbsp;Or enter a few words in
-<SELECT NAME=kl><OPTION VALUE=XX SELECTED>any language 
-<OPTION VALUE=zh>Chinese
-<OPTION VALUE=cs>Czech
-<OPTION VALUE=da>Danish
-<OPTION VALUE=nl>Dutch
-<OPTION VALUE=en>English
-<OPTION VALUE=et>Estonian
-<OPTION VALUE=fi>Finnish
-<OPTION VALUE=fr>French
-<OPTION VALUE=de>German
-<OPTION VALUE=el>Greek
-<OPTION VALUE=he>Hebrew
-<OPTION VALUE=hu>Hungarian
-<OPTION VALUE=is>Icelandic
-<OPTION VALUE=it>Italian
-<OPTION VALUE=ja>Japanese
-<OPTION VALUE=ko>Korean
-<OPTION VALUE=lv>Latvian
-<OPTION VALUE=lt>Lithuanian
-<OPTION VALUE=no>Norwegian
-<OPTION VALUE=pl>Polish
-<OPTION VALUE=pt>Portuguese
-<OPTION VALUE=ro>Romanian
-<OPTION VALUE=ru>Russian
-<OPTION VALUE=es>Spanish
-<OPTION VALUE=sv>Swedish
-</SELECT></font><p><input type=text name=q size=50 maxlength=800 value="+LSAM +Bogus21746NoSuchWord939394601">&nbsp;<INPUT TYPE=submit name=search VALUE="Search"><br>
- <P><font size=-1>Search - <a href="/cgi-bin/query?pg=aq&what=web&text=yes">Advanced Text Search</a> - <a href="/cgi-bin/query?pg=q&what=news&text=yes">Usenet</a></font></FORM>
-AltaVista found no document matching your query. <P><font size=-1></font><font size=-2>word count: LSAM: 817<BR>Ignored:    Bogus21746NoSuchWord939394601:<b>0</b><BR></font><P>
-<p><font face="Arial,Helvetica" size="-2">
-<a href="/">AltaVista.com</a> |
-<a href="/av/content/about.htm">About AltaVista</a> |
-<a href="/av/content/help.htm">Help</a> |
-<a href="/av/content/questions.htm">Feedback</a> |
-<a href="http://www.doubleclick.net/advertisers/altavista/">Advertising Info</a> |
-<a href="/cgi-bin/query?pg=addurl">Add a Page</a><br>
-<a href="/av/content/disclaimer.htm">Disclaimer</a> |
-<a href="/av/content/privacy.htm">Privacy</a> |
-<a href="http://image.altavista.com/AV_CopyrightPolicy.htm">Copyright</a> |
-<a href="/av/content/av_network.html">International</a> |
-<a href="/cgi-bin/query?pg=tmpl&v=pref.html">Set your Preferences</a> |
-<a href="/cgi-bin/query">Graphic Version</a></font>
+<title>AltaVista: Results - Text Search</title>
+</head><body><basefont size=3>
+<h3><a href="/cgi-bin/query?text&pg=q&what=web">AltaVista Search</a></h3>
+
+<form action="/cgi-bin/query" name=mfrm>
+
+<b>Ask AltaVista a question.</b>&nbsp;&nbsp;Or enter a few words in
+<SELECT NAME=kl><OPTION VALUE=XX SELECTED>any language <OPTION VALUE=en>English<OPTION VALUE=zh>Chinese<OPTION VALUE=cs>Czech<OPTION VALUE=da>Danish<OPTION VALUE=nl>Dutch<OPTION VALUE=et>Estonian<OPTION VALUE=fi>Finnish<OPTION VALUE=fr>French<OPTION VALUE=de>German<OPTION VALUE=el>Greek<OPTION VALUE=he>Hebrew<OPTION VALUE=hu>Hungarian<OPTION VALUE=is>Icelandic<OPTION VALUE=it>Italian<OPTION VALUE=ja>Japanese<OPTION VALUE=ko>Korean<OPTION VALUE=lv>Latvian<OPTION VALUE=lt>Lithuanian<OPTION VALUE=no>Norwegian<OPTION VALUE=pl>Polish<OPTION VALUE=pt>Portuguese<OPTION VALUE=ro>Romanian<OPTION VALUE=ru>Russian<OPTION VALUE=es>Spanish<OPTION VALUE=sv>Swedish</SELECT>
+<INPUT TYPE=hidden NAME=pg VALUE=q><INPUT TYPE=hidden NAME=text VALUE=yes><p><input type=text name=q size=50 maxlength=800 value="+LSAM +Bogus16882NoSuchWord944167744">&nbsp;<INPUT TYPE=submit name=search VALUE="Search"><br>
+
+</form>
+
+
+<p>Search - <a href="/cgi-bin/query?pg=aq&what=web&enc=iso88591&text=yes">Advanced Text Search</a>
+
+<p>AltaVista found no document matching your query. 
+<p>
+    
+
+    
+
+    
+
+    <font size=-2>word count: LSAM: 1765<BR>Ignored:    Bogus16882NoSuchWord944167744:<b>0</b><BR></font><P>
+
+
+<p>
+
+<br>
+[<a href="/cgi-bin/query">Graphic Version</a>]
+<p>
+<a href="http://doc.altavista.com/company_info/about_av/background.shtml">About AltaVista</a> | 
+<a href="http://doc.altavista.com/help/search/whats_new.shtml">Help</a> | 
+<a href="http://doc.altavista.com/help/contact/contact_us.shtml">Contact Us</a> | 
+<a href="http://www.doubleclick.net/advertisers/altavista/">Advertise With Us</a><br>
+<a href="http://doc.altavista.com/business_solutions/bus_solutions.shtml">Business Solutions</a> | 
+<a href="http://doc.altavista.com/company_info/jobs/jobs.shtml">Job Openings</a> | 
+<a href="http://doc.altavista.com/company_info/press/press_welcome.shtml">Press Room</a> | 
+<a href="http://doc.altavista.com/legal/privacy.shtml">Privacy</a> | 
+<a href="http://doc.altavista.com/legal/termsofuse.shtml">Legal</a> | 
+<a href="http://www.cmgi.com/">A CMGI Company</a><br>
+<a href="http://www.shopping.com/">Shopping</a> | 
+<a href="http://money.av.com/">Money</a> | 
+<a href="http://news.av.com/">News</a> | 
+<a href="http://sports.av.com/">Sports</a> | 
+<a href="http://search.thetrip.com/">Travel</a> | 
+<a href="http://careers.av.com/">Careers</a> | 
+<a href="http://www.intelihealth.com/IH/ihtAV?r=WSALT002">Health</a> | 
+<a href="http://www.wildweb.com/av/">Entertainment</a>
+
 </BODY></HTML>

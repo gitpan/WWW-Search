@@ -1,18 +1,57 @@
-<html><head><base target="_top"><meta name="IS" content="ok_party">
+<html><head><base target="_top"><meta name="IS" content="ok_flash">
 <title>News : prison AND escape</Title></head>
-<body bgcolor="#FFFFFF" link="#0000CC" vlink="#990099"><table width="100%" cellpadding="0" cellspacing="0" border="0">
-<tr><td rowspan="2" width="1%"><a href="/Home/Home.html?svx=search_header&nh=25"><img src="/images/tmpl/search_go.gif" width="120" height="38" border="0" hspace="0" vspace="0"></td>
-<td height="23" width="100%">&nbsp;</td></tr>
-<tr><td bgcolor="#000000" height="15"><spacer type="block" width="1" height="15"></td></tr>
-</table><font face="Helvetica,Arial" size="2"><a href="/Home/Home.html?svx=search_breadcrumb&col=NX&nh=25&qt=prison+AND+escape&rf=0&st=0">GO</a> &gt; <b>prison AND escape</b> <br></font><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#F0F0E9"><tr><td bgcolor="#000000" colspan="5" height="1"><spacer type="block" width="1" height="1"></td></tr><tr><td bgcolor="#999999" colspan="5" height="1"><spacer type="block" width="1" height="1"></td></tr><tr><td bgcolor="#F0F0E9" colspan="5">&nbsp;</td></tr><tr><td bgcolor="#F0F0E9" width="10%">&nbsp;</td><td bgcolor="#F0F0E9" width="35%="><font face="Helvetica,Arial" size="2">Your search resulted in:<BR><a href="#search">51 News search results</a></font></td><td bgcolor="#F0F0E9" width="10%">&nbsp;</td><td bgcolor="#F0F0E9" width="35%"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="40%" rowspan="3">&nbsp;</td><td nowrap><font face="Helvetica,Arial" size="3"><form action="/Titles" method="get" name="WW_Search"><b>Search</b></font><font face="Verdana,Helvetica,Arial" size="1">&nbsp;<input type="radio" value="NX" name="col" checked><b>New</b> search&nbsp;<input type="radio" value="NX,cat_RES" name="col">Search <b>within</b> results</font><br><img src="/images/clear.gif" width="1" height="1"></td><td width="40%" rowspan="3">&nbsp;</td></tr><tr><td valign="top" nowrap><input type="text" name="qt" value="prison AND escape" size="35" maxlength="511">&nbsp;<INPUT TYPE=hidden NAME="sv" VALUE="IS">
+<body bgcolor="#FFFFFF" link="#0000CC" vlink="#990099" topmargin="4">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr><td rowspan="2" width="77" bgcolor="#000000" valign=top><a href="/Home/Home.html?svx=search_header&nh=25"><img src="/images/hp/logo_sr.gif" width="101" height="44" border="0"></td>
+<td valign=bottom height="21" width="911"><spacer height=15 width=1 type=block></td></tr>
+<tr><td bgcolor="#000000" valign=bottom width=911><img src="/images/clear.gif" width=109 height=1><img src="/images/hp/search.gif" width=421 height=19 usemap=#tabs border=0></td>
+<map name=tabs>
+<area coords=0,0,71,17 href="http://mypage.go.com/?svx=TAB_My_Page" shape=rect alt="Personalized stocks, news, weather and more">
+<area coords=75,0,136,17 href="http://www.go.com/?svx=TAB_Home_Page" shape=rect alt="go.com home page">
+<area coords=140,0,201,17 href="http://www.go.com/WebDir/?svx=TAB_Topic" shape=rect alt="Search the web or browse by topic">
+<area coords=205,0,307,17 href="http://www.go.com/Community/?svx=TAB_Community" shape=rect alt="Chat, message boards, homepages and more">
+<area coords=311,0,390,17 href="http://shop.go.com/?svx=TAB_Shop" shape=rect alt="Shop for products and brands">
+<area coords=405,2,419,16 href="/Help/help.html?key=HELP_T00008_SRCHQUIK&svx=TAB_Help" target="GOHelp" shape=rect alt="Help" onclick="window.open('/Help/help.html/?key=HELP_T00008_SRCHQUIK&svx=TAB_Help;', 'GOHelp', 'width=575,height=400,scrollbars=yes,resizable=yes,toolbar=yes'); return false;">
+</map>
+</tr>
+</table><font face="Helvetica,Arial" size="2"><a href="/WebDir/?svx=search_breadcrumb&col=NX&nh=25&qt=prison+AND+escape&rf=0&st=0">Search</a> &gt; <b>prison AND escape</b> <br></font><TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+<TR><TD bgColor=#000000 colSpan=5 height=1><SPACER height="1" width="1" type="block"></TD></TR>
+</TABLE>
+<TABLE bgColor="#f0f0e9" border=0 cellPadding=0 cellSpacing=0 width="100%">
+<TR>
+<TD align=center><TABLE border=0 cellPadding=0 cellSpacing=0>
+<TR vAlign=top>
+<TD>
+<table border="0" cellpadding="3" cellspacing="0"><tr><td colspan=2>
+<form action="/Titles" method="get" name="WW_Search">
+<input type="radio" value="NX" name="col" checked><font face="geneva,arial" size=2>
+<font color="#669966"><b>New</b></font> search </font>
+<input type="radio" value="NX,cat_RES" name="col"><font face="geneva,arial" size=2>Search 
+<font color="#669966"><b>within</b></font> results</font>
+</tr><tr> 
+<td><input type="text" name="qt" value="prison AND escape" size="30" maxlength="511"></td><INPUT TYPE=hidden NAME="sv" VALUE="IS">
 <INPUT TYPE=hidden NAME="lk" VALUE="noframes">
 <INPUT TYPE=hidden NAME="nh" VALUE="25">
+<input type=hidden name="svx" value="sbox_top">
 <input type=hidden name="cc" value="NX">
 <input type=hidden name="oq" value="prison AND escape">
-<input type="submit" value="Find"></td></tr><tr><td nowrap><font face="Verdana,Helvetica,Arial" size="1"><a href="/find?pg=advanced_www.html&ud9=advanced_www&nh=25">Search&nbsp;options</a>&nbsp;|&nbsp;<a target="GOHelp" href="/Help/help.html?key=HELP_T00008_SRCHQUIK&nh=25" onclick="window.open('/Help/help.html?key=HELP_T00008_SRCHQUIK&nh=25', 'GOHelp', 'width=575,height=400,scrollbars=yes,resizable=yes,toolbar=yes'); return false;">How&nbsp;to&nbsp;search</a>
-&nbsp;|&nbsp;</font><br><img src="/images/clear.gif" height="4" width="1"></td></tr></form><!-- End Search Box --></table></td><td bgcolor="#F0F0E9" width="10%">&nbsp;</td><tr><td colspan="5" height="8"><spacer type="block" width="1" height="8"></td></tr></table>
-<img src="/images/clear.gif" border="0" width="1" height="6"><br>
-<center><table cellpadding="0" cellspacing="0" border="0"><tr><td align="right" valign="top"><table width="121" height="60" cellpadding="1" cellspacing="0" border="0">
+<td><input type="submit" value="Find"></td></tr></form>
+<tr>
+<td nowrap colspan=2><font face="Verdana,Helvetica,Arial" size="1"><a href="/find?pg=advanced_www.html&ud9=advanced_www&nh=25">Search&nbsp;options</a>&nbsp;|&nbsp;<a target="GOHelp" href="/Help/help.html?key=HELP_T00008_SRCHQUIK&nh=25" onclick="window.open('/Help/help.html?key=HELP_T00008_SRCHQUIK&nh=25', 'GOHelp', 'width=575,height=400,scrollbars=yes,resizable=yes,toolbar=yes'); return false;">How&nbsp;to&nbsp;search</a>
+&nbsp;|&nbsp;</font><br></td></tr></table></td>
+<TD noWrap width=8><SPACER width="8" type="block"></TD>
+<TD noWrap width=8><SPACER width="8" type="block"></TD>
+<TD valign=top>
+</TD></TR>
+</TABLE>
+</td>
+</tr>
+</table>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+<TR bgColor=#cccccc><TD height=1><SPACER height="1" width="1" type="block"></TD></TR>
+</TABLE>
+<img src="/images/clear.gif" border="0" width="1" height="6"><br><center><table 
+cellpadding="0" cellspacing="0" border="0"><tr><td align="right" valign="top"><table width="121" height="60" cellpadding="1" cellspacing="0" border="0">
 <tr><td bgcolor="#000000" valign="top">
 <table width="119" height="58" cellpadding="0" cellspacing="0" border="0">
 <tr><td bgcolor="#FFFFFF" align="center" valign="bottom" width="119" NOWRAP><font face="Arial,Helvetica" size="-2">Find the</font></td></tr>
@@ -22,57 +61,142 @@
 </table>
 </td></tr>
 </table>
-</td><td>&nbsp;&nbsp;</td><td valign="top" align="left" colspan="3"><center><a href="http://transfer.go.com/cgi/atransfer.pl?goto=http://dvd%2Dad.flycast.com/server/click/InfoseekGoComDVD/ROS/1999.10.08.08.01.15&name=40800&srvc=go&guid=2D94FB7A-7D91-11D3-8DF9-0090273025CD" target=""><img src="http://dvd-ad.flycast.com/server/ad/InfoseekGoComDVD/ROS/1999.10.08.08.01.15" width=468 height=60 border="1" alt="DVD Express" align="center"><FONT FACE="verdana,arial,helvetica" SIZE="1"><b><br>Click here</b></font></a></center></td></tr></table></center><br>
+</td><td>&nbsp;&nbsp;</td><td valign="top" align="center"><SCRIPT language="JavaScript">
+function go(url)
+{
+window.location.href = url
+}
+</SCRIPT>
+<table border=0 cellpadding=0 cellspacing=0 width=468>
+<tr>
+<td width="460"><a href="http://transfer.go.com/cgi/atransfer.pl?name=56454&srvc=gros&context=33938&guid=C3CD462E-AF0E-11D3-81BC-009027285197&goto=http://shop.go.com/holiday">
+<img src="http://adimages.go.com/ad/sponsors/house/go/banners/goco-ban0046/top1.gif" border="0"></a></td>
+</tr>
+<tr>
+<td>
+<table border=0 cellpadding=0 cellspacing=0 width=468>
+<tr>
+<FORM NAME="filter">
+<td width="15"><a href="http://transfer.go.com/cgi/atransfer.pl?name=56454&srvc=gros&context=33938&guid=C3CD462E-AF0E-11D3-81BC-009027285197&goto=http://shop.go.com/holiday">
+<img src="http://adimages.go.com/ad/sponsors/house/go/banners/goco-ban0046/bottom1.gif" border="0"></a></td>
+<TD  bgcolor="#a0dceb" width="254" valign="center" align="center">
+<select name="dooda" size="1" onChange="window.location.href = this.options[selectedIndex].value;">
+<option value="#">Choose one:</option>
+<option value="http://transfer.go.com/cgi/atransfer.pl?name=56454&srvc=gros&context=33938&guid=C3CD462E-AF0E-11D3-81BC-009027285197&goto=http://shop.go.com/holiday">Your best friend's kid</option>
+<option value="http://transfer.go.com/cgi/atransfer.pl?name=56454&srvc=gros&context=33938&guid=C3CD462E-AF0E-11D3-81BC-009027285197&goto=http://shop.go.com/holiday">Your brother's kid</option>
+<option value="http://transfer.go.com/cgi/atransfer.pl?name=56454&srvc=gros&context=33938&guid=C3CD462E-AF0E-11D3-81BC-009027285197&goto=http://shop.go.com/holiday">Your husband, the 40-yr-old kid</option>
+</select>
+</TD>
+<td width="59"><a href="http://transfer.go.com/cgi/atransfer.pl?name=56454&srvc=gros&context=33938&guid=C3CD462E-AF0E-11D3-81BC-009027285197&goto=http://shop.go.com/holiday">
+<img src="http://adimages.go.com/ad/sponsors/house/go/banners/goco-ban0046/bottom2.gif" border="0"></a></td>
+</FORM>
+</TR>
+</TABLE>
+</td></tr></table></td></tr></table></center><img src="/images/clear.gif" border="0" width="1" height="6"><br>
 <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#003366">
-<tr><td valign="middle" align="left" nowrap colspan="3"><font face="Helvetica,Arial" size="3" color="#FFFFFF"><a name="search">&nbsp;<b>News search results</b>&nbsp;&nbsp;&nbsp;&nbsp;<font face="Helvetica,Arial" size="2">1 - 25 of <b>51</b> results most relevant to <b>prison AND escape</b> </font>&nbsp;</a></font></td>
+<tr><td valign="middle" align="left" nowrap colspan="3"><font face="Helvetica,Arial" size="3" color="#FFFFFF"><a name="topics">&nbsp;<b>Search results</b>&nbsp;</a></font></td>
 <td height="18" valign="middle" align="right" nowrap  colspan="1">&nbsp;
 </td></tr>
-<tr><td valign="middle" align="left" nowrap colspan="4" bgcolor="#000000"><img src="/images/clear.gif" border="0" width="100%" height="1"></td>
 </table>
-<spacer type="block" width="1" height="2"><!-- Begin RHS -->
-<table cellpadding="1" cellspacing="0" border="0" width="152" align="right" bgcolor="#FFFFFF"><tr><td height="4"><spacer type="block" width="1" height="4"></td></tr><tr><td></td></tr><tr><td><table cellpadding="1" cellspacing="0" border="0" width="150" align="right" bgcolor="#000000"><tr><td><table cellpadding="6" cellspacing="0" border="0" width="148" align="right" bgcolor="#FFFFFF"><tr><td><center><font size="2" face="Verdana,Helvetica,Arial"><b>Buy the book</b></font></center><br><!-- Infoseek cut--> <FONT FACE="Arial,Helvetica" SIZE="2"> <A HREF="/redirect?sv=IS&lk=&ak=BORD&rl=LINK_C1486_RESULTS_GO&rd=http://go.borders.com/fcgi-bin/part?PID=122010920&PKIND=aa&PAGE=http%3A%2F%2Fwww%2Eborders%2Ecom%2Fsections%2Fsection%5F12300%2Ehtml">Books</A>
-at <A HREF="/redirect?sv=IS&lk=&ak=BORD&rl=LINK_C1486_RESULTS_GO&rd=http://go.borders.com/fcgi-bin/part?PID=122010954&PKIND=aa&PAGE=http%3A%2F%2Fwww%2Eborders%2Ecom%2F">Borders.com</A>
+<table cellpadding="1" cellspacing="0" border="0" width="152" align="right" bgcolor="#FFFFFF"><tr><td height="4"><spacer type="block" width="1" height="4"></td></tr><tr><td></td></tr><tr><td><table cellpadding="1" cellspacing="0" border="0" width="150" align="right" bgcolor="#000000"><tr><td><table cellpadding="6" cellspacing="0" border="0" width="148" align="right" bgcolor="#FFFFFF"><tr><td><center><font size="2" face="Verdana,Helvetica,Arial"><b>Buy the book</b></font></center><br><FONT FACE="Arial,Helvetica" SIZE="2">
+<A HREF="/redirect?sv=IS&lk=noframes&ak=BORD&rl=LINK_C1486_RESULTS_GO&rd=http://go.borders.com/fcgi-bin/part?PID=122010920&PKIND=aa&PAGE=http%3A%2F%2Fwww%2Eborders%2Ecom%2Fsections%2Fsection%5F12300%2Ehtml">Books</A>
+at <A HREF="/redirect?sv=IS&lk=noframes&ak=BORD&rl=LINK_C1486_RESULTS_GO&rd=http://go.borders.com/fcgi-bin/part?PID=122010954&PKIND=aa&PAGE=http%3A%2F%2Fwww%2Eborders%2Ecom%2F">Borders.com</A>
 <BR>
-- <A HREF="/redirect?sv=IS&lk=&ak=BORD&rl=LINK_C1486_RESULTS_GO&rd=http://go.borders.com/fcgi-bin/part?PID=122010921&PKIND=aa&PAGE=http%3A%2F%2Fsearch%2Eborders%2Ecom%2Ffcgi%2Dbin%2Fdb2www%2Fsearch%2Fsearch%2Ed2w%2FDetails%3F%26mediaType%3DBook%26prodID%3D51213302">Legacy of Watergate</A><BR>
-- <A HREF="/redirect?sv=IS&lk=&ak=BORD&rl=LINK_C1486_RESULTS_GO&rd=http://go.borders.com/fcgi-bin/part?PID=122010922&PKIND=aa&PAGE=http%3A%2F%2Fsearch%2Eborders%2Ecom%2Ffcgi%2Dbin%2Fdb2www%2Fsearch%2Fsearch%2Ed2w%2FDetails%3F%26mediaType%3DBook%26prodID%3D51220704">Our Dumb Century</A><BR>
-- <A HREF="/redirect?sv=IS&lk=&ak=BORD&rl=LINK_C1486_RESULTS_GO&rd=http://go.borders.com/fcgi-bin/part?PID=122010923&PKIND=aa&PAGE=http%3A%2F%2Fsearch%2Eborders%2Ecom%2Ffcgi%2Dbin%2Fdb2www%2Fsearch%2Fsearch%2Ed2w%2FDetails%3F%26mediaType%3DBook%26prodID%3D45648983">Deadlines & Datelines</A><BR>
-</FONT>
-<!-- Infoseek cut--></td></tr></table></td></tr></table></td></tr></table>
-<!-- End RHS -->
-<font face="Helvetica,Arial" size="2"><b><a href="http://infoseek.go.com/Titles?col=NX&nh=25&qt=prison+AND+escape&rf=0&st=25&sf=1">Next 25 ></a></b> &nbsp;|&nbsp; <a href="http://infoseek.go.com/Titles?col=NX&nh=20&qt=prison+AND+escape&rf=0&st=0&sf=1&ud4=1">Hide summaries</a></font><br><br><p>
-<font face="Helvetica,Arial" size="2"><p><b><a href="/Content?arn=a4644LBY327reulb-19991007&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">Soccer-Edmundo freed after one night in prison</a></b>
-<br>By Brian Homewood RIO DE JANEIRO, Oct 7 - Edmundo, one of Brazil's best known and most talented soccer players, was released on Thursday after one night in <b style="background:#FFFF99">prison</b> as his lawyers won a further<br><b>Fri  8 Oct  0:44 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p><b><a href="/Content?arn=a3827LBY260reulb-19991006&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">Ford, Bayer, Daimler-Benz targets of slave labor ads</a></b>
-<br>By Steve James NEW YORK, Oct 6 - Jewish and human rights groups targeted the Ford Motor Co. on Wednesday in a newspaper ad showing Nazi camp inmates on a production line and company ...<br><b>Wed  6 Oct 21:25 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p><b><a href="/Content?arn=a0400LBY474reulb-19991006&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">Malaysia PM threatens action in Anwar poison row</a></b>
-<br>By Benjamin Low KUALA LUMPUR, Oct 6 - Malaysian Prime Minister Mahathir Mohamad threatened on Wednesday legal action over allegations his jailed former deputy Anwar Ibrahim had been poisoned. As a<br><b>Wed  6 Oct  6:04 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p><b><a href="/Content?arn=a0779LBY964reulb-19991003&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">Palestinian police detain suspected militants</a></b>
-<br>NABLUS, West Bank, Oct 3 - Palestinian police have detained dozens of people in raids on the homes of suspected Islamic Jihad militants after three members of the group <b style="background:#FFFF99">escaped</b> from custody,<br><b>Sun  3 Oct 20:04 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p><b><a href="/Content?arn=a1798LBY696reulb-19991002&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">Three Islamic Jihad men escape Palestinian custody</a></b>
-<br>JERUSALEM, Oct 2 - Three jailed members of the radical Islamic Jihad group <b style="background:#FFFF99">escaped</b> from Palestinian custody in the West Bank town of Nablus on Saturday, Palestinian security sources said. One of the<br><b>Sat  2 Oct 21:24 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p><b><a href="/Content?arn=a1459LBY632reulb-19991002&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">Ex-Radical Katherine Ann Power Freed From Prison</a></b>
-<br>FRAMINGHAM, Mass. - Former student radical Katherine Ann Power walked free from a Massachusetts <b style="background:#FFFF99">prison</b> Saturday morning, 29 years after driving the getaway car in a Boston bank robbery in ...<br><b>Sun  3 Oct  6:45 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p><b><a href="/Content?arn=a1266LBY345reulb-19990930&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">Iran says new charges against German sex suspect</a></b>
-<br>TEHRAN, Sept 30 - German businessman Helmut Hofer, once held on death row in Iran for illicit sex with a Moslem woman, faces new charges, the judiciary said on Thursday, dashing defence ...<br><b>Thu 30 Sep 12:05 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p><b><a href="/Content?arn=a5503LBY184reulb-19990930&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">FEATURE - Ukrainian in the sun after 57 years of fear</a></b>
-<br>By Dmitry Solovyov MONCHYNTSI, Ukraine, Oct 1 - A feeble, stooped old man with palsied hands slowly comes out of his peasant house, a slight smile lightening his emaciated face. ``Now I can see the<br><b>Fri  1 Oct  2:45 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p><b><a href="/Content?arn=a3997LBY862reulb-19990929&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">Crime and punishment divide shell-shocked Brazil</a></b>
-<br>By Tracey Ober RIO DE JANEIRO, Sept 29 - Radical new plans to ease overcrowding in Brazil's <b style="background:#FFFF99">prison</b> system by freeing nonviolent criminals have divided a population that is bombarded daily with<br><b>Wed 29 Sep 22:05 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p><b><a href="/Content?arn=a1108LBY263reulb-19990929&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">Croatian Nazi camp commander pleads innocence</a></b>
-<br>By Zoran Radosavljevic ZAGREB, Sept 29 - Nazi-era concentration camp commander Dinko Sakic told a Croatian court on Wednesday that his failure last year to go into hiding or to attempt to <b style="background:#FFFF99">escape</b><br><b>Wed 29 Sep 12:05 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p><b><a href="/Content?arn=a4507LBY831reulb-19990928&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">Argentina let in 180 Nazis after war - report</a></b>
-<br>By Arthur Spiegelman LOS ANGELES, Sept 28 - Argentina gave refuge to at least 180 Nazis and collaborators after the Second World War -- from the organiser of Hitler's ``Final Solution'' to ...<br><b>Wed 29 Sep  0:44 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p><b><a href="/Content?arn=a1044LBY182reulb-19990927&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">Latvia sentences man for Soviet-era deportations</a></b>
-<br>RIGA, Sept 27 - An 82-year-old former Soviet security police officer was sentenced on Monday in Riga to seven years in <b style="background:#FFFF99">prison</b> for deporting families from Latvia to Siberia in the late 1940s. A<br><b>Mon 27 Sep 12:26 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p><b><a href="/Content?arn=a1602LBY721reulb-19990926&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">Brazil trembles after 1,100 kids flee packed jails</a></b>
-<br>By Phil Stewart SAO PAULO, Sept 26 - Hundreds of juvenile delinquents have <b style="background:#FFFF99">escaped</b> from detention centres in Sao Paulo over the past 15 days, unleashing a wave of violent crime that has ...<br><b>Sun 26 Sep 21:04 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p><b><a href="/Content?arn=a2312LBY574reulb-19990924&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">Cuban Migrants Escape From Bahamas Prison</a></b>
-<br>NASSAU, Bahamas - Bahamian police and immigration authorities searched Friday for 30 Cuban immigrants who had broken out of Nassau's main <b style="background:#FFFF99">prison</b>. The fugitives were part of a group of nearly 400<br><b>Fri 24 Sep 17:05 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p><b><a href="/Content?arn=a4089LBY827reulb-19990924&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">Handcuffed prisoners on the run in Scotland</a></b>
-<br>LONDON, Sept 24 - Two prisoners handcuffed together remained at large in Scotland on Friday after six men <b style="background:#FFFF99">escaped</b> from a bus on their way back to jail from court in Glasgow, police said. A<br><b>Fri 24 Sep 23:44 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p><b><a href="/Content?arn=a2150LBY405reulb-19990920&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">Train Robber Biggs expected home soon after stroke</a></b>
-<br>RIO DE JANEIRO, Sept 23 - Legendary British ``Great Train Robber'' Ronnie Biggs should soon leave a hospital where he was admitted last week after suffering a mild stroke, a hospital ...<br><b>Thu 23 Sep 20:25 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p><b><a href="/Content?arn=BW1487-19990922&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">Help Us Track Down the &quot;World's Most Wanted&quot;; Magazine Deputizes Its 100 Million ...</a></b>
-<br>PLEASANTVILLE, N.Y. - Last year, Reader's Digest warned you about Osama Bin Ladin before he allegedly masterminded attacks on U.S. embassies in Africa. Now, in cooperation ...<br><b>Wed 22 Sep 19:05 &nbsp; &nbsp; &nbsp; &nbsp; Business Wire&nbsp;</b><p><b><a href="/Content?arn=a0513LBY883reulb-19990920&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">PRESS DIGEST - South Africa - Sept 20</a></b>
-<br>JOHANNESBURG, Sept 20 - These are the leading stories in the South African press on Monday. Reuters has not verified these stories and does not vouch for their accuracy. - - - - BUSINESS DAY - The<br><b>Mon 20 Sep  8:04 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p><b><a href="/Content?arn=a0896LBY041reulb-19990918&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">Reuters historical calendar - September 25</a></b>
-<br>LONDON, Sept 18 - Following are some of the major events to have occurred on September 25 in history: 1066 - King Harold II of England defeated the invading forces of Harald Haardraade of Norway at<br><b>Sat 18 Sep 16:03 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p><b><a href="/Content?arn=a4137LBY515reulb-19990913&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">One police officer killed in Brazil prison riot</a></b>
-<br>SAO PAULO, Sept 13 - Inmates rioting for nearly nine hours at a crammed penitentiary centre in Brazil's eastern state of Espirito Santo shot and killed one police officer while still holding hostage<br><b>Tue 14 Sep  1:23 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p><b><a href="/Content?arn=a2748LBY012reulb-19990909&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">Spain's ex-security chief jailed over Basque murder</a></b>
-<br>MADRID, Sept 9 - A judge on Thursday jailed the top security official of Spain's former Socialist government for involvement in the 1984 murder of a leader of the political wing of the Basque<br><b>Thu  9 Sep 17:22 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p><b><a href="/Content?arn=a1448LBY512reulb-19990906&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">Over 70 escape from Niger jail in dust storm</a></b>
-<br>NIAMEY, Sept 6 - About 70 prisoners <b style="background:#FFFF99">escaped</b> under cover of a dust storm in the West African state of Niger, prompting a huge manhunt, officials said on Monday. Five were recaptured on Monday --<br><b>Wed  8 Sep 22:45 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p><b><a href="/Content?arn=a1784LBY603reulb-19990906&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">Four Killed, 65 Taken Hostage In Colombia Prisons</a></b>
-<br>BOGOTA - At least four inmates died in a shootout at a high-security <b style="background:#FFFF99">prison</b> in Bogota Monday, while three convicts held 65 women and children hostage for a second day in a jail in central ...<br><b>Wed  8 Sep 22:46 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p><b><a href="/Content?arn=a3359LBY653reulb-19990907&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">Prisoners use fake gun in mass Brazilian jailbreak</a></b>
-<br>SAO PAULO, Sept 7 - More than 80 detainees who broke out of a Brazilian jail with the help of a fake gun made of paper were at large on Tuesday, television reports said. Brazil's Globo ...<br><b>Wed  8 Sep 22:54 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p><b><a href="/Content?arn=a1901LBY067reulb-19990903&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">Argentines Feel Pain Of Dirty War Film</a></b>
-<br>By Andrew Hay BUENOS AIRES - As the credits rolled on ``Garage Olimpo,'' the Argentine Dirty War film released this week in Buenos Aires, a short middle-aged woman rose to her feet, shaking her fist<br><b>Sat  4 Sep  8:27 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b></font><br clear=all><br clear=all><font face="Helvetica,Arial" size="2"><b><a href="http://infoseek.go.com/Titles?col=NX&nh=25&qt=prison+AND+escape&rf=0&st=25&sf=1">Next 25 ></a></b> </font><br><br><center><center><a href="http://transfer.go.com/cgi/atransfer.pl?goto=http://dvd%2Dad.flycast.com/server/click/InfoseekGoComDVD/ROS/1999.10.08.08.01.15&name=40800&srvc=go&guid=2D94FB7A-7D91-11D3-8DF9-0090273025CD" target=""><img src="http://dvd-ad.flycast.com/server/ad/InfoseekGoComDVD/ROS/1999.10.08.08.01.15" width=468 height=60 border="1" alt="DVD Express" align="center"><FONT FACE="verdana,arial,helvetica" SIZE="1"><b><br>Click here</b></font></a></center></center><p><center>
-<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td bgcolor="#F0F0E9">&nbsp;</td></tr></table><p><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td rowspan="4" width="35%" align="center" valign="top"><font size="2" face="Verdana,Helvetica,Arial"><a href="/Titles?nh=25&tv=brag&qt=prison+AND+escape&col=NX&sv=IS&svx=brag_page"><img src="/images/misc/powered_by_stack.gif" border="0" alt="Powered by Infoseek"><br>What makes us better</a></font></td><tr><td width="40%" rowspan="3">&nbsp;</td><td nowrap><font face="Helvetica,Arial" size="3"><form action="/Titles" method="get" name="WW_Search"><b>Search</b></font><font face="Verdana,Helvetica,Arial" size="1">&nbsp;<input type="radio" value="NX" name="col" checked><b>New</b> search&nbsp;<input type="radio" value="NX,cat_RES" name="col">Search <b>within</b> results</font><br><img src="/images/clear.gif" width="1" height="1"></td><td width="40%" rowspan="3">&nbsp;</td></tr><tr><td valign="top" nowrap><input type="text" name="qt" value="prison AND escape" size="35" maxlength="511">&nbsp;<INPUT TYPE=hidden NAME="sv" VALUE="IS">
+- <A HREF="/redirect?sv=IS&lk=noframes&ak=BORD&rl=LINK_C1486_RESULTS_GO&rd=http://go.borders.com/fcgi-bin/part?PID=122010921&PKIND=aa&PAGE=http%3A%2F%2Fsearch%2Eborders%2Ecom%2Ffcgi%2Dbin%2Fdb2www%2Fsearch%2Fsearch%2Ed2w%2FDetails%3F%26mediaType%3DBook%26prodID%3D51388101">No Way to Pick a President</A><BR>
+- <A HREF="/redirect?sv=IS&lk=noframes&ak=BORD&rl=LINK_C1486_RESULTS_GO&rd=http://go.borders.com/fcgi-bin/part?PID=122010922&PKIND=aa&PAGE=http%3A%2F%2Fsearch%2Eborders%2Ecom%2Ffcgi%2Dbin%2Fdb2www%2Fsearch%2Fsearch%2Ed2w%2FDetails%3F%26mediaType%3DBook%26prodID%3D51415792">Atlantis Rising</A><BR>
+- <A HREF="/redirect?sv=IS&lk=noframes&ak=BORD&rl=LINK_C1486_RESULTS_GO&rd=http://go.borders.com/fcgi-bin/part?PID=122010923&PKIND=aa&PAGE=http%3A%2F%2Fsearch%2Eborders%2Ecom%2Ffcgi%2Dbin%2Fdb2www%2Fsearch%2Fsearch%2Ed2w%2FDetails%3F%26mediaType%3DBook%26prodID%3D15408064">Culture Jammers Handbook</A><BR>
+</FONT></td></tr></table></td></tr></table></td></tr></table>
+<font face="Helvetica,Arial" size="2"><font size=1><a href="http://infoseek.go.com/Titles?col=NX&nh=20&qt=prison+AND+escape&rf=0&st=0&sf=1&ud4=1">Hide summaries</a></font></font><br><br>
+<p>
+<font face="Helvetica,Arial" size="2">1. <b><a href="/Content?arn=a5529LBY236reulb-19991208&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">Eleven Dead in Bogota Prison Shoot-Out</a></b>
+<br>BOGOTA - At least 11 convicts were shot to death and eight other people wounded in a shoot-out between rival gangs in Bogota's notoriously violent La Modelo <b style="background:#FFFF99">prison</b> on Wednesday evening, <b style="background:#FFFF99">prison</b><br><b>Thu  9 Dec  8:10 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p>2. <b><a href="/Content?arn=a2066LBY834reulb-19991209&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">FOCUS-Congo jails four Europeans and ex-ruler</a></b>
+<br>BRAZZAVILLE, Dec 9 - A court in Congo Republic has sentenced exiled former President Pascal Lissouba and four Europeans on charges of plotting to destabilise the government, court officials said on<br><b>Thu  9 Dec 19:21 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p>3. <b><a href="/Content?arn=a5293LBY204reulb-19991208&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">Five feared dead in Bogota prison shoot-out</a></b>
+<br>BOGOTA, Dec 8 - At least five convicts were feared shot to death in a gang fight in Bogota's notoriously violent La Modelo <b style="background:#FFFF99">prison</b> on Wednesday evening, police said. TV images showed <b style="background:#FFFF99">prison</b> guards<br><b>Thu  9 Dec  5:24 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p>4. <b><a href="/Content?arn=a3371LBY843reulb-19991207&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">France said sending Palestinians back to Syria</a></b>
+<br>PARIS, Dec 7 - Several French groups backing Palestinian causes or defending immigrant rights accused French authorities on Tuesday of systematically sending back to Syria Palestinians who had<br><b>Tue  7 Dec 23:43 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p>5. <b><a href="/Content?arn=a1764LBY557reulb-19991207&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">Life term for Egypt militant ends two years on run</a></b>
+<br>CAIRO, Dec 7 - An Egyptian militant tried in his absence two years ago was sentenced to life imprisonment by a state security court on Tuesday after being captured and re-tried, court sources said.<br><b>Tue  7 Dec 18:28 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p>6. <b><a href="/Content?arn=a1605LBY551reulb-19991206&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">At Least 100 Inmates Escape From Brazil Prison</a></b>
+<br>SAO PAULO - Several gunmen stormed a low-security Brazilian <b style="background:#FFFF99">prison</b> at daybreak on Monday, springing more than 100 inmates, possibly to help them make it home in time for Christmas, police said.<br><b>Mon  6 Dec 17:49 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p>7. <b><a href="/Content?arn=a4073LBY957reulb-19991206&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">More than 100 escape from cramped Brazil city jail</a></b>
+<br>SAO PAULO, Dec 6 - More than 100 inmates <b style="background:#FFFF99">escaped</b> from a crowded city jail after six gunmen stormed the facility early on Monday to spring two alleged drug traffickers before the Christmas holidays,<br><b>Tue  7 Dec  3:08 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p>8. <b><a href="/Content?arn=a3581LBY055reulb-19991203&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">Brazil's courts hobble landmark anti-drugs probe</a></b>
+<br>By Phil Stewart BRASILIA, Dec 3 - A landmark congressional probe, that has shocked Brazil by exposing the nation's powerful drug mafias, threatened to disband itself on Friday over a court ruling<br><b>Sat  4 Dec  0:41 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p>9. <b><a href="/Content?arn=a1884LBY790reulb-19991202&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">Man Who Opened Berlin Wall Told to Report to Jail</a></b>
+<br>BERLIN - The man who opened the Berlin Wall a decade ago, former East German leader Egon Krenz, has been given two weeks to report to <b style="background:#FFFF99">prison</b> to serve out a manslaughter conviction, his lawyer said<br><b>Thu  2 Dec 18:54 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p>10. <b><a href="/Content?arn=a0560roetz-19991202&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">USA Sports New Projects</a></b>
+<br>By John Dempsey NEW YORK - Biopics of Wilt Chamberlain, George Foreman and Marge Schott highlight a wide-ranging slate of original movies on the drawing boards of the USA Network. USA aims to<br><b>Thu  2 Dec 11:51 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p>11. <b><a href="/Content?arn=a1133rontz-19991124&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">Nazi Collaborator Stripped of Legion of Honor</a></b>
+<br>PARIS - French Nazi collaborator Maurice Papon, now serving a 10-year <b style="background:#FFFF99">prison</b> term for crimes against humanity, was stripped of his Legion of Honor award under a decree published in the Official<br><b>Wed 24 Nov 16:52 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p>12. <b><a href="/Content?arn=a1106LBY946reulb-19991124&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">France's Papon stripped of Legion of Honour</a></b>
+<br>PARIS, Nov 24 - French Nazi collaborator Maurice Papon, now serving a 10-year <b style="background:#FFFF99">prison</b> term for crimes against humanity, was stripped of his Legion of Honour award under a decree published in the<br><b>Wed 24 Nov 16:42 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p>13. <b><a href="/Content?arn=a4462LBY508reulb-19991122&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">Bogus delivery boys free 60 Brazil inmates</a></b>
+<br>SAO PAULO, Nov 22 - Four Brazilians posing as food delivery boys pulled out pistols instead of pizza on Monday to overpower jail guards and free 60 prisoners, police said. The four apparently wanted<br><b>Tue 23 Nov  5:14 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p>14. <b><a href="/Content?arn=a0150LBY758reulb-19991117&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">Australia may X-ray smugglers to determine age</a></b>
+<br>CANBERRA, Nov 17 - Indonesians caught smuggling boatpeople into Australia may be X-rayed to determine their age, as smugglers are claiming to be juveniles in order to <b style="background:#FFFF99">escape</b> harsh adult penalties<br><b>Wed 17 Nov  8:54 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b><p>15. <b><a href="/Content?arn=a0563LBY885reulb-19991112&qt=prison+AND+escape&sv=IS&lk=&col=NX&kt=A&ak=news1486">China Jails Four Falun Gong Leaders</a></b>
+<br>By Benjamin Kang Lim BEIJING - China jailed four leaders of the banned Falun Gong spiritual movement for up to 12 years Friday in the first known trial of members of what the Communist government<br><b>Fri 12 Nov 12:28 &nbsp; &nbsp; &nbsp; &nbsp; Reuters News Service&nbsp;</b></font><p><font face="Helvetica,Arial" size="2"><font size=2></font></font><br><br>
+<center><SCRIPT language="JavaScript">
+function go(url)
+{
+window.location.href = url
+}
+</SCRIPT>
+<table border=0 cellpadding=0 cellspacing=0 width=468>
+<tr>
+<td width="460"><a href="http://transfer.go.com/cgi/atransfer.pl?name=56454&srvc=gros&context=33938&guid=C3CD462E-AF0E-11D3-81BC-009027285197&goto=http://shop.go.com/holiday">
+<img src="http://adimages.go.com/ad/sponsors/house/go/banners/goco-ban0046/top1.gif" border="0"></a></td>
+</tr>
+<tr>
+<td>
+<table border=0 cellpadding=0 cellspacing=0 width=468>
+<tr>
+<FORM NAME="filter">
+<td width="15"><a href="http://transfer.go.com/cgi/atransfer.pl?name=56454&srvc=gros&context=33938&guid=C3CD462E-AF0E-11D3-81BC-009027285197&goto=http://shop.go.com/holiday">
+<img src="http://adimages.go.com/ad/sponsors/house/go/banners/goco-ban0046/bottom1.gif" border="0"></a></td>
+<TD  bgcolor="#a0dceb" width="254" valign="center" align="center">
+<select name="dooda" size="1" onChange="window.location.href = this.options[selectedIndex].value;">
+<option value="#">Choose one:</option>
+<option value="http://transfer.go.com/cgi/atransfer.pl?name=56454&srvc=gros&context=33938&guid=C3CD462E-AF0E-11D3-81BC-009027285197&goto=http://shop.go.com/holiday">Your best friend's kid</option>
+<option value="http://transfer.go.com/cgi/atransfer.pl?name=56454&srvc=gros&context=33938&guid=C3CD462E-AF0E-11D3-81BC-009027285197&goto=http://shop.go.com/holiday">Your brother's kid</option>
+<option value="http://transfer.go.com/cgi/atransfer.pl?name=56454&srvc=gros&context=33938&guid=C3CD462E-AF0E-11D3-81BC-009027285197&goto=http://shop.go.com/holiday">Your husband, the 40-yr-old kid</option>
+</select>
+</TD>
+<td width="59"><a href="http://transfer.go.com/cgi/atransfer.pl?name=56454&srvc=gros&context=33938&guid=C3CD462E-AF0E-11D3-81BC-009027285197&goto=http://shop.go.com/holiday">
+<img src="http://adimages.go.com/ad/sponsors/house/go/banners/goco-ban0046/bottom2.gif" border="0"></a></td>
+</FORM>
+</TR>
+</TABLE>
+</td></tr></table></center><p><center>
+<table border=0 width=100% cellpadding=0 cellspacing=0>
+<tr><td bgcolor="#000000" height=1><spacer type=block height=1></td></tr>
+</table>
+<table border=0 cellpadding=0 cellspacing=0><tr><td align=left>
+<table border="0" cellpadding="3" cellspacing="0"><tr><td colspan=2>
+<form action="/Titles" method="get" name="WW_Search">
+<input type="radio" value="NX" name="col" checked><font face="geneva,arial" size=2>
+<font color="#669966"><b>New</b></font> search </font>
+<input type="radio" value="NX,cat_RES" name="col"><font face="geneva,arial" size=2>Search 
+<font color="#669966"><b>within</b></font> results</font>
+</tr><tr> 
+<td><input type="text" name="qt" value="prison AND escape" size="30" maxlength="511"></td><INPUT TYPE=hidden NAME="sv" VALUE="IS">
 <INPUT TYPE=hidden NAME="lk" VALUE="noframes">
 <INPUT TYPE=hidden NAME="nh" VALUE="25">
+<input type=hidden name="svx" value="sbox_bottom">
 <input type=hidden name="cc" value="NX">
 <input type=hidden name="oq" value="prison AND escape">
-<input type="submit" value="Find"></td></tr><tr><td nowrap><font face="Verdana,Helvetica,Arial" size="1"><a href="/find?pg=advanced_www.html&ud9=advanced_www&nh=25">Search&nbsp;options</a>&nbsp;|&nbsp;<a target="GOHelp" href="/Help/help.html?key=HELP_T00008_SRCHQUIK&nh=25" onclick="window.open('/Help/help.html?key=HELP_T00008_SRCHQUIK&nh=25', 'GOHelp', 'width=575,height=400,scrollbars=yes,resizable=yes,toolbar=yes'); return false;">How&nbsp;to&nbsp;search</a>
-&nbsp;|&nbsp;</font><br><img src="/images/clear.gif" height="4" width="1"></td></tr></form><!-- End Search Box --></table><br><br><center><font size="2" face="Verdana,Helvetica,Arial">If there is a site you would like listed, click <a href="/AddUrl?pg=SubmitUrl.html&nh=25&svx=search_footer"><b>add URL</b></a>.<hr><br><center><b>GO Network partners:</b>&nbsp; <a href="http://abc.go.com/"><b>ABC.com</b></a>&nbsp; <a href="http://abcnews.go.com"><b>ABCNEWS.com</b></a>&nbsp; <a href="http://disney.go.com"><b>Disney.com</b></a>&nbsp; <a href="http://espn.go.com"><b>ESPN.com</b></a>&nbsp; <a href="http://family.go.com"><b>Family.com</b></a>&nbsp; <a href="http://mrshowbiz.go.com"><b>Mr. Showbiz</b></a>
-<br><br><a href="/doc?pg=copyright.html">Copyright</a> &copy; 1999 Infoseek Corporation.  All rights reserved.&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://comments.go.com/comments.html">Contact us</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://info.go.com/doc/policy/disclaimer.html">Legal Notices</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://info.go.com/doc/policy/privacy.html">Privacy policy</a></font></center>
-</body>
-</html>
+<td><input type="submit" value="Find"></td></tr></form>
+<tr>
+<td nowrap colspan=2><font face="Verdana,Helvetica,Arial" size="1"><a href="/find?pg=advanced_www.html&ud9=advanced_www&nh=25">Search&nbsp;options</a>&nbsp;|&nbsp;<a target="GOHelp" href="/Help/help.html?key=HELP_T00008_SRCHQUIK&nh=25" onclick="window.open('/Help/help.html?key=HELP_T00008_SRCHQUIK&nh=25', 'GOHelp', 'width=575,height=400,scrollbars=yes,resizable=yes,toolbar=yes'); return false;">How&nbsp;to&nbsp;search</a>
+&nbsp;|&nbsp;</font><br></td></tr></table></td>
+<TD noWrap width=8><SPACER width="8" type="block"></TD>
+<TD bgColor=#000000 noWrap width=1><SPACER width="1"type="block"></TD>
+<TD noWrap width=8><SPACER width="8" type="block"></TD>
+<TD valign=middle><font face="verdana, helvetica" size=1>
+<b>Did you know? </b><br><br>
+If you are using Windows 95/98 or Windows NT, you can 
+<b>search all the major search engines at the same time</b>
+using <a href="http://express.go.com/subdocuments/sr_details.html">GO Network Express Search</a>.
+Free download at <a href="http://express.go.com/sr_download.html">http://express.go.com</a>.</font></td>
+</tr></table><table border=0 width=100% cellpadding=0 cellspacing=0>
+<tr><td bgcolor="#000000" height=1><spacer type=block height=1></td></tr></table>
+<center>&nbsp;<font face="verdana,geneva,arial" size=1> 
+<b>GO Network Partners:&nbsp;</b>&nbsp;&nbsp;
+&nbsp; <a href="http://abc.go.com">ABC.com</a> &nbsp; <a href="http://abcnews.go.com">ABCNEWS.com</a> 
+&nbsp; <a href="http://espn.go.com">ESPN.com</a> &nbsp; <a href="http://disney.go.com">Disney.com</a> 
+&nbsp; <a href="http://family.go.com">Family.com</a> &nbsp; <a href="http://mrshowbiz.go.com">MrShowbiz</a></font></center>
+<table border=0 width=100% cellspacing=0 cellpadding=3>
+<tr><td nowrap><font face="geneva,arial" size=1><a href="/doc?pg=copyright.html">Copyright</a> 
+&copy; 1998, 1999 Infoseek Corporation. All rights reserved.</font></td>
+<td align="right" nowrap><font face="geneva,arial" size=1>&nbsp; 
+<!-- <a href="/AddUrl?pg=SubmitUrl.html&nh=25&svx=search_footer"> --><a href="/AddUrl?pg=SubmitUrl.html">Submit your site</A>&nbsp; &nbsp;<A HREF="http://info.go.com/doc/policy/disclaimer.html">Legal Notices</a> &nbsp;&nbsp;<a href="http://info.go.com/doc/policy/privacy.html">Privacy&nbsp;policy</a></font></td>
+</tr></table></center>
+</body></html>

@@ -1,3 +1,41 @@
+1999-12-10  Kingpin  <mthurn@tasc.com>
+
+	* Magellan.pm updated to 2.03 (new test cases)
+
+	* Lycos::Sites.pm updated to 2.05 (fix for missing 'next' link)
+
+	* HotBot.pm updated to 2.08 (was missing next-page link)
+
+	* Dejanews.pm updated to 2.06 (ignore more deja-internal links)
+
+	* SearchResult.pm updated to 2.06 (pod additions & corrections)
+
+	* Infoseek.pm updated to 2.05 (handles new output format)
+
+	* Lycos.pm updated to 2.07 (handles new output format)
+
+1999-12-07  Kingpin  <mthurn@tasc.com>
+
+	* Dejanews.pm updated to 2.05 (new test cases, and pod typo)
+
+1999-12-06  Kingpin  <mthurn@tasc.com>
+
+	* Dejanews.pm updated to 2.04 (handles new output format)
+
+1999-12-03  Kingpin  <mthurn@tasc.com>
+
+	* Makefile.PL modified for new test suite call sequence
+	
+	* NetFind.pm updated to 1.8
+
+	* Lycos::Sites.pm updated to 2.05 (handles new url and new output format)
+
+	* Lycos.pm updated to 2.05 (handles new output format for Lycos::Sites)
+
+1999-12-01  Kingpin  <mthurn@tasc.com>
+
+	* WWW::Search VERSION 2.06 RELEASED!
+
 1999-11-30  Kingpin  <mthurn@tasc.com>
 
 	* ZDNet.pm updated to 2.02 (handles new output format)

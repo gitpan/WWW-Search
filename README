@@ -3,12 +3,11 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.06?  (1999-11-30)
+WHAT IS NEW IN WWW::Search 2.07?  (1999-12-10)
 ----------------------------------------------
 overview:
- * new backends for six (count'em!) jobs search engines
- * Yahoo.pm can now search Yahoo Korea!
- * Bug fixes for several backends (as usual)
+ * bug fixes for several backends (as usual)
+ * 'make test' no longer does all the downloading/parsing tests
 
 See the file ChangeLog for details.
 
@@ -36,9 +35,10 @@ backend will tell you about the more important tricks being used.
 Because WWW::Search depends on parsing the HTML output of web search
 engines it will fail if the search engine operators change their
 format (an unfortunately frequent occurrence).  WWW::Search includes a
-test suite for most backends which verifies that it is functioning
-correctly.  As of the day of the release the current backend status
-is:
+test suite for most backends which verifies that they are functioning
+correctly.  The test suite can be run by typing 'make test_parsing';
+see under INSTALLATION below for details.  As of the day of the
+release the current backend status is:
 
 AltaVista		working
 AltaVista::AdvancedNews	not working
@@ -122,8 +122,7 @@ Perl5, see <http://www.perl.com>.  For all the modules, see
 
 At the time of this release, the primary WWW::Search development and
 testing is under perl version 5.005_03 on Sun UltraSparc Solaris 7 and
-under ActiveState perl build 519 on Windows NT 4.0 with service pack
-5.
+under ActiveState perl build 522 on Windows NT 4.0 service pack 6.
 
 WWW::Search has also been built and tested successfully on Win98J
 (that's Japanese) with ActiveState perl build 517.
@@ -171,8 +170,6 @@ whole bunch of 'zero.out' files are missing.  This seems to be a bug
 in some versions of WinZip which refuse to extract empty files from
 the archive.  You can ignore these warnings.
 
-See "TESTING" below for a description of what "make test" does.
-
 If you want to install a private copy of WWW::Search in your home
 directory, then you should do the installation with something like
 these commands:
@@ -188,8 +185,18 @@ Don't forget to add /my/perl/lib to your PERL5LIB environment variable
 TESTING
 -------
 
-The "make test" command compares expected output from WWW::Search with
-actual output.  It detects two kinds of errors:
+The "make test_parsing" command compares expected output from
+WWW::Search with actual output.  You can give arguments to the
+test_parsing program by using the TEST_ARGS macro.  For example, the
+following command only runs the external queries for Dejanews:
+
+make test_parsing TEST_ARGS='-e Dejanews -x'
+
+To see all the available options, do this:
+
+make test_parsing TEST_ARGS='-help'
+
+The "test_parsing" utility detects two kinds of errors:
 
 - internal parsing:
 	First it checks to make sure that your system computes
@@ -212,17 +219,18 @@ External queries can fail for several reasons:
 
 If the external tests fail, please either investigate the error or
 send a description of the problem, a list of your operating system and
-all relevant perl version number, and the output of "make test" to the
-maintainer of the backend for the search engine that fails.
+all relevant perl version number, and the relevant output of "make
+test_parsing" to the maintainer of the backend for the search engine
+that fails.
 
 
 DISCUSSION, BUG REPORTS, AND IMPROVEMENTS
 -----------------------------------------
 
 Feedback about WWW::Search is encouraged.  If you're using it for a
-neat application, please let us know.  If you'd like to (or have)
-implemented a new backend for WWW::Search, let us know so we don't
-duplicate work.  <MartinThurn@iname.com>
+neat application, please let us know.  If you'd like to (or have
+already) implement and publish a new backend for WWW::Search, let us
+know so we don't duplicate work.  <MartinThurn@iname.com>
 
 Feedback, bug reports, fixes, and new backends should be sent to
 Martin Thurn <MartinThurn@iname.com>.  When sending e-mail, please
@@ -237,8 +245,9 @@ soon as they're fixed.
 
 Back-end-related bug reports ("search engine ABC doesn't work") should
 be sent to the author of the backend (backend authors are identified
-in the corresponding man page and in the output of ``make test'').
-General bugs should be reported to <MartinThurn@iname.com>.
+in the corresponding man page and in the output of ``make
+test_parsing'').  General bugs should be reported to
+<MartinThurn@iname.com>.
 
 When submitting a bug report or request for help, please remember to
 include:

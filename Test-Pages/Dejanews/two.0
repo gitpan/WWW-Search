@@ -1,9 +1,3 @@
-<p>
-<table width=600 border=0 cellpadding=0 cellspacing=0><tr>
-<td bgcolor="#6666cc" height=5 colspan=2><spacer type=block height=5 width=0></td></tr>
-<tr valign=top><td><font color="#ff6600" face="geneva,arial"><b>Search Results</b></font></td>
-<td align=right><font face="geneva,arial" size=-1><a href="http://www.deja.com/help/help_qsr.shtml">help</a></font></td></tr>
-</table>
 
 
 
@@ -13,23 +7,8 @@
 <html>
 <head>
 <title>Deja.com: Power Search Results</title>
+<link rel="stylesheet" type="text/css" href="/templates/css.epl?diet=1">
 <meta name=keywords content="dejanews usenet newsgroup articles search query discussion">
-
-
-
-
-<style type="text/css">
-
-    <!--        A.DARK3     {color: ff3300}-->
-
-    <!--        A.DARK2     {color: ff6600}-->
-
-    <!--        A.LIGHT2     {color: ffcc66}-->
-
-
-
-
-</style>
 
 
 <base href="http://www.deja.com/">
@@ -41,170 +20,118 @@
 
 <!-- PLOC = d.search.query.hitlist.ps -->
 
-<table cellpadding=0 cellspacing=0 border=0 width=100%><tr>
-<td width=135></td><td width=14></td><td></td><td width=100%></td>
-</tr><tr>
-<td width=135 bgcolor=#6666cc valign=bottom align=left><a href="http://www.deja.com/"><img src="http://g.deja.com/gifs/dlogo_130_b.gif" width=130 height=75 alt="deja.com" border=0 align=left hspace=3></a></td>
-<td width=12 bgcolor=#ffffff><img src="http://g.deja.com/gifs/20x20.gif" width=12 border=0 height=60 align=left></td>
-<td bgcolor=#ffffff valign=top align=center><A HREF="/jump/http://gp1.deja.com/gtc?id=1015796&dejahi=0&tm=939394710.487099&site=dn&keyword=lili+ledy&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=468x60.1&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7c468x60.1%7c%7c%7c%7c%7c%7c%7c">
-<IMG ALIGN=MIDDLE HEIGHT=60 WIDTH=468 SRC="http://view.avenuea.com/view/deja_sonicnet_ba385_082499cs_2/direct/01-939394710.487099" ALT="Sonicnet - the online music network" border=1></A><BR>
+<table border=0 cellpadding=0 cellspacing=0 width=100%>
+<tr><td align=left bgcolor=#6666cc valign=bottom width=135><a href="./"><img src="http://g.deja.com/gifs/dlogo_130_b.gif" width=130 height=75 alt="deja.com" border=0 hspace=0 align=left></a></td>
+<td bgcolor=#ffffff width=12><img src="http://g.deja.com/gifs/20x20.gif" width=12 border=0 height=60 align=left></td>
+<td align=middle bgcolor=#ffffff valign=top><script src="/jump/http://gp1.deja.com/gtc?id=1026005&dejahi=0&tm=944588960.709418&site=dn&keyword=lili+ledy&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=468x60.1&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7crec.hobbies.collecting.%7cd.%7c468x60.1%7c%7c%7c%7c%7c%7c%7c" 
+type=text/javascript>
+</script>
+<noscript> 
+<a href="/jump/http://gp1.deja.com/gtc?id=1026005&dejahi=1&tm=944588960.709418&site=dn&keyword=lili+ledy&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=468x60.1&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7crec.hobbies.collecting.%7cd.%7c468x60.1%7c%7c%7c%7c%7c%7c%7c" target="_top">
+<img src="http://van.ads.link4ads.com/bin/wadredir?req=ad&tag=img&siteid=24179&pageid=1.1&mode=via"
+width=468 height=60 alt="Sabela Ad Serving"></a>
+</noscript>
 
 </td>
-<td width=100% align=right>
+<td align=right width=100%>
 
 </td>
-</tr><tr>
-<td colspan=4 width=100% bgcolor=#6666cc valign=top align=left><img src="http://g.deja.com/gifs/20x20.gif" width=4 height=1><img src="http://g.deja.com/gifs/dmotto_b.gif" width=338 height=21 alt="Before you buy" border=0><br>
-</td></tr>
-</table>
+</tr></table>
 
-<table border=0 cellspacing=0 cellpadding=0 bgcolor="#cccc66" width=100%><tr>
-<td width=1 bgcolor="#6666cc"><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td>
-<td width=130 bgcolor="#6666cc"><img src="http://g.deja.com/gifs/20x20.gif" width=130 height=1></td>
-<td width=4 bgcolor="#6666cc"><img src="http://g.deja.com/gifs/20x20.gif" width=4 height=1></td>
-<td width=100% bgcolor="#6666cc"><img src="http://g.deja.com/gifs/20x20.gif" width=331 height=1></td>
-<td width=1 bgcolor="#6666cc"><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td>
-<td width=130 bgcolor="#6666cc"><img src="http://g.deja.com/gifs/20x20.gif" width=130 height=1></td>
-<td width=3 bgcolor="#6666cc"><img src="http://g.deja.com/gifs/20x20.gif" width=3 height=1></td>
-</tr><tr>
-<td width=1 bgcolor=#000000><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td>
-<td colspan=3 valign=top width=100%>
+<table border=0 cellpadding=0 cellspacing=0  width="100%">
+<tr><td bgcolor=#6666cc><img src="http://g.deja.com/gifs/dmotto_b.gif" width=338  alt="Before You Buy" border=0 height=21 hspace=1 align=left></td>
+<td valign=middle align=right bgcolor=#6666cc id=white>
+<b class=verdana><a href="mydn_forums.xp"><font color="#FFFFFF">My Deja</font></a></b>&nbsp;&nbsp;<br></td>
+</tr></table>
 
+<table border=0 cellspacing=0 cellpadding=0 bgcolor=#cccc66 width=100%><tr bgcolor=#6666cc>
+<td width=4><img src=http://g.deja.com/gifs/20x20.gif width=4 height=1></td>
+<td width=100%><img src=http://g.deja.com/gifs/20x20.gif width=331 height=1></td>
+<td width=1><img src=http://g.deja.com/gifs/20x20.gif width=1 height=1></td>
+<td width=130><img src=http://g.deja.com/gifs/20x20.gif width=130 height=1></td>
+<td width=3><img src=http://g.deja.com/gifs/20x20.gif width=3 height=1></td>
+</tr>
+
+<tr><td width=1 bgcolor=#000000><img src=http://g.deja.com/gifs/20x20.gif width=1 height=1></td>
+<td valign=top width=100%>
 
 <!-- nav_chan : begin -->
 
 
-<table border=0 cellspacing=0 cellpadding=0 bgcolor="#cccc66" width=100%><tr>
-<td>
-
-<table border=0 cellspacing=0 cellpadding=2>
-<tr>
-<td bgcolor="#cccc66" nowrap><font face="geneva,arial" size=2>
-&nbsp;<a href="http://www.deja.com/"><b>Home</b></a>
-
-
+<table border=0 cellspacing=0 cellpadding=2><tr>
+<td bgcolor="#cccc66" nowrap>
+&nbsp;<a href="./"><b>Home</b></a>
 
     
-	&nbsp;<b>&#187;</b>&nbsp;
-	
-	    
-	    
-	    <a href="http://www.deja.com/channels/forums.xp?CID=10407"><b>Recreation</b></a>
-	
-	
     
-	&nbsp;<b>&#187;</b>&nbsp;
-	
-	    
-	    
-	    <a href="http://www.deja.com/channels/forums.xp?CID=10409"><b>Hobbies</b></a>
-	
-	
     
-</font></td>
+	
+	    &nbsp;<b>&#187;</b>&nbsp;
+	    
+		
+		
+		<a href="channels/forums.xp?CID=10407"><b>Recreation</b></a>
+	    
+	    
+	
+	    &nbsp;<b>&#187;</b>&nbsp;
+	    
+		
+		
+		<a href="channels/forums.xp?CID=10409"><b>Hobbies</b></a>
+	    
+	    
+	
+    </td></tr>
+
+
+
+
+    <tr>
+    
+	<td bgcolor=#ffffff nowrap>
+	
+	
+	    <b class="xxlarge" id="blue">&nbsp;&gt;&gt;&nbsp;</b>
+	
+	<b class="xxlarge">Collecting&nbsp;</b></td>
+    
+    
 </tr>
 
-<tr>
-
-    <td bgcolor=#ffffff nowrap>
-    <font face="geneva,arial" color=#6666cc size=5>&nbsp;<b>&gt;&gt;</b>&nbsp;</font>
-    <font face="geneva,arial" size=5><b>Collecting&nbsp;</b></font></td>
-
-<td width=100% align=right><font face="geneva,arial" size=2></font></td>
-<td width=12>&nbsp;</td>
-</tr>
 </table>
 
 
 
+
 <table border=0 cellspacing=2 cellpadding=2><tr>
-<td bgcolor="#cccc66"><font face="geneva,arial" size=1>
-</font></td>
-</tr></table>
-
-
-
-</td>
+<td bgcolor="#cccc66"><span class="small">
+</span></td>
 </tr></table>
 <!-- nav_chan : end -->
 
 </td>
-<td rowspan=2 width=1 bgcolor=#000000><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td>
-<td rowspan=2 bgcolor="#6666cc" valign=top align=center width=100%>
+
+<td rowspan=2 width=1 bgcolor=#000000><img src=http://g.deja.com/gifs/20x20.gif width=1 height=1></td>
+<td rowspan=2 bgcolor=#6666cc valign=top align=center width=100%>
 
 <!-- third stage : begin -->
 
 
 
-<table width=100% border=0 cellspacing=0 cellpadding=0>
 
+<table width=100% border=0 cellspacing=0 cellpadding=6><tr align=center>
+<td bgcolor=#ffffff>
+<table bgcolor=#000000 width=120 cellspacing=0 cellpadding=0 border=0><tr>
+<td bgcolor=#000000><A HREF="/jump/http://gp1.deja.com/gtc?id=1019536&dejahi=0&tm=944588960.740805&site=dn&keyword=lili+ledy&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=promo.1&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7cpromo.1%7c%7c%7c%7c%7c%7c%7c">
+<IMG ALIGN=MIDDLE HEIGHT=30 WIDTH=120 SRC="http://web2.deja.com/ads/76/632976276-2086.gif" ALT="Just in time for HOLIDAY SHOPPING! Click to visit." border=1></A><BR></td>
+</tr></table>
+</td></tr>
+</table>
 
-<tr>
-    <td>
-    <table width=100% border=0 cellspacing=0 cellpadding=6><tr align=center>
-        <td bgcolor="#ffffff"><A HREF="/jump/http://gp1.deja.com/gtc?id=1014299&dejahi=0&tm=939394710.516600&site=dn&keyword=lili+ledy&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=promo.1&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7cpromo.1%7c%7c%7c%7c%7c%7c%7c">
-<IMG ALIGN=MIDDLE HEIGHT=30 WIDTH=120 SRC="http://web2.deja.com/ads/70/2689489970-5334.gif" ALT="Please visit our sponsor" border=1></A><BR></td>
-    </tr></table>
-    </td>
-</tr>
-
-<tr>
-<td bgcolor="#000000"><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td>
-</tr>
-
-
-
-<tr>
-    <td>
-    <table width=100% border=0 cellspacing=0 cellpadding=6><tr align=center>
-	<td bgcolor="#ffffff"><table border="0" bgcolor="#000000" cellspacing="0" cellpadding="1"><tr><td><center><table 
-border="0" bgcolor="#ffffff" cellspacing="0" cellpadding="0"><tr><form 
-method="get" action="/jump/http://gp1.deja.com/gtf/id=1016382&dejafi=0&tm=939394710.539064&site=dn&keyword=lili+ledy&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=120x120.1&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7crec.%7cd.%7c120x120.1%7c%7c%7c%7c%7c%7c%7c"><input 
-type=hidden name=tag value=deja-allproduct-button><td 
-colspan="2"><a href="/jump/http://gp1.deja.com/gtc?id=1016382&dejahi=0&tm=939394710.539064&site=dn&keyword=lili+ledy&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=120x120.1&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7crec.%7cd.%7c120x120.1%7c%7c%7c%7c%7c%7c%7c"><img 
-src="http://g.deja.com/ads/amzn_find2_top.gif" width="118" height="28" border="0"></a></td></tr><tr><td 
-colspan="2" background="http://g.deja.com/ads/amzn_find2_midback.gif" width="118"><table border="0" cellspacing="0" cellpadding="0"><tr><td width="90"><font size="2"><center><input 
-type="Text" name="keyword" size="9"></center></font></td><td width="28"><input 
-type="Image" name="Go" src="http://g.deja.com/ads/amzn_find2_go.gif" border="0" width="26" height="28"></td></tr></table></td></tr><tr><td 
-colspan="2"><table 
-border="0" cellspacing="0" cellpadding="0"><tr><td rowspan="3"><a 
-href="/jump/http://gp1.deja.com/gtc?id=1016382&dejahi=0&tm=939394710.539064&site=dn&keyword=lili+ledy&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=120x120.1&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7crec.%7cd.%7c120x120.1%7c%7c%7c%7c%7c%7c%7c"><img 
-src="http://g.deja.com/ads/amzn_find2_search.gif" width="15" height="46" border="0"></a></td><td><center><input 
-type="radio" name="mode" value="books"></center></td><td><center><input 
-type="radio" name="mode" value="music"></center></td><td><center><input 
-type="radio" name="mode" value="video"></center></td></tr><tr><td><img 
-src="http://g.deja.com/ads/amzn_find2_book.gif" width="32" height="9" border="0"></td><td><img 
-src="http://g.deja.com/ads/amzn_find2_music.gif" width="30" height="9" border="0"></td><td><img 
-src="http://g.deja.com/ads/amzn_find2_vid.gif" width="35" height="9" border="0"></td></tr><tr><td colspan="3"><table 
-border="0" bgcolor="#ffffff" cellspacing="0" cellpadding="0"><tr><td><img 
-src="http://g.deja.com/ads/amzn_find2_or.gif" width="14" height="19" border="0"></td><td><center><input 
-type="radio" name="mode" value="blended" checked></center></td><td><img 
-src="http://g.deja.com/ads/amzn_find2_allprod.gif" width="62" height="17" border="0"></td></tr></table></td></tr></table></td><tr><td 
-colspan="2"><a 
-href="/jump/http://gp1.deja.com/gtc?id=1016382&dejahi=0&tm=939394710.539064&site=dn&keyword=lili+ledy&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=120x120.1&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7crec.%7cd.%7c120x120.1%7c%7c%7c%7c%7c%7c%7c"><img 
-src="http://g.deja.com/ads/amzn_find2_bot.gif" width="118" height="16" border="0"></a></td></form></tr></table></center></td></tr></table></td>
-    </tr></table>
-    </td>
-</tr>
-
-<tr>
-<td bgcolor="#000000"><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td>
-</tr>
-
-
-
-<tr>
-    <td>
-    <table width=100% border=0 cellspacing=0 cellpadding=6><tr align=center>
-	<td bgcolor="#ffffff"><A HREF="/jump/http://gp1.deja.com/gtc?id=1015793&dejahi=0&tm=939394710.561417&site=dn&keyword=lili+ledy&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=120x120.2&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7c120x120.2%7c%7c%7c%7c%7c%7c%7c">
-<IMG ALIGN=MIDDLE HEIGHT=120 WIDTH=120 SRC="http://view.avenuea.com/view/deja_mtv_ba409_082799cs_2/direct/01-939394710.561417" ALT="Please visit our sponsor" border=1></A><BR></td>
-    </tr></table>
-    </td>
-</tr>
-
-<tr>
-<td bgcolor="#000000"><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td>
-</tr>
+<table width=100% cellpadding=0 cellspacing=0 bgcolor=#000000 border=0><tr>
+<td bgcolor=#000000 width=100%><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1 hspace=0 vspace=0><br></td>
+</tr></table>
 
 
 
@@ -214,315 +141,99 @@ src="http://g.deja.com/ads/amzn_find2_bot.gif" width="118" height="16" border="0
 
 
 
-<tr>
-    <td>
-    <table width=100% border=0 cellspacing=0 cellpadding=6><tr>
-	<td bgcolor="#000000"><font face="geneva,arial" color="#ff6600"><b>Explore More:</b></font></td>
-    </tr></table>
-    </td>
-</tr>
 
-<tr>
-    <td>
-	
+
+<table width=100% border=0 cellspacing=0 cellpadding=6><tr>
+<td bgcolor="#000000"><font color="#ff6600"><b>Explore More:</b></font></td>
+</tr></table>
+
+
+
 
 
 <table width=100% border=0 cellspacing=0 cellpadding=6>
-<tr><td bgcolor="#6666cc"> 
-<font size=1 face="geneva,arial" color="#ffffff">
+<tr><td bgcolor="#6666cc"><span class=small>
+<font color="#ffffff">
 
 <p>Apartments.com<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=44692021&location=textlink.apartments.cat.money.ads.cat.rec.hobbies.collecting">
-<font face="geneva,arial" color="#ffcc66">
-<b>Interior photos of apartments nationwide</b></font></a>
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=9375516&location=textlink.apartments.cat.money.ads.cat.rec.hobbies.collecting">
+<font color="#ffcc66"><b>Interior photos of apartments nationwide</b></font></a>
 
 <p>Beanies action figures and collectible toys.<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=44692021&location=textlink.ebay1.cat.money.ads.cat.rec.hobbies.collecting">
-<font face="geneva,arial" color="#ffcc66">
-<b>Ebay.com</b></font></a>
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=9375516&location=textlink.ebay1.cat.money.ads.cat.rec.hobbies.collecting">
+<font color="#ffcc66"><b>Ebay.com</b></font></a>
 
 <p>Beautiful jewelry and gemstones.<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=44692021&location=textlink.ebay2.cat.money.ads.cat.rec.hobbies.collecting">
-<font face="geneva,arial" color="#ffcc66">
-<b>Ebay.com</b></font></a>
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=9375516&location=textlink.ebay2.cat.money.ads.cat.rec.hobbies.collecting">
+<font color="#ffcc66"><b>Ebay.com</b></font></a>
 
-<p>abed.com<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=44692021&location=textlink.ppm.cat.rec.cat.rec.hobbies.collecting">
-<font face="geneva,arial" color="#ffcc66">
-<b>A healthier way to sleep</b></font></a>
+<p>TireRack.com<br>
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=9375516&location=textlink.tirerack.cat.rec.cat.rec.hobbies.collecting">
+<font color="#ffcc66"><b>Quality, Price & Service</b></font></a>
 
 <p>Free personalized email<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=44692021&location=textlink.mailcom.cat.ros.cat.rec.hobbies.collecting">
-<font face="geneva,arial" color="#ffcc66">
-<b>Signup now! Mail.com</b></font></a>
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=9375516&location=textlink.mailcom.cat.ros.cat.rec.hobbies.collecting">
+<font color="#ffcc66"><b>Signup now!</b></font></a>
 
-<p>Get IAMS and Eukanuba<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=44692021&location=textlink.iam.cat.rec.cat.rec.hobbies.collecting">
-<font face="geneva,arial" color="#ffcc66">
-<b>delivered to your home</b></font></a>
+<p>Gifts For Your Pet<br>
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=9375516&location=textlink.orb.cat.rec.cat.rec.hobbies.collecting">
+<font color="#ffcc66"><b>Buy 1 food item, get 1 free</b></font></a>
 
-<p>Find any book, video, CD<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=44692021&location=textlink.amazon.cat.rec.cat.rec.hobbies.collecting">
-<font face="geneva,arial" color="#ffcc66">
-<b>SHOP AMAZON.COM!</b></font></a>
+<p>SonicNet<br>
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=9375516&location=textlink.son.cat.rec.cat.rec.hobbies.collecting">
+<font color="#ffcc66"><b>The best music online</b></font></a>
 
-<p>5╒ long distance!<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=44692021&location=textlink.qwest.cat.rec.cat.rec.hobbies.collecting">
-<font face="geneva,arial" color="#ffcc66">
-<b>Save $$$$$.</b></font></a>
+<p>Search for Jobs!<br>
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=9375516&location=textlink.joboptions.cat.ros.cat.rec.hobbies.collecting">
+<font color="#ffcc66"><b>JobOptions</b></font></a>
 
-<p>Hot Wheels Giveaway<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=44692021&location=textlink.mob.cat.auto.cat.rec.hobbies.collecting">
-<font face="geneva,arial" color="#ffcc66">
-<b>Free Auctions-Mobilia.com</b></font></a>
-
-<p>Return of Rock<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=44692021&location=textlink.mtv.cat.rec.cat.rec.hobbies.collecting">
-<font face="geneva,arial" color="#ffcc66">
-<b>MTV.com</b></font></a>
-
-</td></tr>
-</table>
-    </td>
-
-</tr>
-
+</span></td></tr>
 </table>
 
 <!-- third stage : end -->
 
 </td>
-<td rowspan=2 width=3 bgcolor=#000000><img src="http://g.deja.com/gifs/20x20.gif" width=3 height=1></td>
-</tr><tr>
-<td colspan=2 valign=top bgcolor="#ffcc66" width=131>
 
-<!-- first stage : begin -->
+<td rowspan=2 width=3 bgcolor=#000000><img src=http://g.deja.com/gifs/20x20.gif width=3 height=1></td>
 
-
-
-
-
-
-<table border=0 cellspacing=0 cellpadding=0 width=100%>
-
-<tr><td>
-
-
-
-
-
-
-
-<form action="http://www.deja.com/rate/user_rate.xp" method=GET>
-<table border=0 cellspacing=0 cellpadding=6 width=100%><tr>
-<td valign=bottom bgcolor=#000000>
-    <table cellspacing=0 cellpadding=0 border=0 width=100%><tr>
-    <td valign=middle><font face="geneva,arial" color="#ff6600" size=4><b>Rate it!</b></font></td>
-    </tr></table>
-</td>
-</tr><tr>
-<td bgcolor="#cccc66"><font face="geneva,arial" size=1>
-<font size=3><b><a href="http://www.deja.com/rate/item.xp?CID=10413&PDID=2621">Karhu Hardbody</a></b></font><br>
-
-in <a href="http://www.deja.com/rate/list_items.xp?CID=10413&PCID=12091">Cross-country Skis</a>
-<br>(1=worst, 5=best)
-</tr><tr>
-<td bgcolor="#cccc66" nowrap><font face="geneva,arial" size=1>
-
-
-    Performance<br>
-    
-    1<input type=radio name=CR1 value=1><input type=radio name=CR1 value=2><input type=radio name=CR1 value=3><input type=radio name=CR1 value=4><input type=radio name=CR1 value=5>5<br>
-    
-
-    Design<br>
-    
-    1<input type=radio name=CR2 value=1><input type=radio name=CR2 value=2><input type=radio name=CR2 value=3><input type=radio name=CR2 value=4><input type=radio name=CR2 value=5>5<br>
-    
-
-    Durability<br>
-    
-    1<input type=radio name=CR3 value=1><input type=radio name=CR3 value=2><input type=radio name=CR3 value=3><input type=radio name=CR3 value=4><input type=radio name=CR3 value=5>5<br>
-    
-
-    Cost / Benefit<br>
-    
-    1<input type=radio name=CR4 value=1><input type=radio name=CR4 value=2><input type=radio name=CR4 value=3><input type=radio name=CR4 value=4><input type=radio name=CR4 value=5>5<br>
-    
-
-<p>
-<input type=submit value="Submit">
-<input type="hidden" name="CID" value="10413">
-<input type="hidden" name="PDID" value="2621">
-</form>
-<li> <a href="http://www.deja.com/rate/list_items.xp?CID=10413&PCID=12091">Compare it to others</a><br>
-<li> <a href="http://www.deja.com/rate/list_reviews.xp?CID=10413&PDID=2621">User Comments</a>
-<br>
-
-<li> <a href="http://www.deja.com/linkback.xp?act=f&res_type=rating&res_title=Karhu%20Hardbody&res_url=http://www.deja.com/rate/item.xp%3fPDID%3d2621%26PCID%3d12091%26CID%3d10413">Add this rating</a><br>&nbsp;&nbsp;&nbsp;<a href="http://www.deja.com/linkback.xp?act=f&res_type=rating&res_title=Karhu%20Hardbody&res_url=http://www.deja.com/rate/item.xp%3fPDID%3d2621%26PCID%3d12091%26CID%3d10413">to your own Web site</a>
-<br>&nbsp;
-</font></td></tr>
-</table>
-</td></tr>
-
-<tr><td bgcolor="#000000"><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td></tr>
-
-<tr><td>
-
-
-
-<table width=100% border=0 cellspacing=0 cellpadding=6>
-
-<tr>
-<td valign=bottom bgcolor=#000000>
-    <table cellspacing=0 cellpadding=0 border=0 width=100%><tr>
-    <td valign=middle><font face="geneva,arial" color="#ff6600" size=6><b>5&nbsp;</b></font></td>
-    <td valign=top><font face="geneva,arial" color="#ff6600" size=2><b>top&nbsp;rated<br>Cross-country Skis</b></font></td>
-    </tr></table>
-</td>
 </tr>
 
 <tr>
-<td valign=top bgcolor=#cccc66>
-<font face="geneva,arial" size=1>
-
-
-    
-    <a href="http://www.deja.com/rate/item.xp?CID=10413&PDID=2623">
-    1. Rossignol Energy Cut Dualtec</a><br>
-
-    
-    <a href="http://www.deja.com/rate/item.xp?CID=10413&PDID=2618">
-    2. Dynastar Max 2</a><br>
-
-    
-    <a href="http://www.deja.com/rate/item.xp?CID=10413&PDID=2622">
-    3. Rossignol 9X Cut</a><br>
-
-    
-    <a href="http://www.deja.com/rate/item.xp?CID=10413&PDID=2627">
-    4. Volkl Carver Xcape</a><br>
-
-    
-    <a href="http://www.deja.com/rate/item.xp?CID=10413&PDID=2625">
-    5. Tua Mega MX</a><br>
-
-<a href="http://www.deja.com/rate/list_items.xp?CID=10413&PCID=12091"><li>See the full list...</a><br>
-</font></td>
-</tr>
-</table>
-</td></tr>
-
-<tr><td bgcolor="#000000"><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td></tr>
-
-
-<tr><td>
-
-
-
-<table width=100% border=0 cellspacing=0 cellpadding=6>
-<tr>
-<td valign=top bgcolor=#ffcc66><b><font face="geneva,arial" size=2>Deja Forums</font></b><br>
-<font face="geneva,arial" size=1>
-
-
-<a href="http://www.deja.com/group/alt.collecting">Collections</a><br>
-
-
-<a href="http://www.deja.com/group/alt.collecting.autographs">Autograph collections</a><br>
-
-
-<a href="http://www.deja.com/group/alt.collecting.beanie-babies">Beanie babies collections</a><br>
-
-
-<a href="http://www.deja.com/group/alt.collecting.bicycles">Bicycle collections</a><br>
-
-
-<a href="http://www.deja.com/group/alt.collecting.breweriana">Brewing equip. collections</a><br>
-
-&nbsp;</font></td>
-</tr></table>
-</td></tr>
-
-<tr><td bgcolor="#000000"><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td></tr>
-
-
-
-
-<tr><td>
-
-
-
-<table width=100% border=0 cellspacing=0 cellpadding=6>
-<tr>
-<td valign=top bgcolor=#ffcc66><b><font face="geneva,arial" size=2>Deja Communities</font></b><br>
-<font face="geneva,arial" size=1>
-
-
-<p>
-<a href="http://www.deja.com/j_new.xp">Start your own</a> 
-community in <b>Collecting</b>.
-
-&nbsp;</font></td>
-</tr></table>
-</td></tr>
-
-<tr><td bgcolor="#000000"><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td></tr>
-
-
-<tr>
-    <td>
-    <table border=0 cellspacing=0 cellpadding=6 width=100%><tr>
-	<td valign=top bgcolor="#ffcc66">
-	<font face="geneva,arial" size=2><b>My Deja</b></font><br>
-	<font face="geneva,arial" size=1>
-	
-	    Get more out of Deja: <a href="http://www.deja.com/register.xp">Register</a> to easily manage your discussions
-	    and communities, and improve your searches.  Plus, get email alerts about
-	    new posts in your favorite discussions with <a href="http://www.deja.com/mydn_search.xp">Deja Tracker</a>!
-	
-	<br>&nbsp;</font></td>
-    </tr></table>
-    </td>
-</tr>
-
-</table>
-
-<!-- first stage : end -->
-
-<img src="http://g.deja.com/gifs/20x20.gif" width=131 height=1></td>
-<td bgcolor=#000000 width=4><img src="http://g.deja.com/gifs/20x20.gif" width=4 height=1></td>
-
-
-<td bgcolor=#ffffff valign=top>
+<td bgcolor=#000000 width=4><img src=http://g.deja.com/gifs/20x20.gif width=4 height=1></td>
+<td bgcolor=#ffffff valign=top align=center height=800 width=100%>
 
 <!-- second stage : begin -->
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=#000000><tr>
+<td bgcolor=#000000><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=5></td>
+</tr></table>
+
 <!-- second stage nav_tab : begin -->
+
+
 
 
 
 <table border=0 cellspacing=0 cellpadding=0 width=100%>
 <tr><td valign=bottom bgcolor=#000000>
 
-
-
 <table border=0 cellspacing=0 cellpadding=0>
 <tr><td bgcolor=#000000><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=5></td>
 </tr></table>
 
-<table border=0 cellspacing=0 cellpadding=2><tr>
+<table border=0 cellspacing=0 cellpadding=2>
+<tr>
 
 
     
-    <td nowrap bgcolor=#ffcc66><font face="geneva,arial" size=2><b>&nbsp;
+    <td nowrap bgcolor=#ffcc66><b>&nbsp;
     
-	<a href="http://www.deja.com/rate/search.xp?QRY=Lili+AND+Ledy">ratings</a>
+	<a href="rate/search.xp?QRY=Lili+AND+Ledy">ratings</a>
     
     &nbsp;</b></font></td>
     <td bgcolor=#000000><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td>
 
     
-    <td nowrap bgcolor=#ffffff><font face="geneva,arial" size=2><b>&nbsp;
+    <td nowrap bgcolor=#ffffff><b>&nbsp;
     
 	discussions
     
@@ -530,9 +241,9 @@ community in <b>Collecting</b>.
     <td bgcolor=#000000><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td>
 
     
-    <td nowrap bgcolor=#ffcc66><font face="geneva,arial" size=2><b>&nbsp;
+    <td nowrap bgcolor=#ffcc66><b>&nbsp;
     
-	<a href="http://www.deja.com/commsearch.xp?QRY=Lili+AND+Ledy">communities</a>
+	<a href="commsearch.xp?QRY=Lili+AND+Ledy">communities</a>
     
     &nbsp;</b></font></td>
     <td bgcolor=#000000><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td>
@@ -545,1323 +256,1871 @@ community in <b>Collecting</b>.
     &nbsp;
 
 
+</td>
+</tr></table>
+
+
+
+
+
+<!-- second stage nav_tab : end -->
+
+<!-- second stage content : begin -->
+
+
+
+
+
+
+
+
+
+<p>
+
+<table width=95% cellpadding=0 cellspacing=0 border=0><tr>
+<td valign=top>
+<span class="xlarge">Results for:&nbsp;</span>
+<span class="xlarge" id="red">"Lili AND Ledy&quot</span>
+</td>
+<td valign=top align=right>
+
+
+
+
+<table border=0 cellspacing=0 cellpadding=3><tr align=right>
+
+    <td align=center nowrap valign=top class="small" bgcolor=#ffcc66>
+	<a href="home_ps.shtml?QRY=Lili%20AND%20Ledy&TAB=D">Power Search</a>
+    </td>
+
+<td align=center nowrap valign=top class="small" bgcolor=#eeeeee>
+
+    <a href="help/help_metasr.shtml">Help</a> | 
+
+<a href="mailto.xp?category=Searching">Feedback</a>
+<br></td>
+</tr></table>
 
 
 </td>
 </tr></table>
-
-<!-- second stage nav_tab : end -->
-<!-- second stage content : begin -->
-<table width=100% cellpadding=12 cellspacing=0 border=0>
-<tr><td valign=top>
+</p>
 
 
 
+<table cellpadding=2 cellspacing=0 border=0 width=95%>
+<tr><td width=100% colspan=2>
+<b>Messages</b><br>
+<b class="small">1-100 of about 200 matches</b>
+<br><a href="http://www.deja.com/trackquery.xp?query=Lili%20AND%20Ledy&wp_query=svcclass%3ddnserver%26defaultOp%3d%257c%26ST%3dPS%26minAN%3d0%26ageweight%3d1%26query%3dLili%2520AND%2520Ledy%26search%3dword%26HT%3d0%26maxhits%3d100%26RN%3d0%26LNG%3dALL%26showsort%3dscore%26format%3dterse%26QRY%3dLili%2520AND%2520Ledy%26IS%3dLili%2520AND%2520Ledy%26agesign%3d0%26OP%3ddnquery.xp&return_to=http://x39.deja.com/qs.xp%3fLNG%3dALL%26OP%3ddnquery.xp%26QRY%3dLili%2bAND%2bLedy%26ST%3dPS%26defaultOp%3dOR%26maxhits%3d100%26showsort%3dscore">Track this search for me</a>
 
+</td></tr>
+</table>
 
+<table width=95% cellspacing=0 cellpadding=6 border=0>
+
+<tr align=left valign=top>
+
+    <td><a href="http://x39.deja.com/qs.xp?LNG=ALL&OP=dnquery.xp&QRY=Lili+AND+Ledy&ST=PS&defaultOp=OR&maxhits=100&showsort=date">Date</a> <img src="http://g.deja.com/gifs/sort_down_x.gif" width=11 height=6 border=0 hspace=3 vspace=1></td>
+
+    <td><a href="http://x39.deja.com/qs.xp?LNG=ALL&OP=dnquery.xp&QRY=Lili+AND+Ledy&ST=PS&defaultOp=OR&maxhits=100&showsort=subject">Subject</a> <img src="http://g.deja.com/gifs/sort_down_x.gif" width=11 height=6 border=0 hspace=3 vspace=1></td>
+
+    <td><a href="http://x39.deja.com/qs.xp?LNG=ALL&OP=dnquery.xp&QRY=Lili+AND+Ledy&ST=PS&defaultOp=OR&maxhits=100&showsort=newsgroup">Forum</a> <img src="http://g.deja.com/gifs/sort_down_x.gif" width=11 height=6 border=0 hspace=3 vspace=1></td>
+
+    <td><a href="http://x39.deja.com/qs.xp?LNG=ALL&OP=dnquery.xp&QRY=Lili+AND+Ledy&ST=PS&defaultOp=OR&maxhits=100&showsort=author">Author</a> <img src="http://g.deja.com/gifs/sort_down_x.gif" width=11 height=6 border=0 hspace=3 vspace=1></td>
+
+</tr>
 
 
 
 
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table cellspacing=0 width=640 cellpadding=0 border=0>
-    <tr valign=top>
-	<td><font face="geneva,arial" size=2>view results in <a href="http://x41.deja.com/dnquery.xp?QRY=Lili+AND+Ledy&ST=PS&defaultOp=OR&maxhits=100&showsort=score&format=terse">tabular format</a></font>&nbsp;<img src="http://g.deja.com/gifs/new.gif" border=0 HEIGHT=20 WIDTH=37 align=abscenter></td>
-	<td width=45 rowspan=3>&nbsp;</td>
-	<td><font face="geneva,arial" size=1>sort by:
-	    &nbsp;<font color="#999999">confidence</font>&nbsp; | &nbsp;<a href="http://x41.deja.com/dnquery.xp?QRY=Lili+AND+Ledy&ST=PS&defaultOp=OR&format=delta&maxhits=100&showsort=subject">subject</a>&nbsp; |
-	    &nbsp;<a href="http://x41.deja.com/dnquery.xp?QRY=Lili+AND+Ledy&ST=PS&defaultOp=OR&format=delta&maxhits=100&showsort=newsgroup">forum</a>&nbsp; | &nbsp;<a href="http://x41.deja.com/dnquery.xp?QRY=Lili+AND+Ledy&ST=PS&defaultOp=OR&format=delta&maxhits=100&showsort=date">date</a>&nbsp; |
-	    &nbsp;<a href="http://x41.deja.com/dnquery.xp?QRY=Lili+AND+Ledy&ST=PS&defaultOp=OR&format=delta&maxhits=100&showsort=author">author</a></font></td>
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>12/03/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=556425574&CONTEXT=944588958.1820393532&hitnum=0">
+    fs lili ledy lumat 55.00    
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=385c0bd01bd249655f61300da57b1a717d7a97f7198277bee5e39aa81927bdca7bc2ff4b68ac9ee6ef6d1a59218988e14be902936bea40c83efb101b18&ST=PS&ee=1">Dave Degregory </a></td>
     </tr>
-    <tr height=5><td>&nbsp;</td></tr>
-    <tr valign=top>
-	<td width=220>
-	
-	
-	
-		
+    
 
-	
-	
-	
-	
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>12/06/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=557546877&CONTEXT=944588958.1820393532&hitnum=1">
+    Re: 20-Back VC jawa?        
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=385f0fd718d2486796af31045524c7405c6ac2e0f25efb12a3d4047a65a4408366e54cd9d26be9fd4459b318510c42394807d400&ST=PS&ee=1">daniel bretta  </a></td>
+    </tr>
+    
 
-	
-	
-	
-	
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>11/07/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=545393789&CONTEXT=944588958.1820393532&hitnum=2">
+    Re: FS: Lili Ledy 12&quot; Tusken
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3c590bd118d14863dc33dcc4585a4fdf690cfbb6380ec1da540247764a6a299cf8d9d808c03998950b2359d60944b68ca3&ST=PS&ee=1">Jakobius21     </a></td>
+    </tr>
+    
 
-	<font face="geneva,arial"><b>Forums related to</b></font>
-	<font face="geneva,arial" color="#ff6600"><b>Lili AND Ledy</b></font><b>:</b>
-	<font face="geneva,arial" size=2></font>
-        <p>
-	<font face="geneva,arial" size=2>
-	click on a forum to browse its topics<br>
-	
-	
-	
-	<a href=http://x41.deja.com/[ST_rn=if]/topics_if.xp?search=topic&group=rec.arts.sf.starwars.collecting.vintage&GRPP=939394707.777257040&title=Related&query=Lili%20AND%20Ledy>rec.arts.sf.starwars.collecting.vintage</a><font size=3>&nbsp;</font><br>
-	
-	
-	
-	</font>
-	</td>
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>11/07/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=545544164&CONTEXT=944588958.1820393532&hitnum=3">
+    Re: FS: Lili Ledy 12&quot; Tusken
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3c5b0ed217d0416008bf754e9eb809b6dc9f0fbf0cc0dcbd3c2c0e052504f5adfd0533b1b7ed8a8d1b5b7d63be&ST=PS&ee=1">SWseller       </a></td>
+    </tr>
+    
 
-	<td width=390>
-	
-	<font face="geneva,arial"><b>Messages that contain your search</b></font>
-	<font face="geneva,arial" color=#ff6600><b>Lili AND Ledy</b></font><b>:</b>
-        <br>
-	
-        <font face="geneva,arial" size=-1><a href="http://www.deja.com/trackquery.xp?query=Lili%20AND%20Ledy&wp_query=svcclass%3ddnserver%26defaultOp%3d%257c%26ST%3dPS%26minAN%3d0%26ageweight%3d1%26query%3dLili%2520AND%2520Ledy%26search%3dword%26HT%3d0%26maxhits%3d100%26RN%3d0%26showsort%3dscore%26format%3ddelta%26QRY%3dLili%2520AND%2520Ledy%26IS%3dLili%2520AND%2520Ledy%26agesign%3d0&return_to=http://x41.deja.com/dnquery.xp%3fQRY%3dLili%2bAND%2bLedy%26ST%3dPS%26defaultOp%3dOR%26format%3ddelta%26maxhits%3d100%26showsort%3dscore">Notify me of new matches</a></font>
-        <p>
-	
-        <font face="geneva,arial" size=-1>messages 1-100 of about 100 matches</font>
-        <p>
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>07/02/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=496285102&CONTEXT=944588958.1820393532&hitnum=4">
+    Question Lili Ledy ROTJ figu
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3a5b01d61ed54765781c875f0e40a4b91a9a03c409df3c0ad2e205a0dd8b73b7beec0e8c58731eb009&ST=PS&ee=1">BillN4         </a></td>
+    </tr>
+    
 
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=385480386&CONTEXT=939394707.777257040&hitnum=0">FS: Lili Ledy 12&quot; Princess Leia MIB on E-bay</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/08/28 <b>Author</b>: BillN4
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=385485483&CONTEXT=939394707.777257040&hitnum=1">FS: Lili Ledy 12&quot; Princess Leia MIB on E-bay</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.toys.vintage<br>
-	<b>Date</b>: 1998/08/28 <b>Author</b>: BillN4
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=496285102&CONTEXT=939394707.777257040&hitnum=2">Question Lili Ledy ROTJ figures w/ Stapled bubbles</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/07/02 <b>Author</b>: BillN4
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=422748797&CONTEXT=939394707.777257040&hitnum=3">WTB: Lili Ledy loose dolls, Takara, Micro</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/12/15 <b>Author</b>: rude-boy
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=420898184&CONTEXT=939394707.777257040&hitnum=4">WTB: loose Lili Ledy dolls carded figs..</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/12/10 <b>Author</b>: rude-boy
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=408863155&CONTEXT=939394707.777257040&hitnum=5">Re: FS: Lili Ledy Darth VAder box</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/11/05 <b>Author</b>: rude-boy
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=398513119&CONTEXT=939394707.777257040&hitnum=6">Re: Lili Ledy Darth Vader MIB</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/10/07 <b>Author</b>: JYX1138
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=422783191&CONTEXT=939394707.777257040&hitnum=7">Re: WTB: Lili Ledy loose dolls, Takara, Micro</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/12/16 <b>Author</b>: JYX1138
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=415733008&CONTEXT=939394707.777257040&hitnum=8">WTB: Lili Ledy loose dolls</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/11/25 <b>Author</b>: rude-boy
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=385525613&CONTEXT=939394707.777257040&hitnum=9">Re: Need some information on lili ledy 8&quot; r2-d2</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/08/28 <b>Author</b>: Bigred1579
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=338754227&CONTEXT=939394707.777257040&hitnum=10">How mcuh are Lili Ledy figures worth?</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/03/29 <b>Author</b>: Bigred1579
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=496301270&CONTEXT=939394707.777257040&hitnum=11">Re: Question Lili Ledy ROTJ figures w/ Stapled bubbles</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/07/01 <b>Author</b>: daniel bretta
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=494500542&CONTEXT=939394707.777257040&hitnum=12">A few LiLi Ledy questions</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/06/27 <b>Author</b>: daniel bretta
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=494555572&CONTEXT=939394707.777257040&hitnum=13">Re: A few LiLi Ledy questions</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/06/27 <b>Author</b>: Gavin
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=409241035&CONTEXT=939394707.777257040&hitnum=14">Re: FS: Lili Ledy Darth Vader BOX only.</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/11/07 <b>Author</b>: JYX1138
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=408916877&CONTEXT=939394707.777257040&hitnum=15">Re: FS: Lili Ledy Darth VAder box</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/11/06 <b>Author</b>: VaderForMe
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=409081414&CONTEXT=939394707.777257040&hitnum=16">Re: FS: Lili Ledy Darth VAder box</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/11/06 <b>Author</b>: Tim Sparks
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=409081415&CONTEXT=939394707.777257040&hitnum=17">Re: FS: Lili Ledy Darth Vader BOX only.</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/11/06 <b>Author</b>: Tim Sparks
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=408754318&CONTEXT=939394707.777257040&hitnum=18">FS: Lili Ledy Darth VAder box</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/11/05 <b>Author</b>: rude-boy
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=407998342&CONTEXT=939394707.777257040&hitnum=19">FS: Lili Ledy Darth VAder box/Bell shape display</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/11/03 <b>Author</b>: rude-boy
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=408145107&CONTEXT=939394707.777257040&hitnum=20">FS: Lili Ledy Darth VAder box/Bell shape display</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/11/03 <b>Author</b>: rude-boy
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=406781928&CONTEXT=939394707.777257040&hitnum=21">FS: Lili Ledy Darth Vader BOX only.</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/10/30 <b>Author</b>: rude-boy
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=398508415&CONTEXT=939394707.777257040&hitnum=22">Re: Lili Ledy Darth Vader MIB</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/10/07 <b>Author</b>: JYX1138
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=533349897&CONTEXT=939394707.777257040&hitnum=23">Re: Toy Expo in NJ </font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/10/06 <b>Author</b>: Salfamily
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=477664193&CONTEXT=939394707.777257040&hitnum=24">FS: Lili Ledy 12&quot; R2 on ebay</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/05/14 <b>Author</b>: poptoys
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=450231495&CONTEXT=939394707.777257040&hitnum=25">Re: vinyl cape jawa on Lily Ledy card???</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/03/01 <b>Author</b>: Chris Georgoulias
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=408766992&CONTEXT=939394707.777257040&hitnum=26">Re: FS: Lili Ledy Darth VAder box</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/11/05 <b>Author</b>: Mark Meazark
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=401076242&CONTEXT=939394707.777257040&hitnum=27">Lili Ledy Darth Bvader box</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/10/14 <b>Author</b>: rude-boy
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=399947409&CONTEXT=939394707.777257040&hitnum=28">Re: Discussion: What Star Wars collectibles are you searching for?</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/10/11 <b>Author</b>: rude-boy
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=387499321&CONTEXT=939394707.777257040&hitnum=29">E-bay: Lili Ledy 12&quot; Princess Leia MIB 10 hours left</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/09/03 <b>Author</b>: BillN4
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=387500010&CONTEXT=939394707.777257040&hitnum=30">E-bay: Lili Ledy 12&quot; Princess Leia MIB 10 hours left</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.toys.vintage<br>
-	<b>Date</b>: 1998/09/03 <b>Author</b>: BillN4
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=386805719&CONTEXT=939394707.777257040&hitnum=31">FS: Lili Ledy 12&quot; Princess Leia MIB from Mexico on E-bay</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/09/01 <b>Author</b>: BillN4
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=385971219&CONTEXT=939394707.777257040&hitnum=32">FS: Lili Ledy Princess Leia MIB on E-bay</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/08/29 <b>Author</b>: BillN4
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=385284064&CONTEXT=939394707.777257040&hitnum=33">Re: Need some information on lili ledy 8&quot; r2-d2</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/08/27 <b>Author</b>: Salfamily
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=385502784&CONTEXT=939394707.777257040&hitnum=34">Re: Need some information on lili ledy 8&quot; r2-d2</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/08/27 <b>Author</b>: Wall
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=385159519&CONTEXT=939394707.777257040&hitnum=35">Need some information on lili ledy 8&quot; r2-d2</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/08/26 <b>Author</b>: Neil Sunderland
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=338991267&CONTEXT=939394707.777257040&hitnum=36">Re: How mcuh are Lili Ledy figures worth?</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/03/30 <b>Author</b>: MegatronForever
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=339096782&CONTEXT=939394707.777257040&hitnum=37">Re: How mcuh are Lili Ledy figures worth?</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/03/30 <b>Author</b>: jasper
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=339220058&CONTEXT=939394707.777257040&hitnum=38">Re: How mcuh are Lili Ledy figures worth?</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/03/30 <b>Author</b>: jasper
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=339251989&CONTEXT=939394707.777257040&hitnum=39">Re: How mcuh are Lili Ledy figures worth?</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/03/30 <b>Author</b>: Salfamily
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=494590138&CONTEXT=939394707.777257040&hitnum=40">Re: A few LiLi Ledy questions</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/06/28 <b>Author</b>: Salfamily
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=409940796&CONTEXT=939394707.777257040&hitnum=41">Re: FS: Lili Ledy Darth Vader BOX only.</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/11/09 <b>Author</b>: Tim Sparks
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=409781114&CONTEXT=939394707.777257040&hitnum=42">Re: FS: Lili Ledy Darth Vader BOX only.</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/11/08 <b>Author</b>: rude-boy
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=409381306&CONTEXT=939394707.777257040&hitnum=43">Re: FS: Lili Ledy Darth Vader BOX only.</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/11/07 <b>Author</b>: Chris Georgoulias
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=409098958&CONTEXT=939394707.777257040&hitnum=44">Re: FS: Lili Ledy Darth Vader BOX only.</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/11/06 <b>Author</b>: rude-boy
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=398407368&CONTEXT=939394707.777257040&hitnum=45">Re: Lili Ledy Darth Vader MIB</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/10/06 <b>Author</b>: Salfamily
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=208383291&CONTEXT=939394707.777257040&hitnum=46">Help! Lili Ledy Tusken Raider Wanted</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting<br>
-	<b>Date</b>: 1997/01/07 <b>Author</b>: Michael Wall
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=507515354&CONTEXT=939394707.777257040&hitnum=47">POTF Carded Figures</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/07/31 <b>Author</b>: Kein Walker
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=500564748&CONTEXT=939394707.777257040&hitnum=48">Re: FS: Italian 12b Darth Vader</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/07/13 <b>Author</b>: Salfamily
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=450376993&CONTEXT=939394707.777257040&hitnum=49">Re: vinyl cape jawa on Lily Ledy card???</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/03/02 <b>Author</b>: Ron Salvatore
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=450064429&CONTEXT=939394707.777257040&hitnum=50">Re: vinyl cape jawa on Lily Ledy card???</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/03/01 <b>Author</b>: Salfamily
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=437424007&CONTEXT=939394707.777257040&hitnum=51">Re: Fallout 2: Бонуса.</font></a><br>
-	<font size=2>
-	<b>Forum</b>: relcom.games<br>
-	<b>Date</b>: 1999/01/27 <b>Author</b>: Vladimir Ermilin
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=408791338&CONTEXT=939394707.777257040&hitnum=52">Re: FS: Lili Ledy Darth VAder box</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/11/05 <b>Author</b>: rude-boy
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=408816452&CONTEXT=939394707.777257040&hitnum=53">Re: FS: Lili Ledy Darth VAder box</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/11/05 <b>Author</b>: Mark Meazark
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=406258981&CONTEXT=939394707.777257040&hitnum=54">Re: The rarest vintage SW toy/s in your collection??</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/10/29 <b>Author</b>: Ashman
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=338872897&CONTEXT=939394707.777257040&hitnum=55">Re: How mcuh are Lili Ledy figures worth?</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/03/29 <b>Author</b>: Salfamily
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=231298943&CONTEXT=939394707.777257040&hitnum=56">Lili Ledy Jawa</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting<br>
-	<b>Date</b>: 1997/04/07 <b>Author</b>: David K Gaddy
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=523580479&CONTEXT=939394707.777257040&hitnum=57">Re: Is there a new SW Galaxy Collector out yet ??</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/09/10 <b>Author</b>: Bigred1579
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=511242283&CONTEXT=939394707.777257040&hitnum=58">Re: Lili-Ledy bagged sample parts</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/08/10 <b>Author</b>: Salfamily
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=424590202&CONTEXT=939394707.777257040&hitnum=59">Items for sale</font></a><br>
-	<font size=2>
-	<b>Forum</b>: alt.toys.gi-joe<br>
-	<b>Date</b>: 1998/12/21 <b>Author</b>: bob morandin
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=411713453&CONTEXT=939394707.777257040&hitnum=60">Help with info?</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/11/14 <b>Author</b>: rude-boy
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=406876265&CONTEXT=939394707.777257040&hitnum=61">My want list, you got it??</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/10/30 <b>Author</b>: rude-boy
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=390247210&CONTEXT=939394707.777257040&hitnum=62">Looking for a few misc. items</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/09/11 <b>Author</b>: Cappsized
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=527271425&CONTEXT=939394707.777257040&hitnum=63">Re: Wanted-European Figures with no Country on leg</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/09/20 <b>Author</b>: Bigred1579
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=507538198&CONTEXT=939394707.777257040&hitnum=64">Re: POTF Carded Figures</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/08/01 <b>Author</b>: Starwars1
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=507640256&CONTEXT=939394707.777257040&hitnum=65">Re: POTF Carded Figures</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/08/01 <b>Author</b>: Kein Walker
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=490442402&CONTEXT=939394707.777257040&hitnum=66">Re: Rarest carded Star Wars figures</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/06/16 <b>Author</b>: Salfamily
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=460594916&CONTEXT=939394707.777257040&hitnum=67">WTB-Carded Death Squad Comms and Proof Cards</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/03/30 <b>Author</b>: Bigred1579
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=428916646&CONTEXT=939394707.777257040&hitnum=68">Re: Discussion topic: What is in your collection?</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/01/04 <b>Author</b>: rude-boy
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=386681760&CONTEXT=939394707.777257040&hitnum=69">FS: Palitoy Emperor's Royal Guard MOC on E-bay</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/09/01 <b>Author</b>: BillN4
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=385971218&CONTEXT=939394707.777257040&hitnum=70">E-bay: Vintage Carded Figures + MORE</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/08/29 <b>Author</b>: BillN4
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=380180648&CONTEXT=939394707.777257040&hitnum=71">Re: Bib Fortuna variation</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/08/11 <b>Author</b>: Salfamily
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=339034942&CONTEXT=939394707.777257040&hitnum=72">Re: How mcuh are Lili Ledy figures worth?</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/03/30 <b>Author</b>: Ron Peritore
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=339257828&CONTEXT=939394707.777257040&hitnum=73">Re: How mcuh are Lili Ledy figures worth?</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/03/30 <b>Author</b>: Salfamily
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=338971025&CONTEXT=939394707.777257040&hitnum=74">Re: How mcuh are Lili Ledy figures worth?</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/03/29 <b>Author</b>: Ron Peritore
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=286129424&CONTEXT=939394707.777257040&hitnum=75">Re: Vintage Star Wars Topics</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1997/10/31 <b>Author</b>: Toy One
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=499683514&CONTEXT=939394707.777257040&hitnum=76">Re: Vintage Collector Quiz #3</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/07/11 <b>Author</b>: DANIEL BRETTA
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=499278069&CONTEXT=939394707.777257040&hitnum=77">Vintage Collector Quiz #3</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/07/09 <b>Author</b>: daniel bretta
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=499286879&CONTEXT=939394707.777257040&hitnum=78">Re: Vintage Collector Quiz #3</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/07/09 <b>Author</b>: CoolGuy025
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=499286880&CONTEXT=939394707.777257040&hitnum=79">Re: Vintage Collector Quiz #3</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/07/09 <b>Author</b>: Accursed01
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=499289878&CONTEXT=939394707.777257040&hitnum=80">Re: Vintage Collector Quiz #3</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/07/09 <b>Author</b>: SWseller
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=465699058&CONTEXT=939394707.777257040&hitnum=81">Re: red caped jawas...</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/04/13 <b>Author</b>: Salfamily
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=464312263.2&CONTEXT=939394707.777257040&hitnum=82">FS: Vintage toys, many foreign (Lili Ledy, Harbert, Top Toys, etc) #2/3</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/04/09 <b>Author</b>: toddc
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=464312263.3&CONTEXT=939394707.777257040&hitnum=83">FS: Vintage toys, many foreign (Lili Ledy, Harbert, Top Toys, etc) #3/3</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/04/09 <b>Author</b>: toddc
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=464312271.2&CONTEXT=939394707.777257040&hitnum=84">FS: Vintage toys, many foreign (Lili Ledy, Harbert, Top Toys, etc) #2/3</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.misc<br>
-	<b>Date</b>: 1999/04/09 <b>Author</b>: toddc
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=464312271.3&CONTEXT=939394707.777257040&hitnum=85">FS: Vintage toys, many foreign (Lili Ledy, Harbert, Top Toys, etc) #3/3</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.misc<br>
-	<b>Date</b>: 1999/04/09 <b>Author</b>: toddc
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=439545085&CONTEXT=939394707.777257040&hitnum=86">Re: info needed, vintage figs</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/02/01 <b>Author</b>: Salfamily
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=439593167&CONTEXT=939394707.777257040&hitnum=87">Re: info needed, vintage figs</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/02/01 <b>Author</b>: Ken Furlong
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=432700492&CONTEXT=939394707.777257040&hitnum=88">Re: Anyone been to Brazil</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/01/14 <b>Author</b>: gunsnroses
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=422748793&CONTEXT=939394707.777257040&hitnum=89">FS/T: MISB ESB Vader case with 3 figures offer the rare ones</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/12/15 <b>Author</b>: rude-boy
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=421978616&CONTEXT=939394707.777257040&hitnum=90">Re: Anyone heard of a Jawa w/ upsidedown Bubble?</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/12/14 <b>Author</b>: Salfamily
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=422010362&CONTEXT=939394707.777257040&hitnum=91">Re: Anyone heard of a Jawa w/ upsidedown Bubble?</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/12/13 <b>Author</b>: Chris Georgoulias
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=418275046&CONTEXT=939394707.777257040&hitnum=92">Re: Sweet Star Wars Vintage Lot FA/E-bay, Many RARE Complete !</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/12/03 <b>Author</b>: rude-boy
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=321459539&CONTEXT=939394707.777257040&hitnum=93">**Awesome Vinatge Star Wars Auction**</font></a><br>
-	<font size=2>
-	<b>Forum</b>: alt.toys<br>
-	<b>Date</b>: 1998/02/02 <b>Author</b>: Hablo4U
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=321462481&CONTEXT=939394707.777257040&hitnum=94">**52 lot auction&gt;&gt;Good Stuff!!!**</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.misc<br>
-	<b>Date</b>: 1998/02/02 <b>Author</b>: Hablo4U
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=321462486&CONTEXT=939394707.777257040&hitnum=95">***Awesome Vintage Auction***</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/02/02 <b>Author</b>: Hablo4U
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=321462488&CONTEXT=939394707.777257040&hitnum=96">**Awesome Vintage Auction**</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.misc<br>
-	<b>Date</b>: 1998/02/02 <b>Author</b>: Hablo4U
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=321462599&CONTEXT=939394707.777257040&hitnum=97">**Awesome Vintage Star Wars Auction**</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.collecting<br>
-	<b>Date</b>: 1998/02/02 <b>Author</b>: Hablo4U
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=321463207&CONTEXT=939394707.777257040&hitnum=98">**Awesome Vintage Star Wars Auction**</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.toys.action-figures<br>
-	<b>Date</b>: 1998/02/02 <b>Author</b>: Hablo4U
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x41.deja.com/getdoc.xp?AN=321463218&CONTEXT=939394707.777257040&hitnum=99">**Awesome Vintage Star Wars Auction**</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.toys.misc<br>
-	<b>Date</b>: 1998/02/02 <b>Author</b>: Hablo4U
-	<p>
-	</font>
-	
-	
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>12/15/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=422748797&CONTEXT=944588958.1820393532&hitnum=5">
+    WTB: Lili Ledy loose dolls, 
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3c5b0cd41cd148671b8c0ca3059a9c8da3eb585a627ee0384fc996a99d62923dc5e3e99eeb341359945298c2dda082f6&ST=PS&ee=1">rude-boy       </a></td>
+    </tr>
+    
 
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>12/10/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=420898184&CONTEXT=944588958.1820393532&hitnum=6">
+    WTB: loose Lili Ledy dolls c
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3c5d0dd019d0446cad0047704c808700ab35420f9aad3c174e03f1a3cbd15b58a890514bf9321e67662703e39393c87f&ST=PS&ee=1">rude-boy       </a></td>
+    </tr>
+    
 
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>11/05/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=408863155&CONTEXT=944588958.1820393532&hitnum=7">
+    Re: FS: Lili Ledy Darth VAde
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3d5a0ad61bd4466c7ce6aa1296d3609cca6d51e6d440301f2ab7d30f15481c2d7c890b1bfafa0748380d6b850697f122&ST=PS&ee=1">rude-boy       </a></td>
+    </tr>
+    
 
-<b><font size=4 face="geneva,arial" color="#999999">&lt;&lt;</font>
-<font face="geneva,arial" size=2 color="#999999">Previous matches</font></b>
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>10/07/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=398513119&CONTEXT=944588958.1820393532&hitnum=8">
+    Re: Lili Ledy Darth Vader MI
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3d5b01d71dd14867da9a58daa91fbf260e3ee46dc9abda8d85f51cb86309713b678af89e766c6074367f35&ST=PS&ee=1">JYX1138        </a></td>
+    </tr>
+    
 
-&nbsp; &#183; &nbsp;
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>11/11/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=547330260&CONTEXT=944588958.1820393532&hitnum=9">
+    1 Day Left for lili ledy Tus
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3d5b09d01cdf4761834289b318229fc6b91d76c49ff9111d4830b2277a4fc0ad906bef2efe8ae5058f58551b9a8938eff607a09f64e9870ada&ST=PS&ee=1">Matthew Templet</a></td>
+    </tr>
+    
 
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>11/06/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=545287155&CONTEXT=944588958.1820393532&hitnum=10">
+    FS: Lili Ledy 12&quot; Tusken Rai
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=31500ada1dd146653759280484d74d1253037175e6771811f1e7683c660c8699e0a333e9108b6c6dec198c6fad5579c6aa61d8c1bd5dc61787&ST=PS&ee=1">Matthew Templet</a></td>
+    </tr>
+    
 
-<b><font face="geneva,arial" size=2><a href="http://x41.deja.com/dnquery.xp?search=next&IS=Lili%20AND%20Ledy&ST=PS&offsets=db99p7x%023%01db97p1%021%01db98p1%029%01db99p1%024%01db99p2%024%01db98p4%027%01db99p3%026%01db96q5%021%01db97p5%021%01db98p5%0212%01db99p4%021%01db97p6%027%01db99p5%0214%01db98p6%0220%01db98p7%029%01db99p6%021&svcclass=dnserver&CONTEXT=939394707.777257040">Next matches</a></font>
-<font size=4 face="geneva,arial" color="#ff6600">&gt;&gt;</font></b>
-</td></tr>
-    <tr>
-	<td colspan=2>&nbsp;</td>
-        <td><font face="geneva,arial" size=2>messages 1-100 of about 100 matches</font></td></tr>
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>11/01/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=543358261&CONTEXT=944588958.1820393532&hitnum=11">
+    FA: 12&quot; Lili Ledy Tusken Rai
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=30500cd31ade48654cdeb0b0129096d1f74f31b76b388c2301990d130a2d7b06700882529a8a166030377e7d7416153125da60499a17ef1c1c&ST=PS&ee=1">Matthew Templet</a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>09/08/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=522349951&CONTEXT=944588958.1820393532&hitnum=12">
+    Re: FA: Vintage Lili Ledy it
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3d5b0dd217d142664263fa004803eed643696fdb61e76f51e796464ad4142c29f40ddddfe9f4f2325736aa&ST=PS&ee=1">Blue87T        </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>09/08/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=522402201&CONTEXT=944588958.1820393532&hitnum=13">
+    Re: FA: Vintage Lili Ledy it
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3e5b09da19d24162049f8d4047302a31661c415b15042429d5246c517d5ddd5b161011030f5d3a96a3df718758e24ffb6ba8d15564a3c0f25fa66c&ST=PS&ee=1">starscrm       </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>09/08/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=522494107&CONTEXT=944588958.1820393532&hitnum=14">
+    Re: FA: Vintage Lili Ledy it
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=305101d016d343620d33e624bc0b1d9760138600d20102e9bdd53a6449142b856cb80e53a36f6e91552972&ST=PS&ee=1">Blue87T        </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>09/07/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=521930624&CONTEXT=944588958.1820393532&hitnum=15">
+    FA: Lili Ledy vintage toys o
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3d5a0fd21ad7436728c3f4b7dc7649db4f9e6a3dd1f97e66683c05e6d79d7e167eedbacc88df7176bdc293f5480d330f82d69064b06b3fa49202bd38&ST=PS&ee=1">Todd Chamberlai</a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>09/07/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=521930635&CONTEXT=944588958.1820393532&hitnum=16">
+    FA: Vintage Lili Ledy items 
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3d5801db1ddf4866bd0e0547833f065f6c107f18df2196faf63352fa323aa188c924f6e3d064e203095abe682d18961d68cba403e3c137d9a62ac38d&ST=PS&ee=1">Todd Chamberlai</a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>09/07/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=521956313&CONTEXT=944588958.1820393532&hitnum=17">
+    Re: FA: Vintage Lili Ledy it
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3b5a08d21dd74861c3771ccc3daa8759d27c13b209b3c08649090c467000ddaaa70814082af534&ST=PS&ee=1">Cstoj          </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>09/01/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=519520917&CONTEXT=944588958.1820393532&hitnum=18">
+    Re: How much for a Lili Ledy
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=305900d01adf476cba244f587c6aadd47ab23265637f4a0f8a8f8bd4a03f1d24feeba51b7bb1c3d398e24e72a9e9da&ST=PS&ee=1">Salfamily      </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>08/31/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=519178591&CONTEXT=944588958.1820393532&hitnum=19">
+    How much for a Lili Ledy Emp
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3f5a09d31ad5446c94fb23174768ee82091ab883a63378cfe4c74192c8921cb03dc8ff0b17f8a33f9cb25ae83ddbc8b0c310&ST=PS&ee=1">Chad Wright    </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>08/31/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=519385645&CONTEXT=944588958.1820393532&hitnum=20">
+    Re: How much for a Lili Ledy
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3d5808d019de4162e3b73a7da63fb614c69df15cb2bcc044b0421dcd6a8245e300e139ad5a293a7f405e2448a0cc12597ed334e3&ST=PS&ee=1">daniel bretta  </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>12/16/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=422783191&CONTEXT=944588958.1820393532&hitnum=21">
+    Re: WTB: Lili Ledy loose dol
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=38510cd41ad1436227c01068267283c6a98d64ceddabff40903743bc28812df1570dbc6845f366705dc7cf&ST=PS&ee=1">JYX1138        </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>11/25/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=415733008&CONTEXT=944588958.1820393532&hitnum=22">
+    WTB: Lili Ledy loose dolls  
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=39590ad618d241642da10904759353e9794464b87f9d0c3d56e54a0deda9b7e54e283653250e6fdb6f4e54a489d27695&ST=PS&ee=1">rude-boy       </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>07/01/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=496301270&CONTEXT=944588958.1820393532&hitnum=23">
+    Re: Question Lili Ledy ROTJ 
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3e5f00d21fd0426557413fb445e0848847f35cccda955ee2fb15ab787e92a464e23fb64382f309a9c5d21b0df714eaa0d27635f4&ST=PS&ee=1">daniel bretta  </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>06/27/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=494500542&CONTEXT=944588958.1820393532&hitnum=24">
+    A few LiLi Ledy questions   
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3b590adb1cd2476cc339e94ac9aa5496d9c307ff59d6cc284fb30b79c006308b3a0fd448f2235a9b8b26ee622cfecfb58ceca3a6&ST=PS&ee=1">daniel bretta  </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>06/27/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=494555572&CONTEXT=944588958.1820393532&hitnum=25">
+    Re: A few LiLi Ledy question
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=305009d41ed343615c17fa052109b9173e1667127b74ea451ee1470b21f9455f6cf7a3704f0b9b7338539f8777d1&ST=PS&ee=1">Gavin          </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>11/07/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=409241035&CONTEXT=944588958.1820393532&hitnum=26">
+    Re: FS: Lili Ledy Darth Vade
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3d590cd21dde4364715a401dedac6081fe085193d93939195578a5dbc2e157eada2bc32e526ed4590d58c6&ST=PS&ee=1">JYX1138        </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>11/06/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=408916877&CONTEXT=944588958.1820393532&hitnum=27">
+    Re: FS: Lili Ledy Darth VAde
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3d5c0ad21cd34263e229696a07dc1355416778df7c2382b4ffbfe077d95c55606729fe9ddcc1a9d71b1115d42b7c2d713c&ST=PS&ee=1">VaderForMe     </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>11/06/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=409081414&CONTEXT=944588958.1820393532&hitnum=28">
+    Re: FS: Lili Ledy Darth VAde
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=395e0dd51cd4416c7a0d3935128385f874f4822552eaf400f468f7e0cfed33d8b665acbdc6c324b8c7c4236a98d0adb9f6728c70&ST=PS&ee=1">Tim Sparks     </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>11/06/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=409081415&CONTEXT=944588958.1820393532&hitnum=29">
+    Re: FS: Lili Ledy Darth Vade
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=385d00db18d64965ff0ab1b129d950eee37afa3862d59d4eb9701f8d8b0a01d4992302c03f140f14aae735ef74bf8a2c208871c5&ST=PS&ee=1">Tim Sparks     </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>11/05/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=408754318&CONTEXT=944588958.1820393532&hitnum=30">
+    FS: Lili Ledy Darth VAder bo
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3d510cd51ad24964cdfd0572e08452ab40acd7874ebfd834642abdbcea0ba353d657ce51bc41f36cc6bff82895d97ede&ST=PS&ee=1">rude-boy       </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>11/03/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=407998342&CONTEXT=944588958.1820393532&hitnum=31">
+    FS: Lili Ledy Darth VAder bo
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3b580fd719d0486662629a57a2c01f8adbbf7c93d473ef6fcd67dca568439e81faec3943159db711a418b601b09962d6&ST=PS&ee=1">rude-boy       </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>11/03/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=408145107&CONTEXT=944588958.1820393532&hitnum=32">
+    FS: Lili Ledy Darth VAder bo
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=385108d41bdf4465f93c0d0d728d0a44c466e7abaffd0379a214f64cff779c0ec23cca31c2823429dd02db87105aede1&ST=PS&ee=1">rude-boy       </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>10/30/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=406781928&CONTEXT=944588958.1820393532&hitnum=33">
+    FS: Lili Ledy Darth Vader BO
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=315a0fdb16d744667afc5417a414e75ccb317253d2cbb028e2eef888b9bc3e6c609d345110af5c590536dd6a421a9c55&ST=PS&ee=1">rude-boy       </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>10/07/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=398508415&CONTEXT=944588958.1820393532&hitnum=34">
+    Re: Lili Ledy Darth Vader MI
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=38500bd416d1466c6f50f37b30d37db68aa1c48879e8a27f634637f24e1b40c7cb770e814ed5c18781575b&ST=PS&ee=1">JYX1138        </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>11/07/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=545615916&CONTEXT=944588958.1820393532&hitnum=35">
+    Re: FS: Lili Ledy 12&quot; Tusken
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3a5e0ed718df47648ce233b09987aea1bd646561c1d298a208e336e3d57976cca7e8cad5b0b713ea4b12ec70abffeeb905fd35d5ce3daa0fd0463bd04ab26ad5816657ae10daa07cc5&ST=PS&ee=1">heath stricklan</a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>09/08/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=522367655&CONTEXT=944588958.1820393532&hitnum=36">
+    Re: FA: Vintage Lili Ledy it
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3f580cdb1cd54266f2ea213d3a59a3df78882e9cd0d6fefbec6596d731040ac543e87e9f705d8927de06404637094e&ST=PS&ee=1">Salfamily      </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>09/07/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=522259411&CONTEXT=944588958.1820393532&hitnum=37">
+    Re: FA: Vintage Lili Ledy it
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3c5b01d71fd5446d06e6352709ecef7fd2a08e227b1550fce83d6d6f459fd690c6a546658b62d394d9e48ea47b637104f8f977763bf696f0cc1d881a&ST=PS&ee=1">Todd Chamberlai</a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>09/07/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=522313322&CONTEXT=944588958.1820393532&hitnum=38">
+    Re: FA: Vintage Lili Ledy it
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=385f00d11cd24165fc950e6cf265f8fdb3cebf28499852408cec6e7a2289736d206975e543888f1b6d004a1407ec49&ST=PS&ee=1">Salfamily      </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>05/14/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=477664193&CONTEXT=944588958.1820393532&hitnum=39">
+    FS: Lili Ledy 12&quot; R2 on ebay
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=395e01d61fde426c92f672a1fe98a9628df19d8397efe405c015935d67a5c6694e4ccfe05b4b14&ST=PS&ee=1">poptoys        </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>03/01/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=450231495&CONTEXT=944588958.1820393532&hitnum=40">
+    Re: vinyl cape jawa on Lily 
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3c5a0ed51ad2466cf9573859282b6bd2e736931e8c3c9990482990d77ced3281e1da4a62501b2646eb08141efa523546766a77332fbd6a101960d3d1&ST=PS&ee=1">Chris Georgouli</a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>11/05/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=408766992&CONTEXT=944588958.1820393532&hitnum=41">
+    Re: FS: Lili Ledy Darth VAde
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3d500fd21cd44364f57df367594c5c073d15fd073765b1d856dc26a88cc7ce58a0d3a9320426ae88d2ca42225078e16b74f1ef982ba7a486e912&ST=PS&ee=1">Mark Meazark   </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>10/14/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=401076242&CONTEXT=944588958.1820393532&hitnum=42">
+    Lili Ledy Darth Bvader box  
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=39590ed516d048653188b65505b49b1272098191bac94a23cc96bf2c125034f6f5b2819ce94ad4da7f76ea96a4745e45&ST=PS&ee=1">rude-boy       </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>10/11/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=399947409&CONTEXT=944588958.1820393532&hitnum=43">
+    Re: Discussion: What Star Wa
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3e5001db1fd74566a14fb07b3d5814aa59fca4687b32bcf1569835d510a2a149618937ccf281b0b133b2aca189bf6a87&ST=PS&ee=1">rude-boy       </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>09/03/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=387499321&CONTEXT=944588958.1820393532&hitnum=44">
+    E-bay: Lili Ledy 12&quot; Princes
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=38580adb19d0406512f374ec17892d54b472ff7c9532ae19c38e803e01299747043c6d376e0ea0b839&ST=PS&ee=1">BillN4         </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>09/03/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=387500010&CONTEXT=944588958.1820393532&hitnum=45">
+    E-bay: Lili Ledy 12&quot; Princes
+    </a>
+    </b></td>
+    <td>rec.toys.vintage     </td>
+    <td><a href="profile.xp?author=385c0fd71adf4560cd15f0b36d49a69150c6e27b215f1d8c78f1d6e608fbf486d3c455044280092468&ST=PS&ee=1">BillN4         </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>09/01/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=386805719&CONTEXT=944588958.1820393532&hitnum=46">
+    FS: Lili Ledy 12&quot; Princess L
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3c5b0cda16d3466c0618460bea9a44215d9d5f4dc71d89e0fdd8d0a385d1117d8e3f770c315784b75b&ST=PS&ee=1">BillN4         </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>08/29/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=385971219&CONTEXT=944588958.1820393532&hitnum=47">
+    FS: Lili Ledy Princess Leia 
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3c580ad61fd04660310be23a721c8c0c68a4294e3436b47b36aedbaadfc727228754c28d6ee0772bf9&ST=PS&ee=1">BillN4         </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>06/28/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=494590138&CONTEXT=944588958.1820393532&hitnum=48">
+    Re: A few LiLi Ledy question
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3e500ad51ed24061dbaf3c5c972abdb645db9d458ff59b2cf7a2d7d1f4087f15dafe8535fa2997cf310963db1e9aa6&ST=PS&ee=1">Salfamily      </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>11/09/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=409940796&CONTEXT=944588958.1820393532&hitnum=49">
+    Re: FS: Lili Ledy Darth Vade
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=315b0cd61ad74364b4e718633b912c0360dd2c8a435a6d81068f036e54281eaefa92898cc7d677d2dcaf56fcc70ec3f971371d13&ST=PS&ee=1">Tim Sparks     </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>11/08/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=409781114&CONTEXT=944588958.1820393532&hitnum=50">
+    Re: FS: Lili Ledy Darth Vade
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3e5f01d71bd7496ca6c24163f84d81048c059a95cb666040404fed39f458c32ac5c204441ff09cd960cc37e38787f9cb&ST=PS&ee=1">rude-boy       </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>11/07/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=409381306&CONTEXT=944588958.1820393532&hitnum=51">
+    Re: FS: Lili Ledy Darth Vade
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3c5d08d118d0456c21e56d1c5ec15750c9cf72aaf504e624aad69a4d85005a6be6b49a6abed9b228341caad9c133fe71b3f4417472bae1d275f5b650&ST=PS&ee=1">Chris Georgouli</a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>11/06/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=409098958&CONTEXT=944588958.1820393532&hitnum=52">
+    Re: FS: Lili Ledy Darth Vade
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3e5e0ad019d34062805276f54a365414654be8c609af7a431ac0a68b3d816f82ef5822c2186fbdd30f422122ecb6fc76&ST=PS&ee=1">rude-boy       </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>10/06/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=398407368&CONTEXT=944588958.1820393532&hitnum=53">
+    Re: Lili Ledy Darth Vader MI
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=395809da17d74560ff3f6ce125e3b74806f3598e74f041250193926332768ac74bce8b14c117de3a07af50ab213dda&ST=PS&ee=1">Salfamily      </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>09/04/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=521078682&CONTEXT=944588958.1820393532&hitnum=54">
+    WTB: Foreign boxed Mini-Rigs
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3d580fd117de476dc57119fa02db45e8bcec930458ea2faa1d5ba24f1ad17e1a89e5a0afdb8cf42a5a73b09f7ec9a5292e&ST=PS&ee=1">Amanaman21     </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>07/31/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=507515354&CONTEXT=944588958.1820393532&hitnum=55">
+    POTF Carded Figures         
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3a5b09da18d7406cfc5b7c55a38154e5ccd7f22fbe70108037796dd3048f1fcac8b6f8872e2419ba37e11c2bb43381e93268d7765ab4e5082f89d5b2589f&ST=PS&ee=1">Kein Walker    </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>07/13/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=500564748&CONTEXT=944588958.1820393532&hitnum=56">
+    Re: FS: Italian 12b Darth Va
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=385a0ad11ed444629a0eef00dcf5df544ef2dc58d5ae1b2661326b6838ec75ff2375dae276b1db40e1586673cbd8e0&ST=PS&ee=1">Salfamily      </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>03/02/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=450376993&CONTEXT=944588958.1820393532&hitnum=57">
+    Re: vinyl cape jawa on Lily 
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=315f0cdb1cd744637e7ade7815423a7b7f3f72eed266f04e5c3520c98cff6217634b59c3aa5ba89802735e2048e10a635886d04b78a87ad419&ST=PS&ee=1">Ron Salvatore  </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>03/01/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=450064429&CONTEXT=944588958.1820393532&hitnum=58">
+    Re: vinyl cape jawa on Lily 
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3e5c0fdb18d74962bd9afc0ed4c3fdab39379ce231f3d89984eaa06c7b4879bbbe2d075dff94ed5ab647f9705d26d9&ST=PS&ee=1">Salfamily      </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>01/27/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=437424007&CONTEXT=944588958.1820393532&hitnum=59">
+    Re: Fallout 2: Бонуса.      
+    </a>
+    </b></td>
+    <td>relcom.games         </td>
+    <td><a href="profile.xp?author=3b5a09d41bd54263dfc80c304e079eb2c4e705cf2f62dddd25a453def42ec763b02b9acf5fc5747f813ea47ddc4b39483b8d0fe0208da08bd7c6b6a2963241d9ec6f0503ff85b8b77fcd&ST=PS&ee=1">Vladimir Ermili</a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>11/05/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=408791338&CONTEXT=944588958.1820393532&hitnum=60">
+    Re: FS: Lili Ledy Darth VAde
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3f590bd51fd444673faee69c7250de3f32996f06b260c42ff949a4a3c7bb646f91f81fd5f202247448e2f1ab2e1dbd74&ST=PS&ee=1">rude-boy       </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>11/05/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=408816452&CONTEXT=944588958.1820393532&hitnum=61">
+    Re: FS: Lili Ledy Darth VAde
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3d5c00d419d7486c7771f7a1e304c14eb8983a9042406b7a56a7106e5e3e79c8bbe715758a41d67ee9dcdfca4698794c07ebe3bc6bdfe9ac1262&ST=PS&ee=1">Mark Meazark   </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>10/29/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=406258981&CONTEXT=944588958.1820393532&hitnum=62">
+    Re: The rarest vintage SW to
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3e5a0cd11dd0416d893c749b8e6ed8c05d07eedd0889229208769735a3d45ce3e6aa1bf441943f85d62dfc25390a145f4c97dbf91bd11321134ebe&ST=PS&ee=1">Ashman         </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>08/10/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=511242283&CONTEXT=944588958.1820393532&hitnum=63">
+    Re: Lili-Ledy bagged sample 
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=315f0cd31bd6426647186fdb83cb82e84b200181738cbb931388ab0d9ec522fd5e8ee09be9f99f69d619f699c5aa8c&ST=PS&ee=1">Salfamily      </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>12/21/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=424590202&CONTEXT=944588958.1820393532&hitnum=64">
+    Items for sale              
+    </a>
+    </b></td>
+    <td>alt.toys.gi-joe      </td>
+    <td><a href="profile.xp?author=3b5009d619d1456dd140bf18d6ec62c86f7461e0d9786dfce421a6d166d0fad1643ab2f92f3c38639743023f7da10944c08bf0cc74fe752a916c0adec367eb7009d0&ST=PS&ee=1">bob morandin   </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>11/14/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=411713453&CONTEXT=944588958.1820393532&hitnum=65">
+    Help with info?             
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3d5f0bd61ad4496dd0e878d818ffc28b9151d221b711cbec9fe940fa65a90c5e4d151d609f3d1cdc290e76439cca708d&ST=PS&ee=1">rude-boy       </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>10/30/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=406876265&CONTEXT=944588958.1820393532&hitnum=66">
+    My want list, you got it??  
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=305801d41dd745663f5fb977d51f3ff04babe544661f0b49bacb6d4fdae1dc3cd16fee812992f6f924520e2b0c6f1d44&ST=PS&ee=1">rude-boy       </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>09/11/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=390247210&CONTEXT=944588958.1820393532&hitnum=67">
+    Looking for a few misc. item
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3d5c0dd617d7476cafab8da3501878f6ac60c4943a34aed876fb1514fa5969cc91be6442cbab8ec76019c39e1edd2e&ST=PS&ee=1">Cappsized      </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>11/18/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=550102593&CONTEXT=944588958.1820393532&hitnum=68">
+    Odp: Kto wie ?              
+    </a>
+    </b></td>
+    <td>pl.misc.elektronika  </td>
+    <td><a href="profile.xp?author=38590bd51ed646611a0e4696aed1d3ba6682fdecd4205ff22e9c992ebf870b599716a376681ae3031db88476f39d6966319dfbeca3&ST=PS&ee=1">Rycho          </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>10/06/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=533349897&CONTEXT=944588958.1820393532&hitnum=69">
+    Re: Toy Expo in NJ          
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3f590ad617d44763561d8eb9fe5b2f94ee221b07a4444779a1c199916d89338d0c7545a55c30fc9cf3babc64c1d76e&ST=PS&ee=1">Salfamily      </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>09/10/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=523580479&CONTEXT=944588958.1820393532&hitnum=70">
+    Re: Is there a new SW Galaxy
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3c5900d41ad641628dd6d7a0b61cbf7741565f15e4d720b3b9dfc825d04867091fc831a95f7857a3f2371702668c4804f8&ST=PS&ee=1">Bigred1579     </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>09/07/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=522263534&CONTEXT=944588958.1820393532&hitnum=71">
+    Red Cape Bib Fortuna on eBay
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3d5d0dd01bd149666f6ab96cd181aea2d2442035468b4d9cf14e52d164ae4e207defd360012c7bf2c6d2764eaf5ad24c7d4d63a6b67dc0dc11c2d7e3&ST=PS&ee=1">Todd Chamberlai</a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>08/01/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=507538198&CONTEXT=944588958.1820393532&hitnum=72">
+    Re: POTF Carded Figures     
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3e5e0bd01ad042673ffaf8049f2d291a2ee99c367c689e178156095b5a96155123be2c31cef6e0d44aa3cefcce70d1729aa0265395&ST=PS&ee=1">Starwars1      </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>08/01/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=507640256&CONTEXT=944588958.1820393532&hitnum=73">
+    Re: POTF Carded Figures     
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3e5008d218d24965908f9689bfe3c7e6e89dc1b9f9b7f69c448c6341a92692ecab4ee9a268a060f4c2bfea5e6ce0d53feac47e40c8ef8f6eb6a5ebd73145&ST=PS&ee=1">Kein Walker    </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>06/16/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=490442402&CONTEXT=944588958.1820393532&hitnum=74">
+    Re: Rarest carded Star Wars 
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=30510dd21fdf4464b29fc1489ea1ca78bc2fd30ae1fd381e559d4f289c2515e2ee8e35ce6c01789df685a8951462e7&ST=PS&ee=1">Salfamily      </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>03/30/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=460594916&CONTEXT=944588958.1820393532&hitnum=75">
+    WTB-Carded Death Squad Comms
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3a5e0ad319d14163696e9470edfca85c88f50fd9e9b3872da10ed13afcc0c5ceee6c6cb919ed02e430f9d96a8017d7429b&ST=PS&ee=1">Bigred1579     </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>01/04/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=428916646&CONTEXT=944588958.1820393532&hitnum=76">
+    Re: Discussion topic: What i
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3a5f08db1ede4065a43cf0edfb4e85dc4450a00be13ecbe5f6410e2eaf117909f691475a333ae27888760ca81783763a&ST=PS&ee=1">rude-boy       </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>09/01/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=386681760&CONTEXT=944588958.1820393532&hitnum=77">
+    FS: Palitoy Emperor's Royal 
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3e5d0fd11fde4962689497b932fb5a8927ec1a14b8c1b04dae3610ec106c33f12aec19ccef91f8fc8b&ST=PS&ee=1">BillN4         </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>08/29/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=385971218&CONTEXT=944588958.1820393532&hitnum=78">
+    E-bay: Vintage Carded Figure
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3e5e09da16d2456c455e420cca927e022908dd5ea87b03e790eda29667355fa51132d03b6b4192675f&ST=PS&ee=1">BillN4         </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>09/20/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=527271425&CONTEXT=944588958.1820393532&hitnum=79">
+    Re: Wanted-European Figures 
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3f580ad017df446236a13ad6789df14da02f7062822902b80911f034b7e418d9dfe624eed31e466d4fd49359101ac7a833&ST=PS&ee=1">Bigred1579     </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>07/11/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=499683514&CONTEXT=944588958.1820393532&hitnum=80">
+    Re: Vintage Collector Quiz #
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3a5c08d21bd54764f3ac6d5792957731a7a1f967a7753d1b12581857a97d11310cd2b1830341808c34cd00ffb6f3a00ccc9eb95a&ST=PS&ee=1">DANIEL BRETTA  </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>07/09/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=499278069&CONTEXT=944588958.1820393532&hitnum=81">
+    Vintage Collector Quiz #3   
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=38580cd119de4761196819112428a2eac4a5821c30151c8e1fcbc6f54145881577fd4400b9e84a0929de642e2efbe7a14c123440&ST=PS&ee=1">daniel bretta  </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>07/09/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=499286879&CONTEXT=944588958.1820393532&hitnum=82">
+    Re: Vintage Collector Quiz #
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=395101d718d340671ccd9097e8b5d70a30ed6ecc8118697497b3308609d1c1c40db1b391b3e339f6d522629ee416a91496&ST=PS&ee=1">CoolGuy025     </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>07/09/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=499286880&CONTEXT=944588958.1820393532&hitnum=83">
+    Re: Vintage Collector Quiz #
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=305a09d71bd04866704cf5f14d82e544635bf8c4dfe1b099c4c27306ae8c621aa77f66fe2e4ff1fa94b12133dbb7819cac&ST=PS&ee=1">Accursed01     </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>07/09/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=499289878&CONTEXT=944588958.1820393532&hitnum=84">
+    Re: Vintage Collector Quiz #
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=30510fd01ed6486367212442ec940e6d69a209162658f36c8e395e849b51cf11c3706000e66ce365ef07624549&ST=PS&ee=1">SWseller       </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>04/13/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=465699058&CONTEXT=944588958.1820393532&hitnum=85">
+    Re: red caped jawas...      
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3e5b0cd117d0416089caaef3f260d3fe621e7ccc0ead8a5b1d1b6c4695240815bd8a61f59dad0fb92c68168b258062&ST=PS&ee=1">Salfamily      </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>04/09/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=464312263.2&CONTEXT=944588958.1820393532&hitnum=86">
+    FS: Vintage toys, many forei
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3d5f00d117d24461bd2f6b492c44ce1df959b62a3359f035774422277fee3e749b&ST=PS&ee=1">toddc          </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>04/09/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=464312263.3&CONTEXT=944588958.1820393532&hitnum=87">
+    FS: Vintage toys, many forei
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=385d0eda1dd04663152d4380595826733e0fafd591363c255b30e81cbe67d6d72b&ST=PS&ee=1">toddc          </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>04/09/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=464312271.2&CONTEXT=944588958.1820393532&hitnum=88">
+    FS: Vintage toys, many forei
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3c5901da1ed6446329ccdb37bb4bdc589570b47a711b0730bc779ce59ecf112118&ST=PS&ee=1">toddc          </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>04/09/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=464312271.3&CONTEXT=944588958.1820393532&hitnum=89">
+    FS: Vintage toys, many forei
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3e5d0ada18d7486d1b302ef422503e9fe09690679df20f50650c7ccaa748cb75ca&ST=PS&ee=1">toddc          </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>02/01/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=439545085&CONTEXT=944588958.1820393532&hitnum=90">
+    Re: info needed, vintage fig
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=305b00d41dd64763998c451a03faf15f922362854cec74cf29b91de510dfccd3557b8de2904b90fae333c993a5e355&ST=PS&ee=1">Salfamily      </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>02/01/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=439593167&CONTEXT=944588958.1820393532&hitnum=91">
+    Re: info needed, vintage fig
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=385a0bd71cd64765ebfc44dbab8f8fd5ca8dd0e2c8d3c887caf9204547a4696e98b93f7700a2358ffb297c6d1afe16e00ee308444b963610&ST=PS&ee=1">Ken Furlong    </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>01/14/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=432700492&CONTEXT=944588958.1820393532&hitnum=92">
+    Re: Anyone been to Brazil   
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=305a0dda19d34165c6bb4945f3751a4f33a184f2e5e375096f7b551adba8b9177bc0593481b87d5971eeb99046522e874410b24e52990fd2ff21f6ae&ST=PS&ee=1">gunsnroses     </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>12/15/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=422748793&CONTEXT=944588958.1820393532&hitnum=93">
+    FS/T: MISB ESB Vader case wi
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3d580cd517d1496d1a43f1c8788e08247a7ef2bfdd705529512f69a56222a7eb62dee4f5ed955c3b9cf6b4cc9149e271&ST=PS&ee=1">rude-boy       </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>12/14/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=421978616&CONTEXT=944588958.1820393532&hitnum=94">
+    Re: Anyone heard of a Jawa w
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3c590ad016d54862737fad7b6a9bf35e7583e0b23d13ecd895c40d96c1a53eec2046367d2e322fb2bb7bff55e2a84a&ST=PS&ee=1">Salfamily      </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>12/13/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=422010362&CONTEXT=944588958.1820393532&hitnum=95">
+    Re: Anyone heard of a Jawa w
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3e5b09d31dd64863ffbbf38e1158855f651e40e14bf9f10762df4bac6e65baaeb373fefcb52bb86424134327f99da82b51d13a632818bd284abe1d15&ST=PS&ee=1">Chris Georgouli</a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>12/03/1998</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=418275046&CONTEXT=944588958.1820393532&hitnum=96">
+    Re: Sweet Star Wars Vintage 
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=39500ada1ed04964d68303b2d53c7e791f1e6233181679d1d3d76c51fc262a1f33e4bb0ffa062bcf55b32cfa7655aa6b&ST=PS&ee=1">rude-boy       </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>05/08/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=475425061&CONTEXT=944588958.1820393532&hitnum=97">
+    WTB-Star Destroyer Commander
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=385809db16df48657a851dc86c2842e614691e28a3edb0c267b38d531445b64ed1d0c6103e0476355b47a461bc34f2b4f3&ST=PS&ee=1">Bigred1579     </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>03/31/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=461201131&CONTEXT=944588958.1820393532&hitnum=98">
+    Re: WTB-Carded Death Squad C
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3a500dd11bd54162ec232a7d99d136e5fee1f646a16b6e220433cf4f354c33ea5733713e72f5d49dc8c2e65f5941d52670c3ed1e407cd537129ac62a78a38673598c&ST=PS&ee=1">Doug Mikkelson </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>09/18/1999</td>
+    <td><b>
+    <a href="http://x39.deja.com/getdoc.xp?AN=527078363&CONTEXT=944588958.1820393532&hitnum=99">
+    Re: Wanted-European Figures 
+    </a>
+    </b></td>
+    <td>rec.arts.sf.starwars.</td>
+    <td><a href="profile.xp?author=3a510dd418d04667dd27abe070feca6a695ad2c151580b7a06bc913d0f93a1554a4e34979e89cd478cf71d81442905f1bc1437993d3491b86d909d7b3acb155d019933ca&ST=PS&ee=1">Daniel L Bretta</a></td>
+    </tr>
+    
 
 </table>
+
+
+
+    
+    
+
+
+
+<table width=95% cellspacing=0 cellpadding=6 border=0><tr>
+
+
+<td align=right>
+
+
+
+
+<span class="small"><a href="http://x39.deja.com/dnquery.xp?search=next&LNG=ALL&IS=Lili%20AND%20Ledy&ST=PS&offsets=db99p8%021%01db99p9%028%01db99p1%024%01db99p2%025%01db99p3%027%01db98p5%0212%01db99p4%021%01db99p5%0214%01db98p6%0220%01db98p7%029%01db99p6%0215%01db99p7%024&svcclass=dnserver&CONTEXT=944588958.1820393532">next messages</a></span>
+<img src="http://g.deja.com/gifs/20x9orange-arrow.gif" alt="next" width=20 height=9 hspace=2 vspace=0 border=0> 
+
+</td>
+
+</tr></table>
+
+
+
+
+    
+	
+
+
+
+
+<table width=95% cellspacing=0 cellpadding=6 border=0><tr><td>
+<b class="small">Individual word match counts (approximate)</b>
+<span class="small"><ul>
+
+<li> lili: 43000</li>
+<li> ledy: 1400</li>
+</ul></span>
+</td></tr></table>
+
+
+    
+
+
+<p>
+<table width=95% cellspacing=0 cellpadding=0 border=0><tr>
+<td>
+<a href="linkback.xp?act=f&res_type=search&res_title=Lili%20AND%20Ledy&res_url=http://x39.deja.com/qs.xp%3fLNG%3dALL%26OP%3ddnquery.xp%26QRY%3dLili%2bAND%2bLedy%26ST%3dPS%26defaultOp%3dOR%26maxhits%3d100%26showsort%3dscore"><b>Deja Linkback</b></a>: Create a custom link to these search results from your own Web site
+</td>
+</tr></table>
+
+<p>
+
+
+
+
+
+<table width=95% cellspacing=0 cellpadding=0 border=0><tr valign=top>
+
+<td>
+
+
+    <a href="http://x39.deja.com/dnquery.xp?QRY=Lili%20AND%20Ledy&DBS=&ST=MS">View all search results</a><br>
+    
+
+    <a href="http://x39.deja.com/query_profile.xp?QRY=Lili%20AND%20Ledy&DBS=&CONTEXT=944588958.1820393532">View forum search results</a><br>
+    
+
+</td>
+
+<td align=right>
+
+    <a href="http://x39.deja.com/rate/search.xp?QRY=Lili%20AND%20Ledy&DBS=&CONTEXT=944588958.1820393532">View product search results</a><br>
+    
+
+    <a href="http://x39.deja.com/rate/prod_cat.xp?CONTEXT=944588958.1820393532">View product category search results</a><br>
+    
+
+</td>
+
+</tr></table>
+
+
+
+
 
 <!-- second stage content : end -->
 
@@ -1874,8 +2133,8 @@ community in <b>Collecting</b>.
 
 
 <p>
-<table cellpadding=2 cellspacing=0 border=0 margineheight=1 marginewidth=1 width=100% bgcolor=#cccc66>
-<form action="http://www.deja.com/dnquery.xp">
+<table cellpadding=2 cellspacing=0 border=0  width=95% bgcolor=#cccc66>
+<form action="dnquery.xp">
 
 <tr>
 
@@ -1887,10 +2146,16 @@ community in <b>Collecting</b>.
     <input type=hidden name=DBS value=2>
     
 
+    
+    
+    <input type=hidden name=ST value=PS>
+    
+
+
 <td bgcolor=#000000>
-<center><font face="geneva,arial" size=2 color=#ff6600><b>Search Discussions</b></font></center></td>
-<td><font face="geneva,arial" size=1 color=#000000>&nbsp;
-For a more detailed search go to <a href="http://www.deja.com/home_ps.shtml?QRY=Lili%20AND%20Ledy">Power Search</a></font></td>
+<center><font color=#ff6600><b style="font-size:10pt;">Search Discussions</b></font></center></td>
+<td><font size=2 color=#000000><span class="small">&nbsp;
+For a more detailed search in Discussions go to <a href="home_ps.shtml?QRY=Lili%20AND%20Ledy&TAB=D">Power Search</a></span></font></td>
 </tr>
 
 
@@ -1902,8 +2167,8 @@ For a more detailed search go to <a href="http://www.deja.com/home_ps.shtml?QRY=
     
 
 
-    <tr><td valign=top align=right><font face="geneva,arial" size=1><b>Search only in:</b></font></td>
-	<td valign=top><font face="geneva,arial" size=1>
+    <tr><td valign=top align=right><font size=2><b class="small">Search only in:</b></font></td>
+	<td valign=top><font size=2><span class="small">
     
     
 	
@@ -1923,14 +2188,14 @@ For a more detailed search go to <a href="http://www.deja.com/home_ps.shtml?QRY=
 	<input type=radio name=VW value=ane.starwars.toys > Arts & Entertainment >> Star Wars >> Toys<br>
     
     
-	<input type=radio name=VW value="" checked> All Deja.com</font>
+	<input type=radio name=VW value="" checked> All Deja.com</span></font>
     
     </td></tr>
 
 
 
 <tr>
-<td valign=top align=right><font face="geneva,arial" size=2><b>Search for:</b></font></td>
+<td valign=top align=right><font size=2><b class="small">Search for:</b></font></td>
 <td valign=top>
 <input type=text size=35 name=QRY value="Lili AND Ledy">
 <input type=submit value="Search">
@@ -1941,7 +2206,7 @@ For a more detailed search go to <a href="http://www.deja.com/home_ps.shtml?QRY=
 
     
     
-    <br><nobr><font face="geneva,arial" size=1>Search&nbsp;
+    <br><nobr><font size=2><span class="small">Search&nbsp;
     <select name=svcclass>
     
 	
@@ -1959,7 +2224,7 @@ For a more detailed search go to <a href="http://www.deja.com/home_ps.shtml?QRY=
 	 
 	<option value=dnserver selected>all
     
-    </select> Messages</font></nobr>
+    </select> Messages</span></font></nobr>
 
 </td></tr>
 
@@ -1967,157 +2232,144 @@ For a more detailed search go to <a href="http://www.deja.com/home_ps.shtml?QRY=
 
 
 <!-- search again : end -->
+
+<br>&nbsp;
 </td></tr></table>
 <!-- second stage : end -->
 
-</td></tr></table>
-
+<!-- FOOTER : begin -->
 
 
 
 
 <table width=100% border=0 cellspacing=0 cellpadding=6><tr align=center>
 <td bgcolor=#000000 colspan=2>
-<font face="geneva,arial" size=2>
 
 
 
-    
-    
-	&nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=10536"><b><font color=#ffffff>Arts & Entertainment</font></b></a>&nbsp;
-	
-	
-    
 
     
     
-	&nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=10095"><b><font color=#ffffff>Automotive</font></b></a>&nbsp;
+	&nbsp;<a href="channels/channel.xp?CID=10536"><font color=#ffffff><b class="med">Arts & Entertainment</b></font></a>&nbsp;
 	
 	
     
 
     
     
-	&nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=10121"><b><font color=#ffffff>Computing & Tech</font></b></a>&nbsp;
+	&nbsp;<a href="channels/channel.xp?CID=10095"><font color=#ffffff><b class="med">Automotive</b></font></a>&nbsp;
 	
 	
     
 
     
     
-	&nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=10122"><b><font color=#ffffff>Consumer Electronics</font></b></a>&nbsp;
+	&nbsp;<a href="channels/channel.xp?CID=10121"><font color=#ffffff><b class="med">Computing & Tech</b></font></a>&nbsp;
 	
 	
     
 
     
     
-	&nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=12059"><b><font color=#ffffff>Health & Fitness</font></b></a>&nbsp;
+	&nbsp;<a href="channels/channel.xp?CID=10122"><font color=#ffffff><b class="med">Consumer Electronics</b></font></a>&nbsp;
+	
+	
+    
+
+    
+    
+	&nbsp;<a href="channels/channel.xp?CID=12059"><font color=#ffffff><b class="med">Health & Fitness</b></font></a>&nbsp;
 	<br>
 	
     
 
     
     
-	&nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=10424"><b><font color=#ffffff>Home & Family</font></b></a>&nbsp;
+	&nbsp;<a href="channels/channel.xp?CID=10424"><font color=#ffffff><b class="med">Home & Family</b></font></a>&nbsp;
 	
 	
     
 
     
     
-	&nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=10657"><b><font color=#ffffff>Lifestyles</font></b></a>&nbsp;
+	&nbsp;<a href="channels/channel.xp?CID=10657"><font color=#ffffff><b class="med">Lifestyles</b></font></a>&nbsp;
 	
 	
     
 
     
     
-	&nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=10003"><b><font color=#ffffff>Money</font></b></a>&nbsp;
+	&nbsp;<a href="channels/channel.xp?CID=10003"><font color=#ffffff><b class="med">Money</b></font></a>&nbsp;
 	
 	
     
 
     
     
-	&nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=10367"><b><font color=#ffffff>Politics & Media</font></b></a>&nbsp;
+	&nbsp;<a href="channels/channel.xp?CID=10367"><font color=#ffffff><b class="med">Politics & Media</b></font></a>&nbsp;
 	
 	
     
 
     
     
-	&nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=10407"><b><font color=#ffffff>Recreation</font></b></a>&nbsp;
+	&nbsp;<a href="channels/channel.xp?CID=10407"><font color=#ffffff><b class="med">Recreation</b></font></a>&nbsp;
 	
 	
     
 
     
     
-	&nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=10444"><b><font color=#ffffff>Sports</font></b></a>&nbsp;
+	&nbsp;<a href="channels/channel.xp?CID=10444"><font color=#ffffff><b class="med">Sports</b></font></a>&nbsp;
 	
 	
     
 
     
     
-	&nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=10526"><b><font color=#ffffff>Travel</font></b></a>&nbsp;
+	&nbsp;<a href="channels/channel.xp?CID=10526"><font color=#ffffff><b class="med">Travel</b></font></a>&nbsp;
 	
 	
     
-
-</font></td>
+</td>
 
 </tr><!--LAND-O-LINKS--><tr align=left> 
 
 <td>
 
-<table width="100%" bgcolor="#ffffff" cellpadding=10 cellspacing=0 border=0><tr>
 
-<td colspan=2><center><font face="geneva,arial" size=1>
+<table width=100% bgcolor=#ffffff cellpadding=10 cellspacing=0 border=0>
 
-
-<font face="geneva,arial" size=1>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.bfl.sitewide&cid=51985907555">SHOPPING</a> -
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.qwest.sitewide&cid=51985907555">FREE Internet Access</a> -
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.freeshop.sitewide&cid=51985907555">FREE STUFF</a> -
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.datek.sitewide&cid=51985907555">Trade with Datek</a> -
-<nobr><a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.necx.sitewide&cid=51985907555">GET IT NOW @ NECX</a> -</nobr>
-<nobr><a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.mtv.sitewide&cid=51985907555">MTV VMA Winners</a> -</nobr>
-<nobr><a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.ebay.sitewide&cid=51985907555">eBay Auctions</a> -</nobr>
-<nobr><a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.mailcom.sitewide&cid=51985907555">MAIL.COM</a> -</nobr>
-<nobr><a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.amazon.sitewide&cid=51985907555">Up to 50% off now at Amazon.com!</a> -</nobr>
-<nobr><a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.eco.sitewide&cid=51985907555">BUY AT COST at eCOST.com</a> -</nobr>
-<nobr><a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.joboptions.sitewide&cid=51985907555">Search for Jobs! JobOptions</a> -</nobr>
-<nobr><a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.son.sitewide&cid=51985907555">The BEST Music Online</a> -</nobr>
-<nobr><a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.onsale.sitewide&cid=51985907555">Onsale Auctions</a></nobr>
-</font>
+<tr><td colspan=2><center>
+<font size=1><span class="small">
 
 
+<span class=small>
+<a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.bfl.sitewide&cid=55757823959">Holiday Shopping</a> -
+<a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.freeshop.sitewide&cid=55757823959">FREE STUFF!</a> -
+<a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.datek.sitewide&cid=55757823959">Trade with Datek</a> -
+<nobr><a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.necx.sitewide&cid=55757823959">GET IT NOW @ NECX</a> -</nobr>
+<nobr><a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.ebay.sitewide&cid=55757823959">eBay Auctions</a> -</nobr>
+<nobr><a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.son.sitewide&cid=55757823959">The BEST Music Online</a> -</nobr>
+<nobr><a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.mailcom.sitewide&cid=55757823959">MAIL.COM</a> -</nobr>
+<nobr><a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.drkoop.sitewide&cid=55757823959">Get FREE Health Info@drkoop.com</a> -</nobr>
+<nobr><a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.eco.sitewide&cid=55757823959">BUY AT COST at eCOST.com</a> -</nobr>
+<nobr><a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.joboptions.sitewide&cid=55757823959">Search for Jobs! JobOptions</a> -</nobr>
+<nobr><a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.onsale.sitewide&cid=55757823959">Onsale Auctions</a></nobr>
+</span>
 
+</span></font></center>
+</td></tr>
 
-
-
-
-
-
-
-</font></center>
-</td>
-
-</tr><tr>
-
-<td>
-<P>
-<FONT face="geneva,arial" size=1>
-<a href="http://www.deja.com/info/policy.shtml#copyright">Copyright</a> &copy; 1999 <a href="http://www.deja.com/corp/">Deja.com, Inc.</a> All rights reserved.
-<br><a href="http://www.deja.com/info/trademarks.shtml">Trademarks</a> &#183; <a href="http://www.deja.com/info/policy.shtml">Terms &amp; Conditions of Use</a> &#183; <a href="http://www.deja.com/info/privacy.shtml">Site Privacy Statement</a>.</FONT>
+<tr><td class="small">
+<p>
+<a href="info/policy.shtml#copyright">Copyright</a> &copy; 1999 <a href="corp/">Deja.com, Inc.</a> All rights reserved.
+<br><a href="info/trademarks.shtml">Trademarks</a> &#183; <a href="info/policy.shtml">Terms &amp; Conditions of Use</a> &#183; <a href="info/privacy.shtml">Site Privacy Statement</a>.</FONT>
 </td>
 
 <td align=right valign=bottom nowrap>
-<font face="geneva,arial" size=2><b>
-<A href="http://www.deja.com/corp/ad.shtml">Advertise with Us!</A> &nbsp;|&nbsp; 
-<a href="http://www.deja.com/corp/">About Deja.com</a>
+<b><a href="corp/ad.shtml">Advertise with Us!</A> &nbsp;|&nbsp; 
+<a href="corp/">About Deja.com</a>
 </b></font>
 </td>
 
@@ -2125,6 +2377,7 @@ For a more detailed search go to <a href="http://www.deja.com/home_ps.shtml?QRY=
 
 </td></tr></table>
 
+<!-- FOOTER : end -->
+
 </body>
 </html>
-

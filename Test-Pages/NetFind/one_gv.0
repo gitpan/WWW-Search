@@ -1,12 +1,14 @@
 
 <HTML>
 <HEAD>
+<SCRIPT SRC="/gr/search.js">
+</SCRIPT>
   <TITLE> AOL.COM
  Search: Results for Zuckus
 </TITLE>
   <LINK REL=stylesheet TYPE=text/css HREF=/gr/styles.css>
 </HEAD>
-<BODY BGCOLOR=#ffffff TEXT=#000000 LINK=#000099 VLINK=#000099>
+<BODY onload=FocusQuery() BGCOLOR=#ffffff TEXT=#000000 LINK=#000099 VLINK=#000099>
 <P ALIGN=Center>
 <!--- BEGIN NAV BAR ---> 
 <CENTER>
@@ -19,7 +21,7 @@
                 <TD WIDTH=585 HEIGHT=12 COLSPAN=2><HR SIZE=1></TD>
         </TR>
         <TR>
-                <TD WIDTH=585 HEIGHT=12 COLSPAN=2>You are here: <A HREF=http://dynamic.aol.com/cgi/redir?http://www.aol.com/home.html>Home</A> &gt; AOL.COM Search</TD>
+                <TD WIDTH=585 HEIGHT=12 COLSPAN=2>You are here: <A HREF=http://dynamic.aol.com/cgi/redir?http://www.aol.com/home.html>Home</A> &gt; <A HREF="http://search.aol.com/">AOL.COM Search</A></TD>
         </TR>
 </TABLE>
 </CENTER>
@@ -27,19 +29,19 @@
 <!--- END NAV BAR --->
 
 <P ALIGN=Center>
-<a href="http://ads.web.aol.com/link/2014570/html?badsc=B0CVbvn8Hp7JhNh7FoG-Tw1HvdPkS7Ne3_FksrOeW9Isf227mbLQyi6NvLRlqaN2YbAA240b3QVleGfYN7ItukaSsz8Ex6YeMN"><img src="http://ads.web.aol.com/content/B0/0/iBL1O95LGrmfhtey6QEZXed5_17CpaPb3vA4nkXrnfJRrAUw7En0qI330OCVoR_DngzBPyFfvhXorKljtq6dIKCS3gvjxStT6Ao3icbEE5c$/aol" border="0" height="60" width="468" alt="Disaster! Click here!"></a>
+<a href="http://ads.web.aol.com/link/2014570/html?badsc=B0KH_BIbDhcmzGBb321aaEEjC9PHCZOm0_HzRXsSA1Bd20SB-YCbrDV9aqaIYJZxEx6NCu4xgUfp7rbTgqmfzb4d-6k2wRlpDast91E0tcIz_7BtbZDqbZirwhpsoWH25zG79ENZtrWyE$"><img src="http://ads.web.aol.com/content/B0/0/iBL1O95LGrmfhtey6QEZXed5_17CpaPb3vA4nkXrnfJRrAUw7En0qBV3JbbEXPpNueTKKHLNn1YVYk8eucQb72KJsUKN_OM2bAjAhOH0Ejc$/aol" border="0" height="60" width="468"></a>
 
 
 <P ALIGN=Left>
 <CENTER>
-  <TABLE BGCOLOR=#000066 WIDTH=585 BORDER=0 CELLSPACING=0 CELLPADDING=2 ALIGN=Center>
-<FORM ACTION=dirsearch.adp>
-    <TR>
-      <TD WIDTH=200><A HREF=/index.adp><IMG WIDTH=198 HEIGHT=48 BORDER=0 SRC=/gr/logo_com.gif></A>
+  <TABLE BGCOLOR=#000066 WIDTH=585 BORDER=0 CELLSPACING=0 CELLPADDING=4 ALIGN=Center>
+<FORM ACTION=dirsearch.adp NAME=topform>
+    <TR VALIGN=TOP>
+      <TD WIDTH=200 VALIGN=TOP><A HREF=/index.adp><IMG WIDTH=198 HEIGHT=48 BORDER=0 SRC=/gr/logo_com.gif></A>
 </TD>
       <TD WIDTH=385>
 	  <FONT COLOR=#ffffff>Enter words below and click Search<BR>
-	  <INPUT TYPE=text NAME=query SIZE=26 VALUE="Zuckus"
+	  <INPUT TYPE=text NAME=query SIZE=26 tabindex=0 VALUE="Zuckus"
 > 
 	  <INPUT TYPE=submit VALUE=Search><BR>
 	  <A HREF=/index.adp CLASS=yellow><FONT COLOR=#ffff00 CLASS=yellow>Home</FONT></A> | 
@@ -51,83 +53,130 @@
     </TR>
 	</FORM>
   </TABLE>
-  <TABLE WIDTH=585 BORDER=0 CELLSPACING=0 CELLPADDING=2 ALIGN=Center>
+  <TABLE WIDTH=585 BORDER=0 CELLSPACING=0 CELLPADDING=0 ALIGN=Center>
     <TR>
       <TD VALIGN=TOP>
+<TABLE WIDTH=131 BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN=RIGHT>
+  <TR>
+    <TD WIDTH=3 BGCOLOR=#000066><IMG SRC=/gr/pixel.gif WIDTH=3 HEIGHT=3 BORDER=0></TD>
+    <TD WIDTH=125 BGCOLOR=#000066><IMG SRC=/gr/pixel.gif WIDTH=3 HEIGHT=3 BORDER=0></TD>
+    <TD WIDTH=3 BGCOLOR=#000066><IMG SRC=/gr/pixel.gif WIDTH=3 HEIGHT=3 BORDER=0></TD>
+  </TR>
+  <TR>
+    <TD WIDTH=3 BGCOLOR=#000066><IMG SRC=/gr/pixel.gif WIDTH=3 HEIGHT=3 BORDER=0></TD>
+    <TD BGCOLOR=#ffffff>
+<TABLE WIDTH=125 BGCOLOR=#ffffff CELLPADDING=1 CELLSPACING=0 BORDER=0>
+<TR>
+<TD BGCOLOR=#ffffff VALIGN=TOP ALIGN=CENTER>
+<TABLE CELLPADDING=6 CELLSPACING=0 WIDTH=100% BORDER=0 BGCOLOR=#00cc99>
+<TR>
+<TD ALIGN=CENTER><B>Search books:</B><BR>
+<A HREF="/redir.adp?appname=amazon&query=Zuckus&url=http://www.amazon.com/exec/obidos/aol-search/search=Zuckus"><IMG SRC=/gr/amzn-w-logo.gif WIDTH=90 HEIGHT=29 BORDER=0></A>
+<BR>
+<B>
+<A HREF="/redir.adp?appname=amazon&query=Zuckus&url=http://www.amazon.com/exec/obidos/aol-search/search=Zuckus">ZUCKUS</B></A>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<A HREF=http://ads.web.aol.com/link/7007426/aol>
+<img alt="Check Out Our Advertiser! ClickHere." border=0 height=60 width=120 src="http://ads.web.aol.com/image/7007426/aol?">
+</A>
+<BR>
+<BR>
+<A HREF=/contest><IMG SRC=/gr/contestlogo.gif BORDER=0 WIDTH=120 HEIGHT=60></A>
 <P>
+<A HREF="http://free.aol.com/tryaolfree/index.adp?124518"><FONT STYLE="font-size:13px"><B>ALL NEW AOL 5.0!</B></FONT></A>
+
+
+
+</TD>
+</TR>
+</TABLE>
+
+</TD>
+    <TD WIDTH=3 BGCOLOR=#000066><IMG SRC=/gr/pixel.gif WIDTH=3 HEIGHT=3 BORDER=0></TD>
+  </TR>
+  <TR>
+    <TD WIDTH=3 BGCOLOR=#000066><IMG SRC=/gr/pixel.gif WIDTH=3 HEIGHT=3 BORDER=0></TD>
+    <TD BGCOLOR=#000066><IMG SRC=/gr/pixel.gif WIDTH=3 HEIGHT=3 BORDER=0></TD>
+    <TD WIDTH=3 BGCOLOR=#000066><IMG SRC=/gr/pixel.gif WIDTH=3 HEIGHT=3 BORDER=0></TD>
+  </TR>
+</TABLE>
 
 <P>
 <P>
 <P>
 <TABLE CELLPADDING=0 CELLSPACING=0 WIDTH=430 BORDER=0>
 <TR>
-<TD WIDTH=200><FONT COLOR=#990000 STYLE="font-family: Arial, helv, helvetica;  font-weight:bold; font-size:14px">MATCHING WEB PAGES</FONT></TD><TD WIDTH=130 ALIGN=CENTER>(<B>1</B> thru <B>5</B> of <B>5</B>)</TD>
+<TD WIDTH=200><FONT COLOR=#990000 STYLE="font-family: Arial, helv, helvetica;  font-weight:bold; font-size:14px">MATCHING WEB PAGES</FONT></TD><TD WIDTH=130 ALIGN=CENTER>(<B>1</B> thru <B>6</B> of <B>6</B>)</TD>
 <TD WIDTH=50></TD><TD WIDTH=50 ALIGN=CENTER></TD></TR></TABLE>
 
 <DIV ALIGN=left STYLE="font-size:10px; font-weight:light">
 The following results are from the World Wide Web and may contain objectionable material that AOL does not endorse.</DIV>
 <P>		
 <DIV STYLE="font-weight:normal">
-<FONT COLOR=#990000 STYLE="font-weight:bold"><B>99%</B></FONT> <A HREF="http://www.turbotek.net/gheryp/sw/decks/deckd19.html " STYLE="font-weight:bold"><B>Travis' Dark Deck </B></A>
+<FONT COLOR=#990000 STYLE="font-weight:bold"><B>99%</B></FONT> <A HREF="http://www.gsppc.org/gheryp/sw/decks/deckd19.html " STYLE="font-weight:bold"><B>Travis' Dark Deck </B></A>
 <BR>
 Travis' Dark Deck Locations Death Star DS: War Room DS: Detention Block Corridor DS: Detention Block Control Room DS: Docking Bay 327 Yavin IV Hoth Tatooine:Lars Moisture Farm Hoth: Ice Plains (5th Marker) Characters Darth Vader (x2) Grand  Moff.. <BR>
-<I>http://www.turbotek.net/gheryp/sw/decks/deckd</I>
+<I>http://www.gsppc.org/gheryp/sw/decks/deckd19.</I>
 <P>
-<FONT COLOR=#990000 STYLE="font-weight:bold"><B>94%</B></FONT> <A HREF="http://www.umcsc.org/users/jedi/ " STYLE="font-weight:bold"><B>Jedi's Corner </B></A>
+<FONT COLOR=#990000 STYLE="font-weight:bold"><B>96%</B></FONT> <A HREF="http://members.aol.com/CougarToys/sw1.html " STYLE="font-weight:bold"><B>COUGAR ENTERPRISES' ACTION FIGURE ALLEY - STAR WARS SECTION </B></A>
 <BR>
-Last Updated on June 7th, 1997 Jedi's Corner Latest Information on Star Wars Novels, Movies, and Kenner's POTF2. This Star Wars WebRing site is owned by David Connell (JediMasterLuke). Click for the [ Next Page | Skip It | Next 5 ] Want to join  the <BR>
-<I>http://www.umcsc.org/users/jedi/ </I>
+Cougar Enterprises' Action-Figure Store, Action-Figure Alley ,  <BR>
+<I>http://members.aol.com/CougarToys/sw1.html </I>
 <P>
-<FONT COLOR=#990000 STYLE="font-weight:bold"><B>92%</B></FONT> <A HREF="http://rubylane.com/enter/toys/vintage/other/80.36.19.html " STYLE="font-weight:bold"><B>Ruby Lane Catalog for toys vintage other, page 1 </B></A>
+<FONT COLOR=#990000 STYLE="font-weight:bold"><B>94%</B></FONT> <A HREF="http://www.umcsc.org/users/Jedi " STYLE="font-weight:bold"><B>Jedi's Corner </B></A>
 <BR>
-Stroll down Ruby Lane to find the antiques and collectibles you've been searching for!  Whether you like fine antiques, paintings and art, or beanie babies, our search engine lists hundreds of thousands of items for sale at major auction and  shoppi <BR>
-<I>http://rubylane.com/enter/toys/vintage/other/</I>
+Last Updated on June 7th, 1997 Jedi's Corner Latest Information on Star Wars Novels, Movies, and Kenner's POTF2. This Star Wars WebRing site is owned by David Connell (JediMasterLuke). Click for the [ Next Page | Skip It | Next 5 ] Want to join the. <BR>
+<I>http://www.umcsc.org/users/Jedi </I>
 <P>
-<FONT COLOR=#990000 STYLE="font-weight:bold"><B>62%</B></FONT> <A HREF="http://www.solnet.co.uk/wonderland/toys3.html " STYLE="font-weight:bold"><B>Wonderland Toys - Toys Listing - S-Z </B></A>
+<FONT COLOR=#990000 STYLE="font-weight:bold"><B>94%</B></FONT> <A HREF="http://www.amazon.com/exec/obidos/ASIN/0553579002/polishfoodrecipe " STYLE="font-weight:bold"><B>Amazon.com: A Glance: Solo Command (Star Wars X-Wing Series , No 7) </B></A>
 <BR>
-80 x 29th Avenue, North Hull Estate. Kingston Upon Hull HU6 8DG ENGLAND TEL 01482 806960. OVERSEAS + 44 - 1482 - 806960 AVAILABLE 7 DAYS FAX: 01482 855394 OVERSEAS + 44 - 1482 - 855394 (24 hours) EMAIL : WilsonJ@wtoys.freeserve.co.uk VISA,  MASTER.. <BR>
+* at a glance reviews customer comments if you like this book.. read an excerpt e-mail a friend about this book.. Keyword Search Books All Products Full search: Books, Music, DVD & Video, Toys, or Electronics Visit the Amazon.com Star Wars  Store.. <BR>
+<I>http://www.amazon.com/exec/obidos/ASIN/055357</I>
+<P>
+<FONT COLOR=#990000 STYLE="font-weight:bold"><B>66%</B></FONT> <A HREF="http://www.cs.bilkent.edu.tr/~david/derya/storys3/story1911.htm " STYLE="font-weight:bold"><B>The Young Writer's Club - Member's Stories No:1911 </B></A>
+<BR>
+The Young Writer's Club Member's Stories No: 1911 Space Battle 2: Thresher 14 by 003, age 11 February 15, 2060 Greg Mueller here. Remember the 'Space Battle' I told you about not so long ago? There was another one about a year ago. It was  much.. <BR>
+<I>http://www.cs.bilkent.edu.tr/~david/derya/sto</I>
+<P>
+<FONT COLOR=#990000 STYLE="font-weight:bold"><B>65%</B></FONT> <A HREF="http://www.solnet.co.uk/wonderland/toys3.html " STYLE="font-weight:bold"><B>Wonderland Toys - Toys Listing - S-Z </B></A>
+<BR>
+80 x 29th Avenue, North Hull Estate. Kingston Upon Hull HU6 8DG ENGLAND TEL 01482 806960. OVERSEAS + 44 - 1482 - 806960 AVAILABLE 7 DAYS FAX: 01482 855394 OVERSEAS + 44 - 1482 - 855394 (24 hours) EMAIL : WilsonJ <BR>
 <I>http://www.solnet.co.uk/wonderland/toys3.html</I>
-<P>
-<FONT COLOR=#990000 STYLE="font-weight:bold"><B>61%</B></FONT> <A HREF="http://www.comic-cafe.de/comiccafe/comic-cgis/gaestebuch.html " STYLE="font-weight:bold"><B>Gästebuch </B></A>
-<BR>
-Gästebuch Hier können Sie sich eintragen. kallipso schrieb am 14.09.1999: He ihr dummen Panel-Leute! Mit den eigenen Auszeichnungen um sich zu schmeißen ist absolut doof und unfein. Ihr benehmt Euch ja wie der Scheiß Uli Hoeneß. Außerdem  solltet.. <BR>
-<I>http://www.comic-cafe.de/comiccafe/comic-cgis</I>
 <P>
 </DIV><P ALIGN=CENTER STYLE="font-weight:bold">
 
 
 <P>&nbsp;
 </TD>
-<TD WIDTH=125 BGCOLOR=#000066 VALIGN=TOP ALIGN=CENTER>
-<TABLE CELLPADDING=6 CELLSPACING=0 WIDTH=100% BORDER=0 BGCOLOR=#ccffcc>
-<TR>
-<TD ALIGN=CENTER><B>Search books:</B><BR>
-<B>
-<A HREF="http://dynamic.aol.com/cgi/redir?http://www.amazon.com/exec/obidos/aol-search/search=Zuckus">Zuckus</B><BR>
-<A HREF="http://dynamic.aol.com/cgi/redir?http://www.amazon.com/exec/obidos/aol-search/search=Zuckus"><IMG SRC=/gr/amazonblk88x31.gif WIDTH=89 HEIGHT=30 BORDER=0></A>
-</TD>
-</TR>
-</TABLE>
-
-<IMG SRC=/gr/pixel.gif WIDTH=125 HEIGHT=1 BORDER=0>
-
-</TD>
     </TR>
   </TABLE>
   <TABLE WIDTH=585 BORDER=0 CELLSPACING=0 CELLPADDING=0 ALIGN=Center>
+<TR>
+<TD BGCOLOR=#000066><IMG SRC=/gr/pixel.gif WIDTH=1 HEIGHT=5></TD>
+</TR>
+<TR>
+<TD BGCOLOR=#99ccff>
+<TABLE ALIGN=CENTER CELLPADDING=3 CELLSPACING=0 BORDER=0 WIDTH=100%>
+<TR>
+<TD ALIGN=CENTER>
+
+<DIV STYLE="font-size:18px; font-weight:bold; color: #000066">
+Additional results for "Zuckus" in <A HREF="web.adp?query=Zuckus">Web Articles</A>.
+</DIV>
+
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+</TR>
     <TR>
-      <TD WIDTH=10 BGCOLOR=#000066><IMG WIDTH=10 HEIGHT=10 BORDER=0 SRC=/gr/pixel.gif></TD>
-      <TD WIDTH=565 BGCOLOR=#000066><IMG WIDTH=10 HEIGHT=10 BORDER=0 SRC=/gr/pixel.gif></TD>
-      <TD WIDTH=10 BGCOLOR=#000066><IMG WIDTH=10 HEIGHT=10 BORDER=0 SRC=/gr/pixel.gif></TD>
-    </TR>
-    <TR>
-      <TD WIDTH=10 BGCOLOR=#000066><IMG WIDTH=10 HEIGHT=5 BORDER=0 SRC=/gr/pixel.gif></TD>
-      <TD WIDTH=565 BGCOLOR=#ffffff><IMG WIDTH=10 HEIGHT=5 BORDER=0 SRC=/gr/pixel.gif></TD>
-      <TD WIDTH=10 BGCOLOR=#000066><IMG WIDTH=10 HEIGHT=5 BORDER=0 SRC=/gr/pixel.gif></TD>
-    </TR>
-    <TR>
-      <TD WIDTH=10 BGCOLOR=#000066><IMG WIDTH=10 HEIGHT=10 BORDER=0 SRC=/gr/pixel.gif></TD>
-      <TD WIDTH=565>
+      <TD WIDTH=585>
 <P>
 &nbsp;<FONT COLOR=#000066><B>Also Search In:</B></FONT><BR>
 <DIV ALIGN=CENTER><A HREF="web.adp?query=Zuckus">Web Articles</A>
@@ -135,7 +184,7 @@ Gästebuch Hier können Sie sich eintragen. kallipso schrieb am 14.09.1999: He ihr
 <A HREF="http://hometown.aol.com/find.adp?cid=10000&resultOrder=1&queryToFlush=&query=Zuckus">Personal Home Pages</A> <B>&#149;</B>
       <A HREF="http://www.download.com/pc/list/1,339,0-a-0-0-1,00.html?tag=st.dl.fd.srch.list&queryType=quicksearch&search=Zuckus">Downloads</A>
       <B>&#149;</B>
-      <A HREF="http://comptonsv3.web.aol.com/search/articlesearch?db1=A&db2=P&db3=F&db4=S&perpage=25&view=viewcomptons&userstring=Zuckus">Encyclopedias</A>
+      <A HREF="http://dynamic.aol.com/cgi/redir-post?p=encyclopediapost&search=Zuckus&sp=sp">Encyclopedias</A>
       <B>&#149;</B>
       <A HREF="http://www.deja.com/=aol/dnquery.xp?Search=Find%21&query=Zuckus">Newsgroups</A>
       <B>&#149;</B>
@@ -153,27 +202,24 @@ Gästebuch Hier können Sie sich eintragen. kallipso schrieb am 14.09.1999: He ihr
 <A HREF="http://www.aol.com/netfind/international.html">International Directories</A></DIV>
 
 
+<P>&nbsp;
 </TD>
-      <TD WIDTH=10 BGCOLOR=#000066><IMG WIDTH=10 HEIGHT=10 BORDER=0 SRC=/gr/pixel.gif></TD>
     </TR>
-    <TR>
-      <TD WIDTH=10 BGCOLOR=#000066><IMG WIDTH=10 HEIGHT=5 BORDER=0 SRC=/gr/pixel.gif></TD>
-      <TD WIDTH=565 BGCOLOR=#ffffff><IMG WIDTH=10 HEIGHT=5 BORDER=0 SRC=/gr/pixel.gif></TD>
-      <TD WIDTH=10 BGCOLOR=#000066><IMG WIDTH=10 HEIGHT=5 BORDER=0 SRC=/gr/pixel.gif></TD>
-    </TR>
-    <TR>
-      <TD WIDTH=10 BGCOLOR=#000066><IMG WIDTH=10 HEIGHT=10 BORDER=0 SRC=/gr/pixel.gif></TD>
-      <TD WIDTH=565 BGCOLOR=#000066><IMG WIDTH=10 HEIGHT=10 BORDER=0 SRC=/gr/pixel.gif></TD>
-      <TD WIDTH=10 BGCOLOR=#000066><IMG WIDTH=10 HEIGHT=10 BORDER=0 SRC=/gr/pixel.gif></TD>
-    </TR>
+<TR>
+<TD BGCOLOR=#000066><IMG SRC=/gr/pixel.gif WIDTH=1 HEIGHT=5 BORDER=0></TD>
+</TR>
 </TABLE>
 </CENTER>
+<P ALIGN=Center>
+<a href="http://ads.web.aol.com/link/2014570/html?badsc=B0KH_BIbDhcmzGBb321aaEEjC9PHCZOm0_HzRXsSA1Bd20SB-YCbrDV9aqaIYJZxEx6NCu4xgUfp7rbTgqmfzb4d-6k2wRlpDast91E0tcIz_7BtbZDqbZirwhpsoWH25zG79ENZtrWyE$"><img src="http://ads.web.aol.com/content/B0/0/iBL1O95LGrmfhtey6QEZXed5_17CpaPb3vA4nkXrnfJRrAUw7En0qBV3JbbEXPpNueTKKHLNn1YVYk8eucQb72KJsUKN_OM2bAjAhOH0Ejc$/aol" border="0" height="60" width="468"></a>
+
+
 <P>
 <CENTER>
-<TABLE BGCOLOR=#000066 WIDTH=585 BORDER=0 CELLSPACING=0 CELLPADDING=2 ALIGN=CENTER>
+<TABLE BGCOLOR=#000066 WIDTH=585 BORDER=0 CELLSPACING=0 CELLPADDING=4 ALIGN=CENTER>
 <FORM ACTION=dirsearch.adp>
 	  <TR>
-	    <TD WIDTH=200><A HREF=/index.adp><IMG WIDTH=198 HEIGHT=48 BORDER=0 SRC=/gr/logo_com.gif>
+	    <TD WIDTH=200 VALIGN=TOP><A HREF=/index.adp><IMG WIDTH=198 HEIGHT=48 BORDER=0 SRC=/gr/logo_com.gif>
 </A></TD>
 	    <TD WIDTH=385>
 		<FONT COLOR=#ffffff>Enter words below and click Search<BR>
@@ -189,10 +235,6 @@ Gästebuch Hier können Sie sich eintragen. kallipso schrieb am 14.09.1999: He ihr
 	      </FORM>
 	</TABLE>
 </CENTER>
-<P ALIGN=Center>
-<a href="http://ads.web.aol.com/link/2014570/html?badsc=B0CVbvn8Hp7JhNh7FoG-Tw1HvdPkS7Ne3_FksrOeW9Isf227mbLQyi6NvLRlqaN2YbAA240b3QVleGfYN7ItukaSsz8Ex6YeMN"><img src="http://ads.web.aol.com/content/B0/0/iBL1O95LGrmfhtey6QEZXed5_17CpaPb3vA4nkXrnfJRrAUw7En0qI330OCVoR_DngzBPyFfvhXorKljtq6dIKCS3gvjxStT6Ao3icbEE5c$/aol" border="0" height="60" width="468" alt="Disaster! Click here!"></a>
-
-
 <P ALIGN=Center>
 <P>
 <CENTER>

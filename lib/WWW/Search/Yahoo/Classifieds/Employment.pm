@@ -595,7 +595,7 @@ sub native_retrieve_some
   #
   # Find next link
   #
-  my $p = new HTML::TokeParser(\$response->content());
+  $p = new HTML::TokeParser(\$response->content());
   while(1) {
       $tag = $p->get_tag("img");
       last if($tag->[1]{'alt'} eq 'Previous');

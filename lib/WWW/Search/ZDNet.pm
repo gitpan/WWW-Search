@@ -4,7 +4,7 @@
 # ZDnet.pm
 # by Jim Smyser
 # Copyright (C) 1999 by Jim Smyser & USC/ISI
-# $Id: ZDNet.pm,v 2.02 1999/11/29 15:27:05 jims Exp $
+# $Id: ZDNet.pm,v 1.5 1999/11/30 14:16:54 mthurn Exp $
 ###########################################################
  
 package WWW::Search::ZDNet;

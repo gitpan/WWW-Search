@@ -1,6 +1,6 @@
 # Magellan.pm
 # Copyright (c) 1998 by Martin Thurn
-# $Id: Magellan.pm,v 1.14 1999/10/05 19:57:52 mthurn Exp $
+# $Id: Magellan.pm,v 1.15 1999/12/10 17:44:41 mthurn Exp $
 
 =head1 NAME
 
@@ -52,6 +52,10 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 =head1 VERSION HISTORY
 
+=head2 2.03, 1999-12-10
+
+new test cases
+
 =head2 2.02, 1999-10-05
 
 now uses hash_to_cgi_string()
@@ -80,13 +84,13 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.02';
+$VERSION = '2.03';
 
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 $TEST_CASES = <<"ENDTESTCASES";
 &test('Magellan', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_EXACTLY);
-&test('Magellan', '$MAINTAINER', 'one_page', 'dise'.'stablishmentarianism', \$TEST_RANGE, 1,9);
-&test('Magellan', '$MAINTAINER', 'two_page', 'cha'.'rmeleon', \$TEST_GREATER_THAN, 11);
+&test('Magellan', '$MAINTAINER', 'one_page', 'antidise'.'stablishmentarianism', \$TEST_RANGE, 1,9);
+&test('Magellan', '$MAINTAINER', 'two_page', 'cha'.'rmeleon', \$TEST_GREATER_THAN, 10);
 ENDTESTCASES
 
 use Carp ();

@@ -1,7 +1,7 @@
 # Lycos.pm
 # by Wm. L. Scheding and Martin Thurn
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: Lycos.pm,v 1.10 1999/10/22 15:16:52 mthurn Exp $
+# $Id: Lycos.pm,v 1.13 1999/12/10 17:40:45 mthurn Exp $
 
 =head1 NAME
 
@@ -27,8 +27,9 @@ be done through L<WWW::Search> objects.
 =head1 NOTES
 
 WWW::Search::Lycos returns results only from www.lycos.com's "Web
-Pages"; results from "Categories", "Web Sites", and "News & Media" are
-ignored.
+Pages".  Results from "Categories", "Web Sites", and "News & Media"
+are ignored.
+
 If you want to get results from www.lycos.com's categorized "Web
 Sites", use Lycos::Sites instead.
 
@@ -75,7 +76,15 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 If it is not listed here, then it was not a meaningful nor released revision.
 
-=head3 2.04, 1999-10-22
+=head2 2.07, 1999-12-10
+
+more output format fixes, and missing 'next' link for Sites
+
+=head2 2.05, 1999-12-03
+
+handle new url and new output format for Lycos;:Sites.pm
+
+=head2 2.04, 1999-10-22
 
 use strip_tags();
 extract real URL from www.lycos.com's redirection URL
@@ -109,12 +118,14 @@ require Exporter;
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
 
-$VERSION = '2.04';
+$VERSION = '2.07';
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
+# $TEST_CASES can be found in Lycos::Pages.pm
 
 use Carp ();
 use WWW::Search(qw( generic_option strip_tags unescape_query ));
 require WWW::SearchResult;
+use URI::Escape;
 
 sub native_setup_search
   {
@@ -125,10 +136,11 @@ sub native_setup_search
   $self->{_debug} = 0 if (!defined($self->{_debug}));
 
   # During Sites searches, lycos.com returns 10 hits per page no
-  # matter what, so we don't depend on this value for our processing:
+  # matter what.
   my $DEFAULT_HITS_PER_PAGE = 100;
   $DEFAULT_HITS_PER_PAGE = 20 if 0 < $self->{_debug};
-  $self->{'_hits_per_page'} = $DEFAULT_HITS_PER_PAGE;
+  $self->{'_hits_per_page'} ||= 0;
+  $self->{'_hits_per_page'} = $DEFAULT_HITS_PER_PAGE unless 0 < $self->{'_hits_per_page'};
 
   $self->{agent_e_mail} = 'MartinThurn@iname.com';
   $self->user_agent('non-robot');
@@ -136,19 +148,20 @@ sub native_setup_search
   $self->{_next_to_retrieve} = 1;
   $self->{'_num_hits'} = 0;
 
+  # The default search uses lycos.com's Advanced Search mechanism:
   if (!defined($self->{_options})) 
     {
     $self->{'search_base_url'} = 'http://lycospro.lycos.com';
     $self->{_options} = {
                          'search_url' => $self->{'search_base_url'} .'/cgi-bin/pursuit',
                          'maxhits' => $self->{_hits_per_page},
-                         'query' => $native_query,
                          'matchmode' => 'or',
                          'cat' => 'lycos',
                          'mtemp' => 'nojava',
                          'adv' => 1,
                         };
     } # if
+  $self->{_options}->{'query'} = $native_query;
 
   my $options_ref = $self->{_options};
 
@@ -200,6 +213,7 @@ sub native_retrieve_some
     }
   
   $self->{'_next_url'} = undef;
+  $self->{'_next_to_retrieve'} += $self->{'_hits_per_page'};
   print STDERR " *   got response\n" if $self->{_debug};
   # parse the output
   my ($HEADER, $HITS, $DESC, $COLLECT, $SKIP1, $SKIP2) = qw( HE HI DE CO K1 K2 );
@@ -213,10 +227,6 @@ sub native_retrieve_some
     next if m@^$@; # short circuit for blank lines
 
     print STDERR " * $state ===$_=== " if 2 <= $self->{'_debug'};
-
-    # Note: if Lycos finds no Lycos-registered sites that match, it
-    # automatically forward the query to Alta Vista.  If we see that
-    # this has happened, we quit immediately.
 
     if ($state eq $HEADER && m|^Web\sSites</b></TD>|i)
       {
@@ -242,6 +252,16 @@ sub native_retrieve_some
       $self->approximate_result_count($1) if m=\((\d+)\)=;
       $state = $HITS;
       } # if
+    elsif ($state eq $HEADER && m|<b>([,\d]+)</b>\s*Web\ssites\swere\sfound|i)
+      {
+      # Actual line of input are:
+      # <FONT FACE=verdana COLOR=#999999 SIZE=-2>&nbsp;&nbsp;<B>127</B> Web sites were found in a search of the complete Lycos Web catalog</FONT>
+      print STDERR " site list intro\n" if ($self->{_debug});
+      my $i = $1;
+      $i =~ s/,//;
+      $self->approximate_result_count($1);
+      $state = $HITS;
+      } # if
 
     elsif ($state eq $HITS && 
            (m@^(?:<LI>|\s)?<a href=\"?([^">]+?)\"?\>(.*?)</a>\s-\s(.*)$@i ||
@@ -264,7 +284,7 @@ sub native_retrieve_some
       $hit->title(strip_tags($sTitle));
       $hit->description(strip_tags($sDesc));
       }
-    elsif ($state eq $HITS && m@<LI><A HREF=\"?([^">]+?)\"?>(.*)</A>@i)
+    elsif ($state eq $HITS && m@<LI><A HREF=\"?([^">]+?)\"?><B>\s?(.*?)</A>@i)
       {
       # Actual line of input is:
       # <LI><A HREF="http://www.fortunecity.com/lavendar/python/134/">WISHBONE - A SHORT BIO OF THE GREAT SHOW FOR CHILDREN</A>&nbsp;<BR>
@@ -292,6 +312,56 @@ sub native_retrieve_some
         {
         $state = $DESC;        
         }
+      }
+    elsif ($state eq $HITS && m!<P>!i)
+      {
+      print STDERR " multi-result line, splitting...\n" if 2 <= $self->{_debug};
+      # Actual line of input is
+      # <LI><FONT FACE=verdana SIZE=-1><a href="http://click.hotbot.com/director.asp?id=1&target=http://www.pitt.edu/%7ethurn/&query=Martin+Thurn&rsource=LCOSW1"><b>Martin</b> <b>Thurn</b>'s Index Page</a> - <b>Martin</b> <b>Thurn</b> Why am I so busy? I am gainfully employed at TASC. I have a family including 3 beautiful children. I am a co-habitant with two immaculate cats. I am the editor of The Star Wars Collector,</FONT><BR><I><FONT FACE=verdana size=-2 COLOR=#999999>http://www.pitt.edu/~<b>thurn</b>/</FONT></I><P></LI><LI><FONT FACE=verdana SIZE=-1><a href="http://click.hotbot.com/director.asp?id=2&target=http://www.posta.suedtirol.com/&query=Martin+Thurn&rsource=LCOSW1">Gasthof Post - St. <b>Martin</b> in <b>Thurn</b>, S. <b>Martin</b> in Badia, Pustertal, Val Pusteria,</a> - Diese Web-Seite verwendet Frames. Frames werden von Ihrem Browser aber nicht unterstutzt.</FONT><BR><I><FONT FACE=verdana size=-2 COLOR=#999999>http://www.posta.suedtirol.com/</FONT></I><P></LI><LI>...
+      my @asHits = split /\074[Pp]\076/;
+ HIT:
+      foreach my $sHit (@asHits)
+        {
+        # Actual chunk of the line is:
+        # <LI><FONT FACE=verdana SIZE=-1><a href="http://click.hotbot.com/director.asp?id=1&target=http://burn.ucsd.edu/%7eresist/prison.html&query=prison&rsource=LCOSW2"><b>Prison</b>, Police, rePression</a></FONT><BR><FONT FACE=verdana size=-2 COLOR=#000000><I>Society  &gt; </I><I> Issues  &gt; </I><I> Human Rights  &gt; </I><FONT FACE="verdana,helvetica,arial" SIZE=-2><A HREF="http://dir.lycos.com/Society/Issues/Human_Rights/Political_Prisoners"><B> Political Prisoners</B></A></FONT></FONT>
+        # </LI><LI><FONT FACE=verdana SIZE=-1><a href="http://click.hotbot.com/director.asp?id=9&target=http://www.igc.apc.org/prisons/&query=prison&rsource=LCOSW2"><b>Prison</b> Issues Desk</a></FONT><BR><FONT FACE=verdana size=-2 COLOR=#000000><I>Society  &gt; </I><I> Issues  &gt; </I><I> Human Rights  &gt; </I><FONT FACE="verdana,helvetica,arial" SIZE=-2><A HREF="http://dir.lycos.com/Society/Issues/Human_Rights/Political_Prisoners"><B> Political Prisoners</B></A></FONT></FONT>
+        # </LI><LI><FONT FACE=verdana SIZE=-1><a href="http://click.hotbot.com/director.asp?id=10&target=http://www.hrw.org/advocacy/prisons/&query=prison&rsource=LCOSW2">Human Rights Watch <b>Prison</b> Project: <b>Prison</b> Conditions and the Treatment of Prisoners</a> - Information on <b>prison</b> conditions around the world, international human rights standards applicable to prisoners, and <b>prison</b>-related activities of the U.N. and other organizations.</FONT><BR><FONT FACE=verdana size=-2 COLOR=#000000><I>Society  &gt; </I><I> Issues  &gt; </I><I> Crime and Justice  &gt; </I><I> Prisons  &gt; </I><FONT FACE="verdana,helvetica,arial" SIZE=-2><A HREF="http://dir.lycos.com/Society/Issues/Crime_and_Justice/Prisons/Organizations"><B> Organizations</B></A></FONT></FONT>
+        print STDERR " +   $state ===$sHit=== " if 2 <= $self->{'_debug'};
+        my ($iHit,$iPercent,$iBytes,$sURL,$sTitle,$sDesc,$sDate) = (0,0,0,'','','','');
+        $sURL = &strip_tags($1) if $sHit =~ m!target=\"?(.+?)[&\">]!;
+        if ($sURL =~ m!\s(>|&gt;)\s!)
+          {
+          # This link is a Lycos category; we have to get the URL from
+          # somewhere else in the line:
+          $sURL = &uri_unescape($1) if $sHit =~ m!target=(.+?)&!i;
+          }
+        $sTitle = &strip_tags($1) if $sHit =~ m!LCOSW\d+\">(.+?)<BR>!i;
+        $sTitle = &strip_tags($1) if $sHit =~ m!LCOSW\d+\">(.+?)</a>\s-\s!i;
+        my $sLoc = &strip_tags($1) if $sHit =~ m!<BR>(.+?)</FONT>!;
+        $sDesc = &strip_tags($1) if $sHit =~ m!</a>\s-\s(.+?)</FONT>!;
+        if ($sURL ne '')
+          {
+          if (ref($hit))
+            {
+            push(@{$self->{cache}}, $hit);
+            } # if
+          $hit = new WWW::SearchResult;
+          $hit->add_url(uri_unescape($sURL));
+          $hit->title($sTitle) if $sTitle ne '';
+          $hit->description($sDesc) if $sDesc ne '';
+          $hit->location($sLoc) if $sLoc ne '';
+          $hit->score($iPercent) if 0 < $iPercent;
+          $hit->size($iBytes) if 0 < $iBytes;
+          $hit->change_date($sDate) if $sDate ne '';
+          $self->{'_num_hits'}++;
+          $hits_found++;
+          print STDERR " OK\n" if 2 <= $self->{_debug};
+          } # if $URL
+        else
+          {
+          print STDERR " CANNOT FIND URL\n" if 2 <= $self->{_debug};
+          }
+        } # foreach
       }
 
     elsif ($state eq $COLLECT && m=^(.*?)<br>=i)
@@ -339,7 +409,6 @@ sub native_retrieve_some
       # There is a "next" button on this page, therefore there are
       # indeed more results for us to go after next time.
       my $sURL = $1;
-      $self->{'_next_to_retrieve'} += $self->{'_hits_per_page'};
       $self->{'_next_to_retrieve'} = $1 if $sURL =~ m/first=(\d+)/;
       $self->{'_next_url'} = $self->{'search_base_url'} . $sURL;
       print STDERR " * next URL is ", $self->{'_next_url'}, "\n" if 2 <= $self->{_debug};
@@ -357,6 +426,17 @@ sub native_retrieve_some
     push(@{$self->{cache}}, $hit);
     } # if
   
+  # Sometimes, the result page for a Lycos::Sites search has a DEAD
+  # next link.  Here is a hack to create our own _next_url based on
+  # what WE know about the search so far:
+  if (ref($self) =~ m/::Sites/ &&
+      $self->{'_next_to_retrieve'} <= $self->approximate_result_count
+     )
+    {
+    $self->{_options}->{'first'} = $self->{'_next_to_retrieve'};
+    $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $self->hash_to_cgi_string($self->{_options});
+    }
+
   return $hits_found;
   } # native_retrieve_some
 
@@ -374,3 +454,5 @@ cat=lycos&mtemp=nojava   Show results from Web Pages index only
 cat=dirw&mtemp=sites     Show results from Lycos categorized Web Sites only
 cat=dirw&mtemp=news      Search in News articles and Media only
 cat=dir                  Search for Lycos named Categories only
+
+

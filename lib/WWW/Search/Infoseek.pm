@@ -1,6 +1,6 @@
 # Infoseek.pm
 # Copyright (C) 1998 by Martin Thurn
-# $Id: Infoseek.pm,v 1.25 1999/10/05 19:49:46 mthurn Exp $
+# $Id: Infoseek.pm,v 1.26 1999/12/10 14:26:13 mthurn Exp $
 
 =head1 NAME
 
@@ -56,6 +56,10 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 =head1 VERSION HISTORY
 
 If it is not listed here, then it was not a meaningful nor released revision.
+
+=head2 2.06, 1999-12-10
+
+handle infoseek.com's slight output format change
 
 =head2 2.05, 1999-10-05
 
@@ -269,8 +273,13 @@ sub native_retrieve_some
       $state = $NEXT;
       next;
       } # we're in START mode, and line has number of WEB results
-
-    if ($state eq $START && 
+    if ($state eq $START && m=\>Search\sresults<=i)
+      {
+      # Actual line of input is:
+      # <tr><td valign="middle" align="left" nowrap colspan="3"><font face="Helvetica,Arial" size="3" color="#FFFFFF"><a name="topics">&nbsp;<b>Search results</b>&nbsp;</a></font></td>
+      $state = $NEXT;
+      }
+    elsif ($state eq $START && 
            m=\>\d+\s+-\s+\d+\s+of\s+\<b\>([0-9,]+)=)
       {
       # Actual line of input is:
@@ -346,10 +355,11 @@ sub native_retrieve_some
       {
       # Sample line of input:
       # ...<br><br><img src="/images/rnarrow.gif" width=13 height=13><font face="Helvetica,Arial" size="2"> <b><a href="http://www.mortgageselect.com">American Home Mortgage Holdings, Inc.</a>:</b>&nbsp; <a href="/Content?arn=60482&qt=home+mortgage+Atlanta&col=HV&svx=lhscaps">company profile</a><br><font face="Helvetica,Arial" size="2">http://www.mortgageselect.com</font>
+      # <font face="Helvetica,Arial" size="2">1. <b><a href="http://www.isi.edu/lsam/tools/WWW_SEARCH/">WWW::Search</a></b><br>WWW::Search is a collection of Perl modules which provide an API to WWW search engines like AltaVista, Lycos, Hotbot, WebCrawler, and so on. Currently WWW::Search includes back-ends for variations of AltaVista, Lycos, ...<br>Relevance: <font face="Helvetica,Arial" size="2">65% &nbsp;Date: 26 Jul 1999, &nbsp;Size 13.5K, &nbsp;http://www.isi.edu/lsam/tools/WWW_SEARCH/&nbsp;</font><br><font size="1"><a href="http://infoseek.go.com/Titles?col=WW&nh=25&rf=0&sf=1&cat=RES&fsd=291045125928341279&fs=http%3A//www.isi.edu/lsam/tools/WWW_SEARCH/&svx=find_similar">Find similar pages</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/redirect?sv=IS&lk=noframes&ak=SEEK&rl=LINK_Ktranslator_search_result&_nr=1&rd=http%3A//translator.go.com/search_trans?url=http%253A//www.isi.edu/lsam/tools/WWW_SEARCH/">Translate this page</a></font>
       my ($sURL,$sTitle) = ($1,$2);
-      if ($sURL =~ m/infoseek\.go\.com/ && $sTitle =~ m/Previous\s\d+/)
+      if ($sURL =~ m/infoseek\.go\.com/ && $sTitle =~ m/(Next|Previous)\s\d+/)
         {
-        print STDERR " ignoring 'previous page' link\n" if 2 <= $self->{'_debug'};
+        print STDERR " ignoring '$1 page' link\n" if 2 <= $self->{'_debug'};
         next;
         } # if
       if (m!>company profile<!)
@@ -358,7 +368,7 @@ sub native_retrieve_some
         next;
         } # if
       print STDERR " webhit URL line\n" if 2 <= $self->{'_debug'};
-      if (($self->{_options}->{'col'} eq 'WW') && (! m!</(a|center|table)>$!i))
+      if (($self->{_options}->{'col'} eq 'WW') && (! m!</(a|center|font|table)>$!i))
         {
         print STDERR " SPLIT DESCRIPTION!!!\n" if 2 <= $self->{'_debug'};
         # There is a \n in the middle of the description.  We need to
@@ -380,7 +390,7 @@ sub native_retrieve_some
       $hit->title(strip_tags($sTitle));
       $state = $DESC;
       $hit->score($1) if (m/(\d+)\%$SPACE/i);
-      $hit->change_date($1) if (m/Date:\s(.*?)\</i);
+      $hit->change_date($1) if (m/Date:\s(.*?)[^a-zA-Z0-9\s]/i);
       $hit->description(strip_tags($1)) if (s!\<br\>(.*?)\<br\>!!);
       if (m/Size\s(\S+?),/i)
         {

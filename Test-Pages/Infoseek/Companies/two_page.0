@@ -1,18 +1,57 @@
-<html><head><base target="_top"><meta name="IS" content="ok_nordman">
+<html><head><base target="_top"><meta name="IS" content="ok_sobers">
 <title>Companies : prison</Title></head>
-<body bgcolor="#FFFFFF" link="#0000CC" vlink="#990099"><table width="100%" cellpadding="0" cellspacing="0" border="0">
-<tr><td rowspan="2" width="1%"><a href="/Home/Home.html?svx=search_header&nh=25"><img src="/images/tmpl/search_go.gif" width="120" height="38" border="0" hspace="0" vspace="0"></td>
-<td height="23" width="100%">&nbsp;</td></tr>
-<tr><td bgcolor="#000000" height="15"><spacer type="block" width="1" height="15"></td></tr>
-</table><font face="Helvetica,Arial" size="2"><a href="/Home/Home.html?svx=search_breadcrumb&col=HV&nh=25&qt=prison&rf=0&st=0">GO</a> &gt; <b>prison</b> <br></font><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#F0F0E9"><tr><td bgcolor="#000000" colspan="5" height="1"><spacer type="block" width="1" height="1"></td></tr><tr><td bgcolor="#999999" colspan="5" height="1"><spacer type="block" width="1" height="1"></td></tr><tr><td bgcolor="#F0F0E9" colspan="5">&nbsp;</td></tr><tr><td bgcolor="#F0F0E9" width="10%">&nbsp;</td><td bgcolor="#F0F0E9" width="35%="><font face="Helvetica,Arial" size="2">Your search resulted in:<BR><a href="#search">35 Companies search results</a></font></td><td bgcolor="#F0F0E9" width="10%">&nbsp;</td><td bgcolor="#F0F0E9" width="35%"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="40%" rowspan="3">&nbsp;</td><td nowrap><font face="Helvetica,Arial" size="3"><form action="/Titles" method="get" name="WW_Search"><b>Search</b></font><font face="Verdana,Helvetica,Arial" size="1">&nbsp;<input type="radio" value="HV" name="col" checked><b>New</b> search&nbsp;<input type="radio" value="HV,cat_RES" name="col">Search <b>within</b> results</font><br><img src="/images/clear.gif" width="1" height="1"></td><td width="40%" rowspan="3">&nbsp;</td></tr><tr><td valign="top" nowrap><input type="text" name="qt" value="prison" size="35" maxlength="511">&nbsp;<INPUT TYPE=hidden NAME="sv" VALUE="IS">
+<body bgcolor="#FFFFFF" link="#0000CC" vlink="#990099" topmargin="4">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr><td rowspan="2" width="77" bgcolor="#000000" valign=top><a href="/Home/Home.html?svx=search_header&nh=25"><img src="/images/hp/logo_sr.gif" width="101" height="44" border="0"></td>
+<td valign=bottom height="21" width="911"><spacer height=15 width=1 type=block></td></tr>
+<tr><td bgcolor="#000000" valign=bottom width=911><img src="/images/clear.gif" width=109 height=1><img src="/images/hp/search.gif" width=421 height=19 usemap=#tabs border=0></td>
+<map name=tabs>
+<area coords=0,0,71,17 href="http://mypage.go.com/?svx=TAB_My_Page" shape=rect alt="Personalized stocks, news, weather and more">
+<area coords=75,0,136,17 href="http://www.go.com/?svx=TAB_Home_Page" shape=rect alt="go.com home page">
+<area coords=140,0,201,17 href="http://www.go.com/WebDir/?svx=TAB_Topic" shape=rect alt="Search the web or browse by topic">
+<area coords=205,0,307,17 href="http://www.go.com/Community/?svx=TAB_Community" shape=rect alt="Chat, message boards, homepages and more">
+<area coords=311,0,390,17 href="http://shop.go.com/?svx=TAB_Shop" shape=rect alt="Shop for products and brands">
+<area coords=405,2,419,16 href="/Help/help.html?key=HELP_T00008_SRCHQUIK&svx=TAB_Help" target="GOHelp" shape=rect alt="Help" onclick="window.open('/Help/help.html/?key=HELP_T00008_SRCHQUIK&svx=TAB_Help;', 'GOHelp', 'width=575,height=400,scrollbars=yes,resizable=yes,toolbar=yes'); return false;">
+</map>
+</tr>
+</table><font face="Helvetica,Arial" size="2"><a href="/WebDir/?svx=search_breadcrumb&col=HV&nh=25&qt=prison&rf=0&st=0">Search</a> &gt; <b>prison</b> <br></font><TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+<TR><TD bgColor=#000000 colSpan=5 height=1><SPACER height="1" width="1" type="block"></TD></TR>
+</TABLE>
+<TABLE bgColor="#f0f0e9" border=0 cellPadding=0 cellSpacing=0 width="100%">
+<TR>
+<TD align=center><TABLE border=0 cellPadding=0 cellSpacing=0>
+<TR vAlign=top>
+<TD>
+<table border="0" cellpadding="3" cellspacing="0"><tr><td colspan=2>
+<form action="/Titles" method="get" name="WW_Search">
+<input type="radio" value="HV" name="col" checked><font face="geneva,arial" size=2>
+<font color="#669966"><b>New</b></font> search </font>
+<input type="radio" value="HV,cat_RES" name="col"><font face="geneva,arial" size=2>Search 
+<font color="#669966"><b>within</b></font> results</font>
+</tr><tr> 
+<td><input type="text" name="qt" value="prison" size="30" maxlength="511"></td><INPUT TYPE=hidden NAME="sv" VALUE="IS">
 <INPUT TYPE=hidden NAME="lk" VALUE="noframes">
 <INPUT TYPE=hidden NAME="nh" VALUE="25">
+<input type=hidden name="svx" value="sbox_top">
 <input type=hidden name="cc" value="HV">
 <input type=hidden name="oq" value="prison">
-<input type="submit" value="Find"></td></tr><tr><td nowrap><font face="Verdana,Helvetica,Arial" size="1"><a href="/find?pg=advanced_www.html&ud9=advanced_www&nh=25">Search&nbsp;options</a>&nbsp;|&nbsp;<a target="GOHelp" href="/Help/help.html?key=HELP_T00008_SRCHQUIK&nh=25" onclick="window.open('/Help/help.html?key=HELP_T00008_SRCHQUIK&nh=25', 'GOHelp', 'width=575,height=400,scrollbars=yes,resizable=yes,toolbar=yes'); return false;">How&nbsp;to&nbsp;search</a>
-&nbsp;|&nbsp;</font><br><img src="/images/clear.gif" height="4" width="1"></td></tr></form><!-- End Search Box --></table></td><td bgcolor="#F0F0E9" width="10%">&nbsp;</td><tr><td colspan="5" height="8"><spacer type="block" width="1" height="8"></td></tr></table>
-<img src="/images/clear.gif" border="0" width="1" height="6"><br>
-<center><table cellpadding="0" cellspacing="0" border="0"><tr><td align="right" valign="top"><table width="121" height="60" cellpadding="1" cellspacing="0" border="0">
+<td><input type="submit" value="Find"></td></tr></form>
+<tr>
+<td nowrap colspan=2><font face="Verdana,Helvetica,Arial" size="1"><a href="/find?pg=advanced_www.html&ud9=advanced_www&nh=25">Search&nbsp;options</a>&nbsp;|&nbsp;<a target="GOHelp" href="/Help/help.html?key=HELP_T00008_SRCHQUIK&nh=25" onclick="window.open('/Help/help.html?key=HELP_T00008_SRCHQUIK&nh=25', 'GOHelp', 'width=575,height=400,scrollbars=yes,resizable=yes,toolbar=yes'); return false;">How&nbsp;to&nbsp;search</a>
+&nbsp;|&nbsp;</font><br></td></tr></table></td>
+<TD noWrap width=8><SPACER width="8" type="block"></TD>
+<TD noWrap width=8><SPACER width="8" type="block"></TD>
+<TD valign=top>
+</TD></TR>
+</TABLE>
+</td>
+</tr>
+</table>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+<TR bgColor=#cccccc><TD height=1><SPACER height="1" width="1" type="block"></TD></TR>
+</TABLE>
+<img src="/images/clear.gif" border="0" width="1" height="6"><br><center><table 
+cellpadding="0" cellspacing="0" border="0"><tr><td align="right" valign="top"><table width="121" height="60" cellpadding="1" cellspacing="0" border="0">
 <tr><td bgcolor="#000000" valign="top">
 <table width="119" height="58" cellpadding="0" cellspacing="0" border="0">
 <tr><td bgcolor="#FFFFFF" align="center" valign="bottom" width="119" NOWRAP><font face="Arial,Helvetica" size="-2">Books about</font></td></tr>
@@ -22,61 +61,161 @@
 </table>
 </td></tr>
 </table>
-</td><td>&nbsp;&nbsp;</td><td valign="top" align="left" colspan="3"><center><a href="http://transfer.go.com/cgi/atransfer.pl?goto=http://ads09.focalink.com/SmartBanner/page%3F15161.499%2D1999.10.08.08.05.22&name=46746&srvc=go&guid=C31D7713-7D91-11D3-8F4E-00902730418A" target=""><img src="http://ads09.focalink.com/SmartBanner/nph-graphic?15161.499-1999.10.08.08.05.22" width=468 height=60 border="1" alt="Amazon.com" align="center"><FONT FACE="verdana,arial,helvetica" SIZE="1"><b><br>Click here</b></font></a></center></td></tr></table></center><br>
+</td><td>&nbsp;&nbsp;</td><td valign="top" align="center"><SCRIPT language="JavaScript">
+function go(url)
+{
+        window.location.href = url
+}
+</SCRIPT>
+<table border=0 cellpadding=0 cellspacing=0 width=468>
+<tr> 
+<td width="460"><a href="http://transfer.go.com/cgi/atransfer.pl?name=56453&srvc=gros&context=33938&guid=97DF0524-AF0E-11D3-8DFA-0090273025CD&goto=http://shop.go.com/holiday">
+<img src="http://adimages.go.com/ad/sponsors/house/go/banners/goco-ban0045/top.gif" border="0"></a></td></tr>
+<tr> 
+<td> 
+<table border=0 cellpadding=0 cellspacing=0 width=468>
+<tr> 
+<FORM NAME="filter">
+<td width="183"><a href="http://transfer.go.com/cgi/atransfer.pl?name=56453&srvc=gros&context=33938&guid=97DF0524-AF0E-11D3-8DFA-0090273025CD&goto=http://shop.go.com/holiday">
+<img src="http://adimages.go.com/ad/sponsors/house/go/banners/goco-ban0045/bottom1.gif" border="0"></a></td>
+<TD  bgcolor="#80daa7" width="226" valign="center" align="center"> 
+<select name="dooda" size="1" onChange="window.location.href = this.options[selectedIndex].value;">
+<option value="#">Choose one:</option>
+<option value="http://transfer.go.com/cgi/atransfer.pl?name=56453&srvc=gros&context=33938&guid=97DF0524-AF0E-11D3-8DFA-0090273025CD&goto=http://shop.go.com/holiday">Your stepmother</option>
+<option value="http://transfer.go.com/cgi/atransfer.pl?name=56453&srvc=gros&context=33938&guid=97DF0524-AF0E-11D3-8DFA-0090273025CD&goto=http://shop.go.com/holiday">Your stepsisters</option>
+<option value="http://transfer.go.com/cgi/atransfer.pl?name=56453&srvc=gros&context=33938&guid=97DF0524-AF0E-11D3-8DFA-0090273025CD&goto=http://shop.go.com/holiday">Your fairy godmother</option>
+</select>
+</TD>
+<td width="59"><a href="http://transfer.go.com/cgi/atransfer.pl?name=56453&srvc=gros&context=33938&guid=97DF0524-AF0E-11D3-8DFA-0090273025CD&goto=http://shop.go.com/holiday">
+<img src="http://adimages.go.com/ad/sponsors/house/go/banners/goco-ban0045/bottom2.gif" border="0"></a></td>
+</FORM>
+</TR>
+</TABLE>
+</td>
+</tr>
+</table></td></tr></table></center><img src="/images/clear.gif" border="0" width="1" height="6"><br>
 <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#003366">
-<tr><td valign="middle" align="left" nowrap colspan="3"><font face="Helvetica,Arial" size="3" color="#FFFFFF"><a name="search">&nbsp;<b>Companies search results</b>&nbsp;&nbsp;&nbsp;&nbsp;<font face="Helvetica,Arial" size="2">1 - 25 of <b>35</b> results most relevant to <b>prison</b> </font>&nbsp;</a></font></td>
+<tr><td valign="middle" align="left" nowrap colspan="3"><font face="Helvetica,Arial" size="3" color="#FFFFFF"><a name="topics">&nbsp;<b>Search results</b>&nbsp;</a></font></td>
 <td height="18" valign="middle" align="right" nowrap  colspan="1">&nbsp;
 </td></tr>
-<tr><td valign="middle" align="left" nowrap colspan="4" bgcolor="#000000"><img src="/images/clear.gif" border="0" width="100%" height="1"></td>
 </table>
-<spacer type="block" width="1" height="2"><!-- Begin RHS -->
-<table cellpadding="1" cellspacing="0" border="0" width="152" align="right" bgcolor="#FFFFFF"><tr><td height="4"><spacer type="block" width="1" height="4"></td></tr><tr><td></td></tr><tr><td><table cellpadding="1" cellspacing="0" border="0" width="150" align="right" bgcolor="#000000"><tr><td><table cellpadding="6" cellspacing="0" border="0" width="148" align="right" bgcolor="#FFFFFF"><tr><td><center><font size="2" face="Verdana,Helvetica,Arial"><b>Buy the book</b></font></center><br><!-- Infoseek cut-->
-<FONT FACE="Arial,Helvetica" SIZE="2">
-<A HREF="/redirect?sv=IS&lk=&ak=BORD&rl=LINK_C420_RESULTS_GO&rd=http://go.borders.com/fcgi-bin/part?PID=122010810&PKIND=aa&PAGE=http%3A%2F%2Fwww%2Eborders%2Ecom%2Fsections%2Fsection%5F10400%2Ehtml">Books</A> at <A HREF="/redirect?sv=IS&lk=&ak=BORD&rl=LINK_C420_RESULTS_GO&rd=http://go.borders.com/fcgi-bin/part?PID=122010814&PKIND=tb&PAGE=http%3A%2F%2Fwww%2Eborders%2Ecom%2F">Borders.com</A>
+<table cellpadding="1" cellspacing="0" border="0" width="152" align="right" bgcolor="#FFFFFF"><tr><td height="4"><spacer type="block" width="1" height="4"></td></tr><tr><td></td></tr><tr><td><table cellpadding="1" cellspacing="0" border="0" width="150" align="right" bgcolor="#000000"><tr><td><table cellpadding="6" cellspacing="0" border="0" width="148" align="right" bgcolor="#FFFFFF"><tr><td><center><font size="2" face="Verdana,Helvetica,Arial"><b>Buy the book</b></font></center><br><FONT FACE="Arial,Helvetica" SIZE="2">
+<A HREF="/redirect?sv=IS&lk=noframes&ak=BORD&rl=LINK_C420_RESULTS_GO&rd=http://go.borders.com/fcgi-bin/part?PID=122010810&PKIND=aa&PAGE=http%3A%2F%2Fwww%2Eborders%2Ecom%2Fsections%2Fsection%5F10400%2Ehtml">Books</A> at
+<A HREF="/redirect?sv=IS&lk=noframes&ak=BORD&rl=LINK_C420_RESULTS_GO&rd=http://go.borders.com/fcgi-bin/part?PID=122010814&PKIND=tb&PAGE=http%3A%2F%2Fwww%2Eborders%2Ecom%2F">Borders.com</A>
 <BR>
-- <A HREF="/redirect?sv=IS&lk=&ak=BORD&rl=LINK_C420_RESULTS_GO&rd=http://go.borders.com/fcgi-bin/part?PID=122010811&PKIND=aa&PAGE=http%3A%2F%2Fsearch%2Eborders%2Ecom%2Ffcgi%2Dbin%2Fdb2www%2Fsearch%2Fsearch%2Ed2w%2FDetails%3F%26mediaType%3DBook%26prodID%3D51086573">Stories of Silicon Valley</A><BR>
-- <A HREF="/redirect?sv=IS&lk=&ak=BORD&rl=LINK_C420_RESULTS_GO&rd=http://go.borders.com/fcgi-bin/part?PID=122010812&PKIND=aa&PAGE=http%3A%2F%2Fsearch%2Eborders%2Ecom%2Ffcgi%2Dbin%2Fdb2www%2Fsearch%2Fsearch%2Ed2w%2FDetails%3F%26mediaType%3DBook%26prodID%3D40621055">Building Wealth</A><BR>
-- <A HREF="/redirect?sv=IS&lk=&ak=BORD&rl=LINK_C420_RESULTS_GO&rd=http://go.borders.com/fcgi-bin/part?PID=122010813&PKIND=aa&PAGE=http%3A%2F%2Fsearch%2Eborders%2Ecom%2Ffcgi%2Dbin%2Fdb2www%2Fsearch%2Fsearch%2Ed2w%2FDetails%3F%26mediaType%3DBook%26prodID%3D51181491">Qualities of a Leader</A><BR>
-</FONT>
-<!-- Infoseek cut--><hr>
-<font face="Geneva,Arial" size=2><center><b>Search Amazon.com</b><br></center><li><a href="/redirect?sv=IS&lk=noframes&ak=SEEK&rl=LINK_T420_Amazon_Search_AD&_nr=1&rd=http://www.amazon.com/exec/obidos/external-search?tag=go-srch-kw&mode=blended&keyword=PRISON">PRISON</a><br></font><li><font size=2 face="Geneva,Arial"><a href="/redirect?sv=IS&lk=&ak=AMAZ&rl=LINK_SearchAd_T420_HOT&rd=http://www.amazon.com/exec/obidos/redirect?tag=go-srch-video&path=subst/video/sellers/amazon-top-100-video.html">100 Hot Videos</a></font><BR>
-<li><font size=2 face="Geneva,Arial"><a href="/redirect?sv=IS&lk=&ak=AMAZ&rl=LINK_SearchAd_T420_TOP&rd=http://www.amazon.com/exec/obidos/redirect?tag=go-srch-ce&path=subst/electronics/misc/top-sellers.html">Top Electronics</a></font><BR><br>
-<font size=2 face="Geneva,Arial">-&nbsp;<a href="/redirect?sv=IS&lk=&ak=AMAZ&rl=LINK_SearchAd_T420_CLICK&rd=http://www.amazon.com/exec/obidos/redirect?tag=go-srch-cemsg&path=subst/electronics/home/home.html">Click Here to Shop!</a>&nbsp;-</font><BR></td></tr></table></td></tr></table></td></tr></table>
-<!-- End RHS -->
-<font face="Helvetica,Arial" size="2"><b><a href="http://infoseek.go.com/Titles?col=HV&nh=25&qt=prison&rf=0&st=25&sf=1">Next 25 ></a></b> &nbsp;|&nbsp; <a href="http://infoseek.go.com/Titles?col=HV&nh=20&qt=prison&rf=0&st=0&sf=1&ud4=1">Hide summaries</a></font><br><br><p>
-<font face="Helvetica,Arial" size="2"><p><b><a href="/Content?arn=53544&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">Prison Realty Trust</a></b>
-<br>Incarceration as a growth industry? <b style="background:#FFFF99">Prison</b> Realty Trust thinks so. The real estate investment trust (REIT) builds and manages <b style="background:#FFFF99">prisons</b> in Australia, Puerto Rico, the UK, and the US. It owns nearly 50 <b style="background:#FFFF99">prisons</b> (one in the UK, the rest in the US); ...<br><p><b><a href="/Content?arn=43053&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">Federal Prison Industries, Inc.</a></b>
-<br>Some businesses benefit from captive audiences -- this company benefits from captive employees. Federal <b style="background:#FFFF99">Prison</b> Industries (FPI), better known by its trade name UNICOR, uses prisoners to make products and provide services, ...<br><p><b><a href="/Content?arn=47054&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">Avalon Correctional Services, Inc.</a></b>
-<br>Avalon is the mythical isle of dead heroes, but the tenants of Avalon Correctional Services are alive and kickin' -- although not exactly heroes. The company owns and operates four private <b style="background:#FFFF99">prisons</b> and provides therapy and ...<br><p><b><a href="/Content?arn=60143&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">CompuDyne Corporation</a></b>
-<br>The thin blue line lends to CompuDyne's bottom line. The security contractor does everything from designing <b style="background:#FFFF99">prison</b> security systems to making bullet-proof glass. It has state <b style="background:#FFFF99">prisons</b> as customers -- it already has the jail on ...<br><p><b><a href="/Content?arn=42155&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">Wackenhut Corrections Corporation</a></b>
-<br>The second-largest developer and operator of private <b style="background:#FFFF99">prisons</b> in the US (after <b style="background:#FFFF99">Prison</b> Realty), Wackenhut Corrections manages private correctional and detention facilities in the US, the UK, and Australia. (It is the market ...<br><p><b><a href="/Content?arn=55705&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">PRIDE Enterprises</a></b>
-<br>In Florida, even a trip to the hoosegow won't save you from the work week. PRIDE Enterprises employs inmates in Florida <b style="background:#FFFF99">prisons</b> to make a variety of consumer goods, including furniture, textiles, paint, and food products. The primary ...<br><p><b><a href="/Content?arn=15462&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">America Service Group Inc.</a></b>
-<br>Talk about your captive populations. America Service Group's subsidiaries provide health care to prisoners in state, county, and local correctional facilities. Through EMS Correctional and <b style="background:#FFFF99">Prison</b> Health Services, the company contracts with ...<br><p><b><a href="/Content?arn=56205&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">Correctional Properties Trust</a></b>
-<br>Correctional Properties Trust, a real estate investment trust (REIT), was formed to buy correctional and detention facilities, including 10 facilities from Wackenhut Corrections. The trust leases the <b style="background:#FFFF99">prisons</b> back to Wackenhut. Four of ...<br><p><b><a href="/Content?arn=59346&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">DirectChef, Inc.</a></b>
-<br>DirectChef (formerly Hospitality Design & Supply) doesn't care if its customers cook hot dogs or haute cuisine. DirectChef was founded in 1998 to consolidate distributors of food service equipment, such as ranges and refrigerators, and ...<br><p><b><a href="/Content?arn=58314&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">Evercom, Inc.</a></b>
-<br>When prisoners are allowed to use the phone, Evercom is ready with a dial tone. The company provides collect, prepaid, and debit phone service to inmates of correctional facilities. Evercom serves more than 2,000 local and county jails, state ...<br><p><b><a href="/Content?arn=58042&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">Half Price Books</a></b>
-<br>The nation's largest chain of used bookstores, Half Price Books tries to live up to its name and its hippie roots. Half Price Books' stores sell used (60% of inventory) and new books, magazines, and CDs. Its 60-plus stores are located ...<br><p><b><a href="/Content?arn=56984&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">ILD Telecommunications, Inc.</a></b>
-<br>If idle hands are the devil's playground, then ILD Telecommunications is on a mission from God. Taking phone companies' outsourcing needs off their hands, ILD handles billing, operator service, and direct-dial long-distance ...<br><p><b><a href="/Content?arn=55294&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">HLM Design, Inc.</a></b>
-<br>HLM Design of Northamerica (formerly Hansen Lind Meyer), an architecture, engineering, and planning firm,  engineered a plan and designed the legal architecture to handle its management chores and those of two related firms. The ...<br><p><b><a href="/Content?arn=55032&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">Integrated Electrical Services, Inc.</a></b>
-<br>Integrated Electrical Services keeps turning up the juice on its electrical contracting and maintenance business. The fast-growing company has a network of about 40 companies (most of them acquired since the firm's 1998 ...<br><p><b><a href="/Content?arn=52911&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">Quest Diagnostics Incorporated</a></b>
-<br>Quest Diagnostics' quest to be the world's #1 clinical laboratory came to a happy ending with its purchase of SmithKline Beecham's clinical lab operations. Quest Diagnostics annually performs more than 50 million routine tests (such as ...<br><p><b><a href="/Content?arn=90378&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">Serco Group plc</a></b>
-<br>Serco Group insources the outsourced work of government and industrial clients. It provides facilities management and systems engineering services through a staff of 20,000 people in more than 30 countries. In such areas as aviation, ...<br><p><b><a href="/Content?arn=47630&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">Tutor-Saliba Corporation</a></b>
-<br>Underneath California's glamour, Tutor-Saliba is making tracks. Among the largest transportation construction firms in the US, the company is the primary builder of the new subway system in Los Angeles and has provided services ...<br><p><b><a href="/Content?arn=47621&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">AECOM Technology Corporation</a></b>
-<br>AECOM Technology offers a building service for each letter in its name, which stands for architecture, engineering, construction management, operation, and maintenance.  Established as a holding company in 1990,  AECOM operates through ...<br><p><b><a href="/Content?arn=44941&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">The Walsh Group</a></b>
-<br>The Walsh Group has built walls, halls, malls and more since 1898. Walsh provides contracting services for industrial, infrastructure, and commercial projects throughout the US. Its undertakings have ranged from <b style="background:#FFFF99">prisons</b> to skyscrapers to ...<br><p><b><a href="/Content?arn=46360&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">Versus Technology, Inc.</a></b>
-<br>You're bound to lose a game of hide-and-seek versus Versus Technology. The company sells infrared location tracking systems and cellular products, mainly to the health care sector. The systems enable remote monitoring of patients and ...<br><p><b><a href="/Content?arn=46318&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">U.S. Technologies Inc.</a></b>
-<br>You can tell U.S. Technologies' employees by their stripes -- most of them are prisoners. Through its subsidiaries, U.S. Technologies (a Strategic Solutions spinoff) puts inmates to work assembling electronics, manufacturing ...<br><p><b><a href="/Content?arn=45206&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">Barringer Technologies Inc.</a></b>
-<br>Barringer Technologies makes bomb and drug detectors for security and law enforcement agencies worldwide. Its flagship product, the IONSCAN, is a portable desktop unit that detects trace amounts of a substance smaller than one-billionth ...<br><p><b><a href="/Content?arn=42145&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">Continental Choice Care, Inc.</a></b>
-<br>Continental Choice Care is cleaning up its business. The company switched to the dry cleaning business in 1998 after selling its subsidiaries that were involved in dialysis-related services. Continental Choice Care was providing its ...<br><p><b><a href="/Content?arn=11598&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">The Wackenhut Corporation</a></b>
-<br>Wackenhut provides security to commercial, industrial, and governmental customers; through subsidiary Wackenhut Corrections, it also manages more than 40 correctional facilities with some 30,000 beds. The company touts its Custom ...<br><p><b><a href="/Content?arn=12234&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">Perini Corporation</a></b>
-<br>Perini has its fingers in many pies as a construction contractor whose projects range from new buildings and infrastructure rehabilitation to overseas government projects. Perini's civil division builds and repairs such structures as ...<br></font><br clear=all><br clear=all><font face="Helvetica,Arial" size="2"><b><a href="http://infoseek.go.com/Titles?col=HV&nh=25&qt=prison&rf=0&st=25&sf=1">Next 25 ></a></b> </font><br><br><center><center><a href="http://transfer.go.com/cgi/atransfer.pl?goto=http://ads09.focalink.com/SmartBanner/page%3F15161.499%2D1999.10.08.08.05.22&name=46746&srvc=go&guid=C31D7713-7D91-11D3-8F4E-00902730418A" target=""><img src="http://ads09.focalink.com/SmartBanner/nph-graphic?15161.499-1999.10.08.08.05.22" width=468 height=60 border="1" alt="Amazon.com" align="center"><FONT FACE="verdana,arial,helvetica" SIZE="1"><b><br>Click here</b></font></a></center></center><p><center>
-<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td bgcolor="#F0F0E9">&nbsp;</td></tr></table><p><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td rowspan="4" width="35%" align="center" valign="top"><font size="2" face="Verdana,Helvetica,Arial"><a href="/Titles?nh=25&tv=brag&qt=prison&col=HV&sv=IS&svx=brag_page"><img src="/images/misc/powered_by_stack.gif" border="0" alt="Powered by Infoseek"><br>What makes us better</a></font></td><tr><td width="40%" rowspan="3">&nbsp;</td><td nowrap><font face="Helvetica,Arial" size="3"><form action="/Titles" method="get" name="WW_Search"><b>Search</b></font><font face="Verdana,Helvetica,Arial" size="1">&nbsp;<input type="radio" value="HV" name="col" checked><b>New</b> search&nbsp;<input type="radio" value="HV,cat_RES" name="col">Search <b>within</b> results</font><br><img src="/images/clear.gif" width="1" height="1"></td><td width="40%" rowspan="3">&nbsp;</td></tr><tr><td valign="top" nowrap><input type="text" name="qt" value="prison" size="35" maxlength="511">&nbsp;<INPUT TYPE=hidden NAME="sv" VALUE="IS">
+- <A HREF="/redirect?sv=IS&lk=noframes&ak=BORD&rl=LINK_C420_RESULTS_GO&rd=http://go.borders.com/fcgi-bin/part?PID=122010811&PKIND=aa&PAGE=http%3A%2F%2Fsearch%2Eborders%2Ecom%2Ffcgi%2Dbin%2Fdb2www%2Fsearch%2Fsearch%2Ed2w%2FDetails%3F%26mediaType%3DBook%26prodID%3D51302417">The Savage Truth On Money</A><BR>
+- <A HREF="/redirect?sv=IS&lk=noframes&ak=BORD&rl=LINK_C420_RESULTS_GO&rd=http://go.borders.com/fcgi-bin/part?PID=122010812&PKIND=aa&PAGE=http%3A%2F%2Fsearch%2Eborders%2Ecom%2Ffcgi%2Dbin%2Fdb2www%2Fsearch%2Fsearch%2Ed2w%2FDetails%3F%26mediaType%3DBook%26prodID%3D51391298">NY Times Century of Business</A><BR>
+- <A HREF="/redirect?sv=IS&lk=noframes&ak=BORD&rl=LINK_C420_RESULTS_GO&rd=http://go.borders.com/fcgi-bin/part?PID=122010813&PKIND=aa&PAGE=http%3A%2F%2Fsearch%2Eborders%2Ecom%2Ffcgi%2Dbin%2Fdb2www%2Fsearch%2Fsearch%2Ed2w%2FDetails%3F%26mediaType%3DBook%26prodID%3D51261236">The Internet Bubble</A><BR>
+</FONT></td></tr></table>
+</td></tr></table>
+<br clear=all><br>
+<table cellpadding=1 cellspacing=0 border=0 width=150 align=right bgcolor="#000000"><tr><td>
+<table cellpadding=6 cellspacing=0 border=0 width=148 align=right bgcolor="#FFFFFF"><tr><td>
+<font face="Geneva,Arial" size=2><center><b>SHOP AMAZON.COM</b><br></center><li type="square"><a href="/redirect?sv=IS&lk=noframes&ak=AMAZ&rl=LINK_T420_Amazon_Search_AD&_nr=1&rd=http%3A//www.amazon.com/exec/obidos/external-search?tag=go-srch-kw&mode=blended&keyword=PRISON">PRISON</a><br></font><li type=square><font size=2 face="Geneva,Arial"><a href="/redirect?sv=IS&lk=&ak=AMAZ&rl=LINK_SearchAd_T420_POKEMON&rd=http://www.amazon.com/exec/obidos/redirect?tag=go-srch-video&path=subst/video/misc/pokemon.html">Buy Pokémon</a></font><BR>
+<li type=square><font size=2 face="Geneva,Arial"><a href="/redirect?sv=IS&lk=&ak=AMAZ&rl=LINK_SearchAd_T420_BUY&rd=http://www.amazon.com/exec/obidos/redirect?tag=go-srch-ce&path=tg/electronics/browse-electronics/-/172514">Buy DVD Players!</a></font><BR><BR>
+<font size=2 face="Geneva,Arial">-&nbsp;<a href="/redirect?sv=IS&lk=&ak=AMAZ&rl=LINK_SearchAd_T420_CLICK&rd=http://www.amazon.com/exec/obidos/redirect?tag=go-srch-msg&path=subst/home/go-home.html">Click Here to Shop!</a>&nbsp;-</font><BR></td></tr></table></td></tr></table></td></tr></table>
+<font face="Helvetica,Arial" size="2"><font size=1><b><a href="http://infoseek.go.com/Titles?col=HV&nh=25&qt=prison&rf=0&st=25&sf=1">Next 14 ></a></b> &nbsp;|&nbsp; <a href="http://infoseek.go.com/Titles?col=HV&nh=20&qt=prison&rf=0&st=0&sf=1&ud4=1">Hide summaries</a></font></font><br><br>
+<p>
+<font face="Helvetica,Arial" size="2">1. <b><a href="/Content?arn=53544&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">Prison Realty Trust</a></b>
+<br>Incarceration as a growth industry? <b style="background:#FFFF99">Prison</b> Realty Trust thinks so. The real estate investment trust (REIT) builds and manages <b style="background:#FFFF99">prisons</b> in Australia, Puerto Rico, the UK, and the US. It owns nearly 50 <b style="background:#FFFF99">prisons</b> (one in the UK, the rest in ...<br><p>2. <b><a href="/Content?arn=43053&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">Federal Prison Industries, Inc.</a></b>
+<br>Some businesses benefit from captive audiences -- this company benefits from captive employees. Federal <b style="background:#FFFF99">Prison</b> Industries (FPI), better known by its trade name UNICOR, uses prisoners to make products and provide services, ...<br><p>3. <b><a href="/Content?arn=60143&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">CompuDyne Corporation</a></b>
+<br>The thin blue line lends to CompuDyne's bottom line. The security contractor does everything from designing <b style="background:#FFFF99">prison</b> security systems to making bullet-proof glass. It has state <b style="background:#FFFF99">prisons</b> as customers -- it already has the jail on Rikers ...<br><p>4. <b><a href="/Content?arn=42155&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">Wackenhut Corrections Corporation</a></b>
+<br>The second-largest developer and operator of private <b style="background:#FFFF99">prisons</b> in the US (after <b style="background:#FFFF99">Prison</b> Realty), Wackenhut Corrections manages private correctional and detention facilities in the US, the UK, and Australia. (It is the market ...<br><p>5. <b><a href="/Content?arn=55705&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">PRIDE Enterprises</a></b>
+<br>In Florida, even a trip to the hoosegow won't save you from the work week. PRIDE Enterprises employs inmates in Florida <b style="background:#FFFF99">prisons</b> to make a variety of consumer goods, including furniture, textiles, paint, and food products. The primary ...<br><p>6. <b><a href="/Content?arn=15462&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">America Service Group Inc.</a></b>
+<br>Talk about your captive populations. America Service Group's subsidiaries provide health care to prisoners in state, county, and local correctional facilities. Through EMS Correctional and <b style="background:#FFFF99">Prison</b> Health Services, the company ...<br><p>7. <b><a href="/Content?arn=56205&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">Correctional Properties Trust</a></b>
+<br>Correctional Properties Trust, a real estate investment trust (REIT), was formed to buy correctional and detention facilities, including 10 facilities from Wackenhut Corrections. The trust leases the <b style="background:#FFFF99">prisons</b> back to Wackenhut. Four ...<br><p>8. <b><a href="/Content?arn=47054&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">Avalon Correctional Services, Inc.</a></b>
+<br>Avalon Correctional Services benefits from its captive market. The private <b style="background:#FFFF99">prison</b> operator owns and manages nine facilities in Colorado, Oklahoma, and Texas, having locked down several acquisitions to build a capacity of 1,700 beds. ...<br><p>9. <b><a href="/Content?arn=90378&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">Serco Group plc</a></b>
+<br>Serco Group insources the outsourced work of government and industrial clients. It provides facilities management and systems engineering services through a staff of 20,000 people in more than 30 countries. In such areas as aviation, defense, ...<br><p>10. <b><a href="/Content?arn=59542&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">Silent Witness Enterprises Ltd.</a></b>
+<br>Silent Witness Enterprises shoots miscreants in the act of misbehaving. The company makes video surveillance systems used in vehicles such as school buses -- to help drivers keep an eye on rowdy kids -- as well as in public ...<br><p>11. <b><a href="/Content?arn=59346&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">DirectChef, Inc.</a></b>
+<br>DirectChef (formerly Hospitality Design & Supply) doesn't care if its customers cook hot dogs or haute cuisine. DirectChef was founded in 1998 to consolidate distributors of food service equipment, such as ranges and refrigerators, and ...<br><p>12. <b><a href="/Content?arn=58736&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">Bovis Construction Group</a></b>
+<br>Bovis Construction Group is building up steam as a leading player in the global construction market. From small-scale improvements to major urban developments, the firm provides services for every stage of a project, including ...<br><p>13. <b><a href="/Content?arn=58314&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">Evercom, Inc.</a></b>
+<br>When prisoners are allowed to use the phone, Evercom is ready with a dial tone. The company provides collect, prepaid, and debit phone service to inmates of correctional facilities. Evercom serves more than 2,000 local and county jails, state ...<br><p>14. <b><a href="/Content?arn=58042&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">Half Price Books</a></b>
+<br>The nation's largest chain of used bookstores, Half Price Books tries to live up to its name and its hippie roots. Half Price Books' stores sell used (60% of inventory) and new books, magazines, and CDs. Its 60-plus stores are located ...<br><p>15. <b><a href="/Content?arn=56984&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">ILD Telecommunications, Inc.</a></b>
+<br>If idle hands are the devil's playground, then ILD Telecommunications is on a mission from God. Taking phone companies' outsourcing needs off their hands, ILD handles billing, operator service, and direct-dial long-distance phone ...<br><p>16. <b><a href="/Content?arn=55032&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">Integrated Electrical Services, Inc.</a></b>
+<br>Integrated Electrical Services keeps turning up the juice on its electrical contracting and maintenance business. The fast-growing company has a network of about 40 companies (most of them acquired since the firm's 1998 IPO) in 36 US ...<br><p>17. <b><a href="/Content?arn=52911&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">Quest Diagnostics Incorporated</a></b>
+<br>Quest Diagnostics' quest to be the world's #1 clinical laboratory came to a happy ending with its purchase of SmithKline Beecham's clinical lab operations. Quest Diagnostics annually performs more than 50 million routine tests (such as ...<br><p>18. <b><a href="/Content?arn=48023&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">Magal Security Systems Ltd.</a></b>
+<br>People who want to be fenced in can turn to Magal Security Systems. The company makes a line of security products designed for perimeter security, motion detection, bomb detection, and security management. Magal's perimeter ...<br><p>19. <b><a href="/Content?arn=47630&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">Tutor-Saliba Corporation</a></b>
+<br>Underneath California's glamour, Tutor-Saliba is making tracks. Among the largest transportation construction firms in the US, the company is the primary builder of the new subway system in Los Angeles and has provided services ...<br><p>20. <b><a href="/Content?arn=47621&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">AECOM Technology Corporation</a></b>
+<br>AECOM Technology offers a building service for each letter in its name, which stands for architecture, engineering, construction management, operation, and maintenance.  Established as a holding company in 1990,  AECOM operates ...<br><p>21. <b><a href="/Content?arn=47429&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">American Library Association</a></b>
+<br>Shhhh! The American Library Association (ALA), founded in 1876, is a not-for-profit education and service organization that develops, promotes, and improves library and information services. It works with legislators to secure ...<br><p>22. <b><a href="/Content?arn=46360&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">Versus Technology, Inc.</a></b>
+<br>You're bound to lose a game of hide-and-seek versus Versus Technology. The company sells infrared location tracking systems and cellular products, mainly to the health care sector. The systems enable remote monitoring of patients ...<br><p>23. <b><a href="/Content?arn=46318&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">U.S. Technologies Inc.</a></b>
+<br>You can tell U.S. Technologies' employees by their stripes -- most of them are prisoners. Through its subsidiaries, U.S. Technologies (a Strategic Solutions spinoff) puts inmates to work assembling electronics, manufacturing ...<br><p>24. <b><a href="/Content?arn=45206&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">Barringer Technologies Inc.</a></b>
+<br>Although dogs can be used to sniff out bombs and drugs, Barringer Technologies' bomb and drug detection equipment doesn't need to be housebroken. Barringer makes trace particle detectors for security and law enforcement agencies in more ...<br><p>25. <b><a href="/Content?arn=44941&qt=prisonsv=IS&lk=&col=HV&kt=A&ak=corpdir">The Walsh Group</a></b>
+<br>The Walsh Group has built walls, halls, malls and more since 1898. Walsh provides contracting services for industrial, infrastructure, and commercial projects throughout the US. Its undertakings have ranged from <b style="background:#FFFF99">prisons</b> to skyscrapers to ...<br></font><p><font face="Helvetica,Arial" size="2"><font size=2><b><a href="http://infoseek.go.com/Titles?col=HV&nh=25&qt=prison&rf=0&st=25&sf=1">Next 14 ></a></b> </font></font><br><br>
+<center><SCRIPT language="JavaScript">
+function go(url)
+{
+        window.location.href = url
+}
+</SCRIPT>
+<table border=0 cellpadding=0 cellspacing=0 width=468>
+<tr> 
+<td width="460"><a href="http://transfer.go.com/cgi/atransfer.pl?name=56453&srvc=gros&context=33938&guid=97DF0524-AF0E-11D3-8DFA-0090273025CD&goto=http://shop.go.com/holiday">
+<img src="http://adimages.go.com/ad/sponsors/house/go/banners/goco-ban0045/top.gif" border="0"></a></td></tr>
+<tr> 
+<td> 
+<table border=0 cellpadding=0 cellspacing=0 width=468>
+<tr> 
+<FORM NAME="filter">
+<td width="183"><a href="http://transfer.go.com/cgi/atransfer.pl?name=56453&srvc=gros&context=33938&guid=97DF0524-AF0E-11D3-8DFA-0090273025CD&goto=http://shop.go.com/holiday">
+<img src="http://adimages.go.com/ad/sponsors/house/go/banners/goco-ban0045/bottom1.gif" border="0"></a></td>
+<TD  bgcolor="#80daa7" width="226" valign="center" align="center"> 
+<select name="dooda" size="1" onChange="window.location.href = this.options[selectedIndex].value;">
+<option value="#">Choose one:</option>
+<option value="http://transfer.go.com/cgi/atransfer.pl?name=56453&srvc=gros&context=33938&guid=97DF0524-AF0E-11D3-8DFA-0090273025CD&goto=http://shop.go.com/holiday">Your stepmother</option>
+<option value="http://transfer.go.com/cgi/atransfer.pl?name=56453&srvc=gros&context=33938&guid=97DF0524-AF0E-11D3-8DFA-0090273025CD&goto=http://shop.go.com/holiday">Your stepsisters</option>
+<option value="http://transfer.go.com/cgi/atransfer.pl?name=56453&srvc=gros&context=33938&guid=97DF0524-AF0E-11D3-8DFA-0090273025CD&goto=http://shop.go.com/holiday">Your fairy godmother</option>
+</select>
+</TD>
+<td width="59"><a href="http://transfer.go.com/cgi/atransfer.pl?name=56453&srvc=gros&context=33938&guid=97DF0524-AF0E-11D3-8DFA-0090273025CD&goto=http://shop.go.com/holiday">
+<img src="http://adimages.go.com/ad/sponsors/house/go/banners/goco-ban0045/bottom2.gif" border="0"></a></td>
+</FORM>
+</TR>
+</TABLE>
+</td>
+</tr>
+</table></center><p><center>
+<table border=0 width=100% cellpadding=0 cellspacing=0>
+<tr><td bgcolor="#000000" height=1><spacer type=block height=1></td></tr>
+</table>
+<table border=0 cellpadding=0 cellspacing=0><tr><td align=left>
+<table border="0" cellpadding="3" cellspacing="0"><tr><td colspan=2>
+<form action="/Titles" method="get" name="WW_Search">
+<input type="radio" value="HV" name="col" checked><font face="geneva,arial" size=2>
+<font color="#669966"><b>New</b></font> search </font>
+<input type="radio" value="HV,cat_RES" name="col"><font face="geneva,arial" size=2>Search 
+<font color="#669966"><b>within</b></font> results</font>
+</tr><tr> 
+<td><input type="text" name="qt" value="prison" size="30" maxlength="511"></td><INPUT TYPE=hidden NAME="sv" VALUE="IS">
 <INPUT TYPE=hidden NAME="lk" VALUE="noframes">
 <INPUT TYPE=hidden NAME="nh" VALUE="25">
+<input type=hidden name="svx" value="sbox_bottom">
 <input type=hidden name="cc" value="HV">
 <input type=hidden name="oq" value="prison">
-<input type="submit" value="Find"></td></tr><tr><td nowrap><font face="Verdana,Helvetica,Arial" size="1"><a href="/find?pg=advanced_www.html&ud9=advanced_www&nh=25">Search&nbsp;options</a>&nbsp;|&nbsp;<a target="GOHelp" href="/Help/help.html?key=HELP_T00008_SRCHQUIK&nh=25" onclick="window.open('/Help/help.html?key=HELP_T00008_SRCHQUIK&nh=25', 'GOHelp', 'width=575,height=400,scrollbars=yes,resizable=yes,toolbar=yes'); return false;">How&nbsp;to&nbsp;search</a>
-&nbsp;|&nbsp;</font><br><img src="/images/clear.gif" height="4" width="1"></td></tr></form><!-- End Search Box --></table><br><br><center><font size="2" face="Verdana,Helvetica,Arial">If there is a site you would like listed, click <a href="/AddUrl?pg=SubmitUrl.html&nh=25&svx=search_footer"><b>add URL</b></a>.<hr><br><center><b>GO Network partners:</b>&nbsp; <a href="http://abc.go.com/"><b>ABC.com</b></a>&nbsp; <a href="http://abcnews.go.com"><b>ABCNEWS.com</b></a>&nbsp; <a href="http://disney.go.com"><b>Disney.com</b></a>&nbsp; <a href="http://espn.go.com"><b>ESPN.com</b></a>&nbsp; <a href="http://family.go.com"><b>Family.com</b></a>&nbsp; <a href="http://mrshowbiz.go.com"><b>Mr. Showbiz</b></a>
-<br><br><a href="/doc?pg=copyright.html">Copyright</a> &copy; 1999 Infoseek Corporation.  All rights reserved.&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://comments.go.com/comments.html">Contact us</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://info.go.com/doc/policy/disclaimer.html">Legal Notices</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://info.go.com/doc/policy/privacy.html">Privacy policy</a></font></center>
-</body>
-</html>
+<td><input type="submit" value="Find"></td></tr></form>
+<tr>
+<td nowrap colspan=2><font face="Verdana,Helvetica,Arial" size="1"><a href="/find?pg=advanced_www.html&ud9=advanced_www&nh=25">Search&nbsp;options</a>&nbsp;|&nbsp;<a target="GOHelp" href="/Help/help.html?key=HELP_T00008_SRCHQUIK&nh=25" onclick="window.open('/Help/help.html?key=HELP_T00008_SRCHQUIK&nh=25', 'GOHelp', 'width=575,height=400,scrollbars=yes,resizable=yes,toolbar=yes'); return false;">How&nbsp;to&nbsp;search</a>
+&nbsp;|&nbsp;</font><br></td></tr></table></td>
+<TD noWrap width=8><SPACER width="8" type="block"></TD>
+<TD bgColor=#000000 noWrap width=1><SPACER width="1"type="block"></TD>
+<TD noWrap width=8><SPACER width="8" type="block"></TD>
+<TD valign=middle><font face="verdana, helvetica" size=1>
+<b>Did you know? </b><br><br>
+If you are using Windows 95/98 or Windows NT, you can 
+<b>search all the major search engines at the same time</b>
+using <a href="http://express.go.com/subdocuments/sr_details.html">GO Network Express Search</a>.
+Free download at <a href="http://express.go.com/sr_download.html">http://express.go.com</a>.</font></td>
+</tr></table><table border=0 width=100% cellpadding=0 cellspacing=0>
+<tr><td bgcolor="#000000" height=1><spacer type=block height=1></td></tr></table>
+<center>&nbsp;<font face="verdana,geneva,arial" size=1> 
+<b>GO Network Partners:&nbsp;</b>&nbsp;&nbsp;
+&nbsp; <a href="http://abc.go.com">ABC.com</a> &nbsp; <a href="http://abcnews.go.com">ABCNEWS.com</a> 
+&nbsp; <a href="http://espn.go.com">ESPN.com</a> &nbsp; <a href="http://disney.go.com">Disney.com</a> 
+&nbsp; <a href="http://family.go.com">Family.com</a> &nbsp; <a href="http://mrshowbiz.go.com">MrShowbiz</a></font></center>
+<table border=0 width=100% cellspacing=0 cellpadding=3>
+<tr><td nowrap><font face="geneva,arial" size=1><a href="/doc?pg=copyright.html">Copyright</a> 
+&copy; 1998, 1999 Infoseek Corporation. All rights reserved.</font></td>
+<td align="right" nowrap><font face="geneva,arial" size=1>&nbsp; 
+<!-- <a href="/AddUrl?pg=SubmitUrl.html&nh=25&svx=search_footer"> --><a href="/AddUrl?pg=SubmitUrl.html">Submit your site</A>&nbsp; &nbsp;<A HREF="http://info.go.com/doc/policy/disclaimer.html">Legal Notices</a> &nbsp;&nbsp;<a href="http://info.go.com/doc/policy/privacy.html">Privacy&nbsp;policy</a></font></td>
+</tr></table></center>
+</body></html>

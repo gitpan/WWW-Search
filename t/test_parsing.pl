@@ -2,7 +2,7 @@
 
 # test.pl
 # Copyright (C) 1997 by USC/ISI
-# $Id: test.pl,v 1.31 1999/11/29 19:43:54 mthurn Exp $
+# $Id: test_parsing.pl,v 1.35 1999/12/10 19:15:33 mthurn Exp $
 #
 # Copyright (c) 1997 University of Southern California.
 # All rights reserved.                                            
@@ -25,14 +25,15 @@ sub usage
   print STDERR <<END;
 usage: $0 [-dIXuv] [-e SearchEngine]
 
-Runs WWW::Search tests.
+Runs WWW::Search tests.  The default action (no arguments) is to run
+internal tests on all engines, then run external tests on all engines.
 
 Options:
-    -e SearchEngine	limit actions to that search engine
-    -u			update saved test files
-    -v			verbose (show commands)
-    -I			run interal tests only
-    -X			run external tests only
+    -e Yahoo,HotBot  limit actions to certain Search Engine(s)
+    -i               run interal tests only
+    -u               update saved test files
+    -v               verbose (show commands)
+    -x               run external tests only
 END
   my $unused = <<'UNUSED';
 To save a result to a file, use the search_to_file option of WebSearch.
@@ -50,20 +51,22 @@ use File::Path;
 use Getopt::Long;
 use WWW::Search;
 
-use vars qw( $verbose $debug $desired_search_engine $mode $update_saved_files );
+use vars qw( $verbose $debug $desired_search_engines $mode $update_saved_files );
 use vars qw( $do_internal $do_external );
 $do_internal = $do_external = 0;
 undef $debug;
+$desired_search_engines = '';
 &usage unless &GetOptions(
                           'd:i' => \$debug,
-                          'e=s' => \$desired_search_engine,
+                          'e=s' => \$desired_search_engines,
                           'u' => \$update_saved_files,
                           'v' => \$verbose,
-                          'I' => \$do_internal,
-                          'X' => \$do_external,
+                          'i' => \$do_internal,
+                          'x' => \$do_external,
                          );
 ($do_internal, $do_external) = (1,1) unless ($do_internal || $do_external);
 $debug = 1 if (defined($debug) and ($debug < 1));
+$desired_search_engines = ",$desired_search_engines,";
 
 my $error_count = 0;
 my $fullperl;
@@ -78,8 +81,9 @@ exit 0;
 
 sub relevant_test 
   {
-  return 1 if (!defined($desired_search_engine));
-  return ($desired_search_engine eq $_[0]);
+  return 1 if ($desired_search_engines eq ',,');
+  my $e = ','.shift().',';
+  return ($desired_search_engines =~ m/$e/i);
   } # relevant_test
 
 sub web_search_bin 
@@ -121,6 +125,19 @@ sub test
   my $query = shift;
   my $test_method = shift;
   # print "  mode=$mode, method=$test_method\n";
+  my ($low_end, $high_end) = @_;
+  $low_end ||= 0;
+  $high_end ||= 0;
+  my $sExpected = $low_end;
+  if ($test_method == $TEST_GREATER_THAN)
+    {
+    $low_end++;
+    $sExpected = "$low_end..";
+    }
+  if (0 < $high_end)
+    {
+    $sExpected = "$low_end..$high_end";
+    }
   
   return if (!relevant_test($sSE));
   
@@ -152,10 +169,9 @@ sub test
              $MODE_EXTERNAL => '',
              $MODE_UPDATE => "--option search_to_file=$file",
             );
-  # --max 201 added by Martin Thurn 1999-09-27, changed to 199 on
-  # 1999-10-05.  We never want to fetch more than two pages, if we can
-  # at all help it (or do we?)
-  my $cmd = &web_search_bin . "--max 199 --engine $sSE $src{$mode} -- $query";
+  # --max 209 added by Martin Thurn 1999-09-27.  We never want to
+  # fetch more than three pages, if we can at all help it (or do we?)
+  my $cmd = &web_search_bin . "--max 209 --engine $sSE $src{$mode} -- $query";
   print "  $cmd\n" if ($verbose);
   open(TRIALSTREAM, "$cmd|") || die "$0: cannot run test\n";
   open(TRIALFILE, ">$file.trial") || die "$0: cannot open $file.trial\n";
@@ -179,9 +195,6 @@ sub test
       } # if
     my $iPageCount = &wc_l($file);
     my $iURLCount = &wc_l("$file.out");
-    my $sExpected = join('..', @_);
-    $sExpected .= '..' if ($test_method == $TEST_GREATER_THAN);
-    $sExpected = 0 if $sExpected eq '';
     print "  $query --> $iURLCount urls (should be $sExpected) on $iPageCount pages\n";
     return;
     } # if
@@ -191,8 +204,7 @@ sub test
     my ($e, $sMsg) = (0, '');
     if ($test_method == $TEST_GREATER_THAN) 
       {
-      my ($low_end) = @_;
-      if ($iActual < $low_end)
+      if ($iActual <= $low_end)
         {
         $sMsg .= "expected more than $low_end, but got $iActual; ";
         $e = 1;
@@ -200,7 +212,6 @@ sub test
       } # TEST_GREATER_THAN
     elsif ($test_method == $TEST_RANGE) 
       {
-      my ($low_end, $high_end) = @_;
       $sMsg .= "INTERNAL ERROR, low_end has no value; " unless defined($low_end);
       $sMsg .= "INTERNAL ERROR, high_end has no value; " unless defined($high_end);
       $sMsg .= "INTERNAL ERROR, high_end is zero; " unless 0 < $high_end;
@@ -347,18 +358,13 @@ sub test_cases
 
   $sSE = 'AltaVista::AdvancedWeb';
   $sM = 'John Heidemann <johnh@isi.edu>';
-  
-  $file = 'zero_result';
-  $query = 'LS'.'AM and ' . $bogus_query;
-  test($sSE, $sM, $file, $query, $TEST_EXACTLY);
-  
-  $file = 'one_page_result';
-  $query = 'LSA'.'M and AutoSea'.'rch';
-  test($sSE, $sM, $file, $query, $TEST_RANGE, 2, 11);
-  
-  $file = 'two_page_result';
-  $query = 'LSA'.'M and IS'.'I and I'.'B';
-  test($sSE, $sM, $file, $query, $TEST_GREATER_THAN, 10);
+  &not_working($sSE, $sM);
+  # $query = 'LS'.'AM and ' . $bogus_query;
+  # test($sSE, $sM, 'zero', $query, $TEST_EXACTLY);
+  # $query = 'LSA'.'M and AutoSea'.'rch';
+  # test($sSE, $sM, 'one', $query, $TEST_RANGE, 2, 11);
+  # $query = 'LSA'.'M and IS'.'I and I'.'B';
+  # test($sSE, $sM, 'two', $query, $TEST_GREATER_THAN, 10);
   
   ######################################################################
 
@@ -412,15 +418,7 @@ sub test_cases
   
   ######################################################################
 
-  $sSE = 'Fireball';
-  $sM = 'Jim Smyser <jsmyser@bigfoot.com>';
-  &no_test($sSE, $sM);
-  # 10 hits/page
-  test($sSE, $sM, 'zero', $bogus_query, $TEST_EXACTLY);
-  $query = 'charmeleon';
-  test($sSE, $sM, 'one', $query, $TEST_RANGE, 1, 10);
-  # $query = '+Mu'.'rnau +Hinterg'.'lasbilder';
-  # test($sSE, $sM, 'two', $query, $TEST_GREATER_THAN, 10);
+  &eval_test('Fireball');
   
   ######################################################################
 

@@ -1,7 +1,7 @@
 # HotBot.pm
 # by Wm. L. Scheding and Martin Thurn
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: HotBot.pm,v 1.43 1999/11/12 15:32:39 mthurn Exp $
+# $Id: HotBot.pm,v 1.44 1999/12/10 15:48:44 mthurn Exp $
 
 =head1 NAME
 
@@ -296,6 +296,10 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 If it''s not listed here, then it wasn''t a meaningful nor released revision.
 
+=head2 2.08, 1999-12-10
+
+handle new output format
+
 =head2 2.07, 1999-11-12
 
 BUGFIX for domain-limited URL parsing (thanks to Leon Brocard)
@@ -394,13 +398,13 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.07';
+$VERSION = '2.08';
 
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 $TEST_CASES = <<"ENDTESTCASES";
 &test('HotBot', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_EXACTLY);
 &test('HotBot', '$MAINTAINER', 'one', 'LSAM replication', \$TEST_RANGE, 2,80);
-&test('HotBot', '$MAINTAINER', 'two', 'Calri'.'ssian', \$TEST_GREATER_THAN, 101);
+&test('HotBot', '$MAINTAINER', 'two', 'Bo'.'ss Na'.'ss', \$TEST_GREATER_THAN, 101);
 ENDTESTCASES
 
 use Carp ();
@@ -529,10 +533,10 @@ sub native_retrieve_some
       $state = $NEXT;
       } # we're in HEADER mode, and line has number of results
 
-    elsif ($state eq $NEXT && m|href="[^"?]+\?([^"]*act\.next=next[^"]+)|)
+    elsif ($state eq $NEXT && m|href="[^"?]+\?([^\"]*?)">next</a>|)
       {
       # Actual line of input:
-      #        <b>1&nbsp;-&nbsp;100&nbsp;</b><a href="/text/results.asp?act.next=next&MT=IG%2D88&SM=SC&DC=100&BT=T">next</a><font color="#FF0000" face="courier" size=1>&nbsp;<b>&gt;&gt;</b></font>
+      #  <b>1&nbsp;-&nbsp;100&nbsp;</b> <a href="/text/default.asp?MT=Calrissian&SM=SC&II=100&RPN=2&DC=100&BT=T">next</a><font color="#FF0000" face="courier" size=1>&nbsp;<b>&gt;&gt;</b></font><br>
       print STDERR " found next button" if 2 <= $self->{'_debug'};
       # There is a "next" button on this page, therefore there are
       # indeed more results for us to go after next time.

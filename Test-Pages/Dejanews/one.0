@@ -1,9 +1,3 @@
-<p>
-<table width=600 border=0 cellpadding=0 cellspacing=0><tr>
-<td bgcolor="#6666cc" height=5 colspan=2><spacer type=block height=5 width=0></td></tr>
-<tr valign=top><td><font color="#ff6600" face="geneva,arial"><b>Search Results</b></font></td>
-<td align=right><font face="geneva,arial" size=-1><a href="http://www.deja.com/help/help_qsr.shtml">help</a></font></td></tr>
-</table>
 
 
 
@@ -13,23 +7,8 @@
 <html>
 <head>
 <title>Deja.com: Power Search Results</title>
+<link rel="stylesheet" type="text/css" href="/templates/css.epl?diet=1">
 <meta name=keywords content="dejanews usenet newsgroup articles search query discussion">
-
-
-
-
-<style type="text/css">
-
-    <!--        A.DARK3     {color: ff3300}-->
-
-    <!--        A.DARK2     {color: ff6600}-->
-
-    <!--        A.LIGHT2     {color: ffcc66}-->
-
-
-
-
-</style>
 
 
 <base href="http://www.deja.com/">
@@ -41,170 +20,278 @@
 
 <!-- PLOC = d.search.query.hitlist.ps -->
 
-<table cellpadding=0 cellspacing=0 border=0 width=100%><tr>
-<td width=135></td><td width=14></td><td></td><td width=100%></td>
-</tr><tr>
-<td width=135 bgcolor=#6666cc valign=bottom align=left><a href="http://www.deja.com/"><img src="http://g.deja.com/gifs/dlogo_130_b.gif" width=130 height=75 alt="deja.com" border=0 align=left hspace=3></a></td>
-<td width=12 bgcolor=#ffffff><img src="http://g.deja.com/gifs/20x20.gif" width=12 border=0 height=60 align=left></td>
-<td bgcolor=#ffffff valign=top align=center><A HREF="/jump/http://gp1.deja.com/gtc?id=1012677&dejahi=0&tm=939394694.443138&site=dn&keyword=stuntboy&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=468x60.1&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7c468x60.1%7c%7c%7c%7c%7c%7c%7c">
-<IMG ALIGN=MIDDLE HEIGHT=60 WIDTH=468 SRC="http://web2.deja.com/ads/53/57916353-9887.gif" ALT="Please visit our sponsor" border=1></A><BR>
+<table border=0 cellpadding=0 cellspacing=0 width=100%>
+<tr><td align=left bgcolor=#6666cc valign=bottom width=135><a href="./"><img src="http://g.deja.com/gifs/dlogo_130_b.gif" width=130 height=75 alt="deja.com" border=0 hspace=0 align=left></a></td>
+<td bgcolor=#ffffff width=12><img src="http://g.deja.com/gifs/20x20.gif" width=12 border=0 height=60 align=left></td>
+<td align=middle bgcolor=#ffffff valign=top><A HREF="/jump/http://gp1.deja.com/gtc?id=1020603&dejahi=0&tm=944588946.980747&site=dn&keyword=irover&channel=comptech.prod_sw&page=d.search.query.hitlist.ps&slot=468x60.1&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7ccomptech.%7cd.%7c468x60.1%7c%7c%7c%7c%7c%7c%7c">
+<IMG ALIGN=MIDDLE HEIGHT=60 WIDTH=468 SRC="http://web2.deja.com/ads/30/212013030-11971.gif" ALT="Please visit our sponsor" border=1></A><BR>
 
 </td>
-<td width=100% align=right>
+<td align=right width=100%>
 
 </td>
-</tr><tr>
-<td colspan=4 width=100% bgcolor=#6666cc valign=top align=left><img src="http://g.deja.com/gifs/20x20.gif" width=4 height=1><img src="http://g.deja.com/gifs/dmotto_b.gif" width=338 height=21 alt="Before you buy" border=0><br>
-</td></tr>
-</table>
+</tr></table>
 
-<table border=0 cellspacing=0 cellpadding=0 bgcolor="#cccc66" width=100%><tr>
-<td width=1 bgcolor="#6666cc"><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td>
-<td width=130 bgcolor="#6666cc"><img src="http://g.deja.com/gifs/20x20.gif" width=130 height=1></td>
-<td width=4 bgcolor="#6666cc"><img src="http://g.deja.com/gifs/20x20.gif" width=4 height=1></td>
-<td width=100% bgcolor="#6666cc"><img src="http://g.deja.com/gifs/20x20.gif" width=331 height=1></td>
-<td width=1 bgcolor="#6666cc"><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td>
-<td width=130 bgcolor="#6666cc"><img src="http://g.deja.com/gifs/20x20.gif" width=130 height=1></td>
-<td width=3 bgcolor="#6666cc"><img src="http://g.deja.com/gifs/20x20.gif" width=3 height=1></td>
-</tr><tr>
-<td width=1 bgcolor=#000000><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td>
-<td colspan=3 valign=top width=100%>
+<table border=0 cellpadding=0 cellspacing=0  width="100%">
+<tr><td bgcolor=#6666cc><img src="http://g.deja.com/gifs/dmotto_b.gif" width=338  alt="Before You Buy" border=0 height=21 hspace=1 align=left></td>
+<td valign=middle align=right bgcolor=#6666cc id=white>
+<b class=verdana><a href="mydn_forums.xp"><font color="#FFFFFF">My Deja</font></a></b>&nbsp;&nbsp;<br></td>
+</tr></table>
 
+<table border=0 cellspacing=0 cellpadding=0 bgcolor=#cccc66 width=100%><tr bgcolor=#6666cc>
+<td width=4><img src=http://g.deja.com/gifs/20x20.gif width=4 height=1></td>
+<td width=100%><img src=http://g.deja.com/gifs/20x20.gif width=331 height=1></td>
+<td width=1><img src=http://g.deja.com/gifs/20x20.gif width=1 height=1></td>
+<td width=130><img src=http://g.deja.com/gifs/20x20.gif width=130 height=1></td>
+<td width=3><img src=http://g.deja.com/gifs/20x20.gif width=3 height=1></td>
+</tr>
+
+<tr><td width=1 bgcolor=#000000><img src=http://g.deja.com/gifs/20x20.gif width=1 height=1></td>
+<td valign=top width=100%>
 
 <!-- nav_chan : begin -->
 
 
-<table border=0 cellspacing=0 cellpadding=0 bgcolor="#cccc66" width=100%><tr>
-<td>
-
-<table border=0 cellspacing=0 cellpadding=2>
-<tr>
-<td bgcolor="#cccc66" nowrap><font face="geneva,arial" size=2>
-&nbsp;<a href="http://www.deja.com/"><b>Home</b></a>
-
-
+<table border=0 cellspacing=0 cellpadding=2><tr>
+<td bgcolor="#cccc66" nowrap>
+&nbsp;<a href="./"><b>Home</b></a>
 
     
-	&nbsp;<b>&#187;</b>&nbsp;
-	
-	    
-	    
-	    <a href="http://www.deja.com/channels/forums.xp?CID=10407"><b>Recreation</b></a>
-	
-	
     
-	&nbsp;<b>&#187;</b>&nbsp;
-	
-	    
-	    
-	    <a href="http://www.deja.com/channels/forums.xp?CID=10409"><b>Hobbies</b></a>
-	
-	
     
-</font></td>
+	
+	    &nbsp;<b>&#187;</b>&nbsp;
+	    
+		
+		
+		<a href="channels/forums.xp?CID=10121"><b>Computing & Tech</b></a>
+	    
+	    
+	
+    </td></tr>
+
+
+
+
+    <tr>
+    
+	<td bgcolor=#ffffff nowrap>
+	
+	
+	    <img src="http://g.deja.com/gifs/arrow_down_big.gif" width=20 height=10 hspace=3 vspace=10 border=0 align=left>
+	
+	<b class="xxlarge">Productivity Software&nbsp;</b></td>
+    
+    
 </tr>
 
-<tr>
-
-    <td bgcolor=#ffffff nowrap>
-    <font face="geneva,arial" color=#6666cc size=5>&nbsp;<b>&gt;&gt;</b>&nbsp;</font>
-    <font face="geneva,arial" size=5><b>Collecting&nbsp;</b></font></td>
-
-<td width=100% align=right><font face="geneva,arial" size=2></font></td>
-<td width=12>&nbsp;</td>
-</tr>
 </table>
 
 
 
+
 <table border=0 cellspacing=2 cellpadding=2><tr>
-<td bgcolor="#cccc66"><font face="geneva,arial" size=1>
-</font></td>
-</tr></table>
+<td bgcolor="#cccc66"><span class="small">
 
-
-
-</td>
+    
+    
+	
+	
+	
+	
+	
+	
+	
+	    <a href="channels/forums.xp?CID=12024">Antivirus</a>
+	
+	
+	|
+    
+	
+	
+	
+	
+	
+	
+	
+	    <a href="channels/forums.xp?CID=12025">Database</a>
+	
+	
+	|
+    
+	
+	
+	
+	
+	
+	
+	
+	    <a href="channels/forums.xp?CID=12026">Kids Reference</a>
+	
+	
+	|
+    
+	
+	
+	
+	
+	
+	
+	
+	    <a href="channels/forums.xp?CID=12028">OCR</a>
+	
+	
+	|
+    
+	
+	
+	
+	
+	
+	
+	
+	    <a href="channels/forums.xp?CID=12029">Operating Systems</a>
+	
+	
+	|
+    
+	
+	
+	
+	
+	
+	
+	
+	    <a href="channels/forums.xp?CID=12030">Personal Info Management</a>
+	
+	
+	|
+    
+	
+	
+	
+	
+	
+	
+	
+	    <a href="channels/forums.xp?CID=12031">Project Management</a>
+	
+	
+	|
+    
+	
+	
+	
+	
+	
+	
+	
+	    <a href="channels/forums.xp?CID=12027">Reference</a>
+	
+	
+	|
+    
+	
+	
+	
+	
+	
+	
+	
+	    <a href="channels/forums.xp?CID=12032">Remote Access</a>
+	
+	
+	|
+    
+	
+	
+	
+	
+	
+	
+	
+	    <a href="channels/forums.xp?CID=12033">Speech Recognition</a>
+	
+	
+	|
+    
+	
+	
+	
+	
+	
+	
+	
+	    <a href="channels/forums.xp?CID=12034">Spreadsheet</a>
+	
+	
+	|
+    
+	
+	
+	
+	
+	
+	
+	
+	    <a href="channels/forums.xp?CID=12035">Utility</a>
+	
+	
+	|
+    
+	
+	
+	
+	
+	
+	
+	
+	    <a href="channels/forums.xp?CID=12299">Word Processor</a>
+	
+	
+	
+    
+</span></td>
 </tr></table>
 <!-- nav_chan : end -->
 
 </td>
-<td rowspan=2 width=1 bgcolor=#000000><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td>
-<td rowspan=2 bgcolor="#6666cc" valign=top align=center width=100%>
+
+<td rowspan=2 width=1 bgcolor=#000000><img src=http://g.deja.com/gifs/20x20.gif width=1 height=1></td>
+<td rowspan=2 bgcolor=#6666cc valign=top align=center width=100%>
 
 <!-- third stage : begin -->
 
 
 
-<table width=100% border=0 cellspacing=0 cellpadding=0>
 
+<table width=100% border=0 cellspacing=0 cellpadding=6><tr align=center>
+<td bgcolor=#ffffff>
+<table bgcolor=#000000 width=120 cellspacing=0 cellpadding=0 border=0><tr>
+<td bgcolor=#000000><A HREF="/jump/http://gp1.deja.com/gtc?id=1019536&dejahi=0&tm=944588947.009819&site=dn&keyword=irover&channel=comptech.prod_sw&page=d.search.query.hitlist.ps&slot=promo.1&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7cpromo.1%7c%7c%7c%7c%7c%7c%7c">
+<IMG ALIGN=MIDDLE HEIGHT=30 WIDTH=120 SRC="http://web2.deja.com/ads/76/632976276-2086.gif" ALT="Just in time for HOLIDAY SHOPPING! Click to visit." border=1></A><BR></td>
+</tr></table>
+</td></tr>
+</table>
 
-<tr>
-    <td>
-    <table width=100% border=0 cellspacing=0 cellpadding=6><tr align=center>
-        <td bgcolor="#ffffff"><A HREF="/jump/http://gp1.deja.com/gtc?id=1014299&dejahi=0&tm=939394694.473486&site=dn&keyword=stuntboy&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=promo.1&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7cpromo.1%7c%7c%7c%7c%7c%7c%7c">
-<IMG ALIGN=MIDDLE HEIGHT=30 WIDTH=120 SRC="http://web2.deja.com/ads/70/2689489970-5334.gif" ALT="Please visit our sponsor" border=1></A><BR></td>
-    </tr></table>
-    </td>
-</tr>
-
-<tr>
-<td bgcolor="#000000"><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td>
-</tr>
-
-
-
-<tr>
-    <td>
-    <table width=100% border=0 cellspacing=0 cellpadding=6><tr align=center>
-	<td bgcolor="#ffffff"><table border="0" bgcolor="#000000" cellspacing="0" cellpadding="1"><tr><td><center><table 
-border="0" bgcolor="#ffffff" cellspacing="0" cellpadding="0"><tr><form 
-method="get" action="/jump/http://gp1.deja.com/gtf/id=1016382&dejafi=0&tm=939394694.501214&site=dn&keyword=stuntboy&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=120x120.1&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7crec.%7cd.%7c120x120.1%7c%7c%7c%7c%7c%7c%7c"><input 
-type=hidden name=tag value=deja-allproduct-button><td 
-colspan="2"><a href="/jump/http://gp1.deja.com/gtc?id=1016382&dejahi=0&tm=939394694.501214&site=dn&keyword=stuntboy&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=120x120.1&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7crec.%7cd.%7c120x120.1%7c%7c%7c%7c%7c%7c%7c"><img 
-src="http://g.deja.com/ads/amzn_find2_top.gif" width="118" height="28" border="0"></a></td></tr><tr><td 
-colspan="2" background="http://g.deja.com/ads/amzn_find2_midback.gif" width="118"><table border="0" cellspacing="0" cellpadding="0"><tr><td width="90"><font size="2"><center><input 
-type="Text" name="keyword" size="9"></center></font></td><td width="28"><input 
-type="Image" name="Go" src="http://g.deja.com/ads/amzn_find2_go.gif" border="0" width="26" height="28"></td></tr></table></td></tr><tr><td 
-colspan="2"><table 
-border="0" cellspacing="0" cellpadding="0"><tr><td rowspan="3"><a 
-href="/jump/http://gp1.deja.com/gtc?id=1016382&dejahi=0&tm=939394694.501214&site=dn&keyword=stuntboy&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=120x120.1&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7crec.%7cd.%7c120x120.1%7c%7c%7c%7c%7c%7c%7c"><img 
-src="http://g.deja.com/ads/amzn_find2_search.gif" width="15" height="46" border="0"></a></td><td><center><input 
-type="radio" name="mode" value="books"></center></td><td><center><input 
-type="radio" name="mode" value="music"></center></td><td><center><input 
-type="radio" name="mode" value="video"></center></td></tr><tr><td><img 
-src="http://g.deja.com/ads/amzn_find2_book.gif" width="32" height="9" border="0"></td><td><img 
-src="http://g.deja.com/ads/amzn_find2_music.gif" width="30" height="9" border="0"></td><td><img 
-src="http://g.deja.com/ads/amzn_find2_vid.gif" width="35" height="9" border="0"></td></tr><tr><td colspan="3"><table 
-border="0" bgcolor="#ffffff" cellspacing="0" cellpadding="0"><tr><td><img 
-src="http://g.deja.com/ads/amzn_find2_or.gif" width="14" height="19" border="0"></td><td><center><input 
-type="radio" name="mode" value="blended" checked></center></td><td><img 
-src="http://g.deja.com/ads/amzn_find2_allprod.gif" width="62" height="17" border="0"></td></tr></table></td></tr></table></td><tr><td 
-colspan="2"><a 
-href="/jump/http://gp1.deja.com/gtc?id=1016382&dejahi=0&tm=939394694.501214&site=dn&keyword=stuntboy&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=120x120.1&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7crec.%7cd.%7c120x120.1%7c%7c%7c%7c%7c%7c%7c"><img 
-src="http://g.deja.com/ads/amzn_find2_bot.gif" width="118" height="16" border="0"></a></td></form></tr></table></center></td></tr></table></td>
-    </tr></table>
-    </td>
-</tr>
-
-<tr>
-<td bgcolor="#000000"><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td>
-</tr>
+<table width=100% cellpadding=0 cellspacing=0 bgcolor=#000000 border=0><tr>
+<td bgcolor=#000000 width=100%><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1 hspace=0 vspace=0><br></td>
+</tr></table>
 
 
 
-<tr>
-    <td>
-    <table width=100% border=0 cellspacing=0 cellpadding=6><tr align=center>
-	<td bgcolor="#ffffff"><A HREF="/jump/http://gp1.deja.com/gtc?id=1015793&dejahi=0&tm=939394694.537413&site=dn&keyword=stuntboy&channel=rec.hobbies.collecting&page=d.search.query.hitlist.ps&slot=120x120.2&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7c120x120.2%7c%7c%7c%7c%7c%7c%7c">
-<IMG ALIGN=MIDDLE HEIGHT=120 WIDTH=120 SRC="http://view.avenuea.com/view/deja_mtv_ba409_082799cs_2/direct/01-939394694.537413" ALT="Please visit our sponsor" border=1></A><BR></td>
-    </tr></table>
-    </td>
-</tr>
+<table width=100% border=0 cellspacing=0 cellpadding=6><tr align=center>
+<td bgcolor=#ffffff>
+<table bgcolor=#000000 width=120 cellspacing=0 cellpadding=0 border=0><tr>
+<td bgcolor=#000000><A HREF="/jump/http://gp1.deja.com/gtc?id=1028994&dejahi=0&tm=944588947.039977&site=dn&keyword=irover&channel=comptech.prod_sw&page=d.search.query.hitlist.ps&slot=120x120.1&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7ccomptech.%7c%7c120x120.1%7c%7c%7c%7c%7c%7c%7c">
+<IMG ALIGN=MIDDLE HEIGHT=120 WIDTH=120 SRC="http://web2.deja.com/ads/00/1652208700-5120.gif" ALT="Please visit our sponsor" border=1></A><BR></td>
+</tr></table>
+</td></tr>
+</table>
 
-<tr>
-<td bgcolor="#000000"><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td>
-</tr>
+<table width=100% cellpadding=0 cellspacing=0 bgcolor=#000000 border=0><tr>
+<td bgcolor=#000000 width=100%><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1 hspace=0 vspace=0><br></td>
+</tr></table>
 
 
 
@@ -213,316 +300,117 @@ src="http://g.deja.com/ads/amzn_find2_bot.gif" width="118" height="16" border="0
 
 
 
+<table width=100% border=0 cellspacing=0 cellpadding=6><tr>
+<td bgcolor=#000000><font color="#ff6600"><b>Net Interests:</b></font></td>
+</tr></table>
 
-<tr>
-    <td>
-    <table width=100% border=0 cellspacing=0 cellpadding=6><tr>
-	<td bgcolor="#000000"><font face="geneva,arial" color="#ff6600"><b>Explore More:</b></font></td>
-    </tr></table>
-    </td>
-</tr>
+<table width=100% border=0 cellspacing=0 cellpadding=6><tr bgcolor="#eeeeee">
+<td><table width="100%" border=0 cellspacing=0 cellpadding=6><tr>
+<td><span class="small"><font size=2 face="geneva,arial"><font size="2">Search <a href="/jump/http://gp1.deja.com/gtc?id=1011990&dejahi=0&tm=944588947.023694&site=dn&keyword=irover&channel=comptech.prod_sw&page=d.search.query.hitlist.ps&slot=promo.2&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7ccomptech.%7cd.%7cpromo.2%7c%7c%7c%7c%7c%7c%7c"><i>ComputerJobs Resource Center</i></a> 
+on Deja.com for careers in computers & tech. Upgrade your career today!</font></span></td>
+</tr></table>
+</td></tr></table>
 
-<tr>
-    <td>
-	
+
+<table width=100% border=0 cellspacing=0 cellpadding=6><tr>
+<td bgcolor="#000000"><font color="#ff6600"><b>Explore More:</b></font></td>
+</tr></table>
+
+
+
 
 
 <table width=100% border=0 cellspacing=0 cellpadding=6>
-<tr><td bgcolor="#6666cc"> 
-<font size=1 face="geneva,arial" color="#ffffff">
+<tr><td bgcolor="#6666cc"><span class=small>
+<font color="#ffffff">
 
-<p>Apartments.com<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=24688563&location=textlink.apartments.cat.money.ads.cat.rec.hobbies.collecting">
-<font face="geneva,arial" color="#ffcc66">
-<b>Interior photos of apartments nationwide</b></font></a>
+<p>3Com, Dreamcast, DVD!<br>
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=18323847&location=textlink.amazon.cat.comptech.cat.comptech.prod_sw">
+<font color="#ffcc66"><b>Bid @ Amazon.com Auctions</b></font></a>
 
-<p>Beanies action figures and collectible toys.<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=24688563&location=textlink.ebay1.cat.money.ads.cat.rec.hobbies.collecting">
-<font face="geneva,arial" color="#ffcc66">
-<b>Ebay.com</b></font></a>
+<p>Great PC Deals<br>
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=18323847&location=textlink.necx.cat.comptech.cat.comptech.prod_sw">
+<font color="#ffcc66"><b>Visit NECX!</b></font></a>
 
-<p>Beautiful jewelry and gemstones.<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=24688563&location=textlink.ebay2.cat.money.ads.cat.rec.hobbies.collecting">
-<font face="geneva,arial" color="#ffcc66">
-<b>Ebay.com</b></font></a>
+<p>Free personalized email<br>
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=18323847&location=textlink.mailcom.cat.comptech.cat.comptech.prod_sw">
+<font color="#ffcc66"><b>Signup now!</b></font></a>
 
-<p>Find any book, video, CD<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=24688563&location=textlink.amazon.cat.rec.cat.rec.hobbies.collecting">
-<font face="geneva,arial" color="#ffcc66">
-<b>SHOP AMAZON.COM!</b></font></a>
+<p>Computer & Tech Jobs<br>
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=18323847&location=textlink.compjobs.cat.comptech.cat.comptech.prod_sw">
+<font color="#ffcc66"><b>Upgrade your Career!</b></font></a>
 
-<p>5¢ long distance!<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=24688563&location=textlink.qwest.cat.rec.cat.rec.hobbies.collecting">
-<font face="geneva,arial" color="#ffcc66">
-<b>Save $$$$$.</b></font></a>
+<p>Great PC's and More!<br>
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=18323847&location=textlink.gateway.cat.comptech.cat.comptech.prod_sw">
+<font color="#ffcc66"><b>Click for Gateway.com</b></font></a>
 
-<p>Hot Wheels Giveaway<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=24688563&location=textlink.mob.cat.auto.cat.rec.hobbies.collecting">
-<font face="geneva,arial" color="#ffcc66">
-<b>Free Auctions-Mobilia.com</b></font></a>
+<p>1 Source for Computers!<br>
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=18323847&location=textlink.miw.cat.comptech.cat.comptech.prod_sw">
+<font color="#ffcc66"><b>Deals @ Microwarehouse</b></font></a>
 
-<p>Return of Rock<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=24688563&location=textlink.mtv.cat.rec.cat.rec.hobbies.collecting">
-<font face="geneva,arial" color="#ffcc66">
-<b>MTV.com</b></font></a>
+<p>Palm VII organizer<br>
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=18323847&location=textlink.palmvii.cat.comptech.cat.comptech.prod_sw">
+<font color="#ffcc66"><b>Wireless Internet access</b></font></a>
 
-<p>SonicNet<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=24688563&location=textlink.son.cat.rec.cat.rec.hobbies.collecting">
-<font face="geneva,arial" color="#ffcc66">
-<b>The best music online</b></font></a>
+<p>Value America-Electronics<br>
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=18323847&location=textlink.val.cat.comptech.cat.comptech.prod_sw">
+<font color="#ffcc66"><b>Best Brands & Prices-Now</b></font></a>
+
+<p>Thousands of Products<br>
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=18323847&location=textlink.eco.cat.comptech.cat.comptech.prod_sw">
+<font color="#ffcc66"><b>Buy at cost @ eCOST.com</b></font></a>
 
 <p>Search for Jobs!<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=24688563&location=textlink.joboptions.cat.ros.cat.rec.hobbies.collecting">
-<font face="geneva,arial" color="#ffcc66">
-<b>JobOptions</b></font></a>
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=18323847&location=textlink.joboptions.cat.ros.cat.comptech.prod_sw">
+<font color="#ffcc66"><b>JobOptions</b></font></a>
 
-<p>TireRack.com<br>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=24688563&location=textlink.tirerack.cat.rec.cat.rec.hobbies.collecting">
-<font face="geneva,arial" color="#ffcc66">
-<b>Quality, Price & Service</b></font></a>
-
-</td></tr>
-</table>
-    </td>
-
-</tr>
-
+</span></td></tr>
 </table>
 
 <!-- third stage : end -->
 
 </td>
-<td rowspan=2 width=3 bgcolor=#000000><img src="http://g.deja.com/gifs/20x20.gif" width=3 height=1></td>
-</tr><tr>
-<td colspan=2 valign=top bgcolor="#ffcc66" width=131>
 
-<!-- first stage : begin -->
+<td rowspan=2 width=3 bgcolor=#000000><img src=http://g.deja.com/gifs/20x20.gif width=3 height=1></td>
 
-
-
-
-
-
-<table border=0 cellspacing=0 cellpadding=0 width=100%>
-
-<tr><td>
-
-
-
-
-
-
-
-<form action="http://www.deja.com/rate/user_rate.xp" method=GET>
-<table border=0 cellspacing=0 cellpadding=6 width=100%><tr>
-<td valign=bottom bgcolor=#000000>
-    <table cellspacing=0 cellpadding=0 border=0 width=100%><tr>
-    <td valign=middle><font face="geneva,arial" color="#ff6600" size=4><b>Rate it!</b></font></td>
-    </tr></table>
-</td>
-</tr><tr>
-<td bgcolor="#cccc66"><font face="geneva,arial" size=1>
-<font size=3><b><a href="http://www.deja.com/rate/item.xp?CID=10413&PDID=2389">Converse All Star 4-Real</a></b></font><br>
-
-in <a href="http://www.deja.com/rate/list_items.xp?CID=10413&PCID=11604">Basketball Shoes</a>
-<br>(1=worst, 5=best)
-</tr><tr>
-<td bgcolor="#cccc66" nowrap><font face="geneva,arial" size=1>
-
-
-    Looks<br>
-    
-    1<input type=radio name=CR1 value=1><input type=radio name=CR1 value=2><input type=radio name=CR1 value=3><input type=radio name=CR1 value=4><input type=radio name=CR1 value=5>5<br>
-    
-
-    Comfort<br>
-    
-    1<input type=radio name=CR2 value=1><input type=radio name=CR2 value=2><input type=radio name=CR2 value=3><input type=radio name=CR2 value=4><input type=radio name=CR2 value=5>5<br>
-    
-
-    Performance<br>
-    
-    1<input type=radio name=CR3 value=1><input type=radio name=CR3 value=2><input type=radio name=CR3 value=3><input type=radio name=CR3 value=4><input type=radio name=CR3 value=5>5<br>
-    
-
-    Cost / Benefit<br>
-    
-    1<input type=radio name=CR4 value=1><input type=radio name=CR4 value=2><input type=radio name=CR4 value=3><input type=radio name=CR4 value=4><input type=radio name=CR4 value=5>5<br>
-    
-
-<p>
-<input type=submit value="Submit">
-<input type="hidden" name="CID" value="10413">
-<input type="hidden" name="PDID" value="2389">
-</form>
-<li> <a href="http://www.deja.com/rate/list_items.xp?CID=10413&PCID=11604">Compare it to others</a><br>
-<li> <a href="http://www.deja.com/rate/list_reviews.xp?CID=10413&PDID=2389">User Comments</a>
-<br>
-
-<li> <a href="http://www.deja.com/linkback.xp?act=f&res_type=rating&res_title=Converse%20All%20Star%204-Real&res_url=http://www.deja.com/rate/item.xp%3fPDID%3d2389%26PCID%3d11604%26CID%3d10413">Add this rating</a><br>&nbsp;&nbsp;&nbsp;<a href="http://www.deja.com/linkback.xp?act=f&res_type=rating&res_title=Converse%20All%20Star%204-Real&res_url=http://www.deja.com/rate/item.xp%3fPDID%3d2389%26PCID%3d11604%26CID%3d10413">to your own Web site</a>
-<br>&nbsp;
-</font></td></tr>
-</table>
-</td></tr>
-
-<tr><td bgcolor="#000000"><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td></tr>
-
-<tr><td>
-
-
-
-<table width=100% border=0 cellspacing=0 cellpadding=6>
-
-<tr>
-<td valign=bottom bgcolor=#000000>
-    <table cellspacing=0 cellpadding=0 border=0 width=100%><tr>
-    <td valign=middle><font face="geneva,arial" color="#ff6600" size=6><b>5&nbsp;</b></font></td>
-    <td valign=top><font face="geneva,arial" color="#ff6600" size=2><b>top&nbsp;rated<br>Basketball Shoes</b></font></td>
-    </tr></table>
-</td>
 </tr>
 
 <tr>
-<td valign=top bgcolor=#cccc66>
-<font face="geneva,arial" size=1>
-
-
-    
-    <a href="http://www.deja.com/rate/item.xp?CID=10413&PDID=2384">
-    1. Adidas EQT Dominion</a><br>
-
-    
-    <a href="http://www.deja.com/rate/item.xp?CID=10413&PDID=2388">
-    2. Air Zoom GP</a><br>
-
-    
-    <a href="http://www.deja.com/rate/item.xp?CID=10413&PDID=2385">
-    3. Adidas EQT KB8 11</a><br>
-
-    
-    <a href="http://www.deja.com/rate/item.xp?CID=10413&PDID=2397">
-    4. Reebok Answer II DMX Lite</a><br>
-
-    
-    <a href="http://www.deja.com/rate/item.xp?CID=10413&PDID=2386">
-    5. Air Jordan XIV</a><br>
-
-<a href="http://www.deja.com/rate/list_items.xp?CID=10413&PCID=11604"><li>See the full list...</a><br>
-</font></td>
-</tr>
-</table>
-</td></tr>
-
-<tr><td bgcolor="#000000"><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td></tr>
-
-
-<tr><td>
-
-
-
-<table width=100% border=0 cellspacing=0 cellpadding=6>
-<tr>
-<td valign=top bgcolor=#ffcc66><b><font face="geneva,arial" size=2>Deja Forums</font></b><br>
-<font face="geneva,arial" size=1>
-
-
-<a href="http://www.deja.com/group/alt.collecting">Collections</a><br>
-
-
-<a href="http://www.deja.com/group/alt.collecting.autographs">Autograph collections</a><br>
-
-
-<a href="http://www.deja.com/group/alt.collecting.beanie-babies">Beanie babies collections</a><br>
-
-
-<a href="http://www.deja.com/group/alt.collecting.bicycles">Bicycle collections</a><br>
-
-
-<a href="http://www.deja.com/group/alt.collecting.breweriana">Brewing equip. collections</a><br>
-
-&nbsp;</font></td>
-</tr></table>
-</td></tr>
-
-<tr><td bgcolor="#000000"><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td></tr>
-
-
-
-
-<tr><td>
-
-
-
-<table width=100% border=0 cellspacing=0 cellpadding=6>
-<tr>
-<td valign=top bgcolor=#ffcc66><b><font face="geneva,arial" size=2>Deja Communities</font></b><br>
-<font face="geneva,arial" size=1>
-
-
-<p>
-<a href="http://www.deja.com/j_new.xp">Start your own</a> 
-community in <b>Collecting</b>.
-
-&nbsp;</font></td>
-</tr></table>
-</td></tr>
-
-<tr><td bgcolor="#000000"><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td></tr>
-
-
-<tr>
-    <td>
-    <table border=0 cellspacing=0 cellpadding=6 width=100%><tr>
-	<td valign=top bgcolor="#ffcc66">
-	<font face="geneva,arial" size=2><b>My Deja</b></font><br>
-	<font face="geneva,arial" size=1>
-	
-	    Get more out of Deja: <a href="http://www.deja.com/register.xp">Register</a> to easily manage your discussions
-	    and communities, and improve your searches.  Plus, get email alerts about
-	    new posts in your favorite discussions with <a href="http://www.deja.com/mydn_search.xp">Deja Tracker</a>!
-	
-	<br>&nbsp;</font></td>
-    </tr></table>
-    </td>
-</tr>
-
-</table>
-
-<!-- first stage : end -->
-
-<img src="http://g.deja.com/gifs/20x20.gif" width=131 height=1></td>
-<td bgcolor=#000000 width=4><img src="http://g.deja.com/gifs/20x20.gif" width=4 height=1></td>
-
-
-<td bgcolor=#ffffff valign=top>
+<td bgcolor=#000000 width=4><img src=http://g.deja.com/gifs/20x20.gif width=4 height=1></td>
+<td bgcolor=#ffffff valign=top align=center height=800 width=100%>
 
 <!-- second stage : begin -->
+<table border=0 cellspacing=0 cellpadding=0 width=100% bgcolor=#000000><tr>
+<td bgcolor=#000000><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=5></td>
+</tr></table>
+
 <!-- second stage nav_tab : begin -->
+
+
 
 
 
 <table border=0 cellspacing=0 cellpadding=0 width=100%>
 <tr><td valign=bottom bgcolor=#000000>
 
-
-
 <table border=0 cellspacing=0 cellpadding=0>
 <tr><td bgcolor=#000000><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=5></td>
 </tr></table>
 
-<table border=0 cellspacing=0 cellpadding=2><tr>
+<table border=0 cellspacing=0 cellpadding=2>
+<tr>
 
 
     
-    <td nowrap bgcolor=#ffcc66><font face="geneva,arial" size=2><b>&nbsp;
+    <td nowrap bgcolor=#ffcc66><b>&nbsp;
     
-	<a href="http://www.deja.com/rate/search.xp?QRY=stuntboy">ratings</a>
+	<a href="rate/search.xp?QRY=irover">ratings</a>
     
     &nbsp;</b></font></td>
     <td bgcolor=#000000><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td>
 
     
-    <td nowrap bgcolor=#ffffff><font face="geneva,arial" size=2><b>&nbsp;
+    <td nowrap bgcolor=#ffffff><b>&nbsp;
     
 	discussions
     
@@ -530,9 +418,9 @@ community in <b>Collecting</b>.
     <td bgcolor=#000000><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td>
 
     
-    <td nowrap bgcolor=#ffcc66><font face="geneva,arial" size=2><b>&nbsp;
+    <td nowrap bgcolor=#ffcc66><b>&nbsp;
     
-	<a href="http://www.deja.com/commsearch.xp?QRY=stuntboy">communities</a>
+	<a href="commsearch.xp?QRY=irover">communities</a>
     
     &nbsp;</b></font></td>
     <td bgcolor=#000000><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td>
@@ -545,813 +433,493 @@ community in <b>Collecting</b>.
     &nbsp;
 
 
+</td>
+</tr></table>
+
+
+
+
+
+<!-- second stage nav_tab : end -->
+
+<!-- second stage content : begin -->
+
+
+
+
+
+
+
+
+
+<p>
+
+<table width=95% cellpadding=0 cellspacing=0 border=0><tr>
+<td valign=top>
+<span class="xlarge">Results for:&nbsp;</span>
+<span class="xlarge" id="red">"irover&quot</span>
+</td>
+<td valign=top align=right>
+
+
+
+
+<table border=0 cellspacing=0 cellpadding=3><tr align=right>
+
+    <td align=center nowrap valign=top class="small" bgcolor=#ffcc66>
+	<a href="home_ps.shtml?QRY=irover&TAB=D">Power Search</a>
+    </td>
+
+<td align=center nowrap valign=top class="small" bgcolor=#eeeeee>
+
+    <a href="help/help_metasr.shtml">Help</a> | 
+
+<a href="mailto.xp?category=Searching">Feedback</a>
+<br></td>
+</tr></table>
 
 
 </td>
 </tr></table>
-
-<!-- second stage nav_tab : end -->
-<!-- second stage content : begin -->
-<table width=100% cellpadding=12 cellspacing=0 border=0>
-<tr><td valign=top>
+</p>
 
 
 
+<table cellpadding=2 cellspacing=0 border=0 width=95%>
+<tr><td width=100% colspan=2>
+<b>Messages</b><br>
+<b class="small">1-20 of exactly 20 matches</b>
+<br><a href="http://www.deja.com/trackquery.xp?query=irover&wp_query=svcclass%3ddnserver%26defaultOp%3d%257c%26ST%3dPS%26minAN%3d0%26ageweight%3d1%26query%3dirover%26search%3dword%26HT%3d0%26maxhits%3d100%26RN%3d0%26LNG%3dALL%26showsort%3dscore%26format%3dterse%26QRY%3dirover%26IS%3dirover%26agesign%3d0%26OP%3ddnquery.xp&return_to=http://x31.deja.com/qs.xp%3fLNG%3dALL%26OP%3ddnquery.xp%26QRY%3dirover%26ST%3dPS%26defaultOp%3dOR%26maxhits%3d100%26showsort%3dscore">Track this search for me</a>
 
+</td></tr>
+</table>
 
+<table width=95% cellspacing=0 cellpadding=6 border=0>
+
+<tr align=left valign=top>
+
+    <td><a href="http://x31.deja.com/qs.xp?LNG=ALL&OP=dnquery.xp&QRY=irover&ST=PS&defaultOp=OR&maxhits=100&showsort=date">Date</a> <img src="http://g.deja.com/gifs/sort_down_x.gif" width=11 height=6 border=0 hspace=3 vspace=1></td>
+
+    <td><a href="http://x31.deja.com/qs.xp?LNG=ALL&OP=dnquery.xp&QRY=irover&ST=PS&defaultOp=OR&maxhits=100&showsort=subject">Subject</a> <img src="http://g.deja.com/gifs/sort_down_x.gif" width=11 height=6 border=0 hspace=3 vspace=1></td>
+
+    <td><a href="http://x31.deja.com/qs.xp?LNG=ALL&OP=dnquery.xp&QRY=irover&ST=PS&defaultOp=OR&maxhits=100&showsort=newsgroup">Forum</a> <img src="http://g.deja.com/gifs/sort_down_x.gif" width=11 height=6 border=0 hspace=3 vspace=1></td>
+
+    <td><a href="http://x31.deja.com/qs.xp?LNG=ALL&OP=dnquery.xp&QRY=irover&ST=PS&defaultOp=OR&maxhits=100&showsort=author">Author</a> <img src="http://g.deja.com/gifs/sort_down_x.gif" width=11 height=6 border=0 hspace=3 vspace=1></td>
+
+</tr>
 
 
 
 
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table cellspacing=0 width=640 cellpadding=0 border=0>
-    <tr valign=top>
-	<td><font face="geneva,arial" size=2>view results in <a href="http://x23.deja.com/dnquery.xp?QRY=stuntboy&ST=PS&defaultOp=OR&maxhits=100&showsort=score&format=terse">tabular format</a></font>&nbsp;<img src="http://g.deja.com/gifs/new.gif" border=0 HEIGHT=20 WIDTH=37 align=abscenter></td>
-	<td width=45 rowspan=3>&nbsp;</td>
-	<td><font face="geneva,arial" size=1>sort by:
-	    &nbsp;<font color="#999999">confidence</font>&nbsp; | &nbsp;<a href="http://x23.deja.com/dnquery.xp?QRY=stuntboy&ST=PS&defaultOp=OR&format=delta&maxhits=100&showsort=subject">subject</a>&nbsp; |
-	    &nbsp;<a href="http://x23.deja.com/dnquery.xp?QRY=stuntboy&ST=PS&defaultOp=OR&format=delta&maxhits=100&showsort=newsgroup">forum</a>&nbsp; | &nbsp;<a href="http://x23.deja.com/dnquery.xp?QRY=stuntboy&ST=PS&defaultOp=OR&format=delta&maxhits=100&showsort=date">date</a>&nbsp; |
-	    &nbsp;<a href="http://x23.deja.com/dnquery.xp?QRY=stuntboy&ST=PS&defaultOp=OR&format=delta&maxhits=100&showsort=author">author</a></font></td>
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>10/31/1999</td>
+    <td><b>
+    <a href="http://x31.deja.com/getdoc.xp?AN=542785564&CONTEXT=944588942.1954873486&hitnum=0">
+    Re: search engine software  
+    </a>
+    </b></td>
+    <td>alt.comp.freeware    </td>
+    <td><a href="profile.xp?author=3f5908d416d54267c88a101a83b28124343884ad7a1cd56d555932dbd2e0c230965d52f531421c424f633880dd8e418227e670fc6c&ST=PS&ee=1">spcor          </a></td>
     </tr>
-    <tr height=5><td>&nbsp;</td></tr>
-    <tr valign=top>
-	<td width=220>
-	
-	
-	
-		
+    
 
-	
-	
-	
-	
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>09/26/1999</td>
+    <td><b>
+    <a href="http://x31.deja.com/getdoc.xp?AN=529889969&CONTEXT=944588942.1954873486&hitnum=1">
+    Re: I am ready to commit sui
+    </a>
+    </b></td>
+    <td>soc.support.depressio</td>
+    <td><a href="profile.xp?author=3e5f0ad619d44262e5f23639051d48f756d100ec7e367e292bd202b7b8951e333c36ccb1f22f16c7f6c399449fe409e2b448b3c1ce92cadf7d32&ST=PS&ee=1">Mike Zulkoski  </a></td>
+    </tr>
+    
 
-	
-	
-	
-	
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>07/20/1999</td>
+    <td><b>
+    <a href="http://x31.deja.com/getdoc.xp?AN=502982021&CONTEXT=944588942.1954873486&hitnum=2">
+    Re: MSVBVM60.DLL            
+    </a>
+    </b></td>
+    <td>microsoft.public.win9</td>
+    <td><a href="profile.xp?author=305900d71ddf4267915ed1a588121dfc7bc9d34756bb6d3bfaaaafdd965630fab3342b9aabb0f6a3baaf4f4f9fb72271324a14be5b873e038557&ST=PS&ee=1">Alan Edwards   </a></td>
+    </tr>
+    
 
-	<font face="geneva,arial"><b>Forums related to</b></font>
-	<font face="geneva,arial" color="#ff6600"><b>stuntboy</b></font><b>:</b>
-	<font face="geneva,arial" size=2></font>
-        <p>
-	<font face="geneva,arial" size=2>
-	click on a forum to browse its topics<br>
-	
-	
-	
-	<a href=http://x23.deja.com/[ST_rn=if]/topics_if.xp?search=topic&group=rec.arts.sf.starwars.collecting&GRPP=939394692.1474953230&title=Related&query=stuntboy>rec.arts.sf.starwars.collecting</a><font size=3>&nbsp;</font><br>
-	
-	
-	
-	
-	
-	<a href=http://x23.deja.com/[ST_rn=if]/topics_if.xp?search=topic&group=rec.arts.sf.starwars.collecting.vintage&GRPP=939394692.1474953230&title=Related&query=stuntboy>rec.arts.sf.starwars.collecting.vintage</a><font size=3>&nbsp;</font><br>
-	
-	
-	
-	
-	
-	<a href=http://x23.deja.com/[ST_rn=if]/topics_if.xp?search=topic&group=rec.arts.sf.starwars.collecting.misc&GRPP=939394692.1474953230&title=Related&query=stuntboy>rec.arts.sf.starwars.collecting.misc</a><font size=3>&nbsp;</font><br>
-	
-	
-	
-	
-	
-	<a href=http://x23.deja.com/[ST_rn=if]/topics_if.xp?search=topic&group=alt.asian-movies&GRPP=939394692.1474953230&title=Related&query=stuntboy>alt.asian-movies</a><font size=3>&nbsp;</font><br>
-	
-	
-	
-	
-	
-	<a href=http://x23.deja.com/[ST_rn=if]/topics_if.xp?search=topic&group=news.groups&GRPP=939394692.1474953230&title=Related&query=stuntboy>news.groups</a><font size=3>&nbsp;</font><br>
-	
-	
-	
-	
-	
-	<a href=http://x23.deja.com/[ST_rn=if]/topics_if.xp?search=topic&group=alt.bmx&GRPP=939394692.1474953230&title=Related&query=stuntboy>alt.bmx</a><font size=3>&nbsp;</font><br>
-	
-	
-	
-	</font>
-	</td>
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>04/17/1999</td>
+    <td><b>
+    <a href="http://x31.deja.com/getdoc.xp?AN=467353020&CONTEXT=944588942.1954873486&hitnum=3">
+    Re: &quot;Puheen tunnistus&quot;      
+    </a>
+    </b></td>
+    <td>sfnet.atk.ms-windows </td>
+    <td><a href="profile.xp?author=3f5e00d319d44466e82c7bc1fe7cc6bae7e434d3a536a148248f8ad38d42fb6b950cd15dbf39ace691a2681caccaf6ea6af428b5254452a272b2066a1f603db6db&ST=PS&ee=1">Raimo Suonio   </a></td>
+    </tr>
+    
 
-	<td width=390>
-	
-	<font face="geneva,arial"><b>Messages that contain your search</b></font>
-	<font face="geneva,arial" color=#ff6600><b>stuntboy</b></font><b>:</b>
-        <br>
-	
-        <font face="geneva,arial" size=-1><a href="http://www.deja.com/trackquery.xp?query=stuntboy&wp_query=svcclass%3ddnserver%26defaultOp%3d%257c%26ST%3dPS%26minAN%3d0%26ageweight%3d1%26query%3dstuntboy%26search%3dword%26HT%3d0%26maxhits%3d100%26RN%3d0%26showsort%3dscore%26format%3ddelta%26QRY%3dstuntboy%26IS%3dstuntboy%26agesign%3d0&return_to=http://x23.deja.com/dnquery.xp%3fQRY%3dstuntboy%26ST%3dPS%26defaultOp%3dOR%26format%3ddelta%26maxhits%3d100%26showsort%3dscore">Notify me of new matches</a></font>
-        <p>
-	
-        <font face="geneva,arial" size=-1>messages 1-55 of exactly 55 matches</font>
-        <p>
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>04/08/1999</td>
+    <td><b>
+    <a href="http://x31.deja.com/getdoc.xp?AN=464071663&CONTEXT=944588942.1954873486&hitnum=4">
+    Re: News Parrot             
+    </a>
+    </b></td>
+    <td>alt.comp.freeware    </td>
+    <td><a href="profile.xp?author=3b5d0ad71dd14563f880964650d94fc39a4373394f57e6e5680e6ebcfa16dda879bdd4142be1a02af07350cf41056ba15fdebd34952ef3&ST=PS&ee=1">Daniel Madura  </a></td>
+    </tr>
+    
 
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=528086018&CONTEXT=939394692.1474953230&hitnum=0">Stuntboy has moved...</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/09/21 <b>Author</b>: Chris Georgoulias
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=514025828&CONTEXT=939394692.1474953230&hitnum=1">Re: BS Series</font></a><br>
-	<font size=2>
-	<b>Forum</b>: alt.bmx<br>
-	<b>Date</b>: 1999/08/17 <b>Author</b>: The Cappetto's
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=513619850&CONTEXT=939394692.1474953230&hitnum=2">BS Series</font></a><br>
-	<font size=2>
-	<b>Forum</b>: alt.bmx<br>
-	<b>Date</b>: 1999/08/16 <b>Author</b>: The Cappetto's
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=411971686&CONTEXT=939394692.1474953230&hitnum=3">Re: all of my collection must go :(</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.misc<br>
-	<b>Date</b>: 1998/11/15 <b>Author</b>: JEDl74
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=380878570&CONTEXT=939394692.1474953230&hitnum=4">Re: Fung Hark On</font></a><br>
-	<font size=2>
-	<b>Forum</b>: alt.asian-movies<br>
-	<b>Date</b>: 1998/08/13 <b>Author</b>: Simon Wyndham
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=380558291&CONTEXT=939394692.1474953230&hitnum=5">Re: Fung Hark On</font></a><br>
-	<font size=2>
-	<b>Forum</b>: alt.asian-movies<br>
-	<b>Date</b>: 1998/08/12 <b>Author</b>: Darryl Pestilence
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=344239747&CONTEXT=939394692.1474953230&hitnum=6">Re: bash those proto dudes! (Re: Tomart Ripp Off!!</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/04/15 <b>Author</b>: Mike B
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=457611381&CONTEXT=939394692.1474953230&hitnum=7">Re: Snasweet my arse.. Jason Joiner's the man, and his was on teevee..</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/03/22 <b>Author</b>: Ron Salvatore
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=447336723&CONTEXT=939394692.1474953230&hitnum=8">Re: Great Idea - Regulars and Non PLEASE READ</font></a><br>
-	<font size=2>
-	<b>Forum</b>: alt.asian-movies<br>
-	<b>Date</b>: 1999/02/21 <b>Author</b>: Darryl Pestilence
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=430855626&CONTEXT=939394692.1474953230&hitnum=9">Re: Which Tony in The Lover?</font></a><br>
-	<font size=2>
-	<b>Forum</b>: alt.asian-movies<br>
-	<b>Date</b>: 1999/01/10 <b>Author</b>: Darryl Pestilence
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=412274025&CONTEXT=939394692.1474953230&hitnum=10">Re: all of my collection must go :(</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.misc<br>
-	<b>Date</b>: 1998/11/15 <b>Author</b>: Steve Wiskowski
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=404097303&CONTEXT=939394692.1474953230&hitnum=11">Re: Impressive Yuen Biao Stuntwork</font></a><br>
-	<font size=2>
-	<b>Forum</b>: alt.asian-movies<br>
-	<b>Date</b>: 1998/10/22 <b>Author</b>: Darryl Pestilence
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=391526876&CONTEXT=939394692.1474953230&hitnum=12">Re: AP Stuff</font></a><br>
-	<font size=2>
-	<b>Forum</b>: alt.tv.remember-wenn<br>
-	<b>Date</b>: 1998/09/16 <b>Author</b>: NASAchic
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=380890731&CONTEXT=939394692.1474953230&hitnum=13">Re: Fung Hark On</font></a><br>
-	<font size=2>
-	<b>Forum</b>: alt.asian-movies<br>
-	<b>Date</b>: 1998/08/13 <b>Author</b>: Darryl Pestilence
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=357170716&CONTEXT=939394692.1474953230&hitnum=14">Re: QVC Special: Thoughts?</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.misc<br>
-	<b>Date</b>: 1998/05/28 <b>Author</b>: Mike Wells
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=344633700&CONTEXT=939394692.1474953230&hitnum=15">Re: bash those proto dudes! (Re: Tomart Ripp Off!!</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/04/16 <b>Author</b>: Mike B
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=411826948&CONTEXT=939394692.1474953230&hitnum=16">Re: all of my collection must go :(</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.misc<br>
-	<b>Date</b>: 1998/11/14 <b>Author</b>: Sklmsta
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=344519790&CONTEXT=939394692.1474953230&hitnum=17">Re: bash those proto dudes! (Re: Tomart Ripp Off!!</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/04/15 <b>Author</b>: stuntboy
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=319162328&CONTEXT=939394692.1474953230&hitnum=18">Re: My take on the NG and an idea.</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1998/01/25 <b>Author</b>: Keith A. Schneider
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=473928671&CONTEXT=939394692.1474953230&hitnum=19">Re: Sick of seeing Chris G,s face!!!</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/05/04 <b>Author</b>: Ken Furlong
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=473778429&CONTEXT=939394692.1474953230&hitnum=20">Re: Sick of seeing Chris G,s face!!!</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1999/05/03 <b>Author</b>: Chris Georgoulias
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=358707225&CONTEXT=939394692.1474953230&hitnum=21">Re: QVC and Sansweet</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.misc<br>
-	<b>Date</b>: 1998/06/02 <b>Author</b>: Eric Ehrbar
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=358728767&CONTEXT=939394692.1474953230&hitnum=22">Re: QVC and Sansweet</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.misc<br>
-	<b>Date</b>: 1998/06/02 <b>Author</b>: Gus Lopez
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=358773325&CONTEXT=939394692.1474953230&hitnum=23">Re: QVC and Sansweet</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.misc<br>
-	<b>Date</b>: 1998/06/02 <b>Author</b>: rlcox
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=290386084&CONTEXT=939394692.1474953230&hitnum=24">Re: Keith Schneider</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.misc<br>
-	<b>Date</b>: 1997/11/18 <b>Author</b>: Eric Sansoni
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=224274981&CONTEXT=939394692.1474953230&hitnum=25">Re: RFD: rec.arts.sf.starwars.collecting.* reorganization</font></a><br>
-	<font size=2>
-	<b>Forum</b>: news.groups<br>
-	<b>Date</b>: 1997/03/10 <b>Author</b>: Christopher A Maybury
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=224110582&CONTEXT=939394692.1474953230&hitnum=26">Re: RFD: rec.arts.sf.starwars.collecting.* reorganization</font></a><br>
-	<font size=2>
-	<b>Forum</b>: news.groups<br>
-	<b>Date</b>: 1997/03/09 <b>Author</b>: Justin Greenfield
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=224036967&CONTEXT=939394692.1474953230&hitnum=27">Re: RFD: rec.arts.sf.starwars.collecting.* reorganization</font></a><br>
-	<font size=2>
-	<b>Forum</b>: news.groups<br>
-	<b>Date</b>: 1997/03/08 <b>Author</b>: Gus Lopez
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=224041824&CONTEXT=939394692.1474953230&hitnum=28">Re: RFD: rec.arts.sf.starwars.collecting.* reorganization</font></a><br>
-	<font size=2>
-	<b>Forum</b>: news.groups<br>
-	<b>Date</b>: 1997/03/08 <b>Author</b>: John Wooten
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=310495917&CONTEXT=939394692.1474953230&hitnum=29">Re: DRIVE</font></a><br>
-	<font size=2>
-	<b>Forum</b>: alt.asian-movies<br>
-	<b>Date</b>: 1997/12/27 <b>Author</b>: Dpest1
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=271323003&CONTEXT=939394692.1474953230&hitnum=30">Re: 12 back telescoping Luke</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1997/09/10 <b>Author</b>: Obi-Juan
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=238580563&CONTEXT=939394692.1474953230&hitnum=31">Re: George Lucas Action Figure</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting<br>
-	<b>Date</b>: 1997/05/01 <b>Author</b>: John Wooten
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=238684898&CONTEXT=939394692.1474953230&hitnum=32">Re: George Lucas Action Figure</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting<br>
-	<b>Date</b>: 1997/05/01 <b>Author</b>: Josh Carlson
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=238695078&CONTEXT=939394692.1474953230&hitnum=33">Re: George Lucas Action Figure</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting<br>
-	<b>Date</b>: 1997/05/01 <b>Author</b>: Russ Miller
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=238410107&CONTEXT=939394692.1474953230&hitnum=34">Re: collecting facism (was boring old: Re: RFD</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting<br>
-	<b>Date</b>: 1997/04/30 <b>Author</b>: ron salvatore
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=224032657&CONTEXT=939394692.1474953230&hitnum=35">Re: RFD: rec.arts.sf.starwars.collecting.* reorganization</font></a><br>
-	<font size=2>
-	<b>Forum</b>: news.groups<br>
-	<b>Date</b>: 1997/03/08 <b>Author</b>: Keith A. Schneider
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=224034321&CONTEXT=939394692.1474953230&hitnum=36">Re: RFD: rec.arts.sf.starwars.collecting.* reorganization</font></a><br>
-	<font size=2>
-	<b>Forum</b>: news.groups<br>
-	<b>Date</b>: 1997/03/08 <b>Author</b>: John Wooten
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=271779485&CONTEXT=939394692.1474953230&hitnum=37">Re: 12 back telescoping Luke</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1997/09/11 <b>Author</b>: stuntboy
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=271354154&CONTEXT=939394692.1474953230&hitnum=38">Re: 12 back telescoping Luke</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting.vintage<br>
-	<b>Date</b>: 1997/09/10 <b>Author</b>: John Wooten
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=238573483&CONTEXT=939394692.1474953230&hitnum=39">Re: George Lucas Action Figure</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting<br>
-	<b>Date</b>: 1997/05/01 <b>Author</b>: R/S/J Salazar
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=238591681&CONTEXT=939394692.1474953230&hitnum=40">Re: George Lucas Action Figure</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting<br>
-	<b>Date</b>: 1997/05/01 <b>Author</b>: Ron Peritore
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=238656889&CONTEXT=939394692.1474953230&hitnum=41">Re: George Lucas Action Figure</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting<br>
-	<b>Date</b>: 1997/05/01 <b>Author</b>: Russ Miller
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=238662468&CONTEXT=939394692.1474953230&hitnum=42">Re: George Lucas Action Figure</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting<br>
-	<b>Date</b>: 1997/05/01 <b>Author</b>: Chris Fawcett
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=238724888&CONTEXT=939394692.1474953230&hitnum=43">Re: George Lucas Action Figure</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting<br>
-	<b>Date</b>: 1997/05/01 <b>Author</b>: Russ Miller
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=238729815&CONTEXT=939394692.1474953230&hitnum=44">Re: George Lucas Action Figure</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting<br>
-	<b>Date</b>: 1997/05/01 <b>Author</b>: John Bartos
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=224118475&CONTEXT=939394692.1474953230&hitnum=45">Re: RFD: rec.arts.sf.starwars.collecting.* reorganization</font></a><br>
-	<font size=2>
-	<b>Forum</b>: news.groups<br>
-	<b>Date</b>: 1997/03/09 <b>Author</b>: stuntboy
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=107893748&CONTEXT=939394692.1474953230&hitnum=46">***MOC POTF Yak Face Auction Update 8-10***</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.marketplace<br>
-	<b>Date</b>: 1995/08/10 <b>Author</b>: John K. Laneave
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=247244892&CONTEXT=939394692.1474953230&hitnum=47">Re: Max - $poilers.</font></a><br>
-	<font size=2>
-	<b>Forum</b>: uk.media.tv.sf.x-files<br>
-	<b>Date</b>: 1997/06/09 <b>Author</b>: Lian
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=239824214.2&CONTEXT=939394692.1474953230&hitnum=48">THE WEEK IN RASSC - 4/27/97 - 5/3/97 #2/2</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting<br>
-	<b>Date</b>: 1997/05/04 <b>Author</b>: Vic Medina
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=138349042&CONTEXT=939394692.1474953230&hitnum=49">Re: BEST Star Wars find ever?</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting<br>
-	<b>Date</b>: 1996/02/07 <b>Author</b>: cmaynard
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=138845192&CONTEXT=939394692.1474953230&hitnum=50">Re: BEST Star Wars find ever?</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting<br>
-	<b>Date</b>: 1996/02/06 <b>Author</b>: andyc
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=145048106&CONTEXT=939394692.1474953230&hitnum=51">Re: Help! New collector looking for advice...</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.misc<br>
-	<b>Date</b>: 1996/03/30 <b>Author</b>: Brian Taylor
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=144142775&CONTEXT=939394692.1474953230&hitnum=52">Re: Top 10 reasons Why SW Collecting is Crapping out Like Sp</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting<br>
-	<b>Date</b>: 1996/03/26 <b>Author</b>: Tusken Raider
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=138639977&CONTEXT=939394692.1474953230&hitnum=53">Re: Let's all get to know each other again.....</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.toys.misc<br>
-	<b>Date</b>: 1996/02/09 <b>Author</b>: Pamela Green
-	<p>
-	</font>
-	
-	
-	
-        
-        
-        
-	<font face="geneva,arial" size=2><a href="http://x23.deja.com/getdoc.xp?AN=138286099&CONTEXT=939394692.1474953230&hitnum=54">Re: BEST Star Wars find ever?</font></a><br>
-	<font size=2>
-	<b>Forum</b>: rec.arts.sf.starwars.collecting<br>
-	<b>Date</b>: 1996/02/06 <b>Author</b>: Jamie McDougall u
-	<p>
-	</font>
-	
-	
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>03/27/1999</td>
+    <td><b>
+    <a href="http://x31.deja.com/getdoc.xp?AN=459676605&CONTEXT=944588942.1954873486&hitnum=5">
+    New files                   
+    </a>
+    </b></td>
+    <td>fido7.f400.file      </td>
+    <td><a href="profile.xp?author=3b5d0cd31dd24963e578cb1cc01aa8ab7c1c764e73329c4728549777436838efef&ST=PS&ee=1">fnet           </a></td>
+    </tr>
+    
 
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>10/01/1999</td>
+    <td><b>
+    <a href="http://x31.deja.com/getdoc.xp?AN=531804969.2&CONTEXT=944588942.1954873486&hitnum=6">
+    Neue Files sind eingetroffen
+    </a>
+    </b></td>
+    <td>hamburg.announce     </td>
+    <td><a href="profile.xp?author=3f580ad31fdf4960c85e894eaaf8dd5d3f9a9a0208f8e811d80e28694804810ad73e6ca5d88dd56b4895b4ffa21814e43b9c48a512d7bbe7c302422b981af3e2f4b8ccfb99a9874278&ST=PS&ee=1">Klaus Wessel   </a></td>
+    </tr>
+    
 
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>04/18/1999</td>
+    <td><b>
+    <a href="http://x31.deja.com/getdoc.xp?AN=467992418&CONTEXT=944588942.1954873486&hitnum=7">
+    Re: &quot;Puheen tunnistus&quot;      
+    </a>
+    </b></td>
+    <td>sfnet.atk.ms-windows </td>
+    <td><a href="profile.xp?author=3b5f0cd11bde4366a63524e4c765d3b242f9b47b149ca1f7041d9954c5c9aada65805d0d260c12a5f18c1525345ac0d205c2164e169293713880a8bf9da7786edb&ST=PS&ee=1">Timo Jutila    </a></td>
+    </tr>
+    
 
-<b><font size=4 face="geneva,arial" color="#999999">&lt;&lt;</font>
-<font face="geneva,arial" size=2 color="#999999">Previous matches</font></b>
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>04/13/1999</td>
+    <td><b>
+    <a href="http://x31.deja.com/getdoc.xp?AN=465695950&CONTEXT=944588942.1954873486&hitnum=8">
+    Re: &quot;Puheen tunnistus&quot;      
+    </a>
+    </b></td>
+    <td>sfnet.atk.ms-windows </td>
+    <td><a href="profile.xp?author=3a5b0bd519d04865e96e7d21eb92bc6ee51778a4e85cab2740ce68ed1f60539de90d429952ff9c31154239741a251895920f76556a859a7671655a20574c0a227c&ST=PS&ee=1">Raimo Suonio   </a></td>
+    </tr>
+    
 
-&nbsp; &#183; &nbsp;
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>04/02/1999</td>
+    <td><b>
+    <a href="http://x31.deja.com/getdoc.xp?AN=462058080.2&CONTEXT=944588942.1954873486&hitnum=9">
+    Lisa der absolute .... Neue 
+    </a>
+    </b></td>
+    <td>braunschweig.newfiles</td>
+    <td><a href="profile.xp?author=3d5d0cd017df426d8392bc063f017364502a6ec05008837b84c02c5bfaa8f2c5c679b59e8ebdd90948f5233aafea97bc6bc100dca257&ST=PS&ee=1">Lisa           </a></td>
+    </tr>
+    
 
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>02/14/1999</td>
+    <td><b>
+    <a href="http://x31.deja.com/getdoc.xp?AN=444127264.4&CONTEXT=944588942.1954873486&hitnum=10">
+    SIMTEL UPLOADS: MS-News Dige
+    </a>
+    </b></td>
+    <td>comp.software.sharewa</td>
+    <td><a href="profile.xp?author=305c0ad01dd44661d84b15388994285c468fc013784c67981677a87d826cc0084ab4cb0206afb644b30666cd515abc77255dd42a72211ffec4caf439d7c62088&ST=PS&ee=1">Simtel Uploads </a></td>
+    </tr>
+    
 
-<b><font face="geneva,arial" size=2 color="#999999">Next matches</font>
-<font size=4 face="geneva,arial" color="#999999">&gt;&gt;</font></b>
-</td></tr>
-    <tr>
-	<td colspan=2>&nbsp;</td>
-        <td><font face="geneva,arial" size=2>messages 1-55 of exactly 55 matches</font></td></tr>
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>02/10/1999</td>
+    <td><b>
+    <a href="http://x31.deja.com/getdoc.xp?AN=443028600&CONTEXT=944588942.1954873486&hitnum=11">
+    rover22.zip - Advanced web s
+    </a>
+    </b></td>
+    <td>comp.archives.ms-wind</td>
+    <td><a href="profile.xp?author=305d00d51ed045626f018ff4eb0c8f2f60049593651389469fa86e591b603786aaa2378ffc603d00368247c2abd5398e0122bc7a&ST=PS&ee=1">Jim Smyser     </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>05/02/1999</td>
+    <td><b>
+    <a href="http://x31.deja.com/getdoc.xp?AN=473303460&CONTEXT=944588942.1954873486&hitnum=12">
+    Re: &quot;Puheen tunnistus&quot;      
+    </a>
+    </b></td>
+    <td>sfnet.atk.ms-windows </td>
+    <td><a href="profile.xp?author=3e5d0bdb1cd64765a146a55a30e03f1bdbafdeb26006289410893ad24aa45260c3ad7cea1666b8fafecaf3f530c08ee4104e9af25f19afd184875acfe5d35dc0ad&ST=PS&ee=1">Raimo Suonio   </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>04/02/1999</td>
+    <td><b>
+    <a href="http://x31.deja.com/getdoc.xp?AN=461868928.8&CONTEXT=944588942.1954873486&hitnum=13">
+    NEW UPLOADS: Volume 0499 : #
+    </a>
+    </b></td>
+    <td>alt.comp.shareware   </td>
+    <td><a href="profile.xp?author=3b5808d316df45627a09aa433368908e4cbc2d93405f4f5228cf74e5d88d274865&ST=PS&ee=1">@TSC-ONLINE.CO.</a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>03/29/1999</td>
+    <td><b>
+    <a href="http://x31.deja.com/getdoc.xp?AN=460222036&CONTEXT=944588942.1954873486&hitnum=14">
+    New Files On UX5UL Station (
+    </a>
+    </b></td>
+    <td>fido7.iskra.fileecho </td>
+    <td><a href="profile.xp?author=3a5d09d518d346610b24a337115bd0c59a853d9df1c0fe4165e00f4485d886f0f5cf1afa14346df0a3fdea0795eba83b9237c5c2715fc4b577eb92a1ba4aee8c194a991a54f2c60b851a086e1350d6899b7d0ad6&ST=PS&ee=1">AllFix 2:463/77</a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>03/20/1999</td>
+    <td><b>
+    <a href="http://x31.deja.com/getdoc.xp?AN=457304153.3&CONTEXT=944588942.1954873486&hitnum=15">
+    Neue Files im KiSS System Ha
+    </a>
+    </b></td>
+    <td>hamburg.announce     </td>
+    <td><a href="profile.xp?author=3f5d08db17df4463b951de63e91f01259cbedbb6944d30348e1b9f57dd215867ebf0767c1525cd6beb2e2f5a2abce02618873e9f4f014a2bb8b209633259b4f348aaef5f32babb2af74be77f71&ST=PS&ee=1">Thomas Lehmann </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>02/02/1999</td>
+    <td><b>
+    <a href="http://x31.deja.com/getdoc.xp?AN=439993191&CONTEXT=944588942.1954873486&hitnum=16">
+    rover167.zip - Advance web s
+    </a>
+    </b></td>
+    <td>comp.archives.ms-wind</td>
+    <td><a href="profile.xp?author=3e5c00d71ed0406231284eb4d96de7c930827aa445e161a5dc64359e5b4a0760bdc80157603cb1e8e780ae56cfc4ed282c3a6b10&ST=PS&ee=1">Jim Smyser     </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>04/15/1999</td>
+    <td><b>
+    <a href="http://x31.deja.com/getdoc.xp?AN=466998280.1&CONTEXT=944588942.1954873486&hitnum=17">
+    Lisa der absolute .... Neue 
+    </a>
+    </b></td>
+    <td>braunschweig.newfiles</td>
+    <td><a href="profile.xp?author=3c5901d51fd3416178e6b1cc9cb03569779ba12a517fcfb30f97179b3924398ad93cf31f1fcd4d53fb3cf9119c4533e711bcabfc870a&ST=PS&ee=1">Lisa           </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#dddddd valign=top>
+    <td>02/05/1999</td>
+    <td><b>
+    <a href="http://x31.deja.com/getdoc.xp?AN=440885224.5&CONTEXT=944588942.1954873486&hitnum=18">
+    SIMTEL UPLOADS: MS-News Dige
+    </a>
+    </b></td>
+    <td>comp.software.sharewa</td>
+    <td><a href="profile.xp?author=315c0ed018d0456525d4475f410f24a259e770136afa623fb5ddb26471c41cdb6de386fe7d0d9df04d158ca17c881c03ba28d15ed0b17bb61ea0024ec5b971f9&ST=PS&ee=1">Simtel Uploads </a></td>
+    </tr>
+    
+
+    
+    
+    
+    
+    
+    <tr bgcolor=#eeeeee valign=top>
+    <td>12/24/1997</td>
+    <td><b>
+    <a href="http://x31.deja.com/getdoc.xp?AN=309914962&CONTEXT=944588942.1954873486&hitnum=19">
+    Intereducazione             
+    </a>
+    </b></td>
+    <td>it.sociale.scout     </td>
+    <td><a href="profile.xp?author=3f5b00d318de46622bc8ea02affd4d0121490c55bdb39b86e1fa9573477ac36a512f04dc6c4fe9d220e0902a847e5200443b9f82eea1a54d514fbe14f80c10023f6f0ffa&ST=PS&ee=1">Maurizio Tramon</a></td>
+    </tr>
+    
 
 </table>
+
+
+
+    
+    
+
+
+
+
+    
+	
+
+
+
+
+<table width=95% cellspacing=0 cellpadding=6 border=0><tr><td>
+<b class="small">Individual word match counts (exact)</b>
+<span class="small"><ul>
+
+<li> irover: 20</li>
+</ul></span>
+</td></tr></table>
+
+
+    
+
+
+<p>
+<table width=95% cellspacing=0 cellpadding=0 border=0><tr>
+<td>
+<a href="linkback.xp?act=f&res_type=search&res_title=irover&res_url=http://x31.deja.com/qs.xp%3fLNG%3dALL%26OP%3ddnquery.xp%26QRY%3dirover%26ST%3dPS%26defaultOp%3dOR%26maxhits%3d100%26showsort%3dscore"><b>Deja Linkback</b></a>: Create a custom link to these search results from your own Web site
+</td>
+</tr></table>
+
+<p>
+
+
+
+
+
+<table width=95% cellspacing=0 cellpadding=0 border=0><tr valign=top>
+
+<td>
+
+
+    <a href="http://x31.deja.com/dnquery.xp?QRY=irover&DBS=&ST=MS">View all search results</a><br>
+    
+
+    <a href="http://x31.deja.com/query_profile.xp?QRY=irover&DBS=&CONTEXT=944588942.1954873486">View forum search results</a><br>
+    
+
+</td>
+
+<td align=right>
+
+    <a href="http://x31.deja.com/rate/search.xp?QRY=irover&DBS=&CONTEXT=944588942.1954873486">View product search results</a><br>
+    
+
+    <a href="http://x31.deja.com/rate/prod_cat.xp?CONTEXT=944588942.1954873486">View product category search results</a><br>
+    
+
+</td>
+
+</tr></table>
+
+
+
+
 
 <!-- second stage content : end -->
 
@@ -1364,8 +932,8 @@ community in <b>Collecting</b>.
 
 
 <p>
-<table cellpadding=2 cellspacing=0 border=0 margineheight=1 marginewidth=1 width=100% bgcolor=#cccc66>
-<form action="http://www.deja.com/dnquery.xp">
+<table cellpadding=2 cellspacing=0 border=0  width=95% bgcolor=#cccc66>
+<form action="dnquery.xp">
 
 <tr>
 
@@ -1377,10 +945,16 @@ community in <b>Collecting</b>.
     <input type=hidden name=DBS value=2>
     
 
+    
+    
+    <input type=hidden name=ST value=PS>
+    
+
+
 <td bgcolor=#000000>
-<center><font face="geneva,arial" size=2 color=#ff6600><b>Search Discussions</b></font></center></td>
-<td><font face="geneva,arial" size=1 color=#000000>&nbsp;
-For a more detailed search go to <a href="http://www.deja.com/home_ps.shtml?QRY=stuntboy">Power Search</a></font></td>
+<center><font color=#ff6600><b style="font-size:10pt;">Search Discussions</b></font></center></td>
+<td><font size=2 color=#000000><span class="small">&nbsp;
+For a more detailed search in Discussions go to <a href="home_ps.shtml?QRY=irover&TAB=D">Power Search</a></span></font></td>
 </tr>
 
 
@@ -1394,8 +968,8 @@ For a more detailed search go to <a href="http://www.deja.com/home_ps.shtml?QRY=
     
 
 
-    <tr><td valign=top align=right><font face="geneva,arial" size=1><b>Search only in:</b></font></td>
-	<td valign=top><font face="geneva,arial" size=1>
+    <tr><td valign=top align=right><font size=2><b class="small">Search only in:</b></font></td>
+	<td valign=top><font size=2><span class="small">
     
     
 	
@@ -1404,7 +978,7 @@ For a more detailed search go to <a href="http://www.deja.com/home_ps.shtml?QRY=
 	
 	
 	
-	<input type=radio name=VW value=rec.hobbies.collecting > Recreation >> Hobbies >> Collecting<br>
+	<input type=radio name=VW value=comptech.prod_sw > Computing & Tech >> Productivity Software<br>
     
 	
 	
@@ -1412,7 +986,7 @@ For a more detailed search go to <a href="http://www.deja.com/home_ps.shtml?QRY=
 	
 	
 	
-	<input type=radio name=VW value=ane.starwars.toys > Arts & Entertainment >> Star Wars >> Toys<br>
+	<input type=radio name=VW value=health.mental.depression > Health & Fitness >> Mental >> Depression<br>
     
 	
 	
@@ -1420,19 +994,19 @@ For a more detailed search go to <a href="http://www.deja.com/home_ps.shtml?QRY=
 	
 	
 	
-	<input type=radio name=VW value=ane.starwars.actionfigures > Arts & Entertainment >> Star Wars >> Action Figures<br>
+	<input type=radio name=VW value=comptech.prod_sw.os > Computing & Tech >> Productivity Software >> Operating Systems<br>
     
     
-	<input type=radio name=VW value="" checked> All Deja.com</font>
+	<input type=radio name=VW value="" checked> All Deja.com</span></font>
     
     </td></tr>
 
 
 
 <tr>
-<td valign=top align=right><font face="geneva,arial" size=2><b>Search for:</b></font></td>
+<td valign=top align=right><font size=2><b class="small">Search for:</b></font></td>
 <td valign=top>
-<input type=text size=35 name=QRY value="stuntboy">
+<input type=text size=35 name=QRY value="irover">
 <input type=submit value="Search">
 
 
@@ -1441,7 +1015,7 @@ For a more detailed search go to <a href="http://www.deja.com/home_ps.shtml?QRY=
 
     
     
-    <br><nobr><font face="geneva,arial" size=1>Search&nbsp;
+    <br><nobr><font size=2><span class="small">Search&nbsp;
     <select name=svcclass>
     
 	
@@ -1459,7 +1033,7 @@ For a more detailed search go to <a href="http://www.deja.com/home_ps.shtml?QRY=
 	 
 	<option value=dnserver selected>all
     
-    </select> Messages</font></nobr>
+    </select> Messages</span></font></nobr>
 
 </td></tr>
 
@@ -1467,157 +1041,144 @@ For a more detailed search go to <a href="http://www.deja.com/home_ps.shtml?QRY=
 
 
 <!-- search again : end -->
+
+<br>&nbsp;
 </td></tr></table>
 <!-- second stage : end -->
 
-</td></tr></table>
-
+<!-- FOOTER : begin -->
 
 
 
 
 <table width=100% border=0 cellspacing=0 cellpadding=6><tr align=center>
 <td bgcolor=#000000 colspan=2>
-<font face="geneva,arial" size=2>
 
 
 
-    
-    
-	&nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=10536"><b><font color=#ffffff>Arts & Entertainment</font></b></a>&nbsp;
-	
-	
-    
 
     
     
-	&nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=10095"><b><font color=#ffffff>Automotive</font></b></a>&nbsp;
+	&nbsp;<a href="channels/channel.xp?CID=10536"><font color=#ffffff><b class="med">Arts & Entertainment</b></font></a>&nbsp;
 	
 	
     
 
     
     
-	&nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=10121"><b><font color=#ffffff>Computing & Tech</font></b></a>&nbsp;
+	&nbsp;<a href="channels/channel.xp?CID=10095"><font color=#ffffff><b class="med">Automotive</b></font></a>&nbsp;
 	
 	
     
 
     
     
-	&nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=10122"><b><font color=#ffffff>Consumer Electronics</font></b></a>&nbsp;
+	&nbsp;<a href="channels/channel.xp?CID=10121"><font color=#ffffff><b class="med">Computing & Tech</b></font></a>&nbsp;
 	
 	
     
 
     
     
-	&nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=12059"><b><font color=#ffffff>Health & Fitness</font></b></a>&nbsp;
+	&nbsp;<a href="channels/channel.xp?CID=10122"><font color=#ffffff><b class="med">Consumer Electronics</b></font></a>&nbsp;
+	
+	
+    
+
+    
+    
+	&nbsp;<a href="channels/channel.xp?CID=12059"><font color=#ffffff><b class="med">Health & Fitness</b></font></a>&nbsp;
 	<br>
 	
     
 
     
     
-	&nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=10424"><b><font color=#ffffff>Home & Family</font></b></a>&nbsp;
+	&nbsp;<a href="channels/channel.xp?CID=10424"><font color=#ffffff><b class="med">Home & Family</b></font></a>&nbsp;
 	
 	
     
 
     
     
-	&nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=10657"><b><font color=#ffffff>Lifestyles</font></b></a>&nbsp;
+	&nbsp;<a href="channels/channel.xp?CID=10657"><font color=#ffffff><b class="med">Lifestyles</b></font></a>&nbsp;
 	
 	
     
 
     
     
-	&nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=10003"><b><font color=#ffffff>Money</font></b></a>&nbsp;
+	&nbsp;<a href="channels/channel.xp?CID=10003"><font color=#ffffff><b class="med">Money</b></font></a>&nbsp;
 	
 	
     
 
     
     
-	&nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=10367"><b><font color=#ffffff>Politics & Media</font></b></a>&nbsp;
+	&nbsp;<a href="channels/channel.xp?CID=10367"><font color=#ffffff><b class="med">Politics & Media</b></font></a>&nbsp;
 	
 	
     
 
     
     
-	&nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=10407"><b><font color=#ffffff>Recreation</font></b></a>&nbsp;
+	&nbsp;<a href="channels/channel.xp?CID=10407"><font color=#ffffff><b class="med">Recreation</b></font></a>&nbsp;
 	
 	
     
 
     
     
-	&nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=10444"><b><font color=#ffffff>Sports</font></b></a>&nbsp;
+	&nbsp;<a href="channels/channel.xp?CID=10444"><font color=#ffffff><b class="med">Sports</b></font></a>&nbsp;
 	
 	
     
 
     
     
-	&nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=10526"><b><font color=#ffffff>Travel</font></b></a>&nbsp;
+	&nbsp;<a href="channels/channel.xp?CID=10526"><font color=#ffffff><b class="med">Travel</b></font></a>&nbsp;
 	
 	
     
-
-</font></td>
+</td>
 
 </tr><!--LAND-O-LINKS--><tr align=left> 
 
 <td>
 
-<table width="100%" bgcolor="#ffffff" cellpadding=10 cellspacing=0 border=0><tr>
 
-<td colspan=2><center><font face="geneva,arial" size=1>
+<table width=100% bgcolor=#ffffff cellpadding=10 cellspacing=0 border=0>
 
-
-<font face="geneva,arial" size=1>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.bfl.sitewide&cid=60137652746">SHOPPING</a> -
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.qwest.sitewide&cid=60137652746">FREE Internet Access</a> -
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.freeshop.sitewide&cid=60137652746">FREE STUFF</a> -
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.datek.sitewide&cid=60137652746">Trade with Datek</a> -
-<nobr><a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.necx.sitewide&cid=60137652746">GET IT NOW @ NECX</a> -</nobr>
-<nobr><a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.mtv.sitewide&cid=60137652746">MTV VMA Winners</a> -</nobr>
-<nobr><a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.ebay.sitewide&cid=60137652746">eBay Auctions</a> -</nobr>
-<nobr><a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.mailcom.sitewide&cid=60137652746">MAIL.COM</a> -</nobr>
-<nobr><a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.amazon.sitewide&cid=60137652746">Up to 50% off now at Amazon.com!</a> -</nobr>
-<nobr><a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.eco.sitewide&cid=60137652746">BUY AT COST at eCOST.com</a> -</nobr>
-<nobr><a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.joboptions.sitewide&cid=60137652746">Search for Jobs! JobOptions</a> -</nobr>
-<nobr><a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.son.sitewide&cid=60137652746">The BEST Music Online</a> -</nobr>
-<nobr><a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.onsale.sitewide&cid=60137652746">Onsale Auctions</a></nobr>
-</font>
+<tr><td colspan=2><center>
+<font size=1><span class="small">
 
 
+<span class=small>
+<a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.bfl.sitewide&cid=90811666381">Holiday Shopping</a> -
+<a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.freeshop.sitewide&cid=90811666381">FREE STUFF!</a> -
+<a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.datek.sitewide&cid=90811666381">Trade with Datek</a> -
+<nobr><a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.necx.sitewide&cid=90811666381">GET IT NOW @ NECX</a> -</nobr>
+<nobr><a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.ebay.sitewide&cid=90811666381">eBay Auctions</a> -</nobr>
+<nobr><a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.son.sitewide&cid=90811666381">The BEST Music Online</a> -</nobr>
+<nobr><a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.mailcom.sitewide&cid=90811666381">MAIL.COM</a> -</nobr>
+<nobr><a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.drkoop.sitewide&cid=90811666381">Get FREE Health Info@drkoop.com</a> -</nobr>
+<nobr><a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.eco.sitewide&cid=90811666381">BUY AT COST at eCOST.com</a> -</nobr>
+<nobr><a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.joboptions.sitewide&cid=90811666381">Search for Jobs! JobOptions</a> -</nobr>
+<nobr><a href="jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.onsale.sitewide&cid=90811666381">Onsale Auctions</a></nobr>
+</span>
 
+</span></font></center>
+</td></tr>
 
-
-
-
-
-
-
-</font></center>
-</td>
-
-</tr><tr>
-
-<td>
-<P>
-<FONT face="geneva,arial" size=1>
-<a href="http://www.deja.com/info/policy.shtml#copyright">Copyright</a> &copy; 1999 <a href="http://www.deja.com/corp/">Deja.com, Inc.</a> All rights reserved.
-<br><a href="http://www.deja.com/info/trademarks.shtml">Trademarks</a> &#183; <a href="http://www.deja.com/info/policy.shtml">Terms &amp; Conditions of Use</a> &#183; <a href="http://www.deja.com/info/privacy.shtml">Site Privacy Statement</a>.</FONT>
+<tr><td class="small">
+<p>
+<a href="info/policy.shtml#copyright">Copyright</a> &copy; 1999 <a href="corp/">Deja.com, Inc.</a> All rights reserved.
+<br><a href="info/trademarks.shtml">Trademarks</a> &#183; <a href="info/policy.shtml">Terms &amp; Conditions of Use</a> &#183; <a href="info/privacy.shtml">Site Privacy Statement</a>.</FONT>
 </td>
 
 <td align=right valign=bottom nowrap>
-<font face="geneva,arial" size=2><b>
-<A href="http://www.deja.com/corp/ad.shtml">Advertise with Us!</A> &nbsp;|&nbsp; 
-<a href="http://www.deja.com/corp/">About Deja.com</a>
+<b><a href="corp/ad.shtml">Advertise with Us!</A> &nbsp;|&nbsp; 
+<a href="corp/">About Deja.com</a>
 </b></font>
 </td>
 
@@ -1625,6 +1186,7 @@ For a more detailed search go to <a href="http://www.deja.com/home_ps.shtml?QRY=
 
 </td></tr></table>
 
+<!-- FOOTER : end -->
+
 </body>
 </html>
-

@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.16 1999/10/20 15:24:50 mthurn Exp mthurn $
+# $Id: Search.pm,v 1.18 1999/12/10 18:36:16 mthurn Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -67,8 +67,8 @@ package WWW::Search;
 
 require Exporter;
 @EXPORT = qw();
-@EXPORT_OK = qw(escape_query unescape_query generic_option strip_tags);
-$VERSION = '2.06';
+@EXPORT_OK = qw(escape_query unescape_query generic_option strip_tags @ENGINES_WORKING);
+$VERSION = '2.07';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
 use LWP::UserAgent;
@@ -80,22 +80,24 @@ use HTTP::Response;
 use Carp ();
 use URI::Escape;
 
-
 # internal
 my ($SEARCH_BEFORE, $SEARCH_UNDERWAY, $SEARCH_DONE) = (1..10);
-
 
 =head2 new
 
 To create a new WWW::Search, call
+
     $search = new WWW::Search('SearchEngineName');
+
 where SearchEngineName is replaced with a particular search engine.
 For example:
-    $search = new WWW::Search('AltaVista');
 
-If no search engine is specified a default will be chosen for you.
+    $search = new WWW::Search('HotBot');
 
+If no search engine is specified a default (currently 'AltaVista')
+will be chosen for you.
 The next step is usually:
+
     $search->native_query('search-engine-specific+query+string');
 
 =cut
@@ -950,5 +952,49 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 =cut
 
+
+@ENGINES_WORKING = qw(
+AltaVista	
+AltaVista::Careers
+AltaVista::Intranet
+AltaVista::Web		
+AOL::Classifieds::Employment
+Crawler			
+Deja
+Dejanews
+Dice                    
+Excite			
+Excite::News		
+Fireball
+FolioViews
+Google  	
+GoTo            
+HeadHunter      
+HotBot		
+HotFiles	
+Infoseek	
+Infoseek::Companies
+Infoseek::News		
+Infoseek::Web		
+LookSmart		
+Lycos			
+Lycos::Pages		
+Lycos::Sites		
+Magellan		
+MetaCrawler             
+Metapedia		
+Monster                 
+NetFind                 
+NorthernLight		
+Null			
+OpenDirectory           
+Profusion		
+SFgate			
+Snap			
+WebCrawler		
+Yahoo			
+Yahoo::Classifieds::Employment
+ZDNet			
+           );
 
 1;

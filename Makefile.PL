@@ -1,5 +1,5 @@
 # This -*- perl -*- script writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.8 1999/11/29 19:47:20 mthurn Exp $
+# $Id: Makefile.PL,v 1.9 1999/12/10 19:15:16 mthurn Exp $
 
 require 5.004;
 
@@ -31,3 +31,10 @@ WriteMakefile(
               'dist' => { COMPRESS => 'gzip -fv9', SUFFIX => 'gz' },
              );
 
+sub MY::postamble
+  {
+  return '
+test_parsing: pure_all
+	PERL_DL_NONLAZY=1 $(FULLPERL) -I$(INST_ARCHLIB) -I$(INST_LIB) -I$(PERL_ARCHLIB) -I$(PERL_LIB) t/test_parsing.pl $(TEST_ARGS)
+';
+  } # MY::postamble

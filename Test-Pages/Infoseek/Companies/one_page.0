@@ -1,18 +1,57 @@
-<html><head><base target="_top"><meta name="IS" content="ok_flash">
+<html><head><base target="_top"><meta name="IS" content="ok_blaze">
 <title>Companies : Pacific AND travel</Title></head>
-<body bgcolor="#FFFFFF" link="#0000CC" vlink="#990099"><table width="100%" cellpadding="0" cellspacing="0" border="0">
-<tr><td rowspan="2" width="1%"><a href="/Home/Home.html?svx=search_header&nh=25"><img src="/images/tmpl/search_go.gif" width="120" height="38" border="0" hspace="0" vspace="0"></td>
-<td height="23" width="100%">&nbsp;</td></tr>
-<tr><td bgcolor="#000000" height="15"><spacer type="block" width="1" height="15"></td></tr>
-</table><font face="Helvetica,Arial" size="2"><a href="/Home/Home.html?svx=search_breadcrumb&col=HV&nh=25&qt=Pacific+AND+travel&rf=0&st=0">GO</a> &gt; <b>Pacific AND travel</b> <br></font><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#F0F0E9"><tr><td bgcolor="#000000" colspan="5" height="1"><spacer type="block" width="1" height="1"></td></tr><tr><td bgcolor="#999999" colspan="5" height="1"><spacer type="block" width="1" height="1"></td></tr><tr><td bgcolor="#F0F0E9" colspan="5">&nbsp;</td></tr><tr><td bgcolor="#F0F0E9" width="10%">&nbsp;</td><td bgcolor="#F0F0E9" width="35%="><font face="Helvetica,Arial" size="2">Your search resulted in:<BR><a href="#search">5 Companies search results</a></font></td><td bgcolor="#F0F0E9" width="10%">&nbsp;</td><td bgcolor="#F0F0E9" width="35%"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="40%" rowspan="3">&nbsp;</td><td nowrap><font face="Helvetica,Arial" size="3"><form action="/Titles" method="get" name="WW_Search"><b>Search</b></font><font face="Verdana,Helvetica,Arial" size="1">&nbsp;<input type="radio" value="HV" name="col" checked><b>New</b> search&nbsp;<input type="radio" value="HV,cat_RES" name="col">Search <b>within</b> results</font><br><img src="/images/clear.gif" width="1" height="1"></td><td width="40%" rowspan="3">&nbsp;</td></tr><tr><td valign="top" nowrap><input type="text" name="qt" value="Pacific AND travel" size="35" maxlength="511">&nbsp;<INPUT TYPE=hidden NAME="sv" VALUE="IS">
+<body bgcolor="#FFFFFF" link="#0000CC" vlink="#990099" topmargin="4">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr><td rowspan="2" width="77" bgcolor="#000000" valign=top><a href="/Home/Home.html?svx=search_header&nh=25"><img src="/images/hp/logo_sr.gif" width="101" height="44" border="0"></td>
+<td valign=bottom height="21" width="911"><spacer height=15 width=1 type=block></td></tr>
+<tr><td bgcolor="#000000" valign=bottom width=911><img src="/images/clear.gif" width=109 height=1><img src="/images/hp/search.gif" width=421 height=19 usemap=#tabs border=0></td>
+<map name=tabs>
+<area coords=0,0,71,17 href="http://mypage.go.com/?svx=TAB_My_Page" shape=rect alt="Personalized stocks, news, weather and more">
+<area coords=75,0,136,17 href="http://www.go.com/?svx=TAB_Home_Page" shape=rect alt="go.com home page">
+<area coords=140,0,201,17 href="http://www.go.com/WebDir/?svx=TAB_Topic" shape=rect alt="Search the web or browse by topic">
+<area coords=205,0,307,17 href="http://www.go.com/Community/?svx=TAB_Community" shape=rect alt="Chat, message boards, homepages and more">
+<area coords=311,0,390,17 href="http://shop.go.com/?svx=TAB_Shop" shape=rect alt="Shop for products and brands">
+<area coords=405,2,419,16 href="/Help/help.html?key=HELP_T00008_SRCHQUIK&svx=TAB_Help" target="GOHelp" shape=rect alt="Help" onclick="window.open('/Help/help.html/?key=HELP_T00008_SRCHQUIK&svx=TAB_Help;', 'GOHelp', 'width=575,height=400,scrollbars=yes,resizable=yes,toolbar=yes'); return false;">
+</map>
+</tr>
+</table><font face="Helvetica,Arial" size="2"><a href="/WebDir/?svx=search_breadcrumb&col=HV&nh=25&qt=Pacific+AND+travel&rf=0&st=0">Search</a> &gt; <b>Pacific AND travel</b> <br></font><TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+<TR><TD bgColor=#000000 colSpan=5 height=1><SPACER height="1" width="1" type="block"></TD></TR>
+</TABLE>
+<TABLE bgColor="#f0f0e9" border=0 cellPadding=0 cellSpacing=0 width="100%">
+<TR>
+<TD align=center><TABLE border=0 cellPadding=0 cellSpacing=0>
+<TR vAlign=top>
+<TD>
+<table border="0" cellpadding="3" cellspacing="0"><tr><td colspan=2>
+<form action="/Titles" method="get" name="WW_Search">
+<input type="radio" value="HV" name="col" checked><font face="geneva,arial" size=2>
+<font color="#669966"><b>New</b></font> search </font>
+<input type="radio" value="HV,cat_RES" name="col"><font face="geneva,arial" size=2>Search 
+<font color="#669966"><b>within</b></font> results</font>
+</tr><tr> 
+<td><input type="text" name="qt" value="Pacific AND travel" size="30" maxlength="511"></td><INPUT TYPE=hidden NAME="sv" VALUE="IS">
 <INPUT TYPE=hidden NAME="lk" VALUE="noframes">
 <INPUT TYPE=hidden NAME="nh" VALUE="25">
+<input type=hidden name="svx" value="sbox_top">
 <input type=hidden name="cc" value="HV">
 <input type=hidden name="oq" value="Pacific AND travel">
-<input type="submit" value="Find"></td></tr><tr><td nowrap><font face="Verdana,Helvetica,Arial" size="1"><a href="/find?pg=advanced_www.html&ud9=advanced_www&nh=25">Search&nbsp;options</a>&nbsp;|&nbsp;<a target="GOHelp" href="/Help/help.html?key=HELP_T00008_SRCHQUIK&nh=25" onclick="window.open('/Help/help.html?key=HELP_T00008_SRCHQUIK&nh=25', 'GOHelp', 'width=575,height=400,scrollbars=yes,resizable=yes,toolbar=yes'); return false;">How&nbsp;to&nbsp;search</a>
-&nbsp;|&nbsp;</font><br><img src="/images/clear.gif" height="4" width="1"></td></tr></form><!-- End Search Box --></table></td><td bgcolor="#F0F0E9" width="10%">&nbsp;</td><tr><td colspan="5" height="8"><spacer type="block" width="1" height="8"></td></tr></table>
-<img src="/images/clear.gif" border="0" width="1" height="6"><br>
-<center><table cellpadding="0" cellspacing="0" border="0"><tr><td align="right" valign="top"><table width="121" height="60" cellpadding="1" cellspacing="0" border="0">
+<td><input type="submit" value="Find"></td></tr></form>
+<tr>
+<td nowrap colspan=2><font face="Verdana,Helvetica,Arial" size="1"><a href="/find?pg=advanced_www.html&ud9=advanced_www&nh=25">Search&nbsp;options</a>&nbsp;|&nbsp;<a target="GOHelp" href="/Help/help.html?key=HELP_T00008_SRCHQUIK&nh=25" onclick="window.open('/Help/help.html?key=HELP_T00008_SRCHQUIK&nh=25', 'GOHelp', 'width=575,height=400,scrollbars=yes,resizable=yes,toolbar=yes'); return false;">How&nbsp;to&nbsp;search</a>
+&nbsp;|&nbsp;</font><br></td></tr></table></td>
+<TD noWrap width=8><SPACER width="8" type="block"></TD>
+<TD noWrap width=8><SPACER width="8" type="block"></TD>
+<TD valign=top>
+</TD></TR>
+</TABLE>
+</td>
+</tr>
+</table>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+<TR bgColor=#cccccc><TD height=1><SPACER height="1" width="1" type="block"></TD></TR>
+</TABLE>
+<img src="/images/clear.gif" border="0" width="1" height="6"><br><center><table 
+cellpadding="0" cellspacing="0" border="0"><tr><td align="right" valign="top"><table width="121" height="60" cellpadding="1" cellspacing="0" border="0">
 <tr><td bgcolor="#000000" valign="top">
 <table width="119" height="58" cellpadding="0" cellspacing="0" border="0">
 <tr><td bgcolor="#FFFFFF" align="center" valign="bottom" width="119" NOWRAP><font face="Arial,Helvetica" size="-2">Books about</font></td></tr>
@@ -22,41 +61,77 @@
 </table>
 </td></tr>
 </table>
-</td><td>&nbsp;&nbsp;</td><td valign="top" align="left" colspan="3"><center><a href="http://transfer.go.com/cgi/atransfer.pl?goto=http://gm.preferences.com/click;spacedesc=ChevyCarKey99U_Infoseek_468x60_RunOfSite_Any%26time=1999.10.08.08.05.17&name=39292&srvc=go&guid=C31D75D1-7D91-11D3-8F4E-00902730418A" target="_top"><img src="http://gm.preferences.com/image;spacedesc=ChevyCarKey99U_Infoseek_468x60_RunOfSite_Any&time=1999.10.08.08.05.17" width=468 height=60 border="1" alt="Chevrolet" ><FONT FACE="verdana,arial,helvetica" SIZE="1"><b><br>Click here</b></font></a></center></td></tr></table></center><br>
+</td><td>&nbsp;&nbsp;</td><td valign="top" align="center"><center><a href="http://transfer.go.com/cgi/atransfer.pl?goto=http://www.previewtravel.com/Redirect/1,2217,,00.html%3Fwhere_to=ff%26layout=F1%26channel=WEB%26affiliate=IFO&name=56153&srvc=go&context=34588&guid=C3CD427E-AF0E-11D3-81BC-009027285197" target="_top"><img src="http://adimages.go.com/ad/sponsors/preview_travel/prev-ban0023.gif" width=468 height=60 border="1" alt="Preview Travel" align=><FONT FACE="verdana,arial,helvetica" SIZE="1"><b><br>Click Here</b></font></a></center></td></tr></table></center><img src="/images/clear.gif" border="0" width="1" height="6"><br>
 <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#003366">
-<tr><td valign="middle" align="left" nowrap colspan="3"><font face="Helvetica,Arial" size="3" color="#FFFFFF"><a name="search">&nbsp;<b>Companies search results</b>&nbsp;&nbsp;&nbsp;&nbsp;<font face="Helvetica,Arial" size="2">1 - 5 of <b>5</b> results most relevant to <b>Pacific AND travel</b> </font>&nbsp;</a></font></td>
+<tr><td valign="middle" align="left" nowrap colspan="3"><font face="Helvetica,Arial" size="3" color="#FFFFFF"><a name="topics">&nbsp;<b>Search results</b>&nbsp;</a></font></td>
 <td height="18" valign="middle" align="right" nowrap  colspan="1">&nbsp;
 </td></tr>
-<tr><td valign="middle" align="left" nowrap colspan="4" bgcolor="#000000"><img src="/images/clear.gif" border="0" width="100%" height="1"></td>
 </table>
-<spacer type="block" width="1" height="2"><!-- Begin RHS -->
-<table cellpadding="1" cellspacing="0" border="0" width="152" align="right" bgcolor="#FFFFFF"><tr><td height="4"><spacer type="block" width="1" height="4"></td></tr><tr><td></td></tr><tr><td><table cellpadding="1" cellspacing="0" border="0" width="150" align="right" bgcolor="#000000"><tr><td><table cellpadding="6" cellspacing="0" border="0" width="148" align="right" bgcolor="#FFFFFF"><tr><td><center><font size="2" face="Verdana,Helvetica,Arial"><b>Buy the book</b></font></center><br><!-- Infoseek cut-->
-<FONT FACE="Arial,Helvetica" SIZE="2">
-<A HREF="/redirect?sv=IS&lk=&ak=BORD&rl=LINK_C420_RESULTS_GO&rd=http://go.borders.com/fcgi-bin/part?PID=122010810&PKIND=aa&PAGE=http%3A%2F%2Fwww%2Eborders%2Ecom%2Fsections%2Fsection%5F10400%2Ehtml">Books</A> at <A HREF="/redirect?sv=IS&lk=&ak=BORD&rl=LINK_C420_RESULTS_GO&rd=http://go.borders.com/fcgi-bin/part?PID=122010814&PKIND=tb&PAGE=http%3A%2F%2Fwww%2Eborders%2Ecom%2F">Borders.com</A>
+<table cellpadding="1" cellspacing="0" border="0" width="152" align="right" bgcolor="#FFFFFF"><tr><td height="4"><spacer type="block" width="1" height="4"></td></tr><tr><td></td></tr><tr><td><table cellpadding="1" cellspacing="0" border="0" width="150" align="right" bgcolor="#000000"><tr><td><table cellpadding="6" cellspacing="0" border="0" width="148" align="right" bgcolor="#FFFFFF"><tr><td><center><font size="2" face="Verdana,Helvetica,Arial"><b>Buy the book</b></font></center><br><FONT FACE="Arial,Helvetica" SIZE="2">
+<A HREF="/redirect?sv=IS&lk=noframes&ak=BORD&rl=LINK_C420_RESULTS_GO&rd=http://go.borders.com/fcgi-bin/part?PID=122010810&PKIND=aa&PAGE=http%3A%2F%2Fwww%2Eborders%2Ecom%2Fsections%2Fsection%5F10400%2Ehtml">Books</A> at
+<A HREF="/redirect?sv=IS&lk=noframes&ak=BORD&rl=LINK_C420_RESULTS_GO&rd=http://go.borders.com/fcgi-bin/part?PID=122010814&PKIND=tb&PAGE=http%3A%2F%2Fwww%2Eborders%2Ecom%2F">Borders.com</A>
 <BR>
-- <A HREF="/redirect?sv=IS&lk=&ak=BORD&rl=LINK_C420_RESULTS_GO&rd=http://go.borders.com/fcgi-bin/part?PID=122010811&PKIND=aa&PAGE=http%3A%2F%2Fsearch%2Eborders%2Ecom%2Ffcgi%2Dbin%2Fdb2www%2Fsearch%2Fsearch%2Ed2w%2FDetails%3F%26mediaType%3DBook%26prodID%3D51086573">Stories of Silicon Valley</A><BR>
-- <A HREF="/redirect?sv=IS&lk=&ak=BORD&rl=LINK_C420_RESULTS_GO&rd=http://go.borders.com/fcgi-bin/part?PID=122010812&PKIND=aa&PAGE=http%3A%2F%2Fsearch%2Eborders%2Ecom%2Ffcgi%2Dbin%2Fdb2www%2Fsearch%2Fsearch%2Ed2w%2FDetails%3F%26mediaType%3DBook%26prodID%3D40621055">Building Wealth</A><BR>
-- <A HREF="/redirect?sv=IS&lk=&ak=BORD&rl=LINK_C420_RESULTS_GO&rd=http://go.borders.com/fcgi-bin/part?PID=122010813&PKIND=aa&PAGE=http%3A%2F%2Fsearch%2Eborders%2Ecom%2Ffcgi%2Dbin%2Fdb2www%2Fsearch%2Fsearch%2Ed2w%2FDetails%3F%26mediaType%3DBook%26prodID%3D51181491">Qualities of a Leader</A><BR>
-</FONT>
-<!-- Infoseek cut--><hr>
-<font face="Geneva,Arial" size=2><center><b>Search Amazon.com</b><br></center><li><a href="/redirect?sv=IS&lk=noframes&ak=SEEK&rl=LINK_T420_Amazon_Search_AD&_nr=1&rd=http://www.amazon.com/exec/obidos/external-search?tag=go-srch-kw&mode=blended&keyword=PACIFIC+AND+TRAVEL">PACIFIC AND TRA...</a><br></font><li><font size=2 face="Geneva,Arial"><a href="/redirect?sv=IS&lk=&ak=AMAZ&rl=LINK_SearchAd_T420_HOT&rd=http://www.amazon.com/exec/obidos/redirect?tag=go-srch-video&path=subst/video/sellers/amazon-top-100-video.html">100 Hot Videos</a></font><BR>
-<li><font size=2 face="Geneva,Arial"><a href="/redirect?sv=IS&lk=&ak=AMAZ&rl=LINK_SearchAd_T420_TOP&rd=http://www.amazon.com/exec/obidos/redirect?tag=go-srch-ce&path=subst/electronics/misc/top-sellers.html">Top Electronics</a></font><BR><br>
-<font size=2 face="Geneva,Arial">-&nbsp;<a href="/redirect?sv=IS&lk=&ak=AMAZ&rl=LINK_SearchAd_T420_CLICK&rd=http://www.amazon.com/exec/obidos/redirect?tag=go-srch-cemsg&path=subst/electronics/home/home.html">Click Here to Shop!</a>&nbsp;-</font><BR></td></tr></table></td></tr></table></td></tr></table>
-<!-- End RHS -->
-<font face="Helvetica,Arial" size="2"><a href="http://infoseek.go.com/Titles?col=HV&nh=20&qt=Pacific+AND+travel&rf=0&st=0&sf=1&ud4=1">Hide summaries</a></font><br><br><p>
-<font face="Helvetica,Arial" size="2"><p><b><a href="/Content?arn=44509&qt=Pacific+AND+travelsv=IS&lk=&col=HV&kt=A&ak=corpdir">Transmedia Asia Pacific, Inc.</a></b>
-<br>Transmedia Asia <b style="background:#FFFF99">Pacific</b> believes it holds the card to great savings. The firm and its subsidiaries sell restaurant and retail discount card services under license from US-based Transmedia Network. It also operates telephone advice ...<br><p><b><a href="/Content?arn=47633&qt=Pacific+AND+travelsv=IS&lk=&col=HV&kt=A&ak=corpdir">Pleasant Holidays, LLC</a></b>
-<br>Looking to get away from it all? Pleasant Holidays might have the answer. While the company has traditionally specialized in offering wholesale tour packages to Hawaii and Mexico, it has also begun booking passengers on excursions to ...<br><p><b><a href="/Content?arn=41393&qt=Pacific+AND+travelsv=IS&lk=&col=HV&kt=A&ak=corpdir">Qantas Airways Limited</a></b>
-<br>Some Australians go on walkabout; others fly about on Qantas Airways, Australia's #1 airline for domestic <b style="background:#FFFF99">travel</b> and a leader in international flights. The airline has nearly 100 jets in service; its Australian regional subsidiaries ...<br><p><b><a href="/Content?arn=42764&qt=Pacific+AND+travelsv=IS&lk=&col=HV&kt=A&ak=corpdir">DFS Group Limited</a></b>
-<br>DFS Group has made it inexcusable to return from a trip abroad without gifts for the family. The world's largest <b style="background:#FFFF99">travel</b> retailer, DFS (Duty Free Shoppers) operates 150 stores in 16 countries, primarily throughout the Asia/<b style="background:#FFFF99">Pacific</b> ...<br><p><b><a href="/Content?arn=42539&qt=Pacific+AND+travelsv=IS&lk=&col=HV&kt=A&ak=corpdir">Kitty Hawk, Inc.</a></b>
-<br>Equipped with plenty of the right stuff, airfreight carrier and logistics provider Kitty Hawk has more than 120 owned and leased aircraft that fly throughout the US as well as in the <b style="background:#FFFF99">Pacific</b> Rim and South America. Kitty Hawk arranges ...<br></font><br clear=all><br clear=all><font face="Helvetica,Arial" size="2"></font><br><br><p><center>
-<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td bgcolor="#F0F0E9">&nbsp;</td></tr></table><p><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td rowspan="4" width="35%" align="center" valign="top"><font size="2" face="Verdana,Helvetica,Arial"><a href="/Titles?nh=25&tv=brag&qt=Pacific+AND+travel&col=HV&sv=IS&svx=brag_page"><img src="/images/misc/powered_by_stack.gif" border="0" alt="Powered by Infoseek"><br>What makes us better</a></font></td><tr><td width="40%" rowspan="3">&nbsp;</td><td nowrap><font face="Helvetica,Arial" size="3"><form action="/Titles" method="get" name="WW_Search"><b>Search</b></font><font face="Verdana,Helvetica,Arial" size="1">&nbsp;<input type="radio" value="HV" name="col" checked><b>New</b> search&nbsp;<input type="radio" value="HV,cat_RES" name="col">Search <b>within</b> results</font><br><img src="/images/clear.gif" width="1" height="1"></td><td width="40%" rowspan="3">&nbsp;</td></tr><tr><td valign="top" nowrap><input type="text" name="qt" value="Pacific AND travel" size="35" maxlength="511">&nbsp;<INPUT TYPE=hidden NAME="sv" VALUE="IS">
+- <A HREF="/redirect?sv=IS&lk=noframes&ak=BORD&rl=LINK_C420_RESULTS_GO&rd=http://go.borders.com/fcgi-bin/part?PID=122010811&PKIND=aa&PAGE=http%3A%2F%2Fsearch%2Eborders%2Ecom%2Ffcgi%2Dbin%2Fdb2www%2Fsearch%2Fsearch%2Ed2w%2FDetails%3F%26mediaType%3DBook%26prodID%3D51302417">The Savage Truth On Money</A><BR>
+- <A HREF="/redirect?sv=IS&lk=noframes&ak=BORD&rl=LINK_C420_RESULTS_GO&rd=http://go.borders.com/fcgi-bin/part?PID=122010812&PKIND=aa&PAGE=http%3A%2F%2Fsearch%2Eborders%2Ecom%2Ffcgi%2Dbin%2Fdb2www%2Fsearch%2Fsearch%2Ed2w%2FDetails%3F%26mediaType%3DBook%26prodID%3D51391298">NY Times Century of Business</A><BR>
+- <A HREF="/redirect?sv=IS&lk=noframes&ak=BORD&rl=LINK_C420_RESULTS_GO&rd=http://go.borders.com/fcgi-bin/part?PID=122010813&PKIND=aa&PAGE=http%3A%2F%2Fsearch%2Eborders%2Ecom%2Ffcgi%2Dbin%2Fdb2www%2Fsearch%2Fsearch%2Ed2w%2FDetails%3F%26mediaType%3DBook%26prodID%3D51261236">The Internet Bubble</A><BR>
+</FONT></td></tr></table>
+</td></tr></table>
+<br clear=all><br>
+<table cellpadding=1 cellspacing=0 border=0 width=150 align=right bgcolor="#000000"><tr><td>
+<table cellpadding=6 cellspacing=0 border=0 width=148 align=right bgcolor="#FFFFFF"><tr><td>
+<font face="Geneva,Arial" size=2><center><b>SHOP AMAZON.COM</b><br></center><li type="square"><a href="/redirect?sv=IS&lk=noframes&ak=AMAZ&rl=LINK_T420_Amazon_Search_AD&_nr=1&rd=http%3A//www.amazon.com/exec/obidos/external-search?tag=go-srch-kw&mode=blended&keyword=PACIFIC%2BAND%2BTRAVEL">PACIFIC AN...</a><br></font><li type=square><font size=2 face="Geneva,Arial"><a href="/redirect?sv=IS&lk=&ak=AMAZ&rl=LINK_SearchAd_T420_POKEMON&rd=http://www.amazon.com/exec/obidos/redirect?tag=go-srch-video&path=subst/video/misc/pokemon.html">Buy Pokémon</a></font><BR>
+<li type=square><font size=2 face="Geneva,Arial"><a href="/redirect?sv=IS&lk=&ak=AMAZ&rl=LINK_SearchAd_T420_BUY&rd=http://www.amazon.com/exec/obidos/redirect?tag=go-srch-ce&path=tg/electronics/browse-electronics/-/172514">Buy DVD Players!</a></font><BR><BR>
+<font size=2 face="Geneva,Arial">-&nbsp;<a href="/redirect?sv=IS&lk=&ak=AMAZ&rl=LINK_SearchAd_T420_CLICK&rd=http://www.amazon.com/exec/obidos/redirect?tag=go-srch-msg&path=subst/home/go-home.html">Click Here to Shop!</a>&nbsp;-</font><BR></td></tr></table></td></tr></table></td></tr></table>
+<font face="Helvetica,Arial" size="2"><font size=1><a href="http://infoseek.go.com/Titles?col=HV&nh=20&qt=Pacific+AND+travel&rf=0&st=0&sf=1&ud4=1">Hide summaries</a></font></font><br><br>
+<p>
+<font face="Helvetica,Arial" size="2">1. <b><a href="/Content?arn=44509&qt=Pacific+AND+travelsv=IS&lk=&col=HV&kt=A&ak=corpdir">Transmedia Asia Pacific, Inc.</a></b>
+<br>Transmedia Asia <b style="background:#FFFF99">Pacific</b> believes it holds the card to great savings. The firm and its subsidiaries sell restaurant and retail discount card services under license from US-based Transmedia Network. It also operates telephone advice ...<br><p>2. <b><a href="/Content?arn=47633&qt=Pacific+AND+travelsv=IS&lk=&col=HV&kt=A&ak=corpdir">Pleasant Holidays, LLC</a></b>
+<br>Looking to get away from it all? Pleasant Holidays might have the answer. While the company has traditionally specialized in offering wholesale tour packages to Hawaii and Mexico, it has also begun booking passengers on excursions to Asia, ...<br><p>3. <b><a href="/Content?arn=43672&qt=Pacific+AND+travelsv=IS&lk=&col=HV&kt=A&ak=corpdir">Intrav</a></b>
+<br>When Intrav calls itself a deluxe tour operator, it's not kidding. The purveyor of such exotic <b style="background:#FFFF99">travel</b> adventures as Around the World by Private Concorde (aboard a supersonic jet, available at the low, low price of $59,500 per person), Intrav ...<br><p>4. <b><a href="/Content?arn=41393&qt=Pacific+AND+travelsv=IS&lk=&col=HV&kt=A&ak=corpdir">Qantas Airways Limited</a></b>
+<br>Some Australians go on walkabout; others fly about on Qantas Airways, Australia's #1 airline for domestic <b style="background:#FFFF99">travel</b> and a leader in international flights. The airline has nearly 100 jets in service; its Australian regional subsidiaries ...<br><p>5. <b><a href="/Content?arn=42764&qt=Pacific+AND+travelsv=IS&lk=&col=HV&kt=A&ak=corpdir">DFS Group Limited</a></b>
+<br>Some travelers prefer seeing sites, but as DFS Group knows, some prefer seeing sales. The world's largest <b style="background:#FFFF99">travel</b> retailer, DFS (Duty Free Shoppers) runs 150 stores, located primarily in the Asia/<b style="background:#FFFF99">Pacific</b> region and on the US West Coast. DFS ...<br></font><p><font face="Helvetica,Arial" size="2"><font size=2></font></font><br><br>
+<p><center>
+<table border=0 width=100% cellpadding=0 cellspacing=0>
+<tr><td bgcolor="#000000" height=1><spacer type=block height=1></td></tr>
+</table>
+<table border=0 cellpadding=0 cellspacing=0><tr><td align=left>
+<table border="0" cellpadding="3" cellspacing="0"><tr><td colspan=2>
+<form action="/Titles" method="get" name="WW_Search">
+<input type="radio" value="HV" name="col" checked><font face="geneva,arial" size=2>
+<font color="#669966"><b>New</b></font> search </font>
+<input type="radio" value="HV,cat_RES" name="col"><font face="geneva,arial" size=2>Search 
+<font color="#669966"><b>within</b></font> results</font>
+</tr><tr> 
+<td><input type="text" name="qt" value="Pacific AND travel" size="30" maxlength="511"></td><INPUT TYPE=hidden NAME="sv" VALUE="IS">
 <INPUT TYPE=hidden NAME="lk" VALUE="noframes">
 <INPUT TYPE=hidden NAME="nh" VALUE="25">
+<input type=hidden name="svx" value="sbox_bottom">
 <input type=hidden name="cc" value="HV">
 <input type=hidden name="oq" value="Pacific AND travel">
-<input type="submit" value="Find"></td></tr><tr><td nowrap><font face="Verdana,Helvetica,Arial" size="1"><a href="/find?pg=advanced_www.html&ud9=advanced_www&nh=25">Search&nbsp;options</a>&nbsp;|&nbsp;<a target="GOHelp" href="/Help/help.html?key=HELP_T00008_SRCHQUIK&nh=25" onclick="window.open('/Help/help.html?key=HELP_T00008_SRCHQUIK&nh=25', 'GOHelp', 'width=575,height=400,scrollbars=yes,resizable=yes,toolbar=yes'); return false;">How&nbsp;to&nbsp;search</a>
-&nbsp;|&nbsp;</font><br><img src="/images/clear.gif" height="4" width="1"></td></tr></form><!-- End Search Box --></table><br><br><center><font size="2" face="Verdana,Helvetica,Arial">If there is a site you would like listed, click <a href="/AddUrl?pg=SubmitUrl.html&nh=25&svx=search_footer"><b>add URL</b></a>.<hr><br><center><b>GO Network partners:</b>&nbsp; <a href="http://abc.go.com/"><b>ABC.com</b></a>&nbsp; <a href="http://abcnews.go.com"><b>ABCNEWS.com</b></a>&nbsp; <a href="http://disney.go.com"><b>Disney.com</b></a>&nbsp; <a href="http://espn.go.com"><b>ESPN.com</b></a>&nbsp; <a href="http://family.go.com"><b>Family.com</b></a>&nbsp; <a href="http://mrshowbiz.go.com"><b>Mr. Showbiz</b></a>
-<br><br><a href="/doc?pg=copyright.html">Copyright</a> &copy; 1999 Infoseek Corporation.  All rights reserved.&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://comments.go.com/comments.html">Contact us</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://info.go.com/doc/policy/disclaimer.html">Legal Notices</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://info.go.com/doc/policy/privacy.html">Privacy policy</a></font></center>
-</body>
-</html>
+<td><input type="submit" value="Find"></td></tr></form>
+<tr>
+<td nowrap colspan=2><font face="Verdana,Helvetica,Arial" size="1"><a href="/find?pg=advanced_www.html&ud9=advanced_www&nh=25">Search&nbsp;options</a>&nbsp;|&nbsp;<a target="GOHelp" href="/Help/help.html?key=HELP_T00008_SRCHQUIK&nh=25" onclick="window.open('/Help/help.html?key=HELP_T00008_SRCHQUIK&nh=25', 'GOHelp', 'width=575,height=400,scrollbars=yes,resizable=yes,toolbar=yes'); return false;">How&nbsp;to&nbsp;search</a>
+&nbsp;|&nbsp;</font><br></td></tr></table></td>
+<TD noWrap width=8><SPACER width="8" type="block"></TD>
+<TD bgColor=#000000 noWrap width=1><SPACER width="1"type="block"></TD>
+<TD noWrap width=8><SPACER width="8" type="block"></TD>
+<TD valign=middle><font face="verdana, helvetica" size=1>
+<b>Did you know? </b><br><br>
+If you are using Windows 95/98 or Windows NT, you can 
+<b>search all the major search engines at the same time</b>
+using <a href="http://express.go.com/subdocuments/sr_details.html">GO Network Express Search</a>.
+Free download at <a href="http://express.go.com/sr_download.html">http://express.go.com</a>.</font></td>
+</tr></table><table border=0 width=100% cellpadding=0 cellspacing=0>
+<tr><td bgcolor="#000000" height=1><spacer type=block height=1></td></tr></table>
+<center>&nbsp;<font face="verdana,geneva,arial" size=1> 
+<b>GO Network Partners:&nbsp;</b>&nbsp;&nbsp;
+&nbsp; <a href="http://abc.go.com">ABC.com</a> &nbsp; <a href="http://abcnews.go.com">ABCNEWS.com</a> 
+&nbsp; <a href="http://espn.go.com">ESPN.com</a> &nbsp; <a href="http://disney.go.com">Disney.com</a> 
+&nbsp; <a href="http://family.go.com">Family.com</a> &nbsp; <a href="http://mrshowbiz.go.com">MrShowbiz</a></font></center>
+<table border=0 width=100% cellspacing=0 cellpadding=3>
+<tr><td nowrap><font face="geneva,arial" size=1><a href="/doc?pg=copyright.html">Copyright</a> 
+&copy; 1998, 1999 Infoseek Corporation. All rights reserved.</font></td>
+<td align="right" nowrap><font face="geneva,arial" size=1>&nbsp; 
+<!-- <a href="/AddUrl?pg=SubmitUrl.html&nh=25&svx=search_footer"> --><a href="/AddUrl?pg=SubmitUrl.html">Submit your site</A>&nbsp; &nbsp;<A HREF="http://info.go.com/doc/policy/disclaimer.html">Legal Notices</a> &nbsp;&nbsp;<a href="http://info.go.com/doc/policy/privacy.html">Privacy&nbsp;policy</a></font></td>
+</tr></table></center>
+</body></html>

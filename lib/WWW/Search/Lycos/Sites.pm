@@ -1,7 +1,7 @@
 # Sites.pm
 # by Martin Thurn
 # Copyright (C) 1996 by USC/ISI
-# $Id: Sites.pm,v 1.2 1999/10/18 19:24:14 mthurn Exp $
+# $Id: Sites.pm,v 1.5 1999/12/10 17:41:57 mthurn Exp $
 #
 # Complete copyright notice follows below.
 
@@ -42,6 +42,14 @@ was written by Martin Thurn <MartinThurn@iname.com>
 
 If it''s not listed here, then it wasn''t a meaningful nor released revision.
 
+=head2 2.06, 1999-12-10
+
+handle missing 'next' link
+
+=head2 2.05, 1999-12-03
+
+new search parameters and new search url
+
 =head2 2.04, 1999-10-10
 
 First public release (coincided with WWW::Search 2.04).
@@ -74,7 +82,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search::Lycos Exporter);
-$VERSION = '2.04';
+$VERSION = '2.06';
 
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 $TEST_CASES = <<"ENDTESTCASES";
@@ -89,12 +97,27 @@ use WWW::Search::Lycos;
 sub native_setup_search
   {
   my $self = shift;
-  $self->{_child_options} = {
-                             cat => 'dirw',
-                             mtemp => 'sites',
-                            };
+  # Lycos returns 10 hpp no matter what:
+  $self->{'_hits_per_page'} = 10;  
+  # By using _options, we totally replace the settings of the parent
+  # (if we just want to add to the parent, we can use _child_options)
+  $self->{'search_base_url'} = 'http://www.lycos.com';
+  $self->{_options} = {
+                       first => 1,
+                       # page => 1,
+                       search_url => $self->{'search_base_url'} .'/srch/more.html',
+                       type => 'websites',
+                      };
   # let Lycos.pm finish up the hard work.
   return $self->SUPER::native_setup_search(@_);
   }
 
 1;
+
+__END__
+
+NEW FORMAT 1999-12-01:
+
+full url: http://www.lycos.com/srch/more.html?lpv=1&type=websites&loc=mlink_w&l=12&y=89724&c=2111&o=27&s=91874&pn=&qc=Y&page=1&query=star+wars&first=1
+
+minimal url: http://www.lycos.com/srch/more.html?type=websites&page=1&query=star+wars&first=1

@@ -2,7 +2,7 @@
 # NetFind.pm
 # by Gil Vidals 
 # Copyright (C) 1999-2000 by Gil Vidals at PositionGeek.com 
-# $Id: NetFind.pm,v 1.7 1999/10/11 16:58:51 mthurn Exp $
+# $Id: NetFind.pm,v 1.8 1999/12/03 18:02:55 mthurn Exp $
 ##########################################################
 
 
@@ -12,14 +12,14 @@ package WWW::Search::NetFind;
 =head1 NAME
 
 WWW::Search::NetFind - class for searching NetFind 
-Originally based on Google.pm
+Originally based on Google.pm. NetFind is the same
+as AOL search.
 
 =head1 SYNOPSIS
 
 use WWW::Search;
 my $Search = new WWW::Search('NetFind'); # cAsE matters
-		my $Query = WWW::Search::escape_query("search engine
-consultant");
+my $Query = WWW::Search::escape_query("search engine consultant");
 $Search->native_query($Query);
 while (my $Result = $Search->next_result()) {
 print $Result->url, "\n";
@@ -27,9 +27,9 @@ print $Result->url, "\n";
 
 =head1 DESCRIPTION
 
-This class is a NetFind specialization of WWW::Search.
+This class is a NetFind (AOL) specialization of WWW::Search.
 It handles making and interpreting NetFind searches.
-F<http://netfind.aol.com>.
+F<http://search.aol.com>.
 
 NetFinds returns 100 Hits per page. 
 
@@ -38,7 +38,7 @@ be done through L<WWW::Search> objects.
 
 =head1 AOL SEARCH
 
-Please note that searching at netfind.aol.com produces 
+Please note that searching at search.aol.com produces 
 results from both the Open Source Directory and the licensed
 Inktomi search engine. Results from Open Source Directory are
 presented first followed by results from Inktomi.
@@ -52,7 +52,7 @@ are from the Inktomi engine.
 If you are interested in results only from Inktomi, 
 then force the search to use the web.adp query like so:
 
-$search->native_query(WWW::Search::escape_query($query),{search_url=>'http://netfind.aol.com/web.adp'});
+ $search->native_query(WWW::Search::escape_query($query),{search_url=>'http://netfind.aol.com/web.adp'});
 
 If you are interested in results only from the Open Source
 Directory, refer to the OpenDirectory.pm module.
@@ -97,6 +97,11 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 Since this is a new Backend there are undoubtly one. Report any ASAP. 
 
 =head1 VERSION HISTORY
+1.8
+Changed the root search from netfind.aol.com to search.aol.com
+because netfind.aol.com seemed very unresponsive and the
+searches timed out frequently. Also changed to the new format
+using $self->hash_to_cgi_string($self->{_options});
 
 1.5
 Formatting change 10/08/99
@@ -112,7 +117,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '1.5';
+$VERSION = '1.8';
 
 $MAINTAINER = 'Gil Vidals <gil@positiongeek.com>';
 $TEST_CASES = <<"ENDTESTCASES";
@@ -139,9 +144,9 @@ sub native_setup_search {
      $self->{_next_to_retrieve} = 1;
      $self->{'_num_hits'} = 0;
      if (!defined($self->{_options})) {
-       $self->{'search_base_url'} = 'http://netfind.aol.com/';
+       $self->{'search_base_url'} = 'http://search.aol.com/';
        $self->{_options} = {
-         'search_url' => 'http://netfind.aol.com/dirsearch.adp',
+         'search_url' => 'http://search.aol.com/dirsearch.adp',
          'query' => $native_query,
        };
      }
@@ -164,7 +169,8 @@ sub native_setup_search {
      }
      chop $options;
      # Finally figure out the url.
-     $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
+     # old way ---> $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
+     $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $self->hash_to_cgi_string($self->{_options});
      } # native_setup_search
 
 # private
@@ -310,5 +316,7 @@ return $hits_found;
 } # native_retrieve_some
 
 1;
+
+
 
 

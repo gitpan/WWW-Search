@@ -8,22 +8,7 @@
 <head>
 <title>Deja.com: Error</title>
 <meta name=keywords content="dejanews usenet newsgroup articles search query discussion">
-
-
-
-
-<style type="text/css">
-
-    <!--        A.DARK3     {color: ff3300}-->
-
-    <!--        A.DARK2     {color: ff6600}-->
-
-    <!--        A.LIGHT2     {color: ffcc66}-->
-
-
-
-
-</style>
+<link rel="stylesheet" type="text/css" href="/templates/css.epl">
 
 
 <base href="http://www.deja.com/">
@@ -40,8 +25,26 @@
 </tr><tr>
 <td width=135 bgcolor=#6666cc valign=bottom align=left><a href="http://www.deja.com/"><img src="http://g.deja.com/gifs/dlogo_130_b.gif" width=130 height=75 alt="deja.com" border=0 align=left hspace=3></a></td>
 <td width=12 bgcolor=#ffffff><img src="http://g.deja.com/gifs/20x20.gif" width=12 border=0 height=60 align=left></td>
-<td bgcolor=#ffffff valign=top align=center><A HREF="/jump/http://gp1.deja.com/gtc?id=1015792&dejahi=0&tm=939394685.979283&site=dn&keyword=bogus21746nosuchword939394601&page=d.search.query.err.no_matching_articles&slot=468x60.1&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7c468x60.1%7c%7c%7c%7c%7c%7c%7c">
-<IMG ALIGN=MIDDLE HEIGHT=60 WIDTH=468 SRC="http://view.avenuea.com/view/deja_mtv_ba409_081299cs_1/direct/01-939394685.979283" ALT="MTV Online - click here!" border=1></A><BR>
+<td bgcolor=#ffffff valign=top align=center><table height="60" cellpadding="0" cellspacing="0" border="0" bgcolor="#003366" width="468">
+<form method="get" action="/jump/http://gp1.deja.com/gtf/id=1019443&dejafi=0&tm=944588936.006540&site=dn&keyword=bogus11103nosuchword944588930&page=d.search.query.err.no_matching_articles&slot=468x60.1&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7c468x60.1%7c%7c%7c%7c%7c%7c%7c" TARGET=_top>
+<input type="hidden" name="src" value="001_01_I_01_001_0030">
+<tr>
+<td valign="top" colspan="2" align="left">
+<a href="/jump/http://gp1.deja.com/gtc?id=1019443&dejahi=0&tm=944588936.006540&site=dn&keyword=bogus11103nosuchword944588930&page=d.search.query.err.no_matching_articles&slot=468x60.1&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7c468x60.1%7c%7c%7c%7c%7c%7c%7c" TARGET=_top><img height="30" width="468" src="http://ads25.focalink.com/SmartBanner/chtml/16515.135-INSERT_TIME_DATE_STAMP_HERE/nph-graphic/68769kirby6.gif" border="0"></a></td></tr>
+<tr>
+<td valign="top" align="left width="307" height="30">
+<a href="/jump/http://gp1.deja.com/gtc?id=1019443&dejahi=0&tm=944588936.006540&site=dn&keyword=bogus11103nosuchword944588930&page=d.search.query.err.no_matching_articles&slot=468x60.1&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7c468x60.1%7c%7c%7c%7c%7c%7c%7c" TARGET=_top><img height="30" width="142" src="http://ads25.focalink.com/SmartBanner/chtml/16515.135/image/68769kirby-bottom.gif" border="0"></a></td>
+<td height="30" width="468" bgcolor="#003366" align="center">
+<select name="book" class="shared" size="1">
+<option>Kirby's using his million to:
+<option>move out of his mom's basement
+<option>have his Yugo detailed once a week
+<option>never miss another Star Trek convention
+<option>make his comic books Y2k compliant
+<option>corner the cabbage patch kid market
+<option>buy a mink bean-bag
+</select>
+</td></tr></form></table>
 
 </td>
 <td width=100% align=right>
@@ -89,120 +92,13 @@
 
 
 
-
-
-
-<table border=0 cellspacing=2 cellpadding=2><tr>
-<td bgcolor="#cccc66"><font face="geneva,arial" size=1>
-
-    
-    
-	
-	<a href="http://www.deja.com/channels/forums.xp?CID=10536">Arts & Entertainment</a>
-	
-    
-    |
-
-    
-    
-	
-	<a href="http://www.deja.com/channels/forums.xp?CID=10095">Automotive</a>
-	
-    
-    |
-
-    
-    
-	
-	<a href="http://www.deja.com/channels/forums.xp?CID=10121">Computing & Tech</a>
-	
-    
-    |
-
-    
-    
-	
-	<a href="http://www.deja.com/channels/forums.xp?CID=10122">Consumer Electronics</a>
-	
-    
-    |
-
-    
-    
-	
-	<a href="http://www.deja.com/channels/forums.xp?CID=12059">Health & Fitness</a>
-	
-    
-    |
-
-    
-    
-	
-	<a href="http://www.deja.com/channels/forums.xp?CID=10424">Home & Family</a>
-	
-    
-    |
-
-    
-    
-	
-	<a href="http://www.deja.com/channels/forums.xp?CID=10657">Lifestyles</a>
-	
-    
-    |
-
-    
-    
-	
-	<a href="http://www.deja.com/channels/forums.xp?CID=10003">Money</a>
-	
-    
-    |
-
-    
-    
-	
-	<a href="http://www.deja.com/channels/forums.xp?CID=10367">Politics & Media</a>
-	
-    
-    |
-
-    
-    
-	
-	<a href="http://www.deja.com/channels/forums.xp?CID=10407">Recreation</a>
-	
-    
-    |
-
-    
-    
-	
-	<a href="http://www.deja.com/channels/forums.xp?CID=10444">Sports</a>
-	
-    
-    |
-
-    
-    
-	
-	<a href="http://www.deja.com/channels/forums.xp?CID=10526">Travel</a>
-	
-    
-    
-
-</font></td>
-</tr></table>
-
-
-
 </td>
 </tr></table>
 <!-- nav_chan : end -->
 
 </td>
 <td rowspan=2 width=1 bgcolor=#000000><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td>
-<td rowspan=2 bgcolor="#6666cc" valign=top align=center width=100%>
+<td rowspan=2 bgcolor="#6666cc" valign=top align=center width=130>
 
 <!-- third stage : begin -->
 
@@ -214,8 +110,8 @@
 <tr>
     <td>
     <table width=100% border=0 cellspacing=0 cellpadding=6><tr align=center>
-        <td bgcolor="#ffffff"><A HREF="/jump/http://gp1.deja.com/gtc?id=1014301&dejahi=0&tm=939394686.009527&site=dn&keyword=bogus21746nosuchword939394601&page=d.search.query.err.no_matching_articles&slot=promo.1&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7cpromo.1%7c%7c%7c%7c%7c%7c%7c">
-<IMG ALIGN=MIDDLE HEIGHT=30 WIDTH=120 SRC="http://web2.deja.com/ads/67/3161414667-6351.gif" ALT="Please visit our sponsor" border=1></A><BR></td>
+        <td bgcolor="#ffffff"><A HREF="/jump/http://gp1.deja.com/gtc?id=1019536&dejahi=0&tm=944588936.039767&site=dn&keyword=bogus11103nosuchword944588930&page=d.search.query.err.no_matching_articles&slot=promo.1&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7cpromo.1%7c%7c%7c%7c%7c%7c%7c">
+<IMG ALIGN=MIDDLE HEIGHT=30 WIDTH=120 SRC="http://web2.deja.com/ads/76/632976276-2086.gif" ALT="Just in time for HOLIDAY SHOPPING! Click to visit." border=1></A><BR></td>
     </tr></table>
     </td>
 </tr>
@@ -226,33 +122,7 @@
 
 
 
-<tr>
-    <td>
-    <table width=100% border=0 cellspacing=0 cellpadding=6><tr align=center>
-	<td bgcolor="#ffffff"><A HREF="/jump/http://gp1.deja.com/gtc?id=1013225&dejahi=0&tm=939394686.042326&site=dn&keyword=bogus21746nosuchword939394601&page=d.search.query.err.no_matching_articles&slot=120x120.1&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7c120x120.1%7c%7c%7c%7c%7c%7c%7c">
-<IMG ALIGN=MIDDLE HEIGHT=120 WIDTH=120 SRC="http://web2.deja.com/ads/91/3631847391-11540.gif" ALT="Please visit our sponsor" border=1></A><BR></td>
-    </tr></table>
-    </td>
-</tr>
 
-<tr>
-<td bgcolor="#000000"><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td>
-</tr>
-
-
-
-<tr>
-    <td>
-    <table width=100% border=0 cellspacing=0 cellpadding=6><tr align=center>
-	<td bgcolor="#ffffff"><A HREF="/jump/http://gp1.deja.com/gtc?id=1015793&dejahi=0&tm=939394686.101476&site=dn&keyword=bogus21746nosuchword939394601&page=d.search.query.err.no_matching_articles&slot=120x120.2&cr=%7c%7cdn%7c%7c%7c%7c%7c%7c%7c%7cd.%7c120x120.2%7c%7c%7c%7c%7c%7c%7c">
-<IMG ALIGN=MIDDLE HEIGHT=120 WIDTH=120 SRC="http://view.avenuea.com/view/deja_mtv_ba409_082799cs_2/direct/01-939394686.101476" ALT="Please visit our sponsor" border=1></A><BR></td>
-    </tr></table>
-    </td>
-</tr>
-
-<tr>
-<td bgcolor="#000000"><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td>
-</tr>
 
 
 
@@ -320,30 +190,33 @@
 </td>
 </tr><tr>
 <td bgcolor="#cccc66"><font face="geneva,arial" size=1>
-<font size=3><b><a href="http://www.deja.com/rate/item.xp?CID=0&PDID=10004">Natalie Portman</a></b></font><br>
+<font size=3><b><a href="http://www.deja.com/rate/item.xp?CID=0&PDID=1300">Jamie Moyer</a></b></font><br>
 
-in <a href="http://www.deja.com/rate/list_items.xp?CID=0&PCID=11725">Movie Actresses</a>
+<font size=2><a href="http://www.deja.com/rate/item.xp?CID=0&PDID=1300">Seattle Mariners</a></font><br>
+
+in <a href="http://www.deja.com/rate/list_items.xp?CID=0&PCID=12171">AL Starting Pitchers</a>
 <br>(1=worst, 5=best)
+</font></td>
 </tr><tr>
 <td bgcolor="#cccc66" nowrap><font face="geneva,arial" size=1>
 
 
-    Talent<br>
+    Velocity<br>
     
     1<input type=radio name=CR1 value=1><input type=radio name=CR1 value=2><input type=radio name=CR1 value=3><input type=radio name=CR1 value=4><input type=radio name=CR1 value=5>5<br>
     
 
-    Range<br>
+    Control<br>
     
     1<input type=radio name=CR2 value=1><input type=radio name=CR2 value=2><input type=radio name=CR2 value=3><input type=radio name=CR2 value=4><input type=radio name=CR2 value=5>5<br>
     
 
-    Choice of roles<br>
+    Savvy<br>
     
     1<input type=radio name=CR3 value=1><input type=radio name=CR3 value=2><input type=radio name=CR3 value=3><input type=radio name=CR3 value=4><input type=radio name=CR3 value=5>5<br>
     
 
-    Sex appeal<br>
+    Endurance<br>
     
     1<input type=radio name=CR4 value=1><input type=radio name=CR4 value=2><input type=radio name=CR4 value=3><input type=radio name=CR4 value=4><input type=radio name=CR4 value=5>5<br>
     
@@ -351,13 +224,13 @@ in <a href="http://www.deja.com/rate/list_items.xp?CID=0&PCID=11725">Movie Actre
 <p>
 <input type=submit value="Submit">
 <input type="hidden" name="CID" value="0">
-<input type="hidden" name="PDID" value="10004">
+<input type="hidden" name="PDID" value="1300">
 </form>
-<li> <a href="http://www.deja.com/rate/list_items.xp?CID=0&PCID=11725">Compare it to others</a><br>
-<li> <a href="http://www.deja.com/rate/list_reviews.xp?CID=0&PDID=10004">User Comments</a>
+<li> <a href="http://www.deja.com/rate/list_items.xp?CID=0&PCID=12171">Compare it to others</a><br>
+<li> <a href="http://www.deja.com/rate/list_reviews.xp?CID=0&PDID=1300">User Reviews</a>
 <br>
 
-<li> <a href="http://www.deja.com/linkback.xp?act=f&res_type=rating&res_title=Natalie%20Portman&res_url=http://www.deja.com/rate/item.xp%3fPDID%3d10004%26PCID%3d11725%26CID%3d0">Add this rating</a><br>&nbsp;&nbsp;&nbsp;<a href="http://www.deja.com/linkback.xp?act=f&res_type=rating&res_title=Natalie%20Portman&res_url=http://www.deja.com/rate/item.xp%3fPDID%3d10004%26PCID%3d11725%26CID%3d0">to your own Web site</a>
+<li> <a href="http://www.deja.com/linkback.xp?act=f&res_type=rating&res_title=Jamie%20Moyer&res_url=http://www.deja.com/rate/item.xp%3fPDID%3d1300%26PCID%3d12171%26CID%3d0">Add this rating</a><br>&nbsp;&nbsp;&nbsp;<a href="http://www.deja.com/linkback.xp?act=f&res_type=rating&res_title=Jamie%20Moyer&res_url=http://www.deja.com/rate/item.xp%3fPDID%3d1300%26PCID%3d12171%26CID%3d0">to your own Web site</a>
 <br>&nbsp;
 </font></td></tr>
 </table>
@@ -375,7 +248,7 @@ in <a href="http://www.deja.com/rate/list_items.xp?CID=0&PCID=11725">Movie Actre
 <td valign=bottom bgcolor=#000000>
     <table cellspacing=0 cellpadding=0 border=0 width=100%><tr>
     <td valign=middle><font face="geneva,arial" color="#ff6600" size=6><b>5&nbsp;</b></font></td>
-    <td valign=top><font face="geneva,arial" color="#ff6600" size=2><b>top&nbsp;rated<br>Movie Actresses</b></font></td>
+    <td valign=top><font face="geneva,arial" color="#ff6600" size=2><b>top&nbsp;rated<br>AL Starting Pitchers</b></font></td>
     </tr></table>
 </td>
 </tr>
@@ -386,26 +259,26 @@ in <a href="http://www.deja.com/rate/list_items.xp?CID=0&PCID=11725">Movie Actre
 
 
     
-    <a href="http://www.deja.com/rate/item.xp?CID=0&PDID=8552">
-    1. Jodie Foster</a><br>
+    <a href="http://www.deja.com/rate/item.xp?CID=0&PDID=1298">
+    1. Pedro Martinez</a><br>
 
     
-    <a href="http://www.deja.com/rate/item.xp?CID=0&PDID=13793">
-    2. Linda Fiorentino</a><br>
+    <a href="http://www.deja.com/rate/item.xp?CID=0&PDID=1292">
+    2. David Cone</a><br>
 
     
-    <a href="http://www.deja.com/rate/item.xp?CID=0&PDID=10223">
-    3. Ashley Judd</a><br>
+    <a href="http://www.deja.com/rate/item.xp?CID=0&PDID=1301">
+    3. Mike Mussina</a><br>
 
     
-    <a href="http://www.deja.com/rate/item.xp?CID=0&PDID=8551">
-    4. Jennifer Jason Leigh</a><br>
+    <a href="http://www.deja.com/rate/item.xp?CID=0&PDID=8056">
+    4. Orlando Hernandez</a><br>
 
     
-    <a href="http://www.deja.com/rate/item.xp?CID=0&PDID=8563">
-    5. Reese Witherspoon</a><br>
+    <a href="http://www.deja.com/rate/item.xp?CID=0&PDID=1291">
+    5. Bartolo Colon</a><br>
 
-<a href="http://www.deja.com/rate/list_items.xp?CID=0&PCID=11725"><li>See the full list...</a><br>
+<a href="http://www.deja.com/rate/list_items.xp?CID=0&PCID=12171"><li>See the full list...</a><br>
 </font></td>
 </tr>
 </table>
@@ -463,7 +336,7 @@ in <a href="http://www.deja.com/rate/list_items.xp?CID=0&PCID=11725">Movie Actre
     
     <td nowrap bgcolor=#ffcc66><font face="geneva,arial" size=2><b>&nbsp;
     
-	<a href="http://www.deja.com/rate/search.xp?QRY=Bogus21746NoSuchWord939394601">ratings</a>
+	<a href="http://www.deja.com/rate/search.xp?QRY=Bogus11103NoSuchWord944588930">ratings</a>
     
     &nbsp;</b></font></td>
     <td bgcolor=#000000><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td>
@@ -479,7 +352,7 @@ in <a href="http://www.deja.com/rate/list_items.xp?CID=0&PCID=11725">Movie Actre
     
     <td nowrap bgcolor=#ffcc66><font face="geneva,arial" size=2><b>&nbsp;
     
-	<a href="http://www.deja.com/commsearch.xp?QRY=Bogus21746NoSuchWord939394601">communities</a>
+	<a href="http://www.deja.com/commsearch.xp?QRY=Bogus11103NoSuchWord944588930">communities</a>
     
     &nbsp;</b></font></td>
     <td bgcolor=#000000><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td>
@@ -514,10 +387,11 @@ in <a href="http://www.deja.com/rate/list_items.xp?CID=0&PCID=11725">Movie Actre
 <td>
 
 
+
 <table width=100% cellpadding=0 cellspacing=0 border=0>
 <tr>
   
-    <td valign=top>
+    <td valign=bottom>
       <font face="geneva,arial" color=#000000 size=4>
         
           No Matches&nbsp;
@@ -548,14 +422,16 @@ in <a href="http://www.deja.com/rate/list_items.xp?CID=0&PCID=11725">Movie Actre
 
 
 
+
+
 <p>
 <font face="geneva,arial" size=2>
 Your search did not match any articles at all.
 <p>
 Some tricks which might help:
 <UL>
-<LI>Try <a href="http://x42.deja.com/dnquery.xp?QRY=Bogus21746NoSuchWord939394601&ST=PS&defaultOp=OR&format=delta&maxhits=100&showsort=score&DBS=1">searching our complete archive</a>, including jobs, for sale, and
-		    adult content, for <b>Bogus21746NoSuchWord939394601</b>.</li>
+<LI>Try <a href="http://x33.deja.com/qs.xp?LNG=ALL&OP=dnquery.xp&QRY=Bogus11103NoSuchWord944588930&ST=PS&defaultOp=OR&maxhits=100&showsort=score&DBS=1">searching our complete archive</a>, including jobs, for sale, and
+		    adult content, for <b>Bogus11103NoSuchWord944588930</b>.</li>
 <LI>Try matching <A HREF="http://www.deja.com/help/help_ps.shtml#keywords">ANY</A> keyword instead of <A HREF="help/help_ps.shtml#keywords">ALL</A> keywords</li>
 <LI>Try using <A HREF="http://www.deja.com/help/help_lang.shtml#wildcard">wildcards</A> to cover suffix variations, for example cat* searches for cat, cattle, catalog,
 and more...</li>
@@ -595,10 +471,15 @@ You can modify your keywords below or enter a completely new search.  Go ahead, 
     <input type=hidden name=DBS value=2>
     
 
+    
+    
+    <input type=hidden name=ST value=MS>
+    
+
 <td bgcolor=#000000>
 <center><font face="geneva,arial" size=2 color=#ff6600><b>Search Discussions</b></font></center></td>
 <td><font face="geneva,arial" size=1 color=#000000>&nbsp;
-For a more detailed search go to <a href="http://www.deja.com/home_ps.shtml?QRY=Bogus21746NoSuchWord939394601">Power Search</a></font></td>
+For a more detailed search go to <a href="http://www.deja.com/home_ps.shtml?QRY=Bogus11103NoSuchWord944588930&TAB=D">Power Search</a></font></td>
 </tr>
 
 
@@ -614,10 +495,11 @@ For a more detailed search go to <a href="http://www.deja.com/home_ps.shtml?QRY=
 
 
 
+
 <tr>
 <td valign=top align=right><font face="geneva,arial" size=2><b>Search for:</b></font></td>
 <td valign=top>
-<input type=text size=35 name=QRY value="Bogus21746NoSuchWord939394601">
+<input type=text size=35 name=QRY value="Bogus11103NoSuchWord944588930">
 <input type=submit value="Search">
 
 
@@ -762,30 +644,18 @@ For a more detailed search go to <a href="http://www.deja.com/home_ps.shtml?QRY=
 <td colspan=2><center><font face="geneva,arial" size=1>
 
 
-<font face="geneva,arial" size=1>
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.bfl.sitewide&cid=16201732168">SHOPPING</a> -
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.qwest.sitewide&cid=16201732168">FREE Internet Access</a> -
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.freeshop.sitewide&cid=16201732168">FREE STUFF</a> -
-<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.datek.sitewide&cid=16201732168">Trade with Datek</a> -
-<nobr><a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.necx.sitewide&cid=16201732168">GET IT NOW @ NECX</a> -</nobr>
-<nobr><a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.mtv.sitewide&cid=16201732168">MTV VMA Winners</a> -</nobr>
-<nobr><a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.ebay.sitewide&cid=16201732168">eBay Auctions</a> -</nobr>
-<nobr><a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.mailcom.sitewide&cid=16201732168">MAIL.COM</a> -</nobr>
-<nobr><a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.amazon.sitewide&cid=16201732168">Up to 50% off now at Amazon.com!</a> -</nobr>
-<nobr><a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.eco.sitewide&cid=16201732168">BUY AT COST at eCOST.com</a> -</nobr>
-<nobr><a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.joboptions.sitewide&cid=16201732168">Search for Jobs! JobOptions</a> -</nobr>
-<nobr><a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.son.sitewide&cid=16201732168">The BEST Music Online</a> -</nobr>
-<nobr><a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.onsale.sitewide&cid=16201732168">Onsale Auctions</a></nobr>
-</font>
-
-
-
-
-
-
-
-
-
+<font face="geneva,arial" size=1><span class=size8>
+<a href="http://www.deja.com/[ST_rn=md]/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.freeshop.sitewide&cid=12093056599">FREE STUFF!</a> -
+<a href="http://www.deja.com/[ST_rn=md]/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.datek.sitewide&cid=12093056599">Trade with Datek</a> -
+<nobr><a href="http://www.deja.com/[ST_rn=md]/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.necx.sitewide&cid=12093056599">GET IT NOW @ NECX</a> -</nobr>
+<nobr><a href="http://www.deja.com/[ST_rn=md]/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.ebay.sitewide&cid=12093056599">eBay Auctions</a> -</nobr>
+<nobr><a href="http://www.deja.com/[ST_rn=md]/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.son.sitewide&cid=12093056599">The BEST Music Online</a> -</nobr>
+<nobr><a href="http://www.deja.com/[ST_rn=md]/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.mailcom.sitewide&cid=12093056599">MAIL.COM</a> -</nobr>
+<nobr><a href="http://www.deja.com/[ST_rn=md]/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.drkoop.sitewide&cid=12093056599">Get FREE Health Info@drkoop.com</a> -</nobr>
+<nobr><a href="http://www.deja.com/[ST_rn=md]/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.eco.sitewide&cid=12093056599">BUY AT COST at eCOST.com</a> -</nobr>
+<nobr><a href="http://www.deja.com/[ST_rn=md]/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.joboptions.sitewide&cid=12093056599">Search for Jobs! JobOptions</a> -</nobr>
+<nobr><a href="http://www.deja.com/[ST_rn=md]/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.onsale.sitewide&cid=12093056599">Onsale Auctions</a></nobr>
+</span></font>
 
 </font></center>
 </td>
@@ -795,14 +665,14 @@ For a more detailed search go to <a href="http://www.deja.com/home_ps.shtml?QRY=
 <td>
 <P>
 <FONT face="geneva,arial" size=1>
-<a href="http://www.deja.com/info/policy.shtml#copyright">Copyright</a> &copy; 1999 <a href="http://www.deja.com/corp/">Deja.com, Inc.</a> All rights reserved.
-<br><a href="http://www.deja.com/info/trademarks.shtml">Trademarks</a> &#183; <a href="http://www.deja.com/info/policy.shtml">Terms &amp; Conditions of Use</a> &#183; <a href="http://www.deja.com/info/privacy.shtml">Site Privacy Statement</a>.</FONT>
+<a href="http://www.deja.com/[ST_rn=md]/info/policy.shtml#copyright">Copyright</a> &copy; 1999 <a href="http://www.deja.com/[ST_rn=md]/corp/">Deja.com, Inc.</a> All rights reserved.
+<br><a href="http://www.deja.com/[ST_rn=md]/info/trademarks.shtml">Trademarks</a> &#183; <a href="http://www.deja.com/[ST_rn=md]/info/policy.shtml">Terms &amp; Conditions of Use</a> &#183; <a href="http://www.deja.com/[ST_rn=md]/info/privacy.shtml">Site Privacy Statement</a>.</FONT>
 </td>
 
 <td align=right valign=bottom nowrap>
 <font face="geneva,arial" size=2><b>
-<A href="http://www.deja.com/corp/ad.shtml">Advertise with Us!</A> &nbsp;|&nbsp; 
-<a href="http://www.deja.com/corp/">About Deja.com</a>
+<A href="http://www.deja.com/[ST_rn=md]/corp/ad.shtml">Advertise with Us!</A> &nbsp;|&nbsp; 
+<a href="http://www.deja.com/[ST_rn=md]/corp/">About Deja.com</a>
 </b></font>
 </td>
 

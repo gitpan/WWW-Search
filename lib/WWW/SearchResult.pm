@@ -1,7 +1,7 @@
 # SearchResult.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: SearchResult.pm,v 1.4 1999/10/18 19:25:05 mthurn Exp $
+# $Id: SearchResult.pm,v 1.8 1999/12/10 15:35:10 mthurn Exp $
 #
 # Copyright (c) 1996 University of Southern California.
 # All rights reserved.                                            
@@ -45,10 +45,9 @@ L<WWW::Search>
 
 =head1 REQUIRED RESULTS
 
-The particular fields returned in a result are backend
-(search-engine) dependent.  However, all search engines are required 
-to return a url and title.
-(This list may grow in the future.)
+The particular fields returned in a result are backend- (search
+engine-) dependent.  However, all search engines are required to
+return a url and title.  (This list may grow in the future.)
 
 
 =head1 METHODS AND FUNCTIONS
@@ -62,28 +61,27 @@ package WWW::SearchResult;
 require LWP::MemberMixin;
 @ISA = qw(LWP::MemberMixin);
 use Carp ();
-$VERSION = '2.05';
+$VERSION = '2.06';
 
 =head2 new
 
 To create a new WWW::SearchResult, call
-    $search = new WWW::SearchResult();
+
+    $result = new WWW::SearchResult();
 
 =cut
 
 sub new
-{ 
-    my($class) = @_;
-
-    my $self = bless { }, $class;
-    $self->{urls} = ();
-    return $self;
-}
-
+  { 
+  my $class = shift;
+  my $self = bless { }, $class;
+  $self->{urls} = ();
+  return $self;
+  } # new
 
 =head2 url
 
-Return the primary URL.  Note that there may be a list of urls, see
+Returns the primary URL.  Note that there may be a list of urls, see
 also methods C<urls> and C<add_url>.  Nothing special is guaranteed
 about the primary URL other than that it is the first one returned by
 the back end.
@@ -120,7 +118,6 @@ sub _add_elem_array {
     push(@{$self->{$elem}}, @_);
 };
 
-
 =head2 urls
 
 Return a reference to an array of urls.
@@ -131,12 +128,11 @@ See also C<add_url>.
 
 Add a URL to the list.
 
-
 =head2 related_urls, add_related_url, related_titles, add_related_title
 
 Analgous to urls, these functions provide lists of related URLs
 and their titles.  These point to things the search engine thinks
-you might want (for example, see Infoseek).
+you might want.
 
 =cut
 
@@ -158,6 +154,7 @@ its method will return C<undef>.
 Typical contents of these attributes:
 
 =over 8
+
 =item title
 
 The title of the hit result (typically that provided by the 'TITLE'
@@ -223,16 +220,23 @@ dependent.  In fact, many backends do not even return it at all.
 =cut
 
 sub change_date { return shift->_elem('change_date', @_); }
-sub company { return shift->_elem('company', @_); }
 sub description { return shift->_elem('description', @_); }
 sub index_date { return shift->_elem('index_date', @_); }
-sub location { return shift->_elem('location', @_); }
 sub normalized_score { return shift->_elem('normalized_score', @_); }
 sub raw { return shift->_elem('raw', @_); }
 sub score { return shift->_elem('score', @_); }
 sub size { return shift->_elem('size', @_); }
-sub source { return shift->_elem('source', @_); }
 sub title { return shift->_elem('title', @_); }
+
+=head2 company, location, source
+
+More attributes of the result.
+
+=cut
+
+sub company { return shift->_elem('company', @_); }
+sub location { return shift->_elem('location', @_); }
+sub source { return shift->_elem('source', @_); }
 
 
 1;
