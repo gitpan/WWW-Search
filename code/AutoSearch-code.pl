@@ -4,7 +4,7 @@ exit 0;
 # AutoSearch-code.pl
 # Copyright (c) 1996-1997 University of Southern California.
 # All rights reserved.
-# $Id: AutoSearch-code.pl,v 1.4 2002/03/29 20:08:14 mthurn Exp mthurn $
+# $Id: AutoSearch-code.pl,v 1.5 2002/12/16 14:24:42 mthurn Exp mthurn $
 #
 # Complete copyright notice follows below.
 
@@ -425,7 +425,7 @@ use WWW::Search;
 use strict;
 
 use vars qw( $VERSION );
-$VERSION = '2.05';
+$VERSION = '2.06';
 
 sub print_version
   {
@@ -444,7 +444,7 @@ sub print_version
 
 sub usage {
   print STDERR <<END;
-usage: $0 [--stats] [--verbose] -n "Query Name" -s "query string" --engine engine [--mail you\@where.com] [--options "query options"]... [--filter "filter"] [--host host] [--port port] query_id
+usage: $0 [--stats] [--verbose] -n "Query Name" -s "query string" --engine engine [--mail you\@where.com] [--options "query options"]... [--filter "filter"] [--host host] [--port port] [--userid bbunny --password c4rr0t5] query_id
 Update or create a web search-engine query.
 Unambiguous argument names can be abbreviated to one letter (e.g. -e engine -f "filter")
 END
@@ -455,15 +455,20 @@ my(%opts,@query_list,$query_name,$query_string,$search_engine,$query_options,$ur
 # Default options:
 $opts{'m'} = '';
 $opts{'v'} = 0;
+$opts{'help'} = 0;
 $opts{'stats'} = 0;
 $opts{'debug'} = 0;
-&GetOptions(\%opts, qw(n|qn|queryname=s s|qs|querystring=s e|engine=s m|mail=s h|host=s p|port=s o|options=s@ f|uf|urlfilter=s stats v|verbose V|VERSION debug));
+&GetOptions(\%opts, qw(n|qn|queryname=s s|qs|querystring=s e|engine=s m|mail=s h|host=s p|port=s o|options=s@ f|uf|urlfilter=s stats userid=s password=s v|verbose help V|VERSION debug));
 if ($opts{'V'})
   {
   &print_version();
   exit 0;
   } # if
-
+if ($opts{'help'})
+  {
+  &usage;
+  exit 0;
+  } # if
 &usage if ($#ARGV == -1); # we MUST have one left, the qid
 
 my $s_dbg = $opts{'stats'};
@@ -491,15 +496,15 @@ if ($opts{'m'} ne '')
 $query_name =    $opts{'n'} if defined($opts{'n'});
 $query_string =  $opts{'s'} if defined($opts{'s'});
 $search_engine = $opts{'e'} if defined($opts{'e'});
-if (defined($opts{'o'})) 
+if (defined($opts{'o'}))
   {
   $query_options = {};
-  foreach my $sPair (@{$opts{'o'}}) 
+  foreach my $sPair (@{$opts{'o'}})
     {
     my ($key, $value) = $sPair =~ m/^([^=]+)=(.*)$/;
     &add_to_hash($key, &WWW::Search::escape_query($value), $query_options);
-    }
-  }
+    } # foreach
+  } # if
 $url_filter =    $opts{'f'} if defined($opts{'f'});
 my($local_filter) = 0; # shall we exclude our own old pages? (1=y,0=n)
 
@@ -798,6 +803,7 @@ sub main {
   $search->http_proxy($ENV{'http_proxy'}) if ($ENV{'http_proxy'});
   # submit search w/options.
   $search->native_query(WWW::Search::escape_query($SummaryQuery), $query_options);
+  $search->login($opts{'userid'}, $opts{'password'});
   # examine search results
   my($result,@results);
   my($next_result);

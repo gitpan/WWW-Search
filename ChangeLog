@@ -1,3 +1,15 @@
+2002-12-20  Kingpin  <mthurn@carbon.>
+
+	* lib/WWW/Search.pm (approximate_hit_count): new method (synonym for approximate_result_count)
+
+2002-12-16  Kingpin  <mthurn@carbon.>
+
+	* code/AutoSearch-code.pl: new option --help
+
+2002-10-22  Kingpin  <mthurn@carbon>
+
+	* code/WebSearch-code.pl: new option --terse; --count now prints actual count
+
 2002-07-18  Kingpin  <mthurn@copper.dulles.tasc.com>
 
 	* WWW::Search VERSION 2.36 RELEASED!

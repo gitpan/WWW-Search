@@ -4,18 +4,16 @@ exit 0;
 #
 # WebSearch.PL
 # Copyright (C) 1996-1997 by USC/ISI
-# $Id: WebSearch-code.pl,v 1.2 2002/03/29 14:41:48 mthurn Exp mthurn $
+# $Id: WebSearch-code.pl,v 1.3 2002/10/22 20:37:16 mthurn Exp $
 #
 # Complete copyright notice follows below.
-#
 
-
-sub usage 
+sub usage
   {
   my $msg = shift;
   defined($msg) && ($msg ne '') && print STDERR "$0: $msg\n";
   print STDERR <<"END";
-usage: WebSearch [--engine <name>] [--gui] [--max <integer>] [--options <key=value>]... [--count] [--all] [--raw] [--verbose] [--VERSION] [--help] [--host <hostname>] [--port <portnum>] [--lwpdebug] [--debug] query
+usage: WebSearch [--engine <name>] [--gui] [--max <integer>] [--options <key=value>]... [--count] [--terse] [--all] [--raw] [--verbose] [--VERSION] [--help] [--host <hostname>] [--port <portnum>] [--lwpdebug] [--debug] query
 
 Make a query to a web search engine, printing to STDOUT the URLs which match (one per line).
 
@@ -63,7 +61,7 @@ option names, or single-minus with one-letter abbreviations.
 
 The string e_name is the name of (the module for) the desired search
 engine.  Capitalization matters.  See `perldoc WWW::Search` to find
-out what the default is (normally AltaVista)
+out what the default is (probably Null).
 
 See L<WWW::Search> for a complete list of supported engines.
 
@@ -84,7 +82,15 @@ repeated.
 
 =item --count, -c
 
-As the first line of output, print the approximate hit count. 
+As the first line of output, print the approximate hit count.
+As the last line of output, print the actual hit count.
+
+=item --terse, -t
+
+Do not print any URLs.
+Only useful if you also specify --count.
+If you specify --terse but not --count,
+there will be no output no matter how many hits are found!
 
 =item --all, -a
 
@@ -96,6 +102,7 @@ object.)  Can be combined with --verbose; can not be combined with
 =item --raw, -r
 
 For each hit result, print the raw HTML.
+Not implemented for all backends.
 
 =item --verbose, -v
 
@@ -140,7 +147,8 @@ For a more sophisticated client, see L<AutoSearch>.
 
 =head1 AUTHOR
 
-C<WebSearch> is written by John Heidemann, <johnh@isi.edu>.
+C<WebSearch> was written by John Heidemann, <johnh@isi.edu>.
+C<WebSearch> is maintained by Martin Thurn, <mthurn@cpan.org>.
 
 
 =head1 COPYRIGHT
@@ -174,13 +182,14 @@ use Getopt::Long;
 use WWW::Search;
 
 use vars qw( $VERSION );
-$VERSION = '2.13';
+$VERSION = '2.14';
 
-use vars qw( $sEngine $all $verbose $raw $maximum_to_retrieve $print_version $debuglwp $debug );
+use vars qw( $sEngine $all $verbose $raw $iMax $print_version $debuglwp $debug );
 use vars qw( @options $_host $_port $help $iShowCount $iGui );
 # Set default values:
 $iShowCount = 0;
 $iGui = 0;
+my $iTerse = 0;
 $_host = '';
 $_port = '';
 $sEngine = '';
@@ -188,18 +197,21 @@ undef $debug;
 $debuglwp = 0;
 # Get the command-line options:
 &Getopt::Long::config(qw(no_ignore_case no_getopt_compat));
-&usage('getopt failed') unless &GetOptions('all', \$all, 'raw', \$raw,
-                                           'verbose', \$verbose,
-                                           'VERSION', \$print_version,
+&usage('getopt failed') unless &GetOptions('all', \$all,
                                            'count', \$iShowCount,
                                            'debug:i', \$debug,
                                            'engine=s', \$sEngine,
                                            'gui', \$iGui,
-                                           'lwpdebug', \$debuglwp,
-                                           'max=i', \$maximum_to_retrieve,
-                                           'options=s@', \@options,
-                                           'host=s', \$_host,  'port=s', \$_port,
                                            'help', \$help,
+                                           'host=s', \$_host,
+                                           'lwpdebug', \$debuglwp,
+                                           'max=i', \$iMax,
+                                           'options=s@', \@options,
+                                           'port=s', \$_port,
+                                           'raw', \$raw,
+                                           'terse', \$iTerse,
+                                           'verbose', \$verbose,
+                                           'VERSION', \$print_version,
                                           );
 &usage('user requested help') if $help;
 $debug = 1 if (defined($debug) and ($debug < 1));
@@ -234,7 +246,7 @@ my($verbose_code);
 
 sub print_result {
     my($result, $count) = @_;
-
+    return if $iTerse;
     my($prefix) = "";
     if ($verbose) {
 	my(@attribs) = ();
@@ -287,10 +299,10 @@ sub main {
 
     $search->http_proxy($ENV{'HTTP_PROXY'}) if ($ENV{'HTTP_PROXY'});
     $search->http_proxy($ENV{'http_proxy'}) if ($ENV{'http_proxy'});
-         
-    if (0 < scalar(@options)) 
+
+    if (0 < scalar(@options))
       {
-      foreach my $sPair (@options) 
+      foreach my $sPair (@options)
         {
         if ($sPair =~ m/^([^=]+)=(.*)$/)
           {
@@ -322,43 +334,57 @@ sub main {
         } # foreach $sPair
       } # if @options
 
-    if (defined($maximum_to_retrieve)) 
+    if (defined($iMax))
       {
-      $search->maximum_to_retrieve($maximum_to_retrieve);
+      $search->maximum_to_retrieve($iMax);
       }
     else
       {
-      $maximum_to_retrieve = 10000;
+      $iMax = 10000;
       }
 
     $hsOptions{'search_debug'} = $debug if (defined($debug) and (0 < $debug));
 
-    $iGui ? 
-        $search->gui_query(WWW::Search::escape_query($query), \%hsOptions) 
-      : $search->native_query(WWW::Search::escape_query($query), \%hsOptions);
+    $iGui
+    ? $search->gui_query(WWW::Search::escape_query($query), \%hsOptions)
+    : $search->native_query(WWW::Search::escape_query($query), \%hsOptions);
 
     my($way) = 0; # 0=piecemeal, 1=all at once
     my($result);
-    if (($iShowCount) and defined($search->approximate_result_count))
+    if (($iShowCount) && defined($search->approximate_result_count))
       {
       print "There are approximately " if $verbose;
       print $search->approximate_result_count;
       print " results." if $verbose;
       print "\n";
+      } # if
+    my $iNumPrinted = 0;
+    if ($way) # return all at once.
+      {
+      foreach $result ($search->results())
+        {
+        print_result($result, ++$count);
+        $iNumPrinted++;
+        last if ($iMax < $count);
+        };
       }
-    if ($way) { # return all at once.
-        foreach $result ($search->results()) 
-          {
-          print_result($result, ++$count);
-	  last if ($count > $maximum_to_retrieve);
-          };
-    } else { # return page by page
-        while ($result = $search->next_result()) 
-          {
-          print_result($result, ++$count);
-	  last if ($count > $maximum_to_retrieve);
-          } # while
+    else # return page by page
+      {
+      while ($result = $search->next_result())
+        {
+        print_result($result, ++$count);
+        $iNumPrinted++;
+        last if ($iMax < $count);
+        } # while
       } # else page by page
+    if ($iShowCount)
+      {
+      print "There are exactly " if $verbose;
+      print $iNumPrinted;
+      print " results (maximum of $iMax were requested)." if $verbose;
+      print "\n";
+      } # if
+
     # handle errors
     if ($count == 0) {
         my($response) = $search->response();

@@ -3,14 +3,14 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.37?  (2002-09-04)
+WHAT IS NEW IN WWW::Search 2.38?  (2003-01-08)
 ----------------------------------------------
 
 overview: 
- * new backends for testing: Null::Count, Null::Empty, and Null::Error
- * all other backends moved out to their own distribution
- * default search engine changed to Null::Empty (since AltaVista is in this distribution)
- * minor pod improvements
+ * new option --terse on WebSearch
+ * WebSearch --count also prints actual result count
+ * new option --help on AutoSearch
+ * new method approximate_hit_count()
 
 For details, see the ChangeLog file and/or the pod of each affected
 module.
@@ -21,7 +21,6 @@ WHAT IS WWW::Search?
 
 WWW::Search is a collection of Perl modules which provide an API to
 search engines on the world-wide web (and similar engines).
-Currently, WWW::Search includes backends for WebCrawler, among others.
 Backends for many engines can be obtained separately, such as
 AltaVista, Ebay, HotBot, and Yahoo.  This distribution includes two
 applications built from this library: AutoSearch, a program to
@@ -43,40 +42,15 @@ and increasing the number of hits per page, among other tricks.
 
 Because WWW::Search depends on parsing the HTML output of web search
 engines, it will fail if the search engine operators change their
-format (an unfortunately frequent occurrence).  WWW::Search includes a
-test suite for a few backends, which verifies that they are
-functioning correctly.  The test suite can be run by typing 'make
-test_parsing'; see under INSTALLATION below for details.  
+format.
 
-This base WWW::Search distribution contains backends for the following
-search engines.  Unfortunately, almost none are operational.  We would
-like to have volunteers to fix and/or take over maintenance of these
-backends.
+This base WWW::Search distribution contains a few backends that can be
+used for testing.  The backend Null::Empty always returns no results;
+Null::Error always returns an error condition; and Null::Count returns
+a number of sample results that you can specify.
 
-Crawler			not working
-ExciteForWebServers	not working
-Fireball		partially working (not in test suite)
-FolioViews		not working
-Gopher			not working? (not in test suite)
-HotFiles		not working
-Livelink		not working? (not in test suite)
-MetaCrawler             not working?
-Metapedia		partially working? (not in test suite)
-MSIndexServer		not working?
-NetFind                 not working?
-Null			working
-PLweb			not working
-Profusion               defunct
-Search97		not working
-SFgate			partially working?
-Simple			not working? (not in test suite)
-Verity			not working (not in test suite)
-VoilaFr                 partially working? (not in test suite)
-
-''Partially working'' indicates that some tests passed and some failed.
-
-The following backends (and more!) are registered at CPAN
-independently (not included with this WWW::Search distribution):
+The following real, working backends (and more!) are registered at
+CPAN independently (not included with this WWW::Search distribution):
 
 AltaVista       http://www.perl.com/CPAN-local/authors/by-module/WWW
 AP              in the WWW::Search::News distribution
@@ -84,7 +58,6 @@ Ebay            http://www.perl.com/CPAN-local/authors/by-module/WWW
 Euroseek        http://www.perl.com/CPAN-local/authors/by-module/WWW/JSMYSER/
 Go              http://www.perl.com/CPAN-local/authors/by-module/WWW
 GoTo            http://www.perl.com/CPAN-local/authors/by-module/WWW/JSMYSER/
-Google          http://www.perl.com/CPAN-local/authors/by-module/WWW/JSMYSER/
 HotBot          http://www.perl.com/CPAN-local/modules/by-module/WWW/
 LookSmart       http://www.perl.com/CPAN-local/modules/by-module/WWW/JSMYSER
 Lycos           http://www.perl.com/CPAN-local/modules/by-module/WWW/MTHURN/
@@ -98,17 +71,16 @@ Pubmed          http://www.perl.com/CPAN-local/authors/by-module/WWW
 Yahoo           http://www.perl.com/CPAN-local/modules/by-module/WWW
 ZDNet           http://www.perl.com/CPAN-local/authors/by-module/WWW/JSMYSER/
 WashPost        in the WWW::Search::News distribution
-WashTech        in the WWW::Search::News distribution
 
 There are even more backends available for manual download and
-installation at http://www.idexer.com/backends/
+installation at http://www.idexer.com/backends/ (thanks to Jim Smyser).
 
 
 REQUIREMENTS
 ------------
 
 WWW::Search requires Perl5, the libwww-perl module suite, the URI
-module, the HTML::Parser module, and a few other modules (see
+module, the HTML::Parser module, and several other modules (see
 Makefile.PL for a complete list).  For information on Perl5, see
 <http://www.perl.com>.  For modules, see
 <http://www.perl.com/CPAN-local/modules>.
@@ -126,9 +98,9 @@ INSTALLATION
 ------------
 
 It is highly recommended that you use CPAN.pm to install WWW::Search.
-It will automatically install all the prerequisite modules and all the
-backends and put everything in the right places.  On a Unix or linux
-system, while connected to the internet, just type
+It will automatically install all the prerequisite modules and put
+everything in the right places.  While connected to the internet, just
+type
 
    perl -MCPAN -e 'install WWW::Search'
 
@@ -141,15 +113,9 @@ modules):
     make test
     make install
 
-On Win32, maintenance and testing is done with Microsoft's nmake.exe;
-if that's true for you, use 'nmake' instead of 'make' in the above
-sequence of commands.
-
-When you do `perl makefile.pl` on Win32, you might get warnings that a
-whole bunch of 'zero*.out' files are missing.  This seems to be a bug
-in some versions of WinZip which refuse to extract empty files from
-the archive.  Since those files are supposed to be empty anyway, you
-can ignore these warnings.
+On Win32, maintenance and testing is done with ActiveState's perl and
+Microsoft's nmake.exe; if that's true for you, use 'nmake' instead of
+'make' in the above sequence of commands.
 
 If you want to install a private copy of WWW::Search in your home
 directory, then you should do the installation with something like
@@ -161,53 +127,6 @@ these commands:
 
 Don't forget to add /my/perl/lib to your PERL5LIB environment variable
 (or use lib '/my/perl/lib'; or unshift @INC, '/my/perl/lib')!
-
-
-TESTING
--------
-
-[This section of the documentation is primarily for backend authors
-and maintainers.]
-
-The "make test_parsing" command compares expected output
-(precalculated and shipped with the archive) with actual output (from
-the internet).  Sorry, the "make test_parsing" command does not run on
-Win32, only in UNIX-type shells.  You can give arguments to the
-test_parsing program by using the TEST_ARGS macro.  For example, the
-following command only runs the external queries for WebCrawler:
-
-make test_parsing TEST_ARGS='-e WebCrawler -x'
-
-To see all the available options, do this:
-
-make test_parsing TEST_ARGS='-help'
-
-The "test_parsing" utility detects two kinds of errors:
-
-- internal parsing:
-	First it checks to make sure that your system computes
-	the same results as my system based on some saved
-	Web queries.  This test should always pass for working
-        backends; if it doesn't, send me mail.
-
-- external queries:
-	Second, it makes real queries against the search engines
-	and compares them with some saved results.
-
-External queries can fail for several reasons:
-
-- new pages have been added which match the test queries, or matching
-  pages have been deleted, causing the page count to go too far out of
-  whack from the expected number (not necessarily a bad thing)
-
-- changes in the web search engine output which break WWW::Search's
-  parsers, usually resulting in no URLs being returned (a bad thing)
-
-If the external tests fail, please either investigate the error or
-send a description of the problem, a list of your operating system and
-all relevant perl version number, and the relevant output of "make
-test_parsing" to the maintainer of the backend for the search engine
-that fails.
 
 
 WHAT IS AutoSearch?
@@ -239,22 +158,20 @@ include:
 There is a mailing list for WWW::Search discussion.  To subscribe,
 send "subscribe info-www-search" as the body of a message to
 <info-www-search-request@isi.edu>.  If you use WWW::Search at all, you
-should subscribe to the mailing list.  Bug fixes are usually announced
-there as soon as they're released.
+should subscribe to the mailing list.
 
 Feedback about WWW::Search is encouraged.  If you're using it for a
 neat application, please let us know.  If you'd like to (or have
 already) implement and publish a new backend for WWW::Search, let us
 know so we don't duplicate work.  <mthurn@cpan.org>
 
-Backend-related bug reports ("search engine ABC doesn't work") should
-be sent to the author of the backend (backend authors are identified
-in the corresponding man page and in the output of `make
-test_parsing`).  
+Backend-related bug reports ("backend ABC doesn't work") should be
+sent to the author/maintainer of the backend (backend maintainers are
+identified in the corresponding man page).
 
-All other feedback, bug reports, fixes, and new backends (if you want
-them to be included with the base distribution) should be sent to
-Martin Thurn <mthurn@cpan.org>.  When sending e-mail, please please
+All other feedback, bug reports, fixes, and new backends (if you are
+unwilling or unable to publish them on CPAN yourself) should be sent
+to Martin Thurn <mthurn@cpan.org>.  When sending e-mail, please please
 put [WWW::Search] in the subject line (or risk me losing the message
 among the spam).
 
@@ -273,7 +190,7 @@ or, if you are on Win32:
 to see where your name is mentioned on the web.  Then try:
 
 	AutoSearch -n me_on_the_web -s '"Your Name Here"' me
-        netscape me/index.html
+        netscape me/index.html &
 
 or, if you are on Win32:
 
@@ -296,7 +213,7 @@ DOCUMENTATION
 See `perldoc WWW::Search` after installation for an overview of the
 library.  POD-style documentation is also included in all modules and
 programs, so you can do `perldoc WebSearch` and `perldoc AutoSearch`
-and `perldoc WWW::Search::Crawler` after installation.
+after installation.
 
 
 FUTURE PLANS
@@ -307,17 +224,17 @@ Some things we need, and ideas for new features:
  - more robust test mechanism (i.e. more than just counting the number
 of URLs returned) (e.g. look at the various values and make sure
 they're being parsed correctly) (e.g. change_date() is really a date,
-URL is not double-encoded, results are not duplicated, etc.)  Contact
-<mthurn@cpan.org>
+URL is really a URL, URL is not double-encoded, results are not
+duplicated, etc.)  Contact <mthurn@cpan.org>
 
  - updates to each backend to implement the submit() method.  Contact
 each backend's maintainer.
 
  - updates to each backend that will force WWW::Search to perform the
-same search as the engine's web GUI (I'm looking for contributions of
-the precise arguments that will produce such a search for each engine;
-i.e. the hash that should be passed as the second argument to
-native_query).  Contact <mthurn@cpan.org>
+same search as the engine's default web GUI (I'm looking for
+contributions of the precise arguments that will produce such a search
+for each engine; i.e. the hash that should be passed as the second
+argument to native_query).  Contact <mthurn@cpan.org>
 
  - test cases for WebSearch.  Contact <mthurn@cpan.org>
 
@@ -348,9 +265,8 @@ SUPPORT AND CREDITS
 
 The WWW::Search architecture was originally written by John Heidemann,
 with feedback from other contributors listed below.  NOTE: This list
-is no longer updated; consult the on-line documentation and/or the
-output of `make test_parsing` to find out who is currently maintaining
-each component.
+is no longer updated; consult the on-line documentation (i.e. man
+pages) to find out who is currently maintaining each component.
 
 PLATFORM SUPPORT:
 	Unix			John Heidemann <johnh@isi.edu>

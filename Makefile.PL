@@ -1,5 +1,5 @@
 # This -*- perl -*- script writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.27 2002/07/18 21:46:10 mthurn Exp mthurn $
+# $Id: Makefile.PL,v 1.28 2003/01/08 14:45:39 mthurn Exp $
 
 require 5.004;
 
@@ -19,7 +19,7 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
               'NAME' => 'WWW::Search',
-              'VERSION' => 2.37,
+              'VERSION' => 2.38,
 
               ($] ge '5.005') ? (
                                  'AUTHOR' => 'Martin Thurn <mthurn@cpan.org>',
@@ -55,12 +55,17 @@ AutoSearch :: FORCE
 	/bin/rm -f AutoSearch
 
 ';
-  } # MY::postamble
+  } # MY::preamble
 
 
 sub MY::postamble
   {
   return '
+AutoSearch :: code/AutoSearch-code.pl
+	$(PERLRUNINST) AutoSearch.PL AutoSearch
+WebSearch :: code/WebSearch-code.pl
+	$(PERLRUNINST) WebSearch.PL WebSearch
+
 test_parsing: pure_all
 	PERL_DL_NONLAZY=1 $(FULLPERL) -I$(INST_ARCHLIB) -I$(INST_LIB) -I$(PERL_ARCHLIB) -I$(PERL_LIB) t/test_parsing.pl $(TEST_ARGS)
 

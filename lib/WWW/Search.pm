@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.71 2002/09/04 16:10:17 mthurn Exp mthurn $
+# $Id: Search.pm,v 2.39 2002/12/20 22:13:16 mthurn Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -69,22 +69,16 @@ to backend programmers.
 
 package WWW::Search;
 
-require Exporter;
-@EXPORT = qw();
-@EXPORT_OK = qw( escape_query unescape_query generic_option strip_tags );
-$VERSION = '2.36';
-$MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
-require LWP::MemberMixin;
-@ISA = qw(Exporter LWP::MemberMixin);
-
 use Carp ();
 use Data::Dumper;  # for debugging only
+use Exporter;
 use File::Find;
 use HTML::TreeBuilder;
 use HTTP::Cookies;
 use HTTP::Request;
 use HTTP::Response;
 use HTTP::Status;
+use LWP::MemberMixin;
 use LWP::RobotUA;
 use LWP::UserAgent;
 use Net::Domain qw( hostfqdn );
@@ -96,6 +90,15 @@ use User;
 use constant SEARCH_BEFORE => 1;
 use constant SEARCH_UNDERWAY => 2;
 use constant SEARCH_DONE => 3;
+
+use strict qw( vars );
+
+use vars qw( @ISA @EXPORT @EXPORT_OK $VERSION $MAINTAINER );
+@EXPORT = qw();
+@EXPORT_OK = qw( escape_query unescape_query generic_option strip_tags );
+@ISA = qw(Exporter LWP::MemberMixin);
+$MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
+$VERSION = sprintf("%d.%02d", q$Revision: 2.39 $ =~ /(\d+)\.(\d+)/o);
 
 =head2 new
 
@@ -115,17 +118,16 @@ will be chosen for you.  The next step is usually:
 
 =cut
 
-
-# the default (not currently more configurable :-< )
-$default_engine = 'Null::Empty';
-$default_agent_name = "WWW::Search/$VERSION";
-$default_agent_e_mail = User->Login .'@'. hostfqdn;
-
 sub new
   {
   my $class = shift;
   my $engine = shift;
   # Remaining arguments will become hash args
+
+  # the default (not currently more configurable :-< )
+  my $default_engine = 'Null::Empty';
+  my $default_agent_name = "WWW::Search/$VERSION";
+  my $default_agent_e_mail = User->Login .'@'. hostfqdn;
 
   $engine = $default_engine if (!defined($engine));
   # Load the engine, if necessary.
@@ -208,7 +210,7 @@ We can not tell if they are up-to-date or working, though.
 
 =cut
 
-use constant DEBUG_COOKIES => 1;
+use constant DEBUG_COOKIES => 0;
 use constant DEBUG_FIND => 0;
 
 sub wanted
@@ -250,7 +252,7 @@ sub installed_engines
   {
   # Does NOT need a WWW::Search object to operate
   my %hsi;
-  foreach $sDir (@INC)
+  foreach my $sDir (@INC)
     {
     File::Find::find(sub {
                        $hsi{&wanted($sDir) || 'JUNKJUNK'}++;
@@ -593,6 +595,11 @@ Some backends indicate how many hits they have found.
 Typically this is an approximate value.
 
 =cut
+
+sub approximate_hit_count
+  {
+  shift->approximate_result_count(@_);
+  } # approximate_hit_count
 
 sub approximate_result_count
   {
