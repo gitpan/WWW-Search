@@ -3,6 +3,7 @@ ChangeLog
 MANIFEST
 Makefile.PL
 README
+TAGS
 TODO
 Test-Pages/Fireball/multi
 Test-Pages/Fireball/multi.0
@@ -85,7 +86,8 @@ Test-Pages/WebCrawler/zero.out
 WWW-Search.ppd
 WebSearch.PL
 code/AutoSearch-code.pl
-diff.txt
+code/WebSearch-code.pl
+cookie_jar
 lib/WWW/Search.pm
 lib/WWW/Search.pm.rej
 lib/WWW/Search/Crawler.pm

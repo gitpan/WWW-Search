@@ -3,12 +3,11 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.32?  (2002-04-19)
+WHAT IS NEW IN WWW::Search 2.33?  (2002-04-21)
 ----------------------------------------------
 
 overview: 
- * new function installed_engines()
- * WebSearch -V prints backend version too
+ * fixed MANIFEST & missing files
 
 For details, see the ChangeLog file and/or the pod of each affected
 module.
