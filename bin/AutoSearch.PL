@@ -23,7 +23,7 @@ print OUT <<'!NO!SUBS!';
 # AutoSearch.pl
 # Copyright (c) 1996-1997 University of Southern California.
 # All rights reserved.                                            
-# $Id: AutoSearch.PL,v 1.32 1998/11/18 21:54:55 johnh Exp $
+# $Id: AutoSearch.PL,v 1.2 1999/07/09 14:04:21 mthurn Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -447,6 +447,10 @@ BEGIN {
 use WWW::Search;
 use Getopt::Long;
 use POSIX qw(strftime);
+
+use vars qw( $VERSION );
+
+$VERSION = '1.26';
 
 #=head1 NAME
 #
@@ -1263,9 +1267,9 @@ sub make_link {
 sub make_no_link {
   my ($template,$url,$title,$description) = @_;
   my ($link) = $template;
-  $link =~ s/URL/$url/;
-  $link =~ s/TITLE/$title/;
-  $link =~ s/DESCRIPTION/$description/;
+  $link =~ s/URL/$url/ if defined($url);
+  $link =~ s/TITLE/$title/ if defined($title);
+  $link =~ s/DESCRIPTION/$description/ if defined($description);
   return ($link);
 }
 

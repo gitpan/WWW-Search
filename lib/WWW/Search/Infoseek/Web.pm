@@ -1,6 +1,6 @@
 # Web.pm
 # Copyright (c) 1998 by Martin Thurn
-# $Id: Web.pm,v 1.10 1999/06/30 15:35:19 mthurn Exp $
+# $Id: Web.pm,v 1.11 1999/07/13 13:50:09 mthurn Exp $
 
 =head1 NAME
 
@@ -45,12 +45,12 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search::Infoseek Exporter);
-$VERSION = '1.10';
+$VERSION = '2.01';
 
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 $TEST_CASES = <<"ENDTESTCASES";
-&test('Infoseek::Web', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_BY_COUNTING, 0);
-&test('Infoseek::Web', '$MAINTAINER', 'one_page', 'Mar'.'tin Thurn AND St'.'ar Wa'.'rs', \$TEST_RANGE, 2,24);
+&test('Infoseek::Web', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_EXACTLY);
+&test('Infoseek::Web', '$MAINTAINER', 'one_page', 'Mar'.'tin Thu'.'rn AND St'.'ar Wa'.'rs', \$TEST_RANGE, 2,24);
 &test('Infoseek::Web', '$MAINTAINER', 'two_page', 'Gre'.'edo AND collecti'.'ble', \$TEST_GREATER_THAN, 25);
 ENDTESTCASES
 

@@ -1,15 +1,15 @@
 
-WWW::Search and AutoSearch
-==========================
+WWW::Search and AutoSearch and WebSearch
+========================================
 
 
-WHAT IS NEW WITH WWW::Search 1.025?  (1999-06-30)
-------------------------------------------------
+WHAT IS NEW IN WWW::Search 2.01?  (1999-07-14)
+----------------------------------------------
 overview:
+ * Makefile now works in Win32!
  * Bug fixes for some backends (as usual)
- * New backend for AltaVista Intranet!
- * New backend for Excite News!
- * New test mechanism
+ * New backends for Google, LookSmart, and OpenDirectory
+ * All backends with their own version numbers have been bumped up to 2.01
 
 See the file ChangeLog for details.
 
@@ -25,43 +25,63 @@ include two applications built from this library: AutoSearch (a
 program to automate tracking of search results over time), and
 WebSearch, a small demonstration program to drive the library.
 
+WWW::Search does NOT try to emulate the search that you would get with
+each search engine's GUI.  WWW::Search performs the search in a way
+that is efficient and convenient for text processing.  This might
+include getting "text-only" pages, making sure descriptions are turned
+on, and increasing the number of hits per page, among other tricks.
+
 Because WWW::Search depends on parsing the HTML output of web search
-engines it will fail of the search engine operators change their
+engines it will fail if the search engine operators change their
 format (an unfortunately frequent occurrence).  WWW::Search includes a
 test suite for most back-ends which verifies that it is functioning
 correctly.  As of the day of the release the current back-end status
 is:
 
 AltaVista		working
+AltaVista::AdvancedNews	working
+AltaVista::AdvancedWeb	working
+AltaVista::News		working
+AltaVista::Web		working
+AltaVista::Intranet	working
 Crawler			partially working
 Dejanews		working
 Excite			working
+Excite::News		working
 ExciteForWebServers	not working
-Fireball		not working
+Fireball		not working?
 FolioViews		working
+Google  		working
 Gopher			not working? (not in test suite)
 HotBot			working
 HotFiles		not working? (not in test suite)
 Infoseek		working
+Infoseek::Companies	working
+Infoseek::Email		not working
+Infoseek::News		working
+Infoseek::Web		working
 Livelink		not working? (not in test suite)
+LookSmart		working
 Lycos			working
 Magellan		working
+Metacrawler             not working
 Metapedia		not working? (not in test suite)
 MSIndexServer		not working
-NorthernLight		partially working (doesn't handle multi-page returns)
+NorthernLight		working
 Null			working
-PLweb			working
+OpenDirectory           working
+PLweb			not working
 Profusion		working
-Search97		working
+Search97		not working
 SFgate			working
 Simple			not working? (not in test suite)
 Snap			working
 Verity			not working (not in test suite)
 WebCrawler		working
 Yahoo			working
-ZDNet			not working? (not in test suite)
+ZDNet			working
 
-``Paritially working'' indicates that some tests passed and some failed.
+``Partially working'' indicates that some tests passed and some failed.
 
 
 WHAT IS AutoSearch?
@@ -87,8 +107,9 @@ see <http://www.perl.com>.  For libwww-perl, see
 Comprehensive Perl Archive Network (CPAN). Visit
 <http://www.perl.com/CPAN/> to find a CPAN site near you.
 
-At this time the primary WWW::Search development and testing is under
-perl version 5.005_05 on Sun Sparc Solaris 2.5.1 and 7.
+At the time of this release, the primary WWW::Search development and
+testing is under perl version 5.005_03 on Sun Sparc Solaris 7 and
+ActiveState perl build 517 on Windows NT 4.0 with service pack 5.
 
 
 AVAILABILITY
@@ -106,7 +127,7 @@ INSTALLATION
 ------------
 
 In order to use this package you will need Perl version 5.002 or
-better.  You install WWW::Search, as you would install any perl module
+better.  You install WWW::Search as you would install any perl module
 library, by running these commands:
 
     perl Makefile.PL
@@ -149,9 +170,7 @@ External queries can fail for several reasons:
 
 If the external tests fail, please either investigate the error or
 send a description of the problem and the output of "make test" to the
-maintainer of the back-end for the search engine that fails.  You can
-find out who maintains the back-end by looking at the documentation
-(e.g. perldoc WWW::Search::Infoseek).
+maintainer of the back-end for the search engine that fails.
 
 
 DISCUSSION, BUG REPORTS, AND IMPROVEMENTS
@@ -163,14 +182,16 @@ A mailing list for WWW::Search discussion exists.  To subscribe, send
 
 Back-end-related bug reports ("search engine ABC doesn't work") should
 be sent to the author of the back-end (back-end authors are identified
-in the corresponding man page and the output of ``make test'').
+in the corresponding man page and in the output of ``make test'').
 General bugs should be reported to <MartinThurn@iname.com>.
 
 When submitting a bug report, please remember to include
+        - your operating system name and version
 	- your version of perl
 	- your version of WWW::Search
+	- your version of the backend
+        - the code you ran to produce the error
 	- sample output showing the error
-	- the output of "make test"
 
 
 DEMONSTRATION
@@ -192,9 +213,8 @@ to your crontab(1) to update this search once a week.
 DOCUMENTATION
 -------------
 
-See `perldoc WWW::Search` for an overview of the library.
-POD-style documentation is also included in all modules
-and scripts.  
+See `perldoc WWW::Search` for an overview of the library.  POD-style
+documentation is also included in all modules and scripts.
 
 
 FUTURE PLANS
@@ -202,8 +222,14 @@ FUTURE PLANS
 
 Some ideas:
 
+  - a global option that will force WWW::Search to perform the same
+search as the engine's web GUI (I'm looking for contributions of the
+precise arguments that will produce such a search for each engine;
+i.e. the hash that should be passed as the second argument to
+native_query)
+
   - application-level proxy support (I'm looking for a contribution
-	here from someone who uses/needs proxy support)
+here from someone who uses/needs proxy support)
 
   - more widespread use of new results tags across all back-ends
 
@@ -227,7 +253,7 @@ component.
 PLATFORM SUPPORT:
 	Unix			John Heidemann <johnh@isi.edu>
 	Windows			Jim Smyser <jsmyser@bigfoot.com>
-		(see <http://pubinfo.phx.primenet.com/www.search/>)
+                		(see <http://members.xoom.com/WWW_Search>)
 
 APPLICATIONS:
 	WebSearch		John Heidemann
@@ -315,17 +341,3 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 Portions of this README are derived from the README for libwww-perl.
 
-
-ISPELL
-------
-
- LocalWords:  AltaVista Lycos Hotbot WebCrawler libwww perl com sn CPAN isi PL
- LocalWords:  lsam pl pm perldoc README LocalWords AutoSearch Search's html usr
- LocalWords:  crontab HotBot autosearch Scheding Kedar Dejanews Infoseek lib de
- LocalWords:  SearchResult LCI wls Cesare Feroldi GLen Pringle pringle monash
- LocalWords:  au Raman raman Virden lvirden cas org LWP WebSearch RobotUA Amor
- LocalWords:  joe smartlink jjamor infor es Yahoo Thurn InfoSeek libwww's PLweb
- LocalWords:  SFgate Lindner Jul wrt Decoux Chandrasekar Linder Martin's mthurn
- LocalWords:  tasc DejaNews Bilal Siddiqui bilal siddiqui mankato msus Apr larc
- LocalWords:  mccoy nasa gov paul lindner itu int decoux moulon inra
- LocalWords:  fr mickeyc linc cis upenn Dwelle hotwired

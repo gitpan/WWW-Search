@@ -1,76 +1,52 @@
 #!/usr/local/bin/perl -w
 
-# HotBot.pm
+# Metacrawler.pm
 # by Wm. L. Scheding and Martin Thurn
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: Metacrawler.pm,v 1.1 1998/06/29 18:39:54 mthurn Exp $
-
-package WWW::Search::HotBot;
+# $Id: Metacrawler.pm,v 1.2 1999/07/13 17:08:57 mthurn Exp $
 
 =head1 NAME
 
-WWW::Search::HotBot - class for searching HotBot 
-
+WWW::Search::Metacrawler - class for searching Metacrawler 
 
 =head1 SYNOPSIS
 
   use WWW::Search;
-  my $oSearch = new WWW::Search('HotBot');
+  my $oSearch = new WWW::Search('Metacrawler');
   my $sQuery = WWW::Search::escape_query("+sushi restaurant +Columbus Ohio");
   $oSearch->native_query($sQuery);
   while (my $oResult = $oSearch->next_result())
     { print $oResult->url, "\n"; }
 
-
 =head1 DESCRIPTION
 
-This class is a HotBot specialization of WWW::Search.
-It handles making and interpreting HotBot searches
-F<http://www.hotbot.com>.
+This class is a Metacrawler specialization of WWW::Search.
+It handles making and interpreting Metacrawler searches
+F<http://www.metacrawler.com>.
 
 This class exports no public interface; all interaction should
 be done through L<WWW::Search> objects.
-
 
 =head1 SEE ALSO
 
 To make new back-ends, see L<WWW::Search>.
 
-
-=head1 HOW DOES IT WORK?
-
-C<native_setup_search> is called (from C<WWW::Search::setup_search>)
-before we do anything.  It initializes our private variables (which
-all begin with underscore) and sets up a URL to the first results
-page in C<{_next_url}>.
-
-C<native_retrieve_some> is called (from C<WWW::Search::retrieve_some>)
-whenever more hits are needed.  It calls C<WWW::Search::http_request>
-to fetch the page specified by C<{_next_url}>.
-It then parses this page, appending any search hits it finds to 
-C<{cache}>.  If it finds a ``next'' button in the text,
-it sets C<{_next_url}> to point to the page for the next
-set of results, otherwise it sets it to undef to indicate we''re done.
-
-
 =head1 BUGS
 
 Please tell the author if you find any!
 
-
 =head1 TESTING
 
 This module adheres to the C<WWW::Search> test suite mechanism. 
-
+See $TEST_CASES below.
 
 =head1 AUTHOR
 
-As of 1998-02-02, C<WWW::Search::HotBot> is maintained by Martin Thurn
-(mthurn@irnet.rest.tasc.com).
+As of 1998-02-02, C<WWW::Search::Metacrawler> is maintained by Martin Thurn
+(MartinThurn@iname.com).
 
-C<WWW::Search::HotBot> was originally written by Wm. L. Scheding,
+C<WWW::Search::Metacrawler> was originally written by Wm. L. Scheding,
 based on C<WWW::Search::AltaVista>.
-
 
 =head1 LEGALESE
 
@@ -78,14 +54,17 @@ THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
 WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
 MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
-
 =head1 VERSION HISTORY
 
 If it''s not listed here, then it wasn''t a meaningful nor released revision.
 
+=head2 2.01
+
+Code cleanup, no change in functionality.
+
 =head2 1.17
 
-HotBot changed their search script location and output format on 1998-05-21.
+Metacrawler changed their search script location and output format on 1998-05-21.
 Also, as many as 6 fields of each SearchResult are now filled in.
 
 =head2 1.13
@@ -95,16 +74,15 @@ Updated test cases.
 
 =head2 1.12
 
-HotBot does not do truncation. Therefore, if the query contains
+Metacrawler does not do truncation. Therefore, if the query contains
 truncation characters (i.e. '*' at end of words), they are simply
-deleted before the query is sent to HotBot.
+deleted before the query is sent to Metacrawler.
 
 =head2 1.11
 
 Fixed and revamped by Martin Thurn.  Sent to John Heidemann
 (maintainer of WWW::Search) on 1998-02-05 for inclusion in the next
 release of WWW::Search.
-
 
 =cut
 
@@ -115,11 +93,20 @@ release of WWW::Search.
 
 #####################################################################
 
+package WWW::Search::Metacrawler;
+
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '1.17';
+$VERSION = '2.01';
+
+$MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
+$TEST_CASES = <<"ENDTESTCASES";
+&test('Metacrawler', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_EXACTLY);
+&test('Metacrawler', '$MAINTAINER', 'one_page', '"Christie Abbott"', \$TEST_RANGE, 2,49);
+&test('Metacrawler', '$MAINTAINER', 'two_page', '"Martin Thurn" AND Bible', \$TEST_GREATER_THAN, 87);
+ENDTESTCASES
 
 use Carp ();
 use WWW::Search(generic_option);
@@ -136,9 +123,9 @@ sub native_setup_search
   my $DEFAULT_HITS_PER_PAGE = 100;
   # $DEFAULT_HITS_PER_PAGE = 10;   # for debugging
   $self->{'_hits_per_page'} = $DEFAULT_HITS_PER_PAGE;
-  # $self->timeout(120);  # HotBot used to be notoriously slow
+  # $self->timeout(120);  # Metacrawler used to be notoriously slow
 
-  # As of 1998-05, HotBot apparently doesn't like WWW::Search!  Response was
+  # As of 1998-05, Metacrawler apparently doesn't like WWW::Search!  Response was
   # RC: 403 (Forbidden)
   # Message: Forbidden by robots.txt
   $self->user_agent(1);
@@ -159,7 +146,7 @@ sub native_setup_search
     {
     $self->{_options} = {
                          'search_url' => 'http://www.metacrawler.com/crawler',  ## ALTERATION
-						 'site' => 'www::search',  ## Paul Phillips of Metacrawler requested this option so he can track incoming traffic
+                         'site' => 'www::search',  ## Paul Phillips of Metacrawler requested this option so he can track incoming traffic
                         };
     } # if
   my $options_ref = $self->{_options};
@@ -179,7 +166,7 @@ sub native_setup_search
     next if (generic_option($_));
     $options .= $_ . '=' . $options_ref->{$_} . '&';
     }
-  # Ugh!  HotBot chokes if our URL has a dangling '&' at the end:
+  # Ugh!  Metacrawler chokes if our URL has a dangling '&' at the end:
   chop $options;
   # Finally figure out the url.
   $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
@@ -194,7 +181,7 @@ sub native_setup_search
 sub native_retrieve_some
   {
   my ($self) = @_;
-  # print STDERR " *   HotBot::native_retrieve_some()\n" if $self->{'_debug'};
+  # print STDERR " *   Metacrawler::native_retrieve_some()\n" if $self->{'_debug'};
   
   # Fast exit if already done:
   return undef unless defined($self->{_next_url});
@@ -208,7 +195,7 @@ sub native_retrieve_some
   if (!$response->is_success) 
     {
     return undef;
-    };
+    }
 
   print STDERR " *   got response\n" if $self->{'_debug'};
   $self->{'_next_url'} = undef;
@@ -220,17 +207,17 @@ sub native_retrieve_some
   my ($state) = ($TITLE);
   my ($hit) = ();
   my $sHitPattern = quotemeta '<font color="#000000">';  ## ALTERATION
-  foreach (split(/\n/, $response->content())) 
+  foreach ($self->split_lines($response->content())) 
     {
     s/\r$//;  # delete DOS carriage-return
     next if m/^\r?$/; # short circuit for blank lines
     print STDERR " * $state ===$_===" if 2 <= $self->{'_debug'};
 
     if ($state eq $TITLE && 
-        m@<TITLE>Metacrawler query:\s+(.+)</TITLE>@i)  ## ALTERATION
+        m@\<TITLE>Metacrawler query:\s+(.+)\</TITLE>@i)  ## ALTERATION
       {
       # Actual line of input is:
-      # <HEAD><TITLE>HotBot results: Christie Abbott (1+)</TITLE>
+      # <HEAD><TITLE>Metacrawler results: Christie Abbott (1+)</TITLE>
       print STDERR "title line\n" if 2 <= $self->{'_debug'};
       $state = $HEADER;
       } # We're in TITLE mode, and line has title
@@ -247,15 +234,15 @@ sub native_retrieve_some
 
     elsif ($state eq $HITS && 
            m/^$sHitPattern/)
-           # m|<B>(\d+)\.\s<A\ .+?</A>\ <A\ HREF=\043([^\043]+)\043>(.+?)</A></B><BR>(.+?)<br>.+?(\d+)\%.+?(\d+)\ bytes.+?(\d\d\d\d/\d\d/\d\d)|i)
+           # m|\<B>(\d+)\.\s\<A\ .+?\</A>\ \<A\ HREF=\043([^\043]+)\043>(.+?)\</A>\</B>\<BR>(.+?)\<br>.+?(\d+)\%.+?(\d+)\ bytes.+?(\d\d\d\d/\d\d/\d\d)|i)
       {
       print STDERR "hit line\n" if 2 <= $self->{'_debug'};
       # Actual line of input:
-      # <font face="verdana&#44;arial&#44;helvetica" size="2"><B>1. <A HREF="http://www.toysrgus.com/images-bootleg.html" TARGET="preview"><IMG SRC="http://static.hotbot.com/images/btn.openpage.white.gif" BORDER="0" WIDTH="17" HEIGHT="16" ALT=""></A> <A HREF="http://www.toysrgus.com/images-bootleg.html">Bootlegs</A></B><BR>Bootlegs Maintained by Gus Lopez (lopez@cs.washington.edu) Bootlegs toys and other Star Wars collectibles were made primarily in countries where Star Wars was not commercially released in theaters. Most Star Wars bootlegs originate from the eastern.<br></font><font size="2">99%&nbsp;&nbsp; 5601 bytes&#44; 1998/03/19 &nbsp;&nbsp;&nbsp;http://www.toysrgus.com/images-bootleg.html</font><p>
+      # <font face="verdana&#44;arial&#44;helvetica" size="2"><B>1. <A HREF="http://www.toysrgus.com/images-bootleg.html" TARGET="preview"><IMG SRC="http://static.Metacrawler.com/images/btn.openpage.white.gif" BORDER="0" WIDTH="17" HEIGHT="16" ALT=""></A> <A HREF="http://www.toysrgus.com/images-bootleg.html">Bootlegs</A></B><BR>Bootlegs Maintained by Gus Lopez (lopez@cs.washington.edu) Bootlegs toys and other Star Wars collectibles were made primarily in countries where Star Wars was not commercially released in theaters. Most Star Wars bootlegs originate from the eastern.<br></font><font size="2">99%&nbsp;&nbsp; 5601 bytes&#44; 1998/03/19 &nbsp;&nbsp;&nbsp;http://www.toysrgus.com/images-bootleg.html</font><p>
       my ($iHit,$iPercent,$iBytes,$sURL,$sTitle,$sDesc,$sDate) = (0,0,0,'','','','');
-      # m/<B>(\d+)\.\s/ && $iHit = $1;
-      ($sURL,$sTitle) = ($1,$2) if m|<A\sHREF=\042([^\042]+)\042>(.+?)</A>|;
-      $sDesc = $1 if m/<BR>(.+)<br>/;
+      # m/\<B>(\d+)\.\s/ && $iHit = $1;
+      ($sURL,$sTitle) = ($1,$2) if m|\<A\sHREF=\042([^\042]+)\042>(.+?)\</A>|;
+      $sDesc = $1 if m/\<BR>(.+)\<br>/;
       ($iPercent,$iBytes,$sDate) = ($1,$2,$3) if m|>(\d+)\%&nbsp;&nbsp;\s(\d+)\sbytes&\#44;\s(\d\d\d\d/\d\d/\d\d)|;
       # At this point, we could do something about "mirror" URLs (like
       # ignore them), but then our total hit count will get all out of
@@ -283,7 +270,7 @@ sub native_retrieve_some
       $state = $HITS;
       } # $state eq HIT2
 
-    elsif ($state eq $NEXT && m|</form>|i)
+    elsif ($state eq $NEXT && m|\</form>|i)
       {
       print STDERR " missed next button\n" if 2 <= $self->{'_debug'};
       # There was no "next" button on this page; no more pages to get!
@@ -305,7 +292,7 @@ sub native_retrieve_some
         next if (generic_option($_));
         $options .= $_ . '=' . $self->{_options}{$_} . '&';
         }
-      # Ugh!  HotBot chokes if our URL has a dangling '&' at the end:
+      # Ugh!  Metacrawler chokes if our URL has a dangling '&' at the end:
       chop $options;
       # Finally figure out the url.
       $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
@@ -328,7 +315,7 @@ sub native_retrieve_some
     push(@{$self->{cache}}, $hit);
     }
   
-  # Sleep so as to not overload Mr. HotBot
+  # Sleep so as to not overload Mr. Metacrawler
   $self->user_agent_delay if (defined($self->{_next_url}));
   
   return $hits_found;

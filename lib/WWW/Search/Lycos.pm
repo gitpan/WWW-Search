@@ -1,7 +1,7 @@
 # Lycos.pm
 # by Wm. L. Scheding and Martin Thurn
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: Lycos.pm,v 1.4 1999/04/30 18:50:22 mthurn Exp $
+# $Id: Lycos.pm,v 1.7 1999/07/14 18:45:45 mthurn Exp $
 
 =head1 NAME
 
@@ -86,6 +86,8 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 If it is not listed here, then it was not a meaningful nor released revision.
 
+=head2 2.01, 1999-07-13
+
 =head2 1.04, 1999-04-30
 
 Now uses lycos.com's advanced query format.
@@ -104,13 +106,18 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '1.04';
+$VERSION = '2.01';
+
+$MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
+$TEST_CASES = <<"ENDTESTCASES";
+&test('Lycos', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_EXACTLY);
+&test('Lycos', '$MAINTAINER', 'one', 'establis'.'hmentarian', \$TEST_RANGE, 2,99);
+&test('Lycos', '$MAINTAINER', 'two', 'Vad'.'er and ch'.'oke', \$TEST_GREATER_THAN, 101);
+ENDTESTCASES
 
 use Carp ();
 use WWW::Search(generic_option);
 require WWW::SearchResult;
-
-sub version { $VERSION }
 
 sub native_setup_search
   {

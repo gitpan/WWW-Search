@@ -1,29 +1,21 @@
-#!/usr/local/bin/perl -w
-         
-#
 # HotFiles.pm
 # by Jim Smyser
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: HotFiles.pm,v 1.1 1999/06/18 19:15:36 mthurn Exp $
+# $Id: HotFiles.pm,v 1.5 1999/07/14 17:55:07 mthurn Exp $
 # Complete copyright notice follows below.
-#
-         
-         
+
 package WWW::Search::HotFiles;
-         
+
 =head1 NAME
-         
+
 WWW::Search::HotFiles - class for searching ZDnet HotFiles
 
-        
 =head1 SYNOPSIS
-         
+
 require WWW::Search;
 $search = new WWW::Search('HotFiles');
-         
-         
-=head1 DESCRIPTION
 
+=head1 DESCRIPTION
 
 Class for searching ZDnet HotFiles (shareware, freeware) via Lycos.
 F<http://www.hotfiles.lycos.com>.
@@ -48,7 +40,7 @@ OS version.
 
 This class exports no public interface; all interaction should
 be done through WWW::Search objects.
-         
+
 =head1 USAGE EXAMPLE
 
  One of several print samples for this backend (this is a WebSearch
@@ -61,61 +53,28 @@ be done through WWW::Search objects.
  $result->{'index_date'} $result->{'score'}<P></SMALL></FONT>
 
  END
-         
+
 =head1 SEE ALSO
-         
+
 To make new back-ends, see L<WWW::Search>.
-         
-         
-=head1 HOW DOES IT WORK?
-         
-C<native_setup_search> is called before we do anything.
-It initializes our private variables (which all begin with underscores)
-and sets up a URL to the first results page in C<{_next_url}>.
-         
-C<native_retrieve_some> is called (from C<WWW::Search::retrieve_some>)
-whenever more hits are needed.  It calls the LWP library
-to fetch the page specified by C<{_next_url}>.
-It parses this page, appending any search hits it finds to
-C<{cache}>.  If it finds a ``next'' button in the text,
-it sets C<{_next_url}> to point to the page for the next
-set of results, otherwise it sets it to undef to indicate we're done.
-         
-         
+
 =head1 AUTHOR
-         
+
 Maintained by Jim Smyser <jsmyser@bigfoot.com>
-         
+
 =head1 TESTING
 
-Lycos can return pricky test results depending what time
-the test are run (server load?). 
-
-    $search_engine = 'HotFiles';
-    $maintainer = 'Jim Smyser <jsmyser@bigfoot.com>';
-
-    $file = 'test/HotFiles/zero_result'; 
-    $query = $bogus_query; 
-    test($mode, $TEST_EXACTLY); 
-     
-    $file = 'test/HotFiles/one_page_result'; 
-    $query = 'Med' . 'icine';
-    test($mode, $TEST_RANGE, 2, 25);
-      
-    $file = 'test/HotFiles/multi_page_result'; 
-    $query = 'Ch' . 'ess';
-    test($mode, $TEST_GREATER_THAN, 49); 
-
-
+HotFiles.pm adheres to the WWW::Search test mechanism.
+See $TEST_CASES below.
 
 =head1 COPYRIGHT
-         
+
 The original parts from John Heidemann are subject to
 following copyright notice:
-         
+
 Copyright (c) 1996-1998 University of Southern California.
 All rights reserved.
-                                                                        
+
 Redistribution and use in source and binary forms are permitted
 provided that the above copyright notice and this paragraph are
 duplicated in all such forms and that any documentation, advertising
@@ -124,183 +83,208 @@ acknowledge that the software was developed by the University of
 Southern California, Information Sciences Institute.  The name of the
 University may not be used to endorse or promote products derived from
 this software without specific prior written permission.
-         
+
 THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
 WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
 MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-         
-         
-=cut
-#'
 
-         
+=cut
+
 #####################################################################
     
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
+$VERSION = '2.01';
     
+$MAINTAINER = 'Jim Smyser <jsmyser@bigfoot.com>';
+$TEST_CASES = <<"ENDTESTCASES";
+&test('HotFiles', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_EXACTLY);
+&test('HotFiles', '$MAINTAINER', 'one', 'replication', \$TEST_RANGE, 2,24);
+&test('HotFiles', '$MAINTAINER', 'two', 'Medicine', \$TEST_GREATER_THAN, 25);
+ENDTESTCASES
+
 use Carp ();
 use WWW::Search(generic_option);
 require WWW::SearchResult;
-    
-    
+
 # private
 sub native_setup_search
-{
-   my ($self, $native_query, $native_options_ref) = @_;
-   # Set some private variables:
-   $self->{_debug} = $native_options_ref->{'search_debug'};
-   $self->{_debug} = 2 if ($native_options_ref->{'search_parse_debug'});
-   $self->{_debug} ||= 0;
-   
-   my $DEFAULT_HITS_PER_PAGE = 25;
-   $DEFAULT_HITS_PER_PAGE = 25 if $self->{_debug};
-   $self->{'_hits_per_page'} = $DEFAULT_HITS_PER_PAGE;
-   # Add one to the number of hits needed, because Search.pm does ">"
-   # instead of ">=" on line 672!
-   my $iMaximum = 1 + $self->maximum_to_retrieve;
-   # Divide the problem into N pages of K hits per page.
-   my $iNumPages = 1 + int($iMaximum / $self->{'_hits_per_page'});
-   if (1 < $iNumPages)
+  {
+  my ($self, $native_query, $native_options_ref) = @_;
+  # Set some private variables:
+  $self->{_debug} = $native_options_ref->{'search_debug'};
+  $self->{_debug} = 2 if ($native_options_ref->{'search_parse_debug'});
+  $self->{_debug} ||= 0;
+  
+  my $DEFAULT_HITS_PER_PAGE = 25;
+  $DEFAULT_HITS_PER_PAGE = 25 if $self->{_debug};
+  $self->{'_hits_per_page'} = $DEFAULT_HITS_PER_PAGE;
+  # Add one to the number of hits needed, because Search.pm does ">"
+  # instead of ">=" on line 672!
+  my $iMaximum = 1 + $self->maximum_to_retrieve;
+  # Divide the problem into N pages of K hits per page.
+  my $iNumPages = 1 + int($iMaximum / $self->{'_hits_per_page'});
+  if (1 < $iNumPages)
     {
-   $self->{'_hits_per_page'} = 1 + int($iMaximum / $iNumPages);
-    } else {
-   $self->{'_hits_per_page'} = $iMaximum;
+    $self->{'_hits_per_page'} = 1 + int($iMaximum / $iNumPages);
+    } 
+  else {
+    $self->{'_hits_per_page'} = $iMaximum;
     }
-   $self->{agent_e_mail} = 'jsmyser@bigfoot.com';
-   $self->user_agent(1);
-   $self->{'_next_to_retrieve'} = 0;
-   $self->{'_num_hits'} = 0;
-   if (!defined($self->{_options})) {
-            $self->{_options} = {
-            'search_url' => 'http://www.hotfiles.lycos.com/cgi-bin/texis/swlib/lycos/search.html',
-            'Usrt' => 'rel&Usrchtype=simple&search_max=26',
-            'Utext' => $native_query,
-   
-            };
-         }
-   my $options_ref = $self->{_options};
-   if (defined($native_options_ref))
-   {
-   # Copy in new options.
-   foreach (keys %$native_options_ref)
+  $self->{agent_e_mail} = 'jsmyser@bigfoot.com';
+  $self->user_agent(1);
+  $self->{'_next_to_retrieve'} = 0;
+  $self->{'_num_hits'} = 0;
+  if (!defined($self->{_options})) {
+    $self->{_options} = {
+                         'search_url' => 'http://www.hotfiles.lycos.com/cgi-bin/texis/swlib/lycos/search.html',
+                         'Usrt' => 'rel&Usrchtype=simple&search_max=26',
+                         'Utext' => $native_query,
+                        };
+    }
+  my $options_ref = $self->{_options};
+  if (defined($native_options_ref))
     {
-   $options_ref->{$_} = $native_options_ref->{$_};
-    } 
-      } 
-# Process the options.
-   my $options = '';
-   foreach (keys %$options_ref)
-   {
-   # printf STDERR "option: $_ is " . $options_ref->{$_} . "\n";
-   next if (generic_option($_));
-   $options .= $_ . '=' . $options_ref->{$_} . '&';
-    }
-# Finally, figure out the url.
-   $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
-    } 
-    
+    # Copy in new options.
+    foreach (keys %$native_options_ref)
+      {
+      $options_ref->{$_} = $native_options_ref->{$_};
+      } # foreach
+    } # if
+  # Process the options.
+  my $options = '';
+  foreach (keys %$options_ref)
+    {
+    # printf STDERR "option: $_ is " . $options_ref->{$_} . "\n";
+    next if (generic_option($_));
+    $options .= $_ . '=' . $options_ref->{$_} . '&';
+    } # foreach
+  # Finally, figure out the url.
+  $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
+  } # native_setup_search
+
 sub begin_new_hit
-    {
-   my($self) = shift;
-   my($old_hit) = shift;
-   my($old_raw) = shift;
-   # Save it
-   if (defined($old_hit)) {
-   $old_hit->raw($old_raw) if (defined($old_raw));
-   push(@{$self->{cache}}, $old_hit);
-    };
-# Make a new hit.
-   return (new WWW::SearchResult, '');
+  {
+  my($self) = shift;
+  my($old_hit) = shift;
+  my($old_raw) = shift;
+  # Save it
+  if (defined($old_hit)) {
+    $old_hit->raw($old_raw) if (defined($old_raw));
+    push(@{$self->{cache}}, $old_hit);
     }
-   
+  ;
+  # Make a new hit.
+  return (new WWW::SearchResult, '');
+  } # begin_new_hit
+
 # private
 sub native_retrieve_some
+  {
+  my ($self) = @_;
+  # Fast exit if already done:
+  return undef unless defined($self->{_next_url});
+  # Sleep so as to not overload the server for next page(s)
+  print STDERR "***Sending request (",$self->{_next_url},")\n" if $self->{'_debug'};
+  my $response = $self->http_request('GET', $self->{_next_url});
+  $self->{response} = $response;
+  unless ($response->is_success)
     {
-   my ($self) = @_;
-   # Fast exit if already done:
-   return undef unless defined($self->{_next_url});
-   # Sleep so as to not overload the server for next page(s)
-   print STDERR "***Sending request (",$self->{_next_url},")\n" if $self->{'_debug'};
-   my $response = $self->http_request('GET', $self->{_next_url});
-   $self->{response} = $response;
-   unless ($response->is_success)
-    {
-   return undef;
+    return undef;
     }
-   print STDERR "***Picked up a response..\n" if $self->{'_debug'};
-   $self->{'_next_url'} = undef;
-# Parse the output
-   my ($HEADER, $HITS, $DESC, $TRAILER) = qw(HE HH DE TR);
-   my ($raw) = '';
-   my $hits_found = 0;
-   my $state = $HEADER;
-   my $hit;
-   foreach ($self->split_lines($response->content()))
+  print STDERR "***Picked up a response..\n" if $self->{'_debug'};
+  $self->{'_next_url'} = undef;
+  # Parse the output
+  my ($HEADER, $HITS, $DESC, $TRAILER) = qw(HE HH DE TR);
+  my ($raw) = '';
+  my $hits_found = 0;
+  my $state = $HEADER;
+  my $hit;
+  foreach ($self->split_lines($response->content()))
     {
-   next if m/^$/; # short circuit for blank lines
-   print STDERR " *** $state ===$_===" if 2 <= $self->{'_debug'};
-   
-if ($state eq $HEADER && m@<TR BGCOLOR="#FFFFFF">@i) {
-    $state = $HITS;
-} elsif ($state eq $HITS && m@<TD ALIGN=left><FONT SIZE=2><b><A HREF="([^"]+)">(.*)</FONT></A><BR>@i) {
-    print STDERR "hit url line\n" if 2 <= $self->{'_debug'};
-    ($hit, $raw) = $self->begin_new_hit($hit, $raw);
-    $raw .= $_;
-    $self->{'_num_hits'}++;
-    $hits_found++;
-    $hit->add_url($1);
-    $hit->title($2);
-    $state = $DESC;
-} elsif ($state eq $DESC && m@^<FONT SIZE=2>(.*)@) {
-    print STDERR "hit description line\n" if 2 <= $self->{'_debug'};
-    $raw .= $_;
-    $hit->description($1);
-    $state = $HITS;
-} elsif ($state eq $HITS && m@<TD>&nbsp;</TD>@) {
-    $raw .= $_;
-    # Get the date, most I think like to see a file date w/desc..
-} elsif ($state eq $HITS && m@<TD NOWRAP ALIGN=left>(.*)</TD>@) {
-    $raw .= $_;
-    $hit->index_date($1);
-    # the score here will display rating star images for a nice touch...
-} elsif ($state eq $HITS && m@<TD ALIGN=left>(<IMG SRC=(.+)>)@) {
-    $raw .= $_;
-    $hit->score($1);
-} elsif ($state eq $HITS && m@<TD ALIGN=left><FONT SIZE=2>(.*)@) {
-    $raw .= $_;
-} elsif ($state eq $HITS && m@<TD ALIGN=left><FONT SIZE=2>(.*)</FONT></TD>@) {
-    $raw .= $_;
-} elsif ($state eq $HITS && m@<p>@i) {
-    # end of hits
-   
-} elsif ($state eq $HITS && m/<INPUT\s[^>]*VALUE=\"Hits\s(.+)\"/i) {
-    print STDERR " found next button\n" if 2 <= $self->{'_debug'};
-    $self->{'_next_to_retrieve'} += $self->{'_hits_per_page'};
-    $self->{'_options'}{'mainnext'} = $self->{'_next_to_retrieve'};
-    my($options) = '';
-    foreach (keys %{$self->{_options}})
-     {
-    next if (generic_option($_));
-    $options .= $_ . '=' . $self->{_options}{$_} . '&';
-     }
-    # Finally, figure out the url.
-    $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
-    $state = $TRAILER;
-     } else {
-    print STDERR "didn't match\n" if 2 <= $self->{'_debug'};
-     }
-       } 
-    if ($state ne $TRAILER)
-     {
+    next if m/^$/;          # short circuit for blank lines
+    print STDERR " *** $state ===$_===" if 2 <= $self->{'_debug'};
+    
+    if ($state eq $HEADER && m@\<TR BGCOLOR="#FFFFFF">@i) 
+      {
+      $state = $HITS;
+      }
+    elsif ($state eq $HITS && m@\<TD ALIGN=left>\<FONT SIZE=2>\<b>\<A HREF="([^"]+)">(.*)\</FONT>\</A>\<BR>@i) 
+      {
+      print STDERR "hit url line\n" if 2 <= $self->{'_debug'};
+      ($hit, $raw) = $self->begin_new_hit($hit, $raw);
+      $raw .= $_;
+      $self->{'_num_hits'}++;
+      $hits_found++;
+      $hit->add_url($1);
+      $hit->title($2);
+      $state = $DESC;
+      }
+    elsif ($state eq $DESC && m@^\<FONT SIZE=2>(.*)@) 
+      {
+      print STDERR "hit description line\n" if 2 <= $self->{'_debug'};
+      $raw .= $_;
+      $hit->description($1);
+      $state = $HITS;
+      }
+    elsif ($state eq $HITS && m@\<TD>&nbsp;\</TD>@) 
+      {
+      $raw .= $_;
+      # Get the date, most I think like to see a file date w/desc..
+      }
+    elsif ($state eq $HITS && m@\<TD NOWRAP ALIGN=left>(.*)\</TD>@) 
+      {
+      $raw .= $_;
+      $hit->index_date($1);
+      # the score here will display rating star images for a nice touch...
+      }
+    elsif ($state eq $HITS && m@\<TD ALIGN=left>(\<IMG SRC=(.+)>)@) 
+      {
+      $raw .= $_;
+      $hit->score($1);
+      }
+    elsif ($state eq $HITS && m@\<TD ALIGN=left>\<FONT SIZE=2>(.*)@) 
+      {
+      $raw .= $_;
+      }
+    elsif ($state eq $HITS && m@\<TD ALIGN=left>\<FONT SIZE=2>(.*)\</FONT>\</TD>@) 
+      {
+      $raw .= $_;
+      }
+    elsif ($state eq $HITS && m@\<p>@i) 
+      {
+      # end of hits
+      }
+    elsif ($state eq $HITS && m/\<INPUT\s[^>]*VALUE=\"Hits\s(.+)\"/i) 
+      {
+      print STDERR " found next button\n" if 2 <= $self->{'_debug'};
+      $self->{'_next_to_retrieve'} += $self->{'_hits_per_page'};
+      $self->{'_options'}{'mainnext'} = $self->{'_next_to_retrieve'};
+      my($options) = '';
+      foreach (keys %{$self->{_options}})
+        {
+        next if (generic_option($_));
+        $options .= $_ . '=' . $self->{_options}{$_} . '&';
+        }
+      # Finally, figure out the url.
+      $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
+      $state = $TRAILER;
+      } 
+    else 
+      {
+      print STDERR "didn't match\n" if 2 <= $self->{'_debug'};
+      }
+    } # foreach line of input 
+  if ($state ne $TRAILER)
+    {
     # no other pages missed
     $self->{_next_url} = undef;
-     }
-    return $hits_found;
-} # native_retrieve_some
-   
+    }
+  return $hits_found;
+  } # native_retrieve_some
+
 1;
-
-
+      
+      

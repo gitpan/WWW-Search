@@ -1,6 +1,6 @@
 # Magellan.pm
 # Copyright (c) 1998 by Martin Thurn
-# $Id: Magellan.pm,v 1.9 1998/10/22 17:46:24 mthurn Exp $
+# $Id: Magellan.pm,v 1.12 1999/07/13 16:56:24 mthurn Exp $
 
 =head1 NAME
 
@@ -28,21 +28,6 @@ be done through L<WWW::Search> objects.
 
 To make new back-ends, see L<WWW::Search>.
 
-=head1 HOW DOES IT WORK?
-
-C<native_setup_search> is called (from C<WWW::Search::setup_search>)
-before we do anything.  It initializes our private variables (which
-all begin with underscore) and sets up a URL to the first results
-page in C<{_next_url}>.
-
-C<native_retrieve_some> is called (from C<WWW::Search::retrieve_some>)
-whenever more hits are needed.  It calls C<WWW::Search::http_request>
-to fetch the page specified by C<{_next_url}>.
-It then parses this page, appending any search hits it finds to 
-C<{cache}>.  If it finds a ``next'' button in the text,
-it sets C<{_next_url}> to point to the page for the next
-set of results, otherwise it sets it to undef to indicate we''re done.
-
 =head1 BUGS
 
 Please tell the author if you find any!
@@ -50,20 +35,6 @@ Please tell the author if you find any!
 =head1 TESTING
 
 This module adheres to the C<WWW::Search> test suite mechanism. 
-
-  Test cases (accurate as of 1998-10-22):
-
-    $file = 'test/Magellan/zero_result';
-    $query = 'Bogus' . 'NoSuchWord';
-    test($mode, $TEST_EXACTLY);
-
-    $file = 'test/Magellan/one_page_result';
-    $query = 'disestab'.'lishmentarianism';
-    test($mode, $TEST_RANGE, 2, 9);
-
-    $file = 'test/Magellan/multi_page_result';
-    $query = 'om'.'arr';
-    test($mode, $TEST_GREATER_THAN, 11);
 
 =head1 AUTHOR
 
@@ -80,6 +51,8 @@ WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
 MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 =head1 VERSION HISTORY
+
+=head2 2.01, 1999-07-13
 
 =head2 1.7, 1998-10-09
 
@@ -103,12 +76,18 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = sprintf("%d.%02d", q$Revision: 1.9 $ =~ /(\d+)\.(\d+)/);
+$VERSION = '2.01';
+
+$MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
+$TEST_CASES = <<"ENDTESTCASES";
+&test('Magellan', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_EXACTLY);
+&test('Magellan', '$MAINTAINER', 'one_page', 'dise'.'stablishmentarianism', \$TEST_RANGE, 1,9);
+&test('Magellan', '$MAINTAINER', 'two_page', '+IS'.'I +divisi'.'on', \$TEST_GREATER_THAN, 11);
+ENDTESTCASES
 
 use Carp ();
 use WWW::Search(generic_option);
 require WWW::SearchResult;
-
 
 # private
 sub native_setup_search
@@ -118,10 +97,6 @@ sub native_setup_search
   # Magellan doesn't seem to let you change the number of hits per page.
   my $DEFAULT_HITS_PER_PAGE = 10;
   $self->{'_hits_per_page'} = $DEFAULT_HITS_PER_PAGE;
-
-  # Add one to the number of hits needed, because Search.pm does ">"
-  # instead of ">=" on line 672!
-  my $iMaximum = 1 + $self->maximum_to_retrieve;
 
   $self->{agent_e_mail} = 'MartinThurn@iname.com';
   $self->user_agent(0);
@@ -224,7 +199,7 @@ sub native_retrieve_some
       $state = $HITS;
       }
     elsif ($state eq $HITS && 
-           m{<B><A\sHREF=\"([^\"]+)\">([^<]+)})
+           m{\<B\>\<A\sHREF=\"([^\"]+)\"\>([^\<]+)})
       {
       print STDERR "hit url line\n" if 2 <= $self->{'_debug'};
       # Actual line of input:
@@ -264,7 +239,7 @@ sub native_retrieve_some
       $state = $HITS;
       } # line is description
 
-    elsif ($state eq $HITS && m{<input\s.*?\sVALUE=\"Next\sResults\"}i)
+    elsif ($state eq $HITS && m{\<input\s.*?\sVALUE=\"Next\sResults\"}i)
       {
       print STDERR " found next button\n" if 2 <= $self->{'_debug'};
       # Actual lines of input are:

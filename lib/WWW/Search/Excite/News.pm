@@ -1,9 +1,9 @@
 ###############################################################
-# ExciteNews.pm                                               
-# by Jim Smyser                                               
-# Copyright (c) 1999 by Jim Smyser & USC/ISI                  
-# $Id: News.pm,v 1.2 1999/06/30 20:12:06 mthurn Exp $
-# Complete copyright notice follows below.                    
+# ExciteNews.pm                                       
+# by Jim Smyser                                       
+# Copyright (c) 1999 by Jim Smyser & USC/ISI          
+# $Id: News.pm,v 1.4 1999/07/14 17:09:16 mthurn Exp $
+# Complete copyright notice follows below.            
 ###############################################################
 
 =head1 NAME
@@ -36,7 +36,7 @@ To make new back-ends, see L<WWW::Search>.
 C<native_setup_search> is called before we do anything.
 It initializes our private variables (which all begin with underscores)
 and sets up a URL to the first results page in C<{_next_url}>.
-         
+ 
 C<native_retrieve_some> is called (from C<WWW::Search::retrieve_some>)
 whenever more hits are needed.  It calls the LWP library
 to fetch the page specified by C<{_next_url}>.
@@ -51,16 +51,23 @@ Maintained by Jim Smyser <jsmyser@bigfoot.com>
 
 =head1 TESTING
 
-NONE AVAILABLE FOR THIS BACKEND!
+This module adheres to the C<WWW::Search> test suite mechanism. 
+See $TEST_CASES below.
+
+=head1 VERSION HISTORY
+
+=head2 2.01, 1999-07-13
+
+New test mechanism
 
 =head1 COPYRIGHT
 
 The original parts from John Heidemann are subject to
 following copyright notice:
-         
+
 Copyright (c) 1996-1998 University of Southern California.
 All rights reserved.
-                                                                        
+                                                                
 THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
 WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
 MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
@@ -75,7 +82,14 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '1.01';
+$VERSION = '2.01';
+
+$MAINTAINER = 'Jim Smyser <jsmyser@bigfoot.com>';
+$TEST_CASES = <<"ENDTESTCASES";
+&test('Excite::News', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_EXACTLY);
+&test('Excite::News', '$MAINTAINER', 'one', 'Haw'.'aii AND Alask'.'a', \$TEST_RANGE, 1,49);
+&test('Excite::News', '$MAINTAINER', 'multi', 'Alaska', \$TEST_GREATER_THAN, 51);
+ENDTESTCASES
 
 use Carp ();
 use WWW::Search(generic_option);
@@ -168,58 +182,70 @@ sub native_retrieve_some
     next if m/^$/;              # short circuit for blank lines
     print STDERR " *** $state ===$_===" if 2 <= $self->{'_debug'};
     
-    if ($state eq $HEADER && m=^\[(\d+)\s+hits.=i) {
+    if ($state eq $HEADER && m=^\[(\d+)\s+hits.=i) 
+      {
       print STDERR "**Result Count**\n" if 2 <= $self->{'_debug'};
       $self->approximate_result_count($1);
       $state = $HITS;
-      } elsif ($state eq $HEADER && m@&nbsp;(\d+)-(\d+)@i) {
-        print STDERR "**Next Page Header**\n" if 2 <= $self->{'_debug'};
-        $state = $HITS;
-        
-        } elsif ($state eq $HITS && m@.*?<A HREF=.*?;([^"]+)\">(.*)</A></b>&nbsp;@i) {
-          print STDERR "hit url line\n" if 2 <= $self->{'_debug'};
-          ($hit, $raw) = $self->begin_new_hit($hit, $raw);
-          $raw .= $_;
-          $self->{'_num_hits'}++;
-          $hits_found++;
-          $hit->add_url($1);
-          $hit->title($2);
-          $state = $SOURCE;
-          } elsif ($state eq $SOURCE && m@(\((.*))@i) {
-            print STDERR "**News Source**\n" if 2 <= $self->{'_debug'};
-            $raw .= $_;
-            $hit->score($1);
-            $state = $DESC;
-            } elsif ($state eq $DESC && m@<BR>(.*)$@i) {
-              print STDERR "**Found Description**\n" if 2 <= $self->{'_debug'};
-              $raw .= $_;
-              $hit->description($1);
-              $state = $DATE;
-              
-              } elsif ($state eq $DATE && m@<BR>(<i>(.*))&nbsp;@) {
-                print STDERR "**Got the Date**\n" if 2 <= $self->{'_debug'};
-                $raw .= $_;
-                $hit->index_date($1);
-                $state = $HITS;
-                
-                } elsif ($state eq $HITS && m/<INPUT\s[^>]*VALUE=\"Next\sResults\"/i) {
-                  print STDERR "**Going to Next Page**\n" if 2 <= $self->{'_debug'};
-                  $self->{'_next_to_retrieve'} += $self->{'_hits_per_page'};
-                  $self->{'_options'}{'start'} = $self->{'_next_to_retrieve'};
-                  my($options) = '';
-                  foreach (keys %{$self->{_options}})
-                    {
-                    next if (generic_option($_));
-                    $options .= $_ . '=' . $self->{_options}{$_} . '&';
-                    }
-                  chop $options;
-                  # Finally, figure out the url.
-                  $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
-                  $state = $TRAILER;
-                  } else {
-                    print STDERR "**Nothing Matched**\n" if 2 <= $self->{'_debug'};
-                    }
-    } 
+      }
+    elsif ($state eq $HEADER && m@&nbsp;(\d+)-(\d+)@i) 
+      {
+      print STDERR "**Next Page Header**\n" if 2 <= $self->{'_debug'};
+      $state = $HITS;
+      }
+    elsif ($state eq $HITS && m@.*?\<A HREF=.*?;([^"]+)\">(.*)\</A>\</b>&nbsp;@i) 
+      {
+      print STDERR "hit url line\n" if 2 <= $self->{'_debug'};
+      ($hit, $raw) = $self->begin_new_hit($hit, $raw);
+      $raw .= $_;
+      $self->{'_num_hits'}++;
+      $hits_found++;
+      $hit->add_url($1);
+      $hit->title($2);
+      $state = $SOURCE;
+      } 
+    elsif ($state eq $SOURCE && m@(\((.*))@i) 
+      {
+      print STDERR "**News Source**\n" if 2 <= $self->{'_debug'};
+      $raw .= $_;
+      $hit->score($1);
+      $state = $DESC;
+      } 
+    elsif ($state eq $DESC && m@\<BR>(.*)$@i) 
+      {
+      print STDERR "**Found Description**\n" if 2 <= $self->{'_debug'};
+      $raw .= $_;
+      $hit->description($1);
+      $state = $DATE;
+      }
+    elsif ($state eq $DATE && m@\<BR>(\<i>(.*))&nbsp;@) 
+      {
+      print STDERR "**Got the Date**\n" if 2 <= $self->{'_debug'};
+      $raw .= $_;
+      $hit->index_date($1);
+      $state = $HITS;
+      } 
+    elsif ($state eq $HITS && m/\<INPUT\s[^>]*VALUE=\"Next\sResults\"/i) 
+      {
+      print STDERR "**Going to Next Page**\n" if 2 <= $self->{'_debug'};
+      $self->{'_next_to_retrieve'} += $self->{'_hits_per_page'};
+      $self->{'_options'}{'start'} = $self->{'_next_to_retrieve'};
+      my($options) = '';
+      foreach (keys %{$self->{_options}})
+        {
+        next if (generic_option($_));
+        $options .= $_ . '=' . $self->{_options}{$_} . '&';
+        } # foreach
+      chop $options;
+      # Finally, figure out the url.
+      $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
+      $state = $TRAILER;
+      }
+    else 
+      {
+      print STDERR "**Nothing Matched**\n" if 2 <= $self->{'_debug'};
+      }
+    } # foreach
   if ($state ne $TRAILER)
     {
     # no other pages missed

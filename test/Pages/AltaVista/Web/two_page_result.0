@@ -1,14 +1,8 @@
 <html><head>
 <title>AltaVista: Simple Query +LSAM +ISI +IB</title>
 </head><body>
-<font size=+1 face=arial, helvetica>
-<a href="/cgi-bin/query?text">AltaVista Search Service</a>
-</font>
-<br>
-<FORM name=mfrm method=GET action="/cgi-bin/query">
-<INPUT TYPE=hidden NAME=pg VALUE=q>
-<INPUT TYPE=hidden NAME=text VALUE=yes>
-<font size=-1><B>Ask AltaVista<sup><small>TM</small></sup> a question.</B>&nbsp;&nbsp;Or enter a few words in
+<font face="Arial,Helvetica" size="+1"><a href="/cgi-bin/query?text&pg=q&what=web">AltaVista Search Service</a></font><p><FORM name=mfrmaction="/cgi-bin/query">
+<INPUT TYPE=hidden NAME=pg VALUE=q><INPUT TYPE=hidden NAME=text VALUE=yes><font size=-1><B>Ask AltaVista<sup><small>TM</small></sup> a question.</B>&nbsp;&nbsp;Or enter a few words in
 <SELECT NAME=kl><OPTION VALUE=XX SELECTED>any language 
 <OPTION VALUE=zh>Chinese
 <OPTION VALUE=cs>Czech
@@ -35,57 +29,54 @@
 <OPTION VALUE=ru>Russian
 <OPTION VALUE=es>Spanish
 <OPTION VALUE=sv>Swedish
-</SELECT></font><br><INPUT NAME=q size=50 maxlength=800 VALUE="+LSAM +ISI +IB">
-<br><INPUT TYPE=radio NAME=act VALUE=search CHECKED>search <INPUT TYPE=radio NAME=act VALUE=refine>refine <INPUT TYPE=submit VALUE=Submit><br>
- <P><font size=-1>Search - <a href="/cgi-bin/query?pg=aq&what=web&text=yes">Advanced</a> - <a href="/cgi-bin/query?pg=q&what=news&text=yes">Usenet</a></font><BR></FORM>
-<font size=-1><b>AltaVista found 18 Web pages for you. </font></b><P><font size=-1><b>Result Pages: </b><b>1</b> &nbsp;<a href="/cgi-bin/query?pg=q&text=yes&q=%2bLSAM+%2bISI+%2bIB&stq=10&c9k">2</a>
+</SELECT></font><p><input type=text name=q size=50 maxlength=800 value="+LSAM +ISI +IB">&nbsp;<INPUT TYPE=submit name=search VALUE="Search"><br>
+ <P><font size=-1>Search - <a href="/cgi-bin/query?pg=aq&what=web&text=yes">Advanced Text Search</a> - <a href="/cgi-bin/query?pg=q&what=news&text=yes">Usenet</a></font></FORM>
+AltaVista found 12 Web pages. <P><font size=-1><b>Result Pages: </b><b>1</b> &nbsp;<a href="/cgi-bin/query?pg=q&text=yes&q=%2bLSAM+%2bISI+%2bIB&stq=10&c9k">2</a>
 &nbsp; <a href="/cgi-bin/query?pg=q&text=yes&q=%2bLSAM+%2bISI+%2bIB&stq=10&c9k">[<b>Next &gt;&gt;</b>]</a> <br>
-</font><font size=-1><dl><dt><b>1. </b><a href="http://www.isi.edu/ib/example.html"><b>IB Research Plan</b></a><dd>
-IB Research Plan. For the experiments in this research, we will make use of traffic generators that emulate WWW browser request streams, to evaluate the...<br><b>URL:</b> <font color=gray>www.isi.edu/ib/example.html<br>
-Last modified 13-Jan-97 - page size 6K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fwww%2eisi%2eedu%2fib%2fexample%2ehtml&language=en">Translate</a>&nbsp;]</dl>
-<dl><dt><b>2. </b><a href="http://www.isi.edu/ib/"><b>About IB</b></a><dd>
+</font><font size=-1><dl><dt><b>1. </b><a href="http://www.isi.edu/ib/"><b>About IB</b></a><dd>
 About Intelligent BW. In today's Internet, information services such as WWW, Gopher, WAIS, etc. are oriented towards a reactive model: the Internet and...<br><b>URL:</b> <font color=gray>www.isi.edu/ib/<br>
 Last modified 6-Oct-97 - page size 3K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fwww%2eisi%2eedu%2fib%2f&language=en">Translate</a>&nbsp;]</dl>
-<dl><dt><b>3. </b><a href="http://www.isi.edu/div7/cities/ib/tuner/about.html"><b>About IB</b></a><dd>
-About the Multicast Web Tuner. Proxy Benefits: Move files closer to client to improve response speed when files are requested again. Share proxies so that.<br><b>URL:</b> <font color=gray>www.isi.edu/div7/cities/ib/tuner/about.html<br>
-Last modified 12-Feb-98 - page size 4K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fwww%2eisi%2eedu%2fdiv7%2fcities%2fib%2ftuner%2fabout%2ehtml&language=en">Translate</a>&nbsp;]</dl>
-<dl><dt><b>4. </b><a href="http://www.isi.edu/~lsam/ib/rmc/investigate.html"><b>IB - Reliable Multicast Transport protocol</b></a><dd>
-IB - Reliable Multicast Transport protocol. AFDP. Dynamically selects from available transmission modes so as to maximize efficiency and throughput while..<br><b>URL:</b> <font color=gray>www.isi.edu/~lsam/ib/rmc/investigate.html<br>
-Last modified 12-Feb-98 - page size 3K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fwww%2eisi%2eedu%2f%7elsam%2fib%2frmc%2finvestigate%2ehtml&language=en">Translate</a>&nbsp;]</dl>
-<dl><dt><b>5. </b><a href="http://www.isi.edu/~lsam/ib/rmc/links.html"><b>IB - Reliable Multicast Transport protocol</b></a><dd>
-IB - Reliable Multicast Transport protocol. Here are a few good links for Multicast Transport Protocols....<br><b>URL:</b> <font color=gray>www.isi.edu/~lsam/ib/rmc/links.html<br>
-Last modified 12-Feb-98 - page size 1K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fwww%2eisi%2eedu%2f%7elsam%2fib%2frmc%2flinks%2ehtml&language=en">Translate</a>&nbsp;]</dl>
-<dl><dt><b>6. </b><a href="http://www.isi.edu/ib/discussion.html"><b>IB Discussion</b></a><dd>
-IB Discussion. Response time and bandwidth are key resources in this project. Current Internet user interfaces, such as Web browsers, Gopher and WAIS...<br><b>URL:</b> <font color=gray>www.isi.edu/ib/discussion.html<br>
-Last modified 13-Jan-97 - page size 6K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fwww%2eisi%2eedu%2fib%2fdiscussion%2ehtml&language=en">Translate</a>&nbsp;]</dl>
-<dl><dt><b>7. </b><a href="http://www.isi.edu/div7/lsam/ib/projects.html"><b>IB Research Plan</b></a><dd>
-IB Research Projects. Lowlat. Anticipatory document caching reduces request latency. Multicast Web Tuner. Multicasting popular documents on channels...<br><b>URL:</b> <font color=gray>www.isi.edu/div7/lsam/ib/projects.html<br>
-Last modified 12-Feb-98 - page size 2K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fwww%2eisi%2eedu%2fdiv7%2flsam%2fib%2fprojects%2ehtml&language=en">Translate</a>&nbsp;]</dl>
-<dl><dt><b>8. </b><a href="http://www.isi.edu/div7/lsam/ib/about.html"><b>About IB</b></a><dd>
-About Intelligent BW. Motivations. Ethernet or faster bandwidth is needed to interactively view the average web page. Bandwidth requirements increase as...<br><b>URL:</b> <font color=gray>www.isi.edu/div7/lsam/ib/about.html<br>
-Last modified 15-Jan-98 - page size 3K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fwww%2eisi%2eedu%2fdiv7%2flsam%2fib%2fabout%2ehtml&language=en">Translate</a>&nbsp;]</dl>
-<dl><dt><b>9. </b><a href="http://www.isi.edu/div7/lsam/ib/rmc/req.html"><b>IB - Reliable Multicast Transport protocol</b></a><dd>
-IB - Reliable Multicast Transport protocol. Reliability Mechanism. Retransmission is event driven (off-line). Retransmission requests uses selactive NACKS.<br><b>URL:</b> <font color=gray>www.isi.edu/div7/lsam/ib/rmc/req.html<br>
-Last modified 12-Feb-98 - page size 2K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fwww%2eisi%2eedu%2fdiv7%2flsam%2fib%2frmc%2freq%2ehtml&language=en">Translate</a>&nbsp;]</dl>
-<dl><dt><b>10. </b><a href="http://www.isi.edu/div7/ib/plan.html"><b>IB Research Plan</b></a><dd>
+<dl><dt><b>2. </b><a href="http://www.isi.edu/lsam/ib/about.html"><b>About IB</b></a><dd>
+About Intelligent BW. Motivations. Ethernet or faster bandwidth is needed to interactively view the average web page. Bandwidth requirements increase as...<br><b>URL:</b> <font color=gray>www.isi.edu/lsam/ib/about.html<br>
+Last modified 15-Jan-98 - page size 3K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fwww%2eisi%2eedu%2flsam%2fib%2fabout%2ehtml&language=en">Translate</a>&nbsp;]</dl>
+<dl><dt><b>3. </b><a href="http://www.isi.edu/div7/ib/plan.html"><b>IB Research Plan</b></a><dd>
 IB Research Plan. For the experiments in this research, we will make use of traffic generators that emulate WWW browser request streams, to evaluate the...<br><b>URL:</b> <font color=gray>www.isi.edu/div7/ib/plan.html<br>
 Last modified 13-Jan-97 - page size 4K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fwww%2eisi%2eedu%2fdiv7%2fib%2fplan%2ehtml&language=en">Translate</a>&nbsp;]</dl>
+<dl><dt><b>4. </b><a href="http://www.isi.edu/lsam/ib/index.html"><b>About IB</b></a><dd>
+Intelligent Bandwidth. About Intelligent Bandwidth. Research Projects. People. Related Work. Page maintainer: Joe Touch Last modified: Thu Jan 15 13:30:29.<br><b>URL:</b> <font color=gray>www.isi.edu/lsam/ib/index.html<br>
+Last modified 15-Jan-98 - page size 2K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fwww%2eisi%2eedu%2flsam%2fib%2findex%2ehtml&language=en">Translate</a>&nbsp;]</dl>
+<dl><dt><b>5. </b><a href="http://www.isi.edu/div7/ib/example.html"><b>IB Research Plan</b></a><dd>
+IB Research Plan. For the experiments in this research, we will make use of traffic generators that emulate WWW browser request streams, to evaluate the...<br><b>URL:</b> <font color=gray>www.isi.edu/div7/ib/example.html<br>
+Last modified 13-Jan-97 - page size 6K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fwww%2eisi%2eedu%2fdiv7%2fib%2fexample%2ehtml&language=en">Translate</a>&nbsp;]</dl>
+<dl><dt><b>6. </b><a href="http://www.isi.edu/lsam/ib/people.html"><b>IB Research Plan</b></a><dd>
+IB People. Joe Touch (project leader) Amy S. Hughes. Anand Oswal. Page maintainer: Joe Touch Last modified: Thu Jan 15 13:31:54 1998 Copyright © 1996 by...<br><b>URL:</b> <font color=gray>www.isi.edu/lsam/ib/people.html<br>
+Last modified 15-Jan-98 - page size 2K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fwww%2eisi%2eedu%2flsam%2fib%2fpeople%2ehtml&language=en">Translate</a>&nbsp;]</dl>
+<dl><dt><b>7. </b><a href="http://www.isi.edu/div7/ib/discussion.html"><b>IB Discussion</b></a><dd>
+IB Discussion. Response time and bandwidth are key resources in this project. Current Internet user interfaces, such as Web browsers, Gopher and WAIS...<br><b>URL:</b> <font color=gray>www.isi.edu/div7/ib/discussion.html<br>
+Last modified 13-Jan-97 - page size 6K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fwww%2eisi%2eedu%2fdiv7%2fib%2fdiscussion%2ehtml&language=en">Translate</a>&nbsp;]</dl>
+<dl><dt><b>8. </b><a href="http://theory.uwinnipeg.ca/CPAN/data/WWW-Search/test/Lycos/README.html"><b>/usr/local/lib/perl5/site_perl/WAIT/DB/cpan/data/WWW-Search/test/Lycos/README</b></a><dd>
+Contained in JOHNH/WWW-Search-1.023.tar.gz. requires perl 5.004 or later. NAME. DESCRIPTION. NAME. WWW-Search test/Lycos/README. DESCRIPTION. One page:...<br><b>URL:</b> <font color=gray>theory.uwinnipeg.ca/CPAN/data/WWW-Search/test/Lycos/README.h<br>
+Last modified 2-Apr-99 - page size 2K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2ftheory%2euwinnipeg%2eca%2fCPAN%2fdata%2fWWW%2dSearch%2ftest%2fLycos%2fREADME%2ehtml&language=en">Translate</a>&nbsp;]</dl>
+<dl><dt><b>9. </b><a href="http://xent.ics.uci.edu/FoRK-archive/jan98/0429.html"><b>FoRK Archive: LSAM: Large-Scale Active Middleware (formerly Cities Online)</b></a><dd>
+LSAM: Large-Scale Active Middleware (formerly Cities Online) Rohit Khare (rohit@uci.edu) Tue, 03 Feb 1998 00:05:42 -0800. Messages sorted by: [ date ][...<br><b>URL:</b> <font color=gray>xent.ics.uci.edu/FoRK-archive/jan98/0429.html<br>
+Last modified 3-Feb-98 - page size 9K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fxent%2eics%2euci%2eedu%2fFoRK%2darchive%2fjan98%2f0429%2ehtml&language=en">Translate</a>&nbsp;]</dl>
+<dl><dt><b>10. </b><a href="http://www.isi.edu/lsam/ib/related-work.html"><b>LSAM Related Research</b></a><dd>
+Web Latency Reduction. Features Description. Anticipation. Configuration. Cache Organization. Intermediate Proxies. User Aggregation. Connection...<br><b>URL:</b> <font color=gray>www.isi.edu/lsam/ib/related-work.html<br>
+Last modified 15-Jan-98 - page size 6K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fwww%2eisi%2eedu%2flsam%2fib%2frelated%2dwork%2ehtml&language=en">Translate</a>&nbsp;]</dl>
 </font><font size=-1><b>Result Pages: </b><b>1</b> &nbsp;<a href="/cgi-bin/query?pg=q&text=yes&q=%2bLSAM+%2bISI+%2bIB&stq=10&c9k">2</a>
 &nbsp; <a href="/cgi-bin/query?pg=q&text=yes&q=%2bLSAM+%2bISI+%2bIB&stq=10&c9k">[<b>Next &gt;&gt;</b>]</a> <br>
-</font><font size=-2>word count: LSAM: 874; ISI: 130362; IB: 169529<BR></font><P>
-<br>
-<font size=-2 face=arial, helvetica>
-<a href="/cgi-bin/query?text">AltaVista Home</a> | 
-<a href="/av/content/help.htm">Help</a> | 
-<a href="/av/content/questions.htm">Feedback</a>
-<br> 
-Copyright | 
-<a href="/av/content/disclaimer.htm">Disclaimer</a> | 
-<a href="/av/content/privacy.htm">Privacy</a>
-<br>
-<a href="/av/content/about.htm">About AltaVista</a> | 
-<a href="/cgi-bin/query?pg=tmpl&v=pref.html">Set your Preferences</a> | 
-<a href="/av/content/addurl.htm">Add a Page</a> | 
-<a href="/cgi-bin/query">Graphic Version</a>
-</font>
+</font><font size=-2>word count: LSAM: 832; ISI: 150227; IB: 196418<BR></font><P>
+<p><font face="Arial,Helvetica" size="-2">
+<a href="/">AltaVista.com</a> |
+<a href="/av/content/about.htm">About AltaVista</a> |
+<a href="/av/content/help.htm">Help</a> |
+<a href="/av/content/questions.htm">Feedback</a> |
+<a href="http://www.doubleclick.net/advertisers/altavista/">Advertising Info</a> |
+<a href="/cgi-bin/query?pg=addurl">Add a Page</a><br>
+<a href="/av/content/disclaimer.htm">Disclaimer</a> |
+<a href="/av/content/privacy.htm">Privacy</a> |
+<a href="http://image.altavista.com/AV_CopyrightPolicy.htm">Copyright</a> |
+<a href="/av/content/av_network.html">International</a> |
+<a href="/cgi-bin/query?pg=tmpl&v=pref.html">Set your Preferences</a> |
+<a href="/cgi-bin/query">Graphic Version</a></font>
 </BODY></HTML>

@@ -1,7 +1,7 @@
 # HotBot.pm
 # by Wm. L. Scheding and Martin Thurn
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: HotBot.pm,v 1.33 1999/06/22 13:58:48 mthurn Exp $
+# $Id: HotBot.pm,v 1.36 1999/07/13 18:45:14 mthurn Exp $
 
 =head1 NAME
 
@@ -276,20 +276,7 @@ Please tell the author if you find any!
 =head1 TESTING
 
 This module adheres to the C<WWW::Search> test suite mechanism. 
-
-  Test cases (accurate as of 1999-02-22):
-
-    $file = 'test/HotBot/zero_result';
-    $query = 'Bogus' . 'NoSuchWord';
-    test($mode, $TEST_EXACTLY);
-
-    $file = 'test/HotBot/one_page_result';
-    $query = '"Chr'.'istie Abbo'.'tt"';
-    test($mode, $TEST_RANGE, 2, 99);
-
-    $file = 'test/HotBot/multi_page_result';
-    $query = 'L'.'S'.'A'.'M';
-    test($mode, $TEST_GREATER_THAN, 100);
+See $TEST_CASES below.
 
 =head1 AUTHOR
 
@@ -308,6 +295,12 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 =head1 VERSION HISTORY
 
 If it''s not listed here, then it wasn''t a meaningful nor released revision.
+
+=head2 2.01, 1999-07-13
+
+=head2 1.34, 1999-07-01
+
+New test cases.
 
 =head2 1.32, 1999-06-20
 
@@ -381,7 +374,14 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '1.32';
+$VERSION = '2.01';
+
+$MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
+$TEST_CASES = <<"ENDTESTCASES";
+&test('HotBot', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_EXACTLY);
+&test('HotBot', '$MAINTAINER', 'one', 'LSAM replication', \$TEST_RANGE, 2,80);
+&test('HotBot', '$MAINTAINER', 'two', 'Zuckuss', \$TEST_GREATER_THAN, 100);
+ENDTESTCASES
 
 use Carp ();
 use WWW::Search(generic_option);

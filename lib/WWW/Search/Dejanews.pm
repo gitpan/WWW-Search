@@ -1,6 +1,6 @@
 # Dejanews.pm
 # Copyright (C) 1998 by Martin Thurn
-# $Id: Dejanews.pm,v 1.6 1998/12/03 14:41:05 mthurn Exp $
+# $Id: Dejanews.pm,v 1.9 1999/07/13 18:35:50 mthurn Exp $
 
 =head1 NAME
 
@@ -20,7 +20,7 @@ WWW::Search::Dejanews - class for searching Dejanews
 
 This class is a Dejanews specialization of WWW::Search.
 It handles making and interpreting Dejanews searches
-F<http://www.dejanews.com>.
+F<http://www.deja.com>.
 
 This class exports no public interface; all interaction should
 be done through L<WWW::Search> objects.
@@ -61,20 +61,7 @@ Please tell the author if you find any!
 =head1 TESTING
 
 This module adheres to the C<WWW::Search> test suite mechanism. 
-
-Test cases:
-
-    $file = 'test/Dejanews/zero_result';
-    $query = 'Bogus' . 'NoSuchWord';
-    test($mode, $TEST_EXACTLY);
-
-    $file = 'test/Dejanews/one_page_result';
-    $query = 'Fe'.'tt AND st'.'untboy;
-    test($mode, $TEST_RANGE, 2, 50);
-
-    $file = 'test/Dejanews/multi_page_result';
-    $query = 'Chewb'.'acca';
-    test($mode, $TEST_GREATER_THAN, 101);
+See $TEST_CASES below.
 
 =head1 AUTHOR
 
@@ -89,6 +76,13 @@ WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
 MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 =head1 VERSION HISTORY
+
+=head2 2.01, 1999-07-13
+
+=head2 1.12, 1999-07-06
+
+Finally moved from www.dejanews.com to www.deja.com;
+New test suite mechanism;
 
 =head2 1.11, 1998-12-03
 
@@ -117,12 +111,18 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '1.11';
+$VERSION = '2.01';
 
 use Carp ();
 use WWW::Search(generic_option);
 require WWW::SearchResult;
 
+$MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
+$TEST_CASES = <<"ENDTESTCASES";
+&test('Dejanews', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_EXACTLY);
+&test('Dejanews', '$MAINTAINER', 'one', 'st'.'untboy', \$TEST_RANGE, 2,99);
+&test('Dejanews', '$MAINTAINER', 'two', 'L'.'ili AND Le'.'dy', \$TEST_GREATER_THAN, 101);
+ENDTESTCASES
 
 # private
 sub native_setup_search
@@ -143,7 +143,7 @@ sub native_setup_search
     {
     # These are the defaults:
     $self->{_options} = {
-                         'search_url' => 'http://www.Dejanews.com/dnquery.xp',
+                         'search_url' => 'http://www.deja.com/dnquery.xp',
                          'QRY' => $native_query,
                          'ST' => 'PS',
                          'defaultOp' => 'OR',
@@ -226,7 +226,7 @@ sub native_retrieve_some
            m@<a\shref=\"([^\"]+)\">Next\smatches@)
       {
       # Actual line of input is:
-      # <b><font face="arial,helvetica" size=2><a href="http://x1.dejanews.com/dnquery.xp?search=next&DBS=1&LNG=ALL&IS=Martin%20Thurn&ST=PS&offsets=db98p4x%02100&svcclass=dnserver&CONTEXT=903630253.1503199236">Next matches</a></font>
+      # <b><font face="arial,helvetica" size=2><a href="http://x1.deja.com/dnquery.xp?search=next&DBS=1&LNG=ALL&IS=Martin%20Thurn&ST=PS&offsets=db98p4x%02100&svcclass=dnserver&CONTEXT=903630253.1503199236">Next matches</a></font>
       print STDERR " found next button\n" if 2 <= $self->{'_debug'};
       # There is a "next" button on this page, therefore there are
       # indeed more results for us to go after next time.
@@ -257,7 +257,7 @@ sub native_retrieve_some
       next if m/Previous\smatches/;
       print STDERR "hit url line\n" if 2 <= $self->{'_debug'};
       # Actual line of input:
-      # <td align=left><a href=http://x10.dejanews.com/getdoc.xp?AN=365996516&CONTEXT=899408575.427622419&hitnum=8><b>Stuffed Chewbacca</b></a><br>
+      # <td align=left><a href=http://x10.deja.com/getdoc.xp?AN=365996516&CONTEXT=899408575.427622419&hitnum=8><b>Stuffed Chewbacca</b></a><br>
       my $sURL = $1 . '&fmt=raw';
       my $sTitle = $2;
       if (defined($hit))

@@ -1,14 +1,8 @@
 <html><head>
-<title>AltaVista: Advanced Query LSAM and AutoSearch</title>
+<title>AltaVista: Advanced Query LSAM AND AutoSearch</title>
 </head><body>
-<font size=+1 face=arial, helvetica>
-<a href="/cgi-bin/query?text">AltaVista Search Service</a>
-</font>
-<br>
-<FORM name=mfrm method=GET action="/cgi-bin/query">
-<INPUT TYPE=hidden NAME=pg VALUE=aq>
-<INPUT TYPE=hidden NAME=text VALUE=yes>
-<font size=-1><B>Enter ranking keywords in</B>
+<font face="Arial,Helvetica" size="+1"><a href="/cgi-bin/query?text&pg=q&what=web">AltaVista Search Service</a></font><p><FORM name=mfrmaction="/cgi-bin/query">
+<INPUT TYPE=hidden NAME=pg VALUE=aq><INPUT TYPE=hidden NAME=text VALUE=yes><font size=-1><B>Enter ranking keywords in</B>
 <SELECT NAME=kl><OPTION VALUE=XX SELECTED>any language 
 <OPTION VALUE=zh>Chinese
 <OPTION VALUE=cs>Czech
@@ -35,55 +29,47 @@
 <OPTION VALUE=ru>Russian
 <OPTION VALUE=es>Spanish
 <OPTION VALUE=sv>Swedish
-</SELECT></font><font size=-1><br><input type=text name=r size=50 value="">
-<br><INPUT TYPE=radio NAME=act VALUE=search CHECKED>search <INPUT TYPE=radio NAME=act VALUE=refine>refine <INPUT TYPE=submit VALUE=Submit><br>
+</SELECT></font><font size=-1><p><input type=text name=r size=50 value="LSAM AutoSearch">
+<INPUT TYPE=submit name=search VALUE="Search"><br>
  Enter boolean expression:<br>
-<textarea name=q cols=50 rows=3 maxlength=800 wrap=virtual>LSAM and AutoSearch</textarea><br>Range of Dates (e.g. 21/Mar/96): <b> From </b><INPUT TYPE=text NAME=d0 SIZE=9 MAXLENGTH=32 VALUE="">
-<b> To </b><INPUT TYPE=text NAME=d1 SIZE=9 MAXLENGTH=32 VALUE=""><br><INPUT TYPE=checkbox name=fmt value=n> <b>Count documents matching the boolean expression.</b> 
-<P><font size=-1><a href="/cgi-bin/query?pg=q&what=web&text=yes">Search</a> - Advanced - <a href="/cgi-bin/query?pg=aq&what=news&text=yes">Usenet</a></font><BR></font></FORM>
-<font size=-1><b>AltaVista found about 9 Web pages for you. </font></b><P><font size=-1><br>
-</font><font size=-1><dl><dt><b>1. </b><a href="http://www.isi.edu/div7/cities/tools/autosearch/index.html"><b>index.html directory page</b></a><dd>
-AutoSearch WEB Searching. What is AutoSearch? AutoSearch performs a web-based search and puts the results set in a web page. It periodically updates this..<br><b>URL:</b> <font color=gray>www.isi.edu/div7/cities/tools/autosearch/index.html<br>
-Last modified 3-Jun-98 - page size 2K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fwww%2eisi%2eedu%2fdiv7%2fcities%2ftools%2fautosearch%2findex%2ehtml&language=en">Translate</a>&nbsp;]</dl>
-<dl><dt><b>2. </b><a href="http://www.isi.edu/~lsam/tools/autosearch/TEST/index.html"><b>Test Pages for AutoSearch</b></a><dd>
-Test Pages for AutoSearch. Singleton. Dozen: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12. hidden anchor page. AutoSearch-page. Page maintainer: John Heidemann...<br><b>URL:</b> <font color=gray>www.isi.edu/~lsam/tools/autosearch/TEST/index.html<br>
-Last modified 27-Nov-96 - page size 1K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fwww%2eisi%2eedu%2f%7elsam%2ftools%2fautosearch%2fTEST%2findex%2ehtml&language=en">Translate</a>&nbsp;]</dl>
-<dl><dt><b>3. </b><a href="http://gost.isi.edu/people/johnh/WORK/index.html"><b>John Heidemann's Work</b></a><dd>
+<textarea name=q cols=50 rows=3 maxlength=800 wrap=virtual>LSAM AND AutoSearch</textarea><p>Range of Dates (e.g. 21/Mar/96): <b> From </b><INPUT TYPE=text NAME=d0 SIZE=9 MAXLENGTH=32 VALUE="">
+<b> To </b><INPUT TYPE=text NAME=d1 SIZE=9 MAXLENGTH=32 VALUE=""><p><INPUT TYPE=checkbox name=fmt value=n> <b>Count documents matching the boolean expression.</b> 
+<P><font size=-1><a href="/cgi-bin/query?pg=q&what=web&text=yes">Search</a> - Advanced Text Search - <a href="/cgi-bin/query?pg=aq&what=news&text=yes">Usenet</a></font></font></FORM>
+AltaVista found 7 Web pages. <P><font size=-1><br>
+</font><font size=-1><dl><dt><b>1. </b><a href="http://www.isi.edu/div7/lsam/tools/autosearch/index.html"><b>index.html directory page</b></a><dd>
+AutoSearch WEB Searching. What is AutoSearch? AutoSearch performs a web-based search and puts the results set in a web page. It periodically updates this..<br><b>URL:</b> <font color=gray>www.isi.edu/div7/lsam/tools/autosearch/index.html<br>
+Last modified 3-Jun-98 - page size 2K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fwww%2eisi%2eedu%2fdiv7%2flsam%2ftools%2fautosearch%2findex%2ehtml&language=en">Translate</a>&nbsp;]</dl>
+<dl><dt><b>2. </b><a href="http://theory.uwinnipeg.ca/CPAN/data/WWW-Search/bin/AutoSearch.html"><b>AutoSearch -- a web-searching application</b></a><dd>
+Contained in JOHNH/WWW-Search-1.023.tar.gz. requires perl 5.004 or later. NAME. SYNOPSIS. DESCRIPTION. OPTIONS. DESCRIPTION. AUTOMATED SEARCHING. CHANGING.<br><b>URL:</b> <font color=gray>theory.uwinnipeg.ca/CPAN/data/WWW-Search/bin/AutoSearch.html<br>
+Last modified 2-Apr-99 - page size 18K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2ftheory%2euwinnipeg%2eca%2fCPAN%2fdata%2fWWW%2dSearch%2fbin%2fAutoSearch%2ehtml&language=en">Translate</a>&nbsp;]</dl>
+<dl><dt><b>3. </b><a href="http://www.isi.edu/lsam/tools/autosearch/TEST/index.html"><b>Test Pages for AutoSearch</b></a><dd>
+Test Pages for AutoSearch. Singleton. Dozen: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12. hidden anchor page. AutoSearch-page. Page maintainer: John Heidemann...<br><b>URL:</b> <font color=gray>www.isi.edu/lsam/tools/autosearch/TEST/index.html<br>
+Last modified 27-Nov-96 - page size 1K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fwww%2eisi%2eedu%2flsam%2ftools%2fautosearch%2fTEST%2findex%2ehtml&language=en">Translate</a>&nbsp;]</dl>
+<dl><dt><b>4. </b><a href="http://www.isi.edu/people/johnh/WORK/index.html"><b>John Heidemann's Work</b></a><dd>
+John Heidemann's Work. I am computer scientist at Information Sciences Institute and a research assistant professor at the University of Southern...<br><b>URL:</b> <font color=gray>www.isi.edu/people/johnh/WORK/index.html<br>
+Last modified 20-Nov-98 - page size 7K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fwww%2eisi%2eedu%2fpeople%2fjohnh%2fWORK%2findex%2ehtml&language=en">Translate</a>&nbsp;]</dl>
+<dl><dt><b>5. </b><a href="http://gost.isi.edu/people/johnh/WORK/index.html"><b>John Heidemann's Work</b></a><dd>
 John Heidemann's Work. I am computer scientist at Information Sciences Institute of the University of Southern California. I will also be teaching at USC..<br><b>URL:</b> <font color=gray>gost.isi.edu/people/johnh/WORK/index.html<br>
 Last modified 25-Jun-97 - page size 6K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fgost%2eisi%2eedu%2fpeople%2fjohnh%2fWORK%2findex%2ehtml&language=en">Translate</a>&nbsp;]</dl>
-<dl><dt><b>4. </b><a href="http://www.engelschall.com/ar/perldoc/pages/util/AutoSearch.html"><b>AutoSearch -- a web-searching application</b></a><dd>
-AutoSearch. NAME. SYNOPSIS. DESCRIPTION. OPTIONS. DESCRIPTION. AUTOMATED SEARCHING. CHANGING THE LOOK OF THE PAGES. FILES. SEE ALSO. AUTHORS. COPYRIGHT....<br><b>URL:</b> <font color=gray>www.engelschall.com/ar/perldoc/pages/util/AutoSearch.html<br>
-Last modified 18-Apr-99 - page size 17K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fwww%2eengelschall%2ecom%2far%2fperldoc%2fpages%2futil%2fAutoSearch%2ehtml&language=en">Translate</a>&nbsp;]</dl>
-<dl><dt><b>5. </b><a href="http://www.isi.edu/div7/cities/tools/WWW_SEARCH/index.html"><b>WWW::Search</b></a><dd>
-WWW::Search. WWW::Search is a collection of Perl modules which provide an API to WWW search engines like AltaVista, Lycos, Hotbot, WebCrawler, and so on...<br><b>URL:</b> <font color=gray>www.isi.edu/div7/cities/tools/WWW_SEARCH/index.html<br>
-Last modified 11-Dec-98 - page size 12K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fwww%2eisi%2eedu%2fdiv7%2fcities%2ftools%2fWWW%5fSEARCH%2findex%2ehtml&language=en">Translate</a>&nbsp;]</dl>
-<dl><dt><b>6. </b><a href="http://gin.isi.edu/lsam/tools/autosearch/TEST/index.html"><b>Test Pages for AutoSearch</b></a><dd>
-Test Pages for AutoSearch. Singleton. Dozen: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12. hidden anchor page. AutoSearch-page. Page maintainer: John Heidemann...<br><b>URL:</b> <font color=gray>gin.isi.edu/lsam/tools/autosearch/TEST/index.html<br>
-Last modified 27-Nov-96 - page size 1K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fgin%2eisi%2eedu%2flsam%2ftools%2fautosearch%2fTEST%2findex%2ehtml&language=en">Translate</a>&nbsp;]</dl>
-<dl><dt><b>7. </b><a href="http://gin.isi.edu/~johnh/WORK/index.html"><b>John Heidemann's Work</b></a><dd>
-John Heidemann's Work. I am computer scientist at Information Sciences Institute and a research assistant professor at the University of Southern...<br><b>URL:</b> <font color=gray>gin.isi.edu/~johnh/WORK/index.html<br>
-Last modified 20-Nov-98 - page size 7K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fgin%2eisi%2eedu%2f%7ejohnh%2fWORK%2findex%2ehtml&language=en">Translate</a>&nbsp;]</dl>
-<dl><dt><b>8. </b><a href="http://sofa.dartnet.co.uk/manual/perl5/site_perl/WWW/autosearch.pl.html"><b>autosearch.pl</b></a><dd>
-NAME. AutoSearch -- a web-searching application. SYNOPSIS. AutoSearch [-n QueryName] [-s query] [-e=SearchEngine] [-o=QueryOptions] [-o=QueryOptions]...<br><b>URL:</b> <font color=gray>sofa.dartnet.co.uk/manual/perl5/site_perl/WWW/autosearch.pl.<br>
-Last modified 26-Oct-97 - page size 18K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fsofa%2edartnet%2eco%2euk%2fmanual%2fperl5%2fsite%5fperl%2fWWW%2fautosearch%2epl%2ehtml&language=en">Translate</a>&nbsp;]</dl>
-<dl><dt><b>9. </b><a href="http://www.isi.edu/~wls/index.html"><b>William L. Scheding @ ISI</b></a><dd>
-William L. (Bill) Scheding (Resume) Systems Programmer. USC/Information Sciences Institute. 4676 Admiralty Way, Suite 1001. Marina del Rey, CA 90292-6695..<br><b>URL:</b> <font color=gray>www.isi.edu/~wls/index.html<br>
-Last modified 15-Mar-99 - page size 6K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fwww%2eisi%2eedu%2f%7ewls%2findex%2ehtml&language=en">Translate</a>&nbsp;]</dl>
+<dl><dt><b>6. </b><a href="http://www.isi.edu/~wls/"><b>William L. Scheding @ ISI</b></a><dd>
+William L. (Bill) Scheding (Resume) Systems Programmer. USC/Information Sciences Institute. 4676 Admiralty Way, Suite 1001. Marina del Rey, CA 90292-6695..<br><b>URL:</b> <font color=gray>www.isi.edu/~wls/<br>
+Last modified 15-Mar-99 - page size 6K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fwww%2eisi%2eedu%2f%7ewls%2f&language=en">Translate</a>&nbsp;]</dl>
+<dl><dt><b>7. </b><a href="http://www.isi.edu/div7/lsam/tools/WWW_SEARCH/index.html"><b>WWW::Search</b></a><dd>
+WWW::Search. WWW::Search is a collection of Perl modules which provide an API to WWW search engines like AltaVista, Lycos, Hotbot, WebCrawler, and so on...<br><b>URL:</b> <font color=gray>www.isi.edu/div7/lsam/tools/WWW_SEARCH/index.html<br>
+Last modified 11-Dec-98 - page size 12K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go?urltext=http%3a%2f%2fwww%2eisi%2eedu%2fdiv7%2flsam%2ftools%2fWWW%5fSEARCH%2findex%2ehtml&language=en">Translate</a>&nbsp;]</dl>
 </font><font size=-1><br>
-</font><font size=-2></font><P>
-<br>
-<font size=-2 face=arial, helvetica>
-<a href="/cgi-bin/query?text">AltaVista Home</a> | 
-<a href="/av/content/help.htm">Help</a> | 
-<a href="/av/content/questions.htm">Feedback</a>
-<br> 
-Copyright | 
-<a href="/av/content/disclaimer.htm">Disclaimer</a> | 
-<a href="/av/content/privacy.htm">Privacy</a>
-<br>
-<a href="/av/content/about.htm">About AltaVista</a> | 
-<a href="/cgi-bin/query?pg=tmpl&v=pref.html">Set your Preferences</a> | 
-<a href="/av/content/addurl.htm">Add a Page</a> | 
-<a href="/cgi-bin/query">Graphic Version</a>
-</font>
+</font><font size=-2>word count: LSAM: 832; AutoSearch: 1369<BR></font><P>
+<p><font face="Arial,Helvetica" size="-2">
+<a href="/">AltaVista.com</a> |
+<a href="/av/content/about.htm">About AltaVista</a> |
+<a href="/av/content/help.htm">Help</a> |
+<a href="/av/content/questions.htm">Feedback</a> |
+<a href="http://www.doubleclick.net/advertisers/altavista/">Advertising Info</a> |
+<a href="/cgi-bin/query?pg=addurl">Add a Page</a><br>
+<a href="/av/content/disclaimer.htm">Disclaimer</a> |
+<a href="/av/content/privacy.htm">Privacy</a> |
+<a href="http://image.altavista.com/AV_CopyrightPolicy.htm">Copyright</a> |
+<a href="/av/content/av_network.html">International</a> |
+<a href="/cgi-bin/query?pg=tmpl&v=pref.html">Set your Preferences</a> |
+<a href="/cgi-bin/query">Graphic Version</a></font>
 </BODY></HTML>

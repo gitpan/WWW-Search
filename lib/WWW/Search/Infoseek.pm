@@ -1,6 +1,6 @@
 # Infoseek.pm
 # Copyright (C) 1998 by Martin Thurn
-# $Id: Infoseek.pm,v 1.16 1999/06/30 15:07:12 mthurn Exp $
+# $Id: Infoseek.pm,v 1.19 1999/07/13 13:49:11 mthurn Exp $
 
 =head1 NAME
 
@@ -57,6 +57,13 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 If it is not listed here, then it was not a meaningful nor released revision.
 
+=head2 2.01, 1999-07-13
+
+=head2 1.18, 1999-07-09
+
+BUGFIX for not seeing all the URLs on a page, and fetching the first
+page of results over and over(!).
+
 =head2 1.16, 1999-06-30
 
 Now strips HTML tags from titles and descriptions.
@@ -111,7 +118,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '1.16';
+$VERSION = '2.01';
 
 use Carp ();
 use WWW::Search(qw( generic_option strip_tags ));
@@ -123,7 +130,7 @@ sub native_setup_search
   {
   my ($self, $native_query, $rhOptions) = @_;
 
-  # WARNING: www.Infoseek.com returns 25 hits per page no matter what number
+  # WARNING: www.infoseek.com returns 25 hits per page no matter what number
   # you send in the argument list!
   my $DEFAULT_HITS_PER_PAGE = 25;
   # $DEFAULT_HITS_PER_PAGE = 10;  # for debugging
@@ -230,14 +237,14 @@ sub native_retrieve_some
   my $state = $START;
   my $hit;
   my $sContent = $response->content();
-  $sContent =~ s/<p>/\n/g;
+  $sContent =~ s/\<p\>/\n/g;
   foreach ($self->split_lines($sContent))
     {
     next if m/^$/; # short circuit for blank lines
     print STDERR " *   $state ===$_===" if 2 <= $self->{'_debug'};
     if ($state eq $START && 
 	m=web\ssearch\sresults=i &&
-	m=of\s+<b>([\d,]+)</b>\s+results=i)
+	m=of\s+\<b\>([\d,]+)\</b\>\s+results=i)
       {
       # Actual line of input is:
       # <tr><td valign="middle" align="left" nowrap colspan="3"><font face="Helvetica,Arial" size="3" color="#FFFFFF"><a name="search">&nbsp;<b>Web search results</b>&nbsp;&nbsp;&nbsp;&nbsp;<font face="Helvetica,Arial" size="2">1 - 10 of <b>99</b> results most relevant to <b>martin thurn</b> </font>&nbsp;</a></font></td>
@@ -250,7 +257,7 @@ sub native_retrieve_some
       } # we're in START mode, and line has number of WEB results
 
     if ($state eq $START && 
-           m=\>\d+\s+-\s+\d+\s+of\s+<b>([0-9,]+)=)
+           m=\>\d+\s+-\s+\d+\s+of\s+\<b\>([0-9,]+)=)
       {
       # Actual line of input is:
       # <b>ARTICLES 1 - 25</b>  of 1,239 total articles <p>
@@ -284,7 +291,7 @@ sub native_retrieve_some
 
     if ((($state eq $NEXT) || 
          ($state eq $WEB_NEXT)) &&
-        s@<a href=\"(.*?)\">Next$SPACE\d+@WWWSEARCHDELETED@i)
+        s@\<a href=\"(.*?)\"\>Next$SPACE\d+@WWWSEARCHDELETED@i)
       {
       # Actual line of input is:
       # <font face="Helvetica,Arial" size="2"><b><a href="http://infoseek.go.com/Titles?qt=martin+thurn&col=WW&sv=IS&lk=noframes&svx=home_searchbox&st=10">Next 10 ></a></b> &nbsp;|&nbsp; ...
@@ -296,7 +303,7 @@ sub native_retrieve_some
       # Stay on this line of input!
       }
     elsif ($state eq $NEXT &&
-           (s@^.*?<a href=\"(.*?)\">Group\sresults@WWWSEARCHDELETED@i ||
+           (s@^.*?\<a href=\"(.*?)\"\>Group\sresults@WWWSEARCHDELETED@i ||
             m!\">Hide\ssummaries!i))
       {
       print STDERR " no 'next' link\n" if 2 <= $self->{'_debug'};
@@ -305,9 +312,9 @@ sub native_retrieve_some
       # Stay on this line of input!
       }
 
-    if ($state eq $WEB_HITS && s!<b><a href=\"(.*?)\">(.*?)</a>!!i)
+    if ($state eq $WEB_HITS && s!\<b\>\<a href=\"(.*?)\"\>(.*?)\</a\>!!i)
       {
-      print STDERR " hit URL line\n" if 2 <= $self->{'_debug'};
+      print STDERR " webhit URL line\n" if 2 <= $self->{'_debug'};
       my ($sURL,$sTitle) = ($1,$2);
       if (defined($hit))
         {
@@ -321,8 +328,8 @@ sub native_retrieve_some
       $hit->title(strip_tags($sTitle));
       $state = $DESC;
       $hit->score($1) if (m/(\d+)\%$SPACE/i);
-      $hit->change_date($1) if (m/Date:\s(.*?)</i);
-      $hit->description(strip_tags($1)) if (s!<br>(.*?)<br>!!);
+      $hit->change_date($1) if (m/Date:\s(.*?)\</i);
+      $hit->description(strip_tags($1)) if (s!\<br\>(.*?)\<br\>!!);
       if (m/Size\s(\S+?),/i)
         {
         my $size = $1;
@@ -332,11 +339,11 @@ sub native_retrieve_some
         $state = $WEB_HITS;
         } # if
       }
-    elsif ($state eq $DESC && s!^<br>(.*?)<br>!!)
+    elsif ($state eq $DESC && s!^\<br\>(.*?)\<br\>!!)
       {
       print STDERR " description line\n" if 2 <= $self->{'_debug'};
       $hit->description(strip_tags($1));
-      $hit->change_date($1) if (m/^<b>(.*?)\s&nbsp;/i);
+      $hit->change_date($1) if (m/^\<b\>(.*?)\s&nbsp;/i);
       $state = $WEB_HITS;
       } # if
 
@@ -346,13 +353,13 @@ sub native_retrieve_some
     #   # There is no next button.
     #   $state = $HITS;
     #   }
-    elsif ($state eq $COMP_NEXT && m=^<p>$=)
+    elsif ($state eq $COMP_NEXT && m=^\<p\>$=)
       {
       print STDERR " no next button (company mode)\n" if 2 <= $self->{'_debug'};
       # There is no next button.
       $state = $HITS;
       }
-    elsif ($state eq $COMP_NEXT && m=^</td></tr></table>$=) # afb 10/98
+    elsif ($state eq $COMP_NEXT && m=^\</td\>\</tr\>\</table\>$=) # afb 10/98
       {
       print STDERR " no next button (web mode)\n" if 2 <= $self->{'_debug'};
       # There is no next button.
@@ -360,7 +367,7 @@ sub native_retrieve_some
       }
 
     elsif ($state eq $HITS && 
-           m=<b>Articles</b>\s+\d+\s+-\s+\d+\s+of\s+\d+=)
+           m=\<b\>Articles\</b\>\s+\d+\s+-\s+\d+\s+of\s+\d+=)
       {
       # Actual line of input is:
       # <b>Articles</b>  51  -  100  of  104
@@ -372,16 +379,16 @@ sub native_retrieve_some
       print STDERR "xxxxxx line\n" if 2 <= $self->{'_debug'};
       $state = $TRAILER;
       }
-    elsif ($state eq $HITS && m/>Hide\ssummaries</)
+    elsif ($state eq $HITS && m/\>Hide\ssummaries\</)
       {
       print STDERR "show/hide line\n" if 2 <= $self->{'_debug'};
       $state = $TRAILER;
       }
 
     elsif ($state eq $HITS && 
-           m|<b><a\shref=\"([^\"]+)\">([^<]+)|i)
+           m|\<b\>\<a\shref=\"([^\"]+)\"\>([^\<]+)|i)
       {
-      print STDERR "hit url line\n" if 2 <= $self->{'_debug'};
+      print STDERR "oldhit url line\n" if 2 <= $self->{'_debug'};
       # Actual line of input:
       # <b><a href="http://www.wizardpress.com/68toychst.html">Wizard Press Columns and Departments:Toychest!</a></b><br>
       # Sometimes the </A> is on the next line.
@@ -406,9 +413,9 @@ sub native_retrieve_some
       } # old URL line
 
     elsif ($state eq $DESC &&
-           m|<br>(.*?)<br>$|)
+           m|\<br\>(.*?)\<br\>$|)
       {
-      print STDERR "hit description line\n" if 2 <= $self->{'_debug'};
+      print STDERR "old description line\n" if 2 <= $self->{'_debug'};
       # Sometimes description is empty
       $hit->description(strip_tags($1)) if ref($hit);
       if ($hit->url =~ m/col=NX/)
@@ -424,7 +431,7 @@ sub native_retrieve_some
     elsif ($state eq $DESC &&
            m|^(.+(\s\.\.?\.?)?)?\s&nbsp;\s&nbsp;\s*$|)
       {
-      print STDERR "hit company description line\n" if 2 <= $self->{'_debug'};
+      print STDERR "company description line\n" if 2 <= $self->{'_debug'};
       # Sometimes description is empty
       $hit->description(strip_tags($1)) if ref($hit);
       $state = $HITS;
@@ -432,7 +439,7 @@ sub native_retrieve_some
 
     elsif ($state eq $HITS && m=(\d+)\%$=)
       {
-      print STDERR "hit score line\n" if 2 <= $self->{'_debug'};
+      print STDERR "score line\n" if 2 <= $self->{'_debug'};
       $hit->score($1) if ref($hit);
       $state = $HITS;
       }
@@ -455,7 +462,7 @@ sub native_retrieve_some
       $hit->change_date($2) if ref($hit);
       $state = $HITS;
       }
-    elsif ($state eq $HITS && m=^(<b>)?([a-zA-Z]+\s+\d+\s+[a-zA-Z]+\s+[\d:]+)(</b>)?=)
+    elsif ($state eq $HITS && m=^(\<b\>)?([a-zA-Z]+\s+\d+\s+[a-zA-Z]+\s+[\d:]+)(\</b\>)?=)
       {
       print STDERR "hit news date line\n" if 2 <= $self->{'_debug'};
       # Actual lines of input include:
@@ -471,7 +478,7 @@ sub native_retrieve_some
       }
     } # foreach line of query results HTML page
 
-  if (defined($hit)) 
+  if (defined($hit))
     {
     push(@{$self->{cache}}, $hit);
     }

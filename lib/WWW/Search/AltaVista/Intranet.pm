@@ -1,6 +1,6 @@
 # AltaVista/Intranet.pm
 # by Martin Thurn
-# $Id: Intranet.pm,v 1.3 1999/06/21 15:13:19 mthurn Exp mthurn $
+# $Id: Intranet.pm,v 1.4 1999/07/13 17:50:59 mthurn Exp $
 #
 # Complete copyright notice follows below.
 
@@ -72,13 +72,15 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search::AltaVista Exporter);
-$VERSION = '1.03';
+$VERSION = '2.01';
+
+$MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
+$TEST_CASES = <<"ENDTESTCASES";
+&no_test('AltaVista::Intranet', '$MAINTAINER');
+ENDTESTCASES
 
 use WWW::Search::AltaVista;
 use Carp;
-
-# public
-sub version { $VERSION }
 
 # private
 sub native_setup_search
@@ -143,14 +145,14 @@ sub native_retrieve_some
       $self->approximate_result_count($1);
       $state = $HITS;
       } # COUNT line
-    elsif ($state eq $HITS && m:<dl><dt><b>(\d+)\.:i)
+    elsif ($state eq $HITS && m:\<dl>\<dt>\<b>(\d+)\.:i)
       {
       # Actual line of input is:
       # <dl><dt><b>1.   </b>
       print STDERR "rank line\n" if 2 <= $self->{_debug};
       $state = $TITLE;
       }
-    elsif ($state eq $TITLE && m:<a\shref=\"([^"]+)\">:i)
+    elsif ($state eq $TITLE && m:\<a\shref=\"([^"]+)\">:i)
       {
       # Actual line of input is:
       # <!-- PAV 1 --><a href="http://www.tasc.com/news/prism/9811/51198.html"><!-- PAV end --><b>Arlington Pond Waterski Club 11/98                                                  </b></a><dd>
@@ -162,7 +164,7 @@ sub native_retrieve_some
       $hit = new WWW::SearchResult;
       $hit->add_url($1);
       $hits_found++;
-      if (m:<b>(.+?)</b>:i)
+      if (m:\<b>(.+?)\</b>:i)
         {
         my $sTitle = $1;
         $sTitle =~ s/\s+$//;

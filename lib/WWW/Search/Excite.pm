@@ -1,7 +1,7 @@
 # Excite.pm
 # by Martin Thurn
 # Copyright (C) 1998 by USC/ISI
-# $Id: Excite.pm,v 1.12 1999/06/29 20:20:11 mthurn Exp $
+# $Id: Excite.pm,v 1.13 1999/07/13 13:47:28 mthurn Exp $
 
 =head1 NAME
 
@@ -59,6 +59,8 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 =head1 VERSION HISTORY
 
+=head2 2.01, 1999-07-13
+
 =head2 1.12, 1999-06-29
 
 updated test cases
@@ -99,7 +101,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '1.11';
+$VERSION = '2.01';
 
 use Carp ();
 use WWW::Search(generic_option);
@@ -107,7 +109,7 @@ require WWW::SearchResult;
 
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 $TEST_CASES = <<"ENDTESTCASES";
-&test('Excite', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_BY_COUNTING, 0);
+&test('Excite', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_EXACTLY);
 &test('Excite', '$MAINTAINER', 'one_page', '+L'.'S'.'A'.'M +replic'.'ation', \$TEST_RANGE, 2,75);
 &test('Excite', '$MAINTAINER', 'two_page', 'chir'.'pa pa'.'ploo te'.'ebo', \$TEST_GREATER_THAN, 87);
 ENDTESTCASES

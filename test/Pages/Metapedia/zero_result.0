@@ -9,9 +9,9 @@
 <table bgcolor="white" border=0 width=614 cellpadding=0 cellspacing=0>
 
 <tr>
-  <td bgcolor="#0000e0" width=7><img alt="" src="http://img.savvysearch.com/images/clear_dot.gif" width=7 height=6></td>
-  <td bgcolor="#0000e0" width=137><img alt="" src="http://img.savvysearch.com/images/clear_dot.gif" width=137 height=6></td>
-  <td bgcolor="#0000e0" width=470><img alt="" src="http://img.savvysearch.com/images/clear_dot.gif" width=470 height=6></td>
+  <td bgcolor="#000080" width=7><img alt="" src="http://img.savvysearch.com/images/clear_dot.gif" width=7 height=6></td>
+  <td bgcolor="#000080" width=137><img alt="" src="http://img.savvysearch.com/images/clear_dot.gif" width=137 height=6></td>
+  <td bgcolor="#000080" width=470><img alt="" src="http://img.savvysearch.com/images/clear_dot.gif" width=470 height=6></td>
 </tr>
 <tr>
   <td valign=middle align=right colspan=2><a href="/search"><img alt="SavvySearch" border=0 width=144 height=70 src="http://img.savvysearch.com/images/savvylogo.gif"></a>
@@ -39,16 +39,17 @@ metasearch <font size="+2">Encyclopedias</font> for<br>
 </table></form></td>
 </tr>
 <tr>
-  <td valign=middle align=center bgcolor="#0000e0" colspan=2><a href="http://click.savvysearch.com/click?ad,52,http://www.savvysearch.com/submit" onMouseOver="window.status='FREE website submission to 13 search engines!'; return true"><font face="helvetica,arial" size="-1" color="white"><b>FREE website submission to 13 search engines!</b></font></a><br>
+  <td valign=middle align=center bgcolor="#000080" colspan=2><a href="http://click.savvysearch.com/click?ad,52,http://www.savvysearch.com/submit" onMouseOver="window.status='FREE website submission to 13 search engines!'; return true"><font face="helvetica,arial" size="-1" color="white"><b>FREE website submission to 13 search engines!</b></font></a><br>
 </td>
-  <td valign=middle align=center width=470 bgcolor="#0000e0"><A HREF="http://ad.doubleclick.net/jump/adauction.lcsavvy.com/;ord=930336277">
-<IMG SRC="http://ad.doubleclick.net/ad/adauction.lcsavvy.com/;ord=930336277" width=468 
-height=60 border=0></A>
-
+  <td valign=middle align=center width=470 bgcolor="#000080"><!-- Copyright (C) 1998,1999 Flycast Communications Corporation. All Rights Reserved -->
+<iframe src="http://adex3.flycast.com/server/socket/127.0.0.1:2800/iframe/SavvySearch/SavvySearch/931878730" scrolling="no" marginwidth=0 marginheight=0 frameborder=0 vspace=0 hspace=0 width=468 height=60>
+<a target="_top" href="http://adex3.flycast.com/server/socket/127.0.0.1:2800/click/SavvySearch/SavvySearch/931878730">
+<img alt="" src="http://adex3.flycast.com/server/socket/127.0.0.1:2800/img/SavvySearch/SavvySearch/931878730" border=1 width=468 height=60></a>
+</iframe>
 </td>
 </tr>
 <tr>
-  <td valign=bottom height=4 align=right bgcolor="#0000e0" colspan=3><img alt="" src="http://img.savvysearch.com/images/clear_dot.gif" height=4 width=4></td>
+  <td valign=bottom height=4 align=right bgcolor="#000080" colspan=3><img alt="" src="http://img.savvysearch.com/images/clear_dot.gif" height=4 width=4></td>
 </tr>
 
 <tr><td width="7">
@@ -63,23 +64,20 @@ height=60 border=0></A>
 <font color="blue" face="helvetica,arial" size="2">
 <a href="/search">Search</a><br>
 <a href="http://www.savvysearch.com/submit">Submit</a><br>
-<a href="/custom">Customize</a><br>
 <a href="/snoop">Snoop</a><br>
-<a href="/faq.html">FAQ</a><br>
-<a href="/addsavvy.html">Link</a><br>
+<a href="/custom">Customize</a><br>
 <a href="/savvynews.html">Savvynews</a><br>
 <a href="/tellafriend">Tell a friend!</a><br>
-<a href="/survey.html">Feedback</a><br>
 </font>
 </td></tr></table>
 </td>
     <td><table cellpadding=0 cellspacing=0 border=0 width=470>
 <tr><td colspan=5><font face="helvetica,arial" size="-1"></font></td></tr>
 <tr><td colspan=5><img alt="" height=16 width=470 src="http://img.savvysearch.com/images/clear_dot.gif" name="ssmsg"></td></tr><tr>
-<td align=left width="8%"><img alt="" height=6 width=6 src="http://img.savvysearch.com/images/gray_dot.gif" name="s235"><font face="helvetica,arial" size="-1"> Infoplease</font></td>
-<td align=left width="8%"><img alt="" height=6 width=6 src="http://img.savvysearch.com/images/gray_dot.gif" name="s210"><font face="helvetica,arial" size="-1"> Encyclopedia Britannica</font></td>
-<td align=left width="8%"><img alt="" height=6 width=6 src="http://img.savvysearch.com/images/gray_dot.gif" name="s213"><font face="helvetica,arial" size="-1"> Knowledge Adventure</font></td>
-<td align=left width="8%"><img alt="" height=6 width=6 src="http://img.savvysearch.com/images/gray_dot.gif" name="s212"><font face="helvetica,arial" size="-1"> Encarta</font></td>
+<td align=left width="5%"><img alt="" height=6 width=6 src="http://img.savvysearch.com/images/gray_dot.gif" name="s212"><font face="helvetica,arial" size="-1"> Encarta</font></td>
+<td align=left width="5%"><img alt="" height=6 width=6 src="http://img.savvysearch.com/images/gray_dot.gif" name="s213"><font face="helvetica,arial" size="-1"> Knowledge Adventure</font></td>
+<td align=left width="5%"><img alt="" height=6 width=6 src="http://img.savvysearch.com/images/gray_dot.gif" name="s235"><font face="helvetica,arial" size="-1"> Infoplease</font></td>
+<td align=left width="5%"><img alt="" height=6 width=6 src="http://img.savvysearch.com/images/gray_dot.gif" name="s210"><font face="helvetica,arial" size="-1"> Encyclopedia Britannica</font></td>
 </tr></table>
 </td>
 </tr>
@@ -110,6 +108,7 @@ height=60 border=0></A>
 &nbsp;&nbsp;<a href="/search?cat=23&q=BogusNoSuchWordSpammersAreIdiots&go=no">Books<br></a>
 &nbsp;&nbsp;<a href="/search?cat=54&q=BogusNoSuchWordSpammersAreIdiots&go=no">Flowers<br></a>
 &nbsp;&nbsp;<a href="/search?cat=57&q=BogusNoSuchWordSpammersAreIdiots&go=no">Fragrances<br></a>
+&nbsp;&nbsp;<a href="/search?cat=26&q=BogusNoSuchWordSpammersAreIdiots&go=no">Hardware<br></a>
 &nbsp;&nbsp;<a href="/search?cat=50&q=BogusNoSuchWordSpammersAreIdiots&go=no">Magazines<br></a>
 &nbsp;&nbsp;<a href="/search?cat=27&q=BogusNoSuchWordSpammersAreIdiots&go=no">Music<br></a>
 &nbsp;&nbsp;<a href="/search?cat=51&q=BogusNoSuchWordSpammersAreIdiots&go=no">Software<br></a>
@@ -147,20 +146,7 @@ height=60 border=0></A>
 &nbsp;&nbsp;<a href="/search?cat=38&q=BogusNoSuchWordSpammersAreIdiots&go=no">Web&nbsp;Development<br></a>
 </font></td></tr>
 </table>
-</td>
-    <td valign=top rowspan=2><font face="helvetica,arial">
-There were no results for your query.
-Some of the things you might try are:
-<ul>
-<li>double check your query for typos (i.e., try <i>psychic friends</i> instead of <i>psychik freinds</i>)
-<li>try a different category (i.e., <b>Search Engines</b> instead of <b>Flowers</b>)
-<li>reformulate in more general terms (i.e., try <i>roses</i> instead of <i>red and yellow baby roses</i>)
-</ul>
-</td>
-
-</tr>
-<tr>
-    <td colspan=2 valign=top><br><br>
+<br><br><br>
 <table width=120 bgcolor="lightblue" cellspacing=0 cellpadding=4 border=0>
 <form action="http://www.savvysearch.com/search" method=get>
 <input type=hidden name="ref" value="mini">
@@ -194,6 +180,16 @@ for
 </form>
 </table>
 </td>
+    <td valign=top><font face="helvetica,arial">
+There were no results for your query.
+Some of the things you might try are:
+<ul>
+<li>double check your query for typos (i.e., try <i>psychic friends</i> instead of <i>psychik freinds</i>)
+<li>try a different category (i.e., <b>Search Engines</b> instead of <b>Flowers</b>)
+<li>reformulate in more general terms (i.e., try <i>roses</i> instead of <i>red and yellow baby roses</i>)
+</ul>
+</td>
+
 </tr>
 
 <tr><td align=center colspan=3><br></td></tr>

@@ -1,7 +1,7 @@
 # Snap.pm
 # by Jim Smyser
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: Snap.pm,v 1.2 1999/06/22 13:40:47 mthurn Exp $
+# $Id: Snap.pm,v 1.3 1999/07/13 17:45:09 mthurn Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -72,21 +72,8 @@ by Jim Smyser - <jsmyser@bigfoot.com>.
 
 =head1 TESTING
 
-    $search_engine = 'Snap';
-    $maintainer = 'Jim Smyser <jsmyser@bigfoot.com>';
-
-    $file = 'test/Snap/zero_result'; 
-    $query = $bogus_query; 
-    test($mode, $TEST_EXACTLY); 
-     
-    $file = 'test/Snap/one_page_result'; 
-    $query = '"WW' . 'W::Search"'. '"Jim Smyser"'; 
-    test($mode, $TEST_RANGE, 2, 99); 
-      
-    $file = 'test/Snap/multi_page_result'; 
-    $query = '"Vi'.'sual Bas'.'ic"';
-    test($mode, $TEST_GREATER_THAN, 100); 
-
+This backend adheres to the C<WWW::Search> test mechanism.
+See $TEST_CASES below.      
 
 =head1 COPYRIGHT
 
@@ -115,15 +102,18 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '1.08';
+$VERSION = '2.01';
+
+$MAINTAINER = 'Jim Smyser <jsmyser@bigfoot.com>';
+$TEST_CASES = <<"ENDTESTCASES";
+&test('Snap', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_EXACTLY);
+&test('Snap', '$MAINTAINER', 'one', 'vbt'.'hread', \$TEST_RANGE, 2,99);
+&test('Snap', '$MAINTAINER', 'two', 'Bos'.'sk', \$TEST_GREATER_THAN, 101);
+ENDTESTCASES
 
 use Carp ();
 use WWW::Search(generic_option);
 require WWW::SearchResult;
-
-# public
-sub version {$VERSION}
-
 
 sub native_setup_search {
    my($self, $native_query, $native_options_ref) = @_;

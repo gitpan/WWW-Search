@@ -1,5 +1,5 @@
 # This -*- perl -*- script writes the Makefile for libwww-perl
-# $Id: Makefile.PL,v 1.3 1999/06/21 15:54:28 mthurn Exp mthurn $
+# $Id: Makefile.PL,v 1.5 1999/07/02 21:44:25 mthurn Exp $
 
 require 5.004;
 
@@ -20,6 +20,7 @@ unless (getopts("n")) {
 
 # Ok, now it is time to really generate the Makefile
 use ExtUtils::MakeMaker;
+# $ExtUtils::MakeMaker::Verbose = 99;
 
 WriteMakefile(
    'NAME'          => 'WWW::Search',
@@ -30,10 +31,7 @@ WriteMakefile(
 			'HTML::TreeBuilder' => 0,  # release 0.51 is good
 			'LWP' => 5.30,
 		   },
-   'PL_FILES'      => {
-                      'bin/WebSearch.PL' => 'bin/WebSearch',
-                      'bin/AutoSearch.PL' => 'bin/AutoSearch',
-	            },
+   'PL_FILES'      => { map {("bin/$_.PL" => "bin/$_")} @programs_to_install },
    'EXE_FILES'     => [ map {"bin/$_"} @programs_to_install ],
    'clean'       => { FILES => '$(EXE_FILES)' },
    'dist'	 => { COMPRESS => 'gzip', SUFFIX => 'gz' },
@@ -94,6 +92,6 @@ test-v: all
 sub MY::libscan {
     my ($self, $path) = @_;
     return '' if $path =~ m:\bCVS/:;
-    return '' if $path !~ m/\.pm$/;
+    return '' if $path =~ m/\bPages\b/;
     return $path;
 }

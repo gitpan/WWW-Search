@@ -1,0 +1,249 @@
+<HTML>
+<HEAD><TITLE>Search Results</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+
+ <CENTER>
+ <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=2>
+  <TR>
+   <TD ALIGN=LEFT VALIGN=top ROWSPAN=4>
+    <A HREF="http://magellan.excite.com/"><IMG SRC="/img/magellan/mglobe.gif" BORDER=0 WIDTH=49 HEIGHT=41 ALIGN=left></A>
+   </TD>
+   <TD ALIGN=middle VALIGN=top ROWSPAN=4>
+    <A HREF="http://magellan.excite.com/"><IMG SRC="/img/magellan/magellan.gif" BORDER=0 WIDTH=224 HEIGHT=41 ALIGN=middle ALT="Magellan Internet Guide"></A><BR>
+    <IMG SRC="/img/magellan/white.gif" HEIGHT=4 WIDTH=1><BR>
+   </TD>
+   <TD WIDTH=4 ROWSPAN=4></TD>
+   <TD HEIGHT="2" COLSPAN=3 NOWRAP></TD>
+  </TR>
+
+  <FORM ACTION="/search.gw" METHOD=get>
+   <TR>
+    <TD ALIGN=left VALIGN=top COLSPAN=3 NOWRAP>
+     <INPUT NAME=search VALUE="+ISI +division" SIZE=30>
+     <INPUT TYPE=IMAGE SRC="/img/magellan/searchbut.gif" BORDER=0 ALIGN="top" VALUE="Search Magellan" WIDTH=67 HEIGHT=30>
+    </TD>
+   </TR>
+
+   <TR>
+    <TD ALIGN=left NOWRAP>
+     <INPUT TYPE=radio NAME=c VALUE=web  CHECKED>     <FONT SIZE="-1">The Entire Web</FONT>
+     <INPUT TYPE=hidden NAME=look VALUE=magellan>
+    </TD>
+    <TD WIDTH=3 ROWSPAN=2></TD>
+    <TD ALIGN=left>
+     <INPUT TYPE=radio NAME=c VALUE=web.green >     <FONT SIZE="-1" COLOR=#008C05>Green Light</FONT>
+     <FONT SIZE="-1"> sites only</FONT>
+    </TD>
+   </TR>
+
+   <TR>
+    <TD ALIGN=left></TD>
+
+    <!-- End of search and collection section -->
+
+    <TD ALIGN=left><FONT SIZE="-1">
+     <A HREF="/magellan/Info/advancedtips.html">Search Tips and Help</A>
+    </FONT></TD>
+   </TR>
+
+   <input type=hidden name=sorig value=rpage>
+  </FORM>
+ </TABLE>
+ </CENTER>
+
+<P>
+
+
+ <CENTER>
+      <!-- Ad Start -->
+<!-- Ad param svcpage=/search.gw keyword=isi+division svccobrand=magellan svcname=xsr ip=147.81.3.197 user_agent=WWW::Search/2.01 -->
+<a href="http://www.excite.com/relocate/ad=99633_edirect070999_dhban28.gif|pk=2981860;http://38.193.164.61" onMouseOver="window.status='Click for the Best Bargains on the Internet!';return true" language="Javascript"><img src="http://image.eimg.com/ads/99633_edirect070999_dhban28.gif" ALT="Click for the Best Bargains on the Internet!" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> Click for the Best Bargains on the Internet! </B></FONT></CENTER></a>
+<!-- Ad Stop -->
+
+   </CENTER>
+
+<BLOCKQUOTE>
+
+<B>60</B> results returned, ranked by relevance.
+
+<!-- IF statement for Green Light text -->
+
+
+
+
+
+<FORM ACTION="/search.gw" METHOD=get>
+    <INPUT TYPE=hidden NAME=search VALUE="+ISI +division">
+    <INPUT TYPE=hidden NAME=look VALUE=magellan>
+          <INPUT TYPE=hidden NAME=start VALUE=0>
+    <INPUT TYPE=hidden NAME=collection VALUE=web>
+            
+<!--search results-->
+
+   <HR>
+  <B><A HREF="http://www.isi.edu/">USC Information Sciences
+Institute</A></B>&nbsp;&nbsp;&nbsp;
+  <B>67%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=332849&ctag=377BA326&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+      This web site requires a browser that supports HTML tables and jpeg files for proper viewing!  Comments and Questions regarding this site may be sent to action@isi.edu.   
+    <BR>
+  <I> <A HREF="http://www.isi.edu/">http://www.isi.edu/</A></I>
+  <BR>
+   <HR>
+  <B><A HREF="http://www.mncurtis.com/">CurtisISI</A></B>&nbsp;&nbsp;&nbsp;
+  <B>65%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=1622019&ctag=377BA326&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+      Welcome to CURTIS/ISI, Inc.  Please explore our site.  Thanks for stopping... Curtis, Inc. is a leading supplier of solid state disk products and PCMCIA products.   
+    <BR>
+  <I> <A HREF="http://www.mncurtis.com/">http://www.mncurtis.com/</A></I>
+  <BR>
+   <HR>
+  <B><A HREF="http://www.misti.com/">MIS Training Institute</A></B>&nbsp;&nbsp;&nbsp;
+  <B>60%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=1765643&ctag=377BA326&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+      MIS Training Institute is the international leader in audit and information security education.  Its seminar curriculum includes over 70 courses in Internal Auditing, IS Auditing, Internet, Information Security Management, Connectivity and Communications, Client/Server and Workgroup, and Enterprise Systems.  MIS also offers special topical conferences, on-site training, seminars and special... 
+    <BR>
+  <I> <A HREF="http://www.misti.com/">http://www.misti.com/</A></I>
+  <BR>
+   <HR>
+  <B><A HREF="http://www.gemprint.com/">Gemprint TM</A></B>&nbsp;&nbsp;&nbsp;
+  <B>59%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=1739988&ctag=377BA326&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+      GemprintTM, a division of Omphalos Recovery Systems, Inc., produces the ISi system.  This technologically advanced system allows jewelers to use a laser to produce a light pattern image of a diamond's (loose or mounted) sparkle.   
+    <BR>
+  <I> <A HREF="http://www.gemprint.com/">http://www.gemprint.com/</A></I>
+  <BR>
+   <HR>
+  <B><A HREF="http://www.hindustantimes.com/">The Hindustan Times</A></B>&nbsp;&nbsp;&nbsp;
+  <B>56%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=791290&ctag=377BA326&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+      FRONT PAGE  WIMBLEDON 99  GOURMET FARE  TODAY'S POLL  "CALL INDIA FROM US: 44 CENTS/MIN"  ABOUT US  No let up  US endorses Indian military action, blames Pak for conflict The United States today endorsed India's military action in Kargil to push back infiltrators from its territory and for the first time bluntly blamed Pakistan for the current conflict.   
+    <BR>
+  <I> <A HREF="http://www.hindustantimes.com/">http://www.hindustantimes.com/</A></I>
+  <BR>
+   <HR>
+  <B><A HREF="http://www.hscc.net/">Home</A></B>&nbsp;&nbsp;&nbsp;
+  <B>54%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=1323028&ctag=377BA326&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+      High Speed Connectivity Consortium Capable of gigabit end user connections  Using end-to-end optical fiber connections Or mostly fiber-only connections   
+    <BR>
+  <I> <A HREF="http://www.hscc.net/">http://www.hscc.net/</A></I>
+  <BR>
+   <HR>
+  <B><A HREF="http://www.kashmirtimes.com/">Kashmir Times</A></B>&nbsp;&nbsp;&nbsp;
+  <B>54%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=879115&ctag=377BA326&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+      Flash news item here Army patrolling party attacked NC leader, securityman among five killed KT NEWS SERVICE SRINAGAR, Dec 12 : A halqa president of National Conference and a securityman are among five persons killed in various militancy related incidents across the Valley during the last 24 hours.Official sources said, militants fired upon Mohammad Ramzan Wani......  
+    <BR>
+  <I> <A HREF="http://www.kashmirtimes.com/">http://www.kashmirtimes.com/</A></I>
+  <BR>
+   <HR>
+  <B><A HREF="http://expressindia.com/">Expressindia.com: India's Homepage (News, views and much more from Ind...</A></B>&nbsp;&nbsp;&nbsp;
+  <B>53%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=551218&ctag=377BA326&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+      All the news from India updated through the day.  Everything on India that you could want in a website covering news, sports, politics, people, places, events and much, much more.  You can find everything from an Indian bride to the latest cricket score right here.  
+    <BR>
+  <I> <A HREF="http://expressindia.com/">http://expressindia.com/</A></I>
+  <BR>
+   <HR>
+  <B><A HREF="http://www.expressindia.com/">Expressindia.com: India's Homepage (News, views and much more from Ind...</A></B>&nbsp;&nbsp;&nbsp;
+  <B>53%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=301611&ctag=377BA326&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+      All the news from India updated through the day.  Everything on India that you could want in a website covering news, sports, politics, people, places, events and much, much more.  You can find everything from an Indian bride to the latest cricket score right here.  
+    <BR>
+  <I> <A HREF="http://www.expressindia.com/">http://www.expressindia.com/</A></I>
+  <BR>
+   <HR>
+  <B><A HREF="http://www.soundalive.co.uk/">Home</A></B>&nbsp;&nbsp;&nbsp;
+  <B>52%</B>&nbsp;&nbsp;&nbsp;
+  <A HREF="/search.gw?lk=magellan&c=web&qbe=240102&ctag=377BA326&showSummary=true"><font size="-1">[find similar]</A></FONT><BR>
+      Sorry, your browser doesn't support Java.  Soundalive's Home Page  The Company Soundalive was established in 1986.  Its current Managing Director and creator and designer of the Interpreter® audio guide systems is Malcolm Dexter-Tissington.   
+    <BR>
+  <I> <A HREF="http://www.soundalive.co.uk/">http://www.soundalive.co.uk/</A></I>
+  <BR>
+ <HR>
+</FORM>
+
+<FORM ACTION="/search.gw" METHOD=get>
+             <INPUT TYPE=submit NAME=next VALUE="Next Results">
+       <INPUT TYPE=hidden NAME=search VALUE="+ISI +division">
+    <INPUT TYPE=hidden NAME=look VALUE=magellan>
+       <INPUT TYPE=hidden NAME=start VALUE=0>
+    <INPUT TYPE=hidden NAME=collection VALUE=web>
+          </FORM>
+
+
+Try your search on:&nbsp;
+  <A HREF="http://www.excite.com/search.gw?s=%2Bisi+%2Bdivision"><B>Excite</B></A>
+
+
+</BLOCKQUOTE>
+<CENTER>
+
+<P><CENTER>
+
+      <!-- Ad Start -->
+<a href="http://www.excite.com/relocate/ad=99633_edirect070999_dhban28.gif|pk=2981860;http://38.193.164.61" onMouseOver="window.status='Click for the Best Bargains on the Internet!';return true" language="Javascript"><img src="http://image.eimg.com/ads/99633_edirect070999_dhban28.gif" ALT="Click for the Best Bargains on the Internet!" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> Click for the Best Bargains on the Internet! </B></FONT></CENTER></a>
+<!-- Ad Stop -->
+
+  
+</CENTER><P>
+
+<FORM ACTION="/search.gw" METHOD=get>
+ <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=2>
+  <TR>
+   <TD ALIGN=left VALIGN=top COLSPAN=3 NOWRAP>
+    <INPUT NAME=search VALUE="+ISI +division" SIZE=30>
+    <INPUT TYPE=IMAGE SRC="/img/magellan/searchbut.gif" BORDER=0 ALIGN="top" VALUE="Search Magellan" WIDTH=67 HEIGHT=30>
+   </TD>
+  </TR>
+  <TR>
+   <TD ALIGN=left>
+    <INPUT TYPE=radio NAME=c VALUE=web
+     CHECKED> 
+    <FONT SIZE="-1">The Entire Web</FONT>    <INPUT TYPE=hidden NAME=look VALUE=magellan>
+   </TD>
+   <TD WIDTH=3 ROWSPAN=2></TD>
+   <TD ALIGN=left>
+    <INPUT TYPE=radio NAME=c VALUE=web.green
+    >    <FONT SIZE="-1" COLOR=#008C05>Green Light</FONT>
+    <FONT SIZE="-1"> sites only</FONT>
+   </TD>
+  </TR>
+  <TR>
+   <TD ALIGN=left></TD>
+   <TD ALIGN=left><FONT SIZE=-1>
+    <A HREF="/magellan/Info/advancedtips.html">Search Tips and Help</A>
+   </FONT></TD>
+  </TR>
+ </TABLE>
+ <input type=hidden name=sorig value=rpage>
+</FORM>
+
+
+<P><BR>
+<CENTER>
+<FONT FACE="arial,helvetica" SIZE="-1"><A HREF="http://magellan.excite.com/">Home</A> | <A HREF="/magellan/Info/advancedtips.html">Help</A> | <A HREF="/magellan/Info/addsite.html">Add Site</A><P></FONT>
+</FORM>
+<P>
+<HR>
+<FONT SIZE=-1>
+Explore <A HREF="http://www.excite.com/info/advertising">advertising</A> opportunities with Magellan.<BR>
+Copyright &copy;1998 The McKinley Group, Inc., a subsidiary of <A HREF="http://www.excite.com/?Mh-a-t">Excite, Inc.</A>.  All rights reserved.
+</FONT>
+</CENTER>
+<IMG SRC="http://ad.preferences.com/ping.ng;spacedesc=TCExciteData_Excite_1x1_RunOfSite_Any&event=KeywordResults" HEIGHT=1 WIDTH=1 BORDER=0>
+</BODY>
+</HTML>
+
+
+
+
+
+
+
+
+
+
+
+

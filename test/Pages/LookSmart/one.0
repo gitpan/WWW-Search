@@ -1,0 +1,204 @@
+<html>
+<head>
+<title>Looksmart</title>
+<meta http-equiv=Content-Style-Type content=text/css>
+<link rel=stylesheet type=text/css href=/isp/US/dhtml/main.css>
+</head>
+
+<body bgcolor=ffffff text=000000 link=003399 topmargin=0 leftmargin=0 marginwidth=0 marginheight=0>
+
+<table width=615 cellpadding=0 cellspacing=0 border=0>
+<tr>
+<td width=170>
+	<a href=/r?notnew><img src=/i/ls99/lslogo_small.gif width=163 height=25 border=0></a><br></td>
+<td align=right valign=middle>
+	<font size=1 face=verdana,arial,helvetica>
+<a href=/cgi-bin/go/adname=home:home;adfield=favbar;ref=1//r?lt&pin=990714x34cbb4d769c1796dcc1&notnew>Home</a> | 
+
+<a href=/cgi-bin/go/adname=home:email;adfield=favbar;ref=1//r?lt&pin=990714x34cbb4d769c1796dcc1&tunnel=email.htm>Check Email</a> | 
+<a href=/cgi-bin/go/adname=home:news;adfield=favbar;ref=1//r?lt&pin=990714x34cbb4d769c1796dcc1&panel=catsum{day=today{sum=TopStories>News</a> | 
+<a href=/cgi-bin/go/adname=home:stocks;adfield=favbar;ref=1///money.looksmart.com>Stocks</a> | 
+<a href=/cgi-bin/go/adname=home:weather;adfield=favbar;ref=1//r?lt&pin=990714x34cbb4d769c1796dcc1&panel=weather{winfo=states/index>Weather</a> | 
+<a href=/cgi-bin/go/adname=home:maps;adfield=favbar;ref=1///maps.looksmart.com/looksmart/startmap.hm>Maps</a> | 
+<a href=/cgi-bin/go/adname=home:horoscope;adfield=favbar;ref=1//r?lt&pin=990714x34cbb4d769c1796dcc1&panel=astronobar{astro=tunnel>Horoscopes</a> | 
+<a href=/cgi-bin/go/adname=home:chat;adfield=favbar;ref=1///looksmart.yack.com>Chat</a> | 
+<a href=/cgi-bin/go/adname=home:tv;adfield=favbar;ref=1///tvgrid.looksmart.com>TV Listings</a> |
+<a href=/cgi-bin/go/adname=home:help;adfield=favbar;ref=1/help/>Help</a></font>
+	</td></tr>
+<tr>
+<td colspan=2>&nbsp;</td></tr>
+</table>
+
+<table width=638 cellpadding=0 cellspacing=0 border=0>
+<tr>
+<td width=160 height=60 align=right valign=top><a href="/r?lt&pin=990714x34cbb4d769c1796dcc1&logline=Qwest%253a16%257c2291%257c140%253aUS%253a%253asponsor%253aA&cat=us1&random=598956&key=+LSAM++IB++&path=%3bse%3dus1&clickid=00001befbc43956c00000000"><img src="http://qwest-ad.flycast.com/server/socket/127.0.0.1:2800/ad/LooksmartQWST/ROSButton/598956" border=0 width=120 height=60 alt="Click here for more info!"></a></td>
+<td width=10>&nbsp;</td>
+<td width=468 height=60 align=left valign=top><a href="/r?lt&pin=990714x34cbb4d769c1796dcc1&logline=Qwest%253a16%257c2292%257c427%253aUS%253a%253abanner%253aA&cat=us1&random=247526&key=+LSAM++IB++&path=%3be%3dus1&clickid=00001bf0bc43956c00000000"><img src="http://qwest-ad.flycast.com/server/socket/127.0.0.1:2800/ad/LooksmartQWST/ROS/247526" border=0 width=468 height=60></a></td>
+	</tr>
+<tr>
+<td colspan=3>&nbsp;</td></tr>
+</table>
+
+
+<table width=615 cellpadding=0 cellspacing=0 border=0>
+<tr>
+<td width=170>&nbsp;</td>
+<td width=445>
+	
+<!-- REDBACK KEYWORD SEARCHFORM -->
+<table width=445 cellpadding=1 cellspacing=0 border=0>
+<tr>
+<td><form action=/r_search method=get></td></tr>
+<tr>
+<td valign=middle align=center bgcolor=ffcc00>
+	<input type=hidden name=look value=t><input type=hidden name=pin value=990714x34cbb4d769c1796dcc1>
+	<input type=hidden name=search value="0">
+	<input type=text name=key  size=25 maxlength=100> &nbsp; 
+	<input type=image value=Search src=/i/ls99/btn_search.gif align=absmiddle width=44 height=18 border=0 vspace=3></td></tr>
+</table>
+
+<table width=445 cellpadding=0 cellspacing=0 border=0>
+<tr bgcolor=000000>
+<td>
+	<img src=/i/ls99/b.gif width=1 height=1></td></tr>
+</table>
+
+<table width=445 cellpadding=4 cellspacing=0 border=0>
+<tr>
+<td valign=middle align=middle bgcolor=dddddd class=m2>
+	<font size=2>Search in: &nbsp; 
+	<a href=/r?lt&pin=990714x34cbb4d769c1796dcc1&tunnel=people.html>People</a> &nbsp; 
+	<a href=/r?lt&pin=990714x34cbb4d769c1796dcc1&tunnel=businesses.html>Yellow Pages</a> &nbsp; 
+	<a href=/r?lt&pin=990714x34cbb4d769c1796dcc1&tunnel=discussions.html>Discussions</a> &nbsp; 
+	<a href=/r?lt&pin=990714x34cbb4d769c1796dcc1&tunnel=smartshopper.html>SmartShopper</a><br></td></tr>
+<tr>
+<td></form></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+</td></tr>
+</table>
+<table border=0 cellspacing=0 cellpadding=0><tr>
+
+<td width=160 height=190 align=right valign=top><table border=0 cellpadding=0 cellspacing=0 width=120 height=0 align=right valign=right><tr>
+<td width=120>&nbsp;</td></tr></table></td>
+<td width=10>&nbsp;</td>
+
+
+<td width=445 valign=top><table border=0 cellspacing=0 cellpadding=0><tr><td><table width=445 bgcolor="ffcc00" cellspacing=0 border=0 cellpadding=2><tr><td width=445><font size=2 face=verdana,arial,helvetica><b>&nbsp;1-5  matches for "+LSAM +IB +replication" from the entire Web</b></font></td></tr></table> 
+
+<table width=445 cellspacing=0 cellpadding=0 border=0>
+<tr><td>&nbsp;</td></tr>
+
+<!-- Direct Hits Link -->
+<tr><td width=445>
+<a href="/cgi-bin/go/adname=directhits:link;adfield=search;ref=1///looksmart.directhit.com/fcgi-bin/DirectHitLS.fcg?cmd=ls_qry&qry=%2bLSAM+%2bIB+%2breplication"><img src="http://looksmart.directhit.com/fcgi-bin/DirectHitLS.fcg?cmd=ls_btn&qry=%2bLSAM+%2bIB+%2breplication" width=435 height=19 border=0></a>
+</td></tr>
+
+
+<!-- RealNamesLink -->
+<tr><td width=445>
+<img src=/i/b.gif vspace=3><br>
+<a href="/cgi-bin/go/adname=search:realname;ref=0;adfield=search///www.realnames.com/Resolver.dll?realName=%2bLSAM+%2bIB+%2breplication&providerID=2&fallbackURL=http%3a//www.looksmart.com/r%5fsearch?key%3d%252BLSAM%2b%252BIB%2b%252Breplication" >+LSAM +IB +replication</a> - the direct web address for company or product names from RealNames.<br>
+</td></tr></table>
+
+<br></td></tr><td width=445><font size=2 face=verdana,arial,helvetica>
+<a href="http://xent.ics.uci.edu/FoRK-archive/jan98/0429.html">FoRK Archive: <b>LSAM</b>: Large-Scale Active Middleware (formerly Cities Online)</a><br>
+<b>LSAM</b>: Large-Scale Active Middleware (formerly Cities Online) Rohit Khare (rohit@uci.edu) Tue, 03 Feb 1998 00:05:42 -0800. Messages sorted by: [ date ][...<br>
+<font color="#666666">Size 9K - 03-Feb-98</font><br>
+<br>
+<a href="http://www.darpa.mil/ito/Summaries97/C370_0.html"><b>LSAM</b>: Large-Scale Active Middleware (formerly Cities Online)</a><br>
+DARPA ITO Sponsored Research. 1997 Project Summary <b>LSAM</b>: Large-Scale Active Middleware (formerly Cities Online) University of Southern...<br>
+<font color="#666666">Size 10K - 27-May-99</font><br>
+<br>
+<a href="http://www.isi.edu/~lsam/about/">About <b>LSAM</b></a><br>
+About <b>LSAM</b>. What is <b>LSAM</b>. <b>LSAM</b> is developing middleware infrastructure to support scalable distributed information services. This is embodied in the <b>LSAM</b>..<br>
+<font color="#666666">Size 9K - 18-Feb-99</font><br>
+<br>
+<a href="http://www.isi.edu/div7/ib/discussion.html"><b>IB</b> Discussion</a><br>
+<b>IB</b> Discussion. Response time and bandwidth are key resources in this project. Current Internet user interfaces, such as Web browsers, Gopher and WAIS...<br>
+<font color="#666666">Size 6K - 13-Jan-97</font><br>
+<br>
+<a href="http://www.isi.edu/ib/">About <b>IB</b></a><br>
+About Intelligent BW. In today's Internet, information services such as WWW, Gopher, WAIS, etc. are oriented towards a reactive model: the Internet and...<br>
+<font color="#666666">Size 3K - 06-Oct-97</font><br>
+<br>
+</font></td></tr></table></table>
+<table width=615 cellspacing=0 cellpadding=0>
+<tr><td width=170><img src="/i/b.gif" width=170 height=1></td><td width=445><center><font size=2 face=verdana,arial,helvetica><a href="/r_search?lt&pin=990714x34cbb4d769c1796dcc1&skip=5&key=%2bLSAM+%2bIB+%2breplication&se=0&search=us1;local_US">Next&nbsp;10</a>
+</center></td></tr></table>
+<br><table border=0 cellspacing=0 cellpadding=0 width=640 height=20>
+	<tr>
+		<td width=205>
+		</td>
+		<td><img src="/i/avlogo.gif" border=0 width=74 height=25></td>
+		<td width=386 bgcolor="#003366" valign=center height =15 >
+			<center><b><i>
+			<font face="charcoal, arial" size=2 color="#cccccc">
+				AltaVista&#153; Search &#153;. Used under license
+			</b></i></font>
+			</center>
+		</td>
+	</tr>
+</table>
+<table align=left width=615 border=0 cellspacing=0 cellpadding=0>
+<tr><td width=170><img src="/i/b.gif" width=170 height=1></td><td width=445><br><hr align=left width=445>
+
+<!-- REDBACK KEYWORD SEARCHFORM -->
+<table width=445 cellpadding=1 cellspacing=0 border=0>
+<tr>
+<td><form action=/r_search method=get></td></tr>
+<tr>
+<td valign=middle align=center bgcolor=ffcc00>
+	<input type=hidden name=look value=t><input type=hidden name=pin value=990714x34cbb4d769c1796dcc1>
+	<input type=hidden name=search value="0">
+	<input type=text name=key  size=25 maxlength=100> &nbsp; 
+	<input type=image value=Search src=/i/ls99/btn_search.gif align=absmiddle width=44 height=18 border=0 vspace=3></td></tr>
+</table>
+
+<table width=445 cellpadding=0 cellspacing=0 border=0>
+<tr bgcolor=000000>
+<td>
+	<img src=/i/ls99/b.gif width=1 height=1></td></tr>
+</table>
+
+<table width=445 cellpadding=4 cellspacing=0 border=0>
+<tr>
+<td valign=middle align=middle bgcolor=dddddd class=m2>
+	<font size=2>Search in: &nbsp; 
+	<a href=/r?lt&pin=990714x34cbb4d769c1796dcc1&tunnel=people.html>People</a> &nbsp; 
+	<a href=/r?lt&pin=990714x34cbb4d769c1796dcc1&tunnel=businesses.html>Yellow Pages</a> &nbsp; 
+	<a href=/r?lt&pin=990714x34cbb4d769c1796dcc1&tunnel=discussions.html>Discussions</a> &nbsp; 
+	<a href=/r?lt&pin=990714x34cbb4d769c1796dcc1&tunnel=smartshopper.html>SmartShopper</a><br></td></tr>
+<tr>
+<td></form></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+<br></td></tr>
+<tr><td>&nbsp</td><td width=468 height=60 align=left valign=top><a href="/r?lt&pin=990714x34cbb4d769c1796dcc1&logline=Qwest%253a16%257c2292%257c427%253aUS%253a%253abanner%253aA&cat=us1&random=247526&key=+LSAM++IB++&path=%3be%3dus1&clickid=00001bf0bc43956c00000000"><img src="http://qwest-ad.flycast.com/server/socket/127.0.0.1:2800/ad/LooksmartQWST/ROS/247526" border=0 width=468 height=60></a></td></tr></table><br clear=all>
+<table width=615 cellpadding=0 cellspacing=0 border=0>
+<tr>
+<td colspan=4><hr size=1 noshade></td></tr>
+<tr>
+<td width=5>&nbsp;</td>
+<td width=155>
+	<font size=1 face=verdana,arial,helvetica> 
+	<b>About Looksmart</b><br>
+	<a href=/aboutus/>About the Company</a><br>
+	<a href=/aboutus/media/>Advertise with Looksmart</a><br>
+	<a href=/aboutus/partners/subsite2.html>How to Submit a Site</a><br>
+	<a href=/aboutus/contact/>Contact Us</a><br>
+	<a href=/aboutus/company/privacy.html>Privacy Policy</a><br>
+	</td>
+<td width=10>&nbsp;</td>
+<td valign=top width=445>
+	<font size=1 face=verdana,arial,helvetica> 
+	<b>Other Looksmart Services</b><br>
+	<a href=http://www.looksmart.com.au>Looksmart Australia</a> | <a href=http://www.looksmart.co.uk>Looksmart UK</a> | <a href=http://www.looksmart.com/radio>Looksmart Radio</a> | <a href=http://www.beseen.com/mysearch>My Search</a> - free search for your site | 
+	<a href=http://www.beseen.com>Beseen</a> - free site tools | <a href=/isplocator/>ISP Locator</a> - Looksmart recommends ISPs in your area | <a href=/download/sbm/>Search By Media</a> - find audio, video, and images
+	<p>
+	<i>&#169;1999 Looksmart Ltd. All rights reserved.</td></tr>
+<tr>
+<td colspan=4>&nbsp;</td></tr>
+</table>
+</body>
+</html>

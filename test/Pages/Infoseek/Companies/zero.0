@@ -16,13 +16,13 @@ location.href = list.options[list.selectedIndex].value
 <table width=100% cellpadding=0 cellspacing=0 border=0>
 <tr>
 <td valign="bottom" width=100% height=32>
-<font face="verdana,geneva,arial" size=1><b><a href="/redirect?sv=IS&lk=&ak=QLNK&rl=LINK_HEAD_Book&rd=http://entertainment.go.com/Books/">Books</a> &nbsp; <a href="/Facts?pg=maps.html&svx=QLNK_Maps">Maps</a> &nbsp; <a href="/Center/News/Weather?svx=QLNK_weather">Weather</a> &nbsp; <a href="/Facts?pg=email.html&svx=QLNK_white_pages">White pages</a> &nbsp; <a href="/redirect?sv=IS&lk=&ak=QLNK&rl=LINK-HEAD-MSSW_yellow_pages&rd=http://national.sidewalk.msn.com/infoseek/search">Yellow pages</a></b></font> </td>
+<font face="verdana,geneva,arial" size=1><b><a href="/redirect?sv=IS&lk=&ak=QLNK&rl=LINK_HEAD_Book&rd=http://entertainment.go.com/Books/">Books</a> &nbsp; <a href="/Facts?pg=maps.html&svx=QLNK_Maps">Maps</a> &nbsp; <a href="/Center/News/Weather?svx=QLNK_weather">Weather</a> &nbsp; <a href="/Facts?pg=email.html&svx=QLNK_white_pages">White pages</a> &nbsp; <a href="/redirect?sv=IS&lk=&ak=BGYL&rl=LINK-HEAD-QLNK_yellow_pages&rd=http://www.bigyellow.com/cobr/go/go_search.html">Yellow pages</a></b></font> </td>
 <td align="right" valign="bottom" height=28>
 <img src="/images/clear.gif" border=0 height=25 width=65> </td>
 </tr>
 <tr>
 <form METHOD="POST" ACTION="http://feedback.infoseek.com/cgi-bin/jump.cgi" >
-<td height=26 bgcolor="#000000"><font size=1 color=#FFFFFF><b><a href="/GoHome/modules/login.html?nh=25&appRedirect=/Titles%3Fnh%3D25"><font face="sans-serif" size=2 color="#ffffff"><i>Join now. . .</i></font></a> <a href="/GoHome/modules/login.html?nh=25&appRedirect=/Titles%3Fnh%3D25"><font face="sans-serif" size=1 color="#AEB5E8">Personalized sports, stocks, news and more.</font></a></b>
+<td height=26 bgcolor="#000000"><font size=1 color=#FFFFFF><b><a href="/GoHome/modules/login.html?nh=25&appRedirect=/Titles%3Fnh%3D25"><font face="geneva,arial" size=2 color="#ffffff"><i>Join now. . .</i></font></a> <a href="/GoHome/modules/login.html?nh=25&appRedirect=/Titles%3Fnh%3D25"><font face="verdana,geneva,arial" size=1 color="#AEB5E8">Personalized sports, stocks, news and more.</font></a></b>
 </font></td>
 <td align="right" height=26 bgcolor="#000000">
 <select onChange="loadPage(this)" name="url" size=1>
@@ -64,7 +64,7 @@ location.href = list.options[list.selectedIndex].value
 </tr>
 </table>
 <p><center>
-<a href="http://www.infoseek.com/redirect?sv=IS&lk=&tid=&ak=LLBN-2022-1116-GEN&rd=http://ad.doubleclick.net/jump/N646.go.com71/B14599;sz=468x60;ord=000015195?" target="_top"><img border=1 width=468 height=60 src="http://ad.doubleclick.net/ad/N646.go.com71/B14599;sz=468x60;ord=000015195?" alt="[Click Here for L.L. Bean&#39;s Summer Sale]"><br><FONT FACE="verdana,arial,helvetica" SIZE="1"><b>Click here</b></FONT></a></p> </center>
+<a href="http://www.infoseek.com/redirect?sv=IS&lk=&tid=&ak=GETS-15930-1179-GEN&rd=http://www.getsmartinc.com/mortgage/HomeBanner?BANNERNAME=www.getsmartinc.com/minfoseek020mort72" target="_top"><img border=1 width=468 height=60 src="/ads/GETS1179.gif" alt="[GetSmart (BFC)]"><br><FONT FACE="verdana,arial,helvetica" SIZE="1"><b>Click for GetSmart&#39;s MortgageFinder</b></FONT></a></p> </center>
 <table  width="100%"  border=0 cellpadding=3 cellspacing=0>
 <tr><td valign=top align=left bgcolor="003366">
 &nbsp;<font face="Arial, Helvetica" size="4" color="#FFFFFF"><b><i>No Results Found</i></b></font>

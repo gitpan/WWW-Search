@@ -1,7 +1,7 @@
 # OpenDirectory.pm
 # by Jim Smyser
 # Copyright (c) 1999 by Jim Smyser & USC/ISI
-# $Id: OpenDirectory.pm,v 1.2 1999/06/24 14:45:17 mthurn Exp $
+# $Id: OpenDirectory.pm,v 1.3 1999/07/13 17:21:09 mthurn Exp $
 
 
 package WWW::Search::OpenDirectory;
@@ -53,23 +53,9 @@ by Jim Smyser - <jsmyser@bigfoot.com>.
 
 =head1 TESTING
 
-    $search_engine = 'OpenDirectory';
-    $maintainer = 'Jim Smyser <jsmyser@bigfoot.com>';
+This module adheres to the C<WWW::Search> test suite mechanism. 
+See $TEST_CASES below.
 
-    $file = 'test/OpenDirectory/zero_result'; 
-    $query = $bogus_query; 
-    test($mode, $TEST_EXACTLY); 
-     
-    $file = 'test/OpenDirectory/one_page_result'; 
-    $query = '"i' . 'Rover"'; 
-    test($mode, $TEST_RANGE, 2, 50); 
-      
-    $file = 'test/OpenDirectory/multi_page_result'; 
-    $query = '"Gra'.'nd Can'.'yon"';
-    test($mode, $TEST_GREATER_THAN, 99); 
-
-      
-        
 =head1 LEGALESE
 
 Copyright (c) 1996-1999 University of Southern California.
@@ -80,6 +66,9 @@ WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
 MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 =head1 VERSION HISTORY
+
+2.01
+New test mechanism.
 
 1.02
 Format changes.
@@ -92,15 +81,19 @@ Format changes.
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
-$VERSION = 1.02;
+$VERSION = '2.01';
 @ISA = qw(WWW::Search Exporter);
+
+$MAINTAINER = 'Jim Smyser <jsmyser@bigfoot.com>';
+$TEST_CASES = <<"ENDTESTCASES";
+&test('OpenDirectory', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_EXACTLY);
+&test('OpenDirectory', '$MAINTAINER', 'one', 'iRover', \$TEST_RANGE, 2,98);
+&test('OpenDirectory', '$MAINTAINER', 'multi', 'Hasbro', \$TEST_GREATER_THAN, 26);
+ENDTESTCASES
 
 use Carp ();
 use WWW::Search(generic_option);
 require WWW::SearchResult;
-
-# public
-sub version { $VERSION }
 
 # private
 sub native_setup_search

@@ -1,6 +1,6 @@
 # WebCrawler.pm
 # Copyright (C) 1998 by Martin Thurn
-# $Id: WebCrawler.pm,v 1.14 1999/06/30 15:41:29 mthurn Exp $
+# $Id: WebCrawler.pm,v 1.16 1999/07/13 19:06:38 mthurn Exp $
 
 =head1 NAME
 
@@ -70,6 +70,8 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 If it's not listed here, then it wasn't a meaningful or released version.
 
+=head2 2.01, 1999-07-13
+
 =head2 1.13, 1999-03-29
 
 Remove extraneous HTML from description (thanks to Jim Smyser jsmyser@bigfoot.com)
@@ -104,22 +106,18 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '1.14';
+$VERSION = '2.01';
 
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 $TEST_CASES = <<"ENDTESTCASES";
-&test('WebCrawler', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_BY_COUNTING, 0);
-&test('WebCrawler', '$MAINTAINER', 'one_page', 'dise'.'stablishmentarianism', \$TEST_RANGE, 2,99);
-&test('WebCrawler', '$MAINTAINER', 'two_page', 'Lan'.'do', \$TEST_GREATER_THAN, 50);
+&test('WebCrawler', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_EXACTLY);
+&test('WebCrawler', '$MAINTAINER', 'one', 'dise'.'stablishmentarianism', \$TEST_RANGE, 2,24);
+&test('WebCrawler', '$MAINTAINER', 'two', 'Dengar', \$TEST_GREATER_THAN, 26);
 ENDTESTCASES
 
 use Carp ();
 use WWW::Search(generic_option);
 require WWW::SearchResult;
-
-
-# public
-sub version { $VERSION }
 
 # private
 sub native_setup_search
@@ -131,25 +129,11 @@ sub native_setup_search
   $self->{_debug} = 2 if ($native_options_ref->{'search_parse_debug'});
   $self->{_debug} ||= 0;
 
-  my $DEFAULT_HITS_PER_PAGE = 100;
-  $DEFAULT_HITS_PER_PAGE = 10 if $self->{_debug};
+  my $DEFAULT_HITS_PER_PAGE = 25;
+  # $DEFAULT_HITS_PER_PAGE = 10 if $self->{_debug};
   $self->{'_hits_per_page'} = $DEFAULT_HITS_PER_PAGE;
 
-  # Add one to the number of hits needed, because Search.pm does ">"
-  # instead of ">=" on line 672!
-  my $iMaximum = 1 + $self->maximum_to_retrieve;
-  # Divide the problem into N pages of K hits per page.
-  my $iNumPages = 1 + int($iMaximum / $self->{'_hits_per_page'});
-  if (1 < $iNumPages)
-    {
-    $self->{'_hits_per_page'} = 1 + int($iMaximum / $iNumPages);
-    }
-  else
-    {
-    $self->{'_hits_per_page'} = $iMaximum;
-    }
   $self->{agent_e_mail} = 'MartinThurn@iname.com';
-
   # As of 1998-03-16, WebCrawler apparently doesn't like WWW::Search!  Response was
   # 403 (Forbidden) Forbidden by robots.txt
   $self->user_agent(1);

@@ -1,3 +1,48 @@
+1999-07-14  Kingpin  <mthurn@tasc.com>
+
+	* WWW::Search VERSION 2.01 RELEASED!
+
+1999-07-13  Kingpin  <mthurn@tasc.com>
+
+	* various cleanups in test.pl
+	
+	* All backends with their own version numbers have been bumped up
+	to 2.01 (this is to clean up the CPAN database)
+
+	* Makefile.PL and the test suite now work in Win32
+
+	* all test cases updated for all working backends; test cases
+	eliminated for known broken backends
+
+	* NorthernLight.pm updated
+
+	* new backend for Google
+
+	* new backend for OpenDirectory
+
+1999-07-09  Kingpin  <mthurn@tasc.com>
+
+	* Infoseek.pm updated to version 1.18; warnings removed
+
+	* new backend for LookSmart
+
+1999-07-06  Kingpin  <mthurn@tasc.com>
+
+	* Dejanews.pm updated to version 1.12; now uses www.deja.com;
+	adheres to new test mechanism
+
+	* AltaVista/AdvancedWeb.pm updated to version 2.01
+
+1999-07-02  Kingpin  <mthurn@tasc.com>
+
+	* ZDNet.pm FIXED and updated to version 1.03
+
+	* NorthernLight.pm FIXED and updated to version 1.05
+
+1999-07-01  Kingpin  <mthurn@tasc.com>
+
+	* WWW::Search VERSION 1.025 RELEASED!
+
 1999-06-30  Kingpin  <mthurn@tasc.com>
 
 	* WebCrawler.pm updated to version 1.14; adheres to new test mechanism

@@ -6,7 +6,7 @@
 # AltaVista.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Email.pm,v 1.1 1999/06/18 19:17:17 mthurn Exp $
+# $Id: Email.pm,v 1.2 1999/07/14 13:58:30 mthurn Exp $
 #
 # Complete copyright notice follows below.
 # 
@@ -78,101 +78,106 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 
 =cut
-#'
-
-#
-#  Test cases:
-# ./search.pl xxxasdf                        --- no hits
-# ./search.pl '"lsam replication"'           --- single page return
-# ./search.pl '+"john heidemann" +work'      --- 9 page return
-#
-
-
 
 #####################################################################
 
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
-# $VERSION = 1.000;
+$VERSION = '2.01';
 @ISA = qw(WWW::Search::Infoseek Exporter);
+
+$MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
+$TEST_CASES = <<"ENDTESTCASES";
+&not_working('Infoseek::Email', '$MAINTAINER');
+ENDTESTCASES
 
 use Carp ();
 use WWW::Search::Infoseek;
 require WWW::SearchResult;
 
-
-
 # private
 sub native_setup_search
-{
-	my($self)=shift;
-	if (!defined($self->{_default_options})) {
-	 	 $self->{_default_options} = {
-	 	 				operator	=>	'OR',
-	 	 				lk	=>	'noframes',
-	 	 				sv	=>	'IS',
-	 	 				col	=>	'FO'
-	 				};
-	}	
-	$self->{_host} = 'http://www.infoseek.com/';
-	return $self->SUPER::native_setup_search(@_);
-}
+  {
+  my($self)=shift;
+  if (!defined($self->{_default_options})) 
+    {
+    $self->{_default_options} = {
+                                 operator => 'OR',
+                                 lk => 'noframes',
+                                 sv => 'IS',
+                                 col => 'FO'
+                                };
+    } 
+  $self->{_host} = 'http://www.infoseek.com/';
+  return $self->SUPER::native_setup_search(@_);
+  } # native_setup_search
 
 
 # private
 sub native_retrieve_some
-{
-    my ($self) = @_;
-
-    # fast exit if already done
-    return undef if (!defined($self->{_next_url}));
-
-    # get some
-    my($request) = new HTTP::Request('GET', $self->{_next_url});
-    my($response) = $self->{user_agent}->request($request);
-    $self->{response} = $response;
-    if (!$response->is_success) {
-		return undef;
-    };
-
-    # parse the output
-    #define constants:
-    my($hits_found) = 0;
-    my($hit) = ();
-    my($Article)=(0..0);
-    my($raw);
-    $self->{_next_url} = undef;
-    for (split(/\n/, $response->content())) {
-		next if /^$/;
-		if (m#: No Results</title>#) {			
-			return undef;
-		} elsif	(m#<STRONG>Too Many Matches</STRONG><P>#) {
-			return undef;
-		} elsif (m#<STRONG>Successful Search, Found\s+(\d+)\s+Matches</STRONG><P>#) {			
-			$self->approximate_result_count($1);
-		} elsif (m#<a href="(/cgi-bin/Four11Main\?userdetail[^"]+)">([^<]+)</a>#) {
-			$hit = new WWW::SearchResult;
-			$hit->add_url($self->{_host} . $1);
-			$hits_found++;
-			$hit->title($2);	    
-			$Article++;
-			$raw=$_;
-		} elsif ($Article) {
-			if (m#^\s+(\@[^\s<]+)\s*#) {
-				$hit->description($1)
-			} elsif (m#^<br>$#) {	
-				$Article--;
-				$raw.=$_;
-				$hit->raw($raw);
-				push(@{$self->{cache}}, $hit);
-				next;
-			}
-			$raw.=$_;
-		}
+  {
+  my ($self) = @_;
+  
+  # fast exit if already done
+  return undef if (!defined($self->{_next_url}));
+  
+  # get some
+  my($request) = new HTTP::Request('GET', $self->{_next_url});
+  my($response) = $self->{user_agent}->request($request);
+  $self->{response} = $response;
+  if (!$response->is_success) {
+    return undef;
     }
-
-
-}
+  
+  # parse the output
+  #define constants:
+  my($hits_found) = 0;
+  my($hit) = ();
+  my($Article)=(0..0);
+  my($raw);
+  $self->{_next_url} = undef;
+  for ($self->split_lines($response->content()))
+    {
+    next if /^$/;
+    if (m#: No Results\</title>#) 
+      { 
+      return undef;
+      } 
+    elsif (m#\<STRONG>Too Many Matches\</STRONG>\<P>#) 
+      {
+      return undef;
+      } 
+    elsif ( m/Successful\sSearch\,\sFound\s+ ( \d+ ) \s+Matches/ )
+      { 
+      $self->approximate_result_count($1);
+      } 
+    elsif (m#\<a href="(/cgi-bin/Four11Main\?userdetail[^\"]+)">([^\<]+)\</a>#) 
+      {
+      $hit = new WWW::SearchResult;
+      $hit->add_url($self->{_host} . $1);
+      $hits_found++;
+      $hit->title($2);	    
+      $Article++;
+      $raw=$_;
+      } 
+    elsif ($Article) 
+      {
+      if (m#^\s+(\@[^\s\<]+)\s*#) 
+        {
+        $hit->description($1)
+        } 
+      elsif (m#^\<br>$#) 
+        { 
+        $Article--;
+        $raw.=$_;
+        $hit->raw($raw);
+        push(@{$self->{cache}}, $hit);
+        next;
+        }
+      $raw.=$_;
+      } # if $Article
+    } # for
+  } # native_retrieve_some
 
 1;

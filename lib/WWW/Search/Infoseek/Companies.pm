@@ -1,7 +1,7 @@
 # Companies.pm
 # by Martin Thurn
 # Copyright (C) 1996 by USC/ISI
-# $Id: Companies.pm,v 1.10 1999/06/30 15:30:11 mthurn Exp $
+# $Id: Companies.pm,v 1.11 1999/07/13 13:50:44 mthurn Exp $
 #
 # Complete copyright notice follows below.
 
@@ -67,11 +67,11 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search::Infoseek Exporter);
-$VERSION = '1.10';
+$VERSION = '2.01';
 
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 $TEST_CASES = <<"ENDTESTCASES";
-&test('Infoseek::Companies', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_BY_COUNTING, 0);
+&test('Infoseek::Companies', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_EXACTLY);
 &test('Infoseek::Companies', '$MAINTAINER', 'one_page', 'Pac'.'ific AND trav'.'el', \$TEST_RANGE, 2,24);
 &test('Infoseek::Companies', '$MAINTAINER', 'two_page', 'pr'.'ison', \$TEST_GREATER_THAN, 25);
 ENDTESTCASES

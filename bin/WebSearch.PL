@@ -5,7 +5,7 @@ chdir(dirname($0));
 $file =~ s/\.pl$//
       if ($Config{'osname'} eq 'VMS' or
           $Config{'osname'} eq 'OS2');  # "case-forgiving"
-$debug = (`hostname` =~ /^dash.isi.edu/);   # development hack
+$debug = (`hostname` =~ /^copper/);   # development hack
 open OUT,">$file" or die "Can't create $file: $!";
 chmod(0755, $file);
 print "Extracting $file (with variable substitutions)\n";

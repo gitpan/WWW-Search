@@ -1,7 +1,7 @@
 # Profusion.pm
 # by Jim Smyser
 # Copyright (c) 1999 by Jim Smyser & USC/ISI
-# $Id: Profusion.pm,v 1.2 1999/06/24 14:48:57 mthurn Exp $
+# $Id: Profusion.pm,v 1.3 1999/07/13 17:26:55 mthurn Exp $
 
 
 package WWW::Search::Profusion;
@@ -75,19 +75,11 @@ C<WWW::Search::Profusion> is written and maintained
 by Jim Smyser - <jsmyser@bigfoot.com>.
 
 =head1 TESTING
-**This backend returns ALL results to *one* page.**
 
-    $search_engine = 'Profusion';
-    $maintainer = 'Jim Smyser <jsmyser@bigfoot.com>';
+This backend returns ALL results to *one* page.
 
-    $file = 'test/Profusion/zero_result'; 
-    $query = $bogus_query; 
-    test($mode, $TEST_EXACTLY); 
-     
-    $file = 'test/Profusion/one_page_result'; 
-    $query = 'Astr' . 'onomy'; 
-    test($mode, $TEST_GREATER_THAN, 50); 
-      
+This backend adheres to the C<WWW::Search> test mechanism.
+See $TEST_CASES below.      
         
 =head1 COPYRIGHT
 
@@ -109,6 +101,8 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 =head1 VERSION HISTORY
 
+2.01 New test mechanism.
+
 1.05 Fix for new format change. Returning of search engine name 
 with the description along with the full url of the found link.  
 
@@ -125,13 +119,16 @@ Also added returning of all HTML (raw).
 #####################################################################
 
 require Exporter;
+@ISA = qw(WWW::Search Exporter);
 @EXPORT = qw();
 @EXPORT_OK = qw();
-$VERSION = 1.05;
-@ISA = qw(WWW::Search Exporter);
+$VERSION = '2.01';
 
-# public
-sub version {$VERSION}
+$MAINTAINER = 'Jim Smyser <jsmyser@bigfoot.com>';
+$TEST_CASES = <<"ENDTESTCASES";
+&test('Profusion', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_EXACTLY);
+&test('Profusion', '$MAINTAINER', 'one', 'astronomy', \$TEST_GREATER_THAN, 84);
+ENDTESTCASES
 
 use Carp ();
 use WWW::Search(generic_option);

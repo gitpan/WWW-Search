@@ -1,7 +1,7 @@
 # Yahoo.pm
 # by Wm. L. Scheding and Martin Thurn
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: Yahoo.pm,v 1.13 1999/04/29 16:44:34 mthurn Exp $
+# $Id: Yahoo.pm,v 1.14 1999/07/13 13:54:49 mthurn Exp $
 
 =head1 NAME
 
@@ -30,21 +30,6 @@ be done through L<WWW::Search> objects.
 
 To make new back-ends, see L<WWW::Search>.
 
-=head1 HOW DOES IT WORK?
-
-C<native_setup_search> is called (from C<WWW::Search::setup_search>)
-before we do anything.  It initializes our private variables (which
-all begin with underscore) and sets up a URL to the first results
-page in C<{_next_url}>.
-
-C<native_retrieve_some> is called (from C<WWW::Search::retrieve_some>)
-whenever more hits are needed.  It calls C<WWW::Search::http_request>
-to fetch the page specified by C<{_next_url}>.
-It then parses this page, appending any search hits it finds to 
-C<{cache}>.  If it finds a ``next'' button in the text,
-it sets C<{_next_url}> to point to the page for the next
-set of results, otherwise it sets it to undef to indicate we''re done.
-
 =head1 BUGS
 
 Please tell the author if you find any!
@@ -52,20 +37,6 @@ Please tell the author if you find any!
 =head1 TESTING
 
 This module adheres to the C<WWW::Search> test suite mechanism. 
-
-  Test cases (accurate as of 1998-10-22):
-
-    $file = 'test/Yahoo/zero_result';
-    $query = 'Bogus' . 'NoSuchWord';
-    test($mode, $TEST_EXACTLY);
-
-    $file = 'test/Yahoo/one_page_result';
-    $query = 'LS'.'AM';
-    test($mode, $TEST_RANGE, 2, 50);
-
-    $file = 'test/Yahoo/multi_page_result';
-    $query = 'repli'.'cation';
-    test($mode, $TEST_GREATER_THAN, 100);
 
 =head1 AUTHOR
 
@@ -84,6 +55,8 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 =head1 VERSION HISTORY
 
 If it''s not listed here, then it wasn''t a meaningful nor released revision.
+
+=head2 2.01, 1999-07-13
 
 =head2 1.12, 1998-10-22
 
@@ -110,13 +83,18 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '1.13';
+$VERSION = '2.01';
+
+$MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
+$TEST_CASES = <<"ENDTESTCASES";
+&test('Yahoo', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_EXACTLY);
+&test('Yahoo', '$MAINTAINER', 'one_page', 'LSA'.'M', \$TEST_RANGE, 2,84);
+&test('Yahoo', '$MAINTAINER', 'two_page', 'rep'.'lication', \$TEST_GREATER_THAN, 87);
+ENDTESTCASES
 
 use Carp ();
 use WWW::Search(generic_option);
 require WWW::SearchResult;
-
-sub version { $VERSION }
 
 sub native_setup_search
   {
