@@ -15,5 +15,6 @@ lib/WWW/Search/Result.pm
 lib/WWW/Search/Simple.pm
 lib/WWW/Search/Test.pm
 lib/WWW/SearchResult.pm
+t/autosearch.t
 t/use.t
 META.yml                                Module meta-data (added by MakeMaker)

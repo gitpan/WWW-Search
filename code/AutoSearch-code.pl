@@ -4,7 +4,7 @@ exit 0;
 # AutoSearch-code.pl
 # Copyright (c) 1996-1997 University of Southern California.
 # All rights reserved.
-# $Id: AutoSearch-code.pl,v 1.10 2003-11-25 08:30:15-05 kingpin Exp kingpin $
+# $Id: AutoSearch-code.pl,v 1.12 2003-11-27 23:58:44-05 kingpin Exp kingpin $
 #
 # Complete copyright notice follows below.
 
@@ -142,6 +142,13 @@ C<-f '.*\.isi\.edu'> avoids all of ISI's web pages.
 Delete all traces of query results from more than i days ago.  If
 --cleanup is given, all other options other than the query_id will be
 ignored.
+
+=item C<--cmdline>
+
+Reconstruct the complete command line (AutoSearch and all its
+arguments) that was used to create the query results.  Command line
+will be shown on STDERR.  If --cmdline is given, all other options
+other than the query_id will be ignored.
 
 =back
 
@@ -458,13 +465,14 @@ my (%opts,@query_list,$query_name,$query_string,$search_engine,$query_options,$u
 # Default options:
 $opts{'m'} = '';
 $opts{'cleanup'} = 0;
+$opts{'cmdline'} = 0;
 $opts{'v'} = 0;
 $opts{'help'} = 0;
 $opts{'stats'} = 0;
 $opts{'debug'} = 0;
 $opts{'listnewurls'} = 0;
 $opts{'ignore_channels'} = ();
-&GetOptions(\%opts, qw(n|qn|queryname=s s|qs|querystring=s e|engine=s m|mail=s h|host=s p|port=s o|options=s@ f|uf|urlfilter=s listnewurls stats userid=s password=s ignore_channels=s@ cleanup=i v|verbose help V|VERSION debug),
+&GetOptions(\%opts, qw(n|qn|queryname=s s|qs|querystring=s e|engine=s m|mail=s h|host=s p|port=s o|options=s@ f|uf|urlfilter=s listnewurls stats userid=s password=s ignore_channels=s@ cleanup=i cmdline v|verbose help V|VERSION debug),
             'http_proxy=s',
             'http_proxy_user=s',
             'http_proxy_pwd=s',
@@ -628,6 +636,45 @@ sub main
   my $qid = $query_dir;
   die ("qid is a required argument.") unless ($qid);
   die ("qid is a required argument.") unless ($qid =~ m!\S!);
+  print STDERR "query directory: $qid\n" if $v_dbg;
+  # Do we have the necessary infrastructure?  We require two files: 1)
+  # the summary of searches and 2) weekly updates.  Look for
+  # index.html, or default first_index.html, or make one from scratch.
+  # index.html contains the previous search results. (aka old summary)
+  &check_index_file($qid); # make qid/index.html
+
+  if ($opts{'cmdline'})
+    {
+    # Show the original cmdline and exit:
+    my %hssOptions = (
+                      Query => '--querystring',
+                      QueryName => '--queryname',
+                      SearchEngine => '--engine',
+                      URLFilter => '--filter',
+                      QueryOptions => '--option',
+                      # IgnoreChannels => '--ignore_channels',
+                     );
+    my $sFile = qq{$qid/index.html};
+    open(INDEX, $sFile) or die " --- can not open $sFile for read: $!";
+    # Slurp entire file:
+    local $/ = undef;
+    my $sHTML = <INDEX>;
+    close(INDEX) or warn " --- can not close $sFile after reading: $!";
+    my $sCmdline = qq{$0 $qid };
+    # Special case: look for QueryName inside <h1> tags:
+    $sHTML =~ s#<h1>(.+?)</h1>#<!--QueryName\{$1}/QueryName-->#;
+    while (my ($sTag, $sArg) = each %hssOptions)
+      {
+      while ($sHTML =~ m#<!--$sTag\{(.*?)}/$sTag-->#g)
+        {
+        my $sValue = $1 || '';
+        $sCmdline .= qq{$sArg "$sValue" } if ($sValue ne '');
+        } # while
+      } # while
+    print STDERR "\n$sCmdline\n";
+    return;
+    } # if --cmdline
+
   my $iCleanup = $opts{'cleanup'};
   if (0 < $iCleanup)
     {
@@ -678,16 +725,11 @@ sub main
     close NEW;
     copy($sFileNew, $sFile) or die " --- can not copy $sFileNew to $sFile: $!";
     unlink $sFileNew;  # No big deal if this fails
+    # All done:
     return;
-    } # if
-  $qid .= '/' unless substr($qid,-1,1) eq '/'; # we MUST have a /
-  print STDERR "query directory: $qid\n" if $v_dbg;
-  # Do we have the necessary infrastructure?  We require two files: 1)
-  # the Summary of searches and 2) weekly updates.  Look for
-  # index.html, or default first_index.html, or make one.  index.html
-  # contains the previous isearch results. (aka old summary)
-  &check_index_file($qid); #make qid/index.html
+    } # if --cleanup
 
+  $qid .= '/' unless substr($qid,-1,1) eq '/'; # we MUST have a /
   # Read index.html and break into fields.
   my ($SummaryTop, $SummaryQuery,
       $SummarySearchEngine, $SummaryURLFilter,
@@ -740,17 +782,16 @@ sub main
 # 1) from existing file or default files (files already in place), or
 # 2) from user.
 #    (either a) command line or b) "ask user" (or error if we don't dare))
-  my($QueryName,$QueryString,$SearchEngine,$URLFilter);
+  my ($QueryName, $QueryString, $SearchEngine, $URLFilter);
+  $QueryName = $query_name;
 # did we get a Query Name/String/Engine/Options/Filter from existing files?
   if ($SummaryTop =~ m/AutoSearch WEB Searching/i) { # no
-    if (defined($query_name)) { # from command line
-      $QueryName = $query_name;
-    } else { # no, ask 'em
+    if (! defined($query_name)) { # from command line
       $QueryName = &read_query("Please enter a Query Name:");
     }
     $SummaryTop =~ s/AutoSearch WEB Searching/$QueryName/i;
-    print STDERR "Query Name is \"$QueryName\"\n" if $v_dbg;
   }
+  print STDERR "Query Name is \"$QueryName\"\n" if $v_dbg;
 
   if ($SummaryQuery =~ m/ask user/i)
     { # no
@@ -763,7 +804,7 @@ sub main
     print STDERR "Query String is \"$QueryString\"\n" if $v_dbg;
     }
   my $sTitle = "<Title> Search results for $SummaryQuery as of $now </Title>\n";
-  
+
 # this is not a required field.
 # this MUST BE ask user to get AutoSearch to ask.
   if ($SummarySearchEngine =~ m/ask user/i) { # no, shall we ask the user
@@ -846,16 +887,13 @@ sub main
      $WeeklyBottom)
    = &get_weekly_parts($qid);
 # insert queryname into html Top from date.html
-# usually this is not seti up, because when we created the file we didn't
+# usually this is not set up, because when we created the file we didn't
 # have the data.  Do we have the Query Name?
-  if ($WeeklyTop =~ m/AutoSearch WEB Searching/i) { # no
-    $WeeklyTop =~ s/AutoSearch WEB Searching/$QueryName/i # use the summary.
-  } # else, yes.
+  $WeeklyTop =~ s/>AutoSearch WEB Searching</$QueryName/;
 
-  my($hits) = 0; # actual no. of hits.
-  my($saved) = 0; # actual no. saved.
-  # Duh! This must be outside the if () {} else {}; because of scope!
-  my($search);
+  my $hits = 0; # actual no. of hits.
+  my $saved = 0; # actual no. saved.
+  my $search;
   # Search AltaVista, or whatever the user has specified.
   if($SummarySearchEngine) {
     $search = new WWW::Search($SummarySearchEngine);
@@ -956,7 +994,7 @@ sub main
   if ($hits == 0) {
     my($response) = $search->response();
     if ($response->is_success) {
-      print STDERR "Warning:  Empty results set.\n" if defined($v_dbg);
+      print STDERR "Warning:  Empty results set.\n" if ($v_dbg);
     } else {
       print STDERR "Error: " . http_error_as_nice_string($response) . "\n";
     }
@@ -983,18 +1021,18 @@ sub main
     push(@suspended_title,$title);
   }
   # stats?? (to see 'em use -stats)
-  print STDERR "Query is : \"$SummaryQuery\" on \"$SummarySearchEngine\"" if defined($s_dbg);
-  print STDERR " with \"@SummaryQueryOptions\"" if (defined($s_dbg) && $#SummaryQueryOptions);
-  print STDERR "\n" if defined($s_dbg);
-  print STDERR "old summary count: ",$#old_summary_url + 1,"\n" if defined($s_dbg);
-  print STDERR "new raw hits     : ",$hits,"\n" if defined($s_dbg);
-  print STDERR "urls filtered    : ",$url_filter_count,", filter \"",$URLFilter,"\"\n" if defined($s_dbg);
-  print STDERR "not filtered     : ",$saved,"\n" if defined($s_dbg);
-  print STDERR "results set count: ",$#new_weekly_url + 1,"\n" if defined($s_dbg);
-  print STDERR "suspended count  : ",$#suspended_url + 1,"\n" if defined($s_dbg);
-  print STDERR "final count      : ",$#weekly_url + 1,"\n" if defined($s_dbg);
+  print STDERR "Query is : \"$SummaryQuery\" on \"$SummarySearchEngine\"" if ($s_dbg);
+  print STDERR " with \"@SummaryQueryOptions\"" if ($s_dbg && $#SummaryQueryOptions);
+  print STDERR "\n" if ($s_dbg);
+  print STDERR "old summary count: ",$#old_summary_url + 1,"\n" if ($s_dbg);
+  print STDERR "new raw hits     : ",$hits,"\n" if ($s_dbg);
+  print STDERR "urls filtered    : ",$url_filter_count,", filter \"",$URLFilter,"\"\n" if ($s_dbg);
+  print STDERR "not filtered     : ",$saved,"\n" if ($s_dbg);
+  print STDERR "results set count: ",$#new_weekly_url + 1,"\n" if ($s_dbg);
+  print STDERR "suspended count  : ",$#suspended_url + 1,"\n" if ($s_dbg);
+  print STDERR "final count      : ",$#weekly_url + 1,"\n" if ($s_dbg);
   my($changes) = (($#new_weekly_url != -1) || ($#suspended_url != -1));
-#  printf STDERR "changes is %d\n",$changes if defined($v_dbg);
+#  printf STDERR "changes is %d\n",$changes if ($v_dbg);
 
 # For every search, AutoSearch (aka AS) will make a 'weekly' file.
 # Usually AutoSearch is run as a 'cron' job; but can be run manually.
@@ -1015,7 +1053,7 @@ sub main
   if ($changes) {
 #    print STDERR "test file: $qid$file\n";
     if (-e $qid.$file) { # file already there modify it.
-#      print STDERR "modify existing weekly file.\n" if defined($v_dbg);
+#      print STDERR "modify existing weekly file.\n" if ($v_dbg);
       # copy in previous file from today
       open (PARTS,'<'.$qid.$file) || die "Can't open weekly input file.\nReason: $!\n";
       my($part) = <PARTS>;
@@ -1057,7 +1095,7 @@ sub main
       close (HTML);
   
     } else { # create the file
-#      print STDERR "make new weekly file.\n" if defined($v_dbg);
+#      print STDERR "make new weekly file.\n" if ($v_dbg);
       open (HTML,'>'.$qid.$file) || die "Can't open weekly output file.\nReason: $!\n";
       print HTML $sTitle;
       print HTML "<!-- created by AutoSearch.pl by wls -->\n";
@@ -1104,23 +1142,23 @@ sub main
       close (HTML);
     }
   } else {
-#    print STDERR "no weekly changes required.\n" if defined($v_dbg);
+#    print STDERR "no weekly changes required.\n" if ($v_dbg);
   }
 
 # now write the new index file.
 # create the index.html output file
-  my($key);
   open (HTML,'>'.$qid.'index.html') || die "Can't open summary output file.\nReason: $!\n";
   print HTML "<Title> Summary of Search results for $SummaryQuery</Title>\n";
   print HTML "<!-- created by AutoSearch.pl by wls -->\n";
   print HTML "<!--Top-->\n$SummaryTop<!--/Top-->\n";
   print HTML "<!--Query{$SummaryQuery}/Query-->\n";
+  print HTML "<!--QueryName{$QueryName}/QueryName-->\n";
   print HTML "<!--SearchEngine{$SummarySearchEngine}/SearchEngine-->\n" if ($SummarySearchEngine);
-  foreach $key (keys (%{$query_options})) {
+  print HTML "<!--URLFilter{$SummaryURLFilter}/URLFilter-->\n" if ($SummaryURLFilter);
+  foreach my $key (keys (%{$query_options})) {
 #    print STDERR "option::$key=$query_options->{$key}\n";
     print HTML "<!--QueryOptions{$key\=$query_options->{$key}\}QueryOptions-->\n";
   }
-  print HTML "<!--URLFilter{$SummaryURLFilter}/URLFilter-->\n" if ($SummaryURLFilter);
   print HTML "\n";
 # output summary of updated unique findings
   print HTML "<!--SummaryHeading\n$SummaryHeading/SummaryHeading-->\n";
@@ -1153,38 +1191,68 @@ sub main
     if ($response->is_success) { # dbg message, normally we're quiet
 #      print HTML "AutoSearch Warning: Empty Results Set. <br>\n";
     } else { # SearchEngine error message:
-      print HTML "AutoSearch Error: " . http_error_as_nice_string($response) . "<br>\n";
+      print HTML "AutoSearch Error during search on $today: " . http_error_as_nice_string($response) . "<br>\n";
     }
   }
   # let's use reverse chronological order.
   # update the 'weekly' status:
-  if ($changes) { # there were changes.
+  if ($changes)
+    { # there were changes.
     # second run today?
-    if ($Weekly =~ m/^No unique results found for(.*)$today/i) { # yes
-#      print STDERR "change 'No' to 'Yes'\n";
-      # change No to Yes.
-      # the first line SHOULD be today's, assume so.
-      # delete first line of $Weekly and write new link
+    if ($Weekly =~ m/^No unique results found for(.*)$today/i)
+      {
+      #      print STDERR "change 'No' to 'Yes'\n";
+      # The first line SHOULD be today's, assume so.
+      # Delete first line of $Weekly and write new link:
       my($junk);
       ($junk,$Weekly) = split (/\n/,$Weekly,2); # split off first line
+      print HTML "Web search results for <a href=\"$file\">search on ",$today,"</a><br>\n";
+      }
+    elsif ($Weekly =~ m/^AutoSearch Error during search on $today/i)
+      {
+      #      print STDERR "change 'Error' to 'Yes'\n";
+      # The first line SHOULD be today's, assume so.
+      # Delete first line of $Weekly and write new link:
+      my($junk);
+      ($junk, $Weekly) = split(/\n/, $Weekly, 2); # split off first line
+      print HTML "Web search results for <a href=\"$file\">search on ",$today,"</a><br>\n";
+      }
+    elsif ($Weekly =~ m/^Web search results for(.*)$today/)
+      { # yes we already have a link, leave it.
+      #      print STDERR "leave 'Yes'\n";
+      }
+    else
+      { # no link for today of any kind. add one.
+      #      print STDERR "insert 'Yes'\n";
       print HTML "Web search results for <a href=\"$file\">search on ",$today,"</a><br>\n"; 
-    } elsif ($Weekly =~ m/^Web search results for(.*)$today/) { # yes we already have a link, leave it.
-#      print STDERR "leave 'Yes'\n";
-    } else { # no link for today of any kind. add one.
-#      print STDERR "insert 'Yes'\n";
-      print HTML "Web search results for <a href=\"$file\">search on ",$today,"</a><br>\n"; 
-    }
-  } else { # no changes.
+      }
+    } # there were any $changes
+  else
+    {
     # second run today?
-    if ($Weekly =~ m/^No unique results found for(.*)$today/i) { # yes
-#      print STDERR "leave 'No'\n";
-    } elsif ($Weekly =~ m/^Web search results for(.*)$today/) { # yes we already have a link, leave it.
-#      print STDERR "leave 'Yes'\n";      # do nothing, still no results.
-    } else { # no results, add a line.
-#      print STDERR "insert 'No'\n";
+    if ($Weekly =~ m/^No unique results found for(.*)$today/i)
+      {
+      # print STDERR "leave 'No'\n";
+      }
+    elsif ($Weekly =~ m/^AutoSearch Error during search on $today/i)
+      {
+      #      print STDERR "change 'Error' to 'No'\n";
+      # The first line SHOULD be today's, assume so.
+      # Delete first line of $Weekly and write new link:
+      my($junk);
+      ($junk, $Weekly) = split(/\n/, $Weekly, 2); # split off first line
       print HTML "No unique results found for search on ",$today,"<br>\n";
-    }
-  }
+      }
+    elsif ($Weekly =~ m/^Web search results for(.*)$today/)
+      { # We found results earlier today, leave them.
+      # print STDERR "leave 'Yes'\n";
+      }
+    else
+      {
+      # print STDERR "insert 'No'\n";
+      print HTML "No unique results found for search on ",$today,"<br>\n";
+      }
+    } # there were no $changes
   print HTML $Weekly;
   print HTML "<!--/$section-->\n\n";
 
@@ -1229,9 +1297,9 @@ EMAILEND
 #=cut
 
 sub check_index_file {
-  my($qid) = @_;
+  my ($qid) = @_;
   # do we have the necessary infrastructure?
-  if (open (FIRST,'<'.$qid."index.html") ) { # yes
+  if (open (FIRST,"<$qid/index.html") ) { # yes
     # OK, close it.
     close (FIRST);
   } else { # no, make dir.
@@ -1520,7 +1588,7 @@ sub get_pair_part {
 #    print STDERR "$mark: \"$1\"\n";
     return ($1);
   }
-  # print STDERR "Warning: can't find <!--$mark--> ... <--/$mark-->\n" if defined($v_dbg);
+  # print STDERR "Warning: can't find <!--$mark--> ... <--/$mark-->\n" if ($v_dbg);
   return ("");
 }
 
@@ -1545,7 +1613,7 @@ sub get_part {
 #    print STDERR "$mark: \"$1\"\n";
     return ($1);
   }
-  # print STDERR "Warning: can't find <!--$mark\\n ... /$mark-->\n" if defined($v_dbg);
+  # print STDERR "Warning: can't find <!--$mark\\n ... /$mark-->\n" if ($v_dbg);
   return ("");
 }
 
@@ -1570,7 +1638,7 @@ sub get_inline_part {
 #    print STDERR "inline $mark: \{$1\}\n";
     return ($1);
   }
-  # print STDERR "Warning: can't find <!--$mark\{ ... \}/$mark-->\n" if defined($v_dbg);
+  # print STDERR "Warning: can't find <!--$mark\{ ... \}/$mark-->\n" if ($v_dbg);
   return ("");
 }
 
@@ -1603,7 +1671,7 @@ sub get_inline_list {
     }
     return (@LIST);
   }
-  # print STDERR "Warning: can't find <!--$mark\{ ... \}/$mark-->\n" if defined($v_dbg);
+  # print STDERR "Warning: can't find <!--$mark\{ ... \}/$mark-->\n" if ($v_dbg);
   return ("");
 }
 
@@ -1622,16 +1690,16 @@ sub get_inline_list {
 # check the root directory for default first_index file;
 # else make one of our own.
 sub make_index {
-  my($qid) = @_;
-  open (INDEX,'>'.$qid."index.html") || die "Can't create index.html in $qid\nReason $!";
+  my ($qid) = @_;
+  open (INDEX, ">$qid/index.html") || die "Can't create index.html in $qid\nReason $!";
   # copy user-provided file...
-  if (open (DEFAULT,'<'.$qid."../first_index.html") ) { # look for a default
+  if (open (DEFAULT, "<$qid/../first_index.html") ) { # look for a default
     # copy in default provided by user.
     while (<DEFAULT>) {
       print INDEX $_;
     }
-    close (DEFAULT) || die "Can't close default index.html file.\nReason:$!";
-    close (INDEX) || die "Can't close index.html file.\nReason:$!";
+    close (DEFAULT) || die "Can't close file $qid/../first_index.html: $!";
+    close (INDEX) || die "Can't close file $qid/index.html: $!";
     return;
   } 
   # or OUR provided file

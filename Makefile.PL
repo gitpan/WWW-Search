@@ -1,5 +1,5 @@
 # This -*- cperl -*- program writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.34 2003-11-25 08:32:20-05 kingpin Exp kingpin $
+# $Id: Makefile.PL,v 1.35 2003-11-29 23:17:51-05 kingpin Exp kingpin $
 
 require 5.004;
 
@@ -19,7 +19,7 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
               'NAME' => 'WWW::Search',
-              'VERSION' => 2.45,
+              'VERSION' => 2.46,
 
               ($] ge '5.005') ? (
                                  'AUTHOR' => 'Martin Thurn <mthurn@cpan.org>',
@@ -152,6 +152,8 @@ PART3
       # print STDERR " +   writing code to testifypod $pod\n";
       (my $test = $pod) =~ s/\.(pm|pod)$//;
       $test =~ s|/|-|g;
+      # Same, for Win32:
+      $test =~ s|\\|-|g;
       $test =~ s/^lib\W//;
       $test =~ s/\W/-/;
       $test = "embedded-$test.t";

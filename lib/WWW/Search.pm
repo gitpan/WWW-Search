@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 2.49 2003-11-25 08:21:30-05 kingpin Exp kingpin $
+# $Id: Search.pm,v 2.51 2003/12/28 04:16:55 Daddy Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -99,7 +99,7 @@ use vars qw( @ISA @EXPORT @EXPORT_OK $VERSION $MAINTAINER );
 @EXPORT_OK = qw( escape_query unescape_query generic_option strip_tags );
 @ISA = qw(Exporter LWP::MemberMixin);
 $MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
-$VERSION = sprintf("%d.%02d", q$Revision: 2.49 $ =~ /(\d+)\.(\d+)/o);
+$VERSION = sprintf("%d.%02d", q$Revision: 2.51 $ =~ /(\d+)\.(\d+)/o);
 
 =head2 new
 
@@ -1085,7 +1085,7 @@ sub user_agent
     if (! $@)
       {
       # Successfully loaded module.
-      eval { $ua = new $sUA };
+      eval { $ua = $sUA->new };
       if (ref($ua) && ! $@)
         {
         # Successfully created object.
@@ -1116,7 +1116,13 @@ sub user_agent
     $ua->delay($self->{'interrequest_delay'}/60.0);
     }
   $ua->timeout($self->{'timeout'});
-  $ua->proxy(@{$self->{'http_proxy'}}) if (ref($self->{'http_proxy'}));
+  $ua->proxy(@{$self->{'http_proxy'}}) if (
+                                           ('ARRAY' eq ref($self->{'http_proxy'}))
+                                           &&
+                                           defined($self->{'http_proxy'}->[0])
+                                           &&
+                                           ($self->{'http_proxy'}->[0] ne '')
+                                          );
   if ($self->env_proxy)
     {
     $ua->env_proxy($self->env_proxy);

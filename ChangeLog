@@ -1,3 +1,16 @@
+2003-12-19  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search.pm (user_agent): fix for undef warnings in LWP::UserAgent::proxy
+
+2003-11-29  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search.pm (user_agent): fix $sUA creation
+
+2003-11-27  Kingpin  <mthurn@verizon.net>
+
+	* code/AutoSearch-code.pl (main): added date to error messages in index.html
+	(main): new option --cmdline
+
 2003-11-25  Kingpin  <mthurn@verizon.net>
 
 	* code/AutoSearch-code.pl: new option --cleanup
