@@ -3,16 +3,16 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.41?  (2003-06-06)
+WHAT IS NEW IN WWW::Search 2.42?  (2003-07-28)
 ----------------------------------------------
 
 overview: 
 
- * AutoSearch has a new option --listnewurls
- * WebSearch has a new option --list
+ * WWW::Search::Test::count_results() now calls login() before getting results
+ * no more warnings about WebSearch from WWW::Search::Test
 
-For details, see the ChangeLog file and/or the pod of each affected
-module.
+For details, see the ChangeLog file (updates after 2003-06-06) and/or
+the pod of each affected module.
 
 
 WHAT IS WWW::Search?
@@ -54,6 +54,7 @@ CPAN independently (not included with this WWW::Search distribution):
 AltaVista       http://www.perl.com/CPAN-local/modules/by-module/WWW
 AP              in the WWW::Search::News distribution
 Ebay            http://www.perl.com/CPAN-local/modules/by-module/WWW
+Ebay::Mature    contact author, mthurn@cpan.org
 Euroseek        http://www.perl.com/CPAN-local/modules/by-module/WWW/JSMYSER/
 Go              http://www.perl.com/CPAN-local/modules/by-module/WWW
 GoTo            http://www.perl.com/CPAN-local/modules/by-module/WWW/JSMYSER/
@@ -70,8 +71,9 @@ Yahoo           http://www.perl.com/CPAN-local/modules/by-module/WWW
 ZDNet           http://www.perl.com/CPAN-local/modules/by-module/WWW/JSMYSER/
 WashPost        in the WWW::Search::News distribution
 
-There are several backends which I don't even know if they work or not
-in the WWW::Search::Backends distribution.
+There are several backends which I don't even know if they work or
+not; I put them in a distribution called WWW::Search::Backends which
+you can find at http://www.perl.com/CPAN-local/modules/by-module/WWW
 
 There are even more backends available for manual download and
 installation at http://www.idexer.com/backends/ (thanks to Jim Smyser).

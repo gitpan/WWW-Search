@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 2.42 2003-04-16 00:39:29-04 kingpin Exp kingpin $
+# $Id: Search.pm,v 2.45 2003-07-28 21:25:43-04 kingpin Exp kingpin $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -98,7 +98,7 @@ use vars qw( @ISA @EXPORT @EXPORT_OK $VERSION $MAINTAINER );
 @EXPORT_OK = qw( escape_query unescape_query generic_option strip_tags );
 @ISA = qw(Exporter LWP::MemberMixin);
 $MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
-$VERSION = sprintf("%d.%02d", q$Revision: 2.42 $ =~ /(\d+)\.(\d+)/o);
+$VERSION = sprintf("%d.%02d", q$Revision: 2.45 $ =~ /(\d+)\.(\d+)/o);
 
 =head2 new
 
@@ -269,10 +269,10 @@ sub installed_engines
 
 Specify a query (and optional options) to the current search object.
 Previous query (if any) and its cached results (if any) will be thrown away.
-The option values and the query must be escaped; call L<WWW::Search::escape_query()>
-to escape a string.
-The search process is not actually begun until C<results> or
-C<next_result> is called (lazy!), so native_query does not return anything.
+The option values and the query must be escaped;
+call L<WWW::Search::escape_query()> to escape a string.
+The search process is not actually begun until C<results()> or
+C<next_result()> is called (lazy!), so native_query does not return anything.
 
 Example:
 
@@ -327,7 +327,7 @@ Details about how the search string and option hash are interpreted
 might be found in the search-engine-specific manual pages
 (WWW::Search::SearchEngineName).
 
-After C<native_query>, the next step is usually:
+After C<native_query()>, the next step is usually:
 
     while ($oResult = $oSearch->next_result())
       {
@@ -354,6 +354,7 @@ sub native_query
       # delete $opts_ref->{$sKey};
       } # if
     } # foreach
+  $self->setup_search() if ($self->{state} == SEARCH_BEFORE);
   } # native_query
 
 
@@ -363,7 +364,7 @@ Specify a query to the current search object;
 the query will be performed with the engine's default options,
 as if it were typed by a user in a browser window.
 
-Same arguments as C<native_query> above.
+Same arguments as C<native_query()> above.
 
 Currently, this feature is supported by only a few backends;
 consult the documentation for each backend to see if it is implemented.
@@ -413,9 +414,10 @@ sub cookie_jar
     return $self->{'_cookie_jar'};
     } # if no arguments
   my $arg = shift;
-  if (ref($arg) eq 'HTTP::Cookies')
+  my $sRef = ref($arg);
+  if ($sRef =~ m!\AHTTP::Cookies!)
     {
-    print STDERR " + WWW::Search using caller's HTTP::Cookies object\n" if DEBUG_COOKIES;
+    print STDERR " + WWW::Search using caller's $sRef object\n" if DEBUG_COOKIES;
     $self->{'_cookie_jar'} = $arg;
     $self->{'_cookie_jar_we_save'} = 0;
     } # if
@@ -434,7 +436,7 @@ sub cookie_jar
     }
   else
     {
-    Carp::carp "argument to WWW::Search::cookie_jar() must be HTTP::Cookies or scalar";
+    Carp::carp "argument to WWW::Search::cookie_jar() must be a scalar or a flavor of HTTP::Cookies";
     }
   } # cookie_jar
 
@@ -685,7 +687,8 @@ sub next_result
 =head2 login
 
 Backends which need to login to the search engine should implement
-this function.  Takes two arguments, user and password.
+this function.  Takes two arguments, user and password.  Return
+nonzero if login was successful.  Return 0 if login failed.
 
 =head2 logout
 
@@ -699,6 +702,7 @@ sub login
   my $self = shift;
   my ($sUser, $sPassword) = @_;
   # Here is just a stub.
+  return 1;
   } # login
 
 sub logout
@@ -737,8 +741,8 @@ sub response
 
 =head2 seek_result($offset)
 
-Set which result C<next_result> should be returned next time
-next_result() is called.  Results are zero-indexed.
+Set which result should be returned next time
+C<next_result()> is called.  Results are zero-indexed.
 
 The only guaranteed valid offset is 0,
 which will replay the results from the beginning.
@@ -845,7 +849,7 @@ Example:
 
     (Returns "%2Bhi+%2Bmom").
 
-See also C<unescape_query>.
+See also C<unescape_query()>.
 NOTE that this is not a method, it is a plain function.
 
 =cut
@@ -865,7 +869,7 @@ sub escape_query
 =head2 unescape_query
 
 Unescape a query.
-See C<escape_query> for details.
+See C<escape_query()> for details.
 
 Example:
     $unescaped = WWW::Search::unescape_query('%22hi+mom%22');
@@ -981,15 +985,17 @@ sub hash_to_cgi_string
 =head2 user_agent($NON_ROBOT) (PRIVATE)
 
 This internal routine creates a user-agent for derived classes that
-query the web.  If non-false argument $non_robot is given, a normal
-user-agent (rather than a robot-style user-agent) is used.
+query the web.  If any non-false argument is given, a normal
+LWP::UserAgent (rather than a LWP::RobotUA) is used.
+
+Returns the user-agent object.
 
 If a backend needs the low-level LWP::UserAgent or LWP::RobotUA to
 have a particular name, $oSearch->{'agent_name'} (and possibly
-$oSearch->{'agent_e_mail'}) should be set to the desired values before
+$oSearch->{'agent_e_mail'}) should be set to the desired values *before*
 calling $oSearch->user_agent():
 
-  $oSearch = new WWW::Search('NewBackend');
+  $oSearch = new WWW::Search('MyBackend');
   $oSearch->{'agent_e_mail'} = $oSearch->{'agent_name'};
   $oSearch->{'agent_name'} = 'Mozilla/5.5';
   $oSearch->user_agent('non-robot');
@@ -1047,7 +1053,7 @@ sub http_referer { return shift->_elem('_http_referer', @_); }
 Get / set the method to be used for the HTTP request.
 Must be either 'GET' or 'POST'.
 Call this method before calling http_request.
-(Normally you would set this during native_setup_search.)
+(Normally you would set this during native_setup_search().)
 The default is 'GET'.
 
   $oSearch->http_method('POST');
@@ -1314,10 +1320,17 @@ sub generic_option
 =head2 setup_search (PRIVATE)
 
 This internal routine does generic Search setup.
-It calls C<native_setup_search> to do backend specific setup.
+It calls C<native_setup_search()> to do backend-specific setup.
 
 =cut
 
+
+sub native_setup_search
+  {
+  my $self = shift;
+  # This is a NOP.  It is here in case a backend does not need to do
+  # any native setup!
+  } # native_setup_search
 
 sub setup_search
   {
@@ -1367,7 +1380,7 @@ sub absurl
 
 =head2 retrieve_some (PRIVATE)
 
-An internal routine to interface with C<native_retrieve_some>.
+An internal routine to interface with C<native_retrieve_some()>.
 Checks for overflow.
 
 =cut
@@ -1479,6 +1492,13 @@ found in $self->{_prev_url}.
 
 =cut
 
+sub parse_tree
+  {
+  my $self = shift;
+  # This is a NOP stub.
+  return 0;
+  } # parse_tree
+
 sub native_retrieve_some
   {
   my ($self) = @_;
@@ -1555,9 +1575,9 @@ usage.
 
 sub preprocess_results_page
   {
-  # Here is just a stub.  Return our argument(s) without modification.
+  # Here is just a stub.  Return our argument without modification.
   my $self = shift;
-  @_;
+  return shift;
   } # preprocess_results_page
 
 
@@ -1582,24 +1602,24 @@ C<WWW::Search> supports backends to separate search engines.  Each
 backend is implemented as a subclass of C<WWW::Search>.
 L<WWW::Search::Yahoo> provides a good sample backend.
 
-A backend must have the routine C<native_setup_search>.  A backend
-must have the routine C<native_retrieve_some> or C<parse_tree>.
+A backend must have the routine C<native_setup_search()>.  A backend
+must have the routine C<native_retrieve_some()> or C<parse_tree()>.
 
-C<native_setup_search> is invoked before the search.  It is passed a
+C<native_setup_search()> is invoked before the search.  It is passed a
 single argument: the escaped, native version of the query.
 
-C<native_retrieve_some> is the core of a backend.  It will be called
+C<native_retrieve_some()> is the core of a backend.  It will be called
 periodically to fetch URLs.  It should retrieve several hits from the
 search service and add them to the cache.  It should return the number
 of hits found, or undef when there are no more hits.
 
-Internally, C<native_retrieve_some> typically sends an HTTP request to
+Internally, C<native_retrieve_some()> typically sends an HTTP request to
 the search service, parses the HTML, extracts the links and
 descriptions, then saves the URL for the next page of results.  See
 the code for the C<WWW::Search::AltaVista> module for an example.
 
-Alternatively, a backend can define the method C<parse_tree> instead
-of C<native_retrieve_some>.  See the C<WWW::Search::Ebay> module for a
+Alternatively, a backend can define the method C<parse_tree()> instead
+of C<native_retrieve_some()>.  See the C<WWW::Search::Ebay> module for a
 good example.
 
 If you implement a new backend, please let the authors know.

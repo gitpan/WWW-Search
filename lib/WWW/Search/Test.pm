@@ -1,4 +1,4 @@
-# $rcs = ' $Id: Test.pm,v 1.25 2003-05-27 08:47:18-04 kingpin Exp kingpin $ ' ;
+# $rcs = ' $Id: Test.pm,v 1.29 2003-07-14 23:02:26-04 kingpin Exp kingpin $ ' ;
 
 =head1 NAME
 
@@ -47,23 +47,30 @@ use vars qw( @EXPORT @EXPORT_OK @ISA );
                );
 @ISA = qw( Exporter );
 
-use vars qw( $VERSION $bogus_query );
+use vars qw( $VERSION $bogus_query $websearch );
 
-$VERSION = '2.23';
+$VERSION = '2.25';
 $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 
 ($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = qw(dummy internal external update);
 ($TEST_DUMMY, $TEST_EXACTLY, $TEST_BY_COUNTING, $TEST_GREATER_THAN, $TEST_RANGE) = (1..10);
 
-# At the time this module is loaded, try to find a working WebSearch:
-my @as = split(/\s/, eval{`WebSearch --VERSION`});
-my $websearch = shift @as;
-# Try local directory, in case . is not in the path:
-(-f './WebSearch') && (@as = split(/\s/, eval{`./WebSearch --VERSION`}));
-$websearch ||= shift @as;
-$websearch ||= 'not in the path';
-undef $websearch unless $websearch =~ m/WebSearch/;
-# print STDERR "in WWW::Search::Test, websearch is $websearch\n";
+sub find_websearch
+  {
+  unless ($websearch)
+    {
+    # Try to find a working WebSearch:
+    my @as = split(/\s/, eval{`WebSearch --VERSION`});
+    $websearch = shift @as;
+    # Try local directory, in case . is not in the path:
+    (-f './WebSearch') && (@as = split(/\s/, eval{`./WebSearch --VERSION`}));
+    $websearch ||= shift @as;
+    $websearch ||= 'not in the path';
+    undef $websearch unless $websearch =~ m/WebSearch/;
+    # print STDERR "in WWW::Search::Test, websearch is $websearch\n";
+    } # unless
+  return $websearch;
+  } # find_websearch
 
 =head2 new
 
@@ -84,7 +91,7 @@ sub new
                 error_count => 0,
                 mode => $MODE_DUMMY,
                 verbose => 0,
-                websearch => $websearch,
+                # websearch => $websearch, # why do we need this?
                }, $class;
   } # new
 
@@ -249,7 +256,7 @@ sub test
             );
   # --max 209 added by Martin Thurn 1999-09-27.  We never want to
   # fetch more than three pages, if we can at all help it (or do we?)
-  my $websearch = $self->{websearch};
+  my $websearch = &find_websearch;
   $websearch ||= catfile($pwd, 'blib', 'script', 'WebSearch');
   my $cmd = $Config{'perlpath'} . " -MExtUtils::testlib $websearch ";
   $cmd .= $self->{debug} ? '--debug '.$self->{debug} : '';
@@ -611,12 +618,18 @@ sub count_results
                              { 'search_debug' => $iDebug, },
                           );
     }
+  $oSearch->login($ENV{WWW_SEARCH_USERNAME}, $ENV{WWW_SEARCH_PASSWORD});
   my @aoResults = $oSearch->results();
   if ($iPrintResults)
     {
-    $, = "\n";
-    print map { join(' == ', $_->url, $_->title, $_->description) } @aoResults;
-    print "\n";
+    foreach my $oResult (@aoResults)
+      {
+      print $oResult->url, "\n";
+      foreach my $sField (qw( title description score change_date index_date size company location source ))
+        {
+        print "  $sField==", $oResult->$sField, "==\n" if defined($oResult->$sField);
+        } # foreach
+      } # foreach
     } # if
   return scalar(@aoResults);
   } # count_results

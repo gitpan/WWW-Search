@@ -1,3 +1,29 @@
+2003-07-28  Kingpin  <mthurn@megapipe.net>
+
+	* lib/WWW/Search.pm (preprocess_results_page): BUGFIX bad return value
+
+2003-07-14  Kingpin  <mthurn@megapipe.net>
+
+	* lib/WWW/Search/Test.pm (count_results): printResults output is more verbose
+
+2003-07-05  Kingpin  <mthurn@megapipe.net>
+
+	* lib/WWW/Search.pm (parse_tree): new NOP stub function
+
+2003-07-04  Kingpin  <mthurn@megapipe.net>
+
+	* lib/WWW/Search.pm (login): now returns flag for success/failure
+
+	* lib/WWW/Search/Test.pm (find_websearch): new function
+
+2003-07-03  Kingpin  <mthurn@megapipe.net>
+
+	* lib/WWW/Search/Test.pm (count_results): call login() before getting results
+
+2003-06-24  Kingpin  <mthurn@megapipe.net>
+
+	* lib/WWW/Search.pm (cookie_jar): allow any flavor of HTTP::Cookies
+
 2003-06-06  Kingpin  <mthurn@megapipe.net>
 
 	* code/AutoSearch-code.pl: new option --listnewurls

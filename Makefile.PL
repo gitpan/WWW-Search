@@ -1,5 +1,5 @@
 # This -*- perl -*- program writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.30 2003-05-22 21:53:10-04 kingpin Exp kingpin $
+# $Id: Makefile.PL,v 1.31 2003-07-28 21:45:17-04 kingpin Exp kingpin $
 
 require 5.004;
 
@@ -19,7 +19,7 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
               'NAME' => 'WWW::Search',
-              'VERSION' => 2.41,
+              'VERSION' => 2.42,
 
               ($] ge '5.005') ? (
                                  'AUTHOR' => 'Martin Thurn <mthurn@cpan.org>',
@@ -63,12 +63,14 @@ sub MY::postamble
   {
   return '
 AutoSearch :: code/AutoSearch-code.pl
+	$(FULLPERL) -MExtUtils::Command -e chmod 0755 AutoSearch.PL
 	$(PERLRUNINST) AutoSearch.PL AutoSearch
 WebSearch :: code/WebSearch-code.pl
+	$(FULLPERL) -MExtUtils::Command -e chmod 0755 WebSearch.PL
 	$(PERLRUNINST) WebSearch.PL WebSearch
 
 test_parsing: pure_all
-	PERL_DL_NONLAZY=1 $(FULLPERL) -I$(INST_ARCHLIB) -I$(INST_LIB) -I$(PERL_ARCHLIB) -I$(PERL_LIB) t/test_parsing.pl $(TEST_ARGS)
+	PERL_DL_NONLAZY=1 $(PERLRUNINST) t/test_parsing.pl $(TEST_ARGS)
 
 tags:
 	cat MANIFEST | etags -
