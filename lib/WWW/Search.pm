@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.53 2001/03/28 19:39:14 mthurn Exp mthurn $
+# $Id: Search.pm,v 1.55 2001/05/07 13:44:23 mthurn Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -69,7 +69,7 @@ package WWW::Search;
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query generic_option strip_tags @ENGINES_WORKING);
-$VERSION = '2.17';
+$VERSION = '2.18';
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
@@ -440,7 +440,9 @@ sub results
   Carp::croak "query string is empty" unless ($self->{'native_query'} ne '');
   # Put all the SearchResults into the cache:
   1 while ($self->retrieve_some());
-  return @{$self->{cache}}[0..($self->{maximum_to_retrieve}-1)];
+  my $iMax = scalar(@{$self->{cache}});
+  $iMax = $self->{maximum_to_retrieve} if ($self->{maximum_to_retrieve} < $iMax);
+  return @{$self->{cache}}[0..$iMax-1];
   } # results
 
 =head2 next_result

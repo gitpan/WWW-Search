@@ -3,14 +3,11 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.17?  (2001-05-03)
+WHAT IS NEW IN WWW::Search 2.19?  (2001-05-07)
 ----------------------------------------------
 
 overview:
- * new option --mail for AutoSearch
- * new module WWW::Search::Scraper
- * moved job-search backends to the new WWW::Search::Jobs distribution
- * other tiny invisible updates
+ * BUGFIX for: results() always returned 500!
 
 For details, see the file ChangeLog and/or the pod of each affected module.
 
