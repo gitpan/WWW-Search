@@ -1,11 +1,13 @@
 # http://module-build.sourceforge.net/META-spec.html
 #XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
 name:         WWW-Search
-version:      2.44
+version:      2.45
 version_from: 
 installdirs:  site
 requires:
+    Date::Manip:                   0
     File::Basename:                0
+    File::Copy:                    0
     File::Find:                    0
     File::Spec:                    0
     Getopt::Long:                  2.24

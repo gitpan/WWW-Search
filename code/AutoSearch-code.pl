@@ -4,7 +4,7 @@ exit 0;
 # AutoSearch-code.pl
 # Copyright (c) 1996-1997 University of Southern California.
 # All rights reserved.
-# $Id: AutoSearch-code.pl,v 1.8 2003-10-21 09:13:46-04 kingpin Exp kingpin $
+# $Id: AutoSearch-code.pl,v 1.10 2003-11-25 08:30:15-05 kingpin Exp kingpin $
 #
 # Complete copyright notice follows below.
 
@@ -134,8 +134,14 @@ If the web pages created by AutoSearch are
 publically available (and indexed),
 they should be filtered out with this option.
 
-Example: 
+Example:
 C<-f '.*\.isi\.edu'> avoids all of ISI's web pages.
+
+=item C<--cleanup i>
+
+Delete all traces of query results from more than i days ago.  If
+--cleanup is given, all other options other than the query_id will be
+ignored.
 
 =back
 
@@ -248,13 +254,11 @@ to request the search string from the user.
 
 =item <!--SearchEngine{.*}/SearchEngine-->
 
-The text contained between the braces is the search engine.  The
-default engine is AltaVista.
-Other engines supported are HotBot
-and Lycos.  You may edit this
-string to change the query string; but only in F<qid/index.html>.
-The text I<ask user> is special and will force B<AutoSearch> to
-to request the search string from the user.
+The text contained between the braces is the search engine.  Other
+engines supported are HotBot and Lycos.  You may edit this string to
+change the engine used; but only in F<qid/index.html>.  The text
+I<ask user> is special and will force B<AutoSearch> to to request the
+search string from the user.
 
 =item <!--QueryOptions{.*}/QueryOptions-->
 
@@ -423,14 +427,18 @@ BEGIN
   # unshift (@INC, "/nfs/u1/wls/cvs/lsam/rendezvous/lib");
   }
 
+use Data::Dumper;  # for debugging
+use Date::Manip;
+use File::Copy;
 use Getopt::Long qw( :config no_ignore_case );
+# use LWP::Debug qw(+ ); # -conns);
 use POSIX qw(strftime);
 use WWW::Search;
 
 use strict;
 
 use vars qw( $VERSION );
-$VERSION = '2.09';
+$VERSION = '2.11';
 
 sub print_version
   {
@@ -446,16 +454,21 @@ END
   exit 1;
 }
 
-my(%opts,@query_list,$query_name,$query_string,$search_engine,$query_options,$url_filter);
+my (%opts,@query_list,$query_name,$query_string,$search_engine,$query_options,$url_filter);
 # Default options:
 $opts{'m'} = '';
+$opts{'cleanup'} = 0;
 $opts{'v'} = 0;
 $opts{'help'} = 0;
 $opts{'stats'} = 0;
 $opts{'debug'} = 0;
 $opts{'listnewurls'} = 0;
 $opts{'ignore_channels'} = ();
-&GetOptions(\%opts, qw(n|qn|queryname=s s|qs|querystring=s e|engine=s m|mail=s h|host=s p|port=s o|options=s@ f|uf|urlfilter=s listnewurls stats userid=s password=s ignore_channels=s@ v|verbose help V|VERSION debug));
+&GetOptions(\%opts, qw(n|qn|queryname=s s|qs|querystring=s e|engine=s m|mail=s h|host=s p|port=s o|options=s@ f|uf|urlfilter=s listnewurls stats userid=s password=s ignore_channels=s@ cleanup=i v|verbose help V|VERSION debug),
+            'http_proxy=s',
+            'http_proxy_user=s',
+            'http_proxy_pwd=s',
+           );
 if ($opts{'V'})
   {
   &print_version();
@@ -470,7 +483,7 @@ if ($opts{'help'})
 
 my $s_dbg = $opts{'stats'};
 my $v_dbg = $opts{'v'};
-my $d_dbg = $opts{'debug'};
+my $d_dbg = $opts{'debug'} || $v_dbg;
 if ($v_dbg)
   {
   print STDERR "v     option: defined\n";
@@ -599,72 +612,127 @@ exit 0;
 
 # submit a search and optionally build output file(s).
 #
-sub main {
-  my($query_dir) = @_;
-  my($dbg_search) = $d_dbg || 0;
-  my($v_dbg) = $v_dbg; # shall we be verbose??
+sub main
+  {
+  my ($query_dir) = @_;
+  my $dbg_search = $d_dbg || 0;
+  my $v_dbg = $v_dbg; # shall we be verbose??
   my $sEmail = '';
-  my($url_filter_count) = 0;
-# get the date.
-  my($now) = &time_now;
-  my($today) = &time_today;
+  my $url_filter_count = 0;
+  # get the date.
+  my $now = &time_now;
+  my $today = &time_today;
   print STDERR "Now = ", $now if $v_dbg;
   print STDERR ", Today = ", $today, "\n" if $v_dbg;
-# build query directory string.
-  my($qid) = $query_dir;
-  die ("qid is a required field.") unless ($qid);
+  # Build query directory string:
+  my $qid = $query_dir;
+  die ("qid is a required argument.") unless ($qid);
+  die ("qid is a required argument.") unless ($qid =~ m!\S!);
+  my $iCleanup = $opts{'cleanup'};
+  if (0 < $iCleanup)
+    {
+    print STDERR " + doing cleanup $iCleanup in ==$qid==\n" if $opts{debug};
+    # We don't care what the timezone is, we only deal with days:
+    &Date_Init('TZ=US/Eastern');
+    my $dateCutoff = &DateCalc('today', " - $iCleanup days");
+    my $sCutoff = &UnixDate($dateCutoff, '%Y%m%d');
+    print STDERR " +   cutoff date is ==$sCutoff==\n" if $opts{debug};
+    opendir(DIR, $qid) or die(" --- can not read directory $qid: $!");
+ CLEANUP_FILE:
+    while (my $sFile = readdir(DIR))
+      {
+      next CLEANUP_FILE if $sFile eq '.';
+      next CLEANUP_FILE if $sFile eq '..';
+      print STDERR " +   found file ==$sFile==\n" if $opts{debug};
+      if ($sFile lt $sCutoff)
+        {
+        print STDERR " +     unlink ==$sFile==\n" if $opts{debug};
+        unlink qq{$qid/$sFile} or warn $!;
+        } # if file is old
+      } # while
+    closedir DIR;
+    # Now delete old lines from index.html:
+    my $sFile = qq{$qid/index.html};
+    my $sFileNew = qq{$sFile.new};
+    open(INDEX, $sFile) or die " --- can not open $sFile for read: $!";
+    open(NEW, '>'. $sFileNew) or die " --- can not open $sFileNew for write: $!";
+    local $/ = "\n";
+ CLEANUP_LINE:
+    while (my $sLine = <INDEX>)
+      {
+      if ($sLine =~ m!search on ([A-Za-z]+ \d+, \d+)!)
+        {
+        # This line contains a date.
+        my $date = &ParseDate($1);
+        my $iCmp = &Date_Cmp($date, $dateCutoff);
+        if ($iCmp < 0)
+          {
+          # This line's date is before the cutoff.
+          print STDERR " + delete line $sLine" if $opts{debug};
+          next CLEANUP_LINE;
+          } # if
+        } # if
+      print NEW $sLine;
+      } # while
+    close INDEX;
+    close NEW;
+    copy($sFileNew, $sFile) or die " --- can not copy $sFileNew to $sFile: $!";
+    unlink $sFileNew;  # No big deal if this fails
+    return;
+    } # if
   $qid .= '/' unless substr($qid,-1,1) eq '/'; # we MUST have a /
-  print STDERR "query directory: $qid, " if $v_dbg;
-# do we have the necessary infrastructure?
-# we require two files. 1) the Summary of searches and 2) weekly updates
-# look for index.html, or default first_index.html or make one.
-# index.html contains the previous isearch results. (aka old summary)
+  print STDERR "query directory: $qid\n" if $v_dbg;
+  # Do we have the necessary infrastructure?  We require two files: 1)
+  # the Summary of searches and 2) weekly updates.  Look for
+  # index.html, or default first_index.html, or make one.  index.html
+  # contains the previous isearch results. (aka old summary)
   &check_index_file($qid); #make qid/index.html
 
-# read index.html and break into fields.
-  my($SummaryTop,$SummaryQuery,
-     $SummarySearchEngine,$SummaryURLFilter,
-     $SummaryHeading,$SummaryTemplate,$Summary,
-     $WeeklyHeading,$WeeklyTemplate,$Weekly,
-     $SummaryBottom,@SummaryQueryOptions)
-   = &get_summary_parts($qid);
-# split the old summary into a list. (later sort it)
-  my($url,$description,$title);
-  my(@old_summary_url,@old_summary_title);
-  my(@old_summary) = split(/\n/,$Summary);
-  my($line);
-  my($i,$n,$j,$m);
-# break each hyperlink into its url and title.
-  $n = $#old_summary + 1;
-  for ($i=0; $i < $n; $i++) {
+  # Read index.html and break into fields.
+  my ($SummaryTop, $SummaryQuery,
+      $SummarySearchEngine, $SummaryURLFilter,
+      $SummaryHeading, $SummaryTemplate, $Summary,
+      $WeeklyHeading, $WeeklyTemplate, $Weekly,
+      $SummaryBottom, @SummaryQueryOptions) = &get_summary_parts($qid);
+  # Split the old summary into a list. (later sort it)
+  my ($url, $description, $title);
+  my (@old_summary_url,@old_summary_title);
+  my @old_summary = split(/\n/,$Summary);
+  my ($line);
+  my ($i, $n, $j, $m);
+  # Break each hyperlink into its url and title.
+  $n = $#old_summary;
+  for my $i (0..$n)
+    {
     # $old_summary -> $url & $title
     $line = $old_summary[$i];
-    if ($line =~ m#<a href="(.*)">(.*)</a><br>#i) {
+    if ($line =~ m#<a href="(.*)">(.*)</a><br>#i)
+      {
       $url = $1;
       $title = $2;
       push (@old_summary_url,$url);
       push (@old_summary_title,$title);
-    }
-  }
+      } # if
+    } # for
 
-# for each item in weekly list:
-#   if it is in old summary list remove it, else leave it.
-#  hint: note alphabetical order to reduce searching.
-# append weekly list to summary list. sort it.
-# use summary list to build a new summary.
-# output first half of the NEW index.html page. (summary)
-# append either "no new results" (if zero unique left in weekly list)
+# For each item in weekly list:
+#   If it is in old summary list remove it, else leave it.
+#  Hint: note alphabetical order to reduce searching.
+# Append weekly list to summary list. Sort it.
+# Use summary list to build a new summary.
+# Output first half of the NEW index.html page. (summary)
+# Append either "no new results" (if zero unique left in weekly list)
 # or the date to weekly results list.
-# output second half of NEW index.html page. (weekly results)
+# Output second half of NEW index.html page. (weekly results)
 #
-# if non-zero use weekly list to build weekly file.
+# If non-zero, use weekly list to build weekly file.
 
-# these are the input params to autosearch:
+# These are the input params to autosearch:
 # 1) qid, 2) query name, 3) query string, 4) search engine,
 # 5) query options, and 6) url filter RE.
 # Dispose of input params as follows:
-# insert the Query Name into 'Top' for  index.html & date.html,
-# insert the Query String, Search Engine, and URL Filter into
+# Insert the Query Name into 'Top' for  index.html & date.html,
+# Insert the Query String, Search Engine, and URL Filter into
 # the 'HTML fields' from index.html
 # Precedence of input: Query Name (pretty name) and Query String (search engine)
 # Search Engine (AltaVista), Search Options (## need example ##),
@@ -708,16 +776,16 @@ sub main {
   } else { # don't ask; try command line
     if (defined($search_engine)) { # from command line ?
       $SearchEngine = $search_engine; # yes
-    } else { # if no comamnd line, no Search Engine!!
+    } else { # if no command line, no Search Engine!!
       $SearchEngine = $SummarySearchEngine; # use whatever was in the first_index.html file
     }
     $SummarySearchEngine = $SearchEngine;
   }
   print STDERR "Search Engine is \"$SearchEngine\"\n" if $v_dbg;
 
-# this is not a required field.
-# this MUST BE ask user to get AutoSeatch to ask.
-# 
+# This is not a required field.
+# This MUST BE 'ask user' to get AutoSearch to ask.
+#
 #  print $SummaryQueryOptions[0], " v. ask user\n";
   if ($SummaryQueryOptions[0] =~ m/ask user/i) { # either ask or use command line
 #    print $SummaryQueryOptions[0], " is ask user\n";
@@ -786,9 +854,9 @@ sub main {
 
   my($hits) = 0; # actual no. of hits.
   my($saved) = 0; # actual no. saved.
-  # duh! This must be outside the if () {} else {}; because of scope!
+  # Duh! This must be outside the if () {} else {}; because of scope!
   my($search);
-  # search AltaVista, or whatever the user has specified.
+  # Search AltaVista, or whatever the user has specified.
   if($SummarySearchEngine) {
     $search = new WWW::Search($SummarySearchEngine);
   } else {
@@ -796,8 +864,27 @@ sub main {
   }
   $search->{_host} = $opts{'h'} if defined($opts{'h'});
   $search->{_port} = $opts{'p'} if defined($opts{'p'});
-  $search->http_proxy($ENV{'HTTP_PROXY'}) if ($ENV{'HTTP_PROXY'});
-  $search->http_proxy($ENV{'http_proxy'}) if ($ENV{'http_proxy'});
+  if (defined($opts{'http_proxy'}) && ($opts{'http_proxy'} ne ''))
+    {
+    print STDERR qq{ + applying http_proxy }, Dumper(\$opts{http_proxy}) if $opts{'debug'};
+    $search->http_proxy(['http', ] => $opts{'http_proxy'});
+    if (defined($opts{'http_proxy_user'}) && ($opts{'http_proxy_user'} ne ''))
+      {
+      print STDERR qq{ + applying $opts{http_proxy_user}...\n} if $opts{'debug'};
+      $search->http_proxy_user($opts{'http_proxy_user'});
+      $search->http_proxy_pwd($opts{'http_proxy_pwd'});
+      } # if
+    } # if
+  elsif ($opts{'env_proxy'})
+    {
+    $search->env_proxy($opts{'env_proxy'});
+    }
+  elsif (0)
+    {
+    # This is the OLD code:
+    $search->http_proxy($ENV{'HTTP_PROXY'}) if ($ENV{'HTTP_PROXY'});
+    $search->http_proxy($ENV{'http_proxy'}) if ($ENV{'http_proxy'});
+    } # if
   # submit search w/options.
   $search->native_query(WWW::Search::escape_query($SummaryQuery), $query_options);
   $search->login($opts{'userid'}, $opts{'password'});
@@ -1563,7 +1650,7 @@ sub make_index {
 <!--In the next line place the actual query.-->
 <!--Query{ask user}/Query-->
 <!--In the next line place the actual search engine.-->
-<!--SearchEngine{AltaVista}/SearchEngine-->
+<!--SearchEngine{Null}/SearchEngine-->
 <!--In the next line(s) place the query/search engine specific options.-->
 <!--QueryOptions{}/QueryOptions-->
 <!--In the next line place the actual url filter.-->

@@ -1,4 +1,4 @@
-# $rcs = ' $Id: Test.pm,v 1.30 2003-08-31 22:09:35-04 kingpin Exp kingpin $ ' ;
+# $rcs = ' $Id: Test.pm,v 1.31 2003-11-25 08:31:36-05 kingpin Exp kingpin $ ' ;
 
 =head1 NAME
 
@@ -533,6 +533,7 @@ sub new_engine
   $oSearch = new WWW::Search($sEngine);
   print ref($oSearch) ? '' : 'not ';
   print "ok $iTest\n";
+  $oSearch->env_proxy('yes');
   } # new_engine
 
 sub new_engine_test_more
@@ -540,6 +541,7 @@ sub new_engine_test_more
   my $sEngine = shift;
   $oSearch = new WWW::Search($sEngine);
   ok(ref($oSearch), "instantiate WWW::Search::$sEngine object");
+  $oSearch->env_proxy('yes');
   } # new_engine_test_more
 
 sub run_test_test_more

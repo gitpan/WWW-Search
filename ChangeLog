@@ -1,3 +1,18 @@
+2003-11-25  Kingpin  <mthurn@verizon.net>
+
+	* code/AutoSearch-code.pl: new option --cleanup
+
+	* lib/WWW/Search.pm (user_agent): new $ENV{WWW_SEARCH_USERAGENT} mechanism
+
+2003-11-24  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search.pm (strip_tags): reduce embedded spaces
+
+2003-11-14  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search.pm (http_proxy): now takes same arguments as LWP::UserAgent::proxy()
+	(user_agent): get proxy password from %ENV
+
 2003-10-21  Kingpin  <mthurn@verizon.net>
 
 	* code/AutoSearch-code.pl (usage): new option --ignore_channels

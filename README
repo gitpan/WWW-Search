@@ -3,14 +3,17 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.44?  (2003-10-21)
+WHAT IS NEW IN WWW::Search 2.45?  (2003-11-25)
 ----------------------------------------------
 
 Overview of changes: 
 
- * approximate_result_count() can now be called without explicitly calling retrieve_some() first
+ * new $ENV{WWW_SEARCH_USERAGENT} mechanism
+ * improved proxy support
+ * AutoSearch: new option --cleanup to delete old files
+ * AutoSearch: default engine is Null instead of AltaVista
 
-For details, see the ChangeLog file (updates after 2003-10-07) and/or
+For details, see the ChangeLog file (updates after 2003-10-21) and/or
 the pod of each affected module.
 
 

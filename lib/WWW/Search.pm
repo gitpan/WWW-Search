@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 2.47 2003-10-21 09:11:07-04 kingpin Exp kingpin $
+# $Id: Search.pm,v 2.49 2003-11-25 08:21:30-05 kingpin Exp kingpin $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -99,7 +99,7 @@ use vars qw( @ISA @EXPORT @EXPORT_OK $VERSION $MAINTAINER );
 @EXPORT_OK = qw( escape_query unescape_query generic_option strip_tags );
 @ISA = qw(Exporter LWP::MemberMixin);
 $MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
-$VERSION = sprintf("%d.%02d", q$Revision: 2.47 $ =~ /(\d+)\.(\d+)/o);
+$VERSION = sprintf("%d.%02d", q$Revision: 2.49 $ =~ /(\d+)\.(\d+)/o);
 
 =head2 new
 
@@ -147,7 +147,7 @@ sub new
                     agent_e_mail => $default_agent_e_mail,
                     env_proxy => 0,
                     http_method => 'GET',
-                    http_proxy => '',
+                    http_proxy => undef,
                     http_proxy_user => undef,
                     http_proxy_pwd => undef,
                     timeout => 60,
@@ -470,11 +470,21 @@ sub date_to
 =head2 env_proxy
 
 Enable loading proxy settings from *_proxy environment variables.
+The proxy URL will be read from $ENV{http_proxy}.
+The username for authentication will be read from $ENV{http_proxy_user}.
+The password for authentication will be read from $ENV{http_proxy_pwd}.
 
-This routine should be called before the first retrieval is attempted.
+If you don't want to put passwords in the environment, then subclass
+LWP::UserAgent and use $ENV{WWW_SEARCH_USERAGENT} instead (see
+user_agent below).
+
+env_proxy() must be called before the first retrieval is attempted.
 
 Example:
 
+  $ENV{http_proxy     } = 'http://my.proxy.com:80';
+  $ENV{http_proxy_user} = 'bugsbun';
+  $ENV{http_proxy_pwd } = 'c4rr0t5';
   $oSearch->env_proxy('yes');  # Turn on with any true value
   ...
   $oSearch->env_proxy(0);  # Turn off with zero or undef
@@ -492,18 +502,27 @@ sub env_proxy { return shift->_elem('env_proxy', @_); }
 Set-up an HTTP proxy
 (for connections from behind a firewall).
 
+Takes the same arguments as LWP::UserAgent::proxy().
+
 This routine should be called before calling any of the result
 functions (next_result or results).
 
 Example:
 
-  $oSearch->http_proxy('http://gateway:8080');  # Turn on and set address
-  ...
-  $oSearch->http_proxy('');  # Turn off
+  # Turn on and set address:
+  $oSearch->http_proxy(['http','ftp'] => 'http://proxy:8080');
+  # Turn off:
+  $oSearch->http_proxy('');
 
 =cut
 
-sub http_proxy { return shift->_elem('http_proxy', @_); }
+sub http_proxy
+  {
+  my $self = shift;
+  # Make a copy of our arguments:
+  my @a = @_;
+  return $self->_elem('http_proxy', \@a);
+  } # http_proxy
 
 
 =head2 http_proxy_user, http_proxy_pwd
@@ -511,8 +530,9 @@ sub http_proxy { return shift->_elem('http_proxy', @_); }
 Set/get HTTP proxy authentication data.
 
 These routines set/get username and password used in proxy
-authentication.  Authentication is performed only if proxy, username
-and password are available.
+authentication.
+Authentication is attempted only if all three items (proxy URL, username
+and password) have been set.
 
 Example:
 
@@ -526,21 +546,19 @@ Example:
 
 sub http_proxy_user
   {
-  my $obj = shift;
-  @_ ? $obj->{http_proxy_user} = shift() : $obj->{http_proxy_user};
+  return shift->_elem('http_proxy_user', @_);
   }
 
 sub http_proxy_pwd
   {
-  my $obj = shift;
-  @_ ? $obj->{http_proxy_pwd} = shift() : $obj->{http_proxy_pwd};
+  return shift->_elem('http_proxy_pwd', @_);
   }
 
 
 =head2 is_http_proxy_auth_data (PRIVATE)
 
-Checks if authentication data (proxy name, username, and password) are available.
-In this case proxy authentication is performed.
+Returns true if all authentication data
+(proxy URL, username, and password) are available.
 
 =cut
 
@@ -548,6 +566,7 @@ sub is_http_proxy_auth_data
   {
   my $self = shift;
   return (
+          defined($self->http_proxy) &&
           ($self->http_proxy ne '') &&
           defined($self->http_proxy_user) &&
           defined($self->http_proxy_pwd)
@@ -943,23 +962,23 @@ NOTE that this is not a method, it is a plain function.
 sub strip_tags
   {
   # This is not a method; there is no $self
-  my @as = @_;
- STRING:
-  foreach (@as)
-    {
-    next STRING unless $_;
-    # Special case: change BR to space:
-    s!<BR>! !gi;
-    # We assume for now that we will not be encountering tags with
-    # embedded '>' characters!
-    s/\074.+?\076//g;
-    s/&nbsp;/ /g;
-    s/&quot;/\042/g;
-    s/&amp;/\046/g;
-    s/&lt;/\074/g;
-    s/&gt;/\076/g;
-    } # foreach
-  return wantarray ? @as : shift @as;
+  my $s = join('', @_);
+  # Special case: change BR to space:
+  $s =~ s!<BR>! !gi;
+  # We assume for now that we will not be encountering tags with
+  # embedded '>' characters!
+  $s =~ s/\074.+?\076//g;
+  $s =~ s/&nbsp;/ /g;
+  $s =~ s/&quot;/\042/g;
+  $s =~ s/&amp;/\046/g;
+  $s =~ s/&lt;/\074/g;
+  $s =~ s/&gt;/\076/g;
+  # Coalesce multiple spaces:
+  $s =~ tr!\040\t\r\n! !s;
+  # Delete leading & trailing spaces:
+  $s =~ s!\A\s+!!;
+  $s =~ s!\s+\Z!!;
+  return $s;
   } # strip_tags
 
 =head2 hash_to_cgi_string (PRIVATE) (DEPRECATED)
@@ -1033,9 +1052,16 @@ have a particular name, $oSearch->{'agent_name'} (and possibly
 $oSearch->{'agent_e_mail'}) should be set to the desired values *before*
 calling $oSearch->user_agent():
 
+If the environment variable WWW_SEARCH_USERAGENT has a value, it will
+be used as the class for a new user agent object.  This class should
+be a subclass of LWP::UserAgent.  For example,
+
+  $ENV{WWW_SEARCH_USERAGENT} = 'My::Own::UserAgent';
+  # If this env.var. has no value,
+  # LWP::UserAgent or LWP::RobotUA will be used.
   $oSearch = new WWW::Search('MyBackend');
   $oSearch->{'agent_e_mail'} = $oSearch->{'agent_name'};
-  $oSearch->{'agent_name'} = 'Mozilla/5.5';
+  $oSearch->{'agent_name'} = 'Mozilla/MSIE 5.5';
   $oSearch->user_agent('non-robot');
 
 Backends should use robot-style user-agents whenever possible.
@@ -1052,6 +1078,32 @@ sub user_agent
     } # unless
   my $non_robot = shift || 0;
   my $ua;
+  my $sUA = $ENV{'WWW_SEARCH_USERAGENT'} || '';
+  if ($sUA ne '')
+    {
+    eval "use $sUA";
+    if (! $@)
+      {
+      # Successfully loaded module.
+      eval { $ua = new $sUA };
+      if (ref($ua) && ! $@)
+        {
+        # Successfully created object.
+        $self->{'user_agent'} = $ua;
+        return $ua;
+        }
+      else
+        {
+        warn " --- WWW::Search::user_agent can not create $sUA object: $@\n";
+        # Fall through and try the other methods:
+        }
+      }
+    else
+      {
+      warn " --- WWW::Search::user_agent can not load $sUA: $@\n";
+      # Fall through and try the other methods:
+      }
+    } # if found WWW_SEARCH_USERAGENT in environment
   if ($non_robot)
     {
     $ua = new LWP::UserAgent;
@@ -1064,8 +1116,14 @@ sub user_agent
     $ua->delay($self->{'interrequest_delay'}/60.0);
     }
   $ua->timeout($self->{'timeout'});
-  $ua->proxy('http', $self->{'http_proxy'}) if ($self->{'http_proxy'} ne '');
-  $ua->env_proxy if $self->{'env_proxy'};
+  $ua->proxy(@{$self->{'http_proxy'}}) if (ref($self->{'http_proxy'}));
+  if ($self->env_proxy)
+    {
+    $ua->env_proxy($self->env_proxy);
+    # Read password from ENV:
+    $self->http_proxy_user($ENV{http_proxy_user});
+    $self->http_proxy_pwd ($ENV{http_proxy_pwd});
+    } # if
   $self->{'user_agent'} = $ua;
   return $ua;
   } # user_agent
