@@ -1,9 +1,9 @@
 # This -*- perl -*- script writes the Makefile for libwww-perl
-# $Id: Makefile.PL,v 1.2 1996/10/11 02:14:56 johnh Exp $
+# $Id: Makefile.PL,v 1.5 1996/10/29 21:28:08 johnh Exp $
 
 #--- Configuration section ---
 
-@programs_to_install = qw(search);
+@programs_to_install = qw(search AutoSearch);
 
 #--- End Configuration - You should not have to change anything below this line
 
@@ -53,11 +53,12 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
    NAME          => 'WWW::Search',
-   VERSION_FROM  => 'WWW/Search.pm',
-#   PL_FILES      => {
-#                      'CLIENTS/search.pl' => 'CLIENTS/search',
-#	            },
-   EXE_FILES     => [ map {"CLIENTS/$_"} @programs_to_install ],
+   VERSION_FROM  => 'lib/WWW/Search.pm',
+   PL_FILES      => {
+                      'bin/search.PL' => 'bin/search',
+                      'bin/AutoSearch.PL' => 'bin/AutoSearch',
+	            },
+   EXE_FILES     => [ map {"bin/$_"} @programs_to_install ],
    'clean'       => { FILES => '$(EXE_FILES)' },
    'dist'	 => { COMPRESS => 'gzip', SUFFIX => 'gz' },
 );

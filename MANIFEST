@@ -1,9 +1,8 @@
-README
 MANIFEST
-CLIENTS/AutoSearch.pl
-CLIENTS/Time.pm
-CLIENTS/search.pl
+README
 Makefile.PL
-WWW/Search.pm
-WWW/Search/AltaVista.pm
-WWW/SearchResult.pm
+bin/AutoSearch.PL
+bin/search.PL
+lib/WWW/Search.pm
+lib/WWW/Search/AltaVista.pm
+lib/WWW/SearchResult.pm

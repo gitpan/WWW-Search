@@ -4,23 +4,9 @@
 # AltaVista.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: AltaVista.pm,v 1.7 1996/10/03 22:06:13 johnh Exp $
+# $Id: AltaVista.pm,v 1.8 1996/10/14 17:28:27 johnh Exp $
 #
-# Copyright (c) 1996 University of Southern California.
-# All rights reserved.                                            
-#                                                                
-# Redistribution and use in source and binary forms are permitted
-# provided that the above copyright notice and this paragraph are
-# duplicated in all such forms and that any documentation, advertising
-# materials, and other materials related to such distribution and use
-# acknowledge that the software was developed by the University of
-# Southern California, Information Sciences Institute.  The name of the
-# University may not be used to endorse or promote products derived from
-# this software without specific prior written permission.
-# 
-# THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
-# WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
-# MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+# Complete copyright notice follows below.
 # 
 
 
@@ -36,15 +22,56 @@ This class is an AltaVista specialization of WWW::Search.
 It handles making and interpreting AltaVista searches
 F<http://www.altavista.digital.com>.
 
+This class exports no public interface; all interaction should
+be done through WWW::Search objects.
+
 
 =head1 SEE ALSO
 
 To make new back-ends, see L<WWW::Search>.
 
-=head1 METHODS AND FUNCTIONS
+
+=head1 HOW DOES IT WORK?
+
+C<native_setup_search> is called before we do anything.
+It initializes our private variables (which all begin with underscores)
+and sets up a URL to the first results page in C<{_next_url}>.
+
+C<native_retrieve_some> is called (from C<WWW::Search::retrieve_some>)
+whenever more hits are needed.  It calls the LWP library
+to fetch the page specified by C<{_next_url}>.
+It parses this page, appending any search hits it finds to 
+C<{cache}>.  If it finds a ``next'' button in the text,
+it sets C<{_next_url}> to point to the page for the next
+set of results, otherwise it sets it to undef to indicate we're done.
+
+
+=head1 AUTHOR
+
+C<WWW::Search> is written by John Heidemann, <johnh@isi.edu>.
+
+
+=head1 COPYRIGHT
+
+Copyright (c) 1996 University of Southern California.
+All rights reserved.                                            
+                                                               
+Redistribution and use in source and binary forms are permitted
+provided that the above copyright notice and this paragraph are
+duplicated in all such forms and that any documentation, advertising
+materials, and other materials related to such distribution and use
+acknowledge that the software was developed by the University of
+Southern California, Information Sciences Institute.  The name of the
+University may not be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
 
 =cut
-
+#'
 
 #
 #  Test cases:
@@ -61,12 +88,24 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 # $VERSION = 1.000;
-require LWP::MemberMixin;
 @ISA = qw(WWW::Search Exporter);
 
 use Carp ();
 require WWW::SearchResult;
 
+
+
+# private
+sub native_setup_search
+{
+    my($self, $native_query) = @_;
+    $self->{_user_agent} = WWW::Search::setup_user_agent;
+    $self->{_next_to_retrieve} = 0;
+    $self->{_base_url} = 
+	$self->{_next_url} =
+	"http://www.altavista.digital.com/cgi-bin/query?pg=q&what=web&fmt=d" .
+	"&q=" . $native_query;
+}
 
 
 # private
@@ -134,18 +173,5 @@ sub native_retrieve_some
 
     return $hits_found;
 }
-
-# private
-sub native_setup_search
-{
-    my($self, $native_query) = @_;
-    $self->{_user_agent} = WWW::Search::setup_user_agent;
-    $self->{_next_to_retrieve} = 0;
-    $self->{_base_url} = 
-	$self->{_next_url} =
-	"http://www.altavista.digital.com/cgi-bin/query?pg=q&what=web&fmt=d" .
-	"&q=" . $native_query;
-}
-
 
 1;

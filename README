@@ -1,13 +1,33 @@
 
+
 WWW::Search
 -----------
 
 WWW::Search is a collection of Perl modules which provide an API to
 WWW search engines like AltaVista, Lycos, Hotbot, WebCrawler, and so
 on.  Currently WWW::Search includes the generic library, a back-end
-for AltaVista, and a small demonstration program to drive the library.
-Back-ends for other search engines and more sophisticated clients are
-currently under development.
+for AltaVista, AutoSearch (an program to automate tracking of search
+results over time), and a small demonstration program to drive the
+library.  Back-ends for other search engines and more sophisticated
+clients are currently under development.
+
+
+AutoSearch
+----------
+
+WWW::Search's primary client is AutoSearch.  AutoSearch performs a
+web-based search and puts the results set in a web page.  It
+periodically updates this web page, indicating how the search changes
+over time.  Sample output from WWW::Search can be found at
+<http://www.isi.edu/lsam/autosearch/>.  Output format is configurable.
+
+See the man page for AutoSearch details, or Demonstration section
+below for the quick-start instructions.
+
+
+
+Requirements
+------------
 
 WWW::Search requires Perl5 and libwww-perl.
 For information on Perl5, see <http://www.perl.com>.
@@ -17,13 +37,17 @@ Network (CPAN). Visit <http://www.perl.com/CPAN/> to find a CPAN
 site near you.
 
 
-AVAILABILITY
+
+Availability
+------------
 
 The latest version of WWW::Search should always be available from
 <http://www.isi.edu/lsam/tools/WWW_SEARCH/>.
 
 
-INSTALLATION
+
+Installation
+------------
 
 In order to use this package you will need Perl version 5.002 or
 better.  You install WWW::Search, as you would install any perl module
@@ -40,13 +64,27 @@ something like this command:
   perl Makefile.PL PREFIX=~/perl
 
 
-DEMONSTRATION
 
-By default the client program is not installed.  You can run it by:
-	perl ./CLIENTS/search.pl '"lsam tools"'
+Demonstration
+-------------
+
+After installing the client programs,
+try
+	search '"Your Name Here"'
+to see who's talking about you on the web.
+
+Then (in your web page directory), try
+	AutoSearch -m 'me on the web' -q '"Your Name Here"' me
+and the web page me/index.html will be created summarizing
+this information.
+Then add
+	0 3 * * 1 AutoSearch /path/to/your/web/pages/me
+to your crontab(1) to update this search once a week.
 
 
-DOCUMENTATION
+
+Documentation
+-------------
 
 See WWW/Search.pm for an overview of the library.
 POD-style documentation is included in all modules
@@ -56,13 +94,17 @@ able to use the 'perldoc' utility to extract documentation from the
 module files directly.
 
 
-SUPPORT
+
+Support
+-------
 
 Question about how to use this library should be directed to 
 <johnh@isi.edu> at this time.
 
 
-COPYRIGHT
+
+Copyright
+---------
 
 Copyright (c) 1996 University of Southern California.
 All rights reserved.                                            
@@ -84,7 +126,10 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 Portions of this README are derived from the README for libwww-perl.
 
 
-ISPELL
+
+Ispell
+------
 
  LocalWords:  AltaVista Lycos Hotbot WebCrawler libwww perl com sn CPAN isi PL
- LocalWords:  lsam pl pm perldoc README LocalWords
+ LocalWords:  lsam pl pm perldoc README LocalWords AutoSearch Search's html
+ LocalWords:  crontab

@@ -4,23 +4,9 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.11 1996/10/11 02:14:58 johnh Exp $
+# $Id: Search.pm,v 1.16 1996/10/31 01:52:57 johnh Exp $
 #
-# Copyright (c) 1996 University of Southern California.
-# All rights reserved.                                            
-#                                                                
-# Redistribution and use in source and binary forms are permitted
-# provided that the above copyright notice and this paragraph are
-# duplicated in all such forms and that any documentation, advertising
-# materials, and other materials related to such distribution and use
-# acknowledge that the software was developed by the University of
-# Southern California, Information Sciences Institute.  The name of the
-# University may not be used to endorse or promote products derived from
-# this software without specific prior written permission.
-# 
-# THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
-# WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
-# MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+# A complete copyright notice appears at the end of this file.
 # 
 
 
@@ -70,7 +56,7 @@ For more details see L<LWP>.
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query);
-$VERSION = 1.002;
+$VERSION = 1.004;
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
 require LWP::UserAgent;
@@ -106,7 +92,7 @@ sub new
     my $self = bless {
 	state => $SEARCH_BEFORE,
 	next_to_return => 0,
-	maximum_to_retrieve => 500,
+	maximum_to_retrieve => 500,  # both pages and hits
 	number_retrieved => 0,
 	requests_made => 0,
 	interrequest_delay => 0.25,
@@ -119,6 +105,8 @@ sub new
 =head2 native_query
 
 Specify a query to the current search object.
+The query must be escaped; call L<WWW::Search/escape_query>
+to escape a plain query.
 Doesn't actually begin the search until C<results> or
 C<next_result> is called.
 
@@ -363,11 +351,11 @@ sub retrieve_some
     # too many?
     if ($self->{number_retrieved} > $self->{maximum_to_retrieve}) {
         $self->{state} = $SEARCH_DONE;
-	last;
+	return;
     };
     if ($self->{requests_made} > $self->{maximum_to_retrieve}) {
         $self->{state} = $SEARCH_DONE;
-	last;
+	return;
     };
 
     # do it
@@ -383,6 +371,7 @@ sub retrieve_some
 
 C<WWW::Search> supports back-ends to separate search engines.
 Each back-end is implemented as a subclass of C<WWW::Search>.
+L<WWW::Search::AltaVista> provides a good sample back-end.
 
 A back-end usually has two routines,
 C<native_retrieve_some> and C<native_setup_search>.
@@ -405,8 +394,7 @@ of the query.
 The front- and back-ends share a single object (a hash)
 The back-end can change any hash element beginning with underscore,
 and C<{response}> (an C<HTTP::Response> code) and C<{cache}>
-(an array of C<WWW::SearchResult> objects to which it should append
-new results).
+(the array of C<WWW::SearchResult> objects caching all results).
 
 If you implement a new back-end, please let the authors know.
 

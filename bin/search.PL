@@ -1,9 +1,27 @@
-#!/home/johnh/BIN/perl5 -w
+use Config;
+use File::Basename qw(basename dirname);
+chdir(dirname($0));
+($file = basename($0)) =~ s/\.PL$//;
+$file =~ s/\.pl$//
+	if ($Config{'osname'} eq 'VMS' or
+	    $Config{'osname'} eq 'OS2');  # "case-forgiving"
+open OUT,">$file" or die "Can't create $file: $!";
+chmod(0755, $file);
+print "Extracting $file (with variable substitutions)\n";
+
+print OUT <<"!GROK!THIS!";
+$Config{'startperl'} -w
+    eval 'exec perl -S \$0 "\$@"'
+	if 0;
+
+!GROK!THIS!
+
+print OUT <<'!NO!SUBS!';
 
 #
 # search.pl
 # Copyright (C) 1996 by USC/ISI
-# $Id: search.pl,v 1.6 1996/10/10 18:11:58 johnh Exp $
+# $Id: search.PL,v 1.7 1996/10/29 21:09:39 johnh Exp $
 #
 # Copyright (c) 1996 University of Southern California.
 # All rights reserved.                                            
@@ -92,3 +110,5 @@ sub main {
 	 print $result->url, "\n";
     };
 };
+
+!NO!SUBS!
