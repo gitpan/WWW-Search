@@ -35,6 +35,29 @@ ok(scalar(@ao2) == 0);
 is($o2->approximate_result_count(3), 3);
 is($o2->approximate_result_count(undef), 3);
 is($o2->approximate_result_count(''), 3);
+is($o2->approximate_result_count(0), 0);
+is($o2->approximate_result_count(2), 2);
+is($o2->approximate_hit_count(undef), 2);
+is($o2->approximate_hit_count(-1), 2);
+# Test for what happens when a backend is not installed:
+my $o3;
+eval { $o3 = new WWW::Search('No_Such_Backend') };
+like($@, qr{(?i:unknown search engine backend)});
+# Use a backend twice (just to exercise the code in Search.pm):
+my $o4 = new WWW::Search('Null::Empty');
+my $o5 = new WWW::Search('Null::Empty');
+# Test the version() function:
+$o5 = new WWW::Search('Null::NoVersion');
+is($o5->version, $WWW::Search::VERSION);
+is($o5->maintainer, $WWW::Search::MAINTAINER);
+# Exercise / test the cookie_jar() function:
+$o4->cookie_jar('t/cookies.txt');
+my $oCookies = new HTTP::Cookies;
+$o5->cookie_jar($oCookies);
+diag(q{'argument...must be a scalar...' message here is normal:});
+eval { $o2->cookie_jar($o4) };
+# like($@, qr{(?i:must be a scalar or a flavor of)});
+$oCookies = $o4->cookie_jar;
 
 exit 0;
 

@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 2.524 2004/05/02 03:16:29 Daddy Exp $
+# $Id: Search.pm,v 2.528 2004/07/01 02:22:24 Daddy Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -73,6 +73,7 @@ use Carp ();
 use Data::Dumper;  # for debugging only
 use Exporter;
 use File::Find;
+use File::Spec::Functions;
 use HTML::TreeBuilder;
 use HTTP::Cookies;
 use HTTP::Request;
@@ -99,7 +100,7 @@ use vars qw( @ISA @EXPORT @EXPORT_OK $VERSION $MAINTAINER );
 @EXPORT_OK = qw( escape_query unescape_query generic_option strip_tags );
 @ISA = qw(Exporter LWP::MemberMixin);
 $MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
-$VERSION = do { my @r = (q$Revision: 2.524 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.528 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 =head2 new
 
@@ -223,24 +224,25 @@ sub _wanted
   # Date: 1999/02/15
   my $startdir = shift;
   my $sFullPath = $File::Find::name;
-  # print STDERR " +   _wanted($startdir, $sFullPath)\n" if DEBUG_FIND;
+  print STDERR " +   _wanted($startdir, $sFullPath)\n" if DEBUG_FIND;
   if (-d && /^[a-z]/)
     {
-    # this is so we don't go down site_perl etc too early
+    # This is so we don't go down site_perl etc too early (whatever
+    # that means):
     $File::Find::prune = 1;
-    # print STDERR " +     prune\n" if DEBUG_FIND;
+    print STDERR " +     prune\n" if DEBUG_FIND;
     return;
     } # if
   unless ($sFullPath =~ s!\.pm\Z!!)
     {
-    # print STDERR " +     not .pm\n" if DEBUG_FIND;
+    DEBUG_FIND && print STDERR " +     not .pm\n";
     return;
     } # unless
   # Delete absolute path off front of file path:
-  $sFullPath =~ s{^\Q$startdir/}{};
-  unless ($sFullPath =~ s!\AWWW/Search!!)
+  $sFullPath =~ s{^\Q$startdir\E[\\/]}{};
+  unless (1 || ($sFullPath =~ s!\AWWW/Search!!))
     {
-    # print STDERR " +     not WWW/Search\n" if DEBUG_FIND;
+    print STDERR " +     not WWW/Search\n" if DEBUG_FIND;
     return;
     } # unless
   print STDERR " +     found $sFullPath\n" if DEBUG_FIND;
@@ -253,12 +255,17 @@ sub installed_engines
   {
   # Does NOT need a WWW::Search object to operate
   my %hsi;
-  foreach my $sDir (@INC)
+  local $" = '|';
+  DEBUG_FIND && print STDERR " + installed_engines() start, INC is @INC...\n";
+ INC_DIR:
+  foreach my $sDir (map catdir($_, 'WWW', 'Search'), @INC)
     {
+    DEBUG_FIND && print STDERR " +   foreach ==$sDir==\n";
+    next INC_DIR unless -d $sDir;
     File::Find::find(sub {
                        $hsi{&_wanted($sDir) || 'JUNKJUNK'}++;
                        }, $sDir);
-    } # foreach
+    } # foreach INC_DIR
   delete $hsi{'JUNKJUNK'};
   delete $hsi{'Test'};
   delete $hsi{'Result'};
@@ -1061,17 +1068,11 @@ Backends should use robot-style user-agents whenever possible.
 
 =cut
 
-sub user_agent
+sub _load_env_useragent
   {
   my $self = shift;
-  unless (@_)
-    {
-    # If NO ARGS, return the previously-created agent (if any):
-    return $self->{'user_agent'} if ref($self->{'user_agent'});
-    } # unless
-  my $non_robot = shift || 0;
-  my $ua;
   my $sUA = $ENV{'WWW_SEARCH_USERAGENT'} || '';
+  my $ua;
   if ($sUA ne '')
     {
     eval "use $sUA";
@@ -1082,7 +1083,6 @@ sub user_agent
       if (ref($ua) && ! $@)
         {
         # Successfully created object.
-        $self->{'user_agent'} = $ua;
         return $ua;
         }
       else
@@ -1097,32 +1097,49 @@ sub user_agent
       # Fall through and try the other methods:
       }
     } # if found WWW_SEARCH_USERAGENT in environment
-  if ($non_robot)
+  } # _load_env_useragent
+
+
+sub user_agent
+  {
+  my $self = shift;
+  unless (@_)
     {
-    $ua = new LWP::UserAgent;
-    $ua->agent($self->{'agent_name'});
-    $ua->from($self->{'agent_e_mail'});
-    }
-  else
+    # If NO ARGS, return the previously-created agent (if any):
+    return $self->{'user_agent'} if ref($self->{'user_agent'});
+    } # unless
+  my $non_robot = shift || 0;
+  my $ua = _load_env_useragent();
+  # If we loaded a UserAgent, don't do any of this stuff:
+  if (! ref $ua)
     {
-    $ua = new LWP::RobotUA($self->{'agent_name'}, $self->{'agent_e_mail'});
-    $ua->delay($self->{'interrequest_delay'}/60.0);
-    }
-  $ua->timeout($self->{'timeout'});
-  $ua->proxy(@{$self->{'http_proxy'}}) if (
-                                           ('ARRAY' eq ref($self->{'http_proxy'}))
-                                           &&
-                                           defined($self->{'http_proxy'}->[0])
-                                           &&
-                                           ($self->{'http_proxy'}->[0] ne '')
-                                          );
-  if ($self->env_proxy)
-    {
-    $ua->env_proxy($self->env_proxy);
-    # Read password from ENV:
-    $self->http_proxy_user($ENV{http_proxy_user});
-    $self->http_proxy_pwd ($ENV{http_proxy_pwd});
-    } # if
+    if ($non_robot)
+      {
+      $ua = new LWP::UserAgent;
+      $ua->agent($self->{'agent_name'});
+      $ua->from($self->{'agent_e_mail'});
+      }
+    else
+      {
+      $ua = new LWP::RobotUA($self->{'agent_name'}, $self->{'agent_e_mail'});
+      $ua->delay($self->{'interrequest_delay'}/60.0);
+      }
+    $ua->timeout($self->{'timeout'});
+    $ua->proxy(@{$self->{'http_proxy'}}) if (
+                                             ('ARRAY' eq ref($self->{'http_proxy'}))
+                                             &&
+                                             defined($self->{'http_proxy'}->[0])
+                                             &&
+                                             ($self->{'http_proxy'}->[0] ne '')
+                                            );
+    if ($self->env_proxy)
+      {
+      $ua->env_proxy($self->env_proxy);
+      # Read password from ENV:
+      $self->http_proxy_user($ENV{http_proxy_user});
+      $self->http_proxy_pwd ($ENV{http_proxy_pwd});
+      } # if
+    } # if ! ref $ua
   $self->{'user_agent'} = $ua;
   return $ua;
   } # user_agent
@@ -1148,7 +1165,7 @@ sub http_referer { return shift->_elem('_http_referer', @_); }
 Get / set the method to be used for the HTTP request.
 Must be either 'GET' or 'POST'.
 Call this method before calling http_request.
-(Normally you would set this during native_setup_search().)
+(Normally you would set this during _native_setup_search().)
 The default is 'GET'.
 
   $oSearch->http_method('POST');
@@ -1426,10 +1443,19 @@ sub generic_option
 =head2 setup_search (PRIVATE)
 
 This internal routine does generic Search setup.
-It calls C<native_setup_search()> to do backend-specific setup.
+It calls C<_native_setup_search()> to do backend-specific setup.
 
 =cut
 
+
+sub _native_setup_search
+  {
+  my $self = shift;
+  # This function is for backward-compatibility, for backends that
+  # define the old native_setup_search(), but not the new
+  # _native_setup_search()
+  $self->native_setup_search(@_);
+  } # _native_setup_search
 
 sub native_setup_search
   {
@@ -1447,7 +1473,7 @@ sub setup_search
   $self->{number_retrieved} = 0;
   $self->{state} = SEARCH_UNDERWAY;
   # $self->{_options} = ();
-  $self->native_setup_search($self->{'native_query'}, $self->{'native_options'});
+  $self->_native_setup_search($self->{'native_query'}, $self->{'native_options'});
   } # setup_search
 
 
@@ -1486,7 +1512,7 @@ sub absurl
 
 =head2 retrieve_some (PRIVATE)
 
-An internal routine to interface with C<native_retrieve_some()>.
+An internal routine to interface with C<_native_retrieve_some()>.
 Checks for overflow.
 
 =cut
@@ -1525,8 +1551,8 @@ sub retrieve_some
     return;
     } # if
   # need more results
-  my $res = $self->native_retrieve_some() || 0;
-  print STDERR " +   native_retrieve_some() returned $res\n" if $self->{_debug};
+  my $res = $self->_native_retrieve_some() || 0;
+  print STDERR " +   _native_retrieve_some() returned $res\n" if $self->{_debug};
   $self->{requests_made}++;
   $self->{number_retrieved} += $res;
   $self->{state} = SEARCH_DONE if ($res == 0);
@@ -1565,7 +1591,7 @@ sub need_to_delay
   } # need_to_delay
 
 
-=head2 native_retrieve_some (PRIVATE)
+=head2 _native_retrieve_some (PRIVATE)
 
 Fetch the next page of results from the web engine, parse the results,
 and prepare for the next page of results.
@@ -1573,19 +1599,19 @@ and prepare for the next page of results.
 If a backend defines this method, it is in total control of the WWW
 fetch, parsing, and preparing for the next page of results.  See the
 WWW::Search::AltaVista module for example usage of the
-native_retrieve_some method.
+_native_retrieve_some method.
 
 An easier way to achieve this in a backend is to inherit
-native_retrieve_some from WWW::Search, and do only the HTML parsing.
+_native_retrieve_some from WWW::Search, and do only the HTML parsing.
 Simply define a method parse_tree which takes one argument, an
 HTML::TreeBuilder object, and returns an integer, the number of
 results found on this page.  See the WWW::Search::Yahoo module for
 example usage of the parse_tree method.
 
 A backend should, in general, define either parse_tree() or
-native_retrieve_some(), but not both.
+_native_retrieve_some(), but not both.
 
-Additional features of the default native_retrieve_some method:
+Additional features of the default _native_retrieve_some method:
 
 Sets $self->{_prev_url} to the URL of the page just retrieved.
 
@@ -1601,7 +1627,7 @@ store_comments turned ON.  If a backend needs to use a subclassed or
 modified HTML::TreeBuilder object, the backend should set
 $self->{'_treebuilder'} to that object before any results are
 retrieved.  The best place to do this is at the end of
-native_setup_search.
+_native_setup_search.
 
   my $oTree = new myTreeBuilder;
   $oTree->store_pis(1);  # for example
@@ -1623,10 +1649,18 @@ sub parse_tree
   return 0;
   } # parse_tree
 
+sub _native_retrieve_some
+  {
+  # This function is for backward-compatibility, for backends that
+  # define the old native_retrieve_some(), but not the new
+  # _native_retrieve_some()
+  shift->native_retrieve_some(@_);
+  } # native_retrieve_some
+
 sub native_retrieve_some
   {
   my ($self) = @_;
-  # printf STDERR (" +   %s::native_retrieve_some()\n", __PACKAGE__) if $self->{_debug};
+  # printf STDERR (" +   %s::_native_retrieve_some()\n", __PACKAGE__) if $self->{_debug};
   # Fast exit if already done:
   return undef if (!defined($self->{_next_url}));
   # If this is not the first page of results, sleep so as to not
@@ -1682,7 +1716,7 @@ sub native_retrieve_some
   $tree->eof();
   # print STDERR " +   calling parse_tree...\n" if 1 < $self->{_debug};
   return $self->parse_tree($tree);
-  } # native_retrieve_some
+  } # _native_retrieve_some
 
 
 =head2 preprocess_results_page (PRIVATE)
@@ -1694,7 +1728,7 @@ such as to correct for known problems, HTML that can not be parsed correctly, et
 Takes one argument, a string (the HTML webpage);
 returns one string (the same HTML, modified).
 
-This method is called from within native_retrieve_some (above)
+This method is called from within _native_retrieve_some (above)
 before the HTML of the page is parsed.
 
 See the WWW::Search::Ebay distribution 2.07 or higher for example
@@ -1731,24 +1765,24 @@ C<WWW::Search> supports backends to separate search engines.  Each
 backend is implemented as a subclass of C<WWW::Search>.
 L<WWW::Search::Yahoo> provides a good sample backend.
 
-A backend must have the routine C<native_setup_search()>.  A backend
-must have the routine C<native_retrieve_some()> or C<parse_tree()>.
+A backend must have the routine C<_native_setup_search()>.  A backend
+must have the routine C<_native_retrieve_some()> or C<parse_tree()>.
 
-C<native_setup_search()> is invoked before the search.  It is passed a
-single argument: the escaped, native version of the query.
+C<_native_setup_search()> is invoked before the search.  It is passed
+a single argument: the escaped, native version of the query.
 
-C<native_retrieve_some()> is the core of a backend.  It will be called
+C<_native_retrieve_some()> is the core of a backend.  It will be called
 periodically to fetch URLs.  It should retrieve several hits from the
 search service and add them to the cache.  It should return the number
 of hits found, or undef when there are no more hits.
 
-Internally, C<native_retrieve_some()> typically sends an HTTP request to
+Internally, C<_native_retrieve_some()> typically sends an HTTP request to
 the search service, parses the HTML, extracts the links and
 descriptions, then saves the URL for the next page of results.  See
 the code for the C<WWW::Search::AltaVista> module for an example.
 
 Alternatively, a backend can define the method C<parse_tree()> instead
-of C<native_retrieve_some()>.  See the C<WWW::Search::Ebay> module for a
+of C<_native_retrieve_some()>.  See the C<WWW::Search::Ebay> module for a
 good example.
 
 If you implement a new backend, please let the authors know.

@@ -3,17 +3,17 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.47?  (2004-05-01)
+WHAT IS NEW IN WWW::Search 2.471?  (2004-05-01)
 ----------------------------------------------
 
 Overview of changes: 
 
- * new method need_to_delay()
- * detect HTTP-Redirect loops and avoid infinite loop
- * fix "undefined" warnings in AutoSearch
- * Makefile.PL now uses Module::Install
+ * better testing of Null:: modules
+ * better testing for coverage
+ * make installed_engines() smarter and faster
+ * minor code clean-ups
 
-For details, see the ChangeLog file (updates after 2003-12-25) and/or
+For details, see the ChangeLog file (updates after 2004-05-01) and/or
 the pod of each affected module.
 
 
@@ -55,29 +55,30 @@ consult `perldoc WWW::Search::Null::Count` for details.
 The following real, working backends (and more!) are registered at
 CPAN independently (not included with this WWW::Search distribution):
 
-AltaVista       http://www.perl.com/CPAN-local/modules/by-module/WWW
+AltaVista       http://www.perl.com/CPAN/modules/by-module/WWW
 AP              in the WWW::Search::News distribution
-Ebay            http://www.perl.com/CPAN-local/modules/by-module/WWW
+Ebay            http://www.perl.com/CPAN/modules/by-module/WWW
 Ebay::Mature    contact author, mthurn@cpan.org
-Euroseek        http://www.perl.com/CPAN-local/modules/by-module/WWW/JSMYSER/
-Go              http://www.perl.com/CPAN-local/modules/by-module/WWW
-GoTo            http://www.perl.com/CPAN-local/modules/by-module/WWW/JSMYSER/
-HotBot          http://www.perl.com/CPAN-local/modules/by-module/WWW/
-LookSmart       http://www.perl.com/CPAN-local/modules/by-module/WWW/JSMYSER
-Lycos           http://www.perl.com/CPAN-local/modules/by-module/WWW/MTHURN/
-Magellan        http://www.perl.com/CPAN-local/modules/by-module/WWW/MTHURN/
-Nomade          http://www.perl.com/CPAN-local/modules/by-module/WWW
-NorthernLight   http://www.perl.com/CPAN-local/modules/by-module/WWW/JSMYSER/
-OpenDirectory   http://www.perl.com/CPAN-local/modules/by-module/WWW/JSMYSER/
-PRWire          http://www.perl.com/CPAN-local/modules/by-module/WWW
-Pubmed          http://www.perl.com/CPAN-local/modules/by-module/WWW
-Yahoo           http://www.perl.com/CPAN-local/modules/by-module/WWW
-ZDNet           http://www.perl.com/CPAN-local/modules/by-module/WWW/JSMYSER/
+Euroseek        http://www.perl.com/CPAN/modules/by-module/WWW/JSMYSER/
+Go              http://www.perl.com/CPAN/modules/by-module/WWW
+GoTo            http://www.perl.com/CPAN/modules/by-module/WWW/JSMYSER/
+HotBot          http://www.perl.com/CPAN/modules/by-module/WWW/
+LookSmart       http://www.perl.com/CPAN/modules/by-module/WWW/JSMYSER
+Lycos           http://www.perl.com/CPAN/modules/by-module/WWW/MTHURN/
+Magellan        http://www.perl.com/CPAN/modules/by-module/WWW/MTHURN/
+Monster         http://www.perl.com/CPAN/modules/by-module/WWW
+Nomade          http://www.perl.com/CPAN/modules/by-module/WWW
+NorthernLight   http://www.perl.com/CPAN/modules/by-module/WWW/JSMYSER/
+OpenDirectory   http://www.perl.com/CPAN/modules/by-module/WWW/JSMYSER/
+PRWire          http://www.perl.com/CPAN/modules/by-module/WWW
+Pubmed          http://www.perl.com/CPAN/modules/by-module/WWW
+Yahoo           http://www.perl.com/CPAN/modules/by-module/WWW
+ZDNet           http://www.perl.com/CPAN/modules/by-module/WWW/JSMYSER/
 WashPost        in the WWW::Search::News distribution
 
 There are several backends which I don't even know if they work or
 not; I put them in a distribution called WWW::Search::Backends which
-you can find at http://www.perl.com/CPAN-local/modules/by-module/WWW
+you can find at http://www.perl.com/CPAN/modules/by-module/WWW
 
 There are even more backends available for manual download and
 installation at http://www.idexer.com/backends/ (thanks to Jim Smyser).
@@ -90,7 +91,7 @@ WWW::Search requires Perl5, the libwww-perl module suite, the URI
 module, the HTML::Parser module, and several other modules (see
 Makefile.PL for a complete list).  For information on Perl5, see
 <http://www.perl.com>.  For modules, see
-<http://www.perl.com/CPAN-local/modules>.
+<http://www.perl.com/CPAN/modules>.
 
 
 AVAILABILITY
@@ -98,7 +99,7 @@ AVAILABILITY
 
 The latest version of WWW::Search should always be available on CPAN.
 Here is a good URL for finding it:
-http://www.perl.com/CPAN-local/modules/by-module/WWW
+http://www.perl.com/CPAN/modules/by-module/WWW
 
 
 INSTALLATION

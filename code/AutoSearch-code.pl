@@ -4,7 +4,7 @@ exit 0;
 # AutoSearch-code.pl
 # Copyright (c) 1996-1997 University of Southern California.
 # All rights reserved.
-# $Id: AutoSearch-code.pl,v 2.126 2004/03/05 12:45:55 Daddy Exp $
+# $Id: AutoSearch-code.pl,v 2.126 2004/03/05 12:45:55 Daddy Exp Daddy $
 #
 # Complete copyright notice follows below.
 
@@ -50,11 +50,12 @@ $opts{'emailfrom'} = '';
 $opts{'v'} = 0;
 $opts{'help'} = 0;
 $opts{'man'} = 0;
+$opts{'smtp'} = '';
 $opts{'stats'} = 0;
 $opts{'debug'} = 0;
 $opts{'listnewurls'} = 0;
 $opts{'ignore_channels'} = ();
-&GetOptions(\%opts, qw(n|qn|queryname=s s|qs|querystring=s e|engine=s m|mail=s emailfrom=s h|host=s p|port=s o|options=s@ f|uf|urlfilter=s listnewurls stats userid=s password=s ignore_channels=s@ cleanup=i cmdline v|verbose help man V|VERSION debug),
+&GetOptions(\%opts, qw(n|qn|queryname=s s|qs|querystring=s e|engine=s m|mail=s emailfrom=s h|host=s p|port=s o|options=s@ f|uf|urlfilter=s listnewurls stats userid=s password=s ignore_channels=s@ cleanup=i cmdline smtp v|verbose help man V|VERSION debug),
             'http_proxy=s',
             'http_proxy_user=s',
             'http_proxy_pwd=s',
@@ -897,7 +898,10 @@ EMAILEND
     if (ref($oMsg))
       {
       $oMsg->add(From => $opts{'emailfrom'}) if ($opts{emailfrom} ne '');
-      if (! $oMsg->send)
+      if ((($opts{'smtp'} ne '') && ! $oMsg->send('smtp', $opts{'smtp'}))
+          ||
+          (($opts{'smtp'} eq '') && ! $oMsg->send)
+         )
         {
         print STDERR " --- could not send email\n";
         } # if

@@ -38,16 +38,17 @@ package WWW::Search::Null::Error;
 
 use strict;
 
-use vars qw( @ISA );
+use vars qw( @ISA $VERSION );
 @ISA = qw( WWW::Search );
+$VERSION = do { my @r = (q$Revision: 1.4 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
-sub native_setup_search
+sub _native_setup_search
   {
   my($self, $native_query, $native_opt) = @_;
   } # native_setup_search
 
 
-sub native_retrieve_some
+sub _native_retrieve_some
   {
   my $self = shift;
   my $response = new HTTP::Response(500,

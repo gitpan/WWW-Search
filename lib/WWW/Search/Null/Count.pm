@@ -9,7 +9,7 @@ WWW::Search::Null::Count - class for testing WWW::Search clients
 =begin example
 
   require WWW::Search;
-  my $iCount = 15;
+  my $iCount = 4;
   my $oSearch = new WWW::Search('Null::Count',
                                 '_null_count' => $iCount,
                                );
@@ -22,6 +22,16 @@ WWW::Search::Null::Count - class for testing WWW::Search clients
 =for example_testing
 is(scalar(@aoResults), $iCount, 'got the right number of results');
 is($oSearch->approximate_result_count, $iCount, 'got the right approx_results');
+my $oResult = shift @aoResults;
+is($oResult->url, "url1", 'url');
+is(scalar(@{$oResult->related_urls}), $iCount, 'got N related_urls');
+is(scalar(@{$oResult->related_titles}), $iCount, 'got N related_titles');
+is(scalar(@{$oResult->urls}), $iCount+1, 'got N+1 urls');
+my $raURL = $oResult->urls;
+# diag("sURL =$sURL=");
+is(scalar(@{$raURL}), $iCount+1, 'got N+1 urls in arrayref');
+$oSearch = new WWW::Search('Null::Count');
+@aoResults = $oSearch->results;
 
 =head1 DESCRIPTION
 
@@ -44,22 +54,23 @@ package WWW::Search::Null::Count;
 use WWW::Search::Result;
 use strict;
 
-use vars qw( @ISA );
+use vars qw( @ISA $VERSION );
 @ISA = qw( WWW::Search );
+$VERSION = do { my @r = (q$Revision: 1.7 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
-sub native_setup_search
+sub _native_setup_search
   {
   my ($self, $native_query, $native_opt) = @_;
-  # print STDERR " + ::Null::Count::native_setup_search()\n";
+  # print STDERR " + ::Null::Count::_native_setup_search()\n";
   if (! defined $self->{_null_count})
     {
     # print STDERR " +   setting default _null_count to 5\n";
     $self->{_null_count} = 5;
     } # if
-  } # native_setup_search
+  } # _native_setup_search
 
 
-sub native_retrieve_some
+sub _native_retrieve_some
   {
   my $self = shift;
   # print STDERR " + ::Null::Count::native_retrieve_some()\n";
@@ -74,9 +85,34 @@ sub native_retrieve_some
     my $oResult = new WWW::Search::Result;
     $oResult->url(qq{url$i});
     $oResult->title(qq{title$i});
-    $oResult->description(qq{description$i});
+    $oResult->description("description$i");
+    $oResult->change_date("yesterday");
+    $oResult->index_date("today");
+    $oResult->raw(qq{<A HREF="url$i">});
+    $oResult->score(100-$i*2);
+    $oResult->normalized_score(1000-$i*20);
+    $oResult->size($i*2*1024);
+    $oResult->source('WWW::Search::Null::Count');
+    $oResult->company('Dub Dub Dub Search, Inc.');
+    $oResult->location('Ashburn, VA');
+    if ($i % 2)
+      {
+      $oResult->urls("url$i", map { "url$i.$_" } (1..$iCount));
+      $oResult->related_urls(map { "url-r$i.$_" } (1..$iCount));
+      my @aoTitles = map { "title-r$i.$_" } (1..$iCount);
+      $oResult->related_titles(\@aoTitles);
+      }
+    else
+      {
+      for my $j (1..$iCount)
+        {
+        $oResult->add_url(qq{url$i.$j});
+        $oResult->add_related_url(qq{url-r$j});
+        $oResult->add_related_title(qq{title-r$i});
+        } # for $j
+      } # else
     push(@{$self->{cache}}, $oResult);
-    } # for
+    } # for $i
   return 0;
   } # native_retrieve_some
 

@@ -1,3 +1,25 @@
+2004-06-30  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search.pm (installed_engines): make it run much faster!
+
+2004-06-01  Kingpin  <mthurn@verizon.net>
+
+	* t/use.t: added a lot of tests for coverage
+
+	* lib/WWW/Search.pm (_load_env_useragent): new function
+
+2004-05-24  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search/Null/Count.pm: add $VERSION
+	* lib/WWW/Search/Null/Empty.pm: add $VERSION
+	* lib/WWW/Search/Null/Error.pm: add $VERSION
+	* lib/WWW/Search/Null/Count.pm: add _ in front of function names
+	* lib/WWW/Search/Null/Empty.pm: add _ in front of function names
+	* lib/WWW/Search/Null/Error.pm: add _ in front of function names
+	* lib/WWW/Search/Null/NoVersion.pm: new file (for testing)
+
+	* lib/WWW/Search/Null/Count.pm (native_retrieve_some): set and test all SearchResult fields
+
 2004-05-01  Kingpin  <mthurn@verizon.net>
 
 	* lib/WWW/Search.pm (need_to_delay): new method

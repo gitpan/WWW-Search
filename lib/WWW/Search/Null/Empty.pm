@@ -1,4 +1,4 @@
-# $Id: Empty.pm,v 1.3 2003-04-16 00:33:31-04 kingpin Exp $
+# $Id: Empty.pm,v 1.4 2004/05/24 12:20:04 Daddy Exp $
 
 =head1 NAME
 
@@ -40,16 +40,17 @@ package WWW::Search::Null::Empty;
 
 use strict;
 
-use vars qw( @ISA );
+use vars qw( @ISA $VERSION );
 @ISA = qw( WWW::Search );
+$VERSION = do { my @r = (q$Revision: 1.4 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
-sub native_setup_search
+sub _native_setup_search
   {
   my($self, $native_query, $native_opt) = @_;
   } # native_setup_search
 
 
-sub native_retrieve_some
+sub _native_retrieve_some
   {
   my $self = shift;
   my $response = new HTTP::Response(200,

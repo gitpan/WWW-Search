@@ -1,4 +1,4 @@
-# $rcs = ' $Id: Test.pm,v 1.31 2003-11-25 08:31:36-05 kingpin Exp kingpin $ ' ;
+# $rcs = ' $Id: Test.pm,v 2.262 2004/07/01 03:53:41 Daddy Exp $ ' ;
 
 =head1 NAME
 
@@ -49,7 +49,7 @@ use vars qw( @EXPORT @EXPORT_OK @ISA );
 
 use vars qw( $VERSION $bogus_query $websearch );
 
-$VERSION = '2.26';
+$VERSION = do { my @r = (q$Revision: 2.262 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 
 ($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = qw(dummy internal external update);
@@ -60,12 +60,18 @@ sub find_websearch
   unless ($websearch)
     {
     # Try to find a working WebSearch:
-    my @as = split(/\s/, eval{`WebSearch --VERSION`});
-    $websearch = shift @as;
+    my $sProg = 'WebSearch';
+    my @asTry = ( $sProg );
     # Try local directory, in case . is not in the path:
-    (-f './WebSearch') && (@as = split(/\s/, eval{`./WebSearch --VERSION`}));
-    $websearch ||= shift @as;
-    $websearch ||= 'not in the path';
+    push @asTry, catfile(curdir, $sProg);
+    foreach my $sTry (@asTry)
+      {
+      my $sCmd = "$sTry --VERSION";
+      # print STDERR " + cmd ==$sCmd==\n";
+      my @as = split(/\s/, eval{`$sCmd`});
+      $websearch = shift @as || undef;
+      last if $websearch;
+      } # foreach
     undef $websearch unless $websearch =~ m/WebSearch/;
     # print STDERR "in WWW::Search::Test, websearch is $websearch\n";
     } # unless
@@ -578,6 +584,12 @@ sub run_gui_test
   {
   return &run_our_test('gui', @_);
   } # run_gui_test
+
+=head2 count_results
+
+Run a query, and return the actual (not approximate) number of hits.
+
+=cut
 
 sub count_results
   {

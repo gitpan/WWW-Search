@@ -1,10 +1,10 @@
 # This -*- cperl -*- program writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.37 2004/01/31 00:43:25 Daddy Exp Daddy $
+# $Id: Makefile.PL,v 1.38 2004/07/01 03:49:33 Daddy Exp $
 
 use inc::Module::Install;
 
 name('WWW-Search');
-version(2.47);
+version(2.471);
 author('Martin Thurn <mthurn@cpan.org>');
 abstract('Query web search engines and get URLs');
 requires(perl => 5.004);
@@ -74,7 +74,13 @@ AutoSearch :: FORCE
 
 sub MY::postamble
   {
-  my $ret = '';
+  my $ret = <<'PART0';
+coverage :
+	cover -delete
+	$(MAKE) HARNESS_PERL_SWITCHES=-MDevel::Cover coverage_slave
+coverage_slave : test
+	cover
+PART0
   if (0)
     {
     $ret .= <<'PART1';
