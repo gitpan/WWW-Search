@@ -2,7 +2,7 @@
 
 # test.pl
 # Copyright (C) 1997 by USC/ISI
-# $Id: test_parsing.pl,v 1.35 1999/12/10 19:15:33 mthurn Exp $
+# $Id: test_parsing.pl,v 1.37 1999/12/22 20:18:21 mthurn Exp $
 #
 # Copyright (c) 1997 University of Southern California.
 # All rights reserved.                                            
@@ -451,7 +451,6 @@ sub test_cases
   # use WWW::Search::LookSmart;
   # &no_test('LookSmart', $WWW::Search::LookSmart::MAINTAINER);
 
-  &eval_test('Lycos::Pages');
   &eval_test('Lycos::Sites');
   
   &eval_test('Magellan');
@@ -499,10 +498,6 @@ sub test_cases
   # test($sSE, $sM, 'zero', $bogus_query, $TEST_EXACTLY);
   # $query = 'bur'.'undi';
   # test($sSE, $sM, 'one', $query, $TEST_RANGE, 2, 99);
-  
-  ######################################################################
-
-  &eval_test('Profusion');
   
   ######################################################################
 

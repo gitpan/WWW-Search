@@ -1,3 +1,35 @@
+1999-12-23  Kingpin  <mthurn@tasc.com>
+
+	* Google.pm updated to 2.15 (return more details for each result)
+
+1999-12-22  Kingpin  <mthurn@tasc.com>
+
+	* HotBot.pm updated to 2.10 (new output format)
+
+	* Lycos::Pages retired
+
+	* Lycos.pm updated to 2.08 (new URL for advanced search)
+
+1999-12-15  Kingpin  <mthurn@tasc.com>
+
+	* Profusion.pm retired
+	
+	* HotBot.pm updated to 2.09 (handle new result count format)
+
+	* Google.pm updated to 2.12 (new output format, etc.)
+
+1999-12-13  Kingpin  <mthurn@tasc.com>
+
+	* Yahoo::Classifieds::Employment updated to 1.01 (remove unneeded 'use Socket')
+
+	* Monster updated to 1.01 (remove unneeded 'use Socket')
+
+	* HeadHunter updated to 1.01 (remove unneeded 'use Socket')
+
+1999-12-11  Kingpin  <mthurn@tasc.com>
+
+	* WWW::Search VERSION 2.07 RELEASED!
+
 1999-12-10  Kingpin  <mthurn@tasc.com>
 
 	* Magellan.pm updated to 2.03 (new test cases)

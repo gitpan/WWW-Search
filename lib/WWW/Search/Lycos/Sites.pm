@@ -1,7 +1,7 @@
 # Sites.pm
 # by Martin Thurn
 # Copyright (C) 1996 by USC/ISI
-# $Id: Sites.pm,v 1.5 1999/12/10 17:41:57 mthurn Exp $
+# $Id: Sites.pm,v 1.6 1999/12/22 20:45:43 mthurn Exp $
 #
 # Complete copyright notice follows below.
 
@@ -28,6 +28,13 @@ F<http://www.lycos.com>.
 This class exports no public interface; all interaction should
 be done through WWW::Search objects.
 
+=head1 NOTES
+
+The default search mode is "any" of the query terms.  If you want to
+search for "ALL" of the query terms, add {'matchmode' => 'and'} as the
+second argument to native_query().  More advanced query modes can be
+added upon request; please contact the author.
+
 =head1 TESTING
 
 This module adheres to the WWW::Search test mechanism.
@@ -41,6 +48,10 @@ was written by Martin Thurn <MartinThurn@iname.com>
 =head1 VERSION HISTORY
 
 If it''s not listed here, then it wasn''t a meaningful nor released revision.
+
+=head2 2.07, 1999-12-22
+
+pod update
 
 =head2 2.06, 1999-12-10
 
@@ -82,7 +93,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search::Lycos Exporter);
-$VERSION = '2.06';
+$VERSION = '2.07';
 
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 $TEST_CASES = <<"ENDTESTCASES";

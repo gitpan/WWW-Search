@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.18 1999/12/10 18:36:16 mthurn Exp $
+# $Id: Search.pm,v 1.20 1999/12/23 14:58:18 mthurn Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -48,8 +48,6 @@ All backends are required to support title and url.
 
 =head1 SEE ALSO
 
-For more details see L<LWP>.
-
 For specific search engines, see L<WWW::Search::TheEngineName>
 (replacing TheEngineName with a particular search engine).
 
@@ -68,7 +66,7 @@ package WWW::Search;
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query generic_option strip_tags @ENGINES_WORKING);
-$VERSION = '2.07';
+$VERSION = '2.08';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
 use LWP::UserAgent;
@@ -978,7 +976,6 @@ Infoseek::News
 Infoseek::Web		
 LookSmart		
 Lycos			
-Lycos::Pages		
 Lycos::Sites		
 Magellan		
 MetaCrawler             
@@ -988,7 +985,6 @@ NetFind
 NorthernLight		
 Null			
 OpenDirectory           
-Profusion		
 SFgate			
 Snap			
 WebCrawler		

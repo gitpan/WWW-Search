@@ -1,0 +1,515 @@
+<html>
+<head>
+<title>Fireball Express Suche</title>
+<meta NAME="description" CONTENT="Mit Fireball können mehr als 8 Mio. deutschsprachige Dokumente und ein umfangreicher Webkatalog durchsucht werden.">
+<meta NAME="keywords" CONTENT="Suchmaschine, Recherche, Katalog, Webkatalog, suchen, recherchieren, finden">
+<style><!--a:hover {color:#000000; }--></style>
+</head>
+<body link="#CC0000" vlink="#600000" bgcolor="#FFFFFF">
+<center>
+<map name="navmap">
+<area shape="rect" coords="3,0,122,19" href="express.html" alt="Express Suche">
+<area shape="rect" coords="3,19,122,36" href="express_hilfe.html" alt="Hilfe zur Express Suche">
+<area shape="rect" coords="119,0,226,19" href="detail.html" alt="Detail Suche">
+<area shape="rect" coords="227,0,313,19" href="http://rubriken.fireball.de" alt="Rubriken">
+<area shape="rect" coords="314,0,409,19" href="http://www.fireball.de/voyeur-fireball.fcg?action=voyeur-queries" alt="Live Suche">
+<area shape="rect" coords="410,0,462,19" href="info.html" alt="Info und Tools">
+</map>
+<table cellspacing="0" cellpadding="0" border="0" align="center">
+<tr> 
+<td bgcolor="#CC0000"> 
+<table width="23" border="0" cellspacing="0" cellpadding="2">
+<tr> 
+<td>&nbsp;</td>
+</tr>
+</table>
+</td>
+<td bgcolor="#FFFFCC"> 
+<table border="0" cellpadding="0" cellspacing="0">
+<tr> 
+<td colspan="2"><img src="http://bilder.fireball.de/bilder/navbar_e.gif" width="462" height="37" border="0" usemap="#navmap"> 
+</td>
+</tr>
+<tr> 
+<td colspan="2" bgcolor="#FFFFFF"> 
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+<tr> 
+<td colspan="8" bgcolor="#FFFFCC"> 
+<form method="GET" action="/query-fireball.fcg">
+<input type="HIDDEN" name="action" value="query">
+<input name="pg" type="HIDDEN" value="express">
+<table border="0" cellpadding="3" cellspacing="0" width="100%">
+<tr> 
+<td align="right"><b><font face="arial,helvetica" size="1">Nach: 
+</font></b></td>
+<td align="left" colspan="3"> 
+<input type="text" name="q" value="+ash +misty" size=30>
+&nbsp; 
+<input type="submit" value="suchen" name="submit">
+</td>
+</tr>
+<tr> 
+<td align="right" width="54"><b><font face="arial,helvetica" size="1">Sprache: 
+</font></b></td>
+<td align="left" colspan="2"> 
+<select name="what">
+<option value="german_web" SELECTED>deutsch 
+<option value="web" >allen 
+Sprachen (AltaVista) 
+<option value="da" >d&auml;nisch 
+(AltaVista) 
+<option value="en" >englisch 
+(AltaVista) 
+<option value="et" >estnisch 
+(AltaVista) 
+<option value="fi" >finnisch 
+(AltaVista) 
+<option value="fr" >franz&ouml;sisch 
+(AltaVista) 
+<option value="nl" >holl&auml;ndisch 
+(AltaVista) 
+<option value="is" >isl&auml;ndisch 
+(AltaVista) 
+<option value="it" >italienisch 
+(AltaVista) 
+<option value="lv" >lettisch 
+(AltaVista) 
+<option value="lt" >lithauisch 
+(AltaVista) 
+<option value="no" >norwegisch 
+(AltaVista) 
+<option value="pl" >polnisch 
+(AltaVista) 
+<option value="pt" >portugiesisch 
+(AltaVista) 
+<option value="ro" >rum&auml;nisch 
+(AltaVista) 
+<option value="sv" >schwedisch 
+(AltaVista) 
+<option value="es" >spanisch 
+(AltaVista) 
+<option value="cs" >tschechisch 
+(AltaVista) 
+<option value="hu" >ungarisch 
+(AltaVista) 
+</select>
+</td>
+<td rowspan="2" bgcolor="#FFFFCC"><img src="http://bilder.fireball.de/bilder/logo03.gif" alt="Fireball Logo" width="186" height="46"></td>
+</tr>
+<tr> 
+<td align="right" width="54"><b><font face="arial,helvetica" size="1">Anzeige: 
+</font></b></td>
+<td align="left"> 
+<select name="fmt">
+<option value="d" SELECTED>detail 
+<option value="." >standard 
+<option value="c" >kompakt 
+</select>
+</td>
+<td align="center"><b><font face="arial,helvetica" size="1"><a href="express_hilfe_kurz.html">Tips:</a> 
+</font></b></td>
+</tr>
+</table>
+</form>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table></td>
+<td><img src="http://bilder.fireball.de/bilder/verschiedenes/anzeige.gif" width=16 height=52 alt="Anzeige" border="0"></td>
+<td><a href="http://srv1.bannercommunity.de:8484/tagclick.cgi?tag=fb8249"><img border=0 width=100 height=120 alt=Click src="http://srv1.bannercommunity.de:8484/tagsearch.cgi?tag=fb8249&engine=fireball&suchworte=ash+misty"></a></td>
+</tr>
+</table>
+<!--- werbung --->
+<br>
+<table border="0" cellpadding="0" cellspacing="0" align="center">
+<tr>
+<td><img src="http://bilder.fireball.de/bilder/verschiedenes/anzeige.gif" width=16 height=52 alt="Anzeige" border="0"></td>
+<td><A TARGET="_new" HREF="http://www.fireball.de/af.fcg?MIval=zi_redir&mr=&URL=16975&WP=1025&PLZ=12109&BG=13896&NM=fairad%2Drota%2Dtvt%2Dfb%2D031299&SNM=468x60&MIqry2pass=on&channel=fireball"><IMG SRC="http://badservant.guj.de/cgi-object/webdriver/LO/00000001a6b7c8d90000000700000009000000ae38306acb000000000001d3ab00000000000000000000000000000000000000000000000000000000000000000000000000000000/MItypeObj/image/gif" WIDTH=468 HEIGHT=60 BORDER=0 ALT="www.fairad.de"></A><IMG SRC="http://werbung.fireball.de/cgi-bin/ziAdCount?WP=1025&KN=0&BG=13896&PLZ=12109&NM=fairad%2Drota%2Dtvt%2Dfb%2D031299&SNM=468x60" WIDTH=1 HEIGHT=1>
+<IMG SRC="/cgi-bin/vdz/CP/query-fireball-multi.fcg" WIDTH=1 HEIGHT=1>
+</td>
+</tr>
+</table>
+<!--- werbung ende---> 
+<br><table width="605" border="0" cellpadding="0" cellspacing="0" align="center">
+<tr> 
+<td valign="top">
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+<tr> 
+<td bgcolor="#FFCC00">&nbsp; </td>
+<td colspan="4" bgcolor="#FFCC00"><font size="2" face="Arial, Helvetica"><b>Rubrikensuche</b></font></td>
+<td bgcolor="#FFCC00">&nbsp; </td>
+</tr>
+<tr> 
+<td bgcolor="#FFCC00"> 
+<table width="21" border="0" cellspacing="0" cellpadding="2">
+<tr> 
+<td>&nbsp;</td>
+</tr>
+</table>
+</td>
+<td colspan="3" bgcolor="#CE0000"> 
+<table cellspacing="0" cellpadding="2">
+<tr> 
+<td> 
+<p><font color="#FFFFFF" size="1" face="Arial, Helvetica"><b>Weitere 
+Treffer in folgenden Rubriken:</b></font></p>
+</td>
+</tr>
+</table>
+</td>
+<td bgcolor="#FFFFCC" colspan="2">&nbsp;</td>
+</tr>
+<tr> 
+<td>&nbsp;</td>
+<td colspan="5" bgcolor="#F7FFD6"> 
+<table width="100%" border="0" cellspacing="0" cellpadding="2">
+<tr bgcolor="#FFFFCC"> 
+<td><tr><td></td></tr></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- empfehlungen -->
+<table border="0" cellpadding="2" cellspacing="0">
+<tr> 
+<td bgcolor="#FFCC00">&nbsp; </td>
+<td colspan="5" bgcolor="#FFCC00"><font size="2" face="Arial, Helvetica"><b>Empfehlung</b></font></td>
+</tr>
+<tr> 
+<td bgcolor="#FFCC00"> 
+<table width="21" border="0" cellspacing="0" cellpadding="2">
+<tr> 
+<td>&nbsp;</td>
+</tr>
+</table>
+</td>
+<td bgcolor="#FFFFCC" valign="top" rowspan="5"> 
+<table width="100%" border="0" cellspacing="0" cellpadding="2">
+<tr> 
+<td><font face="Arial, Helvetica" size="1">Wenn Sie Suchwörter in Kleinschreibung eingeben, findet Fireball die kleingeschriebene und die großgeschriebene Variante.</font></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr> 
+<td>&nbsp;</td>
+</tr>
+</table>
+<!-- einkaufen -->
+<table border="0" cellpadding="2" cellspacing="0">
+<tr> 
+<td bgcolor="#FFCC00">&nbsp; </td>
+<td colspan="5" bgcolor="#FFCC00"><font size="2" face="Arial, Helvetica"><b>Einkaufen</b></font></td>
+</tr>
+<tr> 
+<td bgcolor="#FFCC00"> 
+<table width="21" border="0" cellspacing="0" cellpadding="2">
+<tr> 
+<td>&nbsp;</td>
+</tr>
+</table>
+</td>
+<td colspan="5" bgcolor="#FFFFCC" valign="top" rowspan="4"> 
+<table width="100%" border="0" cellspacing="0" cellpadding="2">
+<tr><!--BOL-->
+<td><font size="1" face="Arial, Helvetica"><a href="http://adservant.guj.de/cgi-object/webdriver?MIval=zi_redir&URL=17353&BG=9517&PLZ=7932&WP=1230&NM=bol-textlink-fireball-220499&SNM=468x60&MIqry2pass=on">Hier finden Sie Bücher zu Ihrer Suchanfrage</a><IMG SRC="http://werbung.fireball.de/cgi-bin/ziAdCount?WP=1230&KN=11&BG=9517&PLZ=7932&NM=bol-textlink-fireball-220499&SNM=468x60" WIDTH=1 HEIGHT=1></font></td>
+<td><A TARGET="_top" HREF="http://adservant.guj.de/cgi-object/webdriver?MIval=zi_redir&URL=16803&WP=1231&PLZ=7934&BG=9520&NM=Fireball-horror-68x29-291199&SNM=68x29&MIqry2pass=on"><IMG SRC="http://adservant.guj.de/cgi-object/webdriver/LO/00000001a6b7c8d900000007000000090000003538306a4d000000000001d3ab00000000000000000000000000000000000000000000000000000000000000000000000000000000/MItypeObj/image/gif" WIDTH=68 HEIGHT=29 BORDER=0 ALT=""></A><IMG SRC="http://werbung.fireball.de/cgi-bin/ziAdCount?WP=1231&KN=11&BG=9520&PLZ=7934&NM=Fireball-horror-68x29-291199&SNM=68x29" WIDTH=1 HEIGHT=1></td>
+</tr>
+<tr><!--CD4YOU-->
+<td><font size="1" face="Arial, Helvetica"><a href="http://adservant.guj.de/cgi-object/webdriver?MIval=zi_redir&URL=14119&BG=9518&PLZ=7933&WP=1234&NM=Primus-cd4you-textlink-fb-220499&SNM=468x60&MIqry2pass=on">CDs zu Ihrer Musikanfrage gibt es hier</a>
+<IMG SRC="http://werbung.fireball.de/cgi-bin/ziAdCount?WP=1234&KN=11&BG=9518&PLZ=7933&NM=Primus-cd4you-textlink-fb-220499&SNM=468x60" WIDTH=1 HEIGHT=1></font></td>
+<td><A TARGET="_top" HREF="http://adservant.guj.de/cgi-object/webdriver?MIval=zi_redir&URL=15877&WP=1235&PLZ=7940&BG=9527&NM=Primus-wahnsinn-FB-68x29-131099&SNM=68x29&MIqry2pass=on"><IMG SRC="http://adservant.guj.de/cgi-object/webdriver/LO/00000001a6b7c8d9000000070000000a00001b6b38306645000000000001d3ab00000000000000000000000000000000000000000000000000000000000000000000000000000000/MItypeObj/image/gif" WIDTH=68 HEIGHT=29 BORDER=0 ALT="CDs, Videos, DVDs zu Sonderpreisen!"></A><IMG SRC="http://werbung.fireball.de/cgi-bin/ziAdCount?WP=1235&KN=11&BG=9527&PLZ=7940&NM=Primus-wahnsinn-FB-68x29-131099&SNM=68x29" WIDTH=1 HEIGHT=1></td>
+</tr>
+<tr><!--TC-->
+<td><font size="1" face="Arial, Helvetica"><a href="http://www.travelchannel.de/buchen/index.html">Reisen online buchen</a></font></td>
+<td><a href="http://www.travelchannel.de/buchen/index.html"><img src="http://bilder.fireball.de/bilder/tc_schnaeppchen.gif" width="68" height="29" border="0" alt="klick und weg !"></a></td>
+</tr>
+<!--SHOP--><!--<tr>
+<td><font size="1" face="Arial, Helvetica"><a href="l"> </a><a href="http://shop.guj.de/">Fireball 
+Kollektion </a></font></td>
+<td><a href="http://shop.guj.de/"><img src="http://bilder.fireball.de/bilder/kollektion.gif" width="68" height="29" border="0"></a></td>
+</tr>-->
+<tr><!--ABO-->
+<td><font size="1" face="Arial, Helvetica"><a href="http://abo.fireball.de/cgi-bin/AboShop.storefront?SUCHE=ash%2Bmisty">Zeitschriftenabos 
+zu Ihrer Suche</a></font></td>
+<td><a href="http://abo.fireball.de/cgi-bin/AboShop.storefront?SUCHE=ash%2Bmisty"><img src="http://bilder.fireball.de/bilder/aboshop-button.gif" width="68" height="29" border="0"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr> 
+<td>&nbsp;</td>
+</tr>
+<tr> 
+<td>&nbsp;</td>
+</tr>
+<tr> 
+<td>&nbsp;</td>
+</tr>
+<tr> 
+<td>&nbsp;</td>
+<td colspan="5" bgcolor="#FFFFCC" valign="top">&nbsp;</td>
+</tr>
+</table>
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+<tr> 
+<td bgcolor="#21639C">&nbsp; </td>
+<td colspan="5" bgcolor="#21639C"><font size="2" face="Arial, Helvetica" color="#FFFFFF"><b>Paperball</b></font></td>
+</tr>
+<tr> 
+<td bgcolor="#21639C">&nbsp; </td>
+<td colspan="5" bgcolor="#FFCC00" valign="top"> 
+<p><font size="2" face="Arial, Helvetica"></font><font face="arial, helvetica" size="1">Stellen 
+Sie Ihre persönliche<br>
+Tageszeitung zusammen. <a href="http://www.paperball.de/">Jetzt!</a></font></p>
+</td>
+</tr>
+<tr> 
+<td> 
+<table width="21" border="0" cellspacing="0" cellpadding="2">
+<tr> 
+<td>&nbsp;</td>
+</tr>
+</table>
+</td>
+<td colspan="5" bgcolor="#FFFFCC" valign="top"> 
+<table border="0" cellpadding="3" cellspacing="0" width="100%">
+<tr> 
+<td colspan="2"><font size="2" face="Arial, Helvetica"><a href="http://www.paperball.de/service/paperball.fcg?action=query&amp;pg=detail&amp;r=&amp;fmt=.&amp;d0=&amp;d1=&amp;q=%2Bash+%2Bmisty&amp;papers=all&amp;categories=all"><b>Aktuelle 
+Zeitungsartikel zu Ihrer Suche.</b></a></font></td>
+</tr>
+</table>
+</td>
+</tr>
+
+</table>
+
+</td>
+<td><table width="21" border="0" cellspacing="0" cellpadding="2">
+<tr> 
+<td>&nbsp;</td>
+</tr>
+</table></td>
+<td valign="top"> 
+<table border="0" cellpadding="2" cellspacing="0" width="400">
+<tr> 
+<td bgcolor="#CC0000" width="25">&nbsp; </td>
+<td bgcolor="#CC0000"><font face="arial,helvetica" size="2" color="#FFFFFF"><b>Suchergebnis:</b></font></td>
+<td bgcolor="#CC0000">&nbsp; </td>
+<td bgcolor="#CC0000">&nbsp; </td>
+<td width="100">&nbsp; </td>
+</tr>
+<tr> 
+<td bgcolor="#CC0000" width="25">&nbsp;</td>
+<td bgcolor="#FFCC00"><font face="Arial,Helvetica" size="1">&nbsp;Zu 
+viele Treffer? Suche <a href="detail.html">verfeinern?</a></font></td>
+<td bgcolor="#FFFFCC">&nbsp; </td>
+<td bgcolor="#FFFFCC">&nbsp; </td>
+<td bgcolor="#FFFFCC" width="100">&nbsp; </td>
+</tr>
+<tr> 
+<td bgcolor="#CC0000" width="25"> 
+<table width="21" border="0" cellspacing="0" cellpadding="2">
+<tr> 
+<td>&nbsp;</td>
+</tr>
+</table>
+</td>
+<td bgcolor="#FFFFCC" colspan="4" rowspan="2"> <font face="Arial,Helvetica" size="2"> 
+<!--- term statistics ---> <FONT FACE="Arial,Helvetica" SIZE=-1>Worth&auml;ufigkeiten: misty: 727; ash: 9753</FONT> <!--- end term statistics ---> 
+<br>
+<b><!--- hit count information --->&nbsp;Dokument 1-10 von 18 Treffern, beste Treffer zuerst. <!--- end hit count information ---> 
+</b></font> </td>
+</tr>
+<tr> 
+<td width="25">&nbsp; </td>
+</tr>
+<tr>
+<td width="25">&nbsp;</td>
+<td colspan="4">&nbsp;</td>
+</tr>
+</table>
+<!--- Teil 2 -- Ergebnisausgabe ---> 
+<table BORDER="0" CELLPADDING="2" CELLSPACING="0" WIDTH="400">
+<!--- realnames anfang ---->  
+<tr> 
+<td WIDTH="25"></td>
+<td></td>
+</tr>
+<tr> 
+<td valign="top" WIDTH="25" bgcolor="#FFCC00">&nbsp;</td>
+<td bgcolor="#FFFFCC">&nbsp;<font face="Arial,Helvetica" size=2">Weitere Treffer in der RealNames-Datenbank zu&nbsp;<b><A HREF="http://heavymetal.fireball.de:4080/fcgi/rnsContainer.fcg?action=rnsQuery&query=%2Bash+%2Bmisty&backURL=http%3A%2F%2Fwww%2Efireball%2Ede%3A80%2Fquery%2Dfireball%2Efcg%3Fwhat%3Dgerman%5Fweb%26action%3Dquery%26fmt%3Dd%26pg%3Dexpress%26q%3D%252Bash%2B%252Bmisty">+ash +misty</A></b>.</font></td>
+</tr>
+<tr> 
+<td valign="top" WIDTH="25">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+ <!--- realnames ende ---> <!--- hits ---> <TR><td valign="top" WIDTH="25" bgcolor="#CC0000"><img SRC="bilder/verschiedenes/1.gif" BORDER="0" width="25" height="1">&nbsp;</td><td bgcolor="#FFFFCC"><b><a HREF="http://jump.to/pokemon_world/"><font FACE="Arial,Helvetica" SIZE="2">Pokémon World
+</font></a></b></td></tr><tr><td valign="top" WIDTH="25"><img src="bilder/verschiedenes/1.gif" width="21" height="1"></td><td><font FACE="Arial,Helvetica" SIZE="2">It's all about Pokémon<br></font><font FACE="Arial,Helvetica" SIZE="1"><a HREF="http://jump.to/pokemon_world/">http://jump.to/pokemon_world/</a><BR><i>Gr&ouml;&szlig;e 1 K - 30.9.1999  </i><br><a href="/query-fireball.fcg?action=query&pg=express&fmt=d&r=&q=%2Bash+%2Bmisty+%2Bsite%3Ajump%2Eto&stq=1&d0=&d1=&what=german_web&dmn=de">Nur Seiten von dieser Site zeigen</a>&nbsp;|&nbsp;<a href="/query-fireball.fcg?action=query&pg=express&fmt=d&r=&q=%2Bash+%2Bmisty+%2Dsite%3Ajump%2Eto&stq=1&d0=&d1=&what=german_web&dmn=de">Keine Seiten von dieser Site zeigen</a><br><br></font></td></tr>
+
+<TR><td valign="top" WIDTH="25" bgcolor="#CC0000"><img SRC="bilder/verschiedenes/1.gif" BORDER="0" width="25" height="1">&nbsp;</td><td bgcolor="#FFFFCC"><b><a HREF="http://members.xoom.com/mysojus/anime/andere/pokemon/misty.htm"><font FACE="Arial,Helvetica" SIZE="2">Misty
+</font></a></b></td></tr><tr><td valign="top" WIDTH="25"><img src="bilder/verschiedenes/1.gif" width="21" height="1"></td><td><font FACE="Arial,Helvetica" SIZE="2">Bilder und Beschreibungen zur Serie und den einzelnen Pokemon<br></font><font FACE="Arial,Helvetica" SIZE="1"><a HREF="http://members.xoom.com/mysojus/anime/andere/pokemon/misty.htm">http://members.xoom.com/mysojus/anime/andere/pokemon/misty.htm</a><BR><i>Gr&ouml;&szlig;e 3 K - 6.10.1999  - <I>Autor:</I> Zathras - <I>Herausgeber:</I> My Sojus Homepageverband - <I>Urheberrecht:</I> Zathras - <I>Seitentyp:</I> Bild, Private Homepage - <I>Thema:</I> Anime</i><br><a href="/query-fireball.fcg?action=query&pg=express&fmt=d&r=&q=%2Bash+%2Bmisty+%2Bsite%3Amembers%2Exoom%2Ecom&stq=1&d0=&d1=&what=german_web&dmn=de">Nur Seiten von dieser Site zeigen</a>&nbsp;|&nbsp;<a href="/query-fireball.fcg?action=query&pg=express&fmt=d&r=&q=%2Bash+%2Bmisty+%2Dsite%3Amembers%2Exoom%2Ecom&stq=1&d0=&d1=&what=german_web&dmn=de">Keine Seiten von dieser Site zeigen</a><br><br></font></td></tr>
+
+<TR><td valign="top" WIDTH="25" bgcolor="#CC0000"><img SRC="bilder/verschiedenes/1.gif" BORDER="0" width="25" height="1">&nbsp;</td><td bgcolor="#FFFFCC"><b><a HREF="http://members.xoom.com/mysojus/anime/andere/pokemon/noframes.htm"><font FACE="Arial,Helvetica" SIZE="2">Zat's Pokedex
+</font></a></b></td></tr><tr><td valign="top" WIDTH="25"><img src="bilder/verschiedenes/1.gif" width="21" height="1"></td><td><font FACE="Arial,Helvetica" SIZE="2">Bilder und Beschreibungen zur Serie und den einzelnen Pokemon<br></font><font FACE="Arial,Helvetica" SIZE="1"><a HREF="http://members.xoom.com/mysojus/anime/andere/pokemon/noframes.htm">http://members.xoom.com/mysojus/anime/andere/pokemon/noframes.htm</a><BR><i>Gr&ouml;&szlig;e 9 K - 17.11.1999  - <I>Autor:</I> Zathras - <I>Herausgeber:</I> My Sojus Homepageverband - <I>Urheberrecht:</I> Zathras - <I>Seitentyp:</I> Bild, Private Homepage - <I>Thema:</I> Anime</i><br><a href="/query-fireball.fcg?action=query&pg=express&fmt=d&r=&q=%2Bash+%2Bmisty+%2Bsite%3Amembers%2Exoom%2Ecom&stq=1&d0=&d1=&what=german_web&dmn=de">Nur Seiten von dieser Site zeigen</a>&nbsp;|&nbsp;<a href="/query-fireball.fcg?action=query&pg=express&fmt=d&r=&q=%2Bash+%2Bmisty+%2Dsite%3Amembers%2Exoom%2Ecom&stq=1&d0=&d1=&what=german_web&dmn=de">Keine Seiten von dieser Site zeigen</a><br><br></font></td></tr>
+
+<TR><td valign="top" WIDTH="25" bgcolor="#CC0000"><img SRC="bilder/verschiedenes/1.gif" BORDER="0" width="25" height="1">&nbsp;</td><td bgcolor="#FFFFCC"><b><a HREF="http://members.xoom.com/mysojus/anime/andere/pokemon/index.htm"><font FACE="Arial,Helvetica" SIZE="2">Zat's Pokedex
+</font></a></b></td></tr><tr><td valign="top" WIDTH="25"><img src="bilder/verschiedenes/1.gif" width="21" height="1"></td><td><font FACE="Arial,Helvetica" SIZE="2">Bilder und Beschreibungen zur Serie und den einzelnen Pokemon<br></font><font FACE="Arial,Helvetica" SIZE="1"><a HREF="http://members.xoom.com/mysojus/anime/andere/pokemon/index.htm">http://members.xoom.com/mysojus/anime/andere/pokemon/index.htm</a><BR><i>Gr&ouml;&szlig;e 1 K - 17.11.1999  - <I>Autor:</I> Zathras - <I>Herausgeber:</I> My Sojus Homepageverband - <I>Urheberrecht:</I> Zathras - <I>Seitentyp:</I> Bild, Private Homepage - <I>Thema:</I> Anime</i><br><a href="/query-fireball.fcg?action=query&pg=express&fmt=d&r=&q=%2Bash+%2Bmisty+%2Bsite%3Amembers%2Exoom%2Ecom&stq=1&d0=&d1=&what=german_web&dmn=de">Nur Seiten von dieser Site zeigen</a>&nbsp;|&nbsp;<a href="/query-fireball.fcg?action=query&pg=express&fmt=d&r=&q=%2Bash+%2Bmisty+%2Dsite%3Amembers%2Exoom%2Ecom&stq=1&d0=&d1=&what=german_web&dmn=de">Keine Seiten von dieser Site zeigen</a><br><br></font></td></tr>
+
+<TR><td valign="top" WIDTH="25" bgcolor="#CC0000"><img SRC="bilder/verschiedenes/1.gif" BORDER="0" width="25" height="1">&nbsp;</td><td bgcolor="#FFFFCC"><b><a HREF="http://members.xoom.com/mysojus/anime/andere/pokemon/ash.htm"><font FACE="Arial,Helvetica" SIZE="2">Ash
+</font></a></b></td></tr><tr><td valign="top" WIDTH="25"><img src="bilder/verschiedenes/1.gif" width="21" height="1"></td><td><font FACE="Arial,Helvetica" SIZE="2">Bilder und Beschreibungen zur Serie und den einzelnen Pokemon<br></font><font FACE="Arial,Helvetica" SIZE="1"><a HREF="http://members.xoom.com/mysojus/anime/andere/pokemon/ash.htm">http://members.xoom.com/mysojus/anime/andere/pokemon/ash.htm</a><BR><i>Gr&ouml;&szlig;e 4 K - 19.10.1999  - <I>Autor:</I> Zathras - <I>Herausgeber:</I> My Sojus Homepageverband - <I>Urheberrecht:</I> Zathras - <I>Seitentyp:</I> Bild, Private Homepage - <I>Thema:</I> Anime</i><br><a href="/query-fireball.fcg?action=query&pg=express&fmt=d&r=&q=%2Bash+%2Bmisty+%2Bsite%3Amembers%2Exoom%2Ecom&stq=1&d0=&d1=&what=german_web&dmn=de">Nur Seiten von dieser Site zeigen</a>&nbsp;|&nbsp;<a href="/query-fireball.fcg?action=query&pg=express&fmt=d&r=&q=%2Bash+%2Bmisty+%2Dsite%3Amembers%2Exoom%2Ecom&stq=1&d0=&d1=&what=german_web&dmn=de">Keine Seiten von dieser Site zeigen</a><br><br></font></td></tr>
+
+<TR><td valign="top" WIDTH="25" bgcolor="#CC0000"><img SRC="bilder/verschiedenes/1.gif" BORDER="0" width="25" height="1">&nbsp;</td><td bgcolor="#FFFFCC"><b><a HREF="http://www.charmander-pokemons.de/presse.html"><font FACE="Arial,Helvetica" SIZE="2">Charmander-Pokémons.de
+</font></a></b></td></tr><tr><td valign="top" WIDTH="25"><img src="bilder/verschiedenes/1.gif" width="21" height="1"></td><td><font FACE="Arial,Helvetica" SIZE="2">Charmander-Pokémons.de<br></font><font FACE="Arial,Helvetica" SIZE="1"><a HREF="http://www.charmander-pokemons.de/presse.html">http://www.charmander-pokemons.de/presse.html</a><BR><i>Gr&ouml;&szlig;e 59 K - 22.11.1999  - <I>Herausgeber:</I> GERAnet.de Internet-Treffpunkt Pietsch &amp; Roch OHG - <I>Urheberrecht:</I> GERAnet.de Internet-Treffpunkt Pietsch &amp; Roch OHG - <I>Seitentyp:</I> Link-Liste, Produktinfo - <I>Thema:</I> Bildung, Kultur, Spiel, Spass, Fun, Kinder, Fanpage,  - <I>Zielgruppe:</I> Anfänger, Azubis, Erwachsene, Experten, Fans, Fortgeschrittene,</i><br><a href="/query-fireball.fcg?action=query&pg=express&fmt=d&r=&q=%2Bash+%2Bmisty+%2Bsite%3Awww%2Echarmander%2Dpokemons%2Ede&stq=1&d0=&d1=&what=german_web&dmn=de">Nur Seiten von dieser Site zeigen</a>&nbsp;|&nbsp;<a href="/query-fireball.fcg?action=query&pg=express&fmt=d&r=&q=%2Bash+%2Bmisty+%2Dsite%3Awww%2Echarmander%2Dpokemons%2Ede&stq=1&d0=&d1=&what=german_web&dmn=de">Keine Seiten von dieser Site zeigen</a><br><br></font></td></tr>
+
+<TR><td valign="top" WIDTH="25" bgcolor="#CC0000"><img SRC="bilder/verschiedenes/1.gif" BORDER="0" width="25" height="1">&nbsp;</td><td bgcolor="#FFFFCC"><b><a HREF="http://www.playthegame.de/news/september/pokemoncharakter.htm"><font FACE="Arial,Helvetica" SIZE="2">Pokémon - Die Charaktere aus der Pokémon-Welt
+</font></a></b></td></tr><tr><td valign="top" WIDTH="25"><img src="bilder/verschiedenes/1.gif" width="21" height="1"></td><td><font FACE="Arial,Helvetica" SIZE="2">play the game - Die Spieleseite fuer Computerspiele, Konsolenspiele und Brettspiele<br></font><font FACE="Arial,Helvetica" SIZE="1"><a HREF="http://www.playthegame.de/news/september/pokemoncharakter.htm">http://www.playthegame.de/news/september/pokemoncharakter.htm</a><BR><i>Gr&ouml;&szlig;e 8 K - 19.9.1999  </i><br><a href="/query-fireball.fcg?action=query&pg=express&fmt=d&r=&q=%2Bash+%2Bmisty+%2Bsite%3Awww%2Eplaythegame%2Ede&stq=1&d0=&d1=&what=german_web&dmn=de">Nur Seiten von dieser Site zeigen</a>&nbsp;|&nbsp;<a href="/query-fireball.fcg?action=query&pg=express&fmt=d&r=&q=%2Bash+%2Bmisty+%2Dsite%3Awww%2Eplaythegame%2Ede&stq=1&d0=&d1=&what=german_web&dmn=de">Keine Seiten von dieser Site zeigen</a><br><br></font></td></tr>
+
+<TR><td valign="top" WIDTH="25" bgcolor="#CC0000"><img SRC="bilder/verschiedenes/1.gif" BORDER="0" width="25" height="1">&nbsp;</td><td bgcolor="#FFFFCC"><b><a HREF="http://www.mag64.de/pokemon5.htm"><font FACE="Arial,Helvetica" SIZE="2">Mag64 
+</font></a></b></td></tr><tr><td valign="top" WIDTH="25"><img src="bilder/verschiedenes/1.gif" width="21" height="1"></td><td><font FACE="Arial,Helvetica" SIZE="2">Die Charaktere aus der Pokemon Welt   Die Pokemon Titel leben von ihrer Vielzahl interessanter Charaktere. Dazu  gehören Personen wie Professor Eich und die verschiedenen Pokemon Trainer -  und natürlich die 150 Pokemon selbst.   Ash   Er ist der He<br></font><font FACE="Arial,Helvetica" SIZE="1"><a HREF="http://www.mag64.de/pokemon5.htm">http://www.mag64.de/pokemon5.htm</a><BR><i>Gr&ouml;&szlig;e 3 K - 26.8.1999  </i><br><a href="/query-fireball.fcg?action=query&pg=express&fmt=d&r=&q=%2Bash+%2Bmisty+%2Bsite%3Awww%2Emag64%2Ede&stq=1&d0=&d1=&what=german_web&dmn=de">Nur Seiten von dieser Site zeigen</a>&nbsp;|&nbsp;<a href="/query-fireball.fcg?action=query&pg=express&fmt=d&r=&q=%2Bash+%2Bmisty+%2Dsite%3Awww%2Emag64%2Ede&stq=1&d0=&d1=&what=german_web&dmn=de">Keine Seiten von dieser Site zeigen</a><br><br></font></td></tr>
+
+<TR><td valign="top" WIDTH="25" bgcolor="#CC0000"><img SRC="bilder/verschiedenes/1.gif" BORDER="0" width="25" height="1">&nbsp;</td><td bgcolor="#FFFFCC"><b><a HREF="http://www.wiso.uni-dortmund.de/lsfg/mik/coll/e/trade/me_ed.htm"><font FACE="Arial,Helvetica" SIZE="2">METW     
+</font></a></b></td></tr><tr><td valign="top" WIDTH="25"><img src="bilder/verschiedenes/1.gif" width="21" height="1"></td><td><font FACE="Arial,Helvetica" SIZE="2">AFriend or Three Ein Freund oder Drei  A Little Gold Ring Kleiner Goldring  A Malady Without Healing Unheilbare Krankheit  A Nice Place to Hide Ein hübsches Versteck  A Short Rest Kurze Rast  Abductor Entführer  Adamant Helmet Helm aus Adamant  Adra<br></font><font FACE="Arial,Helvetica" SIZE="1"><a HREF="http://www.wiso.uni-dortmund.de/lsfg/mik/coll/e/trade/me_ed.htm">http://www.wiso.uni-dortmund.de/lsfg/mik/coll/e/trade/me_ed.htm</a><BR><i>Gr&ouml;&szlig;e 60 K - 26.3.1998  </i><br><a href="/query-fireball.fcg?action=query&pg=express&fmt=d&r=&q=%2Bash+%2Bmisty+%2Bsite%3Awww%2Ewiso%2Euni%2Ddortmund%2Ede&stq=1&d0=&d1=&what=german_web&dmn=de">Nur Seiten von dieser Site zeigen</a>&nbsp;|&nbsp;<a href="/query-fireball.fcg?action=query&pg=express&fmt=d&r=&q=%2Bash+%2Bmisty+%2Dsite%3Awww%2Ewiso%2Euni%2Ddortmund%2Ede&stq=1&d0=&d1=&what=german_web&dmn=de">Keine Seiten von dieser Site zeigen</a><br><br></font></td></tr>
+
+<TR><td valign="top" WIDTH="25" bgcolor="#CC0000"><img SRC="bilder/verschiedenes/1.gif" BORDER="0" width="25" height="1">&nbsp;</td><td bgcolor="#FFFFCC"><b><a HREF="http://www.schwinni.de/Pornstarindex.html"><font FACE="Arial,Helvetica" SIZE="2">100% Free Pornstars & Hardcoregallerys
+</font></a></b></td></tr><tr><td valign="top" WIDTH="25"><img src="bilder/verschiedenes/1.gif" width="21" height="1"></td><td><font FACE="Arial,Helvetica" SIZE="2">Pornstars 60.000 Free Pornstar & Supermodelpictures<br></font><font FACE="Arial,Helvetica" SIZE="1"><a HREF="http://www.schwinni.de/Pornstarindex.html">http://www.schwinni.de/Pornstarindex.html</a><BR><i>Gr&ouml;&szlig;e 27 K - 19.11.1999  - <I>Seitentyp:</I> Sexpictures,Hardcoregallerys, - <I>Thema:</I> Pornstars,Hardcore, - <I>Zielgruppe:</I> Hardcore/only for Adults</i><br><a href="/query-fireball.fcg?action=query&pg=express&fmt=d&r=&q=%2Bash+%2Bmisty+%2Bsite%3Awww%2Eschwinni%2Ede&stq=1&d0=&d1=&what=german_web&dmn=de">Nur Seiten von dieser Site zeigen</a>&nbsp;|&nbsp;<a href="/query-fireball.fcg?action=query&pg=express&fmt=d&r=&q=%2Bash+%2Bmisty+%2Dsite%3Awww%2Eschwinni%2Ede&stq=1&d0=&d1=&what=german_web&dmn=de">Keine Seiten von dieser Site zeigen</a><br><br></font></td></tr>
+
+ 
+<!--- end hits ---> 
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="400">
+<tr> 
+<td width="25"></td>
+<td colspan="4">&nbsp; </td>
+<td>&nbsp; </td>
+</tr>
+<tr> 
+<td width="25">&nbsp; </td>
+<td bgcolor="#FFFFCC" colspan="5" rowspan="2"> 
+<table border="0" width="471">
+<tr><td width="25">&nbsp; </td><td bgcolor="#FFFFCC" colspan="5" rowspan="2"><font FACE="Arial,Helvetica" SIZE="2"><B> [</B><B> 1 </B> <A HREF="/query-fireball.fcg?action=query&pg=express&fmt=d&r=&q=%2Bash+%2Bmisty&stq=11&d0=&d1=&what=german_web&dmn=de" TARGET=_top>2</A> <B>]</B></font></td></tr>
+ 
+</table>
+</td>
+</tr>
+<tr> 
+<td width="25" bgcolor="#CC0000">
+<table width="21" border="0" cellspacing="0" cellpadding="2">
+<tr> 
+<td>&nbsp;</td>
+</tr>
+</table>
+&nbsp; </td>
+</tr>
+<tr> 
+<td width="25" bgcolor="#CC0000">&nbsp; </td>
+<td bgcolor="#FFCC00"><font face="arial,helvetica" size="2"><b>&nbsp;&nbsp;<a href="#top">Seitenanfang</a></b></font></td>
+<td bgcolor="#FFCC00"><font face="arial,helvetica" size="2"><b>&nbsp;</b></font></td>
+<td bgcolor="#FFCC00"><font face="arial,helvetica" size="2"><b><A HREF="/query-fireball.fcg?action=query&pg=express&fmt=d&r=&q=%2Bash+%2Bmisty&stq=11&d0=&d1=&what=german_web&dmn=de" TARGET=_top>n&auml;chste Seite</A> 
+</b></font></td>
+<td bgcolor="#FFFFCC">&nbsp; </td>
+<td bgcolor="#FFFFCC">&nbsp; </td>
+</tr>
+<tr> 
+<td width="25" bgcolor="#CC0000">
+<table width="21" border="0" cellspacing="0" cellpadding="2">
+<tr> 
+<td>&nbsp;</td>
+</tr>
+</table>
+</td>
+<td bgcolor="#CC0000" colspan="3">&nbsp; </td>
+<td bgcolor="#CC0000">&nbsp; </td>
+<td>&nbsp; </td>
+</tr>
+</table>
+<table border="0" cellpadding="2" cellspacing="0" align="right">
+<tr>
+<td>
+<table width="21" border="0" cellspacing="0" cellpadding="2">
+<tr> 
+<td>&nbsp;</td>
+</tr>
+</table>
+</td>
+<td colspan="3">&nbsp; </td>
+<td>&nbsp; </td>
+</tr>
+<tr> 
+<td width="25">&nbsp; </td>
+<td rowspan="2" bgcolor="#FFFFCC" colspan="3" align="right"> 
+<table border="0" cellspacing="0" cellpadding="4">
+<tr valign="top" align="right"> 
+<td nowrap> 
+<div align="right"> 
+<p><font size="2" face="Arial, Helvetica"><a href="http://altavista.software.digital.com/search/">Powered 
+by</a></font><a href="http://www.compaq.de/produkte/alphaserver/"><img src="http://bilder.fireball.de/bilder/alta.gif" width="45" height="17" hspace="2" border="0"><font size="2" face="Arial, Helvetica"><br>
+Search Software <br>
+und <br>
+Compaq AlphaServer</font></a></p>
+</div>
+</td>
+<td nowrap><font size="2" face="Arial, Helvetica"><b><a href="url_melden.html">URL 
+melden</a></b></font><font face="Arial,Helvetica" size="1"> 
+<br>
+</font><font size="2" face="Arial, Helvetica"><a href="impressum.html">Impressum</a><br>
+<a href="kontakt.html">Kontakt<br>
+</a></font><font size="2" face="Arial, Helvetica"><a href="werben.html"> 
+Werben</a><br>
+<a href="nutzungsordnung.html">Nutzungs-<br>
+ordnung</a></font></td>
+<td nowrap> 
+<div align="right"> 
+<p><font size="2" face="Arial, Helvetica"><b><a href="express_hilfe.html">Fireball 
+Hilfe</a><br>
+</b><a href="express.html">Express Suche</a><br>
+<a href="detail.html">Detail Suche</a><b><br>
+</b></font><font size="2" face="Arial, Helvetica"><a href="katalog.html">Rubriken 
+Suche</a><br>
+<a href="intern.html">Info &amp; Tools</a><br>
+<a href="guestbook-fireball.fcg">G&auml;stebuch</a></font></p>
+</div>
+</td>
+</tr>
+</table>
+<!-- disclaimer innen --> </td>
+<td>&nbsp; </td>
+</tr>
+<tr> 
+<td width="25">&nbsp; </td>
+<td bgcolor="#CC0000">
+<table width="21" border="0" cellspacing="0" cellpadding="2">
+<tr> 
+<td>&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr> 
+<td width="25">&nbsp; </td>
+<td bgcolor="#FFFFCC">&nbsp; </td>
+<td bgcolor="#FFFFCC">&nbsp; </td>
+<td bgcolor="#FFCC00" align="right"><font face="arial,helvetica" size="1">© 
+<a
+href="http://www.ems.guj.de">G+J Electronic Media Service<br>
+</a> Hamburg 1997/99</font></td>
+<td bgcolor="#CC0000">&nbsp; </td>
+</tr>
+<tr> 
+<td width="25">&nbsp; </td>
+<td align="right">&nbsp; </td>
+<td bgcolor="#CC0000">&nbsp; </td>
+<td bgcolor="#CC0000" align="right"><font face="arial,helvetica" size="2" color="#FFFFFF"><b>Fireball</b></font></td>
+<td bgcolor="#CC0000">&nbsp; </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</center>
+</body>
+</html>
+

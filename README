@@ -3,11 +3,11 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.07?  (1999-12-10)
+WHAT IS NEW IN WWW::Search 2.08?  (1999-12-24)
 ----------------------------------------------
 overview:
  * bug fixes for several backends (as usual)
- * 'make test' no longer does all the downloading/parsing tests
+ * two backends retired
 
 See the file ChangeLog for details.
 
@@ -43,14 +43,14 @@ release the current backend status is:
 AltaVista		working
 AltaVista::AdvancedNews	not working
 AltaVista::AdvancedWeb	not working
-AltaVista::Careers	working (not in test suite)
+AltaVista::Careers	working? (not in test suite)
 AltaVista::Intranet	working
 AltaVista::News		not working
 AltaVista::Web		working
 AOL::Classifieds::Employment    working (not in test suite)
 Crawler			partially working?
 Deja/Dejanews		working
-Dice                    working (not in test suite)
+Dice                    working? (not in test suite)
 Excite			working
 Excite::News		working
 ExciteForWebServers	not working
@@ -59,7 +59,7 @@ FolioViews		working
 Google  		working
 Gopher			not working? (not in test suite)
 GoTo                    working
-HeadHunter              working (not in test suite)
+HeadHunter              working? (not in test suite)
 HotBot			working
 HotFiles		working
 Infoseek		working
@@ -69,20 +69,19 @@ Infoseek::News		working
 Infoseek::Web		working
 Livelink		not working? (not in test suite)
 LookSmart		working
-Lycos			working
-Lycos::Pages		working
+Lycos::Pages		defunct
 Lycos::Sites		working
 Magellan		working
 MetaCrawler             working
 Metapedia		working? (not in test suite)
-Monster                 working (not in test suite)
+Monster                 working? (not in test suite)
 MSIndexServer		not working?
 NetFind                 working
 NorthernLight		working
 Null			working
 OpenDirectory           working
 PLweb			not working
-Profusion		working
+Profusion               defunct
 Search97		not working
 SFgate			working
 Simple			not working? (not in test suite)
@@ -90,7 +89,7 @@ Snap			working
 Verity			not working (not in test suite)
 WebCrawler		working
 Yahoo			working
-Yahoo::Classifieds::Employment  working (not in test suite)
+Yahoo::Classifieds::Employment  working? (not in test suite)
 ZDNet			working
 
 ``Partially working'' indicates that some tests passed and some failed.
@@ -158,7 +157,6 @@ after unpacking the archive (and after installing all the prerequisite
 modules):
 
     perl Makefile.PL
-    make
     make test
     make install
 

@@ -1,235 +1,170 @@
 <html>
-<head><title>Google Search: +LSAM +replication</title></head>
+<head><title>Google Search: +LSAM +replication</title>
+<style><!--
+body {font-family: arial,sans-serif;}
+div.nav {margin-top: 1ex;}
+div.nav A,span.nav {font-size: 8pt; font-family: arial,sans-serif;}
+div.nav A {color: black;}
+//--></style>
+</head>
 <body bgcolor=#ffffff text=#000000 link=#0000ee vlink=#ff0000 alink=#000099>
-<form method=GET action=/search><table cellpadding=0 cellspacing=0><tr><td valign=top><a href=/><img border=0 src=/images/Title_Left.gif width=200 height=78 alt="Google "></a></td><td width=5>&nbsp;</td><td align=left><br>
+<form method=GET action=/search><table cellpadding=0 cellspacing=0 width=100%><tr><td valign=top><a href=/><img border=0 src=/images/Title_Left.gif width=200 height=78 alt="Google "></a></td><td width=5>&nbsp;</td><td align=left><font face=arial,sans-serif><br>
 <INPUT type=text name=q size=31 maxlength=256 value="+LSAM +replication"><SELECT name=num><option value=10>10 results<option value=30>30 results<option value=100 SELECTED>100 results</SELECT>
-<br><INPUT type=submit name=sa VALUE="Google Search"><INPUT type=submit name=sa VALUE="I'm feeling lucky"></td></tr></table>
-<hr size=1><center><font color=darkgray>Estimated <font color=black><b>44</b></font> matches for <font color=black><b>+LSAM +replication</b></font><br><font color=green>In general, you do not need to use <b>+</b> in Google. Google does an AND search by default, ignoring only very common words (stopwords).  We will let you know when you use stopwords in your query and will give you the opportunity to use <b>+</b> at that time. Since you used a <b>+</b> in front of a non-stopword, we have ignored all the plus signs in your query.<br></font>Showing results <font color=black>1-44</font>,
-Search took 1.27 seconds<br></font><A HREF=/help.html#interpret>How do I interpret the results?</A></center><br></form>
-
-<p><A HREF=http://www.isi.edu/lsam/about/replication.html>About LSAM Replication</A>
-<font size=-1><br>...About <b>LSAM</b> <b>Replication</b> Why <b>Replication</b>? Although the Web is...<br>
+<nobr><INPUT type=submit name=sa VALUE="Google Search"> <INPUT type=submit name=sa VALUE="I'm feeling lucky"></nobr></font></td><td align=right valign=top><font face=arial,sans-serif><A HREF=/help.html>Help</A></font></td></tr></form>
+</table>
+<hr size=1>
+<center><font color=#6F6F6F size=-1>Showing results <b>1-54</b> of approximately <b>54</b> for <b>+LSAM +replication</b>.
+Search took <b>0.47</b> seconds.<br><font color=green>In general, you do not need to use <b>+</b> in Google. Google does an AND search by default, ignoring only very common words (stopwords).  We will let you know when you use stopwords in your query and will give you the opportunity to use <b>+</b> at that time. Since you used a <b>+</b> in front of a non-stopword, we have ignored all the plus signs in your query.<br></font><br></font></center>
+<p><A HREF=http://www.isi.edu/lsam/about/replication.html>About LSAM Replication</A><font size=-1><br>...About <b>LSAM</b> <b>Replication</b> Why <b>Replication</b>? Although the Web is...<br>
 ...bottleneck. What To Do? <b>LSAM</b> is investigating web <b>replication</b>...
-<br><font color=green>www.isi.edu/lsam/about/replication.html 
-<A HREF=/search?q=cache:1374226&dq=cache:www.isi.edu/lsam/about/replication.html>Cached (4k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:1374226&dq=related:www.isi.edu/lsam/about/replication.html>GoogleScout</A></font></font><BLOCKQUOTE>
-<p><A HREF=http://www.isi.edu/lsam/>Large-Scale Active Middleware</A>
-<font size=-1><br>...Active Middleware About <b>LSAM</b> The <b>LSAM</b> Proxy Cache uses multicast...<br>
+<br><font color=green>www.isi.edu/lsam/about/replication.html -  <A HREF=/search?q=cache:www.isi.edu/lsam/about/replication.html>Cached: 5k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/lsam/about/replication.html>GoogleScout</A></font></font><BLOCKQUOTE>
+<p><A HREF=http://www.isi.edu/~johnh/SOFTWARE/WWW_SEARCH_ALTAVISTA/AltaVista.pm-2.0.txt>www.isi.edu/~johnh/SOFTWARE/WWW_SEARCH_ALTAVISTA/AltaVista.pm-2.0.txt</A><font size=-1><br>...hits # ./altavista.pl '"<b>lsam</b> <b>replication</b>"' --- single page return...
+<br><font color=green> <A HREF=/search?q=cache:www.isi.edu/~johnh/SOFTWARE/WWW_SEARCH_ALTAVISTA/AltaVista.pm-2.0.txt>Cached: 10k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/~johnh/SOFTWARE/WWW_SEARCH_ALTAVISTA/AltaVista.pm-2.0.txt>GoogleScout</A></font></font>
+<p><A HREF=http://www.isi.edu/~johnh/SOFTWARE/WWW_SEARCH_ALTAVISTA/AltaVista.pm-2.4.txt>www.isi.edu/~johnh/SOFTWARE/WWW_SEARCH_ALTAVISTA/AltaVista.pm-2.4.txt</A><font size=-1><br>...hits # ./altavista.pl '"<b>lsam</b> <b>replication</b>"' --- single page return...
+<br><font color=green> <A HREF=/search?q=cache:www.isi.edu/~johnh/SOFTWARE/WWW_SEARCH_ALTAVISTA/AltaVista.pm-2.4.txt>Cached: 11k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/~johnh/SOFTWARE/WWW_SEARCH_ALTAVISTA/AltaVista.pm-2.4.txt>GoogleScout</A></font></font>
+<p><A HREF=http://www.isi.edu/~johnh/SOFTWARE/WWW_SEARCH_ALTAVISTA/AltaVista.pm-2.5.txt>www.isi.edu/~johnh/SOFTWARE/WWW_SEARCH_ALTAVISTA/AltaVista.pm-2.5.txt</A><font size=-1><br>...hits # ./altavista.pl '"<b>lsam</b> <b>replication</b>"' --- single page return...
+<br><font color=green> <A HREF=/search?q=cache:www.isi.edu/~johnh/SOFTWARE/WWW_SEARCH_ALTAVISTA/AltaVista.pm-2.5.txt>Cached: 11k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/~johnh/SOFTWARE/WWW_SEARCH_ALTAVISTA/AltaVista.pm-2.5.txt>GoogleScout</A></font></font>
+<p><A HREF=http://www.isi.edu/lsam/>Large-Scale Active Middleware</A><font size=-1><br>...Active Middleware About <b>LSAM</b> The <b>LSAM</b> Proxy Cache uses multicast...<br>
 ...quick look at the channel architecture <b>LSAM</b> Proxy Cache (LPC) (software...
-<br><font color=green>www.isi.edu/lsam/ 
-<A HREF=/search?q=cache:1402044&dq=cache:www.isi.edu/lsam/>Cached (3k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:1402044&dq=related:www.isi.edu/lsam/>GoogleScout</A></font></font>
-<p><A HREF=http://www.isi.edu/lsam/people.html>LSAM People</A>
-<font size=-1><br>... <b>LSAM</b> People <b>LSAM</b> Researchers: Joe Touch. Project Leader....<br>
-...issues. Earlier work focused on <b>replication</b> and transport performance...
-<br><font color=green>www.isi.edu/lsam/people.html 
-<A HREF=/search?q=cache:11889590&dq=cache:www.isi.edu/lsam/people.html>Cached (3k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:11889590&dq=related:www.isi.edu/lsam/people.html>GoogleScout</A></font></font>
-<p><A HREF=http://www.isi.edu/lsam/about/>About LSAM</A>
-<font size=-1><br>...architecture of the current <b>LSAM</b> proxy. <b>Replication</b> Supports copy...<br>
-...About <b>LSAM</b> What is <b>LSAM</b> <b>LSAM</b> is developing middleware...
-<br><font color=green>www.isi.edu/lsam/about/ 
-<A HREF=/search?q=cache:12327391&dq=cache:www.isi.edu/lsam/about/>Cached (9k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:12327391&dq=related:www.isi.edu/lsam/about/>GoogleScout</A></font></font>
-<p><A HREF=http://www.isi.edu/div7/cities/publications/wc98/lsam-arch.html>Abstract </A>
-<font size=-1><br>...The <b>LSAM</b> Proxy Cache - a Multicast Distributed Virtual Cache Joe Touch...<br>
+<br><font color=green>www.isi.edu/lsam/ -  <A HREF=/search?q=cache:www.isi.edu/lsam/>Cached: 4k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/lsam/>GoogleScout</A></font></font>
+<p><A HREF=http://www.isi.edu/lsam/publications/wc98/lsam-arch.html>Abstract </A><font size=-1><br>...The <b>LSAM</b> Proxy Cache - a Multicast Distributed Virtual Cache Joe Touch...<br>
 ...version of this file) Abstract 1` The <b>LSAM</b> Proxy is a multicast...
-<br><font color=green>www.isi.edu/div7/cities/publications/wc98/lsam-arch.html 
-<A HREF=/search?q=cache:5005932&dq=cache:www.isi.edu/div7/cities/publications/wc98/lsam-arch.html>Cached (27k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:5005932&dq=related:www.isi.edu/div7/cities/publications/wc98/lsam-arch.html>GoogleScout</A></font></font>
-<p><A HREF=http://www.isi.edu/lsam/about/security.html>LSAM Security </A>
-<font size=-1><br>... <b>LSAM</b> Security THE TECHNOLOGIES provided in <b>LSAM</b> represent one...<br>
+<br><font color=green>www.isi.edu/lsam/publications/wc98/lsam-arch.html -  <A HREF=/search?q=cache:www.isi.edu/lsam/publications/wc98/lsam-arch.html>Cached: 28k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/lsam/publications/wc98/lsam-arch.html>GoogleScout</A></font></font>
+<p><A HREF=http://www.isi.edu/lsam/people.html>LSAM People</A><font size=-1><br>... <b>LSAM</b> People <b>LSAM</b> Researchers: Joe Touch. Project Leader....<br>
+...issues. Earlier work focused on <b>replication</b> and transport performance...
+<br><font color=green>www.isi.edu/lsam/people.html -  <A HREF=/search?q=cache:www.isi.edu/lsam/people.html>Cached: 4k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/lsam/people.html>GoogleScout</A></font></font>
+<p><A HREF=http://www.isi.edu/lsam/about/>About LSAM</A><font size=-1><br>...architecture of the current <b>LSAM</b> proxy. <b>Replication</b> Supports copy...<br>
+...About <b>LSAM</b> What is <b>LSAM</b> <b>LSAM</b> is developing middleware...
+<br><font color=green>www.isi.edu/lsam/about/ -  <A HREF=/search?q=cache:www.isi.edu/lsam/about/>Cached: 10k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/lsam/about/>GoogleScout</A></font></font>
+<p><A HREF=http://www.isi.edu/lsam/about/security.html>LSAM Security </A><font size=-1><br>... <b>LSAM</b> Security THE TECHNOLOGIES provided in <b>LSAM</b> represent one...<br>
 ...machine communication takes place. <b>LSAM</b> will implement several...
-<br><font color=green>www.isi.edu/lsam/about/security.html 
-<A HREF=/search?q=cache:12482591&dq=cache:www.isi.edu/lsam/about/security.html>Cached (8k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:12482591&dq=related:www.isi.edu/lsam/about/security.html>GoogleScout</A></font></font>
-<p><A HREF=http://www.isi.edu/~johnh/WORK/>John Heidemann's Work</A>
-<font size=-1><br>...ISI From 1995-1998 I worked on the <b>LSAM</b> project. <b>LSAM</b> looked at a...<br>
+<br><font color=green>www.isi.edu/lsam/about/security.html -  <A HREF=/search?q=cache:www.isi.edu/lsam/about/security.html>Cached: 9k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/lsam/about/security.html>GoogleScout</A></font></font>
+<p><A HREF=http://www.isi.edu/~johnh/WORK/>John Heidemann's Work</A><font size=-1><br>...ISI From 1995-1998 I worked on the <b>LSAM</b> project. <b>LSAM</b> looked at a...<br>
 ...unexpected P-HTTP/TCP interactions web <b>replication</b> issues (how can you...
-<br><font color=green>www.isi.edu/~johnh/WORK/ 
-<A HREF=/search?q=cache:449258&dq=cache:www.isi.edu/~johnh/WORK/>Cached (7k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:449258&dq=related:www.isi.edu/~johnh/WORK/>GoogleScout</A></font></font>
-<p><A HREF=http://www.isi.edu/touch/pubs/cnis98/>Abstract ,</A>
-<font size=-1><br>...The <b>LSAM</b> Proxy Cache - a Multicast Distributed Virtual Cache Joe Touch...<br>
+<br><font color=green>www.isi.edu/~johnh/WORK/ -  <A HREF=/search?q=cache:www.isi.edu/~johnh/WORK/>Cached: 8k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/~johnh/WORK/>GoogleScout</A></font></font>
+<p><A HREF=http://www.isi.edu/touch/pubs/cnis98/>Abstract ,</A><font size=-1><br>...The <b>LSAM</b> Proxy Cache - a Multicast Distributed Virtual Cache Joe Touch...<br>
 ...for postscript. Abstract 1 , 2 The <b>LSAM</b> Proxy Cache (LPC) is a multicast...
-<br><font color=green>www.isi.edu/touch/pubs/cnis98/ 
-<A HREF=/search?q=cache:17334680&dq=cache:www.isi.edu/touch/pubs/cnis98/>Cached (37k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:17334680&dq=related:www.isi.edu/touch/pubs/cnis98/>GoogleScout</A></font></font>
-<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19961016.html>Search results for caching as of 10/16/1996 17:24:16 </A>
-<font size=-1><br>...over nettet (30 - Propagation, <b>Replication</b> and Caching on the Web:...<br>
-...by James Burton. Propagation, <b>Replication</b> and Caching. This area...
-<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19961016.html 
-<A HREF=/search?q=cache:52462228&dq=cache:www.isi.edu/lsam/tools/autosearch/caching/19961016.html>Cached (56k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:52462228&dq=related:www.isi.edu/lsam/tools/autosearch/caching/19961016.html>GoogleScout</A></font></font>
-<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19961112.html>Search results for caching as of 11/12/1996 08:15:40 </A>
-<font size=-1><br>...Webutvikling 1996, caching Propagation, <b>Replication</b> and Caching on the...<br>
-...Caching is Hard white paper on <b>replication</b>/caching/authentication for IAB...
-<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19961112.html 
-<A HREF=/search?q=cache:52486854&dq=cache:www.isi.edu/lsam/tools/autosearch/caching/19961112.html>Cached (69k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:52486854&dq=related:www.isi.edu/lsam/tools/autosearch/caching/19961112.html>GoogleScout</A></font></font>
-<p><A HREF=http://www.isi.edu/~touch/pubs/>Joe Touch - Publications (chronological)</A>
-<font size=-1><br>...Computer, Nov. 1998, pp. 46-52. "The <b>LSAM</b> Proxy Cache - a Multicast...<br>
+<br><font color=green>www.isi.edu/touch/pubs/cnis98/ -  <A HREF=/search?q=cache:www.isi.edu/touch/pubs/cnis98/>Cached: 38k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/touch/pubs/cnis98/>GoogleScout</A></font></font>
+<p><A HREF=http://www.isi.edu/ib/>About IB</A><font size=-1><br>...as supporting mechanisms for <b>replication</b> in support of reliability (as...
+<br><font color=green>www.isi.edu/ib/ -  <A HREF=/search?q=cache:www.isi.edu/ib/>Cached: 4k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/ib/>GoogleScout</A></font></font>
+<p><A HREF=http://www.isi.edu/div7/ib/discussion.html>IB Discussion</A><font size=-1><br>...requiring the (small) cost of disk <b>replication</b> or the (large) cost of...
+<br><font color=green>www.isi.edu/div7/ib/discussion.html -  <A HREF=/search?q=cache:www.isi.edu/div7/ib/discussion.html>Cached: 6k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/div7/ib/discussion.html>GoogleScout</A></font></font>
+<p><A HREF=http://www.isi.edu/touch/pubs/>Joe Touch - Publications (chronological)</A><font size=-1><br>...Computer, Nov. 1998, pp. 46-52. "The <b>LSAM</b> Proxy Cache - a Multicast...<br>
 ...web push using interest-groups: the <b>LSAM</b> Proxy Cache (LPC)" J. Touch,...
-<br><font color=green>www.isi.edu/~touch/pubs/ 
-<A HREF=/search?q=cache:3849611&dq=cache:www.isi.edu/~touch/pubs/>Cached (16k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:3849611&dq=related:www.isi.edu/~touch/pubs/>GoogleScout</A></font></font>
-<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19970414.html>Search results for caching as of 04/14/1997 03:00:11 </A>
-<font size=-1><br>...size 14K - 18 May 95 Caching and <b>Replication</b> - the Problem Caching and...<br>
-...futher define the propogation, <b>replication</b> and chaching activity area,...
-<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19970414.html 
-<A HREF=/search?q=cache:52626494&dq=cache:www.isi.edu/lsam/tools/autosearch/caching/19970414.html>Cached (90k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:52626494&dq=related:www.isi.edu/lsam/tools/autosearch/caching/19970414.html>GoogleScout</A></font></font>
-<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19970623.html>Search results for caching as of 06/23/1997 03:00:13 </A>
-<font size=-1><br>...size 5K - 28.Nov.94 - English <b>Replication</b> and Caching Position Statement...<br>
-...WWW Caching Service Caching and <b>Replication</b> - the Problem LATNET Caching...
-<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19970623.html 
-<A HREF=/search?q=cache:52669006&dq=cache:www.isi.edu/lsam/tools/autosearch/caching/19970623.html>Cached (87k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:52669006&dq=related:www.isi.edu/lsam/tools/autosearch/caching/19970623.html>GoogleScout</A></font></font>
-<p><A HREF=http://www.isi.edu/~johnh/PAPERS/chronological.html>Papers Authored by John Heidemann (Chronological)</A>
-<font size=-1><br>...Released as web page http://www.isi.edu/<b>lsam</b>...<br>
-...as web page http://www.isi.edu/<b>lsam</b>/ib/http-perf/. June, 1996....
-<br><font color=green>www.isi.edu/~johnh/PAPERS/chronological.html 
-<A HREF=/search?q=cache:13462205&dq=cache:www.isi.edu/~johnh/PAPERS/chronological.html>Cached (12k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:13462205&dq=related:www.isi.edu/~johnh/PAPERS/chronological.html>GoogleScout</A></font></font>
-<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19961223.html>Search results for caching as of 12/23/1996 03:00:10 </A>
-<font size=-1><br>...Webutvikling 1996, caching Propagation, <b>Replication</b> and Caching on the...<br>
-...Caching is Hard white paper on <b>replication</b>/caching/authentication for IAB...
-<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19961223.html 
-<A HREF=/search?q=cache:52539836&dq=cache:www.isi.edu/lsam/tools/autosearch/caching/19961223.html>Cached (93k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:52539836&dq=related:www.isi.edu/lsam/tools/autosearch/caching/19961223.html>GoogleScout</A></font></font>
-<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19971006.html>Search results for caching as of 10/06/1997 03:00:15 </A>
-<font size=-1><br>...INGRES Caching and Data Access <b>Replication</b> and Caching Position Statement...
-<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19971006.html 
-<A HREF=/search?q=cache:52411858&dq=cache:www.isi.edu/lsam/tools/autosearch/caching/19971006.html>Cached (24k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:52411858&dq=related:www.isi.edu/lsam/tools/autosearch/caching/19971006.html>GoogleScout</A></font></font>
-<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19970811.html>Search results for caching as of 08/11/1997 03:00:11 </A>
-<font size=-1><br>...INGRES Caching and Data Access <b>Replication</b> and Caching Position Statement...
-<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19970811.html 
-<A HREF=/search?q=cache:52446830&dq=cache:www.isi.edu/lsam/tools/autosearch/caching/19970811.html>Cached (24k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:52446830&dq=related:www.isi.edu/lsam/tools/autosearch/caching/19970811.html>GoogleScout</A></font></font>
-<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19970901.html>Search results for caching as of 09/01/1997 03:00:12 </A>
-<font size=-1><br>...INGRES Caching and Data Access <b>Replication</b> and Caching Position Statement...
-<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19970901.html 
-<A HREF=/search?q=cache:52458169&dq=cache:www.isi.edu/lsam/tools/autosearch/caching/19970901.html>Cached (24k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:52458169&dq=related:www.isi.edu/lsam/tools/autosearch/caching/19970901.html>GoogleScout</A></font></font>
-<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19970728.html>Search results for caching as of 07/28/1997 03:00:10 </A>
-<font size=-1><br>...INGRES Caching and Data Access <b>Replication</b> and Caching Position Statement...
-<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19970728.html 
-<A HREF=/search?q=cache:52463216&dq=cache:www.isi.edu/lsam/tools/autosearch/caching/19970728.html>Cached (24k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:52463216&dq=related:www.isi.edu/lsam/tools/autosearch/caching/19970728.html>GoogleScout</A></font></font>
-<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19970818.html>Search results for caching as of 08/18/1997 03:00:10 </A>
-<font size=-1><br>...INGRES Caching and Data Access <b>Replication</b> and Caching Position Statement...
-<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19970818.html 
-<A HREF=/search?q=cache:52495766&dq=cache:www.isi.edu/lsam/tools/autosearch/caching/19970818.html>Cached (24k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:52495766&dq=related:www.isi.edu/lsam/tools/autosearch/caching/19970818.html>GoogleScout</A></font></font>
-<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19971013.html>Search results for caching as of 10/13/1997 03:00:12 </A>
-<font size=-1><br>...INGRES Caching and Data Access <b>Replication</b> and Caching Position Statement...
-<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19971013.html 
-<A HREF=/search?q=cache:52534792&dq=cache:www.isi.edu/lsam/tools/autosearch/caching/19971013.html>Cached (24k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:52534792&dq=related:www.isi.edu/lsam/tools/autosearch/caching/19971013.html>GoogleScout</A></font></font>
-<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19970929.html>Search results for caching as of 09/29/1997 03:00:11 </A>
-<font size=-1><br>...INGRES Caching and Data Access <b>Replication</b> and Caching Position Statement...
-<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19970929.html 
-<A HREF=/search?q=cache:52543233&dq=cache:www.isi.edu/lsam/tools/autosearch/caching/19970929.html>Cached (24k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:52543233&dq=related:www.isi.edu/lsam/tools/autosearch/caching/19970929.html>GoogleScout</A></font></font>
-<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19971020.html>Search results for caching as of 10/20/1997 03:00:15 </A>
-<font size=-1><br>...INGRES Caching and Data Access <b>Replication</b> and Caching Position Statement...
-<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19971020.html 
-<A HREF=/search?q=cache:52581700&dq=cache:www.isi.edu/lsam/tools/autosearch/caching/19971020.html>Cached (24k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:52581700&dq=related:www.isi.edu/lsam/tools/autosearch/caching/19971020.html>GoogleScout</A></font></font>
-<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19970922.html>Search results for caching as of 09/22/1997 03:00:10 </A>
-<font size=-1><br>...INGRES Caching and Data Access <b>Replication</b> and Caching Position Statement...
-<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19970922.html 
-<A HREF=/search?q=cache:52581799&dq=cache:www.isi.edu/lsam/tools/autosearch/caching/19970922.html>Cached (24k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:52581799&dq=related:www.isi.edu/lsam/tools/autosearch/caching/19970922.html>GoogleScout</A></font></font>
-<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19970825.html>Search results for caching as of 08/25/1997 03:00:10 </A>
-<font size=-1><br>...INGRES Caching and Data Access <b>Replication</b> and Caching Position Statement...
-<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19970825.html 
-<A HREF=/search?q=cache:52588892&dq=cache:www.isi.edu/lsam/tools/autosearch/caching/19970825.html>Cached (24k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:52588892&dq=related:www.isi.edu/lsam/tools/autosearch/caching/19970825.html>GoogleScout</A></font></font>
-<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19970908.html>Search results for caching as of 09/08/1997 03:00:12 </A>
-<font size=-1><br>...INGRES Caching and Data Access <b>Replication</b> and Caching Position Statement...
-<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19970908.html 
-<A HREF=/search?q=cache:52606209&dq=cache:www.isi.edu/lsam/tools/autosearch/caching/19970908.html>Cached (24k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:52606209&dq=related:www.isi.edu/lsam/tools/autosearch/caching/19970908.html>GoogleScout</A></font></font>
-<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19970804.html>Search results for caching as of 08/04/1997 03:00:11 </A>
-<font size=-1><br>...INGRES Caching and Data Access <b>Replication</b> and Caching Position Statement...
-<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19970804.html 
-<A HREF=/search?q=cache:52635143&dq=cache:www.isi.edu/lsam/tools/autosearch/caching/19970804.html>Cached (24k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:52635143&dq=related:www.isi.edu/lsam/tools/autosearch/caching/19970804.html>GoogleScout</A></font></font></BLOCKQUOTE>
-
-<p><A HREF=http://www.engelschall.com/ar/perldoc/pages/util/AutoSearch.html>AutoSearch -- a web-searching application   </A>
-<font size=-1><br>...browser. Example: AutoSearch -n '<b>LSAM</b> <b>Replication</b>' -s...<br>
-...of the AltaVista query on "<b>lsam</b> <b>replication</b>" , with pages titled...
-<br><font color=green>www.engelschall.com/ar/perldoc/pages/util/AutoSearch.html 
-<A HREF=/search?q=cache:17684009&dq=cache:www.engelschall.com/ar/perldoc/pages/util/AutoSearch.html>Cached (16k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:17684009&dq=related:www.engelschall.com/ar/perldoc/pages/util/AutoSearch.html>GoogleScout</A></font></font>
-<p><A HREF=http://xent.ics.uci.edu/FoRK-archive/jan98/0429.html>FoRK Archive: LSAM: Large-Scale Active Middleware (formerly Cities Online)</A>
-<font size=-1><br>... <b>LSAM</b>: Large-Scale Active Middleware (formerly Cities Online) Rohit Khare...<br>
-...filename="C370--USC_ISI.html" [1996 Project Summary] <b>LSAM</b>: Large-Scale...
-<br><font color=green>xent.ics.uci.edu/FoRK-archive/jan98/0429.html 
-<A HREF=/search?q=cache:10345194&dq=cache:xent.ics.uci.edu/FoRK-archive/jan98/0429.html>Cached (8k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:10345194&dq=related:xent.ics.uci.edu/FoRK-archive/jan98/0429.html>GoogleScout</A></font></font>
-<p><A HREF=http://www.darpa.mil/ito/psum1997/C370-0.html>LSAM: Large-Scale Active Middleware (formerly Cities Online)</A>
-<font size=-1><br>...Research 1997 Project Summary <b>LSAM</b>: Large-Scale Active Middleware...<br>
-...Project Website: http://www.isi.edu/<b>lsam</b> -- Additional project...
-<br><font color=green>www.darpa.mil/ito/psum1997/C370-0.html 
-<A HREF=/search?q=cache:12171640&dq=cache:www.darpa.mil/ito/psum1997/C370-0.html>Cached (9k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:12171640&dq=related:www.darpa.mil/ito/psum1997/C370-0.html>GoogleScout</A></font></font>
-<p><A HREF=http://www.ietf.org/internet-drafts/draft-ietf-wrec-res-00.txt>www.ietf.org/internet-drafts/draft-ietf-wrec-res-00.txt</A>
-<font size=-1><br>...Sept. 22, 1999 Web Caching and <b>Replication</b> -- Research Issues Status of...<br>
-...support distributed caching and <b>replication</b> of web objects. The potential...
-<br><font color=green> 
-<A HREF=/search?q=cache:223517&dq=cache:www.ietf.org/internet-drafts/draft-ietf-wrec-res-00.txt>Cached (17k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:223517&dq=related:www.ietf.org/internet-drafts/draft-ietf-wrec-res-00.txt>GoogleScout</A></font></font>
-<p><A HREF=http://www.research.att.com/~misha/tutorial/tutorial-bib.txt>www.research.att.com/~misha/tutorial/tutorial-bib.txt</A>
-<font size=-1><br>...author = {J. Touch}, title = {The <b>LSAM</b> Proxy Cache - a multicast...<br>
-...http://wwwcache.ja.net/events/workshop/14/<b>lsam</b>.html}, year = 1998,...
-<br><font color=green> 
-<A HREF=/search?q=cache:14074219&dq=cache:www.research.att.com/~misha/tutorial/tutorial-bib.txt>Cached (12k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:14074219&dq=related:www.research.att.com/~misha/tutorial/tutorial-bib.txt>GoogleScout</A></font></font>
-<p><A HREF=http://www.terena.nl/tech/wrec/draft-wrec-res-00.txt>www.terena.nl/tech/wrec/draft-wrec-res-00.txt</A>
-<font size=-1><br>...Sept. 22, 1999 Web Caching and <b>Replication</b> -- Research Issues Status of...<br>
-...support distributed caching and <b>replication</b> of web objects. The potential...
-<br><font color=green> 
-<A HREF=/search?q=cache:60741972&dq=cache:www.terena.nl/tech/wrec/draft-wrec-res-00.txt>Cached (17k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:60741972&dq=related:www.terena.nl/tech/wrec/draft-wrec-res-00.txt>GoogleScout</A></font></font><BLOCKQUOTE>
-<p><A HREF=http://www.terena.nl/tech/wrec/chicago.txt>www.terena.nl/tech/wrec/chicago.txt</A>
-<font size=-1><br>...Caching and <b>Replication</b> BOF - Opening the floor to server-server and...<br>
-...client chooses "closest" site. -- <b>Replication</b> is used in the context of...
-<br><font color=green> 
-<A HREF=/search?q=cache:23247507&dq=cache:www.terena.nl/tech/wrec/chicago.txt>Cached (9k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:23247507&dq=related:www.terena.nl/tech/wrec/chicago.txt>GoogleScout</A></font></font></BLOCKQUOTE>
-
-<p><A HREF=http://www.scimitar.terena.nl/standardisation/reports/IETF43_Palme/IETF43_Palme.html>IETF December 1998 Meeting Notes</A>
-<font size=-1><br>...Plenary HTTP Next Generation Web <b>Replication</b> and Caching Process for...<br>
-...given an e-mail address), web <b>replication</b> and caching, Kermit over...
-<br><font color=green>www.scimitar.terena.nl/standardisation/reports/IETF43_Palme/IETF43_Palme.html 
-<A HREF=/search?q=cache:1131670&dq=cache:www.scimitar.terena.nl/standardisation/reports/IETF43_Palme/IETF43_Palme.html>Cached (44k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:1131670&dq=related:www.scimitar.terena.nl/standardisation/reports/IETF43_Palme/IETF43_Palme.html>GoogleScout</A></font></font>
-<p><A HREF=http://www.distributedcoalition.org/mailing_lists/dist-obj/msg00887.html>(long) Re: Questions/comments on some Guerraoui et al. papers</A>
-<font size=-1><br>...something about the history of <b>replication</b> and object groups in OMG/CORBA...<br>
-...approach is not only that it makes <b>replication</b> transparent to the...
-<br><font color=green>www.distributedcoalition.org/mailing_lists/dist-obj/msg00887.html 
-<A HREF=/search?q=cache:59337636&dq=cache:www.distributedcoalition.org/mailing_lists/dist-obj/msg00887.html>Cached (15k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:59337636&dq=related:www.distributedcoalition.org/mailing_lists/dist-obj/msg00887.html>GoogleScout</A></font></font>
-<p><A HREF=http://ircache.nlanr.net/Hit-N-Miss/archive/n005.19980904/issue.txt>ircache.nlanr.net/Hit-N-Miss/archive/n005.19980904/issue.txt</A>
-<font size=-1><br>...transparent caching. -Caching and <b>Replication</b> BOF Patrik Falstrom and...<br>
-...Directors) held a BOF on Web caching and <b>replication</b>. One motivating...
-<br><font color=green> 
-<A HREF=/search?q=cache:19545991&dq=cache:ircache.nlanr.net/Hit-N-Miss/archive/n005.19980904/issue.txt>Cached (11k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:19545991&dq=related:ircache.nlanr.net/Hit-N-Miss/archive/n005.19980904/issue.txt>GoogleScout</A></font></font>
-<p><A HREF=http://www-sor.inria.fr/projects/relais/biblio/>Web caching bibliography</A>
-<font size=-1><br>...M. Introducing application-level <b>replication</b> and naming into today's Web....<br>
-...the overall impact of caching and <b>replication</b> in the Web. Tech. rep., SFB...
-<br><font color=green>www-sor.inria.fr/projects/relais/biblio/ 
-<A HREF=/search?q=cache:949226&dq=cache:www-sor.inria.fr/projects/relais/biblio/>Cached (104k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:949226&dq=related:www-sor.inria.fr/projects/relais/biblio/>GoogleScout</A></font></font><BLOCKQUOTE>
-<p><A HREF=http://www-sor.inria.fr/projects/relais/biblio/webcaches-bib.html>webcaches.bib</A>
-<font size=-1><br>...{Introducing Application-level <b>Replication</b> and Naming into today's...<br>
-...Overall Impact of Caching and <b>Replication</b> in the {W}eb}, institution =...
-<br><font color=green>www-sor.inria.fr/projects/relais/biblio/webcaches-bib.html 
-<A HREF=/search?q=cache:3637376&dq=cache:www-sor.inria.fr/projects/relais/biblio/webcaches-bib.html>Cached (101k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:3637376&dq=related:www-sor.inria.fr/projects/relais/biblio/webcaches-bib.html>GoogleScout</A></font></font></BLOCKQUOTE>
-
-<p><A HREF=http://gost.isi.edu/people/katia/>Katia Obraczka, USC Information Science Institute </A>
-<font size=-1><br>...Publications and Projects Internet Service <b>Replication</b> This work focuses...<br>
+<br><font color=green>www.isi.edu/touch/pubs/ -  <A HREF=/search?q=cache:www.isi.edu/touch/pubs/>Cached: 18k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/touch/pubs/>GoogleScout</A></font></font>
+<p><A HREF=http://www.isi.edu/people/katia/>Katia Obraczka, USC Information Science Institute </A><font size=-1><br>...and Projects Internet Service <b>Replication</b> This work focuses on efficient...<br>
 ...as web page http://www.isi.edu/<b>lsam</b>/ib/http-perf/, June, 1996. Resource...
-<br><font color=green>gost.isi.edu/people/katia/ 
-<A HREF=/search?q=cache:16978836&dq=cache:gost.isi.edu/people/katia/>Cached (9k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:16978836&dq=related:gost.isi.edu/people/katia/>GoogleScout</A></font></font><BLOCKQUOTE>
-<p><A HREF=http://gost.isi.edu/people/johnh/PAPERS/>Papers Published by John Heidemann</A>
-<font size=-1><br>...Released as web page http://www.isi.edu/<b>lsam</b>...<br>
+<br><font color=green>www.isi.edu/people/katia/ -  <A HREF=/search?q=cache:www.isi.edu/people/katia/>Cached: 10k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/people/katia/>GoogleScout</A></font></font>
+<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19961016.html>Search results for caching as of 10/16/1996 17:24:16 </A><font size=-1><br>...over nettet (30 - Propagation, <b>Replication</b> and Caching on the Web:...<br>
+...by James Burton. Propagation, <b>Replication</b> and Caching. This area...
+<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19961016.html -  <A HREF=/search?q=cache:www.isi.edu/lsam/tools/autosearch/caching/19961016.html>Cached: 57k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/lsam/tools/autosearch/caching/19961016.html>GoogleScout</A></font></font>
+<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19961112.html>Search results for caching as of 11/12/1996 08:15:40 </A><font size=-1><br>...Webutvikling 1996, caching Propagation, <b>Replication</b> and Caching on the...<br>
+...Caching is Hard white paper on <b>replication</b>/caching/authentication for IAB...
+<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19961112.html -  <A HREF=/search?q=cache:www.isi.edu/lsam/tools/autosearch/caching/19961112.html>Cached: 70k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/lsam/tools/autosearch/caching/19961112.html>GoogleScout</A></font></font>
+<p><A HREF=http://www.isi.edu/~johnh/PAPERS/chronological.html>Papers Authored by John Heidemann (Chronological)</A><font size=-1><br>...Released as web page http://www.isi.edu/<b>lsam</b>...<br>
 ...as web page http://www.isi.edu/<b>lsam</b>/ib/http-perf/. June, 1996....
-<br><font color=green>gost.isi.edu/people/johnh/PAPERS/ 
-<A HREF=/search?q=cache:28235104&dq=cache:gost.isi.edu/people/johnh/PAPERS/>Cached (13k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:28235104&dq=related:gost.isi.edu/people/johnh/PAPERS/>GoogleScout</A></font></font></BLOCKQUOTE>
+<br><font color=green>www.isi.edu/~johnh/PAPERS/chronological.html -  <A HREF=/search?q=cache:www.isi.edu/~johnh/PAPERS/chronological.html>Cached: 14k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/~johnh/PAPERS/chronological.html>GoogleScout</A></font></font>
+<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19970414.html>Search results for caching as of 04/14/1997 03:00:11 </A><font size=-1><br>...size 14K - 18 May 95 Caching and <b>Replication</b> - the Problem Caching and...<br>
+...futher define the propogation, <b>replication</b> and chaching activity area,...
+<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19970414.html -  <A HREF=/search?q=cache:www.isi.edu/lsam/tools/autosearch/caching/19970414.html>Cached: 91k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/lsam/tools/autosearch/caching/19970414.html>GoogleScout</A></font></font>
+<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19970623.html>Search results for caching as of 06/23/1997 03:00:13 </A><font size=-1><br>...size 5K - 28.Nov.94 - English <b>Replication</b> and Caching Position Statement...<br>
+...WWW Caching Service Caching and <b>Replication</b> - the Problem LATNET Caching...
+<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19970623.html -  <A HREF=/search?q=cache:www.isi.edu/lsam/tools/autosearch/caching/19970623.html>Cached: 88k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/lsam/tools/autosearch/caching/19970623.html>GoogleScout</A></font></font>
+<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19961223.html>Search results for caching as of 12/23/1996 03:00:10 </A><font size=-1><br>...Webutvikling 1996, caching Propagation, <b>Replication</b> and Caching on the...<br>
+...Caching is Hard white paper on <b>replication</b>/caching/authentication for IAB...
+<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19961223.html -  <A HREF=/search?q=cache:www.isi.edu/lsam/tools/autosearch/caching/19961223.html>Cached: 94k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/lsam/tools/autosearch/caching/19961223.html>GoogleScout</A></font></font>
+<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19971006.html>Search results for caching as of 10/06/1997 03:00:15 </A><font size=-1><br>...INGRES Caching and Data Access <b>Replication</b> and Caching Position Statement...
+<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19971006.html -  <A HREF=/search?q=cache:www.isi.edu/lsam/tools/autosearch/caching/19971006.html>Cached: 25k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/lsam/tools/autosearch/caching/19971006.html>GoogleScout</A></font></font>
+<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19970811.html>Search results for caching as of 08/11/1997 03:00:11 </A><font size=-1><br>...INGRES Caching and Data Access <b>Replication</b> and Caching Position Statement...
+<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19970811.html -  <A HREF=/search?q=cache:www.isi.edu/lsam/tools/autosearch/caching/19970811.html>Cached: 25k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/lsam/tools/autosearch/caching/19970811.html>GoogleScout</A></font></font>
+<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19970901.html>Search results for caching as of 09/01/1997 03:00:12 </A><font size=-1><br>...INGRES Caching and Data Access <b>Replication</b> and Caching Position Statement...
+<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19970901.html -  <A HREF=/search?q=cache:www.isi.edu/lsam/tools/autosearch/caching/19970901.html>Cached: 25k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/lsam/tools/autosearch/caching/19970901.html>GoogleScout</A></font></font>
+<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19970728.html>Search results for caching as of 07/28/1997 03:00:10 </A><font size=-1><br>...INGRES Caching and Data Access <b>Replication</b> and Caching Position Statement...
+<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19970728.html -  <A HREF=/search?q=cache:www.isi.edu/lsam/tools/autosearch/caching/19970728.html>Cached: 25k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/lsam/tools/autosearch/caching/19970728.html>GoogleScout</A></font></font>
+<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19970818.html>Search results for caching as of 08/18/1997 03:00:10 </A><font size=-1><br>...INGRES Caching and Data Access <b>Replication</b> and Caching Position Statement...
+<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19970818.html -  <A HREF=/search?q=cache:www.isi.edu/lsam/tools/autosearch/caching/19970818.html>Cached: 25k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/lsam/tools/autosearch/caching/19970818.html>GoogleScout</A></font></font>
+<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19971110.html>Search results for caching as of 11/10/1997 03:00:10 </A><font size=-1><br>...INGRES Caching and Data Access <b>Replication</b> and Caching Position Statement...
+<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19971110.html -  <A HREF=/search?q=cache:www.isi.edu/lsam/tools/autosearch/caching/19971110.html>Cached: 115k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/lsam/tools/autosearch/caching/19971110.html>GoogleScout</A></font></font>
+<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19971013.html>Search results for caching as of 10/13/1997 03:00:12 </A><font size=-1><br>...INGRES Caching and Data Access <b>Replication</b> and Caching Position Statement...
+<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19971013.html -  <A HREF=/search?q=cache:www.isi.edu/lsam/tools/autosearch/caching/19971013.html>Cached: 25k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/lsam/tools/autosearch/caching/19971013.html>GoogleScout</A></font></font>
+<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19970929.html>Search results for caching as of 09/29/1997 03:00:11 </A><font size=-1><br>...INGRES Caching and Data Access <b>Replication</b> and Caching Position Statement...
+<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19970929.html -  <A HREF=/search?q=cache:www.isi.edu/lsam/tools/autosearch/caching/19970929.html>Cached: 25k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/lsam/tools/autosearch/caching/19970929.html>GoogleScout</A></font></font>
+<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19971020.html>Search results for caching as of 10/20/1997 03:00:15 </A><font size=-1><br>...INGRES Caching and Data Access <b>Replication</b> and Caching Position Statement...
+<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19971020.html -  <A HREF=/search?q=cache:www.isi.edu/lsam/tools/autosearch/caching/19971020.html>Cached: 25k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/lsam/tools/autosearch/caching/19971020.html>GoogleScout</A></font></font>
+<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19970922.html>Search results for caching as of 09/22/1997 03:00:10 </A><font size=-1><br>...INGRES Caching and Data Access <b>Replication</b> and Caching Position Statement...
+<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19970922.html -  <A HREF=/search?q=cache:www.isi.edu/lsam/tools/autosearch/caching/19970922.html>Cached: 25k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/lsam/tools/autosearch/caching/19970922.html>GoogleScout</A></font></font>
+<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19970825.html>Search results for caching as of 08/25/1997 03:00:10 </A><font size=-1><br>...INGRES Caching and Data Access <b>Replication</b> and Caching Position Statement...
+<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19970825.html -  <A HREF=/search?q=cache:www.isi.edu/lsam/tools/autosearch/caching/19970825.html>Cached: 25k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/lsam/tools/autosearch/caching/19970825.html>GoogleScout</A></font></font>
+<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19970908.html>Search results for caching as of 09/08/1997 03:00:12 </A><font size=-1><br>...INGRES Caching and Data Access <b>Replication</b> and Caching Position Statement...
+<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19970908.html -  <A HREF=/search?q=cache:www.isi.edu/lsam/tools/autosearch/caching/19970908.html>Cached: 25k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/lsam/tools/autosearch/caching/19970908.html>GoogleScout</A></font></font>
+<p><A HREF=http://www.isi.edu/lsam/tools/autosearch/caching/19970804.html>Search results for caching as of 08/04/1997 03:00:11 </A><font size=-1><br>...INGRES Caching and Data Access <b>Replication</b> and Caching Position Statement...
+<br><font color=green>www.isi.edu/lsam/tools/autosearch/caching/19970804.html -  <A HREF=/search?q=cache:www.isi.edu/lsam/tools/autosearch/caching/19970804.html>Cached: 25k</A> - <A HREF=/search?num=10&q=related:www.isi.edu/lsam/tools/autosearch/caching/19970804.html>GoogleScout</A></font></font></BLOCKQUOTE>
 
-<p><A HREF=http://www.cra.org/Policy/NGI/papers/touchWP>www.cra.org/Policy/NGI/papers/touchWP</A>
-<font size=-1><br>...of per-overlay daemons avoid <b>replication</b> of effort interfacing to...<br>
-...http://www.isi.edu/~touch/ ISI / Project Leader, ATOMIC-2, <b>LSAM</b>...
-<br><font color=green> 
-<A HREF=/search?q=cache:1140973&dq=cache:www.cra.org/Policy/NGI/papers/touchWP>Cached (7k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:1140973&dq=related:www.cra.org/Policy/NGI/papers/touchWP>GoogleScout</A></font></font>
-<p><A HREF=http://www.cs.rutgers.edu/~davison/web-caching/bibliography.html>Brian Davison's Web-Caching Bibliography</A>
-<font size=-1><br>...Sturm. Introducing application-level <b>replication</b> and naming into today's...<br>
-...appear, 1999. Distributed Caching and <b>Replication</b> Minitrack. DMF97...
-<br><font color=green>www.cs.rutgers.edu/~davison/web-caching/bibliography.html 
-<A HREF=/search?q=cache:4094268&dq=cache:www.cs.rutgers.edu/~davison/web-caching/bibliography.html>Cached (82k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:4094268&dq=related:www.cs.rutgers.edu/~davison/web-caching/bibliography.html>GoogleScout</A></font></font>
-<p><A HREF=http://bolero.ics.uci.edu/researchclass/web.html>Web caching bibliography</A>
-<font size=-1><br>...M. Introducing application-level <b>replication</b> and naming into today's Web....<br>
+<p><A HREF=http://www.engelschall.com/ar/perldoc/pages/util/AutoSearch.html>AutoSearch -- a web-searching application   </A><font size=-1><br>...browser. Example: AutoSearch -n '<b>LSAM</b> <b>Replication</b>' -s...<br>
+...of the AltaVista query on "<b>lsam</b> <b>replication</b>" , with pages titled...
+<br><font color=green>www.engelschall.com/ar/perldoc/pages/util/AutoSearch.html -  <A HREF=/search?q=cache:www.engelschall.com/ar/perldoc/pages/util/AutoSearch.html>Cached: 17k</A> - <A HREF=/search?num=10&q=related:www.engelschall.com/ar/perldoc/pages/util/AutoSearch.html>GoogleScout</A></font></font>
+<p><A HREF=http://theory.uwinnipeg.ca/CPAN/data/WWW-Search/AutoSearch.html>AutoSearch -- a web-searching application   </A><font size=-1><br>...browser. Example: AutoSearch -n '<b>LSAM</b> <b>Replication</b>' -s...<br>
+...of the AltaVista query on "<b>lsam</b> <b>replication</b>" , with pages titled...
+<br><font color=green>theory.uwinnipeg.ca/CPAN/data/WWW-Search/AutoSearch.html -  <A HREF=/search?q=cache:theory.uwinnipeg.ca/CPAN/data/WWW-Search/AutoSearch.html>Cached: 18k</A> - <A HREF=/search?num=10&q=related:theory.uwinnipeg.ca/CPAN/data/WWW-Search/AutoSearch.html>GoogleScout</A></font></font><BLOCKQUOTE>
+<p><A HREF=http://theory.uwinnipeg.ca/CPAN/data/WWW-Search/WWW/Search/AltaVista/AdvancedWeb.html>WWW::Search::AltaVista::AdvancedWeb - class for advanced Alta Vista web searchi</A><font size=-1><br>...examples: (John Heidemann) AND (<b>lsam</b> OR <b>replication</b>) AND NOT...<br>
+...(somestupiedword OR thisone) (<b>lsam</b> OR <b>replication</b>) AND (John...
+<br><font color=green>theory.uwinnipeg.ca/CPAN/data/WWW-Search/WWW/Search/AltaVista/AdvancedWeb.html -  <A HREF=/search?q=cache:theory.uwinnipeg.ca/CPAN/data/WWW-Search/WWW/Search/AltaVista/AdvancedWeb.html>Cached: 5k</A> - <A HREF=/search?num=10&q=related:theory.uwinnipeg.ca/CPAN/data/WWW-Search/WWW/Search/AltaVista/AdvancedWeb.html>GoogleScout</A></font></font></BLOCKQUOTE>
+
+<p><A HREF=http://xent.ics.uci.edu/FoRK-archive/jan98/0429.html>FoRK Archive: LSAM: Large-Scale Active Middleware (formerly Cities Online)</A><font size=-1><br>... <b>LSAM</b>: Large-Scale Active Middleware (formerly Cities Online) Rohit Khare...<br>
+...filename="C370--USC_ISI.html" [1996 Project Summary] <b>LSAM</b>: Large-Scale...
+<br><font color=green>xent.ics.uci.edu/FoRK-archive/jan98/0429.html -  <A HREF=/search?q=cache:xent.ics.uci.edu/FoRK-archive/jan98/0429.html>Cached: 9k</A> - <A HREF=/search?num=10&q=related:xent.ics.uci.edu/FoRK-archive/jan98/0429.html>GoogleScout</A></font></font>
+<p><A HREF=http://www.darpa.mil/ito/psum1997/C370-0.html>LSAM: Large-Scale Active Middleware (formerly Cities Online)</A><font size=-1><br>...Research 1997 Project Summary <b>LSAM</b>: Large-Scale Active Middleware...<br>
+...Project Website: http://www.isi.edu/<b>lsam</b> -- Additional project...
+<br><font color=green>www.darpa.mil/ito/psum1997/C370-0.html -  <A HREF=/search?q=cache:www.darpa.mil/ito/psum1997/C370-0.html>Cached: 10k</A> - <A HREF=/search?num=10&q=related:www.darpa.mil/ito/psum1997/C370-0.html>GoogleScout</A></font></font>
+<p><A HREF=http://www.ietf.org/internet-drafts/draft-ietf-wrec-res-00.txt>www.ietf.org/internet-drafts/draft-ietf-wrec-res-00.txt</A><font size=-1><br>...Sept. 22, 1999 Web Caching and <b>Replication</b> -- Research Issues Status of...<br>
+...support distributed caching and <b>replication</b> of web objects. The potential...
+<br><font color=green> <A HREF=/search?q=cache:www.ietf.org/internet-drafts/draft-ietf-wrec-res-00.txt>Cached: 18k</A> - <A HREF=/search?num=10&q=related:www.ietf.org/internet-drafts/draft-ietf-wrec-res-00.txt>GoogleScout</A></font></font>
+<p><A HREF=http://wwwcache.ja.net/events/workshop/14/lsam.html>Abstract </A><font size=-1><br>...The <b>LSAM</b> Proxy Cache - a Multicast Distributed Virtual Cache Joe Touch...<br>
+...version of this file) Abstract 1` The <b>LSAM</b> Proxy is a multicast...
+<br><font color=green>wwwcache.ja.net/events/workshop/14/lsam.html -  <A HREF=/search?q=cache:wwwcache.ja.net/events/workshop/14/lsam.html>Cached: 12k</A> - <A HREF=/search?num=10&q=related:wwwcache.ja.net/events/workshop/14/lsam.html>GoogleScout</A></font></font>
+<p><A HREF=http://www.research.att.com/~misha/tutorial/tutorial-bib.txt>www.research.att.com/~misha/tutorial/tutorial-bib.txt</A><font size=-1><br>...author = {J. Touch}, title = {The <b>LSAM</b> Proxy Cache - a multicast...<br>
+...http://wwwcache.ja.net/events/workshop/14/<b>lsam</b>.html}, year = 1998,...
+<br><font color=green> <A HREF=/search?q=cache:www.research.att.com/~misha/tutorial/tutorial-bib.txt>Cached: 13k</A> - <A HREF=/search?num=10&q=related:www.research.att.com/~misha/tutorial/tutorial-bib.txt>GoogleScout</A></font></font>
+<p><A HREF=http://www.wrec.org/Drafts/draft-wrec-res-00.txt>www.wrec.org/Drafts/draft-wrec-res-00.txt</A><font size=-1><br>...Sept. 22, 1999 Web Caching and <b>Replication</b> -- Research Issues Status of...<br>
+...support distributed caching and <b>replication</b> of web objects. The potential...
+<br><font color=green> <A HREF=/search?q=cache:www.wrec.org/Drafts/draft-wrec-res-00.txt>Cached: 18k</A> - <A HREF=/search?num=10&q=related:www.wrec.org/Drafts/draft-wrec-res-00.txt>GoogleScout</A></font></font><BLOCKQUOTE>
+<p><A HREF=http://www.wrec.org/IETF42/notes.txt>www.wrec.org/IETF42/notes.txt</A><font size=-1><br>...Caching and <b>Replication</b> BOF - Opening the floor to server-server and...<br>
+...client chooses "closest" site. -- <b>Replication</b> is used in the context of...
+<br><font color=green> <A HREF=/search?q=cache:www.wrec.org/IETF42/notes.txt>Cached: 10k</A> - <A HREF=/search?num=10&q=related:www.wrec.org/IETF42/notes.txt>GoogleScout</A></font></font></BLOCKQUOTE>
+
+<p><A HREF=http://nii-server.isi.edu/people/johnh/WORK/>John Heidemann's Work</A><font size=-1><br>...I'm currently active on two projects, <b>LSAM</b> and VINT. <b>LSAM</b> is...<br>
+...unexpected P-HTTP/TCP interactions web <b>replication</b> issues (how can you...
+<br><font color=green>nii-server.isi.edu/people/johnh/WORK/ -  <A HREF=/search?q=cache:nii-server.isi.edu/people/johnh/WORK/>Cached: 6k</A> - <A HREF=/search?num=10&q=related:nii-server.isi.edu/people/johnh/WORK/>GoogleScout</A></font></font><BLOCKQUOTE>
+<p><A HREF=http://nii-server.isi.edu/people/johnh/PAPERS/>Papers Published by John Heidemann</A><font size=-1><br>...Released as web page http://www.isi.edu/<b>lsam</b>...<br>
+...as web page http://www.isi.edu/<b>lsam</b>/ib/http-perf/. June, 1996....
+<br><font color=green>nii-server.isi.edu/people/johnh/PAPERS/ -  <A HREF=/search?q=cache:nii-server.isi.edu/people/johnh/PAPERS/>Cached: 14k</A> - <A HREF=/search?num=10&q=related:nii-server.isi.edu/people/johnh/PAPERS/>GoogleScout</A></font></font></BLOCKQUOTE>
+
+<p><A HREF=http://www.dsv.su.se/jpalme/meetings/dec-98-notes/>IETF December 1998 Meeting Notes</A><font size=-1><br>...Plenary HTTP Next Generation Web <b>Replication</b> and Caching Process for...<br>
+...given an e-mail address), web <b>replication</b> and caching, Kermit over...
+<br><font color=green>www.dsv.su.se/jpalme/meetings/dec-98-notes/ -  <A HREF=/search?q=cache:www.dsv.su.se/jpalme/meetings/dec-98-notes/>Cached: 44k</A> - <A HREF=/search?num=10&q=related:www.dsv.su.se/jpalme/meetings/dec-98-notes/>GoogleScout</A></font></font>
+<p><A HREF=http://ircache.nlanr.net/Hit-N-Miss/archive/n005.19980904/issue.txt>ircache.nlanr.net/Hit-N-Miss/archive/n005.19980904/issue.txt</A><font size=-1><br>...transparent caching. -Caching and <b>Replication</b> BOF Patrik Falstrom and...<br>
+...Directors) held a BOF on Web caching and <b>replication</b>. One motivating...
+<br><font color=green> <A HREF=/search?q=cache:ircache.nlanr.net/Hit-N-Miss/archive/n005.19980904/issue.txt>Cached: 12k</A> - <A HREF=/search?num=10&q=related:ircache.nlanr.net/Hit-N-Miss/archive/n005.19980904/issue.txt>GoogleScout</A></font></font>
+<p><A HREF=http://www-sor.inria.fr/projects/relais/biblio/webcaches-bib.html>webcaches.bib</A><font size=-1><br>...{Introducing Application-level <b>Replication</b> and Naming into today's...<br>
+...Overall Impact of Caching and <b>Replication</b> in the {W}eb}, INSTITUTION =...
+<br><font color=green>www-sor.inria.fr/projects/relais/biblio/webcaches-bib.html -  <A HREF=/search?q=cache:www-sor.inria.fr/projects/relais/biblio/webcaches-bib.html>Cached: 109k</A> - <A HREF=/search?num=10&q=related:www-sor.inria.fr/projects/relais/biblio/webcaches-bib.html>GoogleScout</A></font></font><BLOCKQUOTE>
+<p><A HREF=http://www-sor.inria.fr/projects/relais/biblio/>Web caching bibliography</A><font size=-1><br>...M. Introducing application-level <b>replication</b> and naming into today's Web....<br>
 ...the overall impact of caching and <b>replication</b> in the Web. Tech. rep., SFB...
-<br><font color=green>bolero.ics.uci.edu/researchclass/web.html 
-<A HREF=/search?q=cache:6186787&dq=cache:bolero.ics.uci.edu/researchclass/web.html>Cached (100k)</A> &nbsp;<font color=red>New!</font> <font color=black>Try out</font> <A HREF=/search?site=search&num=10&q=related:6186787&dq=related:bolero.ics.uci.edu/researchclass/web.html>GoogleScout</A></font></font><p><center></center>
-<form method=GET action=/search><center><font size=-1>New query: <INPUT type=text name=q size=31 maxlength=256 value="+LSAM +replication"> <INPUT type=submit name=sa VALUE="Google Search"></font><br><font size=-2><A HREF=/faq.html#narrow>Search within results?</A></font></center>
-<hr><center><font size=-1>Try your query on other engines<br>
-<a href=http://www.altavista.digital.com/cgi-bin/query?pg=q&kl=XX&q=%2BLSAM+%2Breplication>AltaVista</a>
-<a href=http://www.excite.com/search.gw?search=%2BLSAM+%2Breplication>Excite</a>
-<a href=http://www.hotbot.com/?MT=%2BLSAM+%2Breplication>HotBot</a>
-<a href=http://www.infoseek.com/Titles?qt=%2BLSAM+%2Breplication>Infoseek</a>
-<a href=http://www.lycos.com/cgi-bin/pursuit?query=%2BLSAM+%2Breplication>Lycos</a>
-<a href=http://www.deja.com/dnquery.xp?QRY=%2BLSAM+%2Breplication>Deja</a>
-<a href=http://search.yahoo.com/bin/search?p=%2BLSAM+%2Breplication>Yahoo!</a>
-<a href=http://www.amazon.com/exec/obidos/external-search/?keyword=%2BLSAM+%2Breplication&tag=googlinc05>Amazon</a>
-<a href=http://search.dmoz.org/cgi-bin/search?search=%2BLSAM+%2Breplication>Open Directory</a>
-<a href=http://www.egroups.com/info/top?murl=/info/mainarcsearch%3fquery%3d%252BLSAM%2B%252Breplication>eGroups</a><br>
-</font></center>
-</form><p><center><font size=-1>Copyright &copy;1999 Google Inc. - <A HREF=about.html>About</A></font></center></body></html>
+<br><font color=green>www-sor.inria.fr/projects/relais/biblio/ -  <A HREF=/search?q=cache:www-sor.inria.fr/projects/relais/biblio/>Cached: 120k</A> - <A HREF=/search?num=10&q=related:www-sor.inria.fr/projects/relais/biblio/>GoogleScout</A></font></font></BLOCKQUOTE>
+
+<p><A HREF=http://www.smainc.com/library/Newsletters/Summer1999.html>Enterprise Technology Update [Summer 1999]</A><font size=-1><br>...accomplished through transaction <b>replication</b> to another server for backup...<br>
+...a Local Schedule Activity Monitor (<b>LSAM</b>) on each platform and the...
+<br><font color=green>www.smainc.com/library/Newsletters/Summer1999.html -  <A HREF=/search?q=cache:www.smainc.com/library/Newsletters/Summer1999.html>Cached: 41k</A> - <A HREF=/search?num=10&q=related:www.smainc.com/library/Newsletters/Summer1999.html>GoogleScout</A></font></font>
+<p><A HREF=http://www.cra.org/Policy/NGI/papers/touchWP>www.cra.org/Policy/NGI/papers/touchWP</A><font size=-1><br>...of per-overlay daemons avoid <b>replication</b> of effort interfacing to...<br>
+...http://www.isi.edu/~touch/ ISI / Project Leader, ATOMIC-2, <b>LSAM</b>...
+<br><font color=green> <A HREF=/search?q=cache:www.cra.org/Policy/NGI/papers/touchWP>Cached: 8k</A> - <A HREF=/search?num=10&q=related:www.cra.org/Policy/NGI/papers/touchWP>GoogleScout</A></font></font>
+<p><A HREF=http://www.cs.rutgers.edu/~davison/web-caching/bibliography.html>Brian Davison's Web-Caching Bibliography</A><font size=-1><br>...Sturm. Introducing application-level <b>replication</b> and naming into today's...<br>
+...appear, 1999. Distributed Caching and <b>Replication</b> Minitrack. DMF97...
+<br><font color=green>www.cs.rutgers.edu/~davison/web-caching/bibliography.html -  <A HREF=/search?q=cache:www.cs.rutgers.edu/~davison/web-caching/bibliography.html>Cached: 83k</A> - <A HREF=/search?num=10&q=related:www.cs.rutgers.edu/~davison/web-caching/bibliography.html>GoogleScout</A></font></font>
+<p><A HREF=http://www.visualize.uk.com/conf/activeweb/proceed/pap23/>Meeting Interactive Response Targets in Distributed Learning Environments</A><font size=-1><br>...promising approach. Independence and <b>replication</b> can be used to support...<br>
+...HTTP Performance" http://www.isi.edu/<b>lsam</b>/publications/http-perf/...
+<br><font color=green>www.visualize.uk.com/conf/activeweb/proceed/pap23/ -  <A HREF=/search?q=cache:www.visualize.uk.com/conf/activeweb/proceed/pap23/>Cached: 25k</A> - <A HREF=/search?num=10&q=related:www.visualize.uk.com/conf/activeweb/proceed/pap23/>GoogleScout</A></font></font><p><center></center>
+
+<form method=GET action=/search><center><small><INPUT type=text name=q size=31 maxlength=256 value="+LSAM +replication"> <INPUT type=submit name=sa VALUE="Google Search"></small> <font size=-2><A HREF=/faq.html#narrow>Search&nbsp;within&nbsp;results?</A></font></center>
+<hr><center><font size=-1>Try your query on:&nbsp;<a href=http://av.com/?q=%2BLSAM+%2Breplication>AltaVista</a>&nbsp;<a href=http://excite.com/search.gw?search=%2BLSAM+%2Breplication>Excite</a>&nbsp;<a href=http://hotbot.com/?MT=%2BLSAM+%2Breplication>HotBot</a>&nbsp;<a href=http://go.com/Titles?qt=%2BLSAM+%2Breplication>Infoseek</a>&nbsp;<a href=http://lycos.com/cgi-bin/pursuit?query=%2BLSAM+%2Breplication>Lycos</a>&nbsp;<a href=http://deja.com/dnquery.xp?QRY=%2BLSAM+%2Breplication>Deja</a>&nbsp;<a href=http://search.yahoo.com/search?p=%2BLSAM+%2Breplication>Yahoo!</a>&nbsp;<a href=http://amazon.com/exec/obidos/external-search/?keyword=%2BLSAM+%2Breplication&tag=googlinc05>Amazon</a>&nbsp;<a href=http://dmoz.org/cgi-bin/search?search=%2BLSAM+%2Breplication>Open&nbsp;Directory</a>&nbsp;<a href=http://egroups.com/search?type=combined&query=%252BLSAM%2B%252Breplication>eGroups</a>&nbsp;</font></center><BR></form>
+<p><center><font size=-1>Copyright &copy;1999 Google Inc. - <A HREF=/about.html>About</A> - <A HREF=/help.html>Help</A></font></center></body></html>

@@ -137,11 +137,10 @@ require HTML::TokeParser;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '1.00';
+$VERSION = '1.01';
 
 use Carp ();
 use WWW::Search(generic_option);
-use Socket qw(:crlf :DEFAULT); # for end-of-line
 
 sub native_setup_search
   {

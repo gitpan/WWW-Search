@@ -1,7 +1,7 @@
 # Lycos.pm
 # by Wm. L. Scheding and Martin Thurn
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: Lycos.pm,v 1.13 1999/12/10 17:40:45 mthurn Exp $
+# $Id: Lycos.pm,v 1.15 1999/12/22 20:31:49 mthurn Exp $
 
 =head1 NAME
 
@@ -10,7 +10,7 @@ WWW::Search::Lycos - class for searching Lycos
 =head1 SYNOPSIS
 
   use WWW::Search;
-  my $oSearch = new WWW::Search('Lycos');
+  my $oSearch = new WWW::Search('Lycos::Sites');
   my $sQuery = WWW::Search::escape_query("+sushi restaurant +Columbus Ohio");
   $oSearch->native_query($sQuery);
   while (my $oResult = $oSearch->next_result())
@@ -26,20 +26,10 @@ be done through L<WWW::Search> objects.
 
 =head1 NOTES
 
-WWW::Search::Lycos returns results only from www.lycos.com's "Web
-Pages".  Results from "Categories", "Web Sites", and "News & Media"
-are ignored.
+WWW::Search::Lycos does not work by itself.  Use Lycos::Sites instead.
 
-If you want to get results from www.lycos.com's categorized "Web
-Sites", use Lycos::Sites instead.
-
-The default search mode is "any" of the query terms.  If you want to
-search for "ALL" of the query terms, add {'matchmode' => 'and'} as the
-second argument to native_query().  More advanced query modes can be
-added upon request; please contact the author.
-
-www.lycos.com is pretty slow to respond; but I have not had a problem
-with the default timeout.
+www.lycos.com is sometimes slow to respond; but I have not had a
+problem with the default timeout.
 
 www.lycos.com does not give the score, date, nor size of the pages at
 the resulting URLs; therefore change_date(), score(), and size() will
@@ -55,8 +45,7 @@ Please tell the author if you find any!
 
 =head1 TESTING
 
-Testing is done only on the children modules Lycos::Sites and
-Lycos::Pages.
+Testing is done only on the child module Lycos::Sites.
 
 =head1 AUTHOR
 
@@ -76,13 +65,17 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 If it is not listed here, then it was not a meaningful nor released revision.
 
+=head2 2.08, 1999-12-22
+
+point to new path on lycos.com (thanks to David Bradford dbradford@bdctechnologies.com)
+
 =head2 2.07, 1999-12-10
 
 more output format fixes, and missing 'next' link for Sites
 
 =head2 2.05, 1999-12-03
 
-handle new url and new output format for Lycos;:Sites.pm
+handle new url and new output format for Lycos::Sites.pm
 
 =head2 2.04, 1999-10-22
 
@@ -118,9 +111,9 @@ require Exporter;
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
 
-$VERSION = '2.07';
+$VERSION = '2.08';
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
-# $TEST_CASES can be found in Lycos::Pages.pm
+# $TEST_CASES can be found in Lycos::Sites.pm
 
 use Carp ();
 use WWW::Search(qw( generic_option strip_tags unescape_query ));
@@ -130,7 +123,6 @@ use URI::Escape;
 sub native_setup_search
   {
   my ($self, $native_query, $native_options_ref) = @_;
-  # print STDERR " * this is Martin's new Lycos.pm!\n" if $self->{_debug};
   $self->{_debug} = $native_options_ref->{'search_debug'};
   $self->{_debug} = 2 if ($native_options_ref->{'search_parse_debug'});
   $self->{_debug} = 0 if (!defined($self->{_debug}));
@@ -153,7 +145,7 @@ sub native_setup_search
     {
     $self->{'search_base_url'} = 'http://lycospro.lycos.com';
     $self->{_options} = {
-                         'search_url' => $self->{'search_base_url'} .'/cgi-bin/pursuit',
+                         'search_url' => $self->{'search_base_url'} .'/srchpro',
                          'maxhits' => $self->{_hits_per_page},
                          'matchmode' => 'or',
                          'cat' => 'lycos',
@@ -444,15 +436,4 @@ sub native_retrieve_some
 1;
 
 __END__
-
-ADVENCED QUERY RESULTS:
-http://lycospro.lycos.com/cgi-bin/pursuit?mtemp=nojava&etemp=error_nojava&rt=1&qs=gt%7Cdate&npl=matchmode%3Dand%26adv%3D1&query=replication&maxhits=40&cat=lycos&npl1=ignore%3Dfq&fq=&lang=&rtwm=45000&rtpy=2500&rttf=5000&rtfd=2500&rtpn=2500&rtor=2500
-
-OTHER OPTIONS:
-
-cat=lycos&mtemp=nojava   Show results from Web Pages index only
-cat=dirw&mtemp=sites     Show results from Lycos categorized Web Sites only
-cat=dirw&mtemp=news      Search in News articles and Media only
-cat=dir                  Search for Lycos named Categories only
-
 

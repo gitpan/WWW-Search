@@ -1,7 +1,7 @@
 # HotBot.pm
 # by Wm. L. Scheding and Martin Thurn
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: HotBot.pm,v 1.44 1999/12/10 15:48:44 mthurn Exp $
+# $Id: HotBot.pm,v 1.46 1999/12/22 20:44:29 mthurn Exp $
 
 =head1 NAME
 
@@ -296,6 +296,14 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 If it''s not listed here, then it wasn''t a meaningful nor released revision.
 
+=head2 2.10, 1999-12-22
+
+handle new result format
+
+=head2 2.09, 1999-12-15
+
+handle new result count format
+
 =head2 2.08, 1999-12-10
 
 handle new output format
@@ -398,7 +406,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.08';
+$VERSION = '2.10';
 
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 $TEST_CASES = <<"ENDTESTCASES";
@@ -522,10 +530,11 @@ sub native_retrieve_some
       } # We're in TITLE mode, and line has title
 
     elsif ($state eq $HEADER && 
-           m!(?:\s|\&nbsp\;)([\d,]+)(?:\s|\&nbsp\;)+Matches.!i)
+           m!Returned:(?:$WHITESPACE|fewer|less|more|than)+([\d,]+)$WHITESPACE+(Matches.)?!i)
       {
       # Actual line of input is:
       # <b>Returned:&nbsp;69&nbsp;Matches&nbsp;
+      # <b>Returned:&nbsp;&nbsp;more&nbsp;than&nbsp;500,000&nbsp;&nbsp;
       my $iCount = $1;
       $iCount =~ s/\D//g;
       print STDERR "count line ($iCount) " if 2 <= $self->{'_debug'};
@@ -545,7 +554,10 @@ sub native_retrieve_some
       $self->{'_next_to_retrieve'} += $self->{'_hits_per_page'};
       $state = $HITS;
       } # found "next" link in NEXT mode
-    elsif ($state eq $NEXT && m|^\074p\076\s\074b\076(\d+)\.| )
+    elsif ($state eq $NEXT && (
+                               m|^(?:\074p\076\s)?\074b\076(\d+)\.|   ||
+                               m/<!-- BRES --> /                 
+                              ))
       {
       print STDERR " no next button; " if 2 <= $self->{'_debug'};
       # There was no "next" button on this page; no more pages to get!
@@ -555,7 +567,7 @@ sub native_retrieve_some
       # pattern matches this line (again)!
       }
 
-    if ($state eq $HITS && m|^\074p\076\s\074b\076(\d+)\.| )
+    if ($state eq $HITS && m|^(?:\074p\076\s)?\074b\076(\d+)\.| )
       {
       print STDERR "multihit line" if 2 <= $self->{'_debug'};
       # Actual line of input as of 1999-10-18:
