@@ -1,9 +1,7 @@
-#!/usr/local/bin/perl -w
-
 # Excite.pm
 # by Martin Thurn
 # Copyright (C) 1998 by USC/ISI
-# $Id: Excite.pm,v 1.13 1998/11/07 01:26:08 johnh Exp $
+# $Id: Excite.pm,v 1.10 1999/06/11 15:33:57 mthurn Exp $
 
 =head1 NAME
 
@@ -44,18 +42,18 @@ Please tell the author if you find any!
 
 This module adheres to the C<WWW::Search> test suite mechanism. 
 
-  Test cases (accurate as of 1998-11-06):
+  Test cases (accurate as of 1999-06-11):
 
     $file = 'test/Excite/zero_result';
     $query = 'Bogus' . 'NoSuchWord';
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/Excite/one_page_result';
-    $query = '+LS'.'AM +replic'.'ation';
+    $query = '+L'.'S'.'A'.'M +replic'.'ation';
     test($mode, $TEST_RANGE, 2, 75);
 
     $file = 'test/Excite/multi_page_result';
-    $query = '+Jabb'.'a +bou'.'nty +hu'.'nter +Gr'.'eedo'
+    $query = 'L'.'S'.'A'.'M';
     test($mode, $TEST_GREATER_THAN, 100);
 
 =head1 AUTHOR
@@ -73,6 +71,11 @@ WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
 MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 =head1 VERSION HISTORY
+
+=head2 1.10, 1999-06-11
+
+fixed a BUG where returned URLs were garbled (maybe this was because
+www.excite.com changed their links)
 
 =head2 1.08, 1998-11-06
 
@@ -105,11 +108,14 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '1.08';
+$VERSION = '1.10';
 
 use Carp ();
 use WWW::Search(generic_option);
 require WWW::SearchResult;
+
+# public
+sub version { $VERSION }
 
 
 # private
@@ -244,7 +250,7 @@ sub native_retrieve_some
       } # we're in HEADER mode, and line has number of results
 
     elsif ($state eq $HITS && 
-           m=^<SMALL>(\d+)\%\s*</SMALL>$=i)
+           m=\A\<SMALL>(\d+)\%=i)
       {
       print STDERR "hit percentage line\n" if 2 <= $self->{'_debug'};
       # Actual line of input:
@@ -261,7 +267,7 @@ sub native_retrieve_some
       } # in HITS mode, saw percentage line
 
     elsif ($state eq $URL && 
-           m|^<A\s+HREF=\"([^\"]+)\">([^<]+)|i)
+           m!\A\<A\s+HREF=\"[^\";]+?;([^\"]+)\">([^\<]+)!i)
       {
       print STDERR "hit url line\n" if 2 <= $self->{'_debug'};
       # Actual line of input:

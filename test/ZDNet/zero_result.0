@@ -1,0 +1,322 @@
+
+<!-- Texis RDBMS Copyright (c) 1992 - 1998 Thunderstone -->
+<!-- Texis Web Script Copyright (c) 1996 - 1998 Thunderstone -->
+
+
+<HTML><HEAD><TITLE>Search</TITLE>
+<STYLE TYPE="text/css">
+
+<!--
+	A:hover 	{ color:#FF0000; }
+	A:link 		{ color:#0033CC; }
+	A:visited 	{ color:#333366; }
+ 	A:active 	{ color:#FFCC00; }
+	.whiteText 	{ color:#FFFFFF; font-family: "Arial", "Geneva"; font-size: 10pt; }
+	.yellowText { color:#FFFFCC; font-family: "Arial", "Geneva"; font-size: 8pt; }
+	input 		{ font-family: "Arial", "san-serif"; font-size: 8pt; }
+	form, select, option { font-family: "Arial", "sans-serif"; font-size: 9pt; }
+-->
+</STYLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" LINK="#0033CC" VLINK="#333366" ALINK="#FFCC00" MARGINHEIGHT="0" TOPMARGIN="0" MARGINWIDTH="0" LEFTMARGIN="0">
+
+<TABLE LAYOUT="Logo, Nav, Ad" BORDER="0" WIDTH="590" CELLPADDING="0" CELLSPACING="0" STYLE="TABLE-LAYOUT:fixed; border-collapse:collapse;">
+<TR><TD ALIGN="CENTER" VALIGN="TOP" WIDTH="110" ROWSPAN="2" BGCOLOR="#003399">
+
+<A HREF="http://www.zdnet.com/"><IMG SRC="/graphics/zdlogo5.gif" WIDTH=95 HEIGHT=61 ALT="" BORDER="0" HSPACE="6" VSPACE="5"></A><BR>
+<A HREF="http://members.zdnet.com/register/register.cgi"><FONT CLASS="yellowText" FACE="Arial,Geneva,sans-serif" SIZE="-3" COLOR="#99CCFF">Join now!</FONT></A></TD>
+<TD ALIGN="CENTER" VALIGN="MIDDLE">
+
+<TABLE LAYOUT="Top Nav" WIDTH="480" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR><TD COLSPAN="2" ALIGN="LEFT" VALIGN="TOP" BGCOLOR="#003399">
+<IMG SRC="/graphics/clear.gif" WIDTH="1" HEIGHT="3" ALT=""></TD></TR>
+<TR><TD WIDTH="175" BGCOLOR="#003399" VALIGN="TOP">
+<FORM STYLE="font-face:Arial,sans-serif; font-size:9pt" METHOD="post" NAME="TopNav" ACTION="javascript:void(0)">
+<IMG SRC="/graphics/yellow_arrow.gif" WIDTH="11" HEIGHT="17" ALIGN="LEFT" VSPACE="2" ALT="arrow">
+
+<FONT COLOR="#FFFFFF"><SELECT NAME="sel" onchange="window.open(this.options[this.selectedIndex].value,'_top')" STYLE="font-face:Arial,sans-serif; font-size:9pt">
+<OPTION VALUE="">Pick a site or topic:</OPTION>
+<OPTION VALUE="">************</OPTION>
+<OPTION VALUE="http://www.zdnet.com/topics">Topic Finder
+<OPTION VALUE="http://xlink.zdnet.com/cgi-bin/texis/cofinder/cofinder">Company Finder
+<OPTION VALUE="http://www.zdnet.com">ZDNet Home 
+<OPTION VALUE="http://xlink.zdnet.com/cgi-bin/texis/xlink/xlink/">ZDNet Search
+<OPTION VALUE="http://my.zdnet.com">My ZDNet
+<OPTION VALUE="">--------------------
+<OPTION VALUE="http://www.zdnet.com/anchordesk/">AnchorDesk
+<OPTION VALUE="http://www.zdnet.com/athome/">At Home
+<OPTION VALUE="http://www.zdnet.com/zdbop/">Benchmarks
+<OPTION VALUE="http://www.classifieds2000.com/">Classifieds
+<OPTION VALUE="http://www.zdnet.com/comdex/">Comdex
+<OPTION VALUE="http://www.zdnet.com/cc/">Community
+<OPTION VALUE="http://www.zdnet.com/computershopper/">computershopper.com
+<OPTION VALUE="http://www.devhead.com">DevHead
+<OPTION VALUE="http://www.zde-business.com/">E-Business
+<OPTION VALUE="http://www.zdnet.com/enterprise/">Enterprise
+<OPTION VALUE="http://www.equip.com/">Equip
+<OPTION VALUE="http://www.zdnet.com/familypc/">FamilyPC
+<OPTION VALUE="http://www.gamespot.com/zdnet/index.html">GameSpot
+<OPTION VALUE="http://www.zdnet.com/zdhelp/">Help!
+<OPTION VALUE="http://www.zdii.com">Inter@ctive Investor
+<OPTION VALUE="http://www.zdnet.com/intweek/">Inter@ctive Week
+<OPTION VALUE="http://www.jobengine.com/">jobEngine
+<OPTION VALUE="http://www.zdnet.com/mac/">Mac
+<OPTION VALUE="http://macweek.zdnet.com/">MacWEEK
+<OPTION VALUE="http://macworld.zdnet.com/">Macworld
+<OPTION VALUE="http://cma.zdnet.com/texis/cma/cma">Magazine Archive
+<OPTION VALUE="http://www.zdnet.com/onair/">On Air
+<OPTION VALUE="http://www.zdnet.com/pccomp/">PC Computing
+<OPTION VALUE="http://www.zdnet.com/pcmag/">PC Magazine
+<OPTION VALUE="http://www.zdnet.com/pcweek/">PC Week
+<OPTION VALUE="http://www.zdnet.com/products/">Products
+<OPTION VALUE="http://www.zdnet.com/smallbusiness/">Small Business
+<OPTION VALUE="http://www.zdnet.com/sr/">Sm@rt Reseller
+<OPTION VALUE="http://www.hotfiles.com">Software Library
+<OPTION VALUE="http://www.zdnet.com/products/windows/">Windows
+<OPTION VALUE="http://www.zdnet.com/yil/">Yahoo! Internet Life
+<OPTION VALUE="http://www.zdjournals.com/">ZD Journals
+<OPTION VALUE="http://www.zdnet.com">ZDNet Home
+<OPTION VALUE="http://www.zdnet.com/zdnn/">ZDNN
+<OPTION VALUE="http://cma.zdnet.com/texis/zdrewards/">ZD Rewards
+<OPTION VALUE="http://www.zdtv.com">ZDTV
+<OPTION VALUE="http://www.zdu.com/">ZDU
+<OPTION VALUE="http://www.zdnet.com/zdy2k/">ZDY2K.com
+</SELECT></FONT><BR>
+<IMG SRC="/graphics/clear.gif" WIDTH="1" HEIGHT="1" ALT=""></TD></FORM>
+<TD WIDTH="305" ALIGN="CENTER" VALIGN="MIDDLE" BGCOLOR="#003399">
+<A HREF="http://www.zdnet.com/products"><FONT STYLE="font-size:8pt; color:#FFFFFF;" FACE="Verdana, Arial" COLOR="#99CCFF" SIZE="-2">Reviews</FONT></A>
+<FONT STYLE="font-size:8pt;" SIZE="-3" COLOR="#FFFFFF">|</FONT>
+<A HREF="http://www.zdnet.com/zdnn"><FONT STYLE="font-size:8pt; color:#FFFFFF;" FACE="Verdana, Arial" COLOR="#99CCFF" SIZE="-2">News</FONT></A>
+<FONT STYLE="font-size:8pt;" SIZE="-3" COLOR="#FFFFFF">|</FONT>
+<A HREF="http://www.hotfiles.com/"><FONT STYLE="font-size:8pt; color:#FFFFFF;" FACE="Verdana, Arial" COLOR="#99CCFF" SIZE="-2">Downloads</FONT></A>
+<FONT STYLE="font-size:8pt;" SIZE="-3" COLOR="#FFFFFF">|</FONT>
+<A HREF="http://www.zdnet.com/computershopper/"><FONT STYLE="font-size:8pt; color:#FFFFFF;" FACE="Verdana, Arial" COLOR="#99CCFF" SIZE="-2">Shop</FONT></A>
+<FONT STYLE="font-size:8pt;" SIZE="-3" COLOR="#FFFFFF">|</FONT>
+<A HREF="http://my.zdnet.com"><FONT STYLE="font-size:8pt; color:#FFFFFF;" FACE="Verdana, Arial" COLOR="#99CCFF" SIZE="-2">MyZDNet</FONT></A></TD></TR>
+<TR><TD COLSPAN="2" ALIGN="LEFT" BGCOLOR="#003399">
+<IMG SRC="/graphics/clear.gif" WIDTH="1" HEIGHT="3" ALT=""></TD>
+</TR></TABLE></TD></TR>
+<TR><TD ALIGN="RIGHT" VALIGN="BOTTOM" WIDTH="480">
+<IMG SRC="/graphics/clear.gif" WIDTH=1 HEIGHT=6 BORDER=0 ALT=""><BR>
+<!--bannerstart--><!-- Rebecca --><!--ba--><TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0 >
+<TR>
+<TD ALIGN="left" VALIGN="MIDDLE" WIDTH=146 HEIGHT=60>
+<a href="http://ads2.zdnet.com/adverts/nph-ct/r508/c99999/a21121/www.zdnet.com/zdhelp"><IMG SRC="http://ads2.zdnet.com/adverts/imp/c99999/help34.gif" WIDTH=146 HEIGHT=60 BORDER=0  ALT=""></a></TD>
+<TD ALIGN="LEFT" VALIGN="CENTER" WIDTH=120 HEIGHT=60 NOWRAP bgCOLOR=#00ff00>
+<FONT SIZE="1" fACE="verdana" COLOR="black">
+&nbsp;<IMG SRC="http://ads2.zdnet.com/adverts/imp/c99999/ws2.gif" WIDTH=12 HEIGHT=12 BORDER=0  ALT="">&nbsp;<a href="http://ads2.zdnet.com/adverts/nph-ct/r508/c99999/a21121/www.zdnet.com/zdhelp/tip_help/tip_help.html">TipZone</a><BR>
+&nbsp;<IMG SRC="http://ads2.zdnet.com/adverts/imp/c99999/ws2.gif" WIDTH=12 HEIGHT=12 BORDER=0  ALT="">&nbsp;<a href="http://ads2.zdnet.com/adverts/nph-ct/r508/c99999/a21121/www.zdnet.com/zdhelp/filters/bugs/">BugAlert</a><BR>
+&nbsp;<IMG SRC="http://ads2.zdnet.com/adverts/imp/c99999/ws2.gif" WIDTH=12 HEIGHT=12 BORDER=0  ALT="">&nbsp;<a href="http://ads2.zdnet.com/adverts/nph-ct/r508/c99999/a21121/www.zdnet.com/zdhelp/filters/downloads/">Downloads</a><BR>
+</font>
+</TD>
+<TD ALIGN="LEFT"  VALIGN="center" WIDTH=102 HEIGHT=60 NOWRAP bgCOLOR=#00ff00>
+<FONT SIZE="1" fACE="verdana"COLOR="black">
+<IMG SRC="http://ads2.zdnet.com/adverts/imp/c99999/ws2.gif" WIDTH=12 HEIGHT=12 BORDER=0  ALT="">&nbsp;<a href="http://ads2.zdnet.com/adverts/nph-ct/r508/c99999/a21121/www.zdnet.com/zdhelp/filters/howdoi/">How Tos</a><BR>
+<IMG SRC="http://ads2.zdnet.com/adverts/imp/c99999/ws2.gif" WIDTH=12 HEIGHT=12 BORDER=0  ALT="">&nbsp;<a href="http://ads2.zdnet.com/adverts/nph-ct/r508/c99999/a21121/www.zdnet.com/zdhelp/filters/windows/windows98/">Win98</a><BR>
+<IMG SRC="http://ads2.zdnet.com/adverts/imp/c99999/ws2.gif" WIDTH=12 HEIGHT=12 BORDER=0  ALT="">&nbsp;<a href="http://ads2.zdnet.com/adverts/nph-ct/r508/c99999/a21121/www.zdnet.com/zdhelp/bookstore/bookstore.html">Books</a><BR>
+</font>
+</TD>
+<TD ALIGN="LEFT" VALIGN="CENTER"  WIDTH=100 HEIGHT=60 NOWRAP bgCOLOR=#00ff00>
+<FONT SIZE="1" fACE="verdana" COLOR="black">
+<IMG SRC="http://ads2.zdnet.com/adverts/imp/c99999/ws2.gif" WIDTH=12 HEIGHT=12 BORDER=0  ALT="">&nbsp;<a href="http://ads2.zdnet.com/adverts/nph-ct/r508/c99999/a21121/www.zdnet.com/zdhelp/filters/healthypc/">HealthyPC</a><BR>
+<IMG SRC="http://ads2.zdnet.com/adverts/imp/c99999/ws2.gif" WIDTH=12 HEIGHT=12 BORDER=0  ALT="">&nbsp;<a href="http://ads2.zdnet.com/adverts/nph-ct/r508/c99999/a21121/www.zdnet.com/zdhelp/linux_help/linux_help.html">Linux</a><BR>
+<IMG SRC="http://ads2.zdnet.com/adverts/imp/c99999/ws2.gif" WIDTH=12 HEIGHT=12 BORDER=0  ALT="">&nbsp;<a href="http://ads2.zdnet.com/adverts/nph-ct/r508/c99999/a21121/www.zdnet.com/zdhelp">and more</a><BR>
+</font>
+</TD>
+</TR>
+</TABLE>
+<img src="http://ads2.zdnet.com/adverts/imp/dotclear.gif?g=r508&c=a21121&idx=928442545" height="1" width="1" border="0" align="top" alt=""><!--bcg--><img src="http://gserv.zdnet.com/clear/ns.gif?a21121+928442545+r508+rh=novar" height="1" width="1"><!--ecg--><br><!--ea-->
+ <!--  /Rebecca  --> <!--bannerend--></TD></TR>
+</TABLE>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="590" VALIGN="TOP">
+<TR><TD WIDTH="122" ROWSPAN="1000"><IMG SRC="/graphics/clear.gif" WIDTH="122" HEIGHT="15" ALT=""></TD>
+<TD WIDTH="13"><IMG SRC="/graphics/clear.gif" WIDTH="13" HEIGHT="15" ALT=""></TD><TD WIDTH="455"><IMG SRC="/graphics/clear.gif" WIDTH="455" HEIGHT="15" ALT=""></TD></TR>
+<TR><TD COLSPAN="4" BGCOLOR="#003399"><FONT STYLE="color:#FFFFFF; font-size: 12pt; font-weight: bold;" FACE="HELVETICA, ARIAL, SANS-
+SERIF" COLOR="#99CCFF" SIZE="3">&nbsp;<B>SEARCH ZDNET:</B></FONT></TD></TR>
+<TR BGCOLOR="#FFFFCC"><TD COLSPAN="4"><FONT FACE="HELVETICA, ARIAL, SANS-SERIF">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="468"><TR><TD COLSPAN="2"><IMG SRC="/graphics/clear.gif" WIDTH="468" HEIGHT=
+"6" ALT=""></TD></TR><TR><FORM><TD WIDTH="350">&nbsp;<INPUT TYPE="TEXT" NAME="Utext" VALUE="BogusNoSuchWordSpammersAreIdiots" size="30">
+<INPUT TYPE="SUBMIT" VALUE ="Next Search">
+<input type="hidden" name="Urt" value="D">
+<input type="hidden" name="Unbr" value="100">
+<input type="hidden" name="Ust" value="B">
+<input type="hidden" name="Utqt" value="and">
+<input type="hidden" name="Udat" value="All">
+<input type="hidden" name="Utype" value="D">
+<INPUT TYPE="HIDDEN" NAME="Uch" VALUE ="">
+&nbsp;&nbsp;</TD><TD WIDTH="118">
+<FONT FACE="HELVETICA, ARIAL, SANS-SERIF" SIZE="1">
+<A HREF="">refine search</A></FONT></TD></TR></FORM></TABLE><IMG SRC="
+/graphics/clear.gif" WIDTH="468" HEIGHT="6" ALT=""></FONT></TD></TR><tr><td colspan=4>
+<TR><TD COLSPAN="4">
+<table border=0 cellspacing=0 cellpadding=0 width=464 BGCOLOR="#9cdd9c">
+<tr><FORM method=GET action="http://ads2.zdnet.com/adverts/nph-ct/r342/c05081/a19354/click.avenuea.com/go/zdnet_necx_042799mg_10/direct/01">
+<input type="hidden" name="nonce" value="guest_zd1">
+<input type="hidden" name="refer" value="zd1">
+<td align=left rowspan=2>
+<A HREF="http://ads2.zdnet.com/adverts/nph-ct/r342/c05081/a19354/necxdirect.necx.com/cgi-bin/auth/docroot/index.html?nonce=guest_zd1&refer=zd1"><IMG SRC="http://ads2.zdnet.com/adverts/imp/c05081/necx_logo.gif" BORDER=0 WIDTH=129 HEIGHT=40></a></td>
+<td valign=bottom colspan=3 align=right><font size=-2 face="Arial"><img src="http://ads2.zdnet.com/adverts/imp/c05081/text.gif" WIDTH=329 HEIGHT=15 BORDER=0></td></tr>
+<tr><td align=left valign=top>
+<input type=text value="BogusNoSuchWordSpammersAreIdiots" size=15 name="searchstring" maxlength="30"></td>
+<td align=middle valign=top>
+<nobr>
+&nbsp;
+<SELECT NAME='searchtype'>
+<OPTION VALUE='catkey' SELECTED>Product Category
+<OPTION VALUE='productname'>Model
+<OPTION VALUE='companyname'>Manufacturer</SELECT>&nbsp;
+</td><td>
+<INPUT type=IMAGE SRC="http://ads2.zdnet.com/adverts/imp/c05081/go.gif" WIDTH=50 HEIGHT=30 BORDER=0>
+</nobr>
+</td></form></tr></table>
+</td></tr>
+<tr>
+<td valign=top bgcolor=FFFFFF colspan=3>
+<font face=arial,helvetica size=2>
+<a href="http://chkpt.zdnet.com/chkpt/xldho/zdnet.directhit.com/fcgi-bin/DirectHitZD.fcg?cmd=zd_qry&qry=BogusNoSuchWordSpammersAreIdiots&db=site"><IMG SRC="http://zdnet.directhit.com/fcgi-bin/DirectHitZD.fcg?cmd=zd_btn&qry=BogusNoSuchWordSpammersAreIdiots&db=site" border=0></a>
+</td>
+</tr>
+</table>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="590" VALIGN="TOP">
+<TR><TD WIDTH="122" ROWSPAN="1000"><IMG SRC="/graphics/clear.gif" WIDTH="122" HEIGHT="15" ALT=""></TD>
+<TD WIDTH="13"><IMG SRC="/graphics/clear.gif" WIDTH="13" HEIGHT="15" ALT=""></TD><TD WIDTH="455"><IMG SRC="/graphics/clear.gif" WIDTH="455" HEIGHT="15" ALT=""></TD></TR>
+<!--liststart--><!--listend--><TR><TD COLSPAN="4"><IMG SRC="/graphics/clear.gif" WIDTH="468" HEIGHT="8" ALT=""></TD></TR>
+<TR><TD COLSPAN="4">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="468">
+<TR>
+<TD align=left>
+Your query returned no results<br>
+</TD></TR>
+</TABLE>
+</TD></TR>
+<tr>
+<td valign=top bgcolor=FFFFFF colspan=3>
+<font face=arial,helvetica size=2>
+<a href="http://chkpt.zdnet.com/chkpt/xldho/zdnet.directhit.com/fcgi-bin/DirectHitZD.fcg?cmd=zd_qry&qry=BogusNoSuchWordSpammersAreIdiots&db=web"><IMG SRC="http://zdnet.directhit.com/fcgi-bin/DirectHitZD.fcg?cmd=zd_btn&qry=BogusNoSuchWordSpammersAreIdiots&db=web" border=0></a>
+</td>
+</tr>
+<TR><TD COLSPAN="4" BGCOLOR="#003399"><FONT STYLE="color:#FFFFFF; font-size: 12pt; font-weight: bold;" FACE="HELVETICA, ARIAL, SANS-
+SERIF" COLOR="#99CCFF" SIZE="3">&nbsp;<B>SEARCH ZDNET:</B></FONT></TD></TR>
+<TR BGCOLOR="#FFFFCC"><TD COLSPAN="4"><FONT FACE="HELVETICA, ARIAL, SANS-SERIF">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="468"><TR><TD COLSPAN="2"><IMG SRC="/graphics/clear.gif" WIDTH="468" HEIGHT=
+"6" ALT=""></TD></TR><TR><FORM><TD WIDTH="350">&nbsp;<INPUT TYPE="TEXT" NAME="Utext" VALUE="BogusNoSuchWordSpammersAreIdiots" size="30">
+<INPUT TYPE="SUBMIT" VALUE ="Next Search">
+<input type="hidden" name="Urt" value="">
+<input type="hidden" name="Unbr" value="100">
+<input type="hidden" name="Ust" value="">
+<input type="hidden" name="Utqt" value="">
+<input type="hidden" name="Udat" value="All">
+<input type="hidden" name="Utype" value="">
+<INPUT TYPE="HIDDEN" NAME="Uch" VALUE ="">
+&nbsp;&nbsp;</TD><TD WIDTH="118">
+<FONT FACE="HELVETICA, ARIAL, SANS-SERIF" SIZE="1">
+<A HREF="">refine search</A></FONT></TD></TR></FORM></TABLE><IMG SRC="
+/graphics/clear.gif" WIDTH="468" HEIGHT="6" ALT=""></FONT></TD></TR></table>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="590" VALIGN="TOP">
+<TR><TD WIDTH="122" ROWSPAN="1000"><IMG SRC="/graphics/clear.gif" WIDTH="122" HEIGHT="15" ALT=""></TD>
+<TD WIDTH="13"><IMG SRC="/graphics/clear.gif" WIDTH="13" HEIGHT="15" ALT=""></TD><TD WIDTH="455"><IMG SRC="/graphics/clear.gif" WIDTH="455" HEIGHT="15" ALT=""></TD></TR>
+<tr>
+<td>
+<!-- Sponsors Links Thu Jun  3 10:27:23 1999 -->
+<LINK REL="STYLESHEET" TYPE="text/css" HREF="http://www.zdnet.com/graphics/styles/zdstyles.css" TITLE="ZDNet Styles"> 
+<BR>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" BGCOLOR="#FFFFFF">
+<TR><TD CLASS="sphead" COLSPAN="2" WIDTH="468" BGCOLOR="#99CCFF">
+&nbsp;Sponsored Links</TD></TR>
+<TR><TD COLSPAN="2" HEIGHT="4" NOWRAP><SCRIPT LANGUAGE="JavaScript1.2">
+<!--
+var cleargif_date_0=(new Date()).getTime();document.write('<img src=\"http://ads2.zdnet.com/adverts/imp/dotclear.gif?g=r451&c=a24186-a24220-a15808-a13934-a24709-a23528-a21176-a21478-a23953-a22509&idx=' + cleargif_date_0 + ' \" height=1 width=1 alt=\"\">');
+//-->
+</SCRIPT><NOSCRIPT>
+<IMG SRC="http://ads2.zdnet.com/adverts/imp/dotclear.gif?g=r451&c=a24186-a24220-a15808-a13934-a24709-a23528-a21176-a21478-a23953-a22509" HEIGHT="1" WIDTH="1" BORDER=0 ALT=""></NOSCRIPT></TD></TR>
+<TR><TD CLASS="spdeck" ALIGN="right" WIDTH="63" VALIGN="TOP"> @Backup</TD>
+<TD CLASS="spurl" ALIGN="LEFT" WIDTH="405" VALIGN="TOP"> &nbsp;<A HREF="http://ads2.zdnet.com/adverts/nph-ct/r451/c06485/a24186/automatic.backup.com/BID7598">The #1 Online Backup Service. Install FREE 30 day trial
+
+</A></TD></TR>
+<TR><TD CLASS="spdeck" ALIGN="right" WIDTH="63" VALIGN="TOP"> STORAGE</TD>
+<TD CLASS="spurl" ALIGN="LEFT" WIDTH="405" VALIGN="TOP"> &nbsp;<A HREF="http://ads2.zdnet.com/adverts/nph-ct/r451/c06490/a24220/www.quantum.com/nonstopbusiness/">Quantum provides the most reliable business solutions!</A></TD></TR>
+<TR><TD CLASS="spdeck" ALIGN="RIGHT" WIDTH="63" VALIGN="TOP"> Careers</TD>
+<TD CLASS="spurl" ALIGN="LEFT" WIDTH="405" VALIGN="TOP"> &nbsp;<A HREF="http://ads2.zdnet.com/adverts/nph-ct/r451/c03674/a15808/www.jobengine.com">Check out <b>hundreds of job openings</b> at top companies </A></TD></TR>
+<TR><TD CLASS="spdeck" ALIGN="RIGHT" WIDTH="63" VALIGN="TOP"> Very Cool</TD>
+<TD CLASS="spurl" ALIGN="LEFT" WIDTH="405" VALIGN="TOP"> &nbsp;<A HREF="http://ads2.zdnet.com/adverts/nph-ct/r451/c03680/a13934/www.x10.com/home/offer.cgi?~ZDNetLink"><B>X10.com - DVD Anywhere - from your PC - check it out! </B></A></TD></TR>
+<TR><TD CLASS="spdeck" ALIGN="RIGHT" WIDTH="63" VALIGN="TOP"> Books</TD>
+<TD CLASS="spurl" ALIGN="LEFT" WIDTH="405" VALIGN="TOP"> &nbsp;<A HREF="http://ads2.zdnet.com/adverts/nph-ct/r451/c05509/a24709/barnesandnoble.bfast.com/booklink/click?sourceid=478783&categoryid=nytnf"><B>Get 50% off</B> all New York Times Bestsellers today!</A></TD></TR>
+<TR><TD CLASS="spdeck" ALIGN="RIGHT" WIDTH="63" VALIGN="TOP"> Printers</TD>
+<TD CLASS="spurl" ALIGN="LEFT" WIDTH="405" VALIGN="TOP"> &nbsp;<A HREF="http://ads2.zdnet.com/adverts/nph-ct/r451/c06329/a23528/www.hp.com/printers/lj2100/printers/printers.html">HP LaserJet 2100TN -- Network-ready for under $1000</A></TD></TR>
+<TR><TD COLSPAN="2" HEIGHT="6">
+<IMG SRC="/graphics/clear.gif" BORDER="0" ALT="" HEIGHT="1" WIDTH="1"></TD></TR>
+<TR><TD CLASS="sphead" COLSPAN="2" WIDTH="468" BGCOLOR="#99CCFF">
+&nbsp;ZDNet Featured Links</TD></TR>
+<TR><TD COLSPAN="2" HEIGHT="4">
+<IMG SRC="/graphics/clear.gif" BORDER="0" ALT="" HEIGHT="1" WIDTH="1"></TD></TR>
+<TR><TD CLASS="spdeck" ALIGN="RIGHT" WIDTH="63" VALIGN="TOP"> Freebies</TD>
+<TD CLASS="spurl" ALIGN="LEFT" WIDTH="405" VALIGN="TOP"> &nbsp;<A HREF="http://ads2.zdnet.com/adverts/nph-ct/r451/c03674/a21176/www.zdnet.com/swlib/hotfiles/99sofar.html"><b>50 FREE downloads</b> -- the top programs of the year </A></TD></TR>
+<TR><TD CLASS="spdeck" ALIGN="RIGHT" WIDTH="63"> Shop Smart</TD>
+<TD CLASS="spurl" ALIGN="LEFT" WIDTH="405" VALIGN="TOP"> &nbsp;<A HREF="http://ads2.zdnet.com/adverts/nph-ct/r451/c03674/a21478/www.computershopper.com">Compare prices on <b>over 7,000 computer products & save</b> </A></TD></TR>
+<TR><TD CLASS="spdeck" ALIGN="RIGHT" WIDTH="63" VALIGN="TOP"> Learning</TD>
+<TD CLASS="spurl" ALIGN="LEFT" WIDTH="405" VALIGN="TOP"> &nbsp;<A HREF="http://ads2.zdnet.com/adverts/nph-ct/r451/c03674/a23953/www.zdu.com/free/free.asp?promocode=1-2025">FREE, convenient web/PC classes to try at ZDU now!</A></TD></TR>
+<TR><TD COLSPAN="2" HEIGHT="6">
+<IMG SRC="/graphics/clear.gif" BORDER="0" ALT="" HEIGHT="1" WIDTH="1"></TD></TR>
+<TR><TD CLASS="sphead" COLSPAN="2" WIDTH="468" BGCOLOR="#99CCFF">
+&nbsp;Magazine Offers</TD></TR>
+<TR><TD COLSPAN="2" HEIGHT="4"> <IMG SRC="/graphics/clear.gif" BORDER="0" ALT="" HEIGHT="1" WIDTH="1"></TD></TR>
+<TR><TD CLASS="spdeck" ALIGN="RIGHT" WIDTH="63" VALIGN="TOP"> Free Issue</TD>
+<TD CLASS="spurl" ALIGN="LEFT" WIDTH="405" VALIGN="TOP"> &nbsp;<A HREF="http://ads2.zdnet.com/adverts/nph-ct/r451/c04870/a22509/https:/www.redherring.com/service/circ/subs_ZC.html">Get a <b>risk-free issue</b> of <b>RED HERRING</b> magazine today!</A></TD></TR>
+<TR><TD COLSPAN="2" HEIGHT="6">
+<IMG SRC="/graphics/clear.gif" BORDER="0" ALT="" HEIGHT="1" WIDTH="1"></TD></TR>
+</TABLE><BR>
+<!-- end sponsored links -->
+<TABLE BORDER="0" WIDTH="468" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD ALIGN="CENTER" VALIGN="TOP" WIDTH="468" BGCOLOR="#003399" COLSPAN="4">
+<IMG SRC="http://www.zdnet.com/graphics/clear.gif" WIDTH=1 HEIGHT=2 BORDER=0 ALT=""></TD></TR>
+<TR><TD ALIGN="CENTER" VALIGN="TOP" WIDTH="2" BGCOLOR="#003399">
+<IMG SRC="http://www.zdnet.com/graphics/clear.gif" WIDTH=2 HEIGHT=1 BORDER=0 ALT=""></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH="68" BGCOLOR="#FFFFFF">
+<A HREF="http://www.zdnet.com"><IMG SRC="http://www.zdnet.com/graphics/botnav/zdlogo_sm.gif" WIDTH=64 HEIGHT=37 BORDER=0 ALT="" VSPACE="2" HSPACE="2"></A></TD>
+<TD ALIGN="CENTER" VALIGN="MIDDLE" WIDTH="464" BGCOLOR="#FFFFFF">
+<FONT STYLE="color:#333399; font-family:Arial; font-size: 8pt;" FACE="Geneva, Arial" COLOR="#333399" SIZE="-2">
+<A HREF="http://www.zdnet.com/products">Reviews</A> | 
+<A HREF="http://www.zdnet.com/zdnn">News</A> | 
+<A HREF="http://www.hotfiles.com/">Downloads</A> | 
+<A HREF="http://www.zdnet.com/computershopper/">Shop</A> | 
+<A HREF="http://my.zdnet.com/">MyZDNet</A> | 
+<A HREF="http://www.gamespot.com/zdnet/index.html">Games</A> |
+<A HREF="http://www.zdtv.com/">ZDTV</A> | 
+<A HREF="http://www.zdnet.com/cc">Forums</A><BR>
+<IMG SRC="http://www.zdnet.com/graphics/clear.gif" WIDTH=1 HEIGHT=4 BORDER=0 ALT=""><BR>
+<A HREF="http://www.zdnet.com/anchordesk">AnchorDesk</A> | 
+<A HREF="http://www.zdnet.com/pcmag/">PC Magazine</A> | 
+<A HREF="http://www.zdnet.com/pcweek">PC Week</A> | 
+<A HREF="http://www.zdnet.com/zdhelp">Help!</A> | 
+<A HREF="http://www.zdnet.com/yil">Yahoo! Internet Life</A>
+</FONT></TD>
+<TD ALIGN="CENTER" VALIGN="TOP" WIDTH="2" BGCOLOR="#003399">
+<IMG SRC="http://www.zdnet.com/graphics/clear.gif" WIDTH=1 HEIGHT=1 ALT="" BORDER="0"></TD></TR>
+<TR><TD ALIGN="CENTER" VALIGN="TOP" WIDTH="468" BGCOLOR="#003399" COLSPAN="4">
+<IMG SRC="http://www.zdnet.com/graphics/clear.gif" WIDTH=1 HEIGHT=2 ALT="" BORDER="0"><BR>
+<FONT COLOR="#FFFFCC" SIZE="-2">
+<A HREF="http://www.zdnet.com/"><FONT STYLE="color:#FFFFCC; font-size: 8pt; font-weight: bold;" FACE="Verdana, Geneva, Arial" COLOR="#99CCFF" SIZE="-2"><B>HOME</B></FONT></A> <FONT STYLE="color:#FFFFCC; font-size: 8pt;" COLOR="#99CCFF" SIZE="-2">|</FONT> <A HREF="http://members.zdnet.com/register/register.cgi"><FONT STYLE="color:#FFFFCC; font-size: 8pt; font-weight: bold;" FACE="Verdana, Geneva, Arial" COLOR="#99CCFF" SIZE="-2"><B>FREE MEMBERSHIP</B></FONT></A> <FONT STYLE="color:#FFFFCC; font-size: 8pt;" COLOR="#99CCFF" SIZE="-2">|</FONT> <A HREF="http://www.zdnet.com/cc/contact.html"><FONT STYLE="color:#FFFFCC; font-size: 8pt; font-weight: bold;" FACE="Verdana, Geneva, Arial" COLOR="#99CCFF" SIZE="-2"><B>CONTACT ZD</B></FONT></A> <FONT STYLE="color:#FFFFCC; font-size: 8pt;" COLOR="#99CCFF" SIZE="-2">|</FONT> <A HREF="http://www.zdnet.com/adverts/adinfo/"><FONT STYLE="color:#FFFFCC; font-size: 8pt; font-weight: bold;" FACE="Verdana, Geneva, Arial" COLOR="#99CCFF" SIZE="-2"><B>AD INFO</B></FONT></A> <FONT STYLE="color:#FFFFCC; font-size: 8pt;" COLOR="#99CCFF" SIZE="-2">|</FONT> 
+<A HREF="http://www.zd.com/"><FONT STYLE="color:#FFFFCC; font-size: 8pt; font-weight: bold;" FACE="Verdana, Geneva, Arial" COLOR="#99CCFF" SIZE="-2"><B>ZIFF-DAVIS</B></FONT></A><BR>
+<IMG SRC="http://www.zdnet.com/graphics/clear.gif" WIDTH=1 HEIGHT=4 ALT="" BORDER="0"></FONT></TD></TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH="468" BGCOLOR="#FFFFFF" COLSPAN="4">
+&nbsp;</TD></TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH="468" BGCOLOR="#FFFFFF" COLSPAN="4">
+<FONT FACE="Arial, Geneva, Lucida" SIZE="2">Use of ZDNet is subject to certain <A HREF="http://www.zdnet.com/findit/terms.html">Terms &amp; Conditions</A></FONT><BR>
+<FONT FACE="Arial, Geneva, Lucida" SIZE="2">Please read ZDNet's <A HREF="http://www.zdnet.com/findit/privacy.html">Privacy Statement</A></FONT><P>
+<!--begin copyright-->
+<FONT FACE="Arial, Geneva, Lucida" SIZE="1">Copyright (c) 1999 <A HREF="http://www.zdnet.com/">ZDNet</A>. All rights reserved. Reproduction in whole or in part in any form or medium without express written permission of ZDNet is prohibited. ZDNet and the ZDNet logo are trademarks of Ziff-Davis Inc.</FONT><!--end copyright--></TD></TR></TABLE></td>
+</tr>
+</table>
+</TABLE>
+
+<script language="javascript">
+<!--
+var cleargif_date=(new Date()).getTime();document.write('<img src=\"http://ads.zdnet.com/adverts/imp/dotclear.gif?g=r342&c=a19354&idx=' + cleargif_date + ' \" height=1 width=1>');
+//-->
+</script>
+<noscript>
+<img src="http://ads.zdnet.com/adverts/imp/dotclear.gif?g=r342&c=a19354" height=1 width=1 border=0>
+</noscript>
+</BODY></HTML>

@@ -1,10 +1,6 @@
-#!/usr/local/bin/perl -w
-
 # WebCrawler.pm
 # Copyright (C) 1998 by Martin Thurn
-# $Id: WebCrawler.pm,v 1.5 1998/08/27 17:29:05 johnh Exp $
-
-package WWW::Search::WebCrawler;
+# $Id: WebCrawler.pm,v 1.6 1999/05/27 23:15:58 johnh Exp $
 
 =head1 NAME
 
@@ -28,11 +24,9 @@ F<http://www.WebCrawler.com>.
 This class exports no public interface; all interaction should
 be done through L<WWW::Search> objects.
 
-
 =head1 SEE ALSO
 
 To make new back-ends, see L<WWW::Search>.
-
 
 =head1 HOW DOES IT WORK?
 
@@ -49,22 +43,27 @@ C<{cache}>.  If it finds a ``next'' button in the text,
 it sets C<{_next_url}> to point to the page for the next
 set of results, otherwise it sets it to undef to indicate we''re done.
 
-
 =head1 BUGS
 
 Please tell the author if you find any!
-
 
 =head1 TESTING
 
 This module adheres to the C<WWW::Search> test suite mechanism. 
 
-   Test cases (results as of 1998-08-20):
-  '+mrfglbqnx +NoSuchWord'    ---   no hits
-  'disestablishmentarianism'  ---    1 hit  on one page
-  'LSAM'                      ---    4 hits on one page
-  'Jabba'                     ---  334 hits on four pages
+  Test cases (accurate as of 1999-03-29):
 
+    $file = 'test/WebCrawler/zero_result';
+    $query = 'Bogus' . 'NoSuchWord';
+    test($mode, $TEST_EXACTLY);
+
+    $file = 'test/WebCrawler/one_page_result';
+    $query = 'antidisestab'.'lishmentarianism';
+    test($mode, $TEST_RANGE, 2, 50);
+
+    $file = 'test/WebCrawler/multi_page_result';
+    $query = 'Ke'.'nobi';
+    test($mode, $TEST_GREATER_THAN, 100);
 
 =head1 AUTHOR
 
@@ -74,15 +73,23 @@ As of 1998-03-16, C<WWW::Search::WebCrawler> is maintained by Martin Thurn
 C<WWW::Search::WebCrawler> was originally written by Martin Thurn
 based on C<WWW::Search::HotBot>.
 
-
 =head1 LEGALESE
 
 THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
 WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
 MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
-
 =head1 VERSION HISTORY
+
+If it's not listed here, then it wasn't a meaningful or released version.
+
+=head2 1.13, 1999-03-29
+
+Remove extraneous HTML from description (thanks to Jim Smyser jsmyser@bigfoot.com)
+
+=head2 1.11, 1998-10-09
+
+Now uses split_lines function
 
 =head2 1.9
 
@@ -100,21 +107,25 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 First publicly-released version.
 
-
 =cut
 
 #####################################################################
+
+package WWW::Search::WebCrawler;
 
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = sprintf("%d.%02d", q$Revision: 1.5 $ =~ /(\d+)\.(\d+)/);
+$VERSION = '1.13';
 
 use Carp ();
 use WWW::Search(generic_option);
 require WWW::SearchResult;
 
+
+# public
+sub version { $VERSION }
 
 # private
 sub native_setup_search
@@ -210,12 +221,9 @@ sub native_retrieve_some
   
   # Get some results, adhering to the WWW::Search mechanism:
   print STDERR " *   sending request (",$self->{_next_url},")\n" if $self->{'_debug'};
-  my($response) = $self->http_request('GET', $self->{_next_url});
+  my $response = $self->http_request('GET', $self->{_next_url});
   $self->{response} = $response;
-  if (!$response->is_success) 
-    {
-    return undef;
-    };
+  unless ($response->is_success) { return undef }
 
   print STDERR " *   got response\n" if $self->{'_debug'};
   $self->{'_next_url'} = undef;
@@ -292,7 +300,7 @@ sub native_retrieve_some
       $state = $DESC;
       }
     elsif ($state eq $DESC &&
-           m|^<DD>(.*)$|)
+           m|^<DD>(.*?)<NOBR>|)
       {
       print STDERR "hit description line\n" if 2 <= $self->{'_debug'};
       $hit->description($1);
@@ -340,15 +348,3 @@ sub native_retrieve_some
 
 1;
 
-__END__
-
-Martin''s page download results, 1998-02:
-
-simplest arbitrary page:
-
-http://www.webcrawler.com/cgi-bin/WebQuery?search=star+wars+collecting;showSummary=true;perPage=25;start=0
-
-Here''s what I''m generating:
-
-http://www.webcrawler.com/cgi-bin/WebQuery?search=LSAM;perPage=24;start=0;showSummary=true;
-http://www.webcrawler.com/cgi-bin/WebQuery?search=LSAM;perPage=30;start=0;showSummary=true;

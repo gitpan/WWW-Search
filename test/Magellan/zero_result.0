@@ -2,67 +2,70 @@
 <HEAD><TITLE>Search Results</TITLE></HEAD>
 <BODY BGCOLOR="#ffffff">
 
-<CENTER>
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=2>
- <TR>
-<TD ALIGN=LEFT VALIGN=top ROWSPAN=4>
-<A HREF="http://www.mckinley.com/">
-<IMG SRC="/img/magellan/mglobe.gif" BORDER=0 WIDTH=49 HEIGHT=41 ALIGN=left></A>
-</TD>
-<TD ALIGN=middle VALIGN=top ROWSPAN=4>
-<A HREF="http://www.mckinley.com/"><IMG SRC="/img/magellan/magellan.gif" BORDER=0 WIDTH=224 HEIGHT=41 ALIGN=middle ALT="Magellan Internet Guide"></A><BR>
-<IMG SRC="/img/magellan/white.gif" HEIGHT=4 WIDTH=1><BR>
-<FONT FACE="arial,helvetica" SIZE="-2">
-<A HREF="http://www.mckinley.com/">HOME</A> | <A HREF="/magellan/Reviews/index.magellan.html">REVIEWS</A></FONT>
-</TD><TD WIDTH=4 ROWSPAN=4></TD>
-<TD HEIGHT="2" COLSPAN=3 NOWRAP></TD></TR>
+ <CENTER>
+ <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=2>
+  <TR>
+   <TD ALIGN=LEFT VALIGN=top ROWSPAN=4>
+    <A HREF="http://magellan.excite.com/"><IMG SRC="/img/magellan/mglobe.gif" BORDER=0 WIDTH=49 HEIGHT=41 ALIGN=left></A>
+   </TD>
+   <TD ALIGN=middle VALIGN=top ROWSPAN=4>
+    <A HREF="http://magellan.excite.com/"><IMG SRC="/img/magellan/magellan.gif" BORDER=0 WIDTH=224 HEIGHT=41 ALIGN=middle ALT="Magellan Internet Guide"></A><BR>
+    <IMG SRC="/img/magellan/white.gif" HEIGHT=4 WIDTH=1><BR>
+   </TD>
+   <TD WIDTH=4 ROWSPAN=4></TD>
+   <TD HEIGHT="2" COLSPAN=3 NOWRAP></TD>
+  </TR>
 
-<TR>
+  <FORM ACTION="/search.gw" METHOD=get>
+   <TR>
+    <TD ALIGN=left VALIGN=top COLSPAN=3 NOWRAP>
+     <INPUT NAME=search VALUE="BogusNoSuchWordSpammersAreIdiots" SIZE=30>
+     <INPUT TYPE=IMAGE SRC="/img/magellan/searchbut.gif" BORDER=0 ALIGN="top" VALUE="Search Magellan" WIDTH=67 HEIGHT=30>
+    </TD>
+   </TR>
 
+   <TR>
+    <TD ALIGN=left NOWRAP>
+     <INPUT TYPE=radio NAME=c VALUE=web  CHECKED>     <FONT SIZE="-1">The Entire Web</FONT>
+     <INPUT TYPE=hidden NAME=look VALUE=magellan>
+    </TD>
+    <TD WIDTH=3 ROWSPAN=2></TD>
+    <TD ALIGN=left>
+     <INPUT TYPE=radio NAME=c VALUE=web.green >     <FONT SIZE="-1" COLOR=#008C05>Green Light</FONT>
+     <FONT SIZE="-1"> sites only</FONT>
+    </TD>
+   </TR>
 
-<FORM ACTION="/search.gw" METHOD=get>
-<TD ALIGN=left VALIGN=top COLSPAN=3 NOWRAP>
-<INPUT NAME=search VALUE="BogusNoSuchWordSpammersAreIdiots" SIZE=30>
-<INPUT TYPE=IMAGE SRC="/img/magellan/searchbut.gif" BORDER=0 ALIGN="top" VALUE="Search Magellan" WIDTH=67 HEIGHT=30>
-</TD></TR>
-<TR>
- <TD ALIGN=left NOWRAP>
- <INPUT TYPE=radio NAME=c VALUE=web.guide
-    > <FONT SIZE="-1">Reviewed Sites Only</FONT></TD>
- <TD WIDTH=3 ROWSPAN=2></TD>
- <TD ALIGN=left>
-  <INPUT TYPE=radio NAME=c VALUE=web.green
-        ><FONT SIZE="-1" COLOR=#008C05>Green Light</FONT><FONT SIZE="-1"> sites only</FONT>
- </TD>
-</TR>
-<TR>
- <TD ALIGN=left><INPUT TYPE=radio NAME=c VALUE=web
-   CHECKED  > <FONT SIZE="-1">The Entire Web</FONT>
-<INPUT TYPE=hidden NAME=look VALUE=magellan>
-</TD>
+   <TR>
+    <TD ALIGN=left></TD>
 
-<!-- End of search and collection section -->
+    <!-- End of search and collection section -->
 
+    <TD ALIGN=left><FONT SIZE="-1">
+     <A HREF="/magellan/Info/advancedtips.html">Search Tips and Help</A>
+    </FONT></TD>
+   </TR>
 
-<TD ALIGN=left><FONT SIZE="-1"><A HREF="/magellan/Info/advancedtips.html">Search Tips and Help</A></FONT></TD></TR></TABLE>
+   <input type=hidden name=sorig value=rpage>
+  </FORM>
+ </TABLE>
+ </CENTER>
 
-<input type=hidden name=sorig value=rpage>
-</FORM>
-</CENTER>
 <P>
 
   <CENTER>
                                                                                                                                                                                                                                                                                                                     				    				      					
 
+ 
 <B>Your search produced no results.</B>
 <HR NOSHADE SIZE=1>
 <B>Please refer to the tips below before trying your search again:</B>
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=8 WIDTH=100%>
 <TR>
-<TD>
+<TD valign=top>
 <B> &#183; Searching on more than one word produces much better results.</B>
 </TD>
-<TD>
+<TD valign=top>
 <B> &#183; Use more specific terms.</B><BR>Eg. <I>ferrari</I> instead of <I>sports cars</I>.
 </TD>
 </TR>
@@ -113,26 +116,91 @@
 </TR>
 </TABLE>
 
+ 
 
 									      				                                                                                                                                                                                                                                                                                                                      <center>
 
   <br>
-  <!-- Ad Start -->
-<!-- Ad param svcpage=/search.gw keyword=bogusnosuchwordspammersareidiots svccobrand=magellan svcname=xsr ip=128.9.160.184 user_agent=WWW::Search/1.023 -->
-<a href="/relocate/ad=http://ad.preferences.com/image.ng;spacedesc=ExciteNetwork_Excite_468x60_RunOfSite_Any&time=1998.12.10.18.28.31&ex_cookie=&ex_reg=&TG_NETLOC=xsr/search.gw&TG_COBRAND=magellan|pk=1732784;http://ad.preferences.com/click.ng;spacedesc=ExciteNetwork_Excite_468x60_RunOfSite_Any&time=1998.12.10.18.28.31&ex_cookie=&ex_reg=&TG_NETLOC=xsr/search.gw&TG_COBRAND=magellan" onMouseOver="window.status='Click Here';return true" language="Javascript"><img src="http://ad.preferences.com/image.ng;spacedesc=ExciteNetwork_Excite_468x60_RunOfSite_Any&time=1998.12.10.18.28.31&ex_cookie=&ex_reg=&TG_NETLOC=xsr/search.gw&TG_COBRAND=magellan" ALT="Click Here" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> Click Here </B></FONT></CENTER></a>
+      <!-- Ad Start -->
+<!-- Ad param svcpage=/search.gw keyword=bogusnosuchwordspammersareidiots svccobrand=magellan svcname=xsr ip=128.9.160.184 user_agent=WWW::Search/1.024 -->
+
+<FORM NAME="Buy" ACTION="http://www.autobytel.com/index.cfm" METHOD=GET
+target="_top"> <input type="hidden"
+name="id" value="excite50"> <input type="hidden" name="sction"
+value="used"> <input type="hidden"
+name="fromFasTrak" value="yes"> <input type="hidden" name="url"
+value="/contentframe/used/selectusedmodel.cfm"> <TABLE BORDER=1
+CELLPADDING=0 CELLSPACING=0 WIDTH=468
+HEIGHT=60><TR><TD> <table border="0" cellpadding="0" cellspacing="0"
+width="100%"> <tr> <td colspan="3"
+valign="top" bgcolor="#CC9933"><img src="http://image.eimg.com/ads/83622_test.gif" border=0 width="253"
+height="32"></td> <td rowspan="2"
+valign="top"><img src="http://image.eimg.com/ads/83622_thisb.gif" width="216" border=0 height="60"></td>
+</tr> <tr> <td valign="top"
+bgcolor="#CC9933">&nbsp;<SELECT NAME="Make_ch"> <option VALUE="Acura"
+SELECTED>Acura</option> <option
+VALUE="AM General">AM General</option> <option VALUE="Aston Martin">Aston
+Martin</option> <option
+VALUE="Audi">Audi</option> <option VALUE="BMW">BMW</option> <option
+VALUE="Buick">Buick</option> <option
+VALUE="Cadillac">Cadillac</option> <option
+VALUE="Chevrolet">Chevrolet</option> <option
+VALUE="Chrysler">Chrysler</option> <option VALUE="Dodge">Dodge</option>
+<option
+VALUE="Eagle">Eagle</option> <option VALUE="Ford">Ford</option> <option
+VALUE="Geo">Geo</option> <option
+VALUE="GMC">GMC</option> <option VALUE="Honda">Honda</option> <option
+VALUE="Hyundai">Hyundai</option>
+<option VALUE="Infiniti">Infiniti</option> <option
+VALUE="Isuzu">Isuzu</option> <option
+VALUE="Jaguar">Jaguar</option> <option VALUE="Jeep">Jeep</option> <option
+VALUE="Kia">Kia</option> <option
+VALUE="Land Rover">Land Rover</option> <option
+VALUE="Lexus">Lexus</option> <option
+VALUE="Lincoln">Lincoln</option> <option VALUE="Mazda">Mazda</option>
+<option
+VALUE="Mercedes-Benz">Mercedes-Benz</option> <option
+VALUE="Mercury">Mercury</option> <option
+VALUE="Mitsubishi">Mitsubishi</option> <option
+VALUE="Nissan">Nissan</option> <option
+VALUE="Oldsmobile">Oldsmobile</option> <option
+VALUE="Plymouth">Plymouth</option> <option
+VALUE="Pontiac">Pontiac</option> <option VALUE="Porsche">Porsche</option>
+<option
+VALUE="Saab">Saab</option> <option VALUE="Saturn">Saturn</option> <option
+VALUE="Subaru">Subaru</option>
+<option VALUE="Suzuki">Suzuki</option> <option
+VALUE="Toyota">Toyota</option> <option
+VALUE="Volkswagen">Volkswagen</option> <option
+VALUE="Volvo">Volvo</option> </select></td> <td valign="top"
+bgcolor="#CC9933"><INPUT NAME="Entered_Postal_Code_vch" TYPE="text"
+VALUE="" SIZE="8" MAXLENGTH="7"></td>
+<td valign="top" bgcolor="#CC9933"><input type="submit" name="go"
+value="Go"></td> </tr>
+</table></TD></TR></TABLE><A
+HREF="/relocate/ad=83622_htmlad.gif|pk=2456299;http://www.excite.com"></A><CENTER><FONT SIZE=-1 COLOR=#0000FF
+FACE=arial, geneva><B>Click Here for Autobytel.com!</B></FONT></CENTER>
+</form>
+
+
 <!-- Ad Stop -->
 
-  </CENTER>
+    </CENTER>
 <P>
 <HR>
 <FONT SIZE=-1>
-Explore <A HREF=/magellan/advertising.html>advertising</A> opportunities with Magellan.<BR>
-Copyright &copy;1997 The McKinley Group, Inc., a subsidiary of <A HREF="http://www.excite.com/?Mh-a-t">Excite, Inc.</A>.  All rights reserved.
+Explore <A HREF="http://www.excite.com/info/advertising">advertising</A> opportunities with Magellan.<BR>
+Copyright &copy;1998 The McKinley Group, Inc., a subsidiary of <A HREF="http://www.excite.com/?Mh-a-t">Excite, Inc.</A>.  All rights reserved.
 </FONT>
 </CENTER>
 <IMG SRC="http://ad.preferences.com/ping.ng;spacedesc=TCExciteData_Excite_1x1_RunOfSite_Any&event=KeywordResults" HEIGHT=1 WIDTH=1 BORDER=0>
 </BODY>
 </HTML>
+
+
+
+
+
 
 
 

@@ -1,763 +1,716 @@
 <html>
-
-<!--Northern Light Simple Search Results (Build 2164)-->
+<!--Northern Light Simple Search Results (Build 4176)-->
 <!--    -->
 
 <head>
  <title>Northern Light Search: +LSAM +ISI +IB</title>
 </head>
 
+<!-- Shopping Cart HTML -->
+<!--T_JAVA_SCRIPT-->
+
 <body bgcolor=white alink=blue link=blue text=black>
 
-<!--Search box, logos and banner------------------------------>
-	
-<table border=0 cellspacing=0 cellpadding=0>
- <tr>
-  <td width=25 rowspan=3><img src="docs/gif/transparent.gif" width=25 height=1 alt=""></td>
-  <td width=195><img src="docs/gif/transparent.gif" width=195 height=1 alt=""></td>
-  <td width=38><img src="docs/gif/transparent.gif" width=38 height=1 alt=""></td>
-  <td width=472><img src="docs/gif/transparent.gif" width=472 height=1 alt=""></td>
- </tr>
- <tr>
-  <td valign=top>
-   <a href="search.html"><img src="docs/gif/nlt_logo.gif" width=112 height=100 border=0 alt="Northern Light Technology"></a><br>
-   <img src="docs/gif/transparent.gif" width=1 height=5 border=0 alt=""><br>
-  </td>
-  <td>&nbsp;</td>
-  <td colspan=2 valign=top><font size=1>
-   <a href="search.html">Simple Search</a>&nbsp;&nbsp;&nbsp;
-   <a href="power.html">Power Search</a>&nbsp;&nbsp;&nbsp;
-   <a href="pubsearch.html">Publication Search</a>&nbsp;&nbsp;&nbsp;
-   <a href="industry.html">Industry Search</a>&nbsp;&nbsp;&nbsp;
-   <a href="news.html">Current News</a>
-   <br>&nbsp;<br>
-   </font>
-   <!-- and now a word from our sponsor -->
-   <nolayer>
-   <!--iframe src="http://ad.doubleclick.net/adi/northernlight.com/results;kw=LSAM+ISI+IB;ord=913314524" marginwidth=1 marginheight=0 width=468 height=60 hspace=0 vspace=0 frameborder=0 scrolling="no"-->
-   <iframe src="http://ad.doubleclick.net/adi/northernlight.com/results;kw=LSAM+ISI+IB;ord=913314524" marginwidth=1 marginheight=1 width=468 height=60 frameborder=0 scrolling="no">
-   <!--NLBannerStart-->
-   <a href="http://ad.doubleclick.net/jump/northernlight.com/results;kw=LSAM+ISI+IB;ord=913314524"><img src="http://ad.doubleclick.net/ad/northernlight.com/results;kw=LSAM+ISI+IB;ord=913314524" width=468 height=60 alt="please visit our sponsor" border=0></a>
-   <!--NLBannerEnd-->
-   </iframe>
-   </nolayer>
-   <!--ilayer id=snap visibility=hidden width=468 height=63></ilayer-->
-   <ilayer id=snap visibility=hidden width=468 height=63></ilayer>
-   <!-- end -->
-   <br><img src="docs/gif/transparent.gif" width=1 height=6 alt=""><br>
-  </td>
- </tr>
- <tr>
- <!-- keywords cluster -->
-  <td valign=middle>
-<table border=0 cellspacing=0 cellpadding=0 width=110>
- <tr>
-<td align=center><font size=2>
- <img src="docs/gif/transparent.gif" width=1 height=5 border=0 alt=""><br>
- <a href="http://barnesandnoble.bfast.com/booklink/click?sourceid=222869&categoryid=homepage">Buy books at</a>&nbsp;<br>
- <img src="docs/gif/transparent.gif" width=110 height=3 border=0 alt=""><br>
- <a href="http://barnesandnoble.bfast.com/booklink/click?sourceid=222869&categoryid=homepage"><img src="docs/gif/bn_logo_results.gif" width=80 height=20 border=0 alt="barnesandnoble.com"></a><br>
-</font></td>
- </tr>
-</table>
-  </td>
-  <!-- end -->
-  <td>&nbsp;</td>
-  <td colspan=3 valign=middle>
-   <table border=0 cellspacing=1 cellpadding=0>
-   <form action="/nlquery.fcg" method=get>
-    <input type=hidden name=ho value="">
-    <input type=hidden name=po value="">
-    <input type=hidden name=si value="">
-    <input type=hidden name=cc value=" ">
-    <input type=hidden name=us value="025">
-    <input type=hidden name=xd value="">
-    <tr>
-     <td colspan=3><img src="docs/gif/transparent.gif" width=1 height=5 border=0 alt=""><br>
-      <font size=2><b>38 items</b><!-- result --> found <!-- end --><!-- audit cluster -->  <!-- result -->for:<!-- end --></font></td>
-    </tr>
-    <tr>
-     <td><input type=text size=27 name=qr value="+LSAM +ISI +IB"></td>
-     <td>&nbsp;</td>
-     <td nowrap><input type=image name=sb src="docs/gif/srchbtn1.gif" maxlength=100 border=0 align=top alt="Search"><nobr><a href="docs/search_help_results.html"><img src="docs/gif/searchhelp.gif" border=0 align=top width=85 height=28 alt="Help/Hints"></a></nobr></td>
-    </tr>
-   </form>
-   </table>
-  </td>
- </tr>
-</table>
-
-<!--Results--------------------------------------------------->
-	
 <table border=0 cellspacing=0 cellpadding=0 width=730>
- <tr>
-  <td colspan=5><font size=1>&nbsp;</font></td>
- </tr>
- <tr>
-  <td width=220><img src="docs/gif/transparent.gif" width=220 height=1 alt=""></td>
-  <td width=38><img src="docs/gif/transparent.gif" width=38 height=1 alt=""></td>
-  <td width=365><img src="docs/gif/transparent.gif" width=365 height=1 alt=""></td>
-  <td><img src="docs/gif/transparent.gif" width=1 height=1 alt=""></td>
-  <td><img src="docs/gif/transparent.gif" width=1 height=1 alt=""></td>
- </tr>
- <tr>
-  <td rowspan=8 valign=top width=220><font size=2>
-  <!--Custom Search Folders(TM) span all rows-1:1----->
-  <!-- any clusters -->
-   <img src="docs/gif/dynamicfolders.gif" width=204 height=47 border=0 alt="Narrow Your Search with Custom Search Folders"><br>
-   Your search returned
-   38 items
-   which we have organized into the following
-   <!--  the following categories: -->
-   <a href="docs/search_help_folders.html">Custom Search Folders</a>:<br>
-   <img src="docs/gif/transparent.gif" border=0 width=1 height=8 alt=""><br>
-   </font>
-   <!-- end -->
-    <table border=0 cellspacing=0>
-     <tr>
-      <td colspan=4>
-      <!-- audit cluster -->
-     </td>
-    </tr>
-    <!-- news cluster -->
-    <tr>
-     <td><font size=1>&nbsp;&nbsp;</font></td>
-     <td valign=middle align=right><a href="/nlquery.fcg?qr=%2bLSAM+%2bISI+%2bIB&dr=14&dx=1006&us=025&rv=1"><img src="docs/gif/folderx.gif" width=22 height=15 border=0 alt=""></a><br>
-      <img src="docs/gif/transparent.gif" border=0 width=1 height=3 alt=""><br>
-     </td>
-     <td><font size=1>&nbsp;&nbsp;</font></td>
-     <td valign=middle><font size=2><a href="/nlquery.fcg?qr=%2bLSAM+%2bISI+%2bIB&dr=14&dx=1006&us=025&rv=2">Search Current News</a></font><br>
-      <img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""><br>
-     </td>
-    </tr>
-    <!-- end -->
-    <!-- cluster -->
-    <tr>
-     <td width=1><img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""></td>
-     <td nowrap valign=top align=right><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&&cb=0&cc=for+-www%2Eisi%2Eedu&cl=1&clweb_1_24=8750&cn_1=www%2Eisi%2Eedu&db=11801&us=025"><img src="docs/gif/foldery.gif" width=22 height=14 border=0 alt=""></a></td>
-     <td width=5></td>
-     <td valign=top align=left><font size=2><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&&cb=0&cc=for+-www%2Eisi%2Eedu&cl=1&clweb_1_24=8750&cn_1=www%2Eisi%2Eedu&db=11801&us=025">www.isi.edu</a></font></td>
-    </tr>
-    <!-- end -->
-    <tr>
-     <td width=1><img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""></td>
-     <td nowrap valign=top align=right><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&&cb=0&cc=for+-Personal+pages&cl=1&clsrc_1_25=2&cn_1=Personal+pages&db=11801&us=025"><img src="docs/gif/foldery.gif" width=22 height=14 border=0 alt=""></a></td>
-     <td width=5></td>
-     <td valign=top align=left><font size=2><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&&cb=0&cc=for+-Personal+pages&cl=1&clsrc_1_25=2&cn_1=Personal+pages&db=11801&us=025">Personal pages</a></font></td>
-    </tr>
-    <!-- end -->
-    <tr>
-     <td width=1><img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""></td>
-     <td nowrap valign=top align=right><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&&cb=0&cc=for+-gost%2Eisi%2Eedu&cl=1&clweb_1_26=19200&cn_1=gost%2Eisi%2Eedu&db=11801&us=025"><img src="docs/gif/foldery.gif" width=22 height=14 border=0 alt=""></a></td>
-     <td width=5></td>
-     <td valign=top align=left><font size=2><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&&cb=0&cc=for+-gost%2Eisi%2Eedu&cl=1&clweb_1_26=19200&cn_1=gost%2Eisi%2Eedu&db=11801&us=025">gost.isi.edu</a></font></td>
-    </tr>
-    <!-- end -->
-    <tr>
-     <td width=1><img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""></td>
-     <td nowrap valign=top align=right><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&&cb=0&cc=for+-Educational+sites&cl=1&clsrc_1_27=7&cn_1=Educational+sites&db=11801&us=025"><img src="docs/gif/foldery.gif" width=22 height=14 border=0 alt=""></a></td>
-     <td width=5></td>
-     <td valign=top align=left><font size=2><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&&cb=0&cc=for+-Educational+sites&cl=1&clsrc_1_27=7&cn_1=Educational+sites&db=11801&us=025">Educational sites</a></font></td>
-    </tr>
-    <!-- end -->
-    <tr>
-     <td width=1><img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""></td>
-     <td nowrap valign=top align=right><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&&cb=0&cc=for+-Non%2Dprofit+sites&cl=1&clsrc_1_28=5&cn_1=Non%2Dprofit+sites&db=11801&us=025"><img src="docs/gif/foldery.gif" width=22 height=14 border=0 alt=""></a></td>
-     <td width=5></td>
-     <td valign=top align=left><font size=2><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&&cb=0&cc=for+-Non%2Dprofit+sites&cl=1&clsrc_1_28=5&cn_1=Non%2Dprofit+sites&db=11801&us=025">Non-profit sites</a></font></td>
-    </tr>
-    <!-- end -->
-    <tr>
-     <td width=1><img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""></td>
-     <td nowrap valign=top align=right><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&&cb=0&cc=&cl=1&cloth_1_29=NOT+%28+WEBSITE+%3D+8750+OR++SOURCE+%3D+2+OR++WEBSITE+%3D+19200+OR++SOURCE+%3D+7+OR++SOURCE+%3D+5%29&cn_1=all+others%2E%2E%2E&db=11801&us=025"><img src="docs/gif/foldery.gif" width=22 height=14 border=0 alt=""></a></td>
-     <td width=5></td>
-     <td valign=top align=left><font size=2><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&&cb=0&cc=&cl=1&cloth_1_29=NOT+%28+WEBSITE+%3D+8750+OR++SOURCE+%3D+2+OR++WEBSITE+%3D+19200+OR++SOURCE+%3D+7+OR++SOURCE+%3D+5%29&cn_1=all+others%2E%2E%2E&db=11801&us=025">all others...</a></font></td>
-    </tr>
-    <!-- end -->
-    <tr>
-     <td></td>
-     <td colspan=3 align=center valign=top><font size=2>
-     <!-- any clusters -->
-      &nbsp;<br>
-      Patent Pending&nbsp;&nbsp;&nbsp;<br>
-     <!-- end -->
-      &nbsp;<br>
-      <a href="search.html"><img src="docs/gif/startover.gif" width=104 height=29 border=0 alt="Start Over"></a>
-     </font></td>
-    </tr>
-   </table>
-  </td>
+<tr>
+ <td width=25 rowspan=3><img src="docs/gif/transparent.gif" width=25 height=1 alt=""></td>
+ <td width=112><img src="docs/gif/transparent.gif" width=112 height=1 alt=""></td>
+ <td width=116><img src="docs/gif/transparent.gif" width=116 height=1 alt=""></td>
+ <td width=477><img src="docs/gif/transparent.gif" width=477 height=1 alt=""></td>
+</tr>
+<tr>
+ <td valign=top><a href="search.html"><img src="docs/gif/nlt_logo.gif" width=112 height=100 border=0 alt="Northern Light Technology"></a></td>
+ <td>&nbsp;</td>
+ <td colspan=2 valign=top><font size=1>
+<a href="search.html">Simple Search</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="power.html">Power</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="industry.html">Industry</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="news.html">News</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="wefa.html">WEFA</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="investext.html">Investext</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="pubsearch.html">Publication</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://special.northernlight.com">Special Edition</a><br>
+&nbsp;<br>
+ </font>
+<!-- and now a word from our sponsor -->
+<table border=0 width=468><IFRAME WIDTH=468 HEIGHT=60 NORESIZE SCROLLING=No FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 SRC="http://adforce.imgis.com/?adiframe|2.0|34|47263|1|1|ADFORCE;">
+<script language=javascript src="http://adforce.imgis.com/?addyn|2.0|34|47263|1|1|ADFORCE;loc=700;"></script>
+<noscript><a href="http://adforce.imgis.com/?adlink|2.0|34|47263|1|1|ADFORCE;loc=300;" target=_top><img src="http://adforce.imgis.com/?adserv|2.0|34|47263|1|1|ADFORCE;loc=300;" border=0 width=468 height=60></a></noscript>
+</IFRAME></table>
+<!-- end -->
+<br><img src="docs/gif/transparent.gif" width=1 height=3 alt=""><br>
+ </td>
+</tr>
+<tr>
+<!-- keywords cluster -->
+ <td valign=middle align=center><font size=2>
+<img src="docs/gif/transparent.gif" width=1 height=5 border=0 alt=""><br>
+<a href="http://barnesandnoble.bfast.com/booklink/click?sourceid=222869&categoryid=homepage">Buy books at</a>&nbsp;<br>
+<img src="docs/gif/transparent.gif" width=110 height=3 border=0 alt=""><br>
+<a href="http://barnesandnoble.bfast.com/booklink/click?sourceid=222869&categoryid=homepage"><img src="docs/gif/bn_logo_results.gif" width=80 height=20 border=0 alt="barnesandnoble.com"></a><br>
+ </font></td>
+<!-- end -->
+ <td>&nbsp;</td>
+ <td colspan=2 valign=middle>
+<table border=0 cellspacing=1 cellpadding=0>
+<form action="/nlquery.fcg" method=get>
+ <input type=hidden name=ho value="">
+ <input type=hidden name=po value="">
+ <input type=hidden name=si value="">
+ <input type=hidden name=cc value=" ">
+ <input type=hidden name=us value="025">
+ <input type=hidden name=xd value="">
+<tr><td colspan=3><img src="docs/gif/transparent.gif" width=1 height=5 border=0 alt=""><br><font size=2><b>41 items</b><!-- result --> found <!-- end --><!-- audit cluster --><!-- result -->for:<!-- end --></font></td></tr>
+<tr>
+ <td><input type=text size=35 name=qr value="+LSAM +ISI +IB"></td>
+ <td>&nbsp;</td>
+ <td nowrap><input name=search type=image src="docs/gif/btn_search.gif" border=0 alt="Search"><a href="docs/search_help_results.html"><img src="docs/gif/btn_search_help.gif" border=0 width=51 height=28 alt="Help"></a></td>
+</tr>
+</form>
+</table>
+ </td>
+</tr>
+</table>
 
-<!--Custom Search Folders(TM) end----------------------------->
-		  
-  <td width=38>&nbsp;</td>
-  <td colspan=3 valign=top>
-   <img src="docs/gif/transparent.gif" width=1 height=6 alt=""><br>
-   <img src="docs/gif/searchresults.gif" width=372 height=28 border=0 alt="Documents that best match your search"><br>
-   <img src="docs/gif/transparent.gif" width=1 height=14 alt=""><br>
-  </td>
-  <td>&nbsp;</td>
- </tr>
- <!--NLResultListStart-->
- <!-- result -->
- <tr>
- <!--NLResultStart-->
-  
-  <td align=right valign=top><font size=2>1.&nbsp;&nbsp;</font></td>
-  <td valign=top><font size=2>
-   <a href="http://www.ito.darpa.mil/Summaries96/C370--USC_ISI.html">LSAM: Large-Scale Active Middleware (formerly Cities Online)</a><br>
-   <!--NLResultRelevanceStart-->
-   <b>86%
-   <!--NLResultRelevanceEnd-->
-   - Articles & General info:</b>&nbsp;   LSAM: Large-Scale Active Middleware (formerly Cities Online)        LSAM: Large-Scale Active Middleware (formerly Cities Online) University of Southern California/Infor... Sciences Institute Research Area:   Information Management Related... 06/26/97<br>
-   <b>Military site:</b>&nbsp;&nbsp;http:/ / www.ito.darpa.mil/ Summaries96/ C370--USC_ISI.html<br>
-   </font>
-   &nbsp;
-  </td>
-  <td><img src="docs/gif/transparent.gif" border=0 width=25 height=1 alt=""></td>
-  <td valign=middle><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
-  <!--NLResultEnd-->
- </tr>
- <!-- end -->
- <tr>
- <!--NLResultStart-->
-  
-  <td align=right valign=top><font size=2>2.&nbsp;&nbsp;</font></td>
-  <td valign=top><font size=2>
-   <a href="http://www.isi.edu/div7/lsam/ib/related-work.html">LSAM Related Research</a><br>
-   <!--NLResultRelevanceStart-->
-   <b>82%
-   <!--NLResultRelevanceEnd-->
-   - Directories & Lists:</b>&nbsp;             LSAM Related Research     &nbsp;Web Latency Reduction   &nbsp;&nbsp;&nbsp; Features Description &nbsp;     Anticipation  Configuration  Cache Organization  Intermediate Proxies  User Aggregation  Connection Aggregation  Data Aggregation      Research Projects                   Lowlat... 01/15/98<br>
-   <b>Educational site:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ div7/ lsam/ ib/ related-work.html<br>
-   </font>
-   &nbsp;
-  </td>
-  <td><img src="docs/gif/transparent.gif" border=0 width=25 height=1 alt=""></td>
-  <td valign=middle><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
-  <!--NLResultEnd-->
- </tr>
- <!-- end -->
- <tr>
- <!--NLResultStart-->
-  
-  <td align=right valign=top><font size=2>3.&nbsp;&nbsp;</font></td>
-  <td valign=top><font size=2>
-   <a href="http://www.isi.edu/~lsam/ib/projects.html">IB Research Plan</a><br>
-   <!--NLResultRelevanceStart-->
-   <b>78%
-   <!--NLResultRelevanceEnd-->
-   - Articles & General info:</b>&nbsp;              IB Research Plan      IB Research Projects  &nbsp;  &nbsp; Lowlat  &nbsp;Anticipatory document caching reduces request latency.   &nbsp; Multicast Web Tuner  Multicasting popular documents on channels reduces... 02/12/98<br>
-   <b>Personal page:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ ~lsam/ ib/ projects.html<br>
-   </font>
-   &nbsp;
-  </td>
-  <td><img src="docs/gif/transparent.gif" border=0 width=25 height=1 alt=""></td>
-  <td valign=middle><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
-  <!--NLResultEnd-->
- </tr>
- <!-- end -->
- <tr>
- <!--NLResultStart-->
-  
-  <td align=right valign=top><font size=2>4.&nbsp;&nbsp;</font></td>
-  <td valign=top><font size=2>
-   <a href="http://www.isi.edu/~lsam/ib/people.html">IB Research Plan</a><br>
-   <!--NLResultRelevanceStart-->
-   <b>78%
-   <!--NLResultRelevanceEnd-->
-   - Articles & General info:</b>&nbsp;              IB Research Plan      IB People  &nbsp;  &nbsp; Joe Touch (project leader)   &nbsp; Amy S. Hughes   &nbsp; Anand Oswal    &nbsp; Page maintainer: Joe Touch Last modified:... 01/15/98<br>
-   <b>Personal page:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ ~lsam/ ib/ people.html<br>
-   </font>
-   &nbsp;
-  </td>
-  <td><img src="docs/gif/transparent.gif" border=0 width=25 height=1 alt=""></td>
-  <td valign=middle><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
-  <!--NLResultEnd-->
- </tr>
- <!-- end -->
- <tr>
- <!--NLResultStart-->
-  
-  <td align=right valign=top><font size=2>5.&nbsp;&nbsp;</font></td>
-  <td valign=top><font size=2>
-   <a href="http://www.isi.edu/~lsam/ib/index.html">About IB</a><br>
-   <!--NLResultRelevanceStart-->
-   <b>77%
-   <!--NLResultRelevanceEnd-->
-   - Articles & General info:</b>&nbsp;              About IB      Intelligent Bandwidth   &nbsp; About Intelligent Bandwidth   &nbsp; Research Projects   &nbsp; People   &nbsp; Related Work    &nbsp; Page maintainer: Joe Touch Last modified: Thu Jan... 01/15/98<br>
-   <b>Personal page:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ ~lsam/ ib/ index.html<br>
-   </font>
-   &nbsp;
-  </td>
-  <td><img src="docs/gif/transparent.gif" border=0 width=25 height=1 alt=""></td>
-  <td valign=middle><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
-  <!--NLResultEnd-->
- </tr>
- <!-- end -->
- <tr>
- <!--NLResultStart-->
-  
-  <td align=right valign=top><font size=2>6.&nbsp;&nbsp;</font></td>
-  <td valign=top><font size=2>
-   <a href="http://www.isi.edu/~lsam/ib/commercial-proj.html">LSAM Related Commercial Projects</a><br>
-   <!--NLResultRelevanceStart-->
-   <b>77%
-   <!--NLResultRelevanceEnd-->
-   - Articles & General info:</b>&nbsp;             LSAM Related Commercial Projects     Commerical Projects  &nbsp;Pointcast &nbsp;&nbsp;&nbsp; Regular server push of client chosen channel content. &nbsp;&nbsp;&nbsp; Web alternative &nbsp;Marimba Castanet &nbsp;&nbsp;&nbsp; Content channels multicast... 01/15/98<br>
-   <b>Personal page:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ ~lsam/ ib/ commercial-proj.html<br>
-   </font>
-   &nbsp;
-  </td>
-  <td><img src="docs/gif/transparent.gif" border=0 width=25 height=1 alt=""></td>
-  <td valign=middle><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
-  <!--NLResultEnd-->
- </tr>
- <!-- end -->
- <tr>
- <!--NLResultStart-->
-  
-  <td align=right valign=top><font size=2>7.&nbsp;&nbsp;</font></td>
-  <td valign=top><font size=2>
-   <a href="http://www.isi.edu/~lsam/ib/test-sites.html">LSAM Test Sites</a><br>
-   <!--NLResultRelevanceStart-->
-   <b>77%
-   <!--NLResultRelevanceEnd-->
-   - Articles & General info:</b>&nbsp;             LSAM Test Sites     Test Sites   HENSA Unix    Provides a public WWW cache for the Higher Education community in the UK.... 01/15/98<br>
-   <b>Personal page:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ ~lsam/ ib/ test-sites.html<br>
-   </font>
-   &nbsp;
-  </td>
-  <td><img src="docs/gif/transparent.gif" border=0 width=25 height=1 alt=""></td>
-  <td valign=middle><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
-  <!--NLResultEnd-->
+<!-- Results -->
+
+<table border=0 cellspacing=0 cellpadding=0 width=730>
+<tr>
+ <td width=220><img src="docs/gif/transparent.gif" width=220 height=1 alt=""></td>
+ <td width=33><img src="docs/gif/transparent.gif" width=33 height=1 alt=""></td>
+ <td width=365><img src="docs/gif/transparent.gif" width=365 height=1 alt=""></td>
+ <td width=5><img src="docs/gif/transparent.gif" width=5 height=1 alt=""></td>
+ <td width=107><img src="docs/gif/transparent.gif" width=107 height=1 alt=""></td>
+</tr>
+<tr><td colspan=5><font size=1>&nbsp;</font></td></tr>
+<tr>
+ <td rowspan=8 valign=top><font size=2>
+<!--Custom Search Folders(TM) span all rows-13:1----->
+<!-- any clusters -->
+<img src="docs/gif/dynamicfolders.gif" width=204 height=47 border=0 alt="Narrow Your Search with Custom Search Folders"><br>
+Your search returned  41 items which we have organized into the following <!--  the following categories: --> <a href="docs/search_help_folders.html">Custom Search Folders</a>:<br>
+<img src="docs/gif/transparent.gif" border=0 width=1 height=8 alt=""><br></font>
+<!-- end -->
+<table border=0 cellspacing=0>
+<!-- audit cluster -->
+<!-- news cluster -->
+<tr>
+ <td><font size=1>&nbsp;&nbsp;</font></td>
+ <td valign=middle align=right><a href="/nlquery.fcg?qr=%2bLSAM+%2bISI+%2bIB&dr=14&dx=1006&us=025&rv=1"><img src="docs/gif/folderx.gif" width=22 height=15 border=0 alt=""></a><br><img src="docs/gif/transparent.gif" border=0 width=1 height=3 alt=""><br></td>
+ <td><font size=1>&nbsp;&nbsp;</font></td>
+ <td valign=middle><font size=2><a href="/nlquery.fcg?qr=%2bLSAM+%2bISI+%2bIB&dr=14&dx=1006&us=025&rv=2">Search Current News</a></font><br><img src="docs/gif/transparent.gif" border=0 width=1 height=1 alt=""><br></td>
+</tr>
+<!-- end -->
+<!-- should generate web only cluster -->
+<!-- cluster -->
+<tr>
+ <td><font size=1>&nbsp;&nbsp;</font></td>
+ <td nowrap valign=top align=right><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&cb=0&cc=for+-Special+Collection+documents&cl=1&clscc_1_76=%28SOURCE+%5E%3D+1%29&cn_1=Special+Collection+documents&db=745072192&us=025"><img src="docs/gif/foldery.gif" width=22 height=14 border=0 alt=""></a></td>
+ <td><font size=1>&nbsp;&nbsp;</font></td>
+ <td valign=top align=left><font size=2><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&cb=0&cc=for+-Special+Collection+documents&cl=1&clscc_1_76=%28SOURCE+%5E%3D+1%29&cn_1=Special+Collection+documents&db=745072192&us=025">Special Collection documents</a></font></td>
+</tr>
+<!-- end -->
+<tr>
+ <td><font size=1>&nbsp;&nbsp;</font></td>
+ <td nowrap valign=top align=right><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&cb=0&cc=for+-www%2Eisi%2Eedu&cl=1&clweb_1_77=27533&cn_1=www%2Eisi%2Eedu&db=745072192&us=025"><img src="docs/gif/foldery.gif" width=22 height=14 border=0 alt=""></a></td>
+ <td><font size=1>&nbsp;&nbsp;</font></td>
+ <td valign=top align=left><font size=2><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&cb=0&cc=for+-www%2Eisi%2Eedu&cl=1&clweb_1_77=27533&cn_1=www%2Eisi%2Eedu&db=745072192&us=025">www.isi.edu</a></font></td>
+</tr>
+<!-- end -->
+<tr>
+ <td><font size=1>&nbsp;&nbsp;</font></td>
+ <td nowrap valign=top align=right><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&cb=0&cc=for+-Personal+pages&cl=1&clsrc_1_78=2&cn_1=Personal+pages&db=745072192&us=025"><img src="docs/gif/foldery.gif" width=22 height=14 border=0 alt=""></a></td>
+ <td><font size=1>&nbsp;&nbsp;</font></td>
+ <td valign=top align=left><font size=2><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&cb=0&cc=for+-Personal+pages&cl=1&clsrc_1_78=2&cn_1=Personal+pages&db=745072192&us=025">Personal pages</a></font></td>
+</tr>
+<!-- end -->
+<tr>
+ <td><font size=1>&nbsp;&nbsp;</font></td>
+ <td nowrap valign=top align=right><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&cb=0&cc=for+-gin%2Eisi%2Eedu&cl=1&clweb_1_79=2116398&cn_1=gin%2Eisi%2Eedu&db=745072192&us=025"><img src="docs/gif/foldery.gif" width=22 height=14 border=0 alt=""></a></td>
+ <td><font size=1>&nbsp;&nbsp;</font></td>
+ <td valign=top align=left><font size=2><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&cb=0&cc=for+-gin%2Eisi%2Eedu&cl=1&clweb_1_79=2116398&cn_1=gin%2Eisi%2Eedu&db=745072192&us=025">gin.isi.edu</a></font></td>
+</tr>
+<!-- end -->
+<tr>
+ <td><font size=1>&nbsp;&nbsp;</font></td>
+ <td nowrap valign=top align=right><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&cb=0&cc=for+-gost%2Eisi%2Eedu&cl=1&clweb_1_80=1181206&cn_1=gost%2Eisi%2Eedu&db=745072192&us=025"><img src="docs/gif/foldery.gif" width=22 height=14 border=0 alt=""></a></td>
+ <td><font size=1>&nbsp;&nbsp;</font></td>
+ <td valign=top align=left><font size=2><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&cb=0&cc=for+-gost%2Eisi%2Eedu&cl=1&clweb_1_80=1181206&cn_1=gost%2Eisi%2Eedu&db=745072192&us=025">gost.isi.edu</a></font></td>
+</tr>
+<!-- end -->
+<tr>
+ <td><font size=1>&nbsp;&nbsp;</font></td>
+ <td nowrap valign=top align=right><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&cb=0&cc=for+-www%2Edarpa%2Emil&cl=1&clweb_1_81=11256&cn_1=www%2Edarpa%2Emil&db=745072192&us=025"><img src="docs/gif/foldery.gif" width=22 height=14 border=0 alt=""></a></td>
+ <td><font size=1>&nbsp;&nbsp;</font></td>
+ <td valign=top align=left><font size=2><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&cb=0&cc=for+-www%2Edarpa%2Emil&cl=1&clweb_1_81=11256&cn_1=www%2Edarpa%2Emil&db=745072192&us=025">www.darpa.mil</a></font></td>
+</tr>
+<!-- end -->
+<tr>
+ <td><font size=1>&nbsp;&nbsp;</font></td>
+ <td nowrap valign=top align=right><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&cb=0&cc=for+-Educational+sites&cl=1&clsrc_1_82=7&cn_1=Educational+sites&db=745072192&us=025"><img src="docs/gif/foldery.gif" width=22 height=14 border=0 alt=""></a></td>
+ <td><font size=1>&nbsp;&nbsp;</font></td>
+ <td valign=top align=left><font size=2><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&cb=0&cc=for+-Educational+sites&cl=1&clsrc_1_82=7&cn_1=Educational+sites&db=745072192&us=025">Educational sites</a></font></td>
+</tr>
+<!-- end -->
+<tr>
+ <td><font size=1>&nbsp;&nbsp;</font></td>
+ <td nowrap valign=top align=right><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&cb=0&cc=for+-Non%2Dprofit+sites&cl=1&clsrc_1_83=5&cn_1=Non%2Dprofit+sites&db=745072192&us=025"><img src="docs/gif/foldery.gif" width=22 height=14 border=0 alt=""></a></td>
+ <td><font size=1>&nbsp;&nbsp;</font></td>
+ <td valign=top align=left><font size=2><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&cb=0&cc=for+-Non%2Dprofit+sites&cl=1&clsrc_1_83=5&cn_1=Non%2Dprofit+sites&db=745072192&us=025">Non-profit sites</a></font></td>
+</tr>
+<!-- end -->
+<tr>
+ <td><font size=1>&nbsp;&nbsp;</font></td>
+ <td nowrap valign=top align=right><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&cb=0&cc=for+-Commercial+sites&cl=1&clsrc_1_84=6&cn_1=Commercial+sites&db=745072192&us=025"><img src="docs/gif/foldery.gif" width=22 height=14 border=0 alt=""></a></td>
+ <td><font size=1>&nbsp;&nbsp;</font></td>
+ <td valign=top align=left><font size=2><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&cb=0&cc=for+-Commercial+sites&cl=1&clsrc_1_84=6&cn_1=Commercial+sites&db=745072192&us=025">Commercial sites</a></font></td>
+</tr>
+<!-- end -->
+<tr>
+ <td><font size=1>&nbsp;&nbsp;</font></td>
+ <td nowrap valign=top align=right><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&cb=0&cc=&cl=1&cloth_1_85=NOT+%28+WEBSITE+%3D+27533+OR++SOURCE+%3D+2+OR++WEBSITE+%3D+2116398+OR++WEBSITE+%3D+1181206+OR++WEBSITE+%3D+11256+OR++SOURCE+%3D+7+OR++SOURCE+%3D+5+OR++SOURCE+%3D+6%29&cn_1=all+others%2E%2E%2E&db=745072192&us=025"><img src="docs/gif/foldery.gif" width=22 height=14 border=0 alt=""></a></td>
+ <td><font size=1>&nbsp;&nbsp;</font></td>
+ <td valign=top align=left><font size=2><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&cb=0&cc=&cl=1&cloth_1_85=NOT+%28+WEBSITE+%3D+27533+OR++SOURCE+%3D+2+OR++WEBSITE+%3D+2116398+OR++WEBSITE+%3D+1181206+OR++WEBSITE+%3D+11256+OR++SOURCE+%3D+7+OR++SOURCE+%3D+5+OR++SOURCE+%3D+6%29&cn_1=all+others%2E%2E%2E&db=745072192&us=025">all others...</a></font></td>
+</tr>
+<!-- end -->
+<tr>
+ <td colspan=3></td>
+ <td valign=top><font size=2>
+<!-- any clusters -->
+&nbsp;<br>&nbsp;&nbsp;Patent Pending&nbsp;&nbsp;&nbsp;<br>
+<!-- end -->
+&nbsp;<br>
+<!-- Shopping Cart HTML -->
+<a href="search.html"><img src="docs/gif/startover.gif" width=104 height=29 border=0 alt="Start Over"></a><br>
+ </font></td>
+</tr>
+</table>
+ </td>
+ <td>&nbsp;</td>
+ <td colspan=3 valign=top>
+<img src="docs/gif/transparent.gif" width=1 height=6 alt=""><br>
+<img src="docs/gif/searchresults.gif" width=372 height=28 border=0 alt="Documents that best match your search"><br>
+<img src="docs/gif/transparent.gif" width=1 height=14 alt=""><br>
+ </td>
+</tr>
+<!--NLResultListStart-->
+<!-- result -->
+<tr>
+<!--NLResultStart-->
+ 
+ <td align=right valign=top><font size=2>1.&nbsp;&nbsp;</font></td>
+ <td valign=top><font size=2><a href="http://gin.isi.edu/lsam/ib/commercial-proj.html">LSAM Related Commercial Projects</a><br>
+<!--NLResultRelevanceStart--><b>85%<!--NLResultRelevanceEnd--> - Articles & General info:</b>&nbsp; LSAM Related Commercial Projects Commerical Projects &nbsp &nbsp;&nbsp;&nbsp; Regular server push of client chosen channel content. &nbsp;&nbsp;&nbsp; Web alternative &nbsp &nbsp;&nbsp;&nbsp; Content channels multicast to... 01/15/98<br>
+<b>Educational site:</b>&nbsp;&nbsp;http:/ / gin.isi.edu/ lsam/ ib/ commercial-proj.html<br></font>&nbsp;
+ </td>
+ <td>&nbsp;</td>
+ <td valign=center><font size=2 color=white>
+<!-- Shopping Cart HTML -->
+<!-- Shopping Cart HTML --><!-- no shopping cart -->
+<img src=docs/gif/www.gif border=0 width=42 height=11>
+<!-- end no shopping cart --><!-- 0 -->
+  </font></td>
+<!--NLResultEnd-->
  </tr>
  <!-- end -->
- <tr>
- <!--NLResultStart-->
-  <td>&nbsp;</td>
-  <td align=right valign=top><font size=2>8.&nbsp;&nbsp;</font></td>
-  <td valign=top><font size=2>
-   <a href="http://www.isi.edu/~lsam/ib/about.html">About IB</a><br>
-   <!--NLResultRelevanceStart-->
-   <b>77%
-   <!--NLResultRelevanceEnd-->
-   - Articles & General info:</b>&nbsp;              About IB      About Intelligent BW  &nbsp;  Motivations &nbsp;     &nbsp;&nbsp;&nbsp; Ethernet or faster bandwidth is needed to interactively view the average web page.           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bandwidth requirements... 01/15/98<br>
-   <b>Personal page:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ ~lsam/ ib/ about.html<br>
-   </font>
-   &nbsp;
-  </td>
-  <td><img src="docs/gif/transparent.gif" border=0 width=25 height=1 alt=""></td>
-  <td valign=middle><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
-  <!--NLResultEnd-->
+<tr>
+<!--NLResultStart-->
+ 
+ <td align=right valign=top><font size=2>2.&nbsp;&nbsp;</font></td>
+ <td valign=top><font size=2><a href="http://gin.isi.edu/lsam/ib/test-sites.html">LSAM Test Sites</a><br>
+<!--NLResultRelevanceStart--><b>85%<!--NLResultRelevanceEnd--> - Articles & General info:</b>&nbsp; LSAM Test Sites Test Sites Provides a public WWW cache for the Higher Education community in the UK. The UK has terrible problems with international......  01/15/98<br>
+<b>Educational site:</b>&nbsp;&nbsp;http:/ / gin.isi.edu/ lsam/ ib/ test-sites.html<br></font>&nbsp;
+ </td>
+ <td>&nbsp;</td>
+ <td valign=center><font size=2 color=white>
+<!-- Shopping Cart HTML -->
+<!-- Shopping Cart HTML --><!-- no shopping cart -->
+<img src=docs/gif/www.gif border=0 width=42 height=11>
+<!-- end no shopping cart --><!-- 0 -->
+  </font></td>
+<!--NLResultEnd-->
  </tr>
  <!-- end -->
- <tr>
- <!--NLResultStart-->
-  <td>&nbsp;</td>
-  <td align=right valign=top><font size=2>9.&nbsp;&nbsp;</font></td>
-  <td valign=top><font size=2>
-   <a href="http://www.isi.edu/div7/cities/about/mobility.html">About LSAM Mobility</a><br>
-   <!--NLResultRelevanceStart-->
-   <b>76%
-   <!--NLResultRelevanceEnd-->
-   - Articles & General info:</b>&nbsp;  About LSAM Mobility      About LSAM Mobility      Mobility The goal of the mobility component is to support users who frequently change their network attachment point while... 01/14/98<br>
-   <b>Educational site:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ div7/ cities/ about/ mobility.html<br>
-   </font>
-   &nbsp;
-  </td>
-  <td><img src="docs/gif/transparent.gif" border=0 width=25 height=1 alt=""></td>
-  <td valign=middle><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
-  <!--NLResultEnd-->
+<tr>
+<!--NLResultStart-->
+ 
+ <td align=right valign=top><font size=2>3.&nbsp;&nbsp;</font></td>
+ <td valign=top><font size=2><a href="http://gin.isi.edu/lsam/private/summergoals.html">Summer Goals for LSAM</a><br>
+<!--NLResultRelevanceStart--><b>83%<!--NLResultRelevanceEnd--> - Directories & Lists:</b>&nbsp; Summer Goals for LSAM LSAM Goals for Summer '96 App: Demo app, Mirroring, Redirection IB: mFTP, mTVguide, mLL LL: Filter cache with load operations, Pump... 06/12/96<br>
+<b>Educational site:</b>&nbsp;&nbsp;http:/ / gin.isi.edu/ lsam/ private/ summergoals.html<br></font>&nbsp;
+ </td>
+ <td>&nbsp;</td>
+ <td valign=center><font size=2 color=white>
+<!-- Shopping Cart HTML -->
+<!-- Shopping Cart HTML --><!-- no shopping cart -->
+<img src=docs/gif/www.gif border=0 width=42 height=11>
+<!-- end no shopping cart --><!-- 0 -->
+  </font></td>
+<!--NLResultEnd-->
  </tr>
  <!-- end -->
- <tr>
- <!--NLResultStart-->
-  <td>&nbsp;</td>
-  <td align=right valign=top><font size=2>10.&nbsp;&nbsp;</font></td>
-  <td valign=top><font size=2>
-   <a href="http://www.isi.edu/~lsam/about/">About LSAM</a><br>
-   <!--NLResultRelevanceStart-->
-   <b>76%
-   <!--NLResultRelevanceEnd-->
-   - Articles & General info:</b>&nbsp;             About LSAM     About LSAM   What is LSAM  LSAM is developing middleware infrastructure to support scalable distributed information services. This is embodied in the LSAM Proxy... 03/25/98<br>
-   <b>Personal page:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ ~lsam/ about/ <br>
-   </font>
-   &nbsp;
-  </td>
-  <td><img src="docs/gif/transparent.gif" border=0 width=25 height=1 alt=""></td>
-  <td valign=middle><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
-  <!--NLResultEnd-->
+<tr>
+<!--NLResultStart-->
+ 
+ <td align=right valign=top><font size=2>4.&nbsp;&nbsp;</font></td>
+ <td valign=top><font size=2><a href="http://gin.isi.edu/lsam/ib/index.html">About IB</a><br>
+<!--NLResultRelevanceStart--><b>82%<!--NLResultRelevanceEnd--> - Articles & General info:</b>&nbsp; About IB Intelligent Bandwidth &nbsp &nbsp &nbsp &nbsp Page maintainer Last modified: Thu Jan 15 13:30:29 1998&nbsp; Copyright &copy; 1996 by USC/ISI ... 01/15/98<br>
+<b>Educational site:</b>&nbsp;&nbsp;http:/ / gin.isi.edu/ lsam/ ib/ index.html<br></font>&nbsp;
+ </td>
+ <td>&nbsp;</td>
+ <td valign=center><font size=2 color=white>
+<!-- Shopping Cart HTML -->
+<!-- Shopping Cart HTML --><!-- no shopping cart -->
+<img src=docs/gif/www.gif border=0 width=42 height=11>
+<!-- end no shopping cart --><!-- 0 -->
+  </font></td>
+<!--NLResultEnd-->
  </tr>
  <!-- end -->
- <tr>
- <!--NLResultStart-->
-  <td>&nbsp;</td>
-  <td align=right valign=top><font size=2>11.&nbsp;&nbsp;</font></td>
-  <td valign=top><font size=2>
-   <a href="http://www.isi.edu/lsam/about/ib/plan.html">IB Research Plan</a><br>
-   <!--NLResultRelevanceStart-->
-   <b>74%
-   <!--NLResultRelevanceEnd-->
-   - Articles & General info:</b>&nbsp;   IB Research Plan      IB Research Plan        For the experiments in this research, we will make use of traffic generators that emulate WWW browser request streams,... 01/13/97<br>
-   <b>Educational site:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ lsam/ about/ ib/ plan.html<br>
-   </font>
-   &nbsp;
-  </td>
-  <td><img src="docs/gif/transparent.gif" border=0 width=25 height=1 alt=""></td>
-  <td valign=middle><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
-  <!--NLResultEnd-->
+<tr>
+<!--NLResultStart-->
+ 
+ <td align=right valign=top><font size=2>5.&nbsp;&nbsp;</font></td>
+ <td valign=top><font size=2><a href="http://gin.isi.edu/lsam/ib/related-work.html">LSAM Related Research</a><br>
+<!--NLResultRelevanceStart--><b>82%<!--NLResultRelevanceEnd--> - Directories & Lists:</b>&nbsp; LSAM Related Research &nbsp;Web Latency Reduction &nbsp;&nbsp;&nbsp &nbsp Server Presending Manual Filter Proxy Client Filter Cache&nbsp; Server Pump Proxy Single User Present files share secondary... 01/15/98<br>
+<b>Educational site:</b>&nbsp;&nbsp;http:/ / gin.isi.edu/ lsam/ ib/ related-work.html<br></font>&nbsp;
+ </td>
+ <td>&nbsp;</td>
+ <td valign=center><font size=2 color=white>
+<!-- Shopping Cart HTML -->
+<!-- Shopping Cart HTML --><!-- no shopping cart -->
+<img src=docs/gif/www.gif border=0 width=42 height=11>
+<!-- end no shopping cart --><!-- 0 -->
+  </font></td>
+<!--NLResultEnd-->
  </tr>
  <!-- end -->
- <tr>
- <!--NLResultStart-->
-  <td>&nbsp;</td>
-  <td align=right valign=top><font size=2>12.&nbsp;&nbsp;</font></td>
-  <td valign=top><font size=2>
-   <a href="http://www.isi.edu/~lsam/ib/research-proj.html">LSAM Related Research Projects</a><br>
-   <!--NLResultRelevanceStart-->
-   <b>74%
-   <!--NLResultRelevanceEnd-->
-   - Articles & General info:</b>&nbsp;             LSAM Related Research Projects     Research Projects      &nbsp;LowLat  &nbsp;&nbsp;&nbsp; USC/ISI: Touch, Hughes &nbsp;&nbsp;&nbsp; Server presend contents of ALL linked items, &nbsp;&nbsp;&nbsp; Files cached on a co-located... 01/15/98<br>
-   <b>Personal page:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ ~lsam/ ib/ research-proj.html<br>
-   </font>
-   &nbsp;
-  </td>
-  <td><img src="docs/gif/transparent.gif" border=0 width=25 height=1 alt=""></td>
-  <td valign=middle><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
-  <!--NLResultEnd-->
+<tr>
+<!--NLResultStart-->
+ 
+ <td align=right valign=top><font size=2>6.&nbsp;&nbsp;</font></td>
+ <td valign=top><font size=2><a href="http://gin.isi.edu/lsam/ib/features.html">LSAM Features</a><br>
+<!--NLResultRelevanceStart--><b>82%<!--NLResultRelevanceEnd--> - Articles & General info:</b>&nbsp; LSAM Features &nbsp;Feature Descriptions &nbsp Anticipation &nbsp;&nbsp;&nbsp; Client Prefetching &nbsp;&nbsp;&nbsp; Client determines which pages to load in the background. &nbsp;&nbsp;&nbsp; Drawback: can interfere with other... 01/15/98<br>
+<b>Educational site:</b>&nbsp;&nbsp;http:/ / gin.isi.edu/ lsam/ ib/ features.html<br></font>&nbsp;
+ </td>
+ <td>&nbsp;</td>
+ <td valign=center><font size=2 color=white>
+<!-- Shopping Cart HTML -->
+<!-- Shopping Cart HTML --><!-- no shopping cart -->
+<img src=docs/gif/www.gif border=0 width=42 height=11>
+<!-- end no shopping cart --><!-- 0 -->
+  </font></td>
+<!--NLResultEnd-->
  </tr>
  <!-- end -->
- <tr>
- <!--NLResultStart-->
-  <td>&nbsp;</td>
-  <td align=right valign=top><font size=2>13.&nbsp;&nbsp;</font></td>
-  <td valign=top><font size=2>
-   <a href="http://www.isi.edu/~lsam/tools/autosearch/caching/19961114.html">Search results for caching as of 11/14/1996 11:05:15</a><br>
-   <!--NLResultRelevanceStart-->
-   <b>74%
-   <!--NLResultRelevanceEnd-->
-   - Articles & General info:</b>&nbsp; Search results for caching as of 11/14/1996 11:05:15      Caching   Web Search Results for 11/14/1996 11:05:15   Links for Caching  Caching. Search results for week of Jan.... 11/14/96<br>
-   <b>Personal page:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ ~lsam/ tools/ autosearch/ caching/ 19961114.html<br>
-   </font>
-   &nbsp;
-  </td>
-  <td><img src="docs/gif/transparent.gif" border=0 width=25 height=1 alt=""></td>
-  <td valign=middle><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
-  <!--NLResultEnd-->
+<tr>
+<!--NLResultStart-->
+ 
+ <td align=right valign=top><font size=2>7.&nbsp;&nbsp;</font></td>
+ <td valign=top><font size=2><a href="http://gin.isi.edu/lsam/ib/research-proj.html">LSAM Related Research Projects</a><br>
+<!--NLResultRelevanceStart--><b>80%<!--NLResultRelevanceEnd--> - Articles & General info:</b>&nbsp; LSAM Related Research Projects Research Projects &nbsp &nbsp;&nbsp;&nbsp &nbsp;&nbsp;&nbsp; Server presend contents of ALL linked items, &nbsp;&nbsp;&nbsp; Files cached on a co-located client proxy. &nbsp;&nbsp;&nbsp;... 02/18/99<br>
+<b>Educational site:</b>&nbsp;&nbsp;http:/ / gin.isi.edu/ lsam/ ib/ research-proj.html<br></font>&nbsp;
+ </td>
+ <td>&nbsp;</td>
+ <td valign=center><font size=2 color=white>
+<!-- Shopping Cart HTML -->
+<!-- Shopping Cart HTML --><!-- no shopping cart -->
+<img src=docs/gif/www.gif border=0 width=42 height=11>
+<!-- end no shopping cart --><!-- 0 -->
+  </font></td>
+<!--NLResultEnd-->
  </tr>
  <!-- end -->
- <tr>
- <!--NLResultStart-->
-  <td>&nbsp;</td>
-  <td align=right valign=top><font size=2>14.&nbsp;&nbsp;</font></td>
-  <td valign=top><font size=2>
-   <a href="http://www.isi.edu/div7/cities/about/mobility_issues.html">LSAM Mobility Issues</a><br>
-   <!--NLResultRelevanceStart-->
-   <b>74%
-   <!--NLResultRelevanceEnd-->
-   - Articles & General info:</b>&nbsp;  LSAM Mobility Issues      LSAM Mobility Issues  Location Naming Model  In order for the LSAM proxy to inform the proxy it is moving, or for the... 01/14/98<br>
-   <b>Educational site:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ div7/ cities/ about/ mobility_issues.html<br>
-   </font>
-   &nbsp;
-  </td>
-  <td><img src="docs/gif/transparent.gif" border=0 width=25 height=1 alt=""></td>
-  <td valign=middle><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
-  <!--NLResultEnd-->
+<tr>
+<!--NLResultStart-->
+ <td>&nbsp;</td>
+ <td align=right valign=top><font size=2>8.&nbsp;&nbsp;</font></td>
+ <td valign=top><font size=2><a href="http://www.isi.edu/~lsam/ib/projects.html">IB Research Plan</a><br>
+<!--NLResultRelevanceStart--><b>78%<!--NLResultRelevanceEnd--> - Articles & General info:</b>&nbsp;              IB Research Plan      IB Research Projects  &nbsp;  &nbsp; Lowlat  &nbsp;Anticipatory document caching reduces request latency.   &nbsp; Multicast Web Tuner  Multicasting popular documents on channels reduces... 02/12/98<br>
+<b>Personal page:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ ~lsam/ ib/ projects.html<br></font>&nbsp;
+ </td>
+ <td>&nbsp;</td>
+ <td valign=center><font size=2 color=white>
+<!-- Shopping Cart HTML -->
+<!-- Shopping Cart HTML --><!-- no shopping cart -->
+<img src=docs/gif/www.gif border=0 width=42 height=11>
+<!-- end no shopping cart --><!-- 0 -->
+  </font></td>
+<!--NLResultEnd-->
  </tr>
  <!-- end -->
- <tr>
- <!--NLResultStart-->
-  <td>&nbsp;</td>
-  <td align=right valign=top><font size=2>15.&nbsp;&nbsp;</font></td>
-  <td valign=top><font size=2>
-   <a href="http://www.isi.edu/~lsam/ib/features.html">LSAM Features</a><br>
-   <!--NLResultRelevanceStart-->
-   <b>73%
-   <!--NLResultRelevanceEnd-->
-   - Articles & General info:</b>&nbsp;             LSAM Features     &nbsp;Feature Descriptions   &nbsp;Anticipation  &nbsp;&nbsp;&nbsp; Client Prefetching &nbsp;&nbsp;&nbsp; Client determines which pages to load in the background. &nbsp;&nbsp;&nbsp; Drawback: can interfere with other processes... 01/15/98<br>
-   <b>Personal page:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ ~lsam/ ib/ features.html<br>
-   </font>
-   &nbsp;
-  </td>
-  <td><img src="docs/gif/transparent.gif" border=0 width=25 height=1 alt=""></td>
-  <td valign=middle><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
-  <!--NLResultEnd-->
+<tr>
+<!--NLResultStart-->
+ <td>&nbsp;</td>
+ <td align=right valign=top><font size=2>9.&nbsp;&nbsp;</font></td>
+ <td valign=top><font size=2><a href="http://www.isi.edu/~lsam/ib/people.html">IB Research Plan</a><br>
+<!--NLResultRelevanceStart--><b>78%<!--NLResultRelevanceEnd--> - Articles & General info:</b>&nbsp;              IB Research Plan      IB People  &nbsp;  &nbsp; Joe Touch (project leader)   &nbsp; Amy S. Hughes   &nbsp; Anand Oswal    &nbsp; Page maintainer: Joe Touch Last modified:... 01/15/98<br>
+<b>Personal page:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ ~lsam/ ib/ people.html<br></font>&nbsp;
+ </td>
+ <td>&nbsp;</td>
+ <td valign=center><font size=2 color=white>
+<!-- Shopping Cart HTML -->
+<!-- Shopping Cart HTML --><!-- no shopping cart -->
+<img src=docs/gif/www.gif border=0 width=42 height=11>
+<!-- end no shopping cart --><!-- 0 -->
+  </font></td>
+<!--NLResultEnd-->
  </tr>
  <!-- end -->
- <tr>
- <!--NLResultStart-->
-  <td>&nbsp;</td>
-  <td align=right valign=top><font size=2>16.&nbsp;&nbsp;</font></td>
-  <td valign=top><font size=2>
-   <a href="http://lists.w3.org/Archives/Public/www-talk/1995NovDec/0255.html">www-talk@w3.org from November to December 1995: Re: two ideas...</a><br>
-   <!--NLResultRelevanceStart-->
-   <b>73%
-   <!--NLResultRelevanceEnd-->
-   - Articles & General info:</b>&nbsp;        www-talk@w3.org from November to December 1995: Re: two ideas...  Re: two ideas... touch@ISI.EDU Mon, 11 Dec 1995 14:13:58 -0800    Messages sorted by: [ date ][... 11/21/97<br>
-   <b>Non-profit site:</b>&nbsp;&nbsp;http:/ / lists.w3.org/ Archives/ Public/ www-talk/ 1995NovDec/ 0255.html<br>
-   </font>
-   &nbsp;
-  </td>
-  <td><img src="docs/gif/transparent.gif" border=0 width=25 height=1 alt=""></td>
-  <td valign=middle><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
-  <!--NLResultEnd-->
+<tr>
+<!--NLResultStart-->
+ <td>&nbsp;</td>
+ <td align=right valign=top><font size=2>10.&nbsp;&nbsp;</font></td>
+ <td valign=top><font size=2><a href="http://www.isi.edu/~lsam/ib/about.html">About IB</a><br>
+<!--NLResultRelevanceStart--><b>78%<!--NLResultRelevanceEnd--> - Articles & General info:</b>&nbsp;              About IB      About Intelligent BW  &nbsp;  Motivations &nbsp;     &nbsp;&nbsp;&nbsp; Ethernet or faster bandwidth is needed to interactively view the average web page.           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bandwidth requirements... 01/15/98<br>
+<b>Personal page:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ ~lsam/ ib/ about.html<br></font>&nbsp;
+ </td>
+ <td>&nbsp;</td>
+ <td valign=center><font size=2 color=white>
+<!-- Shopping Cart HTML -->
+<!-- Shopping Cart HTML --><!-- no shopping cart -->
+<img src=docs/gif/www.gif border=0 width=42 height=11>
+<!-- end no shopping cart --><!-- 0 -->
+  </font></td>
+<!--NLResultEnd-->
  </tr>
  <!-- end -->
- <tr>
- <!--NLResultStart-->
-  <td>&nbsp;</td>
-  <td align=right valign=top><font size=2>17.&nbsp;&nbsp;</font></td>
-  <td valign=top><font size=2>
-   <a href="http://www.isi.edu/~lsam/tools/autosearch/load_balancing/19961114.html">Search results for load balancing as of 11/14/1996 11:07:37</a><br>
-   <!--NLResultRelevanceStart-->
-   <b>73%
-   <!--NLResultRelevanceEnd-->
-   - Articles & General info:</b>&nbsp; Search results for load balancing as of 11/14/1996 11:07:37      Load Balancing   Web Search Results for 11/14/1996 11:07:37   FREEDOMSWITCH 10BT SWITCH 24RJ45 AUTO-LOAD BALANCING  Computer ESP... 11/14/96<br>
-   <b>Personal page:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ ~lsam/ tools/ autosearch/ load_balancing/ 19961114.html<br>
-   </font>
-   &nbsp;
-  </td>
-  <td><img src="docs/gif/transparent.gif" border=0 width=25 height=1 alt=""></td>
-  <td valign=middle><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
-  <!--NLResultEnd-->
+<tr>
+<!--NLResultStart-->
+ <td>&nbsp;</td>
+ <td align=right valign=top><font size=2>11.&nbsp;&nbsp;</font></td>
+ <td valign=top><font size=2><a href="http://www.isi.edu/lsam/about/ib/plan.html">IB Research Plan</a><br>
+<!--NLResultRelevanceStart--><b>75%<!--NLResultRelevanceEnd--> - Articles & General info:</b>&nbsp;   IB Research Plan      IB Research Plan        For the experiments in this research, we will make use of traffic generators that emulate WWW browser request streams,... 01/13/97<br>
+<b>Educational site:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ lsam/ about/ ib/ plan.html<br></font>&nbsp;
+ </td>
+ <td>&nbsp;</td>
+ <td valign=center><font size=2 color=white>
+<!-- Shopping Cart HTML -->
+<!-- Shopping Cart HTML --><!-- no shopping cart -->
+<img src=docs/gif/www.gif border=0 width=42 height=11>
+<!-- end no shopping cart --><!-- 0 -->
+  </font></td>
+<!--NLResultEnd-->
  </tr>
  <!-- end -->
- <tr>
- <!--NLResultStart-->
-  <td>&nbsp;</td>
-  <td align=right valign=top><font size=2>18.&nbsp;&nbsp;</font></td>
-  <td valign=top><font size=2>
-   <a href="http://gost.isi.edu/~johnh/PAPERS/chronological.html">Papers Published by John Heidemann (Chronological)</a><br>
-   <!--NLResultRelevanceStart-->
-   <b>72%
-   <!--NLResultRelevanceEnd-->
-   - Articles & General info:</b>&nbsp;   Papers Published by John Heidemann (Chronological)         Papers Published by John Heidemann (Chronological)   Lists of papers published by John Heidemann are available sorted   by subject or... 01/21/98<br>
-   <b>Personal page:</b>&nbsp;&nbsp;http:/ / gost.isi.edu/ ~johnh/ PAPERS/ chronological.html<br>
-   </font>
-   &nbsp;
-  </td>
-  <td><img src="docs/gif/transparent.gif" border=0 width=25 height=1 alt=""></td>
-  <td valign=middle><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
-  <!--NLResultEnd-->
+<tr>
+<!--NLResultStart-->
+ <td>&nbsp;</td>
+ <td align=right valign=top><font size=2>12.&nbsp;&nbsp;</font></td>
+ <td valign=top><font size=2><a href="http://lists.w3.org/Archives/Public/www-talk/1995NovDec/0255.html">www-talk@w3.org from November to December 1995: Re: two ideas...</a><br>
+<!--NLResultRelevanceStart--><b>73%<!--NLResultRelevanceEnd--> - Articles & General info:</b>&nbsp;        www-talk@w3.org from November to December 1995: Re: two ideas...  Re: two ideas... touch@ISI.EDU Mon, 11 Dec 1995 14:13:58 -0800    Messages sorted by: [ date ][... 11/21/97<br>
+<b>Non-profit site:</b>&nbsp;&nbsp;http:/ / lists.w3.org/ Archives/ Public/ www-talk/ 1995NovDec/ 0255.html<br></font>&nbsp;
+ </td>
+ <td>&nbsp;</td>
+ <td valign=center><font size=2 color=white>
+<!-- Shopping Cart HTML -->
+<!-- Shopping Cart HTML --><!-- no shopping cart -->
+<img src=docs/gif/www.gif border=0 width=42 height=11>
+<!-- end no shopping cart --><!-- 0 -->
+  </font></td>
+<!--NLResultEnd-->
  </tr>
  <!-- end -->
- <tr>
- <!--NLResultStart-->
-  <td>&nbsp;</td>
-  <td align=right valign=top><font size=2>19.&nbsp;&nbsp;</font></td>
-  <td valign=top><font size=2>
-   <a href="http://www.isi.edu/lsam/about/ib/example.html">IB Research Plan</a><br>
-   <!--NLResultRelevanceStart-->
-   <b>72%
-   <!--NLResultRelevanceEnd-->
-   - Articles & General info:</b>&nbsp;   IB Research Plan      IB Research Plan        For the experiments in this research, we will make use of traffic generators that emulate WWW browser request streams,... 01/13/97<br>
-   <b>Educational site:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ lsam/ about/ ib/ example.html<br>
-   </font>
-   &nbsp;
-  </td>
-  <td><img src="docs/gif/transparent.gif" border=0 width=25 height=1 alt=""></td>
-  <td valign=middle><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
-  <!--NLResultEnd-->
+<tr>
+<!--NLResultStart-->
+ <td>&nbsp;</td>
+ <td align=right valign=top><font size=2>13.&nbsp;&nbsp;</font></td>
+ <td valign=top><font size=2><a href="http://www.isi.edu/~lsam/tools/autosearch/load_balancing/19961114.html">Search results for load balancing as of 11/14/1996 11:07:37</a><br>
+<!--NLResultRelevanceStart--><b>73%<!--NLResultRelevanceEnd--> - Articles & General info:</b>&nbsp; Search results for load balancing as of 11/14/1996 11:07:37      Load Balancing   Web Search Results for 11/14/1996 11:07:37   FREEDOMSWITCH 10BT SWITCH 24RJ45 AUTO-LOAD BALANCING  Computer ESP... 11/14/96<br>
+<b>Personal page:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ ~lsam/ tools/ autosearch/ load_balancing/ 19961114.html<br></font>&nbsp;
+ </td>
+ <td>&nbsp;</td>
+ <td valign=center><font size=2 color=white>
+<!-- Shopping Cart HTML -->
+<!-- Shopping Cart HTML --><!-- no shopping cart -->
+<img src=docs/gif/www.gif border=0 width=42 height=11>
+<!-- end no shopping cart --><!-- 0 -->
+  </font></td>
+<!--NLResultEnd-->
  </tr>
  <!-- end -->
- <tr>
- <!--NLResultStart-->
-  <td>&nbsp;</td>
-  <td align=right valign=top><font size=2>20.&nbsp;&nbsp;</font></td>
-  <td valign=top><font size=2>
-   <a href="http://www.isi.edu/~lsam/tools/autosearch/load_balancing/19961209.html">Search results for load balancing as of 12/09/1996 03:00:10</a><br>
-   <!--NLResultRelevanceStart-->
-   <b>71%
-   <!--NLResultRelevanceEnd-->
-   - Articles & General info:</b>&nbsp; Search results for load balancing as of 12/09/1996 03:00:10      Load Balancing   Web Search Results for 12/09/1996 03:00:10   Links for Load Balancing  Load Balancing. Summary of... 12/09/96<br>
-   <b>Personal page:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ ~lsam/ tools/ autosearch/ load_balancing/ 19961209.html<br>
-   </font>
-   &nbsp;
-  </td>
-  <td><img src="docs/gif/transparent.gif" border=0 width=25 height=1 alt=""></td>
-  <td valign=middle><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
-  <!--NLResultEnd-->
+<tr>
+<!--NLResultStart-->
+ <td>&nbsp;</td>
+ <td align=right valign=top><font size=2>14.&nbsp;&nbsp;</font></td>
+ <td valign=top><font size=2><a href="http://www.isi.edu/lsam/about/ib/example.html">IB Research Plan</a><br>
+<!--NLResultRelevanceStart--><b>72%<!--NLResultRelevanceEnd--> - Articles & General info:</b>&nbsp;   IB Research Plan      IB Research Plan        For the experiments in this research, we will make use of traffic generators that emulate WWW browser request streams,... 01/13/97<br>
+<b>Educational site:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ lsam/ about/ ib/ example.html<br></font>&nbsp;
+ </td>
+ <td>&nbsp;</td>
+ <td valign=center><font size=2 color=white>
+<!-- Shopping Cart HTML -->
+<!-- Shopping Cart HTML --><!-- no shopping cart -->
+<img src=docs/gif/www.gif border=0 width=42 height=11>
+<!-- end no shopping cart --><!-- 0 -->
+  </font></td>
+<!--NLResultEnd-->
  </tr>
  <!-- end -->
- <tr>
- <!--NLResultStart-->
-  <td>&nbsp;</td>
-  <td align=right valign=top><font size=2>21.&nbsp;&nbsp;</font></td>
-  <td valign=top><font size=2>
-   <a href="http://www.isi.edu/lsam/about/ib/discussion.html">IB Discussion</a><br>
-   <!--NLResultRelevanceStart-->
-   <b>71%
-   <!--NLResultRelevanceEnd-->
-   - Articles & General info:</b>&nbsp;   IB Discussion      IB Discussion       Response time and bandwidth are key resources in this project. Current Internet user interfaces, such as Web browsers, Gopher and WAIS... 01/13/97<br>
-   <b>Educational site:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ lsam/ about/ ib/ discussion.html<br>
-   </font>
-   &nbsp;
-  </td>
-  <td><img src="docs/gif/transparent.gif" border=0 width=25 height=1 alt=""></td>
-  <td valign=middle><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
-  <!--NLResultEnd-->
+<tr>
+<!--NLResultStart-->
+ <td>&nbsp;</td>
+ <td align=right valign=top><font size=2>15.&nbsp;&nbsp;</font></td>
+ <td valign=top><font size=2><a href="http://www.isi.edu/~lsam/tools/autosearch/load_balancing/19961209.html">Search results for load balancing as of 12/09/1996 03:00:10</a><br>
+<!--NLResultRelevanceStart--><b>72%<!--NLResultRelevanceEnd--> - Articles & General info:</b>&nbsp; Search results for load balancing as of 12/09/1996 03:00:10      Load Balancing   Web Search Results for 12/09/1996 03:00:10   Links for Load Balancing  Load Balancing. Summary of... 12/09/96<br>
+<b>Personal page:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ ~lsam/ tools/ autosearch/ load_balancing/ 19961209.html<br></font>&nbsp;
+ </td>
+ <td>&nbsp;</td>
+ <td valign=center><font size=2 color=white>
+<!-- Shopping Cart HTML -->
+<!-- Shopping Cart HTML --><!-- no shopping cart -->
+<img src=docs/gif/www.gif border=0 width=42 height=11>
+<!-- end no shopping cart --><!-- 0 -->
+  </font></td>
+<!--NLResultEnd-->
  </tr>
  <!-- end -->
- <tr>
- <!--NLResultStart-->
-  <td>&nbsp;</td>
-  <td align=right valign=top><font size=2>22.&nbsp;&nbsp;</font></td>
-  <td valign=top><font size=2>
-   <a href="http://www.kiarchive.ru/pub/windows/internet/ftp/warftpd1_20b.exe/">MZê</a><br>
-   <!--NLResultRelevanceStart-->
-   <b>70%
-   <!--NLResultRelevanceEnd-->
-   - Resumes:</b>&nbsp;MZê    &quot;  ˇˇ  e@    @                                  ê                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ËS This program requires Microsoft Windows. $                                        Z¥	Õ!∏LÕ!              NE          @ü    ... 09/04/96<br>
-   <b>Russian site:</b>&nbsp;&nbsp;http:/ / www.kiarchive.ru/ pub/ windows/ internet/ ftp/ warftpd1_20b.exe/ <br>
-   </font>
-   &nbsp;
-  </td>
-  <td><img src="docs/gif/transparent.gif" border=0 width=25 height=1 alt=""></td>
-  <td valign=middle><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
-  <!--NLResultEnd-->
+<tr>
+<!--NLResultStart-->
+ <td>&nbsp;</td>
+ <td align=right valign=top><font size=2>16.&nbsp;&nbsp;</font></td>
+ <td valign=top><font size=2><a href="http://www.isi.edu/lsam/about/ib/discussion.html">IB Discussion</a><br>
+<!--NLResultRelevanceStart--><b>71%<!--NLResultRelevanceEnd--> - Articles & General info:</b>&nbsp;   IB Discussion      IB Discussion       Response time and bandwidth are key resources in this project. Current Internet user interfaces, such as Web browsers, Gopher and WAIS... 01/13/97<br>
+<b>Educational site:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ lsam/ about/ ib/ discussion.html<br></font>&nbsp;
+ </td>
+ <td>&nbsp;</td>
+ <td valign=center><font size=2 color=white>
+<!-- Shopping Cart HTML -->
+<!-- Shopping Cart HTML --><!-- no shopping cart -->
+<img src=docs/gif/www.gif border=0 width=42 height=11>
+<!-- end no shopping cart --><!-- 0 -->
+  </font></td>
+<!--NLResultEnd-->
  </tr>
  <!-- end -->
- <tr>
- <!--NLResultStart-->
-  <td>&nbsp;</td>
-  <td align=right valign=top><font size=2>23.&nbsp;&nbsp;</font></td>
-  <td valign=top><font size=2>
-   <a href="http://www.isi.edu/people/katia/http-perf-short.html">Analysis of HTTP Performance</a><br>
-   <!--NLResultRelevanceStart-->
-   <b>70%
-   <!--NLResultRelevanceEnd-->
-   - Articles & General info:</b>&nbsp;   Analysis of HTTP Performance      Analysis of HTTP Performance  Joe Touch, John Heidemann, and Katia Obraczka     USC/Information Sciences Institute       Abstract    We discuss the performance effects of... 05/03/97<br>
-   <b>Educational site:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ people/ katia/ http-perf-short.html<br>
-   </font>
-   &nbsp;
-  </td>
-  <td><img src="docs/gif/transparent.gif" border=0 width=25 height=1 alt=""></td>
-  <td valign=middle><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
-  <!--NLResultEnd-->
+<tr>
+<!--NLResultStart-->
+ <td>&nbsp;</td>
+ <td align=right valign=top><font size=2>17.&nbsp;&nbsp;</font></td>
+ <td valign=top><font size=2><a href="http://www.isi.edu/lsam/about/">About LSAM</a><br>
+<!--NLResultRelevanceStart--><b>60%<!--NLResultRelevanceEnd--> - Articles & General info:</b>&nbsp; About LSAM About LSAM What is LSAM LSAM is developing middleware infrastructure to support scalable distributed information services. This is embodied in the LSAM Proxy... 02/18/99<br>
+<b>Educational site:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ lsam/ about/ <br></font>&nbsp;
+ </td>
+ <td>&nbsp;</td>
+ <td valign=center><font size=2 color=white>
+<!-- Shopping Cart HTML -->
+<!-- Shopping Cart HTML --><!-- no shopping cart -->
+<img src=docs/gif/www.gif border=0 width=42 height=11>
+<!-- end no shopping cart --><!-- 0 -->
+  </font></td>
+<!--NLResultEnd-->
  </tr>
  <!-- end -->
- <tr>
- <!--NLResultStart-->
-  <td>&nbsp;</td>
-  <td align=right valign=top><font size=2>24.&nbsp;&nbsp;</font></td>
-  <td valign=top><font size=2>
-   <a href="http://gost.isi.edu/~johnh/PAPERS/index.html">Papers Published by John Heidemann</a><br>
-   <!--NLResultRelevanceStart-->
-   <b>68%
-   <!--NLResultRelevanceEnd-->
-   - Articles & General info:</b>&nbsp;   Papers Published by John Heidemann         Papers Published by John Heidemann   Lists of papers published by John Heidemann are available sorted   by subject (on this page)... 01/21/98<br>
-   <b>Personal page:</b>&nbsp;&nbsp;http:/ / gost.isi.edu/ ~johnh/ PAPERS/ index.html<br>
-   </font>
-   &nbsp;
-  </td>
-  <td><img src="docs/gif/transparent.gif" border=0 width=25 height=1 alt=""></td>
-  <td valign=middle><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
-  <!--NLResultEnd-->
+<tr>
+<!--NLResultStart-->
+ <td>&nbsp;</td>
+ <td align=right valign=top><font size=2>18.&nbsp;&nbsp;</font></td>
+ <td valign=top><font size=2><a href="http://www.isi.edu/div7/cities/about/mobility.html">About LSAM Mobility</a><br>
+<!--NLResultRelevanceStart--><b>60%<!--NLResultRelevanceEnd--> - Articles & General info:</b>&nbsp;  About LSAM Mobility      About LSAM Mobility      Mobility The goal of the mobility component is to support users who frequently change their network attachment point while... 01/14/98<br>
+<b>Educational site:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ div7/ cities/ about/ mobility.html<br></font>&nbsp;
+ </td>
+ <td>&nbsp;</td>
+ <td valign=center><font size=2 color=white>
+<!-- Shopping Cart HTML -->
+<!-- Shopping Cart HTML --><!-- no shopping cart -->
+<img src=docs/gif/www.gif border=0 width=42 height=11>
+<!-- end no shopping cart --><!-- 0 -->
+  </font></td>
+<!--NLResultEnd-->
  </tr>
  <!-- end -->
- <tr>
- <!--NLResultStart-->
-  <td>&nbsp;</td>
-  <td align=right valign=top><font size=2>25.&nbsp;&nbsp;</font></td>
-  <td valign=top><font size=2>
-   <a href="http://www.isi.edu/people/katia/index.html">Katia Obraczka, USC Information Science Institute</a><br>
-   <!--NLResultRelevanceStart-->
-   <b>68%
-   <!--NLResultRelevanceEnd-->
-   - Articles & General info:</b>&nbsp;   Katia Obraczka, USC Information Science Institute       Katia Obraczka      Address   USC Information Science Institute  4676 Admiralty Way  Marina del Rey, CA 90212  voice: (310) 822-1511  fax:... 09/30/98<br>
-   <b>Educational site:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ people/ katia/ index.html<br>
-   </font>
-   &nbsp;
-  </td>
-  <td><img src="docs/gif/transparent.gif" border=0 width=25 height=1 alt=""></td>
-  <td valign=middle><font size=2><img src=docs/gif/www.gif border=0 width=42 height=11></font></td>
-  <!--NLResultEnd-->
+<tr>
+<!--NLResultStart-->
+ <td>&nbsp;</td>
+ <td align=right valign=top><font size=2>19.&nbsp;&nbsp;</font></td>
+ <td valign=top><font size=2><a href="http://www.isi.edu/~lsam/about/">About LSAM</a><br>
+<!--NLResultRelevanceStart--><b>59%<!--NLResultRelevanceEnd--> - Articles & General info:</b>&nbsp;             About LSAM     About LSAM   What is LSAM  LSAM is developing middleware infrastructure to support scalable distributed information services. This is embodied in the LSAM Proxy... 03/25/98<br>
+<b>Personal page:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ ~lsam/ about/ <br></font>&nbsp;
+ </td>
+ <td>&nbsp;</td>
+ <td valign=center><font size=2 color=white>
+<!-- Shopping Cart HTML -->
+<!-- Shopping Cart HTML --><!-- no shopping cart -->
+<img src=docs/gif/www.gif border=0 width=42 height=11>
+<!-- end no shopping cart --><!-- 0 -->
+  </font></td>
+<!--NLResultEnd-->
+ </tr>
+ <!-- end -->
+<tr>
+<!--NLResultStart-->
+ <td>&nbsp;</td>
+ <td align=right valign=top><font size=2>20.&nbsp;&nbsp;</font></td>
+ <td valign=top><font size=2><a href="http://www.isi.edu/~lsam/tools/autosearch/caching/19961114.html">Search results for caching as of 11/14/1996 11:05:15</a><br>
+<!--NLResultRelevanceStart--><b>57%<!--NLResultRelevanceEnd--> - Articles & General info:</b>&nbsp; Search results for caching as of 11/14/1996 11:05:15      Caching   Web Search Results for 11/14/1996 11:05:15   Links for Caching  Caching. Search results for week of Jan.... 11/14/96<br>
+<b>Personal page:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ ~lsam/ tools/ autosearch/ caching/ 19961114.html<br></font>&nbsp;
+ </td>
+ <td>&nbsp;</td>
+ <td valign=center><font size=2 color=white>
+<!-- Shopping Cart HTML -->
+<!-- Shopping Cart HTML --><!-- no shopping cart -->
+<img src=docs/gif/www.gif border=0 width=42 height=11>
+<!-- end no shopping cart --><!-- 0 -->
+  </font></td>
+<!--NLResultEnd-->
+ </tr>
+ <!-- end -->
+<tr>
+<!--NLResultStart-->
+ <td>&nbsp;</td>
+ <td align=right valign=top><font size=2>21.&nbsp;&nbsp;</font></td>
+ <td valign=top><font size=2><a href="http://www.isi.edu/div7/cities/about/mobility_issues.html">LSAM Mobility Issues</a><br>
+<!--NLResultRelevanceStart--><b>57%<!--NLResultRelevanceEnd--> - Articles & General info:</b>&nbsp;  LSAM Mobility Issues      LSAM Mobility Issues  Location Naming Model  In order for the LSAM proxy to inform the proxy it is moving, or for the... 01/14/98<br>
+<b>Educational site:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ div7/ cities/ about/ mobility_issues.html<br></font>&nbsp;
+ </td>
+ <td>&nbsp;</td>
+ <td valign=center><font size=2 color=white>
+<!-- Shopping Cart HTML -->
+<!-- Shopping Cart HTML --><!-- no shopping cart -->
+<img src=docs/gif/www.gif border=0 width=42 height=11>
+<!-- end no shopping cart --><!-- 0 -->
+  </font></td>
+<!--NLResultEnd-->
+ </tr>
+ <!-- end -->
+<tr>
+<!--NLResultStart-->
+ <td>&nbsp;</td>
+ <td align=right valign=top><font size=2>22.&nbsp;&nbsp;</font></td>
+ <td valign=top><font size=2><a href="http://www.darpa.mil/ito/Summaries97/C370_0.html">LSAM: Large-Scale Active Middleware (formerly Cities Online)</a><br>
+<!--NLResultRelevanceStart--><b>55%<!--NLResultRelevanceEnd--> - Articles & General info:</b>&nbsp;   LSAM: Large-Scale Active Middleware (formerly Cities Online)       DARPA ITO  Sponsored Research    1997 Project Summary LSAM: Large-Scale Active Middleware (formerly Cities Online) University of Southern California/Infor...  10/13/98<br>
+<b>Military site:</b>&nbsp;&nbsp;http:/ / www.darpa.mil/ ito/ Summaries97/ C370_0.html<br></font>&nbsp;
+ </td>
+ <td>&nbsp;</td>
+ <td valign=center><font size=2 color=white>
+<!-- Shopping Cart HTML -->
+<!-- Shopping Cart HTML --><!-- no shopping cart -->
+<img src=docs/gif/www.gif border=0 width=42 height=11>
+<!-- end no shopping cart --><!-- 0 -->
+  </font></td>
+<!--NLResultEnd-->
+ </tr>
+ <!-- end -->
+<tr>
+<!--NLResultStart-->
+ <td>&nbsp;</td>
+ <td align=right valign=top><font size=2>23.&nbsp;&nbsp;</font></td>
+ <td valign=top><font size=2><a href="http://www.darpa.mil/ito/psum1997/C370-0.html">LSAM: Large-Scale Active Middleware (formerly Cities Online)</a><br>
+<!--NLResultRelevanceStart--><b>55%<!--NLResultRelevanceEnd--> - Articles & General info:</b>&nbsp; LSAM: Large-Scale Active Middleware (formerly Cities Online) DARPA ITO Sponsored Research 1997 Project Summary LSAM: Large-Scale Active Middleware (formerly Cities Online) USC Information Sciences Institute... 01/14/99<br>
+<b>Department of Defense:</b>&nbsp;&nbsp;http:/ / www.darpa.mil/ ito/ psum1997/ C370-0.html<br></font>&nbsp;
+ </td>
+ <td>&nbsp;</td>
+ <td valign=center><font size=2 color=white>
+<!-- Shopping Cart HTML -->
+<!-- Shopping Cart HTML --><!-- no shopping cart -->
+<img src=docs/gif/www.gif border=0 width=42 height=11>
+<!-- end no shopping cart --><!-- 0 -->
+  </font></td>
+<!--NLResultEnd-->
+ </tr>
+ <!-- end -->
+<tr>
+<!--NLResultStart-->
+ <td>&nbsp;</td>
+ <td align=right valign=top><font size=2>24.&nbsp;&nbsp;</font></td>
+ <td valign=top><font size=2><a href="http://www.isi.edu/people/katia/http-perf-short.html">Analysis of HTTP Performance</a><br>
+<!--NLResultRelevanceStart--><b>53%<!--NLResultRelevanceEnd--> - Articles & General info:</b>&nbsp;   Analysis of HTTP Performance      Analysis of HTTP Performance  Joe Touch, John Heidemann, and Katia Obraczka     USC/Information Sciences Institute       Abstract    We discuss the performance effects of... 05/03/97<br>
+<b>Educational site:</b>&nbsp;&nbsp;http:/ / www.isi.edu/ people/ katia/ http-perf-short.html<br></font>&nbsp;
+ </td>
+ <td>&nbsp;</td>
+ <td valign=center><font size=2 color=white>
+<!-- Shopping Cart HTML -->
+<!-- Shopping Cart HTML --><!-- no shopping cart -->
+<img src=docs/gif/www.gif border=0 width=42 height=11>
+<!-- end no shopping cart --><!-- 0 -->
+  </font></td>
+<!--NLResultEnd-->
+ </tr>
+ <!-- end -->
+<tr>
+<!--NLResultStart-->
+ <td>&nbsp;</td>
+ <td align=right valign=top><font size=2>25.&nbsp;&nbsp;</font></td>
+ <td valign=top><font size=2><a href="http://gost.isi.edu/people/katia/">Katia Obraczka, USC Information Science Institute</a><br>
+<!--NLResultRelevanceStart--><b>51%<!--NLResultRelevanceEnd--> - Articles & General info:</b>&nbsp; Katia Obraczka, USC Information Science Institute Katia Obraczka Address USC Information Science Institute 4676 Admiralty Way Marina del Rey, CA 90292 voice: (310) 822-1511 fax:... 04/10/99<br>
+<b>Educational site:</b>&nbsp;&nbsp;http:/ / gost.isi.edu/ people/ katia/ <br></font>&nbsp;
+ </td>
+ <td>&nbsp;</td>
+ <td valign=center><font size=2 color=white>
+<!-- Shopping Cart HTML -->
+<!-- Shopping Cart HTML --><!-- no shopping cart -->
+<img src=docs/gif/www.gif border=0 width=42 height=11>
+<!-- end no shopping cart --><!-- 0 -->
+  </font></td>
+<!--NLResultEnd-->
  </tr>
  <!-- end -->
  <!--NLResultListEnd-->
 </table>
 
-<!--Search box, next/previous buttons------------------------->
-
-<table border=0 cellspacing=0 cellpadding=0 width=730>
- <tr>
-  <td width=25 rowspan=3><img src="docs/gif/transparent.gif" width=25 height=1 alt=""></td>
-  <td width=225><img src="docs/gif/transparent.gif" width=225 height=1 alt=""></td>
-  <td width=10><img src="docs/gif/transparent.gif" width=10 height=1 alt=""></td>
-  <td width=495><img src="docs/gif/transparent.gif" width=495 height=1 alt=""></td>
- </tr>
- <tr>
-  <td>&nbsp;</td>
-  <td colspan=2 valign=top>
-   <table border=0>
-   <!-- No previous results -->
-    <!-- No next results -->
-    <tr>
-     <td valign=middle><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&&cb=0&cc=&db=11801&nth=026&us=025"><img src="docs/gif/nextten.gif" width=124 height=28 border=0 alt="Next Page"></a></td>
-     <td valign=middle><font size=2><b>Get the next page of documents</b></font></td>
-    </tr>
-    <!-- end -->
-   </table>
-  </td>
- </tr>
- <tr>
-  <td>&nbsp;</td>
- </tr>
- <tr>
-  <td colspan=2>&nbsp;</td>
-  <td>
-   <table border=0 cellspacing=0 cellpadding=0>
-   <form action="/nlquery.fcg" method=get>
-    <input type=hidden name=ho value="">
-    <input type=hidden name=po value="">
-    <input type=hidden name=si value="">
-    <input type=hidden name=cc value=" ">
-    <input type=hidden name=us value="025">
-    <input type=hidden name=xd value="">
-    <tr>
-     <td><input type=text size=27 name=qr value="+LSAM +ISI +IB"></td>
-     <td>&nbsp;</td>
-     <td nowrap><input type=image name=sb src="docs/gif/srchbtn1.gif" border=0 align=top alt="Search"><nobr><a href="docs/search_help_results.html"><img src="docs/gif/searchhelp.gif" border=0 align=top width=85 height=28 alt="Help/Hints"></a></nobr></td>
-    </tr>
-   </form>
-   </table>
-  </td>
- </tr>
- <tr>
-  <td colspan=2></td>
-  <td>&nbsp;<br>
-   <font size=1>
-   <a href="search.html">Simple Search</a>&nbsp;&nbsp;&nbsp;
-   <a href="power.html">Power Search</a>&nbsp;&nbsp;&nbsp;
-   <a href="pubsearch.html">Publication Search</a>&nbsp;&nbsp;&nbsp;
-   <a href="industry.html">Industry Search</a>&nbsp;&nbsp;&nbsp;
-   <a href="news.html">Current News</a>
-   </font><br>&nbsp;
-  </td>
- </tr>
- <tr>
-  <td colspan=2>&nbsp;</td>
-  <td>
-  <!-- and now a word from our sponsor -->
-   <nolayer>
-   <iframe src="http://ad.doubleclick.net/adi/northernlight.com/results;kw=LSAM+ISI+IB;ord=913314524" marginwidth=1 marginheight=1 width=468 height=60 frameborder=0 scrolling="no">
-   <a href="http://ad.doubleclick.net/jump/northernlight.com/results;kw=LSAM+ISI+IB;ord=913314524"><img src="http://ad.doubleclick.net/ad/northernlight.com/results;kw=LSAM+ISI+IB;ord=913314524" width=468 height=60 alt="please visit our sponsor" border=0></a>
-   </iframe>
-   </nolayer>
-  <!--ilayer id=snap2 visibility=hidden width=468 height=63></ilayer-->
-   <ilayer id=snap2 visibility=hidden width=468 height=63></ilayer>
-  <!-- end -->
-   <font size=2><br>&nbsp;<br>Copyright &copy; 1997-1998, Northern Light Technology LLC. All rights reserved.</font>
-  </td>
- </tr>
-</table>
-
-<!-- and now a word from our sponsor -->
-<layer clip="468,60" src="http://ad.doubleclick.net/adl/northernlight.com/results;kw=LSAM+ISI+IB;ord=913314524" visibility=hidden onload="moveToAbsolute(snap.pageX, snap.pageY); visibility='show';">
-</layer>
-<layer clip="468,60" src="http://ad.doubleclick.net/adl/northernlight.com/results;kw=LSAM+ISI+IB;ord=913314524" visibility=hidden onload="moveToAbsolute(snap2.pageX, snap2.pageY); visibility='show';">
-</layer>
+<!-- Search box, next/previous buttons -->
+<table border=0 cellspacing=0 cellpadding=0 width=730><tr>
+ <td width=220><img src="docs/gif/transparent.gif" width=220 height=1 alt=""></td>
+ <td width=20><img src="docs/gif/transparent.gif" width=20 height=1 alt=""></td>
+ <td width=15><img src="docs/gif/transparent.gif" width=15 height=1 alt=""></td>
+ <td width=475><img src="docs/gif/transparent.gif" width=475 height=1 alt=""></td>
+</tr><tr>
+ <td colspan=2>&nbsp;</td>
+ <td colspan=2 valign=top>
+<table border=0>
+<!-- No previous results -->
+<!-- No next results -->
+<tr>
+ <td valign=middle><a href="/nlquery.fcg?ho=blizzard&po=5030&qr=%2BLSAM+%2BISI+%2BIB&si=&cb=0&cc=&db=745072192&nth=026&us=025"><img src="docs/gif/nextten.gif" width=124 height=28 border=0 alt="Next Page"></a></td>
+ <td valign=middle><font size=2><b>Get the next page of documents</b></font></td>
+</tr>
 <!-- end -->
-
+<!-- Shopping Cart HTML -->
+</table>
+ </td>
+</tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td colspan=3>&nbsp;</td><td>
+<table border=0 cellspacing=0 cellpadding=0>
+<form action="/nlquery.fcg" method=get>
+<input type=hidden name=ho value="">
+<input type=hidden name=po value="">
+<input type=hidden name=si value="">
+<input type=hidden name=cc value=" ">
+<input type=hidden name=us value="025">
+<input type=hidden name=xd value="">
+<tr>
+ <td><input type=text size=35 name=qr value="+LSAM +ISI +IB"></td>
+ <td>&nbsp;</td>
+ <td nowrap><input name=search type=image src="docs/gif/btn_search.gif" border=0 alt="Search"><a href="docs/search_help_results.html"><img src="docs/gif/btn_search_help.gif" border=0 width=51 height=28 alt="Help"></a></td>
+</tr>
+</form>
+</table>
+ </td>
+</tr>
+<tr>
+ <td colspan=3></td>
+ <td>&nbsp;<br>&nbsp;<br><font size=1>
+<a href="search.html">Simple Search</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="power.html">Power</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="industry.html">Industry</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="news.html">News</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="wefa.html">WEFA</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="investext.html">Investext</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="pubsearch.html">Publication</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://special.northernlight.com">Special Edition</a><br>
+&nbsp;
+ </font></td>
+</tr>
+<tr>
+ <td colspan=3>&nbsp;</td><td>
+<!-- and now a word from our sponsor -->
+<table border=0 width=468><IFRAME WIDTH=468 HEIGHT=60 NORESIZE SCROLLING=No FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 SRC="http://adforce.imgis.com/?adiframe|2.0|34|47264|1|1|ADFORCE;">
+<script language=javascript src="http://adforce.imgis.com/?addyn|2.0|34|47264|1|1|ADFORCE;loc=700;"></script>
+<noscript><a href="http://adforce.imgis.com/?adlink|2.0|34|47264|1|1|ADFORCE;loc=300;" target=_top><img src="http://adforce.imgis.com/?adserv|2.0|34|47264|1|1|ADFORCE;loc=300;" border=0 width=468 height=60></a></noscript>
+</IFRAME></table>
+<!-- end -->
+<font size=2><br>&nbsp;<br>Copyright &copy; 1997-1999, Northern Light Technology LLC. All rights reserved.</font>
+ </td>
+</tr></table>
 </body>

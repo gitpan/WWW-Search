@@ -3,15 +3,29 @@ WWW::Search and AutoSearch
 ==========================
 
 
-WHAT IS NEW WITH WWW::Search 1.023?  (11-Dec-98)
+WHAT IS NEW WITH WWW::Search 1.024?  (15-Jun-99)
 ------------------------------------------------
 overview:  primarily bug fixes for back ends
 
-- NEW: proxy support added to WebSearch and AutoSearch
-	(based on code from Paul Linder)
-- NEW: new back end for Snap.com (from Jim Smyser)
-- BUG FIX:  Yahoo, HotBot, Excite, Lycos (from Martin Thurn),
-	NorthernLight (from Jim Smyser)
+- BUG FIX:  HotBot (from Martin Thurn)
+- NEW: Profusion (from Jim Smyser)
+- BUG FIX:  documentation clarification on required SearchResult fields
+	(based on comment from Chris P. Acantilado
+
+- BUG FIX:  Excite, WebCrawler, Infoseek (from Martin Thurn).
+	Infoseek::News and ::Companies are broken.
+- NEW: Metapedia, ZDNet, Open Directory, HotFiles (from Jim Smyser)
+- NEW: Lycos now supports advanced queries (from Jim Smyser)
+- BUG FIX: Profusion, NorthernLight, Snap (from Jim Smyser)
+
+- NEW MAINTAINER:  Future WWW::Search releases will come from
+	Martin Thurn <mthurn@tasc.com>.
+	The paucity of releases in the last six months has been
+	because I've been way to busy to maintain it.
+	Unfortunately, WWW::Search requires a fair amount of
+	maintenence.  I trust that Martin will be able to
+	give it the attention it needs.  THANKS!   -John
+
 
 
 WHAT IS WWW::Search?
@@ -37,30 +51,33 @@ status is:
 AltaVista		working
 Crawler			partially working
 Dejanews		working
-Excite			working
-ExciteForWebServers	working
-Fireball		working
+Excite			partially working
+ExciteForWebServers	not working
+Fireball		not working
 FolioViews		working
 Gopher			not working? (not in test suite)
-HotBot			partially working
-Infoseek		working
+HotBot			working
+HotFiles		not working? (not in test suite)
+Infoseek		working (Companies partially working)
 Livelink		not working? (not in test suite)
 Lycos			working
 Magellan		working
-MSIndexServer		partially working?
-NorthernLight		working
+Metapedia		not working? (not in test suite)
+MSIndexServer		not working
+NorthernLight		partially working (doesn't handle multi-page returns)
 Null			working
 PLweb			working
+Profusion		not working
 Search97		working
 SFgate			working
 Simple			not working? (not in test suite)
-Snap			working
+Snap			partially working
 Verity			not working (not in test suite)
-WebCrawler		partially working?
+WebCrawler		partially working
 Yahoo			working
+ZDNet			not working? (not in test suite)
 
 ``Paritially working'' indicates that some tests passed and some failed.
-Yahoo's test suites are sometimes flakey.
 
 (others are currently under development, see contributors below for details)
 
@@ -429,6 +446,15 @@ overview:  An interim release to fix several broken back-ends.
 	partial fix from Andreas Borchert)
 - new: back ends for Crawler, Fireball, NorthernLight from Andreas Borchert
 
+1.024, 11-Dec-98
+overview:  primarily bug fixes for back ends
+- new: proxy support added to WebSearch and AutoSearch
+	(based on code from Paul Linder)
+- new: new back end for Snap.com (from Jim Smyser)
+- bug fix:  Yahoo, HotBot, Excite, Lycos (from Martin Thurn),
+	NorthernLight (from Jim Smyser)
+
+
 
 
 SUPPORT AND CREDITS
@@ -459,7 +485,8 @@ BACK-ENDS:
 	FolioViews		Paul Lindner
 	Gopher			Paul Lindner
 	HotBot			William Scheding and Martin Thurn
-	 Infoseek		Cesare Feroldi de Rosa and Martin Thurn
+	HotFiles		Jim Smyser
+	Infoseek		Cesare Feroldi de Rosa and Martin Thurn
 	Livelink		Paul Lindner
 	Lycos			William Scheding and John Heidemann,
 				Martin Thurn
@@ -467,7 +494,9 @@ BACK-ENDS:
 	MSIndexServer		Paul Lindner
 	NorthernLight		Jim Smyser
 	Null			Paul Lindner
+	OpenDirectory		Jim Smyser
 	PLWeb			Paul Lindner
+	Profusion		Jim Smyser
 	Search97		Paul Lindner
 	SFgate			Paul Lindner
 	Simple			Paul Lindner
@@ -475,6 +504,7 @@ BACK-ENDS:
 	Verity			Paul Lindner
 	WebCrawler		Martin Thurn
 	Yahoo			William Scheding and Martin Thurn
+	ZDNet			Jim Smyser
 
 AutoSearch is based on an earlier implementation by Kedar Jog
 <jog@isi.edu> with advice from Joe Touch <touch@isi.edu>.
@@ -494,7 +524,8 @@ Andreas Borchert <borchert@mathematik.uni-ulm.de>, Jim Smyser
 
 Bugs have reported by Joseph McDonald <joe@smartlink.net>, Juan Jose
 Amor <jjamor@infor.es>, Bowen Dwelle <bowen@hotwired.com>, Vassilis
-Papadimos <vpapad@dblab.ece.ntua.gr>, Vidyut Luther <vluther@hpctc.org>.
+Papadimos <vpapad@dblab.ece.ntua.gr>, Vidyut Luther <vluther@hpctc.org>, 
+Chris P. Acantilado <cacantil@spawar.navy.mil>.
 
 Feedback, bug reports and fixes, and new back-ends should be sent to
 John Heidemann <johnh@isi.edu>.  Before submitting a bug report,

@@ -1,101 +1,346 @@
 <html>
 <head>
-<title>Search Results</title>
+<title>Deja.com: Error</title>
 <meta name=keywords content="dejanews usenet newsgroup articles search query discussion">
-
-
-
 </head>
 
-<body bgcolor=#ffffff text=#000000 link=#0000ff vlink=#52188c alink=#cc0000>
+<style type="text/css">
+<!--        A.DARK2           {color: ff6600}-->
+<!--        A.DARK3           {color: ff3300}-->
+</style>
 
+<body bgcolor=#ffffff text=#000000 link=#0000ff vlink=#9966CC alink=#cc0000>
 
+<!-- PLOC = d.search.query.err.no_matching_articles -->
 
+<table cellpadding=0 cellspacing=0 border=0 width=100%><tr>
+<td width=135></td><td width=14></td><td></td><td width=100%></td>
+</tr><tr>
+<td width=135 bgcolor=#6666cc valign=bottom align=left><a href="http://www.deja.com/"><img src="http://g.deja.com/gifs/dlogo_130_b.gif" width=130 height=75 alt="deja.com" border=0 align=left hspace=3></a></td>
+<td width=12 bgcolor=#ffffff><img src="http://g.deja.com/gifs/20x20.gif" width=12 border=0 height=60 align=left></td>
+<td bgcolor=#ffffff valign=top align=center><TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0 bgCOLOR='#D0D0FF' width=468>
+<TR>
+<TD ALIGN='LEFT' VALIGN='MIDDLE' WIDTH=140 HEIGHT=60 NOWRAP>
+<a href='http://chkpt.zdnet.com/chkpt/djcs003/www.zdnet.com/computershopper/' target='_new'>
+<img SRC='http://web2.deja.com/ads/bestby4.gif' width=140 height=60 border=0 alt='Best Buys on Computer Products'></TD>
+<TD ALIGN='left' WIDTH=110 HEIGHT=60 NOWRAP>
+<FONT SIZE='2' fACE='arial' COLOR='black'>
+ <img SRC='http://web2.deja.com/ads/purple.gif'> <a href='http://chkpt.zdnet.com/chkpt/djcs003/computershopper.zdnet.com/texis/cs/showcat.html?catid=C0000001&rg=r130' target='_new'>Desktops</a><br> 
+ <img SRC='http://web2.deja.com/ads/purple.gif'> <a href='http://chkpt.zdnet.com/chkpt/djcs003/computershopper.zdnet.com/texis/cs/showcat.html?catid=C0000012&rg=r144' target='_new'>Modems</a><br>
+ <img SRC='http://web2.deja.com/ads/purple.gif'> <a href='http://chkpt.zdnet.com/chkpt/djcs003/computershopper.zdnet.com/texis/cs/showcat.html?catid=C0000061&rg=r146' target='_new'>Handhelds</a>
+</font></TD>
+<TD ALIGN='LEFT' WIDTH=109 HEIGHT=60 NOWRAP>
+<FONT SIZE='2' fACE='arial' COLOR='black'>
+<img SRC='http://web2.deja.com/ads/purple.gif'> <a href='http://chkpt.zdnet.com/chkpt/djcs003/computershopper.zdnet.com/texis/cs/showcat.html?catid=C0000004&rg=r133' target='_new'>Multimedia</a><br>
+<img SRC='http://web2.deja.com/ads/purple.gif'> <a href='http://chkpt.zdnet.com/chkpt/djcs003/computershopper.zdnet.com/texis/cs/showcat.html?catid=C0000015&rg=r136' target='_new'>Scanners</a><br>
+<img SRC='http://web2.deja.com/ads/purple.gif'> <a href='http://chkpt.zdnet.com/chkpt/djcs003/computershopper.zdnet.com/texis/cs/showcat.html?catid=C0000002&rg=r131' target='_new'>Notebooks</a>
+</font></TD>
+<TD ALIGN='LEFT' WIDTH=109 HEIGHT=60 NOWRAP>
+<FONT SIZE='2' fACE='arial' COLOR='black'>
+<img SRC='http://web2.deja.com/ads/purple.gif'> <a href='http://chkpt.zdnet.com/chkpt/djcs003/computershopper.zdnet.com/texis/cs/showcat.html?catid=C0000070&rg=r139' target='_new'>Software</a><br>
+<img SRC='http://web2.deja.com/ads/purple.gif'> <a href='http://chkpt.zdnet.com/chkpt/djcs003/computershopper.zdnet.com/texis/cs/showcat.html?catid=C0000011&rg=r134' target='_new'>Printers</a><br>
+<img SRC='http://web2.deja.com/ads/purple.gif'> <a href='http://chkpt.zdnet.com/chkpt/djcs003/computershopper.zdnet.com/texis/cs/showcat.html?catid=C0000037&rg=r142' target='_new'>Upgrades</a>
+</font></TD>
+</TR>
+</TABLE>
 
-
-
-
-
-
-
-
-<a href="/nav_g.map"><img src="http://g.dejanews.com/gifs/nav_g3.gif" alt="Deja News Toolbar" width=640 height=50 usemap="#nav_g.map" ismap border=0></a><br>
-
-<font size=1>&nbsp;</font><br>
-
-<table width=640 cellspacing=0 cellpadding=0 border=0>
-    <tr>
-
-
-
-
-<map name="nav_g.map">
-<area shape="rect" coords="5,0,110,50" href="http://www.dejanews.com/" alt="Home">
-<area shape="rect" coords="150,0,435,25" href="http://www.dejanews.com/emarket/" alt="About Deja News">
-<area shape="rect" coords="150,30,250,50" href="http://www.dejanews.com/rg_enter.xp" alt="My Deja News">
-<area shape="rect" coords="270,30,310,50" href="http://www.dejanews.com/post.xp" alt="Post">
-<area shape="rect" coords="335,30,432,50" href="http://www.dejanews.com/home_ps.shtml" alt="Power Search">
-<area shape="rect" coords="460,0,500,40" href="http://www.dejanews.com/" alt="Home">
-<area shape="rect" coords="525,0,565,40" href="http://www.dejanews.com/" alt="Search">
-<area shape="rect" coords="590,0,625,40" href="http://www.dejanews.com/help/help_index.shtml" alt="Help">
-<area shape="default" nohref alt="">
-</map>
-
-
-
-
-<table border=0 cellpadding=0 cellspacing=0 width=640>
-<tr><td height=1><font size=0>&nbsp;</font></td></tr>
-<tr><td align=center>
-<table border=0 cellpadding=0 cellspacing=0 width=470>
-<tr><td align=center>
-<table cellspacing=0 cellpadding=0 width=470 border=0><tr><td>
-<A HREF="http://gp1.dejanews.com/gtc?id=19704&tm=913314345.246325&site=dn&location=hitlist&keywords=bogusnosuchwordspammersareidiots&cr=%7c%7c%7c%7c%7c%7c%7c%7c">
-<IMG ALIGN=MIDDLE HEIGHT=60 WIDTH=468 SRC="http://web2.dejanews.com/ads/76/1233048076-8753.gif" ALT="Stay on the leading edge with the IBM Developer Connection" border=1></A></td></tr><tr align=center><td><font size=-1><A HREF="http://gp1.dejanews.com/gtc?id=19704&tm=913314345.246325&site=dn&location=hitlist&keywords=bogusnosuchwordspammersareidiots&cr=%7c%7c%7c%7c%7c%7c%7c%7c">
-Stay on the leading edge with the IBM Developer Connection</a></font></td></tr>
-</table>
-</td></tr></table>
-
+</td>
+<td width=100%>
+</td>
+</tr><tr>
+<td colspan=4 width=100% bgcolor=#6666cc valign=top align=left><img src="http://g.deja.com/gifs/20x20.gif" width=3 height=1><img src="http://g.deja.com/gifs/dmotto_b.gif" width=338 height=21 alt="Share what you know. Learn what you don't." border=0>
 </td></tr>
 </table>
 
-<font size=0><p></font>
 
-<p>
-<table width=640 border=0 cellpadding=0 cellspacing=0><tr>
-<td bgcolor="#003399" height=5 colspan=2><spacer type=block height=5 width=0></td></tr>
-<tr valign=top><td><font color="#ff6600" face="arial,helvetica" size=4><b>No Matches</b></font></td>
-<td align=right><font face="arial,helvetica" size=-1><a href="http://www.dejanews.com/help/help_qs.shtml">help</a></font></td></tr>
+
+<table border=0 cellspacing=0 cellpadding=0 bgcolor="#cccc66" width=100%><tr>
+<td width=1 bgcolor="#6666cc"><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td>
+<td width=130 bgcolor="#6666cc"><img src="http://g.deja.com/gifs/20x20.gif" width=130 height=1></td>
+<td width=4 bgcolor="#6666cc"><img src="http://g.deja.com/gifs/20x20.gif" width=4 height=1></td>
+<td width=100% bgcolor="#6666cc"><img src="http://g.deja.com/gifs/20x20.gif" width=331 height=1></td>
+<td width=1 bgcolor="#6666cc"><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td>
+<td width=130 bgcolor="#6666cc"><img src="http://g.deja.com/gifs/20x20.gif" width=130 height=1></td>
+<td width=3 bgcolor="#6666cc"><img src="http://g.deja.com/gifs/20x20.gif" width=3 height=1></td>
+</tr><tr>
+<td width=1 bgcolor=#000000><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td>
+<td colspan=3 valign=top width=100%>
+
+
+<!-- nav_chan : begin -->
+<table border=0 cellspacing=0 cellpadding=0 bgcolor="#cccc66" width=100%><tr>
+<td>
+
+<table border=0 cellspacing=0 cellpadding=2>
+<tr>
+<td bgcolor="#cccc66"><font face="geneva,arial" size=2>
+&nbsp;<a href="http://www.deja.com/"><b>Home</b></a>
+</font></td>
+</tr>
+<tr>
+    <td bgcolor=#ffffff>
+    <font face="geneva,arial" color=#6666cc size=5>&nbsp;<b>&gt;&gt;</b>&nbsp;</font>
+    <font face="geneva,arial" size=5><b>Error&nbsp;</b></font></td>
+    </tr>
+</table>
+
+<table border=0 cellspacing=2 cellpadding=2><tr>
+<td bgcolor="#cccc66"><font face="geneva,arial" size=1>
+</font></td>
+</tr></table>
+
+</td>
+</tr></table>
+
+<!-- nav_chan : end -->
+
+</td>
+<td rowspan=2 width=1 bgcolor=#000000><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td>
+<td rowspan=2 bgcolor="#6666cc" valign=top align=center width=100%>
+
+<!-- third stage : begin -->
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+
+<tr>
+    <td>
+    <table width=100% border=0 cellspacing=0 cellpadding=6><tr>
+	<td bgcolor="#000000"><font face="geneva,arial" color="#ff6600"><b>Explore More:</b></font></td>
+    </tr></table>
+    </td>
+</tr>
+
+<tr>
+    <td>
+	<table width=100% border=0 cellspacing=0 cellpadding=6>
+<tr><td bgcolor=#6666cc> 
+<font size=1 face="geneva,arial" color=#ffffff>
+<p>Westech Virtual Job Fair<br>
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=50966081&location=textlink.westech.cat.money.ads.jobs.cat.unknown">
+<font face="geneva,arial" color="#ffcc66">
+<b>Click here for High-Tech Jobs</b></font></a>
+
+<p>USWEST Dex<br>
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=50966081&location=textlink.uswest.home.cat.unknown">
+<font face="geneva,arial" color="#ffcc66">
+<b>Internet Yellow Pages</b></font></a>
+
+<p>Shop at OfficeMax.com<br>
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=50966081&location=textlink.officemax.cat.money.cat.unknown">
+<font face="geneva,arial" color="#ffcc66">
+<b>For Over 20000 Office Products</b></font></a>
+
+<p>The Best of ZDNet<br>
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=50966081&location=textlink.zdnet.cat.trvl.cat.unknown">
+<font face="geneva,arial" color="#ffcc66">
+<b>Delivered to you free!</b></font></a>
+
+<p>Westech Virtual Job Fair<br>
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=50966081&location=textlink.westech.cat.comptech.cat.unknown">
+<font face="geneva,arial" color="#ffcc66">
+<b>Click here for High-Tech Jobs</b></font></a>
+
+<p>InfoSpace<br>
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=50966081&location=textlink.infospaceud.home.cat.unknown">
+<font face="geneva,arial" color="#ffcc66">
+<b>The Ultimate Directory</b></font></a>
+
+<p>Computer & Tech Jobs<br>
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=50966081&location=textlink.compjobs.home.cat.unknown">
+<font face="geneva,arial" color="#ffcc66">
+<b>Upgrade your Career!</b></font></a>
+
+<p>5¢ long distance!<br>
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=50966081&location=textlink.qwest.cat.health.cat.unknown">
+<font face="geneva,arial" color="#ffcc66">
+<b>Save $$$$$.</b></font></a>
+
+<p>Apartments.com<br>
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=50966081&location=apartments.cat.ads.jobs.cat.unknown">
+<font face="geneva,arial" color="#ffcc66">
+<b>Interior photos of apartments nationwide</b></font></a>
+
+<p>Restock office supplies<br>
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&cid=50966081&location=textlink.officemax.cat.money.cat.unknown">
+<font face="geneva,arial" color="#ffcc66">
+<b>from your desk.</b></font></a>
+</td></tr>
+</table>
+ </td>
+</tr>
+
 </table>
 
 
+<!-- third stage : end -->
+
+</td>
+<td rowspan=2 width=3 bgcolor=#000000><img src="http://g.deja.com/gifs/20x20.gif" width=3 height=1></td>
+</tr><tr>
+<td colspan=2 valign=top bgcolor="#ffcc66" width=131>
+
+<!-- first stage : begin -->
+<table border=0 cellspacing=0 cellpadding=0 width=100%>
+
+<tr><td>
+<table width=100% border=0 cellspacing=0 cellpadding=6>
+
+<tr>
+<td valign=bottom bgcolor=#000000>
+    <table cellspacing=0 cellpadding=0 border=0 width=100%><tr>
+    <td valign=middle><font face="geneva,arial" color="#ff6600" size=6><b>5&nbsp;</b></font></td>
+    <td valign=top><font face="geneva,arial" color="#ff6600" size=2><b>top&nbsp;rated<br>Cell Phones</b></font></td>
+    </tr></table>
+</td>
+</tr>
+
+<tr>
+<td valign=top bgcolor=#cccc66>
+<font face="geneva,arial" size=1>
+<a href="http://www.deja.com/rate/item.xp?CID=0&PDID=4769">
+    1. Nokia 6000 Series</a><br>
+
+    <a href="http://www.deja.com/rate/item.xp?CID=0&PDID=4768">
+    2. Nokia 5000 Series</a><br>
+
+    <a href="http://www.deja.com/rate/item.xp?CID=0&PDID=4766">
+    3. Motorola Startac Series</a><br>
+
+    <a href="http://www.deja.com/rate/item.xp?CID=0&PDID=4772">
+    4. Sony D-Wave Zuma Series</a><br>
+
+    <a href="http://www.deja.com/rate/item.xp?CID=0&PDID=4764">
+    5. Ericsson KF Series</a><br>
+<a href="http://www.deja.com/rate/list_items.xp?CID=0&PCID=11788"><li>See the full list...</a><br>
+</font></td>
+</tr>
+</table>
+
+</td></tr>
+
+<tr><td bgcolor="#000000"><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td></tr>
+
+<tr><td>
+<table border=0 cellspacing=0 cellpadding=6 width=100%>
+
+<tr>
+<td valign=bottom bgcolor=#000000>
+    <table cellspacing=0 cellpadding=0 border=0 width=100%><tr>
+    <td valign=middle><font face="geneva,arial" color="#ff6600" size=4><b>Rate it!</b></font></td>
+    </tr></table>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="#cccc66"><font face="geneva,arial" size=1>
+<font size=3><b><a href="http://www.deja.com/rate/item.xp?CID=0&PDID=4770">Qualcomm QCP Series</a></b></font><br>
+<font size=2><a href="http://www.deja.com/rate/item.xp?CID=0&PDID=4770"></a></font><br>
+<a href="http://www.deja.com/rate/list_items.xp?CID=0&PCID=11788">or choose another to rate</a>
+<form action="http://www.deja.com/rate/user_rate.xp" method=post>
+(1=worst, 5=best)</td>
+</tr>
+<tr>
+<td bgcolor="#cccc66" nowrap><font face="geneva,arial" size=1>
+Sound quality<br>
+    1<input type=radio name=CR1 value=1><input type=radio name=CR1 value=2><input type=radio name=CR1 value=3><input type=radio name=CR1 value=4><input type=radio name=CR1 value=5>5<br>
+    
+    Sexiness<br>
+    1<input type=radio name=CR2 value=1><input type=radio name=CR2 value=2><input type=radio name=CR2 value=3><input type=radio name=CR2 value=4><input type=radio name=CR2 value=5>5<br>
+    
+    Durability<br>
+    1<input type=radio name=CR3 value=1><input type=radio name=CR3 value=2><input type=radio name=CR3 value=3><input type=radio name=CR3 value=4><input type=radio name=CR3 value=5>5<br>
+    
+    Cost / Benefit<br>
+    1<input type=radio name=CR4 value=1><input type=radio name=CR4 value=2><input type=radio name=CR4 value=3><input type=radio name=CR4 value=4><input type=radio name=CR4 value=5>5<br>
+    <p>
+<input type=submit value="Submit">
+<input type="hidden" name="CID" value="0">
+<input type="hidden" name="PDID" value="4770">
+</form>
+<li> <a href="http://www.deja.com/rate/list_items.xp?CID=0&PCID=11788">Compare it to others</a><br>
+<li> <a href="http://www.deja.com/rate/list_reviews.xp?CID=0&PDID=4770">User Comments</a>
+<br>&nbsp;</font></td>
+</tr></table>
 
 
+</td></tr>
+
+<tr><td bgcolor="#000000"><img src="http://g.deja.com/gifs/20x20.gif" width=1 height=1></td></tr>
+
+<tr>
+    <td>
+    <table border=0 cellspacing=0 cellpadding=6 width=100%><tr>
+	<td valign=top bgcolor="#ffcc66">
+	<font face="geneva,arial" size=2><b>My Deja</b></font><br>
+	<font face="geneva,arial" size=1>
+	Get more out of Deja: <a href="http://www.deja.com/register.xp">Register</a> to easily manage your discussions
+	    and communities, and improve your searches.  Plus, get email alerts about
+	    new posts in your favorite discussions with <a href="http://www.deja.com/mydn_search.xp">Deja Tracker</a>!
+	<br>&nbsp;</font></td>
+    </tr></table>
+    </td>
+</tr>
+
+</table>
+
+
+<!-- first stage : end -->
+
+<img src="http://g.deja.com/gifs/20x20.gif" width=131 height=1></td>
+<td bgcolor=#000000 width=4><img src="http://g.deja.com/gifs/20x20.gif" width=4 height=1></td>
+
+
+<td bgcolor="#ffffff" valign=top>
+
+<!-- second stage : begin -->
+<!-- second stage nav_tab : begin -->
+<table border=0 cellspacing=0 cellpadding=0 width=100%>
+<tr><td valign=bottom bgcolor=#000000>
+
+&nbsp;
+</td>
+</tr></table>
+
+
+<!-- second stage nav_tab : end -->
+<!-- second stage content : begin -->
+<table width=100% cellpadding=12 cellspacing=0 border=0>
+<tr><td valign=top>
+<table width=100% cellpadding=6>
+<tr valign=top>
+<td><table width=100% cellpadding=0 cellspacing=0 border=0>
+<tr>
+<td valign=top><font face="geneva,arial" size=4>No Matches&nbsp;</font></td>
+<td valign=top align=right>
+
+<table border=0 cellspacing=0 cellpadding=3><tr bgcolor=#eeeeee align=right>
+<td valign=top align=center nowrap>
+<font face="geneva,arial" size=1>
+<a href="http://www.deja.com/help_index.shtml">Help</a> | <a href="http://www.deja.com/mailto.xp">Feedback</a></font></td>
+</tr></table>
+
+</td>
+</tr></table>
 
 
 
 
 
 <p>
-<table cellspacing=0 cellpadding=0 border=0 width=640>
-<tr valign=top>
-<td width=130>&nbsp;</td>
-<td width=15>&nbsp;</td>
-<td width=375><font face="arial,helvetica">
+<font face="geneva,arial" size=2>
 Your search did not match any articles at all.
 <p>
 Some tricks which might help:
 <UL>
-<LI>Try matching <A HREF="http://www.dejanews.com/help/help_ps.shtml#keywords">ANY</A> keyword instead of <A HREF="help/help_ps.shtml#keywords">ALL</A> keywords</li>
-<LI>Try using <A HREF="http://www.dejanews.com/help/help_lang.shtml#wildcard">wildcards</A> to cover suffix variations, like:</li>
+<LI>Try matching <A HREF="http://www.deja.com/help/help_ps.shtml#keywords">ANY</A> keyword instead of <A HREF="help/help_ps.shtml#keywords">ALL</A> keywords</li>
+<LI>Try using <A HREF="http://www.deja.com/help/help_lang.shtml#wildcard">wildcards</A> to cover suffix variations, like:</li>
 <UL>
 <LI><KBD>user*</KBD> instead of <KBD>users</KBD></li>
 <LI><KBD>rec.pets.*</KBD> instead of <KBD>rec.pets.cats</KBD></li>
 <LI><KBD>1996/01/*</KBD> instead of <KBD>1996/01/14</KBD></li>
 <LI><KBD>davinci@*</KBD> instead of <KBD>davinci@italy.renaissance.com</KBD></li>
 </UL>
-<LI>If you have <A HREF="http://www.dejanews.com/help/help_lang.shtml#boolean">boolean connectors</A> in your query, try using | (<A HREF="http://www.dejanews.com/help/help_lang.shtml#or">OR</A>) instead of & (<A HREF="http://www.dejanews.com/help/help_lang.shtml#and">AND</A>)</li>
-<LI>Try using a different <A HREF="http://www.dejanews.com/help/help_ps.shtml#database">database</A>.</li>
+<LI>If you have <A HREF="http://www.deja.com/help/help_lang.shtml#boolean">boolean connectors</A> in your query, try using | (<A HREF="http://www.deja.com/help/help_lang.shtml#or">OR</A>) instead of & (<A HREF="http://www.deja.com/help/help_lang.shtml#and">AND</A>)</li>
+<LI>Try using a different <A HREF="http://www.deja.com/help/help_ps.shtml#database">database</A>.</li>
 Typically you will find many more matches in our "Old" database.  If you used our <b>Power Search</b>, you can set the Date filter to a broader range of dates.</li>
 <LI>Try different keywords!  :-)</li>
 </UL>
@@ -103,229 +348,117 @@ Typically you will find many more matches in our "Old" database.  If you used ou
 </font>
 </td></tr>
 </table>
-
 <p>
 
 
-
-
-
-
-
 <p>
-<table width=640 border=0 cellpadding=0 cellspacing=0><tr>
-<td bgcolor="#003399" height=5 colspan=2><spacer type=block height=5 width=0></td></tr>
-<tr valign=top><td><font color="#ff6600" face="arial,helvetica" size=4><b>Search Again</b></font></td>
-<td align=right><font face="arial,helvetica" size=-1><a href="http://www.dejanews.com/help/help_ps.shtml">help</a></font></td></tr>
-</table>
+<table cellpadding=2 cellspacing=0 border=0 margineheight=1 marginewidth=1 width=100% bgcolor=#cccc66>
+<form action="http://www.deja.com/dnquery.xp">
+<tr>
+<input type=hidden name=DBS value=2><td bgcolor=#000000>
+<center><font face="geneva,arial" size=2 color=#ff6600><b>Search Discussions</b></font></center></td>
+<td><font face="geneva,arial" size=1 color=#000000>&nbsp;&nbsp;For a more detailed search go to <a href="http://www.deja.com/home_ps.shtml">Power Search</a></font></td>
+</tr>
+
+<tr>
+<td valign=top align=right><font face="geneva,arial" size=2><b>Search for:</b></font></td>
+<td valign=top>
+<input type=text size=35 name=QRY value="BogusNoSuchWordSpammersAreIdiots">
+<input type=submit value="Search">
+<br><font face="geneva,arial" size=1>Search&nbsp;
+<select name=svcclass>
+<option value=dncurrent selected>recent
+<option value=dnold >past
+<option value=dnserver >all
+</select> messages
+</td></tr>
 
 
-
-
-
-
-<form action="dnquery.xp" method=get>
-<table cellspacing=0 cellpadding=2 width=640 border=0>
-<tr valign=middle><td width=130 align=right valign=top><font face="arial,helvetica" size=+1 color=#ff6600><b>Power Search</b></font></td>
-<td width=20>&nbsp;</td>
-<td width=490><input type="text" name="QRY" size="30" value="BogusNoSuchWordSpammersAreIdiots"><input type="submit" value="Find"><br>
-<font face="arial,helvetica" size=2>Find messages in the 
-
-<select name="DBS">
-        <option value=1 >complete
-        <option value=2 >standard
-        <option value=3 >adult
-        <option value=4 >jobs
-        <option value=5 >for sale
-        </select> archive</font>
-<input type="hidden" name="ST" value="PS"></td></tr>
-</table>
-
-<p>
-
-<table width=640 border=0 cellpadding=0 cellspacing=0>
-    <tr valign=top>
-        <td width=15%>&nbsp;</td>
-        <td width=40%><font face="arial,helvetica" color="#003399"><b>Limit Search</b></font></td>
-        <td rowspan=8 width=5%>&nbsp;</td>
-        <td width=40%><font face="arial,helvetica" color="#003399"><b>Organize&nbsp;Results</b></font></td>
-    </tr>
-    <tr valign=top>
-        <td height=40>&nbsp;</td>
-        <td><font face=arial,helvetica size=-2>these options help to further narrow your search<p>Match </font><INPUT type="radio" name="defaultOp" value="AND" ><font face=arial,helvetica size=-2> all</font> &nbsp;<INPUT type="radio" name="defaultOp" value="OR" CHECKED><font face=arial,helvetica size=-2> any &nbsp;keywords</font></td>
-        <td><font face=arial,helvetica size=-2>these options help to organize your search results</font></td>
-    </tr>
-    <tr>
-        <td valign=middle align=right height=30><font face=arial,helvetica size=-2>Language &nbsp;</font></td>
-        <td><select name="LNG" size=1>
-		
-                <option value=ALL >any
-                <option value=chinese >Chinese
-                <option value=danish >Danish
-                <option value=dutch >Dutch
-                <option value=english >English
-                <option value=finnish >Finnish
-                <option value=french >French
-                <option value=german >German
-                <option value=hungarian >Hungarian
-                <option value=italian >Italian
-                <option value=japanese >Japanese
-                <option value=korean >Korean
-                <option value=norwegian >Norwegian
-                <option value=portuguese >Portuguese
-                <option value=polish >Polish
-                <option value=russian >Russian
-                <option value=spanish >Spanish
-                <option value=swedish >Swedish
-                <option value=vietnamese >Vietnamese
-            </select></td>
-        <td valign=top rowspan=4><font face=arial,helvetica size=-2>Results format</font><br>
-            <select name="format">
-		
-		<option value="delta"  SELECTED>list
-		<option value="terse" >tabular
-		<option value="threaded" >threaded
-            </select>
-            <br>&nbsp;<p>
-	    <font face=arial,helvetica size=-2>Sort by</font><br>
-            <select name="showsort" size=1>
-		
-		<option value="score"  SELECTED>confidence
-		<option value="subject" >subject
-		<option value="newsgroup" >forum
-		<option value="author" >author
-		<option value="date" >date
-            </select> 
-            <br>&nbsp;<p>
-	    <font face=arial,helvetica size=-2>Results per page</font><br>
-            <select name="maxhits" size=1>
-		
-		<option value="25" >25
-		<option value="50" >50
-		<option value="100"  SELECTED>100
-            </select></td>
-    </tr>
-    <tr>
-        <td align=right height=40><font face=arial,helvetica size=-2>Subject &nbsp;</font></td>
-        <td valign=top><font face=arial,helvetica size=-2 color="#ff6600">Example</font><font face=arial,helvetica size=-2>: FAQ or (frequently asked questions)</font><br>
-            <input type=text name=subjects size=30 value=""></td>
-    </tr>
-    <tr>
-        <td align=right height=40><font face="arial,helvetica" size=-2>Forum &nbsp;</font></td>
-        <td valign=top><font face=arial,helvetica size=-2 color="#ff6600">Example</font><font face=arial,helvetica size=-2>: alt.tv.x-files or *x-files*</font><br>
-        <input type=text name=groups size=30 value=""></td>
-    </tr>
-    <tr>
-        <td align=right height=40><font face=arial,helvetica size=-2>Author &nbsp;</font></td>
-        <td valign=top><font face=arial,helvetica size=-2 color="#ff6600">Example</font><font face=arial,helvetica size=-2>: demos@dejanews.com</font><br>
-        <input type=text name=authors size=30 value=""></td>
-    </tr>
-    <tr>
-        <td align=right height=40><font face=arial,helvetica size=-2>Date &nbsp;</font></td>
-        <td valign=top>
-            <table border=0 cellpadding=0 cellspacing=0 width=275>
-                <tr valign=top>
-                    <td><font face=arial,helvetica size=-2 color="#ff6600">Example</font><font face="arial,helvetica" size=-2>: Apr 1 1997</font><br>
-                        <input type=text name=fromdate size=12 value=""></td>
-                    <td><font face=arial,helvetica size=-2 color="#ff6600">Example</font><font face="arial,helvetica" size=-2>: Apr 5 1997</font><br>
-                        <input type=text name=todate size=12 value=""></td>
-                </tr>
-                <tr>
-                    <td><font face="arial,helvetica" size=-2>from</font></td>
-                    <td><font face="arial,helvetica" size=-2>to</font></td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-</table>
-</form>
-
-
-
-
-
-<table border=0 cellpadding=0 cellspacing=0 width=640>
-<tr><td height=1><font size=0>&nbsp;</font></td></tr>
-<tr><td align=center>
-<table border=0 cellpadding=0 cellspacing=0 width=470>
-<tr><td align=center>
-<table cellspacing=0 cellpadding=0 width=470 border=0><tr><td>
-<A HREF="http://gp1.dejanews.com/gtc?id=19704&tm=913314345.246325&site=dn&location=hitlist&keywords=bogusnosuchwordspammersareidiots&cr=%7c%7c%7c%7c%7c%7c%7c%7c">
-<IMG ALIGN=MIDDLE HEIGHT=60 WIDTH=468 SRC="http://web2.dejanews.com/ads/76/1233048076-8753.gif" ALT="Stay on the leading edge with the IBM Developer Connection" border=1></A></td></tr><tr align=center><td><font size=-1><A HREF="http://gp1.dejanews.com/gtc?id=19704&tm=913314345.246325&site=dn&location=hitlist&keywords=bogusnosuchwordspammersareidiots&cr=%7c%7c%7c%7c%7c%7c%7c%7c">
-Stay on the leading edge with the IBM Developer Connection</a></font></td></tr>
-</table>
-</td></tr></table></td></tr></table>
-
-
-
-
-<table cellspacing=0 cellpadding=0 border=0 width=640>
-<tr height=10><td>&nbsp;</td></tr>
-<tr><td bgcolor="#003399" height=5 colspan=2><spacer type=block height=5 width=0></td></tr>
-
-<tr align=right><td>
-<font size=4>&nbsp;</font>
-<font size=2 face="arial,helvetica">
-<a href="http://www.dejanews.com/">Home</a> &nbsp;&#183;&nbsp;
-<a href="http://www.dejanews.com/">Search</a> &nbsp;&#183;&nbsp;
-<a href="http://www.dejanews.com/rg_enter.xp">My Deja News</a> &nbsp;&#183;&nbsp;
-<a href="http://www.dejanews.com/post.xp">Post</a> &nbsp;&#183;&nbsp;
-<a href="http://www.dejanews.com/home_ps.shtml">Power Search</a> &nbsp;&#183;&nbsp;
-<a href="http://www.dejanews.com/help/help_index.shtml">Help</a> &nbsp;&#183;&nbsp;
-<a href="http://www.dejanews.com/forms/dnsurvey.shtml">How are we doing?</a>
-</font>
-<br>
-
-<p><font size=2 face="arial,helvetica">
-<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.freeshop&cid=344122545">FREE STUFF @FreeShop!</a>&nbsp;|&nbsp;
-<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.ibmsdplead&cid=344122545">Developer Resources</a>&nbsp;|&nbsp;
-<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.infoseek&cid=344122545">Express by Infoseek</a>
-
-<br>
-<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.nextcard&cid=344122545">NextCard VISA 2.9% intro APR</a>&nbsp;|&nbsp;
-<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.infospace&cid=344122545">Directories</a>&nbsp;|&nbsp;
-<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.bfl&cid=344122545">Shopping</a>&nbsp;|&nbsp;
-<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.auctions&cid=344122545">Auctions</a>
-
-<br>
-<a href="http://uswestdex.com/dejanews.html">Yellow Pages</a>&nbsp;|&nbsp;
-<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.abc&cid=344122545">Four audio books for a penny!</a>&nbsp;|&nbsp;
-<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.ubid&cid=344122545">Get Great Deals at uBid!</a>
-
-<br>
-<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.datek&cid=344122545">Trade Now! with Datek Online</a>&nbsp;|&nbsp;
-<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.uproar&cid=344122545">Win CASH on Uproar game shows!</a>
-<br>
-</font>
-</font>
-
-<p>
-<font size=1 face="arial,helvetica">
-<a href="http://www.dejanews.com/help/newusers.shtml">New Users</a> &#183;
-<a href="http://www.dejanews.com/corp/">About Deja News</a> &#183;
-<a href="http://www.dejanews.com/corp/adv/">Ad Info</a> &#183;
-<a href="http://www.dejanews.com/corp/adv/ad_index.shtml">Our Advertisers</a> &#183;
-<a href="http://www.storedejanews.com/">Deja News Store</a>
-<br>
-<a href="http://www.dejanews.com/rg_enter.xp">Free Web Email</a> &#183;
-<a href="http://www.dejanews.com/info/linkback.shtml">Link to Deja News</a> &#183;
-<a href="http://www.dejanews.com/rg_mkgrp.xp">Create Your Own Community</a></font>
-
-<p>
-<hr width=325>
-<font size=-1>Copyright &copy; 1995-98 <a href="http://www.dejanews.com/emarket/">Deja News, Inc.</A> All rights reserved.
-<a href="http://www.dejanews.com/info/policy.shtml">Conditions of use</a>.</font>
-
-<br>
-<font size=-1><a href="http://www.dejanews.com/info/privacy.shtml">Site privacy statement</a> reviewed by <a href="http://www.truste.org">TRUSTe</a></font>.
+</form></table>
 
 
 </td></tr></table>
+<!-- second stage content : end -->
+<!-- second stage : end -->
+
+</td></tr></table>
+
+<table width=100% border=0 cellspacing=0 cellpadding=6><tr align=center>
+<td bgcolor=#000000 colspan=2>
+<font face="geneva,arial" size=2>
+&nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=10536"><b><font color=#ffffff>Arts & Entertainment</font></b></a>&nbsp;
+	
+    &nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=10095"><b><font color=#ffffff>Automotive</font></b></a>&nbsp;
+	
+    &nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=10121"><b><font color=#ffffff>Computing & Tech</font></b></a>&nbsp;
+	
+    &nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=12059"><b><font color=#ffffff>Health</font></b></a>&nbsp;
+	
+    &nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=10003"><b><font color=#ffffff>Money</font></b></a>&nbsp;
+	<br>
+    &nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=10367"><b><font color=#ffffff>News</font></b></a>&nbsp;
+	
+    &nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=10657"><b><font color=#ffffff>People</font></b></a>&nbsp;
+	
+    &nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=10407"><b><font color=#ffffff>Recreation</font></b></a>&nbsp;
+	
+    &nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=10444"><b><font color=#ffffff>Sports</font></b></a>&nbsp;
+	
+    &nbsp;<a href="http://www.deja.com/channels/channel.xp?CID=10526"><b><font color=#ffffff>Travel</font></b></a>&nbsp;
+	</font></td>
+
+</tr><!--LAND-O-LINKS--><tr align=left> 
+
+<td>
+<table width="100%" bgcolor="#ffffff" cellpadding=10 cellspacing=0 border=0><tr>
+
+<td colspan=2><center><font face="geneva,arial" size=1>
+<font face="geneva,arial" size=1>
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.bfl.sitewide&cid=86461866322">SHOPPING</a> -
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.uswest.sitewide&cid=86461866322">Yellow Pages</a> -
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.qwest.sitewide&cid=86461866322">5&#162; long distance</a> -
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.freeshop.sitewide&cid=86461866322">Free Stuff</a> -
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.datek.sitewide&cid=86461866322">Trade with Datek</a> -
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.drugstoredotcom.sitewide&cid=86461866322">Shop drugstore.com</a> -
+<a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.dell.sitewide&cid=86461866322">Go to Gigabuys!</a> -
+<nobr><a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.necx.sitewide&cid=86461866322">GET IT NOW @ NECX</a> -</nobr>
+<nobr><a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.zdnet.sitewide&cid=86461866322">FREE downloads!</a> -</nobr>
+<nobr><a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.ebay.sitewide&cid=86461866322">Auctions & Classifieds</a> -</nobr>
+<nobr><a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.drkoop.sitewide&cid=86461866322">Get FREE Health Info@drkoop.com</a> -</nobr>
+<nobr><a href="/jump/http://gp.deja.com/gtplacer?site=dn&slot=alltext.1&location=textlink.apartments.sitewide&cid=86461866322">Apartments.com</a></nobr>
+</font>
+
+
+
+</font></center>
+</td>
+
+</tr><tr>
+
+<td>
+<P>
+<FONT face="geneva,arial" size=1>
+<a href="http://www.deja.com/info/policy.shtml#copyright">Copyright</a> &copy; 1999 <a href="http://www.deja.com/corp/">Deja.com, Inc.</a> All rights reserved.
+<br><a href="http://www.deja.com/info/trademarks.shtml">Trademarks</a> &#183; <a href="http://www.deja.com/info/policy.shtml">Terms &amp; Conditions of Use</a> &#183; <a href="http://www.deja.com/info/privacy.shtml">Site Privacy Statement</a>.</FONT>
+</td>
+
+<td align=right valign=bottom nowrap>
+<font face="geneva,arial" size=2><b>
+<a href="http://www.deja.com/corp/">About Deja.com</a>
+</b></font>
+</td>
+
+</tr></table>
+
+</td>
+
+</tr></table>
 
 
 
 
 
- 
 </body>
 </html>
+
+

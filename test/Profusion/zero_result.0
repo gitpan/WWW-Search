@@ -1,0 +1,169 @@
+<html><head><title>ProFusion&reg; Results</title>
+<meta name="description" content="ProFusion Meta Search Engine">
+<meta name="keywords" content="ProFusion,Meta Search,Search,Search Engine,Find,Web,World Wide,Quality Not Quantity,Look up,GET, resource,research">
+<link rev=made href="mailto:webmaster@profusion.com">
+<style type="text/css">
+<!--
+A:link {text-decoration: none;} A:visited {text-decoration: none}
+A:active {text-decoration: none;} A:hover {color: #cc3300 }
+-->
+</style>
+<script language="JavaScript">
+<!-- Start hiding
+//BEGIN MOUSEOVER ARROWS
+whichbrowser = navigator.appName;
+Ver = parseInt(navigator.appVersion);
+version = parseFloat(navigator.appVersion)
+function ArrowOn(imageName) {
+  if ((whichbrowser = "Netscape" && version >= "3") || (version >= "4"))
+  {
+    if (document.images)
+    {
+      document.images[imageName].src = eval("On.src");
+    }
+  }
+}
+function ArrowOff(imageName)
+{
+  if ((whichbrowser = "Netscape" && version >= "3") || (version >= "4"))
+  {
+    if (document.images) 
+    {
+      document.images[imageName].src = eval("Off.src");
+    }
+   }
+}
+//END MOUSEOVER ARROWS 
+//BEGIN MOUSEOVER SEARCH
+function mr(tag)
+{
+  if ((whichbrowser = "Netscape" && version >= "3") || (version >= "4"))
+  {
+    ActiveImage = eval(tag + "_a.src");
+    document.images["tips"].src = ActiveImage;
+  }
+}
+function mt(tag)
+{
+  if ((whichbrowser = "Netscape" && version >= "3") || (version >= "4"))
+  {
+    document.images["tips"].src = "/images/tips.gif";
+  }
+}
+if ((whichbrowser = "Netscape" && version >= "3") || (version >= "4") && (document.images))
+{
+  tips1_a = new Image(400, 20);
+  tips1_a.src = "/images/tips1.gif";
+  tips2_a = new Image(400, 20);
+  tips2_a.src = "/images/tips2.gif";
+  tips3_a = new Image(400, 20);
+  tips3_a.src = "/images/tips3.gif";
+  tips4_a = new Image(400, 20);
+  tips4_a.src = "/images/tips4.gif";
+  On = new Image();
+  On.src = "/images/proabul.gif";
+  Off = new Image();
+  Off.src = "/images/probul.gif";
+}
+
+//END MOUSEOVER SEARCH
+// end hiding-->
+</script>
+<script language="JavaScript">
+<!-- Start hiding
+  var randomNumber = new String (Math.random());
+  var imageurl="http://keywords.profusion.com/RealMedia/ads/adstream.cgi/www.profusion.com/1" + randomNumber.substring (2, 11);
+  var clickurl = "http://keywords.profusion.com/RealMedia/ads/click.cgi/www.profusion.com/1" + randomNumber.substring (2, 11);
+// end hiding -->
+</script>
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#000066" vlink="#333300">
+<form action="/cgi-bin/nph-ProFusion.pl" method="GET">
+<table border="0" width="600" cellspacing="0" cellpadding="0"><tr>
+<td bgcolor="#003366" valign="bottom" align="left"><a href="http://www.profusion.com/index.html"><img src="/images/profusion.gif" width="189" height="34" border="0" alt="ProFusion"></a></td><td bgcolor="#003366" align="center" valign="middle" nowrap><input type="text" size="30" name="queryterm" value="BogusNoSuchWordSpammersAreIdiots"> <input type="submit" value="Just Find It!"></td></tr><tr><td valign="top" colspan="2"><img src="/images/protop.gif" width="600" height="19"></td></tr>
+<tr><td valign="top" align="left" colspan="2"><a href="/index.html"><img src="/images/prohome.gif" width="96" height="60" border="0"></a><script language="JavaScript"><!--
+document.write('<a href=\"' + clickurl + '@Top?BogusNoSuchWordSpammersAreIdiots\"><IMG SRC=\"' + imageurl + '@Top?BogusNoSuchWordSpammersAreIdiots\" height="60" width="468" border="0"></a></td></tr></table>');
+//--></script>
+<noscript>
+<a href="http://keywords.profusion.com/RealMedia/ads/click.cgi/www.profusion.com/index.html@Top?BogusNoSuchWordSpammersAreIdiots"><img border="0" src="http://keywords.profusion.com/RealMedia/ads/adstream.cgi/www.profusion.com/index.html@Top?BogusNoSuchWordSpammersAreIdiots" height="60" width="468"></a></noscript></td></tr></table>
+
+<table border="0" cellspacing="0" cellpadding="0"><tr>
+<td bgcolor="#fff3d3" valign="top" align="center" width="150">
+<br>
+<table width="95%" border="0" cellpadding="2" cellspacing="0" bgcolor="#fff3d3">
+<tr><td bgcolor="#d9c698" align="center" valign="middle" nowrap><a href="/about/targets.html"><font color="#000066" face="arial"><b>Target Search</b></font></a></td></tr>
+<tr><td nowrap>
+<font face="arial" size="-1" >
+<img name=T1 src="/images/probul.gif" width="7" height="11"><a href="http://entertainment.profusion.com/" onmouseout="ArrowOff('T1')" onmouseover="ArrowOn('T1')">Entertainment</a><br>
+<img name=T2 src="/images/probul.gif" width="7" height="11"><a href="http://health.profusion.com/" onmouseout="ArrowOff('T2')" onmouseover="ArrowOn('T2')">Health</a><br>
+<img name=T3 src="/images/probul.gif" width="7" height="11"><a href="http://kidsafe.profusion.com/" onmouseout="ArrowOff('T3')" onmouseover="ArrowOn('T3')">KidSafe</a><br>
+<img name=T4 src="/images/probul.gif" width="7" height="11"><a href="http://mp3.profusion.com/" onmouseout="ArrowOff('T4')" onmouseover="ArrowOn('T4')">MP3</a><br>
+<img name=T5 src="/images/probul.gif" width="7" height="11"><a href="http://sports.profusion.com/" onmouseout="ArrowOff('T5')" onmouseover="ArrowOn('T5')">Sports</a><br>
+<img name=T6 src="/images/probul.gif" width="7" height="11"><a href="http://usenet.profusion.com/" onmouseout="ArrowOff('T6')" onmouseover="ArrowOn('T6')">UseNet</a>
+<br><br></td></tr>
+</font>
+<tr><td bgcolor="#d9c698" align="center" valign="middle" nowrap><a href="/about/guides.html"><font color="#000066" face="arial"><b>Guides</b></font></a></td></tr>
+<tr><td nowrap>
+<font face="arial" size="-1">
+<img name=G1 src="/images/probul.gif" width="7" height="11"><a href="/users/bakeacookie.html" onmouseout="ArrowOff('G1')" onmouseover="ArrowOn('G1')">Bake-A-Cookie</a><br>
+<img name=G2 src="/images/probul.gif" width="7" height="11"><a href="/users/faq.html" onmouseout="ArrowOff('G2')" onmouseover="ArrowOn('G2')">FAQs</a><br>
+<img name=G3 src="/images/probul.gif" width="7" height="11"><a href="/users/bookmark.html" onmouseout="ArrowOff('G3')" onmouseover="ArrowOn('G3')">Favorite Finder</a><br>
+<img name=G4 src="/images/probul.gif" width="7" height="11"><a href="/users/searchtips.html" onmouseout="ArrowOff('G4')" onmouseover="ArrowOn('G4')">Search Tips</a><br>
+<img name=G5 src="/images/probul.gif" width="7" height="11"><a href="/users/startpage.html" onmouseout="ArrowOff('G5')" onmouseover="ArrowOn('G5')">Start Finding It</a>
+</font><br><br>
+</td></tr>
+<tr><td bgcolor="#d9c698" align="center" valign="middle" nowrap><a href="/about/services.html"><font color="#000066" face="arial"><b>Services</b></font></a></td></tr>
+<tr><td nowrap>
+<font face="arial" size="-1">
+
+<img name=S1 src="/images/probul.gif" width="7" height="11"><a href="mailto:webmaster@profusion.com" onmouseout="ArrowOff('S1')" onmouseover="ArrowOn('S1')">Email Webmaster</a><br>
+<img name=S2 src="/images/probul.gif" width="7" height="11"><a href="/webmasters/index.html" onmouseout="ArrowOff('S2')" onmouseover="ArrowOn('S2')">For Webmasters</a><br>
+<img name=S3 src="/images/probul.gif" width="7" height="11"><a href="/users/newsfuse.html" onmouseout="ArrowOff('S3')" onmouseover="ArrowOn('S3')">Subscribe</a><br>
+<img name=S4 src="/images/probul.gif" width="7" height="11"><a href="/users/feedback.html" onmouseout="ArrowOff('S4')" onmouseover="ArrowOn('S4')">User Feedback</a><br>
+<img name=S5 src="/images/probul.gif" width="7" height="11"><a href="/users/usersurvey.html" onmouseout="ArrowOff('S5')" onmouseover="ArrowOn('S5')">User Survey</a><br>
+<img name=S6 src="/images/probul.gif" width="7" height="11"><a href="/webmasters/add.html" onmouseout="ArrowOff('S6')" onmouseover="ArrowOn('S6')">Link To Us</a>
+</font><br><br>
+</td></tr></table>
+<img src="/images/pix.gif" width="150" height="1">
+</td>
+<td><img src="/images/pix.gif" width="8" height="1"></td>
+
+<td valign="top"><br>
+
+<table border="0" width="100%" cellpadding="1" cellspacing="0" bgcolor="#fff3d3">
+<tr><td bgcolor="#d9c698" colspan="2"><img src="/images/pix.gif" width="1" height="1"></td></tr>
+<tr><td width="2"><img src="/images/pix.gif" width="2" height="1"></td>
+<td valign="top">Your search for <b>BogusNoSuchWordSpammersAreIdiots</b> returned <b>1</b> unique results from:<br>
+AltaVista(none) <b>&middot;</b> Excite(none) <b>&middot;</b> LookSmart(none) <b>&middot;</b> InfoSeek(none) <b>&middot;</b> Snap(8) <b>&middot;</b> WebCrawler(none) <b>&middot;</b> Yahoo(none) <b>&middot;</b> Magellan(none) <b>&middot;</b> GoTo(none)    </td></tr><tr><td bgcolor="#d9c698" colspan="2"><img src="/images/pix.gif" width=1" height="1"></td></tr></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff"><tr><td nowrap>&nbsp; <font color="#999999">&lt;&lt; Previous</font>	&nbsp;<b>1</b>&nbsp;<font color="#999999">	 Next &gt;&gt;</font>	</td><td align="right" valign="bottom"><font size="-1">Results 1-1.</font></td></tr></table>
+<br>
+<table  border="0" cellspacing="1" cellpadding="1">
+<tr><td width="1%"><font color="#990000" size="-1">0.8617	</font></td><td bgcolor="#fff3d3"><a href="/cgi-bin/process_result.pl?url==http://www.netpromote.com/search/WWW-Search-1.023/test/AltaVista/zero_result_no_plus.0&engine==Snap&rank==0&category==-1&count==0&firstrank==0&firstranks==aaaa0aaaa&which_selected==1a1a1a1a1a1a1a1a1"><b>No Title</b></a>&nbsp;<font face="arial" size="-2">[<a href="/cgi-bin/process_result.pl?url==http://www.netpromote.com/search/WWW-Search-1.023/test/AltaVista/zero_result_no_plus.0&engine==Snap&rank==0&category==-1&count==0&firstrank==0&firstranks==aaaa0aaaa&which_selected==1a1a1a1a1a1a1a1a1" target="_blank">new window</a>]</font></td></tr><tr><td>&nbsp;</td><td><font size="-1" face="arial"><i>Summary:</i> &lt;html&gt;&lt;head&gt; &lt;title&gt;AltaVista: Simple Query BogusNoSuchWordSpammersAreIdiots&lt;/title&gt; &lt;/head&gt;&lt;body&gt; &lt;font size=+1 face=arial, helvetica&gt; &lt;a href=&quot;/cgi-bin/query?text&quot;&gt;AltaVista Search Service&lt;/a&gt; &lt;/font&gt; &lt;br&gt; &lt;FORM name=mfrm method=GET  action=&quot;/cgi.</font><br><font color="#006666" face="arial" size="-1"><b>http://www.netpromote.com/search/WWW-Search-1.023/test/AltaVista/ zero_result_no_plus.0</b> - </font><font color="#000066" face="arial" size="-1">(Snap)</font><br><img src="/images/pix.gif" height="5"></td></tr>
+</table>
+<br>
+&nbsp; <font color="#999999">&lt;&lt; Previous</font>	&nbsp;<b>1</b>&nbsp;<font color="#999999">	 Next &gt;&gt;</font>	
+</td></tr><tr><td bgcolor="#fff3d3"><img src="/images/pix.gif" height="1"></td><td><img src="/images/pix.gif" height="1"></td>
+<td bgcolor="#d9c698"><img src="/images/pix.gif" height="1"></td></tr>
+<tr><td bgcolor="#fff3d3">&nbsp;</td><td>&nbsp;</td><td align="center" bgcolor="#fff3d3"><font face="arial" color="#000066">
+<a href="/advertise/index.html"> <font size="-1" face="arial">Advertise</font></a> |
+<a href="/invest/index.html"><font size="-1" face="arial">Invest</font></a> |
+<a href="/about/index.html"><font size="-1" face="arial">About</font></a> |
+<a href="/press/awards.html"><font size="-1" face="arial">Awards</font></a> |
+<a href="/press/index.html"><font size="-1" face="arial">In The News</font></a> |
+<a href="/about/legalinfo.html"><font size="-1" face="arial">Legal</font></a> | 
+<a href="/about/privacy.html"><font size="-1" face="arial">Privacy</font></a> | 
+<a href="/index.html"><font size="-1" face="arial">Home</font></a> 
+</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td><td align="center">
+<font size="-2" face="arial"><br>Copyright &copy 1996-99 ProFusion.com.</font>
+<input type="hidden" name="search" value="web">
+<input type=hidden name=option value="all">
+<input type=hidden name=search value="web">
+<input type=hidden name=summary value="Yes">
+<input type=hidden name=totalverify value="0">
+<input type=hidden name=display value="0">
+<input type=hidden name=pid value="">
+<input type=hidden name=auto value="all">
+
+</td></tr></table>
+</form></body></html>

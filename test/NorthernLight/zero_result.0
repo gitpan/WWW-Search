@@ -1,92 +1,81 @@
 <html>
-
-<!--Northern Light Simple Search No Results (Build 2112)-->
+<!--Northern Light Simple Search No Results (Build 4176)-->
 <!--    -->
 
 <head>
  <title>Northern Light Search: BogusNoSuchWordSpammersAreIdiots</title>
 </head>
 
+<!-- Shopping Cart HTML -->
+<!--T_JAVA_SCRIPT-->
+
 <body bgcolor=white alink=blue link=blue text=black>
 
 <table border=0 cellspacing=0 cellpadding=0>
  <tr>
-  <td width=126 valign=top align=center>
-   <a href="search.html"><img src="docs/gif/logo-tall.gif" border=0 width=87 height=107 alt="Northern Light Technology"></a><br>
-  </td>
-  <td align=right valign=top width=41 rowspan=3>
-<img src="docs/gif/side-fade-ssearch.gif" width=41 height=340 alt=""><br>
-  </td>
+  <td width=126 valign=top align=center><a href="search.html"><img src="docs/gif/logo-tall.gif" border=0 width=87 height=107 alt="Northern Light Technology"></a><br></td>
+  <td align=right valign=top width=41 rowspan=3><img src="docs/gif/side-fade-ssearch.gif" width=41 height=340 alt=""><br></td>
   <td width=559 valign=top>
-   <table border=0 cellspacing=0 cellpadding=0>
-    <tr>
-     <td><img src="docs/gif/transparent.gif" width=1 height=62 border=0 alt=""></td>
-     <td><img src="docs/gif/error.gif" width=20 height=20 border=0 alt="x"></td>
-     <td>&nbsp;&nbsp;</td>
-     <td valign=middle><font size=4 color=#cc3333><b>Your query did not find any documents.</b></font></td>
-    </tr>
-    <tr>
-     <td></td>
-    </tr>
-    <tr>
-     <td colspan=3></td>
-     <td valign=top><font size=2>
+<table border=0 cellspacing=0 cellpadding=0>
+ <tr>
+  <td><img src="docs/gif/transparent.gif" width=1 height=62 border=0 alt=""></td>
+  <td><img src="docs/gif/error.gif" width=20 height=20 border=0 alt="x"></td>
+  <td>&nbsp;&nbsp;</td>
+  <td valign=middle><font size=4 color="#cc3333"><b>Your query did not find any documents.</b></font></td>
+ </tr><tr><td></td></tr><tr>
+  <td colspan=3></td>
+  <td valign=top><font size=2>
 You may want to <b>check the spelling of all the words in your query.</b>
-<p>
-If all the words are spelled correctly, you might try
+<p>If all the words are spelled correctly, you might try
 <ul>
  <li> removing quotes from around phrases
  <li> eliminating some words
  <li> replacing words with synonyms or more general terms
 </ul>
-<br>
-</font>
-      <table border=0 cellspacing=0 cellpadding=0>
-       <form action="/nlquery.fcg" method=get>
-        <input type=hidden name=ho value="">
-        <input type=hidden name=po value="">
-        <input type=hidden name=si value="">
-        <input type=hidden name=cc value=" ">
-        <input type=hidden name=us value="025">
-        <input type=hidden name=xd value="">
-         <tr>
-          <td><input type=text size=27 maxlength=100 name=qr value="BogusNoSuchWordSpammersAreIdiots"></td>
-          <td>&nbsp;&nbsp;</td>
-          <td><input name=sb type=image src="docs/gif/srchbtn1.gif" align=top border=0 alt="Search"><nobr><a href="docs/search_help_optimize.html"><img src="docs/gif/searchhelp.gif" border=0 align=top width=85 height=28 alt="Search Help"></a></nobr></td>
-         </tr>
-        </form>
-       </table>
-      </td>
-     </tr>
-    </table>
-   </td>
-  </tr>
-  <tr>
-   <td align=center valign=bottom><img src="docs/gif/transparent.gif" width=8 height=1 border=0 alt=""><nobr><a href="search.html"><img src="docs/gif/startover.gif" border=0 width=104 height=29 alt="Start Over"></a></nobr><br>&nbsp;</td>
-   <td valign=bottom>
-    <table border=0 cellspacing=0 cellpadding=0>
-     <tr>
-      <td><img src="docs/gif/transparent.gif" width=21 height=1 border=0 alt=""></td>
-      <td>&nbsp;&nbsp;</td>
-      <td><font size=1>
-       <a href="search.html">Simple Search</a>&nbsp;&nbsp;&nbsp;
-       <a href="power.html">Power Search</a>&nbsp;&nbsp;&nbsp;
-       <a href="pubsearch.html">Publication Search</a>&nbsp;&nbsp;&nbsp;
-       <a href="industry.html">Industry Search</a>&nbsp;&nbsp;&nbsp;
-       <a href="news.html">Current News</a><br>
-       &nbsp;
-      </font></td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td><font size=2>Copyright &copy; 1997-1998, Northern Light Technology LLC. All rights reserved.</font><br>
-       <img src="docs/gif/transparent.gif" width=1 height=5 border=0 alt=""><br>
-       &nbsp;
-      </td>
-     </tr>
-    </table>
-   </td>
-  </tr>
- </table>
+<br></font>
+<table border=0 cellspacing=0 cellpadding=0>
+<form action="/nlquery.fcg" method=get>
+ <input type=hidden name=ho value="">
+ <input type=hidden name=po value="">
+ <input type=hidden name=si value="">
+ <input type=hidden name=cc value=" ">
+ <input type=hidden name=us value="025">
+ <input type=hidden name=xd value="">
+ <tr>
+  <td><input type=text size=38 name=qr value="BogusNoSuchWordSpammersAreIdiots"></td>
+  <td>&nbsp;&nbsp;</td>
+  <td><input name=search type=image src="docs/gif/btn_search.gif" border=0 alt="Search"><a href="docs/search_help_results.html"><img src="docs/gif/btn_search_help.gif" border=0 width=51 height=28 alt="Help"></a></td>
+ </tr>
+</form>
+</table>
+  </td>
+ </tr>
+</table>
+  </td>
+ </tr><tr>
+  <td align=center valign=bottom><img src="docs/gif/transparent.gif" width=8 height=1 border=0 alt=""><nobr><a href="search.html"><img src="docs/gif/startover.gif" border=0 width=104 height=29 alt="Start Over"></a></nobr><br>&nbsp;</td>
+  <td valign=bottom>
+<table border=0 cellspacing=0 cellpadding=0>
+ <tr>
+  <td><img src="docs/gif/transparent.gif" width=21 height=1 border=0 alt=""></td>
+  <td>&nbsp;&nbsp;</td>
+  <td><font size=1>
+<a href="search.html">Simple Search</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="power.html">Power</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="industry.html">Industry</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="news.html">News</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="wefa.html">WEFA</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="investext.html">Investext</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="pubsearch.html">Publication</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://special.northernlight.com">Special Edition</a><br>
+  &nbsp;</font></td>
+ </tr><tr>
+  <td></td>
+  <td></td>
+  <td><font size=2>Copyright &copy; 1997-1999, Northern Light Technology LLC. All rights reserved.</font><br><img src="docs/gif/transparent.gif" width=1 height=5 border=0 alt=""><br>&nbsp;</td>
+ </tr>
+</table>
+  </td>
+ </tr>
+</table>
 </body>

@@ -4,7 +4,7 @@
 # SearchResult.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: SearchResult.pm,v 1.9 1998/07/14 17:24:09 johnh Exp $
+# $Id: SearchResult.pm,v 1.10 1999/04/26 21:20:48 johnh Exp $
 #
 # Copyright (c) 1996 University of Southern California.
 # All rights reserved.                                            
@@ -48,6 +48,13 @@ A framework for returning the results of C<WWW::Search>.
 =head1 SEE ALSO
 
 L<WWW::Search>
+
+=head1 REQUIRED RESULTS
+
+The particular fields returned in a result are back-end
+(search-engine) dependent.  However, all search engines are required 
+to return a url and title.
+(This list may grow in the future.)
 
 
 =head1 METHODS AND FUNCTIONS

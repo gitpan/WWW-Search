@@ -3,83 +3,160 @@
 </HEAD>
 <BODY bgcolor=ffffff>
 <CENTER>
-<FORM NAME=topbox ACTION=/search.gw>
-<A HREF=http://www.excite.com/>
-<IMG SRC=/img/exc/hdr/search.gif BORDER=0 WIDTH=600 HEIGHT=45 ALT="Excite Search" ISMAP USEMAP=#navstripe></A><BR>
-<MAP NAME=navstripe>
-<AREA SHAPE=rect COORDS=0,0,122,45 HREF=http://www.excite.com/>
-<AREA SHAPE=rect COORDS=159,10,600,45 HREF=http://www.excite.com/>
-</MAP>
+<table cellspacing=0 cellpadding=0 border=0 width=600>
+<tr>
+<td align=right VALIGN=BOTTOM width=120>
+<a href=http://www.excite.com/><img src=/img/head/logo2.gif width=128 height=50 border=0></a>
+</td>
+<td width=480>
+<table cellspacing=0 cellpadding=0 border=0 width=100%>
+<tr>
+<td ALIGN=LEFT VALIGN=BOTTOM>
+<font size=4 face=arial,geneva>
+<b>Search</b>
+</font>
+</TD>
+<TD> <table cellspacing=0 cellpadding=0 border=0 width=100%>
+<TR>
+<TD ALIGN=RIGHT VALIGN=BOTTOM NOWRAP>
+<form action="/redir.dcg" method=get onChange="submit()">
+<td align=right>
+<font face="helvetica" size="-1">
+<a href=http://www.excite.com/><b>My Excite</b></a> | <a href="http://mail.excite.com"><b>Check Email</b></a></font>&nbsp;
+<select name="url" size="1" onChange="submit()">
+<option value="http://www.excite.com/">Excite Home
+<option value="http://www.excite.com/autos">Autos
+<option value="http://www.excite.com/careers">Careers
+<option value="http://www.excite.com/local/">City Guides
+<option value="http://www.excite.com/classifieds">Classifieds
+<option value="http://www.excite.com/auctions">Auctions
+<option value="http://www.excite.com/computers_and_internet/">Computers & Internet
+<option value="http://www.excite.com/education/">Education
+<option value="http://www.excite.com/entertainment/">Entertainment
+<option value="http://www.excite.com/games/">Games
+<option value="http://www.excite.com/health/">Health
+<option value="http://www.excite.com/home_and_real_estate/">Home &amp; Real Estate
+<option value="http://www.excite.com/horoscopes/">Horoscopes
+<option value="http://www.excite.com/lifestyle/">Lifestyle
+<option value="http://quicken.excite.com/">Money &amp; Investing
+<option value="http://nt.excite.com/news/">News
+<option value="http://www.excite.com/people_and_chat/">People &amp; Chat
+<option value="http://www.excite.com/shopping/">Shopping
+<option value="http://sports.excite.com/">Sports
+<option value="http://city.net/">Travel
+</select>
+<input type="submit" value="Go!">
+</td>
+</form>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</tr>
+<tr>
+<td colspan=2>
+<table border=0 cellpadding=1 cellspacing=0 width=100%>
+<tr BGCOLOR=#ff0000>
+<td>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td colspan=2>
+&nbsp;
+</td>
+</tr>
+</table>
+</TD>
+</TR>
+<TR>
+<TD COLSPAN=2>
 <TABLE border=0 cellpadding=1 cellspacing=0>
 <TR><TD bgcolor=cccccc>
-<TABLE border=0 cellspacing=0 cellpadding=4 width=598 bgcolor=ffffff>
+<FORM NAME=topbox ACTION=/search.gw>
+<TABLE border=0 cellspacing=0 cellpadding=4 width='598' bgcolor=ffffff>
 <TR>
-<TD align=right bgcolor=ffffff>
-<b><font face=arial size=-1>You searched for</font></b>
+<TD align=right bgcolor=ffffff nowrap>
+<b><font face="helvetica" size=-1>You searched for</font></b>
 <input size=30 name=search value="+Jabba +bounty +hunter +Greedo">
 <input type=hidden name=tsug value=-1>
 <input type=hidden name=csug value=0>
 </TD>
 <TD>
+<font face="helvetica" size=-1>
 <input type=submit value="Search Again">
+</font>
 </TD>
 <TD nowrap>
-<font face=arial,helvetica size=-1>
-<b><a href=/relocate/co=help;http://www.excite.com/Info/>Help</a>
+<font face="helvetica" size=-1>
+<b><a href=/relocate/co=help;http://www.excite.com/Info/searching2.html>Help</a>
 &nbsp;<br>
+<a href=http://www.excite.com/search_forms/advanced/>More Search</a>
 </b></font>
 </TD>
 <TD>&nbsp;</TD>
 </TR>
 </TABLE>
-<table border=0 cellspacing=0 cellpadding=1 width=598>
+<table border=0 cellspacing=0 cellpadding=1 width=100%>
 <tr><td align=center bgcolor=ffcc00>
-<font face=geneva,arial size=-1>
-<font face=geneva,arial size=-1><b>Find Christmas gifts for: &nbsp;<A HREF=http://www.excite.com/relocate/co=searchresults_findgiftsfor_her;http://www.excite.com/holiday_shoppe/for_her>Her</A> | <A HREF=http://www.excite.com/relocate/co=searchresults_findgiftsfor_him;http://www.excite.com/holiday_shoppe/for_him>Him</A> | <A HREF=http://www.excite.com/relocate/co=searchresults_findgiftsfor_teen;http://www.excite.com/holiday_shoppe/for_teens>Teens</A> | <A HREF=http://www.excite.com/relocate/co=searchresults_findgiftsfor_kids;http://www.excite.com/holiday_shoppe/for_kids>Kids</A> | <A HREF=http://www.excite.com/relocate/co=searchresults_findgiftsfor_rich;http://www.excite.com/holiday_shoppe/upscale>The Filthy Rich</A> | <I><A HREF=http://www.excite.com/relocate/co=searchresults_findgiftsfor_all;http://www.excite.com/holiday_shoppe/>Everyone!</A></I>
-</font></B>
-</font>
+<font face="helvetica" size=-1><b>
+Choose your <A HREF=http://www.excite.com/relocate/co=xsr_mchat;/communities/chat/rooms>Chat</A>: <A HREF=http://www.excite.com/relocate/co=xsr_mchat;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/teenchat.html>Teen</A> | <A HREF=http://www.excite.com/relocate/co=xsr_mchat;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/20ish.html>20ish</A> | <A HREF=http://www.excite.com/relocate/co=xsr_mchat;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/30ish.html>30ish</A> | <A HREF=http://www.excite.com/relocate/co=xsr_mchat;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/40ish.html>40ish</A> | <A HREF=http://www.excite.com/relocate/co=xsr_mchat;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/peers/50plus.html>50+</A> | <A HREF=http://www.excite.com/relocate/co=xsr_mchat;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/peers/christians.html>Christian</A> | <A HREF=http://www.excite.com/relocate/co=xsr_mchat;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/grrls_domain.html>Grrls</A> | <A HREF=http://www.excite.com/relocate/co=xsr_mchat;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/pink_triangle.html>Gay</A> | <A HREF=http://www.excite.com/relocate/co=xsr_mchat;/communities/chat/rooms>more</A>
+</b></font>
 </td></tr>
 </table>
 </td></tr></table>
 </form>
 <small><br></small>
-<a href="/relocate/ad=61443_excite1023_gamemeet1r-468x60.gif|pk=1564959;http://my.excite.com/games/online_games/" onMouseOver="window.status='Click Here !';return true" language="Javascript"><img src="http://image.eimg.com/ads/61443_excite1023_gamemeet1r-468x60.gif" ALT="Click Here !" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> Click Here ! </B></FONT></CENTER></a>
+</TD>
+</TR>
+</table>
+<!-- The following html is Copyright 1997 by MatchLogic Inc. -->
+<!-- RICH=0 -->
+<IFRAME WIDTH=468 HEIGHT=60 NORESIZE SCROLLING=No FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 SRC="http://ad.preferences.com/iframe;spacedesc=ATTClick2Dial_Excite_468x60_RunOfSite_Any&ML_SSPKG=RunOfSiteSS&ML_CUSTOM=0&time=1999.06.03.20.34.36&ex_cookie=&ML_TARGET=_top&ML_REDIRECT=http%25253A%25252F%25252Fwww.excite.com%25252Frelocate%25252Fad%25253DLUCI%25257Cpk%25253D2790907%25253B">
+<SCRIPT
+SRC="http://ad.preferences.com/jscript;spacedesc=ATTClick2Dial_Excite_468x60_RunOfSite_Any&ML_SSPKG=RunOfSiteSS&ML_CUSTOM=0&ML_NIF=Y&ML_KW=jabba+bounty+hunter+greedo&time=1999.06.03.20.34.36&ex_cookie=&ML_TARGET=_top&ML_REDIRECT=http%25253A%25252F%25252Fwww.excite.com%25252Frelocate%25252Fad%25253DLUCI%25257Cpk%25253D2790907%25253B">
+</SCRIPT>
+<NOSCRIPT>
+<A HREF="/relocate/ad=94093_htmlad.gif|pk=2790907;http://ad.preferences.com/click;spacedesc=ATTClick2Dial_Excite_468x60_RunOfSite_Any&ML_NIF=Y&time=1999.06.03.20.34.36&ex_cookie=" TARGET=_top>
+<IMG SRC="http://ad.preferences.com/image;spacedesc=ATTClick2Dial_Excite_468x60_RunOfSite_Any&ML_NIF=Y&time=1999.06.03.20.34.36&ex_cookie="></A>
+</NOSCRIPT>
+</IFRAME><CENTER><FONT SIZE=-1 COLOR=#0000FF FACE=arial, geneva><B>Click Here!</B></FONT></CENTER>
+<!-- The above html is Copyright 1997 by MatchLogic Inc. -->
 </center>
 <small><br></small>
-<a name=web><img src=/img/pixel/trans.gif height=1 width=1><BR></a>
+</center>
+<a name=directory><img src=/img/pixel/trans.gif height=1 width=1><BR></a>
 <table border=0 cellpadding=0 cellspacing=0 width=100%><tr>
 <td bgcolor=ffcc00 width=25%>
-<table border=1 cellpadding=1 cellspacing=0 width=100%><tr>
-<td align=center><font face=geneva,arial size=-1><b>
-Web Results
-</b></font></td></tr></table>
-</td><td valign=bottom width=100%>
-<table border=0 cellspacing=0 cellpadding=0 width=100%>
-<tr><td bgcolor=999999 width=100%><img src=/img/pixel/trans.gif height=2 width=1></td></tr></table>
+<table border=1 cellspacing=0 cellpadding=1 width=100%>
+<tr><td align=center nowrap>
+<b><font face="helvetica" size=-1>
+<img src=/img/logo/lep_y.gif height=16 width=16> Directory
+</font></b>
 </td></tr></table>
-<table border=0 cellpadding=2 cellspacing=0 width=100%>
-<tr><td VALIGN=TOP width=40% nowrap>
-<font face=arial>
-Top <b>84</b>
-matches.
-<small><a href=/search.gw?layout=about&num=89&s=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo><i>
-[89 hits. About Your Results]</i></a></small>
-</font></td>
-<td align=right width=60% nowrap><font face=arial><b>
-<a href="/search.gw?s=%2Bjabba+%2Bbounty+%2Bhunter+%2Bgreedo&c=web&start=0&showSummary=false
-">Show
-Titles only</a>
-&nbsp;
-<a href="/search.gw?sort=site&c=web&s=%2Bjabba+%2Bbounty+%2Bhunter+%2Bgreedo">List
-by Web site</a>
-</b></font>
-</td>
+</td><td valign=bottom width=100%>
+<table border=0 cellspacing=0 cellpadding=0 width=100%><tr>
+<td bgcolor=999999>
+<table border=0 cellspacing=1 cellpadding=0 width=100%>
+<tr bgcolor=ffffcc align=center nowrap>
+<td><font face="helvetica" size=-1><b>
+<a href=#web>Web Results</a>
+</b></font></td>
 </tr></table>
-<br>
+</td></tr></table>
+</td></tr></table>
 <table border=0 cellpadding=2 cellspacing=1 width=120 align=right>
 <tr>
 <td>
-<table border="2" cellspacing="0" cellpadding="3" bordercolor="#330099" bgcolor="#fffcc" width=120 height=58>
+<table border="2" cellspacing="0" cellpadding="3" bordercolor="#330099" bgcolor="#ffffcc" width=120 height=66>
 <tr>
 <td align="center" width=100%>
 <CENTER>
@@ -89,7 +166,7 @@ by Web site</a>
 </FONT>
 </B><BR>
 <FONT FACE="Verdana, Arial, Helvetica, sans-serif">
-<FONT SIZE=-2><a href=http://www.excite.com/relocate/co=17270;http://www.beyond.com/AF20417/search.htm?Query=Query&toggle=name&name_desc=hunter>hunter</a></FONT>
+<FONT SIZE=-2><a href=http://www.excite.com/relocate/co=20317;http://www.beyond.com/AF20417/search.htm?Query=Query&toggle=name&name_desc=hunter>hunter</a></FONT>
 </FONT><BR>
 <FONT FACE="Verdana, Arial, Helvetica, sans-serif">
 <FONT SIZE=-2>Buy Software!</FONT>
@@ -98,532 +175,380 @@ by Web site</a>
 </td></tr></table>
 </td>
 <td align=center>
-<table border="2" cellspacing="0" cellpadding="3" bordercolor="#336600" width=120 height=58>
-<tr><td align="center" bgcolor="#fffcc">
+<table border="2" cellspacing="0" cellpadding="3" bordercolor="#336600" width=120 height=66>
+<tr><td align="center" bgcolor="#ffffcc">
 <b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1">Amazon.com</font></b><br>
 </td></tr>
 <tr><td align="center">
 <font face="Verdana, Arial, Helvetica, sans-serif" size="-2">
-Find books fast:<br>
-<a href=/relocate/co=xsr_amazon;http://www.amazon.com/exec/obidos/stores/excite02825317>+Jabba +bounty...</a><br>
+Search for:<br>
+<a href=/relocate/co=xsr_amazon;http://www.amazon.com/exec/obidos/excite-search/search=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo>+Jabba +bounty...</a><br>
 </font>
 </td></tr></table>
 </td>
 </tr>
 </table>
-<SMALL>90% </SMALL>
-<A HREF="http://www.steven.marlowe.net/greedo.htm">Gweedo</A>&nbsp;
-- Species: Rodian Sex: Male Hair Colour: None Eye Colour: Purple Height: 1.65 meters Homeworld: Rodia Political Affiliation: Free-Lance Bounty Hunter <BR><SMALL>http://www.steven.marlowe.net/greedo.htm
-<BR><A HREF="/search.gw?c=web&qbe=24560950&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>90% </SMALL>
-<A HREF="http://www.hollywoodfactory.com/starwars/mask_greedo.htm">Greedo Collector Masks - Star Wars</A>&nbsp;
-- The green-skinned Rodian named Greedo always wnted to be an intergalactic bounty hunter. He was eventually employed by Jabba the Hutt, and assigned the contract on Han Solo. <BR><SMALL>http://www.hollywoodfactory.com/starwars/mask_greedo.htm
-<BR><A HREF="/search.gw?c=web&qbe=31599184&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>89% </SMALL>
-<A HREF="http://www.scifi.com/sfw/issue79/site.html">Sci-Fi Site of the Week: The Greedo Page</A>&nbsp;
-- The latest Web site reviews from the world of science fiction. <BR><SMALL>http://www.scifi.com/sfw/issue79/site.html
-<BR><A HREF="/search.gw?c=web&qbe=17759360&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>88% </SMALL>
-<A HREF="http://www.thegreatcoverup.com/starwarshtm/masks.htm">Don Post Studios- Star Wars- Collectible Masks &amp; Accessories</A>&nbsp;
-- EMPEROR PALPATINE #82014$40.00 EMPEROR PALPATINEOne man controlled the Galactic Empire... a man consumed by the powers of the dark side of the Force. <BR><SMALL>http://www.thegreatcoverup.com/starwarshtm/masks.htm
-<BR><A HREF="/search.gw?c=web&qbe=25357869&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>87% </SMALL>
-<A HREF="http://www.serve.com/dgil/starwars.htm">Darth Vader's Domain</A>&nbsp;
-- Darth Vader's Domain "Don't act so suprised your highness, you weren't on any mercy mission this time." -Darth Vader Here's what I have so far... Chewbacca!! New 7-17 <BR><SMALL>http://www.serve.com/dgil/starwars.htm
-<BR><A HREF="/search.gw?c=web&qbe=17595934&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>86% </SMALL>
-<A HREF="http://www.toysrgus.com/images-coins/p-greedo.html">Power of the Force Greedo, "Bounty Hunter"</A>&nbsp;
-- Character: Greedo - Bounty Hunter Category: IV Logo Style: POTF2 Variations: none Text: An alien creature killed by HAN SOLO in the cantina at MOS EISLEY when he attempted to collect the money HAN SOLO owed JABBA THE HUTT. <BR><SMALL>http://www.toysrgus.com/images-coins/p-greedo.html
-<BR><A HREF="/search.gw?c=web&qbe=5296001&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>86% </SMALL>
-<A HREF="http://www.galoob.com/bbs1/thread1422/message68.html">Untitled</A>&nbsp;
-- PREVIOUS MESSAGE NEXT MESSAGE NEXT SUBJECT ADD A MESSAGE SEND E-MAIL TO WRITER ADD SUBJECT Subject: Hey JKF: We Propose New AF Ideas Here From: ackbar (Ackbar1111@aol.com) 04 Mar 09:57 PST <BR><SMALL>http://www.galoob.com/bbs1/thread1422/message68.html
-<BR><A HREF="/search.gw?c=web&qbe=16342290&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>86% </SMALL>
-<A HREF="http://www-personal.umich.edu/~psholtes/Starsounds.html">MOFO's Star Wars Soundz</A>&nbsp;
-- MULTIMEDIA SOUND FILES BOBA FETT DARTH VADER EMPORER PALPATINE HAN SOLO LUKE SKYWALKER OBI-WAN KENOBI You Are The Pervert To Listen To XXX Sound Files <BR><SMALL>http://www-personal.umich.edu/~psholtes/Starsounds.html
-<BR><A HREF="/search.gw?c=web&qbe=35213020&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>86% </SMALL>
-<A HREF="http://members.xoom.com/lordkilla/bobafett.html">Lord Killa's Haven Boba Fett Page</A>&nbsp;
-- Have Been Here Since 5/26/98 Welcome to the Boba Fett Haven. This is to pay tribute to the most kickass minor character who became a cult icon. 'Nuff said. <BR><SMALL>http://members.xoom.com/lordkilla/bobafett.html
-<BR><A HREF="/search.gw?c=web&qbe=30681057&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>85% </SMALL>
-<A HREF="http://www.cache.cow.net/~draith/sw/swquotes.txt">Untitled</A>&nbsp;
-- We meet again at last. The circle is now complete. When I left you, I was but the learner....now I am the Master!" "It's an older code sir, but it checks out. <BR><SMALL>http://www.cache.cow.net/~draith/sw/swquotes.txt
-<BR><A HREF="/search.gw?c=web&qbe=5622957&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>85% </SMALL>
-<A HREF="http://ecuvax.cis.ecu.edu/~uggermai/misc/swquotes.txt">Untitled</A>&nbsp;
-- "It's an older code sir, but it checks out. I was about to clear them." "I find your lack of faith disturbing...." "I think my sight's improving. Before I could only see a dark blur, now I can see a light blur." "You...and like your father...are now...MINE." "No...there is another." "And these blast points -- too accurate for Sandpeople. <BR><SMALL>http://ecuvax.cis.ecu.edu/~uggermai/misc/swquotes.txt
-<BR><A HREF="/search.gw?c=web&qbe=35982310&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>85% </SMALL>
-<A HREF="http://www.cae.wisc.edu/~ramsey/starpics.html">Krazy Kurt's Star Wars Pictures</A>&nbsp;
-- STAR WARS PICTURES Imperial March Star Wars Figures Collection Miscellaneous Star Wars Pictures Creatures! Movie Scenes Stormtroopers Han and Jabba Bounty Hunters <BR><SMALL>http://www.cae.wisc.edu/~ramsey/starpics.html
-<BR><A HREF="/search.gw?c=web&qbe=25871378&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>85% </SMALL>
-<A HREF="http://www.mania.com/movies/swdb/wuher.htm">Mania: Wuher</A>&nbsp;
-- None Available
-<BR><SMALL>http://www.mania.com/movies/swdb/wuher.htm
-<BR><A HREF="/search.gw?c=web&qbe=30107140&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>85% </SMALL>
-<A HREF="http://www.decipher.com:8080/starwars/productlibrary/cardlists/jabbaspalace/darkextra/beedox.htm">Beedo</A>&nbsp;
-- Beedo By: Allen Divers Gold Leader (allend@decipher.com) At long last, people will find out Greedo is dangerous. Beedo, a relative of Greedo, is here to set the record straight. <BR><SMALL>http://www.decipher.com:8080/starwars/productlibrary/cardlis...
-<BR><A HREF="/search.gw?c=web&qbe=16744401&ctag=3664781D&showSummary=true">
+<font face="helvetica" size=-1>
+<br>
+<a href=http://search.excite.com/relocate/sr=website|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo;http://www.excite.com/shopping/games_and_toys/toys?search=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo>Shopping: Games & Toys: Toys</a>:
+<br><li>Includes: Your source for action figures, toys, and science fiction merchandise. <br>
+<br>
+<a href=http://search.excite.com/relocate/sr=website|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo;http://www.excite.com/entertainment/home_video/titles/s/star_wars_series/characters?search=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo>Entertainment: Home Video: Titles: S: Star Wars Series: Characters</a>:
+<br><li>Includes: A transcript and Quicktime movie of the fateful meeting between Han Solo and the Rodian <b>bounty</b> <b>hunter</b>. From... <br>
+<br>
+<a href=http://search.excite.com/relocate/sr=website|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo;http://www.excite.com/games/role_playing/collectible_card_games/star_wars_ccg?search=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo>Games: Role-Playing: Collectible Card Games: Star Wars CCG</a>:
+<br><li>Includes: Trade Star Wars CCG cards here. They also have a roster for trades. <br>
+<br>
+</font>
+<small><br></small>
+<a name=web><img src=/img/pixel/trans.gif height=1 width=1><BR></a>
+<table border=0 cellpadding=0 cellspacing=0 width=100%><tr>
+<td bgcolor=ffcc00 width=25%>
+<table border=1 cellpadding=1 cellspacing=0 width=100%><tr>
+<td align=center><font face="helvetica" size=-1><b>
+<img src=/img/logo/lep_y.gif height=16 width=16>Web Results
+</b></font></td></tr></table>
+</td><td valign=bottom width=100%>
+<table border=0 cellspacing=0 cellpadding=0 width=100%>
+<tr><td bgcolor=999999 width=100%><img src=/img/pixel/trans.gif height=2 width=1></td></tr></table>
+</td></tr></table>
+<table border=0 cellpadding=2 cellspacing=0 width=100%>
+<tr><td VALIGN=TOP width=40% nowrap>
+<font face="helvetica">
+Top <b>50</b>
+matches.
+<small>
+<a href=/search.gw?layout=about&num=88&s=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo>
+<i>
+[88 hits. About Your Results]</i></a></small>
+</font></td>
+<td align=right width=60% nowrap><font face="helvetica"><b>
+Show:&nbsp;
+<a href=" relocate/co=shw_tit_wr;
+/search.gw?s=%2Bjabba+%2Bbounty+%2Bhunter+%2Bgreedo&c=web&start=0&showSummary=false
+">Titles only</a>
+&nbsp;
+View by:&nbsp;
+<a href=" relocate/co=vby_web_wr;
+/search.gw?sort=site&c=web&s=%2Bjabba+%2Bbounty+%2Bhunter+%2Bgreedo">Web site</a>
+</b></font>
+</td>
+</tr></table>
+<br>
+<font face="helvetica" size=-1>
+<SMALL>84% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=1887890;http://www.blueharvest.net/greedo.shtml">B l u e H a r v e s t . n e t - G r e e d o</A>&nbsp;
+- Setting: Mos Eisley Cantina, Tattooine When: After Luke has sold his speeder, Han on his way out to join Chewie at Docking bay 94. Greedo: -Oona goota, Solo? (Going somewhere, Solo?) Han Solo: -Yes, Greedo. <BR><SMALL>http://www.blueharvest.net/greedo.shtml
+<BR><A HREF="/search.gw?c=web&qbe=1887890&ctag=374C1064&showSummary=true">
 Search for more documents like this one</A>
 <P></SMALL>
 <SMALL>84% </SMALL>
-<A HREF="http://www.netcantina.com/starwars/newhope.html">Mos Eisley Network Cantina - A New Hope</A>&nbsp;
-- An Excerpt from Star Wars: A New Hope. <BR><SMALL>http://www.netcantina.com/starwars/newhope.html
-<BR><A HREF="/search.gw?c=web&qbe=20245801&ctag=3664781D&showSummary=true">
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=8673089;http://www.telecom.csuhayward.edu/~aleung/greedo.htm">Greedo</A>&nbsp;
+- Greedo Species: Rodian Sex: Male Hair Color: None Eye Color: Purple: Height: 1.65 meters Homeworld: Rodia Political Affiliation: Free-Lance Bounty Hunter Weapon(s) of Choice: Blaster Pistol, Grenades Vehicle of Choice: Incom Corsair Manka Hunter First Appearance: Star Wars: A New Hope Death: At Mos Eisley Cantina in Star Wars: A New Hope A bounty hunter whose dreams far exceeded his grasp,... <BR><SMALL>http://www.telecom.csuhayward.edu/~aleung/greedo.htm
+<BR><A HREF="/search.gw?c=web&qbe=8673089&ctag=374C1064&showSummary=true">
 Search for more documents like this one</A>
 <P></SMALL>
 <SMALL>84% </SMALL>
-<A HREF="http://nerf-herder.com/swmhq/new.html">Yoda's News and Updates - What's New?</A>&nbsp;
-- Want to be told when we update? Just E-mail us with your E-mail address and the subject Update, and we'll send you an E-mail when something changes. <BR><SMALL>http://nerf-herder.com/swmhq/new.html
-<BR><A HREF="/search.gw?c=web&qbe=8187522&ctag=3664781D&showSummary=true">
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=1613484;http://members.delphi.com/doctornick/index.html">BOUNTY HUNTERS</A>&nbsp;
+- BOUNTY HUNTERS This site is still under construction. Not all the links will work and alot of the information needs updating. Still feel free to use what's available <BR><SMALL>http://members.delphi.com/doctornick/index.html
+<BR><A HREF="/search.gw?c=web&qbe=1613484&ctag=374C1064&showSummary=true">
 Search for more documents like this one</A>
 <P></SMALL>
 <SMALL>84% </SMALL>
-<A HREF="http://www.depeche.mode.net/~myrkr/starlist.html">The YAWP outtake to end all YAWP outtakes</A>&nbsp;
-- The following dialogue was taken from YAWP #5. But I probably told you that already. In keeping with what was referred to by Dan Dan the Chilton Man as "a distinct Star Wars bent" or some such phrase like that (actually, I slacked off said bent in the last issue since I wasn't in a very Lucasy mood during the production, but that's OK, cuz old habits reinforce mechanical living [at least... <BR><SMALL>http://www.depeche.mode.net/~myrkr/starlist.html
-<BR><A HREF="/search.gw?c=web&qbe=4228139&ctag=3664781D&showSummary=true">
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=141385;http://thespis.com/greedo/rodian.htm">Greedo teaches Rodian</A>&nbsp;
+- Greedo teaches you his native language of Rodian in this informative and fun web page. <BR><SMALL>http://thespis.com/greedo/rodian.htm
+<BR><A HREF="/search.gw?c=web&qbe=141385&ctag=374C1064&showSummary=true">
 Search for more documents like this one</A>
 <P></SMALL>
 <SMALL>83% </SMALL>
-<A HREF="http://ctrost.simplenet.com/starwars.html">John C.'s Star Wars Page</A>&nbsp;
-- This is a very funny short movie combining the elements of COPS with Star Wars, if you want to know more about the creator of this film and/or more about Star Wars, go to this site: theforce.net <BR><SMALL>http://ctrost.simplenet.com/starwars.html
-<BR><A HREF="/search.gw?c=web&qbe=3792770&ctag=3664781D&showSummary=true">
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=27018971;http://thespis.com/greedo/tragic.htm">Greedo: The Tragic Figure</A>&nbsp;
+- Greedo. It's so easy to shrug him off as just another bit player in the Star Wars universe. Most people don't even know his name. Yet behind this seemingly simple character lies a complex being. <BR><SMALL>http://thespis.com/greedo/tragic.htm
+<BR><A HREF="/search.gw?c=web&qbe=27018971&ctag=374C1064&showSummary=true">
 Search for more documents like this one</A>
 <P></SMALL>
 <SMALL>83% </SMALL>
-<A HREF="http://www.universal.nl/users/dwijnberg/encyd_l.htm">Star Wars Encyclopedia D-L</A>&nbsp;
-- Dantooine: An olive, blue, and brown-colored planet with no industrial settlements or advanced technology. Dantooine served as the primary base for the Rebel Alliance. when Rebel soldiers discovered an Imperial tracking device hidden in a cargo shipment. <BR><SMALL>http://www.universal.nl/users/dwijnberg/encyd_l.htm
-<BR><A HREF="/search.gw?c=web&qbe=3506440&ctag=3664781D&showSummary=true">
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=38327386;http://www-personal.engin.umich.edu/~edebert/han/greedo.html">Oota goota Solo?</A>&nbsp;
+- GREEDO: Going somewhere, Solo? GREEDO: It's too late. You should have paid him when you had the chance. Jabba's put a price on your head, so large that every bounty hunter in the galaxy will be looking for you. <BR><SMALL>http://www-personal.engin.umich.edu/~edebert/han/greedo.html
+<BR><A HREF="/search.gw?c=web&qbe=38327386&ctag=374C1064&showSummary=true">
 Search for more documents like this one</A>
 <P></SMALL>
-<SMALL>83% </SMALL>
-<A HREF="http://shell12.ba.best.com/~zzmaster/SF/star_wars_tales.html">Star Wars Tales, edited by Kevin J. Anderson</A>&nbsp;
-- Tales from the Mos Eisley Cantina (ME) Tales of the Bounty Hunters (BH) Tales from Jabba&#39;s Palace (JP) Fiction Index Anderson, Kevin J., --Swap Meet: The Jawa&#39;s Tale, ME, 1995. --Therefore I Am: The Tale of IG-88, BH, 1995. (novelette) --A Boy and His Monster: The Rancor Keeper&#39;s Tale, JP, 1995. --Epilogue: Whatever Became of ...? JP, 1995. <BR><SMALL>http://shell12.ba.best.com/~zzmaster/SF/star_wars_tales.html
-<BR><A HREF="/search.gw?c=web&qbe=25614163&ctag=3664781D&showSummary=true">
+<SMALL>82% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=8094794;http://www.totaloverload.com/starwars/greedo.html">People: Greedo</A>&nbsp;
+- A member of the Rodian species, Greedo was one of the many bounty hunters hired by Jabba the Hutt to apprehend or kill Han Solo after Solo dumped some of Jabba's cargo to evade being caught by Imperial forces. <BR><SMALL>http://www.totaloverload.com/starwars/greedo.html
+<BR><A HREF="/search.gw?c=web&qbe=8094794&ctag=374C1064&showSummary=true">
 Search for more documents like this one</A>
 <P></SMALL>
-<SMALL>83% </SMALL>
-<A HREF="http://www.bcpl.net/~hsevdali/index2.htm">starwars</A>&nbsp;
-- STAR WARS FIGURES The first Star Wars figures were offered through through the mail in an early bird package back in 1977. The original line of figures began appearing in stores in 1978. <BR><SMALL>http://www.bcpl.net/~hsevdali/index2.htm
-<BR><A HREF="/search.gw?c=web&qbe=12554669&ctag=3664781D&showSummary=true">
+<SMALL>82% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=11534362;http://scifireplicas.com/movies/mask_greedo.htm">Greedo Collector Mask -
+Star Wars Collector Masks -
+star wars greedo c...</A>&nbsp;
+- The green-skinned Rodian named Greedo always wnted to be an intergalactic bounty hunter. He was eventually employed by Jabba the Hutt, and assigned the contract on Han Solo. <BR><SMALL>http://scifireplicas.com/movies/mask_greedo.htm
+<BR><A HREF="/search.gw?c=web&qbe=11534362&ctag=374C1064&showSummary=true">
 Search for more documents like this one</A>
 <P></SMALL>
-<SMALL>83% </SMALL>
-<A HREF="http://www.toysrgus.com/images-coins/coin-chart.html">The Comprehensive Guide to POTF, Droids, and Ewoks Coins</A>&nbsp;
-- The Comprehensive Guide to POTF, Droids, and Ewoks Coins By Gus Lopez A couple of years ago, I came up with a category system for POTF coins based on their relative scarcities as they fell into well-defined categories after collecting a large number of data points. <BR><SMALL>http://www.toysrgus.com/images-coins/coin-chart.html
-<BR><A HREF="/search.gw?c=web&qbe=4313675&ctag=3664781D&showSummary=true">
+<SMALL>82% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=16024243;http://scifireplicas.com/merchandise/mask_greedo.htm">Greedo Collector Mask -
+Star Wars Collector Masks -
+star wars greedo c...</A>&nbsp;
+- The green-skinned Rodian named Greedo always wnted to be an intergalactic bounty hunter. He was eventually employed by Jabba the Hutt, and assigned the contract on Han Solo. <BR><SMALL>http://scifireplicas.com/merchandise/mask_greedo.htm
+<BR><A HREF="/search.gw?c=web&qbe=16024243&ctag=374C1064&showSummary=true">
 Search for more documents like this one</A>
 <P></SMALL>
-<SMALL>83% </SMALL>
-<A HREF="http://www.stl-online.net/milligan/starwars/toys.html">STAR WARS TOYS</A>&nbsp;
-- Welcome to the toys page. This page will keep updated with all the new Power of the Force collection toys. The "New" toys should be released in stores about a month or so after they are posted. <BR><SMALL>http://www.stl-online.net/milligan/starwars/toys.html
-<BR><A HREF="/search.gw?c=web&qbe=33171148&ctag=3664781D&showSummary=true">
+<SMALL>82% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=16483588;http://scifireplicas.com/collectors/mask_greedo.htm">Star Wars Collector Masks -
+Greedo Collector Mask
+</A>&nbsp;
+- Star Wars Collector Masks Greedo Collector Mask - Movie and TV merchandise, sci-fi replicas and props from Aliens to Xena. <BR><SMALL>http://scifireplicas.com/collectors/mask_greedo.htm
+<BR><A HREF="/search.gw?c=web&qbe=16483588&ctag=374C1064&showSummary=true">
 Search for more documents like this one</A>
 <P></SMALL>
-<SMALL>83% </SMALL>
-<A HREF="http://frodo.hiof.no/~deak/video/minisw.html">Deak's Den</A>&nbsp;
+<SMALL>81% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=11324425;http://www.starwars.com/episode-iv/production/jabba/">Star Wars: Production - Introducing Jabba</A>&nbsp;
+- 20 years ago, during production of the original Star Wars, George Lucas filmed a scene where Han Solo encounters Jabba the Hutt in the Millennium Falcon's docking bay just after Han shot Greedo. <BR><SMALL>http://www.starwars.com/episode-iv/production/jabba/
+<BR><A HREF="/search.gw?c=web&qbe=11324425&ctag=374C1064&showSummary=true">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>81% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=35174548;http://homex.s-one.net.sg/user/lhs1701/swtales.htm">Star Wars Novels Reviews</A>&nbsp;
+- STAR WAR STORIES I chose to review these four books as I like them very much. Each book contains a selection of short stories which makes the Star Wars universe more believable and more interesting as the lives of different beings, their dreams and aspirations, their daily lives, their survival are being revealed. <BR><SMALL>http://homex.s-one.net.sg/user/lhs1701/swtales.htm
+<BR><A HREF="/search.gw?c=web&qbe=35174548&ctag=374C1064&showSummary=true">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>80% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=10002527;http://www.angelfire.com/mn/Orlikowski/BountyHunters.html">My Page Of Bounty Hunters</A>&nbsp;
+- Welcome to my Bounty Hunters page. This page Has to do with all of the bounty hunters that I know of, and their backgrounds. Have Fun! This Is Boba Fett. <BR><SMALL>http://www.angelfire.com/mn/Orlikowski/BountyHunters.html
+<BR><A HREF="/search.gw?c=web&qbe=10002527&ctag=374C1064&showSummary=true">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>78% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=24277630;http://www.zdnet.com.au/macuser/andyi/starwarsse.html">Star Wars Special Edition</A>&nbsp;
+- YES! YEEEEAHHHHH! WHOO! YEEEAHHH! AW-RIGHT!!!! WOO-HOO!!!! And that more or less concludes my remarks regarding the Star Wars Special Edition. But to get into specific details: <BR><SMALL>http://www.zdnet.com.au/macuser/andyi/starwarsse.html
+<BR><A HREF="/search.gw?c=web&qbe=24277630&ctag=374C1064&showSummary=true">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>78% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=31062107;http://subnet.virtual-pc.com/lo386500/hs01.faq">Untitled</A>&nbsp;
+- Schrödinger's Chewbacca. [Why did C3PO think Chewie was in Jabba's Palace with Lando, not outside with Leia?]. someone wrote ... This is a problem. <BR><SMALL>http://subnet.virtual-pc.com/lo386500/hs01.faq
+<BR><A HREF="/search.gw?c=web&qbe=31062107&ctag=374C1064&showSummary=true">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>77% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=21963796;http://www.injersey.com/life/story/0,2092,183653,00.html">IN Jersey - Life & Leisure Story</A>&nbsp;
+- Story Search Quiz you, I will Published in the Asbury Park Press and the Home News Tribune Twentieth Century Fox/Lucasfilms By BART CALENDAR Staff Writer <BR><SMALL>http://www.injersey.com/life/story/0,2092,183653,00.html
+<BR><A HREF="/search.gw?c=web&qbe=21963796&ctag=374C1064&showSummary=true">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>76% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=527033;http://www.project-m31.com/characters.shtml">Category: Star Wars: Characters</A>&nbsp;
+- Characters, cast, Darth Vader, Luke Skywalker, Han Solo <BR><SMALL>http://www.project-m31.com/characters.shtml
+<BR><A HREF="/search.gw?c=web&qbe=527033&ctag=374C1064&showSummary=true">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>76% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=37448136;http://www.globe.com/starwars/features/morelinks.shtml">Boston.com / Star Wars</A>&nbsp;
+- Specialized "Star Wars" sites Many fan sites take on the whole Star Wars universe. Others - like the sites below - do just one thing, and do it well. (Click here for more general sites. <BR><SMALL>http://www.globe.com/starwars/features/morelinks.shtml
+<BR><A HREF="/search.gw?c=web&qbe=37448136&ctag=374C1064&showSummary=true">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>76% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=30222093;http://www.arts.mcgill.ca/programs/polisci/faculty/rexb/greedo.html">The Greedo Assassination Conspiracy Page </A>&nbsp;
+- The McGill Department of Exopolitics presents: &quot;Over my dead body!&quot; &quot;That's the idea...&quot; In tribute to the re-release of the Star Wars Trilogy in theatres during the first three months of 1997, we at the prestigious McGill University Department of Exopolitics took it upon ourselves to examine one of the more pressing questions that the Special Edition has produced, namely... <BR><SMALL>http://www.arts.mcgill.ca/programs/polisci/faculty/rexb/gree...
+<BR><A HREF="/search.gw?c=web&qbe=30222093&ctag=374C1064&showSummary=true">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>75% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=9515417;http://homepages.tig.com.au/~echo3/characters/han.html">hansolo.thecomlink</A>&nbsp;
+- the comlink owes a belated thank you to Michael Grote for pointing out a broken link for us. Thanks :) File Size File Name "Aren't you afraid the Empire's going to find out about this little operation and shut you down?" <BR><SMALL>http://homepages.tig.com.au/~echo3/characters/han.html
+<BR><A HREF="/search.gw?c=web&qbe=9515417&ctag=374C1064&showSummary=true">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>75% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=18737809;http://frodo.hiof.no/~deak/video/minisw.html">Deak's Den</A>&nbsp;
 - Please tell me if you should find any errors on this page, such as a video clip in the wrong category or wrong text to a title. Video Clips from Star Wars. <BR><SMALL>http://frodo.hiof.no/~deak/video/minisw.html
-<BR><A HREF="/search.gw?c=web&qbe=13987373&ctag=3664781D&showSummary=true">
+<BR><A HREF="/search.gw?c=web&qbe=18737809&ctag=374C1064&showSummary=true">
 Search for more documents like this one</A>
 <P></SMALL>
-<SMALL>83% </SMALL>
-<A HREF="http://thecantina.simplenet.com/wishlist.html">Wishlist</A>&nbsp;
-- Rick Adams' List: Chuck Mc's List: Aunt Beru Admiral Motti Rebel Ceremonial Guard (Guard at Yavin) Bacta Tank with Luke Skywalker Dagobah Playset <BR><SMALL>http://thecantina.simplenet.com/wishlist.html
-<BR><A HREF="/search.gw?c=web&qbe=24989741&ctag=3664781D&showSummary=true">
+<SMALL>75% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=33341657;http://www.cinema1.com/movies97/returnofthejedi/eng_movie.shtml">Cinema1: Return of the Jedi</A>&nbsp;
+- Cinema1 e-Zine!, Movie Magazine For The Cyberworld! <BR><SMALL>http://www.cinema1.com/movies97/returnofthejedi/eng_movie.sh...
+<BR><A HREF="/search.gw?c=web&qbe=33341657&ctag=374C1064&showSummary=true">
 Search for more documents like this one</A>
 <P></SMALL>
-<SMALL>82% </SMALL>
-<A HREF="http://www.zanshin.com/~bobg/swse-critique.html">Bob Glickstein: Star Wars: Special Edition</A>&nbsp;
-- Link summary: Site map... Several people regard me as the best authority on Star Wars that they know. Consequently, many people have asked me what I think of the new Special Edition. <BR><SMALL>http://www.zanshin.com/~bobg/swse-critique.html
-<BR><A HREF="/search.gw?c=web&qbe=32833997&ctag=3664781D&showSummary=true">
+<SMALL>75% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=36609049;http://www.toysrgus.com/images-coins/coin-chart.html">The Comprehensive Guide to POTF, Droids, and Ewoks Coins</A>&nbsp;
+- The Comprehensive Guide to POTF, Droids, and Ewoks Coins By Gus Lopez A couple of years ago, I came up with a category system for POTF coins based on their relative scarcities as they fell into well-defined categories after collecting a large number of data points. <BR><SMALL>http://www.toysrgus.com/images-coins/coin-chart.html
+<BR><A HREF="/search.gw?c=web&qbe=36609049&ctag=374C1064&showSummary=true">
 Search for more documents like this one</A>
 <P></SMALL>
-<SMALL>82% </SMALL>
-<A HREF="http://www2.epix.net/~pagoda/potf2.html">POTF2</A>&nbsp;
-- Here is our complete listing of POTF2 action figures and vehicles Power of the Force 2 figures and vehicles series 1 Ben Kenobi long saber 50.00 Ben Kenobi short saber 20.00 Chewbacca 15.00 C-3PO 15.00 Darth Vader ss/long tray 25.00 Darth Vader short saber 15.00 Han Solo 14.00 Princess Leia 30.00 R2-D2 15.00 series 2 Boba Fett full circles 15.00 Han Hoth open hand 25.00 Han hoth 15.00 Lando... <BR><SMALL>http://www2.epix.net/~pagoda/potf2.html
-<BR><A HREF="/search.gw?c=web&qbe=32179168&ctag=3664781D&showSummary=true">
+<SMALL>75% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=7502941;http://www.zanshin.com/~bobg/swse-critique.html">Bob Glickstein: Star Wars: Special Edition</A>&nbsp;
+- Link summary: Site map... Americans: defend your liberty! Congress is closer than ever to passing a flag desecration amendment to the Constitution for no better reason than burning the flag offends some people. <BR><SMALL>http://www.zanshin.com/~bobg/swse-critique.html
+<BR><A HREF="/search.gw?c=web&qbe=7502941&ctag=374C1064&showSummary=true">
 Search for more documents like this one</A>
 <P></SMALL>
-<SMALL>82% </SMALL>
-<A HREF="http://seattle.sidewalk.com/link/12690">Star Wars: Special Edition: seattle.sidewalk</A>&nbsp;
-- Complete movie info, including 4 star review, actors and rating! Review: Han Solo and Jabba the Hutt in &amp;quot;Star Wars: Special Edition.&amp;quot; When Steven Spielberg took us within the interior of the alien mother ship at the end of the special edition of &amp;quot;Close Encounters of the Third Kind,&amp;quot; he showed us something we really didn't need to see. Nothing he could... <BR><SMALL>http://seattle.sidewalk.com/link/12690
-<BR><A HREF="/search.gw?c=web&qbe=4994721&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>82% </SMALL>
-<A HREF="http://starwars.alfaprojekt.cz/skript/sw-quote.txt">Untitled</A>&nbsp;
-- A droid's lot in life "Don't you call me a mindless philosopher, you overweight glob of grease!" -C-3PO (ANH) "You'll be malfunctioning within a day, you nearsighted scarp pile!" -C-3PO (ANH) "No, I don't think he likes you at all.... I don't like you either." -C-3PO (ANH) "That little droid and I have been through a lot together." -Luke Skywalker (concerning R2-D2, ANH) "You must repair him! <BR><SMALL>http://starwars.alfaprojekt.cz/skript/sw-quote.txt
-<BR><A HREF="/search.gw?c=web&qbe=25857182&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>81% </SMALL>
-<A HREF="http://www.cen.uiuc.edu/~w-cerven/cantina.html">Cantina Characters</A>&nbsp;
-- NAME: Figrin Da'n OCCUPATION: Musician RACE: Bith SEX: Male HEIGHT: 1.5 meters - Better known as "Fiery Figrin", Figrin Da'n is probably one of Mos Eisley's greatest gamblers. <BR><SMALL>http://www.cen.uiuc.edu/~w-cerven/cantina.html
-<BR><A HREF="/search.gw?c=web&qbe=33889466&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>81% </SMALL>
-<A HREF="http://w3.nic.fi/~mikaelm/spoilers/Completedark.txt">Untitled</A>&nbsp;
-- Imperial Locations *Alderaan Dark System [R1] Set: Premiere Parsec: 2 Icons: Planet Light Force: 1 Dark Force: 0 Light Text: None. Dark Text: If you control, Force drain +1 here for each Death Star site on table also in your control. *Anoat Dark System [U] Set: Dagobah Parsec: 5 Icons: Planet Light Force: 1 Dark Force: 2 Light Text: If you control, all opponent's Ugnaughts on table are... <BR><SMALL>http://w3.nic.fi/~mikaelm/spoilers/Completedark.txt
-<BR><A HREF="/search.gw?c=web&qbe=24885877&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>81% </SMALL>
-<A HREF="http://www.ingame.com/servizi/siti_ospiti/cloud_city/colkenn.html">blank</A>&nbsp;
-- &quot;Mettete il comandante Han Solo nella stiva...&quot; - Boba Fett La lista seguente indica tutte le action figures uscite dal 1995 ad oggi per la linea Kenner - star Wars: the Power of the Force originale in america. <BR><SMALL>http://www.ingame.com/servizi/siti_ospiti/cloud_city/colkenn...
-<BR><A HREF="/search.gw?c=web&qbe=21801004&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>81% </SMALL>
-<A HREF="http://pages.prodigy.com/actionfiguresonline/swchklst.htm">Classic Star Wars Checklist</A>&nbsp;
-- Classic Star Wars Checklist This is a compilation of every figure variation that was made. I am not going to concern myself with figures produced on different card backs. <BR><SMALL>http://pages.prodigy.com/actionfiguresonline/swchklst.htm
-<BR><A HREF="/search.gw?c=web&qbe=2845995&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>81% </SMALL>
-<A HREF="http://cclx1.unican.es/~uc2312/img/swwww3.htm">Untitled</A>&nbsp;
-- From: nieder@Princeton.EDU Hanspeter Niederstrasser Newsgroups: rec.arts.sf.starwars.misc,rec.arts.sf.starwars.info,rec.answers,news.answers Subject: rec.arts.sf.starwars.* The Complete Star Wars WWW Listing Part 3/5 Followup-To: rec.arts.sf.starwars.misc Approved: news-answers-request@MIT.EDU Summary: This posting is the most comprehensive archive of Star Wars related sites in the WWW and... <BR><SMALL>http://cclx1.unican.es/~uc2312/img/swwww3.htm
-<BR><A HREF="/search.gw?c=web&qbe=35886565&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>81% </SMALL>
-<A HREF="http://www.shavenwookie.com/facpov.html">From A Certain Point of View</A>&nbsp;
-- Web Plagiarism In recent times, plagiarism on the web has increased dramatically and Star Wars fans sites have not been immune to this plague. Web plagiarism is when an individual takes someone else's graphics, HTML code, sounds, etc. and attempts to pass them off as his/her own creation. <BR><SMALL>http://www.shavenwookie.com/facpov.html
-<BR><A HREF="/search.gw?c=web&qbe=40108414&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>81% </SMALL>
-<A HREF="http://www.goodthink.com/harris/bh.starwars.html">bh.star wars</A>&nbsp;
-- THE SCOOP (C)1997 Bob Harris TheScoop@earthlink.net I just saw &quot;Star Wars&quot; again. It's big fun. But don't take the kids just yet. You know by now that George Lucas' stock for this stew was Joseph Campbell puree, which photon torpedoed into the collective unconscious by drawing on cultural archetypes and recycling every old story we've ever loved. <BR><SMALL>http://www.goodthink.com/harris/bh.starwars.html
-<BR><A HREF="/search.gw?c=web&qbe=36402119&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>81% </SMALL>
-<A HREF="http://home.fuse.net/splaz/figs.htm">Hasbro's Star Wars Toys and Games Page</A>&nbsp;
-- Toys, Games, Puzzles, and Activities 3 " Basic Figures Wave 1: First Released Luke Skywalker Darth Vader C-3PO R2-D2 Obi-Wan (Ben) Kenobi Han Solo Chewbacca Princess Leia Organa Stormtrooper <BR><SMALL>http://home.fuse.net/splaz/figs.htm
-<BR><A HREF="/search.gw?c=web&qbe=3717333&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>81% </SMALL>
-<A HREF="http://www.max-image.com/nostalgictoys/catalog.htm">collectable toys on-line catalog</A>&nbsp;
-- BATTLESTAR GALACTICA, MATTEL, 1978. No Box, but good condition. STAR TREK 3.5" FIGURES, GALOOB, 1988. All items are MIB. A.)Capt. STAR TREK TNG FIGURES, PLAYMATES, 1992 TO PRESENT. <BR><SMALL>http://www.max-image.com/nostalgictoys/catalog.htm
-<BR><A HREF="/search.gw?c=web&qbe=7110452&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>81% </SMALL>
-<A HREF="http://home.ptd.net/~dbohr/wars.html">SPICE WARS</A>&nbsp;
-- The Empire rules the galaxy with an iron fist. In the span of a few years, the Empire has destroyed the Old Republic and put almost every planet under its control, enslaving races, stealing valuables from rich and poor alike, and stripping all rights from the women of the galaxy. <BR><SMALL>http://home.ptd.net/~dbohr/wars.html
-<BR><A HREF="/search.gw?c=web&qbe=433021&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>80% </SMALL>
-<A HREF="http://thecantina.simplenet.com/post.html">Wal-Mart Poster Figures</A>&nbsp;
-- Luke Skywalker in Tatooine Gear (First Version) Darth Vader (First Version) C-3PO (First Version) R2-D2 (First Version) Ben Kenobi (First Version) <BR><SMALL>http://thecantina.simplenet.com/post.html
-<BR><A HREF="/search.gw?c=web&qbe=24548577&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>80% </SMALL>
-<A HREF="http://www.mania.com/toys/features/micro.html">Mania: Micro Machines</A>&nbsp;
-- Ten years ago this month, Lewis Galoob Toys introduced smaller-than-usual toy cars made of a durable rubbery material and precolored with a detail that went deeper than paint. <BR><SMALL>http://www.mania.com/toys/features/micro.html
-<BR><A HREF="/search.gw?c=web&qbe=39726215&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>80% </SMALL>
-<A HREF="http://www.starwars.hasbro.com/low/toy/listp.html">Hasbro's Star Wars Toys and Games Page</A>&nbsp;
-- Toys, Games, Puzzles, and Activities ***All release dates listed below are approximate and are subject to change.*** 3 " Basic Figures Wave 1: First Released <BR><SMALL>http://www.starwars.hasbro.com/low/toy/listp.html
-<BR><A HREF="/search.gw?c=web&qbe=1713378&ctag=3664781D&showSummary=true">
+<SMALL>74% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=22349298;http://www.mtsu.edu/~biol009d/toys.html">demented doll's toy store</A>&nbsp;
+- toys: buy, sell, and trade welcome to demented doll's toy store. here is where you can see what i've got available right now in the toy department... <BR><SMALL>http://www.mtsu.edu/~biol009d/toys.html
+<BR><A HREF="/search.gw?c=web&qbe=22349298&ctag=374C1064&showSummary=true">
 Search for more documents like this one</A>
 <P></SMALL>
 <CENTER> <TABLE BORDER=0 CELLPADDING=3 CELLSPACING=0 WIDTH=100%><TR>
 <TD ALIGN=center BGCOLOR=FFFFCC>
-<FONT FACE=geneva,arial SIZE=-1><B>
-<font face=geneva,arial size=-1><b>Find Christmas gifts for: &nbsp;<A HREF=http://www.excite.com/relocate/co=searchresults_findgiftsfor_her;http://www.excite.com/holiday_shoppe/for_her>Her</A> | <A HREF=http://www.excite.com/relocate/co=searchresults_findgiftsfor_him;http://www.excite.com/holiday_shoppe/for_him>Him</A> | <A HREF=http://www.excite.com/relocate/co=searchresults_findgiftsfor_teen;http://www.excite.com/holiday_shoppe/for_teens>Teens</A> | <A HREF=http://www.excite.com/relocate/co=searchresults_findgiftsfor_kids;http://www.excite.com/holiday_shoppe/for_kids>Kids</A> | <A HREF=http://www.excite.com/relocate/co=searchresults_findgiftsfor_rich;http://www.excite.com/holiday_shoppe/upscale>The Filthy Rich</A> | <I><A HREF=http://www.excite.com/relocate/co=searchresults_findgiftsfor_all;http://www.excite.com/holiday_shoppe/>Everyone!</A></I>
-</font></B>
+<FONT FACE="helvetica" SIZE=-1><B>
+Choose your <A HREF=http://www.excite.com/relocate/co=xsr_mchat;/communities/chat/rooms>Chat</A>: <A HREF=http://www.excite.com/relocate/co=xsr_mchat;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/teenchat.html>Teen</A> | <A HREF=http://www.excite.com/relocate/co=xsr_mchat;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/20ish.html>20ish</A> | <A HREF=http://www.excite.com/relocate/co=xsr_mchat;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/30ish.html>30ish</A> | <A HREF=http://www.excite.com/relocate/co=xsr_mchat;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/40ish.html>40ish</A> | <A HREF=http://www.excite.com/relocate/co=xsr_mchat;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/peers/50plus.html>50+</A> | <A HREF=http://www.excite.com/relocate/co=xsr_mchat;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/peers/christians.html>Christian</A> | <A HREF=http://www.excite.com/relocate/co=xsr_mchat;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/grrls_domain.html>Grrls</A> | <A HREF=http://www.excite.com/relocate/co=xsr_mchat;http://javatalk.excite.com/VP/javald/jindex.html?room=http://talk.excite.com/chat/rooms/pink_triangle.html>Gay</A> | <A HREF=http://www.excite.com/relocate/co=xsr_mchat;/communities/chat/rooms>more</A>
 </B></FONT>
 </TD></TR></TABLE></CENTER><P>
-<SMALL>79% </SMALL>
-<A HREF="http://www.eden.rutgers.edu/~reevesjd/kenner.html">TJRGTSWAFT: PART II</A>&nbsp;
-- Perhaps, we may be of some service to you. We might have that missing piece to your collection! This Fan Site contains the following features..... Action Figure Name <BR><SMALL>http://www.eden.rutgers.edu/~reevesjd/kenner.html
-<BR><A HREF="/search.gw?c=web&qbe=34311303&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>79% </SMALL>
-<A HREF="http://www.lubbockonline.com/news/013197/starwars4.htm">'Star Wars' re-release captures new fans</A>&nbsp;
-- 'Star Wars' re-release captures new fans By Karen Hershenson Knight-Ridder Newspapers - (KRT) It's been 20 years since George Lucas' scrappy space epic ''Star Wars'' catapulted both moviemaking and marketing into a whole new galaxy. <BR><SMALL>http://www.lubbockonline.com/news/013197/starwars4.htm
-<BR><A HREF="/search.gw?c=web&qbe=14097166&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>79% </SMALL>
-<A HREF="http://www.egosystem.com/starwars/rotj.html">Star Wars Trilogy Blooper Viewers Guide - SWVI: Return Of The Jedi
-</A>&nbsp;
-- The most comprehensive guide available for cataloging the bloopers found in the Star Wars VI: Return Of The Jedi! <BR><SMALL>http://www.egosystem.com/starwars/rotj.html
-<BR><A HREF="/search.gw?c=web&qbe=10061310&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>79% </SMALL>
-<A HREF="http://www.lucasfan.com/rassm/hist3.htm">The RASSM History Archive</A>&nbsp;
-- Although this didn't start on RASSM, it can be viewed as RASSM history because of the part the members played in this monumental event. It began back in September 1996 when without warning news reached RASSM that Lucasfilm Ltd. were searching the Web for unofficial Star Wars sites with a view to closing them down. <BR><SMALL>http://www.lucasfan.com/rassm/hist3.htm
-<BR><A HREF="/search.gw?c=web&qbe=23942263&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>79% </SMALL>
-<A HREF="http://www.pitt.edu/~thurn/SWB/calendar.html">The Star Wars Collector's Bible (The Targeting Computer)</A>&nbsp;
-- Revised and Updated Sun Nov 15 23:11:34 1998 Welcome to the online Targeting Computer. This page will be updated whenever possible, so be sure to check back for new information. <BR><SMALL>http://www.pitt.edu/~thurn/SWB/calendar.html
-<BR><A HREF="/search.gw?c=web&qbe=542558&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>79% </SMALL>
-<A HREF="http://freespace.virgin.net/chris.harper1/starwars/complete.htm">Complete List of Variations</A>&nbsp;
-- Complete List of Variations 2-1B (matte blue version) 2-1B (metallic blue version) 4-LOM (with moulded head) 4-LOM (with pegged head) 8D8 Admiral Ackbar (light bib) Admiral Ackbar (medium bib) Admiral Ackbar (dark bib) Admiral Screed (&#145;Droids&#146; - prototype) Amanaman Anakin Skywalker AT-AT Commander AT-AT Driver (with orange logo on helmet) AT-AT Driver (with red logo on helmet/darker... <BR><SMALL>http://freespace.virgin.net/chris.harper1/starwars/complete....
-<BR><A HREF="/search.gw?c=web&qbe=22269396&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>79% </SMALL>
-<A HREF="http://www.redcourt.demon.co.uk/specifics/starwars.htm">Star Wars Trilogy mistakes</A>&nbsp;
-- When the stormtroopers break into the control room, watch very carefully and you will be able to see a storm trooper nearly render himself unconscious by smacking his head off a door frame. [This was in the Special Edition in the cinemas, but is cut out of the Special Edition videos for some reason]. <BR><SMALL>http://www.redcourt.demon.co.uk/specifics/starwars.htm
-<BR><A HREF="/search.gw?c=web&qbe=20250122&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>79% </SMALL>
-<A HREF="http://hem.passagen.se/wookiee/developm/devel36.html">The Development of Star Wars: 36</A>&nbsp;
-- “That’s no battle, hot shot…they’re just sitting there! Probably a freighter-tanker refueling.”117 Later, when Luke drinks a malt brew with him, Biggs confesses that he did not come back just to say good-bye: “I made some friends at the Academy. (he whispers)…when our frigate goes to one of the central systems, we’re going to jump ship and join the Alliance…”118 He continues: “It’s what we... <BR><SMALL>http://hem.passagen.se/wookiee/developm/devel36.html
-<BR><A HREF="/search.gw?c=web&qbe=40573072&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>78% </SMALL>
-<A HREF="http://www.scican.net/~gcheek/cantina/tradepag.html">Trade Page</A>&nbsp;
-- If you would like added please email me and let me know Title the message &quot;E-Trade&quot; please ONLY send me rares!!!!! Wuher -WANTS:MONEY!!!! Cards for sale!!! and Darth Vader (BB); Luke Skywalker (BB); ALL Star Destroyers HAVES:Almost ALL cards... for sale!! <BR><SMALL>http://www.scican.net/~gcheek/cantina/tradepag.html
-<BR><A HREF="/search.gw?c=web&qbe=2680574&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>78% </SMALL>
-<A HREF="http://www.lucasfan.com/rassm/bookfaq.txt">Untitled</A>&nbsp;
-- Subject: STAR WARS CHRONOLOGY -- MAJORLY UPDATED! 1) New additions -- I've added the Adventure Journals and RPG modules from West End in order to make this as complete as possible. 2) I've made small changes throughout the list. 3) I haven't been more specific with the breakdown of years for Tales of the Jedi, because LFL has provided contradictory timelines for that era in the stories,... <BR><SMALL>http://www.lucasfan.com/rassm/bookfaq.txt
-<BR><A HREF="/search.gw?c=web&qbe=24002313&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>77% </SMALL>
-<A HREF="http://www.isomedia.com/homes/tonyc/swccg/cardlist.htm">Boldface card lore list</A>&nbsp;
-- Bold and lore card types INFORMATION BROKER Dark Side Murttoc Yine Light Side Commander Vanden Willard Jeroen Webb Leia Organa Momaw Nadon R2-D2 (Artoo-Detoo) <BR><SMALL>http://www.isomedia.com/homes/tonyc/swccg/cardlist.htm
-<BR><A HREF="/search.gw?c=web&qbe=33249900&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>77% </SMALL>
-<A HREF="http://starwars.alfaprojekt.cz/english/books.html">CZECH STAR WARS PAGE!</A>&nbsp;
-- CHRONOLOGY OF STAR WARS In May 1991, Star Wars caused a sensation with the Bantam Spectra release of Timothy Zahn's novel Heir to the Empire. For the first time, Lucasfilm Ltd. had authorized new novels that continued the famous story told in George Lucas's three blockbuster motion pictures: Star Wars, The Empire Strikes Back and Return of the Jedi. <BR><SMALL>http://starwars.alfaprojekt.cz/english/books.html
-<BR><A HREF="/search.gw?c=web&qbe=25857225&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>77% </SMALL>
-<A HREF="http://emag.echostation.com/echo3/anatomy.htm">Anatomy of Han Solo</A>&nbsp;
-- ANATOMY OF HAN SOLO (No, it's not what you think) Art: Mark F. Rebel Dawn Author Ann Crispin gets Captain Solo on the couch (so to speak) and finds out what makes him tick. <BR><SMALL>http://emag.echostation.com/echo3/anatomy.htm
-<BR><A HREF="/search.gw?c=web&qbe=13365070&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>77% </SMALL>
-<A HREF="http://www.greatwest.ca/SEE/Issues/1997/970130/op.html">SEE Magazine:Thursday, January 30,1997</A>&nbsp;
-- OPINION BY PETE PACHAL Unless you live in a galaxy far, far away, you must be aware of the forthcoming re-release of sci-fi epic Star Wars. Dubbed Star Wars: Special Edition, the new version boasts added footage and enhanced special effects. <BR><SMALL>http://www.greatwest.ca/SEE/Issues/1997/970130/op.html
-<BR><A HREF="/search.gw?c=web&qbe=40839718&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>77% </SMALL>
-<A HREF="http://www.roughcut.com/star_wars/take/">Take One- Star Wars Special Edition Issue</A>&nbsp;
-- Brand new! Search every Rough Cut article we've ever written about Hollywood. Pick a topic or a star. Our very own Film Punk will make connections from star to star, movie to movie, or just for kicks, from Kevin Bacon to any other actor in the known universe. <BR><SMALL>http://www.roughcut.com/star_wars/take/
-<BR><A HREF="/search.gw?c=web&qbe=29167881&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>77% </SMALL>
-<A HREF="http://www.primenet.com/~btn/faq/ptof.html">Action Figure Times -The Unofficial Star Wars POTF FAQ</A>&nbsp;
-- The Exclusives Strikes Back! This variation FAQ is only as good as YOU make it. I do my observations, reporting and layout. I can't do it all without your help. <BR><SMALL>http://www.primenet.com/~btn/faq/ptof.html
-<BR><A HREF="/search.gw?c=web&qbe=21198969&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>76% </SMALL>
-<A HREF="http://www.amazon.com/exec/obidos/ASIN/060608200X/mikesscificomics">Amazon.com: A Glance: Star Wars : Tales from the Mos Eisley Cantina</A>&nbsp;
-- at a glance Full search: Books or Music Star Wars : Tales from the Mos Eisley Cantina by Kevin J. Anderson (Editor) Turtleback (August 1995) Demco Media; ISBN: 060608200X <BR><SMALL>http://www.amazon.com/exec/obidos/ASIN/060608200X/mikesscifi...
-<BR><A HREF="/search.gw?c=web&qbe=39157368&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>76% </SMALL>
-<A HREF="http://www.stwing.upenn.edu/starwars/films/anh.txt">Untitled</A>&nbsp;
-- STAR WARS Episode IV A NEW HOPE From the JOURNAL OF THE WHILLS by George Lucas Revised Fourth Draft January 15, 1976 LUCASFILM LTD. ---------------------- A long time ago, in a galaxy far, far, away... <BR><SMALL>http://www.stwing.upenn.edu/starwars/films/anh.txt
-<BR><A HREF="/search.gw?c=web&qbe=955369&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>76% </SMALL>
-<A HREF="http://www.ptf.hro.nl/~ruyter/anh.txt">Untitled</A>&nbsp;
-- STAR WARS Episode IV A NEW HOPE From the JOURNAL OF THE WHILLS by George Lucas Revised Fourth Draft January 15, 1976 LUCASFILM LTD. ----------------------------------------- A long time ago, in a galaxy far, far, away... <BR><SMALL>http://www.ptf.hro.nl/~ruyter/anh.txt
-<BR><A HREF="/search.gw?c=web&qbe=21763137&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>76% </SMALL>
-<A HREF="http://www.serve.com/dgil/ANH.htm">Star Wars: A New Hope</A>&nbsp;
-- STAR WARS Episode IV A NEW HOPE From the JOURNAL OF THE WHILLS by George Lucas Revised Fourth Draft January 15, 1976 LUCASFILM LTD. A long time ago, in a galaxy far, far, away... <BR><SMALL>http://www.serve.com/dgil/ANH.htm
-<BR><A HREF="/search.gw?c=web&qbe=31390056&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>76% </SMALL>
-<A HREF="http://home.goslar.netsurf.de/~ralf.froeschke/sw/sw_iv">Untitled</A>&nbsp;
-- "Star Wars IV script" "Star Wars Episode IV: A New Hope - Complete script" STAR WARS Episode IV A NEW HOPE@ From the JOURNAL OF THE WHILLS by George Lucas Revised Fourth Draft January 15, 1976 LUCASFILM LTD. ---------------------- A long time ago, in a galaxy far, far, away... <BR><SMALL>http://home.goslar.netsurf.de/~ralf.froeschke/sw/sw_iv
-<BR><A HREF="/search.gw?c=web&qbe=34406287&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>76% </SMALL>
-<A HREF="http://www.mbnet.fi/~kolttola/ilkka/startext.htm">Untitled</A>&nbsp;
-- Alkuperäinen George Lucaksen kirjoittama Star Warsin käsikirjoitus. STAR WARS episode IV A NEW HOPE A vast sea of stars serves as the backdrop for the main title. <BR><SMALL>http://www.mbnet.fi/~kolttola/ilkka/startext.htm
-<BR><A HREF="/search.gw?c=web&qbe=34666654&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>76% </SMALL>
-<A HREF="http://www.bus.miami.edu/~jdavis/starwars/sw-script.html">Star Wars - A New Hope</A>&nbsp;
-- STAR WARS Episode IV A NEW HOPE From the JOURNAL OF THE WHILLS by George Lucas Revised Fourth Draft January 15, 1976 LUCASFILM LTD. ---------------------- A long time ago, in a galaxy far, far, away... <BR><SMALL>http://www.bus.miami.edu/~jdavis/starwars/sw-script.html
-<BR><A HREF="/search.gw?c=web&qbe=35890127&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>76% </SMALL>
-<A HREF="http://www.endlessworld.com/starwars7.htm">Star Wars Figures</A>&nbsp;
-- NON-SPORT CARDS, COMICS, TOYS &amp; GAMING CARDS WE SHIP WORLD WIDE! &quot;WHERE THE SELECTION IS ENDLESS&quot; STAR WARS ACTION FIGURES 12&quot; FIGURES <BR><SMALL>http://www.endlessworld.com/starwars7.htm
-<BR><A HREF="/search.gw?c=web&qbe=35406581&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>76% </SMALL>
-<A HREF="http://homepages.infoseek.com/~dspr/solo.html">Star Wars Dark Side Phantom Menace Prequel Rumors</A>&nbsp;
-- The official release dates for the prequels: Episode III: May 22, 2005 (Source: Anonymous Lucasfilm Executive) The Mandalorian combat armor is famous the galaxy wide for its toughness and deadly effectiveness even under the most strenuous battle conditions. <BR><SMALL>http://homepages.infoseek.com/~dspr/solo.html
-<BR><A HREF="/search.gw?c=web&qbe=3363383&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>75% </SMALL>
-<A HREF="http://familiar.sph.umich.edu/faq/files/starwars/www/part3">Untitled</A>&nbsp;
-- From: Hanspeter Niederstrasser Newsgroups: rec.arts.sf.starwars.misc,rec.arts.sf.starwars.info,rec.answers,news.answers Subject: [rec.arts.sf.starwars.*] The Complete Star Wars WWW Listing Part 3/4 Followup-To: rec.arts.sf.starwars.misc Date: Wed, 9 Apr 1997 21:11:03 -0400 Organization: Princeton University Lines: 636 Message-ID: NNTP-Posting-Host: tucson-subnet128.princeton.edu Mime-Version:... <BR><SMALL>http://familiar.sph.umich.edu/faq/files/starwars/www/part3
-<BR><A HREF="/search.gw?c=web&qbe=6871873&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>75% </SMALL>
-<A HREF="http://info.eu.net/ftp/documents/faq/starwars/www/part3">Untitled</A>&nbsp;
-- From: Hanspeter Niederstrasser Newsgroups: rec.arts.sf.starwars.misc,rec.arts.sf.starwars.info,rec.answers,news.answers Subject: [rec.arts.sf.starwars.*] The Complete Star Wars WWW Listing Part 3/4 Followup-To: rec.arts.sf.starwars.misc Date: Wed, 9 Apr 1997 21:11:03 -0400 Organization: Princeton University Lines: 636 Approved: news-answers-request@MIT.EDU Message-ID: NNTP-Posting-Host:... <BR><SMALL>http://info.eu.net/ftp/documents/faq/starwars/www/part3
-<BR><A HREF="/search.gw?c=web&qbe=19005471&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>75% </SMALL>
-<A HREF="http://www.endlessworld.com/starwars2.htm">Star Wars Action Figures</A>&nbsp;
-- STAR WARS ACTION FIGURES 12&quot; FIGURES 14&quot; ELECTRONIC DARTH VADER ADMIRAL ACKBAR AT-AT DRIVER BEN KENOBI BOBA FETT CANTINA BAND ALIEN CEREMONIAL LUKE <BR><SMALL>http://www.endlessworld.com/starwars2.htm
-<BR><A HREF="/search.gw?c=web&qbe=30857942&ctag=3664781D&showSummary=true">
+<SMALL>74% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=31313923;http://www.in.tu-clausthal.de/~jbohlen/sounds.htm">Die Star Wars Sound page</A>&nbsp;
+- Alle hier aufgelisteten Sounds sind im Format &gt;WAV, 22 kHz, 8 Bit, Mono&lt; und TM &amp; (C) 1977-1983 Lucasfilm Ltd. (ANH = IV - A New Hope, TESB = V - The Empire Strikes Back, ROTJ = VI - Return of the Jedi) <BR><SMALL>http://www.in.tu-clausthal.de/~jbohlen/sounds.htm
+<BR><A HREF="/search.gw?c=web&qbe=31313923&ctag=374C1064&showSummary=true">
 Search for more documents like this one</A>
 <P></SMALL>
 <SMALL>74% </SMALL>
-<A HREF="http://www.cyberenet.net/~temdee/toytext.txt">Untitled</A>&nbsp;
-- CLASSIFICATION FIGURE PRICE ACCLAIM TOYS Goat Variant $9.95 ACTION PRODUCTS SHUTTLE ASTRONAUT $12.95 ACTION PRODUCTS MERCURY ASTRONAUT $12.95 ACTION PRODUCTS GEMINI ASTRONAUT $12.95 ACTION PRODUCTS APPOLLO ASTRONAUT $12.95 ACTION PRODUCTS SATURN V $12.95 ACTION PRODUCTS SHUTTLE $12.95 ACTION PRODUCTS SHUTTLE ASTRONAUT WITH MMU $18.95 ALIENS ALIEN VS. <BR><SMALL>http://www.cyberenet.net/~temdee/toytext.txt
-<BR><A HREF="/search.gw?c=web&qbe=25534283&ctag=3664781D&showSummary=true">
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=8899907;http://www.canoe.ca/JamStarWars/may20_ostroff.html">Patiently waiting for more</A>&nbsp;
+- Star Wars: In-depth collection of stories, articles and reviews about Star Wars and other Lucasfilm, Lucasart properties. <BR><SMALL>http://www.canoe.ca/JamStarWars/may20_ostroff.html
+<BR><A HREF="/search.gw?c=web&qbe=8899907&ctag=374C1064&showSummary=true">
 Search for more documents like this one</A>
 <P></SMALL>
 <SMALL>74% </SMALL>
-<A HREF="http://www.universal.nl/users/dwijnberg/evolut.htm">Evolution of a space saga by John L. Flynn</A>&nbsp;
-- THE ORIGINS OF STAR WARS: EVOLUTION OF A SPACE SAGA By John L. The Star Wars Trilogy, comprising Episodes four through six "A New Hope," "The Empire Strikes Back" and "Return of the Jedi" (respectively), did not begin as one fully-developed, high-concept pitch but rather evolved over a five-year period through a variety of scripts and story treatments. <BR><SMALL>http://www.universal.nl/users/dwijnberg/evolut.htm
-<BR><A HREF="/search.gw?c=web&qbe=12979338&ctag=3664781D&showSummary=true">
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=24518619;http://www.swdatabase.com/pages/anhbloopers.html">ANH Bloopers</A>&nbsp;
+- Star Wars: A New Hope HERE WE GO AGAIN... This one comes from quegaar@webtv.net.During the scene at docking bay 94 when the stormtroopers arrive and begin to fire on the falcon, notice the trooper that is hit and falls down. <BR><SMALL>http://www.swdatabase.com/pages/anhbloopers.html
+<BR><A HREF="/search.gw?c=web&qbe=24518619&ctag=374C1064&showSummary=true">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>73% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=21454689;http://starwars.alfaprojekt.cz/skript/sw-quote.txt">Untitled</A>&nbsp;
+- A droid's lot in life "Don't you call me a mindless philosopher, you overweight glob of grease!" -C-3PO (ANH) "You'll be malfunctioning within a day, you nearsighted scarp pile!" -C-3PO (ANH) "No, I don't think he likes you at all.... I don't like you either." -C-3PO (ANH) "That little droid and I have been through a lot together." -Luke Skywalker (concerning R2-D2, ANH) "You must repair him! <BR><SMALL>http://starwars.alfaprojekt.cz/skript/sw-quote.txt
+<BR><A HREF="/search.gw?c=web&qbe=21454689&ctag=374C1064&showSummary=true">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>73% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=34221476;http://www.landfield.com/faqs/starwars/www/part3/">[rec.arts.sf.starwars.*] The Complete Star Wars WWW Listing Part 3/4</A>&nbsp;
+- Part1 - Part2 - Part3 - Part4 From: Hanspeter Niederstrasser &lt;nieder@tucson.princeton.edu&gt; Newsgroups: rec.arts.sf.starwars.misc,rec.arts.sf.starwars.info,rec.answers,news.answers Subject: [rec.arts.sf.starwars.*] The Complete Star Wars WWW Listing Part 3/4 Followup-To: rec.arts.sf.starwars.misc Date: Wed, 9 Apr 1997 21:11:03 -0400 Organization: Princeton University Message-ID:... <BR><SMALL>http://www.landfield.com/faqs/starwars/www/part3/
+<BR><A HREF="/search.gw?c=web&qbe=34221476&ctag=374C1064&showSummary=true">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>73% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=24518867;http://www.swdatabase.com/pages/rotjbloopers.html">ROTJ Bloopers</A>&nbsp;
+- Return of the Jedi HEAD THROUGH SHUTTLE?This comes from fredsg@sympatico.ca In ROTJ, when Vader arrives on the moon of Endor, watch closely when he wlaks down the ramp of his shuttle. <BR><SMALL>http://www.swdatabase.com/pages/rotjbloopers.html
+<BR><A HREF="/search.gw?c=web&qbe=24518867&ctag=374C1064&showSummary=true">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>73% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=29996131;http://shop.starwars.com/products/family.gsp/id=297&cat_id=4/index.html">toys, gifts & collectibles: Greedo Cold Cast Bust</A>&nbsp;
+- (C) Lucasfilm Ltd. Terms of Use CATEGORIES: Collectibles and Exclusives Greedo Cold Cast BustLegends in Three Dimension Episode I Trailer is Here! <BR><SMALL>http://shop.starwars.com/products/family.gsp/id=297&cat_id=4...
+<BR><A HREF="/search.gw?c=web&qbe=29996131&ctag=374C1064&showSummary=true">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>73% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=32226451;http://mergetel.com/~dna/part2.htm">part2</A>&nbsp;
+- Image created by Mike (Bounty Hunter) My Collection Part 2 VEHICLES AND PLAYSETS LEGEND : CDN-Canadian package US-United States package DA-Decals applied DNA-Decals not applied O-Orange package G-Green package L-Box not sealed MA-Mail away S.O.T.E.- Shadows of the Empire NP-No package .01,.02,.03-indicates issue number(US only) <BR><SMALL>http://mergetel.com/~dna/part2.htm
+<BR><A HREF="/search.gw?c=web&qbe=32226451&ctag=374C1064&showSummary=true">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>73% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=1110432;http://www.angelfire.com/pq/bodasivrak/swhumor.html">Tons-O-Star Wars Humor</A>&nbsp;
+- Your Jedi robe is a Camouflage color. You have ever used your Light Saber to open a bottle of Boone's Farm Strawberry Hill You can easily describe the taste of an Ewok... without using the word &quot;chicken&quot; A peaceful meditation session is one without gas. <BR><SMALL>http://www.angelfire.com/pq/bodasivrak/swhumor.html
+<BR><A HREF="/search.gw?c=web&qbe=1110432&ctag=374C1064&showSummary=true">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>73% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=13062333;http://www.personal.kent.edu/~nwillis/CoolLinks.html">Beedo's Cool Links</A>&nbsp;
+- BELOW ARE SOME LINKS TO SOME PAGES WHICH BEAR MY OFFICIAL SEAL OF COOLNESS. CLICK ON THE TEXT LINKS TO TRANSPORT YOURSELF TO OTHER WORLDS OF WONDER. <BR><SMALL>http://www.personal.kent.edu/~nwillis/CoolLinks.html
+<BR><A HREF="/search.gw?c=web&qbe=13062333&ctag=374C1064&showSummary=true">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>73% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=1309853;http://pages.whowhere.com/entertainment/joebount/have.html">The Star Channel: SWCCG</A>&nbsp;
+- U can find there my Want / Have list: Vous pouvez trouver ici ma liste d'&eacute;change et ce que je recherche: Han, Han, I need something from you, but you can look at my Have/Want list if you want... <BR><SMALL>http://pages.whowhere.com/entertainment/joebount/have.html
+<BR><A HREF="/search.gw?c=web&qbe=1309853&ctag=374C1064&showSummary=true">
 Search for more documents like this one</A>
 <P></SMALL>
 <SMALL>72% </SMALL>
-<A HREF="http://www.b-movie.com/sideshow/ss3.html">SIDE SHOW 2/3/97</A>&nbsp;
-- B-MOVIE THEATER (http://www.b-movie.com) updates: IT IS DONE... Editing on THE VICIOUS SWEET (http://www.b-movie.com/vsweet.html) is complete... well, not exactly. <BR><SMALL>http://www.b-movie.com/sideshow/ss3.html
-<BR><A HREF="/search.gw?c=web&qbe=26995178&ctag=3664781D&showSummary=true">
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=14162748;http://starwars.hasbro.com/toy/listp.html">Hasbro's Star Wars Toys and Games Page</A>&nbsp;
+- Toys, Games, Puzzles, and Activities ***All release dates listed below are approximate and are subject to change.*** 3 &quot; Basic Figures Wave 1: <BR><SMALL>http://starwars.hasbro.com/toy/listp.html
+<BR><A HREF="/search.gw?c=web&qbe=14162748&ctag=374C1064&showSummary=true">
 Search for more documents like this one</A>
 <P></SMALL>
 <SMALL>72% </SMALL>
-<A HREF="http://www.digiphy.com/swccg/anh_spoiler_dark.html">SW:CCG A NEW HOPE DARK SIDE SPOILER LIST</A>&nbsp;
-- Imperial Locations Death Star R2 Mobile systemParsec: X X=parsec of current position. Must deploy at Parsec 0. Hyperspeed = 1. Immune to Revolution. <BR><SMALL>http://www.digiphy.com/swccg/anh_spoiler_dark.html
-<BR><A HREF="/search.gw?c=web&qbe=18084409&ctag=3664781D&showSummary=true">
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=22239691;http://www.thesitefights.com/team13/contest.htm">The Site Fights Star Wars Trivia Contest</A>&nbsp;
+- Join the fun of the Website Competitions. Check out the different Site Fight Sites; Read the newsletter, visit our games room, enter your home page, vote for the best sites. Fighter of the year competition. <BR><SMALL>http://www.thesitefights.com/team13/contest.htm
+<BR><A HREF="/search.gw?c=web&qbe=22239691&ctag=374C1064&showSummary=true">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>72% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=29165951;http://home.ptd.net/~dbohr/wars.html">SPICE WARS</A>&nbsp;
+- The Empire rules the galaxy with an iron fist. In the span of a few years, the Empire has destroyed the Old Republic and put almost every planet under its control, enslaving races, stealing valuables from rich and poor alike, and stripping all rights from the women of the galaxy. <BR><SMALL>http://home.ptd.net/~dbohr/wars.html
+<BR><A HREF="/search.gw?c=web&qbe=29165951&ctag=374C1064&showSummary=true">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>72% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=13433059;http://www.rebelscum.com/97sep.asp">Rebelscum.com; Star Wars Toy News Archive</A>&nbsp;
+- Rebelscum.com Star Wars toy news archive - September 97. <BR><SMALL>http://www.rebelscum.com/97sep.asp
+<BR><A HREF="/search.gw?c=web&qbe=13433059&ctag=374C1064&showSummary=true">
 Search for more documents like this one</A>
 <P></SMALL>
 <SMALL>71% </SMALL>
-<A HREF="http://www.andstuff.com/Asylum/Figures/list2.html">figures I have</A>&nbsp;
-- These are the 560 unopened figures that I have as of November 7th, 1998. Alien Resurrection (1997-1998) Alien Face Hugger Alien Offspring Alien Warrior Aqua Alien Newborn Alien Ripley <BR><SMALL>http://www.andstuff.com/Asylum/Figures/list2.html
-<BR><A HREF="/search.gw?c=web&qbe=39369852&ctag=3664781D&showSummary=true">
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=29398526;http://silcon.com/~pmcmahon/market/market_all.html">Vaetor's Star Wars: The Customizable Card Game Market: Marketplace: Fu...</A>&nbsp;
+- Vaetor's SW:CCG Market is the place for fans of SW:CCG to meet others interested in trading SW:CCG cards. You can post your have and want lists here and look through others' lists. Hopefully, you can connect with someone and make a trade! <BR><SMALL>http://silcon.com/~pmcmahon/market/market_all.html
+<BR><A HREF="/search.gw?c=web&qbe=29398526&ctag=374C1064&showSummary=true">
 Search for more documents like this one</A>
 <P></SMALL>
 <SMALL>71% </SMALL>
-<A HREF="http://members.xoom.com/Spynal/HTML2.htm">Sounds at Spynal's Star Wars Site</A>&nbsp;
-- This is the Sounds Page of my Star Wars site! You can get A LOT of great sounds here that are very hard to find! <BR><SMALL>http://members.xoom.com/Spynal/HTML2.htm
-<BR><A HREF="/search.gw?c=web&qbe=15354501&ctag=3664781D&showSummary=true">
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=1833972;http://www.entertainmentearth.com/">EntertainmentEarth.com - Your *Very Busy* Collectibles Source</A>&nbsp;
+- Don't waste time searching for Action Figures, Authentic Replicas, Movie Collecitbles and More! We have Hasbro Kenner Star Wars figures, McFarlane Spawn, Monsters and much more in stock now! <BR><SMALL>http://www.entertainmentearth.com/
+<BR><A HREF="/search.gw?c=web&qbe=1833972&ctag=374C1064&showSummary=true">
 Search for more documents like this one</A>
 <P></SMALL>
 <SMALL>70% </SMALL>
-<A HREF="http://www.sci.fi/~enok/starwars/timeline2.htm">StarWars Timeline - X-Wing Squadron Furious</A>&nbsp;
-- StarWars Timeline Part 2, 32 BSW4 to 0 BSW4 32 BSW4 Obi-Wan Kenobi, almost a full Jedi Knight, meets and trains young pilot Anakin Skywalker to become a Jedi Knight with the aid of Master Qui-Gon Jinn, who frees Anakin from slavery on Tatooine. (Sadly, Anakin's mother Shmi is killed in the rescue) Jinn, Kenobi and Skywalker are called into helping save Princess Padme Amidala’s planet, Naboo,... <BR><SMALL>http://www.sci.fi/~enok/starwars/timeline2.htm
-<BR><A HREF="/search.gw?c=web&qbe=34685265&ctag=3664781D&showSummary=true">
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=12161664;http://www.gafm.com/starwars_nip.html">Packaged Star Wars</A>&nbsp;
+- Star Wars Packaged items are unopened unless otherwise noted. Star Wars Episode I Hasbro 1999 Star Wars BendEms JusToys 1983 Obi Wan Kenobi package is worn &amp; bubble has a tear <BR><SMALL>http://www.gafm.com/starwars_nip.html
+<BR><A HREF="/search.gw?c=web&qbe=12161664&ctag=374C1064&showSummary=true">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>70% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=38887367;http://www.hamline.edu/~jstoller/class.html">Star Wars Classifieds</A>&nbsp;
+- If you have a Star Wars home page I would apprecitate it if you made a link to my classifieds. I will make a link to yours on my link page. Due to the high volume of ads being summitted to the Ad page I can no longer guarantee your free ad will appear in a timley manner. <BR><SMALL>http://www.hamline.edu/~jstoller/class.html
+<BR><A HREF="/search.gw?c=web&qbe=38887367&ctag=374C1064&showSummary=true">
 Search for more documents like this one</A>
 <P></SMALL>
 <SMALL>69% </SMALL>
-<A HREF="http://www.sci.fi/~enok/starwars/script4.htm">StarWars a New Hope - X-Wing Squadron Furious</A>&nbsp;
-- STAR WARS Episode IV A NEW HOPE From the JOURNAL OF THE WHILLS by George Lucas Revised Fourth Draft January 15, 1976 LUCASFILM LTD. ---------------------- A long time ago, in a galaxy far, far, away... <BR><SMALL>http://www.sci.fi/~enok/starwars/script4.htm
-<BR><A HREF="/search.gw?c=web&qbe=34473314&ctag=3664781D&showSummary=true">
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=14498453;http://frodo.hiof.no/~deak/blooper/online/txtswb1.txt">Untitled</A>&nbsp;
+- Star Wars Bloopers Compiled by Robert Leithe Version 1.0, last updated on 30. October 1996 INFORMATION ABOUT THIS DOCUMENT People whose work I have based my compilation on I wish to thank, and give credit to, the following people for their admirable work, which without I would never have made my own compilation of Star Wars Bloopers. <BR><SMALL>http://frodo.hiof.no/~deak/blooper/online/txtswb1.txt
+<BR><A HREF="/search.gw?c=web&qbe=14498453&ctag=374C1064&showSummary=true">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>69% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=14930519;http://frodo.hiof.no/~deak/blooper/online/bloop31.txt">Untitled</A>&nbsp;
+- These bloopers have been compiled from various documents, E-mail submissions and the readers of rec. arts.sf.starwars. The main documents used as source are _The Bad Guide to Star Wars_ (copyright Brandon Gillespie -- brandon@cc.usu.edu), the _Journal of the Bloopers_ (copyright Kevin Cox - Juan C. <BR><SMALL>http://frodo.hiof.no/~deak/blooper/online/bloop31.txt
+<BR><A HREF="/search.gw?c=web&qbe=14930519&ctag=374C1064&showSummary=true">
+Search for more documents like this one</A>
+<P></SMALL>
+<SMALL>69% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=9534482;http://www.gamecards.com/lists/starwars/NewHope_Spoiler.html">Star Wars - A New Hope Spoiler List</A>&nbsp;
+- UNOFFICIAL SW:CCG A NEW HOPE DARK SIDE SPOILER LIST TM & (C) 1997 Lucasfilm Ltd. Star Wars and related marks are trademarks of Lucasfilm Ltd. Used under authorization by Decipher Inc. <BR><SMALL>http://www.gamecards.com/lists/starwars/NewHope_Spoiler.html
+<BR><A HREF="/search.gw?c=web&qbe=9534482&ctag=374C1064&showSummary=true">
 Search for more documents like this one</A>
 <P></SMALL>
 <SMALL>68% </SMALL>
-<A HREF="http://www.isd-virulent.de/isb/rebper3.html">Rebel Personalities Database</A>&nbsp;
-- A s leader of the Rebel Alliance, the state- ly Mon Mothma is in control of the reshaping of a galaxy. Unlike other leaders, she has not let her power corrupt her. <BR><SMALL>http://www.isd-virulent.de/isb/rebper3.html
-<BR><A HREF="/search.gw?c=web&qbe=27440208&ctag=3664781D&showSummary=true">
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=551923;http://www.geocities.com/Area51/Vault/6023/index.html">The Mos Eisley Trading Post</A>&nbsp;
+- sentients have visited since it's creation. Quick Index Hi. I'm David Miller, I own this joint. This'll be a place where i've been hooking up Star Wars:CCG traders. <BR><SMALL>http://www.geocities.com/Area51/Vault/6023/index.html
+<BR><A HREF="/search.gw?c=web&qbe=551923&ctag=374C1064&showSummary=true">
 Search for more documents like this one</A>
 <P></SMALL>
 <SMALL>68% </SMALL>
-<A HREF="http://www.decipher.com/starwars/productlibrary/cardlists/anewhope/anhrevspoiler.txt">Untitled</A>&nbsp;
-- Advance Preparation 6 Early warning and careful planning allow the Rebels to achieve maximum readiness while still maintaining optimal flexibility. USED OR LOST INTERRUPT [ANH] USED: Place out of play any one of the following from your hand: Attack Run, You're All Clear Kid, Death Star: Trench or Rebel Tech. <BR><SMALL>http://www.decipher.com/starwars/productlibrary/cardlists/an...
-<BR><A HREF="/search.gw?c=web&qbe=5229271&ctag=3664781D&showSummary=true">
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=17681961;http://www.bus.miami.edu/~jdavis/StarWars/quotes.html">Favorite Quotes</A>&nbsp;
+- Due to extremely (and I do mean extremely) popular demand, I am adding this section where Star Wars fans can add what their favorite quotes from the movie are. <BR><SMALL>http://www.bus.miami.edu/~jdavis/StarWars/quotes.html
+<BR><A HREF="/search.gw?c=web&qbe=17681961&ctag=374C1064&showSummary=true">
 Search for more documents like this one</A>
 <P></SMALL>
-<SMALL>67% </SMALL>
-<A HREF="http://www.jimfisher.net/humor/song00.html">Star Wars Humor Page -- Song Parodies</A>&nbsp;
-- From Trevor Harden Parody of 311's &quot;All Mixed Up&quot; as sung by LUKE (Where Luke's disturbed mind is really revealed) I've got to trust my instincts And do what is right And I'm feared for my life now, cause I'm takin' swords to gunfights Watch-me-know-with-my-blast-shield-down and I say, I come with the Jedi Style that gets me thru Jabba's Door But where were my powers when I fell... <BR><SMALL>http://www.jimfisher.net/humor/song00.html
-<BR><A HREF="/search.gw?c=web&qbe=25543027&ctag=3664781D&showSummary=true">
+<SMALL>68% </SMALL>
+<A HREF="http://search.excite.com/relocate/sr=webresult|ss=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo|id=13011892;http://frodo.hiof.no/~deak/script/online/txtswpub.txt">Untitled</A>&nbsp;
+- STAR WARS !! PUBLIC VERSION !! "A long time ago, in a galaxy far, far away..." A vast sea of stars serves as the backdrop for the main title. War drums echo through the heavens as a rollup slowly crawls into infinity. "It is a period of civil war. <BR><SMALL>http://frodo.hiof.no/~deak/script/online/txtswpub.txt
+<BR><A HREF="/search.gw?c=web&qbe=13011892&ctag=374C1064&showSummary=true">
 Search for more documents like this one</A>
 <P></SMALL>
-<SMALL>66% </SMALL>
-<A HREF="http://www.slashdot.org/articles/98/11/18/0751258_F.shtml">Slashdot:Star Wars Prequel Photos and Trailer Online</A>&nbsp;
-- Star Wars Prequel Photos and Trailer Online Posted by CmdrTaco on Wednesday November 18, @07:51AM from the god-bless-the-net dept. For those of us that live in the vast majority of the world, mpegs of the Star Wars Prequel trailer have appeared all over the place- mirrors are hard to grab, but you can hopefully get it from here, here or from starwars.com. <BR><SMALL>http://www.slashdot.org/articles/98/11/18/0751258_F.shtml
-<BR><A HREF="/search.gw?c=web&qbe=21832305&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>66% </SMALL>
-<A HREF="http://members.tripod.com/~itsallgood_/allgood-2.html">It's All Good</A>&nbsp;
-- The page is temporarily down, but if you click on the banner you will help contribute to getting the domain name we so deserve.. plus it's a great site! <BR><SMALL>http://members.tripod.com/~itsallgood_/allgood-2.html
-<BR><A HREF="/search.gw?c=web&qbe=1000094&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
-<SMALL>65% </SMALL>
-<A HREF="http://www.shavenwookie.com/swlinksmedia.html">Links to The Star Wars Galaxy - Multimedia Links</A>&nbsp;
-- Multimedia Links The Cantina (the-cantina.com) Frosty's Star Wars Page INDEX G Javval's Palace - The Star Wars Universe Links to The Star Wars Galaxy Main Page &#169 Chris Hawkins. <BR><SMALL>http://www.shavenwookie.com/swlinksmedia.html
-<BR><A HREF="/search.gw?c=web&qbe=40119528&ctag=3664781D&showSummary=true">
-Search for more documents like this one</A>
-<P></SMALL>
+</font>
 <FORM ACTION="/search.gw" METHOD=GET>
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 <TR><TD>
@@ -631,35 +556,72 @@ Search for more documents like this one</A>
 <INPUT TYPE=hidden NAME=s VALUE="+Jabba +bounty +hunter +Greedo">
 <INPUT TYPE=hidden NAME=showSummary VALUE=true>
 <INPUT TYPE=hidden NAME=start VALUE=0>
-<INPUT TYPE=hidden NAME=perPage VALUE=84>
+<INPUT TYPE=hidden NAME=perPage VALUE=50>
+<font face="helvetica" size=-1>
 <INPUT TYPE=submit NAME=next VALUE="Next Results">
+</font>
 </TD></TR></TABLE>
 </FORM>
-<small><a href="/relocate/co=webcraw;http://webcrawler.com/cgi-bin/WebQuery?text=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo&src=exciterecip">Try Your Search on WebCrawler</a></small><br>
+<font face="helvetica" size=-1>
+<small>
+See what other people are searching for, try <a href="http://www.excite.com/voyeur_xt">Search Voyeur</a><br>
+For simplified results, try <a href="/relocate/co=webcraw;http://webcrawler.com/cgi-bin/WebQuery?text=%2BJabba+%2Bbounty+%2Bhunter+%2BGreedo&src=exciterecip">Webcrawler Search</a>
+</small><br>
+</font>
 <small><br></small>
+<table border=0 cellspacing=0 cellpadding=0 width=100%><tr>
+<td bgcolor=999999>
+<table border=0 cellspacing=1 cellpadding=0 width=100%>
+<tr bgcolor=ffffcc>
+<td align=center nowrap>
+<font face="helvetica" size=-1><b>
+<a href=#directory>Directory</a>
+</b></font>
+</td>
+<td align=center nowrap>
+<font face="helvetica" size=-1><b>
+<a href=#web>Web Results</a>
+</b></font>
+</td>
+</tr></table>
+</td></tr></table>
 <p>
 <center>
-<a href="/relocate/ad=61443_excite1023_gamemeet1r-468x60.gif|pk=1564959;http://my.excite.com/games/online_games/" onMouseOver="window.status='Click Here !';return true" language="Javascript"><img src="http://image.eimg.com/ads/61443_excite1023_gamemeet1r-468x60.gif" ALT="Click Here !" HEIGHT=60 WIDTH=468 BORDER=1><CENTER><FONT SIZE=-1 FACE=geneva,arial COLOR=0000FF> <B> Click Here ! </B></FONT></CENTER></a>
+<!-- The following html is Copyright 1997 by MatchLogic Inc. -->
+<!-- RICH=0 -->
+<IFRAME WIDTH=468 HEIGHT=60 NORESIZE SCROLLING=No FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 SRC="http://ad.preferences.com/iframe;spacedesc=ATTClick2Dial_Excite_468x60_RunOfSite_Any&ML_SSPKG=RunOfSiteSS&ML_CUSTOM=0&time=1999.06.03.20.34.36&ex_cookie=&ML_TARGET=_top&ML_REDIRECT=http%25253A%25252F%25252Fwww.excite.com%25252Frelocate%25252Fad%25253DLUCI%25257Cpk%25253D2790907%25253B">
+<SCRIPT
+SRC="http://ad.preferences.com/jscript;spacedesc=ATTClick2Dial_Excite_468x60_RunOfSite_Any&ML_SSPKG=RunOfSiteSS&ML_CUSTOM=0&ML_NIF=Y&ML_KW=jabba+bounty+hunter+greedo&time=1999.06.03.20.34.36&ex_cookie=&ML_TARGET=_top&ML_REDIRECT=http%25253A%25252F%25252Fwww.excite.com%25252Frelocate%25252Fad%25253DLUCI%25257Cpk%25253D2790907%25253B">
+</SCRIPT>
+<NOSCRIPT>
+<A HREF="/relocate/ad=94093_htmlad.gif|pk=2790907;http://ad.preferences.com/click;spacedesc=ATTClick2Dial_Excite_468x60_RunOfSite_Any&ML_NIF=Y&time=1999.06.03.20.34.36&ex_cookie=" TARGET=_top>
+<IMG SRC="http://ad.preferences.com/image;spacedesc=ATTClick2Dial_Excite_468x60_RunOfSite_Any&ML_NIF=Y&time=1999.06.03.20.34.36&ex_cookie="></A>
+</NOSCRIPT>
+</IFRAME><CENTER><FONT SIZE=-1 COLOR=#0000FF FACE=arial, geneva><B>Click Here!</B></FONT></CENTER>
+<!-- The above html is Copyright 1997 by MatchLogic Inc. -->
 <small><br></small>
-<TABLE border=0 cellpadding=1 cellspacing=0>
 <FORM NAME=botbox ACTION=/search.gw>
+<TABLE border=0 cellpadding=1 cellspacing=0>
 <TR><TD bgcolor=cccccc>
 <a name="botbox"> </a>
-<TABLE border=0 cellspacing=0 cellpadding=4 width=598 bgcolor=ffffff>
+<TABLE border=0 cellspacing=0 cellpadding=4 width='598' bgcolor=ffffff>
 <TR>
-<TD align=right bgcolor=ffffff>
-<b><font face=arial size=-1>You searched for</font></b>
+<TD align=right bgcolor=ffffff nowrap>
+<b><font face="helvetica" size=-1>You searched for</font></b>
 <input size=30 name=search value="+Jabba +bounty +hunter +Greedo">
 <input type=hidden name=tsug value=-1>
 <input type=hidden name=csug value=0>
 </TD>
 <TD>
+<font face="helvetica" size=-1>
 <input type=submit value="Search Again">
+</font>
 </TD>
 <TD nowrap>
-<font face=arial,helvetica size=-1>
-<b><a href=/relocate/co=help;http://www.excite.com/Info/>Help</a>
+<font face="helvetica" size=-1>
+<b><a href=/relocate/co=help;http://www.excite.com/Info/searching2.html>Help</a>
 &nbsp;<br>
+<a href=http://www.excite.com/search_forms/advanced/>More Search</a>
 </b></font>
 </TD>
 <TD>&nbsp;</TD>
@@ -669,11 +631,12 @@ Search for more documents like this one</A>
 </form>
 <small><br></small>
 <p>
-<font face=geneva,arial size=-1>
+<font face="helvetica" size=-1>
 <nobr><b>More Search Services:</b>&nbsp;
-<A HREF=http://www.excite.com/Info/searching.html>Search
-Help</A> &nbsp; <A HREF=http://www.excite.com/search/options.html>Power Search</A>&nbsp;
-<A HREF=http://nt.excite.com>Search the News</A>&nbsp;
+<A HREF=http://www.excite.com/search_forms/advanced?lang=en&c_type=c_country&c_country=web>Advanced Search</A>&nbsp;
+<A HREF=http://nt.excite.com/>News Search</A>&nbsp;
+<A HREF=http://www.excite.com/search_forms/audio_video_search/>Audio/Video Search</A>&nbsp;
+<A HREF=http://www.excite.com/voyeur_xt>Search Voyeur</A>&nbsp;
 <A HREF=http://www.excite.com/comments/>Feedback</A></nobr><p>
 <nobr><b>Services:</b>&nbsp;
 <A HREF=http://www.excite.com/info/advertising/>Advertise on Excite</A>&nbsp; <A HREF=/relocate/co=xsr_botnav_bookflights;http://city.net/forms/reservations/>Book Flights</A>&nbsp;
@@ -682,10 +645,9 @@ Help</A> &nbsp; <A HREF=http://www.excite.com/search/options.html>Power Search</
 <A HREF=http://www.excite.com/reference/>More...</A></nobr><p>
 </font>
 <font size=-2>
-Copyright 1998 Excite Inc. &nbsp; Powered by <A HREF="http://www.sun.com">Sun Microsystems</A> &nbsp;
+Copyright 1995-1999 Excite Inc. &nbsp; Powered by <A HREF="http://www.sun.com">Sun Microsystems</A> &nbsp;
 <A HREF=http://www.excite.com/info/disclaimer/>Disclaimer</A>
 </font>
 </center>
-<IMG WIDTH=1 HEIGHT=1 SRC="http://media.preferences.com/ping?ML_SD=ExNetPageCount_excite_1x1_RunOfSite_any&DB_AFCR=2C4F-2FD1-5C20&ML_TGMT=1998.12.10.13.26.28&event=Search&group=Search&DB_CUSTID=ExCookie_&DB_DATA=TSST|%2Bjabba+%2Bbounty+%2Bhunter+%2Bgreedo&LEP=">
 </body>
 </html>

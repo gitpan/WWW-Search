@@ -12,7 +12,9 @@
 <font size=-1><b>Search Usenet for postings on:</b>
 </font><br><INPUT NAME=q size=50 maxlength=800 VALUE="+perl +BogusNoSuchWordSpammersAreIdiots">
  <input type=submit name=search value="Search"><br><P><font size=-1>Search - <a href="/cgi-bin/query?pg=aq&what=news&text=yes">Advanced</a> - <a href="/cgi-bin/query?pg=q&text=yes">The Web</a></font><BR></FORM>
-<h3>We apologize, but the server is unavailable. Please try again.</h3>
+<font size=-1><b>AltaVista found no document matching your query. </font></b><P><dl>
+</dl>
+<font size=-2>word count: perl: 319082<BR>Ignored:    BogusNoSuchWordSpammersAreIdiots:<b>0</b><BR></font><P>
 <br>
 <font size=-2 face=arial, helvetica>
 <a href="/cgi-bin/query?text">AltaVista Home</a> | 

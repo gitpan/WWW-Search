@@ -1,9 +1,17 @@
 <!--- Template: imfrslp.hts --->
-<!--- George Prior 10/29/98 --->
-<HTML>
-<HEAD><TITLE>IMF Web Site Search Results</TITLE></HEAD>
+<!--- George Prior 01/27/99 --->
+<!--- George Prior 02/21/99 to fix PDF Bug in URL string --->
+<head>
+<TITLE>IMF Web Site Search Results:  BogusNoSuchWordSpammersAreIdiots</TITLE>
+</head>
 
-<BODY bgcolor="#ffffff">
+<BODY BGCOLOR="#FFFFFF">
+
+
+
+<CENTER>
+
+<!---------------------TOP BANNER START--------------------->
 <!---------------------TOP BANNER START--------------------->
 <CENTER>
 <TABLE CELLSPACING=0 BORDER=0 CELLPADDING=0 WIDTH=590>
@@ -28,15 +36,71 @@
 </TABLE>
 <BR>
 </CENTER>
-<!-----------------------TOP BANNER ENDS---------------------><CENTER>
-<TABLE BORDER=0 WIDTH=90%>
-<TR>
-<TD>
-<CENTER>
-  <FONT SIZE=5><B>IMF Site Search Results</B></FONT>
-  <HR width=30%>
-</CENTER>
+<!-----------------------TOP BANNER ENDS--------------------->
+<!-----------------------TOP BANNER ENDS--------------------->
+&nbsp;<br>
+<!--------------------CONTENT TABLE STARTS------------------->
 
-<center><font size=+1>Sorry, your query produced no results. You can either use the Back button on your browser to edit your search or try a <a href="/external/search/search.htm">new search</a>.</font></center>
-<P>
-</table>
+<TABLE CELLSPACING=0 BORDER=0 CELLPADDING=0>
+
+<TR>
+
+<!------------------------START LEFT COLUMN------------------------> 
+
+<TD WIDTH="100" VALIGN="TOP">
+
+<FONT SIZE=-1> 
+
+<b>Other Search Options</b><p>
+
+<a href="/external/pubind.htm">Search IMF Publications</a><p>
+
+<a href="/external/search/newssrch.htm">Search IMF News</a><p>
+
+<a href="/external/pubs/ft/ar/98/index.htm">Search the Annual Report</a><p>
+
+<a href="/external/pubs/ft/aa/index.htm">Search the Articles of Agreement</a><p>
+
+<a href="/external/pubs/ft/fandd/index.htm">Search Finance & Development</a><p>
+
+<a href="/external/pubs/ft/survey/surveyx.htm">Search IMF Survey</a><p>
+
+<a href="/external/np/loi/mempub.htm">Search Member Country Publications</a><p>
+
+
+</font>
+<!------------------SEARCH_END----------------->
+</TD>
+
+<!-----------------------------SPACER COLUMN----------------------------> 
+<TD WIDTH=4>
+<IMG SRC="/external/gifs/space.gif" WIDTH=4 HEIGHT=4 BORDER=0><BR clear=all>
+</TD>
+
+<!-----------------------------BLUE LINE COLUMN----------------------------> 
+<TD WIDTH=1 BGCOLOR="#004490">
+<IMG SRC="/external/gifs/space.gif" WIDTH=1 HEIGHT=4 BORDER=0>
+</TD>
+
+<!-----------------------------SPACER COLUMN----------------------------> 
+<TD WIDTH=15>
+<IMG SRC="/external/gifs/space.gif" WIDTH=15 HEIGHT=4 BORDER=0><BR clear=all>
+</TD>
+
+<!-------------------------START RIGHT COLUMN---------------------------> 
+<TD VALIGN=TOP WIDTH=470>
+
+<!-------------------------CONTENT RIGHT COLUMN STARTS--------------------------->    
+
+<! ------------------------- Publication TITLE, ETC. ------------------------------------------>
+
+
+
+<center>
+
+<FONT SIZE=5 color="#004490"><B>IMF Site Search Results</B></FONT><p>
+
+<font size=+1>Sorry, your query produced no results. You can either use the Back button on
+your browser to edit your search or try a <a href="/external/search/search.htm">new
+search</a>.</font><P>
+</center>

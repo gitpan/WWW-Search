@@ -38,7 +38,7 @@
 </SELECT></font><br><INPUT NAME=q size=50 maxlength=800 VALUE="+LSAM +BogusNoSuchWordSpammersAreIdiots">
 <br><INPUT TYPE=radio NAME=act VALUE=search CHECKED>search <INPUT TYPE=radio NAME=act VALUE=refine>refine <INPUT TYPE=submit VALUE=Submit><br>
  <P><font size=-1>Search - <a href="/cgi-bin/query?pg=aq&what=web&text=yes">Advanced</a> - <a href="/cgi-bin/query?pg=q&what=news&text=yes">Usenet</a></font><BR></FORM>
-<font size=-1><b>AltaVista found no document matching your query. </font></b><P><font size=-1></font><font size=-2>word count: LSAM: 690<BR>Ignored:    BogusNoSuchWordSpammersAreIdiots:<b>0</b><BR></font><P>
+<font size=-1><b>AltaVista found no document matching your query. </font></b><P><font size=-1></font><font size=-2>word count: LSAM: 893<BR>Ignored:    BogusNoSuchWordSpammersAreIdiots:<b>0</b><BR></font><P>
 <br>
 <font size=-2 face=arial, helvetica>
 <a href="/cgi-bin/query?text">AltaVista Home</a> | 

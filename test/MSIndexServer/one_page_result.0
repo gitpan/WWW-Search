@@ -3,27 +3,1037 @@
 <!--
     /scripts/samples/search/queryhit.htx
 
-    This is the default error page for errors during query execution.
-
-    A registry entry points to this page (where X is the current language):
-
-    \registry\machine\system\currentcontrolset\control\ContentIndex\
-    Language\X\ISAPIDefaultErrorFile
+    This is the formatting page for query results.  This file defines
+    how the result page header, rows, and footer will appear.
 -->
 
 <HEAD>
-    <TITLE>burundi - error.</TITLE>
+    <!-- The title lists the # of documents -->
+
+    
+        <TITLE>burundi - documents 1 to 40</TITLE>
+    
 </HEAD>
 
-<H3>
-    Error "Unspecified error
-" (0x80004005) encountered while processing the query
-    "burundi".
-</H3>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#000066" VLINK="#808080" ALINK="#FF0000" TOPMARGIN=0>
 
-<BR>
+
+
+<!-- Print a header that lists the query and the number of hits -->
+
+
+<!--
+    This table has a link to a new query page, a previous button, and
+    a next page button.  The buttons are only displayed when appropriate.
+-->
+
+<TABLE border=0 WIDTH=80%>
+<tr><td colspan="2">
+ 
+        Documents 1 to 40 of
+        
+            the best
+        
+        300 <!--matching the query
+        "burundi"-->.
+    
+</td></tr>
+    <!--
+         Query.htm set HTMLQueryForm as the name of the page to return to
+         for a new query.
+    -->
+
+
+
+    <!-- Define a "previous" button if this isn't the first page -->
+
+    
+
+    <!-- Define a "next" button if this isn't the last page -->
+
+    
+        <TD ALIGN=RIGHT>
+            <FORM ACTION="/scripts/samples/search/queryhit.idq" METHOD="GET">
+                <INPUT TYPE="HIDDEN"
+                    NAME="CiBookMark" VALUE="N-26ab5c0-237-1" >
+                <INPUT TYPE="HIDDEN"
+                    NAME="CiBookmarkSkipCount" VALUE="40" >
+                <INPUT TYPE="HIDDEN"
+                    NAME="CiMaxRecordsInResultSet" VALUE="300" >
+                <INPUT TYPE="HIDDEN"
+                    NAME="CiRestriction" VALUE="burundi" >
+                <INPUT TYPE="HIDDEN"
+                    NAME="CiMaxRecordsPerPage" VALUE="40" >
+                <INPUT TYPE="HIDDEN"
+                    NAME="CiScope" VALUE="/" >
+                <INPUT TYPE="HIDDEN"
+                    NAME="TemplateName" VALUE="queryhit" >
+                <INPUT TYPE="HIDDEN"
+                    NAME="CiSort" VALUE="rank[d]" >
+                <INPUT TYPE="HIDDEN"
+                    NAME="HTMLQueryForm" VALUE="/search/queryhit.htm" >
+                <INPUT TYPE="SUBMIT"
+                    VALUE="Next 40 documents">
+            </FORM>
+        </TD>
+    
+</TABLE>
+
+<HR>
+
+<!--
+    The begindetail/enddetail section describes how each row of output
+    is be formatted.  The sample below prints:
+
+        - record number
+        - document title (if one exists) or virtual path of the file
+        - the abstract for the file
+        - the url for the file
+        - the file's size and last write time
+        - an HREF to the file for the hit highlighter.
+          The parameters the hit highlighter include the CiQueryFile and
+          CiTemplateFile. The CiQueryFile is not really needed as long as
+          you don't have any custom properties. However, if you add custom
+          properties, make sure the .idq file you use for queries is same
+          as the one specified for CiQueryFile. The CiTemplateFile is used
+          by webhits to format the output text.
+-->
+
+
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       1.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/giews/english/basedocs/bdi/bdilinke.stm">FAO/GIEWS - Other Information Sources on Burundi</a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>Eastern Africa, Food, Agriculture, Weather, Crops, Cereals, Imports, Exports, Markets, Early Warning, Africa,. Other Information Sources on Burundi. Water Resources AQUASTAT). Fisheries. Forestry. Livestock. Other FAO Links. Other Links. FAO Domestic Animal Diversity Information System (DAD-IS) - Burundi. </td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/giews/english/basedocs/bdi/bdilinke.stm">http://www.fao.org/giews/english/basedocs/bdi/bdilinke.stm</a>  <font size=-1> - size 3,465 bytes - 5/26/98 8:51:12 AM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       2.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/wfs/final/rep2/burundi.htm">BURUNDI</a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>LA REPUBLIQUE DU BURUNDI. Son Excellence Monsieur Pascal Firmin Ndimira, Premier Ministre de la R&eacute;publique du Burundi. Au nom du Gouvernement du Burundi, en mon nom propre, nous voudrions saisir l'occasion qui nous est offerte de nous adresser &agrave; cette auguste assembl&eacute;e pour d'abord r&eacute;it&eacute;rer au Directeur g&eacute;n&eacute;ral de la </td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/wfs/final/rep2/burundi.htm">http://www.fao.org/wfs/final/rep2/burundi.htm</a>  <font size=-1> - size 14,095 bytes - 11/26/97 5:04:26 PM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       3.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/waicent/ois/press%5Fne/pressspa/h43f.htm">FAO Press Releases (Spanish)</a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>PR 96/58 - EQUIPO FAO VIAJA URGENTEMENTE A RWANDA. PR 96/58 UN EQUIPO DE LA FAO VIAJA URGENTEMENTE A RWANDA PARA OFRECER AYUDA AGRICOLA DE EMERGENCIA A LOS REFUGIADOS Roma, 22 de noviembre. Este fin de semana llegar&aacute; a Rwanda un equipo de expertos de la Organizaci&oacute;n de las Naciones Unidas para la Agr</td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/waicent/ois/press%5Fne/pressspa/h43f.htm">http://www.fao.org/waicent/ois/press_ne/pressspa/h43f.htm</a>  <font size=-1> - size 4,275 bytes - 2/3/97 4:28:50 PM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       4.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/waicent/ois/press%5Fne/pressfre/prfr9658.htm">FAO Press Releases (French)</a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>PR 96/58 - MISSION D'URGENCE DE LA FAO AU RWANDA. PR 96/58 MISSION D'URGENCE DE LA FAO AU RWANDA Rome, 22 novembre 1996. Une mission d'experts de l'Organisation des Nations unies pour l'alimentation et l'agriculture (FAO) se rendra au Rwanda en fin de semaine pour contribuer sur place &agrave; la coordinat</td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/waicent/ois/press%5Fne/pressfre/prfr9658.htm">http://www.fao.org/waicent/ois/press_ne/pressfre/prfr9658.htm</a>  <font size=-1> - size 4,488 bytes - 2/3/97 4:10:04 PM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       5.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/waicent/ois/press%5Fne/presseng/pren9658.htm"> PR 96/58 - FAO TEAM FLIES TO RWANDA TO GIVE EMERGENCY  ASSISTANCE </a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>PR 96/58 - FAO TEAM FLIES TO RWANDA TO GIVE EMERGENCY ASSISTANCE. PR 96/58 FAO TEAM FLIES TO RWANDA TO PROVIDE EMERGENCY AGRICULTURAL ASSISTANCE FOR REFUGEES RETURNING FROM ZAIRE Rome, November 22 - An advance team of experts from the UN Food and Agriculture Organization (FAO) will arrive in Rwanda this weekend to </td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/waicent/ois/press%5Fne/presseng/pren9658.htm">http://www.fao.org/waicent/ois/press_ne/presseng/pren9658.htm</a>  <font size=-1> - size 3,929 bytes - 2/4/97 10:24:46 AM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       6.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/docrep/w6974t/w6974t05.htm"> Partnership in action Innovative use of TCDC experts in crop and food supply  assessment missions </a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>UTILISATION NOVATRICE D'EXPERTS CTPD DANS LA MISSION D'&Eacute;VALUATION DES R&Eacute;COLTES ET DES DISPONIBILIT&Eacute;S ALIMENTAIRESTrois missions ont d&eacute;montr&eacute; que le programme concernant l'utilisation d'experts pour la CTPD/CTPT &eacute;tait adapt&eacute; aux nouvelles possibilit&eacute;s et aux d&eacute;fis actuels. Une mission conjointe FAO/PAM d'&eacute;valuati</td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/docrep/w6974t/w6974t05.htm">http://www.fao.org/docrep/w6974t/w6974t05.htm</a>  <font size=-1> - size 9,641 bytes - 10/23/98 5:12:43 PM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       7.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/docrep/w6974t/w6974t05.htm"> Partnership in action Innovative use of TCDC experts in crop and food supply  assessment missions </a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>UTILISATION NOVATRICE D'EXPERTS CTPD DANS LA MISSION D'&Eacute;VALUATION DES R&Eacute;COLTES ET DES DISPONIBILIT&Eacute;S ALIMENTAIRESTrois missions ont d&eacute;montr&eacute; que le programme concernant l'utilisation d'experts pour la CTPD/CTPT &eacute;tait adapt&eacute; aux nouvelles possibilit&eacute;s et aux d&eacute;fis actuels. Une mission conjointe FAO/PAM d'&eacute;valuati</td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/docrep/w6974t/w6974t05.htm">http://www.fao.org/docrep/w6974t/w6974t05.htm</a>  <font size=-1> - size 9,641 bytes - 10/23/98 5:12:56 PM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       8.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/news/1996/961202%2De.htm">FAO Media Brief: Crisis in the Great Lakes region and    eastern Zaire</a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>FAO Media Brief The crisis in the Great Lakes region and eastern Zaire The affected communities and populations Armed conflict in Rwanda, Burundi and eastern Zaire has led to extensive suffering among local and refugee populations in the Great Lakes region. The majority of whom are of rural origin. </td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/news/1996/961202%2De.htm">http://www.fao.org/news/1996/961202-e.htm</a>  <font size=-1> - size 15,221 bytes - 7/15/97 8:26:22 AM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       9.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/tc/tco/bdi99.htm">FAO Special Relief Operations Service (TCOR)&nbsp;| Appeal |&nbsp;Burundi</a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>Special Relief Operations Service T C O R. BURUNDI UN Consolidated Inter-Agency Appeal FAO Agricultural Relief Component FAO Agricultural Relief Component: Project Proposals No.1:Support to coordination of emergency agricultural assistance. US$350,000) No.2:. Emergency supply of agricultural inputs. </td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/tc/tco/bdi99.htm">http://www.fao.org/tc/tco/bdi99.htm</a>  <font size=-1> - size 8,367 bytes - 5/6/99 9:27:58 AM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       10.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/ag/agl/aglw/aquastat/burundi.htm">BURUNDI </a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>BURUNDI. Version: Octobre 95. DONNEES PHYSIQUES ET POPULATION Le Burundi, petit pays enclav&eacute; dans l'est de l'Afrique centrale, au bord du lac Tanganyika, a une superficie totale de 27 834 km2. La superficie cultivable est &eacute;valu&eacute;e &agrave; 1,4 million d'hectares, soit 50% de la superficie totale du pays. La supe</td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/ag/agl/aglw/aquastat/burundi.htm">http://www.fao.org/ag/agl/aglw/aquastat/burundi.htm</a>  <font size=-1> - size 7,290 bytes - 5/30/97 2:59:34 PM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       11.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/nouvelle/1996/961202%2Df.htm">La crise dans la r&eacute;gion des Grands Lacs et dans l&acute;est du Za&iuml;re</a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>Dossier de presse FAO La crise dans la r&eacute;gion des Grands Lacs et dans l&acute;est du Za&iuml;re Les communaut&eacute;s et les populations touch&eacute;es Le conflit arm&eacute; au Rwanda, au Burundi et dans l'est du Za&iuml;re a inflig&eacute; des souffrances consid&eacute;rables aux populations locales et aux r&eacute;fugi&eacute;s de la r&eacute;gion des Grands Lacs, </td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/nouvelle/1996/961202%2Df.htm">http://www.fao.org/nouvelle/1996/961202-f.htm</a>  <font size=-1> - size 17,591 bytes - 7/15/97 8:59:46 AM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       12.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/noticias/global/gw9809%2Ds.htm">Burundi: los campesinos regresan a sus tierras, pero la    escasez de insumos y el mal tiempo reducen las cosechas</a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>Burundi: los campesinos regresan a sus tierras, pero la escasez de insumos y el mal tiempo reducen las cosechas. Burundi: los campesinos regresan a sus tierras, pero la escasez de insumos y el mal tiempo reducen las cosechasegresan a sus tierras, pero la escasez de insumos y el mal tiempo reducen las cosechas</td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/noticias/global/gw9809%2Ds.htm">http://www.fao.org/noticias/global/gw9809-s.htm</a>  <font size=-1> - size 7,289 bytes - 4/8/98 10:20:10 AM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       13.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/noticias/1996/961202%2Ds.htm">La crisis de la regi&oacute;n de los Grandes Lagos y del oriente de Zaire</a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>S&iacute;ntesis de prensa de la FAO La crisis de la regi&oacute;n de los Grandes Lagos y del este de Zaire Las comunidades y las poblaciones afectadas El conflicto armado en Rwanda, Burundi y el oriente de Zaire ha producido mucho sufrimiento entre la poblaci&oacute;n local y los refugiados de la regi&oacute;n de los Grandes L</td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/noticias/1996/961202%2Ds.htm">http://www.fao.org/noticias/1996/961202-s.htm</a>  <font size=-1> - size 14,549 bytes - 7/15/97 8:33:26 AM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       14.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/news/global/gw9809%2De.htm">Burundi: farmers return to their fields, but shortage of    inputs and adverse weather cut yields    </a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>Burundi: farmers return to their fields, but shortage of inputs and adverse weather cut yields. An FAO/WFP Crop and Food Supply Assessment Mission to the East African country of Burundi in February 1998 has found that an increase in production as a result of farmers returning to their fields has</td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/news/global/gw9809%2De.htm">http://www.fao.org/news/global/gw9809-e.htm</a>  <font size=-1> - size 6,336 bytes - 4/3/98 10:37:34 AM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       15.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/news/1999/990103%2De.htm">FAO coordinates agricultural relief network in Burundi</a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>FAO coordinates agricultural relief network in Burundi. Burundi can be considered a textbook case supporting strong arguments in favour of setting up a central coordination unit for emergency operations in the agricultural sector, according to Daniele Donati, FAO coordinator of agricultural relief operati</td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/news/1999/990103%2De.htm">http://www.fao.org/news/1999/990103-e.htm</a>  <font size=-1> - size 12,809 bytes - 1/23/99 1:13:34 PM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       16.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/giews/french/liens/bdif.htm">FAO/SMIAR - Cultures et P&eacute;nuries alimentaires 02/99 - BURUNDI* (5 f&eacute;vrier) </a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>FAO/SMIAR - Cultures et P&eacute;nuries alimentaires 02/99 - BURUNDI* (5 f&eacute;vrier). BURUNDI* (5 f&eacute;vrier). La r&eacute;colte des cultures de la campagne A de 1999 s’est achev&eacute;e et l’on pr&eacute;voit une production r&eacute;duite, du fait des pr&eacute;cipitations tardives et insuffisantes au cours de la p&eacute;riode de v&eacute;g&eacute;tation. Une &eacute;v</td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/giews/french/liens/bdif.htm">http://www.fao.org/giews/french/liens/bdif.htm</a>  <font size=-1> - size 1,896 bytes - 4/16/99 2:07:32 PM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       17.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/giews/french/cp/cp9901/pays/bdi9901f.htm">FAO/SMIAR - Cultures et P&eacute;nuries alimentaires 02/99 - BURUNDI* (5 f&eacute;vrier) </a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>FAO/SMIAR - Cultures et P&eacute;nuries alimentaires 02/99 - BURUNDI* (5 f&eacute;vrier). BURUNDI* (5 f&eacute;vrier). La r&eacute;colte des cultures de la campagne A de 1999 s’est achev&eacute;e et l’on pr&eacute;voit une production r&eacute;duite, du fait des pr&eacute;cipitations tardives et insuffisantes au cours de la p&eacute;riode de v&eacute;g&eacute;tation. Une &eacute;v</td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/giews/french/cp/cp9901/pays/bdi9901f.htm">http://www.fao.org/giews/french/cp/cp9901/pays/bdi9901f.htm</a>  <font size=-1> - size 1,870 bytes - 4/16/99 1:17:14 PM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       18.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/giews/french/cp/cp9602/pays/bdi9602f.htm">BURUNDI* (16 f&eacute;vrier)  (UNF)</a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>BURUNDI* (16 f&eacute;vrier). Selon une mission FAO/PAM d'&eacute;valuation des cultures et des approvisionnements alimentaires qui s'est rendue au Burundi du 23 janvier au 3 f&eacute;vrier 1996, la production de la campagne A de 1996 a &eacute;t&eacute; de 15 pour cent inf&eacute;rieure &agrave; la normale &agrave; cause de l'ins&eacute;curit&eacute; qui persiste d</td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/giews/french/cp/cp9602/pays/bdi9602f.htm">http://www.fao.org/giews/french/cp/cp9602/pays/bdi9602f.htm</a>  <font size=-1> - size 3,687 bytes - 4/27/99 3:30:34 PM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       19.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/giews/english/fs/fs9902/pays/bdi9902e.htm">FAO/GIEWS - Foodcrops &amp; Shortages 02/99 - BURUNDI* (5 February) </a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>FAO/GIEWS - Foodcrops &amp; Shortages 02/99 - BURUNDI* (5 February). BURUNDI* (5 February). Harvesting of the 1999 A season crops has been completed and a reduced output is estimated, reflecting late and insufficient rains during the growing season. An FAO/WFP/Government of Burundi crop assessment in the second half</td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/giews/english/fs/fs9902/pays/bdi9902e.htm">http://www.fao.org/giews/english/fs/fs9902/pays/bdi9902e.htm</a>  <font size=-1> - size 1,580 bytes - 3/4/99 3:15:54 PM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       20.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/giews/english/fs/fs9809/pays/bdi9809e.htm">FAO/GIEWS - Foodcrops &amp; Shortages 09/98 - BURUNDI* (3 September) </a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>FAO/GIEWS - Foodcrops &amp; Shortages 09/98 - BURUNDI* (3 September). BURUNDI* (3 September). A recent FAO Crop and Food Supply Assessment Mission to Burundi estimated the 1998 B season food production at about 1.85 million tonnes, an increase of 4 percent on last year’s season B. Cereals suffered a 1 percent decline,</td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/giews/english/fs/fs9809/pays/bdi9809e.htm">http://www.fao.org/giews/english/fs/fs9809/pays/bdi9809e.htm</a>  <font size=-1> - size 1,853 bytes - 9/28/98 4:25:32 PM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       21.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/ag/agl/aglw/projects/nile/countr%7E1/bur.htm">Burundi Focal Point Institution of GCP/RAF/286/ITA</a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>The Nile Basin Water Resources Project in&nbsp;. Burundi&nbsp;. The Nile Basin Water Resources Project (GCP/RAF/286/ITA) is working in eight countries of the Nile Basin. The activities in Burundi are carried out through: Focal Point Institution: Ministere de L'Amenagement du Territoire et de L'Environnement;&nbsp; Ins</td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/ag/agl/aglw/projects/nile/countr%7E1/bur.htm">http://www.fao.org/ag/agl/aglw/projects/nile/countr~1/bur.htm</a>  <font size=-1> - size 1,844 bytes - 5/11/98 9:17:32 AM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       22.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/news/1997/970101%2De.htm">Rwandan returnees put strain on frail food economy</a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>Rwandan returnees put strain on frail food economy; strife and sanctions threaten nutrition in Burundi. ain on frail food economy; strife and sanctions threaten nutrition in BurundiHundreds of thousands of people who returned to Rwanda at the end of last year face the prospect of going hungry in the month</td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/news/1997/970101%2De.htm">http://www.fao.org/news/1997/970101-e.htm</a>  <font size=-1> - size 6,280 bytes - 9/2/97 8:01:40 AM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       23.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/waicent/ois/press%5Fne/presseng/1999/pren9923.htm">FAO Press Release 99/23</a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>FAO SPECIAL REPORT FORECASTS CONTINUED IMPROVEMENT IN FOOD OUTLOOK FOR MUCH OF SUB-SAHARAN AFRICA, BUT WARNS WAR AND CIVIL STRIFE THREATEN AGRICULTURAL PRODUCTION IN ANGOLA, SOMALIA, THE GREAT LAKES REGION, ETHIOPIA, ERITREA, SIERRA LEONE AND GUINEA BISSAU. Back to archive. Press Release 99/23. </td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/waicent/ois/press%5Fne/presseng/1999/pren9923.htm">http://www.fao.org/waicent/ois/press_ne/presseng/1999/pren9923.htm</a>  <font size=-1> - size 11,993 bytes - 4/21/99 1:50:48 PM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       24.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/noticias/1999/990103%2Ds.htm">La FAO coordina la red de socorro agr&iacute;cola en Burundi</a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>La FAO coordina la red de socorro agr&iacute;cola en Burundi. La falta de cooperaci&oacute;n obstaculiza las actividades de socorro. La FAO se convierte en dirigente natural del sector agr&iacute;cola, pero todos tienen su funci&oacute;n. Se dan raciones de alimentos antes que los suministros de semillas. Burundi puede considerars</td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/noticias/1999/990103%2Ds.htm">http://www.fao.org/noticias/1999/990103-s.htm</a>  <font size=-1> - size 14,447 bytes - 2/8/99 9:08:08 AM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       25.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/waicent/ois/press%5Fne/pressspa/1999/prsp9923.htm">Comunicados de prensa de la FAO 99/23</a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>BUENAS PERSPECTIVAS ALIMENTARIAS EN AFRICA SUBSHARIANA MIENTRAS GUERRA Y CONFLICTOS CIVILES AMENAZAN A LA PRODUCCION AGRICOLA EN OTRAS REGIONES DEL CONTINENTE. Archivo 1999. Comunicados de prensa 99/23. NTARIAS EN AFRICA SUBSHARIANA MIENTRAS GUERRA Y CONFLICTOS CIVILES AMENAZAN A LA PRODUCCION AGRICOLA</td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/waicent/ois/press%5Fne/pressspa/1999/prsp9923.htm">http://www.fao.org/waicent/ois/press_ne/pressspa/1999/prsp9923.htm</a>  <font size=-1> - size 12,508 bytes - 4/21/99 3:05:52 PM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       26.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/tc/tco/1996.htm">Special Relief Operations Service - 1996</a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>Humanitarian Emergency Assistance. created on 16 May 1997-. 1996 Projects Profile. by Region. Coordinators. In 1996, FAO’s Special Relief Operations Service/TCOR operated 57. new. projects. in 31 countries:. Afghanistan. Albania. Azerbaijan. Bangladesh. Benin. Bosnia and Herzegovina. Burundi. St Kitts and Nevis. </td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/tc/tco/1996.htm">http://www.fao.org/tc/tco/1996.htm</a>  <font size=-1> - size 5,476 bytes - 4/28/99 2:22:02 PM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       27.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/tc/tco/bdi99n02.htm">FAO Special Relief Operations Service (TCOR)&nbsp;| Appeal |&nbsp;Burundi</a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>Special Relief Operations Service T C O R. BURUNDI UN Consolidated Inter-Agency Appeal. FAO Agricultural Relief Component. Project proposal No. 2 Emergency Supply of Agricultural Inputs Project number BDI-99-1/N02 Objectives To supply minimum essential agricultural inputs to returProject Proposals No.1:. </td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/tc/tco/bdi99n02.htm">http://www.fao.org/tc/tco/bdi99n02.htm</a>  <font size=-1> - size 11,172 bytes - 5/6/99 9:18:28 AM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       28.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/tc/tco/bdi99n03.htm">FAO Special Relief Operations Service (TCOR)&nbsp;| Appeal |&nbsp;Burundi</a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>Special Relief Operations Service T C O R. BURUNDI UN Consolidated Inter-Agency Appeal. FAO Agricultural Relief Component. Project proposal No. 3 Emergency Multiplication of Bean and Potato Seeds Project number BDI-99-1/N03 Objectives To re-launch seed multiplication programmes foProject Proposals No.1:. </td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/tc/tco/bdi99n03.htm">http://www.fao.org/tc/tco/bdi99n03.htm</a>  <font size=-1> - size 11,970 bytes - 5/6/99 9:20:54 AM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       29.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/tc/tco/bdi99n04.htm">FAO Special Relief Operations Service (TCOR)&nbsp;| Appeal |&nbsp;Burundi</a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>Special Relief Operations Service T C O R. BURUNDI UN Consolidated Inter-Agency Appeal. FAO Agricultural Relief Component. Project proposal No. 4 Emergency Integrated Nutrition and Agriculture Intervention Project number BDI-99-1/N04 Objectives To improve the food and nutrition siProject Proposals No.1:. </td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/tc/tco/bdi99n04.htm">http://www.fao.org/tc/tco/bdi99n04.htm</a>  <font size=-1> - size 11,953 bytes - 5/6/99 9:06:40 AM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       30.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/tc/tco/bdi99n05.htm">FAO Special Relief Operations Service (TCOR)&nbsp;| Appeal |&nbsp;Burundi</a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>Special Relief Operations Service T C O R. BURUNDI UN Consolidated Inter-Agency Appeal. FAO Agricultural Relief Component. Project proposal No. 5 Emergency Assistance to Protect Cattle from Contagious Bovine Pleuro-Pneumonia Project number BDI-99-1/N05 Objectives To supply vaccineProject Proposals No.1:. </td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/tc/tco/bdi99n05.htm">http://www.fao.org/tc/tco/bdi99n05.htm</a>  <font size=-1> - size 11,836 bytes - 5/6/99 9:21:44 AM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       31.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/tc/tco/bdi99n06.htm">FAO Special Relief Operations Service (TCOR)&nbsp;| Appeal |&nbsp;Burundi</a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>Special Relief Operations Service T C O R. BURUNDI UN Consolidated Inter-Agency Appeal. FAO Agricultural Relief Component. Project proposal No. 6 Emergency Environmental Protection Project number BDI-99-1/N06 Objectives To support the Government’s efforts to restore environmentalProject Proposals No.1:. </td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/tc/tco/bdi99n06.htm">http://www.fao.org/tc/tco/bdi99n06.htm</a>  <font size=-1> - size 11,575 bytes - 5/6/99 9:31:50 AM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       32.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/nouvelle/1999/990103%2Df.htm">La FAO coordonne un r&eacute;seau de secours agricoles au Burundi</a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>La FAO coordonne un r&eacute;seau de secours agricoles au Burundi. Le manque de coop&eacute;ration ralentit les op&eacute;rations de secours. La FAO est l'organisme pilote, mais chacun a un r&ocirc;le &agrave; jouer. Rations alimentaires d'abord, graines ensuite. Cliquez sur la carte pour voir le graphique en format pdf. Des organisations non gou</td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/nouvelle/1999/990103%2Df.htm">http://www.fao.org/nouvelle/1999/990103-f.htm</a>  <font size=-1> - size 15,889 bytes - 2/1/99 4:37:22 PM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       33.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/giews/french/cp/cp9811/pays/bdi9811f.htm">FAO/SMIAR - Cultures et P&eacute;nuries alimentaires 11/98 - BURUNDI* (25 novembre) </a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>FAO/SMIAR - Cultures et P&eacute;nuries alimentaires 11/98 - BURUNDI* (25 novembre). BURUNDI* (25 novembre). Le regain de violence en septembre et octobre a d&eacute;t&eacute;rior&eacute; les conditions de s&eacute;curit&eacute; du pays, ce qui va probablement interrompre les travaux agricoles dans quelques r&eacute;gions. La r&eacute;colte des cultures vi</td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/giews/french/cp/cp9811/pays/bdi9811f.htm">http://www.fao.org/giews/french/cp/cp9811/pays/bdi9811f.htm</a>  <font size=-1> - size 1,471 bytes - 1/28/99 2:06:12 PM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       34.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/giews/french/cp/cp9809/pays/bdi9809f.htm">FAO/SMIAR - Cultures et P&eacute;nuries alimentaires 09/98 - BURUNDI* (3 septembre) </a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>FAO/SMIAR - Cultures et P&eacute;nuries alimentaires 09/98 - BURUNDI* (3 septembre). BURUNDI* (3 septembre). Une mission FAO d’&eacute;valuation des r&eacute;coltes et des disponibilit&eacute;s alimentaires, effectu&eacute;e r&eacute;cemment dans le pays, a estim&eacute; que le volume de la production vivri&egrave;re de la campagne B de 1998 serait d’envir</td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/giews/french/cp/cp9809/pays/bdi9809f.htm">http://www.fao.org/giews/french/cp/cp9809/pays/bdi9809f.htm</a>  <font size=-1> - size 2,268 bytes - 11/6/98 2:37:16 PM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       35.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/giews/french/cp/cp9806/pays/bdi9806f.htm">FAO/SMIAR - Cultures et P&eacute;nuries alimentaires 06/98 - BURUNDI* (5 juin) </a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>FAO/SMIAR - Cultures et P&eacute;nuries alimentaires 06/98 - BURUNDI* (5 juin). BURUNDI* (5 juin). Gr&acirc;ce aux pluies abondantes des deux premi&egrave;res d&eacute;cades de mai, les conditions favorables se maintiennent pour la production agricole de la seconde campagne de 1998, dont la r&eacute;colte d&eacute;butera en juin. Les conditions m&eacute;t&eacute;orologi</td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/giews/french/cp/cp9806/pays/bdi9806f.htm">http://www.fao.org/giews/french/cp/cp9806/pays/bdi9806f.htm</a>  <font size=-1> - size 2,032 bytes - 7/22/98 12:24:10 PM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       36.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/giews/french/cp/cp9703/pays/bdi9703f.htm">&quot;BDI&quot;&gt;BURUNDI* (9 mars) </a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>BURUNDI* (9 mars). D'apr&egrave;s les indications, les conditions de s&eacute;curit&eacute; se sont am&eacute;lior&eacute;es en f&eacute;vrier dans plusieurs r&eacute;gions du pays, y compris dans les zones septentrionales de Bubanza et de Cibitoke, m&ecirc;me si les troubles civils se poursuivent. Les semis des cultures vivri&egrave;res de la deuxi&egrave;me campagne 1997 B &agrave; r&eacute;colter</td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/giews/french/cp/cp9703/pays/bdi9703f.htm">http://www.fao.org/giews/french/cp/cp9703/pays/bdi9703f.htm</a>  <font size=-1> - size 4,301 bytes - 4/28/99 9:32:28 AM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       37.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/giews/french/cp/cp9701/pays/bdi9701f.htm">BURUNDI* (6 janvier)  (UNF)</a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>BURUNDI* (6 janvier). L'ins&eacute;curit&eacute; persiste dans le pays, et l'on fait &eacute;tat d'une reprise des combats dans la partie septentrionale de la r&eacute;gion de Cibitoke fin d&eacute;cembre, mais &eacute;galement dans le sud de la r&eacute;gion rurale de Bujumbura et dans la r&eacute;gion de Kayanza. Du fait de la reprise des combats, p</td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/giews/french/cp/cp9701/pays/bdi9701f.htm">http://www.fao.org/giews/french/cp/cp9701/pays/bdi9701f.htm</a>  <font size=-1> - size 5,080 bytes - 4/28/99 9:14:20 AM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       38.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/giews/french/cp/cp9611/pays/bdi9611f.htm">BURUNDI* (18 octobre)  (UNF)</a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>BURUNDI* (18 octobre). La mission FAO d'&eacute;valuation des r&eacute;coltes et des disponibilit&eacute;s alimentaires qui s'est rendue au Burundi du 6 au 17 octobre 1996, a estim&eacute; la production de cultures vivri&egrave;res de la campagne secondaire 1996 &agrave; environ 1,634 million de tonnes, soit 2 pour cent de moins que l'an </td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/giews/french/cp/cp9611/pays/bdi9611f.htm">http://www.fao.org/giews/french/cp/cp9611/pays/bdi9611f.htm</a>  <font size=-1> - size 4,747 bytes - 4/28/99 8:28:28 AM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       39.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/giews/english/liens/bdie.htm">FAO/GIEWS - Foodcrops &amp; Shortages 04/99 - BURUNDI* (1 April) </a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>FAO/GIEWS - Foodcrops &amp; Shortages 04/99 - BURUNDI* (1 April). BURUNDI* (1 April). Normal to above normal rains during the past two months favoured planting and establishment of 1999 second season foodcrops. Until March FAO has distributed 2 874 tonnes of bean seeds to 243 000 most affected households. Pros</td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/giews/english/liens/bdie.htm">http://www.fao.org/giews/english/liens/bdie.htm</a>  <font size=-1> - size 1,560 bytes - 5/10/99 2:31:04 PM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+ <Table width="80%">
+ 
+<tr><td bgcolor="#cccc99">       40.</td>
+        
+            <b><td bgcolor="#cccc99"><a href="/giews/english/fs/fs9904/pays/bdi9904e.htm">FAO/GIEWS - Foodcrops &amp; Shortages 04/99 - BURUNDI* (1 April) </a></td></b>
+        
+    </tr>
+	<tr>
+	<td></td>
+        <td><b><i>Abstract:  </i></b>FAO/GIEWS - Foodcrops &amp; Shortages 04/99 - BURUNDI* (1 April). BURUNDI* (1 April). Normal to above normal rains during the past two months favoured planting and establishment of 1999 second season foodcrops. Until March FAO has distributed 2 874 tonnes of bean seeds to 243 000 most affected households. Pros</td>
+	</tr>
+    <tr>
+	<td></td>   
+        <td><cite>
+            <a href="/giews/english/fs/fs9904/pays/bdi9904e.htm">http://www.fao.org/giews/english/fs/fs9904/pays/bdi9904e.htm</a>  <font size=-1> - size 1,560 bytes - 5/10/99 2:31:02 PM GMT</font></cite></td>
+	</tr>
+		  <tr><td></td><td></td></tr>
+		  
+</Table>
+
+
+
+
 <P>
 
-<A HREF="/samples/search/qrylang.htm">Query Syntax Help</A>
+<!-- Only display a line if there were any hits that matched the query -->
+
+
+    <HR>
+
+
+<TABLE WIDTH=80%>
+
+    <!--
+         Query.htm set HTMLQueryForm as the name of the page to return to
+         for a new query.
+    -->
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////
+
+    <TD> <A HREF="http://www-data.fao.org/regional/Europe/deafult.htm">New query</A> </TD>
+
+/////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////
+-->
+
+    <!-- Define a "previous" button if this isn't the first page -->
+
+    
+
+    <!-- Define a "next" button if this isn't the last page -->
+
+    
+        <TD ALIGN=RIGHT>
+            <FORM ACTION="/scripts/samples/search/queryhit.idq" METHOD="GET">
+                <INPUT TYPE="HIDDEN"
+                    NAME="CiBookMark" VALUE="N-26ab5c0-237-1" >
+                <INPUT TYPE="HIDDEN"
+                    NAME="CiBookmarkSkipCount" VALUE="40" >
+                <INPUT TYPE="HIDDEN"
+                    NAME="CiMaxRecordsInResultSet" VALUE="300" >
+                <INPUT TYPE="HIDDEN"
+                    NAME="CiRestriction" VALUE="burundi" >
+                <INPUT TYPE="HIDDEN"
+                    NAME="CiMaxRecordsPerPage" VALUE="40" >
+                <INPUT TYPE="HIDDEN"
+                    NAME="CiScope" VALUE="/" >
+                <INPUT TYPE="HIDDEN"
+                    NAME="TemplateName" VALUE="queryhit" >
+                <INPUT TYPE="HIDDEN"
+                    NAME="CiSort" VALUE="rank[d]" >
+                <INPUT TYPE="HIDDEN"
+                    NAME="HTMLQueryForm" VALUE="/search/queryhit.htm" >
+                <INPUT TYPE="SUBMIT"
+                    VALUE="Next 40 documents">
+            </FORM>
+        </TD>
+    
+</TABLE>
+
+<P><BR>
+
+<!--
+     If the index is out of date (for example, if it's still being created
+     or updated after changes to files in an indexed directory) let the
+     user know.
+-->
+
+
+
+<!--
+    If the query was not executed because it needed to enumerate to
+    resolve the query instead of using the index, but CiForceUseCi
+    was TRUE, let the user know
+-->
+
+
+
+<!--
+    If the query took too long to execute (for example, if too much work
+    was required to resolve the query), let the user know
+-->
+
+
+
+
+<!-- Output a page number and count of pages -->
+
+
+    <P>
+    Page 1 of 8
+    <P>
+
 
 </HTML>

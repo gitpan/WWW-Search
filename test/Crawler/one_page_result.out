@@ -1,19 +1,18 @@
-Error:  HTTP/1.1 403 Forbidden
+Error:  HTTP/1.1 404 Not Found
 Connection: close
-Date: Sat, 12 Dec 1998 01:08:51 GMT
+Date: Tue, 15 Jun 1999 19:19:05 GMT
 Server: Apache/1.3.1 (Unix) PHP/3.0.3
 Content-Type: text/html
-Client-Date: Fri, 11 Dec 1998 23:17:20 GMT
-Client-Peer: 195.4.183.8:80
-Title: 403 Forbidden
+Client-Date: Tue, 15 Jun 1999 18:20:41 GMT
+Client-Peer: 62.104.64.32:80
+Title: 404 Not Found
 
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
 <HTML><HEAD>
-<TITLE>403 Forbidden</TITLE>
+<TITLE>404 Not Found</TITLE>
 </HEAD><BODY>
-<H1>Forbidden</H1>
-You don't have permission to access /suche.php3
-on this server.<P>
+<H1>Not Found</H1>
+The requested URL /suche.php3 was not found on this server.<P>
 </BODY></HTML>
 
 

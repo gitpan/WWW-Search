@@ -4,7 +4,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.63 1998/11/18 21:54:57 johnh Exp $
+# $Id: Search.pm,v 1.64 1999/04/26 21:20:47 johnh Exp $
 #
 # A complete copyright notice appears at the end of this file.
 # 
@@ -59,8 +59,10 @@ Here's a sample program:
 	print $result->url, "\n";
     };
 
-Results are objects of C<WWW::SearchResult>
-(see L<WWW::SearchResult>) .
+Results are objects of type C<WWW::SearchResult>
+(see L<WWW::SearchResult> for details).
+Note that different back-ends support different result fields.
+All back-ends are required to support title and url.
 
 
 =head1 SEE ALSO
@@ -84,7 +86,7 @@ see L<WWW::SearchResult>.
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query generic_option);
-$VERSION = '1.023';
+$VERSION = '1.024';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
 use LWP::UserAgent;
@@ -197,9 +199,11 @@ Specifies the HTTP method (C<GET> or C<POST>) for HTTP-based queries.
 =item search_to_file FILE
 Causes the search results to be saved in a set of files 
 prefixed by FILE.
+(Used internally by the test-suite, not intended for general use.)
 
 =item search_from_file FILE
 Reads a search from a set of files prefixed by FILE.
+(Used internally by the test-suite, not intended for general use.)
 
 =back
 

@@ -1,4 +1,4 @@
-<!-- c|net Fri Dec 11 15:19:34 1998  $Revision: 1.3 $  -->
+<!-- c|net Tue Jun 15 11:33:41 1999  $Revision: 2.29 $  -->
 
  
 
@@ -12,39 +12,76 @@
 <html>
 
 <head>
-<title>Snap:Advanced Search:Results</title>
+<title>Snap:Power Search:Results</title>
 </head>
 
 <body bgcolor="#FFFFFF" link="#0000FF" vlink="#666666" text="#333333">
 
 
 
-<!-- c|net Fri Dec 11 12:18:36 1998  $Revision: 1.3 $  -->
+<!-- c|net Tue Jun 15 11:30:23 1999  $Revision: 2.29 $  -->
 
 
-<map name="tabs"><area shape="rect" coords="0,0,80,32" href="/main/door/0,1,home-home,00.html"><area shape="rect" coords="200,15,273,32" href="/main/door/0,1,home-home,00.html?st.sn.0.t.fd"><area shape="rect" coords="276,15,348,32" href="/main/local/1,37,home-8,00.html?tag=st.sn.0.t.lc"><area shape="rect" coords="349,15,423,32" href="/LMOID/mysnap/mysnap/0,160,home-0,00.html?st.sn.0.t.ms"></map>
-<table width="100%" cellpadding="0" cellspacing="0" border="0">
-<tr valign="bottom"><td width="434"><img src="http://images.snap.com/main/images/general/tab_all5.gif" width="434" height="32" usemap="#tabs" border="0"></td><td width="100%" align="right"><font face="Arial,Helvetica" size="-1">
-<span style="color:#0000FF">
-<b>
-<a href="/main/redirect/emailcom/1,294,home-0,00.html?sr=ex.email.bh"><font color="#0000FF">Get Mail!</font></a></b>
-</span>
-</font></td></tr>
-<tr><td bgcolor="#003399" height="8" colspan="2"><spacer type="block" width="1" height="8"></td></tr></table>
-
+<map name=gs_tabs><area shape=rect coords="2,22,81,44" href="/main/door/0,1,home-home,00.html?st.sn.0.t.fd"><area shape=rect coords="82,27,155,44" href="/main/local/1,37,home-8,00.html?tag=st.sn.0.t.lc"><area shape=rect coords="156,27,230,44" href="/LMOID/mysnap/mysnap/0,160,home-0,00.html?st.sn.0.t.ms"></map>
+<table width="100%" cellspacing=0 cellpadding=0 border=0><tr bgcolor="#cc0000">
+<td width="25%"><a href="/main/door/0,1,home-home,00.html"><img src="/main/images/logos/logo_header_fl.gif" alt="Snap.com" width=185 height=45 border=0></a></td>
+<td width="75%" valign=bottom><img src="/main/images/tabs/none_fl_tgl.gif" alt="" width=234 height=45 border=0 usemap="#gs_tabs"></td>
+</tr><tr><td bgcolor="#666666" height=2 colspan=2><spacer type=block width=1 height=1></td></tr></table>
 <table bgcolor="#EEEEEE" width="100%" cellpadding="0" cellspacing="0" border="0">
 <tr valign="middle">
-<td height="100" align="center"><A HREF="http://images.snap.com/cgi-acc/acc_clickthru.acc?clickid=000015dc5811944e00000000&edition=home&cat=s-web&site=SN" TARGET="_top"><IMG SRC="http://images.snap.com/Ads/Media/Images/nextcard.r10_howlow_clr_chnge.banner.gif?u_vid_0_0&ffffffff" ALT="www.nextcard.com" BORDER="2" HEIGHT="60" WIDTH="468" ><BR><FONT FACE="Verdana, Arial, Helvetica" SIZE="-2">www.nextcard.com</FONT></A>
-</td>
+<td height="100" align="center"><FORM method="GET" action="http://home.snap.com/cgi-acc/acc_clickthru.acc" target="_top">
+<!---->
+<input type="hidden" name="clickid" value="000022555811944e00000000">
+<input type="hidden" name="adt" value="banner">
+<input type="hidden" name="edt" value="home">
+<input type="hidden" name="site" value="SN">
+<input type="hidden" name="cat" value="s-web">
+<table bgcolor="#003399" width=468 height=60 cellpadding=1 cellspacing=0 border=0>
+<tr><td>
+        <table bgcolor="#cccccc" width="100%" cellpadding=0 cellspacing=0 border=0>
+        <tr valign=top>
+        <td width=285 height=31><A HREF="http://home.snap.com/cgi-acc/acc_clickthru.acc?clickid=000022555811944e00000000&edition=home&category=s-web&site=SN&url=http%3A%2F%2Fedition%2Esnap%2Ecom%2Fmain%2Fcommodity%2Fhoroscope%2F0%2C25%2Chome%2D0%2C00%2Ehtml" TARGET="_top"><img src="http://www.snap.com/Ads/Media/Images/snap.stars285x31.banner.gif" width=285 height=31 border=0></a></td>
+        <td rowspan=2 height=58 width=181><A HREF="http://home.snap.com/cgi-acc/acc_clickthru.acc?clickid=000022555811944e00000000&edition=home&category=s-web&site=SN&url=http%3A%2F%2Fedition%2Esnap%2Ecom" TARGET="_top"><img src="http://www.snap.com/Ads/Media/Images/snap.nbc.banner..gif" width=181 height=58 border=0></a></td>
+        </tr>
+        <tr><td align=center height=27 width=285>
+        <font size="-1" face="arial, helvetica">Choose Your Sign:</font>&nbsp; <SELECT NAME="url">
+        <OPTION VALUE="http://edition.snap.com/main/commodity/horoscope/0,25,home-1,00.html">
+        Aries
+    	<OPTION VALUE="http://edition.snap.com/main/commodity/horoscope/0,25,home-2,00.html">
+        Taurus
+        <OPTION VALUE="http://edition.snap.com/main/commodity/horoscope/0,25,home-4,00.html">
+        Cancer
+        <OPTION VALUE="http://edition.snap.com/main/commodity/horoscope/0,25,home-5,00.html">
+        Leo
+        <OPTION VALUE="http://edition.snap.com/main/commodity/horoscope/0,25,home-6,00.html">
+        Virgo
+        <OPTION VALUE="http://edition.snap.com/main/commodity/horoscope/0,25,home-7,00.html">
+        Libra
+        <OPTION VALUE="http://edition.snap.com/main/commodity/horoscope/0,25,home-8,00.html">
+        Scorpio
+        <OPTION VALUE="http://edition.snap.com/main/commodity/horoscope/0,25,home-9,00.html">
+        Sagittarius
+        <OPTION VALUE="http://edition.snap.com/main/commodity/horoscope/0,25,home-10,00.html">
+        Capricorn
+        <OPTION VALUE="http://edition.snap.com/main/commodity/horoscope/0,25,home-11,00.html">
+        Aquarius
+        <OPTION VALUE="http://edition.snap.com/main/commodity/horoscope/0,25,home-12,00.html">
+        Pisces
+        <OPTION VALUE="http://edition.snap.com/main/commodity/horoscope/0,25,home-3,00.html" selected>
+        Gemini
+        </SELECT> <input type=submit value="Go!"></td></tr>
+        </table></td></tr>
+</table><A HREF="http://home.snap.com/cgi-acc/acc_clickthru.acc?clickid=000022555811944e00000000&edition=home&category=s-web&site=SN&url=http%3A%2F%2Fedition%2Esnap%2Ecom%2Fmain%2Fcommodity%2Fhoroscope%2F0%2C25%2Chome%2D0%2C00%2Ehtml" TARGET="_top"><FONT FACE="Verdana, Arial, Helvetica" SIZE="-2">Check your horoscope at Snap</FONT></A>
+
+</FORM>
+<IMG SRC="http://home.snap.com/Ads/Media/Images/1x1.gif?u_vid_0_0&ffffffff"></td>
 </tr>
 </table>
 
 
-<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#003399" height="8" colspan="2"><spacer type="block" width="1" height="8"></td></tr></table>
-<table width="100%" cellpadding="4" cellspacing="0" border="0"><tr><td><b><font face="Arial,Helvetica">
-<a href="/main/door/0,1,home-home,00.html"><span style="color:#0000FF">Home</span></a>:&nbsp;<a href="/search/power/form/0,179,home-0,00.html"><span style="color:#0000FF">Advanced Search</span></a>:&nbsp;Results
-</font></b></td></tr></table>
-<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#003399" height="4" colspan="2"><spacer type="block" width="1" height="4"></td></tr></table>
+<table width="100%" cellpadding=0 cellspacing=0 border=0><tr><td bgcolor="#666666" height=2><spacer type=block width=1 height=1></td></tr><tr><td><table width="100%" cellpadding=4 cellspacing=0 border=0><tr><td><b><font face="Arial,Helvetica">
+<a href="/main/door/0,1,home-home,00.html"><span style="color:#0000FF">Home</span></a>:&nbsp;<a href="/search/power/form/0,179,home-0,00.html"><span style="color:#0000FF">Power Search</span></a>:&nbsp;Results
+</font></b></td></tr></table></td></tr><tr><td bgcolor="#666666" height=2><spacer type=block width=1 height=1></td></tr></table>
 
 
     
@@ -52,19 +89,20 @@
 <table bgcolor="#EEEEEE" align="right" cellpadding="4" cellspacing="0" border="0">
 <tr><td align="center"><spacer type=block width=1 height=1></td></tr>
 <tr><td align="center"><spacer type=block width=1 height=1></td></tr>
-<tr><td align="center"><A HREF="http://images.snap.com/cgi-acc/acc_clickthru.acc?clickid=00001025ee99194b00000000&edition=home&category=s-web&site=SN&fwd_keywords=WWW%3a%3aSearchJim+Smyser&url=http%3A%2F%2Fwww%2Eborders%2Ecom%2Fcgi%2Dbin%2Fpartner%3FPARTNER%5FID%3D103010009%26Url%3Dhttp%3A%2F%2Fwww%2Eborders%2Ecom%3A8080%2Ffcgi%2Dbin%2Fdb2www%2Fsearch%2Fsearch%2Ed2w%2FQResults%3FmediaType%3DBook%26doingQuickSearch%3D1%26srchPage%3DQResults%26Search%2Ex%3D33%26Search%2Ey%3D11"><IMG SRC="/Ads/Media/Images/borders.home.button.gif" HEIGHT=31 WIDTH=88 ALT="Get related Books!" BORDER=0><BR> <FONT FACE="Verdana, Arial, Helvetica" SIZE="-2">Get related Books!</FONT></A>
-</td></tr>
-<tr><td align="center"><A HREF="http://images.snap.com/cgi-acc/acc_clickthru.acc?clickid=000014f4cc22741200000000&edition=home&cat=s-web&site=SN" TARGET="_top"><IMG SRC="http://images.snap.com/Ads/Media/Images/tower.06_2.button.gif" ALT="Sample New Music" BORDER="0" HEIGHT="31" WIDTH="88" ><BR><FONT FACE="Verdana, Arial, Helvetica" SIZE="-2">Sample New Music</FONT></A>
-</td></tr>
+<tr><td align="center"><a href="http://home.snap.com/cgi-acc/acc_clickthru.acc?clickid=000027dfee99194b00000000&adt=midas1&edt=home&cat=s-web&site=SN" target="_top"><img src="http://home.snap.com/Ads/Media/Images/freeshop.midas.text.freeshop.gif" alt="" border="0" height="31" width="88" ><br><center><font face="Verdana, Arial, Helvetica" size="-2"></font></center></A></td></tr>
+<tr><td align="center"><spacer type=block width=1 height=1></td></tr>
+<tr><td><spacer type=block height=1 width=1></td></tr>
 </table>
 
 
-<table width="75%" cellpadding=0 cellspacing=0 border=0>
-<tr><td height="5" colspan=2><spacer type="block" width="1" height="5"></td></tr>
-<tr><td><font face="Arial,Helvetica" Size="-1">Results: 21&nbsp;</font></td><td valign=top align=right><nobr><font face="Arial,Helvetica" size="-1">Page 1 of 1</font></nobr></td></tr>
+<table width="75%" cellpadding=4 cellspacing=0  border=0><tr bgcolor="#EEEEEE"><td><font face="Arial,Helvetica" size=-1>Buy a book about <a href="/go/to?tag=ex.barnesnoble.sr.6&destUrl=http%3A%2F%2Fbn%2Ebfast%2Ecom%2Fbooklink%2Fclick%3Fsourceid%3D1380915%26is%5Fsearch%3DY%26match%3Dexact%26options%3Dand%26keyword%3D%2522WWW%253A%253ASearch%2522%2522Jim%2BSmyser%2522">'&quot;WWW::Search&quot;&quot;Jim Smyser&quot;'</a> from barnesandnoble.com.</font></td></tr></table>
 
-<tr><td height="5" colspan=2><spacer type="block" width="1" height="5"></td></tr>
-<tr><td bgcolor="#CCCCFF" colspan=2><b><font face="Arial,Helvetica" size="-1">&nbsp;Matching Web Pages</font></b></td></tr>
+<table width="75%" cellpadding=0 cellspacing=0 border=0>
+<tr><td height="5" colspan=2><spacer type=block width=1 height=1></td></tr>
+<tr><td><font face="Arial,Helvetica" size=-1>Results: 44&nbsp;</font></td><td valign=top align=right><nobr><font face="Arial,Helvetica" size=-1>Page 1 of 1</font></nobr></td></tr>
+
+<tr><td height="5" colspan=2><spacer type=block width=1 height=1></td></tr>
+<tr><td bgcolor="#CCCCFF" colspan=2><b><font face="Arial,Helvetica" size=-1>&nbsp;Matching Web Pages</font></b></td></tr>
 </table>
 
 <table width="100%" cellpadding="2" cellspacing="0" border="0">
@@ -75,114 +113,229 @@
 </tr></table>
 
 
-<ul><font face="Arial,Helvetica" size="-1">
+<ul><font face="Arial,Helvetica" size=-1>
    
    
     
          
-     <b><a href="http://pubinfo.phx.primenet.com/www.search/">WWW</a></b><br>
-     <b>WWW::Search</b> Copyright © 1996 by USC/ISI Windows Support Page <b>WWW::Search</b> Home Page Link Web Site and <b>WWW::Search</b> Windows assistance provided by <b>Jim Smyser</b> This site provides minimal Windows support and Windows installation interface for John...<br>
-   <font size="-2">Found at: <a href="http://pubinfo.phx.primenet.com/www.search/">http://pubinfo.phx.primenet.com/www.search/</a></font><p>
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.prweb.com/releases/1999/prweb7177.htm&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=0&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">Who Needs Web Portals for Searching?</a></b><br>
+     Who will ever need to visit a Web Search Engine to find anything  again? Introducing iRover: the newest breed of web searching to  invade the desktop.    FOR IMMEDIATE RELEASE    CONTACT: <b>Jim Smyser</b>   iRover: Windows WWW Search Interfac. . . <br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://www.prweb.com/releases/1999/prweb7177.htm&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=0&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://www.prweb.com/releases/1999/prweb7177.htm</a></font><p>
     
          
-     <b><a href="http://www.metronet.com/perl/clpa/1998-08/821">No Title</a></b><br>
-     Path: usenet.cise.ufl.edu!newsfeeds.nerdc.ufl.edu!newsfeeds.nerdc.ufl.edu!news.magicnet.net!news.maxwell.syr.edu!nntp.abs.net!outfeed1.news.cais.net!news.neta.com!not-for-mail From: John Heidemann &lt;johnh@isi.edu&gt; Newsgroups: comp.lang.perl...<br>
-   <font size="-2">Found at: <a href="http://www.metronet.com/perl/clpa/1998-08/821">http://www.metronet.com/perl/clpa/1998-08/821</a></font><p>
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.davecentral.com/8015.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=1&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">DaveCentral: iRover</a></b><br>
+     AndoverNews Network FreeCode Internet Traffic Report IT Manager's Journal MediaBuilder Slaughterhouse TechMailings TechSightings DOMAIN NAME QUERY DAILY FEATURES Animated GIF of the Day Cartoon of the Day Free Font of the Day AndoverNews  Column..<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://www.davecentral.com/8015.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=1&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://www.davecentral.com/8015.html</a></font><p>
     
          
-     <b><a href="http://sunsite.compapp.dcu.ie/pub/perl/modules/by-authors/John_Heidemann/WWW-Search-1.021.readme">No Title</a></b><br>
-     <b>WWW::Search</b> and AutoSearch == WHAT IS NEW WITH <b>WWW::Search</b> 1.021? (27-Aug-98) -- overview: a general release - new: Windows installation is now supported by <b>Jim Smyser</b> &lt;jsmyser@bigfoot.com&gt;; please see his web page &lt;http://pubinfo.phx.primenet.com..<br>
-   <font size="-2">Found at: <a href="http://sunsite.compapp.dcu.ie/pub/perl/modules/by-authors/John_Heidemann/WWW-Search-1.021.readme">http://sunsite.compapp.dcu.ie/pub/perl/modules/by-authors/John_Heidemann/WWW-Search-1.021.readme</a></font><p>
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.isi.edu/lsam/tools/WWW_SEARCH/&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=2&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">WWW::Search</a></b><br>
+     <b>WWW::Search</b> <b>WWW::Search</b> is a collection of Perl modules which provide an API to WWW search engines like AltaVista, Lycos, Hotbot, WebCrawler, and so on. Currently <b>WWW::Search</b> includes back-ends for variations of AltaVista, Lycos, and HotBot.  We..<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://www.isi.edu/lsam/tools/WWW_SEARCH/&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=2&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://www.isi.edu/lsam/tools/WWW_SEARCH/</a></font><p>
     
          
-     <b><a href="http://ring.nacsis.ac.jp/archives/lang/perl/CPAN/modules/by-authors/id/JOHNH/WWW-Search-1.021.readme">No Title</a></b><br>
-     <b>WWW::Search</b> and AutoSearch == WHAT IS NEW WITH <b>WWW::Search</b> 1.021? (27-Aug-98) -- overview: a general release - new: Windows installation is now supported by <b>Jim Smyser</b> &lt;jsmyser@bigfoot.com&gt;; please see his web page &lt;http://pubinfo.phx.primenet.com..<br>
-   <font size="-2">Found at: <a href="http://ring.nacsis.ac.jp/archives/lang/perl/CPAN/modules/by-authors/id/JOHNH/WWW-Search-1.021.readme">http://ring.nacsis.ac.jp/archives/lang/perl/CPAN/modules/by-authors/id/JOHNH/WWW-Search-1.021.readme</a></font><p>
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.isi.edu/lsam/tools/WWW_SEARCH/index.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=3&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">WWW::Search</a></b><br>
+     <b>WWW::Search</b> <b>WWW::Search</b> is a collection of Perl modules which provide an API to WWW search engines like AltaVista, Lycos, Hotbot, WebCrawler, and so on. Currently <b>WWW::Search</b> includes back-ends for variations of AltaVista, Lycos, and HotBot.  We..<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://www.isi.edu/lsam/tools/WWW_SEARCH/index.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=3&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://www.isi.edu/lsam/tools/WWW_SEARCH/index.html</a></font><p>
     
          
-     <b><a href="http://www.metronet.com/0h/perlinfo/authors/id/JOHNH/WWW-Search-1.021.readme">No Title</a></b><br>
-     <b>WWW::Search</b> and AutoSearch == WHAT IS NEW WITH <b>WWW::Search</b> 1.021? (27-Aug-98) -- overview: a general release - new: Windows installation is now supported by <b>Jim Smyser</b> &lt;jsmyser@bigfoot.com&gt;; please see his web page &lt;http://pubinfo.phx.primenet.com..<br>
-   <font size="-2">Found at: <a href="http://www.metronet.com/0h/perlinfo/authors/id/JOHNH/WWW-Search-1.021.readme">http://www.metronet.com/0h/perlinfo/authors/id/JOHNH/WWW-Search-1.021.readme</a></font><p>
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.isi.edu/div7/lsam/tools/WWW_SEARCH/index.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=4&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">WWW::Search</a></b><br>
+     <b>WWW::Search</b> <b>WWW::Search</b> is a collection of Perl modules which provide an API to WWW search engines like AltaVista, Lycos, Hotbot, WebCrawler, and so on. Currently <b>WWW::Search</b> includes back-ends for variations of AltaVista, Lycos, and HotBot.  We..<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://www.isi.edu/div7/lsam/tools/WWW_SEARCH/index.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=4&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://www.isi.edu/div7/lsam/tools/WWW_SEARCH/index.html</a></font><p>
     
          
-     <b><a href="http://www.metronet.com/0h/perlinfo/authors/John_Heidemann/WWW-Search-1.021.readme">No Title</a></b><br>
-     <b>WWW::Search</b> and AutoSearch == WHAT IS NEW WITH <b>WWW::Search</b> 1.021? (27-Aug-98) -- overview: a general release - new: Windows installation is now supported by <b>Jim Smyser</b> &lt;jsmyser@bigfoot.com&gt;; please see his web page &lt;http://pubinfo.phx.primenet.com..<br>
-   <font size="-2">Found at: <a href="http://www.metronet.com/0h/perlinfo/authors/John_Heidemann/WWW-Search-1.021.readme">http://www.metronet.com/0h/perlinfo/authors/John_Heidemann/WWW-Search-1.021.readme</a></font><p>
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.isi.edu/div7/lsam/tools/WWW_SEARCH/index.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=5&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">WWW::Search</a></b><br>
+     <b>WWW::Search</b> <b>WWW::Search</b> is a collection of Perl modules which provide an API to WWW search engines like AltaVista, Lycos, Hotbot, WebCrawler, and so on. Currently <b>WWW::Search</b> includes back-ends for variations of AltaVista, Lycos, and HotBot.  We..<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://www.isi.edu/div7/lsam/tools/WWW_SEARCH/index.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=5&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://www.isi.edu/div7/lsam/tools/WWW_SEARCH/index.html</a></font><p>
     
          
-     <b><a href="http://sunsite.compapp.dcu.ie/pub/perl/authors/John_Heidemann/WWW-Search-1.021.readme">No Title</a></b><br>
-     <b>WWW::Search</b> and AutoSearch == WHAT IS NEW WITH <b>WWW::Search</b> 1.021? (27-Aug-98) -- overview: a general release - new: Windows installation is now supported by <b>Jim Smyser</b> &lt;jsmyser@bigfoot.com&gt;; please see his web page &lt;http://pubinfo.phx.primenet.com..<br>
-   <font size="-2">Found at: <a href="http://sunsite.compapp.dcu.ie/pub/perl/authors/John_Heidemann/WWW-Search-1.021.readme">http://sunsite.compapp.dcu.ie/pub/perl/authors/John_Heidemann/WWW-Search-1.021.readme</a></font><p>
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.filelibrary.com/Contents/Multi-Platform/105/8.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=6&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">File Library at Channel 1: Recent (unsorted)</a></b><br>
+     Comprehensive and searchable file database of shareware, freeware and  utilities<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://www.filelibrary.com/Contents/Multi-Platform/105/8.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=6&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://www.filelibrary.com/Contents/Multi-Platform/105/8.html</a></font><p>
     
          
-     <b><a href="http://www.kfki.hu/ftp/packages/perl/CPAN/modules/by-category/15_World_Wide_Web_HTML_HTTP_CGI/WWW/WWW-Search-1.021.readme">No Title</a></b><br>
-     <b>WWW::Search</b> and AutoSearch == WHAT IS NEW WITH <b>WWW::Search</b> 1.021? (27-Aug-98) -- overview: a general release - new: Windows installation is now supported by <b>Jim Smyser</b> &lt;jsmyser@bigfoot.com&gt;; please see his web page &lt;http://pubinfo.phx.primenet.com..<br>
-   <font size="-2">Found at: <a href="http://www.kfki.hu/ftp/packages/perl/CPAN/modules/by-category/15_World_Wide_Web_HTML_HTTP_CGI/WWW/WWW-Search-1.021.readme">http://www.kfki.hu/ftp/packages/perl/CPAN/modules/by-category/15_World_Wide_Web_HTML_HTTP_CGI/WWW/WWW-Search-1.021.readme</a></font><p>
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.isi.edu/~lsam/tools/WWW_SEARCH/index.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=7&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">WWW::Search</a></b><br>
+     <b>WWW::Search</b> <b>WWW::Search</b> is a collection of Perl modules which provide an API to WWW search engines like AltaVista, Lycos, Hotbot, WebCrawler, and so on. Currently <b>WWW::Search</b> includes back-ends for variations of AltaVista, Lycos, and HotBot.  We..<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://www.isi.edu/~lsam/tools/WWW_SEARCH/index.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=7&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://www.isi.edu/~lsam/tools/WWW_SEARCH/index.html</a></font><p>
     
          
-     <b><a href="http://www.kfki.hu/ftp/packages/perl/CPAN/authors/id/JOHNH/WWW-Search-1.021.readme">No Title</a></b><br>
-     <b>WWW::Search</b> and AutoSearch == WHAT IS NEW WITH <b>WWW::Search</b> 1.021? (27-Aug-98) -- overview: a general release - new: Windows installation is now supported by <b>Jim Smyser</b> &lt;jsmyser@bigfoot.com&gt;; please see his web page &lt;http://pubinfo.phx.primenet.com..<br>
-   <font size="-2">Found at: <a href="http://www.kfki.hu/ftp/packages/perl/CPAN/authors/id/JOHNH/WWW-Search-1.021.readme">http://www.kfki.hu/ftp/packages/perl/CPAN/authors/id/JOHNH/WWW-Search-1.021.readme</a></font><p>
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.filelibrary.com/categories/New_Files.shtml3/35.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=8&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">File Library at Channel 1: New Files</a></b><br>
+     Comprehensive and searchable file database of shareware, freeware and  utilities<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://www.filelibrary.com/categories/New_Files.shtml3/35.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=8&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://www.filelibrary.com/categories/New_Files.shtml3/35.html</a></font><p>
     
          
-     <b><a href="http://www.rge.com/perl/modules/by-category/15_World_Wide_Web_HTML_HTTP_CGI/WWW/WWW-Search-1.021.readme">No Title</a></b><br>
-     <b>WWW::Search</b> and AutoSearch == WHAT IS NEW WITH <b>WWW::Search</b> 1.021? (27-Aug-98) -- overview: a general release - new: Windows installation is now supported by <b>Jim Smyser</b> &lt;jsmyser@bigfoot.com&gt;; please see his web page &lt;http://pubinfo.phx.primenet.com..<br>
-   <font size="-2">Found at: <a href="http://www.rge.com/perl/modules/by-category/15_World_Wide_Web_HTML_HTTP_CGI/WWW/WWW-Search-1.021.readme">http://www.rge.com/perl/modules/by-category/15_World_Wide_Web_HTML_HTTP_CGI/WWW/WWW-Search-1.021.readme</a></font><p>
+     <b><a href="http://redirect.inktomi.com/click?u=http://filelibrary.com/categories/New_Files.shtml3/32.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=9&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">File Library at Channel 1: New Files</a></b><br>
+     Comprehensive and searchable file database of shareware, freeware and  utilities<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://filelibrary.com/categories/New_Files.shtml3/32.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=9&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://filelibrary.com/categories/New_Files.shtml3/32.html</a></font><p>
     
          
-     <b><a href="http://www.rge.com/perl/modules/by-module/WWW/WWW-Search-1.021.readme">No Title</a></b><br>
-     <b>WWW::Search</b> and AutoSearch == WHAT IS NEW WITH <b>WWW::Search</b> 1.021? (27-Aug-98) -- overview: a general release - new: Windows installation is now supported by <b>Jim Smyser</b> &lt;jsmyser@bigfoot.com&gt;; please see his web page &lt;http://pubinfo.phx.primenet.com..<br>
-   <font size="-2">Found at: <a href="http://www.rge.com/perl/modules/by-module/WWW/WWW-Search-1.021.readme">http://www.rge.com/perl/modules/by-module/WWW/WWW-Search-1.021.readme</a></font><p>
+     <b><a href="http://redirect.inktomi.com/click?u=http://filelibrary.com/Contents/New_Files/150/34.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=10&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">File Library at Channel 1: New Files</a></b><br>
+     Comprehensive and searchable file database of shareware, freeware and  utilities<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://filelibrary.com/Contents/New_Files/150/34.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=10&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://filelibrary.com/Contents/New_Files/150/34.html</a></font><p>
     
          
-     <b><a href="http://www.spu.edu/CPAN/authors/John_Heidemann/WWW-Search-1.021.readme">No Title</a></b><br>
-     <b>WWW::Search</b> and AutoSearch == WHAT IS NEW WITH <b>WWW::Search</b> 1.021? (27-Aug-98) -- overview: a general release - new: Windows installation is now supported by <b>Jim Smyser</b> &lt;jsmyser@bigfoot.com&gt;; please see his web page &lt;http://pubinfo.phx.primenet.com..<br>
-   <font size="-2">Found at: <a href="http://www.spu.edu/CPAN/authors/John_Heidemann/WWW-Search-1.021.readme">http://www.spu.edu/CPAN/authors/John_Heidemann/WWW-Search-1.021.readme</a></font><p>
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.netpromote.com/search/WWW-Search-1.023/blib/man3/WWW::Search::Snap.3&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=11&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">No Title</a></b><br>
+     .rn '' &amp;#125` $RCSfile$$Revision$$Date$ '' $Log$ '' .de Sh .br .if t .Sp .ne 5 .PP &amp;#092fB&amp;#092&amp;#092$1&amp;#092fR .PP ..de Sp .if t .sp .5v .if n .sp ..de Ip .br .ie &amp;#092&amp;#092n(.$&gt;=3 .ne &amp;#092&amp;#092$3 .el .ne 3 .IP &quot;&amp;#092&amp;#092$1&quot; &amp;#092&amp;#092$2 ..de Vb .ft CW .nf .ne &amp;#092&amp;#092$1 ..de Ve .ft R .fi .. '' Set up  .<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://www.netpromote.com/search/WWW-Search-1.023/blib/man3/WWW::Search::Snap.3&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=11&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://www.netpromote.com/search/WWW-Search-1.023/blib/man3/WWW::Search::Snap.3</a></font><p>
     
          
-     <b><a href="http://www.metronet.com/perlinfo/modules/by-category/15_World_Wide_Web_HTML_HTTP_CGI/WWW/WWW-Search-1.021.readme">No Title</a></b><br>
-     <b>WWW::Search</b> and AutoSearch == WHAT IS NEW WITH <b>WWW::Search</b> 1.021? (27-Aug-98) -- overview: a general release - new: Windows installation is now supported by <b>Jim Smyser</b> &lt;jsmyser@bigfoot.com&gt;; please see his web page &lt;http://pubinfo.phx.primenet.com..<br>
-   <font size="-2">Found at: <a href="http://www.metronet.com/perlinfo/modules/by-category/15_World_Wide_Web_HTML_HTTP_CGI/WWW/WWW-Search-1.021.readme">http://www.metronet.com/perlinfo/modules/by-category/15_World_Wide_Web_HTML_HTTP_CGI/WWW/WWW-Search-1.021.readme</a></font><p>
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.webreview.com/wr/pub/98/11/20/perl/index.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=12&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">Web Review - Searching Newsgroups with Perl</a></b><br>
+     Use Perl's WWW:Search module to write scripts which search Internet newsgroups, the Web and  more<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://www.webreview.com/wr/pub/98/11/20/perl/index.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=12&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://www.webreview.com/wr/pub/98/11/20/perl/index.html</a></font><p>
     
          
-     <b><a href="http://www.metronet.com/perlinfo/authors/id/JOHNH/WWW-Search-1.021.readme">No Title</a></b><br>
-     <b>WWW::Search</b> and AutoSearch == WHAT IS NEW WITH <b>WWW::Search</b> 1.021? (27-Aug-98) -- overview: a general release - new: Windows installation is now supported by <b>Jim Smyser</b> &lt;jsmyser@bigfoot.com&gt;; please see his web page &lt;http://pubinfo.phx.primenet.com..<br>
-   <font size="-2">Found at: <a href="http://www.metronet.com/perlinfo/authors/id/JOHNH/WWW-Search-1.021.readme">http://www.metronet.com/perlinfo/authors/id/JOHNH/WWW-Search-1.021.readme</a></font><p>
+     <b><a href="http://redirect.inktomi.com/click?u=http://webreview.com/wr/pub/98/11/20/perl/index.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=13&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">Web Review - Searching Newsgroups with Perl</a></b><br>
+     Use Perl's WWW:Search module to write scripts which search Internet newsgroups, the Web and  more<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://webreview.com/wr/pub/98/11/20/perl/index.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=13&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://webreview.com/wr/pub/98/11/20/perl/index.html</a></font><p>
     
          
-     <b><a href="http://www.spu.edu/CPAN/modules/by-category/15_World_Wide_Web_HTML_HTTP_CGI/WWW/WWW-Search-1.021.readme">No Title</a></b><br>
-     <b>WWW::Search</b> and AutoSearch == WHAT IS NEW WITH <b>WWW::Search</b> 1.021? (27-Aug-98) -- overview: a general release - new: Windows installation is now supported by <b>Jim Smyser</b> &lt;jsmyser@bigfoot.com&gt;; please see his web page &lt;http://pubinfo.phx.primenet.com..<br>
-   <font size="-2">Found at: <a href="http://www.spu.edu/CPAN/modules/by-category/15_World_Wide_Web_HTML_HTTP_CGI/WWW/WWW-Search-1.021.readme">http://www.spu.edu/CPAN/modules/by-category/15_World_Wide_Web_HTML_HTTP_CGI/WWW/WWW-Search-1.021.readme</a></font><p>
+     <b><a href="http://redirect.inktomi.com/click?u=http://webreview.com/wr/pub/98/11/20/perl/index.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=14&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">Web Review - Searching Newsgroups with Perl</a></b><br>
+     Use Perl's WWW:Search module to write scripts which search Internet newsgroups, the Web and  more<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://webreview.com/wr/pub/98/11/20/perl/index.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=14&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://webreview.com/wr/pub/98/11/20/perl/index.html</a></font><p>
     
          
-     <b><a href="http://www.spu.edu/CPAN/modules/by-category/15_World_Wide_Web_HTML_HTTP_CGI/WWW/JOHNH/WWW-Search-1.021.readme">No Title</a></b><br>
-     <b>WWW::Search</b> and AutoSearch == WHAT IS NEW WITH <b>WWW::Search</b> 1.021? (27-Aug-98) -- overview: a general release - new: Windows installation is now supported by <b>Jim Smyser</b> &lt;jsmyser@bigfoot.com&gt;; please see his web page &lt;http://pubinfo.phx.primenet.com..<br>
-   <font size="-2">Found at: <a href="http://www.spu.edu/CPAN/modules/by-category/15_World_Wide_Web_HTML_HTTP_CGI/WWW/JOHNH/WWW-Search-1.021.readme">http://www.spu.edu/CPAN/modules/by-category/15_World_Wide_Web_HTML_HTTP_CGI/WWW/JOHNH/WWW-Search-1.021.readme</a></font><p>
+     <b><a href="http://redirect.inktomi.com/click?u=http://webreview.com/wr/pubwr/98/11/20/perl/index.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=15&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">Web Review - Searching Newsgroups with Perl</a></b><br>
+     Use Perl's WWW:Search module to write scripts which search Internet newsgroups, the Web and  more<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://webreview.com/wr/pubwr/98/11/20/perl/index.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=15&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://webreview.com/wr/pubwr/98/11/20/perl/index.html</a></font><p>
     
          
-     <b><a href="http://www.dnttm.ro/cpan/modules/by-module/WWW/JOHNH/WWW-Search-1.021.readme">No Title</a></b><br>
-     <b>WWW::Search</b> and AutoSearch == WHAT IS NEW WITH <b>WWW::Search</b> 1.021? (27-Aug-98) -- overview: a general release - new: Windows installation is now supported by <b>Jim Smyser</b> &lt;jsmyser@bigfoot.com&gt;; please see his web page &lt;http://pubinfo.phx.primenet.com..<br>
-   <font size="-2">Found at: <a href="http://www.dnttm.ro/cpan/modules/by-module/WWW/JOHNH/WWW-Search-1.021.readme">http://www.dnttm.ro/cpan/modules/by-module/WWW/JOHNH/WWW-Search-1.021.readme</a></font><p>
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.netpromote.com/search/WWW-Search-1.023/&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=16&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">Index of /search/WWW-Search-1.023</a></b><br>
+     Index of /search/WWW-Search-1.023 Name Last modified Size Description Parent Directory 05-Mar-1999 12:03 - MANIFEST 11-Dec-1998 18:06 11k Makefile 04-Mar-1999 16:44 27k Makefile.PL 12-Aug-1998 12:50 2k Makefile.PL.old 04-Mar-1999 14:28 2k  Makefile.<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://www.netpromote.com/search/WWW-Search-1.023/&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=16&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://www.netpromote.com/search/WWW-Search-1.023/</a></font><p>
     
          
-     <b><a href="http://www.dnttm.ro/cpan/modules/by-module/WWW/JOHNH/WWW-Search-1.022.readme">No Title</a></b><br>
-     <b>WWW::Search</b> and AutoSearch == WHAT IS NEW WITH <b>WWW::Search</b> 1.022? (16-Oct-98) -- overview: An interim release to fix several broken back-ends. - bug fix: documentation cleanups from Ave Wrigley - bug fix: Infoseek updates (from Martin Thurn) - bug..<br>
-   <font size="-2">Found at: <a href="http://www.dnttm.ro/cpan/modules/by-module/WWW/JOHNH/WWW-Search-1.022.readme">http://www.dnttm.ro/cpan/modules/by-module/WWW/JOHNH/WWW-Search-1.022.readme</a></font><p>
+     <b><a href="http://redirect.inktomi.com/click?u=http://theory.uwinnipeg.ca/CPAN/data/WWW-Search/README.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=17&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">/usr/local/lib/perl5/site_perl/WAIT/DB/cpan/data/WWW-Search/README</a></b><br>
+     Contained in JOHNH/WWW-Search-1.023.tar.gz requires perl 5.004 or later NAME DESCRIPTION NAME WWW-Search README DESCRIPTION <b>WWW::Search</b> and AutoSearch == WHAT IS NEW WITH <b>WWW::Search</b> 1.023? (11-Dec-98) -- overview: primarily bug fixes for back  ends<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://theory.uwinnipeg.ca/CPAN/data/WWW-Search/README.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=17&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://theory.uwinnipeg.ca/CPAN/data/WWW-Search/README.html</a></font><p>
     
          
-     <b><a href="http://www.spu.edu/CPAN/authors/id/JOHNH/WWW-Search-1.022.readme">No Title</a></b><br>
-     <b>WWW::Search</b> and AutoSearch == WHAT IS NEW WITH <b>WWW::Search</b> 1.022? (16-Oct-98) -- overview: An interim release to fix several broken back-ends. - bug fix: documentation cleanups from Ave Wrigley - bug fix: Infoseek updates (from Martin Thurn) - bug..<br>
-   <font size="-2">Found at: <a href="http://www.spu.edu/CPAN/authors/id/JOHNH/WWW-Search-1.022.readme">http://www.spu.edu/CPAN/authors/id/JOHNH/WWW-Search-1.022.readme</a></font><p>
+     <b><a href="http://redirect.inktomi.com/click?u=http://theory.uwinnipeg.ca/CPAN/data/WWW-Search/&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=18&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">Index of /CPAN/data/WWW-Search</a></b><br>
+     Index of /CPAN/data/WWW-Search Name Last modified Size Description Parent Directory 07-May-1999 03:03 - WWW/ 07-May-1999 03:37 - bin/ 06-May-1998 14:31 - test/ 06-May-1998 14:31 - NAME DESCRIPTION NAME WWW-Search README DESCRIPTION <b>WWW::Search</b>  and.<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://theory.uwinnipeg.ca/CPAN/data/WWW-Search/&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=18&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://theory.uwinnipeg.ca/CPAN/data/WWW-Search/</a></font><p>
     
          
-     <b><a href="http://www.spu.edu/CPAN/modules/by-category/15_World_Wide_Web_HTML_HTTP_CGI/WWW/JOHNH/WWW-Search-1.022.readme">No Title</a></b><br>
-     <b>WWW::Search</b> and AutoSearch == WHAT IS NEW WITH <b>WWW::Search</b> 1.022? (16-Oct-98) -- overview: An interim release to fix several broken back-ends. - bug fix: documentation cleanups from Ave Wrigley - bug fix: Infoseek updates (from Martin Thurn) - bug..<br>
-   <font size="-2">Found at: <a href="http://www.spu.edu/CPAN/modules/by-category/15_World_Wide_Web_HTML_HTTP_CGI/WWW/JOHNH/WWW-Search-1.022.readme">http://www.spu.edu/CPAN/modules/by-category/15_World_Wide_Web_HTML_HTTP_CGI/WWW/JOHNH/WWW-Search-1.022.readme</a></font><p>
+     <b><a href="http://redirect.inktomi.com/click?u=http://ftp.epix.net/CPAN/authors/John_Heidemann/WWW-Search-1.023.readme&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=19&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">No Title</a></b><br>
+     <b>WWW::Search</b> and AutoSearch == WHAT IS NEW WITH <b>WWW::Search</b> 1.023? (11-Dec-98) -- overview: primarily bug fixes for back ends - NEW: proxy support added to WebSearch and AutoSearch (based on code from Paul Linder) - NEW: new back end for Snap.com  .<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://ftp.epix.net/CPAN/authors/John_Heidemann/WWW-Search-1.023.readme&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=19&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://ftp.epix.net/CPAN/authors/John_Heidemann/WWW-Search-1.023.readme</a></font><p>
     
          
-     <b><a href="http://www.spu.edu/CPAN/modules/by-category/15_World_Wide_Web_HTML_HTTP_CGI/WWW/WWW-Search-1.022.readme">No Title</a></b><br>
-     <b>WWW::Search</b> and AutoSearch == WHAT IS NEW WITH <b>WWW::Search</b> 1.022? (16-Oct-98) -- overview: An interim release to fix several broken back-ends. - bug fix: documentation cleanups from Ave Wrigley - bug fix: Infoseek updates (from Martin Thurn) - bug..<br>
-   <font size="-2">Found at: <a href="http://www.spu.edu/CPAN/modules/by-category/15_World_Wide_Web_HTML_HTTP_CGI/WWW/WWW-Search-1.022.readme">http://www.spu.edu/CPAN/modules/by-category/15_World_Wide_Web_HTML_HTTP_CGI/WWW/WWW-Search-1.022.readme</a></font><p>
+     <b><a href="http://redirect.inktomi.com/click?u=http://ftp.sv.saitama-u.ac.jp/archives/lang/perl/CPAN/authors/id/JOHNH/WWW-Search-1.023.readme&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=20&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">No Title</a></b><br>
+     <b>WWW::Search</b> and AutoSearch == WHAT IS NEW WITH <b>WWW::Search</b> 1.023? (11-Dec-98) -- overview: primarily bug fixes for back ends - NEW: proxy support added to WebSearch and AutoSearch (based on code from Paul Linder) - NEW: new back end for Snap.com  .<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://ftp.sv.saitama-u.ac.jp/archives/lang/perl/CPAN/authors/id/JOHNH/WWW-Search-1.023.readme&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=20&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://ftp.sv.saitama-u.ac.jp/archives/lang/perl/CPAN/authors/id/JOHNH/WWW-Search-1.023.readme</a></font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://ftp.epix.net/CPAN/authors/John_Heidemann/WWW-Search-1.022.readme&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=21&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">No Title</a></b><br>
+     <b>WWW::Search</b> and AutoSearch == WHAT IS NEW WITH <b>WWW::Search</b> 1.022? (16-Oct-98) -- overview: An interim release to fix several broken back-ends. - bug fix: documentation cleanups from Ave Wrigley - bug fix: Infoseek updates (from Martin Thurn) -  bug.<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://ftp.epix.net/CPAN/authors/John_Heidemann/WWW-Search-1.022.readme&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=21&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://ftp.epix.net/CPAN/authors/John_Heidemann/WWW-Search-1.022.readme</a></font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://ftp.epix.net/CPAN/authors/John_Heidemann/WWW-Search-1.021.readme&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=22&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">No Title</a></b><br>
+     <b>WWW::Search</b> and AutoSearch == WHAT IS NEW WITH <b>WWW::Search</b> 1.021? (27-Aug-98) -- overview: a general release - new: Windows installation is now supported by <b>Jim Smyser</b> &lt;jsmyser@bigfoot.com&gt;; please see his web page  &lt;http://pubinfo.phx.primenet.com.<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://ftp.epix.net/CPAN/authors/John_Heidemann/WWW-Search-1.021.readme&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=22&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://ftp.epix.net/CPAN/authors/John_Heidemann/WWW-Search-1.021.readme</a></font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://ftp.sv.saitama-u.ac.jp/archives/lang/perl/CPAN/authors/id/JOHNH/WWW-Search-1.022.readme&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=23&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">No Title</a></b><br>
+     <b>WWW::Search</b> and AutoSearch == WHAT IS NEW WITH <b>WWW::Search</b> 1.022? (16-Oct-98) -- overview: An interim release to fix several broken back-ends. - bug fix: documentation cleanups from Ave Wrigley - bug fix: Infoseek updates (from Martin Thurn) -  bug.<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://ftp.sv.saitama-u.ac.jp/archives/lang/perl/CPAN/authors/id/JOHNH/WWW-Search-1.022.readme&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=23&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://ftp.sv.saitama-u.ac.jp/archives/lang/perl/CPAN/authors/id/JOHNH/WWW-Search-1.022.readme</a></font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://ftp.sv.saitama-u.ac.jp/archives/lang/perl/CPAN/authors/id/JOHNH/WWW-Search-1.021.readme&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=24&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">No Title</a></b><br>
+     <b>WWW::Search</b> and AutoSearch == WHAT IS NEW WITH <b>WWW::Search</b> 1.021? (27-Aug-98) -- overview: a general release - new: Windows installation is now supported by <b>Jim Smyser</b> &lt;jsmyser@bigfoot.com&gt;; please see his web page  &lt;http://pubinfo.phx.primenet.com.<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://ftp.sv.saitama-u.ac.jp/archives/lang/perl/CPAN/authors/id/JOHNH/WWW-Search-1.021.readme&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=24&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://ftp.sv.saitama-u.ac.jp/archives/lang/perl/CPAN/authors/id/JOHNH/WWW-Search-1.021.readme</a></font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.netpromote.com/search/WWW-Search-1.023/test/test.pl&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=25&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">No Title</a></b><br>
+     #!/home/johnh/BIN/perl5 -w # # test.pl # Copyright (C) 1997 by USC/ISI # $Id: test.pl,v 1.29 1998/12/11 23:07:41 johnh Exp $ # # Copyright (c) 1997 University of Southern California. # All rights reserved. # # Redistribution and use in source  and..<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://www.netpromote.com/search/WWW-Search-1.023/test/test.pl&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=25&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://www.netpromote.com/search/WWW-Search-1.023/test/test.pl</a></font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://installationsplus.com/download.htm&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=26&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">INSTALLATIONS PLUS+.....Software to download.</a></b><br>
+     PC, Personal Computer, consulting, upgrades, websites, training, repairs, sales, installations, software, programming priced right for NY, NJ and  C<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://installationsplus.com/download.htm&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=26&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://installationsplus.com/download.htm</a></font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://installationsplus.com/download.htm&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=27&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">INSTALLATIONS PLUS+.....Software to download.</a></b><br>
+     PC, Personal Computer, consulting, upgrades, websites, training, repairs, sales, installations, software, programming priced right for NY, NJ and  C<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://installationsplus.com/download.htm&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=27&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://installationsplus.com/download.htm</a></font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.installationsplus.com/download.htm&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=28&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">INSTALLATIONS PLUS+.....Software to download.</a></b><br>
+     PC, Personal Computer, consulting, upgrades, websites, training, repairs, sales, installations, software, programming priced right for NY, NJ and  C<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://www.installationsplus.com/download.htm&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=28&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://www.installationsplus.com/download.htm</a></font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://freeware2000.click2site.com/search_tools.htm&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=29&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">Search Tools</a></b><br>
+     Provided By: Get your own Business Website NOW! Freeware 2000 Submit Freeware - If you are a freeware author and wish to submit your work to this site please use the submission form. Which can be found Here Home Up Cookie and Cashe Links&amp;Urls  Misc.<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://freeware2000.click2site.com/search_tools.htm&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=29&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://freeware2000.click2site.com/search_tools.htm</a></font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.pns.com.au/freewarehome/add_ons/a_internet.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=30&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">internet &gt; alphabetical list (768)</a></b><br>
+     The most complete Collection of free software and Internet services in 140+ categories. New items added daily. Subscription to weekly  newsletter<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://www.pns.com.au/freewarehome/add_ons/a_internet.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=30&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://www.pns.com.au/freewarehome/add_ons/a_internet.html</a></font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.inet.com.pl/freewarehome/add_ons/a_internet.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=31&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">internet &gt; alphabetical list (771)</a></b><br>
+     The most complete Collection of free software and Internet services in 140+ categories. New items added daily. Subscription to weekly  newsletter<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://www.inet.com.pl/freewarehome/add_ons/a_internet.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=31&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://www.inet.com.pl/freewarehome/add_ons/a_internet.html</a></font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://noguska.net/freewarehome/add_ons/a_internet.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=32&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">internet &gt; alphabetical list (771)</a></b><br>
+     The most complete Collection of free software and Internet services in 140+ categories. New items added daily. Subscription to weekly  newsletter<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://noguska.net/freewarehome/add_ons/a_internet.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=32&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://noguska.net/freewarehome/add_ons/a_internet.html</a></font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://ensignpub.com/freehome/add_ons/a_internet.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=33&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">internet &gt; alphabetical list (768)</a></b><br>
+     The most complete Collection of free software and Internet services in 140+ categories. New items added daily. Subscription to weekly  newsletter<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://ensignpub.com/freehome/add_ons/a_internet.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=33&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://ensignpub.com/freehome/add_ons/a_internet.html</a></font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www3.winfiles.com/apps/98/webtools-search.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=34&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">WinFiles.com Windows 95/98 Web Searching Tools</a></b><br>
+     The Internet's Largest Source for Information, Shareware, Drivers, and Tips for ALL Versions of  Windows<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://www3.winfiles.com/apps/98/webtools-search.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=34&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://www3.winfiles.com/apps/98/webtools-search.html</a></font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.winfiles.com/apps/98/webtools-search.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=35&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">WinFiles.com Windows 95/98 Web Searching Tools</a></b><br>
+     The Internet's Largest Source for Information, Shareware, Drivers, and Tips for ALL Versions of  Windows<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://www.winfiles.com/apps/98/webtools-search.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=35&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://www.winfiles.com/apps/98/webtools-search.html</a></font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www3.windows95.com/apps/98/webtools-search.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=36&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">WinFiles.com Windows 95/98 Web Searching Tools</a></b><br>
+     The Internet's Largest Source for Information, Shareware, Drivers, and Tips for ALL Versions of  Windows<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://www3.windows95.com/apps/98/webtools-search.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=36&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://www3.windows95.com/apps/98/webtools-search.html</a></font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www1.windows95.com/apps/98/webtools-search.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=37&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">WinFiles.com Windows 95/98 Web Searching Tools</a></b><br>
+     The Internet's Largest Source for Information, Shareware, Drivers, and Tips for ALL Versions of  Windows<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://www1.windows95.com/apps/98/webtools-search.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=37&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://www1.windows95.com/apps/98/webtools-search.html</a></font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.winfiles.com/apps/98/webtools-search.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=38&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">WinFiles.com Windows 95/98 Web Searching Tools</a></b><br>
+     The Internet's Largest Source for Information, Shareware, Drivers, and Tips for ALL Versions of  Windows<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://www.winfiles.com/apps/98/webtools-search.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=38&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://www.winfiles.com/apps/98/webtools-search.html</a></font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://207.159.129.100/apps/98/webtools-search.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=39&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">WinFiles.com Windows 95/98 Web Searching Tools</a></b><br>
+     The Internet's Largest Source for Information, Shareware, Drivers, and Tips for ALL Versions of  Windows<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://207.159.129.100/apps/98/webtools-search.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=39&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://207.159.129.100/apps/98/webtools-search.html</a></font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www1.winfiles.com/apps/98/webtools-search.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=40&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">WinFiles.com Windows 95/98 Web Searching Tools</a></b><br>
+     The Internet's Largest Source for Information, Shareware, Drivers, and Tips for ALL Versions of  Windows<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://www1.winfiles.com/apps/98/webtools-search.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=40&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://www1.winfiles.com/apps/98/webtools-search.html</a></font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www2.windows95.com/apps/98/webtools-search.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=41&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">WinFiles.com Windows 95/98 Web Searching Tools</a></b><br>
+     The Internet's Largest Source for Information, Shareware, Drivers, and Tips for ALL Versions of  Windows<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://www2.windows95.com/apps/98/webtools-search.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=41&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://www2.windows95.com/apps/98/webtools-search.html</a></font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://winfiles.com/apps/98/webtools-search.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=42&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">WinFiles.com Windows 95/98 Web Searching Tools</a></b><br>
+     The Internet's Largest Source for Information, Shareware, Drivers, and Tips for ALL Versions of  Windows<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://winfiles.com/apps/98/webtools-search.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=42&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://winfiles.com/apps/98/webtools-search.html</a></font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.bookcase.com/library/software/win9x.winsock.www.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=43&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">Windows 95/98 » Winsock » Web</a></b><br>
+     Web Windows 95/98 » Winsock » Web 1001K Summary: Interactive Internet Marketing System. DEMO License: Feature Limit Demo. Download: 1001k.zip (Feb 13 1999, 2.4M) ¤ ¤ Description: An interactive Internet Marketing course which guides you through  the<br>
+   <font size="-2">Found at: <a href="http://redirect.inktomi.com/click?u=http://www.bookcase.com/library/software/win9x.winsock.www.html&q=02%3F4HHH%25%25Lz~m%7Cw%3F4%3DUvr%3FLrflzm%3D%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=43&d=www&i=56&n=G2EU581NCPS029MU&s=0&c=">http://www.bookcase.com/library/software/win9x.winsock.www.html</a></font><p>
        </font></ul>
 <table width="100%" cellpadding="3" cellspacing="0" border="0">
 <tr>
@@ -190,7 +343,7 @@
 <td width="100%" nowrap><font face="Arial,Helvetica" size="-2">Powered by <a href="http://www.inktomi.com/">Inktomi</a></font></td>
 </tr>
 </table>
-<center><b><font face="Arial,Helvetica" size="-1">
+<center><b><font face="Arial,Helvetica" size=-1>
  
 Page&nbsp;&nbsp;
 
@@ -204,6 +357,7 @@ Page&nbsp;&nbsp;
 
      
 
+<table width="100%" cellpadding=4 cellspacing=0 border=0><tr bgcolor="#EEEEEE"><td><font face="Arial,Helvetica" size="-1" color="#0000FF"><a href="/go/to?tag=ex.next.sr.txt&destUrl=http%3A%2F%2Fwww%2Enextcard%2Ecom%2Findex%2Ehtml%3Fref%3DLprsaprL49" style="color:#0000FF"><font color="#0000FF">2.9% Intro or 9.9% Fixed APR Visa</font></a></td></tr><tr><td height=6 colspan=2><spacer type=block height=1 width=1></td></tr></table>
 
 <!-- search box -->
 <table  bgcolor="#CCCCCC" width="100%" cellpadding="4" cellspacing="0" border="0">
@@ -245,63 +399,90 @@ Page&nbsp;&nbsp;
 &nbsp;&nbsp;<input type="submit" value="Search">&nbsp;&nbsp;<font face="Arial,Helvetica" size="-2"><a href="/main/help/item/0,11,home-6736,00.html">Search Tips</a></font>
 <br>
 
-<a href="/search/power/form/0,179,home-0,00.html"><font face="Arial,Helvetica" size="-1"><b>New Search</b></font></a>&nbsp;|&nbsp;<a href="/search/power/form/1,179,home-0,00.html?KM=a&KW=%22WWW%3A%3ASearch%22%22Jim+Smyser%22&AM0=m&AT0=w&AK0=&AM1=&AT1=&AK1=&AM2=&AT2=&AK2=&AM3=&AT3=&AK3=&AM4=&AT4=&AK4=&AN=0&NR=100&FR=f&PL=a&DR=0&FM=1&FD=1&FY=&TM=&TD=&TY=&LN=&MT=&XT=&DM=&SDI="><font face="Arial,Helvetica" size="-1"><b>Revise Search</b></font></a><br><br>
+<a href="/search/power/form/0,179,home-0,00.html"><font face="Arial,Helvetica" size=-1><b>New Search</b></font></a>&nbsp;|&nbsp;<a href="/search/power/form/1,179,home-0,00.html?KM=a&KW=%22WWW%3A%3ASearch%22%22Jim+Smyser%22&AM0=m&AT0=w&AK0=&AM1=&AT1=&AK1=&AM2=&AT2=&AK2=&AM3=&AT3=&AK3=&AM4=&AT4=&AK4=&AN=0&NR=100&FR=f&PL=a&DR=0&FM=1&FD=1&FY=&TM=&TD=&TY=&LN=&MT=&XT=&DM=&SDI="><font face="Arial,Helvetica" size=-1><b>Revise Search</b></font></a><br><br>
 
 
-</td><td width="1"><spacer type="block" height="1" width="1"></form></td>
+</td><td width=1><spacer type=block width=1 height=5></form></td>
 </tr>
 </table>
-<!-- end search box -->
-
-
-<!-- begin external search links -->
-<table bgcolor="#CCCCCC" width="100%" cellpadding="0" cellspacing="0" border="0">
-<tr>
-<td><font face="Arial,Helvetica" size="-2"><b>&nbsp;Or try one of these search engines:</b></font></td>
-</tr>
-<tr>
-<td align="center">
-<font face="Arial,Helvetica" size="-1">
-<a href="/exredirect/template/1,304,-0,00.html?tag=ex.sn.sr.6.av&destUrl=http%3A%2F%2Fwww%2Esearch%2Ecom%2FAltaVista%2F1%2C57%2C0%2C0200%2Ehtml%3Fmode%3Dsimple%26what%3Dweb%26suffix%3D%26query%3D%2522WWW%253A%253ASearch%2522%2522Jim%2BSmyser%2522%26format%3D2">AltaVista</a> | 
+<table bgcolor="#CCCCCC" width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td><font face="Arial,Helvetica" size="-2"><b>&nbsp;Or try one of these search engines:</b></font></td></tr>
+<tr><td align=center><font face="Arial,Helvetica" size=-1>
+<a href="/go/to?tag=ex.sn.sr.6.av&destUrl=http%3A%2F%2Fwww%2Esearch%2Ecom%2FAltaVista%2F1%2C57%2C0%2C0200%2Ehtml%3Fmode%3Dsimple%26what%3Dweb%26suffix%3D%26query%3D%2522WWW%253A%253ASearch%2522%2522Jim%2BSmyser%2522%26format%3D2">AltaVista</a> | 
 <a href="/main/finance/news/search/1,216,home-0,00.html?tag=st.sn.sr.6.bbn&keyword=%22WWW%3A%3ASearch%22%22Jim+Smyser%22">Bloomberg News</a> |
-<a href="/exredirect/template/1,304,-0,00.html?tag=ex.sn.sr.6.dn&destUrl=http%3A%2F%2Fx8%2Edejanews%2Ecom%2Fdnquery%2Exp%3FQRY%3D%2522WWW%253A%253ASearch%2522%2522Jim%2BSmyser%2522%26defaultOp%3DAND%26svcclass%3Ddncurrent%26maxhits%3D20%26ST%3DQS%26format%3Dterse%26DBS%3D2">DejaNews</a> | 
-<a href="/exredirect/template/1,304,-0,00.html?tag=ex.sn.sr.6.xcit&destUrl=http%3A%2F%2Fwww%2Eexcite%2Ecom%2Fsearch%2Egw%3Fsearch%3D%2522WWW%253A%253ASearch%2522%2522Jim%2BSmyser%2522%26searchType%3DKeyword%26category%3Ddefault%26mode%3Drelevance%26showqbe%3D1%26display%3Dhtml3%2Chb">Excite</a> | 
-<a href="/exredirect/template/1,304,-0,00.html?tag=ex.sn.sr.6.ipix&destUrl=http%3A%2F%2Fisurf%2Einterpix%2Ecom%2Fcgi%2Dbin%2Fisurf%2Dnoframes%2Fkeyword%5Fsearch%2Ecgi%3Fdb%3D%26q%3D%2522WWW%253A%253ASearch%2522%2522Jim%2BSmyser%2522">Image Surfer</a> | 
-<a href="/exredirect/template/1,304,-0,00.html?tag=ex.sn.sr.6.seek&destUrl=http%3A%2F%2Fwww%2Esearch%2Ecom%2FInfoseek%2F1%2C135%2C0%2C0200%2Ehtml%3FQUERY%3D%2522WWW%253A%253ASearch%2522%2522Jim%2BSmyser%2522%26COLL%3DWW">Infoseek</a> | 
-<a href="/exredirect/template/1,304,-0,00.html?tag=ex.sn.sr.6.lcos&destUrl=http%3A%2F%2Fwww%2Elycos%2Ecom%2Fcgi%2Dbin%2Fpursuit%3Fquery%3D%2522WWW%253A%253ASearch%2522%2522Jim%2BSmyser%2522">Lycos</a> | 
-<a href="/exredirect/template/1,304,-0,00.html?tag=ex.sn.sr.6.yhoo&destUrl=http%3A%2F%2Fsearch%2Eyahoo%2Ecom%2Fbin%2Fsearch%3Fp%3D%2522WWW%253A%253ASearch%2522%2522Jim%2BSmyser%2522">Yahoo</a> |
-<a href="/directory/category/0,16,home-1269,00.html?st.sn.sr.6.more">More...</a></font>
+<a href="/go/to?tag=ex.sn.sr.6.dn&destUrl=http%3A%2F%2Fx8%2Edejanews%2Ecom%2Fdnquery%2Exp%3FQRY%3D%2522WWW%253A%253ASearch%2522%2522Jim%2BSmyser%2522%26defaultOp%3DAND%26svcclass%3Ddncurrent%26maxhits%3D20%26ST%3DQS%26format%3Dterse%26DBS%3D2">DejaNews</a> | 
+<a href="/go/to?tag=ex.sn.sr.6.xcit&destUrl=http%3A%2F%2Fwww%2Eexcite%2Ecom%2Fsearch%2Egw%3Fsearch%3D%2522WWW%253A%253ASearch%2522%2522Jim%2BSmyser%2522%26searchType%3DKeyword%26category%3Ddefault%26mode%3Drelevance%26showqbe%3D1%26display%3Dhtml3%2Chb">Excite</a> | 
+<a href="/go/to?tag=ex.sn.sr.6.goto&destUrl=http%3A%2F%2Fwww%2Egoto%2Ecom%2Fd%2Fsearch%2Fp%2Fsnap%2F%3FKeywords%3D%2522WWW%253A%253ASearch%2522%2522Jim%2BSmyser%2522"><b>GoTo</b></a> | 
+<a href="/go/to?tag=ex.sn.sr.6.ipix&destUrl=http%3A%2F%2Fisurf%2Einterpix%2Ecom%2Fcgi%2Dbin%2Fisurf%2Dnoframes%2Fkeyword%5Fsearch%2Ecgi%3Fdb%3D%26q%3D%2522WWW%253A%253ASearch%2522%2522Jim%2BSmyser%2522">Image Surfer</a> | 
+<a href="/go/to?tag=ex.sn.sr.6.seek&destUrl=http%3A%2F%2Fwww%2Esearch%2Ecom%2FInfoseek%2F1%2C135%2C0%2C0200%2Ehtml%3FQUERY%3D%2522WWW%253A%253ASearch%2522%2522Jim%2BSmyser%2522%26COLL%3DWW">Infoseek</a> | 
+<a href="/go/to?tag=ex.sn.sr.6.lcos&destUrl=http%3A%2F%2Fwww%2Elycos%2Ecom%2Fcgi%2Dbin%2Fpursuit%3Fquery%3D%2522WWW%253A%253ASearch%2522%2522Jim%2BSmyser%2522">Lycos</a> | 
+<a href="/go/to?tag=ex.sn.sr.6.yhoo&destUrl=http%3A%2F%2Fsearch%2Eyahoo%2Ecom%2Fbin%2Fsearch%3Fp%3D%2522WWW%253A%253ASearch%2522%2522Jim%2BSmyser%2522">Yahoo</a> |
+<a href="/directory/category/0,16,home-1269,00.html?st.sn.sr.6.more">More...</a></font></td></tr>
+<tr><td height=5><spacer type=block width=1 height=5></td></tr>
+</table>
+
+<table bgcolor="#EEEEEE" width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td height=100 align=center><FORM method="GET" action="http://home.snap.com/cgi-acc/acc_clickthru.acc" target="_top">
+<!---->
+<input type="hidden" name="clickid" value="000022555811944e00000000">
+<input type="hidden" name="adt" value="banner">
+<input type="hidden" name="edt" value="home">
+<input type="hidden" name="site" value="SN">
+<input type="hidden" name="cat" value="s-web">
+<table bgcolor="#003399" width=468 height=60 cellpadding=1 cellspacing=0 border=0>
+<tr><td>
+        <table bgcolor="#cccccc" width="100%" cellpadding=0 cellspacing=0 border=0>
+        <tr valign=top>
+        <td width=285 height=31><A HREF="http://home.snap.com/cgi-acc/acc_clickthru.acc?clickid=000022555811944e00000000&edition=home&category=s-web&site=SN&url=http%3A%2F%2Fedition%2Esnap%2Ecom%2Fmain%2Fcommodity%2Fhoroscope%2F0%2C25%2Chome%2D0%2C00%2Ehtml" TARGET="_top"><img src="http://www.snap.com/Ads/Media/Images/snap.stars285x31.banner.gif" width=285 height=31 border=0></a></td>
+        <td rowspan=2 height=58 width=181><A HREF="http://home.snap.com/cgi-acc/acc_clickthru.acc?clickid=000022555811944e00000000&edition=home&category=s-web&site=SN&url=http%3A%2F%2Fedition%2Esnap%2Ecom" TARGET="_top"><img src="http://www.snap.com/Ads/Media/Images/snap.nbc.banner..gif" width=181 height=58 border=0></a></td>
+        </tr>
+        <tr><td align=center height=27 width=285>
+        <font size="-1" face="arial, helvetica">Choose Your Sign:</font>&nbsp; <SELECT NAME="url">
+        <OPTION VALUE="http://edition.snap.com/main/commodity/horoscope/0,25,home-1,00.html">
+        Aries
+    	<OPTION VALUE="http://edition.snap.com/main/commodity/horoscope/0,25,home-2,00.html">
+        Taurus
+        <OPTION VALUE="http://edition.snap.com/main/commodity/horoscope/0,25,home-4,00.html">
+        Cancer
+        <OPTION VALUE="http://edition.snap.com/main/commodity/horoscope/0,25,home-5,00.html">
+        Leo
+        <OPTION VALUE="http://edition.snap.com/main/commodity/horoscope/0,25,home-6,00.html">
+        Virgo
+        <OPTION VALUE="http://edition.snap.com/main/commodity/horoscope/0,25,home-7,00.html">
+        Libra
+        <OPTION VALUE="http://edition.snap.com/main/commodity/horoscope/0,25,home-8,00.html">
+        Scorpio
+        <OPTION VALUE="http://edition.snap.com/main/commodity/horoscope/0,25,home-9,00.html">
+        Sagittarius
+        <OPTION VALUE="http://edition.snap.com/main/commodity/horoscope/0,25,home-10,00.html">
+        Capricorn
+        <OPTION VALUE="http://edition.snap.com/main/commodity/horoscope/0,25,home-11,00.html">
+        Aquarius
+        <OPTION VALUE="http://edition.snap.com/main/commodity/horoscope/0,25,home-12,00.html">
+        Pisces
+        <OPTION VALUE="http://edition.snap.com/main/commodity/horoscope/0,25,home-3,00.html" selected>
+        Gemini
+        </SELECT> <input type=submit value="Go!"></td></tr>
+        </table></td></tr>
+</table><A HREF="http://home.snap.com/cgi-acc/acc_clickthru.acc?clickid=000022555811944e00000000&edition=home&category=s-web&site=SN&url=http%3A%2F%2Fedition%2Esnap%2Ecom%2Fmain%2Fcommodity%2Fhoroscope%2F0%2C25%2Chome%2D0%2C00%2Ehtml" TARGET="_top"><FONT FACE="Verdana, Arial, Helvetica" SIZE="-2">Check your horoscope at Snap</FONT></A>
+
+</FORM>
 </td></tr>
-<tr>
-<td height="5"><spacer type="block" height="1" width="1"></td>
-</tr>
-<tr bgcolor="#999999">
-<td height="1"><spacer type="block" height="1" width="1"></td>
-</tr>
-</table>
-<!-- end external search links -->
-
-
-<table bgcolor="#EEEEEE" width="100%" cellpadding="0" cellspacing="0" border="0">
-<tr>
-<td height="100" align="center"><A HREF="http://images.snap.com/cgi-acc/acc_clickthru.acc?clickid=000015dc5811944e00000000&edition=home&cat=s-web&site=SN" TARGET="_top"><IMG SRC="http://images.snap.com/Ads/Media/Images/nextcard.r10_howlow_clr_chnge.banner.gif?u_vid_0_0&ffffffff" ALT="www.nextcard.com" BORDER="2" HEIGHT="60" WIDTH="468" ><BR><FONT FACE="Verdana, Arial, Helvetica" SIZE="-2">www.nextcard.com</FONT></A>
-</td>
-</tr>
 </table>
 
-<!-- c|net Mon Nov 16 11:23:26 1998  $Revision: 1.3 $  -->
-<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td bgcolor="#003399" height="3"><spacer type="block" width="1" height="3"></td></tr></table>
-<table width="100%" cellpadding="4" cellspacing="0" border="0"><tr><td><b><font face="Arial, Helvetica" size="-1">
-<a href="/main/door/0,1,home-home,00.html">Home</a>&nbsp;|&nbsp;
-<a href="/search/directory/results/1,61,home-0,00.html">Search</a>&nbsp;|&nbsp;
-<a href="/main/help/index/0,79,home-0,00.html">Help</a>&nbsp;|&nbsp; <a href="/main/help/item/0,11,home-7679,00.html">About Snap</a> &nbsp;|&nbsp; <a href="/main/help/advertising/0,309,home-0,00.html">Ad Info</a> &nbsp;|&nbsp; <a href="/main/help/item/0,11,home-8073,00.html">Snap Jobs</a></font></b></td></tr></table>
-<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td bgcolor="#003399" height="6"><spacer type="block" width="1" height="6"></td></tr></table>
+<!-- c|net Mon Jun 14 10:01:02 1999  $Revision: 2.29 $  -->
 
+
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#666666" height=2 colspan=3><spacer type=block width=1 height=1></td></tr>
+<tr><td width="2%" rowspan=3><img src="/main/images/logos/logo_footer_fl.gif" width=105 height=20 border=0 alt=""></td><td width="96%" align=center height=27><font face="MS Sans Serif, Geneva" size=-2><a href="/main/door/0,1,home-home,00.html">Home</a>&nbsp;&nbsp;<a href="/search/directory/results/1,61,home-0,00.html">Search</a>&nbsp;&nbsp;<a href="/main/help/index/0,79,home-0,00.html">Membership Info</a>&nbsp;&nbsp;<a href="/main/help/comment/0,98,home-0,00.html">Feedback</a>&nbsp;&nbsp;<a href="/main/help/index/0,79,home-0,00.html">Help</a>&nbsp;&nbsp;<a href="/main/help/snapwire/0,445,home-0,00.html">Free E-mail Newsletter</a></font></td><td width="2%"><img src="/main/images/general/nbclogo.gif" width=35 height=22 border=0 alt="NBC Peacock"></td>
+</tr><tr><td bgcolor="#CC0000" height=2 colspan=2><spacer type=block width=1 height=1></td></tr>
+<tr><td align=center height=25><font face="MS Sans Serif, Geneva" size=-2><a href="/main/help/item/0,11,home-7679,00.html">About Snap</a>&nbsp;&nbsp;<a href="/media/index.html?st.sn.fd.0.mc">Ad Info</a>&nbsp;&nbsp;<a href="/main/help/item/0,11,home-8073,00.html">Snap Jobs</a>&nbsp;&nbsp;<a href="/main/register/problems/0,135,home-0,00.html">Privacy Policy</a>&nbsp;&nbsp;<a href="/main/help/item/0,11,home-8450,00.html">List Your Site</a>&nbsp;&nbsp;<a href="/main/help/item/0,11,home-8707,00.html">Add Snap to Your Site</a></font></td><td><spacer type=block width=1 height=1></td></tr></table>
 <p>
-<!-- c|net Sun Nov  8 11:33:44 1998  $Revision: 1.3 $  -->
+<!-- c|net Sun Jun 13 11:28:06 1999  $Revision: 2.29 $  -->
 
 
-<font face="Arial,Helvetica" size="-2"><a href="/main/copyright/0,72,home-0,00.html">Copyright</a> &copy; 1997-1998 Snap and its content providers. All rights reserved.</font>
+<font face="Arial,Helvetica" size=-2>Copyright &copy; 1997-1999 Snap and its content providers. All rights reserved. <a href="/main/copyright/0,72,home-0,00.html">Terms of Use and Copyright Info</a>.</font>
 </body
 </html>
 

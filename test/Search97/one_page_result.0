@@ -1,9 +1,17 @@
 <!--- Template: imfrslp.hts --->
-<!--- George Prior 10/29/98 --->
-<HTML>
-<HEAD><TITLE>IMF Web Site Search Results</TITLE></HEAD>
+<!--- George Prior 01/27/99 --->
+<!--- George Prior 02/21/99 to fix PDF Bug in URL string --->
+<head>
+<TITLE>IMF Web Site Search Results:  burundi</TITLE>
+</head>
 
-<BODY bgcolor="#ffffff">
+<BODY BGCOLOR="#FFFFFF">
+
+
+
+<CENTER>
+
+<!---------------------TOP BANNER START--------------------->
 <!---------------------TOP BANNER START--------------------->
 <CENTER>
 <TABLE CELLSPACING=0 BORDER=0 CELLPADDING=0 WIDTH=590>
@@ -28,1003 +36,902 @@
 </TABLE>
 <BR>
 </CENTER>
-<!-----------------------TOP BANNER ENDS---------------------><TABLE BORDER=0 WIDTH=90%>
+<!-----------------------TOP BANNER ENDS--------------------->
+<!-----------------------TOP BANNER ENDS--------------------->
+&nbsp;<br>
+<!--------------------CONTENT TABLE STARTS------------------->
+
+<TABLE CELLSPACING=0 BORDER=0 CELLPADDING=0>
+
 <TR>
-<TD>
-<CENTER>
-  <FONT SIZE=5><B>IMF Web Site Search Results</B></FONT>
-  <HR>
-</CENTER>
 
-  <CENTER>
-  <B>Results List Navigation:</B>
-                1
-                    <A HREF="http://www.imf.org/search97cgi/s97_cgi.exe?QueryZip=burundi&ResultTemplate=imfrslp%2Ehts&QueryText=burundi&Collection=econiss&Collection=insext&Collection=external&SortOrder=Desc&ScoreThreshold=14&ResultStart=41&ResultCount=40&ServerKey=&AdminImagePath=&Theme=&Company=">2</A>
-                    <A HREF="http://www.imf.org/search97cgi/s97_cgi.exe?QueryZip=burundi&ResultTemplate=imfrslp%2Ehts&QueryText=burundi&Collection=econiss&Collection=insext&Collection=external&SortOrder=Desc&ScoreThreshold=14&ResultStart=81&ResultCount=40&ServerKey=&AdminImagePath=&Theme=&Company=">3</A>
-          
-      <A HREF="http://www.imf.org/search97cgi/s97_cgi.exe?QueryZip=burundi&ResultTemplate=imfrslp%2Ehts&QueryText=burundi&Collection=econiss&Collection=insext&Collection=external&SortOrder=Desc&ScoreThreshold=14&ResultStart=41&ResultCount=40%>&ServerKey=&AdminImagePath=&Theme=&Company=">[Next]</A> 
-   <A HREF="/external/search/search.htm">[Search Again]</A>
-<br>
-For more information <A HREF="/external/pubs/cat/catalog.cfm">search IMF Publications.</A>
+<!------------------------START LEFT COLUMN------------------------> 
 
-    </CENTER>
-  <HR>
+<TD WIDTH="100" VALIGN="TOP">
+
+<FONT SIZE=-1> 
+
+<b>Other Search Options</b><p>
+
+<a href="/external/pubind.htm">Search IMF Publications</a><p>
+
+<a href="/external/search/newssrch.htm">Search IMF News</a><p>
+
+<a href="/external/pubs/ft/ar/98/index.htm">Search the Annual Report</a><p>
+
+<a href="/external/pubs/ft/aa/index.htm">Search the Articles of Agreement</a><p>
+
+<a href="/external/pubs/ft/fandd/index.htm">Search Finance & Development</a><p>
+
+<a href="/external/pubs/ft/survey/surveyx.htm">Search IMF Survey</a><p>
+
+<a href="/external/np/loi/mempub.htm">Search Member Country Publications</a><p>
 
 
-<table border=0 width=100%>
-<td width=50%>Your query "<B>burundi</B>"
-matched 107 matches out of 2224 documents. 
-</td>
-<td align=right width=50%>
-Thursday, December 10, 1998</td><br>
+</font>
+<!------------------SEARCH_END----------------->
+</TD>
+
+<!-----------------------------SPACER COLUMN----------------------------> 
+<TD WIDTH=4>
+<IMG SRC="/external/gifs/space.gif" WIDTH=4 HEIGHT=4 BORDER=0><BR clear=all>
+</TD>
+
+<!-----------------------------BLUE LINE COLUMN----------------------------> 
+<TD WIDTH=1 BGCOLOR="#004490">
+<IMG SRC="/external/gifs/space.gif" WIDTH=1 HEIGHT=4 BORDER=0>
+</TD>
+
+<!-----------------------------SPACER COLUMN----------------------------> 
+<TD WIDTH=15>
+<IMG SRC="/external/gifs/space.gif" WIDTH=15 HEIGHT=4 BORDER=0><BR clear=all>
+</TD>
+
+<!-------------------------START RIGHT COLUMN---------------------------> 
+<TD VALIGN=TOP WIDTH=470>
+
+<!-------------------------CONTENT RIGHT COLUMN STARTS--------------------------->    
+
+<! ------------------------- Publication TITLE, ETC. ------------------------------------------>
+
+
+
+
+
+<table border=0 cellpadding=0 width=470><tr><td><FONT SIZE=5 color="#004490"><B>IMF Site Search Results</B></FONT></td><td>&nbsp;&nbsp;</td><td align=right valign=bottom>
+<FONT SIZE=2">Thursday, June 03, 1999</FONT>
+</td></tr>
 </table>
-<TABLE border=0 width=100%>
-<TR><TH>Rank</TH><TH></TH><TH ALIGN="Left">Title</TH><TH>Size</TH><TH>Type</TH></TR>
+
+<hr>
+
+  <B>Results List Navigation:</B><br>
+                1
+              <A HREF="http://www.imf.org/search97cgi/s97_cgi.exe?QueryZip=burundi&ResultTemplate=imfrslp%2Ehts&QueryText=burundi&Collection=econiss&Collection=insext&Collection=external&SortOrder=Desc&ScoreThreshold=14&ResultStart=41&ResultCount=40&ServerKey=&AdminImagePath=&Theme=&Company=">2</A>
+              <A HREF="http://www.imf.org/search97cgi/s97_cgi.exe?QueryZip=burundi&ResultTemplate=imfrslp%2Ehts&QueryText=burundi&Collection=econiss&Collection=insext&Collection=external&SortOrder=Desc&ScoreThreshold=14&ResultStart=81&ResultCount=40&ServerKey=&AdminImagePath=&Theme=&Company=">3</A>
+              <A HREF="http://www.imf.org/search97cgi/s97_cgi.exe?QueryZip=burundi&ResultTemplate=imfrslp%2Ehts&QueryText=burundi&Collection=econiss&Collection=insext&Collection=external&SortOrder=Desc&ScoreThreshold=14&ResultStart=121&ResultCount=40&ServerKey=&AdminImagePath=&Theme=&Company=">4</A>
+          
+<A HREF="http://www.imf.org/search97cgi/s97_cgi.exe?QueryZip=burundi&ResultTemplate=imfrslp%2Ehts&QueryText=burundi&Collection=econiss&Collection=insext&Collection=external&SortOrder=Desc&ScoreThreshold=14&ResultStart=41&ResultCount=40%>&ServerKey=&AdminImagePath=&Theme=&Company=">[Next]  </A><A HREF="/external/search/search.htm">[Search Again]</A>
+<br>
+
+
+  <p>
+
+
+<table border=0 cellpadding=0><tr><td>Your query "<B>burundi</B>"
+matched 122 matches out of 2726 documents.</td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+<TABLE border=0>
 
 
 <TR>
 
 
 
-<TD width=5% align=center valign=top>1</A></TD>
+</TR>
+<TD align=center valign=top>1</TD>
 
-<td>
-</td>
+<td></td>
 
-<TD width=75% valign=top>
-<A HREF="http://imfnt1x.imf.org:80/external/np/hipc/review/hipcres.pdf#xml=http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fnp%2Fhipc%2Freview%2Fhipcres%2Epdf&doctype=xml&Collection=external&QueryZip=burundi&">
-HIPC Review and Outlook September 22, 1998 </A>
+<TD valign=top>
+<A HREF="http://www.imf.org/external/np/sec/memdir/members.htm">
+IMF Members</A>
 
-	    	
+               <br><B>Date:</b> April 30, 1999          
 
-			<br><B>Summary:</b> Spanish text - Prepared by the staffs of the World Bank and the IMF. 
-	</TD>
+       <br><B>Summary:</b> Lists IMF members, Quotas, Governors, and
+Voting Power
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  177 Kb
+</TD>
 
-    <TD  align=center valign=top width=15%>359 Kb</TD>
-      <td  align=center valign=top>PDF</td>
-      
 </TR>
 
 
-<TR>
+</TR>
+<TD align=center valign=top>2</TD>
 
+<td></td>
 
+<TD valign=top>
+<A HREF="http://www.imf.org/external/np/sec/memdir/eds.htm">
+IMF Executive Directors</A>
 
-<TD width=5% align=center valign=top>2</A></TD>
+               <br><B>Date:</b> April 30, 1999          
 
-<td>
-</td>
+       <br><B>Summary:</b> IMF Executive Directors and Voting Power,
+includes Director , Alternate ,  Votes by Country, Total Votes , and Percent of Fund Total
+Votes
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  40 Kb
+</TD>
 
-<TD width=75% valign=top>
-<A HREF="http://imfnt1x.imf.org:80/external/np/hipc/review/hipcref.pdf#xml=http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fnp%2Fhipc%2Freview%2Fhipcref%2Epdf&doctype=xml&Collection=external&QueryZip=burundi&">
-HIPC Review and Outlook  September 22 1998 </A>
-
-	    	
-
-			<br><B>Summary:</b> French text - Prepared by the staffs of the World Bank and the IMF. 
-	</TD>
-
-    <TD  align=center valign=top width=15%>312 Kb</TD>
-      <td  align=center valign=top>PDF</td>
-      
 </TR>
 
 
-<TR>
+</TR>
+<TD align=center valign=top>3</TD>
 
+<td></td>
 
+<TD valign=top>
+<A HREF="http://www.imf.org/external/np/hipc/cost2/index.htm">
+Heavily Indebted Poor Countries (HIPC) Initiative Perspectives on the Current Framework and Options for Change - Supplement on Costing</A>
 
-<TD width=5% align=center valign=top>3</A></TD>
+               <br><B>Date:</b> April 21, 1999          
 
-<td>
-</td>
+       <br><B>Summary:</b> Presents updated estimates of the costs of the HIPC Initiative under the current framework, and in a range of possible alternative frameworks.
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  40 Kb
+</TD>
 
-<TD width=75% valign=top>
-<A HREF="http://imfnt1x.imf.org:80/external/np/hipc/review/hipcrev.pdf#xml=http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fnp%2Fhipc%2Freview%2Fhipcrev%2Epdf&doctype=xml&Collection=external&QueryZip=burundi&">
-HIPC Review and Outlook  September 22 1998 </A>
-
-	    	
-
-			<br><B>Summary:</b> prepared by the Staffs of the World Bank and the IMF. 
-	</TD>
-
-    <TD  align=center valign=top width=15%>242 Kb</TD>
-      <td  align=center valign=top>PDF</td>
-      
 </TR>
 
 
-<TR>
+</TR>
+<TD align=center valign=top>4</TD>
 
+<td></td>
 
+<TD valign=top>
+<A HREF="http://www.imf.org/external/np/hipc/hipc.htm">
+Debt Initiative for the Heavily Indebted Poor Countries HIPCs - Factsheet</A>
 
-<TD width=5% align=center valign=top>4</A></TD>
+               <br><B>Date:</b> April 21, 1999          
 
-<td>
-</td>
+       <br><B>Summary:</b> Describes the IMF and World Bank framework to
+provide assistance for heavily indebted poor countries that pursue IMF- and Bank-supported
+adjustment and reform programs, but for whom traditional debt relief mechanisms are
+insufficient.
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  31 Kb
+</TD>
 
-<TD width=75% valign=top>
-<A HREF="http://imfnt1x.imf.org:80/external/pubs/ft/pam/pam52/pamphlet52.pdf#xml=http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fpubs%2Fft%2Fpam%2Fpam52%2Fpamphlet52%2Epdf&doctype=xml&Collection=external&QueryZip=burundi&">
-The IMF and The Poor - Pamphlet 52, September 1998</A>
-
-	    	
-
-			<br><B>Summary:</b> Focuses on reducing poverty and improving equity. Describes how the IMF works to achieve these objectives in surveillance over member countries' economic policies, financial support for adjustment programs, and technical assistance. 
-	</TD>
-
-    <TD  align=center valign=top width=15%>101 Kb</TD>
-      <td  align=center valign=top>PDF</td>
-      
 </TR>
 
 
-<TR>
+</TR>
+<TD align=center valign=top>5</TD>
 
+<td></td>
 
+<TD valign=top>
+<A HREF="http://www.imf.org/external/np/hipc/options/index.htm">
+Heavily Indebted Poor Countries (HIPC) Initiative - Perspectives on the Current Framework and Options for Change</A>
 
-<TD width=5% align=center valign=top>5</A></TD>
+               <br><B>Date:</b> April 02, 1999          
 
-<td>
-</td>
+       <br><B>Summary:</b> Five G-7 governments have made proposals for
+changes to the Initiative to be discussed at the Cologne Summit in June, 1999. This paper
+provides information on the specific proposals, and suggests some considerations for assessing
+them.
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  129 Kb
+</TD>
 
-<TD width=75% valign=top>
-<A HREF="http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fnp%2Fsec%2Fdecdo%2Fwb%2Ehtm&DocOffset=5&DocsFound=107&QueryZip=burundi&Collection=econiss&Collection=insext&Collection=external&SortOrder=Desc&ScoreThreshold=14&SearchUrl=http%3A%2F%2Fwww%2Eimf%2Eorg%2Fsearch97cgi%2Fs97%5Fcgi%2Eexe%3FQueryZip%3Dburundi%26ResultTemplate%3Dimfrslp%252Ehts%26QueryText%3Dburundi%26Collection%3Deconiss%26Collection%3Dinsext%26Collection%3Dexternal%26SortOrder%3DDesc%26ScoreThreshold%3D14%26ResultStart%3D1%26ResultCount%3D40&">
-THE WORLD BANK GROUP</A>
-
-	    		<br><B>Date:</b> July 13, 1998	    	
-
-    	<br><B>Summary:</b> This is an entry from the IMF's Directory of Economic, Commodity and Development Organizations which provides a guide to regional economic organizations and to inter-governmental commodity and development organizations.
-    </TD>
-
-    <TD  align=center valign=top width=15%>29 Kb</TD>
-      <td  align=center valign=top>HTML</td>
-      
 </TR>
 
 
-<TR>
+</TR>
+<TD align=center valign=top>6</TD>
 
+<td></td>
 
+<TD valign=top>
+<A HREF="http://www.imf.org/external/np/tre/quota/status.htm">
+Status of Members' Consents to Increases in Quotas Under the Eleventh General Review</A>
 
-<TD width=5% align=center valign=top>6</A></TD>
+               <br><B>Date:</b> March 31, 1999          
 
-<td>
-</td>
+       <br><B>Summary:</b> As of March 31, 1999, 154 members,
+  accounting for 95.6 percent of quotas, have consented to their increases. The remaining 21
+  members have until July 30, 1999 to consent to their quota increases.
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  12 Kb
+</TD>
 
-<TD width=75% valign=top>
-<A HREF="http://imfnt1x.imf.org:80/external/pubs/ft/weo/weo0598/pdf/0598sta.pdf#xml=http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fpubs%2Fft%2Fweo%2Fweo0598%2Fpdf%2F0598sta%2Epdf&doctype=xml&Collection=external&QueryZip=burundi&">
-IMF World Economic Outlook, May 1998--Statistical Appendix </A>
-
-	    	
-
-			<br><B>Summary:</b> Assumptions, Data & Conventions, Country Classification, Tables, Output , Inflation,  Financial Policies, Foreign Trade, Current  Account Transactions, Balance of Payments & External Financing, Debt,  Flow of Funds,  Medium-Term Baseline Scenario 
-	</TD>
-
-    <TD  align=center valign=top width=15%>375 Kb</TD>
-      <td  align=center valign=top>PDF</td>
-      
 </TR>
 
 
-<TR>
+</TR>
+<TD align=center valign=top>7</TD>
 
+<td></td>
 
+<TD valign=top>
+<A HREF="http://www.imf.org/external/np/hipc/cost/cost.htm">
+Tentative Costing of Illustrative Alternatives to the HIPC Initiative Framework</A>
 
-<TD width=5% align=center valign=top>7</A></TD>
+               <br><B>Date:</b> March 03, 1999          
 
-<td>
-</td>
+       <br><B>Summary:</b> The attached tables provide highly tentative estimates of the costs of changing some key parameters of the current framework of the HIPC Initiative
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  44 Kb
+</TD>
 
-<TD width=75% valign=top>
-<A HREF="http://imfnt1x.imf.org:80/external/pubs/ft/weo/weo1098/pdf/1098sta.pdf#xml=http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fpubs%2Fft%2Fweo%2Fweo1098%2Fpdf%2F1098sta%2Epdf&doctype=xml&Collection=external&QueryZip=burundi&">
-IMF World Economic Outlook, October 1998 -- Statistical Appendix </A>
-
-	    	
-
-	</TD>
-
-    <TD  align=center valign=top width=15%>287 Kb</TD>
-      <td  align=center valign=top>PDF</td>
-      
 </TR>
 
 
-<TR>
+</TR>
+<TD align=center valign=top>8</TD>
 
+<td></td>
 
+<TD valign=top>
+<A HREF="http://www.imf.org/external/np/sec/pn/1999/PN9905.HTM">
+Public Information Notice: IMF Concludes Article IV Consultation with Burundi</A>
 
-<TD width=5% align=center valign=top>8</A></TD>
+               <br><B>Date:</b> January 28, 1999          
 
-<td>
-</td>
+       <br><B>Summary:</b> Each Public Information Notice contains a background section, a table of selected economic indicators if appropriate, and an Executive Board assessment.
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  24 Kb
+</TD>
 
-<TD width=75% valign=top>
-<A HREF="http://imfnt1x.imf.org:80/external/pubs/ft/ar/97/S97/pdf/file13.pdf#xml=http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fpubs%2Fft%2Far%2F97%2FS97%2Fpdf%2Ffile13%2Epdf&doctype=xml&Collection=external&QueryZip=burundi&">
-Informe Anual del FMI 1997 -  Apendice II. Operaciones y transacciones financieras del FMI</A>
-
-	    	
-
-	</TD>
-
-    <TD  align=center valign=top width=15%>119 Kb</TD>
-      <td  align=center valign=top>PDF</td>
-      
 </TR>
 
 
-<TR>
+</TR>
+<TD align=center valign=top>9</TD>
 
+<td></td>
 
+<TD valign=top>
+<A HREF="http://www.imf.org/external/np/sec/pr/1999/PR9904.HTM">
+Press Release: IMF Quota Increase Enters into Effect--Boosts IMF Resources</A>
 
-<TD width=5% align=center valign=top>9</A></TD>
+               <br><B>Date:</b> January 22, 1999          
 
-<td>
-</td>
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  81 Kb
+</TD>
 
-<TD width=75% valign=top>
-<A HREF="http://imfnt1x.imf.org:80/external/pubs/ft/ar/97/F97/pdf/file13f.pdf#xml=http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fpubs%2Fft%2Far%2F97%2FF97%2Fpdf%2Ffile13f%2Epdf&doctype=xml&Collection=external&QueryZip=burundi&">
-FMI Rapport annuel 1997 -- OPERATIONS ET TRANSACTION FINANCIERES DU FMI </A>
-
-	    	
-
-	</TD>
-
-    <TD  align=center valign=top width=15%>85 Kb</TD>
-      <td  align=center valign=top>PDF</td>
-      
 </TR>
 
 
-<TR>
+</TR>
+<TD align=center valign=top>10</TD>
 
+<td></td>
 
+<TD valign=top>
+<A HREF="http://www.imf.org/external/pubs/ft/pam/pam45/IV/IVtab10.htm">
+Pamphlet Series No. 45 - Table 10: Countries Eligible for SAF and ESAF: Loans Disbursed as of April 30, 1998</A>
 
-<TD width=5% align=center valign=top>10</A></TD>
+               <br><B>Date:</b> October 05, 1998          
 
-<td>
-</td>
+       <br><B>Summary:</b> The financial structure and operations of the IMF are described as well as the sources of IMF financing, the policies associated with the use of IMF resources, and the role of the IMF as trustee to various accounts that are administered by it.
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  17 Kb
+</TD>
 
-<TD width=75% valign=top>
-<A HREF="http://imfnt1x.imf.org:80/external/pubs/ft/pam/pam51/pam51.pdf#xml=http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fpubs%2Fft%2Fpam%2Fpam51%2Fpam51%2Epdf&doctype=xml&Collection=external&QueryZip=burundi&">
-Debt Relief for Low Income Countries - The HIPC Initiative - Pamphlet 51</A>
-
-	    	
-
-			<br><B>Summary:</b> This pamphlet describes the HIPC initiative and suggests that it should enable HIPCs to exit from the debt-rescheduling process. 
-	</TD>
-
-    <TD  align=center valign=top width=15%>190 Kb</TD>
-      <td  align=center valign=top>PDF</td>
-      
 </TR>
 
 
-<TR>
+</TR>
+<TD align=center valign=top>11</TD>
 
+<td></td>
 
+<TD valign=top>
+<A HREF="http://www.imf.org/external/pubs/ft/pam/pam45/APPENDIX/APIII.htm">
+Pamphlet Series No. 45 Appendix III: IMF Membership, Quotas, and Allocations of SDRs</A>
 
-<TD width=5% align=center valign=top>11</A></TD>
+               <br><B>Date:</b> October 05, 1998          
 
-<td>
-</td>
+       <br><B>Summary:</b> The financial structure and operations of the IMF are described as well as the sources of IMF financing, the policies associated with the use of IMF resources, and the role of the IMF as trustee to various accounts that are administered by it.
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  64 Kb
+</TD>
 
-<TD width=75% valign=top>
-<A HREF="http://imfnt1x.imf.org:80/external/pubs/ft/ar/98/s/pdf/file08s.pdf#xml=http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fpubs%2Fft%2Far%2F98%2Fs%2Fpdf%2Ffile08s%2Epdf&doctype=xml&Collection=external&QueryZip=burundi&">
-FMI Reporte Anual 1998 - parte 7 de 13  </A>
-
-	    	
-
-			<br><B>Summary:</b> Apéndices I-II 
-	</TD>
-
-    <TD  align=center valign=top width=15%>192 Kb</TD>
-      <td  align=center valign=top>PDF</td>
-      
 </TR>
 
 
-<TR>
-
-
-
-<TD width=5% align=center valign=top>12</A></TD>
-
-<td>
-</td>
-
-<TD width=75% valign=top>
-<A HREF="http://imfnt1x.imf.org:80/external/pubs/ft/ar/98/g/pdf/file08g.pdf#xml=http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fpubs%2Fft%2Far%2F98%2Fg%2Fpdf%2Ffile08g%2Epdf&doctype=xml&Collection=external&QueryZip=burundi&">
-IMF Annual Report 1998 - part 8 of 13</A>
-
-	    	
-
-			<br><B>Summary:</b> Appendix I and  II
-	</TD>
-
-    <TD  align=center valign=top width=15%>234 Kb</TD>
-      <td  align=center valign=top>PDF</td>
-      
 </TR>
+<TD align=center valign=top>12</TD>
 
+<td></td>
 
-<TR>
-
-
-
-<TD width=5% align=center valign=top>13</A></TD>
-
-<td>
-</td>
-
-<TD width=75% valign=top>
-<A HREF="http://imfnt1x.imf.org:80/external/pubs/ft/ar/98/f/pdf/file08f.pdf#xml=http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fpubs%2Fft%2Far%2F98%2Ff%2Fpdf%2Ffile08f%2Epdf&doctype=xml&Collection=external&QueryZip=burundi&">
-FMI Rapport annuel 1998 </A>
-
-	    	
-
-	</TD>
-
-    <TD  align=center valign=top width=15%>267 Kb</TD>
-      <td  align=center valign=top>PDF</td>
-      
-</TR>
-
-
-<TR>
-
-
-
-<TD width=5% align=center valign=top>14</A></TD>
-
-<td>
-</td>
-
-<TD width=75% valign=top>
-<A HREF="http://imfnt1x.imf.org:80/external/pubs/ft/ar/98/pdf/file08.pdf#xml=http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fpubs%2Fft%2Far%2F98%2Fpdf%2Ffile08%2Epdf&doctype=xml&Collection=external&QueryZip=burundi&">
-IMF Annual Report 1998 - part 8 of 13</A>
-
-	    	
-
-			<br><B>Summary:</b> Appendix I and  II
-	</TD>
-
-    <TD  align=center valign=top width=15%>234 Kb</TD>
-      <td  align=center valign=top>PDF</td>
-      
-</TR>
-
-
-<TR>
-
-
-
-<TD width=5% align=center valign=top>15</A></TD>
-
-<td>
-</td>
-
-<TD width=75% valign=top>
-<A HREF="http://imfnt1x.imf.org:80/external/pubs/ft/ar/97/pdf/file13.pdf#xml=http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fpubs%2Fft%2Far%2F97%2Fpdf%2Ffile13%2Epdf&doctype=xml&Collection=external&QueryZip=burundi&">
-IMF Annual Report 1997--Financial Operations and Transactions of the Fund </A>
-
-	    	
-
-	</TD>
-
-    <TD  align=center valign=top width=15%>90 Kb</TD>
-      <td  align=center valign=top>PDF</td>
-      
-</TR>
-
-
-<TR>
-
-
-
-<TD width=5% align=center valign=top>16</A></TD>
-
-<td>
-</td>
-
-<TD width=75% valign=top>
-<A HREF="http://imfnt1x.imf.org:80/external/pubs/ft/ar/97/pdf/file16.pdf#xml=http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fpubs%2Fft%2Far%2F97%2Fpdf%2Ffile16%2Epdf&doctype=xml&Collection=external&QueryZip=burundi&">
-IMF Annual Report 1997--Executive Directors and Voting Power on April 30, 1997, Changes in Membership of Executive Board </A>
-
-	    	
-
-	</TD>
-
-    <TD  align=center valign=top width=15%>57 Kb</TD>
-      <td  align=center valign=top>PDF</td>
-      
-</TR>
-
-
-<TR>
-
-
-
-<TD width=5% align=center valign=top>17</A></TD>
-
-<td>
-</td>
-
-<TD width=75% valign=top>
-<A HREF="http://imfnt1x.imf.org:80/external/pubs/ft/ar/97/S97/pdf/file16.pdf#xml=http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fpubs%2Fft%2Far%2F97%2FS97%2Fpdf%2Ffile16%2Epdf&doctype=xml&Collection=external&QueryZip=burundi&">
-Informe Anual del FMI 1997 - Apendices VII-VIII </A>
-
-	    	
-
-	</TD>
-
-    <TD  align=center valign=top width=15%>68 Kb</TD>
-      <td  align=center valign=top>PDF</td>
-      
-</TR>
-
-
-<TR>
-
-
-
-<TD width=5% align=center valign=top>18</A></TD>
-
-<td>
-</td>
-
-<TD width=75% valign=top>
-<A HREF="http://imfnt1x.imf.org:80/external/pubs/ft/ar/97/F97/pdf/file16f.pdf#xml=http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fpubs%2Fft%2Far%2F97%2FF97%2Fpdf%2Ffile16f%2Epdf&doctype=xml&Collection=external&QueryZip=burundi&">
-FMI Rapport annuel 1997 -- ADMINISTRATEURS ET NOMBRE DE VOIX AU 3 0 AVRIL 1997, CHANGEMENTS DANS L A COMPOSITIONDU CONSEIL D~ADMINISTRATION </A>
-
-	    	
-
-	</TD>
-
-    <TD  align=center valign=top width=15%>58 Kb</TD>
-      <td  align=center valign=top>PDF</td>
-      
-</TR>
-
-
-<TR>
-
-
-
-<TD width=5% align=center valign=top>19</A></TD>
-
-<td>
-</td>
-
-<TD width=75% valign=top>
-<A HREF="http://imfnt1x.imf.org:80/external/pubs/ft/survey/pdf/072197.pdf#xml=http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fpubs%2Fft%2Fsurvey%2Fpdf%2F072197%2Epdf&doctype=xml&Collection=external&QueryZip=burundi&">
-IMF Survey: July 21, 1997 </A>
-
-	    	
-
-	</TD>
-
-    <TD  align=center valign=top width=15%>335 Kb</TD>
-      <td  align=center valign=top>PDF</td>
-      
-</TR>
-
-
-<TR>
-
-
-
-<TD width=5% align=center valign=top>20</A></TD>
-
-<td>
-</td>
-
-<TD width=75% valign=top>
-<A HREF="http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fnp%2Fsec%2Fdecdo%2Fwfp%2Ehtm&DocOffset=20&DocsFound=107&QueryZip=burundi&Collection=econiss&Collection=insext&Collection=external&SortOrder=Desc&ScoreThreshold=14&SearchUrl=http%3A%2F%2Fwww%2Eimf%2Eorg%2Fsearch97cgi%2Fs97%5Fcgi%2Eexe%3FQueryZip%3Dburundi%26ResultTemplate%3Dimfrslp%252Ehts%26QueryText%3Dburundi%26Collection%3Deconiss%26Collection%3Dinsext%26Collection%3Dexternal%26SortOrder%3DDesc%26ScoreThreshold%3D14%26ResultStart%3D1%26ResultCount%3D40&">
-WORLD FOOD PROGRAMME (WFP)</A>
-
-	    		<br><B>Date:</b> April 30, 1998	    	
-
-    	<br><B>Summary:</b> This is an entry from the IMF's Directory of Economic, Commodity and Development Organizations which provides a guide to regional economic organizations and to inter-governmental commodity and development organizations.
-    </TD>
-
-    <TD  align=center valign=top width=15%>18 Kb</TD>
-      <td  align=center valign=top>HTML</td>
-      
-</TR>
-
-
-<TR>
-
-
-
-<TD width=5% align=center valign=top>21</A></TD>
-
-<td>
-</td>
-
-<TD width=75% valign=top>
-<A HREF="http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fpubs%2Fft%2Fpam%2Fpam52%2F3%2Ehtm&DocOffset=21&DocsFound=107&QueryZip=burundi&Collection=econiss&Collection=insext&Collection=external&SortOrder=Desc&ScoreThreshold=14&SearchUrl=http%3A%2F%2Fwww%2Eimf%2Eorg%2Fsearch97cgi%2Fs97%5Fcgi%2Eexe%3FQueryZip%3Dburundi%26ResultTemplate%3Dimfrslp%252Ehts%26QueryText%3Dburundi%26Collection%3Deconiss%26Collection%3Dinsext%26Collection%3Dexternal%26SortOrder%3DDesc%26ScoreThreshold%3D14%26ResultStart%3D1%26ResultCount%3D40&">
+<TD valign=top>
+<A HREF="http://www.imf.org/external/pubs/ft/pam/pam52/3.htm">
 The IMF and The Poor Pamphlet 52 - IMF-Supported Programs and the Poor</A>
 
-	    		<br><B>Date:</b> September 02, 1998	    	
+               <br><B>Date:</b> September 02, 1998          
 
-    	<br><B>Summary:</b> Focuses on reducing poverty and improving equity. Describes how the IMF works to achieve these objectives in its core activities of surveillance over members' economic policies, financial support for adjustment programs, and technical assistance.
-    </TD>
+       <br><B>Summary:</b> Focuses on reducing poverty and improving equity. Describes how the IMF works to achieve these objectives in its core activities of surveillance over members' economic policies, financial support for adjustment programs, and technical assistance.
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  53 Kb
+</TD>
 
-    <TD  align=center valign=top width=15%>53 Kb</TD>
-      <td  align=center valign=top>HTML</td>
-      
 </TR>
 
 
-<TR>
+</TR>
+<TD align=center valign=top>13</TD>
 
+<td></td>
 
+<TD valign=top>
+<A HREF="http://www.imf.org/external/pubs/ft/survey/sup0998/03.htm">
+IMF Survey Supplement on the Fund 1998 - SDR 146 Billion</A>
 
-<TD width=5% align=center valign=top>22</A></TD>
+               <br><B>Date:</b> September 01, 1998          
 
-<td>
-</td>
+       <br><B>Summary:</b> Provides an overview on the IMF with special emphasis on events of the past year.
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  70 Kb
+</TD>
 
-<TD width=75% valign=top>
-<A HREF="http://imfnt1x.imf.org:80/external/pubs/ft/survey/pdf/090096.pdf#xml=http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fpubs%2Fft%2Fsurvey%2Fpdf%2F090096%2Epdf&doctype=xml&Collection=external&QueryZip=burundi&">
-IMF Survey: Supplement on the IMF, September 1996 </A>
-
-	    	
-
-	</TD>
-
-    <TD  align=center valign=top width=15%>327 Kb</TD>
-      <td  align=center valign=top>PDF</td>
-      
 </TR>
 
 
-<TR>
+</TR>
+<TD align=center valign=top>14</TD>
 
+<td></td>
 
+<TD valign=top>
+<A HREF="http://www.imf.org/external/pubs/ft/survey/sup0998/02.htm">
+IMF Survey Supplement on the Fund 1998 - Organization</A>
 
-<TD width=5% align=center valign=top>23</A></TD>
+               <br><B>Date:</b> September 01, 1998          
 
-<td>
-</td>
+       <br><B>Summary:</b> Provides an overview on the IMF with special emphasis on events of the past year.
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  24 Kb
+</TD>
 
-<TD width=75% valign=top>
-<A HREF="http://imfnt1x.imf.org:80/external/pubs/ft/ar/97/S97/pdf/file18.pdf#xml=http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fpubs%2Fft%2Far%2F97%2FS97%2Fpdf%2Ffile18%2Epdf&doctype=xml&Collection=external&QueryZip=burundi&">
-Informe Anual del FMI 1997 - Apendice X. Estados financieros </A>
-
-	    	
-
-	</TD>
-
-    <TD  align=center valign=top width=15%>224 Kb</TD>
-      <td  align=center valign=top>PDF</td>
-      
 </TR>
 
 
-<TR>
+</TR>
+<TD align=center valign=top>15</TD>
 
+<td></td>
 
+<TD valign=top>
+<A HREF="http://www.imf.org/external/np/sec/decdo/imf.htm">
+INTERNATIONAL MONETARY FUND (IMF)</A>
 
-<TD width=5% align=center valign=top>24</A></TD>
+               <br><B>Date:</b> August 31, 1998          
 
-<td>
-</td>
+       <br><B>Summary:</b> This is an entry from the IMF's Directory of Economic, Commodity and Development Organizations which provides a guide to regional economic organizations and to inter-governmental commodity and development organizations.
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  19 Kb
+</TD>
 
-<TD width=75% valign=top>
-<A HREF="http://imfnt1x.imf.org:80/external/pubs/ft/ar/97/F97/pdf/file18f.pdf#xml=http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fpubs%2Fft%2Far%2F97%2FF97%2Fpdf%2Ffile18f%2Epdf&doctype=xml&Collection=external&QueryZip=burundi&">
-FMI Rapport annuel 1997 -- ETATS FINANCIERS </A>
-
-	    	
-
-	</TD>
-
-    <TD  align=center valign=top width=15%>176 Kb</TD>
-      <td  align=center valign=top>PDF</td>
-      
 </TR>
 
 
-<TR>
+</TR>
+<TD align=center valign=top>16</TD>
 
+<td></td>
 
+<TD valign=top>
+<A HREF="http://www.imf.org/external/np/sec/decdo/groups.htm">
+COUNTRY GROUPS</A>
 
-<TD width=5% align=center valign=top>25</A></TD>
+               <br><B>Date:</b> August 20, 1998          
 
-<td>
-</td>
+       <br><B>Summary:</b> This is an entry from the IMF's Directory of Economic, Commodity and Development Organizations which provides a guide to regional economic organizations and to inter-governmental commodity and development organizations.
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  8 Kb
+</TD>
 
-<TD width=75% valign=top>
-<A HREF="http://imfnt1x.imf.org:80/external/pubs/ft/survey/sup0996/pdf/suppleme.pdf#xml=http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fpubs%2Fft%2Fsurvey%2Fsup0996%2Fpdf%2Fsuppleme%2Epdf&doctype=xml&Collection=external&QueryZip=burundi&">
-IMF Survey Supplement on the Fund 1996 </A>
-
-	    	
-
-	</TD>
-
-    <TD  align=center valign=top width=15%>327 Kb</TD>
-      <td  align=center valign=top>PDF</td>
-      
 </TR>
 
 
-<TR>
+</TR>
+<TD align=center valign=top>17</TD>
 
+<td></td>
 
+<TD valign=top>
+<A HREF="http://www.imf.org/external/cntpst/membersignup.asp">
+Sign Up for E-mail notification of new items</A>
 
-<TD width=5% align=center valign=top>26</A></TD>
+               <br><B>Date:</b> August 03, 1998          
 
-<td>
-</td>
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  15 Kb
+</TD>
 
-<TD width=75% valign=top>
-<A HREF="http://imfnt1x.imf.org:80/external/pubs/ft/ar/98/s/pdf/file10s.pdf#xml=http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fpubs%2Fft%2Far%2F98%2Fs%2Fpdf%2Ffile10s%2Epdf&doctype=xml&Collection=external&QueryZip=burundi&">
-FMI Reporte Anual 1998 - parte 10 de 13  </A>
-
-	    	
-
-			<br><B>Summary:</b> Apéndices IX-X 
-	</TD>
-
-    <TD  align=center valign=top width=15%>299 Kb</TD>
-      <td  align=center valign=top>PDF</td>
-      
 </TR>
 
 
-<TR>
-
-
-
-<TD width=5% align=center valign=top>27</A></TD>
-
-<td>
-</td>
-
-<TD width=75% valign=top>
-<A HREF="http://imfnt1x.imf.org:80/external/pubs/ft/ar/98/s/pdf/file09s.pdf#xml=http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fpubs%2Fft%2Far%2F98%2Fs%2Fpdf%2Ffile09s%2Epdf&doctype=xml&Collection=external&QueryZip=burundi&">
-FMI Reporte Anual 1998 - parte 9 de 13  </A>
-
-	    	
-
-			<br><B>Summary:</b> Apéndices III-IV-V-VI-VII 
-	</TD>
-
-    <TD  align=center valign=top width=15%>197 Kb</TD>
-      <td  align=center valign=top>PDF</td>
-      
 </TR>
+<TD align=center valign=top>18</TD>
 
+<td></td>
 
-<TR>
-
-
-
-<TD width=5% align=center valign=top>28</A></TD>
-
-<td>
-</td>
-
-<TD width=75% valign=top>
-<A HREF="http://imfnt1x.imf.org:80/external/pubs/ft/ar/98/g/pdf/file10g.pdf#xml=http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fpubs%2Fft%2Far%2F98%2Fg%2Fpdf%2Ffile10g%2Epdf&doctype=xml&Collection=external&QueryZip=burundi&">
-IMF Annual Report 1998 - part 10 of 13  </A>
-
-	    	
-
-			<br><B>Summary:</b> Appendix VIII and IX 
-	</TD>
-
-    <TD  align=center valign=top width=15%>313 Kb</TD>
-      <td  align=center valign=top>PDF</td>
-      
-</TR>
-
-
-<TR>
-
-
-
-<TD width=5% align=center valign=top>29</A></TD>
-
-<td>
-</td>
-
-<TD width=75% valign=top>
-<A HREF="http://imfnt1x.imf.org:80/external/pubs/ft/ar/98/g/pdf/file09g.pdf#xml=http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fpubs%2Fft%2Far%2F98%2Fg%2Fpdf%2Ffile09g%2Epdf&doctype=xml&Collection=external&QueryZip=burundi&">
-IMF Annual Report 1998 - part 9 of 13 </A>
-
-	    	
-
-			<br><B>Summary:</b> Appendices III thru VII 
-	</TD>
-
-    <TD  align=center valign=top width=15%>258 Kb</TD>
-      <td  align=center valign=top>PDF</td>
-      
-</TR>
-
-
-<TR>
-
-
-
-<TD width=5% align=center valign=top>30</A></TD>
-
-<td>
-</td>
-
-<TD width=75% valign=top>
-<A HREF="http://imfnt1x.imf.org:80/external/pubs/ft/ar/98/f/pdf/file09f.pdf#xml=http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fpubs%2Fft%2Far%2F98%2Ff%2Fpdf%2Ffile09f%2Epdf&doctype=xml&Collection=external&QueryZip=burundi&">
-FMI Rapport annuel 1998 </A>
-
-	    	
-
-	</TD>
-
-    <TD  align=center valign=top width=15%>304 Kb</TD>
-      <td  align=center valign=top>PDF</td>
-      
-</TR>
-
-
-<TR>
-
-
-
-<TD width=5% align=center valign=top>31</A></TD>
-
-<td>
-</td>
-
-<TD width=75% valign=top>
-<A HREF="http://imfnt1x.imf.org:80/external/pubs/ft/ar/98/f/pdf/file10f.pdf#xml=http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fpubs%2Fft%2Far%2F98%2Ff%2Fpdf%2Ffile10f%2Epdf&doctype=xml&Collection=external&QueryZip=burundi&">
-FMI Rapport annuel 1998 </A>
-
-	    	
-
-	</TD>
-
-    <TD  align=center valign=top width=15%>371 Kb</TD>
-      <td  align=center valign=top>PDF</td>
-      
-</TR>
-
-
-<TR>
-
-
-
-<TD width=5% align=center valign=top>32</A></TD>
-
-<td>
-</td>
-
-<TD width=75% valign=top>
-<A HREF="http://imfnt1x.imf.org:80/external/pubs/ft/survey/sup0997/pdf/suppleme.pdf#xml=http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fpubs%2Fft%2Fsurvey%2Fsup0997%2Fpdf%2Fsuppleme%2Epdf&doctype=xml&Collection=external&QueryZip=burundi&">
-IMF Survey Supplement on the Fund--September 1997 </A>
-
-	    	
-
-	</TD>
-
-    <TD  align=center valign=top width=15%>554 Kb</TD>
-      <td  align=center valign=top>PDF</td>
-      
-</TR>
-
-
-<TR>
-
-
-
-<TD width=5% align=center valign=top>33</A></TD>
-
-<td>
-</td>
-
-<TD width=75% valign=top>
-<A HREF="http://imfnt1x.imf.org:80/external/pubs/ft/ar/98/pdf/file10.pdf#xml=http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fpubs%2Fft%2Far%2F98%2Fpdf%2Ffile10%2Epdf&doctype=xml&Collection=external&QueryZip=burundi&">
-IMF Annual Report 1998 - part 10 of 13  </A>
-
-	    	
-
-			<br><B>Summary:</b> Appendix VIII and IX 
-	</TD>
-
-    <TD  align=center valign=top width=15%>313 Kb</TD>
-      <td  align=center valign=top>PDF</td>
-      
-</TR>
-
-
-<TR>
-
-
-
-<TD width=5% align=center valign=top>34</A></TD>
-
-<td>
-</td>
-
-<TD width=75% valign=top>
-<A HREF="http://imfnt1x.imf.org:80/external/pubs/ft/ar/98/pdf/file09.pdf#xml=http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fpubs%2Fft%2Far%2F98%2Fpdf%2Ffile09%2Epdf&doctype=xml&Collection=external&QueryZip=burundi&">
-IMF Annual Report 1998 - part 9 of 13 </A>
-
-	    	
-
-			<br><B>Summary:</b> Appendices III thru VII 
-	</TD>
-
-    <TD  align=center valign=top width=15%>258 Kb</TD>
-      <td  align=center valign=top>PDF</td>
-      
-</TR>
-
-
-<TR>
-
-
-
-<TD width=5% align=center valign=top>35</A></TD>
-
-<td>
-</td>
-
-<TD width=75% valign=top>
-<A HREF="http://imfnt1x.imf.org:80/external/pubs/ft/ar/97/pdf/file18.pdf#xml=http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fpubs%2Fft%2Far%2F97%2Fpdf%2Ffile18%2Epdf&doctype=xml&Collection=external&QueryZip=burundi&">
-IMF Annual Report 1997--Financial Statements </A>
-
-	    	
-
-	</TD>
-
-    <TD  align=center valign=top width=15%>161 Kb</TD>
-      <td  align=center valign=top>PDF</td>
-      
-</TR>
-
-
-<TR>
-
-
-
-<TD width=5% align=center valign=top>36</A></TD>
-
-<td>
-</td>
-
-<TD width=75% valign=top>
-<A HREF="http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=D%3A%5Chtdocs%5Cexternal%5Cpubs%5Cft%5Cissues13%5Cindex%2Ehtm&DocOffset=36&DocsFound=107&QueryZip=burundi&Collection=econiss&Collection=insext&Collection=external&SortOrder=Desc&ScoreThreshold=14&SearchUrl=http%3A%2F%2Fwww%2Eimf%2Eorg%2Fsearch97cgi%2Fs97%5Fcgi%2Eexe%3FQueryZip%3Dburundi%26ResultTemplate%3Dimfrslp%252Ehts%26QueryText%3Dburundi%26Collection%3Deconiss%26Collection%3Dinsext%26Collection%3Dexternal%26SortOrder%3DDesc%26ScoreThreshold%3D14%26ResultStart%3D1%26ResultCount%3D40&">
-Economic Issues No. 13 -- Fixed or Flexible?--Getting the Exchange Rate Right in the 1990s</A>
-
-	    		<br><B>Date:</b> April 17, 1998	    	
-
-    	<br><B>Summary:</b> This paper examines the recent evolution of  exchange rate policies in the developing world. It looks at why so many countries have made the  transition from fixed or pegged exchange rates to managed floating or independently floating  currencies. It disc
-    </TD>
-
-    <TD  align=center valign=top width=15%>44 Kb</TD>
-      <td  align=center valign=top>HTML</td>
-      
-</TR>
-
-
-<TR>
-
-
-
-<TD width=5% align=center valign=top>37</A></TD>
-
-<td>
-</td>
-
-<TD width=75% valign=top>
-<A HREF="http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fnp%2Fins%2Fenglish%2Ftraining%2Fhemail%2Ehtm&DocOffset=37&DocsFound=107&QueryZip=burundi&Collection=econiss&Collection=insext&Collection=external&SortOrder=Desc&ScoreThreshold=14&SearchUrl=http%3A%2F%2Fwww%2Eimf%2Eorg%2Fsearch97cgi%2Fs97%5Fcgi%2Eexe%3FQueryZip%3Dburundi%26ResultTemplate%3Dimfrslp%252Ehts%26QueryText%3Dburundi%26Collection%3Deconiss%26Collection%3Dinsext%26Collection%3Dexternal%26SortOrder%3DDesc%26ScoreThreshold%3D14%26ResultStart%3D1%26ResultCount%3D40&">
-IMF - Headquarters Training - Email Form to INS</A>
-
-	    	
-
-    </TD>
-
-    <TD  align=center valign=top width=15%>12 Kb</TD>
-      <td  align=center valign=top>HTML</td>
-      
-</TR>
-
-
-<TR>
-
-
-
-<TD width=5% align=center valign=top>38</A></TD>
-
-<td>
-</td>
-
-<TD width=75% valign=top>
-<A HREF="http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fnp%2Fins%2Fenglish%2Ftraining%2Fhemail%2Ehtm&DocOffset=38&DocsFound=107&QueryZip=burundi&Collection=econiss&Collection=insext&Collection=external&SortOrder=Desc&ScoreThreshold=14&SearchUrl=http%3A%2F%2Fwww%2Eimf%2Eorg%2Fsearch97cgi%2Fs97%5Fcgi%2Eexe%3FQueryZip%3Dburundi%26ResultTemplate%3Dimfrslp%252Ehts%26QueryText%3Dburundi%26Collection%3Deconiss%26Collection%3Dinsext%26Collection%3Dexternal%26SortOrder%3DDesc%26ScoreThreshold%3D14%26ResultStart%3D1%26ResultCount%3D40&">
-IMF - Headquarters Training - Email Form to INS</A>
-
-	    	
-
-    </TD>
-
-    <TD  align=center valign=top width=15%>12 Kb</TD>
-      <td  align=center valign=top>HTML</td>
-      
-</TR>
-
-
-<TR>
-
-
-
-<TD width=5% align=center valign=top>39</A></TD>
-
-<td>
-</td>
-
-<TD width=75% valign=top>
-<A HREF="http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fnp%2Fsec%2Fdecdo%2Fwto%2Ehtm&DocOffset=39&DocsFound=107&QueryZip=burundi&Collection=econiss&Collection=insext&Collection=external&SortOrder=Desc&ScoreThreshold=14&SearchUrl=http%3A%2F%2Fwww%2Eimf%2Eorg%2Fsearch97cgi%2Fs97%5Fcgi%2Eexe%3FQueryZip%3Dburundi%26ResultTemplate%3Dimfrslp%252Ehts%26QueryText%3Dburundi%26Collection%3Deconiss%26Collection%3Dinsext%26Collection%3Dexternal%26SortOrder%3DDesc%26ScoreThreshold%3D14%26ResultStart%3D1%26ResultCount%3D40&">
-WORLD TRADE ORGANIZATION (WTO)</A>
-
-	    		<br><B>Date:</b> April 14, 1998	    	
-
-    	<br><B>Summary:</b> This is an entry from the IMF's Directory of Economic, Commodity and Development Organizations which provides a guide to regional economic organizations and to inter-governmental commodity and development organizations.
-    </TD>
-
-    <TD  align=center valign=top width=15%>24 Kb</TD>
-      <td  align=center valign=top>HTML</td>
-      
-</TR>
-
-
-<TR>
-
-
-
-<TD width=5% align=center valign=top>40</A></TD>
-
-<td>
-</td>
-
-<TD width=75% valign=top>
-<A HREF="http://www.imf.org/search97cgi/s97_cgi.exe?action=View&VdkVgwKey=http%3A%2F%2Fimfnt1x%2Eimf%2Eorg%3A80%2Fexternal%2Fnp%2Fsec%2Fdecdo%2Fwho%2Ehtm&DocOffset=40&DocsFound=107&QueryZip=burundi&Collection=econiss&Collection=insext&Collection=external&SortOrder=Desc&ScoreThreshold=14&SearchUrl=http%3A%2F%2Fwww%2Eimf%2Eorg%2Fsearch97cgi%2Fs97%5Fcgi%2Eexe%3FQueryZip%3Dburundi%26ResultTemplate%3Dimfrslp%252Ehts%26QueryText%3Dburundi%26Collection%3Deconiss%26Collection%3Dinsext%26Collection%3Dexternal%26SortOrder%3DDesc%26ScoreThreshold%3D14%26ResultStart%3D1%26ResultCount%3D40&">
+<TD valign=top>
+<A HREF="http://www.imf.org/external/np/sec/decdo/who.htm">
 WORLD HEALTH ORGANIZATION (WHO)</A>
 
-	    		<br><B>Date:</b> July 21, 1998	    	
+               <br><B>Date:</b> July 21, 1998          
 
-    	<br><B>Summary:</b> This is an entry from the IMF's Directory of Economic, Commodity and Development Organizations which provides a guide to regional economic organizations and to inter-governmental commodity and development organizations.
-    </TD>
+       <br><B>Summary:</b> This is an entry from the IMF's Directory of Economic, Commodity and Development Organizations which provides a guide to regional economic organizations and to inter-governmental commodity and development organizations.
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  15 Kb
+</TD>
 
-    <TD  align=center valign=top width=15%>14 Kb</TD>
-      <td  align=center valign=top>HTML</td>
-      
+</TR>
+
+
+</TR>
+<TD align=center valign=top>19</TD>
+
+<td></td>
+
+<TD valign=top>
+<A HREF="http://www.imf.org/external/np/sec/decdo/wb.htm">
+THE WORLD BANK GROUP</A>
+
+               <br><B>Date:</b> July 13, 1998          
+
+       <br><B>Summary:</b> This is an entry from the IMF's Directory of Economic, Commodity and Development Organizations which provides a guide to regional economic organizations and to inter-governmental commodity and development organizations.
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  28 Kb
+</TD>
+
+</TR>
+
+
+</TR>
+<TD align=center valign=top>20</TD>
+
+<td></td>
+
+<TD valign=top>
+<A HREF="http://www.imf.org/external/np/sec/decdo/undp.htm">
+UNITED NATIONS DEVELOPMENT PROGRAMME (UNDP)</A>
+
+               <br><B>Date:</b> July 08, 1998          
+
+       <br><B>Summary:</b> This is an entry from the IMF's Directory of Economic, Commodity and Development Organizations which provides a guide to regional economic organizations and to inter-governmental commodity and development organizations.
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  24 Kb
+</TD>
+
+</TR>
+
+
+</TR>
+<TD align=center valign=top>21</TD>
+
+<td></td>
+
+<TD valign=top>
+<A HREF="http://www.imf.org/external/np/sec/decdo/oau.htm">
+ORGANIZATION OF AFRICAN UNITY (OAU)</A>
+
+               <br><B>Date:</b> June 11, 1998          
+
+       <br><B>Summary:</b> This is an entry from the IMF's Directory of Economic, Commodity and Development Organizations which provides a guide to regional economic organizations and to inter-governmental commodity and development organizations.
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  12 Kb
+</TD>
+
+</TR>
+
+
+</TR>
+<TD align=center valign=top>22</TD>
+
+<td></td>
+
+<TD valign=top>
+<A HREF="http://www.imf.org/external/np/sec/decdo/icao.htm">
+INTERNATIONAL CIVIL AVIATION ORGANIZATION (ICAO)</A>
+
+               <br><B>Date:</b> June 09, 1998          
+
+       <br><B>Summary:</b> This is an entry from the IMF's Directory of Economic, Commodity and Development Organizations which provides a guide to regional economic organizations and to inter-governmental commodity and development organizations.
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  12 Kb
+</TD>
+
+</TR>
+
+
+</TR>
+<TD align=center valign=top>23</TD>
+
+<td></td>
+
+<TD valign=top>
+<A HREF="http://www.imf.org/external/np/sec/decdo/comesa.htm">
+COMMON MARKET FOR EASTERN AND SOUTHERN AFRICA (COMESA)</A>
+
+               <br><B>Date:</b> June 08, 1998          
+
+       <br><B>Summary:</b> This is an entry from the IMF's Directory of Economic, Commodity and Development Organizations which provides a guide to regional economic organizations and to inter-governmental commodity and development organizations.
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  13 Kb
+</TD>
+
+</TR>
+
+
+</TR>
+<TD align=center valign=top>24</TD>
+
+<td></td>
+
+<TD valign=top>
+<A HREF="http://www.imf.org/external/np/sec/decdo/aadfi.htm">
+ASSOCIATION OF AFRICAN DEVELOPMENT FINANCE INSTITUTIONS (AADFI)</A>
+
+               <br><B>Date:</b> June 08, 1998          
+
+       <br><B>Summary:</b> This is an entry from the IMF's Directory of Economic, Commodity and Development Organizations which provides a guide to regional economic organizations and to inter-governmental commodity and development organizations.
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  8 Kb
+</TD>
+
+</TR>
+
+
+</TR>
+<TD align=center valign=top>25</TD>
+
+<td></td>
+
+<TD valign=top>
+<A HREF="http://www.imf.org/external/np/sec/decdo/eca.htm">
+UNITED NATIONS ECONOMIC COMMISSION FOR AFRICA (UNECA)</A>
+
+               <br><B>Date:</b> May 27, 1998          
+
+       <br><B>Summary:</b> This is an entry from the IMF's Directory of Economic, Commodity and Development Organizations which provides a guide to regional economic organizations and to inter-governmental commodity and development organizations.
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  13 Kb
+</TD>
+
+</TR>
+
+
+</TR>
+<TD align=center valign=top>26</TD>
+
+<td></td>
+
+<TD valign=top>
+<A HREF="http://www.imf.org/external/np/sec/decdo/ico.htm">
+INTERNATIONAL COFFEE ORGANIZATION (ICO)</A>
+
+               <br><B>Date:</b> May 08, 1998          
+
+       <br><B>Summary:</b> This is an entry from the IMF's Directory of Economic, Commodity and Development Organizations which provides a guide to regional economic organizations and to inter-governmental commodity and development organizations.
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  10 Kb
+</TD>
+
+</TR>
+
+
+</TR>
+<TD align=center valign=top>27</TD>
+
+<td></td>
+
+<TD valign=top>
+<A HREF="http://www.imf.org/external/np/sec/decdo/wfp.htm">
+WORLD FOOD PROGRAMME (WFP)</A>
+
+               <br><B>Date:</b> April 30, 1998          
+
+       <br><B>Summary:</b> This is an entry from the IMF's Directory of Economic, Commodity and Development Organizations which provides a guide to regional economic organizations and to inter-governmental commodity and development organizations.
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  19 Kb
+</TD>
+
+</TR>
+
+
+</TR>
+<TD align=center valign=top>28</TD>
+
+<td></td>
+
+<TD valign=top>
+<A HREF="http://www.imf.org/external/np/sec/decdo/ifad.htm">
+INTERNATIONAL FUND FOR AGRICULTURAL DEVELOPMENT (IFAD)</A>
+
+               <br><B>Date:</b> April 29, 1998          
+
+       <br><B>Summary:</b> This is an entry from the IMF's Directory of Economic, Commodity and Development Organizations which provides a guide to regional economic organizations and to inter-governmental commodity and development organizations.
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  19 Kb
+</TD>
+
+</TR>
+
+
+</TR>
+<TD align=center valign=top>29</TD>
+
+<td></td>
+
+<TD valign=top>
+<A HREF="http://www.imf.org/external/np/sec/decdo/ilo.htm">
+INTERNATIONAL LABOUR ORGANIZATION (ILO)</A>
+
+               <br><B>Date:</b> April 28, 1998          
+
+       <br><B>Summary:</b> This is an entry from the IMF's Directory of Economic, Commodity and Development Organizations which provides a guide to regional economic organizations and to inter-governmental commodity and development organizations.
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  17 Kb
+</TD>
+
+</TR>
+
+
+</TR>
+<TD align=center valign=top>30</TD>
+
+<td></td>
+
+<TD valign=top>
+<A HREF="http://www.imf.org/external/np/sec/decdo/fao.htm">
+FOOD AND AGRICULTURE ORGANIZATION OF THE UNITED NATIONS (FAO)</A>
+
+               <br><B>Date:</b> April 28, 1998          
+
+       <br><B>Summary:</b> This is an entry from the IMF's Directory of Economic, Commodity and Development Organizations which provides a guide to regional economic organizations and to inter-governmental commodity and development organizations.
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  16 Kb
+</TD>
+
+</TR>
+
+
+</TR>
+<TD align=center valign=top>31</TD>
+
+<td></td>
+
+<TD valign=top>
+<A HREF="http://www.imf.org/external/np/sec/decdo/unctad.htm">
+UNITED NATIONS CONFERENCE ON TRADE AND DEVELOPMENT (UNCTAD)</A>
+
+               <br><B>Date:</b> April 27, 1998          
+
+       <br><B>Summary:</b> This is an entry from the IMF's Directory of Economic, Commodity and Development Organizations which provides a guide to regional economic organizations and to inter-governmental commodity and development organizations.
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  18 Kb
+</TD>
+
+</TR>
+
+
+</TR>
+<TD align=center valign=top>32</TD>
+
+<td></td>
+
+<TD valign=top>
+<A HREF="http://www.imf.org/external/np/sec/decdo/unido.htm">
+UNITED NATIONS INDUSTRIAL DEVELOPMENT ORGANIZATION (UNIDO)</A>
+
+               <br><B>Date:</b> April 21, 1998          
+
+       <br><B>Summary:</b> This is an entry from the IMF's Directory of Economic, Commodity and Development Organizations which provides a guide to regional economic organizations and to inter-governmental commodity and development organizations.
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  15 Kb
+</TD>
+
+</TR>
+
+
+</TR>
+<TD align=center valign=top>33</TD>
+
+<td></td>
+
+<TD valign=top>
+<A HREF="http://www.imf.org/external/pubs/ft/issues13/index.htm">
+Economic Issues No. 13 -- Fixed or Flexible?--Getting the Exchange Rate Right in the 1990s</A>
+
+               <br><B>Date:</b> April 17, 1998          
+
+       <br><B>Summary:</b> This paper examines the recent evolution of  exchange rate policies in the developing world. It looks at why so many countries have made the  transition from fixed or pegged exchange rates to managed floating or independently floating  currencies. It disc
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  44 Kb
+</TD>
+
+</TR>
+
+
+</TR>
+<TD align=center valign=top>34</TD>
+
+<td></td>
+
+<TD valign=top>
+<A HREF="http://www.imf.org/external/np/sec/decdo/afdb.htm">
+AFRICAN DEVELOPMENT BANK (AfDB)</A>
+
+               <br><B>Date:</b> April 15, 1998          
+
+       <br><B>Summary:</b> This is an entry from the IMF's Directory of Economic, Commodity and Development Organizations which provides a guide to regional economic organizations and to inter-governmental commodity and development organizations.
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  11 Kb
+</TD>
+
+</TR>
+
+
+</TR>
+<TD align=center valign=top>35</TD>
+
+<td></td>
+
+<TD valign=top>
+<A HREF="http://www.imf.org/external/np/sec/decdo/wto.htm">
+WORLD TRADE ORGANIZATION (WTO)</A>
+
+               <br><B>Date:</b> April 14, 1998          
+
+       <br><B>Summary:</b> This is an entry from the IMF's Directory of Economic, Commodity and Development Organizations which provides a guide to regional economic organizations and to inter-governmental commodity and development organizations.
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  24 Kb
+</TD>
+
+</TR>
+
+
+</TR>
+<TD align=center valign=top>36</TD>
+
+<td></td>
+
+<TD valign=top>
+<A HREF="http://www.imf.org/external/np/sec/decdo/unesco.htm">
+UNITED NATIONS EDUCATIONAL, SCIENTIFIC AND CULTURAL ORGANIZATION (UNESCO)</A>
+
+               <br><B>Date:</b> April 08, 1998          
+
+       <br><B>Summary:</b> This is an entry from the IMF's Directory of Economic, Commodity and Development Organizations which provides a guide to regional economic organizations and to inter-governmental commodity and development organizations.
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  12 Kb
+</TD>
+
+</TR>
+
+
+</TR>
+<TD align=center valign=top>37</TD>
+
+<td></td>
+
+<TD valign=top>
+<A HREF="http://www.imf.org/external/np/sec/decdo/upu.htm">
+UNIVERSAL POSTAL UNION (UPU)</A>
+
+               <br><B>Date:</b> April 07, 1998          
+
+       <br><B>Summary:</b> This is an entry from the IMF's Directory of Economic, Commodity and Development Organizations which provides a guide to regional economic organizations and to inter-governmental commodity and development organizations.
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  16 Kb
+</TD>
+
+</TR>
+
+
+</TR>
+<TD align=center valign=top>38</TD>
+
+<td></td>
+
+<TD valign=top>
+<A HREF="http://www.imf.org/external/np/sec/decdo/cffc.htm">
+COMMON FUND FOR COMMODITIES</A>
+
+               <br><B>Date:</b> April 01, 1998          
+
+       <br><B>Summary:</b> This is an entry from the IMF's Directory of Economic, Commodity and Development Organizations which provides a guide to regional economic organizations and to inter-governmental commodity and development organizations.
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  14 Kb
+</TD>
+
+</TR>
+
+
+</TR>
+<TD align=center valign=top>39</TD>
+
+<td></td>
+
+<TD valign=top>
+<A HREF="http://www.imf.org/external/np/sec/pr/1997/PR9763.HTM">
+Press Release: IMF Board Submits Resolution to Governors for 45 Percent Quota Increase</A>
+
+               <br><B>Date:</b> December 23, 1997          
+
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  70 Kb
+</TD>
+
+</TR>
+
+
+</TR>
+<TD align=center valign=top>40</TD>
+
+<td></td>
+
+<TD valign=top>
+<A HREF="http://www.imf.org/external/np/sec/nb/1997/NB9714.HTM">
+News Brief: IMF's Executive Board Completes Internal Review of ESAF.</A>
+
+               <br><B>Date:</b> July 28, 1997          
+
+    <br><b>Type:  </b>HTML
+          <b>Size:</B>  27 Kb
+</TD>
+
 </TR>
 
 
 </TABLE>
 
   <HR>
-  <center>
   <B>Results List Navigation:</B>
 
   
               1
                     <A HREF="http://www.imf.org/search97cgi/s97_cgi.exe?QueryZip=burundi&ResultTemplate=imfrslp%2Ehts&QueryText=burundi&Collection=econiss&Collection=insext&Collection=external&SortOrder=Desc&ScoreThreshold=14&ResultStart=41&ResultCount=40&ServerKey=&AdminImagePath=&Theme=&Company=">2</A>
                     <A HREF="http://www.imf.org/search97cgi/s97_cgi.exe?QueryZip=burundi&ResultTemplate=imfrslp%2Ehts&QueryText=burundi&Collection=econiss&Collection=insext&Collection=external&SortOrder=Desc&ScoreThreshold=14&ResultStart=81&ResultCount=40&ServerKey=&AdminImagePath=&Theme=&Company=">3</A>
+                    <A HREF="http://www.imf.org/search97cgi/s97_cgi.exe?QueryZip=burundi&ResultTemplate=imfrslp%2Ehts&QueryText=burundi&Collection=econiss&Collection=insext&Collection=external&SortOrder=Desc&ScoreThreshold=14&ResultStart=121&ResultCount=40&ServerKey=&AdminImagePath=&Theme=&Company=">4</A>
           
-      <A HREF="http://www.imf.org/search97cgi/s97_cgi.exe?QueryZip=burundi&ResultTemplate=imfrslp%2Ehts&QueryText=burundi&Collection=econiss&Collection=insext&Collection=external&SortOrder=Desc&ScoreThreshold=14&ResultStart=41&ResultCount=40&ServerKey=&AdminImagePath=&Theme=&Company=">[Next]</A>
-    <A HREF="/external/search/search.htm">[Search Again]</A>
-    </center>
-<hr>
+      <A HREF="http://www.imf.org/search97cgi/s97_cgi.exe?QueryZip=burundi&ResultTemplate=imfrslp%2Ehts&QueryText=burundi&Collection=econiss&Collection=insext&Collection=external&SortOrder=Desc&ScoreThreshold=14&ResultStart=41&ResultCount=40&ServerKey=&AdminImagePath=&Theme=&Company=">[Next]</A>    <A HREF="/external/search/search.htm">[Search Again]</A>
+  
 
-</TD></TR></TABLE></CENTER>
+</TD></TR></TABLE>
+
+
+<!--**************** CONTENTS BODY ENDS HERE *************** --> 
+
+
+<!-------------------------CONTENT RIGHT COLUMN ENDS--------------------------->      
+</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<!------------------------ BEGIN FOOTER ---------------------------->
+<br>
+<br>
+<br>
 <!------------------------ BEGIN FOOTER ---------------------------->
 <CENTER>
-<!---
+
 <TABLE><TR><TD ALIGN=RIGHT><A HREF="#TOP"><img src="/external/gifs/up.gif" BORDER=0 width="13" height="14" ALT="up"></A><br clear=all><img src="/external/gifs/up-line.gif" BORDER=0 width="590" height="9"></TD></TR></TABLE>
----!>
+
 <!------------------------TOOLS FOOTER -----------------------------> 
 <FONT CLASS=8V FACE="arial, helvetica, sans-serif, verdana" SIZE=-1>
 <NOBR><a href="/external/index.htm">Home</a><img src="/external/gifs/foot-vl.gif" border=0 width=17 height=13 align=ABSBOTTOM><A href="/external/search/search.htm">Search</a> <img src="/external/gifs/foot-vl.gif" border=0 width=17 height=13 align=ABSBOTTOM><a href="/external/map.htm">Map</a><img src="/external/gifs/foot-vl.gif" border=0 width=17 height=13 align=ABSBOTTOM><a href="/external/indexlst.htm">Index</a> <img src="/external/gifs/foot-vl.gif" border=0 width=17 height=13 align=ABSBOTTOM><a href="/external/what/what.htm">What's New</a></NOBR><BR CLEAR=ALL>  
@@ -1034,6 +941,10 @@ WORLD HEALTH ORGANIZATION (WHO)</A>
 <BR CLEAR=ALL>
 </font><BR>
 </CENTER>
-<!------------------------END FOOTER--------------------------------></BODY>
+<!------------------------END FOOTER--------------------------------><!------------------------END FOOTER-------------------------------->
 
-</HTML>
+  
+</body>
+</html>
+
+

@@ -1,8 +1,4 @@
-http://www.lycos.com/cgi-bin/pursuit?adv=1&matchmode=or&maxhits=100&query=replication
-http://www.lycos.com/cgi-bin/pursuit?cat=lycos&first=101&maxhits=100&bq=1&br=1&query=replication&matchmode=or&adv=1
-http://www.lycos.com/cgi-bin/pursuit?cat=lycos&first=201&maxhits=100&bq=1&br=1&query=replication&matchmode=or&adv=1
-http://www.lycos.com/cgi-bin/pursuit?cat=lycos&first=301&maxhits=100&bq=1&br=1&query=replication&matchmode=or&adv=1
-http://www.lycos.com/cgi-bin/pursuit?cat=lycos&first=401&maxhits=100&bq=1&br=1&query=replication&matchmode=or&adv=1
-http://www.lycos.com/cgi-bin/pursuit?cat=lycos&first=501&maxhits=100&bq=1&br=1&query=replication&matchmode=or&adv=1
-http://www.lycos.com/cgi-bin/pursuit?cat=lycos&first=601&maxhits=100&bq=1&br=1&query=replication&matchmode=or&adv=1
-http://www.lycos.com/cgi-bin/pursuit?cat=lycos&first=701&maxhits=100&bq=1&br=1&query=replication&matchmode=or&adv=1
+http://lycospro.lycos.com/cgi-bin/pursuit?adv=1&matchmode=or&maxhits=100&mtemp=nojava&query=replication
+http://lycospro.lycos.com/cgi-bin/pursuit?cat=lycos&first=101&maxhits=100&query=replication&matchmode=or&adv=1&mtemp=nojava
+http://lycospro.lycos.com/cgi-bin/pursuit?cat=lycos&first=201&maxhits=100&query=replication&matchmode=or&adv=1&mtemp=nojava
+http://lycospro.lycos.com/cgi-bin/pursuit?cat=lycos&first=301&maxhits=100&query=replication&matchmode=or&adv=1&mtemp=nojava

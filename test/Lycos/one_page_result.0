@@ -1,372 +1,171 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-
-
-
-<DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"> 
+	<DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"> 
 <HTML>
 <HEAD>
-<TITLE>Lycos Search: &quot;Christie Abbott&quot;</TITLE>
-
+<TITLE>Lycos Search: "Christie Abbott"</TITLE>
 </HEAD>
-<!--begin resultheader.inc-->
-<BODY BGCOLOR=#FFFFFF>
-<CENTER>
-<FORM ACTION="http://www.lycos.com/cgi-bin/pursuit" METHOD=GET>
-<INPUT TYPE="hidden" NAME="matchmode" VALUE="and"><INPUT TYPE="hidden" NAME="cat" VALUE="lycos">
-<TABLE BORDER=0 BGCOLOR=#000000 CELLPADDING=0 CELLSPACING=0 WIDTH=600>
-<TR>
-<TD WIDTH=140 ALIGN=LEFT ROWSPAN=3><A HREF="/"><IMG SRC="http://lygo.com/ly/i/inv/lycoslogo.gif" HSPACE=12 WIDTH=116 HEIGHT=55 BORDER=0></A></td>
-<TD WIDTH=340 COLSPAN=3><IMG HEIGHT=1 WIDTH=340 SRC="http://lygo.com/ly/i/inv/dot_clear.gif"></TD>
-<TD ROWSPAN=3 WIDTH=100><FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE=-1>&nbsp;&nbsp;<A HREF="/help/"><FONT COLOR="#FFFFFF">Help</FONT></A><BR>&nbsp;&nbsp;<A HREF="http://echomail.lycos.com/echomail"><FONT COLOR="#FFFFFF">Feedback</FONT></A></FONT></TD>
-</TR>
-<TR>
-<TD ALIGN=RIGHT VALIGN=BOTTOM><B><FONT size=-1 color="#FFCC00" FACE="VERDANA,HELVETICA,ARIAL">Search for:</FONT></TD>
-<TD ALIGN=MIDDLE VALIGN=BOTTOM><INPUT TYPE=text NAME=query VALUE="&quot;Christie Abbott&quot;" SIZE=20></TD>
-<TD VALIGN=BOTTOM><INPUT TYPE="image" src="http://lygo.com/ly/i/inv/gogetit455.gif" BORDER=0 ALIGN="middle" VALUE="Go Get It!"></TD>
-</TR>
-<TR><TD>&nbsp;</TD>
-<TD COLSPAN=2>
-<FONT FACE="VERDANA,HELVETICA,ARIAL" COLOR="#FFFFFF" SIZE=-2>		
-&nbsp;&nbsp;<INPUT TYPE=RADIO style="background-color: black" NAME=npl1 value="ignore=pq" checked><B>New</B> Search
-&nbsp;&nbsp;<INPUT TYPE=RADIO style="background-color: black" NAME=npl1 value="pq=%22Christie+Abbott%22&amp;adv=1">Search These Results
-</FONT></TD>
-</TR>
-<TR>
-<TD COLSPAN=5><IMG HEIGHT=1 WIDTH=1 SRC="http://lygo.com/ly/i/inv/dot_clear.gif"></TD>
-</TR>
-</TABLE>
-<TABLE WIDTH=600 BGCOLOR=#EEEEEE CELLSPACING=1 CELLPADDING=1 BORDER=0><TR><TD><FONT FACE=Verdana,Helvetica,Arial SIZE=-2><A HREF=http://www.lycos.com/network/><FONT COLOR=#000000>Lycos Network</FONT></A>: <A HREF=/cgi-bin/nph-bounce?nb_s|http://www.tripod.com/><FONT COLOR=#000000>Tripod.com</FONT></A> | <A HREF=/cgi-bin/nph-bounce?nb_s|http://www.angelfire.com/><FONT COLOR=#000000>Angelfire.com</FONT></A> | <A HREF=/cgi-bin/nph-bounce?nb_s|http://www.mailcity.lycos.com/><FONT COLOR=#000000>MailCity.com</FONT></A> | <A HREF=/cgi-bin/nph-bounce?nb_s|http://www.whowhere.lycos.com/><FONT COLOR=#000000>WhoWhere.com</FONT></A> | <A HREF=/cgi-bin/nph-bounce?nb_s|http://www.hotbot.com/><FONT COLOR=#000000>HotBot.com</FONT></A></FONT></TD><TD><FONT FACE=Verdana,Helvetica,Arial SIZE=-2><A HREF=http://www.lycos.com/network/><FONT COLOR=#000000>All Sites...</FONT></A></FONT></TD></TR></TABLE>
 
-</FORM>
+<BODY BGCOLOR=#FFFFFF TOPMARGIN=5>
+
+<!-- header-network bar -->
+<TABLE WIDTH=100% CELLPADDING=0 CELLSPACING=0 BORDER=0 BGCOLOR=#000000>
+<TR><TD><A HREF="/"><IMG SRC="http://lygo.com/ly/i/inv/ly_ypig.gif" VSPACE=2 WIDTH=232 HEIGHT=29 ALT="" BORDER=0></A></TD><TD ALIGN=RIGHT><FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE=-1 color=#FFFFFF><font size=4>&nbsp;</font><A HREF="http://www.lycos.com/att/member.html"><font color=#FFCC00>Get Online</font></a> &shy; <a href=http://personal.lycos.com/partners/email.asp><font color=#FFCC00>Check Email</font></a> &shy; <a href=http://personal.lycos.com><font color=#FFCC00>My Lycos</font></a>&nbsp;&nbsp;</font></TD></TR></TABLE>
+<TABLE WIDTH=100% BGCOLOR=#EEEEEE CELLSPACING=0 CELLPADDING=0 HEIGHT=20 BORDER=0><TR><TD><FONT FACE=VERDANA SIZE=-2><B>&nbsp;&nbsp;<A HREF=http://www.lycos.com/network/>Lycos Network</A></b>: <A HREF=http://www.lycos.com/cgi-bin/nph-bounce?nb|http://www.tripod.com/>Tripod.com</A> | <A HREF=http://www.lycos.com/cgi-bin/nph-bounce?nb|http://www.angelfire.com/>Angelfire.com</A> | <A HREF=http://www.lycos.com/cgi-bin/nph-bounce?nb|http://mailcity.lycos.com/>MailCity.com</A> | <A HREF=http://www.lycos.com/cgi-bin/nph-bounce?nb|http://www.whowhere.lycos.com/>WhoWhere.com</A> | <A HREF=http://www.lycos.com/cgi-bin/nph-bounce?nb|http://www.hotbot.com/>HotBot.com</A></FONT></TD><TD align=right><FONT FACE=Verdana SIZE=-2><A HREF=http://www.lycos.com/cgi-bin/nph-bounce?nb|http://www.lycos.com/network/>All Sites...</A>&nbsp;&nbsp;</FONT></TD></TR></TABLE><!-- /header-network bar -->
+
 <P>
-<FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="-2"><a href="/cgi-bin/nph-adclick.exe/CID=0004371670700e1d00000000/ST=lycos/SV=search/A=.lycos.search_lycos./T=1998.12.10.13.27.53"><img  src="http://adforce.imgis.com/?adserv|30|14190|1|1|MISC=1998.12.10.13.27.53;" alt="Citibank"  width=468 height=60></a></FONT>
+<!-- advertisement -->
+<DIV ALIGN=CENTER>
+<FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="-2"><a href="/cgi-bin/nph-adclick.exe/CID=0006206b70700e1d00000000/ST=lycos/SV=search/A=.lycos.search_lycos."><img  src="http://ads.lycos.com/ads/imall43.gif" alt="I Mall" border=0 WIDTH=468 HEIGHT=60></a><br><a href="/cgi-bin/nph-adclick.exe/CID=0006206b70700e1d00000000/ST=lycos/SV=search/A=.lycos.search_lycos.">Click here to visit site</a></FONT>
+</DIV>
+<!-- /advertisement -->
 <P>
-<TABLE BORDER=0  WIDTH=600 CELLSPACING=0 CELLPADDING=0>
-<TR>
-<TD BGCOLOR=#EEEEEE>
-	&nbsp;<FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="-1"><A HREF="http://www.lycos.com/">Lycos Home</A>&nbsp;&gt; <a href="http://www.lycos.com/cgi-bin/pursuit?matchmode=and&cat=lycos&query=%22Christie+Abbott%22">Search: &quot;Christie Abbott&quot;</a></FONT>
-</TD>
-</TR>
-<TR>
-<TD BGCOLOR=#CCCCCC><IMG SRC="http://lygo.com/ly/i/inv/dot_clear.gif" BORDER=0 WIDTH=1 HEIGHT=2></TD>
-</TR>
-</TABLE>
 
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=600>
-<TR>
-<TD WIDTH=140 HEIGHT=10><IMG SRC="http://lygo.com/ly/i/inv/dot_clear.gif" BORDER=0 WIDTH=140 HEIGHT=10></TD>
-<TD BGCOLOR=#CCCCCC HEIGHT=10 WIDTH=1><IMG SRC="http://lygo.com/ly/i/inv/dot_clear.gif" BORDER=0 WIDTH=1 HEIGHT=10></TD>
-<TD WIDTH=13 HEIGHT=10><IMG SRC="http://lygo.com/ly/i/inv/dot_clear.gif" BORDER=0 WIDTH=13 HEIGHT=10></TD>
-<TD WIDTH=446 HEIGHT=10><IMG SRC="http://lygo.com/ly/i/inv/dot_clear.gif" BORDER=0 WIDTH=446 HEIGHT=10></TD>
-</TR>
-<TR>
-<TD VALIGN=TOP>
-<p>
-<FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE=-1>
-<A HREF="http://personal.lycos.com/safetynet/safetynet.asp">Kids Safe Search</A>
-<p><A HREF="http://lycospro.lycos.com/">Search Options</A>
-<p>
 
-<a href="http://personal.lycos.com/partners/email.asp">Free Email</a>
-
-<p>
-
+<!-- search box -->
+<DIV ALIGN=CENTER>
+<!-- lycos.test.searchbar -->
+<FORM ACTION="http://lycospro.lycos.com/cgi-bin/pursuit" METHOD=GET>
+<INPUT TYPE="hidden" NAME="cat" VALUE="lycos">
+<INPUT TYPE="hidden" NAME="mtemp" VALUE="nojava">
+<INPUT TYPE="hidden" NAME="etemp" VALUE="error_nojava">
+<INPUT TYPE="hidden" NAME="adv" VALUE="1">
+<TABLE WIDTH=525 BGCOLOR=#CCCCCC BORDER=0 CELLPADDING=1 CELLSPACING=0>
+<TR><TD>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=10 CELLSPACING=0>
+<TR><TD BGCOLOR=#FFFFFF>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TD ALIGN=RIGHT><B><FONT size=2 FACE="VERDANA,HELVETICA,ARIAL">Search for&nbsp;</FONT></B></TD>
+<TD ALIGN=LEFT><INPUT TYPE=text NAME=query VALUE="christie abbott " SIZE=25>&nbsp;<INPUT TYPE=image src=http://lygo.com/ly/i/inv/ggi_white.gif WIDTH=84 HEIGHT=20 BORDER=0></TD>
+<TD ROWSPAN=2 ALIGN=LEFT VALIGN=TOP><FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE=-2>
+<B><A HREF="http://personal.lycos.com/safetynet/safetynet.asp">Search Guard</A><BR><A HREF="http://www.hotbot.com">Try HotBot</A></B>
+</TD></TR>
+<TR><TD>&nbsp;</TD><TD>
+<FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE=-2>
+<INPUT TYPE=HIDDEN NAME="prquery" VALUE="">
+<INPUT TYPE=RADIO NAME="str" VALUE="N" CHECKED><B>New</B> Search
+<INPUT TYPE=RADIO NAME="pq" VALUE="&quot;Christie Abbott&quot;">Search These Results
 </FONT>
-
-
-
- 
-<!-- Modified: $ 1998-09-09 12:18:48 by Master Cylinder $ -->
-<P>
-
-<FONT face=VERDANA,HELVETICA,ARIAL SIZE=-1>
-<b><a href="http://www.lycos.com/cgi-bin/nph-adclick.exe/CID=0004aca1d50d444e00000000/ST=lycos/SV=search/A=.lycos.search_lycos."><font color=#FF0000>15 Shopping Days</font></a></b><br><a href=http://www.lycos.com/cgi-bin/nph-adclick.exe/CID=0004aca1d50d444e00000000/ST=lycos/SV=search/A=.lycos.search_lycos.>Encyclopedia Brittanica</a>
-<br>
-<A HREF=/shopnet/books/>Books</a><BR>
-
-<a href=/cgi-bin/nph-bounce?hp-prev|http://previewtravel.lycos.com>Travel</a><BR>
-<a href=/shopnet/>Holiday Gifts</a><br>
-
-
-<FONT SIZE=-2><BR></FONT>
-         
-<B><A HREF=http://personal.lycos.com>My Start Page</A></B><BR>
-
-
-        
-        
-        <A HREF=http://personal.lycos.com/partners/email.asp>Get Email</a><BR>
-	<A HREF=http://news.lycos.com/headlines/TopNews/>News</A><BR>
-	<A HREF=http://weather.lycos.com/>Weather</A><BR>
-	<A HREF=http://investing.lycos.com>Stocks</a><br>
-
-<FONT SIZE=-2><BR></FONT>
-
-<B><A HREF="http://chat.lycos.com">Chat</A></B><BR>
-<A HREF="http://boards.lycos.com">Message Boards</a><BR>
-
-<A HREF="/computers/miniguide/zdnet/downloads/">Free Software</a><BR>
-
-<A HREF="http://personal.lycos.com/partners/pagebuild.asp">Free Home Pages</a><BR>
-
-
-
-
-<FONT SIZE=-2><BR></FONT>
-
-<B><A HREF=http://lycospro.lycos.com>Advanced Search</a></B><BR>
-<A HREF=http://personal.lycos.com/safetynet/safetynet.asp>Search Guard</A><BR>
-<A HREF=/cgi-bin/nph-bounce?gtehome-button|http://yp.superpages.com/sform.phtml_QUES_SRC=lycos&STYPE=S>Yellow Pages</a><BR>
-<A HREF=http://www.whowhere.lycos.com/Phone>White Pages</a><BR>
-<a href=http://www.whowhere.lycos.com/Email>Email Lookup</a><BR>
-<A HREF=/roadmap.html>Road Maps</a><BR>
-<A HREF=/picturethis>Pictures &amp; Sounds</a><BR>
-<a href=http://companiesonline.lycos.com>CompaniesOnline</a><BR>
-<A HREF=/cgi-bin/nph-bounce?hp|http://point.lycos.com/categories/>Top 5&#037; Websites</a><BR>
-<a href=/cgi-bin/nph-bounce?hp|http://ftpsearch.lycos.com/?form=normal>FTP Search</a><BR>
-<P>
-</font>
-
-</TD>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<TD BGCOLOR=#CCCCCC><IMG SRC="http://lygo.com/ly/i/inv/dot_clear.gif" BORDER=0 WIDTH=1 HEIGHT=10></TD>
-<TD><IMG SRC="http://lygo.com/ly/i/inv/dot_clear.gif" BORDER=0 WIDTH=13 HEIGHT=1></TD>
-<TD VALIGN=TOP>
-	<TABLE ALIGN=RIGHT WIDTH=90 BORDER=0>
-	<TR>
-	<TD align=middle>
-<center>
-	<font face="VERDANA,HELVETICA,ARIAL" size=-2>
-	
-	
-	
-		
-	
-		
-			
-	
-	
-	
-	
-	
-  	
-				
-	
-	
-	
-	 
-	
-	
- 	 <p>
-	 
-	 <A HREF="http://barnesandnoble.bfast.com/booklink/click?sourceid=15862&amp;categoryid=oprah"><IMG SRC="http://lygo.com/ly/p/bandnbutton3.gif" width=75 height=26 alt="Barnes and Noble" border=0><BR>Oprah's Dec. book pick - now 40% off</a><p>
-		
-	</font>
-	</center>
-	</TD>
-	</TR>
-	</TABLE>
-
-
-
- 
-
-
-<FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE="-1">
-
-
-
-	
-	
-
-	
-
-	
-	
-	<table width=350 bgcolor="#EEEEEE">
-	<tr><td height=25>&nbsp;<font face="Verdana,Helvetica,Arial" size=-1><A HREF="http://barnesandnoble.bfast.com/booklink/click?sourceid=11476&is_search=Y&match=exact&options=and&keyword=%22Christie%20Abbott%22">Books about <b>&quot;Christie Abbott&quot;</b> at barnesandnoble.com</a></font></td></tr>
-	</table>
-	<p>
-	
-	<P>
-	<FONT SIZE="+1">Check These Out<BR></FONT>
-	<FONT SIZE=-1>
-	
-		
-	
-	
-	
-				
-	
-	
-  	
-	
-								
-	
-	
-		<A HREF="/kclick/D=lycos/P=/C=cdnow/I=partner/K=default/U=http:%252F%252Fwww.cdnow.com%252Ffrom=bbx:s:lym:sr:">Find and Buy Music at CDnow</a><br>
-	
-	<a href="http://www.lycos.com/cgi-bin/nph-bounce?GTEcheck|http://yp.gte.net/lsearch">Search GTE Yellow Pages for "&quot;Christie Abbott&quot;"</a><br>
-	</FONT>
-	<P>
-
-<FONT SIZE="+1">Matching Web Pages</FONT>
-<FONT SIZE="-1">
-&nbsp;&nbsp;&nbsp;&lt;&lt; back - next &gt;&gt;
-<P>
-
-<p><b><a href="http://www.metroplexweb.com/actingclass/">Margo Manning Entertainment</A></b>
-<BR>
-"Instruction..... Practice...... Exposure" **Since 1982** &nbsp; Weekend Workshops Summer camps Since 1982, Margo Mannin<BR>http://www.metroplexweb.com/actingclass/
-<font size=-2><a href="/cgi-bin/pursuit?cat=lycos&first=1&maxhits=100&bq=0&br=0&query=%22Christie+Abbott%22&matchmode=or&adv=1&mltq=3167986712&mtemp=main_mlt"><BR>Similar Pages</a></font>
-<font size=-2> |
-<A HREF="/cgi-bin/pursuit?adv=1&amp;fq=www.metroplexweb.com&amp;ct=f&amp;fs=domain&amp;query=%22Christie+Abbott%22&amp;mtemp=main_site">More pages from www.metroplexweb.com</a> |
-<a href="http://www.metroplexweb.com">www.metroplexweb.com</a>
-</font><p><b><a href="http://www.fortunecity.com/lavendar/python/134/">WISHBONE - A SHORT BIO OF THE GREAT SHOW FOR CHILDREN</A></b>
-<BR>
-FC Navigation ConsoleFortuneCity ad WISHBONE - A SHORT BIO OF THE GREAT SHOW FOR CHILDREN My name is Chris Beshirs and I<BR>http://www.fortunecity.com/lavendar/python/134/
-<font size=-2><a href="/cgi-bin/pursuit?cat=lycos&first=1&maxhits=100&bq=0&br=0&query=%22Christie+Abbott%22&matchmode=or&adv=1&mltq=1036456896&mtemp=main_mlt"><BR>Similar Pages</a></font>
-<font size=-2> |
-<A HREF="/cgi-bin/pursuit?adv=1&amp;fq=www.fortunecity.com&amp;ct=f&amp;fs=domain&amp;query=%22Christie+Abbott%22&amp;mtemp=main_site">More pages from www.fortunecity.com</a> |
-<a href="http://www.fortunecity.com">www.fortunecity.com</a>
-</font><p><b><a href="http://www.pbs.org/wishbone/factsabouttheseries.html">WISHBONE - Facts About the Series</A></b>
-<BR>
-FACTS ABOUT THE WISHBONE SERIES PREMIERE DATE WISHBONE premiered on PBS on Oct. 9, 1995. Forty half-hour WISHBONE episod<BR>http://www.pbs.org/wishbone/factsabouttheseries.html
-<font size=-2><a href="/cgi-bin/pursuit?cat=lycos&first=1&maxhits=100&bq=0&br=0&query=%22Christie+Abbott%22&matchmode=or&adv=1&mltq=2089378533&mtemp=main_mlt"><BR>Similar Pages</a></font>
-<font size=-2> |
-<A HREF="/cgi-bin/pursuit?adv=1&amp;fq=www.pbs.org&amp;ct=f&amp;fs=domain&amp;query=%22Christie+Abbott%22&amp;mtemp=main_site">More pages from www.pbs.org</a> |
-<a href="http://www.pbs.org">www.pbs.org</a>
-</font><p><b><a href="http://www.lpage.com/wgb/wgbview.dbm?owner=crevfestival">http://www.lpage.com/wgb/wgbview.dbm?owner=crevfestival</A></b>
-<BR>
-Keep GuestWorld Free! Click the ad below to visit our sponsor. --&gt; || Guestbook TechCenter | Guestbook Forum || || Ne<BR>http://www.lpage.com/wgb/wgbview.dbm?owner=crevfestival
-<font size=-2><a href="/cgi-bin/pursuit?cat=lycos&first=1&maxhits=100&bq=0&br=0&query=%22Christie+Abbott%22&matchmode=or&adv=1&mltq=4244077033&mtemp=main_mlt"><BR>Similar Pages</a></font>
-<font size=-2> |
-<A HREF="/cgi-bin/pursuit?adv=1&amp;fq=www.lpage.com&amp;ct=f&amp;fs=domain&amp;query=%22Christie+Abbott%22&amp;mtemp=main_site">More pages from www.lpage.com</a> |
-<a href="http://www.lpage.com">www.lpage.com</a>
-</font><p><b><a href="http://www.eurotv.com/3germ2.htm">TV Programs - EuroTV : German Kanale / Serie</A></b>
-<BR>
-Focus German Kanale Donnerstag 21 Mai 98 Serie Vorhergehender Tag &#60;- Tag -&#62; Nächster Tag If there is an inconsis<BR>http://www.eurotv.com/3germ2.htm
-<font size=-2><a href="/cgi-bin/pursuit?cat=lycos&first=1&maxhits=100&bq=0&br=0&query=%22Christie+Abbott%22&matchmode=or&adv=1&mltq=2111554145&mtemp=main_mlt"><BR>Similar Pages</a></font>
-<font size=-2> |
-<A HREF="/cgi-bin/pursuit?adv=1&amp;fq=www.eurotv.com&amp;ct=f&amp;fs=domain&amp;query=%22Christie+Abbott%22&amp;mtemp=main_site">More pages from www.eurotv.com</a> |
-<a href="http://www.eurotv.com">www.eurotv.com</a>
-</font>
-<p>
-&lt;&lt; back&nbsp;<B><FONT SIZE=+1>1</FONT>
-</B>&nbsp;next &gt;&gt;<br>
-</FONT>
-</FONT>
-
-<P>
-<TABLE BGCOLOR="#FFFFFF" CELLSPACING=0 CELLPADDING=3 BORDER=0>
-<TR><TD VALIGN=MIDDLE align=right width=70%>
-<FONT SIZE=-1 FACE="Verdana,helvetica,arial">
-<a href="http://www.hotbot.com/?MT=%22Christie+Abbott%22&amp;SM=MC&amp;DV=0&amp;LG=any&amp;RD=RG&amp;DC=10&amp;DE=2&amp;_v=2&amp;OPs=MDRTP">Try your search for <B>&quot;Christie Abbott&quot;</B> on</a>
-</font>
-</td>
-<td valign=middle>
-<a href="http://www.hotbot.com/?MT=%22Christie+Abbott%22&amp;SM=MC&amp;DV=0&amp;LG=any&amp;RD=RG&amp;DC=10&amp;DE=2&amp;_v=2&amp;OPs=MDRTP"><IMG SRC="http://static.wired.com/help.hotbot/images/logo_hb2_white.gif" BORDER=0 WIDTH=100 HEIGHT=29></a>
 </TD></TR>
 </TABLE>
-
-<!-- SEARCH BOX TABLE -->
-<FORM ACTION="/cgi-bin/pursuit" METHOD=GET>
-	<INPUT TYPE=hidden NAME=matchmode VALUE=and>
-	<INPUT TYPE=hidden NAME=cat VALUE=lycos>
-		
-	<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
-	<TD ALIGN=RIGHT><B><FONT size=2 FACE="VERDANA,HELVETICA,ARIAL">Search for: </FONT></B></TD>
-	<TD><INPUT TYPE=text NAME=query VALUE="&quot;Christie Abbott&quot;" SIZE=20>&nbsp;<INPUT TYPE=submit VALUE="Go Get It!"></TD>
-	</TR>
-	<TR>
-	<TD>&nbsp;</TD>
-	<TD>
-	<FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE=-2>
-	<INPUT TYPE=RADIO NAME=npl1 value="ignore=pq" checked><B>New</B> Search
-	<INPUT TYPE=RADIO NAME="npl1" value="pq=%22Christie+Abbott%22&amp;adv=1" >Search These Results
-	</FONT>
-	</TD>
-	</TR>
-	<tr><td>&nbsp;</td><td><font face="Verdana,Helvetica,Arial" size=-1><a href="http://lycospro.lycos.com/">More Search Options</a> - <A HREF="http://personal.lycos.com/safetynet/safetynet.asp">Kids Safe Search</A></font></td></tr>
-	</TABLE>
-</FORM>
-</TR>
-<TR><TD BGCOLOR="#CCCCCC" COLSPAN=4 HEIGHT=2 WIDTH=600><IMG SRC="http://lygo.com/ly/i/inv/dot_clear.gif" BORDER=0 WIDTH=1 HEIGHT=1></TD></TR>
+</TD></TR>
 </TABLE>
-<p>
-<FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE=-2><a href="/cgi-bin/nph-adclick.exe/CID=0004371670700e1d00000000/ST=lycos/SV=search/A=.lycos.search_lycos./T=1998.12.10.13.27.53"><img  src="http://adforce.imgis.com/?adserv|30|14190|1|1|MISC=1998.12.10.13.27.53;" alt="Citibank"  width=468 height=60></a>
-<BR><CENTER><FONT FACE="VERDANA,HELVETICA,ARIAL" COLOR="#000000" SIZE="-2"><A HREF="/lycosinc/legal.html#copy">Copyright</A>&copy; 1998 Lycos, Inc. All Rights Reserved.  Lycos<font size=-3><sup>&#174;</sup></font> is a<BR> registered trademark of Carnegie Mellon University.<BR><A HREF="/privacy/">Our Privacy Vow</A>&#160;&#160;<A HREF=/lycosinc/legal.html>Terms and Conditions</A>&#160;&#160;<A HREF="/lycosinc/legal.html#advertising">Standard Advertising Terms and Conditions</A></FONT></CENTER>
+</TD></TR>
+</FORM>
+</TABLE>
+<TABLE WIDTH=525 BORDER=0 CELLPADDING=4 BGCOLOR=#FFCC66 CELLSPACING=0><TR><TD ALIGN=CENTER><FONT FACE="VERDANA,ARIAL,HELVETICA" SIZE=-1><A HREF="http://www.lycos.com/cgi-bin/nph-adclick.exe/CID=000555e16c7f463100000000/ST=lycos/SV=search/A=.lycos.search_lycos.">Get 4 audiobooks for 1 penny!</FONT></A>
 
 
-<a href="http://www.lycos.com/lycosinc/advertising.html">Advertise with Lycos</a>
+
+
+</FONT></TD></TR></TABLE><!-- /search box -->
+</DIV>
+            <table width=100% cellpadding=4>
+	<tr><td colspan=2 height=2><img src=http://lygo.com/ly/i/dot_clear.gif HEIGHT=2 WIDTH=1></td></tr>
+	<tr>
+	<td width=50% align=center><font face=verdana size=-1><a href="http://barnesandnoble.bfast.com/booklink/click?sourceid=11476&is_search=Y&match=exact&options=and&keyword=%22Christie+Abbott%22">Save on books about <b>&quot;Christie Abbott&quot;</b></a></font></td>
+	<td width=50% align=center><font face=verdana size=-1><A HREF="http://www.lycos.com/cgi-bin/nph-bounce?cdCheckDefault|http://cdnow.com/from=bbx:s:lym:sr">CDNOW storewide <B>sale</B>!</a></font></td>
+	</tr>
+	<tr><td colspan=2 height=2><img src=http://lygo.com/ly/i/dot_clear.gif HEIGHT=2 WIDTH=1></td></tr>
+</table>                              <FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE=-1>
+
+<!-- WP handling -->
+
+<TABLE WIDTH=100% BGCOLOR=#CCCCCC BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR><TD>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=2 CELLSPACING=1>
+<TR><TD BGCOLOR=#EEEEEE ALIGN=CENTER WIDTH=25%>
+<FONT FACE="VERDANA" SIZE=-1 COLOR=#999999>
+<B>Categories</B>
+</TD>
+<TD BGCOLOR=#EEEEEE ALIGN=CENTER WIDTH=25%>
+<FONT FACE="VERDANA" SIZE=-1 COLOR=#999999>
+<B>Web Sites</B>
+</TD>
+<TD BGCOLOR=#EEEEEE ALIGN=CENTER WIDTH=25%>
+<FONT FACE="VERDANA" SIZE=-1 COLOR=#999999>
+<B>News &amp; Media</B>
+</TD>
+<TD BGCOLOR=#0066CC ALIGN=CENTER WIDTH=25%>
+<FONT FACE="VERDANA" SIZE=-1 COLOR=#FFFFFF>
+<B>Web Pages</B>
+</TD>
+</TR>
+</TABLE>
+</TD></TR>
+</TABLE>
+<UL>
+<LI><a href="http://saturn.guestworld.tripod.lycos.com/wgb/wgbview.dbm?owner=dewlly">http://saturn.guestworld.tripod.lycos.com/wgb/wgbview.dbm?owner=dewlly</A>&nbsp;<BR>Click here to visit site Click here to visit site GuestWorld TechCenter GuestWorld Pick of the Moment GuestWorld Forum GuestWorld Mar. 19'th Event Bargain Books, Up to 90% off Free Homepage Free Guestbook "Show Off" your Guestbook Earn $$, Sell Music Total Number of Guests 10<br><FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE=-2>
+http://saturn.guestworld.tripod.lycos.com/wgb/wgbview.dbm?owner=dewlly<br><A HREF="http://www.lycos.com">lycos.com</A><br></FONT></li><br>
+<LI><a href="http://www2.pbs.org/wishbone/factsabouttheseries.html">WISHBONE - Facts About the Series</A>&nbsp;<BR>FACTS ABOUT THE WISHBONE SERIES PREMIERE DATE WISHBONE premiered on PBS on Oct. 9, 1995. Forty half-hour WISHBONE episodes will air daily on some 300 PBS stations over a three-year period. CONCEPT The WISHBONE educational television series airing on PBS is designed to introduce<br><FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE=-2>
+http://www2.pbs.org/wishbone/factsabouttheseries.html<br><A HREF="http://www.pbs.org">pbs.org</A><br></FONT></li><br>
+<LI><a href="http://members.wbs.net/homepages/a/r/o/aromaangelinpurple.html">Aroma(Angel in Purple) / Personal WBS Home Page</A>&nbsp;<BR>Aroma(Angel in Purple) HEY! IF YOU LIKE WISHBONE CHECK THIS OUT! http://www.wwwishbone.com/WWWishbone/MyShow/TheCast/Images/TheCast.sm.gif ------------------------------------------------------------------------- http://www.wwwishbone.com/WWWishbone/MyShow/TheCast/Images/JoeandWB<br><FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE=-2>
+http://members.wbs.net/homepages/a/r/o/aromaangelinpurple.html<br><A HREF="http://www.wbs.net">wbs.net</A><br></FONT></li><br>
+<LI><a href="http://www.angelfire.com/mo/Jihan/">WISHBONE!</A>&nbsp;<BR>WISHBONE! Shows Pappyland Wishbone USA HIGH TELETUBBIES! My Favorite Links Meiou Posh Angel Aroma Sign My Guestbook View My Guestbook Guestbook by GuestWorld http://www.wwwishbone.com/WWWishbone/MyShow/TheCast/Images/TheCast.sm.gif -------------------------------------------<br><FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE=-2>
+http://www.angelfire.com/mo/Jihan/<br><A HREF="http://www.angelfire.com">angelfire.com</A><br></FONT></li><br>
+<P>
+<TABLE WIDTH=100% CELLPADDING=8 CELLSPACING=0 BORDER=0>
+<TR><TD ALIGN=CENTER>
+<FONT FACE="VERDANA,HELVETICA,ARIAL" COLOR=#999999>&lt;&lt; <B>back</B>&nbsp;-&nbsp;<B>next</B> &gt;&gt;</FONT>
+</TD></TR>
+</TABLE>
+<table width=100% cellpadding=4>
+	<tr><td colspan=2 height=2><img src=http://lygo.com/ly/i/dot_clear.gif HEIGHT=2 WIDTH=1></td></tr>
+	<tr>
+	<td width=50% align=center><font face=verdana size=-1><a href=/kclick/D=lycos/P=/C=enews/I=partner/K=default/A=/U=http:%252F%252Flycos.enews.com%252Fportal%252F1,1074,35786,00.html>Try Elle/Maxim +650 others-<B>FREE!</B></a></font></td>
+	<td width=50% align=center><font face=verdana size=-1></font></td>
+	</tr>
+	<tr><td colspan=2 height=2><img src=http://lygo.com/ly/i/dot_clear.gif HEIGHT=2 WIDTH=1></td></tr>
+</table>
+<BR>
+<!-- search box -->
+<DIV ALIGN=CENTER>
+
+<TABLE WIDTH=525 BGCOLOR=#CCCCCC BORDER=0 CELLPADDING=1 CELLSPACING=0>
+<TR><FORM ACTION="http://lycospro.lycos.com/cgi-bin/pursuit" METHOD=GET>
+<INPUT TYPE="hidden" NAME="mtemp" VALUE="nojava">
+<INPUT TYPE="hidden" NAME="etemp" VALUE="error_nojava">
+<INPUT TYPE="hidden" NAME="adv" VALUE="1">
+<TD>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=10 CELLSPACING=0>
+<TR><TD BGCOLOR=#FFFFFF>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TD ALIGN=RIGHT><B><FONT size=2 FACE="VERDANA,HELVETICA,ARIAL">Search for&nbsp;</FONT></B></TD>
+<TD ALIGN=LEFT><INPUT TYPE=text NAME=query VALUE="christie abbott " SIZE=25>&nbsp;<INPUT TYPE=image src=http://lygo.com/ly/i/inv/ggi_white.gif WIDTH=84 HEIGHT=20 BORDER=0></TD>
+<TD ROWSPAN=2 ALIGN=LEFT VALIGN=TOP><FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE=-2>
+<B><A HREF="http://personal.lycos.com/safetynet/safetynet.asp">Search Guard</A><BR><A HREF="http://www.hotbot.com">Try HotBot</A></B>
+</TD></TR>
+<TR><TD>&nbsp;</TD><TD>
+<FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE=-2>
+<INPUT TYPE=HIDDEN NAME="prquery" VALUE="">
+<INPUT TYPE=RADIO NAME="str" VALUE="N" CHECKED><B>New</B> Search
+<INPUT TYPE=RADIO NAME="pq" VALUE="&quot;Christie Abbott&quot;">Search These Results
 </FONT>
-</CENTER>
-</BODY></HTML>
+</TD></TR>
+</TABLE>
+</TD></TR>
+</TABLE>
+</TD></TR>
+</FORM>
+</TABLE>
+
+
+<BR>
+<!-- /search box -->
+<BR>
+<FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE=-2>
+<a href="/cgi-bin/nph-adclick.exe/CID=0006206b70700e1d00000000/ST=lycos/SV=search/A=.lycos.search_lycos."><img  src="http://ads.lycos.com/ads/imall43.gif" alt="I Mall" border=0 WIDTH=468 HEIGHT=60></a><br><a href="/cgi-bin/nph-adclick.exe/CID=0006206b70700e1d00000000/ST=lycos/SV=search/A=.lycos.search_lycos.">Click here to visit site</a></FONT>
+<P>
+<!-- toolbar -->
+<FONT FACE=VERDANA SIZE=-2><B>Tools</B> <a href=/L/sv1/>Chat</a> &nbsp;<a href=/L/sv2/>Clubs</a> &nbsp;<a href=/L/sv3/>Email</a> &nbsp;<a href=/L/sv4/>Message Boards</a> &nbsp;<a href=http://ftpsearch.lycos.com/>Software</a>&nbsp; <B>Build</B>&nbsp; <a href=/L/sv6/>Home Pages</a> &nbsp;<a href=/L/sv7/>My Lycos</a><br><B>Find</B> <a href=/l/sv18/>MP3</a> &nbsp;<a href=/L/sv8/>News</a> &nbsp;<a href=/L/sv9/>Weather</a> &nbsp;<a href=/L/sv10/>Stocks</a>  &nbsp;<a href=/L/sv13/>Yellow Pages</a> &nbsp;<a href=/L/sv11/>Cities</a> &nbsp;<a href=/L/sv14/>People</a> &nbsp;<a href=/L/sv12/>Road Maps</a> &nbsp;<b>Buy</b> &nbsp;<a href=/L/sv16/>Books</a> &nbsp;<a href=/L/sv17/>Music</a><font>&nbsp;</font><!-- /toolbar -->
+</DIV>
+<BR>
+<TABLE WIDTH=100% CELLPADDING=0 CELLSPACING=0 BGCOLOR=#CCCCCC><TR><TD><TABLE BORDER=0 CELLPADDING=1 CELLSPACING=0><TR><TD></TD></TR></TABLE></TD></TR></TABLE>
+<DIV ALIGN=CENTER>
+<FONT FACE="VERDANA,HELVETICA,ARIAL" SIZE=-2>
+<BR>
+<CENTER><FONT FACE="VERDANA,HELVETICA,ARIAL" COLOR="#000000" SIZE="-2"><A
+HREF="/lycosinc/legal.html#copy">Copyright</A> &copy; 1998
+Lycos, Inc. All Rights Reserved.  Lycos<font size=-3><sup>&#174;</sup></font> is a<BR> registered trademark of Carnegie Mellon University.<BR><A HREF=/privacy/>Our Privacy Vow</A>&#160;&#160;<A HREF=/lycosinc/legal.html>Terms and conditions</A>&#160;&#160;<A HREF="http://www.lycos.com/lycosinc/legal.html#advertising">Standard advertising terms and conditions</A></FONT>
+</DIV>
+<P>
+</BODY>
+</HTML>

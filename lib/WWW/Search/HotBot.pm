@@ -1,13 +1,11 @@
-#!/usr/local/bin/perl -w
-
 # HotBot.pm
 # by Wm. L. Scheding and Martin Thurn
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: HotBot.pm,v 1.14 1998/11/07 01:26:09 johnh Exp $
+# $Id: HotBot.pm,v 1.31 1999/06/11 19:07:00 mthurn Exp $
 
 =head1 NAME
 
-WWW::Search::HotBot - class for searching HotBot 
+WWW::Search::HotBot - backend for searching www.hotbot.com
 
 =head1 SYNOPSIS
 
@@ -98,12 +96,12 @@ The default is no date restrictions.
 Only return pages updated within 90 days of today.  
 (Substitute any integer in place of 90.)
 
-=item {'date' => 'range', 'DR' => 'After', 'DY' => 97, 'DM' => 12, 'DD' => 25}
+=item {'date' => 'range', 'DR' => 'newer', 'DY' => 97, 'DM' => 12, 'DD' => 25}
 
 Only return pages updated after Christmas 1997.
 (Substitute any year, month, and day for 97, 12, 25.)
 
-=item {'date' => 'range', 'DR' => 'Before', 'DY' => 97, 'DM' => 12, 'DD' => 25}
+=item {'date' => 'range', 'DR' => 'older', 'DY' => 97, 'DM' => 12, 'DD' => 25}
 
 Only return pages updated before Christmas 1997.
 (Substitute any year, month, and day for 97, 12, 25.)
@@ -279,18 +277,18 @@ Please tell the author if you find any!
 
 This module adheres to the C<WWW::Search> test suite mechanism. 
 
-  Test cases (accurate as of 1998-11-06):
+  Test cases (accurate as of 1999-02-22):
 
     $file = 'test/HotBot/zero_result';
     $query = 'Bogus' . 'NoSuchWord';
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/HotBot/one_page_result';
-    $query = '"Chris'.'tie Abb'.'ott"';
+    $query = '"Chr'.'istie Abbo'.'tt"';
     test($mode, $TEST_RANGE, 2, 99);
 
     $file = 'test/HotBot/multi_page_result';
-    $query = 'Moth'.'ma';
+    $query = 'L'.'S'.'A'.'M';
     test($mode, $TEST_GREATER_THAN, 100);
 
 =head1 AUTHOR
@@ -311,6 +309,21 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 If it''s not listed here, then it wasn''t a meaningful nor released revision.
 
+=head2 1.31, 1999-06-11
+
+www.hotbot.com changed their output format ever so slightly.  (Thanks
+to Jim jsmyser@bigfoot.com for pointing it out)
+
+=head2 1.30, 1999-04-12
+
+BUG FIX: results for domain-limited search were not parsed.  (Thanks to
+Christopher York yorkc@ccwf.cc.utexas.edu for pointing it out)
+
+=head2 1.29, 1999-02-22
+
+www.hotbot.com changed their output format.  (Thanks to Tim Chklovski
+timc@mit.edu for pointing it out)
+
 =head2 1.27, 1998-11-06
 
 HotBot changed their output format(?).
@@ -320,7 +333,7 @@ Minor documentation changes.
 =head2 1.25, 1998-09-11
 
 HotBot changed their output format ever so slightly.
-Documentation added for all possible HotBot query options!
+Documentation added for all known HotBot query options!
 
 =head2 1.23
 
@@ -333,10 +346,6 @@ www.hotbot.com changed their output format.
 =head2 1.21
 
 www.hotbot.com changed their output format.
-
-=head2 1.20
-
-\n changed to \012 for MacPerl compatibility
 
 =head2 1.17
 
@@ -354,7 +363,7 @@ www.hotbot.com does not do truncation. Therefore, if the query
 contains truncation characters (i.e. '*' at end of words), they are
 simply deleted before the query is sent to www.hotbot.com.
 
-=head2 1.11 1998-02-05
+=head2 1.11, 1998-02-05
 
 Fixed and revamped by Martin Thurn.  
 
@@ -368,12 +377,15 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '1.27';
+$VERSION = '1.31';
 
 use Carp ();
 use WWW::Search(generic_option);
 require WWW::SearchResult;
 
+
+# public
+sub version { $VERSION }
 
 # private
 sub native_setup_search
@@ -388,7 +400,7 @@ sub native_setup_search
   # 500 results take  70 seconds at 100 per page
   # 500 results take 234 seconds at  10 per page
   my $DEFAULT_HITS_PER_PAGE = 100;
-  $DEFAULT_HITS_PER_PAGE = 10 if $self->{_debug};
+  # $DEFAULT_HITS_PER_PAGE = 10 if $self->{_debug};
   $self->{'_hits_per_page'} = $DEFAULT_HITS_PER_PAGE;
   # $self->timeout(120);  # HotBot used to be notoriously slow
 
@@ -486,7 +498,7 @@ sub native_retrieve_some
     print STDERR "\n * $state ===$_===" if 2 <= $self->{'_debug'};
 
     if ($state eq $TITLE && 
-        m@<TITLE>HotBot results:\s+(.+)\s\(\d+\+\)</TITLE>@i) 
+        m@\<TITLE>HotBot results:\s+(.+)\s\(\d+\+\)\</TITLE>@i) 
       {
       # Actual line of input is:
       # <HEAD><TITLE>HotBot results: Christie Abbott (1+)</TITLE>
@@ -495,12 +507,14 @@ sub native_retrieve_some
       } # We're in TITLE mode, and line has title
 
     elsif ($state eq $HEADER && 
-           m{^(\d+)\s+matches.<})
+           m!(?:\s|\&nbsp\;)([\d,]+)(?:\s|\&nbsp\;)+Matches.!i)
       {
       # Actual line of input is:
-      # 248 matches.</b><br>
-      print STDERR "count line" if 2 <= $self->{'_debug'};
-      $self->approximate_result_count($1);
+      # <b>Returned:&nbsp;69&nbsp;Matches&nbsp;
+      my $iCount = $1;
+      $iCount =~ s/\D//g;
+      print STDERR "count line ($iCount) " if 2 <= $self->{'_debug'};
+      $self->approximate_result_count($iCount);
       $state = $NEXT;
       } # we're in HEADER mode, and line has number of results
 
@@ -514,7 +528,7 @@ sub native_retrieve_some
       $self->{'_next_to_retrieve'} += $self->{'_hits_per_page'};
       $state = $HITS;
       } # found "next" link in NEXT mode
-    elsif ($state eq $NEXT && m|^<B>(\d+)\.| )
+    elsif ($state eq $NEXT && m|^<p>\s<b>(\d+)\.| )
       {
       print STDERR " no next button; " if 2 <= $self->{'_debug'};
       # There was no "next" button on this page; no more pages to get!
@@ -524,41 +538,44 @@ sub native_retrieve_some
       # pattern matches this line (again)!
       }
 
-    if ($state eq $HITS && m|^<B>(\d+)\.| )
+    if ($state eq $HITS && m|^<p>\s<b>(\d+)\.| )
       {
-      print STDERR "hit line" if 2 <= $self->{'_debug'};
+      print STDERR "multihit line" if 2 <= $self->{'_debug'};
       # Actual line of input:
       # <B>2. </B><A HREF="http://www.toysrgus.com/textfiles.html">Charts, Tables, and Text Files</A><BR>Text Files Maintained by Gus Lopez (lopez@halcyon.com) Ever wonder which weapon goes with which figure? Well, that's the kind of information you can find right here. Any beginning collector should glance at some of these files since they answer...<br>92%&nbsp;&nbsp;&nbsp; 3616 bytes&#44; 1998/04/07&nbsp;&nbsp;&nbsp;http://www.toysrgus.com/textfiles.html<p>
-      my ($iHit,$iPercent,$iBytes,$sURL,$sTitle,$sDesc,$sDate) = (0,0,0,'','','','');
-      # m/<B>(\d+)\.\s/ && $iHit = $1;
-      $sURL = $1 if m/HREF="([^"]+)/;
-      $sTitle = $1 if m|>([^<]+)</A>|;
-      $sDate = $1 if m/(\d\d\d\d\/\d\d\/\d\d)&nbsp;/;
-      $sDesc = $1 if m/<BR>(.+)<br>/;
-      $iPercent = $1 if m/>(\d+)\%(&nbsp;|<)/;
-      $iBytes = $1 if m/&nbsp;\s(\d+)\sbytes/;
-      # Note that we ignore MIRROR URLs, so our total hit count may
-      # get all out of whack.
-      if ($sURL eq '')
+      # <br> <b>1.&nbsp;&nbsp;<a href=/director.asp?target=http%3A%2F%2Fwww%2Ecoolshop%2Ecom%2Fliquidblue%2Ehtml&id=1&userid=2EtRtdJnbHAA&query=MT=Star+Wars+Golden+Turtle&SM=SC&rsource=INK>The Coolest T-Shirts Ever!</A></b><br>Liquid BlueM-. T-shirts, CoolshopM-. offers an incredible line of popular T-shirt styles. In addition to the designs featuring images from the legendary Grateful Dead, COOLSHOPM-. offers a diverse line of T-shirts with original art depicting the...<br><font size=-1><b>99%&nbsp&nbsp</b><i>11/4/98</i>  http://www.coolshop.com/liquidblue.html<BR>See results from <a href="/?MT=Star+Wars+Golden+Turtle&SM=SC&uHost=http://www.coolshop.com/liquidblue.html">this site only</a>.</font><p> <b>2.&nbsp;&nbsp;<a href=/director.asp?target=http%3A%2F%2Fcust%2Eidl%2Enet%2Eau%2Ffionat%2F&id=2&userid=2EtRtdJnbHAA&query=MT=Star+Wars+Golden+Turtle&SM=SC&rsource=INK>Fiona's Tazo Swap Page</A></b><br>UPDATED 30th Nonember 98 I Swap 1 for 1 in mint condition, unless other-wise specified. I will swap 2 of yours for 1 of mine if you don't have any-thing I need. ? means in the process of swapping. SERIES 1: ORIGINAL SWAPS 6 7 22 27 30 32 35 47 BLUE.<br><font size=-1><b>98%&nbsp&nbsp</b><i>11/30/98</i>  http://cust.idl.net.au/fionat/<BR>See results from <a href="/?MT=Star+Wars+Golden+Turtle&SM=SC&uHost=http://cust.idl.net.au/fionat/">this site only</a>.</font>
+      my @asHits = split /<p>/;
+      foreach my $sHit (@asHits)
         {
-        print STDERR "\n *** parse error: found hit line but no URL\n" if 2 <= $self->{'_debug'};
-        }
-      else
-        {
-        if (ref($hit))
+        my ($iHit,$iPercent,$iBytes,$sURL,$sTitle,$sDesc,$sDate) = (0,0,0,'','','','');
+        # m/<B>(\d+)\.\s/ && $iHit = $1;
+        $sURL = $1 if $sHit =~ m/uHost=(.+)\"/;
+        # Following line added 1999-04-12 to recognize domain-limited results:
+        $sURL ||= $1 if $sHit =~ m!</i>\s*(.+)!;
+        $sTitle = $1 if $sHit =~ m/\>([^<]+)<\/A>/;
+        $sDate = $1 if $sHit =~ m!<i>(\d\d?\/\d\d?\/\d\d)</i>!;
+        $sDesc = $1 if $sHit =~ m/<br>([^<]+)<br>/;
+        $iPercent = $1 if $sHit =~ m/>(\d+)\%(&nbsp|\<)/;
+        $iBytes = $1 if $sHit =~ m/&nbsp;\s(\d+)\sbytes/;
+        # Note that we ignore MIRROR URLs, so our total hit count may
+        # get all out of whack.
+        if ($sURL ne '')
           {
-          push(@{$self->{cache}}, $hit);
-          } # if
-        $hit = new WWW::SearchResult;
-        $hit->add_url($sURL);
-        $hit->title($sTitle) if $sTitle ne '';
-        $hit->description($sDesc) if $sDesc ne '';
-        $hit->score($iPercent) if 0 < $iPercent;
-        $hit->size($iBytes) if 0 < $iBytes;
-        $hit->change_date($sDate) if $sDate ne '';
-        $self->{'_num_hits'}++;
-        $hits_found++;
-        } # if $URL else
+          if (ref($hit))
+            {
+            push(@{$self->{cache}}, $hit);
+            } # if
+          $hit = new WWW::SearchResult;
+          $hit->add_url($sURL);
+          $hit->title($sTitle) if $sTitle ne '';
+          $hit->description($sDesc) if $sDesc ne '';
+          $hit->score($iPercent) if 0 < $iPercent;
+          $hit->size($iBytes) if 0 < $iBytes;
+          $hit->change_date($sDate) if $sDate ne '';
+          $self->{'_num_hits'}++;
+          $hits_found++;
+          } # if $URL else
+        } # foreach
       $state = $HITS;
       } # $state eq HITS
 
@@ -593,8 +610,8 @@ DV = (selection) date (age) criteria
      0 = no date restriction
      <integer x> = restrict to within x days before today
 DR = (selection) date anchor criteria
-     Before = only return pages updated before the date given in DY,DM,DD
-     After = only return pages updated after the date given in DY,DM,DD
+     older = only return pages updated before the date given in DY,DM,DD
+     newer = only return pages updated after the date given in DY,DM,DD
 DY = two-digit year (1998 = 98)
 DM = month (January = 1)
 DD = day of month
@@ -648,3 +665,5 @@ SM = (selection) search type
      name = the person
      url = links to this URL
      B = Boolean phrase     
+
+

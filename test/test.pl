@@ -373,11 +373,20 @@ sub test_cases {
     # 84 hits/page
     $file = 'test/HotBot/one_page_result';
     $query = '"Ch' . 'ristie Abbott"';
-    test($mode, $TEST_RANGE, 2, 80);
+    test($mode, $TEST_RANGE, 2, 100);
 
     $file = 'test/HotBot/two_page_result';
-    $query = '+LS' . 'AM +ISI';
-    test($mode, $TEST_GREATER_THAN, 86);
+    $query = '+IS' . 'I +A' . 'I +netwo' . 'rking';
+    test($mode, $TEST_GREATER_THAN, 101);
+
+    ######################################################################
+    $search_engine = 'HotFiles';
+    $maintainer = 'Jim Smyser <jsmyser@bigfoot.com>';
+
+    $file = 'test/HotFiles/zero_result';
+    $query = $bogus_query;
+    test($mode, $TEST_EXACTLY);
+
 
     ######################################################################
     $search_engine = 'Infoseek';
@@ -474,8 +483,17 @@ sub test_cases {
 
     # 10 hits/page
     $file = 'test/Magellan/two_page_result';
-    $query = '+IS' . 'I +divisions';
+    $query = '+IS' . 'I +division';
     test($mode, $TEST_GREATER_THAN, 11);
+
+
+    ######################################################################
+    $search_engine = 'Metapedia';
+    $maintainer = 'Jim Smyser <jsmyser@bigfoot.com>';
+
+    $file = 'test/Metapedia/zero_result';
+    $query = $bogus_query;
+    test($mode, $TEST_EXACTLY);
 
 
     ######################################################################
@@ -519,6 +537,15 @@ sub test_cases {
 
 
     ######################################################################
+    $search_engine = 'OpenDirectory';
+    $maintainer = 'Jim Smyser <jsmyser@bigfoot.com>';
+
+    $file = 'test/OpenDirectory/zero_result';
+    $query = $bogus_query;
+    test($mode, $TEST_EXACTLY);
+
+
+    ######################################################################
     $search_engine = 'PLweb';
     $maintainer = 'Paul Lindner <paul.lindner@itu.int>';
 
@@ -530,6 +557,18 @@ sub test_cases {
     $query = 'bur' . 'undi';
     test($mode, $TEST_RANGE, 2, 99);
 
+
+    ######################################################################
+    $search_engine = 'Profusion';
+    $maintainer = 'Jim Smyser <jsmyser@bigfoot.com>';
+
+    $file = 'test/Profusion/zero_result';
+    $query = $bogus_query;
+    test($mode, $TEST_EXACTLY);
+
+    $file = 'test/Profusion/one_page_result';
+    $query = 'Astr' . 'onomy';
+    test($mode, $TEST_GREATER_THAN, 50);
 
     ######################################################################
     $search_engine = 'Search97';
@@ -617,6 +656,14 @@ sub test_cases {
     $file = 'test/Yahoo/two_page_result';
     $query = 'rep' . 'lication';
     test($mode, $TEST_GREATER_THAN, 100);  # Yahoo seems to have 84 hits/page
+
+    ######################################################################
+    $search_engine = 'ZDNet';
+    $maintainer = 'Jim Smyser <jsmyser@bigfoot.com>';
+
+    $file = 'test/ZDNet/zero_result';
+    $query = $bogus_query;
+    test($mode, $TEST_EXACTLY);
 }
 
 sub main {
