@@ -4,7 +4,7 @@
 # Lycos.pm
 # by Wm. L. Scheding, John Heidemann
 # Copyright (C) 1996-1997 by USC/ISI
-# $Id: Lycos.pm,v 1.10 1998/08/27 17:29:02 johnh Exp $
+# $Id: Lycos.pm,v 1.11 1998/10/16 21:15:41 johnh Exp $
 #
 # Complete copyright notice follows below.
 # 
@@ -27,7 +27,7 @@ WWW::Search::Lycos - class for searching Lycos
 
 This class is an Lycos specialization of WWW::Search.
 It handles making and interpreting Lycos searches
-F<http://www.lycos.com>.
+F<www-english.lycos.com>.
 
 This class exports no public interface; all interaction should
 be done through WWW::Search objects.
@@ -121,7 +121,9 @@ sub native_setup_search
 	    'cat' => 'lycos',
 	    'matchmode' => 'and',
 	    'adv' => '0',
-	    'search_url' => 'http://www.lycos.com/cgi-bin/pursuit',
+	    # Lycos switches from www.lycos.com to www.lycos.de if
+	    # contacted from German sites (afb 10/98)
+	    'search_url' => 'http://www-english.lycos.com/cgi-bin/pursuit',
         };
     };
     my($options_ref) = $self->{_options};
@@ -171,11 +173,13 @@ sub native_retrieve_some
 
     # parse the output
     my($HEADER, $HITS, $DESC, $RATING, $TRAILER, $POST_NEXT) = (1..10);
+    my(@ST) = ("", "HD", "HI", "DE", "RT", "TR", "PN"); # afb 10/98
     my($hits_found) = 0;
     my($state) = ($HEADER);
     my($hit, $raw, $title, $url, $rating, $desc) = ();
     foreach ($self->split_lines($response->content())) {
         next if m@^$@; # short circuit for blank lines
+	print STDERR $ST[$state], ": " if ($self->{_debug} >= 2);
 	if ($state == $HEADER && m@\s+of.*(\d+).*relevant\s+result@i) { # new as of  7-Oct-97
 	    $self->approximate_result_count($1);
             print STDERR "PARSE(HEADER->HITS-1): $_\n" if ($self->{_debug} >= 2);
@@ -186,6 +190,20 @@ sub native_retrieve_some
 	} if ($state == $HEADER && m@a name="pages"@i) {  # new as of 12-Aug-98
             print STDERR "PARSE(HEADER->HITS-2): $_\n" if ($self->{_debug} >= 2);
 	    $state = $HITS;
+	# &nbsp;&nbsp;897&nbsp;matches
+	} if ($state == $HEADER && m@\&nbsp;\&nbsp;(\d+)\&nbsp;matches@i) { # afb 10/98
+	    $self->approximate_result_count($1);
+            print STDERR "PARSE(HEADER->HITS-1): $_\n" if ($self->{_debug} >= 2);
+	    $state = $HITS;
+	} elsif ($state == $HITS && m@<a href="([^"]+)">(.*)\<\/a\><br>(.*)<br>@i) { # afb 10/98
+	    print STDERR "PARSE(HITS->HITS): $_\n" if ($self->{_debug} >= 2);
+	    my($hit) = new WWW::SearchResult;
+	    $hit->add_url($1);
+	    $hit->title($2);
+	    $hit->description($3);
+	    $hit->raw($_);
+	    $hits_found++;
+	    push(@{$self->{cache}}, $hit);
 	} elsif ($state == $HITS && m@^<a href="([^"]+)">(.*)\<\/a\>@i) { # post 23-Mar-98 "
 	    $raw = $_;
 	    $url = $1;

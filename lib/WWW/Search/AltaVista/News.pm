@@ -4,7 +4,7 @@
 # News.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: News.pm,v 1.7 1998/05/28 04:05:50 johnh Exp $
+# $Id: News.pm,v 1.8 1998/10/09 01:11:40 johnh Exp $
 #
 # Complete copyright notice follows below.
 # 
@@ -28,7 +28,7 @@ WWW::Search::AltaVista::News - class for Alta Vista news searching
 This class implements the AltaVista news search
 (specializing AltaVista and WWW::Search).
 It handles making and interpreting AltaVista news searches
-F<http://www.altavista.digital.com>.
+F<http://www.altavista.com>.
 
 Details of AltaVista can be found at L<WWW::Search::AltaVista>.
 
@@ -83,7 +83,7 @@ sub native_setup_search
 	    'text' => 'yes',
 	    what => 'news',
 	    fmt => 'd',
-	    'search_url' => 'http://www.altavista.digital.com/cgi-bin/query',
+	    'search_url' => 'http://www.altavista.com/cgi-bin/query',
         };
     };
     # let AltaVista.pm finish up the hard work.

@@ -3,21 +3,20 @@
 # Yahoo.pm
 # by Wm. L. Scheding and Martin Thurn
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: Yahoo.pm,v 1.8 1998/08/27 17:29:06 johnh Exp $
-
-
-package WWW::Search::Yahoo;
+# $Id: Yahoo.pm,v 1.9 1998/10/09 00:37:20 johnh Exp $
 
 =head1 NAME
 
 WWW::Search::Yahoo - class for searching Yahoo 
 
-
 =head1 SYNOPSIS
 
-    require WWW::Search;
-    $search = new WWW::Search('Yahoo');
-
+  use WWW::Search;
+  my $oSearch = new WWW::Search('Yahoo');
+  my $sQuery = WWW::Search::escape_query("+sushi restaurant +Columbus Ohio");
+  $oSearch->native_query($sQuery);
+  while (my $oResult = $oSearch->next_result())
+    print $oResult->url, "\n";
 
 =head1 DESCRIPTION
 
@@ -29,11 +28,9 @@ that Yahoo might tell us about.
 This class exports no public interface; all interaction should
 be done through L<WWW::Search> objects.
 
-
 =head1 SEE ALSO
 
 To make new back-ends, see L<WWW::Search>.
-
 
 =head1 HOW DOES IT WORK?
 
@@ -50,11 +47,9 @@ C<{cache}>.  If it finds a ``next'' button in the text,
 it sets C<{_next_url}> to point to the page for the next
 set of results, otherwise it sets it to undef to indicate we''re done.
 
-
 =head1 BUGS
 
 Please tell the author if you find any!
-
 
 =head1 TESTING
 
@@ -63,17 +58,15 @@ This module adheres to the C<WWW::Search> test suite mechanism.
   Test cases:
  '+mrfglbqnx +NoSuchWord' ---  no hits
  'LSAM'                   ---   6 hits on one page
- 'replication'            --- 119 hits on two pages
-
+ 'replication'            --- 145 hits on two pages
 
 =head1 AUTHOR
 
 As of 1998-02-02, C<WWW::Search::Yahoo> is maintained by Martin Thurn
-(mthurn@irnet.rest.tasc.com).
+(MartinThurn@iname.com).
 
 C<WWW::Search::Yahoo> was originally written by Wm. L. Scheding,
 based on C<WWW::Search::AltaVista>.
-
 
 =head1 LEGALESE
 
@@ -81,8 +74,13 @@ THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
 WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
 MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
-
 =head1 VERSION HISTORY
+
+If it''s not listed here, then it wasn''t a meaningful nor released revision.
+
+=head2 1.9 1998-10-08
+
+Cosmetic code updates.
 
 =head2 1.5
 
@@ -90,15 +88,17 @@ Fixed bug where next page tag was always missed.
 Fixed the maximum_to_retrieve off-by-one problem.
 Updated test cases.
 
-
 =cut
 
 #####################################################################
+
+package WWW::Search::Yahoo;
 
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
+$VERSION = sprintf("%d.%02d", q$Revision: 1.9 $ =~ /(\d+)\.(\d+)/);
 
 use Carp ();
 use WWW::Search(generic_option);
@@ -125,7 +125,7 @@ sub native_setup_search
     {
     $self->{'_hits_per_page'} = $iMaximum;
     }
-  $self->{agent_e_mail} = 'mthurn@irnet.rest.tasc.com';
+  $self->{agent_e_mail} = 'MartinThurn@iname.com';
 
   # If we run as a robot, WWW::RobotRules fetches the
   # http://www.yahoo.com instead of http://www.yahoo.com/robots.txt,
@@ -181,6 +181,9 @@ sub native_retrieve_some
   # fast exit if already done
   return undef if (!defined($self->{_next_url}));
   
+  # If this is not the first page of results, sleep so as to not overload the server:
+  $self->user_agent_delay if 1 < $self->{'_next_to_retrieve'};
+  
   # get some
   print STDERR " *   sending request (",$self->{_next_url},")\n" if $self->{_debug};
   my($response) = $self->http_request('GET', $self->{_next_url});
@@ -198,7 +201,7 @@ sub native_retrieve_some
   my($state) = ($HEADER);
   my($cite) = "";
   my($hit) = ();
-  foreach ($self->split_lines($response->content())) 
+  foreach ($self->split_lines($response->content()))
     {
     next if m@^$@; # short circuit for blank lines
     print STDERR " * $state ===$_=== " if 2 <= $self->{'_debug'};
@@ -290,7 +293,7 @@ sub native_retrieve_some
   
   # Sleep so as to not overload yahoo
   $self->user_agent_delay if (defined($self->{_next_url}));
-  
+
   return $hits_found;
   } # native_retrieve_some
 

@@ -3,8 +3,8 @@
 <HEAD><TITLE>IMF Web Site Search Results</TITLE></HEAD>
 
 <BODY bgcolor="#ffffff">
-<CENTER>
 <!---------------------TOP BANNER START--------------------->
+<CENTER>
 <TABLE CELLSPACING=0 BORDER=0 CELLPADDING=0 WIDTH=590>
 	<TR>
 		<TD valign=top align=right WIDTH=82>
@@ -27,8 +27,7 @@
 </TABLE>
 <BR>
 </CENTER>
-<!-----------------------TOP BANNER ENDS--------------------->
-<CENTER>
+<!-----------------------TOP BANNER ENDS---------------------><CENTER>
 <TABLE BORDER=0 WIDTH=90%>
 <TR>
 <TD>

@@ -1,0 +1,67 @@
+<html> 
+<!--  (Build 2055) -->
+<!--    -->
+<head> 
+<title>Northern Light Search: +LSAM +BogusNoSuchWordSpammersAreIdiots</title>
+</head>
+
+<body bgcolor=white>
+
+<table border=0 width=630>
+<tr>
+  <td rowspan=4 valign=top>
+  <a href=search.html><img src=docs/gif/templogo.gif border=0 hspace=10></a>
+  </td>
+
+  <td rowspan=10><img src=docs/gif/transparent.gif border=0 width=15 height=1></td>
+
+  <td><img src=docs/gif/transparent.gif border=0 width=1 height=30></td>
+</tr>
+
+<tr>
+  <td>
+<form action=/nlquery.fcg method=get>
+<input type=hidden name=ho value=>
+<input type=hidden name=po value=>
+<input type=text size=27 name=qr maxsize=100 value="+LSAM +BogusNoSuchWordSpammersAreIdiots">&nbsp;<input name=sb type=image src=docs/gif/srchbtn1.gif align=top border=0 width=74 height=28 alt=Submit><nobr><a href=docs/prod_help.htm#simplesearch><img src=docs/gif/searchhelp.gif border=0 align=top width=85 height=28 alt="Search Help"></a>
+<input type=hidden name=si value="">
+<input type=hidden name=cc value=" ">
+<input type=hidden name=us value="">
+<input type=hidden name=xd value="">
+</form>
+
+
+  </td>
+</tr>
+
+<tr>
+  <td>
+  <font size=2>
+Your query did not find any documents.
+<p>
+You may want to <b>check the spelling of all the words in your query.</b>
+<p>
+If you're looking for very current information, you may wish to
+<a href=/nlquery.fcg?qr=%2bLSAM+%2bBogusNoSuchWordSpammersAreIdiots&dr=14&dx=1006&us=025&rv=1>Search Current News</a>.
+<p>
+If all the words are spelled correctly, you might try
+<ul>
+<li> removing quotes from around phrases
+<li> eliminating some words
+<li> replacing words with synonyms or more general terms
+</ul>
+  </font>
+
+  </td>
+</tr>
+
+<tr><td><img src=docs/gif/transparent.gif border=0 width=1 height=30></td></tr>
+
+<tr>
+  <td><a href=search.html><img src=docs/gif/startover.gif border=0 vspace=3></a></td>
+  <td><font size=2>Copyright &copy; 1997-1998, Northern Light Technology LLC. All rights reserved.</font></td>
+</tr>
+</table>
+
+</body>
+</html>

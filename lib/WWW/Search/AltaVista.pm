@@ -4,7 +4,7 @@
 # AltaVista.pm
 # by John Heidemann
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: AltaVista.pm,v 1.35 1998/08/27 17:28:58 johnh Exp $
+# $Id: AltaVista.pm,v 1.38 1998/10/09 01:11:38 johnh Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -27,7 +27,7 @@ WWW::Search::AltaVista - class for searching Alta Vista
 
 This class is an AltaVista specialization of WWW::Search.
 It handles making and interpreting AltaVista searches
-F<http://www.altavista.digital.com>.
+F<http://www.altavista.com>.
 
 This class exports no public interface; all interaction should
 be done through WWW::Search objects.
@@ -50,7 +50,7 @@ These back-ends set different combinations following options.
 
 Specifies who to query with the AltaVista protocol.
 The default is at
-C<http://www.altavista.digital.com/cgi-bin/query>;
+C<http://www.altavista.com/cgi-bin/query>;
 you may wish to retarget it to
 C<http://www.altavista.telia.com/cgi-bin/query>
 or other hosts if you think that they're ``closer''.
@@ -160,7 +160,7 @@ sub native_setup_search
 	    'text' => 'yes',
 	    'what' => 'web',
 	    'fmt' => 'd',
-	    'search_url' => 'http://www.altavista.digital.com/cgi-bin/query',
+	    'search_url' => 'http://www.altavista.com/cgi-bin/query',
         };
     };
     my($options_ref) = $self->{_options};
@@ -233,11 +233,13 @@ sub native_retrieve_some
     foreach ($self->split_lines($response->content())) {
         next if m@^$@; # short circuit for blank lines
 	if (0) {
-	} elsif ($state == $HEADER && /(no|[0-9,]+)[< ].*match.*found/i) {  # post 30-May-98
+	} elsif ($state == $HEADER && (/(no|[0-9,]+)[< ].*match.*found/i || /AltaVista\s+found\s+.*(no|[0-9,]+)\s+(Web|document|posting)/i)) {
+	    # post 30-May-98
 	    # <font size=-1>No matches were found.</font><P><font size=-1><dl>
 	    # <font size=-1><b>10</b> matches were found. </font><P><font size=-1><P>
 	    # <td valign=top bgcolor=#ffffff><table border=0 width=434 bgcolor=#ffffff height=100% cellpadding=4 cellspacing=0><tr><td valign=top><font face=helvetica size=-1><font face=helvetica size=-1>About <b>14,115,615</b> matches were found. </font><P></font><font face=helvetica size=-1>
-
+	    #
+	    # afb 10/98 change
 	    my($n) = $1;
 	    $n =~ s/,//g;
 	    $n = 0 if ($n =~ /no/i);
@@ -257,8 +259,11 @@ sub native_retrieve_some
 	    $hit->change_date($4);
 	    $hit->description($5);
 	    print STDERR "PARSE(3:HITS): news hit found.\n" if ($self->{_debug} >= 2);
-	} elsif ($state == $HITS && m@(<p><dt>|<dt>|<dt><b>)[^"]*\d+\.[^"]*<a[^>]*href=\"([^"]+)"[^>]*>(.*)</a>@i) {  # post 30-May-98
+	} elsif ($state == $HITS && m@(<p><dt>|<dt>|<dt><b>)[^"]*\d+\.[^"]*<a[^>]*href=\"([^"]+)"[^>]*>(.*)</a>@i) {
+	    # post 30-May-98:
 	    # <dt><b>1. </b><a href="http://www.isi.edu/lsam/tools/autosearch/"><b>index.html directory page</b></a><dd>
+	    # post  6-Oct-98:
+ 	    # <dl><dt><b>12. </b><a href="http://www.zum.de/schule/Faecher/G/BW/Landeskunde/rhein/zisterz/zs_skrp2.htm"><b>Das Skriptorium der Zisterzienser</b></a><dd>
 	    ($hit, $raw) = $self->begin_new_hit($hit, $raw);
 	    $raw .= $_;
 	    $hit->add_url($2);
@@ -269,6 +274,7 @@ sub native_retrieve_some
 	    $hit->description("");
 	    print STDERR "PARSE(3:HITS): hit found.\n" if ($self->{_debug} >= 2);
 	} elsif ($state == $HITS && m@^([^<]+).*last modified\s+(\S+)\s.*page size\s+(\S+)\s@i) { # "
+	    # pre-8-oct-98
 	    # AutoSearch WEB Searching. What is AutoSearch? AutoSearch performs a web-based search and puts the results set in a web page. It periodically updates this..<br><font size=-2>Last modified 3-Feb-97 - page size 2K - in English [ <a href="http://babelfish.altavista.digital.com/cgi-bin/translate?urltext=http%3a%2f%2fwww%2eisi%2eedu%2flsam%2ftools%2fautosearch%2f&language=en">Translate</a> ]</font><P>
 	    $raw .= $_;
 	    $hit->description($1);
@@ -277,8 +283,23 @@ sub native_retrieve_some
 	    $size *= 1024 if ($size =~ s@k$@@i);
 	    $size *= 1024*1024 if ($size =~ s@m$@@i);
 	    $hit->size($size);
-	} elsif ($state == $HITS && /<\/dl>/) {
+	} elsif ($state == $HITS && m@last modified (\d+-\w+-\d+).*page size (\S+)@i) {
+	    # post  8-Oct-98
+	    # Last modified 3-Jun-98 - page size 2K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go??urltext=http%3a%2f%2fwww%2eisi%2eedu%2f%7elsam%2ftools%2fautosearch%2findex%2ehtml&language=en">Translate</a>&nbsp;]</dl>
+	    $raw .= $_;
+	    $hit->change_date($1);
+	    my($size) = $2;
+	    $size *= 1024 if ($size =~ s@k$@@i);
+	    $size *= 1024*1024 if ($size =~ s@m$@@i);
+	    $hit->size($size);
+	} elsif ($state == $HITS && m@^([^<]+).*URL:@) {
+	    # post  8-Oct-98
+	    # AutoSearch WEB Searching. What is AutoSearch? AutoSearch performs a web-based search and puts the results set in a web page. It periodically updates this..<br><b>URL:</b> <font color=gray>www.isi.edu/~lsam/tools/autosearch/index.html<br>
+	    $raw .= $_;
+	    $hit->description($1);
+	} elsif ($state == $HITS && (m@^</font>.*<br>@i || m@AltaVista Home.*\|@i || m@result pages:.*href="/cgi-bin/query@i)) { #"
 	    # end of hits
+	    # afb 10/98 adds the cgi-bin termination check
 	    ($hit, $raw) = $self->begin_new_hit($hit, $raw);
 	    $state = $TRAILER;
 	    print STDERR "PARSE(6b:HITS->TRAILER).\n" if ($self->{_debug} >= 2);

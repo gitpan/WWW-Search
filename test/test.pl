@@ -3,7 +3,7 @@
 #
 # test.pl
 # Copyright (C) 1997 by USC/ISI
-# $Id: test.pl,v 1.23 1998/08/27 17:26:41 johnh Exp $
+# $Id: test.pl,v 1.26 1998/10/16 21:15:41 johnh Exp $
 #
 # Copyright (c) 1997 University of Southern California.
 # All rights reserved.                                            
@@ -35,6 +35,7 @@ Options:
     -v			verbose (show commands)
     -d			debug (don't actually run stuff)
     -I			run interal tests only
+    -X			run external tests only
 
 
 To save a result to a file, use the search_to_file option of WebSearch.
@@ -52,7 +53,7 @@ use Config;
 use Getopt::Long;
 &usage if ($#ARGV >= 0 && $ARGV[0] eq '-?');
 my(%opts);
-&GetOptions(\%opts, qw(d e=s I u v));
+&GetOptions(\%opts, qw(d e=s X I u v));
 # &usage if ($#ARGV < 0);
 
 
@@ -60,7 +61,16 @@ my($verbose) = $opts{'v'};
 my($debug) = $opts{'d'};
 my($desired_search_engine) = $opts{'e'};
 my($update_saved_files) = $opts{'u'};
-my($internal_only) = $opts{'I'};
+my($do_internal, $do_external);
+if ($opts{'I'} && $opts{'X'}) {
+    ($do_internal, $do_external) = (1,1);
+} elsif ($opts{'I'}) {
+    ($do_internal, $do_external) = (1,0);
+} elsif ($opts{'X'}) {
+    ($do_internal, $do_external) = (0,1);
+} else {
+    ($do_internal, $do_external) = (1,1);
+};
 my($error_count) = 0;
 
 my($fullperl);
@@ -69,6 +79,8 @@ my($file, $query, $date, $search_engine, $pwd, $maintainer);
 my($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = (0..10);
 
 my($TEST_DUMMY, $TEST_EXACTLY, $TEST_BY_COUNTING, $TEST_GREATER_THAN, $TEST_RANGE) = (1..10);
+
+my($bogus_query) = "Bogus" . "NoSuchWord" . "SpammersAreIdiots";
 
 sub relevant_test {
     return 1 if (!defined($desired_search_engine));
@@ -183,11 +195,11 @@ sub test_cases {
     $maintainer = 'John Heidemann <johnh@isi.edu>';
 
     $file = 'test/AltaVista/zero_result_no_plus';
-    $query = 'Bogus' . 'NoSuchWord';
+    $query = $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/AltaVista/zero_result';
-    $query = '+LSAM +Bogus' . 'NoSuchWord';
+    $query = '+LSAM +' . $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/AltaVista/one_page_result';
@@ -204,7 +216,7 @@ sub test_cases {
     $maintainer = 'John Heidemann <johnh@isi.edu>';
 
     $file = 'test/AltaVista/Web/zero_result';
-    $query = '+LSAM +Bogus' . 'NoSuchWord';
+    $query = '+LSAM +' . $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/AltaVista/Web/one_page_result';
@@ -220,12 +232,12 @@ sub test_cases {
     $maintainer = 'John Heidemann <johnh@isi.edu>';
 
     $file = 'test/AltaVista/AdvancedWeb/zero_result';
-    $query = 'LSAM and Bogus' . 'NoSuchWord';
+    $query = 'LSAM and ' . $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/AltaVista/AdvancedWeb/one_page_result';
     $query = 'LSAM and AutoSearch';
-    test($mode, $TEST_RANGE, 2, 10);
+    test($mode, $TEST_RANGE, 2, 11);
 
     $file = 'test/AltaVista/AdvancedWeb/two_page_result';
     $query = 'LSAM and ISI and IB';
@@ -240,7 +252,7 @@ sub test_cases {
     test($mode, $TEST_GREATER_THAN, 30);   # 30 hits/page
 
     $file = 'test/AltaVista/News/zero_result';
-    $query = '+perl +Bogus' . 'NoSuchWord';
+    $query = '+perl +' . $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     ######################################################################
@@ -252,8 +264,25 @@ sub test_cases {
     test($mode, $TEST_GREATER_THAN, 70);   # 30 hits/page
 
     $file = 'test/AltaVista/AdvancedNews/zero_result';
-    $query = 'perl and Bogus' . 'NoSuchWord';
+    $query = 'perl and ' . $bogus_query;
     test($mode, $TEST_EXACTLY);
+
+    ######################################################################
+    $search_engine = 'Crawler';
+    $maintainer = 'unsupported';
+
+    $file = 'test/Crawler/zero_result';
+    $query = 'LSAM ' . $bogus_query;
+    test($mode, $TEST_EXACTLY);
+
+    $file = 'test/Crawler/one_page_result';
+    $query = 'Bayreuth Bindlacher Berg Flugplatz Pilot';
+    test($mode, $TEST_RANGE, 2, 10);
+
+    # 10 hits/page
+    $file = 'test/Crawler/two_page_result';
+    $query = 'Frankfurter Allgemeine Sonntagszeitung Recherche';
+    test($mode, $TEST_GREATER_THAN, 10);
 
     ######################################################################
     $search_engine = 'Dejanews';
@@ -261,7 +290,7 @@ sub test_cases {
     $maintainer = 'Martin Thurn <MartinThurn@iname.com>';
 
     $file = 'test/Dejanews/zero_result';
-    $query = 'mrfglbqnx AND Bogus' . 'NoSuchWord';
+    $query = 'mrfglbqnx AND ' . $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/Dejanews/multi_result';
@@ -275,7 +304,7 @@ sub test_cases {
     $maintainer = 'Martin Thurn <MartinThurn@iname.com>';
 
     $file = 'test/Excite/zero_result';
-    $query = '+mrfglbqnx +Bogus' . 'NoSuchWord';
+    $query = '+mrfglbqnx +' . $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     # 84 hits/page
@@ -292,7 +321,7 @@ sub test_cases {
     $maintainer = 'Paul Lindner <paul.lindner@itu.int>';
 
     $file = 'test/ExciteForWebServers/zero_result';
-    $query = '+mrfglbqnx +Bogus' . 'NoSuchWord';
+    $query = '+mrfglbqnx +' . $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/ExciteForWebServers/one_page_result';
@@ -300,11 +329,28 @@ sub test_cases {
     test($mode, $TEST_RANGE, 2, 99);
 
     ######################################################################
+    $search_engine = 'Fireball';
+    $maintainer = 'unsupported';
+
+    $file = 'test/Fireball/zero_result';
+    $query = '+LSAM +' . $bogus_query;
+    test($mode, $TEST_EXACTLY);
+
+    $file = 'test/Fireball/one_page_result';
+    $query = '+Anna +Kournikova +Wimbledon +WTA +tennis';
+    test($mode, $TEST_RANGE, 2, 10);
+
+    # 10 hits/page
+    $file = 'test/Fireball/two_page_result';
+    $query = '+Murnau +Hinterglasbilder';
+    test($mode, $TEST_GREATER_THAN, 10);
+
+    ######################################################################
     $search_engine = 'FolioViews';
     $maintainer = 'Paul Lindner <paul.lindner@itu.int>';
 
     $file = 'test/FolioViews/zero_result';
-    $query = '+mrfglbqnx +Bogus' . 'NoSuchWord';
+    $query = '+mrfglbqnx +' . $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/FolioViews/one_page_result';
@@ -321,7 +367,7 @@ sub test_cases {
     $maintainer = 'Martin Thurn <MartinThurn@iname.com>';
 
     $file = 'test/HotBot/zero_result';
-    $query = '"mrfglbqnx Bogus' . 'NoSuchWord"';
+    $query = '"mrfglbqnx ' . $bogus_query . '"';
     test($mode, $TEST_EXACTLY);
 
     # 84 hits/page
@@ -403,7 +449,7 @@ sub test_cases {
     $maintainer = 'John Heidemann <johnh@isi.edu>';
 
     $file = 'test/Lycos/zero_result';
-    $query = 'LSAM Bogus' . 'NoSuchWord';
+    $query = 'LSAM ' . $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/Lycos/one_page_result';
@@ -420,7 +466,7 @@ sub test_cases {
     $maintainer = 'Martin Thurn <MartinThurn@iname.com>';
 
     $file = 'test/Magellan/zero_result';
-    $query = '+mrfglbqnx +Bogus' . 'NoSuchWord';
+    $query = '+mrfglbqnx +' . $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/Magellan/one_page_result';
@@ -438,12 +484,30 @@ sub test_cases {
     $maintainer = 'Paul Lindner <paul.lindner@itu.int>';
 
     $file = 'test/MSIndexServer/zero_result';
-    $query = '+mrfglbqnx +Bogus' . 'NoSuchWord';
+    $query = '+mrfglbqnx +' .  $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/MSIndexServer/one_page_result';
     $query = 'burundi';
     test($mode, $TEST_RANGE, 2, 99);
+
+
+    ######################################################################
+    $search_engine = 'NorthernLight';
+    $maintainer = 'unsupported';
+
+    $file = 'test/NorthernLight/zero_result';
+    $query = '+LSAM +' . $bogus_query;
+    test($mode, $TEST_EXACTLY);
+
+    $file = 'test/NorthernLight/one_page_result';
+    $query = '+Biathlon +weltcups +Athleten +deutschland';
+    test($mode, $TEST_RANGE, 2, 25);
+
+    # 25 hits/page
+    $file = 'test/NorthernLight/two_page_result';
+    $query = '+Madonna +profile +features';
+    test($mode, $TEST_GREATER_THAN, 25);
 
 
     ######################################################################
@@ -460,7 +524,7 @@ sub test_cases {
     $maintainer = 'Paul Lindner <paul.lindner@itu.int>';
 
     $file = 'test/PLweb/zero_result';
-    $query = '+mrfglbqnx +Bogus' . 'NoSuchWord';
+    $query = '+mrfglbqnx +' . $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/PLweb/one_page_result';
@@ -473,7 +537,7 @@ sub test_cases {
     $maintainer = 'Paul Lindner <paul.lindner@itu.int>';
 
     $file = 'test/Search97/zero_result';
-    $query = '+mrfglbqnx +Bogus' . 'NoSuchWord';
+    $query = '+mrfglbqnx +' . $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/Search97/one_page_result';
@@ -486,7 +550,7 @@ sub test_cases {
     $maintainer = 'Paul Lindner <paul.lindner@itu.int>';
 
     $file = 'test/SFgate/zero_result';
-    $query = '+mrfglbqnx +Bogus' . 'NoSuchWord';
+    $query = '+mrfglbqnx +' . $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/SFgate/one_page_result';
@@ -511,7 +575,7 @@ sub test_cases {
     $maintainer = 'Martin Thurn <MartinThurn@iname.com>';
 
     $file = 'test/WebCrawler/zero_result';
-    $query = '+mrfglbqnx +Bogus' . 'NoSuchWord';
+    $query = '+mrfglbqnx +' . $bogus_query;
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/WebCrawler/one_page_result';
@@ -528,7 +592,7 @@ sub test_cases {
     $maintainer = 'Martin Thurn <MartinThurn@iname.com>';
 
     $file = 'test/Yahoo/zero_result';
-    $query = '"mrfglbqnx Bogus' . 'NoSuchWord"';
+    $query = '"mrfglbqnx ' . $bogus_query . '"';
     test($mode, $TEST_EXACTLY);
 
     $file = 'test/Yahoo/one_page_result';
@@ -557,10 +621,12 @@ sub main {
 	return;
     };
 
-    print "\nTESTING INTERNAL PARSING.\n\t(Errors here should be reported to the WWW::Search maintainer.)\n\n";
-    &test_cases($MODE_INTERNAL);
+    if ($do_internal) {
+        print "\nTESTING INTERNAL PARSING.\n\t(Errors here should be reported to the WWW::Search maintainer.)\n\n";
+	&test_cases($MODE_INTERNAL);
+    };
 
-    if (!$internal_only) {
+    if ($do_external) {
         print "\n\nTESTING EXTERNAL QUERIES.\n\t(Errors here suggest search-engine reformatting and should be\n\treported to the maintainer of the back-end for the search engine.)\n\n";
         &test_cases($MODE_EXTERNAL);
     };

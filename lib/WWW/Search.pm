@@ -4,7 +4,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.60 1998/08/27 17:28:57 johnh Exp $
+# $Id: Search.pm,v 1.62 1998/10/16 20:56:57 johnh Exp $
 #
 # A complete copyright notice appears at the end of this file.
 # 
@@ -84,7 +84,7 @@ see L<WWW::SearchResult>.
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query generic_option);
-$VERSION = '1.021';
+$VERSION = '1.022';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
 use LWP::UserAgent;
@@ -246,6 +246,7 @@ sub native_query {
 
 Some back-ends indicate how many hits they've found.
 Typically this is an approximate value.
+
 =cut
 #'
 sub approximate_result_count { return shift->_elem('approx_count', @_); }
@@ -807,7 +808,7 @@ If you want to take a shot at it, please let me know.
 
 =head1 AUTHOR
 
-C<WWW::Search> is written by John Heidemann, <johnh@isi.edu>.
+C<WWW::Search> is written by John Heidemann, E<lt>johnh@isi.eduE<gt>.
 
 Back-ends and applications for WWW::Search have been done by 
 John Heidemann,

@@ -1,125 +1,96 @@
 <html>
 <head>
 <title>Infoseek: No Results</title>
-<META name="IS" content="nohitspage">
+<base target="_top"><base font="Arial,Helvetica"><META name="IS" content="nohitspage">
 </head>
-<body  bgcolor="#FFFFFF"
 
+<body bgcolor="#FFFFFF" 
+ link="#0000CC" bgcolor="#FFFFFF" 
 >
-<center>
+
+
 
 <center>
-<table border=0 cellpadding=0 cellspacing=0><tr><td valign=bottom nowrap>
 
-		<a href="/Topic?tid=420&nh=25"><img src="/images/tmpl/420_header.gif" width="429" height="52" alt="Infoseek: The Business Channel" vspace=0 hspace=0 border=0 ismap usemap="#header"></a><br>
+	<center>
+	<table width=100% cellpadding=0 cellspacing=0 border=0>
+	<tr>
+	<td align=left colspan=3 valign=bottom nowrap bgcolor=#003366>
+	<img src="/images/tmpl/header.gif" align=left width="600" height="47" ismap usemap="#menu" border="0" hspace="0" vspace="0">
+	</td></tr>
+	<tr>
+	<td colspan=3 bgcolor=#000000 valign=top nowrap><img src="/images/clear.gif" align=right height="3" hspace="0" vspace="0" border="0" width=1></td>
+	<map name="menu">
+		<area shape=rect coords="0,0,159,47" href="/Home/Home.html?svx=tb_home&nh=25" alt=" Homepage ">
+		<area shape=rect coords="184,4,237,25" href="/Home/Home.html?svx=tb_home&nh=25" alt=" Homepage ">
+		<area shape=rect coords="237,4,301,25" href="/Topic?tid=459&svx=tb_stocks&nh=25" alt=" Stocks ">
+		<area shape=rect coords="301,4,352,25" href="/Topic?tid=1486&svx=tb_news&nh=25" alt=" News ">
+		<area shape=rect coords="352,4,448,25" href="/redirect?sv=IS&lk=noframes&ak=MSSW&rl=OnBar&rd=http://yp.microsoft.com/infoseek/" alt=" Yellow Pages ">
+	<area shape=rect coords="184,26,246,43" href="/Facts/maps.html?svx=tb_maps&nh=25" alt=" Maps ">
+		<area shape=rect coords="246,26,299,44" href="/redirect?sv=IS&lk=noframes&ak=WBS&rl=LINK-HEADER-CHAT&rd=http://pages.infoseek.com/webchat3.so?noreg_entry.x=1" alt=" Chat ">
+		<area shape=rect coords="299,25,405,44" href="/redirect?sv=IS&lk=noframes&ak=WBS&rl=LINK-HEADER-FREEPAGES&rd=http://pages.infoseek.com/webchat3.so?chatmode=noframes&&&back_default&homepage_center.x=1" alt=" Free Web Page ">
+		<area shape=rect coords="405,26,449,44" href="/Help/Contents.html?svx=tb_help&nh=25" alt=" Help ">
+		<area shape=rect coords="533,0,596,47" href="/ups/ups_jump.html?svx=tb_ups&nh=25" alt=" UPS PACKAGE TRACKING ">
+	</map>
 
-</td><td valign=middle nowrap>
-<center>
 
+	</tr>
+
+<tr>
+<td bgcolor=#CCCCCC valign=bottom align=left valign=bottom>
+
+<table border=0 cellpadding=0 cellspacing=0><tr><td>
+
+                <a href="/Topic?tid=420&nh=25"><img src="/images/tmpl/channel_headers/header_420.gif" width="137" height="23" border="0" hspace="4" vspace="0" align=left valign=bottom alt=" BUSINESS "></a><br>
+
+</td><td valign=bottom><font face="Arial,Helvetica" size="-1">
+</font>&nbsp;</td></tr></table>
+</td>
+<td align=right bgcolor=#CCCCCC valign=middle>	
+<form action="/Topic" method="get" name="WW_Topics">
+		<select name="tid">
+
+                	<option value='420'>Infoseek Business
+
+		<option value='1803'>Automotive
+                <option value='420'>Business
+                <option value='421'>Careers
+                <option value='15067'>Communications
+                <option value='501'>Computer
+                <option value='670'>Education
+                <option value='10144'>Entertainment
+                <option value='13414'>The Good Life
+                <option value='1207'>Health
+                <option value='502'>Internet
+                <option value='12663'>Kids &amp; Family
+                <option value='1486'>News
+                <option value='459'>Personal Finance
+                <option value='433'>Real Estate
+                <option value='2245'>Shopping
+                <option value='1653'>Sports
+                <option value='1753'>Travel
+                <option value='14610'>Women's
+                </select>
+
+<INPUT TYPE=hidden NAME="sv" VALUE="IS">
+<INPUT TYPE=hidden NAME="lk" VALUE="noframes">
+<INPUT TYPE=hidden NAME="nh" VALUE="25">
+		</td>
+                <td align=center bgcolor=#CCCCCC valign=middle>
+                <input type=submit value="Go">&nbsp;
+                </td> </form>
+</tr><tr>
+<td colspan=4 bgcolor=#FFFFFF>
+<img src="/images/clear.gif" align=right width="1" height="3" hspace="0"
+vspace="0" border="0"></td>
+</tr>
+</table>
 </center>
-</td></tr>
-
-<tr><td colspan=2 valign=top nowrap>
-
-            <a href="/Topic?tid=459&nh=25"><b>Stocks</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
-    	    <a href="/Topic?tid=1486&nh=25"><b>News</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
-    	    <a href="/Facts?pg=maps.html&svx=htb_maps&nh=25"><b>Maps</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
-	    <a href="/Facts?pg=email.html&svx=htb_email&nh=25"><b>People &amp; Business</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
-
-
-	       <a href="/Home?pg=Home.html&nh=25"><b>Search again</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
-
-	    <a href="/Home?pg=Home.html&nh=25"><b>Home</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
-	    <a href="/redirect?sv=IS&lk=noframes&ak=UPSS&rl=OnBar&rd=/ups?pg=ups_jump.html&nh=25"><b>UPS Services</b></a><br>
-
-
-</td></tr></table>
-</center>
-
-
-
-
 <p><center>
-<a href="http://www.infoseek.com/redirect?sv=IS&lk=&tid=&ak=ISN2-2032-1266-GEN&rd=http://www.firstauction.com/cgi-bin/fa_entry/25517001/" target="_top"><img border=1 width=468 height=60 src="/ads/ISN21266.gif" alt="[New! First Auction. Click Here for Non-Stop Action!]"></a><br><a href="http://www.infoseek.com/redirect?sv=IS&lk=&tid=&ak=ISN2-2032-1266-GEN&rd=http://www.firstauction.com/cgi-bin/fa_entry/25517001/" target="_top"><strong>Click here</strong></a><p>
+<a href="http://www.infoseek.com/redirect?sv=IS&lk=&tid=&ak=SAPA-2034-1128-GEN&rd=http://www.sapamericapublicsector.com/soapbox.html" target="_top"><img border=1 width=468 height=60 src="/ads/SAPA1128.gif" alt="[Click here for info. about SAPPHIRE&#38;#174;`98 and SAP America Public Sector.]"></a><br><a href="http://www.infoseek.com/redirect?sv=IS&lk=&tid=&ak=SAPA-2034-1128-GEN&rd=http://www.sapamericapublicsector.com/soapbox.html" target="_top"><strong>Click here</strong></a><p>
 <center>
 <table width="100%" cellpadding=0 cellspacing=0 border=0><tr><td valign=top width=135>
-<table width="100%" cellpadding=4 cellspacing=0 border=0>
-<tr><td align=center><hr><font face="Arial,Helvetica"><b>In&nbsp;this&nbsp;channel...</b></font><hr></td></tr><tr><td valign=top>	<dl>
-	<dt><a href="/Topic/Business?tid=420&nh=25"><b>BUSINESS</b></a>
-	<dt><a href="/Topic/Advertising?tid=467&nh=25">Advertising</a>
-	<dt><a href="/Topic/Business_services_and_reference?tid=492&nh=25">Business resources</a>
-	<dt><a href="/Topic/Business/Business_travel?tid=10509&nh=25">Business travel</a>
-	<dt><a href="/Topic/Companies?tid=493&nh=25">Companies</a>
-	<dt><a href="/Topic/Electronic_commerce?tid=480&nh=25">Electronic commerce</a>
-	<dt><a href="/Topic/Employment_law?tid=10654&nh=25">Employment law</a>
-	<dt><a href="/Topic/Business/Find_a_job?tid=423&nh=25">Find a job</a>
-	<dt><a href="/Topic/Marketing?tid=9636&nh=25">Marketing</a>
-	<dt><a href="/Topic/Business/Find_an_ideal_job/Salary_information?tid=12996&nh=25">Salary information</a>
-	<dt><a href="/Topic/Small_business?tid=484&nh=25">Small business</a>
-	</dl>
-</td></tr><tr><td>&nbsp;</td></tr>
-
-<tr><td align=center><hr><font face="Arial,Helvetica"><b>Industry news</b></font><hr></td></tr><tr><td valign=top>
-	Get your industry news updates from <a href="http://www.industrywatch.com">Industry Watch</a>.
-
-	</td></tr><tr><td>&nbsp;</td></tr>
-
-<tr><td align=center><hr><font face="Arial,Helvetica"><b>Buy the book</b></font><hr></td></tr><tr><td valign=top>
-
-   Interested in 
-	<a href="/redirect?sv=IS&lk=noframes&ak=BORD&rl=LINK-T420-business-lhs_books&rd=http://www.borders.com/cgi-bin/partner?PARTNER_ID=101010083&Url=http://www.borders.com/infoseek/section_10400.html">business books</a>? Visit 
-	<a href="/redirect?sv=IS&lk=noframes&ak=BORD&rl=LINK-T420-business-lhs_borders&rd=http://www.borders.com/cgi-bin/partner?PARTNER_ID=101010083&Url=http://www.borders.com/infoseek/section_10400.html">Borders.com</a>. The best selection in the world. 
-	</td></tr><tr><td>&nbsp;</td></tr>
-<tr><td align=center><hr><font face="Arial,Helvetica"><b>Chat</b></font><hr></td></tr><tr><td valign=top><A HREF="/redirect?sv=IS&lk=&ak=LivW&rl=LINK_T420_BUSINESS&rd=http://pages.wbs.net/webchat3.so?&cmd=cmd_doorway:small_business_chat">
-
-Small Business Chat
-
-</A>
-
-<BR>
-
-For today's entrepreneur
-
-<p>
-
-Find more chats in the 
-
-<A HREF="/redirect?sv=IS&lk=&ak=LivW&rl=LINK_T420_BUSINESS&rd=http://pages.wbs.net/webchat3.so?&plaza=Careers&cmd=cmd_display_page:plaza.html">
-
-Careers and Business Plaza
-
-</A>
-</td></tr><tr><td>&nbsp;</td></tr><tr><td align=center><hr><font face="Arial,Helvetica"><b>Classifieds</b></font><hr></td></tr><tr><td valign=top>Buy and sell <A HREF="/redirect?sv=IS&lk=&ak=CLAS&rl=LINK_T420_BUSINESS&rd=http://www.classifieds2000.com/cgi-cls/display.exe?infoseek+Vertical_Business">office furniture and equipment</a>.
-Explore job opportunities.</td></tr><tr><td>&nbsp;</td></tr><tr><td align=center><hr><font face="Arial,Helvetica"><b>Company info</b></font><hr></td></tr><tr><td valign=top>
-
-<p>
-<FORM METHOD=get ACTION="/Titles">
-Get <b>company capsules</b> by entering the name of a company here:<br>
-<INPUT type=text NAME="qt" SIZE=10 VALUE="">
-<INPUT TYPE=hidden name="col" VALUE="HV,kt_A,ak_corpdir">
-<INPUT TYPE=hidden NAME="sv" VALUE="IS">
-<INPUT TYPE=hidden NAME="lk" VALUE="lcd">
-<INPUT TYPE=hidden NAME="nh" VALUE="25">
-<input type=submit value=" seek "><br>
-<font size="-1"><b>example</b>: The North Face</font><P>
-</FORM>
-</p>
-</td></tr><tr><td>&nbsp;</td></tr>
-<tr><td align=center><hr><font face="Arial,Helvetica"><b>UPS service center</b></font><hr></td></tr><tr><td valign=top>
-
-<li><a href="/redirect?sv=IS&lk=noframes&ak=UPSS&rl=LINK-C420-service_center-services&rd=/ups?pg=ups_jump.html&nh=25">UPS services</a>
-<li><a href="/redirect?sv=IS&lk=noframes&ak=UPSS&rl=LINK-C420-service_center-tracking&rd=/ups?pg=ups_jump.html&nh=25">Package tracking</a>
-<li><a href="/redirect?sv=IS&lk=noframes&ak=UPSS&rl=LINK-C420-service_center-dropoff&rd=/ups?pg=ups_jump.html&nh=25">Drop-off locator</a>
-<li><a href="/redirect?sv=IS&lk=noframes&ak=UPSS&rl=LINK-C420-service_center-software&rd=/ups?pg=ups_jump.html&nh=25">Software downloads</a>
-
-</td></tr><tr><td>&nbsp;</td></tr>
-</table>
-
-<p>
-<img src="/images/clear.gif" width=135 height=1>
-</td><td width=25 valign=bottom>
-<img src="/images/clear.gif" width=25 height=1>
-</td><td valign=top>
+<tr><td valign=top>
 
 <p>
 
@@ -136,12 +107,12 @@ mrfglbqnxNoSuchWord
 <p>
 <FORM name="WW_search" method="get" action="/Titles">
 <INPUT NAME="qt" size=35 VALUE="" MAXLENGTH=511>&nbsp;&nbsp;
-<b><font size=-1><input type=submit name="col" value="The web">&nbsp;&nbsp;<input type=submit name="col" value="Company capsules"></font></b><br>
+<b><font size=-1><input type=submit name="col" value="The web">&nbsp;&nbsp;<input type=submit name="col" value="Company profiles"></font></b><br>
 <INPUT TYPE=hidden NAME="oq" VALUE="mrfglbqnxNoSuchWord">
 <INPUT TYPE=hidden NAME="oc" VALUE="">
 
 <INPUT TYPE=hidden NAME="sv" VALUE="IS">
-<INPUT TYPE=hidden NAME="lk" VALUE="lcd">
+<INPUT TYPE=hidden NAME="lk" VALUE="noframes">
 <INPUT TYPE=hidden NAME="nh" VALUE="25">
 <table cellspacing=0 cellpadding=3 border=0 width=100%>
 <tr><td bgcolor="FFCC66" align=center valign=middle>
@@ -175,91 +146,83 @@ For more assistance with Infoseek
 </center>
 
 <p>
-        <center>
-        <table border=0 width=600 cellpadding=1
+<center>
+<table border="0" cellspacing="0" cellpadding="0" width="600">
+	<tr><td align="center" valign="middle" width="100%">
 
-	> 
-        <tr><td>
-        <table border=0 width=598 cellpadding=5 cellspacing=0>
-        <tr>
+	<table border="0" cellspacing="0" cellpadding="0" width="100%">
+		<tr><td bgcolor="#FFFFFF" width="50%"><img src="/images/clear.gif" width="1" height="14" border="0" hspace="0" vspace="0"><br></td>
+		<td rowspan="3" bgcolor="#CCCCCC"><a href="/Home/Home.html?svx=logo_footer&nh=25" alt=" Home Page "><img src="/images/tmpl/bug.gif" width="32" height="35" border="0" hspace="0" vspace="0"></a><br></td>
+		<td bgcolor="#FFFFFF" width="50%"><img src="/images/clear.gif" width="1" height="14" border="0" hspace="0" vspace="0"><br></td></tr>
 
-        <td
+		<tr><td bgcolor="#000000" width="50%"><img src="/images/clear.gif" width="1" height="7" border="0" hspace="0" vspace="0"><br></td>
+		<td bgcolor="#000000" width="50%"><img src="/images/clear.gif" width="1" height="7" border="0" hspace="0" vspace="0"><br></td></tr>
 
-        width=598 align=center colspan=4>
+		<tr><td bgcolor="#CCCCCC" width="50%"><img src="/images/clear.gif" width="1" height="14" border="0" hspace="0" vspace="0"><br></td>
+		<td bgcolor="#CCCCCC" width="50%"><img src="/images/clear.gif" width="1" height="14" border="0" hspace="0" vspace="0"><br></td></tr>
+	</table>
+	</td></tr>
 
+	<tr><td bgcolor="#CCCCCC" align="center" valign="top">
 
-<hr noshade size=1>
-<font face="Arial,Helvetica" 	>
-	<b>Infoseek channels</b>
-<hr noshade size=1>
-</td></tr>
-	<tr><td 
->      <li><a href="/Topic?tid=1803&nh=25">Automotive</a></li>
-      <li><a href="/Topic?tid=420&nh=25">Business</a></li>
-      <li><a href="/Topic?tid=421&nh=25">Careers</a></li>
-      <li><a href="/Topic?tid=15067&nh=25">Communications</a></li>
-      <li><a href="/Topic?tid=501&nh=25">Computer</a></li>
-	</td><td 
-	>
+<font face="Arial,Helvetica" size="-1"><b>INFOSEEK WORLDWIDE:</b></font>	<font face="Arial,Helvetica" size="-2"><a href="/Home?pg=Home.html&nh=25&sv=BR">Brasil</a>&nbsp;|&nbsp;
+<a href="/Home?pg=Home.html&nh=25&sv=DK">Danmark</a>&nbsp;|&nbsp;
+<a href="/Home?pg=Home.html&nh=25&sv=DE">Deutschland</a>&nbsp;|&nbsp;
+<a href="/Home?pg=Home.html&nh=25&sv=ES">en&nbsp;espa&#241;ol</a>&nbsp;|&nbsp;
+<a href="/Home?pg=Home.html&nh=25&sv=FR">France</a>&nbsp;|&nbsp;
+<a href="/Home?pg=Home.html&nh=25&sv=IT">Italia</a>&nbsp;|&nbsp;
+<a href="http://japan.infoseek.com/">Japan</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="http://mexico.infoseek.com/">M&eacute;xico</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="/Home?pg=Home.html&nh=25&sv=NL">Nederland</a>&nbsp;|&nbsp;
+<a href="/Home?pg=Home.html&nh=25&sv=SE">Sverige</a>&nbsp;|&nbsp;
+<a href="/Home?pg=Home.html&nh=25&sv=UK">United&nbsp;Kingdom</a>&nbsp;
+</font><font size="-0"><br><br></font>
+	</td></tr>
 
-      <li><a href="/Topic/Education?tid=670&svx=edu_main&nh=25">Education</a></li>
-      <li><a href="/Topic?tid=10144&nh=25">Entertainment</a></li>
-      <li><a href="/Topic?tid=13414&nh=25">Good&nbsp;Life</a></li>
-      <li><a href="/Topic?tid=1207&nh=25">Health</a></li>
-        </td><td
-        >
-      <li><a href="/Topic?tid=502&nh=25">Internet</a></li>
-      <li><a href="/Topic?tid=12663&nh=25">Kids&nbsp;&&nbsp;Family</a></li>
-      <li><a href="/Topic?tid=1486&nh=25">News</a></li>
-      <li><a href="/Topic?tid=459&nh=25">Personal&nbsp;Finance</a></li>
-        </td><td
-	>
-      <li><a href="/Topic?tid=433&nh=25">Real&nbsp;Estate</a></li>
-      <li><a href="/Topic?tid=2245&nh=25">Shopping</a></li>
-      <li><a href="/Topic?tid=1653&nh=25">Sports</a></li>
-      <li><a href="/Topic?tid=1753&nh=25">Travel</a></li>
-      <li><a href="/Topic?tid=14610&nh=25">Women's</a></li>
+	<tr><td align="center" valign="middle" bgcolor="#000000">
+	<img src="/images/clear.gif" width="1" height="2" border="0" hspace="0" vspace="0"><br></td></tr>
+</table>
 
-    </td>
-  </tr>
+<table border="0" width="600">
+	<tr><td colspan="3" align="center">
 
-<tr><td  width=598 align=center colspan=4><hr noshade size=1><a href="/Home?pg=Home.html&nh=25">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-
-<a href="http://feedback.infoseek.com">Feedback</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-<a href="/find?pg=advanced_www.html&ud9=advanced_www.html&nh=25">Advanced&nbsp;search</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-
+<font face="Arial,Helvetica"size="-2"><a href="http://feedback.infoseek.com">Feedback</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 <a href="/webkit?pg=webkit.html&nh=25">Put&nbsp;Infoseek&nbsp;on&nbsp;your&nbsp;site</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 <a href="/AddUrl?pg=DCaddurl.html&nh=25">Add&nbsp;URL</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 <a href="/Help?pg=Contents.html&nh=25">Help</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-<a href="/doc?pg=international.html&nh=25">Worldwide&nbsp;Infoseek</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-
 <a href="http://info.infoseek.com/">About&nbsp;Infoseek</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 <a href="http://info.infoseek.com/doc/sponsors.html">Advertise&nbsp;on&nbsp;Infoseek</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 <a href="http://info.infoseek.com/doc/jobs.html">Jobs&nbsp;&#064;&nbsp;Infoseek</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-<a href="http://software.infoseek.com/">Intranet&nbsp;software</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="http://software.infoseek.com/">Intranet software</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 <a href="/redirect?sv=&lk=&ak=PopleL&rl=footer&rd=http://www.peoplelink.com/v1/down_infoseek">Infoseek&nbsp;Instant&nbsp;Messaging</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 <a href="/redirect?sv=&lk=&ak=WBS&rl=LINK-SFOOTER-standard_footer-chat&rd=http://pages.infoseek.com/webchat3.so?noreg_entry.x=1">Chat</a>
-
-	</td></tr></table>
-	</td></tr></table>
-
-
-	<hr size=1 noshade width="60%">
-
-
-	<font size="-1">Want to be able to <b>search your own site?</b> (<a href="/redirect?sv=IS&lk=&ak=ULTRA&rl=LINK-results_footer-Ultraseek_jump_page&rd=http://software.infoseek.com/ultrajump.htm">click here</a>)<br></font>
-
-<font size="-1">
-<center>
-<a href="/doc?pg=copyright.html&nh=25">Copyright</a> &#169; 1994-98
-<a href="http://info.infoseek.com/">Infoseek Corporation</a>.  All rights reserved.&nbsp;<br>
-<a href="/doc?pg=disclaimer.html&nh=25">Disclaimer</a> &nbsp;&nbsp;
-
-	<a href="http://info.infoseek.com/doc/Reference/Privacy.html">Privacy Policy</a>
-
-</center>
+&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="/redirect?sv=&lk=&ak=SMAA&rl=LINK-SFOOTER-standard_footer-Clicks&rd=http://www.smartage.com/infoseek_clicks">Infoseek Clicks</a>
 </font>
 
-	</center>	
-	</body>
-	</html>
+	</td></tr>
+
+	<tr><td valign=top>
+
+<p><font face="Arial, Helvetica" size=-2>Best viewed with:
+<br>&nbsp;<a href="http://www.microsoft.com/ie/download/"><img src="/images/promo/microsoft/ie3.gif" border=0 width=88 height=31 alt="Microsoft Internet Explorer" align=absmiddle valign=middle hspace=5></a>&nbsp;&nbsp;&nbsp;<a href="http://home.netscape.com/comprod/mirror/index.html"><img src="/images/promo/netscape/netscape4.gif" align=absmiddle valign=middle border=0 width=88 height=30 alt="Netscape Tune-Up!" hspace=5></a></p>
+</font>
+	</td>
+
+	<td valign=top>
+
+<font face="Arial, Helvetica" size=-2><a href="/doc?pg=copyright.html&nh=25">Copyright</a> &#169; 1994-98 <a href="http://info.infoseek.com/">Infoseek&nbsp;Corporation</a>. 
+<br>All rights reserved.&nbsp;
+<br><a href="/doc?pg=disclaimer.html&nh=25">Disclaimer</a> &nbsp;&nbsp; <a href="http://info.infoseek.com/doc/Reference/Privacy.html">Privacy Policy</a></font>
+	</td>
+
+	<td valign=top>
+
+<font face="Arial, Helvetica" size=-2>Local information:</font>
+<br>&nbsp;<a href="http://www.nbcin.com/"><img src="/images/promo/nbc_in.gif" border=0 width=88 height=31 alt="NBC" align=absmiddle valign=middle hspace=5></a>
+<p>
+<a href="http://info.infoseek.com/doc/Reference/Privacy.html"><img src="/images/promo/truste.gif" width=103 height=31 alt="TRUSTe Program" align=absmiddle valign=middle border=0></a>
+
+	</td></tr>
+</table>
+</center>

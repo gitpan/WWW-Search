@@ -21,49 +21,12 @@
 <table width=640 cellspacing=0 cellpadding=0 border=0>
     <tr>
 
-<td width=130 valign=top align=right nowrap>
-<font face="arial,helvetica" size=2><a href="http://www.dejanews.com/home_if.shtml">Interest Finder</a><br>
-<a href="http://www.dejanews.com/home_bg.shtml">Browse Groups</a></font><br>
-</td>
-
-        <td width=20>&nbsp;</td>
-
-        <td width=360 valign=top nowrap>
-
-        <table width=360 cellspacing=0 cellpadding=0 border=0>
-            <tr><font size="0"><form action="/dnquery.xp" method="get"></font>
-	        <td width=65 valign=top nowrap><font face="arial,helvetica" color="#ff6600" size=4><b>Search</b></font><br>&nbsp;</td>
-                <td width=295 align=left valign=top><input type="text" name="QRY" size="30" value="mrfglbqnx AND BogusNoSuchWord"><input type="submit" value="Find"><br>
 
 
-
-<font face="arial,helvetica" size=2>Find messages in the 
-<select name="DBS">
-        <option value=1 >complete
-        <option value=2 selected>standard
-        <option value=3 >adult
-        <option value=4 >jobs
-        <option value=5 >for sale
-        </select> archive</font>
-
-
-
-<input type="hidden" name="maxhits" value="100">
-<input type="hidden" name="format" value="delta">
-<input type="hidden" name="showsort" value="score">
-<input type="hidden" name="ST" value="PS">
-<input type="hidden" name="LNG" value="ALL"></td>
-<font size="0"></form></font></tr></table></td>
-<td width=130 align=right valign=top>
-
- 
-
-</td>
-</tr></table>
 
 <map name="nav_g.map">
     <area shape="rect" coords="5,0,110,50" href="http://www.dejanews.com/" alt="Home">
-    <area shape="rect" coords="150,0,435,25" href="http://www.dejanews.com/emarket" alt="About Deja News">
+    <area shape="rect" coords="150,0,435,25" href="http://www.dejanews.com/emarket/" alt="About Deja News">
     <area shape="rect" coords="150,30,250,50" href="http://www.dejanews.com/rg_enter.xp" alt="My Deja News">
     <area shape="rect" coords="270,30,310,50" href="http://www.dejanews.com/post.xp" alt="Post">
     <area shape="rect" coords="335,30,432,50" href="http://www.dejanews.com/home_ps.shtml" alt="Power Search">
@@ -79,9 +42,9 @@
 <tr><td height=1><font size=0>&nbsp;</font></td></tr>
 <tr><td align=center>
 <table cellspacing=0 cellpadding=0 width=470 border=0><tr><td>
-<A HREF="http://gp1.dejanews.com/gtc?id=17722&tm=904238630.253045&site=dn&location=hitlist&keywords=mrfglbqnx%20bogusnosuchword&cr=%7c%7c%7c%7c%7c%7c%7c%7c">
-<IMG ALIGN=MIDDLE HEIGHT=60 WIDTH=468 SRC="http://web2.dejanews.com/ads/67/3622695967-7958.gif" ALT="Click here to create your discussion forum now!!" border=1></A></td></tr><tr align=center><td><font size=-1><A HREF="http://gp1.dejanews.com/gtc?id=17722&tm=904238630.253045&site=dn&location=hitlist&keywords=mrfglbqnx%20bogusnosuchword&cr=%7c%7c%7c%7c%7c%7c%7c%7c">
-Click here to create your discussion forum now!!</a></font></td></tr>
+<A HREF="http://gp1.dejanews.com/gtc?id=18012&tm=908570191.642996&site=dn&location=hitlist&keywords=mrfglbqnx%20bogusnosuchwordspammersareidiots&cr=%7c%7c%7c%7c%7c%7c%7c%7c">
+<IMG ALIGN=MIDDLE HEIGHT=60 WIDTH=468 SRC="http://web2.dejanews.com/ads/77/2614348077-11771.gif" ALT="uBid Online Auction" border=1></A></td></tr><tr align=center><td><font size=-1><A HREF="http://gp1.dejanews.com/gtc?id=18012&tm=908570191.642996&site=dn&location=hitlist&keywords=mrfglbqnx%20bogusnosuchwordspammersareidiots&cr=%7c%7c%7c%7c%7c%7c%7c%7c">
+uBid Online Auction</a></font></td></tr>
 </table>
 
 
@@ -104,7 +67,7 @@ Click here to create your discussion forum now!!</a></font></td></tr>
 <p>
 <table border=0 width=640 cellspacing=0 cellpadding=0>
 <tr align=left valign=middle><td>
-Couldn't find people talking about: mrfglbqnx AND BogusNoSuchWord?  Why don't you create a place for them to talk!  Make your own <A HREF=http://www.dejanews.com/rg_mkgrp.xp>Free Member Forum Here.</a>
+Couldn't find people talking about: mrfglbqnx AND BogusNoSuchWordSpammersAreIdiots?  Why don't you create a place for them to talk!  Make your own <A HREF=http://www.dejanews.com/rg_mkgrp.xp>Free Member Forum Here.</a>
 </td></tr></table>
 <p>
 
@@ -178,7 +141,7 @@ Typically you will find many more matches in our "Old" database.  If you used ou
 <table cellspacing=0 cellpadding=2 width=640 border=0>
 <tr valign=middle><td width=130 align=right valign=top><font face="arial,helvetica" size=+1 color=#ff6600><b>Power Search</b></font></td>
 <td width=20>&nbsp;</td>
-<td width=490><input type="text" name="QRY" size="30" value="mrfglbqnx AND BogusNoSuchWord"><input type="submit" value="Find"><br>
+<td width=490><input type="text" name="QRY" size="30" value="mrfglbqnx AND BogusNoSuchWordSpammersAreIdiots"><input type="submit" value="Find"><br>
 <font face="arial,helvetica" size=2>Find messages in the 
 
 <select name="DBS">
@@ -250,7 +213,6 @@ Typically you will find many more matches in our "Old" database.  If you used ou
 	    <font face=arial,helvetica size=-2>Results per page</font><br>
             <select name="maxhits" size=1>
 		
-		<option value="20" >20
 		<option value="25" >25
 		<option value="50" >50
 		<option value="100"  SELECTED>100
@@ -315,18 +277,25 @@ Typically you will find many more matches in our "Old" database.  If you used ou
 
 <p>
 <font size=2 face="arial,helvetica">
-<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.emaildirect&cid=239122349">Free Coupons!</a> &nbsp;|&nbsp;
-<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.dni&cid=239122349">Register Your Domain Name</a> &nbsp;|&nbsp;
-<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.uswest&cid=239122349">Yellow Pages</a> &nbsp;|&nbsp;
-<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.auctions&cid=239122349">Auctions</a> &nbsp;|&nbsp;
-<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.infospace&cid=239122349">Directories</a>
+<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.auctions&cid=289153631">Auctions</a> &nbsp;|&nbsp;
+<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.voicenet2&cid=289153631">Best Calling Card in America!</a>&nbsp;|&nbsp;
+<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.ibmsdplead&cid=289153631">Developer Resources</a>&nbsp;|&nbsp;
+<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.infospace&cid=289153631">Directories</a>&nbsp;|&nbsp;
+<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.infoseek&cid=289153631">Express by Infoseek</a>
+
 <br>
-<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.netscape2&cid=239122349">Visit the new Netscape Netcenter!</a>&nbsp;|&nbsp;
-<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.datek&cid=239122349">Trade Now! with Datek Online</a>&nbsp;|&nbsp;
-<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.ibmsdplead&cid=239122349">Developer Resources</a>
+<a href="http://uswestdex.com/dejanews.html">Yellow Pages</a>&nbsp;|&nbsp;
+<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.emaildirect&cid=289153631">Free Coupons!</a>&nbsp;|&nbsp;
+<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.abc&cid=289153631">4 audiobooks for 1c. Click now</a>&nbsp;|&nbsp;
+<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.ubid&cid=289153631">Great Deals at uBid!</a>
+
+
 <br>
-<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.totale&cid=239122349">Movies & Music!</a> &nbsp;|&nbsp;
-<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.ubid&cid=239122349">Great Deals at uBid!</a>
+<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.datek&cid=289153631">Trade Now! with Datek Online</a>&nbsp;|&nbsp;
+<a href="http://gp.dejanews.com/gtplacer?site=dn&location=link.home.networksolutions&cid=289153631">DOT COM IT with Network Solutions</a>
+<br>
+
+
 
 </font>
 </font>
@@ -348,6 +317,9 @@ Typically you will find many more matches in our "Old" database.  If you used ou
 <hr width=325>
 <font size=-1>Copyright &copy; 1995-98 <a href="http://www.dejanews.com/emarket/">Deja News, Inc.</A> All rights reserved.
 <a href="http://www.dejanews.com/info/policy.shtml">Conditions of use</a>.</font>
+
+<br>
+<font size=-1><a href="http://www.dejanews.com/info/privacy.shtml">Site privacy statement</a> reviewed by <a href="http://www.truste.org">TRUSTe</a></font>.
 
 
 </td></tr></table>

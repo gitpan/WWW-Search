@@ -1,444 +1,787 @@
 <html>
 <head>
-<base target="_top"><meta name="IS" content="ok_bull">
+<base target="_top"><base font="Arial,Helvetica"><meta name="IS" content="ok_flash">
 <title>Infoseek: Greedo AND collectible</Title>
 </head>
 
-<body  bgcolor="#FFFFFF" 
+<body bgcolor="#FFFFFF" 
+ link="#0000CC" bgcolor="#FFFFFF" 
+>
 
-> 
-<center>
-<table border=0 cellpadding=0 cellspacing=0><tr><td valign=bottom nowrap>
-
-<a href="/Home?pg=Home.html&nh=25"><img src="/images/tmpl/standard_header.gif" width="331" height="52" alt="Infoseek" vspace=0 hspace=0 border=0></a><br>
-
-</td><td valign=middle nowrap>
-<center>
-
-</center>
-</td></tr>
-
-<tr><td colspan=2 valign=top nowrap>
-
-        <a href="/Topic?tid=459&nh=25"><b>Stocks</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
-        <a href="/Topic?tid=1486&nh=25"><b>News</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
-        <a href="/Facts?pg=maps.html&svx=htb_maps&nh=25"><b>Maps</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
-        <a href="/Facts?pg=email.html&svx=htb_email&nh=25"><b>People &amp; Business</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
-        <a href="/Home?pg=Home.html&nh=25"><b>Home</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
-	<a href="/redirect?sv=IS&lk=noframes&ak=MSSW&rl=OnBar&rd=http://yp.microsoft.com/infoseek/"><b>Yellow Pages</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;
-        <a href="/ups?pg=ups_jump.html&lk=lb&nh=25"><b>UPS Services</b></a>
-
-</td></tr></table>
-</center>
+	<center>
+	<table width=100% cellpadding=0 cellspacing=0 border=0>
+	<tr>
+	<td align=left colspan=3 valign=bottom nowrap bgcolor=#003366>
+	<img src="/images/tmpl/header.gif" align=left width="600" height="47" ismap usemap="#menu" border="0" hspace="0" vspace="0">
+	</td></tr>
+	<tr>
+	<td colspan=3 bgcolor=#000000 valign=top nowrap><img src="/images/clear.gif" align=right height="3" hspace="0" vspace="0" border="0" width=1></td>
+	<map name="menu">
+		<area shape=rect coords="0,0,159,47" href="/Home/Home.html?svx=tb_home&nh=25" alt=" Homepage ">
+		<area shape=rect coords="184,4,237,25" href="/Home/Home.html?svx=tb_home&nh=25" alt=" Homepage ">
+		<area shape=rect coords="237,4,301,25" href="/Topic?tid=459&svx=tb_stocks&nh=25" alt=" Stocks ">
+		<area shape=rect coords="301,4,352,25" href="/Topic?tid=1486&svx=tb_news&nh=25" alt=" News ">
+		<area shape=rect coords="352,4,448,25" href="/redirect?sv=IS&lk=noframes&ak=MSSW&rl=OnBar&rd=http://yp.microsoft.com/infoseek/" alt=" Yellow Pages ">
+	<area shape=rect coords="184,26,246,43" href="/Facts/maps.html?svx=tb_maps&nh=25" alt=" Maps ">
+		<area shape=rect coords="246,26,299,44" href="/redirect?sv=IS&lk=noframes&ak=WBS&rl=LINK-HEADER-CHAT&rd=http://pages.infoseek.com/webchat3.so?noreg_entry.x=1" alt=" Chat ">
+		<area shape=rect coords="299,25,405,44" href="/redirect?sv=IS&lk=noframes&ak=WBS&rl=LINK-HEADER-FREEPAGES&rd=http://pages.infoseek.com/webchat3.so?chatmode=noframes&&&back_default&homepage_center.x=1" alt=" Free Web Page ">
+		<area shape=rect coords="405,26,449,44" href="/Help/Contents.html?svx=tb_help&nh=25" alt=" Help ">
+		<area shape=rect coords="533,0,596,47" href="/ups/ups_jump.html?svx=tb_ups&nh=25" alt=" UPS PACKAGE TRACKING ">
+	</map>
 
 
+	</tr>
 
+<tr>
+<td bgcolor=#CCCCCC valign=bottom align=left valign=bottom>
 
-<p><center>
-<form action="/Titles" method="get" name="WW_dir_search">
-<table width=468 cellspacing=0 cellpadding=0 border=0>
-<tr><td valign=top width=155>
-<img src="/images/clear.gif" width=155 height=1>
+<table border=0 cellpadding=0 cellspacing=0><tr><td>
+
+			<img src="/images/tmpl/channel_headers/search_results.gif" width="199" height="23" border="0" hspace="4" vspace="0" align=left valign=bottom alt=" SEARCH RESULTS "><br>
+
+</td><td valign=bottom><font face="Arial,Helvetica" size="-1">
+</font>&nbsp;</td></tr></table>
 </td>
-<td valign=top>
-Infoseek found 38
- pages containing the word <b>Greedo AND collectible</b>
-(Click for <a href="/Help?pg=HomeHelp.html&nh=25">tips</a> or <a href="/find?pg=advanced_www.html&nh=25&ud9=advanced_www">Advanced search</a>)
-<br>
-<input type=radio name="col" value="New Search" CHECKED>&nbsp;<b>New</b>&nbsp;Search&nbsp;&nbsp;&nbsp;<input type=radio name="col" value="Search These Results">&nbsp;Search&nbsp;only&nbsp;<b>within</b>&nbsp;these&nbsp;38&nbsp;pages<br>
-<INPUT NAME="qt" size=50 VALUE="" MAXLENGTH=511>&nbsp;<input type=submit value="seek">
-<INPUT TYPE=hidden NAME="oq" VALUE="Greedo AND collectible">
-<INPUT TYPE=hidden NAME="sv" VALUE="IS">
-<INPUT TYPE=hidden NAME="lk" VALUE="lcd">
-<INPUT TYPE=hidden NAME="nh" VALUE="25">
-</td></tr>
-</table>
-</form>
+<td align=right bgcolor=#CCCCCC valign=middle>	
+<form action="/Topic" method="get" name="WW_Topics">
+		<select name="tid">
 
-<p>
-    <table border="0" cellpadding="5" bgcolor="#FFFFCC"><tr><td><font size="-1">
+		<option value='1803'>Automotive
+                <option value='420'>Business
+                <option value='421'>Careers
+                <option value='15067'>Communications
+                <option value='501'>Computer
+                <option value='670'>Education
+                <option value='10144'>Entertainment
+                <option value='13414'>The Good Life
+                <option value='1207'>Health
+                <option value='502'>Internet
+                <option value='12663'>Kids &amp; Family
+                <option value='1486'>News
+                <option value='459'>Personal Finance
+                <option value='433'>Real Estate
+                <option value='2245'>Shopping
+                <option value='1653'>Sports
+                <option value='1753'>Travel
+                <option value='14610'>Women's
+                </select>
+
+<INPUT TYPE=hidden NAME="sv" VALUE="IS">
+<INPUT TYPE=hidden NAME="lk" VALUE="noframes">
+<INPUT TYPE=hidden NAME="nh" VALUE="25">
+		</td>
+                <td align=center bgcolor=#CCCCCC valign=middle>
+                <input type=submit value="Go">&nbsp;
+                </td> </form>
+</tr><tr>
+<td colspan=4 bgcolor=#FFFFFF>
+<img src="/images/clear.gif" align=right width="1" height="3" hspace="0"
+vspace="0" border="0"></td>
+</tr>
+</table>
+</center>
+<center>
+<table width=100% cellpadding=0 cellspacing=0 border=0>
+
+<tr>
+<td align=center valign=top width=121>
+
+	<center>
+        	<table width=121 cellpadding=1 cellspacing=0 BORDER=0>
+        	<tr>
+        	<td BGCOLOR="#000000">
+                	<table width=100% cellpadding=3 cellspacing=0 border=0>
+                	<tr><td bgcolor=#CCCCCC align=center>
+                	<font face="Arial,Helvetica" SIZE=-1>
+
 		<a href="/redirect?sv=IS&lk=noframes&ak=BORD&rl=LINK-C0-standard-flash-borders&rd=http://www.borders.com/cgi-bin/partner?PARTNER_ID=101010097&Url=http://www.borders.com/infoseek/section_10000.html">The latest book titles are at Borders.com. In stock. Fast delivery.</a>
 
-</font></td></tr></table><br>
+                	</FONT>
 
+                	</td>
+                	</tr>
+                	</table>
 
-</center>
+        	</td></tr></table>
+	</center>
 
-<table width="100%" cellpadding=0 cellspacing=0 border=0><tr><td valign=top width=135>
-<table width="100%" cellpadding=4 cellspacing=0 border=0>
-<tr><td align=center><hr><font face="Arial,Helvetica"><b>Channels</b></font><hr></td></tr><tr><td valign=top>
-
-<dl>
-<dt><a href="/Topic?tid=1803&nh=25">Automotive</a>
-<dt><a href="/Topic?tid=420&nh=25">Business</a>
-<dt><a href="/Topic?tid=421&nh=25">Careers</a>
-<dt><a href="/Topic?tid=15067&nh=25">Communications</a>
-<dt><a href="/Topic?tid=501&nh=25">Computer</a>
-<dt><a href="/Topic/Education?pg=education.html&svx=edu_main&nh=25">Education</a>
-<dt><a href="/Topic?tid=10144&nh=25">Entertainment</a>
-<dt><a href="/Topic?tid=13414&nh=25">Good&nbsp;Life</a>
-<dt><a href="/Topic?tid=1207&nh=25">Health</a>
-<dt><a href="/Topic?tid=502&nh=25">Internet</a>
-<dt><a href="/Topic?tid=12663&nh=25">Kids&nbsp;&&nbsp;Family</a>
-<dt><a href="/Topic?tid=1486&nh=25">News</a>
-<dt><a href="/Topic?tid=459&nh=25">Personal&nbsp;Finance</a>
-<dt><a href="/Topic?tid=433&nh=25">Real&nbsp;Estate</a>
-<dt><a href="/Topic?tid=2245&nh=25">Shopping</a>
-<dt><a href="/Topic?tid=1653&nh=25">Sports</a>
-<dt><a href="/Topic?tid=1753&nh=25">Travel</a>
-<dt><a href="/Topic?tid=14610&nh=25">Women's</a>
-</dl>
-
-    </td></tr><tr><td>&nbsp;</td></tr>
-
-<tr><td align=center><hr><font face="Arial,Helvetica"><b>Classifieds</b></font><hr></td></tr><tr><td valign=top><a href="http://www.classifieds2000.com/cgi-cls/Display.exe?infoseek+class">Find anything</a> from concert tickets to computers, poodles to personals
-</td></tr><tr><td>&nbsp;</td></tr></table>
-
-<p>
-<img src="/images/clear.gif" width=135 height=1>
-</td><td width=25 valign=bottom>
-<img src="/images/clear.gif" width=25 height=1>
-</td><td valign=top>
-
-<p>
-
-<p>
-<p><table width="100%" cellpadding=4 cellspacing=0 border=0>
-
-
-<tr><td align=center><hr><font face="Arial,Helvetica"><b>Search results 1 - 25</b></font><hr></td></tr><tr><td valign=top><b><a href="/Titles?nh=20&st=0&qt=Greedo+AND+collectible&rf=0&col=WW&ud4=1"><font size="-1">Hide summaries</font></a></b>
-&nbsp;|&nbsp; <b><a href="/Titles?nh=25&st=0&qt=Greedo+AND+collectible&rf=11&col=WW"><font size="-1">Group these results</font></a></b>
-&nbsp;|&nbsp; <b><a href="/Titles?nh=25&st=25&qt=Greedo+AND+collectible&rf=0&col=WW"><font size="-1">next 25</font></a></b>
-<br> 
-</td></tr>
-</table>
-
-<p><b><a href="http://www.easystreet.com/~histoys/">HIS TOYS - Collectibles For Sale</a></b>
-<br>HIS TOYS.  STAR WARS  BEANIE BABIES  HOT WHEELS  BARBIE  ACTION FIGURES  .  Now accepting VISA/MasterCard/Discover/NOVUS!.  Select a category below to see a list of items for sale with current prices.  For ...<br>
-<font size="-1">
-<b>60%</b>
-&nbsp;http://www.easystreet.com/~histoys/&nbsp;
-&nbsp;(Size 31.6K)&nbsp;
-Document Date:&nbsp;19 Mar 1998
-</font>
-<p><b><a href="http://www.nightmarefactory.com/starwars.html">Star Wars Masks@Nightmare Factory </a></b>
-<br>An extensive collection of high end collectors masks and everyday affordable ones.<br>
-<font size="-1">
-<b>56%</b>
-&nbsp;http://www.nightmarefactory.com/starwars.html&nbsp;
-&nbsp;(Size 11.5K)&nbsp;
-Document Date:&nbsp;12 May 1998
-</font>
-<p><b><a href="http://www.afn.org/~afn36267/bespin.html">Bespin's Cloud City</a></b>
-<br>Permission to land at platform 327.  Bespin sites:.  Bespin: Cloud City  Cloud City Collectibles  Knights of Cloud City  Bounty Hunter sites:.  The Boba Fett Internet Archive  IG-88's Star Wars Mega Page  Greedo's ...<br>
-<font size="-1">
-<b>55%</b>
-&nbsp;http://www.afn.org/~afn36267/bespin.html&nbsp;
-&nbsp;(Size 1.2K)&nbsp;
-Document Date:&nbsp;20 Apr 1998
-</font>
-<p><b><a href="http://www.ct-info.com/co/empire/starwars.html">Comic Gallery's Empire of Collectibles</a></b>
-<br>POTF2 Star Wars  Product Categories  Orange Carded Power of the Force,  Green Carded Power of the Force,  Shadow of the Empire Carded Figures,  Mailaway Items,  12" Figures,  Deluxe Figures,  ...<br>
-<font size="-1">
-<b>55%</b>
-&nbsp;http://www.ct-info.com/co/empire/starwars.html&nbsp;
-&nbsp;(Size 13.0K)&nbsp;
-Document Date:&nbsp; 3 May 1998
-</font>
-<p><b><a href="http://www.delta-9.com/WhiteSalmon/">The White Salmon: Collectibles</a></b>
-<br>Current Items For Sale.  Click on a category for a list of in-stock items and prices.  Updated on 6/20/98  Madman Jackets - A White Salmon Exclusive!  Aliens  Batman  Bowen Designs  G.I. Joe  Madman  McFarlane ...<br>
-<font size="-1">
-<b>53%</b>
-&nbsp;http://www.delta-9.com/WhiteSalmon/&nbsp;
-&nbsp;(Size 19.8K)&nbsp;
-Document Date:&nbsp;25 Jun 1998
-</font>
-<p><b><a href="http://www.spacestar.net/users/rbig/jediknights/actionfigures/figurelist.htm">Star Wars Collectibles</a></b>
-<br>Powers of the Force 2  Deluxe Series  Shadows of the Empire  Power F/X  Beast/Deluxe Beast Series  Exclusives  Placo Key Chains  *Designates Scheduled Release  Powers of the Force 2.  QTY.  FIGURE  WAVE/  COLLECTION  RELEASE  DATE  2-1B Medic Droid ...<br>
-<font size="-1">
-<b>53%</b>
-&nbsp;http://www.spacestar.net/users/rbig/jediknights/actionfigures/figurelist.htm&nbsp;
-&nbsp;(Size 31.3K)&nbsp;
-Document Date:&nbsp;14 Feb 1998
-</font>
-<p><b><a href="http://starshow.com/catalog/69606.htm">Star Show Collectibles</a></b>
-<br>Home Page  GREEDO  ACTION FIGURE  ITEM  69570-69606  $ 7.99.  Hit Back Button to return to prior page <br>
-<font size="-1">
-<b>51%</b>
-&nbsp;http://starshow.com/catalog/69606.htm&nbsp;
-&nbsp;(Size 0.5K)&nbsp;
-Document Date:&nbsp; 5 Feb 1997
-</font>
-<p><b><a href="http://www.hollywoodfactory.com/starwars/links.htm">Star Wars - List of Sites - Links</a></b>
-<br>Star Wars List of Sites.  "I  Had That" Toys and Collectibles  "Star Wars"  #1 Star Wars Website  = Irresistible Force =  A  - The Secret Order of the Emperor  A Certain Point of View  A  Galaxy ...<br>
-<font size="-1">
-<b>51%</b>
-&nbsp;http://www.hollywoodfactory.com/starwars/links.htm&nbsp;
-&nbsp;(Size 79.8K)&nbsp;
-Document Date:&nbsp;12 Jun 1998
-</font>
-<p><b><a href="http://www.goodnet.com/~cards/toys.htm">JAM'S COLLECTIBLES</a></b>
-<br>Action Figures, Starting Line-ups, and other COOL stuff!<br>
-<font size="-1">
-<b>49%</b>
-&nbsp;http://www.goodnet.com/~cards/toys.htm&nbsp;
-&nbsp;(Size 6.1K)&nbsp;
-Document Date:&nbsp;12 Jul 1998
-</font>
-<p><b><a href="http://www.arsdata.com/toynut/p5.html">Action Figures, Toys, Collectibles,Toynut</a></b>
-<br>FOR INFORMATION ON OTHER FIGURES AVAILABLE  E-MAIL, CALL or FAX  PAGE CONTENTS - STAR WARS  TOTAL JUSTICE - VENOM - WETWORKS  WILDC.A.T.S<br>
-<font size="-1">
-<b>49%</b>
-&nbsp;http://www.arsdata.com/toynut/p5.html&nbsp;
-&nbsp;(Size 4.5K)&nbsp;
-Document Date:&nbsp; 5 May 1998
-</font>
-<p><b><a href="http://www.erols.com/mickey01/swars.html">Mick's Starting Lineup/Starwars/Nascar Collectables</a></b>
-<br>Mick's Available Star Wars  Items  .  "Hi, I'm Richard and I love the Redskins, Star Wars, and Mick's Collectibles...  One of the coolest collectible sites on the WWW."  Here is a list of  Mick's ...<br>
-<font size="-1">
-<b>47%</b>
-&nbsp;http://www.erols.com/mickey01/swars.html&nbsp;
-&nbsp;(Size 3.2K)&nbsp;
-Document Date:&nbsp;20 Jul 1998
-</font>
-<p><b><a href="http://www.info2000.net/~jlee/ngp-home.htm">Nathan Lee's Homepage: Hunter's Quarry</a></b>
-<br>Here you will find Star Wars and Star Trek memorabilia, collectibles, toys, figures, and rarities for sale and trade.  We also create 3D computer-generated concept artwork- bring thoughts and ideas ...<br>
-<font size="-1">
-<b>47%</b>
-&nbsp;http://www.info2000.net/~jlee/ngp-home.htm&nbsp;
-&nbsp;(Size 4.2K)&nbsp;
-Document Date:&nbsp;19 Jun 1998
-</font>
-<p><b><a href="http://www.cityauction.com/items/112080.asp">Micro Machines Star Wars Heads - CityAuction</a></b>
-<br>Micro Machines Star Wars Heads - 2 Sets of Micro Machine Star Wars Flip OPen Heads<br>
-<font size="-1">
-<b>47%</b>
-&nbsp;http://www.cityauction.com/items/112080.asp&nbsp;
-&nbsp;(Size 4.7K)&nbsp;
-Document Date:&nbsp; 7 May 1998
-</font>
-<p><b><a href="http://www.info2000.net/~jlee/hqhome.htm">Nathan Lee's Homepage: Hunter's Quarry</a></b>
-<br>Here you will find Star Wars and Star Trek memorabilia, collectibles, toys, figures, and rarities for sale and trade.  We also create 3D computer-generated concept artwork- bring thoughts and ideas to tangible images!<br>
-<font size="-1">
-<b>47%</b>
-&nbsp;http://www.info2000.net/~jlee/hqhome.htm&nbsp;
-&nbsp;(Size 6.8K)&nbsp;
-Document Date:&nbsp;13 Aug 1997
-</font>
-<p><b><a href="http://www.info2000.net/~jlee/huntquar.htm">Nathan Lee's Homepage: Hunter's Quarry</a></b>
-<br>Here you will find Star Wars and Star Trek memorabilia, collectibles, toys, figures, and rarities for sale and trade.  We also create 3D computer-generated concept artwork- bring thoughts and ideas to tangible images!<br>
-<font size="-1">
-<b>47%</b>
-&nbsp;http://www.info2000.net/~jlee/huntquar.htm&nbsp;
-&nbsp;(Size 4.9K)&nbsp;
-Document Date:&nbsp;13 Aug 1997
-</font>
-<p><b><a href="http://pw1.netcom.com/~leelman/starwars.html">Star Wars Collectibles at Tosche Station Collectibles</a></b>
-<br>Your source for Original Star Wars collectibles!<br>
-<font size="-1">
-<b>46%</b>
-&nbsp;http://pw1.netcom.com/~leelman/starwars.html&nbsp;
-&nbsp;(Size 15.2K)&nbsp;
-Document Date:&nbsp; 1 Nov 1997
-</font>
-<p><b><a href="http://internetfamily.com/starwars/green_order_now.htm">Star Wars Collectibles-Green Carded Figures Order Form</a></b>
-<br>star wars figures,star wars, starwars, figures, collectibles, toy, toys, luke, han, skywalker, solo, leia, kenobi, yoda, vader, power of the force, kenner, chewbacca, star, wars,  long saber, short saber, stormtrooper, sci-fi, return of the jedi, ...<br>
-<font size="-1">
-<b>44%</b>
-&nbsp;http://internetfamily.com/starwars/green_order_now.htm&nbsp;
-&nbsp;(Size 10.8K)&nbsp;
-Document Date:&nbsp;20 Oct 1997
-</font>
-<p><b><a href="http://sideshowinc.com/mmp.html">Sideshow Inc. - Mad Monster Party</a></b>
-<br>SIDESHOW INC. in association with ICONS CLASSICS present  The 1998 Mad Monster Party was held at the Pasadena Convention Center in Pasadena, California on May 23 & 24. Considered to be the premiere ...<br>
-<font size="-1">
-<b>42%</b>
-&nbsp;http://sideshowinc.com/mmp.html&nbsp;
-&nbsp;(Size 7.8K)&nbsp;
-Document Date:&nbsp;20 Jun 1998
-</font>
-<p><b><a href="http://www.sideshowinc.com/mmp.html">Sideshow Inc. - Mad Monster Party</a></b>
-<br>SIDESHOW INC. in association with ICONS CLASSICS present  The 1998 Mad Monster Party was held at the Pasadena Convention Center in Pasadena, California on May 23 & 24. Considered to be the premiere  ...<br>
-<font size="-1">
-<b>42%</b>
-&nbsp;http://www.sideshowinc.com/mmp.html&nbsp;
-&nbsp;(Size 7.8K)&nbsp;
-Document Date:&nbsp;20 Jun 1998
-</font>
-<p><b><a href="http://classic-collectibles.com/12_StarWars%20Figures.htm">Hasbro Kenner Star Wars 12 inch Star Wars Figures Harmony Kingdom ...</a></b>
-<br>Classic CollectiblesTM  To place an ORDER click here.  We specialize in collectible merchandise: Harmony Kingdom, Rawcliffe Pewter, Corinthian Headliners, Star Wars, ...<br>
-<font size="-1">
-<b>40%</b>
-&nbsp;http://classic-collectibles.com/12_StarWars%20Figures.htm&nbsp;
-&nbsp;(Size 9.0K)&nbsp;
-Document Date:&nbsp; 6 Aug 1998
-</font>
-<p><b><a href="http://www.classic-collectibles.com/12_StarWars%20Figures.htm">Hasbro Kenner Star Wars 12 inch Star Wars Figures Harmony Kingdom ...</a></b>
-<br>Classic CollectiblesTM  To place an ORDER click here.  We specialize in collectible merchandise: Harmony Kingdom, Rawcliffe Pewter, Corinthian Headliners, Star Wars, ...<br>
-<font size="-1">
-<b>40%</b>
-&nbsp;http://www.classic-collectibles.com/12_StarWars%20Figures.htm&nbsp;
-&nbsp;(Size 9.0K)&nbsp;
-Document Date:&nbsp;21 Jul 1998
-</font>
-<p><b><a href="http://www.info2000.com/~jlee/huntquar.htm">Nathan Lee's Homepage: Hunter's Quarry</a></b>
-<br>Here you will find Star Wars and Star Trek memorabilia, collectibles, toys, figures, and rarities for sale and trade.  We also create 3D computer-generated concept artwork- bring thoughts and ideas to ...<br>
-<font size="-1">
-<b>40%</b>
-&nbsp;http://www.info2000.com/~jlee/huntquar.htm&nbsp;
-&nbsp;(Size 3.2K)&nbsp;
-Document Date:&nbsp;19 Jun 1998
-</font>
-<p><b><a href="http://www.tias.com/stores/pgt/startrek.htm">Pretty Good Toys Collectible Star Trek and Star Wars Toys Page</a></b>
-<br>Collectible Toys from the 60's to the 90's.  Customer service is our number one concern!<br>
-<font size="-1">
-<b>38%</b>
-&nbsp;http://www.tias.com/stores/pgt/startrek.htm&nbsp;
-&nbsp;(Size 35.5K)&nbsp;
-Document Date:&nbsp;13 Oct 1997
-</font>
-<p><b><a href="http://www.stwing.upenn.edu/starwars/form.html">Star Wars Home Page Guest Book and Survey</a></b>
-<br>Since this page's announcement on April 26, 1994  it has gotten over 4,000,000 connections from 50 countries.  I would be honored if you would fill out our guest book and leave a few  ...<br>
-<font size="-1">
-<b>38%</b>
-&nbsp;http://www.stwing.upenn.edu/starwars/form.html&nbsp;
-&nbsp;(Size 5.2K)&nbsp;
-Document Date:&nbsp; 6 Sep 1995
-</font>
-<p><b><a href="http://www.ct-info.com/co/empire/starwarsold.html">Comic Gallery's Empire of Collectibles</a></b>
-<br>Vintage Star Wars  Product Categories  1978 12 backs,  1978-1979 20-21 Backs,  1980-1982 Empire Carded,  1983-1984 Jedi Carded,  1985 Power of the Force Carded,  1983 Jedi Tri-logo Carded,  1978 ...<br>
-<font size="-1">
-<b>37%</b>
-&nbsp;http://www.ct-info.com/co/empire/starwarsold.html&nbsp;
-&nbsp;(Size 11.5K)&nbsp;
-Document Date:&nbsp;11 Aug 1998
-</font>
-<p>
-<font color="FFFFFF" size=0>xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx</font><br>
-
-<b><a href="/Titles?nh=20&st=0&qt=Greedo+AND+collectible&rf=0&col=WW&ud4=1"><font size="-1">Hide summaries</font></a></b>
-&nbsp;|&nbsp; <b><a href="/Titles?nh=25&st=0&qt=Greedo+AND+collectible&rf=11&col=WW"><font size="-1">Group these results</font></a></b>
-&nbsp;|&nbsp; <b><a href="/Titles?nh=25&st=25&qt=Greedo+AND+collectible&rf=0&col=WW"><font size="-1">next 25</font></a></b>
-<br> 
-<p>
-
-
-
-
-
-
-
-
-
-
-<table width=100% cellpadding=4 cellspacing=0 border=0>
-<tr><td align=center colspan=3><hr><font face="Arial,Helvetica"><b>Search more</b></font><hr></td></tr><tr><td valign=top colspan=3>
-
-<form action="/Titles" method="get" name="WW_dir_search">
-<input type=radio name="col" value="New Search" CHECKED>&nbsp;<b>New</b>&nbsp;Search&nbsp;&nbsp;&nbsp;<input type=radio name="col" value="Search These Results">&nbsp;Search&nbsp;only&nbsp;<b>within</b>&nbsp;these&nbsp;
-38
-&nbsp;pages<br>
-<INPUT NAME="qt" size=50 VALUE="" MAXLENGTH=511>&nbsp;<input type=submit value="seek">
-<INPUT TYPE=hidden NAME="oq" VALUE="Greedo AND collectible">
-<INPUT TYPE=hidden NAME="sv" VALUE="IS">
-<INPUT TYPE=hidden NAME="lk" VALUE="lcd">
-<INPUT TYPE=hidden NAME="nh" VALUE="25">
-<br>
-<font size="-1">Click for <a href="/Help?pg=HomeHelp.html&nh=25">tips</a> or <a href="/find?pg=advanced_www.html&nh=25&ud9=advanced_www">Advanced search</a></font>
 </td>
-</tr>
-<tr><td>&nbsp;</td></tr>
 
-</form>
-
-</td></tr></table>
-</td></tr></table>
-<p> 
-        <center>
-        <table border=0 width=600 cellpadding=1
-
-	> 
-        <tr><td>
-        <table border=0 width=598 cellpadding=5 cellspacing=0>
-        <tr>
-
-        <td
-
-        width=598 align=center colspan=4>
-
-
-<hr noshade size=1>
-<font face="Arial,Helvetica" 	>
-	<b>Infoseek channels</b>
-<hr noshade size=1>
-</td></tr>
-	<tr><td 
->      <li><a href="/Topic?tid=1803&nh=25">Automotive</a></li>
-      <li><a href="/Topic?tid=420&nh=25">Business</a></li>
-      <li><a href="/Topic?tid=421&nh=25">Careers</a></li>
-      <li><a href="/Topic?tid=15067&nh=25">Communications</a></li>
-      <li><a href="/Topic?tid=501&nh=25">Computer</a></li>
-	</td><td 
-	>
-
-      <li><a href="/Topic/Education?tid=670&svx=edu_main&nh=25">Education</a></li>
-      <li><a href="/Topic?tid=10144&nh=25">Entertainment</a></li>
-      <li><a href="/Topic?tid=13414&nh=25">Good&nbsp;Life</a></li>
-      <li><a href="/Topic?tid=1207&nh=25">Health</a></li>
-        </td><td
-        >
-      <li><a href="/Topic?tid=502&nh=25">Internet</a></li>
-      <li><a href="/Topic?tid=12663&nh=25">Kids&nbsp;&&nbsp;Family</a></li>
-      <li><a href="/Topic?tid=1486&nh=25">News</a></li>
-      <li><a href="/Topic?tid=459&nh=25">Personal&nbsp;Finance</a></li>
-        </td><td
-	>
-      <li><a href="/Topic?tid=433&nh=25">Real&nbsp;Estate</a></li>
-      <li><a href="/Topic?tid=2245&nh=25">Shopping</a></li>
-      <li><a href="/Topic?tid=1653&nh=25">Sports</a></li>
-      <li><a href="/Topic?tid=1753&nh=25">Travel</a></li>
-      <li><a href="/Topic?tid=14610&nh=25">Women's</a></li>
-
+<td valign=top align=center colspan=3>
+<FORM METHOD=GET ACTION="http://www.infoseek.com/redirect" TARGET="_top">
+<INPUT TYPE=HIDDEN NAME="sv" VALUE="IS">
+<INPUT TYPE=HIDDEN NAME="lk" VALUE="">
+<INPUT TYPE=HIDDEN NAME="ak" VALUE="SHRK-2004-1015-GEN">
+<INPUT TYPE=HIDDEN NAME="url" VALUE="http://rateshop.homeshark.com/scripts/crateshop.dll">
+<input type="hidden" name="loantype" size=1 value="30 Yr Fixed">
+<table border="0" cellspacing="0" cellpadding="0" width="468" height="60">
+  <tr>
+    <td rowspan="2" valign="bottom" align="right"><a href="http://www.infoseek.com/redirect?sv=IS&lk=&ak=SHRK-2004-1015-GEN&rd=http://rateshop.homeshark.com/scripts/crateshop.dll"><img src="/ads/SHRK1015/chtml001.gif" WIDTH="235" HEIGHT="60" border="0"></a></td>
+    <td bgcolor="#000000" valign="top" align="center"><p>
+      <select name="state" size="1">
+        <option selected value="state?">State
+        <option value="Alaska">AK
+        <option value="Alabama">AL
+        <option value="Arkansas">AR
+        <option value="Arizona">AZ
+        <option value="California">CA
+        <option value="Colorado">CO
+        <option value="Connecticut">CT
+        <option value="District of Columbia">DC
+        <option value="Delaware">DE
+        <option value="Florida">FL
+        <option value="Georgia">GA
+        <option value="Hawaii">HI
+        <option value="Iowa">IA
+        <option value="Idaho">ID
+        <option value="Illinois">IL
+        <option value="Indiana">IN
+        <option value="Kansas">KS
+        <option value="Kentucky">KY
+        <option value="Lousiana">LA
+        <option value="Massachussetts">MA
+        <option value="Maryland">MD
+        <option value="Maine">ME
+        <option value="Michigan">MI
+        <option value="Minnesota">MN
+        <option value="Missouri">MO
+        <option value="Mississippi">MS
+        <option value="Montana">MT
+        <option value="North Carolina">NC
+        <option value="North Dakota">ND
+        <option value="Nebraska">NE
+        <option value="New Hampshire">NH
+        <option value="New Jersey">NJ
+        <option value="New Mexico">NM
+        <option value="Nevada">NV
+        <option value="New York">NY
+        <option value="Ohio">OH
+        <option value="Oklahoma">OK
+        <option value="Oregon">OR
+        <option value="Pennsylvania">PA
+        <option value="Rhode Island">RI
+        <option value="South Carolina">SC
+        <option value="South Dakota">SD
+        <option value="Tennessee">TN
+        <option value="Texas">TX
+        <option value="Utah">UT
+        <option value="Virginia">VA
+        <option value="Vermont">VT
+        <option value="Washington">WA
+        <option value="Wisconsin">WI
+        <option value="West Virginia">WV
+        <option value="Wyoming">WY
+      </select>
+    </td>
+    <td bgcolor="#000000" height="20" align="right" valign="top">
+                <input type="text" name="loanamount" size="8" value="$ Loan Amount">
+                <INPUT TYPE="hidden" NAME="price" value="" SIZE=15 MAXLENGTH=15 >
+                <INPUT TYPE="hidden" NAME="downpay" value="" SIZE=15 MAXLENGTH=15>
+                <INPUT TYPE="hidden" NAME="downpct" VALUE="80" SIZE=3 MAXLENGTH=4 >
+                <INPUT TYPE="hidden" name="purpose" value="buy">
+                <INPUT TYPE="hidden" name="PROPTYPE" value="Single Family Residence">
+                <INPUT TYPE="hidden" name="STORIES"  value="1">
+                <INPUT TYPE="hidden" name="occupant" value="Owner Occupied">
+                <INPUT TYPE="hidden" name="lock" value="30">
+                <INPUT TYPE="hidden" name="sortorder" value="2">
+                <INPUT TYPE="hidden" name="pointInt"  value="0">
+                <INPUT TYPE="hidden" name="pointFrac" value=".000">
+                <INPUT TYPE="hidden" name="rateInt" value="7">
+                <INPUT TYPE="hidden" name="rateFrac" value=".500">
+                <input type="hidden" name="prepay" value="F">     
+    </td>       
+  </tr>
+  <tr>
+    <td valign="bottom" align="left" bgcolor="#000000"><a href="http://www.infoseek.com/redirect?sv=IS&lk=&ak=SHRK-2004-1015-GEN&rd=http://rateshop.homeshark.com/scripts/crateshop.dll"><img src="/ads/SHRK1015/chtml002.gif" WIDTH="158" HEIGHT="23" border="0"></a></td>
+    <td bgcolor="#000000" align="right" height="20">
+          <INPUT TYPE="image" NAME="Submit Details" SRC="/ads/SHRK1015/chtml003.gif" border="0">
     </td>
   </tr>
-
-<tr><td  width=598 align=center colspan=4><hr noshade size=1><a href="/Home?pg=Home.html&nh=25">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-
-<a href="http://feedback.infoseek.com">Feedback</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-<a href="/find?pg=advanced_www.html&ud9=advanced_www.html&nh=25">Advanced&nbsp;search</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-
-<a href="/webkit?pg=webkit.html&nh=25">Put&nbsp;Infoseek&nbsp;on&nbsp;your&nbsp;site</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-<a href="/AddUrl?pg=DCaddurl.html&nh=25">Add&nbsp;URL</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-<a href="/Help?pg=Contents.html&nh=25">Help</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-<a href="/doc?pg=international.html&nh=25">Worldwide&nbsp;Infoseek</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-
-<a href="http://info.infoseek.com/">About&nbsp;Infoseek</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-<a href="http://info.infoseek.com/doc/sponsors.html">Advertise&nbsp;on&nbsp;Infoseek</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-<a href="http://info.infoseek.com/doc/jobs.html">Jobs&nbsp;&#064;&nbsp;Infoseek</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-<a href="http://software.infoseek.com/">Intranet&nbsp;software</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-<a href="/redirect?sv=&lk=&ak=PopleL&rl=footer&rd=http://www.peoplelink.com/v1/down_infoseek">Infoseek&nbsp;Instant&nbsp;Messaging</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-<a href="/redirect?sv=&lk=&ak=WBS&rl=LINK-SFOOTER-standard_footer-chat&rd=http://pages.infoseek.com/webchat3.so?noreg_entry.x=1">Chat</a>
-
-	</td></tr></table>
-	</td></tr></table>
-
-
-	<hr size=1 noshade width="60%">
-
-
-	<font size="-1">Want to be able to <b>search your own site?</b> (<a href="/redirect?sv=IS&lk=&ak=ULTRA&rl=LINK-results_footer-Ultraseek_jump_page&rd=http://software.infoseek.com/ultrajump.htm">click here</a>)<br></font>
-
-<font size="-1">
-<center>
-<a href="/doc?pg=copyright.html&nh=25">Copyright</a> &#169; 1994-98
-<a href="http://info.infoseek.com/">Infoseek Corporation</a>.  All rights reserved.&nbsp;<br>
-<a href="/doc?pg=disclaimer.html&nh=25">Disclaimer</a> &nbsp;&nbsp;
-
-	<a href="http://info.infoseek.com/doc/Reference/Privacy.html">Privacy Policy</a>
-
+</table>
+</FORM>
+</td>
+</tr>
+</table>
 </center>
+
+<p><table width=100% border=0 cellpadding=0 cellspacing=0>
+		<tr><td colspan=3 bgcolor="#000000"><img src="/images/clear.gif" align=right width="1" HEIGHT="1" hspace="0" vspace="0" border="0">
+		</td></tr>
+
+		<tr><td colspan=3 bgcolor="#CCCCCC"><img src="/images/clear.gif" align=right width="1" HEIGHT="2" hspace="0" vspace="0" border="0">
+		</td></tr>
+
+		<tr bgcolor="#CCCCCC"><td width=1%>&nbsp;</td>
+		<td width=44%><font face="Arial,Helvetica" size=-1>Your search for "<b>Greedo AND collectible</b>"
+resulted in:
+
+			<br>&nbsp; &nbsp;
+
+29 <a href="#tab3">Web Search Results</a>
+
+		</font>
+		</td>
+
+		<td valign=middle width=55%><center>
+		<table width=100% border=0 cellpadding=3 cellspacing=0>
+	     <form action="/Titles" method="get" name="topform">
+			<tr><td colspan=4><input type="text" name="qt" value="" size="39" maxlength="511">
+
+			<SCRIPT LANGUAGE="JAVASCRIPT">
+			<!-- Hide
+			document.topform.qt.focus();
+			document.topform.qt.select();
+
+
+// -->			</SCRIPT>
+			</td></tr>
+
+			<tr><td align=right width=20%><font size="-1"><input type="submit" value="New search" name="col"></font></td>
+			<td align=center width=3%><font size="-1">&nbsp;or&nbsp;</font></td>
+			<td align=left width=57%><font size="-1"><input type="submit" value="Search within results" name="col"></font></td>
+			<td width=20%> &nbsp;</td></tr>
+		</table>
+		</center>
+		</td></tr>
+
+		<tr><td colspan=3 bgcolor="#CCCCCC"><img src="/images/clear.gif" align=right width="1" HEIGHT="3" hspace="0" vspace="0" border="0">
+		</td></tr>
+
+		<tr><td colspan=3 bgcolor="#000000"><img src="/images/clear.gif" align=right width="1" HEIGHT="1" hspace="0" vspace="0" border="0">
+		</td></tr>
+	</table>
+
+		<input type=hidden name="oq" value="Greedo AND collectible">
+
+<INPUT TYPE=hidden NAME="sv" VALUE="IS">
+<INPUT TYPE=hidden NAME="lk" VALUE="noframes">
+<INPUT TYPE=hidden NAME="nh" VALUE="25">
+</form><br clear=all><a name="tab3">
+<table border=0 cellpadding=0 cellspacing=0 width=100%>
+<tr><td valign=bottom width=30% align=left nowrap>
+	<b><font size="+1" face="Arial,Helvetica">
+
+Web Search Results&nbsp;</font></b></td><td valign=middle align=right width=70% nowrap>
+	<font size=-1 face="Arial,Helvetica"><B>Jump to:&nbsp;&nbsp;
+
+		<a href="#tab4">Search Box</a></b>
+
 </font>
 
-	</center>	
-	</body>
-	</html>
+</td>
+
+</tr><tr>
+        <td width=1 height=2 bgcolor="000000" colspan=2><img src="/images/clear.gif" border=0 vspace=0 hspace=0 alt="" width=1 height=2></td>
+        </tr>
+
+	<tr>
+	<td colspan=2>
+
+</a>
+<table width="100%" border=0 cellpadding=2 cellspacing=0>
+<tr><td align=left valign=top bgcolor="#CCCCCC"><font face="Arial,Helvetica" size="-1">
+<b>RESULTS 1 - 25</b>  of 29 total results <p>
+</font></td><td align=right valign=top bgcolor="#CCCCCC"><font face="Arial,Helvetica" size="-1">
+
+<b><a href="/Titles?nh=20&qt=Greedo+AND+collectible&rf=0&col=WW&ud4=1"><font size="-1">HIDE SUMMARIES</font></a></b>
+&nbsp;|&nbsp; <b><a href="/Titles?nh=25&qt=Greedo+AND+collectible&rf=11&col=WW"><font size="-1">GROUP RESULTS</font></a></b>
+&nbsp;|&nbsp;<b><a href="/Titles?nh=25&qt=Greedo+AND+collectible&rf=0&col=WW&st=25"><font size="-1">Next&nbsp;25</font></a></b>
+<br> 
+	</td></tr><tr><td colspan=2 bgcolor="#FFFFFF" align=right>
+<font face="Arial,Helvetica" size="-2" color="#CC0000">***</font><font face="Arial,Helvetica" size="-2">Pages from the same site are grouped together.</font>
+
+</font></td></tr></table>
+</td></tr></table><table align=right width=121 cellpadding=0 cellspacing=0><tr><td><p><p><p>	<p>
+  
+
+	</p>
+
+	<table width="121" cellpadding=1 cellspacing=0 border=0>
+	<tr><td bgcolor="#000000" valign=top>
+		<table width="100%" cellpadding=3 cellspacing=0 border=0>
+		<tr><td bgcolor="#CCCCCC"><font size="-1" face="Arial,Helvetica">
+
+
+	<p><b>Classifieds:</b><br><font size="-1"> 
+
+<a href="http://www.classifieds2000.com/cgi-cls/Display.exe?infoseek+class">Find anything</a> from concert tickets to computers, poodles to personals
+</font></p></td></tr></table>
+</td></tr></table>
+
+</td></tr></table><font face="Arial,Helvetica">			<p><b><a href="http://www.tias.com/stores/fitinc/starwars-1.html">Star Wars</a></b>
+			<br>Frozen In Time, Inc. - Star Wars<br>
+			<font size="-1">
+69%
+			&nbsp;<b>Date: 16 Sep 1998</b>,
+                        &nbsp;Size 23.6K, 
+			&nbsp;http://www.tias.com/stores/fitinc/starwars-1.html&nbsp;
+			</font>
+
+<font face="Arial,Helvetica">			<p><b><a href="http://www.nightmarefactory.com/starwars.html">Star Wars Masks@Nightmare Factory </a></b>
+			<br>An extensive collection of high end collectors masks and everyday affordable ones.<br>
+			<font size="-1">
+66%
+			&nbsp;<b>Date: 13 May 1998</b>,
+                        &nbsp;Size 11.5K, 
+			&nbsp;http://www.nightmarefactory.com/starwars.html&nbsp;
+			</font>
+
+<font face="Arial,Helvetica">			<p><b><a href="http://www.ct-info.com/co/empire/starwars.html">Comic Gallery's Empire of Collectibles</a></b>
+			<br>POTF2 Star Wars  Product Categories  Orange Carded Power of the Force,  Green Carded Power of the Force,  Shadow of the Empire Carded Figures,  Mailaway Items,  12" Figures,  Deluxe Figures,  ...<br>
+			<font size="-1">
+63%
+			&nbsp;<b>Date: 26 Aug 1998</b>,
+                        &nbsp;Size 13.0K, 
+			&nbsp;http://www.ct-info.com/co/empire/starwars.html&nbsp;
+			</font>
+
+<font face="Arial,Helvetica">			<p><b><a href="http://www.delta-9.com/WhiteSalmon/">The White Salmon: Collectibles</a></b>
+			<br>Current Items For Sale.  Click on a category for a list of in-stock items and prices.  Updated on 6/25/98  Madman Jackets - A White Salmon Exclusive!  Aliens  Batman  Bowen Designs  G.I. Joe  Madman  ...<br>
+			<font size="-1">
+59%
+			&nbsp;<b>Date: 22 Aug 1998</b>,
+                        &nbsp;Size 19.9K, 
+			&nbsp;http://www.delta-9.com/WhiteSalmon/&nbsp;
+			</font>
+
+<font face="Arial,Helvetica">			<p><b><a href="http://www.easystreet.com/~histoys/">HIS TOYS - Collectibles For Sale</a></b>
+			<br>HIS TOYS.  STAR WARS  BEANIE BABIES  HOT WHEELS  BARBIE  ACTION FIGURES  .  Now accepting VISA/MasterCard/Discover/NOVUS!.  Select a category below to see a list of items for sale with current prices.  For ...<br>
+			<font size="-1">
+59%
+			&nbsp;<b>Date: 19 Mar 1998</b>,
+                        &nbsp;Size 31.6K, 
+			&nbsp;http://www.easystreet.com/~histoys/&nbsp;
+			</font>
+
+<font face="Arial,Helvetica">			<p><b><a href="http://www.spacestar.net/users/rbig/jediknights/actionfigures/figurelist.htm">Star Wars Collectibles</a></b>
+			<br>Powers of the Force 2  Deluxe Series  Shadows of the Empire  Power F/X  Beast/Deluxe Beast Series  Exclusives  Placo Key Chains  *Designates Scheduled Release  Powers of the Force 2.  QTY.  FIGURE  WAVE/  COLLECTION  RELEASE  DATE  2-1B Medic Droid ...<br>
+			<font size="-1">
+52%
+			&nbsp;<b>Date: 14 Feb 1998</b>,
+                        &nbsp;Size 31.3K, 
+			&nbsp;http://www.spacestar.net/users/rbig/jediknights/actionfigures/figurelist.htm&nbsp;
+			</font>
+
+<font face="Arial,Helvetica">			<p><b><a href="http://www.nebulacomics.com/prod/figs.html">Nebula Comics,cards,collectibles,secure mail order, Magic, Star Wars, ...</a></b>
+			<br>Nebula Comics - secure mail order<br>
+			<font size="-1">
+50%
+			&nbsp;<b>Date: 21 Aug 1998</b>,
+                        &nbsp;Size 14.7K, 
+			&nbsp;http://www.nebulacomics.com/prod/figs.html&nbsp;
+			</font>
+
+<font face="Arial,Helvetica">			<p><b><a href="http://www.hollywoodfactory.com/starwars/links.htm">Star Wars - List of Sites - Links</a></b>
+			<br>Star Wars List of Sites.  "I  Had That" Toys and Collectibles  "Star Wars"  #1 Star Wars Website  = Irresistible Force =  A  - The Secret Order of the Emperor  A Certain Point of View  A  Galaxy ...<br>
+			<font size="-1">
+50%
+			&nbsp;<b>Date: 12 Jun 1998</b>,
+                        &nbsp;Size 79.8K, 
+			&nbsp;http://www.hollywoodfactory.com/starwars/links.htm&nbsp;
+			</font>
+
+<font face="Arial,Helvetica">			<p><b><a href="http://starshow.com/catalog/69606.htm">Star Show Collectibles</a></b>
+			<br>Home Page  GREEDO  ACTION FIGURE  ITEM  69570-69606  $ 7.99.  Hit Back Button to return to prior page <br>
+			<font size="-1">
+50%
+			&nbsp;<b>Date:  6 Feb 1997</b>,
+                        &nbsp;Size 0.5K, 
+			&nbsp;http://starshow.com/catalog/69606.htm&nbsp;
+			</font>
+
+<font face="Arial,Helvetica">			<p><b><a href="http://www.arsdata.com/toynut/p5.html">Action Figures, Toys, Collectibles,Toynut</a></b>
+			<br>FOR INFORMATION ON OTHER FIGURES AVAILABLE  E-MAIL, CALL or FAX  PAGE CONTENTS - STAR WARS  TOTAL JUSTICE - VENOM - WETWORKS  WILDC.A.T.S<br>
+			<font size="-1">
+47%
+			&nbsp;<b>Date: 21 Aug 1998</b>,
+                        &nbsp;Size 4.5K, 
+			&nbsp;http://www.arsdata.com/toynut/p5.html&nbsp;
+			</font>
+
+<font face="Arial,Helvetica">			<p><b><a href="http://www.goodnet.com/~cards/toys.htm">JAM'S COLLECTIBLES</a></b>
+			<br>Action Figures, Starting Line-ups, and other COOL stuff!<br>
+			<font size="-1">
+47%
+			&nbsp;<b>Date: 12 Jul 1998</b>,
+                        &nbsp;Size 6.1K, 
+			&nbsp;http://www.goodnet.com/~cards/toys.htm&nbsp;
+			</font>
+
+<font face="Arial,Helvetica">			<p><b><a href="http://www.erols.com/mickey01/swars.html">Mick's Starting Lineup/Starwars/Nascar Collectables</a></b>
+			<br>Mick's Available Star Wars  Items  .  "Hi, I'm Richard and I love the Redskins, Star Wars, and Mick's Collectibles...  One of the coolest collectible sites on the WWW."  Here is a list of  Mick's ...<br>
+			<font size="-1">
+46%
+			&nbsp;<b>Date: 21 Jul 1998</b>,
+                        &nbsp;Size 3.2K, 
+			&nbsp;http://www.erols.com/mickey01/swars.html&nbsp;
+			</font>
+
+<font face="Arial,Helvetica">			<p><b><a href="http://www.info2000.net/~jlee/huntquar.htm">Nathan Lee's Homepage: Hunter's Quarry</a></b>
+			<br>Here you will find Star Wars and Star Trek memorabilia, collectibles, toys, figures, and rarities for sale and trade.  We also create 3D computer-generated concept artwork- bring thoughts and ideas to tangible images!<br>
+			<font size="-1">
+46%
+			&nbsp;<b>Date: 13 Aug 1997</b>,
+                        &nbsp;Size 4.9K, 
+			&nbsp;http://www.info2000.net/~jlee/huntquar.htm&nbsp;
+			</font>
+
+<font face="Arial,Helvetica">			<p><b><a href="http://www.cityauction.com/items/112080.asp">Micro Machines Star Wars Heads - CityAuction</a></b>
+			<br>Micro Machines Star Wars Heads - 2 Sets of Micro Machine Star Wars Flip OPen Heads<br>
+			<font size="-1">
+46%
+			&nbsp;<b>Date:  7 May 1998</b>,
+                        &nbsp;Size 4.7K, 
+			&nbsp;http://www.cityauction.com/items/112080.asp&nbsp;
+			</font>
+
+<font face="Arial,Helvetica">			<p><b><a href="http://whizbangtoys.com/toyexpo.html">The International Collectable Toy Expo</a></b>
+			<br>September 26 - 27, 1998;  NJ, Pennsauken.  Philadelphia area.  International Collectible Toy  Expo.  The largest indoor toy and collectable show ever produced!  South Jersey  Expo Center.  Minutes from downtown ...<br>
+			<font size="-1">
+45%
+			&nbsp;<b>Date: 30 Jul 1998</b>,
+                        &nbsp;Size 4.1K, 
+			&nbsp;http://whizbangtoys.com/toyexpo.html&nbsp;
+			</font>
+
+<font face="Arial,Helvetica">			<p><b><a href="http://sideshowinc.com/mmp.html">Sideshow Inc. - Mad Monster Party</a></b>
+			<br>SIDESHOW INC. in association with ICONS CLASSICS present  The 1998 Mad Monster Party was held at the Pasadena Convention Center in Pasadena, California on May 23 & 24. Considered to be the premiere ...<br>
+			<font size="-1">
+40%
+			&nbsp;<b>Date: 20 Jun 1998</b>,
+                        &nbsp;Size 7.8K, 
+			&nbsp;http://sideshowinc.com/mmp.html&nbsp;
+			</font>
+
+<font face="Arial,Helvetica">			<p><b><a href="http://www.info2000.com/~jlee/huntquar.htm">Nathan Lee's Homepage: Hunter's Quarry</a></b>
+			<br>Here you will find Star Wars and Star Trek memorabilia, collectibles, toys, figures, and rarities for sale and trade.  We also create 3D computer-generated concept artwork- bring thoughts and ideas to ...<br>
+			<font size="-1">
+39%
+			&nbsp;<b>Date:  9 Aug 1998</b>,
+                        &nbsp;Size 3.1K, 
+			&nbsp;http://www.info2000.com/~jlee/huntquar.htm&nbsp;
+			</font>
+
+<font face="Arial,Helvetica">			<p><b><a href="http://www.drtonguestoys.com/swcatalog.htm">Dr Tongue's Star Wars Catalog Page</a></b>
+			<br>Dr. Tongue's 3-D House of Collectible Toys. We sell all kinds of classic and collectible toys. We have many Star Wars and Star Trek Toys. If we don't have it, you don't want it<br>
+			<font size="-1">
+39%
+			&nbsp;<b>Date: 24 Aug 1998</b>,
+                        &nbsp;Size 10.2K, 
+			&nbsp;http://www.drtonguestoys.com/swcatalog.htm&nbsp;
+			</font>
+
+<font face="Arial,Helvetica">			<p><b><a href="http://classic-collectibles.com/12_StarWars%20Figures.htm">Hasbro Kenner Star Wars 12 inch Star Wars Figures Harmony Kingdom ...</a></b>
+			<br>Classic CollectiblesTM  To place an ORDER click here.  We specialize in collectible merchandise: Harmony Kingdom, Rawcliffe Pewter, Corinthian Headliners, Star Wars, ...<br>
+			<font size="-1">
+39%
+			&nbsp;<b>Date:  7 Aug 1998</b>,
+                        &nbsp;Size 9.0K, 
+			&nbsp;http://classic-collectibles.com/12_StarWars%20Figures.htm&nbsp;
+			</font>
+
+<font face="Arial,Helvetica">			<p><b><a href="http://www.stwing.upenn.edu/starwars/form.html">Star Wars Home Page Guest Book and Survey</a></b>
+			<br>Since this page's announcement on April 26, 1994  it has gotten over 4,000,000 connections from 50 countries.  I would be honored if you would fill out our guest book and leave a few  ...<br>
+			<font size="-1">
+38%
+			&nbsp;<b>Date:  7 Sep 1995</b>,
+                        &nbsp;Size 5.2K, 
+			&nbsp;http://www.stwing.upenn.edu/starwars/form.html&nbsp;
+			</font>
+
+<font face="Arial,Helvetica">			<p><b><a href="http://www.sayville.com/startrek.html">Wormhole</a></b>
+			<br>This site features Star Trek,  Star Wars, Willow, Tick PVC, and Misc. collectible action figures and toys.  Star Trek  Star Wars  Gargoyles  Earthworm Jim  Independence Day  Tick PVC Figures  Batman  Willow Figures  ...<br>
+			<font size="-1">
+36%
+			&nbsp;<b>Date: 17 Sep 1998</b>,
+                        &nbsp;Size 22.5K, 
+			&nbsp;http://www.sayville.com/startrek.html&nbsp;
+			</font>
+
+<font face="Arial,Helvetica">			<p><b><a href="http://www.sideshowinc.com/mmp.html">Sideshow Inc. - Mad Monster Party</a></b>
+			<br>The 1998 Mad Monster Party was held at the Pasadena Convention Center in Pasadena, California on May 23 & 24. Considered to be the premiere international figure collectible show, the Mad Monster Party kicked off Saturday with a bang opening its doors to collectors, guests, celebrities, studio excutives, and ...<br>
+			<font size="-1">
+36%
+			&nbsp;<b>Date: 20 Jun 1998</b>,
+                        &nbsp;Size 7.8K, 
+			&nbsp;http://www.sideshowinc.com/mmp.html&nbsp;
+			</font>
+
+<font face="Arial,Helvetica">			<p><b><a href="http://www.ct-info.com/co/empire/starwarsold.html">Comic Gallery's Empire of Collectibles</a></b>
+			<br>Vintage Star Wars  Product Categories  1978 12 backs,  1978-1979 20-21 Backs,  1980-1982 Empire Carded,  1983-1984 Jedi Carded,  1985 Power of the Force Carded,  1983 Jedi Tri-logo Carded,  1978 ...<br>
+			<font size="-1">
+36%
+			&nbsp;<b>Date: 11 Aug 1998</b>,
+                        &nbsp;Size 11.5K, 
+			&nbsp;http://www.ct-info.com/co/empire/starwarsold.html&nbsp;
+			</font>
+
+<font face="Arial,Helvetica">			<p><b><a href="http://www.binary.net/omega/toys.htm">Omega Comics Instock items</a></b>
+			<br>Omega Comics, Hobbies, Comics, Collectibles<br>
+			<font size="-1">
+34%
+			&nbsp;<b>Date:  8 Mar 1998</b>,
+                        &nbsp;Size 14.5K, 
+			&nbsp;http://www.binary.net/omega/toys.htm&nbsp;
+			</font>
+
+<font face="Arial,Helvetica">			<p><b><a href="http://www.classic-collectibles.com/12_StarWars%20Figures.htm">Hasbro Kenner Star Wars 12 inch Star Wars Figures Harmony Kingdom ...</a></b>
+			<br>Classic CollectiblesTM  To place an ORDER click here.  We specialize in collectible merchandise: Harmony Kingdom, Rawcliffe Pewter, Corinthian Headliners, Star Wars, ...<br>
+			<font size="-1">
+34%
+			&nbsp;<b>Date: 22 Jul 1998</b>,
+                        &nbsp;Size 9.0K, 
+			&nbsp;http://www.classic-collectibles.com/12_StarWars%20Figures.htm&nbsp;
+			</font>
+
+</font>
+<br clear=all>
+<p>
+
+<table width="100%" border=0 cellpadding=2 cellspacing=0>
+<tr><td align=left valign=top bgcolor="#CCCCCC"><font face="Arial,Helvetica" size="-1">
+<b>RESULTS 1 - 25</b>  of 29 total results <p>
+</font></td><td align=right valign=top bgcolor="#CCCCCC"><font face="Arial,Helvetica" size="-1">
+
+<b><a href="/Titles?nh=20&qt=Greedo+AND+collectible&rf=0&col=WW&ud4=1"><font size="-1">HIDE SUMMARIES</font></a></b>
+&nbsp;|&nbsp; <b><a href="/Titles?nh=25&qt=Greedo+AND+collectible&rf=11&col=WW"><font size="-1">GROUP RESULTS</font></a></b>
+&nbsp;|&nbsp;<b><a href="/Titles?nh=25&qt=Greedo+AND+collectible&rf=0&col=WW&st=25"><font size="-1">Next&nbsp;25</font></a></b>
+<br> 
+	</td></tr><tr><td colspan=2 bgcolor="#FFFFFF" align=right>
+<font face="Arial,Helvetica" size="-2" color="#CC0000">***</font><font face="Arial,Helvetica" size="-2">Pages from the same site are grouped together.</font>
+
+</font></td></tr></table>
+</p>
+
+<br clear=all><a name="tab4">
+<table border=0 cellpadding=0 cellspacing=0 width=100%>
+<tr><td valign=bottom width=30% align=left nowrap>
+	<b><font size="+1" face="Arial,Helvetica">
+
+Search Box&nbsp;</font></b></td><td valign=middle align=right width=70% nowrap>
+	<font size=-1 face="Arial,Helvetica"><B>Jump to:&nbsp;&nbsp;
+
+		<a href="#tab3">Web Search Results</a>
+
+</font>
+
+</td>
+
+</tr><tr>
+        <td width=1 height=2 bgcolor="000000" colspan=2><img src="/images/clear.gif" border=0 vspace=0 hspace=0 alt="" width=1 height=2></td>
+        </tr>
+
+	<tr>
+	<td bgcolor="CCCCCC" colspan=2>
+	<font size=-1 face="Arial,Helvetica">&nbsp;</font></td>
+	</tr>
+	</table>
+
+</a>
+<table width=100% cellpadding=0 cellspacing=0 border=0 bgcolor="#CCCCCC">
+	<tr><td colspan="5" align=center valign=middle bgcolor=#CCCCCC>
+		<img src="/images/clear.gif" width="1" height="4" border="0" hspace="0" vspace="0"><br>
+	</td></tr>
+	<tr><td bgcolor="#CCCCCC">
+		&nbsp; 
+	</td><td colspan=3 align=left valign=middle bgcolor="#CCCCCC">
+		<font face="arial,helvetica" size=-1>
+		<a href="/find/people_finder.html?ud9=people_finder&nh=25">People Finder</a>
+		- 
+		<a href="/find/shareware.html?ud9=shareware&nh=25">Shareware</a>
+		- 
+		<a href="/find/dictionary.html?ud9=dictionary&nh=25">Dictionary</a>
+		-
+		<a href="/find/thesaurus.html?ud9=thesaurus&nh=25">Thesaurus</a>
+		- 
+		<a href="/find/advanced_capsules.html?ud9=advanced_capsules&nh=25">Company Capsules</a>
+		- 
+		<a href="/find/advanced_www.html?ud9=advanced_www&nh=25">More...</a>
+		</font>
+
+	</td><td rowspan=2 valign=middle align=center bgcolor="#CCCCCC">
+
+<!  DAILY CONTENT>
+<a href="/redirect?sv=IS&lk=&ak=SEEK&rl=LINK_T104_Searchbox_Promo_express&rd=http://express.infoseek.com/button_jump.html"><img src="/cimages?SEEK_T104_Searchbox_Promo_urlkey0_19981014_155711_0.gif&col=SL " alt="Express by Infoseek" border=0></a>
+<!  END CONTENT>	</td></tr>
+	<tr><td bgcolor="#CCCCCC">
+		&nbsp; 
+	</td><td align=left valign=middle bgcolor="#CCCCCC">
+		<table border="0" cellpadding="0" cellspacing="0" width=100%>
+			<tr><td valign=top align=left nowrap>
+				<img src="/images/clear.gif" align=RIGHT width="1" height="2" hspace="0" vspace="0" border="0">
+			</td></tr>
+			<tr><td align="right">
+				<form action="/Titles" method="get" name="WW_dir_search">
+				<input type="text" name="qt" value="" size="45" maxlength="511">
+			</td>
+
+			</tr>
+			<tr><td align="right" nowrap valign="middle">
+
+				<table border="0" cellpadding="0" cellspacing="0">
+					<tr><td align=right>
+                                                <input type="submit" value="New search" name="col">
+					</td><td>
+						&nbsp;or&nbsp; 
+					</td><td>
+                                                <input type="submit" value="Search within results" name="col">
+					</td></tr>
+				</table>
+
+				<input type=hidden name="oq" value="Greedo AND collectible">
+<INPUT TYPE=hidden NAME="sv" VALUE="IS">
+<INPUT TYPE=hidden NAME="lk" VALUE="noframes">
+<INPUT TYPE=hidden NAME="nh" VALUE="25">
+				</iscode>
+			</td>
+
+			</tr>
+		</table>
+		</form>
+	</td><td bgcolor="#CCCCCC">
+		&nbsp; 
+	</td><td align=left valign=middle bgcolor="#CCCCCC" nowrap>
+		<a href="/Help/Contents.html?nh=25"><font face="arial" size=-1>Search&nbsp;Tips</font></a>
+		<br>
+		<a href="/find/advanced_www.html?ud9=advanced_www&nh=25"><font face="arial" size=-1>Advanced&nbsp;Search</font></a>
+	</td></tr>
+	<tr><td colspan="5" align=center valign=middle bgcolor=#CCCCCC>
+		<img src="/images/clear.gif" width="1" height="4" border="0" hspace="0" vspace="0"><br>
+	</td></tr>
+	<tr><td colspan=5 align=center valign=bottom width=100%>
+
+<table border="0" cellspacing="0" cellpadding="0" width=100%>
+	<tr><td bgcolor=#CCCCCC width=50%>
+		<img src="/images/clear.gif" width="1" height="14" border="0" hspace="0" vspace="0"><br>
+	</td><td rowspan=3 bgcolor=#CCCCCC>
+		<a href="/Home?nh=25"><img src="/images/tmpl/footer_i.gif" width="32" height="35" border="0" hspace="0" vspace="0"></a><br>
+	</td><td bgcolor=#CCCCCC width=50%>
+		<img src="/images/clear.gif" width="1" height="14" border="0" hspace="0" vspace="0"><br>
+	</td></tr>
+	<tr><td bgcolor=#000000 width=50%>
+		<img src="/images/clear.gif" width="1" height="7" border="0" hspace="0" vspace="0"><br>
+	</td><td bgcolor=#000000 width=50%>
+		<img src="/images/clear.gif" width="1" height="7" border="0" hspace="0" vspace="0"><br>
+	</td></tr>
+	<tr><td bgcolor=#FFFFFF width=50%>
+		<img src="/images/clear.gif" width="1" height="14" border="0" hspace="0" vspace="0"><br>
+	</td><td bgcolor=#FFFFFF width=50%>
+		<img src="/images/clear.gif" width="1" height="14" border="0" hspace="0" vspace="0"><br>
+	</td></tr>
+</table>
+
+	</td></tr>
+</table>
+<center><FORM METHOD=GET ACTION="http://www.infoseek.com/redirect" TARGET="_top">
+<INPUT TYPE=HIDDEN NAME="sv" VALUE="IS">
+<INPUT TYPE=HIDDEN NAME="lk" VALUE="">
+<INPUT TYPE=HIDDEN NAME="ak" VALUE="SHRK-2004-1015-GEN">
+<INPUT TYPE=HIDDEN NAME="url" VALUE="http://rateshop.homeshark.com/scripts/crateshop.dll">
+<input type="hidden" name="loantype" size=1 value="30 Yr Fixed">
+<table border="0" cellspacing="0" cellpadding="0" width="468" height="60">
+  <tr>
+    <td rowspan="2" valign="bottom" align="right"><a href="http://www.infoseek.com/redirect?sv=IS&lk=&ak=SHRK-2004-1015-GEN&rd=http://rateshop.homeshark.com/scripts/crateshop.dll"><img src="/ads/SHRK1015/chtml001.gif" WIDTH="235" HEIGHT="60" border="0"></a></td>
+    <td bgcolor="#000000" valign="top" align="center"><p>
+      <select name="state" size="1">
+        <option selected value="state?">State
+        <option value="Alaska">AK
+        <option value="Alabama">AL
+        <option value="Arkansas">AR
+        <option value="Arizona">AZ
+        <option value="California">CA
+        <option value="Colorado">CO
+        <option value="Connecticut">CT
+        <option value="District of Columbia">DC
+        <option value="Delaware">DE
+        <option value="Florida">FL
+        <option value="Georgia">GA
+        <option value="Hawaii">HI
+        <option value="Iowa">IA
+        <option value="Idaho">ID
+        <option value="Illinois">IL
+        <option value="Indiana">IN
+        <option value="Kansas">KS
+        <option value="Kentucky">KY
+        <option value="Lousiana">LA
+        <option value="Massachussetts">MA
+        <option value="Maryland">MD
+        <option value="Maine">ME
+        <option value="Michigan">MI
+        <option value="Minnesota">MN
+        <option value="Missouri">MO
+        <option value="Mississippi">MS
+        <option value="Montana">MT
+        <option value="North Carolina">NC
+        <option value="North Dakota">ND
+        <option value="Nebraska">NE
+        <option value="New Hampshire">NH
+        <option value="New Jersey">NJ
+        <option value="New Mexico">NM
+        <option value="Nevada">NV
+        <option value="New York">NY
+        <option value="Ohio">OH
+        <option value="Oklahoma">OK
+        <option value="Oregon">OR
+        <option value="Pennsylvania">PA
+        <option value="Rhode Island">RI
+        <option value="South Carolina">SC
+        <option value="South Dakota">SD
+        <option value="Tennessee">TN
+        <option value="Texas">TX
+        <option value="Utah">UT
+        <option value="Virginia">VA
+        <option value="Vermont">VT
+        <option value="Washington">WA
+        <option value="Wisconsin">WI
+        <option value="West Virginia">WV
+        <option value="Wyoming">WY
+      </select>
+    </td>
+    <td bgcolor="#000000" height="20" align="right" valign="top">
+                <input type="text" name="loanamount" size="8" value="$ Loan Amount">
+                <INPUT TYPE="hidden" NAME="price" value="" SIZE=15 MAXLENGTH=15 >
+                <INPUT TYPE="hidden" NAME="downpay" value="" SIZE=15 MAXLENGTH=15>
+                <INPUT TYPE="hidden" NAME="downpct" VALUE="80" SIZE=3 MAXLENGTH=4 >
+                <INPUT TYPE="hidden" name="purpose" value="buy">
+                <INPUT TYPE="hidden" name="PROPTYPE" value="Single Family Residence">
+                <INPUT TYPE="hidden" name="STORIES"  value="1">
+                <INPUT TYPE="hidden" name="occupant" value="Owner Occupied">
+                <INPUT TYPE="hidden" name="lock" value="30">
+                <INPUT TYPE="hidden" name="sortorder" value="2">
+                <INPUT TYPE="hidden" name="pointInt"  value="0">
+                <INPUT TYPE="hidden" name="pointFrac" value=".000">
+                <INPUT TYPE="hidden" name="rateInt" value="7">
+                <INPUT TYPE="hidden" name="rateFrac" value=".500">
+                <input type="hidden" name="prepay" value="F">     
+    </td>       
+  </tr>
+  <tr>
+    <td valign="bottom" align="left" bgcolor="#000000"><a href="http://www.infoseek.com/redirect?sv=IS&lk=&ak=SHRK-2004-1015-GEN&rd=http://rateshop.homeshark.com/scripts/crateshop.dll"><img src="/ads/SHRK1015/chtml002.gif" WIDTH="158" HEIGHT="23" border="0"></a></td>
+    <td bgcolor="#000000" align="right" height="20">
+          <INPUT TYPE="image" NAME="Submit Details" SRC="/ads/SHRK1015/chtml003.gif" border="0">
+    </td>
+  </tr>
+</table>
+</FORM></center><p> 
+<center>
+<font face="Arial, Helvetica" size=-2><a href="/doc?pg=copyright.html&nh=25">Copyright</a> &#169; 1994-98 <a href="http://info.infoseek.com/">Infoseek&nbsp;Corporation</a>. 
+<br>All rights reserved.&nbsp;
+<br><a href="/doc?pg=disclaimer.html&nh=25">Disclaimer</a> &nbsp;&nbsp; <a href="http://info.infoseek.com/doc/Reference/Privacy.html">Privacy Policy</a></font>
+</center>
+<pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>
