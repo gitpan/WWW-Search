@@ -1,0 +1,728 @@
+<!-- c|net Mon Nov  8 05:44:07 1999  $Revision: 2.29 $  -->
+
+ 
+
+
+
+
+
+
+
+
+<html>
+<head>
+<title>Snap:Power Search:Results</title>
+</head>
+
+<body bgcolor="#FFFFFF" link="#0000FF" vlink="#666666" text="#333333">
+
+
+
+<!-- c|net Wed Nov  3 10:12:28 1999  $Revision: 2.29 $  -->
+
+
+<map name=gs-tabs><area shape=rect coords="2,22,81,44" href="/main/door/0,1,home-home,00.html?st.sn.0.t.fd"><area shape=rect coords="82,27,155,44" href="/main/local/1,37,home-8,00.html?tag=st.sn.0.t.lc"><area shape=rect coords="156,27,230,44" href="/LMOID/mysnap/mysnap/0,160,home-0,00.html?st.sn.0.t.ms"></map>
+<table width="100%" cellspacing=0 cellpadding=0 border=0><tr bgcolor="#cc0000">
+<td width="33%"><a href="/main/door/0,1,home-home,00.html"><img src="/main/images/logos/logo_header_fl.gif" alt=Snap.com width=185 height=45 border=0></a></td>
+<td width="34%" align=center valign=bottom><img src="/main/images/tabs/none_fl_tgl.gif" alt="Navigation Tabs" width=234 height=45 border=0 usemap="#gs-tabs"></td>
+<td width="33%"><spacer type=block width=1 height=1></td>
+</tr><tr><td bgcolor="#666666" height=2 colspan=3><spacer type=block width=1 height=1></td></tr></table>
+<table bgcolor="#FFFFFF" width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr valign=middle><td height=100 align=center><a href="http://home.snap.com/cgi-acc/acc_clickthru.acc?clickid=00004b705811944e00000000&adt=banner&edt=home&cat=s-web&site=SN" target="_top"><img src="http://home.snap.com/Ads/Media/Images/gooey.news468x601.banner.gif?u_vid_0_0&ffffffff" alt="Join the Party Now!" border="2" height="60" width="468" ><br><center><font face="Verdana, Arial, Helvetica" size="-2">Join the Party Now!</font></center></A></td></tr></table>
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td bgcolor="#0000FF" height=1><spacer type=block width=1 height=1></td></tr></table>
+<table cellspacing=0 cellpadding=4 border=0 width="100%"><tr valign=top><td nowrap width="75%"><font size=-1 face="Arial,Helvetica">
+Find books
+about '<a
+href="http://home.snap.com/cgi-acc/acc_clickthru.acc?clickid=0000479c3eb331ba00000000&adt=commercelink1&edt=home&cat=s-web&site=SN&url=http%3A%2F%2Fbn%2Ebfast%2Ecom%2Fbooklink%2Fclick%3Fsourceid%3D1380915%26categoryid%3Dmerchsearch%26match%3Dexact%26options%3Dand%26keyword%3DBossk">Bossk</a>'
+at barnesandnoble.com.
+</font></td><td width="25%" align=right nowrap><font size=-2 face="Arial,Helvetica">A D V E R T I S E M E N T</td></tr></table>
+
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td bgcolor="#666666" height=2><spacer type=block width=1 height=1></td></tr>
+</table>
+<table width="100%" cellpadding=4 cellspacing=0 border=0>
+<tr bgcolor="#CCCCCC" valign=bottom><td nowrap>
+<form method=get action="/search/directory/results/1,61,home-0,00.html">
+<input type=text name=keyword value="Bossk" size=40><input type=hidden name="SM" value="1">
+<input type=hidden name="tag" value="st.sn.srsb.top">
+&nbsp;&nbsp;<input type=submit value="Search">
+&nbsp;&nbsp;<span style="color:#0000FF"><a href="/main/help/item/0,11,home-6736,00.html"><font color="#0000FF" face="Arial,Helvetica" size=-2>Search Tips</a></font></span></font></td><td><spacer type=block width=1 height=1></form></td></tr></table>
+
+
+
+
+    
+
+<table align=right cellpadding=4 cellspacing=0 border=0>
+<tr><td><font face="Arial,Helvetica" size=-2>A D V E R T I S E M E N T</font></td></tr>
+
+<tr><td align=center>
+<spacer type=block width=1 height=1></td></tr>
+
+<tr><td align=center>
+<spacer type=block width=1 height=1></td></tr>
+
+<tr><td align=center>
+<spacer type=block width=1 height=1></td></tr>
+
+<tr><td align=center>
+<a href="http://home.snap.com/cgi-acc/acc_clickthru.acc?clickid=00005172cc22741200000000&adt=midas2&edt=home&cat=s-web&site=SN" target="_top"><img src="http://home.snap.com/Ads/Media/Images/freeshop.midas.text.freeshop.gif" alt="" border="1" height="31" width="88" ><br><center><font face="Verdana, Arial, Helvetica" size="-2"></font></center></A></td></tr>
+
+<tr><td><spacer type=block height=1 width=1></td></tr>
+</table>
+
+<table width="75%" cellpadding=0 cellspacing=0 border=0>
+<tr><td height=5 colspan=2><spacer type=block width=1 height=1></td></tr>
+
+
+<tr><td height=5 colspan=2><spacer type=block width=1 height=1></td></tr>
+<tr><td bgcolor="#CCCCCC" colspan=2><b><font face="Arial,Helvetica" size=-1>&nbsp;All Web Pages</font></b></td></tr>
+</table>
+
+<table width="100%" cellpadding=2 cellspacing=0 border=0>
+<tr><td height=8><spacer type=block width=1 height=8></td></tr>
+<tr valign=middle>
+<td align=right width=101><a href="http://www.inktomi.com/"><img src="/main/images/sponsors/inktomi.gif" width=101 height=25 border=0></a></td>
+<td nowrap width="100%"><font face="Arial,Helvetica" size=-2>Powered by <a href="http://www.inktomi.com/">Inktomi</a></font></td>
+</tr></table>
+
+
+<ul><font face="Arial,Helvetica" size=-1>
+   
+   
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.ipass.net/~adamcas/bossk.htm&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=0&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Bossk</a></b><br>
+     This picture comes from Phillip Wise Phillip Wise's Kenner Photo  Galler<br>
+   <font size=-2>Found at: http://www.ipass.net/~adamcas/bossk.htm</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://idgames.gameaholic.com/idgames/graphics/mdl/bossk.txt&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=1&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">/idgames/graphics/mdl/bossk.txt - Absolute Gamer's Files Archive</a></b><br>
+     Absolute Gamer's Files Archive contains various addons for Quake, Quake 2, Quake 3 Arena, Unreal and other games: skins, levels, upgrades, total conversions,  etc<br>
+   <font size=-2>Found at: http://idgames.gameaholic.com/idgames/graphics/mdl/bossk.txt</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://members.ultracom.net/wolfe/fatz/ESB/BOSSK.HTM&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=2&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">FATZ:Bossk</a></b><br>
+     <b>Bossk</b> Classification: Trandoshan Gender: Male Height: 1.9 Meters Home World: Trandosha Political Affiliation: Free-lance Status: Bounty Hunter Weapon(s) of Choice: Blaster Rifle, Grenade Launcher, Flame-thrower Vehicle of Choice: YV-666  Modified..<br>
+   <font size=-2>Found at: http://members.ultracom.net/wolfe/fatz/ESB/BOSSK.HTM</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.sirstevesguide.com/pf/pfbossk.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=3&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">SirSteve's Guide To Star Wars (SSG)</a></b><br>
+     Up-to-date information on the Star Wars  galaxy<br>
+   <font size=-2>Found at: http://www.sirstevesguide.com/pf/pfbossk.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.bossk.demon.co.uk/SetupKnockDown/missionimpossible/missionimpossible.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=4&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Mission Impossible</a></b><br>
+     At the beginning of the movie, Ethan Hunt uses the specail chewing gum to explode the glass fish tank in the restaurant. Now we know the power of the gum, he can use it to do the same thing to the helicopter at the end of the film. Mail  Us..<br>
+   <font size=-2>Found at: http://www.bossk.demon.co.uk/SetupKnockDown/missionimpossible/missionimpossible.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.bossk.freeserve.co.uk/&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=5&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Kev's Scottish Star Wars figures page</a></b><br>
+     Hi and welcome to my web page- back after a lengthy holiday. This site is mostly about the figures from the classic trilogy, since Episode 1 will never beat the old films for me, and I'm not actively collecting the merchandise. E-mail any news  to..<br>
+   <font size=-2>Found at: http://www.bossk.freeserve.co.uk/</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.angelfire.com/tx/chubbatrade/&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=6&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Metallica: Holier Than Thou</a></b><br>
+     Metallica: Holier Than Thou Prince Xizor I have collected a bunch of MIDI files of many Metallica songs. Some are good, some are great. However they all prove that Metallica is HOLLIER THAN THOU!! Name EMail Address Haves Wants Chubba (Owner  of..<br>
+   <font size=-2>Found at: http://www.angelfire.com/tx/chubbatrade/</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.boxerworld.com/fun98/9.htm&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=7&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Mr Fun Boxer 98 Contest ! Pictures 51 to 56.</a></b><br>
+     Fun Boxer 51. Simba is our new boxer puppy. He is a 10 weeks old, fawn male. He is very playful and affectionate, and as you can see in this picture, he is also teething.. Fun Boxer 52 Fun Boxer 53. Simba is owned by C.J.Slitas Fun Boxer 54.  This..<br>
+   <font size=-2>Found at: http://www.boxerworld.com/fun98/9.htm</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.toptown.com/THEEDGE/BIKERSCOUT/aliens.htm&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=8&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Aliens</a></b><br>
+     Home Bulletin Board Mailing List Poll Chatroom Updates News Episode 1 Figures Action Collection Buddies Beast Packs Misc Playsets Vintage Release Dates Wants Awards Links E-mail Admiral Ackbar Admiral Ackbar Carded Barquin D'an and Droopy  McCool..<br>
+   <font size=-2>Found at: http://www.toptown.com/THEEDGE/BIKERSCOUT/aliens.htm</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://sages.ign.com/codes/7/9041.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=9&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">GameSages - The Cure for the Common Code</a></b><br>
+     STAR WARS: REBEL ASSAULT Game Info: Platform: Macintosh Publisher: LucasArts Genre: Action Number of: Players 1 Select a Code FAQ's and Strategy Guides Level Passwords Passwords FAQ's and Strategy Guides All FAQ's are created and hosted by  GameFAQs<br>
+   <font size=-2>Found at: http://sages.ign.com/codes/7/9041.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.gamewinners.com/3DO/RebelAssault.htm&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=10&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Rebel Assault cheats, codes, hints, FAQs: 3DO</a></b><br>
+     Rebel Assault Skip mission: Press Up + A, Down + A, Left + A, Right + A at the screen where the Lucas Arts logo appears in front of the Death Star. A ringing sound and voice saying &quot;Lucas Arts&quot; will confirm correct code entry. Press C during  any..<br>
+   <font size=-2>Found at: http://www.gamewinners.com/3DO/RebelAssault.htm</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.gamewinners.com/SCD/StarWarsRebelAssault.htm&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=11&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Star Wars: Rebel Assault cheats, codes, hints, FAQs: Sega CD and CDX</a></b><br>
+     Cheats, codes, hints, and FAQs for Star Wars: Rebel Assault (Sega  CD)<br>
+   <font size=-2>Found at: http://www.gamewinners.com/SCD/StarWarsRebelAssault.htm</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://members.tripod.com/~dranders/&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=12&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">SW:CCG Trading Page</a></b><br>
+     LinkExchange Member Free Home Pages at GeoCities SW:CCG Trading Page Are you looking for a secure way to trade Starwars Cards over the internet? The Trading Exchange Service allows you to safely trade cards over the internet to ensure that you  don.<br>
+   <font size=-2>Found at: http://members.tripod.com/~dranders/</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://happypuppy.com/cheats/mac/rebelassau-cm1.htm&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=13&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Games: HAPPY PUPPY Games Onramp Mac Cheats For Rebel Assault</a></b><br>
+     Happy Puppy's Cheats Page For  Rebel  Assaul<br>
+   <font size=-2>Found at: http://happypuppy.com/cheats/mac/rebelassau-cm1.htm</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://members.aol.com/jorbloom/&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=14&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Jor Bloom's Home Page</a></b><br>
+     Jordan's Bounty Hunter page Jordan Bloom Hi and welcome to my page! All you have to do is click on the Bounty Hunter you want. (Note:Music may take a while) Dengar <b>Bossk</b> Zuckuss and 4-LOM Boba Fett IG-88 These are some more Bounty Hunters you  may..<br>
+   <font size=-2>Found at: http://members.aol.com/jorbloom/</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.toptown.com/THEEDGE/BIKERSCOUT/wants.htm&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=15&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">WHAT I AM LOOKING FOR</a></b><br>
+     Home Bulletin Board Mailing List Poll Chatroom Updates News Episode 1 Figures Action Collection Buddies Beast Packs Misc Playsets Vintage Release Dates Wants Awards Links E-mail What I am looking for Jabba Playset Rancor monster Twin Pod Cloud  Car.<br>
+   <font size=-2>Found at: http://www.toptown.com/THEEDGE/BIKERSCOUT/wants.htm</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.mcfedries.com/books/cightml/list/945-4.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=16&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">CIGHTML Mailing List -- Re: Cool banner-building utility</a></b><br>
+     Paul McFedries' Web Home Home Books Logophilia Toys Search Ramblings Select a page from this list --&gt; General -- Sign the Guest Book JavaScript Programs Files for Downloading Color Codes and Names -- Books -- Idiot's Guide to HTML CIGHTML  Message..<br>
+   <font size=-2>Found at: http://www.mcfedries.com/books/cightml/list/945-4.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.anetspace.com/news/newsfast/alt.tv.simpsons/177/853.htm&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=17&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">alt.tv.simpsons</a></b><br>
+     The De-spamming Newsreader Previous Next Article list Another newsgroup From: amadore@achilles.net (*<b>Bossk</b>*) Subject: Re: german quote on B. V. A Date: Sat, 27 Sep 1997 07:39:45 GMT Organization: Achilles Internet Ltd. On 27 Sep 1997 02:01:42  GMT.<br>
+   <font size=-2>Found at: http://www.anetspace.com/news/newsfast/alt.tv.simpsons/177/853.htm</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.garden.net/users&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=18&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Garden Networks Users' Pages</a></b><br>
+     Learn how to create your own home page. E-mail webmaster@garden.net to have your home page added to the list. 3d 5string acanj adampro aftershock artmom atrain bednark bogart <b>bossk</b> campmason cbbblink chris clauricefuller cnjsza dave ektupper  ewsm..<br>
+   <font size=-2>Found at: http://www.garden.net/users</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.geocities.com/Area51/Vault/1977&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=19&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Anakin's Home Page</a></b><br>
+     Member of the Linkexchange Free Hompages at Geocities Welcome, to Anakin's Homepage!! to my first try at the web..you are guest number at my web page since my counter broke This page is constantly being patched together..Hopefully it will  contain..<br>
+   <font size=-2>Found at: http://www.geocities.com/Area51/Vault/1977</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://members.tripod.com/~slave7&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=20&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Craig's Guide Bounty Hunters</a></b><br>
+     Welcome To Craig's Guide To Bounty Hunters Choose Your Destiny, by Selecting Your Bounty Hunter: Boba Fett IG-88 Dengar 4-LOM <b>Bossk</b> Zuckuss Jodo Kast Greedo Giarc Eilloc This Site Is Owned By Craig Collie, And Is Not An Authorized Star Wars  Website<br>
+   <font size=-2>Found at: http://members.tripod.com/~slave7</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://members.aol.com/skywlker8/ccg.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=21&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">SW: CCG Cards For Sale</a></b><br>
+     Star Wars CCG Players Have Been Here I'll make this plain and simple. I'm selling my cards-everything must go! You must send first, thats the only rule All my cards are BB/Mint except the Boba Fett and Commander Wedge Antillies from the SE  preview.<br>
+   <font size=-2>Found at: http://members.aol.com/skywlker8/ccg.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://members.aol.com/sonofskywr/toys.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=22&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">A1's Star Wars Toy Page</a></b><br>
+     A1's Star Wars Toy Page (Above is a picture of the soon to be released Darth Vader with removeable helmet.)Welcome to my Toy Section!! I am redoing this whole section so I can bring you lots more pictures. Below are the links to some of  the..<br>
+   <font size=-2>Found at: http://members.aol.com/sonofskywr/toys.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://soundamerica.com/sounds/cartoons/Popeye&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=23&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">CARTOONS</a></b><br>
+     CARTOONS Popeye Name Last Modified Size Description Parent Directory 03-Jan-99 16:57 - <b>bossk</b>.wav 14-Aug-97 22:55 5K audio/wav diskaprd.wav 14-Aug-97 22:55 8K audio/wav ohboy1.wav 14-Aug-97 22:55 4K audio/wav runt.wav 14-Aug-97 22:55 3K  audio/wav..<br>
+   <font size=-2>Found at: http://soundamerica.com/sounds/cartoons/Popeye</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://members.aol.com/Firewalk5/josh.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=24&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Josh's Star Wars Site</a></b><br>
+     This site was made possible by: ArmorKin(Don)-- Firewalk5(Josh) ArmorKin's Home Page-- Josh's Star Wars Site &amp; Kyle S. Hello &amp; welcome to Josh's Homepage ! I hope you find something you like so enjoy ! Character Bios --Links--Triva-- | Sign  The..<br>
+   <font size=-2>Found at: http://members.aol.com/Firewalk5/josh.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.geocities.com/Area51/Dimension/9216&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=25&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Home Page</a></b><br>
+     <br>
+   <font size=-2>Found at: http://www.geocities.com/Area51/Dimension/9216</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.geocities.com/Area51/Zone/6832/swccg.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=26&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">No Title</a></b><br>
+     Star Wars Trading Page WELCOME TO MY STAR WARS TRADING PAGE Here are the STAR WARS CARDS I have and want. these are mainly my uncommons and rares..If you need a common card E-mail me..I Probably have it My Dagobah box came I have every  bounty..<br>
+   <font size=-2>Found at: http://www.geocities.com/Area51/Zone/6832/swccg.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://acm.cs.umn.edu/~slug/rebel/rebel-codes.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=27&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Rebel Assault Passcodes</a></b><br>
+     Rebel Assault Passcodes Intel based verion: Easy Normal Hard Section FALCON ANOAT YUZZEM BRIGIA GREEDO BIGGS KAIBURR MYNOCK DAGOBAH MIMBAN ACKBAR FORNAX BESPIN KESSEL ORGANA Star Destroyer (ch. 1,2,3,4,5,6) Hoth (ch. 7,8,9,10) Yavin (ch.  11,12,13.<br>
+   <font size=-2>Found at: http://acm.cs.umn.edu/~slug/rebel/rebel-codes.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.rummaging.com/resale/rwwboard/messages/3160.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=28&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Re: ******IN SEARCH OF ZOOT SUIT OR ZOOT SUIT PATTERN</a></b><br>
+     Re: **IN SEARCH OF ZOOT SUIT OR ZOOT SUIT PATTERN [ Follow Ups ] [ Post Followup ] [ Second Thoughts ] Posted by Jesney François on March 02, 1999 at 13:15:42: In Reply to: **IN SEARCH OF ZOOT SUIT OR ZOOT SUIT PATTERN posted by <b>Bossk</b> on  November..<br>
+   <font size=-2>Found at: http://www.rummaging.com/resale/rwwboard/messages/3160.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.alpine.k12.ut.us/ths/multimedia/punk.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=29&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Dmitry's Punk Page - Main</a></b><br>
+     L I N K S MTV Blizzard Lookout Records page maintained by  <b>bossk</b>_@hotmail.co<br>
+   <font size=-2>Found at: http://www.alpine.k12.ut.us/ths/multimedia/punk.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.isd2154.k12.mn.us/Pi/sw/decks/darkoperative1.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=30&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Operatives, Operatives, and more Operatives</a></b><br>
+     NEW | MAIN | STAR WARS | BATTLETECH | OTHER STUFF | p_ Star Wars Cardlist Decks Reflist Trades Articles Operatives, Operatives, Operatives **NOTE: this deck is pre-Decipher's errata.** This is just a generic template for a dark operatives deck.  I..<br>
+   <font size=-2>Found at: http://www.isd2154.k12.mn.us/Pi/sw/decks/darkoperative1.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://books.dreambook.com/chewybacca/oolacrumb.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=31&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">OOLA AND SALACIOUS B. CRUMB's Dreambook</a></b><br>
+     OOLA AND SALACIOUS B. CRUMB Welcome to Dreambook, a nifty new free service from: New Dream Network, Dreamhost, and Webring! If you have a minute, please sign my Dreambook too! Name: Adam Comments: In May this two pack will be availble to order  for.<br>
+   <font size=-2>Found at: http://books.dreambook.com/chewybacca/oolacrumb.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://home.tanet.net/stacyw/staces.htm&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=32&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">StAce's Star Wars</a></b><br>
+     LinkExchange Member WELCOME! to StAce's Star Wars Buy the Book Today! NEW! Take my *Star Wars* survey! Click HERE! Download a little Star Wars game - it's a hoot! Check out my Home Page! Vintage Loose Star Wars Action Figures (1977-1983)  Action..<br>
+   <font size=-2>Found at: http://home.tanet.net/stacyw/staces.htm</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://members.tripod.com/~darkvapor&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=33&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Jedi Knight Testing Team</a></b><br>
+     Where the testing never stops. Welcome to JKTT Hello and welcome to Jedi Knight Testing Team, I am Dark Jedi and I now am the webmaster of JKTT. Let me tell you a little about JKTT. First of all, we are a group of free lance Jedi Knight  players..<br>
+   <font size=-2>Found at: http://members.tripod.com/~darkvapor</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://clapton.onecom.com/clevelandphoto.htm&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=34&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Photos of Eric Clapton in Cleveland, Ohio</a></b><br>
+     Photo's From Cleveland 4/12/98 Jr. Swellbone's Eric Clapton Site I would like to personally thank Bob Jadloski for providing these photo's for my site. I've known Bob for some time, we seem to always be at the same concerts. He has an  extraordinary<br>
+   <font size=-2>Found at: http://clapton.onecom.com/clevelandphoto.htm</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.alphalink.com.au/~bens/wave7.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=35&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Ben's POTF Wave 7 Figures Page</a></b><br>
+     return of the jedi Links Some quick links to some kick ass sites. Counter Strike Yakface's Realm Rebel Scum Voodoo Extreme Official Star Wars Site The Force.Net Site Pages: - Main Page - News Archive - Links Page - Holden Page - POTF Figures  ..<br>
+   <font size=-2>Found at: http://www.alphalink.com.au/~bens/wave7.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://emronfaxnews.com/users&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=36&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Garden Networks Users' Pages</a></b><br>
+     Learn how to create your own home page. E-mail webmaster@garden.net to have your home page added to the list. 3d 5string acanj adampro aftershock artmom atrain bednark bogart <b>bossk</b> campmason cbbblink chris clauricefuller cnjsza dave ektupper  ewsm..<br>
+   <font size=-2>Found at: http://emronfaxnews.com/users</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://sfranklin.com/users&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=37&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Garden Networks Users' Pages</a></b><br>
+     Learn how to create your own home page. E-mail webmaster@garden.net to have your home page added to the list. 3d 5string acanj adampro aftershock artmom atrain bednark bogart <b>bossk</b> campmason cbbblink chris clauricefuller cnjsza dave ektupper  ewsm..<br>
+   <font size=-2>Found at: http://sfranklin.com/users</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.hubertschmidt.de/starwars/englisch/bountyhu.htm&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=38&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Tales of the Bounty Hunters</a></b><br>
+     This page contains a short description of the Star Wars stories Tales of the Bounty Hunters edited by Kevin J.  Anderso<br>
+   <font size=-2>Found at: http://www.hubertschmidt.de/starwars/englisch/bountyhu.htm</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.mcfedries.com/books/cightml/list/1092-8.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=39&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">CIGHTML Mailing List -- Re: Oh yea, the URL</a></b><br>
+     Paul McFedries' Web Home Home Books Logophilia Toys Search Ramblings Select a page from this list --&gt; General -- Sign the Guest Book JavaScript Programs Files for Downloading Color Codes and Names -- Books -- Idiot's Guide to HTML CIGHTML  Message..<br>
+   <font size=-2>Found at: http://www.mcfedries.com/books/cightml/list/1092-8.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.mcfedries.com/Books/cightml/List/1034-1.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=40&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">CIGHTML Mailing List -- Re: Scripting Languages for Web pages Compaired</a></b><br>
+     Paul McFedries' Web Home Home Books Logophilia Toys Search Ramblings Select a page from this list --&gt; General -- Sign the Guest Book JavaScript Programs Files for Downloading Color Codes and Names -- Books -- Idiot's Guide to HTML CIGHTML  Message..<br>
+   <font size=-2>Found at: http://www.mcfedries.com/Books/cightml/List/1034-1.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.mcfedries.com/books/cightml/list/1092-6.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=41&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">CIGHTML Mailing List -- Re: Oh yea, the URL</a></b><br>
+     Paul McFedries' Web Home Home Books Logophilia Toys Search Ramblings Select a page from this list --&gt; General -- Sign the Guest Book JavaScript Programs Files for Downloading Color Codes and Names -- Books -- Idiot's Guide to HTML CIGHTML  Message..<br>
+   <font size=-2>Found at: http://www.mcfedries.com/books/cightml/list/1092-6.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.mcfedries.com/books/cightml/list/947-12.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=42&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">CIGHTML Mailing List -- Re: Animated Background(?)(!)(?)(!)</a></b><br>
+     Paul McFedries' Web Home Home Books Logophilia Toys Search Ramblings Select a page from this list --&gt; General -- Sign the Guest Book JavaScript Programs Files for Downloading Color Codes and Names -- Books -- Idiot's Guide to HTML CIGHTML  Message..<br>
+   <font size=-2>Found at: http://www.mcfedries.com/books/cightml/list/947-12.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.mcfedries.com/books/cightml/list/1185-5.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=43&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">CIGHTML Mailing List -- Re: subject in the e-mail</a></b><br>
+     Paul McFedries' Web Home Home Books Logophilia Toys Search Ramblings Select a page from this list --&gt; General -- Sign the Guest Book JavaScript Programs Files for Downloading Color Codes and Names -- Books -- Idiot's Guide to HTML CIGHTML  Message..<br>
+   <font size=-2>Found at: http://www.mcfedries.com/books/cightml/list/1185-5.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.mcfedries.com/books/cightml/list/1144-1.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=44&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">CIGHTML Mailing List -- Re: links opening in new browser window.</a></b><br>
+     Paul McFedries' Web Home Home Books Logophilia Toys Search Ramblings Select a page from this list --&gt; General -- Sign the Guest Book JavaScript Programs Files for Downloading Color Codes and Names -- Books -- Idiot's Guide to HTML CIGHTML  Message..<br>
+   <font size=-2>Found at: http://www.mcfedries.com/books/cightml/list/1144-1.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.mcfedries.com/books/cightml/list/1092-5.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=45&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">CIGHTML Mailing List -- Re: Oh yea, the URL</a></b><br>
+     Paul McFedries' Web Home Home Books Logophilia Toys Search Ramblings Select a page from this list --&gt; General -- Sign the Guest Book JavaScript Programs Files for Downloading Color Codes and Names -- Books -- Idiot's Guide to HTML CIGHTML  Message..<br>
+   <font size=-2>Found at: http://www.mcfedries.com/books/cightml/list/1092-5.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.echostation.com/shop/tfawaction.htm&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=46&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Echo Station: Action Figures</a></b><br>
+     ACTION FIGURES (please allow images to load) Select a series to view the available selection: Complete List of Toys Episode I Bespin Collection Action Collection Beast Assortment Cinema Scenes Complete Galaxy Electronic Power F/X Plush  Buddies..<br>
+   <font size=-2>Found at: http://www.echostation.com/shop/tfawaction.htm</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.pacificnet.net/jungle/starwars.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=47&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">GYPSY'S STAR WARS ACTION FIGURES</a></b><br>
+     GYPSY'S STAR WARS ACTION FIGURES Japanese green/gold C3-PO Bib Fortuna Luke Skywalker with Speeder Bike Imperial Biker Scout Luke Skywalker Princess Leia Organa Han Solo Obi-Wan Kenobi Chewbacca C3PO R2-D2 Yoda Luke Hoth Gear Rebel Soldier  Hoth..<br>
+   <font size=-2>Found at: http://www.pacificnet.net/jungle/starwars.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.piett.org/fiction/top10figures.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=48&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Top Ten Reasons You Like The Empire's Officers</a></b><br>
+     Top Ten Admiral Piett Action Figures Written and submitted by Jesse Smith 10) Captain Piett 9) Admiral Piett's Expresses His OpinionThree Pack(Admiral Piett, <b>Bossk</b>, Imperial Officer) 8) Captain Piett's report (Captain Piett, Admiral Ozzel,  General.<br>
+   <font size=-2>Found at: http://www.piett.org/fiction/top10figures.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.galoob.com/SWAF/SWAFBP04.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=49&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Star Wars(tm) Action Fleet® 68014</a></b><br>
+     Not shown to scale. (Clockwise): Sandtrooper riding Dewback, Greedo, <b>Bossk</b> and Boba Fett. . Asst. 68010 No. 68014 Battle Packs TM #4: Imperial Hunters Imperial Hunters are &quot;hired guns&quot; in the service of the evil Empire. For the right price,  these..<br>
+   <font size=-2>Found at: http://www.galoob.com/SWAF/SWAFBP04.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.tripod.lycos.nl/explore/Bop.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=50&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">No Title</a></b><br>
+     Onderdeel van het Lycos network A B0 - BA BB - BE BF - BJ BK - BO BP - BU BV - B_ Ba0 - Bac Bad - Bal Bam - Bar Bas Bat - Baz Bb - Bd Be0 - Bec Bed - Bek Bel - Ben Beo - Ber Bes - Bey Bez Bf - Bh Bi0 - Bie Bif - Bij Bik - Bis Bit - Biz Bj - Bk  Bl0.<br>
+   <font size=-2>Found at: http://www.tripod.lycos.nl/explore/Bop.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.polart.com/adam/_borders&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=51&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Index of /adam/_borders</a></b><br>
+     Index of /adam/_borders Name Last modified Size Description Parent Directory 26-Apr-1999 19:16 - WS_FTP.LOG 08-Jan-1999 20:39 2k _vti_cnf/ 08-Jan-1999 20:38 - amazon.gif 28-Apr-1999 22:36 1k atate.gif 28-Apr-1999 22:35 24k <b>bossk</b>.gif 28-Apr-1999  22.<br>
+   <font size=-2>Found at: http://www.polart.com/adam/_borders</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.hitechworld.com.au/cheats/3do/rebel_assault.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=52&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Hitech World 3DO Cheats (Star Wars: Rebel Assault)</a></b><br>
+     Star Wars: Rebel Assault Level Skip At the Lucas Arts logo, press Up + A, Down + A, Left + A, Right + A until you hear a tone (several times). To activate, press C while playing to skip a level. Passwords Here are all the passwords for this  stellar<br>
+   <font size=-2>Found at: http://www.hitechworld.com.au/cheats/3do/rebel_assault.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.geocities.com/Area51/Zone/7885/trades.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=53&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Avenger's Trading Post</a></b><br>
+     Avenger's Trading Post I need your have/want lists to get this going!! If you send me your haves, wants, name, and E-Mail, I will put you up on my board(use TRADING POST as the subject). Ever get board of posting and reposting the same message  on..<br>
+   <font size=-2>Found at: http://www.geocities.com/Area51/Zone/7885/trades.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.mortdieu.demon.co.uk/&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=54&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Quick SE Page</a></b><br>
+     Hopefully this should be able to display my wants and trades Haves Light Side Dark Side All Wings Report In (* 2)A Real Hero * Ben Kenobi <b>Bossk</b> In Hound's Tooth (* 2) Bron Burs Cloud City Occupation Camie (* 2) Corporal Grenwick Coruscant  Destroyed<br>
+   <font size=-2>Found at: http://www.mortdieu.demon.co.uk/</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.idcomm.com/personal/Fabulous/StarWars/Galoob_B.htm&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=55&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Galoob STAR WARS Action Fleet</a></b><br>
+     Click here if you wish to see: All Lists Vehicles | Battle Packs | Series Alpha Flight Controller | Kay-Bee Specials | Playsets PICTURES BATTLE PACKS FALL 1996 NAME VEHICLE CHARACTERS #1 Rebel Alliance 2 Speeder Bikes Lando Calrissian, Luke  (Endor.<br>
+   <font size=-2>Found at: http://www.idcomm.com/personal/Fabulous/StarWars/Galoob_B.htm</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.accesscom.net/~stormtrooper/dude.htm&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=56&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">The Imperial Gallery: Cantina Dude</a></b><br>
+     Cantina Dude The Cantina Dude, aka Cantina Patron, is a pretty easy custom to do if you can get your hands on a Johhny Quest Shuttle Pilot helmet. The body is <b>Bossk</b>'s (duh), and no repainting is necessary because the uniform is exactly the same.  I.<br>
+   <font size=-2>Found at: http://www.accesscom.net/~stormtrooper/dude.htm</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.macaccess.com/magic/SWCCG/jrefs.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=57&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Jamie's Refs</a></b><br>
+     Jamie's Refs Note: Not all of these refs are from SW:CCG or trades. Some are from auctions. Check Card Trader (link on Star Wars Page) for more refs. freckel2@aol.com TRupskin12@aol.com auyanged@email.uc.edu rdbarclay@hotmail.com  Jbrownel@aol.com..<br>
+   <font size=-2>Found at: http://www.macaccess.com/magic/SWCCG/jrefs.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.mcfedries.com/books/cightml/list/947-0.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=58&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">CIGHTML Mailing List -- Animated Background(?)(!)(?)(!)</a></b><br>
+     Paul McFedries' Web Home Home Books Logophilia Toys Search Ramblings Select a page from this list --&gt; General -- Sign the Guest Book JavaScript Programs Files for Downloading Color Codes and Names -- Books -- Idiot's Guide to HTML CIGHTML  Message..<br>
+   <font size=-2>Found at: http://www.mcfedries.com/books/cightml/list/947-0.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.mcfedries.com/books/cightml/list/886-5.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=59&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">CIGHTML Mailing List -- Re: Table problem</a></b><br>
+     Paul McFedries' Web Home Home Books Logophilia Toys Search Ramblings Select a page from this list --&gt; General -- Sign the Guest Book JavaScript Programs Files for Downloading Color Codes and Names -- Books -- Idiot's Guide to HTML CIGHTML  Message..<br>
+   <font size=-2>Found at: http://www.mcfedries.com/books/cightml/list/886-5.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.gsppc.org/gheryp/sw/decks/deckd19.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=60&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Travis' Dark Deck</a></b><br>
+     Travis' Dark Deck Locations Death Star DS: War Room DS: Detention Block Corridor DS: Detention Block Control Room DS: Docking Bay 327 Yavin IV Hoth Tatooine:Lars Moisture Farm Hoth: Ice Plains (5th Marker) Characters Darth Vader (x2) Grand  Moff..<br>
+   <font size=-2>Found at: http://www.gsppc.org/gheryp/sw/decks/deckd19.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.megalink.net/~cooke/kevin/starwars2.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=61&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Kevin's Super Star Wars Collection Page!</a></b><br>
+     TO KEVIN'S SUPER COLLECTION PAGE! Collection: Here is a list of Star Wars stuff in my collection. Action Figures: Emperor Palpatine Emperor's Royal Guard Darth Vader Stormtrooper Sandtrooper Snowtrooper Grand Moff Tarkin TIE Fighter Pilot  AT-ST..<br>
+   <font size=-2>Found at: http://www.megalink.net/~cooke/kevin/starwars2.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.bookbuyer.com/aisles/titles/902750.htm&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=62&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">BookBuyers Outlet-BookBuyers Place.</a></b><br>
+     World's Best stocked BookStore with over 400,000 titles in stock, and 20%-40% OFF on all titles in  stock<br>
+   <font size=-2>Found at: http://www.bookbuyer.com/aisles/titles/902750.htm</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://members.xoom.com/snowboarder/StarWars.htm&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=63&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Star Wars</a></b><br>
+     Star Wars POTF Figures For Sale!! Orange/Red Cards Lando Calrisson (.00) $7.00 Han Solo in Hoth Gear (.00) $10.00 Han in Hoth Gear Open Hand (.00) $18.00 Chewbacca (.00) $9.00 Bobba Fett (.01) $12.00 Luke Skywalker in xwing Fighter Pilot Gear  (.01.<br>
+   <font size=-2>Found at: http://members.xoom.com/snowboarder/StarWars.htm</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://pages.map.com/starwars/figures.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=64&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">SW TRP: Action Figures</a></b><br>
+     Action Figures This page is not intended to be a visual guide to all the action figures that made up the Star Wars line. For photographs that show the complete line, consult either Tomart's Price Guide to Worldwide Star Wars Collectibles or  Action.<br>
+   <font size=-2>Found at: http://pages.map.com/starwars/figures.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.mcfedries.com/books/cightml/list/1024-4.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=65&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">CIGHTML Mailing List -- Re: passwords on web page</a></b><br>
+     Paul McFedries' Web Home Home Books Logophilia Toys Search Ramblings Select a page from this list --&gt; General -- Sign the Guest Book JavaScript Programs Files for Downloading Color Codes and Names -- Books -- Idiot's Guide to HTML CIGHTML  Message..<br>
+   <font size=-2>Found at: http://www.mcfedries.com/books/cightml/list/1024-4.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.mcfedries.com/Books/cightml/List/1031-0.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=66&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">CIGHTML Mailing List -- Java script help...</a></b><br>
+     Paul McFedries' Web Home Home Books Logophilia Toys Search Ramblings Select a page from this list --&gt; General -- Sign the Guest Book JavaScript Programs Files for Downloading Color Codes and Names -- Books -- Idiot's Guide to HTML CIGHTML  Message..<br>
+   <font size=-2>Found at: http://www.mcfedries.com/Books/cightml/List/1031-0.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.mcfedries.com/books/cightml/list/943-6.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=67&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">CIGHTML Mailing List -- Re: geocities</a></b><br>
+     Paul McFedries' Web Home Home Books Logophilia Toys Search Ramblings Select a page from this list --&gt; General -- Sign the Guest Book JavaScript Programs Files for Downloading Color Codes and Names -- Books -- Idiot's Guide to HTML CIGHTML  Message..<br>
+   <font size=-2>Found at: http://www.mcfedries.com/books/cightml/list/943-6.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.mcfedries.com/books/cightml/list/948-0.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=68&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">CIGHTML Mailing List -- Image instead of &quot;SUBMIT&quot;</a></b><br>
+     Paul McFedries' Web Home Home Books Logophilia Toys Search Ramblings Select a page from this list --&gt; General -- Sign the Guest Book JavaScript Programs Files for Downloading Color Codes and Names -- Books -- Idiot's Guide to HTML CIGHTML  Message..<br>
+   <font size=-2>Found at: http://www.mcfedries.com/books/cightml/list/948-0.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.mcfedries.com/books/cightml/list/937-2.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=69&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">CIGHTML Mailing List -- Re: animation</a></b><br>
+     Paul McFedries' Web Home Home Books Logophilia Toys Search Ramblings Select a page from this list --&gt; General -- Sign the Guest Book JavaScript Programs Files for Downloading Color Codes and Names -- Books -- Idiot's Guide to HTML CIGHTML  Message..<br>
+   <font size=-2>Found at: http://www.mcfedries.com/books/cightml/list/937-2.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.realastrology.com/realtest/quest17d/messages/3104.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=70&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">On a lighter note...</a></b><br>
+     Home | Question List | Previous Question On a lighter note.. Posted by Zooey on March 05, 1999 at 20:20:07: In preparation for the upcoming release of the new star wars, I'd like to throw in a survey. Who are the greates(most interesting,  unique..<br>
+   <font size=-2>Found at: http://www.realastrology.com/realtest/quest17d/messages/3104.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.tids.pair.com/gcstuff/gcboards/oocbord.htm&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=71&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Galactic Conquest Rebellion Board</a></b><br>
+     Galactic Conquest Rebellion Battle/OOC Board The current EST is: Notice: Do not post on these boards unless you are in the Galactic Conquest: Rebellion Sim. Battle switched to 12 hour posting rounds (All) - Lothar [N/A] 17:15:44 5/27/99 (0)  gamorr.<br>
+   <font size=-2>Found at: http://www.tids.pair.com/gcstuff/gcboards/oocbord.htm</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.swgamers.com/nest/fmes.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=72&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">The Crow's Nest: FMEs</a></b><br>
+     FMEs FME is an abbreviation for 'frame', and is an apt description of what this file is. FMEs are the one frame objects that you find lying around in the levels. Lampposts, dead bodies, rocks, and most of the powerups and items are FMEs. You  can..<br>
+   <font size=-2>Found at: http://www.swgamers.com/nest/fmes.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.asgard.net.au/~bcarroll/gateway/starwars.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=73&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">No Title</a></b><br>
+     Carded 1980's Star Wars Figures in mint condition, cards unpunched. (Updated Sept 1999) HANS SOLO (TRENCH COAT) $19.90 PRINCESS LEIA (COMBAT PONC0) $19.90 &quot; &quot; COIN POTF $39 KLAATU (SKIFF GUARD ) $29.90 WICKET W WARRICK $59 KLAATU (WOOL)  $9.90..<br>
+   <font size=-2>Found at: http://www.asgard.net.au/~bcarroll/gateway/starwars.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.netins.net/showcase/reading/warsficnew.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=74&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">New Star Wars Fiction, and where to find them</a></b><br>
+     lists related books with brief descriptions and links for finding them on the  ne<br>
+   <font size=-2>Found at: http://www.netins.net/showcase/reading/warsficnew.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.driver-forum.com/video/670.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=75&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Re: vids:I263 decompressor AVI</a></b><br>
+     Re: vids:I263 decompressor AVI Need a DRIVER? Click Here! Have you had your Daily Tech News? Try DailyTechNews.com Click here! [ Follow Ups ] [ Post Followups ] [ FAQ ] [ Back to Messages ] Posted by Xaluvier on February 27, 1999 at 15:04:49:  In..<br>
+   <font size=-2>Found at: http://www.driver-forum.com/video/670.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.driver-forum.com/video/672.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=76&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Re: vids:I263 decompressor AVI</a></b><br>
+     Re: vids:I263 decompressor AVI Need a DRIVER? Click Here! Have you had your Daily Tech News? Try DailyTechNews.com Click here! [ Follow Ups ] [ Post Followups ] [ FAQ ] [ Back to Messages ] Posted by Richard Maltby on February 28, 1999 at  04:53:20.<br>
+   <font size=-2>Found at: http://www.driver-forum.com/video/672.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.idcomm.com/personal/Fabulous/StarWars/Classic.htm&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=77&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Classic Star Wars Figures</a></b><br>
+     Classic STAR WARS Figures (Most weapons and accessories not shown.) A New Hope Set 1 - 1977 Darth Vader, Luke Skywalker, C-3P0, R2-D2, Princess Leia, Han Solo, Chewbacca, Obi-Wan Kenobi, Jawa, Death Squad Commander, Stormtrooper, Tusken Raider  ..<br>
+   <font size=-2>Found at: http://www.idcomm.com/personal/Fabulous/StarWars/Classic.htm</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.bookbuyer.com/aisles/titles/955810.htm&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=78&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">BookBuyers Outlet-BookBuyers Place.</a></b><br>
+     World's Best stocked BookStore with over 400,000 titles in stock, and 20%-40% OFF on all titles in  stock<br>
+   <font size=-2>Found at: http://www.bookbuyer.com/aisles/titles/955810.htm</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://user.dcci.com/philip1/Toy_Sales/Star_Wars/star_wars.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=79&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Star Wars</a></b><br>
+     Action Figures and Toys for Sale, Autograph Collecting information and many interesting and fun  link<br>
+   <font size=-2>Found at: http://user.dcci.com/philip1/Toy_Sales/Star_Wars/star_wars.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://hem2.passagen.se/xizor/intresse.htm&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=80&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">intressen</a></b><br>
+     Mina intressen Hej och välkommen till min intresse-sida.Här kan ni bl a. läsa om mina fritidsintressen och vad jag lyssnar på för musik. Mycket nöje! Först tänkte jag berätta litegrann om mitt allra största och roligaste intresse: Star Wars.  Som..<br>
+   <font size=-2>Found at: http://hem2.passagen.se/xizor/intresse.htm</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.mcfedries.com/Books/cightml/List/1034-2.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=81&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">CIGHTML Mailing List -- RE: Scripting Languages for Web pages Compaired</a></b><br>
+     Paul McFedries' Web Home Home Books Logophilia Toys Search Ramblings Select a page from this list --&gt; General -- Sign the Guest Book JavaScript Programs Files for Downloading Color Codes and Names -- Books -- Idiot's Guide to HTML CIGHTML  Message..<br>
+   <font size=-2>Found at: http://www.mcfedries.com/Books/cightml/List/1034-2.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.mcfedries.com/books/cightml/list/968-1.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=82&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">CIGHTML Mailing List -- Re: The VALIGN attribute</a></b><br>
+     Paul McFedries' Web Home Home Books Logophilia Toys Search Ramblings Select a page from this list --&gt; General -- Sign the Guest Book JavaScript Programs Files for Downloading Color Codes and Names -- Books -- Idiot's Guide to HTML CIGHTML  Message..<br>
+   <font size=-2>Found at: http://www.mcfedries.com/books/cightml/list/968-1.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.mcfedries.com/books/cightml/list/1038-2.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=83&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">CIGHTML Mailing List -- RE: Scripting Languages for Web pages Compaired</a></b><br>
+     Paul McFedries' Web Home Home Books Logophilia Toys Search Ramblings Select a page from this list --&gt; General -- Sign the Guest Book JavaScript Programs Files for Downloading Color Codes and Names -- Books -- Idiot's Guide to HTML CIGHTML  Message..<br>
+   <font size=-2>Found at: http://www.mcfedries.com/books/cightml/list/1038-2.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.camasnet.com/~asondahl/birrion/trivia.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=84&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">trivia</a></b><br>
+     This Fortnight's Star Wars trivia.. (Note: some browsers, Netscape 2.0 and lower and IE, may not be able to send answers through this form. Also AOL doesn't work very well. If not, then send regular e-mail to &quot;slewfoot@camasnet.com&quot;. This is  my..<br>
+   <font size=-2>Found at: http://www.camasnet.com/~asondahl/birrion/trivia.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.beyond.swccgnews.com/decks/Darkdeck131.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=85&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Beyond SWCCG - Decks - Cloud City Assault</a></b><br>
+     Cloud City Assault Krosk capt.kirk@metaware.com Locations-- 1.Bespin (Starting Location) 2. Cloud City: East Platform (Docking bay) 3. Cloud City: Lower Corridor 4. Cloud City: Upper Plaza Corridor 5. Cloud City: Security Tower 6.Death Star  7..<br>
+   <font size=-2>Found at: http://www.beyond.swccgnews.com/decks/Darkdeck131.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.beyond.swccgnews.com/decks/Darkdeck68.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=86&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Beyond SWCCG - Decks - Palpatine's Dark Deck</a></b><br>
+     Palpatine's Dark Deck Palpatine coolman777@hotmail.com Locations: Death Star (starting location) Death Star:War Room Tatooine:Lars Moisture Farm Tatooine:Junland Waste Characters: Darth Vader Grand Moff Tarkin Lt. Cabbel Captain Piett Admiral  Motti<br>
+   <font size=-2>Found at: http://www.beyond.swccgnews.com/decks/Darkdeck68.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.gsppc.org/gheryp/sw/decks/deckd21.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=87&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">The Power of the Dark Side</a></b><br>
+     The Power of the Dark Side Locations Kiffex Kashyyyk Kessel Anoat Hoth Asteriod Field x6 Big One x2 Characters Darth Vader Grand Moff Tarkin Admiral Motti Admiral Ozzel Captain Lennox Captain Nedda Warrant Officer M'Kae DS-61-2 DS-61-3  DS-61-4..<br>
+   <font size=-2>Found at: http://www.gsppc.org/gheryp/sw/decks/deckd21.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.galoob.com/bbs1/thread557/message3.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=88&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">No Title</a></b><br>
+     PREVIOUS MESSAGE NEXT MESSAGE NEXT SUBJECT ADD A MESSAGE SEND E-MAIL TO WRITER ADD SUBJECT Subject: MMs we want, SO LISTEN UP GALOOB!! From: Purple Dave (LD164996@hope.edu) 18 Feb 16:08 PST Okay, here we have more complete lists of Rebel and  Imp..<br>
+   <font size=-2>Found at: http://www.galoob.com/bbs1/thread557/message3.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.angelfire.com/ny/jammed/have.wants.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=89&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">HAVE/WANT LIST</a></b><br>
+     If you would like to make an offer, well than E-Mail me ALL MY CARDS ARE BB M/NM UNLESS STATED, I EXPECT THE SAME View My Net Refs NEEDS: ANY BLACK BORDERED CARDS I DON'T HAVE I HAVE A DS SPACE/LAND DECK, SO THOSE TYPES OF CARDS ARE WANTED Alter  x5<br>
+   <font size=-2>Found at: http://www.angelfire.com/ny/jammed/have.wants.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.geocities.com/Area51/Corridor/7864&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=90&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Birdmano and Stevebacca's Home Page</a></b><br>
+     May the Force be With You.. Good news!! My friend Stevebacca and I have decided to merge our pages!! Welcome to our home page. This page is based on Star Wars (In General), SW:CCG and computer games. We will try to keep up to date on numerous  Star.<br>
+   <font size=-2>Found at: http://www.geocities.com/Area51/Corridor/7864</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://members.tripod.com/~PSYCOMATT/index-2.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=91&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Grand Admiral PSYCOMATT's Star Wars Custom Figures</a></b><br>
+     Grand Admiral PSYCOMATT'S Star Wars Custom Figures! WELCOME TO MY PALACE! Not so long ago in a rather close galaxy, Kenner made Star Wars figures which made many fans happy but they didn't make enough figures. Angry fans complained because some  of.<br>
+   <font size=-2>Found at: http://members.tripod.com/~PSYCOMATT/index-2.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://anotheruniverse.com/toys/toyshelf/ret_jedi.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=92&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Return of the Jedi</a></b><br>
+     Action Figure Database | Toy News | Toy Features | Toy Links | Toy Archives | Send Us Feedback Return of the Jedi Kenner 1983 2-1B Lando Calrissian4-LOM Leia Organa8D8 Leia Organa (Bespin, Crew Neck, Profile)Admiral Ackbar Leia Organa (Bespin,  Crew<br>
+   <font size=-2>Found at: http://anotheruniverse.com/toys/toyshelf/ret_jedi.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.planetfortress.com/history/people.shtml&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=93&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Planetfortress</a></b><br>
+     Scouts.. gotta catch 'em all! A Proud Member of the TeamFortress2 WebRing TF has a strong history.. go forth and read about the &quot;roots&quot; that are TF. S TF History Features News Clans People Send Mail News - Newswire - Search - Archives - Send  News.<br>
+   <font size=-2>Found at: http://www.planetfortress.com/history/people.shtml</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://vgames.webpoint.com/vid/starnews/games/0%252C1283%252C427%252C00.html.cmd&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=94&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">StarNews - Tips, Tricks &amp; Reviews: Star Wars Rebel Assault</a></b><br>
+     Starnews.com | indy.com | IndySource Classified Main Menu | The Curve Advanced Search Star Wars Rebel Assault by: JVC for: Sega CD This one's not actually based on the &quot;Star Wars&quot; movies, but it's still pretty cool -- in fact, it reminds us a  lot..<br>
+   <font size=-2>Found at: http://vgames.webpoint.com/vid/starnews/games/0%2C1283%2C427%2C00.html.cmd</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://vgames.webpoint.com/vid/pgonline/games/0%252C1375%252C427%252C00.html.cmd&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=95&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">PG Online - Tips, Tricks &amp; Reviews: Star Wars Rebel Assault</a></b><br>
+     Advanced Search Star Wars Rebel Assault by: JVC for: Sega CD This one's not actually based on the &quot;Star Wars&quot; movies, but it's still pretty cool -- in fact, it reminds us a lot of Shockwave, for the 3DO, which is one of our all-time favorite  games.<br>
+   <font size=-2>Found at: http://vgames.webpoint.com/vid/pgonline/games/0%2C1375%2C427%2C00.html.cmd</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://vgames.webpoint.com/vid/postnet/games/0%252C1398%252C427%252C00.html.cmd&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=96&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Post Net - Tips, Tricks &amp; Reviews: Star Wars Rebel Assault</a></b><br>
+     Advanced Search Star Wars Rebel Assault by: JVC for: Sega CD This one's not actually based on the &quot;Star Wars&quot; movies, but it's still pretty cool -- in fact, it reminds us a lot of Shockwave, for the 3DO, which is one of our all-time favorite  games.<br>
+   <font size=-2>Found at: http://vgames.webpoint.com/vid/postnet/games/0%2C1398%2C427%2C00.html.cmd</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.networx.net.au/~melvosh/action.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=97&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Coruscant Underground</a></b><br>
+     red alert feedback star wars credits My Personal Collection of SW Items Some Photos Courtesy Of ORANGE CARDS Ben &quot;Head shot&quot; &quot;Long Saber&quot; Ben &quot;Full figure photo&quot; &quot;Short Saber&quot; Chewbacca C-3PO Darth Vader &quot;Short Saber&quot; Han Solo Luke Skywalker  &quot;Long.<br>
+   <font size=-2>Found at: http://www.networx.net.au/~melvosh/action.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.mcfedries.com/books/cightml/list/1007-6.html&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=98&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">CIGHTML Mailing List -- Re: Free Hosting Provider</a></b><br>
+     Paul McFedries' Web Home Home Books Logophilia Toys Search Ramblings Select a page from this list --&gt; General -- Sign the Guest Book JavaScript Programs Files for Downloading Color Codes and Names -- Books -- Idiot's Guide to HTML CIGHTML  Message..<br>
+   <font size=-2>Found at: http://www.mcfedries.com/books/cightml/list/1007-6.html</font><p>
+    
+         
+     <b><a href="http://redirect.inktomi.com/click?u=http://www.geocities.com/EnchantedForest/Glade/1264/krayt.htm&q=02%3F4%5Dpllt%3FL%5E%5BUJLK7y%25vqtl~yz%40hpm%7Bl%3F3%3Fi%252.1-////6%3FL%5E%5BUJLK7y%25svqtysjg%3F3%3Fi%25/1/--//6&r=99&d=www&i=56&n=G2ELTHHO4QV14S1D&s=0&c=">Star Wars Customs - Krayt Dragon of Tatooine</a></b><br>
+     Krayt Dragon of Tatooine This fellow is called a &quot;Krayt Dragon&quot; a native inhabitant of the planet Tatooine. My first experience with this species was the time I came across one's skeleton, shortly after landing in that terrible escape pod from  the.<br>
+   <font size=-2>Found at: http://www.geocities.com/EnchantedForest/Glade/1264/krayt.htm</font><p>
+       </font></ul>
+<table width="100%" cellpadding=3 cellspacing=0 border=0>
+<tr>
+<td align=right width=101><a href="http://www.inktomi.com/"><img src="/main/images/sponsors/inktomi.gif" width=101 height=25 border=0></a></td>
+<td width="100%" nowrap><font face="Arial,Helvetica" size=-2>Powered by <a href="http://www.inktomi.com/">Inktomi</a></font></td></tr></table>
+<b><font face="Arial,Helvetica" size=-1>
+ 
+Page&nbsp;&nbsp;
+
+  
+      1&nbsp;&nbsp;
+   
+  
+     <a href="/search/power/results/1,180,home-0,00.html?KM=a&KW=Bossk&AM0=m&AT0=w&AK0=&AM1=&AT1=&AK1=&AM2=&AT2=&AK2=&AM3=&AT3=&AK3=&AM4=&AT4=&AK4=&AN=1&NR=100&FR=f&PL=a&DR=0&FM=1&FD=1&FY=&TM=&TD=&TY=&LN=&MT=&XT=&DM=&SDI=&start=100&tag=st.sn.sr.6.pg"><b>2</b></a>&nbsp;&nbsp;
+   
+  
+     <a href="/search/power/results/1,180,home-0,00.html?KM=a&KW=Bossk&AM0=m&AT0=w&AK0=&AM1=&AT1=&AK1=&AM2=&AT2=&AK2=&AM3=&AT3=&AK3=&AM4=&AT4=&AK4=&AN=1&NR=100&FR=f&PL=a&DR=0&FM=1&FD=1&FY=&TM=&TD=&TY=&LN=&MT=&XT=&DM=&SDI=&start=200&tag=st.sn.sr.6.pg"><b>3</b></a>&nbsp;&nbsp;
+   
+  
+     <a href="/search/power/results/1,180,home-0,00.html?KM=a&KW=Bossk&AM0=m&AT0=w&AK0=&AM1=&AT1=&AK1=&AM2=&AT2=&AK2=&AM3=&AT3=&AK3=&AM4=&AT4=&AK4=&AN=1&NR=100&FR=f&PL=a&DR=0&FM=1&FD=1&FY=&TM=&TD=&TY=&LN=&MT=&XT=&DM=&SDI=&start=300&tag=st.sn.sr.6.pg"><b>4</b></a>&nbsp;&nbsp;
+   
+  
+     <a href="/search/power/results/1,180,home-0,00.html?KM=a&KW=Bossk&AM0=m&AT0=w&AK0=&AM1=&AT1=&AK1=&AM2=&AT2=&AK2=&AM3=&AT3=&AK3=&AM4=&AT4=&AK4=&AN=1&NR=100&FR=f&PL=a&DR=0&FM=1&FD=1&FY=&TM=&TD=&TY=&LN=&MT=&XT=&DM=&SDI=&start=400&tag=st.sn.sr.6.pg"><b>5</b></a>&nbsp;&nbsp;
+   of&nbsp;&nbsp;5
+  &nbsp;&nbsp;|&nbsp;&nbsp;<a href="/search/power/results/1,180,home-0,00.html?KM=a&KW=Bossk&AM0=m&AT0=w&AK0=&AM1=&AT1=&AK1=&AM2=&AT2=&AK2=&AM3=&AT3=&AK3=&AM4=&AT4=&AK4=&AN=1&NR=100&FR=f&PL=a&DR=0&FM=1&FD=1&FY=&TM=&TD=&TY=&LN=&MT=&XT=&DM=&SDI=&start=100&tag=st.sn.sr.6.pg">Next</a> 
+</font></b><p>
+
+
+
+     
+
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td bgcolor="#666666" height=2><spacer type=block width=1 height=1></td></tr></table>
+
+
+<!-- c|net Tue Oct  5 18:32:19 1999  $Revision: 2.29 $  -->
+
+
+<table width="100%" cellpadding=4 cellspacing=0 border=0>
+<tr><td><font face="Arial,Helvetica" size="-1" color="#0000FF">
+<a href="/LMOID/resource/0,566,-409,00.html?ad.snbottom.0.cruise" style="color:#0000FF">
+<font color="#0000FF">Win a Cruise -- Enter Today!</font></a></td>
+<td align=right><font face="Arial,Helvetica" size="-2">A D V E R T I S E M E N T</font></td></tr></table>
+
+
+
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td bgcolor="#0000FF" height=1><spacer type=block width=1 height=1></td></tr></table>
+
+<table bgcolor="#FFFFFF" width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td height=100 align=center><a href="http://home.snap.com/cgi-acc/acc_clickthru.acc?clickid=00004b705811944e00000000&adt=banner&edt=home&cat=s-web&site=SN" target="_top"><img src="http://home.snap.com/Ads/Media/Images/gooey.news468x601.banner.gif?u_vid_0_0&ffffffff" alt="Join the Party Now!" border="2" height="60" width="468" ><br><center><font face="Verdana, Arial, Helvetica" size="-2">Join the Party Now!</font></center></A></td></tr>
+</table>
+
+<!-- search box -->
+<table bgcolor="#CCCCCC" width="100%" cellpadding=4 cellspacing=0 border=0>
+<tr bgcolor="#CCCCCC"><td><form action="/search/power/results/1,180,home-0,00.html" method="get">
+<font face="Arial,Helvetica" size="-2">Enter search word(s):</font><br><input type="text" name="KW" value="Bossk" size="40">
+<input type="hidden" name="KM" value="a">
+<input type="hidden" name="AM0" value="m">
+<input type="hidden" name="AT0" value="w">
+<input type="hidden" name="AK0" value="">
+<input type="hidden" name="AM1" value="">
+<input type="hidden" name="AT1" value="">
+<input type="hidden" name="AK1" value="">
+<input type="hidden" name="AM2" value="">
+<input type="hidden" name="AT2" value="">
+<input type="hidden" name="AK2" value="">
+<input type="hidden" name="AM3" value="">
+<input type="hidden" name="AT3" value="">
+<input type="hidden" name="AK3" value="">
+<input type="hidden" name="AM4" value="">
+<input type="hidden" name="AT4" value="">
+<input type="hidden" name="AK4" value="">
+<input type="hidden" name="AN" value="1">
+<input type="hidden" name="NR" value="100">
+<input type="hidden" name="FR" value="f">
+<input type="hidden" name="PL" value="a">
+<input type="hidden" name="DR" value="0">
+<input type="hidden" name="FM" value="1">
+<input type="hidden" name="FD" value="1">
+<input type="hidden" name="FY" value="">
+<input type="hidden" name="TM" value="">
+<input type="hidden" name="TD" value="">
+<input type="hidden" name="TY" value="">
+<input type="hidden" name="LN" value="">
+<input type="hidden" name="MT" value="">
+<input type="hidden" name="XT" value="">
+<input type="hidden" name="DM" value="">
+<input type="hidden" name="SDI" value="">
+&nbsp;&nbsp;<input type="submit" value="Search">&nbsp;&nbsp;<font face="Arial,Helvetica" size="-2"><a href="/main/help/item/0,11,home-6736,00.html">Search Tips</a></font>
+<br>
+
+<a href="/search/power/form/0,179,home-0,00.html"><font face="Arial,Helvetica" size=-1><b>New Search</b></font></a>&nbsp;|&nbsp;<a href="/search/power/form/1,179,home-0,00.html?KM=a&KW=Bossk&AM0=m&AT0=w&AK0=&AM1=&AT1=&AK1=&AM2=&AT2=&AK2=&AM3=&AT3=&AK3=&AM4=&AT4=&AK4=&AN=0&NR=100&FR=f&PL=a&DR=0&FM=1&FD=1&FY=&TM=&TD=&TY=&LN=&MT=&XT=&DM=&SDI="><font face="Arial,Helvetica" size=-1><b>Revise Search</b></font></a><br><br>
+
+
+</td><td width=1><spacer type=block width=1 height=5></form></td></tr></table>
+<table bgcolor="#CCCCCC" width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td><font face="Arial,Helvetica" size="-2">&nbsp;Or try one of these search engines:</font></td></tr>
+<tr><td align=center><font face="Arial,Helvetica" size=-1>
+<a href="/go/to?tag=ex.sn.sr.6.av&destUrl=http%3A%2F%2Fwww%2Esearch%2Ecom%2FAltaVista%2F1%2C57%2C0%2C0200%2Ehtml%3Fmode%3Dsimple%26what%3Dweb%26suffix%3D%26query%3DBossk%26format%3D2">AltaVista</a> | 
+<a href="/main/finance/news/search/1,216,home-0,00.html?tag=st.sn.sr.6.bbn&keyword=Bossk">Bloomberg News</a> |
+<a href="/go/to?tag=ex.sn.sr.6.dn&destUrl=http%3A%2F%2Fx8%2Edejanews%2Ecom%2Fdnquery%2Exp%3FQRY%3DBossk%26defaultOp%3DAND%26svcclass%3Ddncurrent%26maxhits%3D20%26ST%3DQS%26format%3Dterse%26DBS%3D2">DejaNews</a> | 
+<a href="/go/to?tag=ex.sn.sr.6.xcit&destUrl=http%3A%2F%2Fwww%2Eexcite%2Ecom%2Fsearch%2Egw%3Fsearch%3DBossk%26searchType%3DKeyword%26category%3Ddefault%26mode%3Drelevance%26showqbe%3D1%26display%3Dhtml3%2Chb">Excite</a> | 
+<a href="/go/to?tag=ex.sn.sr.6.goto&destUrl=http%3A%2F%2Fwww%2Egoto%2Ecom%2Fd%2Fsearch%2Fp%2Fsnap%2F%3FKeywords%3DBossk"><b>GoTo</b></a> | 
+<a href="/go/to?tag=ex.sn.sr.6.kanoodle&destUrl=http%3A%2F%2Fwww%2Ekanoodle%2Ecom%2Freturn%2Ecool%3Fquery%3DBossk"><b>Kanoodle</b></a> | 
+<a href="/go/to?tag=ex.sn.sr.6.seek&destUrl=http%3A%2F%2Fwww%2Esearch%2Ecom%2FInfoseek%2F1%2C135%2C0%2C0200%2Ehtml%3FQUERY%3DBossk%26COLL%3DWW">Infoseek</a> | 
+<a href="/go/to?tag=ex.sn.sr.6.lcos&destUrl=http%3A%2F%2Fwww%2Elycos%2Ecom%2Fcgi%2Dbin%2Fpursuit%3Fquery%3DBossk">Lycos</a> | 
+<a href="/go/to?tag=ex.sn.sr.6.yhoo&destUrl=http%3A%2F%2Fsearch%2Eyahoo%2Ecom%2Fbin%2Fsearch%3Fp%3DBossk">Yahoo</a> |
+<a href="/directory/category/0,16,home-1269,00.html?st.sn.sr.6.more">More...</a></font></td></tr>
+<tr><td height=5><spacer type=block width=1 height=5></td></tr>
+</table>
+
+
+<!-- c|net Thu Nov  4 10:50:11 1999  $Revision: 2.29 $  -->
+
+
+ 
+ 
+
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#666666" height=2 colspan=3><spacer type=block width=1 height=1></td></tr>
+<tr><td width="2%" rowspan=3><img src="/main/images/logos/logo_footer_fl.gif" width=105 height=20 border=0 alt="Snap.com"></td><td width="96%" align=center height=27><font face="MS Sans Serif, Geneva" size=-2><a href="/main/door/0,1,home-home,00.html?st.sn.ft.0.hm">Home</a>&nbsp;&nbsp;<a href="/search/directory/results/1,61,home-0,00.html?st.sn.ft.0.srch">Search</a>&nbsp;&nbsp;<a href="/main/help/item/0,11,home-8406,00.html?st.sn.ft.0.mmbr">Membership Info</a>&nbsp;&nbsp;<a href="/main/help/comment/0,98,home-0,00.html?st.sn.ft.0.fdbk">Feedback</a>&nbsp;&nbsp;<a href="/main/help/index/0,79,home-0,00.html?st.sn.ft.0.help">Help</a>&nbsp;&nbsp;<a href="/main/help/snapwire/0,445,home-0,00.html?st.sn.ft.0.wire">Free E-mail Newsletter</a></font></td><td width="2%">&nbsp;</td>
+</tr><tr><td bgcolor="#CC0000" height=2 colspan=2><spacer type=block width=1 height=1></td></tr>
+<tr><td align=center height=25><font face="MS Sans Serif, Geneva" size=-2><a href="/LMOID/resource/0,566,home-650,00.html?st.sn.ft.0.abt">About Snap</a>&nbsp;&nbsp;<a href="/media/index.html?st.sn.ft.o.adv">Ad Info</a>&nbsp;&nbsp;<a href="/LMOID/resource/0,566,home-772,00.html?st.sn.ft.0.job">Snap Jobs</a>&nbsp;&nbsp;<a href="/main/register/problems/0,135,home-0,00.html?st.sn.ft.0.prv">Privacy Policy</a>&nbsp;&nbsp;<a href="/main/help/item/0,11,home-8450,00.html?st.sn.ft.0.surl">List Your Site</a>&nbsp;&nbsp;<a href="/main/help/item/0,11,home-8707,00.html?st.sn.ft.0.tlbx">Add Snap to Your Site</a></font></td><td><spacer type=block width=1 height=1></td></tr></table>
+
+<p>
+<!-- c|net Thu Sep 30 15:53:01 1999  $Revision: 2.29 $  -->
+
+
+<font face="Arial,Helvetica" size=-2>Copyright &copy; 1997-1999 Snap and its content providers. All rights reserved. <a href="/LMOID/resource/0,566,home-764,00.html">Terms of Use and Copyright Info</a>.</font>
+
+</body
+</html>
+
+

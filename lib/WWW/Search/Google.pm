@@ -2,7 +2,7 @@
 # Google.pm
 # by Jim Smyser
 # Copyright (C) 1996-1999 by Jim Smyser & USC/ISI
-# $Id: Google.pm,v 1.8 1999/10/11 16:52:43 jims Exp $
+# $Id: Google.pm,v 1.9 1999/10/18 15:23:19 mthurn Exp $
 ##########################################################
 
 
@@ -70,22 +70,41 @@ set of results, otherwise it sets it to undef to indicate we''re done.
 
 This module adheres to the C<WWW::Search> test suite mechanism. 
 
+=head1 BUGS
+
+2.07 now parses for most of what Google produces, but not all.
+Because Google does not produce universial formatting for all
+results it produces, there are undoublty a few line formats yet 
+uncovered by the author. Different search terms creates various
+differing format out puts for each line of results. Example,
+searching for "visual basic" will create whacky url links,
+whereas searching for "Visual C++" does not. It is a parsing
+nitemare really! If you think you uncovered a BUG just remember
+the above comments!  
+
+With the above said, this back-end will produce proper formated
+results for 96+% of what it is asked to produce. Your milage
+will vary.
+
 =head1 AUTHOR
 
 This backend is maintained and supported by Jim Smyser.
 <jsmyser@bigfoot.com>
 
-=head1 LEGALESE
-
-THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
-WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
-MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-
 =head1 BUGS
 
-Since this is a new Backend there are undoubtly one. Report any ASAP. 
+2.09 seems now to parse all hits with the new format change so there really shouldn't be
+any like there were with 2.08. 
 
 =head1 VERSION HISTORY
+
+2.09
+Google NOW returning url and title on one line.
+
+2.07
+Added a new parsing routine for yet another found result line.
+Added a substitute for whacky url links some queries can produce.
+Added Kingpin's new hash_to_cgi_string() 10/12/99
 
 2.06
 Fixed missing links / regexp crap.
@@ -103,6 +122,12 @@ New test mechanism  7/13/99
 1.00
 First release  7/11/99
 
+=head1 LEGALESE
+
+THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
 =cut
 #'
 
@@ -111,12 +136,12 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.06';
+$VERSION = '2.09';
 
 $MAINTAINER = 'Jim Smyser <jsmyser@bigfoot.com>';
 $TEST_CASES = <<"ENDTESTCASES";
 # Google looks for partial words it can find results for so it will end up finding "Bogus" pages.
-&test('Google', '$MAINTAINER', 'zero', '-40367757usduebd', \$TEST_EXACTLY);
+&test('Google', '$MAINTAINER', 'zero', '4036e7757s5', \$TEST_EXACTLY);
 &test('Google', '$MAINTAINER', 'one_page', '+LS'.'AM +rep'.'lication', \$TEST_RANGE, 2,49);
 &test('Google', '$MAINTAINER', 'multi', 'dir'.'ty ha'.'rr'.'y bimbo', \$TEST_GREATER_THAN, 101);
 ENDTESTCASES
@@ -147,9 +172,9 @@ sub native_setup_search {
      {
      # Copy in new options.
      foreach (keys %$native_options_ref) 
-       {
-       $options_ref->{$_} = $native_options_ref->{$_};
-       } # foreach
+     {
+     $options_ref->{$_} = $native_options_ref->{$_};
+     } # foreach
      } # if
    # Process the options.
    my($options) = '';
@@ -161,103 +186,113 @@ sub native_setup_search {
      }
    chop $options;
    # Finally figure out the url.
-   $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $options;
+   $self->{_next_url} = $self->{_options}{'search_url'} .'?'. $self->hash_to_cgi_string($self->{_options});
    } # native_setup_search
  
 # private
 sub native_retrieve_some
-    {
-    my ($self) = @_;
-    print STDERR "**Google::native_retrieve_some()**\n" if $self->{_debug};
-    # Fast exit if already done:
-    return undef if (!defined($self->{_next_url}));
-    
-    # If this is not the first page of results, sleep so as to not
-    # overload the server:
-    $self->user_agent_delay if 1 < $self->{'_next_to_retrieve'};
-    
-    # Get some if were not already scoring somewhere else:
-    print STDERR "*Sending request (",$self->{_next_url},")\n" if $self->{_debug};
-    my($response) = $self->http_request('GET', $self->{_next_url});
-    $self->{response} = $response;
-    if (!$response->is_success) 
-      {
-      return undef;
-      }
-    $self->{'_next_url'} = undef;
-    print STDERR "**Response\n" if $self->{_debug};
+   {
+   my ($self) = @_;
+   print STDERR "**Google::native_retrieve_some()**\n" if $self->{_debug};
+   # Fast exit if already done:
+   return undef if (!defined($self->{_next_url}));
+   
+   # If this is not the first page of results, sleep so as to not
+   # overload the server:
+   $self->user_agent_delay if 1 < $self->{'_next_to_retrieve'};
+   
+   # Get some if were not already scoring somewhere else:
+   print STDERR "*Sending request (",$self->{_next_url},")\n" if $self->{_debug};
+   my($response) = $self->http_request('GET', $self->{_next_url});
+   $self->{response} = $response;
+   if (!$response->is_success) 
+     {
+     return undef;
+     }
+   $self->{'_next_url'} = undef;
+   print STDERR "**Response\n" if $self->{_debug};
 
-    # parse the output
-    my ($HEADER, $START, $HITS, $DESC, $DESC2, $NEXT) = qw(HE HI ST DE D2 NX);
-    my $hits_found = 0;
-    my $state = $HEADER;
-    my $hit = ();
-    foreach ($self->split_lines($response->content()))
-       {
-       next if m@^$@; # short circuit for blank lines
-       print STDERR " $state ===$_=== " if 2 <= $self->{'_debug'};
-    if (m|<b>(\d+)</b></font> matches|i) {
-       print STDERR "**Found Header Count**\n" if ($self->{_debug});
-       $self->approximate_result_count($1);
-       $state = $START;
-    # set-up attempting the tricky task of 
-       # fetching the very first HIT line
-  } elsif ($state eq $START && m|Search took|i) {
-       print STDERR "**Found Start Line**\n" if ($self->{_debug});
-       $state = $HITS;
-    # Attempt to pull the very first hit line
-       } 
-    if ($state eq $HITS && 
-         m/^<a href=([^<]+)>(.*)<\/a>$/i || 
-         m@<.?UL><a href=([^<]+)>(.*)</a>@i ||
-         m@<p><a href=([^<]+)>(.*)</a>@i)      
-       {
-       print "**Found HIT**\n" if 2 <= $self->{_debug};
-       my ($url, $title) = ($1,$2);
-       if (not $url =~ m@^/search@)
-          { 
-       if (defined($hit)) 
-       {
-       push(@{$self->{cache}}, $hit);
-       };
-       $hit = new WWW::SearchResult;
-       $hits_found++;
-       $hit->add_url($url);
-       $hit->title($title);
-       $state = $DESC;
-    };      
- } elsif ($state eq $DESC && m/^<font size=-1><br><font color=green>(.*)\s/i) { 
-    my $desc = $1;
-       if (not $desc =~ m@&nbsp;@)
-       { 
-    $hit->description($desc) if (defined($hit));
-       $desc = '';
-    $state = $NEXT;
-    }
- } elsif ($state eq $DESC && m@<font size=-1><br>(.*)<br>@i) {
-       print "**Found Description**\n" if 2 <= $self->{_debug};
-       $mDesc .= $1;
-       $mDesc =  $mDesc . '<br>'; 
-       $state = $DESC2;
- } elsif ($state eq $DESC2 && m@^(\.(.+))@i) {
-       print "**Found Next Description**\n" if 2 <= $self->{_debug};
-       $mDesc .= $1;
-       $hit->description($mDesc) if (defined($hit)); 
-       $mDesc = '';
-       $state = $NEXT;
- } elsif ($state eq $NEXT && m|<a href=([^<]+)><IMG SRC=/nav_next.gif.*?><br><.*?>Next page</A>|i) {
-       print STDERR "**Going to Next Page**\n" if 2 <= $self->{_debug};
-       my $iURL = $1;
-       $self->{'_next_url'} = $self->{'search_base_url'} . $iURL;
-    $iURL = '';
-       print STDERR "**Fetching Next URL-> ", $self->{'_next_url'}, "\n" if 2 <= $self->{_debug};
-        } else {
-       print STDERR "**Nothing matched.**\n" if 2 <= $self->{_debug};
-        }
-  } if (defined($hit)) {
-       push(@{$self->{cache}}, $hit);
-        } 
-       return $hits_found;
-        } # native_retrieve_some
+   # parse the output
+   my ($HEADER, $START, $HITS, $NEXT) = qw(HE HI ST NX);
+   my $hits_found = 0;
+   my $state = $HEADER;
+   my $hit = ();
+   foreach ($self->split_lines($response->content()))
+      {
+      next if m@^$@; # short circuit for blank lines
+      print STDERR " $state ===$_=== " if 2 <= $self->{'_debug'};
+  if (m|<b>(\d+)</b></font> matches|i) {
+      print STDERR "**Found Header Count**\n" if ($self->{_debug});
+      $self->approximate_result_count($1);
+      $state = $START;
+      # set-up attempting the tricky task of 
+      # fetching the very first HIT line
+      } 
+  elsif ($state eq $START && m|Search took|i) 
+      {
+      print STDERR "**Found Start Line**\n" if ($self->{_debug});
+      $state = $HITS;
+      # Attempt to pull the very first hit line
+      } 
+  if ($state eq $HITS && m@^<p><a href=([^<]+)>(.*)</a>$@i)      
+      {
+      print "**Found HIT**\n" if 2 <= $self->{_debug};
+      my ($url, $title) = ($1,$2);
+      if (defined($hit)) 
+      {
+      push(@{$self->{cache}}, $hit);
+      };
+      $hit = new WWW::SearchResult;
+      # some queries *can* create internal junk in the url link
+      # remove them! 
+      $url =~ s/\/url\?sa=U&start=\d+&q=//g;
+      $hits_found++;
+      $hit->add_url($url);
+      $hit->title($title);
+      $state = $HITS;
+      } 
+  if ($state eq $HITS && m@^<font size=-1><br>(.*)@i) 
+      {
+      print "**Found First Description**\n" if 2 <= $self->{_debug};
+      $mDesc = $1; 
+      if (not $mDesc =~ m@&nbsp;@)
+      { 
+      $mDesc =~ s/<.*?>//g; 
+      $mDesc =  $mDesc . '<br>' if not $mDesc =~ m@<br>@;
+      $hit->description($mDesc); 
+      $state = $HITS;
+      }
+      } 
+  elsif ($state eq $HITS && 
+           m@^(\.(.+))@i ||
+           m@^<br><font color=green>(.*)\s@i) { 
+      print "**Found Second Description**\n" if 2 <= $self->{_debug};
+      $sDesc = $1; 
+      $sDesc =~ s/<.*?>//g; 
+      $sDesc = $mDesc . $sDesc;
+      $hit->description($sDesc); 
+      $sDesc ='';
+      $state = $HITS;
+      } 
+   elsif ($state eq $HITS && 
+      m|<a href=([^<]+)><IMG SRC=/nav_next.gif.*?><br><.*?>.*?</A>|i) {
+      print STDERR "**Fetching Next URL-> ", $self->{'_next_url'}, "\n" if 2 <= $self->{_debug};
+      my $iURL = $1;
+      $self->{'_next_url'} = $self->{'search_base_url'} . $iURL;
+      } 
+    else 
+      {
+      print STDERR "**Nothing matched.**\n" if 2 <= $self->{_debug};
+      }
+      } 
+    if (defined($hit)) 
+      {
+      push(@{$self->{cache}}, $hit);
+      } 
+      return $hits_found;
+      } # native_retrieve_some
 1;  
+
+
+
 

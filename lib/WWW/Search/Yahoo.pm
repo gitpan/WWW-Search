@@ -1,7 +1,7 @@
 # Yahoo.pm
 # by Wm. L. Scheding and Martin Thurn
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: Yahoo.pm,v 1.19 1999/10/11 16:56:58 mthurn Exp $
+# $Id: Yahoo.pm,v 1.22 1999/11/22 15:39:48 mthurn Exp $
 
 =head1 NAME
 
@@ -20,6 +20,12 @@ WWW::Search::Yahoo - class for searching Yahoo
 
 This class is a Yahoo specialization of L<WWW::Search>.  It handles
 making and interpreting Yahoo searches F<http://www.yahoo.com>.
+
+You can also search Yahoo Korea.  Just add this search_base_url to
+your search setup:
+
+  $oSearch->native_query($sQuery, 
+                         {'search_base_url' => 'http://search.yahoo.co.kr'});
 
 This class exports no public interface; all interaction should
 be done through L<WWW::Search> objects.
@@ -58,6 +64,10 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 =head1 VERSION HISTORY
 
 If it''s not listed here, then it wasn''t a meaningful nor released revision.
+
+=head2 2.06, 1999-11-22
+
+Added support for Yahoo Korea.
 
 =head2 2.04, 1999-10-11
 
@@ -101,7 +111,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.04';
+$VERSION = '2.06';
 
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 $TEST_CASES = <<"ENDTESTCASES";
@@ -111,7 +121,7 @@ $TEST_CASES = <<"ENDTESTCASES";
 ENDTESTCASES
 
 use Carp ();
-use WWW::Search(generic_option);
+use WWW::Search(qw( generic_option strip_tags ));
 require WWW::SearchResult;
 
 sub native_setup_search
@@ -147,7 +157,7 @@ sub native_setup_search
 
   if (!defined($self->{_options})) 
     {
-    $self->{'search_base_url'} = 'http://search.yahoo.com';
+    $self->{'search_base_url'} ||= 'http://search.yahoo.com';
     $self->{_options} = {
                          'search_url' => $self->{'search_base_url'} .'/search',
                          'b' => $self->{_next_to_retrieve},
@@ -197,7 +207,7 @@ sub native_retrieve_some
   if (!$response->is_success) 
     {
     return undef;
-    };
+    }
   
   $self->{'_next_url'} = undef;
   print STDERR " *   got response\n" if $self->{_debug};
@@ -211,19 +221,23 @@ sub native_retrieve_some
     {
     next if m@^$@; # short circuit for blank lines
     print STDERR " * $state ===$_=== " if 2 <= $self->{'_debug'};
-
-    if ($state eq $HITS && s@^\s-\s(.+)(</UL>|<LI>)@$2@i)
+    if (9 < $self->{'_debug'})
+      {
+      if ($state eq $HITS && m@\074a\shref=\"[^"]+\">(.......)@i)
+        {
+        print STDERR " + EIGHT BYTES AFTER href are: ",  sprintf "\\%.3lo"x length($1), unpack("C*", $1), "\n";
+        } # if
+      } # if debug
+    if ($state eq $HITS && s@^\s-\s(.+)(\074/UL>|\074LI>)@$2@i)
       {
       # Actual line of input is:
       #  - Links to many other <b>Star</b> <b>Wars</b> sites as well as some cool original stuff.<LI><A HREF="http://www.geocities.com/Hollywood/Hills/3650/"><b>Star</b> <b>Wars</b>: A New Hope for the Internet</A>
       print STDERR "description line\n" if 2 <= $self->{_debug};
-      my $sDescription = $1;
-      $sDescription =~ s|</?b>||ig;
-      $hit->description($sDescription) if defined($hit);
+      $hit->description(strip_tags($1)) if defined($hit);
       # Don't change state, and don't go to the next line! The <LI> on
       # this line is the next hit!
       }
-    elsif ($state eq $HITS && m=^(.*?)<BR><cite>=)
+    elsif ($state eq $HITS && m=^(.*?)\074BR>\074cite>=)
       {
       # Actual line of input is:
       # 
@@ -235,19 +249,19 @@ sub native_retrieve_some
           {
           $sDescrip = $hit->description . ' ';
           }
-        $sDescrip .= $1;
+        $sDescrip .= strip_tags($1);
         $hit->description($sDescrip);
         $state = $HITS;
         } # if hit
       } # CITATION line
 
-    if ($state eq $HEADER && m|^and\s<b>(\d+)</b>\s*$|)
+    if ($state eq $HEADER && m|^and\s\074b>(\d+)\074/b>\s*$|)
       {
       print STDERR "header line\n" if 2 <= $self->{_debug};
       $self->approximate_result_count($1);
       $state = $HITS;
       }
-    elsif ($state eq $HEADER && m|<b>\(\d+-\d+\s+of\s+(\d+)\)</b>|)
+    elsif ($state eq $HEADER && m|\074b>\(\d+-\d+\s+of\s+(\d+)\)\074/b>|)
       {
       print STDERR "header count line\n" if 2 <= $self->{_debug};
       # Actual line of input:
@@ -255,7 +269,15 @@ sub native_retrieve_some
       $self->approximate_result_count($1);
       $state = $HITS;
       }
-    elsif ($state eq $HEADER && m|^<CENTER>Found\s<B>\d+</B>\sCategory\sand\s<B>(\d+)</B>\sSite\sMatches\sfor|i)
+    elsif ($state eq $HEADER && m|\(\d+&nbsp;-&nbsp;\d+&nbsp;/&nbsp;(\d+)\)|)
+      {
+      print STDERR "header count line (korea)\n" if 2 <= $self->{_debug};
+      # Actual line of input from Yahoo Korea:
+      # <CENTER><FONT SIZE="+1"><B>ÅªÅÁÅ¿ÅÃÅ∆ÅÆ Å∞ÅÀÅªÅˆÅ∞Å·Å∞Å˙ &nbsp; <FONT SIZE="-1">(1&nbsp;-&nbsp;84&nbsp;/&nbsp;114)</FONT></B></FONT></CENTER>
+      $self->approximate_result_count($1);
+      $state = $HITS;
+      }
+    elsif ($state eq $HEADER && m|^\074CENTER>Found\s\074B>\d+\074/B>\sCategory\sand\s\074B>(\d+)\074/B>\sSite\sMatches\sfor|i)
       {
       # Actual line of input is:
       # <CENTER>Found <B>15</B> Category and <B>1297</B> Site Matches for
@@ -264,24 +286,32 @@ sub native_retrieve_some
       $state = $HITS;
       }
     elsif ($state eq $HITS &&
-           m|<LI><A HREF=\042([^\042]+)\042>(.*)</A>|i) 
+           m|\074LI>\074A HREF=\042([^\042]+)\042>(.*)\074/A>|i) 
       {
       # Actual lines of input are:
       # <UL TYPE=disc><LI><A HREF="http://events.yahoo.com/Arts_and_Entertainment/Movies_and_Films/Star_Wars_Series/">Yahoo! Net Events: <b>Star</b> <b>Wars</b> Series</A>
       #  - Links to many other <b>Star</b> <b>Wars</b> sites as well as some cool original stuff.<LI><A HREF="http://www.geocities.com/Hollywood/Hills/3650/"><b>Star</b> <b>Wars</b>: A New Hope for the Internet</A>
+      my ($sURL, $sTitle) = ($1, $2);
+      if ($sURL =~ m/^news:/)
+        {
+        print STDERR "ignore 'news:' url line\n" if 2 <= $self->{_debug};
+        next;
+        } # if
       print STDERR "hit url line\n" if 2 <= $self->{_debug};
       if (defined($hit)) 
         {
         push(@{$self->{cache}}, $hit);
         };
       $hit = new WWW::SearchResult;
-      $hit->add_url($1);
+      $hit->add_url($sURL);
       $hits_found++;
-      $hit->title($2);
+      $hit->title(strip_tags($sTitle));
       } 
-    elsif ($state eq $HITS && m|<a\shref=\"([^"]+)\">Next\s\d+\s(Site\s)?Matches|i)
+    elsif ($state eq $HITS && m@\074a\shref=\"([^"]+)\">(Next|\264\331\300\275)\s*\d+@i)
       {
       print STDERR "next line\n" if 2 <= $self->{_debug};
+      # Actual line of input from Yahoo Korea:
+      # <a href="/bin/search?&d=y&n=84&o=1&p=moon&za=or&hc=3&hs=114&h=s&b=85">Å¥ÅŸÅ¿ÅΩ 30Å∞Å≥Å¿Å« Å∞ÅÀÅªÅˆÅ∞Å·Å∞Å˙</a>
       # There is a "next" button on this page, therefore there are
       # indeed more results for us to go after next time.
       my $sURL = $1;

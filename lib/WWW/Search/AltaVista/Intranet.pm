@@ -1,6 +1,6 @@
 # AltaVista/Intranet.pm
 # by Martin Thurn
-# $Id: Intranet.pm,v 1.4 1999/07/13 17:50:59 mthurn Exp $
+# $Id: Intranet.pm,v 1.5 1999/11/29 17:48:28 mthurn Exp $
 #
 # Complete copyright notice follows below.
 
@@ -58,6 +58,10 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 If it''s not listed here, then it wasn''t a meaningful nor released revision.
 
+=head2 2.02, 1999-11-29
+
+Fixed to work with latest version of AltaVista.pm
+
 =head2 1.03, 1999-06-20
 
 First publicly-released version.
@@ -72,7 +76,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search::AltaVista Exporter);
-$VERSION = '2.01';
+$VERSION = '2.02';
 
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 $TEST_CASES = <<"ENDTESTCASES";
@@ -96,12 +100,14 @@ sub native_setup_search
     carp $sMsg;
     return undef;
     } # if
-  $$rhOptions{'search_url'} = 'http://'. $self->{_host} .':'. $self->{_port} .'/cgi-bin/query';
-  $$rhOptions{'text'} = '';
-  $$rhOptions{'mss'} = 'simple';
+  $self->{_options} = {
+                       'search_url' => 'http://'. $self->{_host} .':'. $self->{_port} .'/cgi-bin/query',
+                       'text' => 'yes',
+                       'mss' => 'simple',
+                      };
   # let AltaVista.pm finish up the hard work.
   return $self->SUPER::native_setup_search($sQuery, $rhOptions);
-  }
+  } # native_setup_search
 
 
 # private
@@ -137,10 +143,18 @@ sub native_retrieve_some
     {
     next if m@^$@; # short circuit for blank lines
     print STDERR " * $state ===$_=== " if 2 <= $self->{'_debug'};
-    if ($state eq $HEADER && m:AltaVista\sfound\s(\d+):i)
+    if ($state eq $HEADER && m/found\s+(\d+)\s+Web\s+pages\s+for\s+you/i)
       {
       # Actual line of input is:
       # <b><b><!-- avecho val="About " if="notexists $avs.header.isExact" -->AltaVista found 33 Web pages for you. </b></b>
+      print STDERR "count line\n" if 2 <= $self->{_debug};
+      $self->approximate_result_count($1);
+      $state = $HITS;
+      } # COUNT line
+    if ($state eq $HEADER && m/DOCUMENTS\s+\d+-\d+\s+OF+\s(\d+)/i)
+      {
+      # Actual line of input is:
+      # <b> Documents 1-1  of 1  matching the query,  best matches first.</b><dl>
       print STDERR "count line\n" if 2 <= $self->{_debug};
       $self->approximate_result_count($1);
       $state = $HITS;
@@ -156,6 +170,7 @@ sub native_retrieve_some
       {
       # Actual line of input is:
       # <!-- PAV 1 --><a href="http://www.tasc.com/news/prism/9811/51198.html"><!-- PAV end --><b>Arlington Pond Waterski Club 11/98                                                  </b></a><dd>
+      # <dt><a href="http://copper.dulles.tasc.com/SEVEN/TESTFILE1-header"><strong>TESTFILE1-header</strong></a><dd>dummy header line 1 dummy header line 2 dummy header line 3 dummy header line 4 DUCTAPE ENCODED 321 535 dummy header line 6 dummy header line 7 DEBUG THIS.<br><cite><a href="http://copper.dulles.tasc.com/SEVEN/TESTFILE1-header">http://copper.dulles.tasc.com/SEVEN/TESTFILE1-header</a><font size=-1> - size 1K</font></cite><br>
       print STDERR "title line\n" if 2 <= $self->{_debug};
       if (ref($hit)) 
         {
@@ -165,6 +180,12 @@ sub native_retrieve_some
       $hit->add_url($1);
       $hits_found++;
       if (m:\<b>(.+?)\</b>:i)
+        {
+        my $sTitle = $1;
+        $sTitle =~ s/\s+$//;
+        $hit->title($sTitle);
+        } # if
+      if (m:\<strong>(.+?)\</strong>:i)
         {
         my $sTitle = $1;
         $sTitle =~ s/\s+$//;
@@ -235,4 +256,9 @@ http://copper.dulles.tasc.com:9000/cgi-bin/query?mss=simple&pg=q&what=web&user=s
 
 This is the barest-bones version that still works:
 
-http://copper.dulles.tasc.com:9000/cgi-bin/query?pg=q&fmt=d&q=forensics&text=yes
+http://copper.dulles.tasc.com:9000/cgi-bin/query?mss=simple&text=yes&q=giraffe
+
+This is what we are generating with WWW::Search 2.06:
+
+http://copper:9000/cgi-bin/query?fmt=&mss=simple&pg=q&text=yes&what=web&q=giraffe
+

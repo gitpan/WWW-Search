@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 1.15 1999/10/12 14:08:08 mthurn Exp $
+# $Id: Search.pm,v 1.16 1999/10/20 15:24:50 mthurn Exp mthurn $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -68,7 +68,7 @@ package WWW::Search;
 require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw(escape_query unescape_query generic_option strip_tags);
-$VERSION = '2.05';
+$VERSION = '2.06';
 require LWP::MemberMixin;
 @ISA = qw(Exporter LWP::MemberMixin);
 use LWP::UserAgent;
@@ -451,8 +451,9 @@ but all non-alphanumeric characters are escaped and
 and spaces are converted to "+"s.
 
 Example:
-    $escaped = Search::escape_query('+lsam +replication');
-(Returns "%22lsam+replication%22").
+    $escaped = WWW::Search::escape_query('+lsam +replication');
+
+    (Returns "%2Blsam+%2Breplication").
 
 See also C<unescape_query>.
 
@@ -477,8 +478,9 @@ Unescape a query.
 See C<escape_query> for details.
 
 Example:
-    $unescaped = Search::unescape_query('%22lsam+replication%22');
-(Returns "+lsam +replication").
+    $unescaped = WWW::Search::unescape_query('%22lsam+replication%22');
+
+    (Returns '"lsam replication"').
 
 See also C<unescape_query>.
 
@@ -512,6 +514,9 @@ sub strip_tags
     # embedded '>' characters!
     s/\074.+?\076//g;
     s/&nbsp;/ /g;
+    s/&lt;/\074/g;
+    s/&gt;/\076/g;
+    s/&quot;/\042/g;
     } # foreach
   return wantarray ? @as : $as[0];
   } # strip_tags
@@ -549,10 +554,12 @@ sub hash_to_cgi_string
     {
     # printf STDERR "option: $key is " . $rh->{$key} . "\n";
     next if generic_option($key);
-    # If we want to let the user delete options, do the
-    # following. (They can still blank them out, which may or may not
-    # have the same effect, anyway):
+    # If we want to let the user delete options, uncomment the next
+    # line. (They can still blank them out, which may or may not have
+    # the same effect, anyway): 
+
     # next unless $rh->{$key} ne '';
+
     $ret .= $key .'='. $rh->{$key} .'&';
     }
   # Remove the trailing '&':

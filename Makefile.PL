@@ -1,5 +1,5 @@
 # This -*- perl -*- script writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.6 1999/07/16 18:39:16 mthurn Exp $
+# $Id: Makefile.PL,v 1.8 1999/11/29 19:47:20 mthurn Exp $
 
 require 5.004;
 
@@ -9,7 +9,7 @@ require 5.004;
 # option.  This is for those that don't want to mess with the configuration
 # section of this file.
 use Getopt::Std;
-$opt_n = undef;   # avoid -w typo waring
+$opt_n = undef;   # avoid -w typo warning?
 unless (getopts("n")) { die "Usage: $0 [-n]\n"; }
 @programs_to_install = () if $opt_n;
 
@@ -22,8 +22,8 @@ WriteMakefile(
               'VERSION_FROM' => 'lib/WWW/Search.pm',
               'PREREQ_PM' => {
                               'URI::Escape' => 0,
-                              'HTML::Parser' => 2.16,
-                              'HTML::TreeBuilder' => 0,  # release 0.51 is good
+                              'HTML::Parser' => 2.23,
+                              'HTML::TreeBuilder' => 0,  # HTML-Tree-0.51 is good
                               'LWP' => 5.30,
                              },
               'EXE_FILES' => [ @programs_to_install ],
@@ -31,20 +31,3 @@ WriteMakefile(
               'dist' => { COMPRESS => 'gzip -fv9', SUFFIX => 'gz' },
              );
 
-# What happens when we say 'make test'
-sub MY::test 
-  {
-  return <<'ENDTEST';
-# .PHONY: a gnu-ism
-.PHONY: test
-
-TEST_VERBOSE = 
-TEST_ENGINE = 
-
-test: all
-	$(FULLPERL) -Iblib/lib test/test.pl $(TEST_VERBOSE) $(TEST_ENGINE)
-test-v: all
-	$(FULLPERL) -Iblib/lib test/test.pl -v $(TEST_ENGINE)
-
-ENDTEST
-} # MY::test

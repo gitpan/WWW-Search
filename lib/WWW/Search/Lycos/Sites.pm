@@ -1,7 +1,7 @@
 # Sites.pm
 # by Martin Thurn
 # Copyright (C) 1996 by USC/ISI
-# $Id: Sites.pm,v 1.1 1999/09/29 20:25:17 mthurn Exp mthurn $
+# $Id: Sites.pm,v 1.2 1999/10/18 19:24:14 mthurn Exp $
 #
 # Complete copyright notice follows below.
 
@@ -37,6 +37,14 @@ See $TEST_CASES below.
 
 C<WWW::Search::Lycos::Sites> 
 was written by Martin Thurn <MartinThurn@iname.com> 
+
+=head1 VERSION HISTORY
+
+If it''s not listed here, then it wasn''t a meaningful nor released revision.
+
+=head2 2.04, 1999-10-10
+
+First public release (coincided with WWW::Search 2.04).
 
 =head1 COPYRIGHT
 

@@ -1,7 +1,7 @@
 # SearchResult.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: SearchResult.pm,v 1.3 1999/10/05 20:05:30 mthurn Exp mthurn $
+# $Id: SearchResult.pm,v 1.4 1999/10/18 19:25:05 mthurn Exp $
 #
 # Copyright (c) 1996 University of Southern California.
 # All rights reserved.                                            

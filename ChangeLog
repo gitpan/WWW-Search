@@ -1,3 +1,75 @@
+1999-11-30  Kingpin  <mthurn@tasc.com>
+
+	* ZDNet.pm updated to 2.02 (handles new output format)
+
+1999-11-29  Kingpin  <mthurn@tasc.com>
+
+	* AltaVista::Intranet.pm updated to 2.02 (fixed to work with latest AltaVista.pm)
+
+1999-11-22  Kingpin  <mthurn@tasc.com>
+
+	* Yahoo.pm updated to 2.06 (supports Yahoo Korea)
+
+1999-11-12  Kingpin  <mthurn@tasc.com>
+
+	* HotBot.pm updated to 2.07 (clean up and fix regexen)
+
+1999-11-08  Kingpin  <mthurn@tasc.com>
+
+	* Span.pm updated to 2.03
+
+	* NorthernLight.pm updated to 2.04 (strip tags, etc.)
+
+1999-11-05  Kingpin  <mthurn@tasc.com>
+
+	* MetaCrawler.pm fixed, renamed, and updated to 2.06
+
+	* GoTo.pm updated to 1.05
+
+1999-10-29  Kingpin  <mthurn@tasc.com>
+
+	* AltaVista.pm updated (handles new output format)
+
+1999-10-22  Kingpin  <mthurn@tasc.com>
+
+	* Lycos.pm updated to 2.04 (use strip_tags, and extract real URL
+	from www.lycos.com's redirection URL)
+
+1999-10-20  Kingpin  <mthurn@tasc.com>
+
+	* Excite.pm updated to 2.03 (fixed parser for new output format,
+	and now strips tags out of title and description)
+
+1999-10-18  Kingpin  <mthurn@tasc.com>
+
+	* GoTo.pm updated to 1.04 (now uses source field of SearchResult)
+
+	* new backend Dice.pm for searching jobs at www.dice.com
+
+	* new backend AOL::Classifieds::Employment
+
+	* new backend AltaVista::Careers
+
+	* new backend Yahoo::Classifieds::Employment
+
+	* new backend Monster.pm for searching jobs at jobsearch.monster.com
+
+	* new backend HeadHunter.pm for searching jobs at www.headhunter.net
+
+	* Google.pm updated to 2.09 (fixed parser for new output format)
+
+	* HotBot.pm updated to 2.06 (strip tags, and new output format)
+
+1999-10-14  Kingpin  <mthurn@tasc.com>
+
+	* Yahoo.pm updated to 2.05 (strip tags, ignore newsgroups)
+
+	* Fireball.pm updated to 2.00 (fixed)
+
+1999-10-13  Kingpin  <mthurn@tasc.com>
+
+	* WWW::Search VERSION 2.05 RELEASED!
+
 1999-10-12  Kingpin  <mthurn@tasc.com>
 
 	* Google.pm updated to 2.06 (fixed parser for new output format)

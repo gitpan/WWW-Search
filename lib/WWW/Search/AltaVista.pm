@@ -4,7 +4,7 @@
 # AltaVista.pm
 # by John Heidemann
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: AltaVista.pm,v 1.3 1999/09/30 19:38:35 mthurn Exp $
+# $Id: AltaVista.pm,v 1.6 1999/11/09 16:48:51 mthurn Exp $
 #
 # Complete copyright notice follows below.
 #
@@ -92,10 +92,17 @@ it sets C<{_next_url}> to point to the page for the next
 set of results, otherwise it sets it to undef to indicate we're done.
 
 
-=head1 AUTHOR
+=head1 AUTHOR and CURRENT VERSION
 
 C<WWW::Search::AltaVista> is written and maintained
 by John Heidemann, <johnh@isi.edu>.
+
+The best place to obtain C<WWW::Search::AltaVista>
+is from Martin Thurn's WWW::Search releases on CPAN.
+Because AltaVista sometimes changes its format
+in between his releases, sometimes more up-to-date versions
+can be found at
+F<http://www.isi.edu/~johnh/SOFTWARE/WWW_SEARCH_ALTAVISTA/index.html>.
 
 
 =head1 COPYRIGHT
@@ -135,6 +142,9 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
+# note that the AltaVista version number is not synchronized
+# with the WWW::Search version number.
+$VERSION = '2.4';
 
 use Carp ();
 use WWW::Search(generic_option);
@@ -171,8 +181,9 @@ sub native_setup_search
 	};
     };
     # Process the options.
+    # (Now in sorted order for consistency regarless of hash ordering.)
     my($options) = '';
-    foreach (keys %$options_ref) {
+    foreach (sort keys %$options_ref) {
 	# printf STDERR "option: $_ is " . $options_ref->{$_} . "\n";
 	next if (generic_option($_));
 	$options .= $_ . '=' . $options_ref->{$_} . '&';
@@ -187,7 +198,21 @@ sub native_setup_search
 	$self->{_options}{'search_url'} .
 	"?" . $options .
 	"q=" . $native_query;
-    print $self->{_base_url} . "\n" if ($self->{_debug});
+    print STDERR $self->{_base_url} . "\n" if ($self->{_debug});
+}
+
+# private
+sub save_old_hit {
+    my($self) = shift;
+    my($old_hit) = shift;
+    my($old_raw) = shift;
+
+    if (defined($old_hit)) {
+	$old_hit->raw($old_raw) if (defined($old_raw));
+	push(@{$self->{cache}}, $old_hit);
+    };
+
+    return(undef, undef);
 }
 
 # private
@@ -197,11 +222,7 @@ sub begin_new_hit
     my($old_hit) = shift;
     my($old_raw) = shift;
 
-    # Save the hit we were working on.
-    if (defined($old_hit)) {
-	$old_hit->raw($old_raw) if (defined($old_raw));
-	push(@{$self->{cache}}, $old_hit);
-    };
+    $self->save_old_hit($old_hit, $old_raw);
 
     # Make a new hit.
     return (new WWW::SearchResult, '');
@@ -225,116 +246,91 @@ sub native_retrieve_some
     };
 
     # parse the output
-    my($HEADER, $HITS, $TRAILER, $POST_NEXT) = (1..10);  # order matters
+    my($HEADER, $HITS, $INHIT, $TRAILER, $POST_NEXT) = (1..10);  # order matters
     my($hits_found) = 0;
     my($state) = ($HEADER);
     my($hit) = undef;
     my($raw) = '';
     foreach ($self->split_lines($response->content())) {
         next if m@^$@; # short circuit for blank lines
+	######
+	# HEADER PARSING: find the number of hits
+	#
 	if (0) {
-	} elsif ($state == $HEADER && (/(no|[0-9,]+)[< ].*match.*found/i || /AltaVista\s+found.*[^,0-9](no|[0-9,]+)\s+(Web|document|posting)/i)) {
-	    # post 30-May-98
-	    # <font size=-1>No matches were found.</font><P><font size=-1><dl>
-	    # <font size=-1><b>10</b> matches were found. </font><P><font size=-1><P>
-	    # <td valign=top bgcolor=#ffffff><table border=0 width=434 bgcolor=#ffffff height=100% cellpadding=4 cellspacing=0><tr><td valign=top><font face=helvetica size=-1><font face=helvetica size=-1>About <b>14,115,615</b> matches were found. </font><P></font><font face=helvetica size=-1>
-	    #
-	    # afb 10/98 change
+	} elsif ($state == $HEADER && /no document matching/) {
+	    # 25-Oct-99
+	    $self->approximate_result_count(0);
+	    $state = $TRAILER;
+	} elsif ($state == $HEADER && /([\d,]+) pages found/) {
+	    # 25-Oct-99
 	    my($n) = $1;
 	    $n =~ s/,//g;
-	    $n = 0 if ($n =~ /no/i);
 	    $self->approximate_result_count($n);
 	    $state = $HITS;
-	    print STDERR "PARSE(2:HEADER->HITS): $n documents found.\n" if ($self->{_debug} >= 2);
-            print STDERR ' 'x 12, "$_\n" if ($self->{_debug} >= 2);
-	} elsif ($state == $HITS && m@(<p><dt>|<dt>|<dt><b>)[^"]*\d+\.[^"]*<a[^>]*href=\"([^"]+)"[^>]*>(.*)</a>.*<dd>\s+(\d+\s+\w+\s+\d+)([^"]+)<a@i) {  # post 30-May-98 "
-	    # news is, of course, slightly different
-	    # <dt><b>1. </b><a href="http://ww2.altavista.digital.com/cgi-bin/news?msg@96138@comp%2elang%2eperl%2emisc"><strong>How to Tar &amp; unzip Perl mods on CPAN site on Win32?</strong></a><dd> 8 Jan 98 - <b>comp.lang.perl.misc</b><br><a href="news:34B53D7D.2CED@fast.net">&lt;34B53D7D.2CED@fast.net&gt;</a><br>  <a href="mailto:emorr@fast.net">&quot;Edward Morris, Jr.&quot; &lt;emorr@fast.net&gt;</a><P>
+	    print STDERR "PARSE(10:HEADER->HITS): $n documents found.\n" if ($self->{_debug} >= 2);
+	######
+	# HITS PARSING: find each hit
+	#
+	} elsif ($state == $HITS && /(word count:|query.*graphic version)/i) {
+	    $state = $TRAILER;
+	    print STDERR "PARSE(11:HITS->TRAILER): done.\n" if ($self->{_debug} >= 2);
+
+	} elsif ($state == $HITS && /<dl><dt>/i) {
+	    # 25-Oct-99
 	    ($hit, $raw) = $self->begin_new_hit($hit, $raw);
-	    $raw .= $_;
-	    $hit->add_url($2);
 	    $hits_found++;
-	    my($title) = $3;
-	    $title =~ s/<[^>]+>//g;   # strip any accidental formatting in title
-	    $hit->title($title);
-	    $hit->change_date($4);
-	    $hit->description($5);
-	    print STDERR "PARSE(3:HITS): news hit found.\n" if ($self->{_debug} >= 2);
-            print STDERR ' 'x 12, "$_\n" if ($self->{_debug} >= 2);
-	} elsif ($state == $HITS && m@(<p><dt>|<dt>|<dt><b>)[^"]*\d+\.[^"]*<a[^>]*href=\"([^"]+)"[^>]*>(.*)</a>@i) {
-	    # post 30-May-98:
-	    # <dt><b>1. </b><a href="http://www.isi.edu/lsam/tools/autosearch/"><b>index.html directory page</b></a><dd>
-	    # post  6-Oct-98:
- 	    # <dl><dt><b>12. </b><a href="http://www.zum.de/schule/Faecher/G/BW/Landeskunde/rhein/zisterz/zs_skrp2.htm"><b>Das Skriptorium der Zisterzienser</b></a><dd>
-	    ($hit, $raw) = $self->begin_new_hit($hit, $raw);
 	    $raw .= $_;
-	    $hit->add_url($2);
-	    $hits_found++;
-	    my($title) = $3;
-	    $title =~ s/<[^>]+>//g;   # strip any accidental formatting in title
-	    $hit->title($title);
-	    $hit->description("");
-	    print STDERR "PARSE(3:HITS): hit found.\n" if ($self->{_debug} >= 2);
-            print STDERR ' 'x 12, "$_\n" if ($self->{_debug} >= 2);
-	} elsif ($state == $HITS && m@^([^<]+).*last modified\s+(\S+)\s.*page size\s+(\S+)\s@i) { # "
-	    # pre-8-oct-98
-	    # AutoSearch WEB Searching. What is AutoSearch? AutoSearch performs a web-based search and puts the results set in a web page. It periodically updates this..<br><font size=-2>Last modified 3-Feb-97 - page size 2K - in English [ <a href="http://babelfish.altavista.digital.com/cgi-bin/translate?urltext=http%3a%2f%2fwww%2eisi%2eedu%2flsam%2ftools%2fautosearch%2f&language=en">Translate</a> ]</font><P>
+	    $state = $INHIT;
+	    print STDERR "PARSE(12:HITS->INHIT): hit start.\n" if ($self->{_debug} >= 2);
+
+	} elsif ($state == $INHIT && /^<a.*href="([^"]+)"/) { #"
+	    # 25-Oct-99
+	    $raw .= $_;
+	    $hit->add_url($1);
+	    print STDERR "PARSE(13:INHIT): url: $1.\n" if ($self->{_debug} >= 2);
+
+	} elsif ($state == $INHIT && /^<b>([^<]+)<\/b>.*<\/dt>/) {
+	    # 25-Oct-99
+	    $raw .= $_;
+	    $hit->title($1);
+	    print STDERR "PARSE(13:INHIT): title: $1.\n" if ($self->{_debug} >= 2);
+
+	} elsif ($state == $INHIT && /^<dd>(.*)<\/dd>/) {
+	    # 25-Oct-99
 	    $raw .= $_;
 	    $hit->description($1);
-	    $hit->change_date($2);
-	    my($size) = $3;
-	    $size *= 1024 if ($size =~ s@k$@@i);
-	    $size *= 1024*1024 if ($size =~ s@m$@@i);
-	    $hit->size($size);
-	    print STDERR "PARSE(3old:HITS): hit found.\n" if ($self->{_debug} >= 2);
-            print STDERR ' 'x 12, "$_\n" if ($self->{_debug} >= 2);
-	} elsif ($state == $HITS && m@last modified (\d+-\w+-\d+).*page size (\S+)@i) {
-	    # post  8-Oct-98
-	    # Last modified 3-Jun-98 - page size 2K - in English</font> [&nbsp;<a href="http://jump.altavista.com/trans.go??urltext=http%3a%2f%2fwww%2eisi%2eedu%2f%7elsam%2ftools%2fautosearch%2findex%2ehtml&language=en">Translate</a>&nbsp;]</dl>
+	    print STDERR "PARSE(13:INHIT): description.\n" if ($self->{_debug} >= 2);
+
+	} elsif ($state == $INHIT && /^Last modified on: (.*)$/) {
+	    # 25-Oct-99
 	    $raw .= $_;
 	    $hit->change_date($1);
-	    my($size) = $2;
-	    $size *= 1024 if ($size =~ s@k$@@i);
-	    $size *= 1024*1024 if ($size =~ s@m$@@i);
-	    $hit->size($size);
-	    print STDERR "PARSE(4old:HIT DATE): hit found.\n" if ($self->{_debug} >= 2);
-            print STDERR ' 'x 12, "$_\n" if ($self->{_debug} >= 2);
-	} elsif ($state == $HITS && m@^([^<]+).*URL:@) {
-	    # post  8-Oct-98
-	    # AutoSearch WEB Searching. What is AutoSearch? AutoSearch performs a web-based search and puts the results set in a web page. It periodically updates this..<br><b>URL:</b> <font color=gray>www.isi.edu/~lsam/tools/autosearch/index.html<br>
+	    print STDERR "PARSE(13:INHIT): mod date.\n" if ($self->{_debug} >= 2);
+
+	} elsif ($state == $INHIT && /^<\/dl>/) {
+	    # 25-Oct-99
 	    $raw .= $_;
-	    $hit->description($1);
-	    print STDERR "PARSE(5:DESCRIPTION): hit found.\n" if ($self->{_debug} >= 2);
-            print STDERR ' 'x 12, "$_\n" if ($self->{_debug} >= 2);
-	} elsif ($state == $HITS && (m@^</font>.*<br>@i || m@AltaVista Home.*\|@i || m@result pages:.*href="/cgi-bin/query@i)) { #"
-	    # end of hits
-	    # afb 10/98 adds the cgi-bin termination check
-	    ($hit, $raw) = $self->begin_new_hit($hit, $raw);
-	    $state = $TRAILER;
-	    print STDERR "PARSE(6b:HITS->TRAILER).\n" if ($self->{_debug} >= 2);
-            print STDERR ' 'x 12, "$_\n" if ($self->{_debug} >= 2);
-	} elsif ($state == $HITS) {
+	    ($hit, $raw) = $self->save_old_hit($hit, $raw);
+	    $state = $HITS;
+	    print STDERR "PARSE(13:INHIT->HITS): end hit.\n" if ($self->{_debug} >= 2);
+
+	} elsif ($state == $INHIT) {
 	    # other random stuff in a hit---accumulate it
-	    # <font size=-2>[<b>URL:</b> www.isi.edu/lsam/tools/autosearch/]</font><br>
 	    $raw .= $_;
-	    print STDERR "PARSE(7:HITS NO MATCH)\n" if ($self->{_debug} >= 2);
-            print STDERR ' 'x 12, "$_\n" if ($self->{_debug} >= 2);
-	} elsif ($state == $TRAILER && /<a[^>]+href="([^"]+)".*\&gt;\&gt;/) { # "
+	    print STDERR "PARSE(14:INHIT): no match.\n" if ($self->{_debug} >= 2);
+            print STDERR ' 'x 12, "$_\n" if ($self->{_debug} >= 3);
+
+	} elsif ($hits_found && ($state == $TRAILER || $state == $HITS) && /<a[^>]+href="([^"]+)".*\&gt;\&gt;/) { # "
+	    # (above, note the trick $hits_found so we don't prematurely terminate.)
 	    # set up next page
-	    # <a href="/cgi-bin/query?pg=q&text=yes&q=%2bLSAM+%2bISI+%2bwork&stq=10&c9k">[<b>&gt;&gt;</b>]</a> <P>
 	    my($relative_url) = $1;
 	    # hack:  make sure fmt=d stays on news URLs
 	    $relative_url =~ s/what=news/what=news\&fmt=d/ if ($relative_url !~ /fmt=d/);
 	    $self->{_next_url} = new URI::URL($relative_url, $self->{_base_url});
+	    my($n) = $self->{_next_url};
 	    $state = $POST_NEXT;
-	    print STDERR "PARSE(9a:TRAILER->POST_NEXT): found next.\n" if ($self->{_debug} >= 2);
-	} elsif ($state == $TRAILER && /\>\[[Nn]ext\]\</) {
-	    # this section is pre 30-May-98 and should be deleted
-	    # set up next page
-	    my($relative_url) = m@<a\s+href="([^"]+)">\s*\[\s*[Nn]ext\s*\]\s*</a>@; # "
-	    $self->{_next_url} = new URI::URL($relative_url, $self->{_base_url});
-	    $state = $POST_NEXT;
-	    print STDERR "PARSE(9b:TRAILER->POST_NEXT): found next.\n" if ($self->{_debug} >= 2);
+	    print STDERR "PARSE(15:->POST_NEXT): found next, $n.\n" if ($self->{_debug} >= 2);
+
 	} else {
 	    # accumulate raw
 	    $raw .= $_;

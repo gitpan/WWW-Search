@@ -1,7 +1,7 @@
 # Excite.pm
 # by Martin Thurn
 # Copyright (C) 1998 by USC/ISI
-# $Id: Excite.pm,v 1.14 1999/10/05 19:46:32 mthurn Exp $
+# $Id: Excite.pm,v 1.15 1999/10/20 15:29:47 mthurn Exp $
 
 =head1 NAME
 
@@ -59,6 +59,11 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 =head1 VERSION HISTORY
 
+=head2 2.03, 1999-10-20
+
+www.excite.com changed their output format slightly;
+new uses strip_tags() on title and description results
+
 =head2 2.02, 1999-10-05
 
 now uses hash_to_cgi_string()
@@ -103,10 +108,10 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.02';
+$VERSION = '2.03';
 
 use Carp ();
-use WWW::Search(generic_option);
+use WWW::Search qw( generic_option strip_tags );
 require WWW::SearchResult;
 
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
@@ -239,7 +244,7 @@ sub native_retrieve_some
       } # we're in HEADER mode, and line has number of results
 
     elsif ($state eq $HITS && 
-           m=\A\<SMALL>(\d+)\%=i)
+           m=\<SMALL>(\d+)\%=i)
       {
       print STDERR "hit percentage line\n" if 2 <= $self->{'_debug'};
       # Actual line of input:
@@ -264,18 +269,19 @@ sub native_retrieve_some
       # Sometimes the </A> is on the next line.
       # Sometimes there is a /r right before the </A>
       $hit->add_url($1);
-      $hit->title($2);
+      $hit->title(strip_tags($2));
       $state = $DESC;
       }
 
     elsif ($state eq $DESC &&
-           m/^\-\s(.+)(<BR>)?/)
+           (m/^\-\s(.+?)<BR>/ || m/^\-\s(.+)$/)
+          )
       {
       print STDERR "hit description line\n" if 2 <= $self->{'_debug'};
       # Actual line of input:
       # - Bootlegs Maintained by Gus Lopez (lopez@halcyon.com) Bootlegs toys and other Star Wars collectibles were made primarily in countries where Star Wars was not commercially released in theaters. Most Star Wars bootlegs originate from the eastern bloc countries: Poland, Hungary, and Russia. <BR><SMALL>http://www.toysrgus.com/images-bootleg.html
       # (The description ends when we see <BR>, or goes to end-of-line if there is no <BR>
-      $hit->description($1);
+      $hit->description(strip_tags($1));
       $state = $HITS;
       } # line is description
 

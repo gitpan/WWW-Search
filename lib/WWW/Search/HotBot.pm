@@ -1,7 +1,7 @@
 # HotBot.pm
 # by Wm. L. Scheding and Martin Thurn
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: HotBot.pm,v 1.41 1999/10/05 19:39:38 mthurn Exp $
+# $Id: HotBot.pm,v 1.43 1999/11/12 15:32:39 mthurn Exp $
 
 =head1 NAME
 
@@ -296,6 +296,15 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 If it''s not listed here, then it wasn''t a meaningful nor released revision.
 
+=head2 2.07, 1999-11-12
+
+BUGFIX for domain-limited URL parsing (thanks to Leon Brocard)
+
+=head2 2.06, 1999-10-18
+
+www.hotbot.com changed their output format slightly;
+now uses strip_tags() on title and description
+
 =head2 2.05, 1999-10-05
 
 now uses hash_to_cgi_string(); new test cases
@@ -385,7 +394,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.05';
+$VERSION = '2.07';
 
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 $TEST_CASES = <<"ENDTESTCASES";
@@ -395,7 +404,7 @@ $TEST_CASES = <<"ENDTESTCASES";
 ENDTESTCASES
 
 use Carp ();
-use WWW::Search( generic_option );
+use WWW::Search qw( generic_option strip_tags );
 require WWW::SearchResult;
 use URI::Escape;
 
@@ -497,8 +506,10 @@ sub native_retrieve_some
     next if m/^\r?$/; # short circuit for blank lines
     print STDERR "\n * $state ===$_===" if 2 <= $self->{'_debug'};
 
+    # \074 is <
+    # \076 is >
     if ($state eq $TITLE && 
-        m@\<TITLE>HotBot results:\s+(.+)\s\(\d+\+\)\</TITLE>@i) 
+        m@\074TITLE\076HotBot results:\s+(.+)\s\(\d+\+\)\074/TITLE\076@i) 
       {
       # Actual line of input is:
       # <HEAD><TITLE>HotBot results: Christie Abbott (1+)</TITLE>
@@ -530,7 +541,7 @@ sub native_retrieve_some
       $self->{'_next_to_retrieve'} += $self->{'_hits_per_page'};
       $state = $HITS;
       } # found "next" link in NEXT mode
-    elsif ($state eq $NEXT && m|^<p>\s<b>(\d+)\.| )
+    elsif ($state eq $NEXT && m|^\074p\076\s\074b\076(\d+)\.| )
       {
       print STDERR " no next button; " if 2 <= $self->{'_debug'};
       # There was no "next" button on this page; no more pages to get!
@@ -540,28 +551,27 @@ sub native_retrieve_some
       # pattern matches this line (again)!
       }
 
-    if ($state eq $HITS && m|^<p>\s<b>(\d+)\.| )
+    if ($state eq $HITS && m|^\074p\076\s\074b\076(\d+)\.| )
       {
       print STDERR "multihit line" if 2 <= $self->{'_debug'};
-      # Actual line of input:
-      # <B>2. </B><A HREF="http://www.toysrgus.com/textfiles.html">Charts, Tables, and Text Files</A><BR>Text Files Maintained by Gus Lopez (lopez@halcyon.com) Ever wonder which weapon goes with which figure? Well, that's the kind of information you can find right here. Any beginning collector should glance at some of these files since they answer...<br>92%&nbsp;&nbsp;&nbsp; 3616 bytes&#44; 1998/04/07&nbsp;&nbsp;&nbsp;http://www.toysrgus.com/textfiles.html<p>
-      # <br> <b>1.&nbsp;&nbsp;<a href=/director.asp?target=http%3A%2F%2Fwww%2Ecoolshop%2Ecom%2Fliquidblue%2Ehtml&id=1&userid=2EtRtdJnbHAA&query=MT=Star+Wars+Golden+Turtle&SM=SC&rsource=INK>The Coolest T-Shirts Ever!</A></b><br>Liquid BlueM-. T-shirts, CoolshopM-. offers an incredible line of popular T-shirt styles. In addition to the designs featuring images from the legendary Grateful Dead, COOLSHOPM-. offers a diverse line of T-shirts with original art depicting the...<br><font size=-1><b>99%&nbsp&nbsp</b><i>11/4/98</i>  http://www.coolshop.com/liquidblue.html<BR>See results from <a href="/?MT=Star+Wars+Golden+Turtle&SM=SC&uHost=http://www.coolshop.com/liquidblue.html">this site only</a>.</font><p> <b>2.&nbsp;&nbsp;<a href=/director.asp?target=http%3A%2F%2Fcust%2Eidl%2Enet%2Eau%2Ffionat%2F&id=2&userid=2EtRtdJnbHAA&query=MT=Star+Wars+Golden+Turtle&SM=SC&rsource=INK>Fiona's Tazo Swap Page</A></b><br>UPDATED 30th Nonember 98 I Swap 1 for 1 in mint condition, unless other-wise specified. I will swap 2 of yours for 1 of mine if you don't have any-thing I need. ? means in the process of swapping. SERIES 1: ORIGINAL SWAPS 6 7 22 27 30 32 35 47 BLUE.<br><font size=-1><b>98%&nbsp&nbsp</b><i>11/30/98</i>  http://cust.idl.net.au/fionat/<BR>See results from <a href="/?MT=Star+Wars+Golden+Turtle&SM=SC&uHost=http://cust.idl.net.au/fionat/">this site only</a>.</font>
+      # Actual line of input as of 1999-10-18:
+      # <p> <b>10.&nbsp;&nbsp;<a href=/director.asp?target=http%3A%2F%2Fwww%2E5ss%2Ecom%2Fswafw%2Finfo%2Ffaq%2Ehtml&id=10&userid=4owy5fprDDg/&query=MT=%22Martin+Thurn%22&SM=SC&DC=100&BT=T&rsource=INK>http://www.5ss.com/swafw/info/faq.html</A></b><br>REC.ARTS.SF.STARWARS.COLLECTING FAQ Last updated 4-22-97 ** Coordinators: Paul Levesque (paulleve@map.com) Gus Lopez (lopez@cs.washington.edu) Chris Nichols (anichols@bucknell.edu) Authors: Dave Halsted (def@leland.stanford.edu) Gus Lopez  (lopez..<br><font size=1><b>85%&nbsp&nbsp</b><i>8/27/97</i>  http://www.5ss.com/swafw/info/faq.html<BR>See results from <a href="/?MT=%22Martin+Thurn%22&SM=SC&DC=100&RD=DM&Domain=www%2E5ss%2Ecom&BT=T">this site only</a>.</font>
       # Here is what it looks like if DE=1 (brief description):
       # <p> <b>1. <a href=/director.asp?target=http%3A%2F%2Fwww%2Epitt%2Eedu%2F%7Ethurn&id=1&userid=3gr+hc5jrHwm&query=MT=Martin+Thurn&SM=SC&DE=1&DC=100&rsource=INK>Martin Thurn's Index Page</A></b><br>Martin Thurn Why am I so busy? I am gainfully employed at TASC. I have a family including 3 beautiful children. I am a co-habitant with two immaculate cats. I am the editor of The Star Wars Collector, a bimonthly newsletter by Star Wars  collectors.<font size=1><br><b>99%&nbsp&nbsp</b></font><p> <b>2. <a href=/director.asp?target=http%3A%2F%2Fwww%2Eposta%2Esuedtirol%2Ecom%2F&id=2&userid=3gr+hc5jrHwm&query=MT=Martin+Thurn&SM=SC&DE=1&DC=100&rsource=INK>**Gasthof Post St. Martin in Thurn Val Badia Sudtirol Alto Adige Southtyrol Suedtirol</A></b><br>Urlaub im Gasthof Post in Pikolein in St. Martin in Thurn in Val Badia in  Sudtiro<font size=1><br><b>98%&nbsp&nbsp</b></font><p> <b>3. ...
-      my @asHits = split /<p>/;
+      my @asHits = split /\074p\076/;
       foreach my $sHit (@asHits)
         {
         my ($iHit,$iPercent,$iBytes,$sURL,$sTitle,$sDesc,$sDate) = (0,0,0,'','','','');
         # m/<b>(\d+)\.$WHITESPACE/ && $iHit = $1;
         $sURL = $1 if $sHit =~ m/uHost=(.+)\"/;
-        # Following line added 1999-04-12 to recognize domain-limited results:
-        $sURL ||= $1 if $sHit =~ m!</i>\s*(.+)!;
+        # Following line corrected 1999-11-11 to ignore domain-limited link (by Leon Brocard)
+        $sURL ||= $1 if $sHit =~ m!\074/i\076\s*(.+?)\074!;
         # Following line added 1999-08-17 to recognize brief-description results (DE=1):
         $sURL ||= $1 if $sHit =~ m!director.asp\?target=(.+?)\&!;
-        $sTitle = $1 if $sHit =~ m/\>([^<]+)<\/A>/;
-        $sDate = $1 if $sHit =~ m!<i>(\d\d?\/\d\d?\/\d\d)</i>!;
-        $sDesc = $1 if $sHit =~ m/<br>([^<]+)<(br|font)/;
-        $iPercent = $1 if $sHit =~ m/>(\d+)\%(&nbsp|\<)/;
+        $sTitle = &strip_tags($1) if $sHit =~ m/\076([^\074]+)\074\/A\076/;
+        $sDate = $1 if $sHit =~ m!\074i\076(\d\d?\/\d\d?\/\d\d)\074/i\076!;
+        $sDesc = &strip_tags($1) if $sHit =~ m/\074br\076([^\074]+)\074(br|font)/;
+        $iPercent = $1 if $sHit =~ m/\076(\d+)\%(&nbsp|\074)/;
         $iBytes = $1 if $sHit =~ m/&nbsp;\s(\d+)\sbytes/;
         # Note that we ignore MIRROR URLs, so our total hit count may
         # get all out of whack.
@@ -573,7 +583,9 @@ sub native_retrieve_some
             } # if
           $hit = new WWW::SearchResult;
           # As of 1999-06-20: www.hotbot.pm escapes the URL on this line of output:
+          print STDERR " +   raw       URL is $sURL...\n" if 5 <= $self->{'_debug'};
           $hit->add_url(uri_unescape($sURL));
+          print STDERR " +   unescaped URL is $sURL...\n" if 5 <= $self->{'_debug'};
           $hit->title($sTitle) if $sTitle ne '';
           $hit->description($sDesc) if $sDesc ne '';
           $hit->score($iPercent) if 0 < $iPercent;

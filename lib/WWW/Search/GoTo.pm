@@ -4,7 +4,7 @@
 # GoTo.pm
 # by Jim Smyser
 # Copyright (C) 1996-1999 by Jim Smyser & USC/ISI
-# $Id: GoTo.pm,v 1.4 1999/10/05 17:08:44 mthurn Exp $
+# $Id: GoTo.pm,v 1.7 1999/11/05 19:16:05 mthurn Exp $
 ######################################################
 
 package WWW::Search::GoTo;
@@ -32,6 +32,12 @@ using simple queries.
  
 This class exports no public interface; all interaction should
 be done through WWW::Search objects.
+
+=head1 NOTES
+
+Uses result field $result->source which is helpful with this engine 
+because the the URL is owner encoded. $result->source will display a 
+plain base URL address and should be called after $result->description  
 
 
 =head1 SEE ALSO
@@ -77,13 +83,13 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '1.03';
+$VERSION = '1.05';
 
 $MAINTAINER = 'Jim Smyser <jsmyser@bigfoot.com>';
 $TEST_CASES = <<"ENDTESTCASES";
 &test('GoTo', '$MAINTAINER', 'zero', \$bogus_query, \$TEST_EXACTLY);
-&test('GoTo', '$MAINTAINER', 'one_page', 'satur'.'nV', \$TEST_RANGE, 1,39);
-&test('GoTo', '$MAINTAINER', 'multi', 'mewt'.'wo', \$TEST_GREATER_THAN, 41);
+&test('GoTo', '$MAINTAINER', 'one_page', 'satur'.'nV', \$TEST_RANGE, 1,10);
+&test('GoTo', '$MAINTAINER', 'multi', 'iro' . 'ver', \$TEST_GREATER_THAN, 20);
 ENDTESTCASES
 
 use Carp ();
@@ -151,20 +157,22 @@ sub native_retrieve_some {
       my($hit, $raw, $title, $url, $rating, $desc) = ();
       foreach ($self->split_lines($response->content())) {
       next if m@^$@; # short circuit for blank lines
-   if ($state == $HEADER && m@<br clear=left>@i) { 
+   if ($state == $HEADER && m@<head>@i) { 
       # GoTo doesn't appear to display total pages found
       print STDERR "**FOUND HEADER**" if ($self->{_debug} >= 2);
       $state = $HITS;
- } elsif ($state == $HITS && m@.*?<b><a href=(.*?)\ target=_top>(.*)</a></b>.*?<font face=.*?>(.*)<br><em>(.*?)</em>@i) { 
+
+ } elsif ($state == $HITS && 
+      m|.*?<b><a href="(.*?)"\ target.*?>(.*)</a></b>.*?<font face=.*?>(.*)<br><em>(.*?)</em>|i) 
+      { 
       print STDERR "**PARSING URL, TITLE, DESC.**\n" if ($self->{_debug} >= 2);
-      my ($url, $title, $description, $score) = ($1,$2,$3,$4);
+      my ($url, $title, $description, $sURL) = ($1,$2,$3,$4);
       my($hit) = new WWW::SearchResult;
       $url = 'http://goto.com' . $url;
       $hit->add_url($url);
       $hit->title($title);
       $hit->description($description);
-      $score = '<br><I>[' . $score . ']</I>';
-      $hit->score($score);
+      $hit->source($sURL);
       $hit->raw($_);
       $hits_found++;
       push(@{$self->{cache}}, $hit);
@@ -190,4 +198,7 @@ sub native_retrieve_some {
       return $hits_found;
       }
 1;
+
+
+
 

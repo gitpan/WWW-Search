@@ -3,12 +3,12 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.05?  (1999-10-12)
+WHAT IS NEW IN WWW::Search 2.06?  (1999-11-30)
 ----------------------------------------------
 overview:
+ * new backends for six (count'em!) jobs search engines
+ * Yahoo.pm can now search Yahoo Korea!
  * Bug fixes for several backends (as usual)
- * new result fields WWW::SearchResult->source, ->company, ->location
- * new method WWW::Search::hash_to_cgi_string
 
 See the file ChangeLog for details.
 
@@ -24,11 +24,14 @@ include two applications built from this library: AutoSearch (a
 program to automate tracking of search results over time), and
 WebSearch, a small demonstration program to drive the library.
 
-WWW::Search does NOT try to emulate the search that you would get with
-each search engine's GUI.  WWW::Search performs the search in a way
-that is efficient and convenient for text processing.  This might
-include getting "text-only" pages, making sure descriptions are turned
-on, and increasing the number of hits per page, among other tricks.
+WWW::Search does NOT try to emulate the default search that you would
+get with each search engine's GUI.  WWW::Search performs the search in
+a way that is efficient and convenient for text processing.  This
+might include getting "text-only" pages, making "OR" the default query
+term operator instead of "AND", ungrouping same-site results, making
+sure descriptions are turned on, and increasing the number of hits per
+page, among other tricks.  Hopefully, the documentation for each
+backend will tell you about the more important tricks being used.
 
 Because WWW::Search depends on parsing the HTML output of web search
 engines it will fail if the search engine operators change their
@@ -38,21 +41,25 @@ correctly.  As of the day of the release the current backend status
 is:
 
 AltaVista		working
-AltaVista::AdvancedNews	working
-AltaVista::AdvancedWeb	working
-AltaVista::News		working
-AltaVista::Web		working
+AltaVista::AdvancedNews	not working
+AltaVista::AdvancedWeb	not working
+AltaVista::Careers	working (not in test suite)
 AltaVista::Intranet	working
+AltaVista::News		not working
+AltaVista::Web		working
+AOL::Classifieds::Employment    working (not in test suite)
 Crawler			partially working?
 Deja/Dejanews		working
+Dice                    working (not in test suite)
 Excite			working
 Excite::News		working
 ExciteForWebServers	not working
-Fireball		not working?
+Fireball		working? (not in test suite)
 FolioViews		working
 Google  		working
 Gopher			not working? (not in test suite)
 GoTo                    working
+HeadHunter              working (not in test suite)
 HotBot			working
 HotFiles		working
 Infoseek		working
@@ -66,8 +73,9 @@ Lycos			working
 Lycos::Pages		working
 Lycos::Sites		working
 Magellan		working
-Metacrawler             not working
+MetaCrawler             working
 Metapedia		working? (not in test suite)
+Monster                 working (not in test suite)
 MSIndexServer		not working?
 NetFind                 working
 NorthernLight		working
@@ -82,6 +90,7 @@ Snap			working
 Verity			not working (not in test suite)
 WebCrawler		working
 Yahoo			working
+Yahoo::Classifieds::Employment  working (not in test suite)
 ZDNet			working
 
 ``Partially working'' indicates that some tests passed and some failed.
@@ -160,18 +169,20 @@ use 'nmake' instead of 'make' in the above sequence of commands.
 When you do `perl Makefile.PL` on Win32, you might get warnings that a
 whole bunch of 'zero.out' files are missing.  This seems to be a bug
 in some versions of WinZip which refuse to extract empty files from
-the archive.  
+the archive.  You can ignore these warnings.
 
 See "TESTING" below for a description of what "make test" does.
 
 If you want to install a private copy of WWW::Search in your home
-directory, then you should produce the initial Makefile with something
-like this command:
+directory, then you should do the installation with something like
+these commands:
 
-    perl Makefile.PL PREFIX=/my/perl/lib
+    perl Makefile.PL INSTALLDIRS=perl PREFIX=/my/perl/lib 
+    make test
+    make pure_perl_install UNINST=1
 
 Don't forget to add /my/perl/lib to your PERL5LIB environment variable
-(or 'use lib' it, or unshift it onto @INC)!
+(or use lib '/my/perl/lib'; or unshift @INC, '/my/perl/lib')!
 
 
 TESTING
@@ -220,7 +231,9 @@ me losing the message in the pile).
 
 There is a mailing list for WWW::Search discussion.  To subscribe,
 send "subscribe info-www-search" as the body of a message to
-<info-www-search-request@isi.edu>.
+<info-www-search-request@isi.edu>.  If you use WWW::Search at all, you
+should subscribe to the mailing list.  Bug fixes are posted there as
+soon as they're fixed.
 
 Back-end-related bug reports ("search engine ABC doesn't work") should
 be sent to the author of the backend (backend authors are identified
@@ -229,12 +242,12 @@ General bugs should be reported to <MartinThurn@iname.com>.
 
 When submitting a bug report or request for help, please remember to
 include:
-        - your operating system name and version
-	- your version of perl
-	- your version of WWW::Search
-	- your version of the backend
-        - the code you ran to produce the error (PLEASE cut-and-paste!)
-	- sample output showing the error (PLEASE cut-and-paste!)
+  - your operating system name and version
+  - your version of perl
+  - your version of WWW::Search
+  - your version of the backend
+  - the code you ran to produce the error (PLEASE cut-and-paste, do not just summarize!)
+  - sample output showing the error (PLEASE cut-and-paste, do not just summarize!)
 
 
 DEMONSTRATION
@@ -296,8 +309,8 @@ native_query).  Contact <MartinThurn@iname.com>
 here from someone who uses/needs proxy support and can test it).
 Contact <MartinThurn@iname.com>
 
-  - more widespread use of new result tags across all backends
-(i.e. description, date, size, etc.)
+  - more widespread use of result tags description, date, size,
+etc. across all backends 
 
   - a freeze/restore interface to suspend and resume in-progress queries
 

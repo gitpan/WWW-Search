@@ -1,7 +1,7 @@
 # Lycos.pm
 # by Wm. L. Scheding and Martin Thurn
 # Copyright (C) 1996-1998 by USC/ISI
-# $Id: Lycos.pm,v 1.9 1999/10/05 19:52:47 mthurn Exp $
+# $Id: Lycos.pm,v 1.10 1999/10/22 15:16:52 mthurn Exp $
 
 =head1 NAME
 
@@ -75,6 +75,11 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 If it is not listed here, then it was not a meaningful nor released revision.
 
+=head3 2.04, 1999-10-22
+
+use strip_tags();
+extract real URL from www.lycos.com's redirection URL
+
 =head2 2.03, 1999-10-05
 
 now uses hash_to_cgi_string()
@@ -104,11 +109,11 @@ require Exporter;
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
 
-$VERSION = '2.03';
+$VERSION = '2.04';
 $MAINTAINER = 'Martin Thurn <MartinThurn@iname.com>';
 
 use Carp ();
-use WWW::Search(qw( generic_option strip_tags ));
+use WWW::Search(qw( generic_option strip_tags unescape_query ));
 require WWW::SearchResult;
 
 sub native_setup_search
@@ -247,15 +252,17 @@ sub native_retrieve_some
       #  <a href="http://www.toysrgus.com">The <b>Star</b> <b>Wars</b> Collectors Archive</a> - <font size=-1>An archive of <b>Star</b> <b>Wars</b> Collectibles.</font> <font size=1>&nbsp;<br><br></font>
       # <a href="http://www.madal.com">Wholesale Only! Pokemon, Magic, <b>Star</b> <b>Wars</b>, <b>Star</b> Trek.  Sales to Qualified retail stores only!</a> - <font size=-1>Wholesale Sales to qualified retail outlets only. We are authorized distributors for Wizards of the Coast, Decipher and most other trading card game companies.  We have Pokemon.</font> <font size=1>&nbsp;<br><br></font>
       print STDERR "hit url+desc line\n" if 2 <= $self->{_debug};
+      my ($sURL, $sTitle, $sDesc) = ($1,$2,$3);
+      $sURL = unescape_query($1) if $sURL =~ m/target=(.+?)&/i;
       if (defined($hit)) 
         {
         push(@{$self->{cache}}, $hit);
-        };
+        }
       $hit = new WWW::SearchResult;
-      $hit->add_url($1);
+      $hit->add_url($sURL);
       $hits_found++;
-      $hit->title($2);
-      $hit->description(strip_tags($3));
+      $hit->title(strip_tags($sTitle));
+      $hit->description(strip_tags($sDesc));
       }
     elsif ($state eq $HITS && m@<LI><A HREF=\"?([^">]+?)\"?>(.*)</A>@i)
       {
@@ -276,7 +283,7 @@ sub native_retrieve_some
       $hit = new WWW::SearchResult;
       $hit->add_url($url);
       $hits_found++;
-      $hit->title($title);
+      $hit->title(strip_tags($title));
       if ($url =~ m=//news\.lycos\.com/=)
         {
         $state = $COLLECT;
@@ -291,7 +298,7 @@ sub native_retrieve_some
       {
       print STDERR "end of description collection\n" if 2 <= $self->{_debug};
       $description .= $1;
-      $hit->description($description);
+      $hit->description(strip_tags($description));
       $description = '';
       $state = $HITS;
       }
@@ -322,7 +329,7 @@ sub native_retrieve_some
       # Star Wars logo &nbsp; Merchandise Collector Masks - Star Wars &nbsp; Emperor Palpatine Greedo Yoda Emperor Palpatine Gre<BR>http://scifireplicas.com/movies/masks.htm
       print STDERR "description line\n" if 2 <= $self->{_debug};
       my $sDescription = $1;
-      $hit->description($sDescription) if defined($hit);
+      $hit->description(strip_tags($sDescription)) if defined($hit);
       $state = $HITS;
       }
 

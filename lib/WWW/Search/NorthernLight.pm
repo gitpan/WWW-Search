@@ -3,10 +3,9 @@
 # NorthernLight.pm
 # by Jim Smyser
 # Copyright (C) 1996-1999 by Jim Smyser & USC/ISI
-# $Id: NorthernLight.pm,v 1.9 1999/09/13 12:56:07 mthurn Exp $
+# $Id: NorthernLight.pm,v 1.10 1999/11/08 13:37:46 mthurn Exp $
 
 package WWW::Search::NorthernLight;
-
 
 =head1 NAME
 
@@ -82,6 +81,10 @@ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 =head1 VERSION HISTORY
 
+2.04 
+Mainly Tag stripping that was getting bad and causing undesirable 
+formatting in the title and description return.
+
 2.03
 Next Page url change and weeding out a new edit search url.
 
@@ -115,7 +118,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.03';
+$VERSION = '2.04';
 
 $MAINTAINER = 'Jim Smyser <jsmyser@bigfoot.com>';
 $TEST_CASES = <<"ENDTESTCASES";
@@ -125,7 +128,7 @@ $TEST_CASES = <<"ENDTESTCASES";
 ENDTESTCASES
 
 use Carp ();
-use WWW::Search(generic_option);
+use WWW::Search(qw(generic_option strip_tags));
 require WWW::SearchResult;
 
 sub native_setup_search {
@@ -136,7 +139,6 @@ sub native_setup_search {
    $self->{agent_e_mail} = 'jsmyser@bigfoot.com';
    $self->user_agent('user');
    $self->{_next_to_retrieve} = 1;
-   $self->{'_num_hits'} = 0;
    if (!defined($self->{_options})) {
      $self->{'search_base_url'} = 'http://www.northernlight.com';
      $self->{_options} = {
@@ -221,24 +223,20 @@ sub native_retrieve_some
        $hit->add_url($URL);
        $hits_found++;
        $Title =~ s/amp;//g;
-       $hit->title($Title);
+       $hit->title(strip_tags($Title));
        $state = $DESC;
        } #Title does eq
        # score and date is returned with the description. 
   } elsif ($state eq $DESC && m|<!.*?>(.*)<br>|i) {
        print STDERR "**Found Description**\n" if 2 <= $self->{_debug};
        my ($description) = ($1);
-       # Don't desire this, remove it if found.
-       $description =~ s/<!--NLResultRelevanceEnd-->//g;
-       # There can be a great deal of whitespaces in the desc, so much
-       # that a one line desc can displace over 20 lines! Remove em.
        $description =~ s/\s+/ /g;
-       $hit->description($description);
+       $hit->description(strip_tags($description));
        $state = $HITS;
   } elsif ($state eq $HITS && m@.*?<a href="(.*)"><img src=.*?alt="Next Page"></a>@i) {
        print STDERR "**Going to Next Page**\n" if 2 <= $self->{_debug};
-       my $URL = $1;
-       $self->{'_next_url'} = $self->{'search_base_url'} . $URL;
+       my $nURL = $1;
+       $self->{'_next_url'} = $self->{'search_base_url'} . $nURL;
        print STDERR "Next URL is ", $self->{'_next_url'}, "\n" if 2 <= $self->{_debug};
        $state = $HITS;
         } else {
@@ -250,8 +248,3 @@ sub native_retrieve_some
        return $hits_found;
         } # native_retrieve_some
  1;
-
-
-
-
-

@@ -4,7 +4,7 @@
 # ZDnet.pm
 # by Jim Smyser
 # Copyright (C) 1999 by Jim Smyser & USC/ISI
-# $Id: ZDNet.pm,v 1.4 1999/07/13 17:52:58 mthurn Exp $
+# $Id: ZDNet.pm,v 2.02 1999/11/29 15:27:05 jims Exp $
 ###########################################################
  
 package WWW::Search::ZDNet;
@@ -37,9 +37,9 @@ different dates.
 
 Print options:
 
-Using $result->{'index_date'} will return categore and date enclosed 
+Using $result->{'source'} will return category and date enclosed 
 in brackets, example: [PC Week, 12-14-98]. use this in place of
-description.
+description since there is NO descriptions anymore with ZDNet.
 
 Raw, of course, returns all the HTML of each hit.
 
@@ -96,7 +96,7 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 @ISA = qw(WWW::Search Exporter);
-$VERSION = '2.01';
+$VERSION = '2.02';
 
 $MAINTAINER = 'Jim Smyser <jsmyser@bigfoot.com>';
 $TEST_CASES = <<"ENDTESTCASES";
@@ -196,7 +196,7 @@ sub native_retrieve_some
        {
     next if m@^$@; # short circuit for blank lines
     print STDERR "** $state ===$_=== **" if 2 <= $self->{'_debug'};
- if (m@\<td valign=top bgcolor=FFFFFF colspan=3>@i) {
+ if (m@<TITLE>.*?</TITLE>@i) {
    $state = $HITS;
     }   
  elsif ($state eq $HITS && m@<A HREF=.*?DHu=(.*)\"\starget="_top">(.*)</A></FONT>@i) {
@@ -211,7 +211,7 @@ sub native_retrieve_some
 } elsif ($state eq $DATE && m@^<b>(.*)</b>@) {
     print STDERR "**Found DATE**\n" if 2 <= $self->{_debug};
     $raw .= $_;
-    $hit->index_date($1);
+    $hit->source($1);
     $state = $HITS;
 } elsif ($state eq $HITS && m@<A HREF="http://www.thunderstone.com">@i) {
     ($hit, $raw) = $self->begin_new_hit($hit, $raw);
@@ -231,3 +231,4 @@ sub native_retrieve_some
   return $hits_found;
     } # native_retrieve_some
 1;
+
