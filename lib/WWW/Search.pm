@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 2.534 2005/02/03 03:35:12 Daddy Exp $
+# $Id: Search.pm,v 2.539 2005/07/23 15:20:57 Daddy Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -54,10 +54,9 @@ For specific search engines, see L<WWW::Search::TheEngineName>
 For details about the results of a search,
 see L<WWW::Search::Result>.
 
-=head1 METHODS AND FUNCTIONS
+=head1 METHODS AND FUNCTIONS FOR SEARCHERS
 
-Methods and functions marked as PRIVATE are, in general, only useful
-to backend programmers.
+=over
 
 =cut
 
@@ -96,9 +95,9 @@ use vars qw( @ISA @EXPORT @EXPORT_OK $VERSION $MAINTAINER );
 @EXPORT_OK = qw( escape_query unescape_query generic_option strip_tags );
 @ISA = qw(Exporter LWP::MemberMixin);
 $MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
-$VERSION = do { my @r = (q$Revision: 2.534 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.539 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
-=head2 new
+=item new
 
 To create a new WWW::Search, call
 
@@ -110,9 +109,7 @@ For example:
     $oSearch = new WWW::Search('Yahoo');
 
 If no search engine is specified, a default (currently 'Null::Empty')
-will be chosen for you.  The next step is usually:
-
-    $oSearch->native_query('search-engine-specific+query+string');
+will be chosen for you.
 
 =cut
 
@@ -122,7 +119,7 @@ sub new
   my $engine = shift;
   # Remaining arguments will become hash args
 
-  # the default (not currently more configurable :-< )
+  # The default backend (not currently more configurable :-< )
   my $default_engine = 'Null::Empty';
   my $default_agent_name = "WWW::Search/$VERSION";
   my $default_agent_email = '';
@@ -155,7 +152,7 @@ sub new
   return $self;
   } # new
 
-=head2 version
+=item version
 
 Returns the value of the $VERSION variable of the backend engine, or
 $WWW::Search::VERSION if the backend does not contain $VERSION.
@@ -171,7 +168,7 @@ sub version
   return $iVersion;
   } # version
 
-=head2 maintainer
+=item maintainer
 
 Returns the value of the $MAINTAINER variable of the backend engine,
 or $WWW::Search::MAINTAINER if the backend does not contain
@@ -189,7 +186,7 @@ sub maintainer
   } # maintainer
 
 
-=head2 installed_engines
+=item installed_engines
 
 Returns a list of the names of all installed backends.
 We can not tell if they are up-to-date or working, though.
@@ -198,7 +195,7 @@ We can not tell if they are up-to-date or working, though.
   my @asEngines = sort &WWW::Search::installed_engines();
   local $" = ', ';
   print (" + These WWW::Search backends are installed: @asEngines\n");
-  # Choose a backend at random:
+  # Choose a backend at random (yes, this is rather silly):
   my $oSearch = WWW::Search->new($asEngines[rand(scalar(@asEngines))]);
 
 =cut
@@ -267,7 +264,7 @@ sub installed_engines
   } # installed_engines
 
 
-=head2 native_query
+=item native_query
 
 Specify a query (and optional options) to the current search object.
 Previous query (if any) and its cached results (if any) will be thrown away.
@@ -329,13 +326,6 @@ Details about how the search string and option hash are interpreted
 might be found in the search-engine-specific manual pages
 (WWW::Search::SearchEngineName).
 
-After C<native_query()>, the next step is usually:
-
-    while ($oResult = $oSearch->next_result())
-      {
-      # do_something($oResult);
-      }
-
 =cut
 
 sub native_query
@@ -360,7 +350,7 @@ sub native_query
   } # native_query
 
 
-=head2 gui_query
+=item gui_query
 
 Specify a query to the current search object;
 the query will be performed with the engine's default options,
@@ -384,13 +374,13 @@ sub gui_query
   } # gui_query
 
 
-=head2 cookie_jar
+=item cookie_jar
 
 Call this method (anytime before asking for results) if you want to
 communicate cookie data with the search engine.  Takes one argument,
 either a filename or an HTTP::Cookies object.  If you give a filename,
-WWW::Search will attempt to read/store cookies there (by in turn
-passing the filename to HTTP::Cookies::new).
+WWW::Search will attempt to read/store cookies there (by passing the
+filename to HTTP::Cookies::new).
 
   $oSearch->cookie_jar('/tmp/my_cookies');
 
@@ -443,17 +433,17 @@ sub cookie_jar
   } # cookie_jar
 
 
-=head2 date_from
+=item date_from
 
 Set/get the start date for limiting the query by a date range.  See
 the documentation for each backend to find out if date ranges are
-supported for each search engine.
+supported.
 
-=head2 date_to
+=item date_to
 
 Set/get the end date for limiting the query by a date range.  See the
 documentation for each backend to find out if date ranges are
-supported for each search engine.
+supported.
 
 =cut
 
@@ -468,16 +458,16 @@ sub date_to
   } # date_to
 
 
-=head2 env_proxy
+=item env_proxy
 
-Enable loading proxy settings from *_proxy environment variables.
+Enable loading proxy settings from environment variables.
 The proxy URL will be read from $ENV{http_proxy}.
 The username for authentication will be read from $ENV{http_proxy_user}.
 The password for authentication will be read from $ENV{http_proxy_pwd}.
 
-If you don't want to put passwords in the environment, then subclass
-LWP::UserAgent and use $ENV{WWW_SEARCH_USERAGENT} instead (see
-user_agent below).
+If you don't want to put passwords in the environment, one solution
+would be to subclass LWP::UserAgent and use $ENV{WWW_SEARCH_USERAGENT}
+instead (see user_agent below).
 
 env_proxy() must be called before the first retrieval is attempted.
 
@@ -501,15 +491,14 @@ sub env_proxy
   } # env_proxy
 
 
-=head2 http_proxy
+=item http_proxy
 
-Set-up an HTTP proxy
-(for connections from behind a firewall).
+Set up an HTTP proxy (for connections from behind a firewall).
 
 Takes the same arguments as LWP::UserAgent::proxy().
 
 This routine should be called before calling any of the result
-functions (next_result or results).
+functions (any method with "result" in its name).
 
 Example:
 
@@ -536,7 +525,7 @@ sub http_proxy
   } # http_proxy
 
 
-=head2 http_proxy_user, http_proxy_pwd
+=item http_proxy_user, http_proxy_pwd
 
 Set/get HTTP proxy authentication data.
 
@@ -566,56 +555,7 @@ sub http_proxy_pwd
   }
 
 
-=head2 is_http_proxy (PRIVATE)
-
-Returns true if proxy information is available.
-
-=cut
-
-sub is_http_proxy
-  {
-  my $self = shift;
-  my $ra = $self->http_proxy;
-  my $ret = (
-             ('ARRAY' eq ref($ra))
-             &&
-             defined($ra->[0])
-             &&
-             ($ra->[0] ne '')
-            );
-  # print STDERR " DDD is_http_proxy() return =$ret=\n";
-  return $ret;
-  } # is_http_proxy
-
-
-=head2 is_http_proxy_auth_data (PRIVATE)
-
-Returns true if all authentication data
-(proxy URL, username, and password) are available.
-
-=cut
-
-sub is_http_proxy_auth_data
-  {
-  my $self = shift;
-  # print STDERR (" DDD http_proxy is ", Dumper(\$self));
-  my $ret = (
-             $self->is_http_proxy
-             &&
-             defined($self->http_proxy_user)
-             &&
-             ($self->http_proxy_user ne '')
-             &&
-             defined($self->http_proxy_pwd)
-             &&
-             ($self->http_proxy_pwd ne '')
-            );
-  # print STDERR " DDD is_http_proxy_auth_data() return =$ret=\n";
-  return $ret;
-  } # is_http_proxy_auth_data
-
-
-=head2 maximum_to_retrieve
+=item maximum_to_retrieve
 
 Set the maximum number of hits to return.
 Queries resulting in more than this many hits will return
@@ -643,7 +583,7 @@ sub maximum_to_return
   }
 
 
-=head2 timeout
+=item timeout
 
 The maximum length of time any portion of the query should take,
 in seconds.
@@ -661,7 +601,38 @@ sub timeout
   }
 
 
-=head2 approximate_result_count
+=item login
+
+Backends which need to login to the search engine should implement
+this function.  Takes two arguments, user and password.  Return
+nonzero if login was successful.  Return undef or 0 if login failed.
+
+=cut
+
+sub login
+  {
+  my $self = shift;
+  # Here is just a stub.
+  return 1;
+  # These are the arguments:
+  my ($sUser, $sPassword) = @_;
+  } # login
+
+=item logout
+
+Backends which need to logout from the search engine should implement
+this function.
+
+=cut
+
+sub logout
+  {
+  my $self = shift; # no other args
+  # Here is just a stub.
+  } # logout
+
+
+=item approximate_result_count
 
 Some backends indicate how many results they have found.
 Typically this is an approximate value.
@@ -701,7 +672,7 @@ sub approximate_result_count
   return $iArg;
   } # approximate_result_count
 
-=head2 approximate_hit_count
+=item approximate_hit_count
 
 This is an alias for approximate_result_count().
 
@@ -713,19 +684,21 @@ sub approximate_hit_count
   } # approximate_hit_count
 
 
-=head2 results
+=item results
 
-Return all the results of a query as an array of WWW::Search::Result objects.
+Return all the results of a query as an array of WWW::Search::Result
+objects.  Note: This might take a while, because a web backend will
+keep asking the search engine for "next page of results" over and over
+until there are no more next pages, and THEN return from this
+function.
 
 Example:
 
     @results = $oSearch->results();
-    foreach $oResult (@results) {
-        print $oResult->url(), "\n";
-    };
-
-On error, results() will return undef and set C<response()>
-to the HTTP response code.
+    foreach $oResult (@results)
+      {
+      print $oResult->url(), "\n";
+      } # foreach
 
 =cut
 
@@ -744,7 +717,7 @@ sub results
   return @{$self->{cache}}[0..$iMax-1];
   } # results
 
-=head2 next_result
+=item next_result
 
 Call this method repeatedly to return each result of a query as a
 WWW::Search::Result object.  Example:
@@ -754,8 +727,7 @@ WWW::Search::Result object.  Example:
       print $oResult->url(), "\n";
       } # while
 
-On error, next_result() will return undef and set C<response()>
-to an HTTP response object.
+When there are no more results, next_result() will return undef.
 
 =cut
 
@@ -770,7 +742,7 @@ sub next_result
       {
       # The cache already contains the desired element; return it:
       my $i = ($self->{next_to_return})++;
-      return ${$self->{cache}}[$i];
+      return $self->{cache}->[$i];
       } # if
     # If we get here, then the desired element is beyond the end of
     # the cache.
@@ -786,65 +758,7 @@ sub next_result
   } # next_result
 
 
-=head2 login
-
-Backends which need to login to the search engine should implement
-this function.  Takes two arguments, user and password.  Return
-nonzero if login was successful.  Return undef or 0 if login failed.
-
-=cut
-
-sub login
-  {
-  my $self = shift;
-  # Here is just a stub.
-  return 1;
-  # These are the arguments:
-  my ($sUser, $sPassword) = @_;
-  } # login
-
-=head2 logout
-
-Backends which need to logout from the search engine should implement
-this function.
-
-=cut
-
-sub logout
-  {
-  my $self = shift; # no other args
-  # Here is just a stub.
-  } # logout
-
-
-=head2 response
-
-Returns the an HTTP::Response object which resulted from the
-most-recently-sent query (see L<HTTP::Response>).  If the query
-returns no results (i.e. $oSearch->results is C<undef>), errors can
-be reported like this:
-
-    my $response = $oSearch->response();
-    if ($response->is_success) {
-	print "normal end of result list\n";
-    } else {
-	print "error:  " . $response->as_string() . "\n";
-    }
-
-Note to backend authors: even if the backend does not involve the web,
-it should return an HTTP::Response object.
-
-=cut
-
-sub response
-  {
-  my $self = shift;
-  $self->{response} ||= new HTTP::Response(RC_OK);
-  return $self->{response};
-  } # response
-
-
-=head2 seek_result($offset)
+=item seek_result($offset)
 
 Set which result should be returned next time
 C<next_result()> is called.  Results are zero-indexed.
@@ -873,44 +787,30 @@ sub seek_result
   } # seek_result
 
 
-=head2 reset_search (PRIVATE)
+=item response
 
-Resets internal data structures to start over with a new search (on
-the same engine).
+Returns an L<HTTP::Response> object which resulted from the
+most-recently-sent query.  Errors can be detected like this:
+
+    if (! $oSearch->response->is_success)
+      {
+      print STDERR "Error:  " . $oSearch->response->as_string() . "\n";
+      } # if
+
+Note to backend authors: even if the backend does not involve the web,
+it should return an L<HTTP::Response> object.
 
 =cut
 
-sub reset_search
+sub response
   {
   my $self = shift;
-  print STDERR " FFF reset_search(",$self->{'native_query'},")\n" if (DEBUG_FUNC || $self->{_debug});
-  $self->{'cache'} = ();
-  $self->{'native_query'} = '';
-  $self->{'next_to_retrieve'} = 1;
-  $self->{'next_to_return'} = 0;
-  $self->{'number_retrieved'} = 0;
-  $self->{'requests_made'} = 0;
-  $self->{'state'} = SEARCH_BEFORE;
-  $self->{'_next_url'} = '';
-  $self->{'approx_count'} = 0;
-  # This method is called by native_query().  native_query() is called
-  # either by gui_query() or by the user.  In the case that
-  # gui_query() was called, we do NOT want to clear out the _options
-  # hash.  For now, I implement a pretty ugly hack to make this work:
-  if (caller(2))
-    {
-    my @as = caller(2);
-    if (1 < scalar(@as))
-      {
-      # print STDERR " in reset_search(), as is (", join(',', @as), ")\n";
-      return if $as[3] =~ m/gui_query/;
-      } # if
-    } # if
-  $self->{_options} = ();
-  } # reset_search
+  $self->{response} ||= new HTTP::Response(RC_OK);
+  return $self->{response};
+  } # response
 
 
-=head2 submit
+=item submit
 
 This method can be used to submit URLs to the search engines for indexing.
 Consult the documentation for each backend to find out if it is implemented there,
@@ -927,7 +827,7 @@ sub submit
   } # submit
 
 
-=head2 opaque
+=item opaque
 
 This function provides an application a place to store
 one opaque data element (or many, via a Perl reference).
@@ -940,7 +840,7 @@ when you have multiple concurrent queries.
 sub opaque { return shift->_elem('opaque', @_); }
 
 
-=head2 escape_query
+=item escape_query
 
 Escape a query.
 Before queries are sent to the internet, special characters must be escaped
@@ -950,9 +850,9 @@ but all non-alphanumeric characters are escaped and
 and spaces are converted to "+"s.
 
 Example:
-    $escaped = WWW::Search::escape_query('+hi +mom');
 
-    (Returns "%2Bhi+%2Bmom").
+    $escaped = WWW::Search::escape_query('+hi +mom');
+    # $escaped is now '%2Bhi+%2Bmom'
 
 See also C<unescape_query()>.
 NOTE that this is not a method, it is a plain function.
@@ -971,15 +871,15 @@ sub escape_query
   return $text;
   } # escape_query
 
-=head2 unescape_query
+=item unescape_query
 
 Unescape a query.
 See C<escape_query()> for details.
 
 Example:
-    $unescaped = WWW::Search::unescape_query('%22hi+mom%22');
 
-    (Returns '"hi mom"').
+    $unescaped = WWW::Search::unescape_query('%22hi+mom%22');
+    # $unescaped eq q{"hi mom"}
 
 NOTE that this is not a method, it is a plain function.
 
@@ -997,7 +897,7 @@ sub unescape_query
   return wantarray ? @copy : $copy[0];
   } # unescape_query
 
-=head2 strip_tags
+=item strip_tags
 
 Given a string, returns a copy of that string with HTML tags removed.
 This should be used by each backend as they insert the title and
@@ -1030,65 +930,102 @@ sub strip_tags
   return $s;
   } # strip_tags
 
-=head2 hash_to_cgi_string (PRIVATE) (DEPRECATED)
+=item is_http_proxy
 
-Deprecated.
-
-Given a reference to a hash of string => string, constructs a CGI
-parameter string that looks like 'key1=value1&key2=value2'.
-
-If the value is undef, the key will not be added to the string.
-
-At one time, for testing purposes, we asked backends to use this
-function rather than piecing the URL together by hand, to ensure that
-URLs are identical across platforms and software versions.  But this
-is no longer necessary.
-
-Example:
-
-    $self->{_options} = {
-                         'opt3' => 'val3',
-                         'search_url' => 'http://www.deja.com/dnquery.xp',
-                         'opt1' => 'val1',
-                         'QRY' => $native_query,
-                         'opt2' => 'val2',
-                        };
-    $self->{_next_url} = $self->{_options}{'search_url'} .'?'.
-                         $self->hash_to_cgi_string($self->{_options});
+Returns true if proxy information is available.
 
 =cut
 
-sub hash_to_cgi_string
+sub is_http_proxy
   {
   my $self = shift;
-  # Because of the design of our test suite, we need our generated
-  # URLs to be identical on all systems, all versions of perl.  Ergo
-  # we must explicitly control the order in which our CGI parameter
-  # strings are cobbled together.  For now, I assume sorting the hash
-  # keys will suffice.
-  my $rh = shift;
-  my $ret = '';
-  foreach my $key (sort keys %$rh)
-    {
-    # printf STDERR "option: $key is " . $rh->{$key} . "\n";
-    next if generic_option($key);
-    # Throw out keys with undef values.
-    next unless defined($rh->{$key});
-    # If we want to let the user delete options, uncomment the next
-    # line. (They can still blank them out, which may or may not have
-    # the same effect):
-
-    # next unless $rh->{$key} ne '';
-
-    $ret .= $key .'='. $rh->{$key} .'&';
-    } # foreach $key
-  # Remove the trailing '&':
-  chop $ret;
+  my $ra = $self->http_proxy;
+  my $ret = (
+             ('ARRAY' eq ref($ra))
+             &&
+             defined($ra->[0])
+             &&
+             ($ra->[0] ne '')
+            );
+  # print STDERR " DDD is_http_proxy() return =$ret=\n";
   return $ret;
-  } # hash_to_cgi_string
+  } # is_http_proxy
+
+=back
+
+=head1 METHODS AND FUNCTIONS FOR BACKEND PROGRAMMERS
+
+=over
+
+=item reset_search
+
+Resets internal data structures to start over with a new search (on
+the same engine).
+
+=cut
+
+sub reset_search
+  {
+  my $self = shift;
+  print STDERR " FFF reset_search(",$self->{'native_query'},")\n" if (DEBUG_FUNC || $self->{_debug});
+  $self->{'cache'} = [];
+  $self->{'native_query'} = '';
+  $self->{'next_to_retrieve'} = 1;
+  $self->{'next_to_return'} = 0;
+  $self->{'number_retrieved'} = 0;
+  $self->{'requests_made'} = 0;
+  $self->{'state'} = SEARCH_BEFORE;
+  $self->{'_next_url'} = '';
+  $self->{'approx_count'} = 0;
+  # This method is called by native_query().  native_query() is called
+  # either by gui_query() or by the user.  In the case that
+  # gui_query() was called, we do NOT want to clear out the _options
+  # hash.  For now, I implement a pretty ugly hack to make this work:
+  if (caller(2))
+    {
+    my @as = caller(2);
+    if (1 < scalar(@as))
+      {
+      # print STDERR " in reset_search(), as is (", join(',', @as), ")\n";
+      return if $as[3] =~ m/gui_query/;
+      } # if
+    } # if
+  $self->{_options} = ();
+  } # reset_search
 
 
-=head2 agent_name($sName)
+=item is_http_proxy_auth_data
+
+Returns true if all authentication data
+(proxy URL, username, and password) are available.
+
+=cut
+
+sub is_http_proxy_auth_data
+  {
+  my $self = shift;
+  # print STDERR (" DDD http_proxy is ", Dumper(\$self));
+  my $ret = (
+             $self->is_http_proxy
+             &&
+             defined($self->http_proxy_user)
+             &&
+             ($self->http_proxy_user ne '')
+             &&
+             defined($self->http_proxy_pwd)
+             &&
+             ($self->http_proxy_pwd ne '')
+            );
+  # print STDERR " DDD is_http_proxy_auth_data() return =$ret=\n";
+  return $ret;
+  } # is_http_proxy_auth_data
+
+
+=item agent_name($sName)
+
+If your search engine rejects certain browser,
+you can trick it into thinking you're any browser type you want.
+See below under user_agent().
 
 =cut
 
@@ -1097,7 +1034,7 @@ sub agent_name
   return shift->_elem('agent_name', @_);
   }
 
-=head2 agent_email($sName)
+=item agent_email($sName)
 
 =cut
 
@@ -1106,7 +1043,7 @@ sub agent_email
   return shift->_elem('agent_email', @_);
   }
 
-=head2 user_agent($NON_ROBOT) (PRIVATE)
+=item user_agent($NON_ROBOT)
 
 This internal routine creates a user-agent for derived classes that
 query the web.  If any non-false argument is given, a normal
@@ -1212,7 +1149,7 @@ sub user_agent
   } # user_agent
 
 
-=head2 http_referer (PRIVATE)
+=item http_referer
 
 Get / set the value of the HTTP_REFERER variable for this search object.
 Some search engines might only accept requests that originated at some specific previous page.
@@ -1230,7 +1167,7 @@ sub http_referer
   }
 
 
-=head2 http_method (PRIVATE)
+=item http_method
 
 Get / set the method to be used for the HTTP request.
 Must be either 'GET' or 'POST'.
@@ -1248,9 +1185,9 @@ sub http_method
   }
 
 
-=head2 http_request($method, $url)
+=item http_request($method, $url)
 
-Return the response from an http request.
+Submit the HTTP request to the world, and return the response.
 Similar to LWP::UserAgent::request.
 Handles cookies, follows redirects, etc.
 Requires that http_referer already be set up, if needed.
@@ -1387,7 +1324,6 @@ sub _http_request_from_file {
 	};
 	close TABLE;
     };
-
     # read file
     my $i = $self->{search_from_file_hash}{$url};
     if (defined($i)) {
@@ -1430,7 +1366,8 @@ sub _http_request_to_file {
     close FILE;
 } # _http_request_to_file
 
-=head2 next_url (PRIVATE)
+
+=item next_url
 
 Get or set the URL for the next backend request.  This can be used to
 save the WWW::Search state between sessions (e.g. if you are showing
@@ -1464,7 +1401,7 @@ sub next_url
   }
 
 
-=head2 split_lines (PRIVATE)
+=item split_lines
 
 This internal routine splits data (typically the result of the web
 page retrieval) into lines in a way that is OS independent.  If the
@@ -1499,7 +1436,7 @@ sub split_lines
   } # split_lines
 
 
-=head2 generic_option (PRIVATE)
+=item generic_option
 
 This internal routine checks if an option
 is generic or backend specific.
@@ -1516,7 +1453,7 @@ sub generic_option
 
 
 
-=head2 setup_search (PRIVATE)
+=item setup_search
 
 This internal routine does generic Search setup.
 It calls C<_native_setup_search()> to do backend-specific setup.
@@ -1546,7 +1483,7 @@ sub setup_search
   {
   my ($self) = @_;
   print STDERR " FFF setup_search(",$self->{'native_query'},")\n" if (DEBUG_FUNC || $self->{_debug});
-  $self->{cache} = ();
+  $self->{cache} = [];
   $self->{next_to_retrieve} = 1;
   $self->{number_retrieved} = 0;
   $self->{state} = SEARCH_UNDERWAY;
@@ -1555,7 +1492,7 @@ sub setup_search
   } # setup_search
 
 
-=head2 user_agent_delay (PRIVATE)
+=item user_agent_delay
 
 Derived classes should call this between requests to remote
 servers to avoid overloading them with many, fast back-to-back requests.
@@ -1569,7 +1506,7 @@ sub user_agent_delay {
 	 if ($self->{robot_p});
 }
 
-=head2 absurl (PRIVATE)
+=item absurl
 
 An internal routine to convert a relative URL into a absolute URL.  It
 takes two arguments, the 'base' url (usually the search engine CGI
@@ -1588,7 +1525,7 @@ sub absurl
   } # absurl
 
 
-=head2 retrieve_some (PRIVATE)
+=item retrieve_some
 
 An internal routine to interface with C<_native_retrieve_some()>.
 Checks for overflow.
@@ -1655,7 +1592,7 @@ sub HTML::TreeBuilder::www_search_reset
   } # HTML::TreeBuilder::www_search_reset
 
 
-=head2 need_to_delay
+=item need_to_delay
 
 A backend should override this method in order to dictate whether
 user_agent_delay() needs to be called before the next HTTP request is
@@ -1672,7 +1609,7 @@ sub need_to_delay
   } # need_to_delay
 
 
-=head2 _native_retrieve_some (PRIVATE)
+=item _native_retrieve_some
 
 Fetch the next page of results from the web engine, parse the results,
 and prepare for the next page of results.
@@ -1802,7 +1739,7 @@ sub native_retrieve_some
   } # native_retrieve_some
 
 
-=head2 preprocess_results_page (PRIVATE)
+=item preprocess_results_page
 
 A filter on the raw HTML of the results page.
 This allows the backend to alter the HTML before it is parsed,
@@ -1827,7 +1764,7 @@ sub preprocess_results_page
   } # preprocess_results_page
 
 
-=head2 test_cases (deprecated)
+=item test_cases (DEPRECATED)
 
 Deprecated.
 
@@ -1841,6 +1778,63 @@ sub test_cases
   return eval '$'.ref($self).'::TEST_CASES';
   } # test_cases
 
+=item hash_to_cgi_string (DEPRECATED)
+
+Given a reference to a hash of string => string, constructs a CGI
+parameter string that looks like 'key1=value1&key2=value2'.
+
+If the value is undef, the key will not be added to the string.
+
+At one time, for testing purposes, we asked backends to use this
+function rather than piecing the URL together by hand, to ensure that
+URLs are identical across platforms and software versions.  But this
+is no longer necessary.
+
+Example:
+
+    $self->{_options} = {
+                         'opt3' => 'val3',
+                         'search_url' => 'http://www.deja.com/dnquery.xp',
+                         'opt1' => 'val1',
+                         'QRY' => $native_query,
+                         'opt2' => 'val2',
+                        };
+    $self->{_next_url} = $self->{_options}{'search_url'} .'?'.
+                         $self->hash_to_cgi_string($self->{_options});
+
+=cut
+
+sub hash_to_cgi_string
+  {
+  my $self = shift;
+  # Because of the design of our test suite, we need our generated
+  # URLs to be identical on all systems, all versions of perl.  Ergo
+  # we must explicitly control the order in which our CGI parameter
+  # strings are cobbled together.  For now, I assume sorting the hash
+  # keys will suffice.
+  my $rh = shift;
+  my $ret = '';
+  foreach my $key (sort keys %$rh)
+    {
+    # printf STDERR "option: $key is " . $rh->{$key} . "\n";
+    next if generic_option($key);
+    # Throw out keys with undef values.
+    next unless defined($rh->{$key});
+    # If we want to let the user delete options, uncomment the next
+    # line. (They can still blank them out, which may or may not have
+    # the same effect):
+
+    # next unless $rh->{$key} ne '';
+
+    $ret .= $key .'='. $rh->{$key} .'&';
+    } # foreach $key
+  # Remove the trailing '&':
+  chop $ret;
+  return $ret;
+  } # hash_to_cgi_string
+
+
+=back
 
 =head1 IMPLEMENTING NEW BACKENDS
 
@@ -1883,8 +1877,8 @@ Desired features:
 
 A portable language would easily allow you to move queries easily
 between different search engines.  A query abstraction is non-trivial
-and unfortunately will not be done anytime soon by the current
-maintainers.  If you want to take a shot at it, please let me know.
+and unfortunately will not be done any time soon by the current
+maintainer.  If you want to take a shot at it, please let me know.
 
 =back
 

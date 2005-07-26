@@ -11,16 +11,12 @@ inc/Module/Install/Metadata.pm
 inc/Module/Install/Scripts.pm
 inc/Module/Install/Win32.pm
 lib/WWW/Search.pm
-lib/WWW/Search/AltaVista.pm
-lib/WWW/Search/Dice.pm
-lib/WWW/Search/Monster.pm
 lib/WWW/Search/Null.pm
 lib/WWW/Search/Null/Count.pm
 lib/WWW/Search/Null/Empty.pm
 lib/WWW/Search/Null/Error.pm
 lib/WWW/Search/Null/NoVersion.pm
 lib/WWW/Search/Result.pm
-lib/WWW/Search/Scraper.pm
 lib/WWW/Search/Simple.pm
 lib/WWW/Search/Test.pm
 lib/WWW/SearchResult.pm

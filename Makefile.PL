@@ -1,10 +1,10 @@
 # This -*- cperl -*- program writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.43 2005/02/20 03:14:33 Daddy Exp $
+# $Id: Makefile.PL,v 1.46 2005/07/23 15:08:00 Daddy Exp $
 
 use inc::Module::Install;
 
 name('WWW-Search');
-version(2.476);
+version(2.479);
 author('Martin Thurn <mthurn@cpan.org>');
 abstract('Query web search engines and get URLs');
 requires(perl => 5.004);
@@ -126,7 +126,33 @@ PART3
 
   {
   package MY;
-  use File::Spec::Functions;
+  use Config;
+  use constant DEBUG_INLINE => 0;
+
+  sub pod2test_command
+    {
+    my $sNoEcho = shift;
+    my $sPodFname = shift;
+    my $sTestFname = shift;
+    # Figure out how to squeeze tests out of .pm files.  Assume that
+    # pod2test (or pod2test.exe or pod2test.bat) is in the path.
+    # (This should be a safe assumption, since Test::Inline is one of
+    # our Prereqs)
+    my $sPod2testCmd = qq{\t$sNoEcho pod2test $sPodFname $sTestFname\n};
+    # There is a bug in Pod::Tests (or is it Pod::Parser).  We can not
+    # read MSWin32 pod on Unix:
+    if ($^O =~ m!(solaris|linux|darwin)!)
+      {
+      my $sPerl = $Config{'perlpath'};
+      $sPod2testCmd = <<"CMD";
+\t$sNoEcho $sPerl -pe"tr/\\r//d" < $sPodFname | pod2test > $sTestFname
+\t$sNoEcho $sPerl -e"unlink '$sTestFname' unless -s '$sTestFname'"
+CMD
+      # DEBUG_INLINE && print STDERR " DDD here are the keys in Config: ", join(', ', keys %Config), "\n";
+      # DEBUG_INLINE && print STDERR " DDD here is config_vars(perlpath) =", config_vars('perlpath'), "=\n";
+      } # if unix
+    return $sPod2testCmd;
+    } # pod2test_command
 
   sub top_targets
     {
@@ -134,41 +160,30 @@ PART3
     # Use the default setting for (not) echoing commands during make:
     my $NOECHO = $self->{NOECHO};
     # Turn it off for debugging this makefile:
-    # $NOECHO = '';
+    $NOECHO = '';
     # And, ignore error signals.  This is necessary because pod2test
     # carps if the file contains no test code!
     $NOECHO .= '-';
-    # Figure out how to squeeze tests out of .pm files.  Assume that
-    # pod2test (or pod2test.exe or pod2test.bat) is in the path.
-    my $sPod2testCmd = 'pod2test %s %s';
-    # There is a bug in Pod::Tests (or is it Pod::Parser).  We can not
-    # read MSWin32 pod on Unix:
-    if ($^O =~ m!(solaris|linux)!)
-      {
-      use File::Temp;
-      my $sTempFname = tmpnam();
-      $sPod2testCmd = 'cat %s | dos2unix > $sTempFname ; pod2test $sTempFname %s';
-      # $sPod2testCmd = 'cat %s | dos2unix | pod2test > %s';
-      } # if unix
     $out .= $self->SUPER::top_targets(@_);
     $out .= "\n\ntestifypods : \n";
     $out .= "\t\$(FULLPERL) -MExtUtils::Command -e rm_f t/embedded-*.t\n";
-    use Data::Dumper;
+    # use Data::Dumper;
     # print STDERR " + self is ", Dumper($self);
     my %hsPOD;
     foreach my $pod (
                      keys %{$self->{MAN1PODS}},
                      keys %{$self->{MAN3PODS}},
-                     # Win32 has no MANPODS, so we add these:
+                     # Win32 has no MANPODS, so we add these
+                     # brute-force-like:
                      keys %{$self->{PM}},
                     )
       {
-      # print STDERR " +   will testifypod $pod\n";
+      DEBUG_INLINE && print STDERR " +   will testifypod $pod\n";
       $hsPOD{$pod}++;
       } # foreach $pod
     foreach my $pod (keys %hsPOD)
       {
-      # print STDERR " +   writing code to testifypod $pod\n";
+      DEBUG_INLINE && print STDERR " +   writing code to testifypod $pod\n";
       (my $test = $pod) =~ s/\.(pm|pod)$//;
       $test =~ s|/|-|g;
       # Same, for Win32:
@@ -176,9 +191,9 @@ PART3
       $test =~ s/^lib\W//;
       $test =~ s/\W/-/;
       $test = "embedded-$test.t";
-      my $sCode = sprintf($sPod2testCmd, $pod, "t/$test");
-      # print STDERR " +     code to testifypod $pod is $sCode\n";
-      $out .= "\t$NOECHO $sCode\n";
+      my $sCode = pod2test_command($NOECHO, $pod, "t/$test");
+      DEBUG_INLINE && print STDERR " +     code to testifypod $pod is =$sCode=\n";
+      $out .= $sCode;
       } # foreach
     return $out;
     } # MY::top_targets

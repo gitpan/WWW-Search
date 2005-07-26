@@ -1,3 +1,28 @@
+2005-07-15  Kingpin  <mthurn@verizon.net>
+
+	* Makefile.PL (MY::postamble): get pod2test to work without cat or dos2unix
+
+2005-07-09  Kingpin  <mthurn@verizon.net>
+
+	* code/AutoSearch-code.pl (main): report HTTP error even if we got some results
+
+2005-07-07  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search.pm (results): on error, now returns empty list instead of undef
+
+2005-06-19  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/SearchResult.pm (image_url): new method
+	(thumb_url): new method
+
+2005-04-18  Kingpin  <mthurn@verizon.net>
+
+	* code/AutoSearch-code.pl (make_date): fix link to AutoSearch webpage
+
+2005-03-12  Kingpin  <mthurn@verizon.net>
+
+	* code/AutoSearch-code.pl (main): add result count to email message
+
 2005-02-02  Kingpin  <mthurn@verizon.net>
 
 	* lib/WWW/Search.pm (http_proxy): BUGFIX for calling with no args setting the value

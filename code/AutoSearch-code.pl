@@ -5,7 +5,7 @@ exit 0;
 # AutoSearch-code.pl
 # Copyright (c) 1996-1997 University of Southern California.
 # All rights reserved.
-# $Id: AutoSearch-code.pl,v 2.135 2005/02/20 02:57:47 Daddy Exp $
+# $Id: AutoSearch-code.pl,v 2.138 2005/07/10 01:25:31 Daddy Exp $
 #
 # Complete copyright notice follows below.
 
@@ -17,8 +17,8 @@ AutoSearch -- a web-search tracking application
 
 AutoSearch [--stats] [--verbose] -n "Query Name" -s "query string" --engine engine [--mail you@where.com] [--options "opt=val"]... [--filter "filter"] [--host host] [--port port] [--userid bbunny --password c4rr0t5] [--ignore_channels KABC,KCBS,KNBC] qid
 
+AutoSearch --VERSION
 AutoSearch --help
-
 AutoSearch --man
 
 =cut
@@ -35,7 +35,7 @@ use WWW::Search;
 use strict;
 
 use vars qw( $VERSION );
-$VERSION = do { my @r = (q$Revision: 2.135 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.138 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 use constant DEBUG_EMAIL => 0;
 
@@ -626,17 +626,21 @@ sub main
     push(@new_weekly_description,$description);
     push(@new_weekly_title,$title);
   } # while NEXT_URL
-  # report errors
-  if ($hits == 0) {
-    my($response) = $search->response();
-    if ($response->is_success) {
+  # Report errors, if any:
+  my $response = $search->response();
+  if ($response->is_success)
+    {
+    if ($hits == 0)
+      {
       print STDERR "Warning:  Empty results set.\n" if ($v_dbg);
-    } else {
-      my $sMsg = "Error: " . http_error_as_nice_string($response);
-      print STDERR "$sMsg\n";
-      $sEmail .= "$sMsg\n";
-    }
-  } # if no hits
+      } # if no hits
+    } # if HTTP success
+  else
+    {
+    my $sMsg = "Error: " . http_error_as_nice_string($response);
+    print STDERR "$sMsg\n";
+    $sEmail .= "$sMsg\n";
+    } # else HTTP error
 
   # Only save the ones that don't show up in the current query list.
   # Those we shall call suspended_*
@@ -686,6 +690,7 @@ sub main
 # now if this is a run that adds information (re) write the file.
 #
 # do we have a reason to care? New Results, Appensions, Suspensions???
+  my $iNewResultCount = 0;
   if ($changes)
     {
     # print STDERR "test file: $qid$file\n";
@@ -714,7 +719,9 @@ sub main
         $url = $new_weekly_url[$i];
         $title = $new_weekly_title[$i];
         $description = $new_weekly_description[$i];
-        print HTML &make_link($AppendedTemplate,$url,$title,$description),"\n";
+        my $sHTML = &make_link($AppendedTemplate, $url, $title, $description);
+        print HTML "$sHTML\n";
+        $sEmail .= "<P>$sHTML\n";
         }
       print HTML "<!--/Appended-->"; # replace due to split
       print HTML $part3;
@@ -742,15 +749,15 @@ sub main
       print HTML "<!--Top-->\n$WeeklyTop<!--/Top-->\n";
       DEBUG_EMAIL && print STDERR " + start creating email, new_weekly_url is ", Dumper(\@new_weekly_url);
       # Output weekly search status: appended
-      $n = $#new_weekly_url + 1;
+      $iNewResultCount = $#new_weekly_url + 1;
       # Always do the header:
       print HTML "<!--AppendedHeading\n$AppendedHeading/AppendedHeading-->\n";
-      print HTML &format_link($AppendedHeading,"DATE", $now) if $n;
+      print HTML &format_link($AppendedHeading,"DATE", $now) if $iNewResultCount;
       print HTML "<!--AppendedTemplate\n$AppendedTemplate/AppendedTemplate-->\n";
       $section = "Appended"; # the section of the file/output.
       print HTML "<!--$section-->\n";
       # Format each unique result:
-      for my $i (0..$n-1)
+      for my $i (0..$iNewResultCount-1)
         {
         $url = $new_weekly_url[$i];
         $title = $new_weekly_title[$i];
@@ -774,19 +781,18 @@ sub main
         $url = $suspended_url[$i];
         $title = $suspended_title[$i];
         print HTML &make_link($SuspendedTemplate,$url,$title,""),"\n";
-      }
+      } # for $i
       print HTML $Suspended;
       print HTML "<!--/$section-->\n\n";
-  
       print HTML "<!--Bottom-->\n$WeeklyBottom<!--/Bottom-->\n";
       close (HTML);
-    }
-  }
+    } # else daily file doesn't exist
+  } # if any new hits
   else
     {
     print STDERR "no weekly changes required.\n" if ($v_dbg);
   }
-
+  $QueryName = $SummaryQuery if ($QueryName eq '');
   # Now write the new index file.
   # Create the index.html output file:
   open (HTML,'>'.$qid.'index.html') || die "Can't open summary output file.\nReason: $!\n";
@@ -801,7 +807,6 @@ sub main
 #    print STDERR "option::$key=$query_options->{$key}\n";
     print HTML "<!--QueryOptions{$key\=$query_options->{$key}\}QueryOptions-->\n";
   }
-  print HTML "\n";
 # output summary of updated unique findings
   print HTML "<!--SummaryHeading\n$SummaryHeading/SummaryHeading-->\n";
   print HTML &format_link($SummaryHeading, "DATE", $now);
@@ -915,7 +920,7 @@ sub main
 <HTML>
 <HEAD>$sTitle</HEAD>
 <BODY>
-<h2>The following URLs are new matches for your $SummarySearchEngine query '$SummaryQuery':</h2>
+<h2>The following $iNewResultCount URLs are new matches for your $SummarySearchEngine query '$SummaryQuery':</h2>
 $sEmail
 </BODY></HTML>
 EMAILEND
@@ -942,8 +947,8 @@ EMAILEND
       DEBUG_EMAIL && Email::Send::send(IO => $oMsg);
       $Email::Send::SMTP::Auth::VERBOSE = $Email::Send::SMTP::Auth::VERBOSE = 1;
       my $sRes = &send_email($oMsg);
-      # print STDERR " + result of send_email() is ==$sRes=\n";
-      print STDERR $sRes if ($v_dbg || ($sRes ne '1'));
+      print STDERR "result of send_email() is ==$sRes=\n" if ($v_dbg || ($sRes ne '1'));
+      # print STDERR $sRes if ($v_dbg || ($sRes ne '1'));
       }
     else
       {
@@ -1552,7 +1557,7 @@ TITLE<br>
 <!--Bottom-->
 <!--Place the html to make your page finish up sharply here-->
 <p>
-Web searches maintained by <a href="http://www.isi.edu/lsam/autosearch/index.html">AutoSearch</a>.
+Web searches maintained by <a href="http://www.isi.edu/lsam/tools/autosearch">AutoSearch</a>.
 <!--/Bottom-->
 </BODY>
 EOF
@@ -1932,7 +1937,7 @@ search.  The file F<first_index.html> (in the directory above F<qid>)
 will be used as a default template for new queries.
 
 Examples of these files can be seen in the pages under
-C<http://www.isi.edu/lsam/autosearch/>, or in the output generated by
+C<http://www.isi.edu/lsam/tools/autosearch/>, or in the output generated by
 a new AutoSearch.
 
 =head1 FILES

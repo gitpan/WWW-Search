@@ -3,16 +3,14 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.476?  (2005-02-18)
+WHAT IS NEW IN WWW::Search 2.478?  (2005-)
 -----------------------------------------------
 
 Overview of changes: 
 
- * new method agent_email()
- * bugfix for http_proxy() getting no args
- * more coverage testing
+ * remove old backends that were inadvertently included in the previous release
 
-For details, see the ChangeLog file (updates after 2004-10-31) and/or
+For details, see the ChangeLog file (updates after 2005-02-18) and/or
 the pod of each affected module.
 
 
@@ -57,7 +55,7 @@ CPAN independently (not included with this WWW::Search distribution):
 AltaVista       http://www.perl.com/CPAN/modules/by-module/WWW
 AP              in the WWW::Search::News distribution
 Ebay            http://www.perl.com/CPAN/modules/by-module/WWW
-Ebay::Motors    in the Ebay distro
+Ebay::Motors    in the Ebay distribution
 Ebay::Complete  contact author, mthurn@cpan.org
 Ebay::Mature    contact author, mthurn@cpan.org
 Euroseek        http://www.perl.com/CPAN/modules/by-module/WWW/JSMYSER/
@@ -212,7 +210,7 @@ If you are on UNIX you can add
 
 to your crontab to update this search every week at 3:00 Monday
 morning.  If you install WWW::Search::Ebay, and add the --mail option
-to AutoSearch, you'll have your own private replacement for ebay's
+to AutoSearch, you'll have your own private replacement for Ebay's
 personal search service... WITHOUT the three-query limit!
 
 
