@@ -1,5 +1,5 @@
 
-# $Id: Error.pm,v 1.7 2005/07/08 03:13:51 Daddy Exp $
+# $Id: Error.pm,v 1.8 2005/12/25 00:20:38 Daddy Exp $
 
 =head1 NAME
 
@@ -41,7 +41,7 @@ use strict;
 
 use vars qw( @ISA $VERSION );
 @ISA = qw( WWW::Search );
-$VERSION = do { my @r = (q$Revision: 1.7 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 1.8 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 sub _native_setup_search
   {

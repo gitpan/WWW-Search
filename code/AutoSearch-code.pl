@@ -97,7 +97,7 @@ sub module_loaded
 if ($opts{'m'} ne '')
   {
  MODULE:
-  foreach my $sMod (qw( Email::MIME Email::MIME::Creator Email::Send Email::Send::Sendmail Email::Send::Qmail Email::Send::SMTP Email::Send::SMTP::Auth ))
+  foreach my $sMod (qw( Email::MIME Email::MIME::Creator Email::Send Email::Send::Sendmail Email::Send::Qmail Email::Send::SMTP )) # Email::Send::SMTP::Auth ))
     {
     if (! &module_loaded($sMod))
       {
@@ -945,7 +945,7 @@ EMAILEND
       {
       DEBUG_EMAIL && print STDERR " + oMsg in sendable format is:\n";
       DEBUG_EMAIL && Email::Send::send(IO => $oMsg);
-      $Email::Send::SMTP::Auth::VERBOSE = $Email::Send::SMTP::Auth::VERBOSE = 1;
+      # $Email::Send::SMTP::Auth::VERBOSE = $Email::Send::SMTP::Auth::VERBOSE = 1;
       my $sRes = &send_email($oMsg);
       print STDERR "result of send_email() is ==$sRes=\n" if ($v_dbg || ($sRes ne '1'));
       # print STDERR $sRes if ($v_dbg || ($sRes ne '1'));
@@ -971,6 +971,11 @@ sub send_email
       $sPassword = ($sPassword eq '') ? '<empty>' : '<hidden>';
       return qq{$0 chose method SMTP::Auth with server=$sSMTPserver, username=$sUsername, password=$sPassword};
       } # if
+    return Email::Send::SMTP::send($oMessage,
+                                   Host => $sSMTPserver,
+                                   username => $sUsername,
+                                   password => $sPassword,
+                                  );
     return Email::Send::SMTP::Auth::send($oMessage, $sSMTPserver,
                                          # The ::SMTP::Auth module
                                          # will properly handle the

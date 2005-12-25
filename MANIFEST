@@ -1,5 +1,5 @@
 AutoSearch.PL
-ChangeLog
+Changes
 code/AutoSearch-code.pl
 code/WebSearch-code.pl
 inc/Module/Install.pm
@@ -10,6 +10,7 @@ inc/Module/Install/Makefile.pm
 inc/Module/Install/Metadata.pm
 inc/Module/Install/Scripts.pm
 inc/Module/Install/Win32.pm
+inc/Module/Install/WriteAll.pm
 lib/WWW/Search.pm
 lib/WWW/Search/Null.pm
 lib/WWW/Search/Null/Count.pm
@@ -22,6 +23,7 @@ lib/WWW/Search/Test.pm
 lib/WWW/SearchResult.pm
 Makefile.PL
 MANIFEST			This list of files
+META.yml
 README
 t/0_versions.t
 t/autosearch.t
@@ -30,3 +32,4 @@ t/test.t
 t/test_parsing.pl
 t/use.t
 WebSearch.PL
+SIGNATURE                                Public-key signature (added by MakeMaker)

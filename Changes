@@ -1,3 +1,7 @@
+2005-12-25    <Daddy@C-3PO>
+
+	* lib/WWW/SearchResult.pm: new attribute 'category'
+
 2005-07-15  Kingpin  <mthurn@verizon.net>
 
 	* Makefile.PL (MY::postamble): get pod2test to work without cat or dos2unix

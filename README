@@ -3,14 +3,14 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.478?  (2005-)
+WHAT IS NEW IN WWW::Search 2.481?  (2005-12-25)
 -----------------------------------------------
 
 Overview of changes: 
 
- * remove old backends that were inadvertently included in the previous release
+ * SearchResult now has an attribute 'category'
 
-For details, see the ChangeLog file (updates after 2005-02-18) and/or
+For details, see the Changes file (updates after 2005-07-25) and/or
 the pod of each affected module.
 
 
