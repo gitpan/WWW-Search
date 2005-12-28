@@ -1,4 +1,4 @@
-# $rcs = ' $Id: Test.pm,v 2.268 2005/01/16 04:07:48 Daddy Exp $ ' ;
+# $rcs = ' $Id: Test.pm,v 2.269 2005/12/28 01:51:54 Daddy Exp $ ' ;
 
 =head1 NAME
 
@@ -48,7 +48,7 @@ use vars qw( @EXPORT @ISA );
 
 use vars qw( $VERSION $bogus_query $websearch );
 
-$VERSION = do { my @r = (q$Revision: 2.268 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.269 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 
 ($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = qw(dummy internal external update);
@@ -650,6 +650,11 @@ sub count_results
   carp ' --- min/max values out of order?' if defined($iMin) && defined($iMax) && ($iMax < $iMin);
   $oSearch->reset_search;
   $iMin ||= 0;
+  if (! defined($iMax))
+    {
+    # User said upper limit is 'undef':
+    $iMax = 999999;
+    } # if
   $iMax ||= 0;
   if ($iMin == $iMax)
     {

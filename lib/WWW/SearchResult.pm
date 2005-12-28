@@ -1,7 +1,7 @@
 # SearchResult.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: SearchResult.pm,v 2.66 2005/12/25 15:11:22 Daddy Exp $
+# $Id: SearchResult.pm,v 2.68 2005/12/28 01:58:02 Daddy Exp $
 #
 # Copyright (c) 1996 University of Southern California.
 # All rights reserved.
@@ -58,7 +58,7 @@ package WWW::SearchResult;
 require LWP::MemberMixin;
 @ISA = qw(LWP::MemberMixin);
 use Carp ();
-$VERSION = do { my @r = (q$Revision: 2.66 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do{ my @r = (q$Revision: 2.68 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r};
 
 =head2 new
 
@@ -303,10 +303,15 @@ More attributes of the result.  Backend-specific.
 
 sub bid_amount { return shift->_elem('bid', @_); }
 sub bid_count { return shift->_elem('bids', @_); }
+sub bidder { return shift->_elem('bidder', @_); }
 sub category { return shift->_elem('category', @_); }
 sub company { return shift->_elem('company', @_); }
+sub end_date { return shift->_elem('end_date', @_); }
 sub image_url { return shift->_elem('image_url', @_); }
+sub item_number { return shift->_elem('item_number', @_); }
 sub location { return shift->_elem('location', @_); }
+sub seller { return shift->_elem('seller', @_); }
+sub start_date { return shift->_elem('start_date', @_); }
 sub thumb_url { return shift->_elem('thumb_url', @_); }
 
 =head1 AUTHOR

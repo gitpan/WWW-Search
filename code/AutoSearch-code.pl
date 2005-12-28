@@ -5,7 +5,7 @@ exit 0;
 # AutoSearch-code.pl
 # Copyright (c) 1996-1997 University of Southern California.
 # All rights reserved.
-# $Id: AutoSearch-code.pl,v 2.138 2005/07/10 01:25:31 Daddy Exp $
+# $Id: AutoSearch-code.pl,v 2.139 2005/12/28 01:55:47 Daddy Exp $
 #
 # Complete copyright notice follows below.
 
@@ -35,7 +35,7 @@ use WWW::Search;
 use strict;
 
 use vars qw( $VERSION );
-$VERSION = do { my @r = (q$Revision: 2.138 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.139 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 use constant DEBUG_EMAIL => 0;
 
@@ -97,7 +97,7 @@ sub module_loaded
 if ($opts{'m'} ne '')
   {
  MODULE:
-  foreach my $sMod (qw( Email::MIME Email::MIME::Creator Email::Send Email::Send::Sendmail Email::Send::Qmail Email::Send::SMTP )) # Email::Send::SMTP::Auth ))
+  foreach my $sMod (qw( Email::MIME Email::MIME::Creator Email::Send Email::Send::Sendmail Email::Send::Qmail Email::Send::SMTP ))
     {
     if (! &module_loaded($sMod))
       {
@@ -945,7 +945,6 @@ EMAILEND
       {
       DEBUG_EMAIL && print STDERR " + oMsg in sendable format is:\n";
       DEBUG_EMAIL && Email::Send::send(IO => $oMsg);
-      # $Email::Send::SMTP::Auth::VERBOSE = $Email::Send::SMTP::Auth::VERBOSE = 1;
       my $sRes = &send_email($oMsg);
       print STDERR "result of send_email() is ==$sRes=\n" if ($v_dbg || ($sRes ne '1'));
       # print STDERR $sRes if ($v_dbg || ($sRes ne '1'));
@@ -976,13 +975,6 @@ sub send_email
                                    username => $sUsername,
                                    password => $sPassword,
                                   );
-    return Email::Send::SMTP::Auth::send($oMessage, $sSMTPserver,
-                                         # The ::SMTP::Auth module
-                                         # will properly handle the
-                                         # case where username and/or
-                                         # password is blank:
-                                         $sUsername, $sPassword,
-                                         @_);
     } # if SMTP
   if (
       # User has customized the pointer to the qmail program:

@@ -1,5 +1,5 @@
 name: WWW-Search
-version: 2.481
+version: 2.482
 abstract: Query web search engines and get URLs
 author: Martin Thurn <mthurn@cpan.org>
 license: perl
@@ -42,4 +42,4 @@ recommends:
 no_index:
   directory:
     - inc
-generated_by: Module::Install version 0.46
+generated_by: Module::Install version 0.48

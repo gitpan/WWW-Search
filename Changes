@@ -1,3 +1,13 @@
+2005-12-27    <Daddy@C-3PO>
+
+	* code/AutoSearch-code.pl (main): make sure email contains HTML of new hits
+        (send_email): don't need Email::Send::SMTP::Auth any more (Email::Send::SMTP will do)
+	(make_date): fix URL of autosearch webpage
+
+2005-12-26    <Daddy@C-3PO>
+
+	* lib/WWW/Search/Test.pm (count_results): bugfix for when argument for max is undef
+
 2005-12-25    <Daddy@C-3PO>
 
 	* lib/WWW/SearchResult.pm: new attribute 'category'

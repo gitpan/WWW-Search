@@ -32,4 +32,3 @@ t/test.t
 t/test_parsing.pl
 t/use.t
 WebSearch.PL
-SIGNATURE                                Public-key signature (added by MakeMaker)

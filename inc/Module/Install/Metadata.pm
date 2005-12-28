@@ -30,6 +30,7 @@ foreach my $key (@scalar_keys) {
 sub sign {
     my $self = shift;
     $self->{'values'}{'sign'} = ( @_ ? $_[0] : 1 );
+    return $self->{'values'}{'sign'};  # added by Martin Thurn
     return $self;
 }
 

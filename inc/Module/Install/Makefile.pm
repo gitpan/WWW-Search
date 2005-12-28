@@ -72,7 +72,7 @@ sub write {
         $args->{NO_META} = 1;
     }
     if ( eval($ExtUtils::MakeMaker::VERSION) > 6.17 ) {
-	$args->{SIGN} = 1 if $self->sign;
+	# $args->{SIGN} = 1 if $self->sign;  # removed by Martin Thurn
     }
     delete $args->{SIGN} unless $self->is_admin;
 

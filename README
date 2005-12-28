@@ -3,12 +3,14 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.481?  (2005-12-25)
+WHAT IS NEW IN WWW::Search 2.482?  (2005-12-27)
 -----------------------------------------------
 
 Overview of changes: 
 
- * SearchResult now has an attribute 'category'
+ * minor bugfix in WWW::Search::Test
+ * new attributes added to WWW::SearchResult
+ * AutoSearch doesn't need Email::Send::SMTP::Auth any more
 
 For details, see the Changes file (updates after 2005-07-25) and/or
 the pod of each affected module.
