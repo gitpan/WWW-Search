@@ -1,5 +1,7 @@
 2005-12-27    <Daddy@C-3PO>
 
+	* lib/WWW/Search/Test.pm (count_results): set absolute maximum of 299 hits
+
 	* code/AutoSearch-code.pl (main): make sure email contains HTML of new hits
         (send_email): don't need Email::Send::SMTP::Auth any more (Email::Send::SMTP will do)
 	(make_date): fix URL of autosearch webpage

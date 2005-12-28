@@ -1,4 +1,4 @@
-# $rcs = ' $Id: Test.pm,v 2.269 2005/12/28 01:51:54 Daddy Exp $ ' ;
+# $rcs = ' $Id: Test.pm,v 2.270 2005/12/28 02:29:51 Daddy Exp $ ' ;
 
 =head1 NAME
 
@@ -48,7 +48,7 @@ use vars qw( @EXPORT @ISA );
 
 use vars qw( $VERSION $bogus_query $websearch );
 
-$VERSION = do { my @r = (q$Revision: 2.269 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.270 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 
 ($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = qw(dummy internal external update);
@@ -652,8 +652,9 @@ sub count_results
   $iMin ||= 0;
   if (! defined($iMax))
     {
-    # User said upper limit is 'undef':
-    $iMax = 999999;
+    # User said upper limit is 'undef', but we never want to get more
+    # than this many results while testing:
+    $iMax = 299;
     } # if
   $iMax ||= 0;
   if ($iMin == $iMax)
