@@ -3,16 +3,14 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.482?  (2005-12-27)
+WHAT IS NEW IN WWW::Search 2.484?  (2005-12-28)
 -----------------------------------------------
 
 Overview of changes: 
 
- * minor bugfix in WWW::Search::Test
- * new attributes added to WWW::SearchResult
- * AutoSearch doesn't need Email::Send::SMTP::Auth any more
+ * bring back explicit build rules for WebSearch & AutoSearch
 
-For details, see the Changes file (updates after 2005-07-25) and/or
+For details, see the Changes file (updates after 2005-12-27) and/or
 the pod of each affected module.
 
 
