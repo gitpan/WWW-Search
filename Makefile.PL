@@ -1,10 +1,10 @@
 # This -*- cperl -*- program writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.52 2005/12/28 14:09:04 Daddy Exp $
+# $Id: Makefile.PL,v 1.54 2006/01/08 01:38:21 Daddy Exp $
 
 use inc::Module::Install;
 
 name('WWW-Search');
-version(2.484);
+version(2.485);
 author('Martin Thurn <mthurn@cpan.org>');
 abstract('Query web search engines and get URLs');
 license('perl');
@@ -41,7 +41,7 @@ requires('File::Find');
 requires('File::Spec');
 requires('HTML::Parser' => 2.23);
 requires('HTML::TreeBuilder');  # HTML-Tree-0.51 is good
-build_requires('IO::Capture::ErrorMessages' => 0);
+build_requires('IO::Capture::Stderr' => 0);
 requires('LWP::UserAgent' => 2.0);
 requires('Net::Domain');
 requires('Pod::Usage');
@@ -65,9 +65,7 @@ build_requires('Test::Simple');
 build_requires('ExtUtils::MM_Unix' => 1.41);
 
 check_nmake();      # check and download nmake.exe for Win32
-&WriteAll({
-           'SIGN' => 0,
-          });
+&WriteAll;
 
 sub MY::preamble
   {

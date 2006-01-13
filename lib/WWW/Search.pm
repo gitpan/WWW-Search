@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 2.539 2005/07/23 15:20:57 Daddy Exp $
+# $Id: Search.pm,v 2.540 2006/01/13 02:30:50 Daddy Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -95,7 +95,7 @@ use vars qw( @ISA @EXPORT @EXPORT_OK $VERSION $MAINTAINER );
 @EXPORT_OK = qw( escape_query unescape_query generic_option strip_tags );
 @ISA = qw(Exporter LWP::MemberMixin);
 $MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
-$VERSION = do { my @r = (q$Revision: 2.539 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.540 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 =item new
 
@@ -687,14 +687,19 @@ sub approximate_hit_count
 =item results
 
 Return all the results of a query as an array of WWW::Search::Result
-objects.  Note: This might take a while, because a web backend will
-keep asking the search engine for "next page of results" over and over
-until there are no more next pages, and THEN return from this
-function.
+objects.
+
+Note: This might take a while, because a web backend will keep asking
+the search engine for "next page of results" over and over until there
+are no more next pages, and THEN return from this function.
+
+If an error occurs at any time during query processing, it will be
+indicated in the response().
 
 Example:
 
     @results = $oSearch->results();
+    # Go have a cup of coffee while the previous line executes...
     foreach $oResult (@results)
       {
       print $oResult->url(), "\n";
@@ -727,7 +732,11 @@ WWW::Search::Result object.  Example:
       print $oResult->url(), "\n";
       } # while
 
-When there are no more results, next_result() will return undef.
+When there are no more results, or if an error occurs, next_result()
+will return undef.
+
+If an error occurs at any time during query processing, it will be
+indicated in the response().
 
 =cut
 
@@ -891,8 +900,8 @@ sub unescape_query
   my @copy = @_;
   for (@copy)
     {
-    s/\+/ /g;
-    s/%([\dA-Fa-f]{2})/chr(hex($1))/eg;
+    s!\+! !g;
+    s!\%([\dA-Fa-f]{2})!chr(hex($1))!eg;
     } # for
   return wantarray ? @copy : $copy[0];
   } # unescape_query
@@ -1201,7 +1210,7 @@ sub http_request
   my $response;
   if (50 <= $self->{_debug})
     {
-    eval q{ use LWP::Debug qw(+) };
+    eval q{ use LWP::Debug qw(+) }; # } # emacs bug
     } # if
   if ($self->{search_from_file})
     {

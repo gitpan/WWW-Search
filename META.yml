@@ -1,45 +1,45 @@
-name: WWW-Search
-version: 2.484
 abstract: Query web search engines and get URLs
 author: Martin Thurn <mthurn@cpan.org>
-license: perl
-distribution_type: module
 build_requires:
-  IO::Capture::ErrorMessages: 0
+  ExtUtils::MM_Unix: 1.41
   File::Spec: 0
   File::Temp: 0
+  IO::Capture::Stderr: 0
   Pod::Tests: 0.12
-  Test::Inline: 0.16
   Test::File: 0
+  Test::Inline: 0.16
   Test::More: 0
   Test::Pod: 0
   Test::Simple: 0
-  ExtUtils::MM_Unix: 1.41
+distribution_type: module
+generated_by: Module::Install version 0.52
+license: perl
+name: WWW-Search
+no_index:
+  directory:
+    - inc
+    - t
+recommends:
+  Email::MIME: 0
+  Email::MIME::Creator: 0
+  Email::Send: 0
+  Email::Send::SMTP::Auth: 0
 requires:
-  perl: 5.004
   Data::Dumper: 0
   Date::Manip: 0
-  File::Copy: 0
-  Getopt::Long: 2.24
-  POSIX: 0
-  Getopt::Long: 2.24
   File::Basename: 0
+  File::Copy: 0
   File::Find: 0
   File::Spec: 0
+  Getopt::Long: 2.24
   HTML::Parser: 2.23
   HTML::TreeBuilder: 0
   LWP::UserAgent: 2
   Net::Domain: 0
+  POSIX: 0
   Pod::Usage: 0
   URI: 0
   URI::Escape: 0
   User: 0
-recommends:
-  Email::Send: 0
-  Email::Send::SMTP::Auth: 0
-  Email::MIME: 0
-  Email::MIME::Creator: 0
-no_index:
-  directory:
-    - inc
-generated_by: Module::Install version 0.48
+  perl: 5.004
+version: 2.485

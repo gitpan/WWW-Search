@@ -3,14 +3,16 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.484?  (2005-12-28)
+WHAT IS NEW IN WWW::Search 2.485?  (2006-qqq)
 -----------------------------------------------
 
 Overview of changes: 
 
- * bring back explicit build rules for WebSearch & AutoSearch
+ * during testing, use IO::Capture::Stderr instead of IO::Capture::ErrorMessages
+ * add pod about how to detect errors during the search
+ * update AutoSearch for latest Email::Send modules
 
-For details, see the Changes file (updates after 2005-12-27) and/or
+For details, see the Changes file (updates after 2006-01-01) and/or
 the pod of each affected module.
 
 

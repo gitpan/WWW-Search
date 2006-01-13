@@ -5,7 +5,7 @@ exit 0;
 # AutoSearch-code.pl
 # Copyright (c) 1996-1997 University of Southern California.
 # All rights reserved.
-# $Id: AutoSearch-code.pl,v 2.139 2005/12/28 01:55:47 Daddy Exp $
+# $Id: AutoSearch-code.pl,v 2.140 2006/01/13 02:29:07 Daddy Exp $
 #
 # Complete copyright notice follows below.
 
@@ -35,7 +35,7 @@ use WWW::Search;
 use strict;
 
 use vars qw( $VERSION );
-$VERSION = do { my @r = (q$Revision: 2.139 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.140 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 use constant DEBUG_EMAIL => 0;
 
@@ -970,7 +970,7 @@ sub send_email
       $sPassword = ($sPassword eq '') ? '<empty>' : '<hidden>';
       return qq{$0 chose method SMTP::Auth with server=$sSMTPserver, username=$sUsername, password=$sPassword};
       } # if
-    return Email::Send::SMTP::send($oMessage,
+    return Email::Send::SMTP->send($oMessage,
                                    Host => $sSMTPserver,
                                    username => $sUsername,
                                    password => $sPassword,

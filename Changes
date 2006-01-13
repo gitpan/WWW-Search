@@ -1,3 +1,15 @@
+2006-01-12    <Daddy@C-3PO>
+
+	* lib/WWW/Search.pm (results): add pod about how to detect errors
+
+	* code/AutoSearch-code.pl (send_email): fix the call syntax of Email::Send
+
+2006-01-07    <Daddy@C-3PO>
+
+	* lib/WWW/Search.pm (results): add pod about how to check for errors
+
+	* t/use.t: use IO::Capture::Stderr instead of ::ErrorMessages
+
 2005-12-27    <Daddy@C-3PO>
 
 	* lib/WWW/Search/Test.pm (count_results): set absolute maximum of 299 hits
