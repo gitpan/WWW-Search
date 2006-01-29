@@ -7,7 +7,7 @@ build_requires:
   IO::Capture::Stderr: 0
   Pod::Tests: 0.12
   Test::File: 0
-  Test::Inline: 0.16
+  Test::Inline: 2
   Test::More: 0
   Test::Pod: 0
   Test::Simple: 0
@@ -42,4 +42,4 @@ requires:
   URI::Escape: 0
   User: 0
   perl: 5.004
-version: 2.485
+version: 2.486

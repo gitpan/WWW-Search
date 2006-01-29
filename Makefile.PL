@@ -1,10 +1,10 @@
 # This -*- cperl -*- program writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.54 2006/01/08 01:38:21 Daddy Exp $
+# $Id: Makefile.PL,v 1.55 2006/01/13 02:34:25 Daddy Exp $
 
 use inc::Module::Install;
 
 name('WWW-Search');
-version(2.485);
+version(2.486);
 author('Martin Thurn <mthurn@cpan.org>');
 abstract('Query web search engines and get URLs');
 license('perl');
@@ -53,7 +53,7 @@ build_requires('File::Spec');
 # These are needed during `make test`:
 build_requires('File::Temp');
 build_requires('Pod::Tests' => 0.12);
-build_requires('Test::Inline' => 0.16);
+build_requires('Test::Inline' => 2.0);
 build_requires('Test::File');
 build_requires('Test::More');
 build_requires('Test::Pod');
