@@ -1,3 +1,17 @@
+2006-03-14    <Daddy@C-3PO>
+
+	* lib/WWW/SearchResult.pm (as_HTML): new method
+
+2006-03-11    <Daddy@C-3PO>
+
+	* lib/WWW/SearchResult.pm (shipping): new method
+	(as_HTML): new method
+
+2006-03-10    <Daddy@C-3PO>
+
+	* lib/WWW/SearchResult.pm (question_count): new method
+	(watcher_count): new method
+
 2006-01-12    <Daddy@C-3PO>
 
 	* lib/WWW/Search.pm (results): add pod about how to detect errors

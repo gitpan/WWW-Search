@@ -1,7 +1,7 @@
 # SearchResult.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: SearchResult.pm,v 2.68 2005/12/28 01:58:02 Daddy Exp $
+# $Id: SearchResult.pm,v 2.71 2006/03/15 00:57:43 Daddy Exp $
 #
 # Copyright (c) 1996 University of Southern California.
 # All rights reserved.
@@ -55,10 +55,10 @@ return a url and title.  (This list may grow in the future.)
 
 package WWW::SearchResult;
 
-require LWP::MemberMixin;
+use CGI;
+use LWP::MemberMixin;
 @ISA = qw(LWP::MemberMixin);
-use Carp ();
-$VERSION = do{ my @r = (q$Revision: 2.68 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r};
+$VERSION = do{ my @r = (q$Revision: 2.71 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r};
 
 =head2 new
 
@@ -289,11 +289,32 @@ table data commands (like li, tr, or td).  Whether raw contains a list
 entry, table row, br-separated lines, or plain text is search-engine
 dependent.  In fact, many backends do not even return it at all.
 
-=back
-
 =cut
 
 sub raw { return shift->_elem('raw', @_); }
+
+=item as_HTML
+
+Convert the search result to a human-readable form,
+decorated with HTML for pretty-printing.
+
+=cut
+
+sub as_HTML
+  {
+  my $self = shift;
+  my $cgi = new CGI;
+  my $s = $cgi->a({
+                   href => $self->url,
+                  },
+                  $self->title || 'title unknown',
+                 );
+  $s .= $cgi->br;
+  $s .= $self->description || 'no description available';
+  return $s;
+  } # as_HTML
+
+=back
 
 =head2 Others
 
@@ -310,9 +331,12 @@ sub end_date { return shift->_elem('end_date', @_); }
 sub image_url { return shift->_elem('image_url', @_); }
 sub item_number { return shift->_elem('item_number', @_); }
 sub location { return shift->_elem('location', @_); }
+sub question_count { return shift->_elem('seller', @_); }
 sub seller { return shift->_elem('seller', @_); }
+sub shipping { return shift->_elem('shipping', @_); }
 sub start_date { return shift->_elem('start_date', @_); }
 sub thumb_url { return shift->_elem('thumb_url', @_); }
+sub watcher_count { return shift->_elem('seller', @_); }
 
 =head1 AUTHOR
 

@@ -1,10 +1,10 @@
 # This -*- cperl -*- program writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.55 2006/01/13 02:34:25 Daddy Exp $
+# $Id: Makefile.PL,v 1.58 2006/03/15 00:59:28 Daddy Exp $
 
 use inc::Module::Install;
 
 name('WWW-Search');
-version(2.486);
+version(2.487);
 author('Martin Thurn <mthurn@cpan.org>');
 abstract('Query web search engines and get URLs');
 license('perl');
@@ -35,14 +35,16 @@ requires('Getopt::Long' => 2.24);
 requires('POSIX');
 # These are needed for WebSearch:
 requires('Getopt::Long' => 2.24);
-# These are needed for WWW::Search base module:
+# These are needed for WWW::Search base module and sub-modules:
+requires('CGI');
 requires('File::Basename');
 requires('File::Find');
 requires('File::Spec');
 requires('HTML::Parser' => 2.23);
 requires('HTML::TreeBuilder');  # HTML-Tree-0.51 is good
-build_requires('IO::Capture::Stderr' => 0);
+build_requires('IO::Capture::Stderr');
 requires('LWP::UserAgent' => 2.0);
+requires('LWP::MemberMixin');
 requires('Net::Domain');
 requires('Pod::Usage');
 requires('URI');

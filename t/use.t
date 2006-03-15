@@ -1,4 +1,4 @@
-# Emacs, please use -*- cperl -*- mode when editing this file
+# $Id: use.t,v 1.16 2006/03/15 00:58:43 Daddy Exp $
 
 use ExtUtils::testlib;
 use Test::More no_plan;
@@ -160,6 +160,38 @@ is($o6->http_referer, 'junk');
 ok($o6->http_method('junk'));
 is($o6->http_method, 'junk');
 is($o6->http_method, 'junk');
+
+# Tests for WWW::SearchResult:
+my $oWSR = new WWW::SearchResult;
+$oWSR->add_url('url1');
+$oWSR->thumb_url('url1.thumb');
+$oWSR->image_url('url1.png');
+$oWSR->title('title1');
+$oWSR->description('description1');
+$oWSR->change_date("yesterday");
+$oWSR->start_date("last Tuesday");
+$oWSR->index_date("today");
+$oWSR->end_date("tomorrow");
+$oWSR->raw(qq{<A HREF="url1">title1</a>});
+$oWSR->score(99);
+$oWSR->normalized_score(990);
+$oWSR->size(4096);
+$oWSR->source('WWW::Search');
+$oWSR->company('Dub Dub Dub Search, Inc.');
+$oWSR->location('Ashburn, VA');
+$oWSR->bid_amount(9.99);
+$oWSR->shipping(4.85);
+$oWSR->bid_count(9);
+$oWSR->question_count(3);
+$oWSR->watcher_count(65);
+$oWSR->item_number(987654321);
+$oWSR->category(7654);
+$oWSR->bidder('Joe');
+$oWSR->seller('Jane');
+
+
+my $s = $oWSR->as_HTML;
+
 exit 0;
 
 foreach my $sEngine (@as)
@@ -167,16 +199,10 @@ foreach my $sEngine (@as)
   my $o;
   # diag(qq{trying $sEngine});
   eval { $o = new WWW::Search($sEngine) };
-  ok(ref($o), qq{loaded WWW::Search::$sEngine});
+  ok(ref($o), qq{loaded WWW::Search::$sEngine}); # } ) # Emacs bug
   } # foreach
 
 exit 0;
-
-# Now make sure we get *some* results from *some* engine:
-my $o = new WWW::Search('WebCrawler');
-$o->maximum_to_retrieve(10);
-$o->native_query('Ohio');
-ok(5 < scalar($o->results()));
 
 __END__
 

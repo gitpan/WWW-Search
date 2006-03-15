@@ -1,5 +1,5 @@
 
-# $Id: Count.pm,v 1.11 2005/02/20 02:59:36 Daddy Exp $
+# $Id: Count.pm,v 1.12 2006/03/12 04:09:23 Daddy Exp $
 
 =head1 NAME
 
@@ -7,9 +7,7 @@ WWW::Search::Null::Count - class for testing WWW::Search clients
 
 =head1 SYNOPSIS
 
-=for example begin
-
-  require WWW::Search;
+  use WWW::Search;
   my $iCount = 4;
   my $oSearch = new WWW::Search('Null::Count',
                                 '_null_count' => $iCount,
@@ -17,22 +15,6 @@ WWW::Search::Null::Count - class for testing WWW::Search clients
   $oSearch->native_query('Makes no difference what you search for...');
   my @aoResults = $oSearch->results;
   # ...You get $iCount results.
-
-=for example end
-
-=for example_testing
-is(scalar(@aoResults), $iCount, 'got the right number of results');
-is($oSearch->approximate_result_count, $iCount, 'got the right approx_results');
-my $oResult = shift @aoResults;
-is($oResult->url, "url1", 'url');
-is(scalar(@{$oResult->related_urls}), $iCount, 'got N related_urls');
-is(scalar(@{$oResult->related_titles}), $iCount, 'got N related_titles');
-is(scalar(@{$oResult->urls}), $iCount+1, 'got N+1 urls');
-my $raURL = $oResult->urls;
-# diag("sURL =$sURL=");
-is(scalar(@{$raURL}), $iCount+1, 'got N+1 urls in arrayref');
-$oSearch = new WWW::Search('Null::Count');
-@aoResults = $oSearch->results;
 
 =head1 DESCRIPTION
 
@@ -52,12 +34,13 @@ Martin Thurn <mthurn@cpan.org>
 
 package WWW::Search::Null::Count;
 
+use WWW::Search;
 use WWW::Search::Result;
 use strict;
 
 use vars qw( @ISA $VERSION $MAINTAINER );
 @ISA = qw( WWW::Search );
-$VERSION = do { my @r = (q$Revision: 1.11 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 1.12 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 $MAINTAINER = q{Martin Thurn <mthurn@cpan.org>};
 
 use constant DEBUG_FUNC => 0;
@@ -119,7 +102,7 @@ sub _native_retrieve_some
     push(@{$self->{cache}}, $oResult);
     } # for $i
   return 0;
-  } # native_retrieve_some
+  } # _native_retrieve_some
 
 1;
 
