@@ -3,14 +3,16 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.487?  (2006-03-11)
+WHAT IS NEW IN WWW::Search 2.488?  (2006-04-21)
 -----------------------------------------------
 
 Overview of changes: 
 
- * enhancements to WWW::SearchResult to better handle auction search results
+ * new method WWW::SearchResult::sold()
+ * new method WWW::Search::result_as_HTML()
+ * AutoSearch uses result_as_HTML() to format email
 
-For details, see the Changes file (updates after 2006-01-28) and/or
+For details, see the Changes file (updates after 2006-03-15) and/or
 the pod of each affected module.
 
 
@@ -35,9 +37,9 @@ include using the "advanced search" interface; getting "text-only"
 pages; making "OR" the default query term operator instead of "AND";
 ungrouping same-site results; making sure descriptions are turned on;
 and increasing the number of hits per page, among other tricks.  A few
-backends implement the method gui_query(), which does get the same
-results as searches from the engine's default web page; after
-installation, see `perldoc WWW::Search::Backend` for details.
+backends implement the method gui_query(), which does attempt to get
+the same results as searches from the engine's default web page; after
+installation, see `perldoc WWW::Search::<Backend>` for details.
 
 Because WWW::Search depends on parsing the HTML output of web search
 engines, it will fail if the search engine operators change their
@@ -47,17 +49,17 @@ This base WWW::Search distribution contains a few backends that can be
 used for testing.  The backend Null::Empty always returns no results;
 Null::Error always returns an error condition; and Null::Count returns
 a number of sample results that you can specify.  After installation,
-consult `perldoc WWW::Search::Null::Count` for details.
+consult `perldoc WWW::Search::Null::Count` et al. for details.
 
 The following real, working backends (and more!) are registered at
 CPAN independently (not included with this WWW::Search distribution):
 
-AltaVista       http://www.perl.com/CPAN/modules/by-module/WWW
+AltaVista       http://www.perl.com/CPAN/modules/by-module/WWW/MTHURN/
 AP              in the WWW::Search::News distribution
-Ebay            http://www.perl.com/CPAN/modules/by-module/WWW
+Ebay            http://www.perl.com/CPAN/modules/by-module/WWW/MTHURN/
 Ebay::Motors    in the Ebay distribution
-Ebay::Complete  contact author, mthurn@cpan.org
-Ebay::Mature    contact author, mthurn@cpan.org
+Ebay::Complete  in the WWW-Ebay distribution
+Ebay::Mature    in the WWW-Ebay distribution
 Euroseek        http://www.perl.com/CPAN/modules/by-module/WWW/JSMYSER/
 Go              http://www.perl.com/CPAN/modules/by-module/WWW
 GoTo            http://www.perl.com/CPAN/modules/by-module/WWW/JSMYSER/
@@ -96,8 +98,8 @@ Makefile.PL for a complete list).  For information on Perl5, see
 AVAILABILITY
 ------------
 
-The latest version of WWW::Search should always be available on CPAN.
-Here is a good URL for finding it:
+The latest version of WWW::Search is always available on CPAN.  Here
+is a good URL for finding it:
 http://www.perl.com/CPAN/modules/by-module/WWW
 
 

@@ -1,4 +1,4 @@
-# $Id: Empty.pm,v 1.6 2005/07/08 03:11:49 Daddy Exp $
+# $Id: Empty.pm,v 1.7 2006/04/21 21:17:54 Daddy Exp $
 
 =head1 NAME
 
@@ -6,21 +6,13 @@ WWW::Search::Null::Empty - class for testing WWW::Search clients
 
 =head1 SYNOPSIS
 
-=for example begin
-
-  require WWW::Search;
+  use WWW::Search;
   my $oSearch = new WWW::Search('Null::Empty');
   $oSearch->native_query('Makes no difference what you search for...');
   my @aoResults = $oSearch->results;
   # You get no results...
   my $oResponse = $oSearch->response;
   # ...But you get an HTTP::Response object with a code of 200
-
-=for example end
-
-=for example_testing
-ok($oResponse->is_success, 'did not get a 500 HTTP::Response');
-is(scalar(@aoResults), 0, 'got some results');
 
 =head1 DESCRIPTION
 
@@ -42,7 +34,7 @@ use strict;
 
 use vars qw( @ISA $VERSION );
 @ISA = qw( WWW::Search );
-$VERSION = do { my @r = (q$Revision: 1.6 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 1.7 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 sub _native_setup_search
   {

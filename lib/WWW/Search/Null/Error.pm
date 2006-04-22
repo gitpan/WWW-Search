@@ -1,5 +1,5 @@
 
-# $Id: Error.pm,v 1.8 2005/12/25 00:20:38 Daddy Exp $
+# $Id: Error.pm,v 1.9 2006/04/21 21:17:54 Daddy Exp $
 
 =head1 NAME
 
@@ -7,19 +7,12 @@ WWW::Search::Null::Error - class for testing WWW::Search clients
 
 =head1 SYNOPSIS
 
-=for example begin
-
   require WWW::Search;
   my $oSearch = new WWW::Search('Null::Error');
   $oSearch->native_query('Makes no difference what you search for...');
   $oSearch->retrieve_some();
   my $oResponse = $oSearch->response;
   # You get an HTTP::Response object with a code of 500
-
-=for example end
-
-=for example_testing
-is($oResponse->code, 500, 'HTTP::Response is an error');
 
 =head1 DESCRIPTION
 
@@ -41,7 +34,7 @@ use strict;
 
 use vars qw( @ISA $VERSION );
 @ISA = qw( WWW::Search );
-$VERSION = do { my @r = (q$Revision: 1.8 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 1.9 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 sub _native_setup_search
   {

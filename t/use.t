@@ -1,4 +1,4 @@
-# $Id: use.t,v 1.16 2006/03/15 00:58:43 Daddy Exp $
+# $Id: use.t,v 1.17 2006/04/21 21:18:21 Daddy Exp $
 
 use ExtUtils::testlib;
 use Test::More no_plan;
@@ -188,7 +188,12 @@ $oWSR->item_number(987654321);
 $oWSR->category(7654);
 $oWSR->bidder('Joe');
 $oWSR->seller('Jane');
-
+ok($o4->result_as_HTML($oWSR));
+is($o4->result_as_HTML(), '');
+is($o4->result_as_HTML(undef), '');
+is($o4->result_as_HTML(0), '');
+is($o4->result_as_HTML(1), '');
+is($o4->result_as_HTML([1,2]), '');
 
 my $s = $oWSR->as_HTML;
 

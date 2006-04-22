@@ -5,7 +5,7 @@ exit 0;
 # AutoSearch-code.pl
 # Copyright (c) 1996-1997 University of Southern California.
 # All rights reserved.
-# $Id: AutoSearch-code.pl,v 2.140 2006/01/13 02:29:07 Daddy Exp $
+# $Id: AutoSearch-code.pl,v 2.141 2006/04/22 13:48:39 Daddy Exp $
 #
 # Complete copyright notice follows below.
 
@@ -35,7 +35,7 @@ use WWW::Search;
 use strict;
 
 use vars qw( $VERSION );
-$VERSION = do { my @r = (q$Revision: 2.140 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.141 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 use constant DEBUG_EMAIL => 0;
 
@@ -575,9 +575,9 @@ sub main
     $search->ignore_channels(@asChannel);
     } # if
   # examine search results
-  my($result,@results);
   my($next_result);
   my(@new_weekly_url,@new_weekly_title,@new_weekly_description);
+  my @aoResult;  # Parallel array to new_weekly_url
   my(@weekly_url,@weekly_title);
 
 # care to see the old summary list?
@@ -625,6 +625,7 @@ sub main
     push(@new_weekly_url,$url); # the newest set of hits (added)
     push(@new_weekly_description,$description);
     push(@new_weekly_title,$title);
+    push @aoResult, $next_result;
   } # while NEXT_URL
   # Report errors, if any:
   my $response = $search->response();
@@ -721,8 +722,9 @@ sub main
         $description = $new_weekly_description[$i];
         my $sHTML = &make_link($AppendedTemplate, $url, $title, $description);
         print HTML "$sHTML\n";
-        $sEmail .= "<P>$sHTML\n";
-        }
+        # print STDERR " DDD search is $search\n";
+        $sEmail .= q{<P>}. $search->result_as_HTML($aoResult[$i]);
+        } # for
       print HTML "<!--/Appended-->"; # replace due to split
       print HTML $part3;
       $n = $#suspended_url + 1;
@@ -764,7 +766,7 @@ sub main
         $description = $new_weekly_description[$i];
         my $sHTML = &make_link($AppendedTemplate, $url, $title, $description);
         print HTML "$sHTML\n";
-        $sEmail .= "<P>$sHTML\n";
+        $sEmail .= q{<P>}. $search->result_as_HTML($aoResult[$i]);
         } # for $i
       print HTML $Appended;
       print HTML "<!--/$section-->\n\n";

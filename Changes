@@ -1,3 +1,19 @@
+2006-04-22    <Daddy@C-3PO>
+
+	* code/AutoSearch-code.pl (main): now uses result_as_HTML() to format email
+
+2006-04-21    <Daddy@C-3PO>
+
+	* lib/WWW/Search.pm (result_as_HTML): new method
+
+2006-04-19    <Daddy@C-3PO>
+
+	* lib/WWW/SearchResult.pm (sold): new method
+
+2006-03-19    <Daddy@C-3PO>
+
+	* lib/WWW/Search.pm: tweak pod (thanks to Brian Sammon)
+
 2006-03-14    <Daddy@C-3PO>
 
 	* lib/WWW/SearchResult.pm (as_HTML): new method

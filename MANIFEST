@@ -27,6 +27,9 @@ META.yml
 README
 t/0_versions.t
 t/autosearch.t
+t/null-count.t
+t/null-empty.t
+t/null-error.t
 t/pod.t
 t/test.t
 t/test_parsing.pl

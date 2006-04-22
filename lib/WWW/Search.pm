@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 2.540 2006/01/13 02:30:50 Daddy Exp $
+# $Id: Search.pm,v 2.542 2006/04/21 21:04:17 Daddy Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -41,8 +41,8 @@ Here is a sample program:
       } # while
     $oSearch->logout;
 
-Results are objects of type C<WWW::Search::Result>
-(see L<WWW::Search::Result> for details).
+Results are objects of type C<WWW::SearchResult>
+(see L<WWW::SearchResult> for details).
 Note that different backends support different result fields.
 All backends are required to support title and url.
 
@@ -52,7 +52,7 @@ For specific search engines, see L<WWW::Search::TheEngineName>
 (replacing TheEngineName with a particular search engine).
 
 For details about the results of a search,
-see L<WWW::Search::Result>.
+see L<WWW::SearchResult>.
 
 =head1 METHODS AND FUNCTIONS FOR SEARCHERS
 
@@ -65,6 +65,7 @@ see L<WWW::Search::Result>.
 package WWW::Search;
 
 use Carp ();
+use CGI;
 use Data::Dumper;  # for debugging only
 use Exporter;
 use File::Find;
@@ -95,7 +96,7 @@ use vars qw( @ISA @EXPORT @EXPORT_OK $VERSION $MAINTAINER );
 @EXPORT_OK = qw( escape_query unescape_query generic_option strip_tags );
 @ISA = qw(Exporter LWP::MemberMixin);
 $MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
-$VERSION = do { my @r = (q$Revision: 2.540 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.542 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 =item new
 
@@ -686,7 +687,7 @@ sub approximate_hit_count
 
 =item results
 
-Return all the results of a query as an array of WWW::Search::Result
+Return all the results of a query as an array of WWW::SearchResult
 objects.
 
 Note: This might take a while, because a web backend will keep asking
@@ -725,7 +726,7 @@ sub results
 =item next_result
 
 Call this method repeatedly to return each result of a query as a
-WWW::Search::Result object.  Example:
+WWW::SearchResult object.  Example:
 
     while ($oResult = $oSearch->next_result())
       {
@@ -1746,6 +1747,29 @@ sub native_retrieve_some
   # print STDERR " +   calling parse_tree...\n" if 1 < $self->{_debug};
   return $self->parse_tree($tree);
   } # native_retrieve_some
+
+
+=item result_as_HTML
+
+Given a WWW::SearchResult object, formats it human-readable with HTML.
+
+=cut
+
+sub result_as_HTML
+  {
+  my $self = shift;
+  my $oSR = shift or return '';
+  return '' unless (ref($oSR) eq 'WWW::SearchResult');
+  my $o = new CGI;
+  return join('',
+              $o->a(
+                      { href => $oSR->url, },
+                    $oSR->title,
+                   ),
+              $o->br,
+              $oSR->description,
+             );
+  } # result_as_HTML
 
 
 =item preprocess_results_page

@@ -1,7 +1,7 @@
 # SearchResult.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: SearchResult.pm,v 2.71 2006/03/15 00:57:43 Daddy Exp $
+# $Id: SearchResult.pm,v 2.72 2006/04/19 11:51:10 Daddy Exp $
 #
 # Copyright (c) 1996 University of Southern California.
 # All rights reserved.
@@ -58,7 +58,7 @@ package WWW::SearchResult;
 use CGI;
 use LWP::MemberMixin;
 @ISA = qw(LWP::MemberMixin);
-$VERSION = do{ my @r = (q$Revision: 2.71 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r};
+$VERSION = do{ my @r = (q$Revision: 2.72 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r};
 
 =head2 new
 
@@ -334,6 +334,7 @@ sub location { return shift->_elem('location', @_); }
 sub question_count { return shift->_elem('seller', @_); }
 sub seller { return shift->_elem('seller', @_); }
 sub shipping { return shift->_elem('shipping', @_); }
+sub sold { return shift->_elem('sold', @_); }
 sub start_date { return shift->_elem('start_date', @_); }
 sub thumb_url { return shift->_elem('thumb_url', @_); }
 sub watcher_count { return shift->_elem('seller', @_); }
