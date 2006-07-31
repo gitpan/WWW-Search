@@ -3,16 +3,14 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.488?  (2006-04-21)
+WHAT IS NEW IN WWW::Search 2.489?  (2006-07-30)
 -----------------------------------------------
 
 Overview of changes: 
 
- * new method WWW::SearchResult::sold()
- * new method WWW::Search::result_as_HTML()
- * AutoSearch uses result_as_HTML() to format email
+ * new function WWW::Search::Test::tm_run_test_no_approx()
 
-For details, see the Changes file (updates after 2006-03-15) and/or
+For details, see the Changes file (updates after 2006-04-21) and/or
 the pod of each affected module.
 
 
@@ -271,6 +269,9 @@ work).  Contact <mthurn@cpan.org>
 
 SUPPORT AND CREDITS
 -------------------
+
+For more information about Martin Thurn's Perl Modules, 
+visit http://tinyurl.com/nn67z
 
 The WWW::Search architecture was originally written by John Heidemann,
 with feedback from other contributors listed below.  NOTE: This list

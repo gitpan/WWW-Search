@@ -1,3 +1,12 @@
+2006-07-30    <Daddy@C-3PO>
+
+	* lib/WWW/Search/Test.pm (tm_run_test_no_approx): new function
+	(count_results): FIX to allow more than 300 results
+
+2006-04-24    <Daddy@C-3PO>
+
+	* lib/WWW/Search.pm (result_as_HTML): FIX for backends that use WWW::Search::Result
+
 2006-04-22    <Daddy@C-3PO>
 
 	* code/AutoSearch-code.pl (main): now uses result_as_HTML() to format email

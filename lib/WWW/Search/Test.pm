@@ -1,4 +1,4 @@
-# $rcs = ' $Id: Test.pm,v 2.270 2005/12/28 02:29:51 Daddy Exp $ ' ;
+# $rcs = ' $Id: Test.pm,v 2.273 2006/07/31 02:28:21 Daddy Exp $ ' ;
 
 =head1 NAME
 
@@ -42,13 +42,13 @@ use vars qw( @EXPORT @ISA );
               $MODE_DUMMY $MODE_INTERNAL $MODE_EXTERNAL $MODE_UPDATE
               $TEST_DUMMY $TEST_EXACTLY $TEST_BY_COUNTING $TEST_GREATER_THAN $TEST_RANGE
               new_engine run_test run_gui_test skip_test count_results
-              tm_new_engine tm_run_test
+              tm_new_engine tm_run_test tm_run_test_no_approx
             );
 @ISA = qw( Exporter );
 
 use vars qw( $VERSION $bogus_query $websearch );
 
-$VERSION = do { my @r = (q$Revision: 2.270 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.273 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 
 ($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = qw(dummy internal external update);
@@ -616,23 +616,47 @@ For example:
 
 sub tm_run_test
   {
-  # Same arguments as count_results()
+  &_tm_run_test(@_, 1);
+  } # tm_run_test
+
+sub _tm_run_test
+  {
+  # Last argument is boolean, whether to check approx_result_count:
+  my $iApprox = pop(@_) || 0;
+  # Remaining args, same as count_results():
   my ($sType, $sQuery, $iMin, $iMax, $iDebug, $iPrintResults) = @_;
   my $iCount = &count_results(@_);
   Test::More::is($oSearch->response->code, 200, 'got valid HTTP response');
   if (defined $iMin)
     {
     Test::More::cmp_ok($iMin, '<=', $iCount, qq{lower-bound num-hits for query=$sQuery});
-    Test::More::cmp_ok($iMin, '<=', $oSearch->approximate_result_count,
-                       qq{lower-bound approximate_result_count});
+    if ($iApprox)
+      {
+      Test::More::cmp_ok($iMin, '<=', $oSearch->approximate_result_count,
+                         qq{lower-bound approximate_result_count});
+      } # if
     } # if
   if (defined $iMax)
     {
     Test::More::cmp_ok($iCount, '<=', $iMax, qq{upper-bound num-hits for query=$sQuery});
-    Test::More::cmp_ok($oSearch->approximate_result_count, '<=', $iMax,
-                       qq{upper-bound approximate_result_count});
+    if ($iApprox)
+      {
+      Test::More::cmp_ok($oSearch->approximate_result_count, '<=', $iMax,
+                         qq{upper-bound approximate_result_count});
+      } # if
     } # if
-  } # tm_run_test
+  } # _tm_run_test
+
+=head2 tm_run_test_no_approx
+
+Same as tm_run_test, but does NOT check the approximate_result_count.
+
+=cut
+
+sub tm_run_test_no_approx
+  {
+  &_tm_run_test(@_, 0);
+  } # tm_run_test_no_approx
 
 =head2 count_results
 
@@ -643,6 +667,7 @@ Run a query, and return the actual (not approximate) number of hits.
 sub count_results
   {
   my ($sType, $sQuery, $iMin, $iMax, $iDebug, $iPrintResults, $rh) = @_;
+  # print STDERR qq{ DDD count_results raw args($sType,$sQuery,$iMin,$iMax,$iDebug,$iPrintResults,$rh)\n};
   $iDebug ||= 0;
   $iPrintResults ||= 0;
   $rh->{'search_debug'} = $iDebug;
@@ -655,6 +680,7 @@ sub count_results
     # User said upper limit is 'undef', but we never want to get more
     # than this many results while testing:
     $iMax = 299;
+    $iMax = $iMin + 1 if ($iMax < $iMin);
     } # if
   $iMax ||= 0;
   if ($iMin == $iMax)

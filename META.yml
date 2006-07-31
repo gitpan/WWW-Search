@@ -10,7 +10,7 @@ build_requires:
   Test::Pod: 0
   Test::Simple: 0
 distribution_type: module
-generated_by: Module::Install version 0.61
+generated_by: Module::Install version 0.63
 license: perl
 name: WWW-Search
 no_index:
@@ -42,4 +42,4 @@ requires:
   URI::Escape: 0
   User: 0
   perl: 5.004
-version: 2.488
+version: 2.489

@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 2.542 2006/04/21 21:04:17 Daddy Exp $
+# $Id: Search.pm,v 2.544 2006/07/31 03:25:34 Daddy Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -96,7 +96,7 @@ use vars qw( @ISA @EXPORT @EXPORT_OK $VERSION $MAINTAINER );
 @EXPORT_OK = qw( escape_query unescape_query generic_option strip_tags );
 @ISA = qw(Exporter LWP::MemberMixin);
 $MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
-$VERSION = do { my @r = (q$Revision: 2.542 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.544 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 =item new
 
@@ -1757,9 +1757,10 @@ Given a WWW::SearchResult object, formats it human-readable with HTML.
 
 sub result_as_HTML
   {
+  # print STDERR " DDD r_as_H(@_)\n";
   my $self = shift;
   my $oSR = shift or return '';
-  return '' unless (ref($oSR) eq 'WWW::SearchResult');
+  return '' unless (ref($oSR) =~ m'WWW::Search(::)?Result');
   my $o = new CGI;
   return join('',
               $o->a(
