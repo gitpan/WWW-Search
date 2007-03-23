@@ -1,6 +1,6 @@
-abstract: Query web search engines and get URLs
-author: 'Martin Thurn <mthurn@cpan.org>'
-build_requires:
+abstract: Virtual base class for WWW searches
+author: Written by John Heidemann, C<johnh@isi.edu>.
+build_requires: 
   ExtUtils::MM_Unix: 1.41
   File::Spec: 0
   File::Temp: 0
@@ -10,19 +10,19 @@ build_requires:
   Test::Pod: 0
   Test::Simple: 0
 distribution_type: module
-generated_by: Module::Install version 0.63
+generated_by: Module::Install version 0.64
 license: perl
 name: WWW-Search
-no_index:
-  directory:
+no_index: 
+  directory: 
     - inc
     - t
-recommends:
+recommends: 
   Email::MIME: 0
   Email::MIME::Creator: 0
   Email::Send: 0
   Email::Send::SMTP::Auth: 0
-requires:
+requires: 
   CGI: 0
   Data::Dumper: 0
   Date::Manip: 0
@@ -42,4 +42,4 @@ requires:
   URI::Escape: 0
   User: 0
   perl: 5.004
-version: 2.489
+version: 2.491

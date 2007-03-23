@@ -5,7 +5,7 @@ exit 0;
 # AutoSearch-code.pl
 # Copyright (c) 1996-1997 University of Southern California.
 # All rights reserved.
-# $Id: AutoSearch-code.pl,v 2.141 2006/04/22 13:48:39 Daddy Exp $
+# $Id: AutoSearch-code.pl,v 2.142 2007/01/30 04:14:23 Daddy Exp $
 #
 # Complete copyright notice follows below.
 
@@ -35,7 +35,7 @@ use WWW::Search;
 use strict;
 
 use vars qw( $VERSION );
-$VERSION = do { my @r = (q$Revision: 2.141 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.142 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 use constant DEBUG_EMAIL => 0;
 
@@ -680,7 +680,7 @@ sub main
 # AS will attempt to handle multiple (non-concurrent) runs per day.
   my $file = (&time_file_of_the_day_numeric).'.html';
   my $section;
-
+  my $junk;
 # to test this 'diff' code 1) rm -r qid/* 2) run AS -stats qid -qn -qs
 # 3) edit qid/index.html remove some, add some (new urls)
 # 4) run AS -stats qid; look at <today>.html
@@ -720,10 +720,10 @@ sub main
         $url = $new_weekly_url[$i];
         $title = $new_weekly_title[$i];
         $description = $new_weekly_description[$i];
-        my $sHTML = &make_link($AppendedTemplate, $url, $title, $description);
-        print HTML "$sHTML\n";
+        my $sHTMLlink = &make_link($AppendedTemplate, $url, $title, $description);
+        print HTML "$sHTMLlink\n";
         # print STDERR " DDD search is $search\n";
-        $sEmail .= q{<P>}. $search->result_as_HTML($aoResult[$i]);
+        $sEmail .= q{<P>}. $search->result_as_HTML($aoResult[$i], '%Y-%m-%d %H:%M %Z');
         } # for
       print HTML "<!--/Appended-->"; # replace due to split
       print HTML $part3;
@@ -764,9 +764,9 @@ sub main
         $url = $new_weekly_url[$i];
         $title = $new_weekly_title[$i];
         $description = $new_weekly_description[$i];
-        my $sHTML = &make_link($AppendedTemplate, $url, $title, $description);
-        print HTML "$sHTML\n";
-        $sEmail .= q{<P>}. $search->result_as_HTML($aoResult[$i]);
+        my $sHTMLlink = &make_link($AppendedTemplate, $url, $title, $description);
+        print HTML "$sHTMLlink\n";
+        $sEmail .= q{<P>}. $search->result_as_HTML($aoResult[$i], '%Y-%m-%d %H:%M %Z');
         } # for $i
       print HTML $Appended;
       print HTML "<!--/$section-->\n\n";
@@ -827,7 +827,7 @@ sub main
       print HTML &make_link($SummaryTemplate,$url,$title,""),"\n";
     }
   }
-# output daily results status (none or ptr to new file).
+  # Output daily results status (none or ptr to new file).
   print HTML "<!--/$section-->\n\n";
   print HTML "<!--WeeklyHeading\n$WeeklyHeading/WeeklyHeading-->\n";
   print HTML &format_link($WeeklyHeading,"DATE", $now);
@@ -859,8 +859,7 @@ sub main
       #      print STDERR "change 'No' to 'Yes'\n";
       # The first line SHOULD be today's, assume so.
       # Delete first line of $Weekly and write new link:
-      my($junk);
-      ($junk,$Weekly) = split (/\n/,$Weekly,2); # split off first line
+      ($junk, $Weekly) = split (/\n/,$Weekly,2); # split off first line
       print HTML "Web search results for <a href=\"$file\">search on ",$today,"</a><br>\n";
       }
     elsif ($Weekly =~ m/^AutoSearch Error during search on $today/i)
@@ -868,7 +867,6 @@ sub main
       #      print STDERR "change 'Error' to 'Yes'\n";
       # The first line SHOULD be today's, assume so.
       # Delete first line of $Weekly and write new link:
-      my($junk);
       ($junk, $Weekly) = split(/\n/, $Weekly, 2); # split off first line
       print HTML "Web search results for <a href=\"$file\">search on ",$today,"</a><br>\n";
       }
@@ -894,7 +892,6 @@ sub main
       #      print STDERR "change 'Error' to 'No'\n";
       # The first line SHOULD be today's, assume so.
       # Delete first line of $Weekly and write new link:
-      my($junk);
       ($junk, $Weekly) = split(/\n/, $Weekly, 2); # split off first line
       print HTML "No unique results found for search on ",$today,"<br>\n";
       }

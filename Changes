@@ -1,3 +1,11 @@
+2007-03-23    <Daddy@C-3PO>
+
+	* lib/WWW/Search/Test.pm (count_results): FIX to not waste time getting too many results
+
+2007-01-29    <Daddy@C-3PO>
+
+	* code/AutoSearch-code.pl (main): added timezone to HTML email
+
 2006-07-30    <Daddy@C-3PO>
 
 	* lib/WWW/Search/Test.pm (tm_run_test_no_approx): new function

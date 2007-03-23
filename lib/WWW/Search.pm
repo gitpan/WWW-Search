@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 2.544 2006/07/31 03:25:34 Daddy Exp $
+# $Id: Search.pm,v 2.545 2007/01/04 00:55:35 Daddy Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -96,7 +96,7 @@ use vars qw( @ISA @EXPORT @EXPORT_OK $VERSION $MAINTAINER );
 @EXPORT_OK = qw( escape_query unescape_query generic_option strip_tags );
 @ISA = qw(Exporter LWP::MemberMixin);
 $MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
-$VERSION = do { my @r = (q$Revision: 2.544 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.545 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 =item new
 
@@ -1916,19 +1916,10 @@ maintainer.  If you want to take a shot at it, please let me know.
 
 =back
 
-
 =head1 AUTHOR
 
-C<WWW::Search> was written by John Heidemann, C<johnh@isi.edu>.
-C<WWW::Search> is currently maintained by Martin Thurn, C<mthurn@cpan.org>.
-
-backends and applications for WWW::Search were originally written by
-John Heidemann,
-Wm. L. Scheding,
-Cesare Feroldi de Rosa,
-and
-GLen Pringle.
-
+Written by John Heidemann, C<johnh@isi.edu>.
+Maintained by Martin Thurn, C<mthurn@cpan.org>, L<http://www.sandcrawler.com/SWB/cpan-modules.html>.
 
 =head1 COPYRIGHT
 

@@ -3,14 +3,14 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.489?  (2006-07-30)
+WHAT IS NEW IN WWW::Search 2.491?  (2007-03-23)
 -----------------------------------------------
 
 Overview of changes: 
 
- * new function WWW::Search::Test::tm_run_test_no_approx()
+ * nothing major
 
-For details, see the Changes file (updates after 2006-04-21) and/or
+For details, see the Changes file (updates after 2006-07-30) and/or
 the pod of each affected module.
 
 
@@ -271,7 +271,7 @@ SUPPORT AND CREDITS
 -------------------
 
 For more information about Martin Thurn's Perl Modules, 
-visit http://tinyurl.com/nn67z
+visit http://www.sandcrawler.com/SWB/cpan-modules.html
 
 The WWW::Search architecture was originally written by John Heidemann,
 with feedback from other contributors listed below.  NOTE: This list

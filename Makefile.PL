@@ -1,14 +1,14 @@
 # This -*- cperl -*- program writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.61 2006/04/22 13:51:20 Daddy Exp $
+# $Id: Makefile.PL,v 1.64 2007/01/30 04:09:19 Daddy Exp $
 
 use inc::Module::Install;
 
 name('WWW-Search');
-version(2.489);
-author('Martin Thurn <mthurn@cpan.org>');
-abstract('Query web search engines and get URLs');
+version(2.491);
+abstract_from('lib/WWW/Search.pm');
+author_from('lib/WWW/Search.pm');
 license('perl');
-requires(perl => 5.004);
+perl_version(5.004);
 
 my @programs_to_install = qw( WebSearch AutoSearch );
 
@@ -50,7 +50,7 @@ requires('Pod::Usage');
 requires('URI');
 requires('URI::Escape');
 requires('User');
-# These are needed during `make all`:
+# These used to be needed during `make all`:
 build_requires('File::Spec');
 # These are needed during `make test`:
 build_requires('File::Temp');
@@ -93,11 +93,9 @@ PART0
     {
     $ret .= <<'PART1';
 AutoSearch :: code/AutoSearch-code.pl
-	$(FULLPERL) -MExtUtils::Command -e chmod 0755 AutoSearch.PL
 	$(FULLPERL) AutoSearch.PL
 	$(FULLPERL) -MExtUtils::Command -e chmod 0755 $@
 WebSearch :: code/WebSearch-code.pl
-	$(FULLPERL) -MExtUtils::Command -e chmod 0755 WebSearch.PL
 	$(FULLPERL) WebSearch.PL
 	$(FULLPERL) -MExtUtils::Command -e chmod 0755 $@
 

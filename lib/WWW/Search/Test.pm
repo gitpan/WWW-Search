@@ -1,4 +1,4 @@
-# $rcs = ' $Id: Test.pm,v 2.273 2006/07/31 02:28:21 Daddy Exp $ ' ;
+# $rcs = ' $Id: Test.pm,v 2.274 2007/03/23 20:41:25 Daddy Exp $ ' ;
 
 =head1 NAME
 
@@ -48,7 +48,7 @@ use vars qw( @EXPORT @ISA );
 
 use vars qw( $VERSION $bogus_query $websearch );
 
-$VERSION = do { my @r = (q$Revision: 2.273 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.274 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 
 ($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = qw(dummy internal external update);
@@ -608,7 +608,7 @@ For example:
   TODO:
     {
     $TODO = 'I have not fixed this yet';
-    ok(...);
+    tm_run_test(...);
     $TODO = '';
     } # end of TODO block
 
@@ -661,6 +661,7 @@ sub tm_run_test_no_approx
 =head2 count_results
 
 Run a query, and return the actual (not approximate) number of hits.
+Same arguments as run_test().
 
 =cut
 
@@ -671,35 +672,25 @@ sub count_results
   $iDebug ||= 0;
   $iPrintResults ||= 0;
   $rh->{'search_debug'} = $iDebug;
-
-  carp ' --- min/max values out of order?' if defined($iMin) && defined($iMax) && ($iMax < $iMin);
+  carp ' --- min/max values out of order?' if (defined($iMin) && defined($iMax) && ($iMax < $iMin));
   $oSearch->reset_search;
   $iMin ||= 0;
+  # While $iMax is the number the user wants to compare, $iMaxAbs is
+  # the actual number we apply to the search:
+  my $iMaxAbs;
   if (! defined($iMax))
     {
-    # User said upper limit is 'undef', but we never want to get more
-    # than this many results while testing:
-    $iMax = 299;
-    $iMax = $iMin + 1 if ($iMax < $iMin);
+    # User said upper limit is 'undef'; just make sure we get the
+    # mininum:
+    $iMaxAbs = $iMin + 1;
     } # if
-  $iMax ||= 0;
-  if ($iMin == $iMax)
-    {
-    # The caller expects an exact result set.  Do not limit how many
-    # results are returned.
-    $oSearch->maximum_to_retrieve(99999);
-    }
   else
     {
-    if ($iMax)
-      {
-      $oSearch->maximum_to_retrieve($iMax + 1);
-      }
-    else
-      {
-      $oSearch->maximum_to_retrieve($iMin + 1);
-      }
+    # Give a little breathing room, so we'll notice if there are too
+    # many returned:
+    $iMaxAbs = $iMax + 1;
     }
+  $oSearch->maximum_to_retrieve($iMaxAbs);
   $iTest++;
   $sQuery = &WWW::Search::escape_query($sQuery);
   # print STDERR " + in WWW::Search::Test::count_results, iDebug = $iDebug\n";
