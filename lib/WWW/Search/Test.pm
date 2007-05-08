@@ -1,4 +1,4 @@
-# $rcs = ' $Id: Test.pm,v 2.274 2007/03/23 20:41:25 Daddy Exp $ ' ;
+# $rcs = ' $Id: Test.pm,v 2.275 2007/05/08 00:56:25 Daddy Exp $ ' ;
 
 =head1 NAME
 
@@ -48,7 +48,7 @@ use vars qw( @EXPORT @ISA );
 
 use vars qw( $VERSION $bogus_query $websearch );
 
-$VERSION = do { my @r = (q$Revision: 2.274 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.275 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 
 ($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = qw(dummy internal external update);
@@ -569,9 +569,13 @@ sub tm_new_engine
 
 =head2 run_test
 
-Three arguments: a query string, NOT escaped; a minimum number of expected results; and
+Three arguments: a query string, NOT escaped;
+a minimum number of expected results; and
 a maximum number of expected results.
 Optional fourth argument: integer value to be used as the search_debug.
+Optional fifth argument: send any true value to dump the search results.
+Optional sixth argument: reference to hash of search options (see backend documentation).
+Optional seventh argument: send any true value to NOT escape the query string.
 
 If the minimum is undef, assumes zero.
 If the maximum is undef, does not check.
@@ -661,14 +665,15 @@ sub tm_run_test_no_approx
 =head2 count_results
 
 Run a query, and return the actual (not approximate) number of hits.
-Same arguments as run_test().
+Required first argument determines which backend query method to call: 'gui' to call gui_query(), anything else to call native_query().
+Remaining arguments are same as all the run_test() arguments.
 
 =cut
 
 sub count_results
   {
-  my ($sType, $sQuery, $iMin, $iMax, $iDebug, $iPrintResults, $rh) = @_;
-  # print STDERR qq{ DDD count_results raw args($sType,$sQuery,$iMin,$iMax,$iDebug,$iPrintResults,$rh)\n};
+  my ($sType, $sQuery, $iMin, $iMax, $iDebug, $iPrintResults, $rh, $iDoNotEscape) = @_;
+  # print STDERR qq{ DDD count_results raw args($sType,$sQuery,$iMin,$iMax,$iDebug,$iPrintResults,$rh,$iDoNotEscape)\n};
   $iDebug ||= 0;
   $iPrintResults ||= 0;
   $rh->{'search_debug'} = $iDebug;
@@ -692,7 +697,7 @@ sub count_results
     }
   $oSearch->maximum_to_retrieve($iMaxAbs);
   $iTest++;
-  $sQuery = &WWW::Search::escape_query($sQuery);
+  $sQuery = &WWW::Search::escape_query($sQuery) unless $iDoNotEscape;
   # print STDERR " + in WWW::Search::Test::count_results, iDebug = $iDebug\n";
   if ($sType eq 'gui')
     {

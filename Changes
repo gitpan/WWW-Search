@@ -1,3 +1,12 @@
+2007-05-07    <Daddy@C-3PO>
+
+	* lib/WWW/Search/Test.pm (count_results): added eighth argument
+
+2007-03-24    <Daddy@C-3PO>
+
+	* lib/WWW/Search.pm (strip_tags): fix for possible "modify read-only" error
+	(absurl): fix for possible undef error
+
 2007-03-23    <Daddy@C-3PO>
 
 	* lib/WWW/Search/Test.pm (count_results): FIX to not waste time getting too many results

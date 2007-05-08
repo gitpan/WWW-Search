@@ -1,10 +1,10 @@
-# $Id: use.t,v 1.17 2006/04/21 21:18:21 Daddy Exp $
+# $Id: use.t,v 1.21 2007/04/09 12:56:56 Daddy Exp $
 
 use ExtUtils::testlib;
 use Test::More no_plan;
 
-use IO::Capture::Stderr;
-my $oICE =  IO::Capture::Stderr->new;
+use IO::Capture::ErrorMessages;
+my $oICE =  IO::Capture::ErrorMessages->new;
 
 use strict;
 
@@ -54,14 +54,14 @@ my $o4 = new WWW::Search('Null::Count',
 is($o4->approximate_result_count, $iCount);
 # Get some results:
 ok($o4->login);
-$o4->{maximum_to_retrieve} = $iCount/2;
+$o4->maximum_to_retrieve($iCount/2);
 my $iCounter = 0;
 while ($o4->next_result)
   {
   $iCounter++;
   } # while
 is($iCounter, $iCount/2, 'next_result stops at maximum_to_retrieve');
-$o4->{maximum_to_retrieve} = $iCount * 2;
+$o4->maximum_to_return($iCount * 2);
 while ($o4->next_result)
   {
   $iCounter++;
@@ -194,9 +194,51 @@ is($o4->result_as_HTML(undef), '');
 is($o4->result_as_HTML(0), '');
 is($o4->result_as_HTML(1), '');
 is($o4->result_as_HTML([1,2]), '');
-
 my $s = $oWSR->as_HTML;
-
+# Other miscellaneous sanity checks and coverage tests:
+is(&WWW::Search::escape_query, '');
+my @a = &WWW::Search::unescape_query(qw(a b c));
+$o2->strip_tags('a', undef, 'b');
+delete $ENV{WWW_SEARCH_USERAGENT};
+$o2->user_agent(1);
+$o2->user_agent;
+$ENV{WWW_SEARCH_USERAGENT} = 'No::Such::Module';
+$oICE->start;
+$o2->user_agent(1);
+$o2->user_agent;
+$oICE->stop;
+my $sICE = join("\n", $oICE->read);
+like($sICE, qr'can not load');
+$ENV{WWW_SEARCH_USERAGENT} = 'Carp';  # a module which does not have a new()
+$oICE->start;
+$o2->user_agent(1);
+$o2->user_agent;
+$oICE->stop;
+$sICE = join("\n", $oICE->read);
+like($sICE, qr'can not create');
+$s = qq{foo\nbar\nbaz};
+$o2->split_lines($s);
+$o2->split_lines(['a'], $s);
+$o2->generic_option;
+$o2->_native_setup_search;
+$o2->user_agent_delay;
+$o2->user_agent_delay(1);
+$o2->absurl;
+$o2->absurl('foo');
+$o2->absurl('foo', 'bar');
+$o2->need_to_delay;
+$o2->parse_tree;
+$o2->_native_retrieve_some;
+$o2->preprocess_results_page;
+$o2->preprocess_results_page('foo');
+$o2->test_cases;
+$o2->hash_to_cgi_string;
+$o2->hash_to_cgi_string({
+                         foo => 'foo',
+                         bar => undef,
+                         undef => 'baz',
+                         empty => '',
+                        });
 exit 0;
 
 foreach my $sEngine (@as)

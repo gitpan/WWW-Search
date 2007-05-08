@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 2.545 2007/01/04 00:55:35 Daddy Exp $
+# $Id: Search.pm,v 2.548 2007/05/08 21:53:56 Daddy Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -96,7 +96,7 @@ use vars qw( @ISA @EXPORT @EXPORT_OK $VERSION $MAINTAINER );
 @EXPORT_OK = qw( escape_query unescape_query generic_option strip_tags );
 @ISA = qw(Exporter LWP::MemberMixin);
 $MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
-$VERSION = do { my @r = (q$Revision: 2.545 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.548 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 =item new
 
@@ -920,8 +920,9 @@ NOTE that this is not a method, it is a plain function.
 sub strip_tags
   {
   # Prevent undef warnings if we get passed any undefined values:
-  @_ = map { $_ ||= '' } @_;
-  my $s = join('', @_);
+  my @args = @_;
+  @args = map { $_ ||= '' } @args;
+  my $s = join('', @args);
   # Special case: change BR to space:
   $s =~ s!<BR>! !gi;
   # We assume for now that we will not be encountering tags with
@@ -1097,10 +1098,12 @@ sub _load_env_useragent
   if ($sUA ne '')
     {
     eval "use $sUA";
+    # print STDERR " DDD this is after eval use $sUA\n";
     if (! $@)
       {
       # Successfully loaded module.
       eval { $ua = $sUA->new };
+      # print STDERR " DDD this is after eval new $sUA\n";
       if (ref($ua) && ! $@)
         {
         # Successfully created object.
@@ -1251,7 +1254,7 @@ sub http_request
       $s = $s->as_string if ref($s) =~ m!URI!;
       $request->referer($s);
       } # if referer
-    print STDERR " +   original HTTP::Request is:\n", $request->as_string if (3 <= $self->{_debug});
+    print STDERR " DDD   raw HTTP::Request is:\n", $request->as_string if (3 <= $self->{_debug});
     my $ua = $self->user_agent();
 
   TRY_GET:
@@ -1528,8 +1531,10 @@ sub absurl
   {
   my ($self, $base, $url) = @_;
   $base ||= '';
+  $url ||= '';
   # print STDERR " +   this is WWW::Search::absurl($base,$url)\n" if 1 < $self->{_debug};
-  $base = $self->{_prev_url} if $base eq '';
+  $base = $self->{_prev_url} if ($base eq '');
+  return '' unless (($url ne '') && ($base ne ''));
   my $link = URI->new_abs($url, $base);
   return $link;
   } # absurl
