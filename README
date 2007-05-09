@@ -3,12 +3,12 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.492?  (2007-05-08)
+WHAT IS NEW IN WWW::Search 2.493?  (2007-05-08)
 -----------------------------------------------
 
 Overview of changes: 
 
- * tweaked WWW::Search::Test to support WWW-Search-Jarit
+ * fix the prerequisites list
 
 For details, see the Changes file (updates after 2006-03-23) and/or
 the pod of each affected module.
