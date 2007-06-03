@@ -1,5 +1,5 @@
 
-# $Id: Count.pm,v 1.12 2006/03/12 04:09:23 Daddy Exp $
+# $Id: Count.pm,v 1.14 2007/06/03 22:28:11 Daddy Exp $
 
 =head1 NAME
 
@@ -34,14 +34,15 @@ Martin Thurn <mthurn@cpan.org>
 
 package WWW::Search::Null::Count;
 
-use WWW::Search;
-use WWW::Search::Result;
 use strict;
 
-use vars qw( @ISA $VERSION $MAINTAINER );
-@ISA = qw( WWW::Search );
-$VERSION = do { my @r = (q$Revision: 1.12 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
-$MAINTAINER = q{Martin Thurn <mthurn@cpan.org>};
+use WWW::Search;
+use WWW::Search::Result;
+
+use base 'WWW::Search';
+our
+$VERSION = do { my @r = (q$Revision: 1.14 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+our $MAINTAINER = q{Martin Thurn <mthurn@cpan.org>};
 
 use constant DEBUG_FUNC => 0;
 

@@ -1,3 +1,11 @@
+2007-06-03    <Daddy@C-3PO>
+
+	* various: make sure to use strict
+
+2007-05-19    <Daddy@C-3PO>
+
+	* lib/WWW/Search/Test.pm (count_results): print result number in front of URL
+
 2007-05-07    <Daddy@C-3PO>
 
 	* lib/WWW/Search/Test.pm (count_results): added eighth argument

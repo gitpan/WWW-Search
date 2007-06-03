@@ -34,47 +34,40 @@ All rights reserved.
 
 =cut
 
-
-
 package WWW::Search::Null;
 
-require Exporter;
-@EXPORT = qw();
-@EXPORT_OK = qw();
-@ISA = qw(WWW::Search Exporter);
+use strict;
 
-#use strict vars;
+use base 'WWW::Search';
+
 use Carp ();
-require WWW::SearchResult;
+use WWW::SearchResult;
 
 my($debug) = 0;
 
 #private
-sub native_setup_search {
-    my($self, $native_query, $native_opt) = @_;
-    my($native_url);
-    $self->{_next_to_retrieve} = 0;
-    $self->{_base_url} = $self->{_next_url} = $native_url;
-}
-
+sub native_setup_search
+  {
+  my($self, $native_query, $native_opt) = @_;
+  my($native_url);
+  $self->{_next_to_retrieve} = 0;
+  $self->{_base_url} = $self->{_next_url} = $native_url;
+  } # native_setup_search
 
 # private
 sub native_retrieve_some
-{
-    my ($self) = @_;
-
-    # Null search just returns an error..
-
-    return undef if (!defined($self->{_next_url}));
-
-    if (defined($how) && ($how =~ /(phrase|boolean)/)) {
-      my $response = new HTTP::Response(500,
-           "This search engine is not supported, Please try searching it manually.");
-        $self->{response} = $response;
-        return(undef);
-    }
-
-}
+  {
+  my ($self) = @_;
+  # Null search just returns an error..
+  return undef if (!defined($self->{_next_url}));
+  if (defined($how) && ($how =~ /(phrase|boolean)/))
+    {
+    my $response = new HTTP::Response(500,
+                                      "This search engine is not supported, Please try searching it manually.");
+    $self->{response} = $response;
+    return(undef);
+    } # if
+  } # native_retrieve_some
 
 1;
 

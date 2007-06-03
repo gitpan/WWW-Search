@@ -1,5 +1,5 @@
 
-# $Id: Error.pm,v 1.9 2006/04/21 21:17:54 Daddy Exp $
+# $Id: Error.pm,v 1.10 2007/05/15 12:04:21 Daddy Exp $
 
 =head1 NAME
 
@@ -32,9 +32,10 @@ package WWW::Search::Null::Error;
 
 use strict;
 
-use vars qw( @ISA $VERSION );
-@ISA = qw( WWW::Search );
-$VERSION = do { my @r = (q$Revision: 1.9 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+use base 'WWW::Search';
+our
+$VERSION = do { my @r = (q$Revision: 1.10 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+our $MAINTAINER = q{Martin Thurn <mthurn@cpan.org>};
 
 sub _native_setup_search
   {

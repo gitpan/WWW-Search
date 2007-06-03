@@ -1,7 +1,7 @@
 # SearchResult.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: SearchResult.pm,v 2.72 2006/04/19 11:51:10 Daddy Exp $
+# $Id: SearchResult.pm,v 2.73 2007/05/15 11:59:11 Daddy Exp $
 #
 # Copyright (c) 1996 University of Southern California.
 # All rights reserved.
@@ -55,10 +55,12 @@ return a url and title.  (This list may grow in the future.)
 
 package WWW::SearchResult;
 
+use strict;
+
 use CGI;
-use LWP::MemberMixin;
-@ISA = qw(LWP::MemberMixin);
-$VERSION = do{ my @r = (q$Revision: 2.72 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r};
+use base 'LWP::MemberMixin';
+our
+$VERSION = do{ my @r = (q$Revision: 2.73 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r};
 
 =head2 new
 

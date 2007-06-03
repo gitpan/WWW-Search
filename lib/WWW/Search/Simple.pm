@@ -37,15 +37,12 @@ All rights reserved.
 =cut
 
 
-
 package WWW::Search::Simple;
 
-require Exporter;
-@EXPORT = qw();
-@EXPORT_OK = qw();
-@ISA = qw(WWW::Search Exporter);
+use strict;
 
-#use strict vars;
+use base 'WWW::Search';
+
 use Carp ();
 require WWW::SearchResult;
 

@@ -5,12 +5,13 @@ build_requires:
   ExtUtils::MM_Unix: 1.41
   File::Spec: 0
   File::Temp: 0
+  IO::Capture::ErrorMessages: 0
   Test::File: 0
   Test::More: 0
   Test::Pod: 0
   Test::Simple: 0
 distribution_type: module
-generated_by: Module::Install version 0.65
+generated_by: Module::Install version 0.67
 license: perl
 meta-spec: 
   url: http://module-build.sourceforge.net/META-spec-v1.3.html
@@ -36,7 +37,6 @@ requires:
   Getopt::Long: 2.24
   HTML::Parser: 2.23
   HTML::TreeBuilder: 0
-  IO::Capture::ErrorMessages: 0
   LWP::MemberMixin: 0
   LWP::UserAgent: 2
   Net::Domain: 0
@@ -46,4 +46,4 @@ requires:
   URI::Escape: 0
   User: 0
   perl: 5.004
-version: 2.493
+version: 2.494

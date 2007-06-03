@@ -1,4 +1,4 @@
-# $rcs = ' $Id: Test.pm,v 2.275 2007/05/08 00:56:25 Daddy Exp $ ' ;
+# $rcs = ' $Id: Test.pm,v 2.277 2007/06/03 19:32:21 Daddy Exp $ ' ;
 
 =head1 NAME
 
@@ -20,6 +20,8 @@ See file test.pl in the WWW-Search-HotBot distribution for a detailed
 
 package WWW::Search::Test;
 
+use strict;
+
 use Carp;
 use Config;
 use Cwd;
@@ -29,8 +31,6 @@ use File::Path;
 use File::Spec::Functions qw( :ALL );
 use Test::More;
 use WWW::Search;
-
-use strict;
 
 use vars qw( $MODE_DUMMY $MODE_INTERNAL $MODE_EXTERNAL $MODE_UPDATE );
 use vars qw( $TEST_DUMMY $TEST_EXACTLY $TEST_BY_COUNTING $TEST_GREATER_THAN $TEST_RANGE );
@@ -48,7 +48,7 @@ use vars qw( @EXPORT @ISA );
 
 use vars qw( $VERSION $bogus_query $websearch );
 
-$VERSION = do { my @r = (q$Revision: 2.275 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.277 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 
 ($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = qw(dummy internal external update);
@@ -711,9 +711,10 @@ sub count_results
   my @aoResults = $oSearch->results();
   if ($iPrintResults)
     {
+    my $i = 1;
     foreach my $oResult (@aoResults)
       {
-      print $oResult->url, "\n";
+      print $i++, '. ', $oResult->url, "\n";
       foreach my $sField (qw( title description score change_date index_date size company location source ))
         {
         print "  $sField==", $oResult->$sField, "==\n" if defined($oResult->$sField);
