@@ -5,7 +5,7 @@ build_requires:
   ExtUtils::MM_Unix: 1.41
   File::Spec: 0
   File::Temp: 0
-  IO::Capture::ErrorMessages: 0
+  IO::Capture::Stderr: 0
   Test::File: 0
   Test::More: 0
   Test::Pod: 0
@@ -46,4 +46,4 @@ requires:
   URI::Escape: 0
   User: 0
   perl: 5.004
-version: 2.494
+version: 2.495

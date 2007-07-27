@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 2.549 2007/06/03 22:28:04 Daddy Exp $
+# $Id: Search.pm,v 2.550 2007/07/04 14:26:38 Daddy Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -96,7 +96,7 @@ use vars qw( @ISA @EXPORT @EXPORT_OK $VERSION $MAINTAINER );
 @EXPORT_OK = qw( escape_query unescape_query generic_option strip_tags );
 @ISA = qw(Exporter LWP::MemberMixin);
 $MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
-$VERSION = do { my @r = (q$Revision: 2.549 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.550 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 =item new
 
@@ -1700,8 +1700,9 @@ sub native_retrieve_some
   return undef if (!defined($self->{_next_url}));
   # If this is not the first page of results, sleep so as to not
   # overload the server:
+  $self->{_next_to_retrieve} ||= 1;
   $self->user_agent_delay if (
-                              (1 < $self->{'_next_to_retrieve'})
+                              (1 < $self->{_next_to_retrieve})
                               ||
                               $self->need_to_delay
                              );

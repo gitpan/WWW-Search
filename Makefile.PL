@@ -1,10 +1,10 @@
 # This -*- cperl -*- program writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.68 2007/05/09 22:02:43 Daddy Exp $
+# $Id: Makefile.PL,v 1.70 2007/07/26 22:02:37 Daddy Exp $
 
 use inc::Module::Install;
 
 name('WWW-Search');
-version(2.494);
+version(2.495);
 abstract_from('lib/WWW/Search.pm');
 author_from('lib/WWW/Search.pm');
 license('perl');
@@ -42,7 +42,7 @@ requires('File::Find');
 requires('File::Spec');
 requires('HTML::Parser' => 2.23);
 requires('HTML::TreeBuilder');  # HTML-Tree-0.51 is good
-test_requires('IO::Capture::ErrorMessages');
+test_requires('IO::Capture::Stderr');
 requires('LWP::UserAgent' => 2.0);
 requires('LWP::MemberMixin');
 requires('Net::Domain');
@@ -64,7 +64,6 @@ build_requires('Test::Simple');
 # FULLPERLRUNINST:
 build_requires('ExtUtils::MM_Unix' => 1.41);
 
-check_nmake();      # check and download nmake.exe for Win32
 &WriteAll;
 
 sub MY::preamble
@@ -82,13 +81,17 @@ AutoSearch :: FORCE
 
 sub MY::postamble
   {
-  my $ret = <<'PART0';
+  my $ret = '';
+  if (1)
+    {
+    $ret .= <<'PART0';
 coverage :
 	cover -delete
 	$(MAKE) HARNESS_PERL_SWITCHES=-MDevel::Cover coverage_slave
 coverage_slave : test
 	cover
 PART0
+    } # if
   if (1)
     {
     $ret .= <<'PART1';

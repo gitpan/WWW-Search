@@ -3,15 +3,14 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.494?  (2007-06-03)
+WHAT IS NEW IN WWW::Search 2.495?  (2007-07-26)
 -----------------------------------------------
 
 Overview of changes: 
 
- * use strict
- * other kwalitee improvements
+ * fix warnings
 
-For details, see the Changes file (updates after 2007-05-08) and/or
+For details, see the Changes file (updates after 2007-06-03) and/or
 the pod of each affected module.
 
 

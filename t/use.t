@@ -1,10 +1,10 @@
-# $Id: use.t,v 1.21 2007/04/09 12:56:56 Daddy Exp $
+# $Id: use.t,v 1.23 2007/07/26 22:01:45 Daddy Exp $
 
 use ExtUtils::testlib;
 use Test::More no_plan;
 
-use IO::Capture::ErrorMessages;
-my $oICE =  IO::Capture::ErrorMessages->new;
+use IO::Capture::Stderr;
+my $oICE =  IO::Capture::Stderr->new;
 
 use strict;
 
@@ -18,6 +18,13 @@ my @as;
 eval { @as = &WWW::Search::installed_engines };
 ok(0 < scalar(@as), 'any installed engines');
 diag('FYI the following backends are already installed (including ones in this distribution): '. join(', ', sort @as));
+my %hs = map { $_ => 1 } @as;
+$ENV{HARNESS_PERL_SWITCHES} ||= '';
+if (exists $hs{Yahoo} && ($ENV{HARNESS_PERL_SWITCHES} =~ m!Devel::Cover!))
+  {
+  diag(q{You are running 'make cover' and I found WWW::Search::Yahoo installed, therefore I will do some live searches to enhance the coverage testing...});
+
+  } # if
 
 # Make sure an undef query does not die;
 my $o1 = new WWW::Search; # NO BACKEND SPECIFIED
