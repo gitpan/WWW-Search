@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 2.550 2007/07/04 14:26:38 Daddy Exp $
+# $Id: Search.pm,v 2.551 2007/11/12 01:13:48 Daddy Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -65,6 +65,7 @@ see L<WWW::SearchResult>.
 package WWW::Search;
 
 use strict qw( vars );
+use warnings;
 
 use Carp ();
 use CGI;
@@ -96,7 +97,7 @@ use vars qw( @ISA @EXPORT @EXPORT_OK $VERSION $MAINTAINER );
 @EXPORT_OK = qw( escape_query unescape_query generic_option strip_tags );
 @ISA = qw(Exporter LWP::MemberMixin);
 $MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
-$VERSION = do { my @r = (q$Revision: 2.550 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.551 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 =item new
 

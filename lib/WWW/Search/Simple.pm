@@ -40,6 +40,7 @@ All rights reserved.
 package WWW::Search::Simple;
 
 use strict;
+use warnings;
 
 use base 'WWW::Search';
 
@@ -54,7 +55,6 @@ sub native_setup_search {
     my($native_url);
     my($default_native_url) =
 	"http://www.itu.int/cgi-bin/SFgate?application=itu&database=local//usr/local/wais/WWW/www-pages&listenv=table&httppath=/usr/local/www-data/&httpprefix=/&tie=and&maxhits=%n&text=%s";
-    
     if (defined($native_opt)) {
 	#print "Got " . join(' ', keys(%$native_opt)) . "\n";
 	# Process options..

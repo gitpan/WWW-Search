@@ -1,6 +1,7 @@
 --- 
 abstract: Virtual base class for WWW searches
-author: Written by John Heidemann, C<johnh@isi.edu>.
+author: 
+  - Written by John Heidemann, C<johnh@isi.edu>.
 build_requires: 
   ExtUtils::MM_Unix: 1.41
   File::Spec: 0
@@ -11,7 +12,7 @@ build_requires:
   Test::Pod: 0
   Test::Simple: 0
 distribution_type: module
-generated_by: Module::Install version 0.67
+generated_by: Module::Install version 0.68
 license: perl
 meta-spec: 
   url: http://module-build.sourceforge.net/META-spec-v1.3.html
@@ -46,4 +47,4 @@ requires:
   URI::Escape: 0
   User: 0
   perl: 5.004
-version: 2.495
+version: 2.496

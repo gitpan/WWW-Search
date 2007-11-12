@@ -1,4 +1,4 @@
-# $Id: NoVersion.pm,v 1.3 2007/05/15 12:04:21 Daddy Exp $
+# $Id: NoVersion.pm,v 1.4 2007/11/12 01:13:50 Daddy Exp $
 
 =head1 NAME
 
@@ -24,6 +24,7 @@ Martin Thurn <mthurn@cpan.org>
 package WWW::Search::Null::NoVersion;
 
 use strict;
+use warnings;
 
 use base 'WWW::Search';
 our $MAINTAINER = q{Martin Thurn <mthurn@cpan.org>};

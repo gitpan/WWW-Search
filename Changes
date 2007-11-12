@@ -1,3 +1,7 @@
+2007-11-11    <Daddy@C-3PO>
+
+	* all: use warnings in all modules
+
 2007-07-26    <Daddy@C-3PO>
 
 	* t/use.t: do not use the deprecated IO::Capture::ErrorMessages

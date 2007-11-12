@@ -37,6 +37,7 @@ All rights reserved.
 package WWW::Search::Null;
 
 use strict;
+use warnings;
 
 use base 'WWW::Search';
 

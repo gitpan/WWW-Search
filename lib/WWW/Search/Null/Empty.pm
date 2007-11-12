@@ -1,4 +1,4 @@
-# $Id: Empty.pm,v 1.8 2007/05/15 12:04:20 Daddy Exp $
+# $Id: Empty.pm,v 1.9 2007/11/12 01:13:49 Daddy Exp $
 
 =head1 NAME
 
@@ -31,10 +31,11 @@ Martin Thurn <mthurn@cpan.org>
 package WWW::Search::Null::Empty;
 
 use strict;
+use warnings;
 
 use base 'WWW::Search';
 our
-$VERSION = do { my @r = (q$Revision: 1.8 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 1.9 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 our $MAINTAINER = q{Martin Thurn <mthurn@cpan.org>};
 
 sub _native_setup_search

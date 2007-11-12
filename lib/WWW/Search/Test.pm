@@ -1,4 +1,4 @@
-# $rcs = ' $Id: Test.pm,v 2.277 2007/06/03 19:32:21 Daddy Exp $ ' ;
+# $rcs = ' $Id: Test.pm,v 2.278 2007/11/12 01:13:49 Daddy Exp $ ' ;
 
 =head1 NAME
 
@@ -21,6 +21,7 @@ See file test.pl in the WWW-Search-HotBot distribution for a detailed
 package WWW::Search::Test;
 
 use strict;
+use warnings;
 
 use Carp;
 use Config;
@@ -48,7 +49,7 @@ use vars qw( @EXPORT @ISA );
 
 use vars qw( $VERSION $bogus_query $websearch );
 
-$VERSION = do { my @r = (q$Revision: 2.277 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.278 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 
 ($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = qw(dummy internal external update);

@@ -1,10 +1,10 @@
 # This -*- cperl -*- program writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.70 2007/07/26 22:02:37 Daddy Exp $
+# $Id: Makefile.PL,v 1.71 2007/11/12 01:14:25 Daddy Exp $
 
 use inc::Module::Install;
 
 name('WWW-Search');
-version(2.495);
+version(2.496);
 abstract_from('lib/WWW/Search.pm');
 author_from('lib/WWW/Search.pm');
 license('perl');
