@@ -1,4 +1,4 @@
-# $Id: null-count.t,v 1.1 2006/03/12 04:09:45 Daddy Exp $
+# $Id: null-count.t,v 1.2 2008/01/21 03:01:38 Daddy Exp $
 
 use ExtUtils::testlib;
 use Test::More 'no_plan';
@@ -28,5 +28,9 @@ is(scalar(@{$oResult->urls}), $iCount+1, 'got N+1 urls');
 ok(my $raURL = $oResult->urls);
 # diag("sURL =$sURL=");
 is(scalar(@{$raURL}), $iCount+1, 'got N+1 urls in arrayref');
+# Additional calls for coverage:
+my $o5 = new WWW::Search('Null::Count');
+$o5->native_query('fubar');
+$o5->results;
 
 __END__

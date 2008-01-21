@@ -1,10 +1,10 @@
 # This -*- cperl -*- program writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.71 2007/11/12 01:14:25 Daddy Exp $
+# $Id: Makefile.PL,v 1.74 2008/01/21 03:13:52 Daddy Exp $
 
 use inc::Module::Install;
 
 name('WWW-Search');
-version(2.496);
+version(2.497);
 abstract_from('lib/WWW/Search.pm');
 author_from('lib/WWW/Search.pm');
 license('perl');
@@ -27,7 +27,6 @@ clean_files($_) foreach @programs_to_install;
 requires('Data::Dumper');
 requires('Date::Manip');
 recommends('Email::Send');
-recommends('Email::Send::SMTP::Auth');
 recommends('Email::MIME');
 recommends('Email::MIME::Creator');
 requires('File::Copy');
@@ -42,7 +41,6 @@ requires('File::Find');
 requires('File::Spec');
 requires('HTML::Parser' => 2.23);
 requires('HTML::TreeBuilder');  # HTML-Tree-0.51 is good
-test_requires('IO::Capture::Stderr');
 requires('LWP::UserAgent' => 2.0);
 requires('LWP::MemberMixin');
 requires('Net::Domain');
@@ -54,6 +52,7 @@ requires('User');
 build_requires('File::Spec');
 # These are needed during `make test`:
 build_requires('File::Temp');
+build_requires('IO::Capture::Stderr');
 build_requires('Test::File');
 build_requires('Test::More');
 build_requires('Test::Pod');
@@ -64,7 +63,7 @@ build_requires('Test::Simple');
 # FULLPERLRUNINST:
 build_requires('ExtUtils::MM_Unix' => 1.41);
 
-&WriteAll;
+WriteAll;
 
 sub MY::preamble
   {
@@ -86,9 +85,8 @@ sub MY::postamble
     {
     $ret .= <<'PART0';
 coverage :
-	cover -delete
-	$(MAKE) HARNESS_PERL_SWITCHES=-MDevel::Cover coverage_slave
-coverage_slave : test
+	- cover -delete
+	$(MAKE) HARNESS_PERL_SWITCHES=-MDevel::Cover test
 	cover
 PART0
     } # if

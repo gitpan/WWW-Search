@@ -1,10 +1,13 @@
-# $Id: 0_versions.t,v 1.4 2004/08/21 19:43:23 Daddy Exp $
+# $Id: 0_versions.t,v 1.5 2008/01/21 03:13:14 Daddy Exp $
 
 use strict;
+use warnings;
+
+use Config;
 use Test::More tests => 1;
 
 # Create a list of modules we're interested in:
-my @asModule = qw( File::Find File::Spec Getopt::Long HTML::Parser HTML::TreeBuilder HTTP::Cookies LWP::UserAgent MIME::Lite Net::Domain Pod::Parser Pod::Tests Pod::Usage Test::Inline URI User );
+my @asModule = qw( File::Copy File::Find File::Spec Getopt::Long HTML::Parser HTML::TreeBuilder HTTP::Cookies LWP::UserAgent MIME::Lite Net::Domain Pod::Parser Pod::Tests Pod::Usage Test::Inline URI User );
 
 # Extract the version number from each module:
 my %hsvVersion;
@@ -19,11 +22,7 @@ foreach my $sModule (@asModule)
   } # foreach
 
 # Also look up the version number of perl itself:
-eval ' use Config; $hsvVersion{perl} = $Config{version} ';  # Should never fail
-if($@)
-  {
-  $hsvVersion{perl} = $];
-  } # if
+$hsvVersion{perl} = $Config{version} || $];
 
 # Print on STDERR details of installed modules:
 diag('');
@@ -35,6 +34,6 @@ foreach my $sModule (sort keys %hsvVersion)
   } # foreach
 
 # Make sure this file passes at least one test:
-ok(1);
+pass;
 exit 0;
 __END__

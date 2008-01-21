@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 2.551 2007/11/12 01:13:48 Daddy Exp $
+# $Id: Search.pm,v 2.552 2008/01/21 03:12:51 Daddy Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -11,9 +11,9 @@ WWW::Search - Virtual base class for WWW searches
 
 =head1 SYNOPSIS
 
-    require WWW::Search;
-    $sEngine = "AltaVista";
-    $oSearch = new WWW::Search($sEngine);
+  use WWW::Search;
+  my $sEngine = 'AltaVista';
+  my $oSearch = new WWW::Search($sEngine);
 
 =head1 DESCRIPTION
 
@@ -31,15 +31,15 @@ request to avoid overloading either the client or the server.
 
 Here is a sample program:
 
-    my $sQuery = 'Columbus Ohio sushi restaurant';
-    my $oSearch = new WWW::Search('AltaVista');
-    $oSearch->native_query(WWW::Search::escape_query($sQuery));
-    $oSearch->login($sUser, $sPassword);
-    while (my $oResult = $oSearch->next_result())
-      {
-      print $oResult->url, "\n";
-      } # while
-    $oSearch->logout;
+  my $sQuery = 'Columbus Ohio sushi restaurant';
+  my $oSearch = new WWW::Search('AltaVista');
+  $oSearch->native_query(WWW::Search::escape_query($sQuery));
+  $oSearch->login($sUser, $sPassword);
+  while (my $oResult = $oSearch->next_result())
+    {
+    print $oResult->url, "\n";
+    } # while
+  $oSearch->logout;
 
 Results are objects of type C<WWW::SearchResult>
 (see L<WWW::SearchResult> for details).
@@ -97,7 +97,7 @@ use vars qw( @ISA @EXPORT @EXPORT_OK $VERSION $MAINTAINER );
 @EXPORT_OK = qw( escape_query unescape_query generic_option strip_tags );
 @ISA = qw(Exporter LWP::MemberMixin);
 $MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
-$VERSION = do { my @r = (q$Revision: 2.551 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.552 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 =item new
 
@@ -123,13 +123,14 @@ sub new
 
   # The default backend (not currently more configurable :-< )
   my $default_engine = 'Null::Empty';
-  my $default_agent_name = "WWW::Search/$VERSION";
+  my $default_agent_name = "$class/$VERSION";
   my $default_agent_email = '';
   $engine = $default_engine if (!defined($engine));
   # Load the engine, if necessary.
   my $subclass = "${class}::$engine";
-  eval "use $subclass";
-  Carp::croak("unknown search engine backend $engine ($@)") if ($@);
+  my $sEval = "use $subclass;";
+  eval $sEval;
+  Carp::croak("can not load backend $engine ($@)") if ($@);
   my $self = bless {
                     engine => $engine,
                     maximum_to_retrieve => 500,  # both pages and hits
@@ -1925,7 +1926,7 @@ maintainer.  If you want to take a shot at it, please let me know.
 
 =head1 AUTHOR
 
-Written by John Heidemann, C<johnh@isi.edu>.
+John Heidemann <johnh@isi.edu>
 Maintained by Martin Thurn, C<mthurn@cpan.org>, L<http://www.sandcrawler.com/SWB/cpan-modules.html>.
 
 =head1 COPYRIGHT

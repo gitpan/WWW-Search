@@ -1,7 +1,7 @@
 --- 
 abstract: Virtual base class for WWW searches
 author: 
-  - Written by John Heidemann, C<johnh@isi.edu>.
+  - John Heidemann <johnh@isi.edu>
 build_requires: 
   ExtUtils::MM_Unix: 1.41
   File::Spec: 0
@@ -26,7 +26,6 @@ recommends:
   Email::MIME: 0
   Email::MIME::Creator: 0
   Email::Send: 0
-  Email::Send::SMTP::Auth: 0
 requires: 
   CGI: 0
   Data::Dumper: 0
@@ -47,4 +46,4 @@ requires:
   URI::Escape: 0
   User: 0
   perl: 5.004
-version: 2.496
+version: 2.497

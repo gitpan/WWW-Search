@@ -1,5 +1,5 @@
 
-# $Id: Count.pm,v 1.15 2007/11/12 01:13:49 Daddy Exp $
+# $Id: Count.pm,v 1.16 2008/01/21 03:01:47 Daddy Exp $
 
 =head1 NAME
 
@@ -42,7 +42,7 @@ use WWW::Search::Result;
 
 use base 'WWW::Search';
 our
-$VERSION = do { my @r = (q$Revision: 1.15 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 1.16 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 our $MAINTAINER = q{Martin Thurn <mthurn@cpan.org>};
 
 use constant DEBUG_FUNC => 0;
@@ -50,7 +50,7 @@ use constant DEBUG_FUNC => 0;
 sub _native_setup_search
   {
   my ($self, $native_query, $native_opt) = @_;
-  print STDERR " FFF ::Null::Count::_native_setup_search()\n" if (DEBUG_FUNC || $self->{_debug});
+  # print STDERR " FFF ::Null::Count::_native_setup_search()\n" if (DEBUG_FUNC || $self->{_debug});
   if (! defined $self->{_null_count})
     {
     # print STDERR " +   setting default _null_count to 5\n";
@@ -63,7 +63,7 @@ sub _native_setup_search
 sub _native_retrieve_some
   {
   my $self = shift;
-  print STDERR " FFF ::Null::Count::_n_r_s()\n" if (DEBUG_FUNC || $self->{_debug});
+  # print STDERR " FFF ::Null::Count::_n_r_s()\n" if (DEBUG_FUNC || $self->{_debug});
   my $response = new HTTP::Response(200,
                                     "This is a test of WWW::Search");
   $self->{response} = $response;

@@ -1,29 +1,37 @@
-# $Id: use.t,v 1.23 2007/07/26 22:01:45 Daddy Exp $
-
-use ExtUtils::testlib;
-use Test::More no_plan;
-
-use IO::Capture::Stderr;
-my $oICE =  IO::Capture::Stderr->new;
+# $Id: use.t,v 1.26 2008/01/21 03:13:43 Daddy Exp $
 
 use strict;
+use warnings;
 
-BEGIN { use_ok('WWW::Search') };
-BEGIN { use_ok('WWW::SearchResult') };
-BEGIN { use_ok('WWW::Search::Result') };
-BEGIN { use_ok('WWW::Search::Test',
-               qw(new_engine run_gui_test run_test skip_test count_results)) };
+use ExtUtils::testlib;
+use Test::More 'no_plan';
+
+use IO::Capture::Stderr;
+ok(my $oICE = IO::Capture::Stderr->new);
+
+BEGIN
+  {
+  use_ok('WWW::Search');
+  use_ok('WWW::SearchResult');
+  use_ok('WWW::Search::Result');
+  use_ok('WWW::Search::Test',
+         qw(new_engine run_gui_test run_test skip_test count_results));
+  } # end of BEGIN block
 
 my @as;
 eval { @as = &WWW::Search::installed_engines };
 ok(0 < scalar(@as), 'any installed engines');
 diag('FYI the following backends are already installed (including ones in this distribution): '. join(', ', sort @as));
 my %hs = map { $_ => 1 } @as;
+my $sBackend = 'AltaVista';
 $ENV{HARNESS_PERL_SWITCHES} ||= '';
-if (exists $hs{Yahoo} && ($ENV{HARNESS_PERL_SWITCHES} =~ m!Devel::Cover!))
+if (exists $hs{$sBackend} && ($ENV{HARNESS_PERL_SWITCHES} =~ m!Devel::Cover!))
   {
-  diag(q{You are running 'make cover' and I found WWW::Search::Yahoo installed, therefore I will do some live searches to enhance the coverage testing...});
-
+  diag(qq{You are running 'make cover' and I found WWW::Search::$sBackend installed, therefore I will do some live searches to enhance the coverage testing...});
+  my $o = new WWW::Search($sBackend);
+  $o->native_query('Vader');
+  $o->maximum_to_retrieve(111);
+  my @ao = $o->results();
   } # if
 
 # Make sure an undef query does not die;
@@ -52,7 +60,7 @@ is($o2->approximate_hit_count(-1), 2);
 # Test for what happens when a backend is not installed:
 my $o3;
 eval { $o3 = new WWW::Search('No_Such_Backend') };
-like($@, qr{(?i:unknown search engine backend)});
+like($@, qr{(?i:can not load backend)});
 my $iCount = 44;
 my $o4 = new WWW::Search('Null::Count',
                          '_null_count' => $iCount,
@@ -60,7 +68,7 @@ my $o4 = new WWW::Search('Null::Count',
 # Get result_count before submitting query:
 is($o4->approximate_result_count, $iCount);
 # Get some results:
-ok($o4->login);
+ok($o4->login, 'login');
 $o4->maximum_to_retrieve($iCount/2);
 my $iCounter = 0;
 while ($o4->next_result)
@@ -74,18 +82,19 @@ while ($o4->next_result)
   $iCounter++;
   } # while
 is($iCounter, $iCount, 'next_result goes to end of cache');
-ok($o4->logout);
-ok($o4->response);
-ok($o4->submit);
-is($o4->opaque, undef);
+ok($o4->logout, 'logout');
+ok($o4->response, 'response');
+ok($o4->submit, 'submit');
+is($o4->opaque, undef, 'opaque is undef');
 $o4->opaque('hello');
-is($o4->opaque, 'hello');
+is($o4->opaque, 'hello', 'opaque is hello');
 $o4->seek_result(undef);
 $o4->seek_result(-1);
 $o4->seek_result(3);
-is(WWW::Search::escape_query('+hi +mom'), '%2Bhi+%2Bmom');
-is(WWW::Search::unescape_query('%2Bhi+%2Bmom'), '+hi +mom');
-# Use a backend twice (just to exercise the code in Search.pm):
+is(WWW::Search::escape_query('+hi +mom'), '%2Bhi+%2Bmom', 'escape');
+is(WWW::Search::unescape_query('%2Bhi+%2Bmom'), '+hi +mom', 'unescape');
+# Use a backend for a second time (just to exercise the code in
+# Search.pm):
 my $o5 = new WWW::Search('Null::Count');
 # Test the version() function:
 ok($o4->version, 'version defined in backend');
