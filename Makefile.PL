@@ -1,10 +1,10 @@
 # This -*- cperl -*- program writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.74 2008/01/21 03:13:52 Daddy Exp $
+# $Id: Makefile.PL,v 1.75 2008/03/23 03:04:40 Martin Exp $
 
 use inc::Module::Install;
 
 name('WWW-Search');
-version(2.497);
+version(2.498);
 abstract_from('lib/WWW/Search.pm');
 author_from('lib/WWW/Search.pm');
 license('perl');
@@ -55,7 +55,7 @@ build_requires('File::Temp');
 build_requires('IO::Capture::Stderr');
 build_requires('Test::File');
 build_requires('Test::More');
-build_requires('Test::Pod');
+build_recommends('Test::Pod');
 # I think there's a bug in Module::CoreList or something, because this
 # comes up missing on some platforms:
 build_requires('Test::Simple');

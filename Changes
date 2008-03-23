@@ -1,3 +1,7 @@
+2008-03-05    <Martin@BLUEMAX>
+
+	* lib/WWW/Search.pm (native_retrieve_some): turn on UTF-8 mode in HTML parser
+
 2007-11-11    <Daddy@C-3PO>
 
 	* all: use warnings in all modules
