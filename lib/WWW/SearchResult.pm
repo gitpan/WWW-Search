@@ -1,7 +1,7 @@
 # SearchResult.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: SearchResult.pm,v 2.74 2007/11/12 01:13:49 Daddy Exp $
+# $Id: SearchResult.pm,v 2.76 2008/04/03 22:36:09 Martin Exp $
 #
 # Copyright (c) 1996 University of Southern California.
 # All rights reserved.
@@ -61,7 +61,7 @@ use warnings;
 use CGI;
 use base 'LWP::MemberMixin';
 our
-$VERSION = do{ my @r = (q$Revision: 2.74 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r};
+$VERSION = do{ my @r = (q$Revision: 2.76 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r};
 
 =head2 new
 
@@ -322,25 +322,107 @@ sub as_HTML
 =head2 Others
 
 More attributes of the result.  Backend-specific.
+Refer to the documentation of each backend for details.
+
+=over
+
+=item bid_amount
 
 =cut
 
 sub bid_amount { return shift->_elem('bid', @_); }
+
+=item bid_count
+
+=cut
+
 sub bid_count { return shift->_elem('bids', @_); }
-sub bidder { return shift->_elem('bidder', @_); }
+
+=item bidder
+
+=cut
+
+sub bidder  { return shift->_elem('bidder', @_); }
+
+=item category
+
+=cut
+
 sub category { return shift->_elem('category', @_); }
+
+=item company
+
+=cut
+
 sub company { return shift->_elem('company', @_); }
+
+=item end_date
+
+=cut
+
 sub end_date { return shift->_elem('end_date', @_); }
+
+=item image_url
+
+=cut
+
 sub image_url { return shift->_elem('image_url', @_); }
+
+=item item_number
+
+=cut
+
 sub item_number { return shift->_elem('item_number', @_); }
+
+=item location
+
+=cut
+
 sub location { return shift->_elem('location', @_); }
+
+=item question_count
+
+=cut
+
 sub question_count { return shift->_elem('seller', @_); }
+
+=item seller
+
+=cut
+
 sub seller { return shift->_elem('seller', @_); }
+
+=item shipping
+
+=cut
+
 sub shipping { return shift->_elem('shipping', @_); }
+
+=item sold
+
+=cut
+
 sub sold { return shift->_elem('sold', @_); }
+
+=item start_date
+
+=cut
+
 sub start_date { return shift->_elem('start_date', @_); }
+
+=item thumb_url
+
+=cut
+
 sub thumb_url { return shift->_elem('thumb_url', @_); }
+
+=item watcher_count
+
+=cut
+
 sub watcher_count { return shift->_elem('seller', @_); }
+
+=back
 
 =head1 AUTHOR
 

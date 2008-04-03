@@ -1,4 +1,4 @@
-# $rcs = ' $Id: Test.pm,v 2.278 2007/11/12 01:13:49 Daddy Exp $ ' ;
+# $rcs = ' $Id: Test.pm,v 2.279 2008/04/03 22:24:36 Martin Exp $ ' ;
 
 =head1 NAME
 
@@ -49,13 +49,20 @@ use vars qw( @EXPORT @ISA );
 
 use vars qw( $VERSION $bogus_query $websearch );
 
-$VERSION = do { my @r = (q$Revision: 2.278 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.279 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 
 ($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = qw(dummy internal external update);
 ($TEST_DUMMY, $TEST_EXACTLY, $TEST_BY_COUNTING, $TEST_GREATER_THAN, $TEST_RANGE) = (1..10);
 
 use constant DEBUG => 0;
+
+=head2 find_websearch
+
+Returns the full path of an executable WebSearch program,
+or undef if none can be found.
+
+=cut
 
 sub find_websearch
   {
@@ -434,7 +441,8 @@ sub not_working_with_tests
   You are encouraged to investigate the problem and email its maintainer,
   $maint.
 KNOWNFAILURE
-  } # not_working_with_tests 
+  } # not_working_with_tests
+
 
 =head2 not_working_and_abandoned
 
@@ -444,7 +452,7 @@ Takes two arguments, the backend name and the name of the maintainer.
 
 =cut
 
-sub not_working_and_abandonded
+sub not_working_and_abandoned
   {
   my $self = shift;
   my ($engine, $maint) = @_;
@@ -455,7 +463,7 @@ sub not_working_and_abandonded
   You are encouraged to adopt it from its last known maintainer,
   $maint.
 ADOPT
-  } # not_working_and_abandonded
+  } # not_working_and_abandoned
 
 =head2 reset_error_count
 

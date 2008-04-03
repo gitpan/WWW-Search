@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 2.554 2008/03/05 04:46:10 Daddy Exp $
+# $Id: Search.pm,v 2.555 2008/04/03 22:25:55 Martin Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -97,7 +97,7 @@ use vars qw( @ISA @EXPORT @EXPORT_OK $VERSION $MAINTAINER );
 @EXPORT_OK = qw( escape_query unescape_query generic_option strip_tags );
 @ISA = qw(Exporter LWP::MemberMixin);
 $MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
-$VERSION = do { my @r = (q$Revision: 2.554 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.555 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 =item new
 
@@ -579,6 +579,13 @@ sub maximum_to_retrieve
   {
   return shift->_elem('maximum_to_retrieve', @_);
   }
+
+
+=item maximum_to_return
+
+Synonym for maximum_to_retrieve
+
+=cut
 
 sub maximum_to_return
   {
@@ -1466,6 +1473,25 @@ sub generic_option
   } # generic_option
 
 
+=item _native_setup_search
+
+Do some backend-specific initialization.
+It will be called with the same arguments as native_query().
+
+=cut
+
+sub _native_setup_search
+  {
+  my $self = shift;
+  print STDERR " FFF _n_s_s\n" if (DEBUG_FUNC || $self->{_debug});
+  # Backward-compatibility for backends that define the old
+  # native_setup_search(), but not the new _native_setup_search()
+  if ($self->can('native_setup_search'))
+    {
+    return $self->native_setup_search(@_);
+    } # if
+  } # _native_setup_search
+
 
 =item setup_search
 
@@ -1473,25 +1499,6 @@ This internal routine does generic Search setup.
 It calls C<_native_setup_search()> to do backend-specific setup.
 
 =cut
-
-
-sub _native_setup_search
-  {
-  my $self = shift;
-  print STDERR " FFF _n_s_s\n" if (DEBUG_FUNC || $self->{_debug});
-  # This function is for backward-compatibility, for backends that
-  # define the old native_setup_search(), but not the new
-  # _native_setup_search()
-  $self->native_setup_search(@_);
-  } # _native_setup_search
-
-sub native_setup_search
-  {
-  my $self = shift;
-  # This is a NOP.  It is here in case a backend does not need to do
-  # any native setup!
-  print STDERR " FFF n_s_s\n" if (DEBUG_FUNC || $self->{_debug});
-  } # native_setup_search
 
 sub setup_search
   {
@@ -1515,7 +1522,7 @@ servers to avoid overloading them with many, fast back-to-back requests.
 
 sub user_agent_delay
   {
-  my ($self) = @_;
+  my $self = shift;
   # Sleep for some number of seconds:
   select(undef, undef, undef, $self->{interrequest_delay});
   } # user_agent_delay
@@ -1625,6 +1632,8 @@ sub need_to_delay
   } # need_to_delay
 
 
+=item parse_tree
+
 =item _native_retrieve_some
 
 Fetch the next page of results from the web engine, parse the results,
@@ -1679,7 +1688,7 @@ found in $self->{_prev_url}.
 sub parse_tree
   {
   my $self = shift;
-  # This is a NOP stub.
+  # This is a NOP stub.  Backend MUST define their own parse function!
   return 0;
   } # parse_tree
 
@@ -1690,12 +1699,10 @@ sub _native_retrieve_some
   # This function is for backward-compatibility, for backends that
   # define the old native_retrieve_some(), but not the new
   # _native_retrieve_some()
-  $self->native_retrieve_some(@_);
-  } # _native_retrieve_some
-
-sub native_retrieve_some
-  {
-  my ($self) = @_;
+  if ($self->can('native_retrieve_some'))
+    {
+    return $self->native_retrieve_some(@_);
+    } # if
   print STDERR " FFF n_r_s\n" if (DEBUG_FUNC || $self->{_debug});
   # Fast exit if already done:
   return undef if (!defined($self->{_next_url}));
@@ -1756,7 +1763,7 @@ sub native_retrieve_some
   $tree->eof();
   # print STDERR " +   calling parse_tree...\n" if 1 < $self->{_debug};
   return $self->parse_tree($tree);
-  } # native_retrieve_some
+  } # _native_retrieve_some
 
 
 =item result_as_HTML
