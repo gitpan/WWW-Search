@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 2.555 2008/04/03 22:25:55 Martin Exp $
+# $Id: Search.pm,v 2.557 2008/04/06 03:37:05 Martin Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -92,12 +92,14 @@ use constant SEARCH_UNDERWAY => 2;
 use constant SEARCH_DONE => 3;
 use constant SEARCH_RETRIEVING => 4;
 
-use vars qw( @ISA @EXPORT @EXPORT_OK $VERSION $MAINTAINER );
+use vars qw( @ISA @EXPORT @EXPORT_OK );
 @EXPORT = qw();
 @EXPORT_OK = qw( escape_query unescape_query generic_option strip_tags );
 @ISA = qw(Exporter LWP::MemberMixin);
+our
 $MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
-$VERSION = do { my @r = (q$Revision: 2.555 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+our
+$VERSION = do { my @r = (q$Revision: 2.557 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 =item new
 
@@ -1632,8 +1634,6 @@ sub need_to_delay
   } # need_to_delay
 
 
-=item parse_tree
-
 =item _native_retrieve_some
 
 Fetch the next page of results from the web engine, parse the results,
@@ -1646,12 +1646,12 @@ _native_retrieve_some method.
 
 An easier way to achieve this in a backend is to inherit
 _native_retrieve_some from WWW::Search, and do only the HTML parsing.
-Simply define a method parse_tree which takes one argument, an
+Simply define a method _parse_tree which takes one argument, an
 HTML::TreeBuilder object, and returns an integer, the number of
 results found on this page.  See the WWW::Search::Yahoo module for
-example usage of the parse_tree method.
+example usage of the _parse_tree method.
 
-A backend should, in general, define either parse_tree() or
+A backend should, in general, define either _parse_tree() or
 _native_retrieve_some(), but not both.
 
 Additional features of the default _native_retrieve_some method:
@@ -1661,9 +1661,9 @@ Sets $self->{_prev_url} to the URL of the page just retrieved.
 Calls $self->preprocess_results_page() on the raw HTML of the page.
 
 Then, parses the page with an HTML::TreeBuilder object and passes that
-populated object to $self->parse_tree().
+populated object to $self->_parse_tree().
 
-Additional notes on using the parse_tree method:
+Additional notes on using the _parse_tree method:
 
 The built-in HTML::TreeBuilder object used to parse the page has
 store_comments turned ON.  If a backend needs to use a subclassed or
@@ -1676,26 +1676,42 @@ _native_setup_search.
   $oTree->store_pis(1);  # for example
   $self->{'_treebuilder'} = $oTree;
 
-When parse_tree() is called, the $self->next_url is cleared.
+When _parse_tree() is called, the $self->next_url is cleared.
 During parsing, the backend should set $self->next_url to the appropriate URL for the next page of results.
-(If parse_tree() does not set the value, the search will end after parsing this page of results.)
+(If _parse_tree() does not set the value, the search will end after parsing this page of results.)
 
-When parse_tree() is called, the URL for the page being parsed can be
+When _parse_tree() is called, the URL for the page being parsed can be
 found in $self->{_prev_url}.
+
+=cut
+
+sub _parse_tree
+  {
+  my $self = shift;
+  # This is a NOP stub.  Backend MUST define their own parse function!
+  return 0;
+  } # _parse_tree
+
+=item parse_tree
+
+This method only exists for backward-compatibility with backends which call
+the old parse_tree() instead of the new _parse_tree().
 
 =cut
 
 sub parse_tree
   {
   my $self = shift;
-  # This is a NOP stub.  Backend MUST define their own parse function!
-  return 0;
+  if ($self->can('_parse_tree'))
+    {
+    $self->_parse_tree(@_);
+    } # if
   } # parse_tree
+
 
 sub _native_retrieve_some
   {
   my $self = shift;
-  print STDERR " FFF _n_r_s\n" if (DEBUG_FUNC || $self->{_debug});
   # This function is for backward-compatibility, for backends that
   # define the old native_retrieve_some(), but not the new
   # _native_retrieve_some()
@@ -1703,7 +1719,7 @@ sub _native_retrieve_some
     {
     return $self->native_retrieve_some(@_);
     } # if
-  print STDERR " FFF n_r_s\n" if (DEBUG_FUNC || $self->{_debug});
+  print STDERR " FFF _n_r_s\n" if (DEBUG_FUNC || $self->{_debug});
   # Fast exit if already done:
   return undef if (!defined($self->{_next_url}));
   # If this is not the first page of results, sleep so as to not
@@ -1761,8 +1777,8 @@ sub _native_retrieve_some
   $tree->parse($sPage);
   # print STDERR " +   done parsing content.\n" if 1 < $self->{_debug};
   $tree->eof();
-  # print STDERR " +   calling parse_tree...\n" if 1 < $self->{_debug};
-  return $self->parse_tree($tree);
+  print STDERR " +   calling _parse_tree...\n" if (1 < $self->{_debug});
+  return $self->_parse_tree($tree);
   } # _native_retrieve_some
 
 
@@ -1894,7 +1910,7 @@ backend is implemented as a subclass of C<WWW::Search>.
 L<WWW::Search::Yahoo> provides a good sample backend.
 
 A backend must have the routine C<_native_setup_search()>.  A backend
-must have the routine C<_native_retrieve_some()> or C<parse_tree()>.
+must have the routine C<_native_retrieve_some()> or C<_parse_tree()>.
 
 C<_native_setup_search()> is invoked before the search.  It is passed
 a single argument: the escaped, native version of the query.
@@ -1909,7 +1925,7 @@ the search service, parses the HTML, extracts the links and
 descriptions, then saves the URL for the next page of results.  See
 the code for the C<WWW::Search::AltaVista> module for an example.
 
-Alternatively, a backend can define the method C<parse_tree()> instead
+Alternatively, a backend can define the method C<_parse_tree()> instead
 of C<_native_retrieve_some()>.  See the C<WWW::Search::Ebay> module for a
 good example.
 

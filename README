@@ -3,14 +3,14 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.499?  (2008-03-22)
+WHAT IS NEW IN WWW::Search 2.501?  (2008-04-05)
 -----------------------------------------------
 
 Overview of changes: 
 
- * pod improvements
+ * renamed some private functions with leading underscore
 
-For details, see the Changes file (updates after 2008-03-22) and/or
+For details, see the Changes file (updates after 2008-04-03) and/or
 the pod of each affected module.
 
 
