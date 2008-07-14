@@ -1,11 +1,9 @@
-exit 0;
-
-# The above line(s) will be stripped off during `make`
+#!perl -w
 #
-# AutoSearch-code.pl
+# AutoSearch
 # Copyright (c) 1996-1997 University of Southern California.
 # All rights reserved.
-# $Id: AutoSearch-code.pl,v 2.142 2007/01/30 04:14:23 Daddy Exp $
+# $Id: AutoSearch,v 1.1 2008/07/14 03:28:13 Martin Exp $
 #
 # Complete copyright notice follows below.
 
@@ -35,7 +33,7 @@ use WWW::Search;
 use strict;
 
 use vars qw( $VERSION );
-$VERSION = do { my @r = (q$Revision: 2.142 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 1.1 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 use constant DEBUG_EMAIL => 0;
 

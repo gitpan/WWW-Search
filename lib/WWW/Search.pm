@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 2.557 2008/04/06 03:37:05 Martin Exp $
+# $Id: Search.pm,v 2.561 2008/07/14 03:12:39 Martin Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -99,7 +99,7 @@ use vars qw( @ISA @EXPORT @EXPORT_OK );
 our
 $MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
 our
-$VERSION = do { my @r = (q$Revision: 2.557 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.561 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 =item new
 
@@ -1156,7 +1156,7 @@ sub user_agent
     else
       {
       $ua = LWP::RobotUA->new($self->agent_name, $self->agent_email);
-      $ua->delay($self->{'interrequest_delay'}/60.0);
+      $ua->delay($self->{'interrequest_delay'});
       }
     $ua->timeout($self->{'timeout'});
     $ua->proxy(@{$self->{'http_proxy'}}) if $self->is_http_proxy;
@@ -1515,10 +1515,28 @@ sub setup_search
   } # setup_search
 
 
+=item need_to_delay
+
+A backend should override this method in order to dictate whether
+user_agent_delay() needs to be called before the next HTTP request is
+sent.  Return any perlish true or zero value.
+
+=cut
+
+sub need_to_delay
+  {
+  my $self = shift;
+  # This is a NOP stub.  Unless the subclass overrides this method,
+  # there is no reason to delay.
+  return 0;
+  } # need_to_delay
+
+
 =item user_agent_delay
 
-Derived classes should call this between requests to remote
-servers to avoid overloading them with many, fast back-to-back requests.
+According to what need_to_delay() returns,
+user_agent_delay() will be called between requests to remote
+servers to avoid overloading them with many back-to-back requests.
 
 =cut
 
@@ -1528,6 +1546,7 @@ sub user_agent_delay
   # Sleep for some number of seconds:
   select(undef, undef, undef, $self->{interrequest_delay});
   } # user_agent_delay
+
 
 =item absurl
 
@@ -1617,23 +1636,6 @@ sub HTML::TreeBuilder::www_search_reset
   } # HTML::TreeBuilder::www_search_reset
 
 
-=item need_to_delay
-
-A backend should override this method in order to dictate whether
-user_agent_delay() needs to be called before the next HTTP request is
-sent.  Return any perlish true or zero value.
-
-=cut
-
-sub need_to_delay
-  {
-  my $self = shift;
-  # This is a NOP stub.  Unless the subclass overrides this method,
-  # there is no reason to delay.
-  return 0;
-  } # need_to_delay
-
-
 =item _native_retrieve_some
 
 Fetch the next page of results from the web engine, parse the results,
@@ -1689,24 +1691,10 @@ sub _parse_tree
   {
   my $self = shift;
   # This is a NOP stub.  Backend MUST define their own parse function!
+  print STDERR " FFF stub _parse_tree\n" if (DEBUG_FUNC || $self->{_debug});
+  return $self->parse_tree(@_) if $self->can('parse_tree');
   return 0;
   } # _parse_tree
-
-=item parse_tree
-
-This method only exists for backward-compatibility with backends which call
-the old parse_tree() instead of the new _parse_tree().
-
-=cut
-
-sub parse_tree
-  {
-  my $self = shift;
-  if ($self->can('_parse_tree'))
-    {
-    $self->_parse_tree(@_);
-    } # if
-  } # parse_tree
 
 
 sub _native_retrieve_some

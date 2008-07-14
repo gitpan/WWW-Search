@@ -1,27 +1,17 @@
 # This -*- cperl -*- program writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.77 2008/04/06 03:41:19 Martin Exp $
+# $Id: Makefile.PL,v 1.80 2008/07/14 03:28:13 Martin Exp $
 
 use inc::Module::Install;
 
 name('WWW-Search');
-version(2.501);
+version(2.502);
 abstract_from('lib/WWW/Search.pm');
 author_from('lib/WWW/Search.pm');
 license('perl');
 perl_version(5.004);
 
-my @programs_to_install = qw( WebSearch AutoSearch );
-
-# Allow us to suppress all program installation with the -n (library only)
-# option.  This is for those that don't want to mess with the configuration
-# section of this file.
-use Getopt::Std;
-my $opt_n;
-unless (getopts("n")) { die "Usage: $0 [-n]\n"; }
-@programs_to_install = () if $opt_n;
-
-install_script($_) foreach @programs_to_install;
-clean_files($_) foreach @programs_to_install;
+install_script('Programs/AutoSearch');
+install_script('Programs/WebSearch');
 
 # These are needed for AutoSearch:
 requires('Data::Dumper');
@@ -49,19 +39,19 @@ requires('URI');
 requires('URI::Escape');
 requires('User');
 # These used to be needed during `make all`:
-build_requires('File::Spec');
+test_requires('File::Spec');
 # These are needed during `make test`:
-build_requires('File::Temp');
-build_requires('IO::Capture::Stderr');
-build_requires('Test::File');
-build_requires('Test::More');
-build_recommends('Test::Pod');
+test_requires('File::Temp');
+test_requires('IO::Capture::Stderr');
+test_requires('Test::File');
+test_requires('Test::More');
+test_recommends('Test::Pod');
 # I think there's a bug in Module::CoreList or something, because this
 # comes up missing on some platforms:
-build_requires('Test::Simple');
+test_requires('Test::Simple');
 # For the defunct test_parsing rule, we need a version that sets
 # FULLPERLRUNINST:
-build_requires('ExtUtils::MM_Unix' => 1.41);
+test_requires('ExtUtils::MM_Unix' => 1.41);
 
 WriteAll;
 
@@ -93,10 +83,10 @@ PART0
   if (1)
     {
     $ret .= <<'PART1';
-AutoSearch :: code/AutoSearch-code.pl
+AutoSearchblurg :: code/AutoSearch-code.pl
 	$(FULLPERL) AutoSearch.PL
 	$(FULLPERL) -MExtUtils::Command -e chmod 0755 $@
-WebSearch :: code/WebSearch-code.pl
+WebSearchfoobar :: code/WebSearch-code.pl
 	$(FULLPERL) WebSearch.PL
 	$(FULLPERL) -MExtUtils::Command -e chmod 0755 $@
 

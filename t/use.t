@@ -1,4 +1,4 @@
-# $Id: use.t,v 1.26 2008/01/21 03:13:43 Daddy Exp $
+# $Id: use.t,v 1.27 2008/07/14 03:11:10 Martin Exp $
 
 use strict;
 use warnings;
@@ -243,7 +243,7 @@ $o2->absurl;
 $o2->absurl('foo');
 $o2->absurl('foo', 'bar');
 $o2->need_to_delay;
-$o2->parse_tree;
+$o2->_parse_tree;
 $o2->_native_retrieve_some;
 $o2->preprocess_results_page;
 $o2->preprocess_results_page('foo');

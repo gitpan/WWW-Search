@@ -1,10 +1,8 @@
-exit 0;
-#line 2
-# The above line will be stripped off during `make`
+#!perl -w
 #
-# WebSearch.PL
+# WebSearch
 # Copyright (C) 1996-1997 by USC/ISI
-# $Id: WebSearch-code.pl,v 1.10 2005/01/16 04:20:21 Daddy Exp $
+# $Id: WebSearch,v 1.1 2008/07/14 03:28:13 Martin Exp $
 #
 # Complete copyright notice follows below.
 

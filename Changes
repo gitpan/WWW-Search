@@ -1,3 +1,11 @@
+2008-07-13  Kingpin  <Martin@BLUEMAX>
+
+	* lib/WWW/Search.pm (_parse_tree): now calls parse_tree() for backward compatibility
+
+2008-06-01  Kingpin  <Martin@BLUEMAX>
+
+	* lib/WWW/Search.pm (parse_tree): don't need conditional
+
 2008-04-05    <Martin@BLUEMAX>
 
 	* lib/WWW/Search.pm: renamed parse_tree() to _parse_tree()
