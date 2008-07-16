@@ -1,4 +1,4 @@
-# $Id: autosearch.t,v 1.8 2006/03/15 00:58:15 Daddy Exp $
+# $Id: autosearch.t,v 1.9 2008/07/16 00:41:37 Martin Exp $
 
 use ExtUtils::testlib;
 use File::Spec::Functions;
@@ -17,7 +17,7 @@ SKIP:
   file_executable_ok($sProg, "$sProg is executable");
   } # end of SKIP block
 pass();
-print STDERR "\n";
+# print STDERR "\n";
 diag(`$sProg -V`);
 pass();
 exit 0;

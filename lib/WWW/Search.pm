@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 2.561 2008/07/14 03:12:39 Martin Exp $
+# $Id: Search.pm,v 2.562 2008/07/15 23:42:15 Martin Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -69,7 +69,7 @@ use warnings;
 
 use Carp ();
 use CGI;
-use Data::Dumper;  # for debugging only
+# use Data::Dumper;  # for debugging only
 use Exporter;
 use File::Find;
 use File::Spec::Functions;
@@ -99,7 +99,7 @@ use vars qw( @ISA @EXPORT @EXPORT_OK );
 our
 $MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
 our
-$VERSION = do { my @r = (q$Revision: 2.561 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.562 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 =item new
 

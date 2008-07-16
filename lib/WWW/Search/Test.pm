@@ -1,4 +1,4 @@
-# $rcs = ' $Id: Test.pm,v 2.279 2008/04/03 22:24:36 Martin Exp $ ' ;
+# $rcs = ' $Id: Test.pm,v 2.280 2008/07/16 00:41:27 Martin Exp $ ' ;
 
 =head1 NAME
 
@@ -49,7 +49,7 @@ use vars qw( @EXPORT @ISA );
 
 use vars qw( $VERSION $bogus_query $websearch );
 
-$VERSION = do { my @r = (q$Revision: 2.279 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.280 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 
 ($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = qw(dummy internal external update);
@@ -73,7 +73,8 @@ sub find_websearch
     my @asTry = ( $sProg );
     # Try local directory, in case . is not in the path:
     push @asTry, catfile(curdir, $sProg);
-    # See if WebSearch.BAT has been create/installed, and try it with
+    push @asTry, catfile(qw( blib script ), $sProg);
+    # See if WebSearch.BAT has been created/installed, and try it with
     # explicit 'perl' in front:
     push @asTry, map { ("$_.bat", "$Config{perlpath} $_") } @asTry;
     DEBUG && print STDERR Dumper(\@asTry);
