@@ -46,4 +46,4 @@ requires:
   URI::Escape: 0
   User: 0
   perl: 5.004
-version: 2.503
+version: 2.504

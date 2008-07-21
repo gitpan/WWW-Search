@@ -4,7 +4,7 @@
 use inc::Module::Install;
 
 name('WWW-Search');
-version(2.503);
+version(2.504);
 abstract_from('lib/WWW/Search.pm');
 author_from('lib/WWW/Search.pm');
 license('perl');

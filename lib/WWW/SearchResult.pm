@@ -1,7 +1,7 @@
 # SearchResult.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: SearchResult.pm,v 2.77 2008/07/14 03:13:07 Martin Exp $
+# $Id: SearchResult.pm,v 2.78 2008/07/21 01:20:30 Martin Exp $
 #
 # Copyright (c) 1996 University of Southern California.
 # All rights reserved.
@@ -61,7 +61,7 @@ use warnings;
 use CGI;
 use base 'LWP::MemberMixin';
 our
-$VERSION = do{ my @r = (q$Revision: 2.77 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r};
+$VERSION = do{ my @r = (q$Revision: 2.78 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r};
 
 =head2 new
 
@@ -220,9 +220,9 @@ sub description { return shift->_elem('description', @_); }
 
 Source is either the base url for this result (as listed on the search
 engine's results page) or another copy of the full url path of the
-result.  It might also indicate the source site address where the
-resource was found, for example, 'http://www.cnn.com' if the search
-result page said "found at CNN.com".
+result.  It might also indicate the source site name or address whence
+the result came, for example, 'CNN' or 'http://www.cnn.com' if the
+search result page said "found at CNN.com".
 
 This value is backend-specific; in fact very few backends set this
 value.
@@ -230,6 +230,23 @@ value.
 =cut
 
 sub source { return shift->_elem('source', @_); }
+
+=item add_sources
+
+Same meaning as source above, for adding sources in case there are
+potentially multiple sources.
+
+=cut
+
+sub add_sources { return shift->_add_elem_array('sources', @_); }
+
+=item sources
+
+Returns a reference to the list of sources.
+
+=cut
+
+sub sources { return shift->_elem_array('sources', @_); }
 
 =item score
 

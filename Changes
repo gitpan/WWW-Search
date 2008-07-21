@@ -1,3 +1,8 @@
+2008-07-20  Kingpin  <Martin@BLUEMAX>
+
+	* lib/WWW/SearchResult.pm (sources): new method
+	(add_sources): new method
+
 2008-07-15  Kingpin  <Martin@BLUEMAX>
 
 	* lib/WWW/Search/Test.pm (find_websearch): look bin blib/script also

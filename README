@@ -3,14 +3,14 @@ WWW::Search and AutoSearch and WebSearch
 ========================================
 
 
-WHAT IS NEW IN WWW::Search 2.503?  (2008-07-15)
+WHAT IS NEW IN WWW::Search 2.504?  (2008-qqq)
 -----------------------------------------------
 
 Overview of changes: 
 
- * improved backward compatibility for some backends (I think)
+ * two new slots on the WWW::SearchResult object
 
-For details, see the Changes file (updates after 2008-04-06) and/or
+For details, see the Changes file (updates after 2008-07-15) and/or
 the pod of each affected module.
 
 
