@@ -1,14 +1,12 @@
 # This -*- cperl -*- program writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.81 2008/07/16 00:41:13 Martin Exp $
+# $Id: Makefile.PL,v 1.83 2008/11/28 18:16:45 Martin Exp $
 
 use inc::Module::Install;
 
-name('WWW-Search');
-version(2.504);
-abstract_from('lib/WWW/Search.pm');
-author_from('lib/WWW/Search.pm');
+all_from('lib/WWW/Search.pm');
+version(2.505);
+perl_version(5.005);
 license('perl');
-perl_version(5.004);
 
 install_script('Programs/AutoSearch');
 install_script('Programs/WebSearch');
@@ -28,6 +26,8 @@ requires('Getopt::Long' => 2.24);
 requires('CGI');
 requires('File::Basename');
 requires('File::Find');
+requires('File::Path');
+requires('File::Slurp');
 requires('File::Spec');
 requires('HTML::Parser' => 2.23);
 requires('HTML::TreeBuilder');  # HTML-Tree-0.51 is good
@@ -46,6 +46,7 @@ test_requires('IO::Capture::Stderr');
 test_requires('Test::File');
 test_requires('Test::More');
 test_recommends('Test::Pod');
+test_recommends('Test::Pod::Coverage');
 # I think there's a bug in Module::CoreList or something, because this
 # comes up missing on some platforms:
 test_requires('Test::Simple');
@@ -59,12 +60,10 @@ sub MY::preamble
   {
   # This does not work because MakeMaker apparently does not have a
   # preamble method.
-  return '
-
+  return <<'PREAMBLE';
 AutoSearch :: FORCE
 	/bin/rm -f AutoSearch
-
-';
+PREAMBLE
   } # MY::preamble
 
 
@@ -80,7 +79,7 @@ coverage :
 	cover
 PART0
     } # if
-  if (1)
+  if (0)
     {
     $ret .= <<'PART1';
 AutoSearchblurg :: code/AutoSearch-code.pl

@@ -1,4 +1,4 @@
-# $rcs = ' $Id: Test.pm,v 2.280 2008/07/16 00:41:27 Martin Exp $ ' ;
+# $rcs = ' $Id: Test.pm,v 2.283 2008/11/28 18:18:20 Martin Exp $ ' ;
 
 =head1 NAME
 
@@ -23,12 +23,14 @@ package WWW::Search::Test;
 use strict;
 use warnings;
 
+use Bit::Vector;
 use Carp;
 use Config;
 use Cwd;
 use Data::Dumper;  # for debugging only
-use Exporter;
+use base 'Exporter';
 use File::Path;
+use File::Slurp;
 use File::Spec::Functions qw( :ALL );
 use Test::More;
 use WWW::Search;
@@ -36,8 +38,10 @@ use WWW::Search;
 use vars qw( $MODE_DUMMY $MODE_INTERNAL $MODE_EXTERNAL $MODE_UPDATE );
 use vars qw( $TEST_DUMMY $TEST_EXACTLY $TEST_BY_COUNTING $TEST_GREATER_THAN $TEST_RANGE );
 use vars qw( $iTest $oSearch $sEngine );
+# If set, will be used as a filename to save HTML when a test fails:
+use vars qw( $sSaveOnError );
 
-use vars qw( @EXPORT @ISA );
+use vars qw( @EXPORT );
 @EXPORT = qw( eval_test test
               no_test not_working not_working_with_tests not_working_and_abandoned
               $MODE_DUMMY $MODE_INTERNAL $MODE_EXTERNAL $MODE_UPDATE
@@ -45,11 +49,10 @@ use vars qw( @EXPORT @ISA );
               new_engine run_test run_gui_test skip_test count_results
               tm_new_engine tm_run_test tm_run_test_no_approx
             );
-@ISA = qw( Exporter );
 
 use vars qw( $VERSION $bogus_query $websearch );
 
-$VERSION = do { my @r = (q$Revision: 2.280 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.283 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 
 ($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = qw(dummy internal external update);
@@ -97,6 +100,7 @@ sub find_websearch
     } # unless
   return $websearch;
   } # find_websearch
+
 
 =head2 new
 
@@ -403,6 +407,7 @@ sub no_test
 NONE
   } # no_test
 
+
 =head2 not_working
 
 Prints a message stating that this backend is known to be broken.
@@ -422,6 +427,7 @@ sub not_working
   $maint.
 BROKEN
   } # not_working
+
 
 =head2 not_working_with_tests
 
@@ -466,6 +472,7 @@ sub not_working_and_abandoned
 ADOPT
   } # not_working_and_abandoned
 
+
 =head2 reset_error_count
 
 Reset the counter of errors to zero.
@@ -478,6 +485,7 @@ sub reset_error_count
   my $self = shift;
   $self->{error_count} = 0;
   } # reset_error_count
+
 
 =head2 wc_l (private, not a method)
 
@@ -500,6 +508,7 @@ sub wc_l
     } # while
   return $i;
   } # wc_l
+
 
 =head2 diff (private, not a method)
 
@@ -610,6 +619,7 @@ sub run_gui_test
   return &_run_our_test('gui', @_);
   } # run_gui_test
 
+
 =head2 tm_run_test
 
 Same as run_test(), but uses Test::More rather than just printing 'ok'.
@@ -630,7 +640,7 @@ For example:
 
 sub tm_run_test
   {
-  &_tm_run_test(@_, 1);
+  _tm_run_test(@_, 1);
   } # tm_run_test
 
 sub _tm_run_test
@@ -638,26 +648,35 @@ sub _tm_run_test
   # Last argument is boolean, whether to check approx_result_count:
   my $iApprox = pop(@_) || 0;
   # Remaining args, same as count_results():
-  my ($sType, $sQuery, $iMin, $iMax, $iDebug, $iPrintResults) = @_;
-  my $iCount = &count_results(@_);
-  Test::More::is($oSearch->response->code, 200, 'got valid HTTP response');
+  my ($sType, $sQuery, $iMin, $iMax) = @_;
+  my $iCount = count_results(@_);
+  my $iAnyFailure = 0;
+  $iAnyFailure++ unless Test::More::is($oSearch->response->code, 200, 'got valid HTTP response');
   if (defined $iMin)
     {
-    Test::More::cmp_ok($iMin, '<=', $iCount, qq{lower-bound num-hits for query=$sQuery});
+    $iAnyFailure++ unless Test::More::cmp_ok($iMin, '<=', $iCount,
+                                             qq{lower-bound num-hits for query=$sQuery});
     if ($iApprox)
       {
-      Test::More::cmp_ok($iMin, '<=', $oSearch->approximate_result_count,
-                         qq{lower-bound approximate_result_count});
+      $iAnyFailure++ unless Test::More::cmp_ok($iMin, '<=', $oSearch->approximate_result_count,
+                                               qq{lower-bound approximate_result_count});
       } # if
     } # if
   if (defined $iMax)
     {
-    Test::More::cmp_ok($iCount, '<=', $iMax, qq{upper-bound num-hits for query=$sQuery});
+    $iAnyFailure++ unless Test::More::cmp_ok($iCount, '<=', $iMax,
+                                             qq{upper-bound num-hits for query=$sQuery});
     if ($iApprox)
       {
-      Test::More::cmp_ok($oSearch->approximate_result_count, '<=', $iMax,
-                         qq{upper-bound approximate_result_count});
+      $iAnyFailure++ unless Test::More::cmp_ok($oSearch->approximate_result_count, '<=', $iMax,
+                                               qq{upper-bound approximate_result_count});
       } # if
+    } # if
+  $sSaveOnError ||= q'';
+  if ($iAnyFailure && ($sSaveOnError ne q''))
+    {
+    write_file($sSaveOnError, { err_mode => 'quiet'}, $oSearch->response->content);
+    Test::More::diag(qq'HTML was saved in $sSaveOnError');
     } # if
   } # _tm_run_test
 
@@ -707,7 +726,7 @@ sub count_results
     }
   $oSearch->maximum_to_retrieve($iMaxAbs);
   $iTest++;
-  $sQuery = &WWW::Search::escape_query($sQuery) unless $iDoNotEscape;
+  $sQuery = WWW::Search::escape_query($sQuery) unless $iDoNotEscape;
   # print STDERR " + in WWW::Search::Test::count_results, iDebug = $iDebug\n";
   if ($sType eq 'gui')
     {
@@ -761,6 +780,7 @@ sub _run_our_test
   print STDOUT "ok $iTest\n";
   } # _run_our_test
 
+
 =head2 skip_test
 
 You can call this function instead of run_test() or run_gui_test()
@@ -774,7 +794,72 @@ sub skip_test
   print STDOUT "skip $iTest\n";
   } # skip_test
 
+
+=head2 test_most_results
+
+Given an arrayref to things to test,
+runs all those things against all the results of the most-recently executed test search.
+
+=cut
+
+sub test_most_results
+  {
+  my $rara = shift;
+  my $fPct = shift || 0.80;
+  my $iCount = scalar(@$rara);
+  my $iAnyFailed = my $iResult = 0;
+  my ($iVall, %hash);
+  my $sCodeAll = q{};
+  my $iTest = 0;
+ TEST:
+  foreach my $ra (@$rara)
+    {
+    print STDERR " DDD ra is ", Dumper($ra);
+    my ($sField, $sCmp, $sValue, $sDesc) = @$ra;
+    my $sCode = "Test::More::cmp_ok(\$oResult->$sField, q{$sCmp}, '$sValue', q{$sDesc});";
+    if ($sCmp eq 'like')
+      {
+      $sCode = "Test::More::like(\$oResult->$sField, $sValue, q{$sDesc});";
+      } # if
+    $sCodeAll .= qq{\$oV->Bit_Off($iTest) unless $sCode\n};
+    $iTest++;
+    } # foreach TEST
+  $sCodeAll .= "1;\n";
+  $sCodeAll =~ s/\(\?-xism:/qr(/g;
+  # print STDERR " DDD the test is ==$sCodeAll==\n";
+ RESULT:
+  foreach my $oResult ($oSearch->results())
+    {
+    $iResult++;
+    # Create a bit vector large enough to hold one bit for each test:
+    my $oV = new Bit::Vector($iCount-1);
+    # Turn on all the bits (we will turn off bits when tests fail):
+    $oV->Fill;
+    my $iVall = $oV->to_Dec;
+    # print STDERR " DDD eval the test...\n";
+    if (! eval $sCodeAll)
+      {
+      print STDERR $@;
+      } # if
+    # Now look at the value of the Bit::Vector after running the tests:
+    my $iV = $oV->to_Dec;
+    if ($iV < $iVall)
+      {
+      # At least one of the bits got turned off (i.e. a test failed):
+      $hash{$iV} = $oResult;
+      $iAnyFailed++;
+      } # if
+    } # foreach RESULT
+  if ($iAnyFailed)
+    {
+    Test::More::diag(" Here are result(s) that exemplify the failure(s):");
+    while (my ($sKey, $sVal) = each %hash)
+      {
+      Test::More::diag(Dumper($sVal));
+      } # while
+    } # if
+  } # test_most_results
+
 1;
 
 __END__
-

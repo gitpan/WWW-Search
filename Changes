@@ -1,3 +1,15 @@
+2008-11-28  Kingpin  <Martin@BLUEMAX>
+
+	* lib/WWW/Search/Test.pm (test_most_results): new function
+
+2008-11-27  Kingpin  <Martin@BLUEMAX>
+
+	* lib/WWW/Search.pm (user_agent): wrap {new LWP::UserAgent} in an eval
+
+2008-11-10  Kingpin  <Martin@BLUEMAX>
+
+	* lib/WWW/Search.pm (_native_retrieve_some): check for empty _next_url
+
 2008-07-20  Kingpin  <Martin@BLUEMAX>
 
 	* lib/WWW/SearchResult.pm (sources): new method

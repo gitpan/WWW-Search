@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 2.562 2008/07/15 23:42:15 Martin Exp $
+# $Id: Search.pm,v 2.564 2008/11/27 22:35:28 Martin Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -99,7 +99,7 @@ use vars qw( @ISA @EXPORT @EXPORT_OK );
 our
 $MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
 our
-$VERSION = do { my @r = (q$Revision: 2.562 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.564 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 =item new
 
@@ -1149,9 +1149,12 @@ sub user_agent
     {
     if ($non_robot)
       {
-      $ua = new LWP::UserAgent;
-      $ua->agent($self->agent_name);
-      $ua->from($self->agent_email);
+      eval
+        {
+        $ua = new LWP::UserAgent;
+        $ua->agent($self->agent_name);
+        $ua->from($self->agent_email);
+        }; # end of eval block
       }
     else
       {
@@ -1598,21 +1601,21 @@ sub retrieve_some
       return;
       } # if
     } # if
-  # got enough already?
+  # Got enough already?
   if ($self->{number_retrieved} >= $self->{'maximum_to_retrieve'})
     {
     print STDERR " DDD retrieve_some() got enough already\n" if (DEBUG_RETR || $self->{_debug});
     $self->{state} = SEARCH_DONE;
     return;
     } # if
-  # spinning our wheels?
+  # Spinning our wheels?
   if ($self->{requests_made} > $self->{'maximum_to_retrieve'})
     {
     print STDERR " DDD retrieve_some() too many requests\n" if (DEBUG_RETR || $self->{_debug});
     $self->{state} = SEARCH_DONE;
     return;
     } # if
-  # need more results
+  # Need more results:
   my $res = $self->_native_retrieve_some() || 0;
   print STDERR " +   _native_retrieve_some() returned $res\n" if (DEBUG_RETR || $self->{_debug});
   $self->{requests_made}++;
@@ -1692,6 +1695,8 @@ sub _parse_tree
   my $self = shift;
   # This is a NOP stub.  Backend MUST define their own parse function!
   print STDERR " FFF stub _parse_tree\n" if (DEBUG_FUNC || $self->{_debug});
+  # This is for backward-compatibility, for backends that define the
+  # old parse_tree(), but not the new _parse_tree():
   return $self->parse_tree(@_) if $self->can('parse_tree');
   return 0;
   } # _parse_tree
@@ -1700,16 +1705,17 @@ sub _parse_tree
 sub _native_retrieve_some
   {
   my $self = shift;
-  # This function is for backward-compatibility, for backends that
-  # define the old native_retrieve_some(), but not the new
-  # _native_retrieve_some()
   if ($self->can('native_retrieve_some'))
     {
+    # This is for backward-compatibility, for backends that define the
+    # old native_retrieve_some(), but not the new
+    # _native_retrieve_some():
     return $self->native_retrieve_some(@_);
     } # if
   print STDERR " FFF _n_r_s\n" if (DEBUG_FUNC || $self->{_debug});
   # Fast exit if already done:
-  return undef if (!defined($self->{_next_url}));
+  return if (!defined($self->{_next_url}));
+  return if ($self->{_next_url} eq q{});
   # If this is not the first page of results, sleep so as to not
   # overload the server:
   $self->{_next_to_retrieve} ||= 1;
@@ -1734,7 +1740,7 @@ sub _native_retrieve_some
       {
       print STDERR " --- HTTP request failed, response is:\n", $response->as_string;
       } # if
-    return undef;
+    return;
     } # if
   # Pre-process the output:
   my $sPage = $self->preprocess_results_page($response->content);
@@ -1878,9 +1884,7 @@ sub hash_to_cgi_string
     # If we want to let the user delete options, uncomment the next
     # line. (They can still blank them out, which may or may not have
     # the same effect):
-
     # next unless $rh->{$key} ne '';
-
     $ret .= $key .'='. $rh->{$key} .'&';
     } # foreach $key
   # Remove the trailing '&':
