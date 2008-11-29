@@ -1,4 +1,4 @@
-# $rcs = ' $Id: Test.pm,v 2.283 2008/11/28 18:18:20 Martin Exp $ ' ;
+# $rcs = ' $Id: Test.pm,v 2.285 2008/11/29 01:55:09 Martin Exp $ ' ;
 
 =head1 NAME
 
@@ -28,6 +28,8 @@ use Carp;
 use Config;
 use Cwd;
 use Data::Dumper;  # for debugging only
+use Date::Manip;
+Date_Init('TZ=-0500');
 use base 'Exporter';
 use File::Path;
 use File::Slurp;
@@ -52,7 +54,7 @@ use vars qw( @EXPORT );
 
 use vars qw( $VERSION $bogus_query $websearch );
 
-$VERSION = do { my @r = (q$Revision: 2.283 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.285 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 
 ($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = qw(dummy internal external update);
@@ -797,7 +799,7 @@ sub skip_test
 
 =head2 test_most_results
 
-Given an arrayref to things to test,
+Given an arrayref of things to test,
 runs all those things against all the results of the most-recently executed test search.
 
 =cut
@@ -808,34 +810,52 @@ sub test_most_results
   my $fPct = shift || 0.80;
   my $iCount = scalar(@$rara);
   my $iAnyFailed = my $iResult = 0;
-  my ($iVall, %hash);
+  my %hioExemplar;
+  my %hiiFailed;
+  # Create a bit vector large enough to hold one bit for each test:
+  my $oV = new Bit::Vector($iCount-1);
+  # Turn on all the bits (we will turn off bits when tests fail):
+  $oV->Fill;
+  my $iVall = $oV->to_Dec;
   my $sCodeAll = q{};
   my $iTest = 0;
  TEST:
   foreach my $ra (@$rara)
     {
-    print STDERR " DDD ra is ", Dumper($ra);
+    # print STDERR " DDD ra is ", Dumper($ra);
     my ($sField, $sCmp, $sValue, $sDesc) = @$ra;
-    my $sCode = "Test::More::cmp_ok(\$oResult->$sField, q{$sCmp}, '$sValue', q{$sDesc});";
+    my $sCode;
     if ($sCmp eq 'like')
       {
-      $sCode = "Test::More::like(\$oResult->$sField, $sValue, q{$sDesc});";
+      $sCode = "(\$oResult->$sField =~ m!$sValue!)";
       } # if
-    $sCodeAll .= qq{\$oV->Bit_Off($iTest) unless $sCode\n};
+    elsif ($sCmp eq 'date')
+      {
+      $sCode = "((ParseDate(\$oResult->$sField) || '') ne q{})";
+      } # if
+    else
+      {
+      $sCode = "(\$oResult->$sField $sCmp '$sValue')";
+      }
+    $sCode = <<"ENDCODE";
+if (! $sCode)
+  {
+  \$oV->Bit_Off($iTest);
+  \$hiiFailed{'$sField'}++;
+  } # if
+ENDCODE
+    $sCodeAll .= $sCode;
     $iTest++;
     } # foreach TEST
   $sCodeAll .= "1;\n";
-  $sCodeAll =~ s/\(\?-xism:/qr(/g;
-  # print STDERR " DDD the test is ==$sCodeAll==\n";
+  # $sCodeAll =~ s{/\(\?-xism:}{/(}g;
+  print STDERR " DDD the test is ==$sCodeAll==\n";
  RESULT:
   foreach my $oResult ($oSearch->results())
     {
     $iResult++;
-    # Create a bit vector large enough to hold one bit for each test:
-    my $oV = new Bit::Vector($iCount-1);
     # Turn on all the bits (we will turn off bits when tests fail):
     $oV->Fill;
-    my $iVall = $oV->to_Dec;
     # print STDERR " DDD eval the test...\n";
     if (! eval $sCodeAll)
       {
@@ -846,18 +866,24 @@ sub test_most_results
     if ($iV < $iVall)
       {
       # At least one of the bits got turned off (i.e. a test failed):
-      $hash{$iV} = $oResult;
+      $hioExemplar{$iV} = $oResult;
       $iAnyFailed++;
       } # if
     } # foreach RESULT
+  ok($iResult, 'got some results');
   if ($iAnyFailed)
     {
-    Test::More::diag(" Here are result(s) that exemplify the failure(s):");
-    while (my ($sKey, $sVal) = each %hash)
+    Test::More::diag(" Here are result(s) that exemplify test failure(s):");
+    foreach my $oResult (values %hioExemplar)
       {
-      Test::More::diag(Dumper($sVal));
+      Test::More::diag(Dumper($oResult));
       } # while
     } # if
+  while (my ($sItem, $iFailed) = each %hiiFailed)
+    {
+    my $fPctFailed = ($iFailed / $iResult);
+    ok((1 - $fPct) < $fPctFailed, sprintf(qq{%0.3f%% of %s tests failed}, $fPctFailed * 100, $sItem));
+    } # while
   } # test_most_results
 
 1;

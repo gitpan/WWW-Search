@@ -1,10 +1,10 @@
 # This -*- cperl -*- program writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.83 2008/11/28 18:16:45 Martin Exp $
+# $Id: Makefile.PL,v 1.85 2008/11/29 01:55:31 Martin Exp $
 
 use inc::Module::Install;
 
 all_from('lib/WWW/Search.pm');
-version(2.505);
+version(2.506);
 perl_version(5.005);
 license('perl');
 
@@ -38,8 +38,13 @@ requires('Pod::Usage');
 requires('URI');
 requires('URI::Escape');
 requires('User');
-# These used to be needed during `make all`:
-test_requires('File::Spec');
+# These are used by WWW::Search::Test:
+requires('Bit::Vector');
+requires('Date::Manip');
+requires('File::Path');
+requires('File::Slurp');
+requires('File::Spec');
+requires('Test::More');
 # These are needed during `make test`:
 test_requires('File::Temp');
 test_requires('IO::Capture::Stderr');

@@ -4,7 +4,6 @@ author:
   - 'John Heidemann <johnh@isi.edu>'
 build_requires:
   ExtUtils::MM_Unix: 1.41
-  File::Spec: 0
   File::Temp: 0
   IO::Capture::Stderr: 0
   Test::File: 0
@@ -29,6 +28,7 @@ recommends:
   Email::MIME::Creator: 0
   Email::Send: 0
 requires:
+  Bit::Vector: 0
   CGI: 0
   Data::Dumper: 0
   Date::Manip: 0
@@ -46,10 +46,11 @@ requires:
   Net::Domain: 0
   POSIX: 0
   Pod::Usage: 0
+  Test::More: 0
   URI: 0
   URI::Escape: 0
   User: 0
   perl: 5.005
 resources:
   license: http://dev.perl.org/licenses/
-version: 2.505
+version: 2.506
