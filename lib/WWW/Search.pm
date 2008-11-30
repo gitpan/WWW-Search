@@ -1,7 +1,7 @@
 # Search.pm
 # by John Heidemann
 # Copyright (C) 1996 by USC/ISI
-# $Id: Search.pm,v 2.564 2008/11/27 22:35:28 Martin Exp $
+# $Id: Search.pm,v 2.565 2008/11/29 05:52:08 Martin Exp $
 #
 # A complete copyright notice appears at the end of this file.
 
@@ -99,7 +99,7 @@ use vars qw( @ISA @EXPORT @EXPORT_OK );
 our
 $MAINTAINER = 'Martin Thurn <mthurn@cpan.org>';
 our
-$VERSION = do { my @r = (q$Revision: 2.564 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.565 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 =item new
 
@@ -1162,7 +1162,7 @@ sub user_agent
       $ua->delay($self->{'interrequest_delay'});
       }
     $ua->timeout($self->{'timeout'});
-    $ua->proxy(@{$self->{'http_proxy'}}) if $self->is_http_proxy;
+    eval { $ua->proxy(@{$self->{'http_proxy'}}) } if $self->is_http_proxy;
     if ($self->env_proxy)
       {
       $ua->env_proxy($self->env_proxy);

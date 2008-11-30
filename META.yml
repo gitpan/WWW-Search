@@ -53,4 +53,4 @@ requires:
   perl: 5.005
 resources:
   license: http://dev.perl.org/licenses/
-version: 2.506
+version: 2.507

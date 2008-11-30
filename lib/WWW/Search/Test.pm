@@ -1,4 +1,4 @@
-# $rcs = ' $Id: Test.pm,v 2.285 2008/11/29 01:55:09 Martin Exp $ ' ;
+# $rcs = ' $Id: Test.pm,v 2.287 2008/11/30 01:27:16 Martin Exp $ ' ;
 
 =head1 NAME
 
@@ -54,7 +54,7 @@ use vars qw( @EXPORT );
 
 use vars qw( $VERSION $bogus_query $websearch );
 
-$VERSION = do { my @r = (q$Revision: 2.285 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.287 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 
 ($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = qw(dummy internal external update);
@@ -829,6 +829,10 @@ sub test_most_results
       {
       $sCode = "(\$oResult->$sField =~ m!$sValue!)";
       } # if
+    elsif ($sCmp eq 'unlike')
+      {
+      $sCode = "(\$oResult->$sField !~ m!$sValue!)";
+      } # if
     elsif ($sCmp eq 'date')
       {
       $sCode = "((ParseDate(\$oResult->$sField) || '') ne q{})";
@@ -849,7 +853,7 @@ ENDCODE
     } # foreach TEST
   $sCodeAll .= "1;\n";
   # $sCodeAll =~ s{/\(\?-xism:}{/(}g;
-  print STDERR " DDD the test is ==$sCodeAll==\n";
+  # print STDERR " DDD the test is ==$sCodeAll==\n";
  RESULT:
   foreach my $oResult ($oSearch->results())
     {
