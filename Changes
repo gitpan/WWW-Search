@@ -1,3 +1,7 @@
+2010-05-20  Kingpin  <Martin@BLUEMAX>
+
+	* lib/WWW/Search/Test.pm (test_most_results): fixed percentage test!
+
 2008-11-28  Kingpin  <Martin@BLUEMAX>
 
 	* lib/WWW/Search/Test.pm (test_most_results): new function

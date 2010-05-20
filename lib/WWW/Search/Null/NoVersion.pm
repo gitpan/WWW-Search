@@ -17,7 +17,7 @@ This module is for testing the WWW::Search module.
 
 =head1 AUTHOR
 
-Martin Thurn <mthurn@cpan.org>
+Martin 'Kingpin' Thurn, C<mthurn at cpan.org>, L<http://tinyurl.com/nn67z>.
 
 =cut
 

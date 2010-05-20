@@ -1,24 +1,20 @@
 ---
-abstract: 'Virtual base class for WWW searches'
-author:
-  - 'John Heidemann <johnh@isi.edu>'
 build_requires:
   ExtUtils::MM_Unix: 1.41
+  ExtUtils::MakeMaker: 6.42
   File::Temp: 0
   IO::Capture::Stderr: 0
   Test::File: 0
   Test::More: 0
-  Test::Pod: 0
-  Test::Pod::Coverage: 0
   Test::Simple: 0
+configure_requires:
+  ExtUtils::MakeMaker: 6.42
 distribution_type: module
-generated_by: 'Module::Install version 0.77'
+generated_by: 'Module::Install version 0.97'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
-module_name: WWW::Search
-name: WWW-Search
 no_index:
   directory:
     - inc
@@ -27,6 +23,8 @@ recommends:
   Email::MIME: 0
   Email::MIME::Creator: 0
   Email::Send: 0
+  Test::Pod: 0
+  Test::Pod::Coverage: 0
 requires:
   Bit::Vector: 0
   CGI: 0
@@ -53,4 +51,4 @@ requires:
   perl: 5.005
 resources:
   license: http://dev.perl.org/licenses/
-version: 2.507
+version: 2.508

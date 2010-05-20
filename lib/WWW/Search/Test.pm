@@ -1,4 +1,4 @@
-# $rcs = ' $Id: Test.pm,v 2.287 2008/11/30 01:27:16 Martin Exp $ ' ;
+# $rcs = ' $Id: Test.pm,v 2.288 2010-05-20 22:56:04 Martin Exp $ ' ;
 
 =head1 NAME
 
@@ -54,7 +54,7 @@ use vars qw( @EXPORT );
 
 use vars qw( $VERSION $bogus_query $websearch );
 
-$VERSION = do { my @r = (q$Revision: 2.287 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.288 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 
 ($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = qw(dummy internal external update);
@@ -874,7 +874,7 @@ ENDCODE
       $iAnyFailed++;
       } # if
     } # foreach RESULT
-  ok($iResult, 'got some results');
+  ok($iResult, qq{got more than zero results ($iResult, to be exact)});
   if ($iAnyFailed)
     {
     Test::More::diag(" Here are result(s) that exemplify test failure(s):");
@@ -886,7 +886,7 @@ ENDCODE
   while (my ($sItem, $iFailed) = each %hiiFailed)
     {
     my $fPctFailed = ($iFailed / $iResult);
-    ok((1 - $fPct) < $fPctFailed, sprintf(qq{%0.3f%% of %s tests failed}, $fPctFailed * 100, $sItem));
+    ok($fPctFailed < (1 - $fPct), sprintf(qq{%0.1f%% of %s tests failed}, $fPctFailed * 100, $sItem));
     } # while
   } # test_most_results
 

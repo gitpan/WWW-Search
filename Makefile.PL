@@ -1,10 +1,10 @@
 # This -*- cperl -*- program writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.86 2008/11/30 01:45:58 Martin Exp $
+# $Id: Makefile.PL,v 1.88 2010-05-20 23:45:53 Martin Exp $
 
 use inc::Module::Install;
 
-all_from('lib/WWW/Search.pm');
-version(2.507);
+# all_from('lib/WWW/Search.pm');
+version(2.508);
 perl_version(5.005);
 license('perl');
 
@@ -50,16 +50,14 @@ test_requires('File::Temp');
 test_requires('IO::Capture::Stderr');
 test_requires('Test::File');
 test_requires('Test::More');
-test_recommends('Test::Pod');
-test_recommends('Test::Pod::Coverage');
+recommends('Test::Pod');
+recommends('Test::Pod::Coverage');
 # I think there's a bug in Module::CoreList or something, because this
 # comes up missing on some platforms:
 test_requires('Test::Simple');
 # For the defunct test_parsing rule, we need a version that sets
 # FULLPERLRUNINST:
 test_requires('ExtUtils::MM_Unix' => 1.41);
-
-WriteAll;
 
 sub MY::preamble
   {
@@ -71,10 +69,7 @@ AutoSearch :: FORCE
 PREAMBLE
   } # MY::preamble
 
-
-sub MY::postamble
-  {
-  my $ret = '';
+  my $ret = q{};
   if (1)
     {
     $ret .= <<'PART0';
@@ -83,18 +78,6 @@ coverage :
 	$(MAKE) HARNESS_PERL_SWITCHES=-MDevel::Cover test
 	cover
 PART0
-    } # if
-  if (0)
-    {
-    $ret .= <<'PART1';
-AutoSearchblurg :: code/AutoSearch-code.pl
-	$(FULLPERL) AutoSearch.PL
-	$(FULLPERL) -MExtUtils::Command -e chmod 0755 $@
-WebSearchfoobar :: code/WebSearch-code.pl
-	$(FULLPERL) WebSearch.PL
-	$(FULLPERL) -MExtUtils::Command -e chmod 0755 $@
-
-PART1
     } # if
   if (0)
     {
@@ -112,8 +95,9 @@ tags:
 
 PART3
     } # if
-  return $ret;
-  } # MY::postamble
+  postamble $ret;
+
+WriteAll;
 
 __END__
 
