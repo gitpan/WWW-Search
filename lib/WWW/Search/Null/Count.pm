@@ -1,5 +1,5 @@
 
-# $Id: Count.pm,v 1.16 2008/01/21 03:01:47 Daddy Exp $
+# $Id: Count.pm,v 1.17 2010/12/02 23:45:57 Martin Exp $
 
 =head1 NAME
 
@@ -42,7 +42,7 @@ use WWW::Search::Result;
 
 use base 'WWW::Search';
 our
-$VERSION = do { my @r = (q$Revision: 1.16 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 1.17 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 our $MAINTAINER = q{Martin Thurn <mthurn@cpan.org>};
 
 use constant DEBUG_FUNC => 0;

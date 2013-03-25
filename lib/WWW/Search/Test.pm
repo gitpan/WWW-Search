@@ -1,4 +1,4 @@
-# $rcs = ' $Id: Test.pm,v 2.288 2010-05-20 22:56:04 Martin Exp $ ' ;
+# $rcs = ' $Id: Test.pm,v 2.289 2013/03/25 15:13:57 martin Exp $ ' ;
 
 =head1 NAME
 
@@ -54,7 +54,7 @@ use vars qw( @EXPORT );
 
 use vars qw( $VERSION $bogus_query $websearch );
 
-$VERSION = do { my @r = (q$Revision: 2.288 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.289 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 
 ($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = qw(dummy internal external update);
@@ -813,7 +813,7 @@ sub test_most_results
   my %hioExemplar;
   my %hiiFailed;
   # Create a bit vector large enough to hold one bit for each test:
-  my $oV = new Bit::Vector($iCount-1);
+  my $oV = new Bit::Vector($iCount);
   # Turn on all the bits (we will turn off bits when tests fail):
   $oV->Fill;
   my $iVall = $oV->to_Dec;

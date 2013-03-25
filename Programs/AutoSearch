@@ -3,7 +3,7 @@
 # AutoSearch
 # Copyright (c) 1996-1997 University of Southern California.
 # All rights reserved.
-# $Id: AutoSearch,v 1.1 2008/07/14 03:28:13 Martin Exp $
+# $Id: AutoSearch,v 1.2 2010/12/02 23:46:30 Martin Exp $
 #
 # Complete copyright notice follows below.
 
@@ -33,7 +33,7 @@ use WWW::Search;
 use strict;
 
 use vars qw( $VERSION );
-$VERSION = do { my @r = (q$Revision: 1.1 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 1.2 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 use constant DEBUG_EMAIL => 0;
 
@@ -643,25 +643,25 @@ sub main
 
   # Only save the ones that don't show up in the current query list.
   # Those we shall call suspended_*
-  my(@suspended_url,@suspended_title);
+  my (@suspended_url,@suspended_title);
   # We must use a for loop, to get the urls to match their descr &
   # title.
-  $n = $#old_summary_url + 1;
-  $m = $#weekly_url + 1;
   OLD_URL:
-  for ($i=0; $i < $n; $i++) {
+  for my $i (0..$#old_summary_url)
+    {
     $url = $old_summary_url[$i];
-    for ($j=0; $j < $m; $j++) {
+    for my $j (0..$#weekly_url)
+      {
       $line = $weekly_url[$j];
       # if we match the weekly (active search) hits, skip it.
       next OLD_URL if $url eq $line;
-    }
+      } # for $j
     printf STDERR "suspend: [%02d]%s\n",$i,$url if $dbg_search;
     # not found? save it, it's been suspended
     push(@suspended_url,$url);
     $title = $old_summary_title[$i];
     push(@suspended_title,$title);
-  }
+    } # for $i
   # stats?? (to see 'em use -stats)
   print STDERR "old summary count: ",$#old_summary_url + 1,"\n" if ($s_dbg);
   print STDERR "new raw hits     : ",$hits,"\n" if ($s_dbg);

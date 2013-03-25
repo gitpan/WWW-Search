@@ -12,14 +12,12 @@ build_requires:
   Test::Simple: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.36
-distribution_type: module
-dynamic_config: 1
-generated_by: 'Module::Install version 1.06'
+dynamic_config: 0
+generated_by: 'Module::Install version 1.06, CPAN::Meta::Converter version 2.120921'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
-module_name: WWW::Search
 name: WWW-Search
 no_index:
   directory:
@@ -57,4 +55,5 @@ requires:
   perl: 5.005
 resources:
   license: http://dev.perl.org/licenses/
-version: 2.509
+version: 2.508
+x_module_name: WWW::Search
