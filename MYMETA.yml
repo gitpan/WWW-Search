@@ -13,7 +13,7 @@ build_requires:
 configure_requires:
   ExtUtils::MakeMaker: 6.36
 dynamic_config: 0
-generated_by: 'Module::Install version 1.06, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Module::Install version 1.06, CPAN::Meta::Converter version 2.131560'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -55,5 +55,5 @@ requires:
   perl: 5.005
 resources:
   license: http://dev.perl.org/licenses/
-version: 2.508
+version: 2.509
 x_module_name: WWW::Search

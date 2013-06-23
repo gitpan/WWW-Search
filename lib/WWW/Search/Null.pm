@@ -1,5 +1,3 @@
-#!/usr/local/bin/perl
-# contributed from Paul Lindner <lindner@itu.int>
 
 =head1 NAME
 
@@ -44,31 +42,26 @@ use base 'WWW::Search';
 use Carp ();
 use WWW::SearchResult;
 
-my($debug) = 0;
+our
+$VERSION = do { my @r = (q$Revision: 1.6 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
-#private
-sub native_setup_search
+sub _native_setup_search
   {
-  my($self, $native_query, $native_opt) = @_;
-  my($native_url);
+  my $self = shift;
+  my ($native_query, $native_opt) = @_;
+  my $native_url;
   $self->{_next_to_retrieve} = 0;
   $self->{_base_url} = $self->{_next_url} = $native_url;
-  } # native_setup_search
+  } # _native_setup_search
 
-# private
-sub native_retrieve_some
+sub _native_retrieve_some
   {
-  my ($self) = @_;
+  my $self = shift;
   # Null search just returns an error..
-  return undef if (!defined($self->{_next_url}));
-  if (defined($how) && ($how =~ /(phrase|boolean)/))
-    {
-    my $response = new HTTP::Response(500,
-                                      "This search engine is not supported, Please try searching it manually.");
-    $self->{response} = $response;
-    return(undef);
-    } # if
-  } # native_retrieve_some
+  return if (!defined($self->{_next_url}));
+  my $response = new HTTP::Response(500, "This is a dummy search engine.");
+  $self->{response} = $response;
+  } # _native_retrieve_some
 
 1;
 

@@ -4,7 +4,7 @@
       "John Heidemann <johnh@isi.edu>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Module::Install version 1.06, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Module::Install version 1.06, CPAN::Meta::Converter version 2.131560",
    "license" : [
       "perl_5"
    ],
@@ -77,6 +77,6 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "2.508",
+   "version" : "2.509",
    "x_module_name" : "WWW::Search"
 }
