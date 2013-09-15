@@ -77,6 +77,6 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "2.509",
+   "version" : "2.511",
    "x_module_name" : "WWW::Search"
 }

@@ -1,4 +1,4 @@
-# $rcs = ' $Id: Test.pm,v 2.289 2013/03/25 15:13:57 martin Exp $ ' ;
+# $rcs = ' $Id: Test.pm,v 2.290 2013/06/23 16:56:39 martin Exp $ ' ;
 
 =head1 NAME
 
@@ -54,7 +54,7 @@ use vars qw( @EXPORT );
 
 use vars qw( $VERSION $bogus_query $websearch );
 
-$VERSION = do { my @r = (q$Revision: 2.289 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 2.290 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 $bogus_query = "Bogus" . $$ . "NoSuchWord" . time;
 
 ($MODE_DUMMY, $MODE_INTERNAL, $MODE_EXTERNAL, $MODE_UPDATE) = qw(dummy internal external update);
@@ -839,7 +839,7 @@ sub test_most_results
       } # if
     else
       {
-      $sCode = "(\$oResult->$sField $sCmp '$sValue')";
+      $sCode = "(\$oResult->$sField $sCmp $sValue)";
       }
     $sCode = <<"ENDCODE";
 if (! $sCode)
@@ -852,8 +852,7 @@ ENDCODE
     $iTest++;
     } # foreach TEST
   $sCodeAll .= "1;\n";
-  # $sCodeAll =~ s{/\(\?-xism:}{/(}g;
-  # print STDERR " DDD the test is ==$sCodeAll==\n";
+  # print STDERR " DDD the test is ===$sCodeAll===\n";
  RESULT:
   foreach my $oResult ($oSearch->results())
     {
@@ -875,6 +874,11 @@ ENDCODE
       } # if
     } # foreach RESULT
   ok($iResult, qq{got more than zero results ($iResult, to be exact)});
+  while (my ($sItem, $iFailed) = each %hiiFailed)
+    {
+    my $fPctFailed = ($iFailed / $iResult);
+    ok($fPctFailed < (1 - $fPct), sprintf(qq{%0.1f%% of %s tests failed}, $fPctFailed * 100, $sItem));
+    } # while
   if ($iAnyFailed)
     {
     Test::More::diag(" Here are result(s) that exemplify test failure(s):");
@@ -883,11 +887,6 @@ ENDCODE
       Test::More::diag(Dumper($oResult));
       } # while
     } # if
-  while (my ($sItem, $iFailed) = each %hiiFailed)
-    {
-    my $fPctFailed = ($iFailed / $iResult);
-    ok($fPctFailed < (1 - $fPct), sprintf(qq{%0.1f%% of %s tests failed}, $fPctFailed * 100, $sItem));
-    } # while
   } # test_most_results
 
 1;

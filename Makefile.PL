@@ -1,9 +1,9 @@
 # This -*- cperl -*- program writes the Makefile for WWW::Search
-# $Id: Makefile.PL,v 1.90 2013/06/23 12:49:10 martin Exp $
+# $Id: Makefile.PL,v 1.92 2013/09/15 20:13:15 martin Exp $
 
 use inc::Module::Install;
 
-version(2.511);
+version(2.512);
 all_from('lib/WWW/Search.pm');
 perl_version(5.005);
 license('perl');
@@ -98,6 +98,28 @@ PART3
   postamble $ret;
 
 WriteAll;
+
+use Env;
+if ($ENV{MTHURN_PERL_DEV})
+  {
+  print "DDD This is author's development environment\n";
+  my $sFnameMakefile = q{Makefile};
+  eval "use File::Slurp";
+  my $s = read_file($sFnameMakefile);
+  if ($s !~ s/(DIRFILESEP\s*=\s*).+$/$1\//m)
+    {
+    print " EEE did not find DIRFILESEP in Makefile\n";
+    } # if
+  if ($s !~ s/(pm_to_blib\(){{\@ARGV}}/$1 . '{@ARGV}'/e)
+    {
+    print " EEE did not find pm_to_blib@ARGV in Makefile\n";
+    } # if
+  if ($s !~ s/(from_to\s+=>\s+){{\@ARGV}}/$1 . '{@ARGV}'/e)
+    {
+    print " EEE did not find from_to@ARGV in Makefile\n";
+    } # if
+  write_file($sFnameMakefile, $s);
+  } # if
 
 __END__
 

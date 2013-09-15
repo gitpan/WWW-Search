@@ -1,3 +1,15 @@
+2013-08-20  Kingpin  <martin@localhost.localdomain>
+
+	* Makefile.PL (MY::preamble): added fix for devel on Windows 7
+
+2013-06-23  Kingpin  <martin@localhost.localdomain>
+
+	* lib/WWW/Search/Test.pm (test_most_results): fixed quote problem in eval
+
+2013-03-25  Kingpin  <martin@localhost.localdomain>
+
+	* lib/WWW/Search/Test.pm (test_most_results): fixed off-by-one error
+
 2010-05-20  Kingpin  <Martin@BLUEMAX>
 
 	* lib/WWW/Search/Test.pm (test_most_results): fixed percentage test!
